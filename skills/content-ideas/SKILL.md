@@ -216,12 +216,20 @@ the reactions stay in `feedback.json` for whenever it is. (The current run's
 reactions are ingested by the *next* run, the same way — there's no end-of-run
 distillation step.)
 
-### 1b. Recall taste and load brand context
+### 1b. Recall taste, load brand context, and detect mode
 
 Read whatever brand context exists (all optional — degrade gracefully):
 - `brand/profile.md` — niche, pillars, search terms, content goal, audience
 - `brand/tracked-accounts/*.md` — tracked creators per platform
 - `brand/my-content.md` — the user's own content performance + audience requests
+
+**Detect strategy mode.** Read the `## Content Goal` section of
+`brand/profile.md`. If the goal mentions **strategy**, **pre-sales**,
+**consulting**, **pipeline building**, **deal prep**, or **enterprise** (as
+opposed to audience growth, followers, content creation), set an internal flag:
+`mode = "strategy"`. This controls what Step 5 produces — use cases instead of
+(or alongside) content ideas. When in strategy mode, Step 5c generates use
+cases and Step 7 offers pipeline next steps via `/pipeline-runner`.
 
 **Recall the user's content taste from your memory.** This skill stores an
 evolving taste profile in your project memory (the auto-memory you maintain). Before generating ideas, recall what you know about what this
@@ -397,12 +405,54 @@ building this tab:
   out ("this fits a pattern you keep coming back to"). Conversely, deprioritize
   anything that matches a recorded "doesn't land" signal.
 
+### 5c. Extract use cases (strategy mode only)
+
+**Skip this step unless `mode = "strategy"` was set in Step 1b.** When the
+user's Content Goal is strategy/pre-sales/pipeline-focused, the primary output
+is not content briefs — it's **use case hypotheses** that chain into downstream
+strategy and pre-sales skills.
+
+Scan all posts from Step 4 (especially outliers and high-relevance ones) and
+the patterns identified. Cluster them by **industry vertical + AI capability**
+(e.g., "healthcare + on-prem LLM", "manufacturing + predictive maintenance",
+"e-commerce + AI customer support"). For each cluster with corroborating
+signals, build a **use case realization** — the structured format defined in
+`FILE-SCHEMAS.md` that maps directly to the branded PPTX slide layout:
+
+1. **Kicker + Title** — category label (`USE CASE {N}  ·  {CATEGORY}`) and a
+   short noun-phrase title. Categories: `HORIZONTAL OPS`, `REVENUE`,
+   `KNOWLEDGE WORK`, `ENGINEERING`, `PLATFORM`, `VERTICAL`, `TRUST`,
+   `PROFESSIONAL`.
+2. **Challenge** — exactly 3 bullets: the pain points this use case addresses.
+3. **Solution** — exactly 3 bullets: how AI addresses each challenge.
+4. **How it works** — exactly 3 numbered steps: trigger → process → outcome.
+5. **Stats** — exactly 3 metric tuples: `[number/metric, label]` (e.g.,
+   `["100%", "data on-prem"]`).
+6. **Solution stack** — exactly 4 layers: `EXPERIENCE`, `ORCHESTRATION`,
+   `CONTEXT`, `ACTUATION` — each with a one-line detail.
+7. **Systems + Users** — which systems the solution touches (3–5) and the
+   buyer/user personas.
+8. **Organizations** — 2–4 organizations already delivering this or suggested
+   prospects. Each is `[name, one-line description]` — these also feed
+   `/presales-deal-prep`.
+9. **Signal provenance** — link the supporting posts/comments with `signalType`
+   (`demand` / `thesis` / `gap` / `trend` / `competitive_move`) and a one-line
+   evidence extract.
+10. **Downstream pass-throughs** — `verticalName` (exact input for
+    `/vertical-scorer`), `sourceUrls` (for `/research-to-strategy`),
+    `confidence` (`high` / `medium` / `exploratory`).
+
+Generate 3–7 use cases, ranked by signal density and confidence. Write them
+into `feed-data.json` under the `useCases` key (see `FILE-SCHEMAS.md` for the
+full schema). The Ideas tab is still generated (it may be useful for thought
+leadership content), but `useCases` is the primary strategy output.
+
 ---
 
 ## Step 6: Write and open the feed
 
 Write the feed data to `$CONTENT_HOME/research/{today}/feed-data.json` — a JSON object with
-keys `meta`, `posts`, `ideas` (see `FILE-SCHEMAS.md`).
+keys `meta`, `posts`, `ideas`, and (in strategy mode) `useCases` (see `FILE-SCHEMAS.md`).
 Do **not** write HTML yourself; the generator embeds this JSON into the
 template.
 
@@ -443,8 +493,38 @@ and the **next** run folds them into taste memory at Step 1a. This keeps the
 workflow simple and, crucially, captures reactions the user makes after this
 conversation has ended.
 
-Offer to: dig deeper on any idea, add/remove tracked accounts, or rerun with a
-different topic focus.
+**Content mode (default):** Offer to: dig deeper on any idea, add/remove
+tracked accounts, or rerun with a different topic focus.
+
+**Strategy mode:** Present the use cases as a numbered list with confidence
+levels and signal counts:
+
+> **Use cases surfaced from today's feed:**
+> 1. On-premise LLM for healthcare (HIGH, 4 signals)
+> 2. AI customer support for DTC brands (MEDIUM, 2 signals)
+> 3. ...
+>
+> Pick a number to run the strategy pipeline (`/pipeline-runner`), or:
+> - `/content-research {urls}` — deep-dive research on this use case topic
+> - `/vertical-scorer "{verticalName}"` — score just this vertical
+> - `/ai-strategy-brief "{verticalName}"` — generate a 1-page executive memo
+> - `/branded-pptx-deck` — generate use case realization slides
+> - `/research-to-strategy "{verticalName}" {urls}` — full research + council + deck
+> - `/presales-deal-prep "{company}"` — prep for a specific prospect
+>
+> Or: add/remove tracked accounts, rerun with a different topic focus.
+
+The user picks a use case and a downstream skill to chain into. `/pipeline-runner`
+runs the full 6-stage sequence:
+
+1. **Content Research** — ingest sources into second-brain + Obsidian + knowledge graph
+2. **Vertical Scorer** — GO/WAIT/PASS gate (25+/35 = GO)
+3. **Strategy Brief** — 1-page executive decision memo (.docx)
+4. **PPTX Deck** — branded use case realization slides (.pptx)
+5. **Research-to-Strategy** — full 30-page research + council + deck (optional)
+6. **Deal Prep** — prospect-specific pre-sales materials (optional, per prospect)
+
+Individual skills can also be invoked directly for a faster, narrower output.
 
 ---
 

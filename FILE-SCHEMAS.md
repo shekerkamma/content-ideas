@@ -375,6 +375,143 @@ hide their parent container.
 
 ---
 
+## research/{YYYY-MM-DD}/feed-data.json — `useCases[]` (strategy mode)
+
+**Created by:** `/content-ideas` Step 5c (strategy mode only — when Content Goal
+mentions strategy/pre-sales/consulting/pipeline)
+**Read by:** `/pipeline-runner` (chains into downstream strategy + pre-sales skills)
+**Location:** Same file as above — `useCases` is a top-level sibling of `ideas`
+
+Present only in strategy mode. The HTML renderer ignores unknown keys, so this is
+backward-compatible. Each use case is a market opportunity hypothesis extracted
+from the feed's posts and patterns, structured so downstream skills can consume
+it without transformation.
+
+Each use case follows the **use case realization layout** (ref:
+`ticketforge/scripts/build_yc_usecase_deck.py` `s_usecase()`). This structured
+format maps directly to the branded PPTX slide layout via `/branded-pptx-deck`
+and provides the complete input for downstream strategy and pre-sales skills.
+
+```js
+const FEED_DATA = {
+  meta: { ... },
+  posts: [ ... ],
+  ideas: { ... },
+
+  useCases: [                                  // [] or absent when not in strategy mode
+    {
+      // ── identity ──────────────────────────────────────────────────────
+      id: "uc-001",                            // stable reference for /pipeline-runner
+      kicker: "USE CASE 01  ·  VERTICAL",      // category label (e.g. "HORIZONTAL OPS", "REVENUE", "VERTICAL", "PLATFORM")
+      title: "On-Premise LLM for Healthcare",  // use case name
+
+      // ── left panel: problem → solution ────────────────────────────────
+      challenge: [                             // 3 bullets: the pain points this use case addresses
+        "Patient data must stay on-site — cloud APIs are not allowed",
+        "Clinical AI models require low-latency inference at the bedside",
+        "Hospitals lack in-house ML ops capability to self-host"
+      ],
+      solution: [                              // 3 bullets: how the AI solution addresses each challenge
+        "On-prem inference stack keeps PHI within the hospital network",
+        "Optimized model serving delivers sub-second clinical response",
+        "Managed deployment removes the need for internal ML engineering"
+      ],
+
+      // ── how it works ──────────────────────────────────────────────────
+      how: [                                   // 3 numbered workflow steps (trigger → process → outcome)
+        "Clinical event triggers the model via internal API",
+        "LLM processes patient context against clinical guidelines on-site",
+        "Returns recommendation to the EHR; flags edge cases for physician review"
+      ],
+
+      // ── stats ─────────────────────────────────────────────────────────
+      stats: [                                 // 3 tuples: [number/metric, label] — gold accent boxes
+        ["100%", "data on-prem"],
+        ["<200ms", "inference latency"],
+        ["HIPAA", "compliant by design"]
+      ],
+
+      // ── solution stack ────────────────────────────────────────────────
+      stack: [                                 // 4 layers: [layer name, detail] — navy bar
+        ["EXPERIENCE", "EHR integration / clinical UI"],
+        ["ORCHESTRATION", "Inference routing + failover"],
+        ["CONTEXT", "Patient records + guidelines"],
+        ["ACTUATION", "EHR write-back + audit log"]
+      ],
+
+      // ── systems & users ───────────────────────────────────────────────
+      systems: ["EHR", "PACS", "Internal API", "Audit/Compliance"],  // systems the solution touches
+      users: "CMIO · clinical informatics · IT security",            // buyer/user personas
+
+      // ── right panel: organizations ────────────────────────────────────
+      orgs: [                                  // organizations already delivering this (or prospects)
+        ["Mayo Clinic", "Academic medical center with internal AI research lab"],
+        ["Kaiser Permanente", "Integrated health system, 12M+ members"],
+        ["HCA Healthcare", "Largest for-profit hospital operator in the US"]
+      ],
+
+      // ── signal provenance (feeds downstream skills) ───────────────────
+      signals: [                               // posts/comments that surfaced this use case
+        {
+          postUrl: "https://...",
+          postTitle: "Why hospitals are banning ChatGPT",
+          handle: "@fireship",
+          platform: "youtube",
+          engagement: { views: 320000, likes: 15000 },
+          signalType: "demand",                // "demand" | "thesis" | "gap" | "trend" | "competitive_move"
+          extract: "320K views in 3 days. Top comment: 'We need this but HIPAA says no.'"
+        }
+      ],
+      patterns: [                              // supporting patterns from the feed
+        "4 of top 15 posts mention healthcare + data sovereignty"
+      ],
+
+      // ── downstream skill pass-throughs ────────────────────────────────
+      verticalName: "On-premise LLM for healthcare",  // exact input for /vertical-scorer + /ai-strategy-brief
+      sourceUrls: [                            // exact input for /research-to-strategy
+        "https://youtube.com/watch?v=abc",
+        "https://x.com/sama/status/123"
+      ],
+      confidence: "high",                      // "high" (3+ signals) | "medium" (2) | "exploratory" (1)
+      timestamp: "2026-06-03T00:00:00Z"
+    }
+  ]
+};
+```
+
+**Field types and allowed values (useCases):**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | string | Stable identifier, e.g. `"uc-001"`. Used by `/pipeline-runner`. |
+| `kicker` | string | Category label: `"USE CASE {N}  ·  {CATEGORY}"`. Categories: `HORIZONTAL OPS`, `REVENUE`, `KNOWLEDGE WORK`, `ENGINEERING`, `PLATFORM`, `VERTICAL`, `TRUST`, `PROFESSIONAL`. |
+| `title` | string | Use case name (short, noun-phrase). |
+| `challenge` | string[3] | Exactly 3 bullets: the pain points. |
+| `solution` | string[3] | Exactly 3 bullets: how AI addresses each challenge. |
+| `how` | string[3] | Exactly 3 steps: trigger → process → outcome. |
+| `stats` | [string, string][3] | Exactly 3 tuples: `[metric, label]`. |
+| `stack` | [string, string][4] | Exactly 4 layers: `[layer_name, detail]`. Layer names: `EXPERIENCE`, `ORCHESTRATION`, `CONTEXT`, `ACTUATION`. |
+| `systems` | string[] | Systems the solution touches (3–5 items). |
+| `users` | string | Buyer/user personas (separated by ` · `). |
+| `orgs` | [string, string][] | Organizations: `[name, one-line description]`. 2–4 items. Can be existing players or suggested prospects. |
+| `signals` | object[] | Source posts from the feed (provenance). |
+| `signalType` | string | `"demand"`, `"thesis"`, `"gap"`, `"trend"`, `"competitive_move"` |
+| `confidence` | string | `"high"` (3+ signals), `"medium"` (2), `"exploratory"` (1) |
+| `verticalName` | string | Pass-through to `/vertical-scorer` and `/ai-strategy-brief`. |
+| `sourceUrls` | string[] | Pass-through to `/research-to-strategy`. |
+
+**Downstream skill consumption:**
+
+| Downstream Skill | Consumes Field | As Parameter |
+|-----------------|---------------|-------------|
+| `/vertical-scorer` | `verticalName` | Positional argument (the vertical to score) |
+| `/ai-strategy-brief` | `verticalName` | Positional argument (the topic) |
+| `/research-to-strategy` | `verticalName` + `sourceUrls` | Topic + URL list |
+| `/presales-deal-prep` | `orgs[i][0]` | Company name (one per invocation) |
+| `/branded-pptx-deck` | Entire use case object | Use case realization slide layout |
+
+---
+
 ## research/{YYYY-MM-DD}/feedback.json
 
 **Created by:** the For You page (browser) — server mode writes it via
