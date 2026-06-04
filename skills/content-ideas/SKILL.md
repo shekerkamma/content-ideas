@@ -248,6 +248,11 @@ Stage 1 discovery to find better official product pages, docs, GitHub repos,
 competitive signals, and current operator proof points faster than generic
 search alone.
 
+In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
+an MCP-connected research server or a local CLI/API wrapper for tools such as
+Exa when available. Treat that as the terminal analogue to desktop plugin
+access.
+
 Codex Desktop plugin access is a discovery advantage, not an exception to the
 rest of this workflow. The same local artifact-generation, branded-deck, QA,
 repo-rule, and source-verification requirements still apply.

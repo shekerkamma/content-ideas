@@ -44,6 +44,10 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
   Stage 1 research and strategy/pipeline work. Use them to find better official
   product pages, documentation, GitHub repos, competitive signals, and current
   operator proof points faster than generic search alone.
+- In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
+  an MCP-connected research server or a local CLI/API wrapper for tools such as
+  Exa when available. Treat that as the terminal analogue to desktop plugin
+  access.
 - Codex Desktop plugin access is a discovery advantage, not an exception path.
   The same workflow, delivery, QA, and source-verification rules still apply.
 - Plugin-assisted research improves discovery; it does not replace local file generation,

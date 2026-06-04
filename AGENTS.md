@@ -6,6 +6,9 @@ Research-plugin rule:
 - In Codex Desktop or any host that exposes high-quality research plugins
   such as `exa`, prefer those plugins for source discovery and current web
   research during Stage 1 and strategy work.
+- In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
+  an MCP-connected research server or a local CLI/API wrapper for tools such as
+  Exa when available.
 - Use them to improve discovery of official product pages, docs, GitHub repos,
   competitive signals, and current operator proof points.
 - Codex Desktop plugin access is an advantage for discovery, not an exception
