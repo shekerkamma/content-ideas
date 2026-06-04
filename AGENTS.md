@@ -6,6 +6,12 @@ GBrain knowledge rule:
 - If `gbrain` is available as an MCP server in Claude Code, Codex, or another
   host, use it by default for cross-session memory and retrieval before
   repeating strategy or pipeline research from scratch.
+- Treat `gbrain` as an explicit skill-chaining stage, not just a background
+  preference:
+  - `GBrain Recall` happens before `content-research`, strategy synthesis, or
+    pipeline research begins
+  - `GBrain Write-back` happens after the run when the findings are likely to
+    matter again
 - Use GBrain as the durable knowledge layer for recurring prospects,
   companies, people, verticals, themes, prior research, and named accounts.
 - Treat GBrain retrieval as embedding-backed semantic retrieval by default, not
@@ -16,6 +22,8 @@ GBrain knowledge rule:
   or use case that may have appeared in prior runs.
 - Write durable findings back to GBrain after strategy/pipeline work when they
   are likely to matter again across sessions.
+- When reporting pipeline status, call out `GBrain Recall` as completed if it
+  was used to seed the run.
 - GBrain is not the system of record for deliverables.
 - Pipeline artifacts, briefs, decks, feed data, and client-facing outputs must
   still be written to local repo/run files.

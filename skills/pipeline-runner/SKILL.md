@@ -17,8 +17,12 @@ allowed-tools: Bash, Read, Write, AskUserQuestion
 # pipeline-runner
 
 Chains a use case hypothesis from `/content-ideas` through the AI strategy and
-pre-sales pipeline. Each stage produces a deliverable and gates the next —
-a PASS verdict at Stage 2 stops the pipeline early, saving time.
+pre-sales pipeline. The full chain is:
+
+`GBrain Recall → content-research → vertical-scorer → ai-strategy-brief → branded-pptx-deck → research-to-strategy → presales-deal-prep → GBrain Write-back`
+
+Each stage produces a deliverable and gates the next — a PASS verdict at Stage
+2 stops the pipeline early, saving time.
 
 The pipeline consumes existing skills as-is via their slash commands. No
 business logic lives here — this is pure orchestration.
@@ -73,6 +77,11 @@ entities and themes, not the system of record for deliverables. Treat that
 recall as embedding-backed semantic retrieval by default, not just keyword
 lookup. Prefer semantic recall first; use synthesis only when Stage 1 needs
 merged interpretation rather than simple recall.
+
+Treat this as a named chain stage:
+- `GBrain Recall` must happen before fresh Stage 1 source gathering when prior
+  work may exist
+- reflect that stage in pipeline status when it was used successfully
 
 If the host exposes stronger research plugins such as `exa`, prefer them for
 discovery in this stage so official product pages, docs, GitHub repos,
@@ -132,17 +141,24 @@ Also write durable findings back to GBrain when they are likely to matter again
 across sessions: named prospects, validated source bundles, recurring vertical
 theses, and implementation-stack notes.
 
+This is the closing chain stage:
+- `GBrain Write-back` happens after the run once durable findings are stable
+- write-backs should cover reusable vertical theses, validated source bundles,
+  named accounts, implementation-stack notes, and other cross-run memory
+
 Print status:
 
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources → second-brain + feed-data updated
   ◻ Vertical Score    (pending)
   ◻ Strategy Brief    (pending)
   ◻ PPTX Deck         (pending)
   ◻ Full Strategy     (pending)
   ◻ Deal Prep         (pending)
+  ◻ GBrain Write-back (pending)
 ```
 
 ---

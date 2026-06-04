@@ -253,6 +253,14 @@ retrieval by default, not just keyword lookup. Prefer semantic recall first;
 use synthesis only when the task needs merged interpretation rather than simple
 recall.
 
+Treat this as an explicit chain step, not just a preference note:
+- `GBrain Recall` before fresh strategy-mode discovery or downstream handoff
+- `GBrain Write-back` after the run when the findings should become reusable
+  memory for later `/pipeline-runner`, `/vertical-scorer`, or `/ai-strategy-brief`
+
+When a run uses GBrain successfully, note that in the run status or stage
+summary so the chain is auditable.
+
 GBrain is not the system of record for pipeline deliverables. `feed-data.json`,
 briefs, strategy docs, deck builders, and client-facing artifacts must still be
 written to the local run folder and repo files.

@@ -42,6 +42,11 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
 - If `gbrain` is available as an MCP server, use it by default for cross-session
   memory and retrieval before repeating strategy or pipeline research from
   scratch.
+- Treat `gbrain` as an explicit chain stage:
+  - `GBrain Recall` before `content-research`, strategy synthesis, or pipeline
+    Stage 1 work
+  - `GBrain Write-back` after the run when durable findings should become
+    reusable memory
 - Treat GBrain as the durable knowledge layer for recurring companies, people,
   prospects, verticals, themes, named accounts, and prior research findings.
 - Treat GBrain retrieval as embedding-backed semantic retrieval by default, not
@@ -51,6 +56,8 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
 - Read from GBrain first when the task references an entity or topic that may
   have appeared in prior work, and write durable findings back after the run
   when they are likely to matter again.
+- When a chained run or pipeline uses GBrain, reflect that explicitly in the
+  run status instead of treating it as invisible setup.
 - Do not use GBrain as the system of record for deliverables. Briefs, feed
   data, decks, and client-facing artifacts must still be written to local files
   in the repo or run folders.
