@@ -39,6 +39,21 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
 - `skills/content-ideas/scripts/lib/__init__.py` is a bare package marker — no eager imports.
 - Persistent state lives under `$CONTENT_HOME` (default `~/Documents/Content`), never the cwd.
 - Credentials live in `~/.config/content/.env` (`SCRAPECREATORS_API_KEY`, `SETUP_COMPLETE`).
+- If `gbrain` is available as an MCP server, use it by default for cross-session
+  memory and retrieval before repeating strategy or pipeline research from
+  scratch.
+- Treat GBrain as the durable knowledge layer for recurring companies, people,
+  prospects, verticals, themes, named accounts, and prior research findings.
+- Treat GBrain retrieval as embedding-backed semantic retrieval by default, not
+  just keyword lookup.
+- Prefer semantic recall first; use synthesis only when the task needs merged
+  interpretation rather than simple recall.
+- Read from GBrain first when the task references an entity or topic that may
+  have appeared in prior work, and write durable findings back after the run
+  when they are likely to matter again.
+- Do not use GBrain as the system of record for deliverables. Briefs, feed
+  data, decks, and client-facing artifacts must still be written to local files
+  in the repo or run folders.
 - In Codex Desktop or any host that exposes stronger research plugins such as
   `exa`, prefer those plugins for discovery and current web research during
   Stage 1 research and strategy/pipeline work. Use them to find better official
@@ -48,13 +63,20 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
   an MCP-connected research server or a local CLI/API wrapper for tools such as
   Exa when available. Treat that as the terminal analogue to desktop plugin
   access.
+- Concrete terminal patterns to prefer when available:
+  - Exa MCP over remote/HTTP MCP
+  - a local Exa API wrapper that calls `https://api.exa.ai/search`
 - Codex Desktop plugin access is a discovery advantage, not an exception path.
   The same workflow, delivery, QA, and source-verification rules still apply.
 - Plugin-assisted research improves discovery; it does not replace local file generation,
   branded PPTX build and QA, repo-specific workflow rules, or the requirement to
   verify that final cited sources are primary and current.
+- Host-specific paths must be configurable. Prefer environment variables over
+  machine-specific absolute paths for branded templates, delivery destinations,
+  second-brain exports, and vault locations.
 - Client-facing PowerPoint output must use the branded PowerPoint template at
-  `/home/shekerk/.claude/templates/branded-template.pptx` or the downstream
+  `BRANDED_PPTX_TEMPLATE`, or fall back to
+  `~/.claude/templates/branded-template.pptx`, or the downstream
   `branded-pptx-deck` / `pptxkit` workflow that wraps it. Do not generate
   client-facing `.pptx` decks from ad hoc `python-pptx` slide layouts or blank
   presentations. If the branded template/workflow is unavailable, stop and say
@@ -79,7 +101,8 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
      `*-reviewed.pptx`, `*-blocked.txt` or equivalent
   8. keep the branded deck builder script in the run folder so QA fixes are
      reproducible
-  9. the reviewed deck must be the one copied to the user-facing Windows path
+  9. the reviewed deck must be the one copied to the user-facing delivery path
+     resolved from `CLIENT_DELIVERY_DIR`
   10. minimum visual QA checklist:
       - no red overflow boxes in `preview_pptx.py`
       - no title/subtitle collisions
@@ -115,8 +138,8 @@ It provides persistent knowledge-graph memory across sessions.
 
 ### When to use GBrain vs local files
 - **GBrain pages**: prospects, people, companies, recurring research topics,
-  meeting notes, deal context — anything that compounds across sessions and
-  benefits from graph traversal and synthesis.
+  verticals, use-case themes, meeting notes, deal context — anything that
+  compounds across sessions and benefits from graph traversal and synthesis.
 - **Local files** (`$CONTENT_HOME/research/`): pipeline run artifacts,
   feed-data.json, strategy briefs, PPTX decks — session-scoped deliverables
   that follow the pipeline-runner workflow.
@@ -130,6 +153,9 @@ It provides persistent knowledge-graph memory across sessions.
   explicit user approval — each cron job fires LLM calls.
 - Prefer `search` (keyword, free) over `ask`/`query` (synthesis, costs
   tokens) for simple lookups.
+- For strategy/pipeline recall, prefer embedding-backed semantic retrieval over
+  plain keyword lookup when both are available. Escalate to synthesis only when
+  the task needs aggregation, interpretation, or merged judgment.
 - When writing pages, embeddings fire automatically. Batch writes where
   possible to reduce embedding calls.
 
@@ -149,3 +175,17 @@ gbrain list --type <T>       # list pages (free)
   own Python venv at `agent/.venv/` and Node deps in `node_modules/`.
   Requires `.env` with API keys (Gemini, Tavily, etc.) to run.
 - `~/gbrain/` — GBrain knowledge brain. Bun runtime. 50 skills. MCP server.
+
+## Portable path defaults
+
+Use these environment variables to make the same workflow portable across
+Codex, Claude, and terminal hosts:
+
+- `BRANDED_PPTX_TEMPLATE` — branded `.pptx` template path. Default fallback:
+  `~/.claude/templates/branded-template.pptx`
+- `CLIENT_DELIVERY_DIR` — optional copy-out location for reviewed decks
+- `SECOND_BRAIN_DIR` — optional content-research export directory
+- `OBSIDIAN_VAULT_DIR` — optional vault root for content-research notes
+
+If an env var is unset, do not invent a machine-specific substitute beyond the
+documented fallback. Report the step as blocked or skip the optional export.

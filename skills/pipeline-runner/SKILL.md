@@ -65,6 +65,15 @@ covering:
 4. **Integration points** — what systems it connects to
 5. **Open-source alternatives** — self-hostable options
 
+If `gbrain` is available as an MCP server, use it by default at the start of
+Stage 1 to recall prior company research, recurring prospects, related
+vertical work, prior source bundles, and named-account context before repeating
+research from scratch. Treat it as the durable knowledge layer for recurring
+entities and themes, not the system of record for deliverables. Treat that
+recall as embedding-backed semantic retrieval by default, not just keyword
+lookup. Prefer semantic recall first; use synthesis only when Stage 1 needs
+merged interpretation rather than simple recall.
+
 If the host exposes stronger research plugins such as `exa`, prefer them for
 discovery in this stage so official product pages, docs, GitHub repos,
 competitive/vendor signals, and current operator proof points are found faster
@@ -74,6 +83,10 @@ In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
 an MCP-connected research server or a local CLI/API wrapper for tools such as
 Exa when available. Treat that as the terminal analogue to desktop plugin
 access.
+
+Concrete terminal patterns to prefer when available:
+- Exa MCP over remote/HTTP MCP
+- a local Exa API wrapper that calls `https://api.exa.ai/search`
 
 Codex Desktop plugin access is a discovery advantage, not an exception to the
 pipeline contract. The same local artifact-generation, branded-deck, QA,
@@ -98,9 +111,13 @@ descriptions.
 
 Run `/content-research` with the selected URLs. This produces:
 
-- Second-brain notes in `~/projects/hyundai-peopletech-deck/second-brain/`
-- Obsidian vault entries in `/mnt/c/Users/sheke/Documents/hyundai-ai-vault/content-research/`
+- Second-brain notes in `SECOND_BRAIN_DIR` when configured
+- Obsidian vault entries under `OBSIDIAN_VAULT_DIR/content-research/` when configured
 - Knowledge graph entries via `/graphify`
+
+If `SECOND_BRAIN_DIR` or `OBSIDIAN_VAULT_DIR` are unset in this host, skip
+those exports rather than inventing machine-specific fallback paths. The local
+run folder remains the system of record either way.
 
 After research completes, **update the use case** in `feed-data.json`:
 
@@ -110,6 +127,10 @@ After research completes, **update the use case** in `feed-data.json`:
 - Add new `patterns[]` from cross-source analysis
 - Expand `sourceUrls[]` with all researched URLs
 - Upgrade `confidence` if signal count increased (3+ = high)
+
+Also write durable findings back to GBrain when they are likely to matter again
+across sessions: named prospects, validated source bundles, recurring vertical
+theses, and implementation-stack notes.
 
 Print status:
 
@@ -186,7 +207,8 @@ follows the Canva-adapted use case realization layout.
 
 This is a hard requirement for client-facing output. Always use the branded
 PowerPoint template workflow (`/branded-pptx-deck`, backed by
-`/home/shekerk/.claude/templates/branded-template.pptx` in this environment).
+`BRANDED_PPTX_TEMPLATE`, falling back to
+`~/.claude/templates/branded-template.pptx` when unset).
 Do **not** substitute a hand-built `python-pptx` deck or a blank presentation
 theme for external/client delivery. If the branded workflow is unavailable,
 stop and report the deck stage as blocked.
@@ -237,12 +259,16 @@ The deck pulls data from:
 - All of the above → slide 8
 
 Save to: `$CONTENT_HOME/research/{date}/{topic-slug}-deck.pptx`
-Copy to: `/mnt/c/Users/sheke/OneDrive/Desktop/` for Windows access.
+Copy to: `CLIENT_DELIVERY_DIR` when the host has a configured user-facing
+delivery location.
 
 Recommended filename convention:
 - `{topic-slug}-deck-draft.pptx` while content/layout is still changing
 - `{topic-slug}-deck-reviewed.pptx` after visual QA passes
 - `{topic-slug}-deck-blocked.txt` if the PPTX stage cannot be completed cleanly
+
+If `CLIENT_DELIVERY_DIR` is unset, keep the reviewed deck in the run folder and
+report that no host delivery directory was configured.
 
 Update status:
 
