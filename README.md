@@ -100,7 +100,33 @@ If your `Content Goal` is strategy-, consulting-, or pre-sales-oriented instead 
 - `/research-to-strategy "{verticalName}" {urls...}` for deeper research
 - `/presales-deal-prep "{company}"` for account-specific follow-up
 
-`/pipeline-runner` reads the latest strategy-mode feed and runs the use case through content research, vertical scoring, strategy brief generation, deck creation, and optional strategy/deal-prep stages.
+`/pipeline-runner` reads the latest strategy-mode feed and runs the use case through `GBrain Recall`, content research, vertical scoring, strategy brief generation, deck creation, optional strategy/deal-prep stages, and `GBrain Write-back`.
+
+There is also a repo-local Stage 0/1 runner for the same handoff:
+
+```bash
+python3 skills/content-ideas/scripts/pipeline_runner.py --list
+python3 skills/content-ideas/scripts/pipeline_runner.py 1
+```
+
+That runner resolves the latest strategy-mode `feed-data.json`, selects a use case, creates a local run folder under `runs/`, executes `GBrain Recall`, and writes `content-research.md`, `pipeline-status.md`, `selected-use-case.json`, and the initial `research-notes/` bundle for downstream stages.
+
+The repo also includes a local helper for the Stage 1/closeout memory steps:
+
+```bash
+python3 skills/content-ideas/scripts/gbrain_tool.py recall-note \
+  --query "real estate brokerage AI workflow automation" \
+  --title "GBrain Recall - Real Estate Brokerage AI" \
+  --out runs/2026-06-04-real-estate-domain-use-cases/research-notes/01-gbrain-recall.md
+```
+
+and for durable write-back:
+
+```bash
+python3 skills/content-ideas/scripts/gbrain_tool.py write-back \
+  --slug concepts/real-estate-domain-use-cases \
+  --file runs/2026-06-04-real-estate-domain-use-cases/research-synthesis.md
+```
 
 Concrete example from a real strategy-mode run on June 3, 2026:
 

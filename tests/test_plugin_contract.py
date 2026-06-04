@@ -38,7 +38,11 @@ class SkillFilesTests(unittest.TestCase):
             "assets/for-you-template.html",
             "scripts/scrape.py",
             "scripts/generate_feed.py",
+            "scripts/gbrain_tool.py",
+            "scripts/pipeline_runner.py",
             "scripts/lib/__init__.py",
+            "scripts/lib/gbrain.py",
+            "scripts/lib/strategy_pipeline.py",
             "scripts/lib/pipeline.py",
         ]:
             self.assertTrue((SKILL / rel).exists(), f"missing {rel}")
@@ -261,6 +265,8 @@ class StrategyChainingContractTests(unittest.TestCase):
         text = (REPO / "commands" / "pipeline-runner.md").read_text(encoding="utf-8")
         self.assertIn("Invoke the `pipeline-runner` skill", text)
         self.assertIn("latest /content-ideas feed", text)
+        self.assertIn("GBrain Recall", text)
+        self.assertIn("content-research", text)
         self.assertIn("vertical-scorer", text)
 
     def test_file_schemas_documents_use_case_pass_throughs(self):

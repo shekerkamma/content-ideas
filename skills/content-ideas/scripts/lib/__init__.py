@@ -14,5 +14,7 @@ Split out of the original monolithic scrape.py into small, testable modules:
 - analyze   — per-account baselines + outlier flags
 - urls      — platform detection + handle extraction from a post URL
 - env       — API key loading (env var > ~/.config/content/.env)
+- gbrain    — repo-local gbrain recall/write-back helpers
+- strategy_pipeline — Stage 0/1 use-case orchestration for strategy-mode feeds
 - pipeline  — orchestration (scrape_all, filter_since, fetch_urls)
 """

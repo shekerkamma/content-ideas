@@ -6,6 +6,14 @@ allowed-tools: [Bash, Read, Write, AskUserQuestion]
 
 Invoke the `pipeline-runner` skill (defined in `skills/pipeline-runner/SKILL.md`) with the user's arguments: $ARGUMENTS
 
-Follow the skill's full pipeline: load the latest feed-data.json → pick a use case →
-Stage 1 (vertical-scorer gate) → Stage 2 (ai-strategy-brief) → Stage 3 (research-to-strategy, optional) →
-Stage 4 (presales-deal-prep, optional). Each stage gates the next.
+Follow the skill's full pipeline: load the latest /content-ideas feed → pick a use case →
+`GBrain Recall` → `content-research` → `vertical-scorer` → `ai-strategy-brief` →
+`branded-pptx-deck` → `research-to-strategy` (optional) → `presales-deal-prep` (optional) →
+`GBrain Write-back`. Each stage gates the next.
+
+For repo-local Stage 0/1 execution, the same use-case handoff can be run with:
+
+```bash
+python3 skills/content-ideas/scripts/pipeline_runner.py --list
+python3 skills/content-ideas/scripts/pipeline_runner.py 1
+```
