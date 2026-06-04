@@ -65,6 +65,32 @@ covering:
 4. **Integration points** — what systems it connects to
 5. **Open-source alternatives** — self-hostable options
 
+If the host exposes stronger research plugins such as `exa`, prefer them for
+discovery in this stage so official product pages, docs, GitHub repos,
+competitive/vendor signals, and current operator proof points are found faster
+and with less search noise than generic web search alone.
+
+Codex Desktop plugin access is a discovery advantage, not an exception to the
+pipeline contract. The same local artifact-generation, branded-deck, QA,
+repo-rule, and source-verification requirements still apply.
+
+Plugin-assisted research does **not** replace:
+- local file generation
+- branded PPTX build and QA
+- repo-specific workflow rules
+- verifying that final cited sources are primary and current
+
+If the use case involves agent orchestration, coding automation, MCP servers,
+skills, or OpenHands is named in the source material, include the OpenHands
+GitHub repo and docs in the Stage 1 source set and treat them as the source of
+truth for implementation details:
+- `https://github.com/OpenHands/OpenHands`
+- `https://docs.openhands.dev/`
+
+Use those sources to upgrade `stack[]`, architecture notes, and implementation
+snippets with verified OpenHands primitives rather than generic agent-platform
+descriptions.
+
 Run `/content-research` with the selected URLs. This produces:
 
 - Second-brain notes in `~/projects/hyundai-peopletech-deck/second-brain/`
@@ -153,6 +179,37 @@ Invoke `/branded-pptx-deck` to generate a multi-slide presentation from the
 use case data. The deck uses `pptxkit` from the branded-pptx-deck skill and
 follows the Canva-adapted use case realization layout.
 
+This is a hard requirement for client-facing output. Always use the branded
+PowerPoint template workflow (`/branded-pptx-deck`, backed by
+`/home/shekerk/.claude/templates/branded-template.pptx` in this environment).
+Do **not** substitute a hand-built `python-pptx` deck or a blank presentation
+theme for external/client delivery. If the branded workflow is unavailable,
+stop and report the deck stage as blocked.
+
+Every slide in the deck must carry structured content, not sparse placeholders.
+At minimum:
+- action-title cover with premise + evidence anchors
+- detailed use-case realization slide in the branded layout
+- structured market/proof slide
+- structured architecture/stack slide
+- structured scorecard or risk/controls slide
+- structured roadmap/next-step slide
+
+PPTX QA is required before this stage is considered complete:
+- `Deck.save()` / branded builder validation must pass
+- text overlap, overflow, and collisions must be checked
+- if `preview_pptx.py` is available, review the contact-sheet output
+- if preview tooling is unavailable, report the deck as unreviewed for visual QA
+  rather than presenting it as final client-ready output
+- use explicit deck status: `draft`, `reviewed`, or `blocked`
+- keep the branded builder script with the run artifacts so QA fixes are reproducible
+- deliver the `reviewed` filename, not an earlier draft
+- visual QA checklist:
+  - no red overflow boxes in `preview_pptx.py`
+  - no title/subtitle collisions
+  - no clipped text in stat bars, callout strips, or side panels
+  - footer/page number present on each slide
+
 **Slides to generate:**
 
 1. **Cover** — title, premise, date, source count, vertical score
@@ -176,6 +233,11 @@ The deck pulls data from:
 
 Save to: `$CONTENT_HOME/research/{date}/{topic-slug}-deck.pptx`
 Copy to: `/mnt/c/Users/sheke/OneDrive/Desktop/` for Windows access.
+
+Recommended filename convention:
+- `{topic-slug}-deck-draft.pptx` while content/layout is still changing
+- `{topic-slug}-deck-reviewed.pptx` after visual QA passes
+- `{topic-slug}-deck-blocked.txt` if the PPTX stage cannot be completed cleanly
 
 Update status:
 

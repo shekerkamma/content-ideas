@@ -9,6 +9,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 SKILL = REPO / "skills" / "content-ideas"
+PIPELINE_SKILL = REPO / "skills" / "pipeline-runner"
 
 
 def _json(rel):
@@ -41,6 +42,10 @@ class SkillFilesTests(unittest.TestCase):
             "scripts/lib/pipeline.py",
         ]:
             self.assertTrue((SKILL / rel).exists(), f"missing {rel}")
+
+    def test_pipeline_runner_files_exist(self):
+        self.assertTrue((PIPELINE_SKILL / "SKILL.md").exists(), "missing pipeline-runner/SKILL.md")
+        self.assertTrue((REPO / "commands" / "pipeline-runner.md").exists(), "missing commands/pipeline-runner.md")
 
 
 class FrontmatterTests(unittest.TestCase):
@@ -132,11 +137,22 @@ class CrossHostPackagingTests(unittest.TestCase):
 
     def test_agents_md_delegates_to_claude_md(self):
         # Codex reads AGENTS.md; it should re-use the single CLAUDE.md guidance.
-        self.assertEqual("@CLAUDE.md", (REPO / "AGENTS.md").read_text(encoding="utf-8").strip())
+        agents = (REPO / "AGENTS.md").read_text(encoding="utf-8")
+        self.assertIn("@CLAUDE.md", agents)
+        self.assertIn("OpenHands", agents)
+        self.assertIn("github.com/OpenHands/OpenHands", agents)
+        self.assertIn("exa", agents)
+        self.assertIn("does not replace", agents)
+        self.assertIn("not an exception", agents)
+        self.assertIn("branded-template.pptx", agents)
+        self.assertIn("reviewed", agents)
         self.assertTrue((REPO / "CLAUDE.md").is_file())
 
     def test_slash_command_present(self):
         self.assertTrue((REPO / "commands" / "content-ideas.md").is_file())
+
+    def test_pipeline_runner_command_present(self):
+        self.assertTrue((REPO / "commands" / "pipeline-runner.md").is_file())
 
     def test_session_hook_present(self):
         hooks = _json("hooks/hooks.json")
@@ -149,6 +165,70 @@ class CrossHostPackagingTests(unittest.TestCase):
         text = (SKILL / "SKILL.md").read_text(encoding="utf-8")
         self.assertIn(".codex/plugins/cache", text)
         self.assertIn(".claude/plugins/cache", text)
+
+    def test_claude_md_mentions_openhands_source_of_truth(self):
+        text = (REPO / "CLAUDE.md").read_text(encoding="utf-8")
+        self.assertIn("github.com/OpenHands/OpenHands", text)
+        self.assertIn("docs.openhands.dev", text)
+
+    def test_claude_md_requires_branded_pptx_template(self):
+        text = (REPO / "CLAUDE.md").read_text(encoding="utf-8")
+        self.assertIn("exa", text)
+        self.assertIn("does not replace local file generation", text)
+        self.assertIn("not an exception path", text)
+        self.assertIn("branded-template.pptx", text)
+        self.assertIn("branded-pptx-deck", text)
+        self.assertIn("Do not generate", text)
+        self.assertIn("structured content", text)
+        self.assertIn("PPTX QA is a delivery gate", text)
+        self.assertIn("draft", text)
+        self.assertIn("reviewed", text)
+        self.assertIn("no red overflow boxes", text)
+
+
+class StrategyChainingContractTests(unittest.TestCase):
+    def test_content_ideas_skill_advertises_pipeline_runner_handoff(self):
+        text = (SKILL / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn('mode = "strategy"', text)
+        self.assertIn("useCases", text)
+        self.assertIn("/pipeline-runner", text)
+        self.assertIn("exa", text)
+        self.assertIn("does **not** replace", text)
+        self.assertIn("not an exception", text)
+        self.assertIn("/vertical-scorer", text)
+        self.assertIn("/presales-deal-prep", text)
+
+    def test_pipeline_runner_skill_describes_stage_chain(self):
+        text = (PIPELINE_SKILL / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn("content-research", text)
+        self.assertIn("vertical-scorer", text)
+        self.assertIn("ai-strategy-brief", text)
+        self.assertIn("research-to-strategy", text)
+        self.assertIn("presales-deal-prep", text)
+        self.assertIn("feed-data.json", text)
+        self.assertIn("github.com/OpenHands/OpenHands", text)
+        self.assertIn("exa", text)
+        self.assertIn("does **not** replace", text)
+        self.assertIn("not an exception", text)
+        self.assertIn("branded-template.pptx", text)
+        self.assertIn("Do **not** substitute", text)
+        self.assertIn("Every slide in the deck must carry structured content", text)
+        self.assertIn("PPTX QA is required before this stage is considered complete", text)
+        self.assertIn("Recommended filename convention", text)
+        self.assertIn("deck-reviewed.pptx", text)
+
+    def test_pipeline_runner_command_targets_pipeline_skill(self):
+        text = (REPO / "commands" / "pipeline-runner.md").read_text(encoding="utf-8")
+        self.assertIn("Invoke the `pipeline-runner` skill", text)
+        self.assertIn("latest /content-ideas feed", text)
+        self.assertIn("vertical-scorer", text)
+
+    def test_file_schemas_documents_use_case_pass_throughs(self):
+        text = (REPO / "FILE-SCHEMAS.md").read_text(encoding="utf-8")
+        self.assertIn("useCases", text)
+        self.assertIn("verticalName", text)
+        self.assertIn("sourceUrls", text)
+        self.assertIn("/pipeline-runner", text)
 
 
 if __name__ == "__main__":

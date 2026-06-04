@@ -231,6 +231,33 @@ opposed to audience growth, followers, content creation), set an internal flag:
 (or alongside) content ideas. When in strategy mode, Step 5c generates use
 cases and Step 7 offers pipeline next steps via `/pipeline-runner`.
 
+**OpenHands source of truth for implementation details.** When strategy mode is
+active and the use case involves agent orchestration, coding automation, MCP
+integration, skills, sub-agents, or the source material explicitly references
+OpenHands, verify the implementation stack against:
+- `https://github.com/OpenHands/OpenHands`
+- `https://docs.openhands.dev/`
+
+Use those sources for coding snippets, framework choices, skills/microagents,
+deployment patterns, CLI/headless workflows, and MCP/server integration details.
+Do not invent OpenHands capabilities from analogy or generic agent-tooling lore.
+
+**Research plugins when available.** In Codex Desktop or another host that
+exposes stronger research plugins such as `exa`, prefer those plugins during
+Stage 1 discovery to find better official product pages, docs, GitHub repos,
+competitive signals, and current operator proof points faster than generic
+search alone.
+
+Codex Desktop plugin access is a discovery advantage, not an exception to the
+rest of this workflow. The same local artifact-generation, branded-deck, QA,
+repo-rule, and source-verification requirements still apply.
+
+Plugin-assisted research improves source discovery, but it does **not** replace:
+- local file generation
+- branded PPTX build and QA
+- repo-specific workflow rules
+- verifying that final cited sources are primary and current
+
 **Recall the user's content taste from your memory.** This skill stores an
 evolving taste profile in your project memory (the auto-memory you maintain). Before generating ideas, recall what you know about what this
 user gravitates toward — preferred topics, formats, angles, creators they keep
@@ -442,6 +469,11 @@ signals, build a **use case realization** — the structured format defined in
     `/vertical-scorer`), `sourceUrls` (for `/research-to-strategy`),
     `confidence` (`high` / `medium` / `exploratory`).
 
+If OpenHands is relevant to the use case, prefer verified stack entries such as
+OpenHands SDK agents, skills/repository agents, MCP transports, CLI/headless
+execution, and self-hosted deployment modes rather than generic labels like
+"agent orchestrator" or "custom runtime".
+
 Generate 3–7 use cases, ranked by signal density and confidence. Write them
 into `feed-data.json` under the `useCases` key (see `FILE-SCHEMAS.md` for the
 full schema). The Ideas tab is still generated (it may be useful for thought
@@ -523,6 +555,21 @@ runs the full 6-stage sequence:
 4. **PPTX Deck** — branded use case realization slides (.pptx)
 5. **Research-to-Strategy** — full 30-page research + council + deck (optional)
 6. **Deal Prep** — prospect-specific pre-sales materials (optional, per prospect)
+
+For any client-facing PPTX generated downstream, the deck must use the branded
+PowerPoint template/workflow (`/branded-pptx-deck` / `pptxkit`, backed by
+`/home/shekerk/.claude/templates/branded-template.pptx` in this environment).
+Do not fall back to an unbranded blank `.pptx` just to complete the pipeline.
+Also require structured content on every slide; the PPTX stage is not complete
+if it only contains headings and loose bullets without the branded content
+patterns (use-case realization, scorecards, cards, roadmap, or comparison
+structures as appropriate).
+Treat PPTX QA as part of the deliverable: the deck is not final until overlap,
+overflow, and slide-collision issues have been checked and fixed. If branded
+preview tooling is unavailable, say that visual QA could not be completed.
+Use explicit deck status (`draft`, `reviewed`, `blocked`) and matching filename
+suffixes, and keep the branded builder script with the run artifacts so the deck
+can be regenerated and QA fixes can be reproduced.
 
 Individual skills can also be invoked directly for a faster, narrower output.
 

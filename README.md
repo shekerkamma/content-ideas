@@ -90,6 +90,46 @@ A self-contained HTML page with two tabs:
 
 React to any item and the reaction is saved to `$CONTENT_HOME/research/{date}/feedback.json`, feeding future personalization.
 
+### Strategy mode
+
+If your `Content Goal` is strategy-, consulting-, or pre-sales-oriented instead of audience-growth-oriented, `/content-ideas` also writes `useCases[]` into `feed-data.json`. Those use cases are structured to chain directly into downstream skills:
+
+- `/pipeline-runner 1` for the full staged flow
+- `/vertical-scorer "{verticalName}"` for just the market gate
+- `/ai-strategy-brief "{verticalName}"` for a short executive memo
+- `/research-to-strategy "{verticalName}" {urls...}` for deeper research
+- `/presales-deal-prep "{company}"` for account-specific follow-up
+
+`/pipeline-runner` reads the latest strategy-mode feed and runs the use case through content research, vertical scoring, strategy brief generation, deck creation, and optional strategy/deal-prep stages.
+
+Concrete example from a real strategy-mode run on June 3, 2026:
+
+```text
+/content-ideas
+
+Use cases surfaced from today's feed:
+1. On-Premise LLM for Healthcare (HIGH, 5 signals)
+   - 80% cost reduction vs cloud (JSL benchmarks)
+   - Suggested prospects: Mayo Clinic, Kaiser Permanente, HCA Healthcare, Duke Health
+
+2. Procurement Automation — RFQ → PO → Invoice Match (HIGH, 5 signals)
+   - 85% RFQ cycle time reduction
+   - Suggested prospects: Orkla, Coupa, SAP Ariba, JAGGAER
+```
+
+From there, the concrete chained next step is:
+
+```text
+/pipeline-runner 1
+```
+
+That picks `On-Premise LLM for Healthcare` out of the latest `feed-data.json` and runs it through the staged downstream flow. If you want the narrower path instead, you can also invoke the pass-through fields directly:
+
+```text
+/vertical-scorer "On-premise LLM for healthcare"
+/ai-strategy-brief "On-premise LLM for healthcare"
+```
+
 ## Install
 
 | Surface | Install |
@@ -147,6 +187,7 @@ After that, `/content-ideas` goes straight to the feed. A SessionStart hook prin
 ```
 /content-ideas                       # your full daily feed
 /content-ideas ai video tools        # bias the feed + ideas toward a topic
+/pipeline-runner 1                   # take the first surfaced use case through the strategy pipeline
 ```
 
 Driving the scraper directly (from a checkout):
