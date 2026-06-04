@@ -97,3 +97,55 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
 - Version is tracked in `pyproject.toml`, `.claude-plugin/plugin.json`,
   `.claude-plugin/marketplace.json`, `.codex-plugin/plugin.json`, and the
   `version:` field of `SKILL.md` — keep them identical. `tests/test_plugin_contract.py` enforces this.
+
+## GBrain (MCP server — persistent memory layer)
+
+GBrain is wired as an MCP server (`gbrain serve`) for this project.
+It provides persistent knowledge-graph memory across sessions.
+
+### Location & config
+- Repo: `~/gbrain` (cloned from `github.com/garrytan/gbrain`)
+- Brain: `~/.gbrain/brain.pglite` (local embedded Postgres, zero DB cost)
+- Engine: PGLite
+- Search mode: `conservative` (cheapest tier)
+- Embeddings: `google:gemini-embedding-001` (Gemini free tier — 1,500 req/day)
+- Chat/synthesis: `google:gemini-3.5-flash` (Gemini free tier)
+- Cost: **$0.00/month** on free tier
+- Skills: 50 loaded
+
+### When to use GBrain vs local files
+- **GBrain pages**: prospects, people, companies, recurring research topics,
+  meeting notes, deal context — anything that compounds across sessions and
+  benefits from graph traversal and synthesis.
+- **Local files** (`$CONTENT_HOME/research/`): pipeline run artifacts,
+  feed-data.json, strategy briefs, PPTX decks — session-scoped deliverables
+  that follow the pipeline-runner workflow.
+- **Memory files** (`~/.claude/projects/.../memory/`): behavioral guidance,
+  user preferences, project meta — things that shape how the agent works.
+
+### Cost guardrails
+- Search mode is `conservative`. Do NOT change to `balanced` or `tokenmax`
+  without explicit user approval — cost scales 2.5× to 5× respectively.
+- Dream cycle / enrichment crons are NOT enabled. Do not enable without
+  explicit user approval — each cron job fires LLM calls.
+- Prefer `search` (keyword, free) over `ask`/`query` (synthesis, costs
+  tokens) for simple lookups.
+- When writing pages, embeddings fire automatically. Batch writes where
+  possible to reduce embedding calls.
+
+### GBrain commands (via MCP or CLI)
+```bash
+gbrain search <query>        # keyword search (free)
+gbrain query <question>      # hybrid search + synthesis (costs tokens)
+gbrain get <slug>            # read a page (free)
+gbrain put <slug>            # write/update a page (embedding cost)
+gbrain list --type <T>       # list pages (free)
+```
+
+## Reference repos (cloned locally)
+
+- `~/awesome-llm-apps/generative_ui_agents/` — 7 Generative UI agent demos
+  (Google ADK + CopilotKit AG-UI). All deps installed. Each project has its
+  own Python venv at `agent/.venv/` and Node deps in `node_modules/`.
+  Requires `.env` with API keys (Gemini, Tavily, etc.) to run.
+- `~/gbrain/` — GBrain knowledge brain. Bun runtime. 50 skills. MCP server.
