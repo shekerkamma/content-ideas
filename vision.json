@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "createdAt": "2026-06-05T12:00:00Z",
+    "updatedAt": "2026-06-05T12:00:00Z",
+    "version": "1.1",
+    "plaidVersion": "1.0"
+  },
+  "creator": {
+    "name": "Sheker K",
+    "expertise": "AI strategy consulting, enterprise AI pilot delivery, pre-sales automation",
+    "background": "AI strategy consultant with deep technical build capability. Has built and deployed AI pilots for enterprise manufacturers (Hyundai, automotive). Created an ecosystem of 20+ Claude Code skills that automate the full consulting workflow from prospect research to client delivery."
+  },
+  "purpose": {
+    "whoYouHelp": "Solo AI consultants and small consulting firms (2-10 people) who sell $20K-$100K AI strategy and pilot engagements to enterprise companies",
+    "problemYouSolve": "Pre-sales preparation — researching prospects, writing strategy briefs, building branded decks, and preparing objection scripts — takes 4-8 hours per deal. At 3 deals per week, that's 12-24 hours of unbillable work that doesn't scale.",
+    "desiredTransformation": "From spending half a day manually prepping for each sales meeting to getting a complete, high-quality deal-prep package in 30 minutes — letting consultants focus their time on billable work and client relationships.",
+    "whyYou": "Built and uses this exact pipeline daily on real enterprise deals. Every component is a battle-tested Claude Code skill refined through actual client engagements. The depth of the chain — 6 interconnected skills with quality gates — would take a competitor months to replicate."
+  },
+  "product": {
+    "name": "DealForge",
+    "oneLiner": "AI-powered pre-sales copilot that turns a prospect name into a complete deal-prep package — account briefing, strategy brief, branded deck, and objection scripts — in minutes.",
+    "howItWorks": "Enter a prospect company name and optionally specify a use case or vertical. DealForge runs a 5-stage pipeline: (1) Account research — pulls company context, news, AI maturity signals. (2) Strategy brief — generates a tailored AI opportunity brief. (3) Branded deck — builds a polished .pptx with action titles, use-case slides, and pricing. (4) Objection scripts — prepares responses to likely pushback with coaching notes. (5) Discovery agenda — generates the meeting question framework. Output is a downloadable package: one PDF briefing + one editable .pptx + one objection prep doc.",
+    "keyCapabilities": [
+      "Automated prospect research and account intelligence",
+      "AI strategy brief generation tailored to prospect's industry",
+      "Branded, editable PowerPoint deck with action titles and use-case realization slides",
+      "Objection script generation with coaching notes",
+      "Discovery meeting agenda with prospect-specific questions"
+    ],
+    "platform": "web",
+    "marketDifferentiation": "Not another 'AI writes your slides' tool. DealForge runs a 5-stage pipeline with quality gates at each stage — the same depth a senior consultant would apply manually, but in minutes. Industry-specific strategy briefs, competitive positioning grounded in real market data, and decks with the structure and polish of a Big 4 deliverable.",
+    "magicMoment": "Type a company name. 90 seconds later, open a branded deck that looks like you spent 4 hours on it — with the prospect's industry challenges, a tailored AI strategy, and talking points you'd actually use in the meeting."
+  },
+  "audience": {
+    "primaryUser": "Solo AI consultant, 2-5 years experience, selling $20K-$100K AI strategy/pilot engagements to mid-market companies ($50M-$500M revenue). Technically strong, uses AI tools for coding, but still does pre-sales manually. Active on LinkedIn, follows AI influencers, closes 1-2 deals/month at $30K-$60K average.",
+    "secondaryUsers": [
+      "Small AI consulting firms (2-10 people) where a partner or BD lead does deal prep for the team",
+      "Enterprise solution architects at system integrators who need to prep client-specific AI proposals quickly",
+      "Freelance AI engineers transitioning to consulting who lack pre-sales experience and need structure"
+    ],
+    "currentAlternatives": "Manual process: Google the company, skim LinkedIn, check Crunchbase, open a blank slide deck, write bullets, format slides, think through objections. Some use ChatGPT to draft sections. A few have partial automations but nothing end-to-end.",
+    "frustrations": "Generic outputs that sound AI-generated. Tools that produce slides but not strategy. No tool that connects prospect research to industry-specific recommendations to branded deliverables in one flow. The consultant still has to be the glue between 5 different tools."
+  },
+  "business": {
+    "revenueModel": "subscription",
+    "initialGoal": "5 paying customers at $300/month within 90 days. Revenue target: $1,500 MRR. Validated through concierge delivery (founder runs pipeline manually for early customers).",
+    "sixMonthVision": "50 paying customers, $15K MRR. Self-service web app with template customization. Expand from AI consultants to adjacent personas (solution architects, pre-sales engineers at SaaS companies).",
+    "constraints": "Solo founder with full-time consulting practice. 10-15 hours/week available for product development. No funding needed — bootstrapped from consulting revenue. Must not cannibalize consulting business during transition.",
+    "goToMarket": "Content-led: share before/after deal-prep comparisons on LinkedIn. Free concierge trials for 10 consultants from AI communities (Nate Herk's AIS, IndieHackers, Twitter). Convert best concierge users to paid subscribers. Partner with AI consulting communities for distribution."
+  },
+  "feeling": {
+    "brandPersonality": "Competent, direct, quietly confident. Like a senior partner who prepares flawlessly but doesn't brag about it. Professional without being corporate. The kind of tool where the output speaks for itself.",
+    "toneOfVoice": "Clear, concise, action-oriented. No fluff or marketing speak. 'Here's your deal package' not 'We've leveraged AI to synergistically optimize your pre-sales workflow.' Technical when needed, plain English by default."
+  },
+  "techStack": {
+    "appType": "web",
+    "frontend": {
+      "choice": "Next.js",
+      "rationale": "Server-side rendering for fast load times, API routes for backend logic, strong TypeScript support, large ecosystem."
+    },
+    "backend": {
+      "choice": "Convex",
+      "rationale": "Real-time data layer, built-in scheduling for pipeline jobs, TypeScript end-to-end, generous free tier for early stage."
+    },
+    "database": {
+      "choice": "Convex Database",
+      "rationale": "Comes with Convex — no separate DB to manage. Schema validation, automatic indexing, real-time subscriptions."
+    },
+    "auth": {
+      "choice": "Clerk",
+      "rationale": "Drop-in auth with social login, org management for team accounts later, good Convex integration."
+    },
+    "payments": {
+      "choice": "Polar",
+      "rationale": "Developer-first payments, subscription management, usage-based billing support for future per-deal pricing."
+    }
+  },
+  "tooling": {
+    "codingAgent": "claude-code",
+    "rationale": "Founder's primary development tool. Existing skill ecosystem integrates directly."
+  }
+}
