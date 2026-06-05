@@ -111,6 +111,29 @@ python3 skills/content-ideas/scripts/pipeline_runner.py 1
 
 That runner resolves the latest strategy-mode `feed-data.json`, selects a use case, creates a local run folder under `runs/`, executes `GBrain Recall`, and writes `content-research.md`, `pipeline-status.md`, `selected-use-case.json`, and the initial `research-notes/` bundle for downstream stages.
 
+## Second Brain
+
+This repo also ships a Codex-compatible `second-brain` skill for bootstrapping a
+SimpleBrain-style personal wiki repo. It is intentionally markdown-first and
+tool-agnostic:
+
+- `raw/` for captured inputs
+- `wiki/` for clean durable notes
+- `projects/` for active work
+- `archive/` for processed source inputs
+
+Use `skills/second-brain/scripts/bootstrap_second_brain.sh <path>` to
+initialize a target repo such as `hyundai-ai-vault/`. The bootstrap creates:
+
+- `README.md`
+- `AGENTS.md`
+- `CLAUDE.md`
+- `translate.md`
+- `.gitignore`
+
+`AGENTS.md` is the Codex entrypoint. `CLAUDE.md` is kept in sync for Claude so
+the same repo works in both hosts.
+
 The repo also includes a local helper for the Stage 1/closeout memory steps:
 
 ```bash
