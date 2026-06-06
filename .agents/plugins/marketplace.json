@@ -8,7 +8,7 @@
       "name": "content-ideas",
       "source": {
         "source": "local",
-        "path": "./"
+        "path": "./plugins/content-ideas"
       },
       "policy": {
         "installation": "AVAILABLE",
