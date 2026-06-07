@@ -2,13 +2,9 @@
 name: pipeline-runner
 version: "1.1.0"
 description: >
-  Run a use case from /content-ideas through the AI strategy and pre-sales
-  pipeline. Reads use cases from the latest feed-data.json, lets the user pick
-  one, then chains through: content-research → vertical-scorer →
-  ai-strategy-brief → branded-pptx-deck → research-to-strategy →
-  presales-deal-prep. Each stage produces a deliverable and gates the next.
-  Use when the user picks a use case to pursue, says "run the pipeline", or
-  wants to go from signal to deal prep.
+  Run a selected use case from signal to strategy and deal prep. Reads the
+  latest feed, lets the user choose a use case, and chains the downstream
+  research, scoring, brief, deck, and pre-sales stages.
 argument-hint: "[use case number, name, or 'list']"
 user-invocable: true
 allowed-tools: Bash, Read, Write, AskUserQuestion

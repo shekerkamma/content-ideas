@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080">
+  <title>{{brand_name}} — Simplicity Beats Sophistication</title>
+  <style>
+    /* Tokens from tokens.json */
+    :root {
+      --color-primary:     #0F172A;
+      --color-secondary:   #1E293B;
+      --color-accent:      #22D3EE;
+      --color-background:  #F8FAFC;
+      --color-text:        #0F172A;
+      --color-surface:     #F1F5F9;
+      --color-muted:       #94A3B8;
+      --color-text-on-dark: #F8FAFC;
+      --color-success:     #10B981;
+      --font-display: 'Inter Tight', 'Inter', 'Helvetica Neue', sans-serif;
+      --font-body:    'Inter', 'Helvetica Neue', Arial, sans-serif;
+      --font-mono:    'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      --canvas-padding: 80px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a2e;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding: 48px;
+      justify-content: center;
+      font-family: var(--font-body);
+    }
+
+    .slide {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      overflow: hidden;
+      background: var(--color-primary);
+      color: var(--color-text-on-dark);
+      flex-shrink: 0;
+      transform: scale(0.35);
+      transform-origin: top left;
+      margin-bottom: -877px;
+      margin-right: -702px;
+    }
+
+    /* Masthead */
+    .masthead {
+      display: flex;
+      justify-content: space-between;
+      padding: 32px var(--canvas-padding);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      position: absolute;
+      bottom: 32px;
+      left: 0;
+      right: 0;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--color-muted);
+      opacity: 0.4;
+    }
+    .dot.active {
+      background: var(--color-accent);
+      opacity: 1;
+    }
+
+    /* Content area */
+    .content {
+      position: absolute;
+      top: 100px;
+      left: var(--canvas-padding);
+      right: var(--canvas-padding);
+      bottom: 100px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Accent bar */
+    .accent-bar {
+      width: 60px; height: 4px;
+      background: var(--color-accent);
+      border-radius: 2px;
+      margin-bottom: 32px;
+    }
+
+    /* Cover specific */
+    .cover .content {
+      justify-content: center;
+    }
+    .cover-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 72px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .cover-subtitle {
+      font-size: 24px;
+      color: var(--color-muted);
+      line-height: 1.4;
+    }
+    .cover-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 48px;
+    }
+    .cta-arrow {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .cta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    /* Body slides */
+    .numeral {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 140px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--color-secondary);
+      margin-bottom: 16px;
+    }
+    .slide-heading {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 32px;
+    }
+    .slide-body {
+      font-size: 24px;
+      line-height: 1.55;
+      color: var(--color-muted);
+      max-width: 800px;
+    }
+    .slide-body strong {
+      color: var(--color-text-on-dark);
+      font-weight: 600;
+    }
+
+    /* Code block */
+    .code-block {
+      background: var(--color-secondary);
+      font-family: var(--font-mono);
+      font-size: 20px;
+      line-height: 1.7;
+      padding: 32px;
+      border-radius: 8px;
+      border-left: 3px solid var(--color-accent);
+      margin-top: 32px;
+      max-width: 800px;
+    }
+    .kw { color: var(--color-accent); }
+    .str { color: var(--color-success); }
+    .cmt { color: var(--color-muted); }
+
+    /* Closer slide */
+    .closer .content {
+      justify-content: center;
+    }
+    .closer-quote {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 52px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+      color: var(--color-accent);
+    }
+    .closer-body {
+      font-size: 24px;
+      line-height: 1.55;
+      color: var(--color-muted);
+      max-width: 750px;
+    }
+    .closer-tag {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 28px;
+      margin-top: 48px;
+      color: var(--color-text-on-dark);
+    }
+
+    /* Bullet list */
+    .check-list {
+      list-style: none;
+      margin-top: 24px;
+    }
+    .check-list li {
+      font-size: 24px;
+      color: var(--color-muted);
+      padding: 12px 0;
+      padding-left: 36px;
+      position: relative;
+    }
+    .check-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* Scale label for preview */
+    .slide-label {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      background: var(--color-accent);
+      color: var(--color-primary);
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ SLIDE 1: COVER ═══ -->
+  <div class="slide cover">
+    <div class="masthead">
+      <span>June 2026</span>
+      <span>{{handle}}</span>
+      <span>{{tagline}}</span>
+    </div>
+    <div class="content">
+      <div class="accent-bar"></div>
+      <h1 class="cover-title">Stop<br>Overengineering<br>Your Automation</h1>
+      <p class="cover-subtitle">The best solution has the fewest moving parts. Here's why.</p>
+      <div class="cover-cta">
+        <span class="cta-arrow">&#8594;</span>
+        <span class="cta-label">Swipe to learn</span>
+      </div>
+    </div>
+    <div class="pagination">
+      <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══ SLIDE 2: THE PROBLEM ═══ -->
+  <div class="slide">
+    <div class="masthead">
+      <span>June 2026</span>
+      <span>{{handle}}</span>
+      <span>{{tagline}}</span>
+    </div>
+    <div class="content">
+      <div class="numeral">01</div>
+      <div class="accent-bar"></div>
+      <h2 class="slide-heading">The Problem</h2>
+      <p class="slide-body">
+        Everyone wants the "scalable, enterprise-ready, future-proof" version.<br><br>
+        So they spend <strong>3 months building infrastructure</strong> instead of solving the actual problem.<br><br>
+        Meanwhile, a 20-line script would've been done in 20 minutes.
+      </p>
+    </div>
+    <div class="pagination">
+      <div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══ SLIDE 3: THE REAL QUESTION ═══ -->
+  <div class="slide">
+    <div class="masthead">
+      <span>June 2026</span>
+      <span>{{handle}}</span>
+      <span>{{tagline}}</span>
+    </div>
+    <div class="content">
+      <div class="numeral">02</div>
+      <div class="accent-bar"></div>
+      <h2 class="slide-heading">The Real Question</h2>
+      <p class="slide-body">
+        Here's the thing: before you pick a framework, ask one question.<br><br>
+        <strong>"Does a simple script solve this?"</strong><br><br>
+        If yes, you're done. Ship it.
+      </p>
+    </div>
+    <div class="pagination">
+      <div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══ SLIDE 4: WHAT SIMPLE LOOKS LIKE ═══ -->
+  <div class="slide">
+    <div class="masthead">
+      <span>June 2026</span>
+      <span>{{handle}}</span>
+      <span>{{tagline}}</span>
+    </div>
+    <div class="content">
+      <div class="numeral">03</div>
+      <div class="accent-bar"></div>
+      <h2 class="slide-heading">What Simple Actually Looks Like</h2>
+      <div class="code-block">
+        <span class="kw">import</span> requests<br>
+        <span class="kw">from</span> bs4 <span class="kw">import</span> BeautifulSoup<br>
+        <br>
+        page = requests.get(<span class="str">"https://example.com/prices"</span>)<br>
+        prices = [t.text <span class="kw">for</span> t <span class="kw">in</span><br>
+        &nbsp;&nbsp;BeautifulSoup(page.text).select(<span class="str">".price"</span>)]
+      </div>
+      <p class="slide-body" style="margin-top: 32px;">
+        Four lines. No dependencies beyond requests and bs4.<br>Runs anywhere.
+      </p>
+    </div>
+    <div class="pagination">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══ SLIDE 5: THE FRAMEWORK TRAP ═══ -->
+  <div class="slide">
+    <div class="masthead">
+      <span>June 2026</span>
+      <span>{{handle}}</span>
+      <span>{{tagline}}</span>
+    </div>
+    <div class="content">
+      <div class="numeral">04</div>
+      <div class="accent-bar"></div>
+      <h2 class="slide-heading">The Framework Trap</h2>
+      <p class="slide-body">
+        Look, frameworks aren't bad.<br><br>
+        They're bad when they're <strong>the first thing you reach for.</strong><br><br>
+        Start with the script. If it breaks at scale, THEN add structure.<br><br>
+        Most never need to.
+      </p>
+    </div>
+    <div class="pagination">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══ SLIDE 6: THE TEST ═══ -->
+  <div class="slide">
+    <div class="masthead">
+      <span>June 2026</span>
+      <span>{{handle}}</span>
+      <span>{{tagline}}</span>
+    </div>
+    <div class="content">
+      <div class="numeral">05</div>
+      <div class="accent-bar"></div>
+      <h2 class="slide-heading">Dead Simple Test</h2>
+      <ul class="check-list">
+        <li>Does it run?</li>
+        <li>Does it save someone time?</li>
+        <li>Can you explain it in one sentence?</li>
+      </ul>
+      <p class="slide-body" style="margin-top: 48px;">
+        If yes to all three, <strong>ship it.</strong><br>Stop adding things.
+      </p>
+    </div>
+    <div class="pagination">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- ═══ SLIDE 7: CLOSER ═══ -->
+  <div class="slide closer">
+    <div class="masthead">
+      <span>June 2026</span>
+      <span>{{handle}}</span>
+      <span>{{tagline}}</span>
+    </div>
+    <div class="content">
+      <div class="accent-bar"></div>
+      <p class="closer-quote">The best scraper is the one that actually runs.</p>
+      <p class="closer-body">
+        Not the one with the cleanest architecture, the most tests, or the fanciest dashboard.<br><br>
+        The one that runs. That's it.
+      </p>
+      <p class="closer-tag">{{handle}}</p>
+    </div>
+    <div class="pagination">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot active"></div>
+    </div>
+  </div>
+
+</body>
+</html>

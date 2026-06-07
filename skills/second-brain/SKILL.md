@@ -1,6 +1,6 @@
 ---
 name: second-brain
-description: Bootstrap and maintain a SimpleBrain-style personal wiki repo for Codex and Claude. Use when the user wants a second brain, wiki repo, raw-to-wiki workflow, or a Codex-compatible alternative to an Obsidian-only setup.
+description: Bootstrap and maintain a markdown-first second-brain repo with raw, wiki, project, and archive workflows.
 ---
 
 # Second Brain

@@ -1,0 +1,26 @@
+{
+  "dark-tech": {
+    "description": "Dark technology backgrounds \u2014 circuits, servers, networks",
+    "count": 10,
+    "source": "pexels",
+    "license": "Pexels License (free to use)"
+  },
+  "gradients-abstract": {
+    "description": "Dark gradients, abstract curves, neon glows",
+    "count": 10,
+    "source": "pexels",
+    "license": "Pexels License (free to use)"
+  },
+  "textures": {
+    "description": "Dark surfaces \u2014 concrete, metal, grain, fabric",
+    "count": 10,
+    "source": "pexels",
+    "license": "Pexels License (free to use)"
+  },
+  "code-terminal": {
+    "description": "Code editors, terminals, programming screens",
+    "count": 10,
+    "source": "pexels",
+    "license": "Pexels License (free to use)"
+  }
+}

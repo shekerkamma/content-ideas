@@ -2,13 +2,9 @@
 name: content-ideas
 version: "2.2.0"
 description: >
-  Your For You page for content creators. Scrapes tracked competitors across
-  social media platforms, scores what's performing, and turns it into actionable, differentiated content ideas backed
-  by real engagement data. Use this whenever the user wants competitor/creator
-  research, a content feed or "for you" page, trending-topic ideas in their
-  niche, to see what's working on social, to track what creators are posting,
-  or to generate video/post briefs from what's performing — even if they don't
-  say "find ideas." First run walks through setup.
+  Build a For You feed from tracked competitors and turn it into content ideas.
+  Use for competitor research, trend discovery, and post or video brief
+  generation. First run walks through setup.
 argument-hint: "[topic filter]"
 user-invocable: true
 allowed-tools: Bash, Read, Write, AskUserQuestion

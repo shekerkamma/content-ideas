@@ -4,12 +4,12 @@
     "name": "Bradley Bonanno"
   },
   "metadata": {
-    "description": "Marketplace hosting the content-ideas plugin — competitor tracking and a curated For You feed for content creators."
+    "description": "Marketplace entry for the content-ideas plugin."
   },
   "plugins": [
     {
       "name": "content-ideas",
-      "description": "Track competitors across X, Instagram, TikTok, and YouTube. See what they're posting, what's performing, and get actionable content ideas backed by real engagement data. Ships the content-ideas skill.",
+      "description": "Track competitors, spot what is performing, and turn it into content ideas.",
       "version": "2.2.0",
       "author": {
         "name": "Bradley Bonanno"

@@ -1,0 +1,56 @@
+/* Body Numeral Textured — Template-specific styles */
+
+.body-content {
+  position: absolute;
+  top: 100px;
+  left: var(--canvas-padding);
+  right: var(--canvas-padding);
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.numeral {
+  font-size: 140px;
+  font-weight: 900;
+  color: var(--color-secondary);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  position: relative;
+}
+
+/* Subtle texture overlay on numeral */
+.numeral::after {
+  content: attr(data-num);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  color: var(--color-accent);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  flex: 1;
+}
+
+.slide-heading {
+  color: var(--color-text-on-dark);
+  margin: var(--space-md) 0 0 0;
+}
+
+.slide-body {
+  color: var(--color-muted);
+  max-width: 800px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.code-block {
+  margin-top: var(--space-lg);
+  max-width: 800px;
+}

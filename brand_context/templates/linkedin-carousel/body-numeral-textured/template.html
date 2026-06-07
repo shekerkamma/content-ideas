@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080">
+  <title>{{brand_name}} — Body Slide</title>
+  <link rel="stylesheet" href="../_shared/base.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="canvas canvas--dark">
+
+    <!-- Masthead -->
+    <div class="masthead">
+      <span class="masthead__label">June 2026</span>
+      <span class="masthead__label">{{handle}}</span>
+      <span class="masthead__label">{{tagline}}</span>
+    </div>
+
+    <!-- Body Content -->
+    <div class="body-content">
+
+      <!-- Large Numeral -->
+      <div class="numeral display-xl">
+        <!-- EDIT: Slide number -->
+        01
+      </div>
+
+      <!-- Content Block -->
+      <div class="content-area">
+        <div class="accent-bar"></div>
+
+        <h2 class="slide-heading display-md">
+          <!-- EDIT: Section heading -->
+          Find Your Data Source
+        </h2>
+
+        <p class="slide-body body-lg">
+          <!-- EDIT: Main content — keep to 2-3 short sentences -->
+          Every scraper starts with a URL. Open the page, right-click, inspect. The data you need is in the HTML — you just need to know where to look.
+        </p>
+
+        <!-- Optional: Code snippet -->
+        <div class="code-block">
+          <!-- EDIT: Replace with relevant code -->
+          <span class="keyword">import</span> requests<br>
+          <span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup<br>
+          <br>
+          page = requests.get(<span class="string">"https://example.com"</span>)<br>
+          soup = BeautifulSoup(page.text, <span class="string">"html.parser"</span>)
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <div class="pagination__dot"></div>
+      <div class="pagination__dot pagination__dot--active"></div>
+      <div class="pagination__dot"></div>
+      <div class="pagination__dot"></div>
+      <div class="pagination__dot"></div>
+      <div class="pagination__dot"></div>
+      <div class="pagination__dot"></div>
+    </div>
+
+  </div>
+</body>
+</html>

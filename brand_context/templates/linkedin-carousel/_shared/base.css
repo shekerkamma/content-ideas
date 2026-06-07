@@ -1,0 +1,194 @@
+/* ═══════════════════════════════════════════════════
+   Brand — Shared Base Styles
+   Source of truth: ../../../visual-identity/tokens.json
+   ═══════════════════════════════════════════════════ */
+
+/* --- Color Tokens --- */
+:root {
+  --color-primary:     #0F172A;
+  --color-secondary:   #1E293B;
+  --color-accent:      #22D3EE;
+  --color-background:  #F8FAFC;
+  --color-text:        #0F172A;
+  --color-surface:     #F1F5F9;
+  --color-muted:       #94A3B8;
+  --color-text-on-dark: #F8FAFC;
+  --color-success:     #10B981;
+}
+
+/* --- Typography Tokens --- */
+:root {
+  --font-display: 'Inter Tight', 'Inter', 'Helvetica Neue', sans-serif;
+  --font-body:    'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* --- Spacing Tokens --- */
+:root {
+  --space-2xs:  4px;
+  --space-xs:   8px;
+  --space-sm:   12px;
+  --space-md:   16px;
+  --space-lg:   24px;
+  --space-xl:   32px;
+  --space-2xl:  48px;
+  --space-3xl:  64px;
+  --space-4xl:  96px;
+  --space-5xl:  128px;
+
+  --canvas-padding:    80px;
+  --block-padding-v:   50px;
+  --block-padding-h:   40px;
+}
+
+/* --- Canvas Base --- */
+.canvas {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+.canvas--dark {
+  background: var(--color-primary);
+  color: var(--color-text-on-dark);
+}
+
+/* --- Masthead --- */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg) var(--canvas-padding);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-muted);
+  letter-spacing: 0.02em;
+}
+
+.canvas--dark .masthead {
+  color: var(--color-muted);
+}
+
+.masthead__label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* --- Pagination --- */
+.pagination {
+  display: flex;
+  gap: var(--space-xs);
+  justify-content: center;
+  padding: var(--space-lg) 0;
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 0;
+  right: 0;
+}
+
+.pagination__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-muted);
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.pagination__dot--active {
+  background: var(--color-accent);
+  opacity: 1;
+}
+
+/* --- Typography Scale --- */
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.display-md {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.display-sm {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.body-lg {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.body-md {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* --- Content Block --- */
+.content-block {
+  padding: var(--block-padding-v) var(--block-padding-h);
+}
+
+/* --- Accent Bar --- */
+.accent-bar {
+  width: 60px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* --- Code Block --- */
+.code-block {
+  background: var(--color-secondary);
+  color: var(--color-text-on-dark);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  line-height: 1.7;
+  padding: var(--space-lg);
+  border-radius: 8px;
+  border-left: 3px solid var(--color-accent);
+}
+
+.code-block .keyword { color: var(--color-accent); }
+.code-block .string  { color: var(--color-success); }
+.code-block .comment { color: var(--color-muted); }
