@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "createdAt": "",
+    "updatedAt": "",
+    "version": "1.1",
+    "plaidVersion": "1.0"
+  },
+  "creator": {
+    "name": "",
+    "expertise": "",
+    "background": ""
+  },
+  "purpose": {
+    "whoYouHelp": "",
+    "problemYouSolve": "",
+    "desiredTransformation": "",
+    "whyYou": ""
+  },
+  "product": {
+    "name": "",
+    "oneLiner": "",
+    "howItWorks": "",
+    "keyCapabilities": [],
+    "platform": "web",
+    "marketDifferentiation": "",
+    "magicMoment": ""
+  },
+  "audience": {
+    "primaryUser": "",
+    "secondaryUsers": [],
+    "currentAlternatives": "",
+    "frustrations": ""
+  },
+  "business": {
+    "revenueModel": "subscription",
+    "initialGoal": "",
+    "sixMonthVision": "",
+    "constraints": "",
+    "goToMarket": ""
+  },
+  "feeling": {
+    "brandPersonality": "",
+    "toneOfVoice": ""
+  },
+  "techStack": {
+    "appType": "web",
+    "frontend": {
+      "choice": "",
+      "rationale": ""
+    },
+    "backend": {
+      "choice": "",
+      "rationale": ""
+    },
+    "database": {
+      "choice": "",
+      "rationale": ""
+    },
+    "auth": {
+      "choice": "",
+      "rationale": ""
+    },
+    "payments": {
+      "choice": "",
+      "rationale": ""
+    }
+  },
+  "tooling": {
+    "codingAgent": "claude-code"
+  }
+}

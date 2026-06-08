@@ -13,25 +13,27 @@
 
 > **Goal:** Project scaffolding, auth, and a working dashboard shell. User can sign up, see an empty dashboard, and navigate the app.
 
+**Status:** 5/5 tasks complete
+
 **Agent session prompt:** "Set up the DealForge project: Next.js app with Convex backend, Clerk auth, and a basic dashboard layout. Follow the PRD's repo structure. The dashboard should have an empty state that invites the user to create their first deal."
 
-- [ ] **TASK-001** — Initialize Next.js project with App Router and TypeScript
+- [x] **TASK-001** — Initialize Next.js project with App Router and TypeScript
   Files: `package.json`, `tsconfig.json`, `next.config.ts`
   Notes: Use `npx create-next-app@latest` with TypeScript, App Router, Tailwind.
 
-- [ ] **TASK-002** — Set up Convex backend
+- [x] **TASK-002** — Set up Convex backend
   Files: `convex/schema.ts`, `convex/auth.config.ts`, `convex/_generated/`
   Notes: `npx convex dev` to initialize. Define User, Deal, StageOutput, Package tables per PRD data model.
 
-- [ ] **TASK-003** — Integrate Clerk authentication
+- [x] **TASK-003** — Integrate Clerk authentication
   Files: `app/layout.tsx`, `middleware.ts`, `convex/auth.config.ts`
   Notes: Clerk + Convex integration. Google and GitHub social providers. Middleware protects all routes except landing.
 
-- [ ] **TASK-004** — Build dashboard layout and empty state
+- [x] **TASK-004** — Build dashboard layout and empty state
   Files: `app/dashboard/page.tsx`, `components/DealCard.tsx`, `components/EmptyState.tsx`
   Notes: Card grid layout for deals. Empty state: centered CTA "Enter a prospect name to generate your first deal package." Use Tailwind for styling.
 
-- [ ] **TASK-005** — User record creation on first sign-in
+- [x] **TASK-005** — User record creation on first sign-in
   Files: `convex/users.ts`
   Notes: Convex mutation triggered on first auth. Creates user record with default brandSettings and free plan.
 

@@ -20,6 +20,27 @@ HTML renderer.
 - `commands/content-ideas.md` — Claude Code slash command
 - `hooks/hooks.json` — SessionStart setup preflight (one-line hint, silent when ready)
 
+## Shared Product-Build Skills
+- `skills/plaid/SKILL.md` — Product Led AI Development: idea, validation,
+  planning, `docs/design.md`, launch, and roadmap execution.
+- `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
+  coding, keep solutions minimal, edit surgically, and verify success criteria.
+
+Claude Code project settings are in `.claude/settings.json` and point at these
+repo-local skill files. Codex discovers them through `.codex-plugin/plugin.json`
+because the plugin exposes `"skills": "./skills/"`.
+
+For long-running app builds, use PLAID as the product source of truth and
+Codex/Claude `/goal` as the execution loop:
+1. Read `vision.json`, `docs/product-vision.md`, `docs/prd.md`, and
+   `docs/product-roadmap.md`.
+2. If `docs/design.md` is present, follow it for UI. If it is missing, use the
+   brand guidance in `docs/product-vision.md` and keep the UI restrained.
+3. Execute roadmap tasks in order, one phase at a time.
+4. Mark roadmap checkboxes complete only after implementation and verification.
+5. Run available build, lint, test, and manual verification before reporting a
+   goal achieved.
+
 The skill resolves its own directory from the Codex cache, the Claude plugin
 cache, or a repo checkout — see the resolution block at the top of `SKILL.md`.
 Keep that block in sync if directory names change.

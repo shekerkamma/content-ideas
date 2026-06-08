@@ -1,5 +1,9 @@
 # Build output
 dist/
+.next/
+out/
+node_modules/
+tsconfig.tsbuildinfo
 
 # Python
 __pycache__/
@@ -27,3 +31,4 @@ feedback.json
 
 # OS
 .DS_Store
+node_modules

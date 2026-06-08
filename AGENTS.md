@@ -65,4 +65,28 @@ Client-facing PPTX rule:
 - Copy reviewed decks only to a delivery destination resolved from
   `CLIENT_DELIVERY_DIR` when one is configured for the host
 
+Cross-host product-build skills:
+- Use repo-local skills from `skills/` for both Codex and Claude Code.
+- Use `skills/plaid/SKILL.md` when the user says `PLAID`, `plaid build`,
+  `plaid design`, `execute the roadmap`, `build the app`, asks to generate a
+  PRD/product roadmap/design spec, or asks to continue a PLAID product build.
+- Use `skills/karpathy-guidelines/SKILL.md` for coding, review, or refactoring
+  work so assumptions are explicit, changes stay surgical, and success criteria
+  are verifiable.
+- For Codex `/goal` work, treat the existing PLAID artifacts as the build
+  contract:
+  - `vision.json`
+  - `docs/product-idea.md`
+  - `docs/validation-report.md`
+  - `docs/product-vision.md`
+  - `docs/prd.md`
+  - `docs/product-roadmap.md`
+  - `docs/design.md` when present
+- Start `/goal` only after the relevant PLAID docs and roadmap scope are clear.
+  Goals must name the phase/task scope, acceptance criteria, verification
+  commands, constraints, and stop conditions.
+- When `docs/product-roadmap.md` has unchecked tasks, route ambiguous build
+  requests to PLAID Build and complete roadmap tasks in order. Mark tasks done
+  only after implementation and verification.
+
 @CLAUDE.md
