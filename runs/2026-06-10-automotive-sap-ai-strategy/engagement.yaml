@@ -1,0 +1,36 @@
+id: 2026-06-10-automotive-sap-ai-strategy
+client: global automotive manufacturer (real-use-case test; Hyundai-pattern practice engagement)
+request: >
+  Produce an AI strategy document for the SAP estate of a global automotive
+  manufacturer (CIOS first real-engagement test, owner-requested)
+domains:
+  primary: sap-ai-transformation
+  secondary: [industry-transformation]
+classification:
+  confidence: high
+  pack_gaps: [industry-transformation/automotive]   # sub-pack does not exist — reported, not faked (CIOS-CLS-004)
+state: delivered
+state_log:
+  - {state: scoped, at: 2026-06-10T18:05Z}
+  - {state: researching, at: 2026-06-10T18:10Z}
+  - {state: synthesizing, at: 2026-06-10T18:30Z}
+  - {state: generating, at: 2026-06-10T18:40Z}
+  - {state: delivered, at: 2026-06-10T18:55Z}
+freshness_gate:
+  passed: false
+  notes: >
+    pack v0.2 draft with §2 [NEEDS ACQUISITION] at start → delta REQUIRED and
+    executed (Joule commercial model from SAP primary docs; DSAG adoption;
+    automotive cases). Deliverable ships as draft per CIOS-GOV-001.
+gbrain:
+  recalled: [concepts/generative-ui-sap, deals/generative-ui-enterprise]
+  written: [market/joule-commercial-model-2026]
+deliverables:
+  - {type: strategy, path: deliverables/sap-ai-strategy.md, status: draft}
+assets_created:
+  - consulting-os/domains/sap-ai-transformation/assets/reference-architecture-sap-owned-agent-layer.md
+assets_reused:
+  - consulting-os/domains/ai-native-engineering/assets/reference-architecture-owned-agent-platform.md  # use_count 1→2
+quality_scores:   # CIOS-TST-006
+  output_quality: 4   # rubric-complete, fully cited, draft-status honest; -1: DSAG figure via secondary source, primary unverified
+  context_quality: 4  # pack supplied PoV/maturity-model/rubric/architecture skeleton + GBrain supplied A2UI + PoC proof; market landscape required fresh delta (now curated back)

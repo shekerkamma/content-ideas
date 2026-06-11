@@ -1,0 +1,36 @@
+id: 2026-06-10-acceptance-ane-strategy
+client: (acceptance scenario — hypothetical 400-developer enterprise software org)
+request: >
+  A 400-developer enterprise software organization asks: what should our
+  AI-native engineering strategy be? (CIOS-SPEC v1.0 Part 13.1 golden
+  question 1, executed as full engagement)
+domains:
+  primary: ai-native-engineering
+  secondary: []
+classification:
+  confidence: high          # keyword hits: ai native engineering, coding agents, engineering transformation (CIOS-CLS-001/002)
+  pack_gaps: []
+state: delivered
+state_log:
+  - {state: scoped, at: 2026-06-10T16:05Z}
+  - {state: researching, at: 2026-06-10T16:10Z}
+  - {state: synthesizing, at: 2026-06-10T16:25Z}
+  - {state: generating, at: 2026-06-10T16:40Z}
+  - {state: delivered, at: 2026-06-10T17:05Z}
+freshness_gate:
+  passed: false
+  notes: >
+    pack v0.1 draft at engagement start (CIOS-GOV-001) — acquisition delta
+    executed on gap list (OpenHands docs index, primary source); briefing and
+    deck carry remaining [NEEDS ACQUISITION] flags inline where applicable
+gbrain:
+  recalled: [deals/generative-ui-enterprise, concepts/generative-ui-sap, usecases/predictive-maintenance-ai]
+  written: [concepts/ai-native-engineering-domain]
+deliverables:
+  - {type: executive-briefing, path: deliverables/executive-briefing.md, status: draft}
+  - {type: board-deck, path: deliverables/ai-native-engineering-strategy-reviewed.pptx, status: reviewed}
+assets_created:
+  - consulting-os/domains/ai-native-engineering/assets/reference-architecture-owned-agent-platform.md
+notes: >
+  CLIENT_DELIVERY_DIR unset — copy-out skipped per CIOS-ART-004 (reported,
+  not invented). Acceptance scenario: no real client transmission applies.
