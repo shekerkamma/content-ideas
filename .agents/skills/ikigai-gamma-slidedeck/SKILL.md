@@ -12,7 +12,7 @@ triggers:
   - linkedin ikigai slides
   - linkedin to slides
   - ikigai deck
-version: "1.1"
+version: "1.2"
 validated_on:
   - "runs/2026-06-13-shravan-ikigai-genspark (individual-first framing)"
   - "runs/2026-06-16-srikumar-ikigai (BD/company-first framing, 26 slides, pptxkit path)"
@@ -69,7 +69,14 @@ Profile Source
                 └── .pptx + preview → Desktop copy
       │
       ▼
-[Stage 3] Run Log + Delivery
+[Stage 3] GCC Roadmap Deck (OPTIONAL)  ← BD/company-first mode only
+      │    If user confirms, invoke gcc-roadmap skill:
+      │    → reads ikigai report for company/platform/tier data
+      │    → generates 17-slide time × capability roadmap deck
+      │    → validates + QA previews + delivers to Desktop
+      │
+      ▼
+[Stage 4] Run Log + Delivery
 ```
 
 ---
@@ -247,7 +254,39 @@ If file is locked (PowerPoint open): write to a new name with `-v2` suffix.
 
 ---
 
-## Stage 3 — Run Log
+## Stage 3 — GCC Implementation Roadmap (Optional, BD/company-first only)
+
+After the positioning deck is delivered, if the person's role is BD/sales at a tech
+company (company-first framing), ask the user:
+
+> "Want me to also generate the GCC Implementation Roadmap deck — shows the full
+> 18-month delivery journey (Sprint → Transformation → Partnership × Modernize /
+> Activate / Innovate)? It's 17 slides and uses the company platform data from the
+> ikigai report."
+
+If the user confirms:
+
+1. Read `<name>-ikigai-report.md` to extract:
+   - `COMPANY_NAME`, `BD_PERSON_NAME`, `BD_PERSON_ROLE`
+   - Platform capabilities (map to MODERNIZE / ACTIVATE / INNOVATE layers)
+   - Offer tiers (Sprint, Transformation, Partnership names and prices)
+   - Proof points (deal sizes, client count, key metrics)
+
+2. Invoke the gcc-roadmap skill:
+   ```
+   Skill(skill="gcc-roadmap", args="chain from <name>-ikigai-report.md")
+   ```
+
+3. The skill will generate `<name>-gcc-roadmap-deck-draft.pptx` in the same
+   run folder (or a new run folder if chaining) and copy to Desktop.
+
+4. Update `run-log.md` to record both decks and their delivery status.
+
+If the user declines or the person is a solo founder / individual: skip Stage 3.
+
+---
+
+## Stage 4 — Run Log
 
 Write `runs/YYYY-MM-DD-<name>-ikigai/run-log.md`:
 
@@ -280,6 +319,11 @@ Status: `<gamma-generated | reviewed | draft>`
 
 ## Validation Score
 <score>/100 <label>
+
+## Stage 3 — GCC Roadmap
+<generated | skipped — <reason>>
+- PPTX: <name>-gcc-roadmap-deck-draft.pptx (if generated)
+- Desktop: C:\Users\sheke\OneDrive\Desktop\<filename>.pptx (if generated)
 ```
 
 ---
@@ -322,10 +366,12 @@ Use personal offer tiers, personal case studies, personal proof points.
 
 ## Resources
 
-- Ikigai analysis skill: `.agents/skills/ikigai/SKILL.md`
-- Gamma outline template: `.agents/skills/ikigai-gamma-slidedeck/gamma-outline.md`
-- pptxkit fallback template: `.agents/skills/ikigai-gamma-slidedeck/build_deck_template.py`
-- Validated BD run: `runs/2026-06-16-srikumar-ikigai/` (26 slides, pptxkit path)
-- Validated founder run: `runs/2026-06-13-shravan-ikigai-genspark/`
-- pptxkit API: `/home/shekerk/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
-- Brand palette: `/home/shekerk/.claude/skills/branded-pptx-deck/reference/brand.md`
+- Ikigai analysis skill: `~/.claude/skills/ikigai/SKILL.md`
+- Gamma outline template: `~/.claude/skills/ikigai-gamma-slidedeck/gamma-outline.md`
+- pptxkit fallback template: `~/.claude/skills/ikigai-gamma-slidedeck/build_deck_template.py`
+- Stage 3 gcc-roadmap skill: `~/.claude/skills/gcc-roadmap/SKILL.md`
+- Validated BD run (ikigai deck): `~/content-ideas/runs/2026-06-16-srikumar-ikigai/` (26 slides, pptxkit path)
+- Validated BD run (roadmap deck): `~/content-ideas/runs/2026-06-16-gcc-implementation-roadmap/` (17 slides)
+- Validated founder run: `~/content-ideas/runs/2026-06-13-shravan-ikigai-genspark/`
+- pptxkit API: `~/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
+- Brand palette: `~/.claude/skills/branded-pptx-deck/reference/brand.md`
