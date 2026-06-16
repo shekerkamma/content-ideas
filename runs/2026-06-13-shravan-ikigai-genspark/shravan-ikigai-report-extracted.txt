@@ -1,0 +1,250 @@
+Ikigai Pro Report — Shravan Siramdas IKIGAI PRO — SHRAVAN SIRAMDAS Solo Founder Analysis · Jun 2026
+Content Market Intelligence Report · Ikigai Framework · Independent Venture
+AI Product Engineering
+for Hi-Tech ISVs
+Build the AI features ISVs are losing deals over — delivered by someone who's spent 23 years on both sides of the ISV business, at $32K/month with no 9-month hiring delay.
+92 Validation Score
+$32K Accelerator Tier /mo
+3 Clients to $100K/mo
+B2B2B Multiplier Model
+>95% Gross Margin
+01
+The Core Insight
+Structural Advantage
+He's upstream. One ISV client reaches 500–5,000 of their customers.
+Most AI agency models sell TO end users — dental practices, insurance agencies, manufacturers. Shravan's natural position is one layer above: selling TO the ISVs who build software FOR those end users. One $32K/month engagement with an insurance AMS ISV reaches every one of their 1,000+ agency clients. That's the B2B2B leverage that changes the revenue ceiling entirely — and it maps exactly to 23 years of ISV sales experience he already has.
+02
+Profile
+Experience
+23+ years enterprise sales — Hi-Technology, ISV, Business Platinum Accounts, Large Deals. Currently Head Sales Hi-Tech ISV at Hitachi Digital Services.
+P&L Track Record
+VP ISV Vertical at Estuate — ran a full business unit with P&L ownership. Has built a practice from scratch, not just managed inherited pipeline.
+Domain Depth
+ISV commercial models, enterprise procurement complexity, large deal structuring ($1M+), digital modernization positioning, C-suite relationships across Hi-Tech and ISV sectors.
+Location & Leverage
+Hyderabad, India — delivering to global ISV clients. $32K/month charge → ~$300/month OpenHands infra. Gross margin exceeds 95%. Warm ISV network means zero cold outreach needed for first 3 clients.
+03
+The Four Ikigai Columns
+What He Loves
+Hunting and winning complex enterprise deals
+Strategy conversations with ISV CEOs and CTOs
+Building business units from scratch (P&L at Estuate)
+Digital modernization and transformation positioning
+Large deal complexity — multi-stakeholder, multi-quarter pursuits
+Watching portfolio companies win because of what he helped them build
+What He's Good At
+Opening Fortune 500 and ISV C-suite doors
+Large deal structuring and commercial negotiation
+ISV go-to-market strategy and channel development
+Positioning technology to business buyers (not just IT)
+Running P&L with full business ownership
+Translating complex AI capability into buyer language
+What the World Needs
+ISVs under board pressure to ship AI features by Q4
+Someone who understands ISV commercial models before writing a line of code
+AI product builds that don't require 9–18 months of hiring and ramping
+A boutique that charges ISV rates, not Accenture rates
+AI feature delivery that respects existing product architecture
+A trusted partner, not another vendor
+What Pays
+$20K–$45K/month ISV retainers
+ISVs budget $200K–$500K/year for AI product initiatives
+3 clients = $96K–$135K/month ($1.2M/year)
+India cost structure: >95% gross margin
+Each delivered feature → ISV monetizes 10x through their own customer base
+Large deal closures (commission) as upside layer
+04
+Niche Statement
+AI product engineering for Hi-Technology ISVs ($5M–$100M revenue) that need to embed AI capabilities into their existing software products — so they can deliver AI-powered outcomes to their SMB customers — but cannot afford to hire, ramp, and retain a full AI engineering team.
+Layer 1
+Market
+Hi-Technology ISVs in insurance software, manufacturing MES, healthcare platforms, real estate tech, legal software, field services. SaaSBOOMi, Nasscom Product Conclave, VC portfolio databases.
+Layer 2
+Niche
+$5M–$100M revenue ISVs with "Add AI" on the product roadmap and no execution plan. Board pressure, customer churn risk, competitor AI launches — all creating urgency right now.
+Layer 3
+Problem
+They've promised AI features to customers, investors, or the board. Hiring takes 9–18 months. Large SIs want $800K for 9-month engagements. Freelancers don't understand ISV product architecture. Nobody fits.
+05
+Use Case Portfolio (from AI Engineering Framework)
+The 13 use cases from the framework document don't become Shravan's services — they become features he builds INTO ISV products. Each ISV vertical has a specific AI capability gap. Shravan fills it.
+ISV Vertical AI Feature to Build Framework Source What the ISV Then Sells
+Insurance AMS ISVs (AMS360 competitors) Renewal automation + commission tracking + policy intelligence SMB 2.1 + Insurance AI $200–500/mo/agency AI add-on tier × 1,000 agencies
+Manufacturing MES ISVs Predictive maintenance dashboard + SAP PM integration + anomaly detection UC06 + UC05 $5–10K/mo add-on to each plant customer
+Healthcare Platform ISVs Patient intake automation + FHIR integration + HIPAA-compliant AI portal SMB 2.1 + HIPAA agents Premium AI tier → reduces customer churn + justifies price increase
+Manufacturing Quality ISVs Visual inspection pipeline + defect detection + quality dashboard UC01 + UC05 New AI quality module on existing platform
+Real Estate Tech ISVs Lead scoring + AI lease generation + commission analytics SMB 2.2 AI premium tier → upsell to existing brokerage customers
+Legal Software ISVs Contract generation + billing automation + legal research summarization SMB 2.3 New AI subscription upsell to law firm customers
+Field Services ISVs (HVAC, plumbing) Missed call AI response + job scheduling + route optimization AI agency niche data AI tier → doubles retention + unlocks $2K+/mo upsell
+06
+Market Intelligence
+Avoid
+Where Not to Compete
+Generic AI consulting with no ISV specialization
+Selling directly to SMB end-users ($3–5K/mo dental/agency model) — wrong price point for Shravan's deal size
+Large SI territory (Accenture/TCS) — wrong speed and wrong price tier
+Pure offshore dev shop positioning — commoditized, no ISV product thinking
+Gap to Own
+Nobody Has This Position
+An AI product engineering boutique that speaks ISV commercial language from day one — understands that ISVs need to monetize AI through their customers, not just use it internally. At $20–45K/month, priced between "too cheap to trust" and "too expensive for an ISV." This position is empty.
+Market Signal
+What the Data Says
+70%+ of software products will incorporate AI by 2027 (Gartner)
+Insurance AI market: $8.6B → $59.5B by 2033 (27% CAGR) — every insurance ISV is under pressure
+Manufacturing AI: predictive maintenance delivers 250–300% ROI — ISVs can charge $5–10K/mo per plant
+YC Summer 2026: funded Klaimee (AI insurance agents) — ISV-layer plays attracting top VC attention
+Why Now
+Three Timing Signals
+OpenHands (73,700+ stars, $18.8M Nov 2025) makes AI product delivery production-grade — one architect supervises what used to need 3–5 engineers
+ISVs that don't ship AI features in 2026 are losing renewal conversations to AI-native competitors
+Shravan's 23-year ISV network = warm pipeline before spending a dollar on marketing
+07
+Audience Language Map
+Pain (ISV CEO / CTO)
+"Our board asked us to ship AI features by Q4 and we don't have a plan."
+"We lost a $2M renewal because the competitor had an AI dashboard and we didn't."
+"We hired an AI engineer — 6 months to ramp, then they left."
+"Accenture quoted us $800K for a 9-month engagement. We can't do that."
+"We need AI layered onto our existing stack — not a full rewrite."
+Aspiration
+"Ship a production-grade AI module in 8 weeks, not 18 months."
+"AI features that are native to our product, not bolted on."
+"A team that's accountable for delivery, not just advisory."
+"Enterprise quality at ISV-friendly pricing."
+"Help us build the AI our customers are already asking for."
+Buying Signals
+"Can you work within our existing tech stack?"
+"How long before we can demo this to customers?"
+"Do you understand ISV commercial models and packaging?"
+"What have you built for other ISVs in our space?"
+"Do you handle SAP / FHIR / DocuSign integrations?"
+08
+Validation Score
+Pain Intensity 9 / 10
+Every ISV has "Add AI" on its roadmap and no execution plan. Board pressure, customer churn risk, competitor AI launches — all acute in 2026. Hiring takes 9–18 months. Shravan solves this in weeks.
+Purchasing Power 9 / 10
+ISVs with $5M–$100M revenue budget $200K–$500K/year for AI product initiatives. $32–45K/month is within engineering budget. For a $20M ISV, it's 1.9–2.7% of revenue — strategic, not discretionary.
+Ease to Find 9 / 10
+ISVs cluster at SaaSBOOMi, Nasscom Product Conclave, LinkedIn, VC portfolio databases. Shravan has 23 years of warm ISV relationships — first 3 clients come from the existing Rolodex, not cold outreach.
+Market Growth 10 / 10
+AI feature pressure is existential for ISVs in 2026. 70%+ of software products incorporating AI by 2027. Insurance AI market alone: $8.6B → $59.5B by 2033. Every funded ISV is solving this problem right now.
+Competition Difficulty 8 / 10
+Large SIs: too expensive and slow. Offshore dev shops: no ISV product thinking. Freelancers: no accountability. Few boutiques combine ISV domain depth + AI engineering delivery efficiency at this price point.
+Founder-Market Fit 10 / 10
+23 years selling to and with ISVs. P&L ownership at Estuate ISV Vertical. Hitachi Hi-Tech ISV accounts. He doesn't need to learn the ISV buyer — he's been that buyer's trusted advisor for two decades. This IS his career applied differently.
+92
+out of 100 · Composite (55 raw × 1.67 multiplier)
+EXCEPTIONAL — Highest-confidence startup for this founder profile
+09
+Competitive Landscape
+Competitor Type Pricing Falls Short
+Accenture / TCS / Infosys Large SI $150K–$500K/project Too slow, too expensive for ISV budgets. Minimum 6-month engagement. No ISV product specialization.
+Generic Offshore Dev Shop Offshore team $5K–$15K/mo No ISV domain. No product thinking. Build features in isolation, don't understand ISV commercial models.
+Freelancer (Upwork/Toptal) Individual $50–120/hr No accountability, no product thinking, can't run end-to-end AI feature build. ISVs can't rely on this.
+Off-the-shelf AI tools SaaS add-on $50–500/mo Generic. Can't build ISV-specific AI features. Not embedded in product architecture. No differentiation for ISV's customers.
+Shravan — AI ISV Engineering Boutique Domain-expert AI boutique $20K–$45K/mo Owns the gap: 23 years ISV domain expertise + OpenHands delivery efficiency + product thinking + India margins + accountability for business outcomes.
+10
+Delivery Stack
+Agent Runtime
+OpenHands
+MIT licensed, 73,700+ stars, $18.8M raised. Runs the AI software engineering — writes code, runs tests, submits PRs, debugs. Shravan supervises, doesn't code.
+Specialized Agents
+VoltAgent Subagents (131 free)
+HIPAA-auditor-agent, document-automation-agent, CRM-specialist-agent, IoT-agent, predictive-maintenance-agent. Pre-built for ISV vertical use cases.
+Integration Layer
+MCP Servers (14K+ available)
+SAP, Stripe, FHIR APIs, DocuSign, MQTT, InfluxDB, GitHub, Postgres. Connects AI features to ISV's existing enterprise integrations.
+Foundation Models
+Claude / GPT
+Reasoning and coding backbone. Claude for complex architecture decisions, GPT for specific tasks. Model-agnostic via OpenHands.
+Infrastructure
+$20/mo VPS
+Hetzner or DigitalOcean. Self-hosted OpenHands. No per-seat SaaS licensing. Infrastructure cost stays flat as client count grows.
+Product Memory
+AGENTS.md
+One-time setup documenting ISV product architecture, codebase, integrations. Done once, reused across every feature build — eliminates ramp time on every new sprint.
+11
+The Offer
+Foundation
+$20K /month
+1 active AI feature build per quarter
+OpenHands + Claude running the engineering
+Weekly architecture review call
+AGENTS.md product onboarding setup
+48-hour response time
+Working AI feature in production within 8 weeks
+Accelerator ★ Recommended
+$32K /month
+2–3 concurrent AI feature builds
+Dedicated sprint cadence + async Slack
+Full MCP integration setup (SAP, FHIR, DocuSign)
+Monthly AI product roadmap review
+First feature demo-ready in 4 weeks
+First feature demo-ready in 4 weeks or month 1 is free
+Product Partner
+$45K /month
+Full AI product co-development
+Unlimited feature queue (prioritized by impact)
+Quarterly product strategy sessions
+White-label AI module packaging
+Proactive competitor AI intelligence
+Guaranteed SLA on delivery timelines
+12
+Income Math
+Revenue Goal Formula Monthly
+First revenue 1 Accelerator client (warm network) $32K/mo
+Replace Hitachi VP comp (est. ₹30L+) 2 Accelerator clients $64K/mo
+Hit $100K/mo 3 clients (Accelerator + Partner mix) $96–135K/mo
+Hit $200K/mo 5 clients + 1 junior PM $160–225K/mo
+Agency scale 8 clients + small delivery team $256–360K/mo
+Infrastructure cost: ~$300–500/month (OpenHands VPS + Claude API across 2–3 active clients). Gross margin exceeds 95%. First 3 clients from warm network — zero CAC.
+13
+The B2B2B Multiplier
+This is the structural advantage that distinguishes Shravan's model from every direct-to-SMB AI agency. One ISV client reaches hundreds or thousands of end users — without Shravan ever making a single SMB sales call.
+Shravan
+AI ISV Engineering Boutique
+Builds AI product features for ISVs at $32K/month. One client engagement. One AGENTS.md setup. OpenHands delivers the engineering.
+→
+ISV Client
+Insurance AMS / MES / Healthcare Platform ISV
+Takes the AI module Shravan built, packages it as a premium tier or add-on, and sells it to their 500–2,000 SMB customers at $200–500/mo each.
+→
+ISV's Customers
+Insurance Agencies, Dental Practices, Manufacturers
+500–2,000 SMBs now using the AI feature. Shravan's single engagement reaches an entire market segment — without a single direct SMB sale.
+Example: Shravan builds an AI renewal automation module into an insurance AMS ISV's platform at $32K/month. The ISV packages it as an "AI Renewal Engine" add-on at $300/month/agency. Their 800 agency customers adopt it → $240K/month in new ISV revenue from Shravan's single $32K/month engagement. The ISV renews Shravan for another year without hesitation.
+14
+Your One-Liner
+"I build the AI product capabilities Hi-Tech ISVs are losing deals over — features your customers are demanding and your roadmap can't deliver fast enough. 4 weeks to demo-ready, $32K/month, delivered by someone who's spent 23 years on both sides of the ISV business."
+15
+7-Day Launch Plan
+Days 1–3 Build the Proof Point
+1. Identify the ISV vertical where Shravan has the warmest existing relationships — likely manufacturing MES or insurance software, given Hitachi's focus areas.
+2. Identify the #1 AI feature ISVs in that vertical are losing deals over. Spin up OpenHands on $20/mo VPS. Build a working demo of that one feature against a mock product API. 2–3 days with OpenHands.
+3. Record a 5-minute Loom: "I built [feature X] for a [vertical] ISV using an AI engineering stack. Here's the architecture, here's the demo, here's what it took." This replaces a 40-page proposal.
+4. Post one LinkedIn article framing the demo as a case study. No pitch language — just what was built, why it matters for ISVs, and what it unlocks for their customers.
+Days 4–7 Activate the Network
+5. Identify 10 ISV CEOs/CTOs from Shravan's existing network — Estuate contacts, Hitachi partner ISVs, 23 years of relationships. These are warm, not cold.
+6. Send a personal message (not a LinkedIn template): "Building something new. I've been working on how ISVs can ship AI features without hiring a full team — would love 20 minutes to show you what we put together this week. No pitch."
+7. Book first 3 discovery calls. Goal: hear their roadmap pain in their own words. Those words become the next month of LinkedIn content and outreach hooks.
+8. One of the 10 should be a pilot client at a reduced rate ($15K month 1) in exchange for a written case study and testimonial at month 2.
+16
+12–18 Month Trajectory
+Phase 1
+Month 1–3
+$64K/mo
+2 clients from warm network. Validate delivery model. Build AGENTS.md library for 2 ISV verticals. Accumulate first case studies.
+Phase 2
+Month 3–6
+$96–135K/mo
+3rd client added. Refine 4-week sprint delivery. ISV customer-level impact data accumulated: "X agencies upgraded to premium tier after AI module launch."
+Phase 3
+Month 6–12
+$160–225K/mo
+Case studies unlock larger ISVs ($50M–$100M revenue). Raise pricing to $40–45K/month for new clients. Add 1 junior PM/coordinator for delivery logistics.
+Phase 4
+Month 12–18
+$256K+/mo
+White-label partnership offers from ISVs. "Product Partner" retainers ($45K/mo) with strategic roadmap input. Begin exploring ISV equity partnerships for highest-impact clients.
+Ikigai Pro · Shravan Siramdas · Hitachi Digital Services · Jun 2026
+The market is ready. The relationships already exist. The delivery stack works. The only question is which ISV to call first.
