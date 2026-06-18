@@ -6,6 +6,11 @@
     "/home/shekerk/content-ideas/.agents/skills/ikigai-gamma-slidedeck/SKILL.md",
     "/home/shekerk/content-ideas/.agents/skills/gcc-roadmap/SKILL.md",
     "/home/shekerk/content-ideas/.agents/skills/openhands-niche-agency/SKILL.md",
-    "/home/shekerk/.claude/skills/ai-use-cases-consultant/SKILL.md"
+    "/home/shekerk/.claude/skills/ai-use-cases-consultant/SKILL.md",
+    "/home/shekerk/content-ideas/skill-framework/.agents/skills/code-reviewer/SKILL.md",
+    "/home/shekerk/content-ideas/skill-framework/.agents/skills/deep-research/SKILL.md",
+    "/home/shekerk/content-ideas/skill-framework/.agents/skills/technical-writer/SKILL.md",
+    "/home/shekerk/content-ideas/skill-framework/.agents/skills/openhands-change-validation/SKILL.md",
+    "/home/shekerk/content-ideas/skill-framework/.agents/skills/openhands-pr-artifact-handoff/SKILL.md"
   ]
 }
