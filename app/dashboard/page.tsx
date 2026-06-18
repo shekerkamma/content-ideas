@@ -1,10 +1,15 @@
 import { EmptyState } from "@/components/EmptyState";
 import { EnsureUser } from "@/components/EnsureUser";
+import { NewDealModal } from "@/components/NewDealModal";
 
 export default function DashboardPage() {
+  const authReady = Boolean(
+    process.env.NEXT_PUBLIC_CONVEX_URL && process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+  );
+
   return (
     <main className="min-h-screen bg-paper">
-      <EnsureUser />
+      {authReady ? <EnsureUser /> : null}
       <header className="border-b border-stone-200 bg-ivory">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
           <div>
@@ -25,11 +30,18 @@ export default function DashboardPage() {
               Track prospect research, strategy decks, objection scripts, and downloads.
             </p>
           </div>
-          <button className="rounded-md bg-ink px-4 py-2 text-sm font-semibold text-white" type="button">
-            New deal
-          </button>
+          <div className="flex items-center gap-3">
+            <span className="hidden rounded-full border border-stone-200 bg-white px-3 py-1 text-xs uppercase tracking-[0.18em] text-stone-500 sm:inline">
+              Exploratory
+            </span>
+            {authReady ? <NewDealModal /> : <NewDealModal userId="demo-user" />}
+          </div>
         </div>
         <EmptyState />
+        <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 text-sm text-stone-600">
+          Phase 2 test accounts live in <span className="font-medium text-ink">docs/test-accounts.md</span>. Start with
+          Acme Manufacturing, focus on predictive quality, and compare the output against the rest of the matrix.
+        </div>
       </section>
     </main>
   );

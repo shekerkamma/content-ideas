@@ -65,3 +65,4 @@ Runtime note:
 - Clerk and Convex are scaffolded for Phase 1. Real deployments need Clerk and Convex environment variables.
 - `docs/design.md` is not present, so the UI follows the restrained brand guidance in `docs/product-vision.md`.
 - Phase 2 pipeline work is intentionally out of scope for this snapshot.
+- `docs/test-accounts.md` contains the current exploratory Phase 2 account matrix and the primary account to use first.

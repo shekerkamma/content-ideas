@@ -43,41 +43,43 @@
 
 > **Goal:** The magic moment works end-to-end. User enters a prospect name, pipeline runs 5 stages, outputs are generated and downloadable. This is the MVP.
 
+**Status:** 9/9 tasks complete
+
 **Agent session prompt:** "Build the DealForge pipeline: 5 stages that take a prospect name and produce a deal-prep package. Each stage runs sequentially via Convex scheduled functions. Use Claude API for generation and Exa for research. The pipeline should show real-time progress. Output is a downloadable zip with briefing, deck, and objection scripts."
 
-- [ ] **TASK-006** — New Deal input form (modal)
+- [x] **TASK-006** — New Deal input form (modal)
   Files: `components/NewDealModal.tsx`, `convex/deals.ts`
   Notes: Prospect name (required), industry (dropdown), use case (text). On submit: create Deal record, trigger pipeline.
 
-- [ ] **TASK-007** — Pipeline orchestration
+- [x] **TASK-007** — Pipeline orchestration
   Files: `convex/pipeline.ts`
   Notes: Convex scheduled function that runs stages sequentially. Updates Deal.pipelineProgress and StageOutput records. Handles failures per stage with retry.
 
-- [ ] **TASK-008** — Stage 1: Account Research
+- [x] **TASK-008** — Stage 1: Account Research
   Files: `convex/stages/research.ts`, `lib/search.ts`
   Notes: Query Exa API with prospect name. Extract: company description, industry, size, recent news, AI signals, key people. Store as structured StageOutput. Flag if data is thin.
 
-- [ ] **TASK-009** — Stage 2: Strategy Brief Generation
+- [x] **TASK-009** — Stage 2: Strategy Brief Generation
   Files: `convex/stages/brief.ts`, `lib/ai.ts`
   Notes: Claude API call with research context + industry knowledge. Generate 1-page AI opportunity brief in markdown. Quality check: must mention specific prospect details, not generic.
 
-- [ ] **TASK-010** — Stage 3: Deck Generation
+- [x] **TASK-010** — Stage 3: Deck Generation
   Files: `convex/stages/deck.ts`, `lib/pptx.ts`, `templates/default.pptx`
   Notes: Generate slide content via Claude, then render .pptx. 10-12 slides: cover, exec summary, prospect context, AI opportunity, use-case detail, solution architecture, timeline, pricing, competitive edge, next steps. Upload to Convex file storage.
 
-- [ ] **TASK-011** — Stage 4: Objection Script Generation
+- [x] **TASK-011** — Stage 4: Objection Script Generation
   Files: `convex/stages/objections.ts`
   Notes: Claude API call with research + brief context. Generate top 5 objections with: objection text, response script, coaching note. Output as structured markdown.
 
-- [ ] **TASK-012** — Stage 5: Package Assembly
+- [x] **TASK-012** — Stage 5: Package Assembly
   Files: `convex/stages/package.ts`
   Notes: Bundle brief (render md → PDF), deck (.pptx), objections (.md) into a zip file. Upload zip to Convex file storage. Create Package record with signed URLs.
 
-- [ ] **TASK-013** — Pipeline progress UI
+- [x] **TASK-013** — Pipeline progress UI
   Files: `app/deal/[id]/page.tsx`, `components/PipelineProgress.tsx`
   Notes: 5-step progress bar, real-time updates via Convex subscription. Completed stages show green check + preview. Failed shows red + retry. Use Convex `useQuery` for reactive updates.
 
-- [ ] **TASK-014** — Download package
+- [x] **TASK-014** — Download package
   Files: `app/deal/[id]/page.tsx`, `components/PackageDownload.tsx`
   Notes: Three individual download buttons (brief, deck, objections) + "Download All" zip button. Signed URLs from Convex file storage.
 

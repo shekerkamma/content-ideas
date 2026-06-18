@@ -1,5 +1,5 @@
 import { v } from "convex/values";
-import { mutation } from "./_generated/server";
+import { mutation, query } from "./_generated/server";
 
 const defaultBrandSettings = {
   primaryColor: "#B91C1C",
@@ -38,5 +38,17 @@ export const upsertCurrentUser = mutation({
       createdAt: now,
       updatedAt: now
     });
+  }
+});
+
+export const getCurrentUserByClerkId = query({
+  args: {
+    clerkId: v.string()
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db
+      .query("users")
+      .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.clerkId))
+      .unique();
   }
 });

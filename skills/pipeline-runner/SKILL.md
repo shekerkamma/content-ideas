@@ -1,6 +1,6 @@
 ---
 name: pipeline-runner
-version: "1.1.0"
+version: "1.2.0"
 description: >
   Run a selected use case from signal to strategy and deal prep. Reads the
   latest feed, lets the user choose a use case, and chains the downstream
@@ -15,7 +15,7 @@ allowed-tools: Bash, Read, Write, AskUserQuestion
 Chains a use case hypothesis from `/content-ideas` through the AI strategy and
 pre-sales pipeline. The full chain is:
 
-`GBrain Recall → content-research → vertical-scorer → ai-strategy-brief → branded-pptx-deck → research-to-strategy → presales-deal-prep → GBrain Write-back`
+`last30days → GBrain Recall → content-research → vertical-scorer → ai-strategy-brief → branded-pptx-deck → research-to-strategy → presales-deal-prep → GBrain Write-back`
 
 Each stage produces a deliverable and gates the next — a PASS verdict at Stage
 2 stops the pipeline early, saving time.
@@ -50,6 +50,43 @@ Once selected, confirm:
 > **Suggested prospects:** {orgs joined}
 >
 > Proceed? / Pick a different one / Add a prospect
+
+---
+
+## Stage 0.5: Last 30 Days Signal (real-time engagement)
+
+Invoke `/last30days "{verticalName}"`.
+
+This runs before GBrain Recall and before any source gathering. It pulls real-time engagement signals from Reddit, X/Twitter, YouTube, TikTok, Hacker News, Polymarket, and GitHub — ranked by actual upvotes, likes, and prediction-market money, not editorial curation. Output is a synthesized research brief in conversation context.
+
+Pass the use case `title` or `verticalName` as the query (e.g., `AI agent orchestration for ERP` or `on-premise LLM compliance`). For named-entity topics (product names, company names, person names), the skill generates its own query plan internally.
+
+After the skill completes, extract for downstream use:
+- **Active communities**: which subreddits, X handles, and YouTube channels are most active on this topic
+- **Engagement spikes**: posts or threads with unusually high score (signals timing and framing)
+- **Polymarket odds**: if any prediction markets exist on this vertical, record the odds and payout dates
+- **Competing products or vendors** surfaced in discussions
+- **Practitioner language**: the actual words practitioners use (not vendor copy) — use this to improve Stage 1 source queries and Stage 3 brief framing
+
+These signals feed Stage 1 source selection directly: prefer sources that match the active communities and high-engagement threads found here, and supplement the standard architecture/market/compliance search with specific subreddits, repos, or channels the skill surfaced.
+
+If `SCRAPECREATORS_API_KEY` is not set, the skill runs in degraded mode (web + HN only, no Reddit/X/YouTube API). Still useful — proceed.
+
+Print status:
+
+```
+PIPELINE: {title}
+═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals — Reddit/HN/X/Polymarket/YouTube
+  ◻ GBrain Recall     (pending)
+  ◻ Content Research  (pending)
+  ◻ Vertical Score    (pending)
+  ◻ Strategy Brief    (pending)
+  ◻ PPTX Deck         (pending)
+  ◻ Full Strategy     (pending)
+  ◻ Deal Prep         (pending)
+  ◻ GBrain Write-back (pending)
+```
 
 ---
 
@@ -147,6 +184,7 @@ Print status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals — Reddit/HN/X/Polymarket/YouTube
   ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources → second-brain + feed-data updated
   ◻ Vertical Score    (pending)
@@ -177,6 +215,8 @@ Print status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ◻ Strategy Brief    (pending)
@@ -201,6 +241,8 @@ When the brief is produced, update status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ✓ Strategy Brief    {filename}.docx
@@ -287,6 +329,8 @@ Update status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ✓ Strategy Brief    {filename}.docx
@@ -325,6 +369,8 @@ Update final status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ✓ Strategy Brief    {filename}.docx
@@ -337,10 +383,15 @@ PIPELINE: {title}
 
 ## Notes
 
-- **No downstream skills are modified.** This skill invokes `/content-research`,
-  `/vertical-scorer`, `/ai-strategy-brief`, `/branded-pptx-deck`,
-  `/research-to-strategy`, and `/presales-deal-prep` exactly as a human would —
-  by their slash commands with string arguments.
+- **No downstream skills are modified.** This skill invokes `/last30days`,
+  `/content-research`, `/vertical-scorer`, `/ai-strategy-brief`,
+  `/branded-pptx-deck`, `/research-to-strategy`, and `/presales-deal-prep`
+  exactly as a human would — by their slash commands with string arguments.
+- **Last 30 Days is the signal layer.** Stage 0.5 runs first and surfaces what
+  practitioners are actually saying — the subreddits, X threads, YouTube channels,
+  and prediction markets with real money on the topic. It shapes Stage 1 source
+  selection and Stage 3 brief framing with practitioner language before any
+  formal research begins.
 - **Content research is the foundation.** Stage 1 grounds every subsequent stage
   in real data — the scorer uses researched evidence, the brief cites specific
   numbers, the deck renders verified facts, and deal prep references actual
