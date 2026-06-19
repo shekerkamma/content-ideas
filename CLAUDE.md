@@ -26,6 +26,13 @@ HTML renderer.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
   coding, keep solutions minimal, edit surgically, and verify success criteria.
 
+## Claude Code Director Skill
+- `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):
+  Plan First → Manage Context → Verify The Work → Build The System. Generates
+  PLAN.md, context budget, verification harness, and system evolution notes.
+- Trigger: `/claude-code-director` or "director mode", "plan this properly",
+  "stop vibe coding", "apply the director framework"
+
 Claude Code project settings are in `.claude/settings.json` and point at these
 repo-local skill files. Codex discovers them through `.codex-plugin/plugin.json`
 because the plugin exposes `"skills": "./skills/"`.
@@ -240,3 +247,10 @@ Codex, Claude, and terminal hosts:
 
 If an env var is unset, do not invent a machine-specific substitute beyond the
 documented fallback. Report the step as blocked or skip the optional export.
+
+## Skill Builder
+
+- **skill-builder** (`.claude/skills/skill-builder/SKILL.md`) — guided skill creation and audit tool following Claude Code official best practices.
+- Trigger: `/skill-builder` or "help me build a skill" or "audit this skill"
+- Supports: new skill discovery interview · existing skill audit · frontmatter optimization
+- Technical reference: `.claude/skills/skill-builder/reference.md`
