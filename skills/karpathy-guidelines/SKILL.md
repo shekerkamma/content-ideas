@@ -1,6 +1,7 @@
 ---
 name: karpathy-guidelines
-description: Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
+description: Use when writing, reviewing, or refactoring any code to enforce: surface assumptions before coding, minimum code that solves the problem, surgical edits that touch only what's required, and verifiable success criteria. Always-on behavioral overlay during implementation work. Triggers on "karpathy", "apply karpathy", "coding guardrails", or any coding task in projects where this skill is loaded.
+category: Code Quality & Review
 license: MIT
 ---
 
@@ -65,3 +66,34 @@ For multi-step tasks, state a brief plan:
 ```
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+
+---
+
+## Skill Relationships
+
+### Category
+Code Quality & Review
+
+### Dependencies
+None — standalone behavioral overlay. No file inputs or outputs.
+
+### Relationships
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `claude-code-director` | Behavioral overlay | always-on during any implementation phase | — (modifies HOW coding runs, not what is produced) |
+| `plaid` (Build phase) | Behavioral overlay | always-on when executing `docs/product-roadmap.md` tasks | — |
+| `code-review` / `ce-code-review` | Domain cluster | sibling in the code quality domain; code-review assesses output, karpathy-guidelines governs process | — |
+| `simplify` | Domain cluster | sibling; simplify cleans up after implementation, karpathy-guidelines prevents overcomplication during it | — |
+
+### Runtime Preamble
+This skill has no interactive invocation. It is an always-on overlay: whenever any implementation work runs in a project that has loaded karpathy-guidelines, these four rules govern how Claude codes — not as a checklist to recite, but as internalized behavior.
+
+---
+
+## Gotchas
+
+- **This is a behavioral overlay, not a checklist:** Do not recite these rules to the user before every edit. Internalize them and code accordingly. If a rule is being violated in the current task, name the violation once and correct course.
+- **"Simplicity first" does not mean "no error handling":** It means no error handling for impossible scenarios. Errors that can realistically occur must still be handled.
+- **Surgical changes applies to edits, not new files:** When writing a new file from scratch, write it cleanly. The surgical rule governs changes to existing code — don't touch what you weren't asked to touch.
+- **Goal-driven execution requires a stated plan for multi-step tasks:** For single-line fixes, stating a plan is overkill. Apply judgment — require explicit verification steps only when multiple things could go wrong independently.
+- **Don't use this skill as a reason to slow down trivial tasks:** The guidelines say "for trivial tasks, use judgment." Asking for clarification on a one-liner typo fix is overhead, not caution.

@@ -208,3 +208,40 @@ Invoke in this order, each reads `COMPANY.md → Architecture`:
 - Each skill writes to its section in `COMPANY.md` and confirms before the next skill runs.
 - Stack is Next.js 14+ / Supabase / Vercel / Stripe unless the user overrides with `--stack [description]`.
 - For solo founders: assume 1 engineer, 30-calendar-day timeline, $0 budget for paid infrastructure in month 1.
+
+---
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+None required. Standalone — can start from a product idea alone. `COMPANY.md` is created by this skill.
+
+### Relationships
+
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `saas-replacement-auditor` | Sequential downstream | Tier 3 internal tools phase — audits the SaaS decisions made in Tier 1 Build vs Buy | `COMPANY.md` → Build vs Buy Decisions section |
+| `ai-feature-integrator` | Sequential downstream | Tier 4 AI workflows phase — integrates AI features defined in the AI workflows section | `COMPANY.md` → AI Workflows section + `docs/architecture.md` |
+| `plaid` | Sequential downstream | when post-MVP product management discipline is needed | `COMPANY.md` → entire ledger |
+| `openhands-niche-agency` | Peer / Alternative | complementary — agency model (sell AI services to SMBs) vs founder model (build your own SaaS) | — |
+
+### Runtime Preamble
+
+At invocation, surface this if relevant:
+
+> "Does a COMPANY.md already exist? If yes, I'll read it and resume from the last completed step rather than starting over.
+> After Tier 1 and Tier 2 complete, this pipeline triggers `/saas-replacement-auditor` (Tier 3) and `/ai-feature-integrator` (Tier 4) automatically in sequence."
+
+---
+
+## Gotchas
+
+- **COMPANY.md is the single source of truth — never duplicate content:** Every agent writes to its designated section in COMPANY.md and reads from previous sections. If a builder re-derives scope from scratch instead of reading COMPANY.md → Architecture, it will contradict earlier decisions. Hard rule: builders read COMPANY.md only.
+- **Problem Validator gate is a hard stop:** If the Problem Validator scores below 13 (KILL), do not proceed to the ICP Definer. The pipeline exists to save runway — running a killed idea through 24 agents wastes the founder's time.
+- **Tier 4 AI features require the AI Use-Case Validator gate first:** Never invoke `/ai-feature-integrator` directly from Tier 4 without running the AI Use-Case Validator gate (Step 1 of ai-feature-integrator). Skipping the gate produces AI-wrapped CRUD.
+- **Stack override must propagate to all builders:** If the user overrides the default stack with `--stack [description]`, record the override in COMPANY.md → Architecture immediately. Builders that read COMPANY.md will then use the correct stack. Do not let individual builders default to Next.js + Supabase if the user specified otherwise.
+- **30-day timeline is for 1 engineer:** The timeline assumes a single engineer. If the user has a 2-person team, halve the timeline for parallel work — but the scope audit and feature prioritizer must be re-run to reflect the parallel lanes.
+- **Never surface a "nice to have" feature without a named post-launch date:** Every TIER2-DEFER feature must have a specific post-launch date it gets reconsidered. Open-ended deferral is scope creep in disguise.

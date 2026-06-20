@@ -1,21 +1,7 @@
 ---
 name: plaid
-description: |
-  Product Led AI Development — guides founders from idea to launched product.
-  Six capabilities: Idea (discover a product idea), Validate (pressure-test
-  the idea against fatal flaws, problem reality, competition, and 2-week MVP
-  feasibility), Plan (vision intake + document generation), Design (translate
-  image references into a design.md spec), Launch (go-to-market strategy),
-  and Build (roadmap execution). Use when someone says "PLAID", "plaid idea",
-  "help me find an idea", "product idea", "idea from my business",
-  "idea from my expertise", "plaid validate", "validate my idea",
-  "pressure-test", "is this idea good", "find fatal flaws",
-  "validate the problem", "plan a product", "define my vision",
-  "generate a PRD", "product strategy", "plaid design", "design from image",
-  "translate image to design", "create design.md", "extract design tokens",
-  "plaid launch", "go-to-market", "launch plan", "GTM strategy",
-  "launch playbook", "plaid build", "build the app", "start building",
-  or "execute the roadmap".
+description: Use when someone says "PLAID", "plaid idea", "help me find an idea", "product idea", "plaid validate", "validate my idea", "pressure-test", "is this idea good", "find fatal flaws", "plan a product", "define my vision", "generate a PRD", "product strategy", "plaid design", "design from image", "create design.md", "plaid launch", "go-to-market", "launch plan", "GTM strategy", "plaid build", "build the app", "start building", or "execute the roadmap". Product Led AI Development — full pipeline from idea to launched product.
+category: Business Automation
 license: MIT
 metadata:
   author: plaid-dev
@@ -86,3 +72,45 @@ PLAID chains with the broader skill ecosystem at every phase. See `references/ch
 - When an upstream skill (grill-me, ai-strategy) feeds into PLAID, read its output file and pre-fill the intake — don't re-ask questions already answered.
 - When PLAID feeds into a downstream skill, pass file paths explicitly and validate PLAID output first.
 - For generative UI products (dashboards, agent UIs), PLAID Plan + Build connects to the ADK + AG-UI demo fork pattern. See `references/chaining.md` § Generative UI integration pattern.
+
+---
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+- File system write access to `docs/` directory — required for all document-generating phases.
+- `node` runtime with `scripts/validate-vision.js` — required for schema validation before doc generation.
+
+### Relationships
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `grill-me` | Sequential upstream | when idea/strategy was brainstormed in a prior session | `brainstorms/{date}-{slug}.md` → pre-fills vision intake |
+| `ai-strategy-researcher` | Sequential upstream | when market research was done before planning | research brief → pre-fills Plan vision intake |
+| `vertical-scorer` | Sequential upstream | when idea came from a vertical scoring exercise | scorer output → pre-fills idea context |
+| `claude-code-director` | Sequential downstream | after Plan completes, for structured build execution | `vision.json`, `docs/prd.md`, `docs/product-roadmap.md` |
+| `plan-ceo-review` | Sequential downstream | after Plan completes, for executive review | `docs/prd.md`, `docs/product-vision.md` |
+| `plan-eng-review` | Sequential downstream | after Plan completes, for engineering review | `docs/prd.md` |
+| `plan-design-review` | Sequential downstream | after Plan completes, for design review | `docs/design.md` |
+| `plan-devex-review` | Sequential downstream | after Plan completes, for developer experience review | `docs/prd.md` |
+| `branded-pptx-deck` | Sequential downstream | after Plan, for client-facing deck | `docs/prd.md` → chain through `ai-strategy-brief` first |
+| `presales-deal-prep` | Sequential downstream | when product is a client engagement | `docs/product-vision.md`, `docs/prd.md` |
+| `architecture-to-everything` | Sequential downstream | after Plan or Build for 4-format architecture docs | `docs/prd.md` system design section |
+| `content-ideas` | Sequential downstream | after Launch, for content feed from GTM strategy | `docs/launch-plan.md` |
+| `graphify` | Sequential downstream | after Build, for knowledge graph of codebase | built codebase |
+
+### Runtime Preamble
+At invocation, check whether an upstream brainstorm or strategy file exists before asking intake questions. If `brainstorms/` contains a recent file matching the topic, say: "Found `brainstorms/{file}` — I'll pre-fill the intake from that. Confirm or correct anything that's changed."
+
+---
+
+## Gotchas
+
+- **Always validate before generating docs:** Run `node scripts/validate-vision.js --migrate` before any document generation from `vision.json`. Skipping this produces docs from a stale or broken schema.
+- **Don't re-ask what upstream skills already answered:** If grill-me or ai-strategy-researcher ran first, read their output file and pre-fill — asking again wastes the founder's time and breaks the chain.
+- **Weak Validate verdict blocks auto-advance:** A "Weak" verdict from Validate means more discovery is needed. Do NOT auto-advance to Plan. Route back to Idea.
+- **Design is orthogonal — don't gate it:** Design (`/plaid design`) doesn't require any other PLAID document. Route to it whenever the founder has visual references, regardless of pipeline state.
+- **vision.json is the source of truth:** Docs are generated FROM vision.json, not the other way around. If docs and vision.json drift, re-generate docs from vision.json.
+- **Never scatter doc files:** All PLAID output lives in `docs/`. Never write vision.json or generated docs into arbitrary project subdirectories.

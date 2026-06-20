@@ -142,3 +142,39 @@ Print a short summary to the terminal:
 - Default dev rate for build cost estimates: $150/hr (senior freelancer). Adjust if user specifies their own rate.
 - Default hosting estimate: $20-50/mo for simple CRUD services on Vercel + Supabase free tier.
 - This skill assumes Next.js + Supabase + Vercel stack unless the user specifies otherwise.
+
+---
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+None required. Standalone — can run from an inline tool list.
+- `founders-build-stack` — optional upstream: COMPANY.md produced by the Build Stack contains the SaaS tool decisions from Tier 3
+
+### Relationships
+
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `founders-build-stack` | Sequential upstream (optional) | when auditing the stack of a product built in the Build Stack | `COMPANY.md` (project root) or `docs/saas-audit.md` trigger from Tier 3 |
+| `plaid` | Sequential downstream | REPLACE candidates become build targets in the PLAID product-led roadmap | `docs/saas-audit.md` |
+
+### Runtime Preamble
+
+At invocation, surface this if relevant:
+
+> "Do you have a COMPANY.md from a Founders Build Stack run? If yes, the Build vs Buy decisions from Tier 3 will seed the REPLACE candidate list.
+> After the audit, REPLACE candidates can feed into `/plaid` as build targets in the product roadmap."
+
+---
+
+## Gotchas
+
+- **Never force 3 REPLACE candidates:** If fewer than 3 tools pass the build cost math, use the best CONSOLIDATE or NEGOTIATE action as the third slot. Forcing REPLACE on a tool that doesn't break even in 36 months destroys the audit's credibility.
+- **REPLACE requires medium-or-lower build complexity:** Hard rule — never classify a tool as REPLACE if build complexity is HIGH and strategic value is LOW. Cheap commodity tools (e.g., a $9/mo analytics tool) stay KEEP even if they seem redundant.
+- **Missing cost data blocks the audit:** If the user provides tool names without monthly costs, ask for costs before classifying. Bucketing tools without cost data produces a useless audit.
+- **Year 2 and Year 3 SaaS cost must use 10% inflation:** The 3-year SaaS cost formula compounds at 10%/year. Do not use flat pricing for all 3 years — SaaS vendors raise prices.
+- **Month 1 actions must require zero code:** The 12-month action plan's Month 1 is negotiation and cancellation only. Surfacing a build task in Month 1 breaks the voice rule ("This call / this email / this click saves you $X").
+- **Stack assumption is Next.js + Supabase + Vercel:** All build cost estimates default to this stack. If the user specifies a different stack, adjust hosting and maintenance estimates accordingly before running cost math.

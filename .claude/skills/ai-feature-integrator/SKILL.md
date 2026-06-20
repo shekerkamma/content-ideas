@@ -156,3 +156,39 @@ Write a summary to `ai-workflows/integration-design.md` with: feature descriptio
 - Never hardcode API keys. Use `ANTHROPIC_API_KEY` from env.
 - Rate limiting uses Supabase `ai_usage` table, not in-memory (serverless = stateless).
 - Always verify webhook signatures if AI is triggered via webhook.
+
+---
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+None required. Standalone — can run from a feature description alone.
+- `plaid` — optional upstream: PRD or roadmap from PLAID provides the feature context
+
+### Relationships
+
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `plaid` | Sequential upstream (optional) | when feature comes from a PLAID PRD or roadmap | `docs/prd.md` or `docs/product-roadmap.md` |
+| `claude-code-director` | Sequential downstream | feature spec from this skill feeds into the director's PLAN.md for implementation | `ai-workflows/integration-design.md` |
+
+### Runtime Preamble
+
+At invocation, surface this if relevant:
+
+> "Do you have a PRD or product roadmap from `/plaid`? The feature description and scope from there will sharpen the use-case gate and context assembly design.
+> After this skill produces `ai-workflows/integration-design.md`, pipe it to `/claude-code-director` to generate the PLAN.md and build sequence."
+
+---
+
+## Gotchas
+
+- **AI gate is not optional:** The 4-test gate in Step 1 is a prerequisite, not a formality. If the feature fails "Does it need AI?" (a form or rules engine could solve it), stop and say so. Shipping AI-wrapped CRUD is waste.
+- **Rate limiting must use the database, not in-memory:** Serverless functions (Vercel) are stateless — in-memory counters reset on every cold start. Rate limiting must use the `ai_usage` Supabase table. Never design in-memory rate limiting for a serverless host.
+- **Never surface raw API errors to users:** Every failure mode in the failure table must have a user-facing message that does not mention the API, the model name, or the HTTP status code.
+- **Cost math must use actual token estimates:** Do not use vague cost descriptions. Show the math: input tokens × price + output tokens × price × calls × users = monthly cost. Name the month the hard stop kicks in.
+- **Smoke test must be runnable by a non-engineer:** If verifying success requires reading logs or inspecting a database directly, it is not a smoke test. Rewrite it as 5 observable steps (what the user clicks, what they see).
+- **Model pricing anchor:** Sonnet 4.6 is the default at $3/1M input + $15/1M output. Haiku is ~10× cheaper for volume use cases. Opus is ~5× more expensive for accuracy-critical cases. Always state which model is used in cost math.
