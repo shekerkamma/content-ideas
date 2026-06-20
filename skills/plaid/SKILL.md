@@ -87,6 +87,7 @@ Business Automation
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `founders-build-stack` | Sequential upstream (orchestrator) | when Founder's Build Stack pipeline reaches the product planning phase | COMPANY.md + niche brief → pre-fills PLAID Plan intake |
 | `grill-me` | Sequential upstream | when idea/strategy was brainstormed in a prior session | `brainstorms/{date}-{slug}.md` → pre-fills vision intake |
 | `ai-strategy-researcher` | Sequential upstream | when market research was done before planning | research brief → pre-fills Plan vision intake |
 | `vertical-scorer` | Sequential upstream | when idea came from a vertical scoring exercise | scorer output → pre-fills idea context |
@@ -100,6 +101,7 @@ Business Automation
 | `architecture-to-everything` | Sequential downstream | after Plan or Build for 4-format architecture docs | `docs/prd.md` system design section |
 | `content-ideas` | Sequential downstream | after Launch, for content feed from GTM strategy | `docs/launch-plan.md` |
 | `graphify` | Sequential downstream | after Build, for knowledge graph of codebase | built codebase |
+| `ai-feature-integrator` | Sequential downstream | after Plan phase produces PRD, for adding AI features to the product | `docs/prd.md` AI feature section |
 
 ### Runtime Preamble
 At invocation, check whether an upstream brainstorm or strategy file exists before asking intake questions. If `brainstorms/` contains a recent file matching the topic, say: "Found `brainstorms/{file}` — I'll pre-fill the intake from that. Confirm or correct anything that's changed."

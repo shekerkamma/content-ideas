@@ -1,6 +1,6 @@
 ---
 name: ai-feature-integrator
-description: Use when adding an AI feature to an existing product — covers surface (UI entry point), data flow (context assembly, storage), failure handling (API down, timeouts, empty responses), cost controls (rate limits, token budgets), and observability (logging, alerts). Outputs API route + React component + DB changes + smoke test.
+description: "Use when adding an AI feature to an existing product — covers surface (UI entry point), data flow (context assembly, storage), failure handling (API down, timeouts, empty responses), cost controls (rate limits, token budgets), and observability (logging, alerts). Outputs API route + React component + DB changes + smoke test. Also triggers on: \"add AI to my product\", \"integrate Claude into my app\", \"AI feature design\", \"rate limit my AI calls\"."
 disable-model-invocation: true
 argument-hint: [AI feature description]
 ---

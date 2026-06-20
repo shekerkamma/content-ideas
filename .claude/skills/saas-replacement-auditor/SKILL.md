@@ -1,6 +1,6 @@
 ---
 name: saas-replacement-auditor
-description: Use when someone asks to audit their SaaS stack, find tools they can replace or build in-house, reduce SaaS costs, or compare build-vs-buy for specific tools. Runs 5-bucket classification + 3-year cost math + 12-month action plan.
+description: "Use when someone asks to audit their SaaS stack, find tools they can replace or build in-house, reduce SaaS costs, or compare build-vs-buy for specific tools. Also triggers on: \"SaaS cost reduction\", \"build vs buy\". Runs 5-bucket classification + 3-year cost math + 12-month action plan."
 disable-model-invocation: true
 argument-hint: [path to tool list file OR paste inline]
 ---

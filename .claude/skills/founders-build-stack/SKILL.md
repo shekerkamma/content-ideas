@@ -1,6 +1,6 @@
 ---
 name: founders-build-stack
-description: Use when starting a new SaaS product build, running a founder's build sprint, or orchestrating the 24-agent Founder's Build Stack pipeline (problem validation → ICP → scope → architecture → MVP → internal tools → AI workflows). Sets up COMPANY.md shared state and chains agents in sequence.
+description: "Use when starting a new SaaS product build, running a founder's build sprint, or orchestrating the 24-agent Founder's Build Stack pipeline (problem validation → ICP → scope → architecture → MVP → internal tools → AI workflows). Also triggers on: \"start a SaaS build\", \"founder pipeline\", \"run the build stack\", \"COMPANY.md\". Sets up COMPANY.md shared state and chains agents in sequence."
 disable-model-invocation: true
 argument-hint: [product idea or existing COMPANY.md path]
 ---
