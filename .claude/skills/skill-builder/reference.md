@@ -1,6 +1,6 @@
 # Skill Builder Reference
 
-Complete technical reference for Claude Code skills. This document covers all frontmatter fields, advanced patterns, argument passing, troubleshooting, and how skills fit into your project.
+Complete technical reference for Claude Code skills plus this repo's cross-host skill compatibility rules. This document covers frontmatter fields, host discovery paths, advanced patterns, argument passing, troubleshooting, and how skills fit into your project.
 
 Source: https://code.claude.com/docs/en/skills
 
@@ -90,7 +90,7 @@ Running `/migrate-component SearchBar React Vue` replaces `$0` with `SearchBar`,
 
 ## Skill File Locations
 
-Where you store a skill determines who can use it:
+Where you store a skill determines who can use it. Claude Code, Codex, and OpenHands do not all read the same project roots automatically.
 
 | Location | Path | Applies to | Priority |
 |----------|------|------------|----------|
@@ -104,6 +104,74 @@ When skills share the same name across levels, higher-priority locations win. Pl
 **Monorepo support:** When editing files in subdirectories, Claude Code auto-discovers skills from nested `.claude/skills/` directories (e.g., `packages/frontend/.claude/skills/`).
 
 **Additional directories:** Skills in `.claude/skills/` within `--add-dir` directories are loaded automatically with live change detection.
+
+### Cross-Host Discovery Matrix
+
+| Host | Primary project path | Notes |
+|---|---|---|
+| Claude Code | `.claude/skills/<name>/SKILL.md` | Claude-specific frontmatter and hooks are supported here. |
+| Codex/OpenAI | `.agents/skills/<name>/SKILL.md` or repo-routed `skills/<name>/SKILL.md` | Do not assume Claude frontmatter is enforced. Use body instructions and AGENTS mappings for critical behavior. |
+| OpenHands | `.agents/skills/<name>/SKILL.md` | Prefer OpenHands-style project skills with scripts/references beside `SKILL.md`. |
+| Shared repo convention | `skills/<name>/SKILL.md` | Works only when the host is instructed to read repo-local skills; document the routing in AGENTS/CLAUDE. |
+
+If a skill must work in multiple hosts, name the canonical source and mirror/wrapper strategy. Do not maintain two diverging copies silently.
+
+### Frontmatter Portability
+
+| Field | Claude Code | Codex/OpenAI | Portability rule |
+|---|---|---|---|
+| `name` | Supported | Supported by skill metadata patterns | Portable. Keep lowercase hyphen-case. |
+| `description` | Supported and used for auto-invocation | Supported by skill metadata patterns | Portable. Make it trigger-focused. |
+| `argument-hint` | Supported | Not a reliable safety or routing control | Claude enhancement only. Repeat argument expectations in body. |
+| `allowed-tools` | Supported | Not portable | Put critical permissions/safety in body too. |
+| `context`, `agent` | Claude subagent controls | Not portable | Provide a non-subagent fallback path. |
+| `hooks` | Claude lifecycle controls | Not portable | Treat as enhancement, never the only validator. |
+| `disable-model-invocation`, `user-invocable` | Claude invocation controls | Not portable | Put side-effect/cost warnings in body and runtime preamble. |
+| extra frontmatter fields | Host-dependent | Host-dependent | Avoid unless that host explicitly requires them. |
+
+### Tool Name Mapping
+
+Use host-neutral wording when a workflow must run in more than one host.
+
+| Claude tool wording | Codex/OpenAI equivalent | Note |
+|---|---|---|
+| `Read` | shell reads such as `sed`, `cat`, or `rg` | Prefer `rg` for search. |
+| `Grep` / `Glob` | `rg` / `rg --files` | Keep search commands explicit. |
+| `Edit` / `MultiEdit` | `apply_patch` | Required for manual file edits in Codex. |
+| `Write` | `apply_patch` or host-approved write tool | Avoid shell redirection for manual edits in Codex. |
+| `Bash` | shell command | Escalation/approval rules differ by host. |
+| `AskUserQuestion` | concise chat question, or numbered choices when repo AGENTS says so | Do not rely on a missing interactive tool. |
+| `Task` / subagent | main-thread execution or available multi-agent tool | Document fallback if no subagent tool exists. |
+| `WebSearch` / `WebFetch` | preferred research MCP/plugin, official docs, then generic web fallback | Strategy skills should state source order. |
+
+### Source / Tool Order
+
+**Global default** is defined in `~/.claude/CLAUDE.md` under `# Research Tool Order` and applies to every skill automatically — no per-skill changes required.
+
+A skill adds `## Source / Tool Order` **only when it needs to override the global default** for domain-specific reasons (e.g. `content-research` prefers Firecrawl over Exa; `competitive-intel-sprint` hits GitHub MCP before web search).
+
+**Global order (for reference):**
+1. Read SKILL.md and referenced local files.
+2. GBrain recall (`gbrain search`) — before any external call.
+3. Exa MCP (`mcp__claude_ai_Exa__web_search_exa`) — MUST use if available.
+4. Firecrawl (`/firecrawl` or `mcp__firecrawl__*`) — for full-page URL ingestion.
+5. Specialist MCPs — Microsoft Learn, GitHub, Notion, Google Drive as relevant.
+6. WebSearch — ONLY if steps 2–5 unavailable or return no signal. NEVER first.
+
+**Template for skill-specific override** (paste into SKILL.md only when global order is insufficient):
+
+```markdown
+## Source / Tool Order
+
+1. Read SKILL.md + `<referenced-file.md>`.
+2. GBrain recall — `gbrain search "<topic>"` before any external lookup.
+3. <Primary tool for this skill — e.g. Exa MCP / Firecrawl / GitHub MCP / Microsoft Learn MCP>.
+4. <Secondary tool or official docs source>.
+5. WebSearch — fallback only. NEVER before steps 2–4.
+Write durable findings back to GBrain after the run when findings will recur.
+```
+
+This is intentionally separate from Codex's system `skill-creator`: `skill-builder` audits project-local skills for cross-host behavior; `skill-creator` remains the Codex-native authoring guide.
 
 ---
 
