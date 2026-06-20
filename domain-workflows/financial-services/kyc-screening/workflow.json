@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "brd.workflow.v0.1",
+  "identifier": "urn:air:local:workflow:financial-services:kyc-screening",
+  "displayName": "KYC/AML Screening Workflow",
+  "domain": "financial-services",
+  "businessFunction": "operations",
+  "businessProcess": "kyc-screening",
+  "maturity": "validated-prototype",
+  "sourcePattern": {
+    "repo": "https://github.com/anthropics/financial-services",
+    "path": "plugins/vertical-plugins/operations/skills/kyc-rules",
+    "checkedAt": "2026-06-20"
+  },
+  "triggerEvents": [
+    "new-client-onboarding",
+    "periodic-kyc-refresh",
+    "beneficial-owner-change"
+  ],
+  "inputContracts": [
+    {
+      "name": "parsedApplicantRecord",
+      "type": "application/json",
+      "required": true
+    },
+    {
+      "name": "rulesGrid",
+      "type": "application/json",
+      "sourceOfTruth": true,
+      "required": true
+    }
+  ],
+  "outputContracts": [
+    {
+      "name": "kycDisposition",
+      "type": "application/json",
+      "requiredFields": [
+        "risk_rating",
+        "disposition",
+        "missing_documents",
+        "escalation_reasons",
+        "rule_outcomes"
+      ]
+    },
+    {
+      "name": "reviewerPacket",
+      "type": "text/markdown"
+    }
+  ],
+  "steps": [
+    {
+      "id": "load-inputs",
+      "description": "Load parsed applicant record and trusted rules grid."
+    },
+    {
+      "id": "evaluate-risk",
+      "description": "Apply jurisdiction, applicant type, ownership, PEP, sanctions, adverse media, and source-of-funds rules."
+    },
+    {
+      "id": "check-required-documents",
+      "description": "List received, missing, and expired documents required for applicant type and risk level."
+    },
+    {
+      "id": "route-disposition",
+      "description": "Route to clear, request-docs, escalate-EDD, or decline-recommend without final approval.",
+      "humanReviewGate": true
+    },
+    {
+      "id": "validate-output",
+      "description": "Validate output contract and workflow guardrails."
+    }
+  ],
+  "runtimeProjection": {
+    "agentName": "kyc-screening-workflow",
+    "role": "KYC operations analyst assistant",
+    "entrypoint": "scripts/run_kyc_screening.py",
+    "validator": "scripts/validate_kyc_disposition.py",
+    "sampleInput": "evals/sample-pep-escalation/input.json",
+    "outputs": [
+      "out/kyc-disposition.json",
+      "out/reviewer-packet.md"
+    ]
+  },
+  "validation": {
+    "requiredChecks": [
+      "risk_rating is low, medium, or high",
+      "disposition is clear, request-docs, escalate-EDD, or decline-recommend",
+      "every rule outcome cites a rule id",
+      "missing documents are explicitly listed",
+      "no final approval language is emitted"
+    ]
+  }
+}
+

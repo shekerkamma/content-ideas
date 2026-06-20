@@ -18,6 +18,9 @@ __pycache__/
 .coverage
 .coverage.*
 htmlcov/
+playwright-report/
+test-results/
+domain-workflows/**/out/
 
 # Secrets (credentials normally live in ~/.config/content/.env, never the repo)
 .env

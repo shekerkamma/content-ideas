@@ -48,6 +48,19 @@ Research-plugin rule:
   - repo-specific workflow rules
   - verifying that final sources are primary and current
 
+Playwright rule:
+- Use the root `playwright.config.ts` and npm scripts for browser validation:
+  - `npm run test:e2e` for all e2e specs
+  - `npm run test:e2e:kyc` for the KYC workflow smoke test
+  - `npm run test:e2e:headed` when a visible Chromium run is needed
+- The Playwright config uses `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` when set,
+  then falls back to cached Chromium under `~/.cache/ms-playwright` when
+  present. If no browser is installed, run `npm run test:e2e:install`.
+- If `npm run build` was run while `npm run dev` was still active, restart the
+  dev server before Playwright testing. A stale dev server can serve HTML that
+  points to missing `.next` chunks such as `main-app.js`, preventing hydration.
+- Keep generated `playwright-report/` and `test-results/` out of commits.
+
 Client-facing PPTX rule:
 - Always use the branded PowerPoint template resolved from
   `BRANDED_PPTX_TEMPLATE`, or fall back to

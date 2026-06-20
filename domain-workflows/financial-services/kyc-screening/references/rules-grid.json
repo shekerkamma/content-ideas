@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "kyc.rules.v0.1",
+  "riskLevels": ["low", "medium", "high"],
+  "dispositions": ["clear", "request-docs", "escalate-EDD", "decline-recommend"],
+  "highRiskJurisdictions": ["North Korea", "Iran", "Syria", "Russia"],
+  "requiredDocuments": {
+    "individual": ["government_id", "proof_of_address", "source_of_funds"],
+    "private_company": [
+      "certificate_of_incorporation",
+      "beneficial_ownership_register",
+      "source_of_funds"
+    ],
+    "trust": [
+      "trust_deed",
+      "beneficial_ownership_register",
+      "source_of_funds",
+      "controller_id"
+    ]
+  },
+  "rules": [
+    {
+      "id": "R-JUR-001",
+      "description": "Applicant or beneficial owner from high-risk jurisdiction increases risk to high.",
+      "severity": "high"
+    },
+    {
+      "id": "R-PEP-001",
+      "description": "Confirmed PEP exposure requires enhanced due diligence.",
+      "severity": "high",
+      "disposition": "escalate-EDD"
+    },
+    {
+      "id": "R-SAN-001",
+      "description": "Confirmed sanctions hit requires decline recommendation and reviewer escalation.",
+      "severity": "critical",
+      "disposition": "decline-recommend"
+    },
+    {
+      "id": "R-AM-001",
+      "description": "Confirmed or possible adverse media requires enhanced due diligence.",
+      "severity": "high",
+      "disposition": "escalate-EDD"
+    },
+    {
+      "id": "R-DOC-001",
+      "description": "Missing required onboarding documents must be listed for request or escalation.",
+      "severity": "medium",
+      "disposition": "request-docs"
+    },
+    {
+      "id": "R-OWN-001",
+      "description": "Opaque or missing beneficial ownership information increases risk.",
+      "severity": "medium"
+    },
+    {
+      "id": "R-SOF-001",
+      "description": "Missing or vague source of funds requires document request and may contribute to escalation.",
+      "severity": "medium",
+      "disposition": "request-docs"
+    }
+  ]
+}
+

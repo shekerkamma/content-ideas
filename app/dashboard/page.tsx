@@ -1,6 +1,7 @@
 import { EmptyState } from "@/components/EmptyState";
 import { EnsureUser } from "@/components/EnsureUser";
 import { NewDealModal } from "@/components/NewDealModal";
+import Link from "next/link";
 
 export default function DashboardPage() {
   const authReady = Boolean(
@@ -41,6 +42,11 @@ export default function DashboardPage() {
         <div className="mt-6 rounded-lg border border-stone-200 bg-white p-4 text-sm text-stone-600">
           Phase 2 test accounts live in <span className="font-medium text-ink">docs/test-accounts.md</span>. Start with
           Acme Manufacturing, focus on predictive quality, and compare the output against the rest of the matrix.
+        </div>
+        <div className="mt-4 rounded-lg border border-stone-200 bg-white p-4 text-sm text-stone-600">
+          <Link className="font-semibold text-ink underline-offset-4 hover:underline" href="/domain-workflows/kyc-screening">
+            Open KYC workflow
+          </Link>
         </div>
       </section>
     </main>

@@ -1,0 +1,6 @@
+{
+  "risk_rating": "high",
+  "disposition": "escalate-EDD",
+  "missing_documents": ["source_of_funds"],
+  "must_include_rule_ids": ["R-PEP-001", "R-AM-001", "R-DOC-001", "R-SOF-001"]
+}

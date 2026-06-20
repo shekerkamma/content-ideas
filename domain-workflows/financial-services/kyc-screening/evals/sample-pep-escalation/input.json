@@ -1,0 +1,37 @@
+{
+  "applicant_id": "APP-001",
+  "applicant_name": "Northstar Family Holdings Ltd.",
+  "applicant_type": "private_company",
+  "jurisdiction": "United Kingdom",
+  "source_of_funds": "",
+  "beneficial_owners": [
+    {
+      "name": "Jane Doe",
+      "ownership_percent": 55,
+      "pep_declared": true,
+      "nationality": "United Kingdom"
+    },
+    {
+      "name": "Nominee Services Ltd.",
+      "ownership_percent": 20,
+      "pep_declared": false,
+      "nationality": "Cayman Islands"
+    }
+  ],
+  "documents_received": [
+    {
+      "type": "certificate_of_incorporation",
+      "status": "received"
+    },
+    {
+      "type": "beneficial_ownership_register",
+      "status": "received"
+    }
+  ],
+  "screening_results": {
+    "sanctions": "no-hit",
+    "pep": "confirmed",
+    "adverse_media": "possible-hit"
+  }
+}
+
