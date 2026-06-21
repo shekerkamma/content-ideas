@@ -44,6 +44,7 @@ AUDITED_SKILLS = {
     "session-handoff", "tool-humanizer", "cheat", "guard", "careful",
     "health", "checkpoint", "00-account-briefing", "ai-strategy-council",
     "analytics-to-comms", "affiliate-workflow",
+    "skill-builder",
 }
 
 def find_skill_files():
@@ -68,6 +69,10 @@ def extract_frontmatter_name(content):
     m = re.search(r'^name:\s*(.+)$', content, re.MULTILINE)
     return m.group(1).strip() if m else None
 
+def strip_fenced_code(content):
+    """Remove fenced code blocks so templates don't count as live sections."""
+    return re.sub(r"```.*?```", "", content, flags=re.DOTALL)
+
 def check_section(content, heading):
     return bool(re.search(r'^#{1,3}\s+' + re.escape(heading), content, re.MULTILINE))
 
@@ -86,15 +91,16 @@ def extract_category(content):
 
 def run_checks(skill_name, skill_path):
     content = skill_path.read_text(encoding="utf-8")
+    visible_content = strip_fenced_code(content)
     lines = content.splitlines()
     line_count = len(lines)
     results = {}
 
     # C1: Has ## Skill Relationships
-    results["has_skill_relationships"] = check_section(content, "Skill Relationships")
+    results["has_skill_relationships"] = check_section(visible_content, "Skill Relationships")
 
     # C2: Has ## Gotchas
-    results["has_gotchas"] = check_section(content, "Gotchas")
+    results["has_gotchas"] = check_section(visible_content, "Gotchas")
 
     # C3: name matches directory
     fm_name = extract_frontmatter_name(content)
@@ -105,15 +111,15 @@ def run_checks(skill_name, skill_path):
     results["line_count"] = line_count
 
     # C5: Valid category
-    category = extract_category(content)
+    category = extract_category(visible_content)
     results["category"] = category
     results["valid_category"] = (category in VALID_CATEGORIES) if category else False
 
     # C6: Runtime preamble exists
-    results["has_runtime_preamble"] = check_section(content, "Runtime Preamble")
+    results["has_runtime_preamble"] = check_section(visible_content, "Runtime Preamble")
 
     # C7: Gotchas has >= 3 entries
-    gotcha_count = count_gotchas(content)
+    gotcha_count = count_gotchas(visible_content)
     results["gotcha_count"] = gotcha_count
     results["gotchas_substantial"] = gotcha_count >= 3
 

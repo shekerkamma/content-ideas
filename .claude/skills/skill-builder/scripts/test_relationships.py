@@ -39,6 +39,7 @@ AUDITED_SKILLS = {
     "health", "checkpoint", "00-account-briefing", "ai-strategy-council",
     "analytics-to-comms", "affiliate-workflow",
     "difficult-conversation-prep",
+    "skill-builder",
 }
 
 
@@ -50,6 +51,7 @@ KNOWN_SKILLS = AUDITED_SKILLS | {
     "plan-eng-review", "plan-design-review", "plan-devex-review",
     "gamma", "excalidraw", "gbrain",
     "ai-analyst", "openkb",
+    "skill-creator", "skill-starter-template", "karpathy-guidelines",
 }
 
 # Placeholder / invalid skill names that should not appear
@@ -107,6 +109,9 @@ def parse_relationships_table(content):
     Extract rows from ## Relationships table.
     Returns list of dicts: {skill, pattern, condition, artifact}
     """
+    # Ignore fenced examples/templates so only live sections are audited.
+    content = re.sub(r"```.*?```", "", content, flags=re.DOTALL)
+
     # Find the Relationships section
     m = re.search(r'### Relationships\s*\n(.*?)(?=\n###|\n##|\Z)', content, re.DOTALL)
     if not m:
