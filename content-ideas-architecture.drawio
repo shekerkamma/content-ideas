@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="content-ideas-architecture">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="100" value="1 — Frontend / Presentation (Next.js + React)" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="101" value="app/dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="100">
+          <mxGeometry x="20" y="40" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="102" value="app/deal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="100">
+          <mxGeometry x="210" y="40" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="103" value="app/domain-workflows" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="100">
+          <mxGeometry x="380" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="104" value="app/api routes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="100">
+          <mxGeometry x="600" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="105" value="components/" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="100">
+          <mxGeometry x="780" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="106" value="middleware.ts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="100">
+          <mxGeometry x="960" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="110" value="2 — Backend / Database (Convex)" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="1560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="111" value="convex/deals.ts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="110">
+          <mxGeometry x="60" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="112" value="convex/pipeline.ts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="110">
+          <mxGeometry x="290" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="113" value="convex/schema.ts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="110">
+          <mxGeometry x="520" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="114" value="convex/stages/" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="110">
+          <mxGeometry x="750" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="115" value="convex/users.ts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="110">
+          <mxGeometry x="980" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="120" value="3 — Skills Layer (Claude Code / Codex)" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="340" width="1560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="121" value="content-ideas skill" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="120">
+          <mxGeometry x="40" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="122" value="pipeline-runner skill" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="120">
+          <mxGeometry x="260" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="123" value="plaid skill" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="120">
+          <mxGeometry x="480" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="124" value="karpathy-guidelines" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="120">
+          <mxGeometry x="660" y="40" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="125" value="second-brain skill" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="120">
+          <mxGeometry x="880" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="130" value="4 — Core Pipeline Scripts (skills/content-ideas/scripts/)" style="swimlane;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="500" width="1560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="131" value="scrape.py&#xa;(competitor scraper)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="130">
+          <mxGeometry x="60" y="36" width="210" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="132" value="generate_feed.py&#xa;(For You HTML feed)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="130">
+          <mxGeometry x="300" y="36" width="210" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="133" value="pipeline_runner.py&#xa;(7-stage orchestrator)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="130">
+          <mxGeometry x="540" y="36" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="134" value="gbrain_tool.py&#xa;(GBrain MCP bridge)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="130">
+          <mxGeometry x="790" y="36" width="210" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="140" value="5 — Library / lib/ (shared modules)" style="swimlane;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="660" width="1560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="141" value="platforms.py&#xa;(fetcher registry)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="140">
+          <mxGeometry x="20" y="36" width="190" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="142" value="analyze.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="140">
+          <mxGeometry x="230" y="36" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="143" value="scoring.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="140">
+          <mxGeometry x="410" y="36" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="144" value="relevance.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="140">
+          <mxGeometry x="590" y="36" width="160" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="145" value="strategy_pipeline.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="140">
+          <mxGeometry x="770" y="36" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="146" value="pipeline.py · env.py&#xa;http.py · log.py · urls.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="140">
+          <mxGeometry x="990" y="36" width="220" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="150" value="6 — Platform Fetchers (lib/)" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="820" width="1560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="151" value="youtube.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="150">
+          <mxGeometry x="100" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="152" value="x.py (Twitter/X)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="150">
+          <mxGeometry x="320" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="153" value="instagram.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="150">
+          <mxGeometry x="540" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="154" value="tiktok.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="150">
+          <mxGeometry x="760" y="40" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="160" value="7 — External Services" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="980" width="1560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="161" value="ScrapeCreators API&#xa;(social data source)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="160">
+          <mxGeometry x="80" y="36" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="162" value="GBrain / PGLite&#xa;(knowledge graph · memory)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="160">
+          <mxGeometry x="370" y="36" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="163" value="Claude AI&#xa;(analysis · strategy · content)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="160">
+          <mxGeometry x="660" y="36" width="240" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="170" value="8 — Storage / Config" style="swimlane;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1140" width="1560" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="171" value="~/.config/content/.env&#xa;(credentials)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="170">
+          <mxGeometry x="80" y="24" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="172" value="$CONTENT_HOME&#xa;(pipeline artifacts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="170">
+          <mxGeometry x="370" y="24" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="173" value="runs/&#xa;(PPTX · HTML outputs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="170">
+          <mxGeometry x="660" y="24" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="200" value="reads / mutates" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="100" target="110">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="201" value="invokes skills" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="100" target="120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="202" value="calls scripts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="120" target="130">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="203" value="imports lib/" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="130" target="140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="204" value="dispatches fetch" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="140" target="150">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="205" value="API calls" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="150" target="160">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="206" value="MCP (memory)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="134" target="162">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="207" value="writes outputs" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="130" target="170">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
