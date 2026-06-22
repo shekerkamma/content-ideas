@@ -233,6 +233,19 @@ gbrain list --type <T>       # list pages (free)
   first instance of this pattern.
 - Gemini free tier rate limits: `gemini-3.5-flash` has 20 RPM, hits limits
   fast during interactive demos. Prefer `gemini-2.5-flash` for ADK agents.
+- Design context via `DESIGN.md`: before generating or restyling UI in any
+  project, read a project-root `DESIGN.md` (Google Stitch format) if present and
+  build against it — this is the fix for the "generic AI" look. Keep its tokens in
+  sync with the `marp` `neon` theme `:root` block so decks and app UI share one
+  identity. Use the installed `refero-design` skill for research-first design work.
+  Resources and the research → distill → build workflow: `references/design-md-resources.md`.
+- CopilotKit theming leak (ADK + AG-UI demos): a token remap of shadcn `:root`
+  vars restyles everything that *reads* the tokens, but two surfaces bypass them
+  and stay light — (1) CopilotKit React UI (`@copilotkit/react-ui`) ships its own
+  light theme; override its `--copilot-kit-*` CSS vars, scoped to `[class*="copilotKit"]`
+  with `!important`, or the chat panel reverts to white; (2) hardcoded utility
+  colors like `bg-white` on inputs/bubbles. Audit for both, then verify with a
+  before/after screenshot (headless chromium → repo dir, not `/tmp`).
 
 ## Portable path defaults
 
