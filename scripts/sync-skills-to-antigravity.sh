@@ -17,6 +17,8 @@ WIN_SKILLS="${WIN_SKILLS:-/mnt/c/Users/${WIN_USER}/.agents/skills}"
 declare -A SKILLS=(
   [marp]="$HOME/.claude/skills/marp"
   [refero-design]="$HOME/.agents/skills/refero-design"
+  [content-ideas]="$HOME/content-ideas/skills/content-ideas"
+  [pipeline-runner]="$HOME/content-ideas/skills/pipeline-runner"
 )
 
 [ -d "$WIN_SKILLS" ] || { echo "ERROR: Windows skills dir not found: $WIN_SKILLS" >&2; exit 1; }
