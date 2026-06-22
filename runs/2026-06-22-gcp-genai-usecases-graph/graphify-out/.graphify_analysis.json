@@ -1,0 +1,281 @@
+{
+  "communities": {
+    "0": [
+      "automotive_logistics_bmw",
+      "automotive_logistics_mercedes_benz",
+      "automotive_logistics_toyota",
+      "business_professional_services_harvey",
+      "financial_services_citi",
+      "financial_services_rogo",
+      "healthcare_life_sciences_anthropic_claude",
+      "media_marketing_gaming_warner_bros",
+      "overview_and_trends_vertex_ai",
+      "retail_best_buy",
+      "technology_character_ai",
+      "technology_quora",
+      "technology_reddit",
+      "telecommunications_nokia",
+      "telecommunications_telus"
+    ],
+    "1": [
+      "business_professional_services_deloitte",
+      "business_professional_services_kpmg",
+      "business_professional_services_pwc",
+      "financial_services_wells_fargo",
+      "healthcare_life_sciences_humana",
+      "healthcare_life_sciences_merck",
+      "manufacturing_industrial_electronics_bosch",
+      "overview_and_trends_gemini_enterprise",
+      "overview_and_trends_security_operations",
+      "overview_and_trends_trend_agentic_security",
+      "overview_and_trends_trend_agentic_teams",
+      "public_sector_nonprofits_nasa",
+      "retail_home_depot",
+      "retail_macys",
+      "telecommunications_vodafone"
+    ],
+    "2": [
+      "hospitality_travel_agoda",
+      "hospitality_travel_latam_airlines",
+      "hospitality_travel_virgin_voyages",
+      "manufacturing_industrial_electronics_samsung",
+      "media_marketing_gaming_adobe",
+      "media_marketing_gaming_elevenlabs",
+      "overview_and_trends_document",
+      "overview_and_trends_imagen",
+      "overview_and_trends_trend_genmedia_factory",
+      "overview_and_trends_veo"
+    ],
+    "3": [
+      "financial_services_deutsche_bank",
+      "healthcare_life_sciences_highmark",
+      "manufacturing_industrial_electronics_honeywell",
+      "media_marketing_gaming_mlb",
+      "media_marketing_gaming_thomson_reuters",
+      "overview_and_trends_gemini",
+      "public_sector_nonprofits_us_fda",
+      "retail_wendys",
+      "telecommunications_banglalink",
+      "telecommunications_deutsche_telekom"
+    ],
+    "4": [
+      "healthcare_life_sciences_cvs_health",
+      "media_marketing_gaming_spotify",
+      "overview_and_trends_bigquery",
+      "public_sector_nonprofits_asu",
+      "retail_etsy",
+      "technology_glean",
+      "technology_palantir"
+    ],
+    "5": [
+      "automotive_logistics_valeo",
+      "manufacturing_industrial_electronics_broadcom",
+      "overview_and_trends_gemini_code_assist",
+      "overview_and_trends_workspace",
+      "public_sector_nonprofits_maryland_dit",
+      "telecommunications_verizon"
+    ],
+    "6": [
+      "media_marketing_gaming_dailymotion",
+      "overview_and_trends_vertex_ai_search"
+    ],
+    "7": [
+      "financial_services_commerzbank",
+      "overview_and_trends_customer_engagement_suite"
+    ],
+    "8": [
+      "automotive_logistics_volkswagen",
+      "overview_and_trends_trend_multimodality"
+    ],
+    "9": [
+      "manufacturing_industrial_electronics_suzano",
+      "overview_and_trends_trend_legacy_nl"
+    ],
+    "10": [
+      "overview_and_trends_document_ai"
+    ],
+    "11": [
+      "overview_and_trends_dialogflow"
+    ],
+    "12": [
+      "overview_and_trends_notebooklm"
+    ],
+    "13": [
+      "business_professional_services_accenture"
+    ],
+    "14": [
+      "hospitality_travel_priceline"
+    ],
+    "15": [
+      "healthcare_life_sciences_apollo_hospitals"
+    ]
+  },
+  "cohesion": {
+    "0": 0.14285714285714285,
+    "1": 0.1523809523809524,
+    "2": 0.28888888888888886,
+    "3": 0.2,
+    "4": 0.2857142857142857,
+    "5": 0.3333333333333333,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0
+  },
+  "gods": [
+    {
+      "id": "overview_and_trends_gemini",
+      "label": "Gemini models",
+      "degree": 28
+    },
+    {
+      "id": "overview_and_trends_vertex_ai",
+      "label": "Vertex AI",
+      "degree": 17
+    },
+    {
+      "id": "overview_and_trends_gemini_enterprise",
+      "label": "Gemini Enterprise / Agent Platform",
+      "degree": 14
+    },
+    {
+      "id": "overview_and_trends_bigquery",
+      "label": "BigQuery",
+      "degree": 8
+    },
+    {
+      "id": "overview_and_trends_veo",
+      "label": "Veo",
+      "degree": 6
+    },
+    {
+      "id": "overview_and_trends_imagen",
+      "label": "Imagen",
+      "degree": 5
+    },
+    {
+      "id": "overview_and_trends_document",
+      "label": "1,302 Real-World Gen AI Use Cases (Google Cloud)",
+      "degree": 4
+    },
+    {
+      "id": "telecommunications_vodafone",
+      "label": "Vodafone",
+      "degree": 4
+    },
+    {
+      "id": "media_marketing_gaming_adobe",
+      "label": "Adobe",
+      "degree": 4
+    },
+    {
+      "id": "overview_and_trends_workspace",
+      "label": "Google Workspace with Gemini",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Spotify",
+      "target": "Gemini models",
+      "source_files": [
+        "raw/07-media-marketing-gaming.md",
+        "raw/00-overview-and-trends.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `Spotify` unexpectedly reaches hub `Gemini models`"
+    },
+    {
+      "source": "ElevenLabs",
+      "target": "Gemini models",
+      "source_files": [
+        "raw/07-media-marketing-gaming.md",
+        "raw/00-overview-and-trends.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `ElevenLabs` unexpectedly reaches hub `Gemini models`"
+    },
+    {
+      "source": "Arizona State University",
+      "target": "Gemini models",
+      "source_files": [
+        "raw/08-public-sector-nonprofits.md",
+        "raw/00-overview-and-trends.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `Arizona State University` unexpectedly reaches hub `Gemini models`"
+    },
+    {
+      "source": "Harvey (legal AI)",
+      "target": "Gemini models",
+      "source_files": [
+        "raw/02-business-professional-services.md",
+        "raw/00-overview-and-trends.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `Harvey (legal AI)` unexpectedly reaches hub `Gemini models`"
+    },
+    {
+      "source": "Agoda (AI Vacation Planner)",
+      "target": "Gemini models",
+      "source_files": [
+        "raw/05-hospitality-travel.md",
+        "raw/00-overview-and-trends.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "bridges separate communities; peripheral node `Agoda (AI Vacation Planner)` unexpectedly reaches hub `Gemini models`"
+    }
+  ],
+  "tokens": {
+    "input": 114951,
+    "output": 20482
+  },
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Gemini models` connect `Gemini Model Customer Agents` to `Vertex AI Customer Deployments`, `Gemini Enterprise & Agentic Ops`, `Generative Media & Creative`, `BigQuery & Data Analytics`, `Customer Engagement Suite`, `Multimodality / Physical World`, `Natural Language for Legacy IT`?",
+      "why": "High betweenness centrality (0.397) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Gemini Enterprise / Agent Platform` connect `Gemini Enterprise & Agentic Ops` to `Generative Media & Creative`?",
+      "why": "High betweenness centrality (0.204) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Vertex AI` connect `Vertex AI Customer Deployments` to `Gemini Enterprise & Agentic Ops`, `Generative Media & Creative`, `BigQuery & Data Analytics`?",
+      "why": "High betweenness centrality (0.200) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 3 inferred relationships involving `Gemini models` (e.g. with `Trend: Natural language for legacy IT` and `Deutsche Bank (DB Lumina)`) actually correct?",
+      "why": "`Gemini models` has 3 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `Vertex AI` (e.g. with `Toyota` and `Character.ai`) actually correct?",
+      "why": "`Vertex AI` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 3 inferred relationships involving `Gemini Enterprise / Agent Platform` (e.g. with `Trend: From assistants to agentic teams` and `Deloitte (Care Finder)`) actually correct?",
+      "why": "`Gemini Enterprise / Agent Platform` has 3 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Document AI`, `Dialogflow`, `NotebookLM` to the rest of the system?",
+      "why": "35 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}
