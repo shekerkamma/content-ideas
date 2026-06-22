@@ -290,7 +290,9 @@ Credentials live separately in `~/.config/content/.env`. See [FILE-SCHEMAS.md](F
 ├── hooks/                              SessionStart setup-status hook
 ├── .claude-plugin/                     plugin.json + marketplace.json (Claude Code)
 ├── .codex-plugin/                      plugin.json (Codex)
+├── .agents/skills/                     Cross-host agent skills (improve, ponytail suite) installed via npx skills add
 ├── AGENTS.md → CLAUDE.md               Codex / generic-agent entry point
+├── content-ideas-architecture.{drawio,png}  8-layer swimlane diagram of the service architecture
 ├── scripts/build-skill.sh              Builds dist/content-ideas.skill for claude.ai upload
 ├── tests/                              Unit tests (python3 -m unittest discover -s tests)
 └── .github/workflows/                  validate.yml (tests) + release.yml (auto-builds the .skill on tag)
