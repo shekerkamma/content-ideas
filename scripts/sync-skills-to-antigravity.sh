@@ -41,6 +41,32 @@ for root in "${TARGET_ROOTS[@]}"; do
     echo "synced $name -> $dest"
   done
 done
+
+# --- HyperFrames bundle ---------------------------------------------------
+# HyperFrames ships ~19 interdependent skills (~/hyperframes/skills/*) that
+# cross-reference each other with ../sibling/ relative paths and run a Node CLI
+# (`npx hyperframes ...`). They must be copied as INDIVIDUAL top-level sibling
+# skill dirs (NOT one nested folder) so those ../ references still resolve.
+# RUNTIME NOTE: Antigravity executes on Windows, so to actually render you also
+# need Node >=22, FFmpeg, and `npm i -g hyperframes` installed on Windows.
+HF_SKILLS="$HOME/hyperframes/skills"
+if [ -d "$HF_SKILLS" ]; then
+  for root in "${TARGET_ROOTS[@]}"; do
+    [ -d "$root" ] || continue
+    n=0
+    for d in "$HF_SKILLS"/*/; do
+      name="$(basename "$d")"
+      dest="$root/$name"
+      rm -rf "$dest"
+      cp -rL "$d" "$dest"
+      n=$((n + 1))
+    done
+    echo "synced HyperFrames bundle ($n skills) -> $root"
+  done
+else
+  echo "skip HyperFrames bundle (source missing: $HF_SKILLS — clone github.com/heygen-com/hyperframes)"
+fi
+
 [ "$found_root" = 1 ] || { echo "ERROR: no Antigravity skill root found" >&2; exit 1; }
 
 echo "Done. Restart Antigravity to pick up changes."
