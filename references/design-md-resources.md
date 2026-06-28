@@ -61,6 +61,48 @@ Our owned one: [`../DESIGN.md`](../DESIGN.md) — **Aurora Glass**, derived from
 4. **Sync** — keep app tokens and the `neon` Marp theme (`~/.claude/skills/marp/SKILL.md`)
    in step so decks and product UI share one system.
 
+## Design QA gate — Impeccable detector
+
+The one piece DESIGN.md + refero don't give us: a **deterministic slop linter**. Adopted
+from [Impeccable](https://github.com/pbakaus/impeccable) (Apache-2.0) — the CLI only, **not
+the skill** (the skill would collide with `refero-design`'s vocabulary, and refero is our
+design authority for client work).
+
+**What it is:** 44 deterministic rules, **no LLM, no API key**, JSON output, exit codes for
+CI. Catches exactly our stated enemies — purple/violet gradients, Inter/overused fonts,
+bounce easing, cramped padding, dark glows, low contrast, side-tab borders.
+
+**Run it (needs Node 24+ — use nvm; system node is 22):**
+```bash
+nvm use 24
+npx -y impeccable@latest detect <dir|file|URL>     # human-readable
+npx -y impeccable@latest detect --json <path>       # CI: parse + exit code
+```
+
+**Detection power varies by target — point it at rendered output for the real check:**
+- **URLs** → full Puppeteer render (strongest; run against a live dev server / built HTML).
+- **HTML files** → full static HTML/CSS analysis (catches linked CSS).
+- **JSX/TSX/CSS** → regex matching only (weaker; clean source can still ship slop once rendered).
+
+**Notes:** loads local `DESIGN.md` by default and suppresses findings that match our system
+(use `--no-config` to see raw hits); waive false positives with inline
+`<!-- impeccable-disable <rule> -->` comments. Verified working 2026-06-28: positive-control
+HTML flagged all 6 expected anti-patterns; RE dashboard `src/` came back clean.
+
+**Canonical wrapper:** `scripts/design-qa-detect.sh <file|dir|URL>` — handles the
+Node-24 guard (via nvm) and propagates Impeccable's exit code (0 clean / 2 findings /
+1 blocked). Use it instead of calling `npx` directly.
+
+**Wired into (run automatically before delivery):**
+- `marp` — Stage 2.5 design-QA gate on the exported HTML.
+- `openkb-deck-neon` / `openkb-deck-editorial` — gate on `output/decks/<slug>/index.html`,
+  ahead of the LLM `openkb-html-critic`.
+- `openkb-html-critic` — Step 0 deterministic pre-pass before its structural checklist.
+
+Same delivery-gate discipline as PPTX QA: a deck with unresolved findings is not `reviewed`.
+Per-theme caveats (waive intentional Aurora Glass `dark-glow`, editorial `overused-font`
+Fraunces) are documented in each skill.
+
 ## Where this pays off in our stack
 
 - Generative-UI ADK demos (`~/awesome-llm-apps/generative_ui_agents/`, RE dashboard fork)

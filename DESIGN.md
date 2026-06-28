@@ -171,6 +171,18 @@ font sans: system-ui · mono: ui-monospace · radius 8/12/999 · spacing ×4
 - *"Apply Aurora Glass: near-black canvas, gradient only on the page H1, everything else
   ink/soft/muted. No white cards, no drop shadows."*
 
+**Design verbs (shared vocabulary)** — shorthand harvested from Impeccable. Use as
+*"<verb> this per DESIGN.md"* to direct a change without re-explaining the system:
+
+| Verb | Means, in Aurora Glass terms |
+|---|---|
+| **bolder** | Commit harder — bigger stat number, stronger H1 gradient, more whitespace around the hero. Raise contrast, don't add color. |
+| **quieter** | Drop to teal-only, remove extra accents/badges, thin to one hairline, kill decorative glow. |
+| **distill** | Strip redundant chrome — collapse nested panels into one, delete boxes-in-boxes, cut anything not carrying information. |
+| **harden** | Add the missing states: loading, empty, error (amber border), and overflow/long-content for every panel, list, and form. |
+| **critique** | Structured pre-ship review against §7 Do's/Don'ts — name each violation and its fix; no vague praise. |
+| **polish** | Final pass — align to the 4px scale, fix orphan words (`text-wrap: balance`), verify focus rings and 44px touch targets. |
+
 ---
 
 ### Sync notes
