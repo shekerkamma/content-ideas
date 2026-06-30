@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Storm Research: AI Coding Agents vs SaaS Implementation Consultants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue: #2563eb; --blue-dark: #1e3a8a; --ink: #16203a; --muted: #5b6677; --line: #e4e9f2;
+    --bg-soft: #f6f8fc; --green: #15803d; --green-bg: #e9f6ee; --amber: #b45309; --amber-bg: #fdf3e7;
+    --slate: #475569; --slate-bg: #eef1f6; --red: #b91c1c; --red-bg: #fdecec;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Roboto', system-ui, sans-serif; color: var(--ink); background: #eef1f6; line-height: 1.62; font-weight: 400; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 900px; margin: 0 auto; background: #fff; padding: 64px 72px 80px; box-shadow: 0 1px 40px rgba(22,32,58,0.08); }
+  .eyebrow { font-family: 'Roboto Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+  h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.12; color: var(--ink); margin-bottom: 18px; }
+  .lede { font-size: 17px; color: var(--muted); max-width: 680px; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 26px; padding-top: 22px; border-top: 2px solid var(--line); font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--muted); }
+  .meta-row b { color: var(--ink); font-weight: 600; }
+  .verify-banner { margin-top: 22px; background: var(--green-bg); border: 1px solid #bfe3cc; border-radius: 8px; padding: 13px 18px; font-size: 13px; color: #14532d; display: flex; gap: 10px; align-items: baseline; }
+  .verify-banner b { font-weight: 700; }
+  .verify-banner .tag { font-family: 'Roboto Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; background: var(--green); color: #fff; padding: 3px 8px; border-radius: 4px; flex-shrink: 0; }
+  .howto { margin-top: 18px; border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px; background: var(--bg-soft); }
+  .howto h4 { font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .howto ul { list-style: none; }
+  .howto li { font-size: 13.5px; color: #2b3950; margin-bottom: 7px; padding-left: 16px; position: relative; }
+  .howto li::before { content: ">"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+  .section { margin-top: 56px; }
+  .section-num { font-family: 'Roboto Mono', monospace; font-size: 13px; font-weight: 600; color: var(--blue); letter-spacing: 0.05em; }
+  h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 25px; color: var(--ink); margin: 6px 0 18px; line-height: 1.2; }
+  h2 .bar { display: inline-block; width: 38px; height: 4px; background: var(--blue); border-radius: 2px; vertical-align: middle; margin-right: 14px; }
+  p { margin-bottom: 14px; }
+  p.body-lg { font-size: 16.5px; }
+  .ceo { background: var(--bg-soft); border-left: 5px solid var(--blue); padding: 26px 30px; border-radius: 4px; font-size: 16.5px; }
+  .ceo strong { font-weight: 700; color: var(--blue-dark); }
+  .finding { border: 1px solid var(--line); border-radius: 10px; padding: 24px 26px; margin-bottom: 18px; position: relative; }
+  .finding-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 12px; }
+  .finding-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.3; color: var(--ink); flex: 1; }
+  .finding-rank { font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 13px; color: #fff; background: var(--ink); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .finding p { font-size: 15px; color: #283449; margin-bottom: 14px; }
+  .rel-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  .rel { display: inline-flex; align-items: center; gap: 9px; font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
+  .rel.high { background: #e7f0fe; color: var(--blue); }
+  .rel.medhigh { background: var(--green-bg); color: var(--green); }
+  .rel.medium { background: var(--amber-bg); color: var(--amber); }
+  .rel.low { background: var(--red-bg); color: var(--red); }
+  .score { font-family: 'Roboto Mono', monospace; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .score b { font-size: 17px; }
+  .score span { color: var(--muted); font-weight: 400; }
+  .chips { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+  .chip-row { display: flex; align-items: baseline; gap: 9px; flex-wrap: wrap; font-size: 13.5px; }
+  .chip-label { font-family: 'Roboto Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+  .chip-label.sup { background: var(--green-bg); color: var(--green); }
+  .chip-label.chal { background: var(--red-bg); color: var(--red); }
+  .chip-label.fix { background: var(--amber-bg); color: var(--amber); }
+  .chip-row span.who { color: #2b3950; }
+  .contested { border: 1px dashed var(--amber); background: #fffaf2; border-radius: 10px; padding: 22px 26px; margin-bottom: 18px; }
+  .contested .tag { font-family: 'Roboto Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
+  .contested h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; color: var(--ink); margin: 6px 0 10px; }
+  .contested p { font-size: 14px; color: #4a3a22; margin-bottom: 0; }
+  .connection { background: linear-gradient(135deg, #16203a 0%, #1e3a8a 100%); color: #eaf0fb; border-radius: 12px; padding: 34px 38px; }
+  .connection h2 { color: #fff; }
+  .connection h2 .bar { background: #6ea8ff; }
+  .connection .section-num { color: #9ec1ff; }
+  .connection p { color: #d3def3; font-size: 16px; }
+  .connection .punch { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 18px; color: #fff; line-height: 1.4; margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.18); }
+  .assume { border: 1px solid var(--line); border-left: 5px solid var(--amber); border-radius: 6px; padding: 24px 28px; background: #fffdf9; }
+  .assume h3 { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+  .assume p { font-size: 15px; color: #3a3320; }
+  .action-item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .action-item:last-child { border-bottom: none; }
+  .action-mark { font-family: 'Roboto Mono', monospace; font-weight: 600; font-size: 13px; color: var(--blue); flex-shrink: 0; width: 34px; }
+  .action-item .do { font-weight: 600; color: var(--ink); }
+  .action-item p { font-size: 14.5px; margin-bottom: 0; color: #2b3950; }
+  .frontier { border: 2px dashed var(--blue); border-radius: 12px; padding: 30px 34px; background: var(--bg-soft); }
+  .frontier .q { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 22px; line-height: 1.32; color: var(--blue-dark); margin-bottom: 16px; }
+  .frontier p { font-size: 15px; color: #2b3950; }
+  .oncam { margin-top: 18px; }
+  .oncam-col { border-radius: 10px; padding: 20px 24px; margin-bottom: 14px; }
+  .oncam-col.safe { background: var(--green-bg); border: 1px solid #bfe3cc; }
+  .oncam-col.caveat { background: var(--amber-bg); border: 1px solid #f0d9b5; }
+  .oncam-col.avoid { background: var(--red-bg); border: 1px solid #f3c9c9; }
+  .oncam-col h4 { font-family: 'Roboto Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .oncam-col.safe h4 { color: var(--green); }
+  .oncam-col.caveat h4 { color: var(--amber); }
+  .oncam-col.avoid h4 { color: var(--red); }
+  .oncam-col ul { list-style: none; }
+  .oncam-col li { font-size: 14px; color: #233; margin-bottom: 8px; padding-left: 16px; position: relative; line-height: 1.5; }
+  .oncam-col li::before { content: "*"; position: absolute; left: 0; font-weight: 700; }
+  .refs { margin-top: 56px; padding-top: 26px; border-top: 2px solid var(--line); }
+  .refs h3 { font-family: 'Roboto Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  .refs ul { list-style: none; }
+  .refs li { font-size: 12.5px; color: var(--muted); margin-bottom: 11px; padding-left: 16px; position: relative; line-height: 1.5; }
+  .refs li::before { content: ">"; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+  .refs a { color: #34507e; text-decoration: none; }
+  .refs a:hover { text-decoration: underline; }
+  .refs .vstat { font-family: 'Roboto Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; margin-right: 6px; }
+  .vstat.ok { background: var(--green-bg); color: var(--green); }
+  .vstat.part { background: var(--amber-bg); color: var(--amber); }
+  .vstat.weak { background: var(--red-bg); color: var(--red); }
+  .footer { margin-top: 40px; font-family: 'Roboto Mono', monospace; font-size: 11px; color: #9aa6b8; text-align: center; }
+  @media (max-width: 640px) { .page { padding: 40px 24px 56px; } h1 { font-size: 30px; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="eyebrow">Storm Research &middot; v2 (verified)</div>
+    <h1>Will AI Coding Agents Replace SaaS Implementation Consultants?</h1>
+    <p class="lede">A five-lens synthesis: practitioner, academic, skeptic, economist, and historian. Every claim was checked by independent verifier agents before publication.</p>
+    <div class="meta-row">
+      <span><b>Date</b> &nbsp;2026-06-30</span>
+      <span><b>Method</b> &nbsp;5 independent lens agents + contradiction map</span>
+      <span><b>Audience</b> &nbsp;AI/software services decision-maker</span>
+    </div>
+    <div class="verify-banner">
+      <span class="tag">Verified</span>
+      <span>All 22 citation clusters were checked against primary or authoritative sources on 2026-06-30. <b>Result: 0 fabricated, 2 corrected, 6 demoted.</b> Confidence scores reflect post-verification evidence quality.</span>
+    </div>
+    <div class="howto">
+      <h4>How to read this</h4>
+      <ul>
+        <li><b>The panel was author-constructed.</b> Agreement across lenses is a strong hypothesis, not independent field consensus.</li>
+        <li><b>Confidence is scored 1-10</b> on evidence quality: peer-reviewed causal work and primary docs outrank secondary market claims.</li>
+        <li><b>Replacement and compression are different.</b> A high-confidence finding can still imply severe margin pressure.</li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-num">01</div>
+    <h2><span class="bar"></span>The 60-Second Summary</h2>
+    <div class="ceo">
+      <p style="margin-bottom:0;"><strong>AI coding agents are more likely to compress SaaS implementation labor than replace implementation consultants as a category.</strong> The strongest evidence says agents can accelerate bounded, testable coding/configuration tasks, but performance degrades in mature, context-heavy work where SaaS implementations actually fail: data meaning, integration behavior, permissions, governance, UAT, adoption, and accountability. The strategic consequence is still material: junior build hours and generic migration/configuration work are exposed, while durable value shifts toward agent-supervised delivery architects who own business translation, validation, change management, and cutover risk.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-num">02</div>
+    <h2><span class="bar"></span>Five Key Findings, Ranked by Reliability</h2>
+
+    <div class="finding">
+      <div class="finding-head"><div class="finding-title">Agents help most inside bounded task frontiers, not across messy implementations.</div><div class="finding-rank">1</div></div>
+      <div class="rel-row"><div class="rel high">Reliability: High</div><div class="score"><b>9</b><span>/10</span></div></div>
+      <p>Controlled and field studies show a jagged frontier. GitHub Copilot users completed a narrow JavaScript HTTP-server task 55.8% faster, and BCG consultants using GPT-4 were faster and higher quality inside the task frontier. But the BCG experiment also found users were 19 percentage points less likely to be correct outside the frontier, while METR found experienced open-source developers were 19% slower with early-2025 AI tools on real mature-code tasks.</p>
+      <div class="chips">
+        <div class="chip-row"><span class="chip-label sup">Supported by</span><span class="who">Academic lens: Peng et al.; Dell'Acqua et al.; METR Becker et al.</span></div>
+        <div class="chip-row"><span class="chip-label chal">Challenged by</span><span class="who">Economist lens: productivity surplus may still reduce billable hours even without full replacement.</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head"><div class="finding-title">The durable implementation bottleneck is validation and accountability, not typing code.</div><div class="finding-rank">2</div></div>
+      <div class="rel-row"><div class="rel high">Reliability: High</div><div class="score"><b>9</b><span>/10</span></div></div>
+      <p>Benchmarks map closely to SaaS delivery risk. CRMArena-Pro reports roughly 58% single-turn and 35% multi-turn success on expert-validated CRM tasks, with weak inherent confidentiality awareness. GitHub's cloud coding agent is explicitly repo/branch/PR-scoped with limits such as one repository per task and a 59-minute cap. That makes agents useful for pieces of delivery, but not equivalent to owning client process discovery, test acceptance, security review, and production cutover.</p>
+      <div class="chips">
+        <div class="chip-row"><span class="chip-label sup">Supported by</span><span class="who">Practitioner, skeptic, academic lenses; GitHub Docs; CRMArena-Pro.</span></div>
+        <div class="chip-row"><span class="chip-label chal">Challenged by</span><span class="who">No lens argued full replacement under current capabilities.</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head"><div class="finding-title">Commodity build hours are exposed even if consultants survive.</div><div class="finding-rank">3</div></div>
+      <div class="rel-row"><div class="rel medhigh">Reliability: Medium-high</div><div class="score"><b>8</b><span>/10</span></div></div>
+      <p>The replacement thesis is too broad, but the labor-compression thesis is strong. The exposed work includes first-pass configuration, integration glue, mapping scripts, test generation, documentation, and straightforward API migrations. A Copilot Agent Mode migration study found 100% median API migration coverage but only 39.75% median test-pass rate, which is exactly the pattern: agents can perform broad mechanical conversion while leaving business correctness and regression cleanup to humans.</p>
+      <div class="chips">
+        <div class="chip-row"><span class="chip-label sup">Supported by</span><span class="who">Practitioner and economist lenses; SQLAlchemy migration study.</span></div>
+        <div class="chip-row"><span class="chip-label chal">Challenged by</span><span class="who">Skeptic lens: exposed work is the part easiest to define, not the whole implementation.</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head"><div class="finding-title">History says automation creates new delivery layers rather than eliminating implementers.</div><div class="finding-rank">4</div></div>
+      <div class="rel-row"><div class="rel medhigh">Reliability: Medium-high</div><div class="score"><b>8</b><span>/10</span></div></div>
+      <p>CASE tools, 4GLs, ERP packages, RPA, and cloud self-service all promised to reduce implementation labor. Each eliminated an old bottleneck and exposed a new one: modeling discipline, data/process mismatch, orchestration, governance, migration architecture, or managed operations. The strongest parallel is ERP/SaaS: packaged best practices did not eliminate process redesign, configuration, data migration, and partner ecosystems.</p>
+      <div class="chips">
+        <div class="chip-row"><span class="chip-label sup">Supported by</span><span class="who">Historian lens; Davenport on ERP; UiPath partner/training ecosystem; AWS migration programs.</span></div>
+        <div class="chip-row"><span class="chip-label chal">Challenged by</span><span class="who">Historical analogy is not causal proof; AI agents may automate a wider surface than prior tools.</span></div>
+        <div class="chip-row"><span class="chip-label fix">Corrected</span><span class="who">4GL date stated cautiously as 1981-1982; AWS partner-count claim demoted.</span></div>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="finding-head"><div class="finding-title">The economic fight is over who captures the productivity surplus.</div><div class="finding-rank">5</div></div>
+      <div class="rel-row"><div class="rel medium">Reliability: Medium</div><div class="score"><b>7</b><span>/10</span></div></div>
+      <p>Large services firms and SaaS vendors are not disappearing; they are absorbing AI into delivery and monetization. Big Four FY2025 revenue and headcount remain enormous, and AI-tool valuations show that capital is pricing in labor substitution. But several market-number claims were only secondary-confirmed, so the reliable conclusion is narrower: agents create margin pressure and reallocation, not proven near-term collapse of implementation services.</p>
+      <div class="chips">
+        <div class="chip-row"><span class="chip-label sup">Supported by</span><span class="who">Economist lens; Big Four FY2025 official/archived revenue and headcount evidence.</span></div>
+        <div class="chip-row"><span class="chip-label chal">Challenged by</span><span class="who">Primary-source gaps for some AI bookings/valuation/market claims.</span></div>
+      </div>
+    </div>
+
+    <div class="contested">
+      <div class="tag">Contested signal &middot; monitor, do not assert &middot; confidence 4/10</div>
+      <h4>Secondary market-number claims around AI services and agent valuations</h4>
+      <p>Gartner IT-spend figures, Accenture AI-bookings detail, Cursor valuation, GitLab governance statistics, and ServiceNow Now Assist ACV figures were not all verified against primary sources in this run. Use them as directional market signals only, not as load-bearing proof.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="connection">
+      <div class="section-num">03</div>
+      <h2><span class="bar"></span>The Hidden Connection</h2>
+      <p>The apparent contradiction is that AI agents are getting materially better at code, yet every lens still resists the replacement claim.</p>
+      <p>The resolution is that SaaS implementation is not mainly a code-generation market. It is an accountability market wrapped around code, configuration, data migration, process redesign, and organizational adoption.</p>
+      <p class="punch">The agent lowers the cost of producing implementation artifacts; the consultant remains valuable when someone must decide whether those artifacts are correct, safe, accepted, and worth deploying.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="assume">
+      <h3>The assumption this briefing rests on (and the missing 6th lens)</h3>
+      <p>The five lenses mostly evaluate implementation from the delivery side: consultant productivity, system reliability, economics, and historical analogies. The missing sixth lens is the buyer/procurement owner who decides whether to pay for accountability or demand fee compression.</p>
+      <p>If buyers become comfortable accepting agent-generated work with lighter human assurance, the consultant role could shrink faster. If regulated buyers require human accountability, the role changes more than it disappears.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-num">04</div>
+    <h2><span class="bar"></span>What To Actually Do Differently</h2>
+    <p class="body-lg" style="color:var(--muted);">For AI/software services leaders deciding where to position consulting capacity.</p>
+    <div class="action-item"><div class="action-mark">01</div><div><span class="do">Stop selling raw build hours as the core product.</span><p>Package implementation around outcome ownership: discovery, data readiness, validated migration, security posture, UAT, rollback, and adoption.</p></div></div>
+    <div class="action-item"><div class="action-mark">02</div><div><span class="do">Turn agents into delivery accelerators, not unbounded delivery owners.</span><p>Use agents for first-pass mapping, config diffs, integration stubs, test scaffolds, documentation, and regression triage; keep human gates for semantics and cutover.</p></div></div>
+    <div class="action-item"><div class="action-mark">03</div><div><span class="do">Build reusable implementation patterns.</span><p>The margin opportunity is in productized playbooks: connector templates, migration validators, sandbox policies, acceptance-test packs, and domain-specific prompt/tool harnesses.</p></div></div>
+    <div class="action-item"><div class="action-mark">04</div><div><span class="do">Price for risk reduction, not typing speed.</span><p>As coding gets cheaper, buyers will resist junior-hour billing. Move toward fixed-scope packages, milestone fees, managed validation, or outcome-linked assurance.</p></div></div>
+    <div class="action-item"><div class="action-mark">05</div><div><span class="do">Train consultants as agent supervisors and business translators.</span><p>The defensible consultant knows the SaaS object model, client process exceptions, data quality traps, security boundaries, and adoption politics.</p></div></div>
+  </section>
+
+  <section class="section">
+    <div class="section-num">04b</div>
+    <h2><span class="bar"></span>What's Safe to Assert</h2>
+    <div class="oncam">
+      <div class="oncam-col safe">
+        <h4>Safe - verified against primary source</h4>
+        <ul>
+          <li>AI coding tools show strong gains on bounded tasks and mixed or negative effects on mature, context-heavy development tasks.</li>
+          <li>Current coding agents are scoped and reliability-limited; they are not independently reliable owners of end-to-end SaaS implementation.</li>
+          <li>Security and governance risks such as prompt injection and excessive agency remain recognized LLM-app risks.</li>
+        </ul>
+      </div>
+      <div class="oncam-col caveat">
+        <h4>Say with a caveat</h4>
+        <ul>
+          <li>Implementation consulting is likely to shrink in junior build hours and expand in validation, orchestration, and adoption work.</li>
+          <li>Historical waves suggest augmentation and role migration, but analogy is not proof of the AI outcome.</li>
+          <li>Market-size and valuation signals support margin pressure, but several figures in this run were secondary-confirmed only.</li>
+        </ul>
+      </div>
+      <div class="oncam-col avoid">
+        <h4>Do not assert</h4>
+        <ul>
+          <li>Do not say AI coding agents will replace SaaS implementation consultants outright.</li>
+          <li>Do not cite ServiceNow Now Assist ACV, Cursor valuation, Gartner IT-services sizing, or GitLab governance percentages as primary-verified in this report.</li>
+          <li>Do not treat demo success or code-generation speed as evidence of production implementation ownership.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-num">05</div>
+    <h2><span class="bar"></span>The Frontier Question</h2>
+    <div class="frontier">
+      <div class="q">Can an AI coding agent reliably complete a real SaaS implementation workstream from discovery through production cutover with human review limited to exception approval?</div>
+      <p>This is the question that would change the conclusion. Benchmarks currently test coding tasks, CRM task simulations, migrations, or workplace-like subtasks. The replacement case needs evidence on full implementation workstreams: messy source data, tenant-specific business rules, security constraints, stakeholder approvals, rollback planning, and post-go-live support.</p>
+    </div>
+  </section>
+
+  <div class="refs">
+    <h3>Evidence base &middot; verification status</h3>
+    <ul>
+      <li><span class="vstat ok">Confirmed</span> Dell'Acqua et al., 2023, "Navigating the Jagged Technological Frontier," 758 BCG consultants; 12.2% more tasks, 25.1% faster, >40% higher quality inside frontier; 19 percentage points less correct outside frontier. <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=64700">hbs.edu</a></li>
+      <li><span class="vstat ok">Confirmed</span> Becker, Rush, Barnes, Rein, 2025, "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"; 16 developers, 246 tasks, AI increased completion time by 19%. <a href="https://arxiv.org/abs/2507.09089">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> Peng et al., 2023, "The Impact of AI on Developer Productivity"; Copilot users finished a JavaScript HTTP-server task 55.8% faster. <a href="https://arxiv.org/abs/2302.06590">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> Pearce et al., 2022, "Asleep at the Keyboard?"; about 40% of generated programs were vulnerable across security-relevant scenarios. <a href="https://arxiv.org/abs/2108.09293">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> GitHub Docs, Copilot cloud agent scope and limits: repository/branch/PR-scoped workflow, one repo per run, 59-minute max session. <a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent">docs.github.com</a></li>
+      <li><span class="vstat part">Corrected</span> TheAgentCompany benchmark: original reports cited 24%, current revised arXiv reports 30% task completion by the most competitive agent. <a href="https://arxiv.org/abs/2412.14161">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> CRMArena-Pro, 2025: around 58% single-turn success, around 35% multi-turn success, and weak inherent confidentiality awareness on CRM tasks. <a href="https://arxiv.org/abs/2505.18878">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> AIDev rejection study, 2026: 46.41% of fixes from Copilot, Devin, Cursor, and Claude were rejected. <a href="https://arxiv.org/abs/2606.13468">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> Copilot Agent Mode SQLAlchemy migration study: 100% median migration coverage, 39.75% median test-pass rate. <a href="https://arxiv.org/abs/2510.26699">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> UK NCSC, 2023, "Exercise caution when building off LLMs"; prompt injection may be inherent and no surefire mitigations exist. <a href="https://www.ncsc.gov.uk/blog-post/exercise-caution-building-off-llms">ncsc.gov.uk</a></li>
+      <li><span class="vstat ok">Confirmed</span> OWASP GenAI Security Project, 2025 Top 10: LLM01 Prompt Injection and LLM06 Excessive Agency. <a href="https://genai.owasp.org/llm-top-10/">genai.owasp.org</a></li>
+      <li><span class="vstat weak">Demoted</span> GitLab AI Accountability percentages were found only via secondary ITPro attribution in this run; not used as load-bearing evidence. <a href="https://www.itpro.com/software/development/enterprises-are-shipping-so-much-ai-generated-code-they-cant-control-or-secure-it">itpro.com</a></li>
+      <li><span class="vstat part">Demoted</span> Gartner 2026 IT spending and IT services sizing were secondary-confirmed; primary Gartner wording not verified in this run. <a href="https://cincodias.elpais.com/companias/2026-04-22/la-ia-disparara-el-gasto-tecnologico-mundial-un-135-este-ano-y-alcanzara-un-record-de-631-billones-de-dolares.html">cincodias.elpais.com</a></li>
+      <li><span class="vstat ok">Confirmed</span> Big Four FY2025 scale: Deloitte, PwC, EY, KPMG revenue/headcount evidence supports consulting services persistence at very large scale. <a href="https://en.wikipedia.org/wiki/Big_Four_accounting_firms">wikipedia.org</a></li>
+      <li><span class="vstat weak">Demoted</span> Accenture Q4 FY2025 AI bookings and Cursor valuation were secondary-confirmed only; useful as market signals, not primary proof. <a href="https://www.investors.com/news/technology/accenture-stock-accenture-earnings-fiscal-2026-guidance/">investors.com</a></li>
+      <li><span class="vstat weak">Demoted</span> ServiceNow Now Assist ACV claim was not verified against a primary investor source in this run and was omitted from findings. <a href="https://www.businessinsider.com/servicenow-targets-over-30-billion-subscription-revenue-2030-2026-5">businessinsider.com</a></li>
+      <li><span class="vstat ok">Confirmed</span> CASE tools: Fuggetta 1993 and historical sources support the pattern of automation tooling becoming lifecycle/modeling infrastructure rather than eliminating developers. <a href="https://doi.org/10.1109/2.247645">doi.org</a></li>
+      <li><span class="vstat part">Corrected</span> 4GL / James Martin timing corrected to 1981-1982; claim treated as historical analogy rather than causal evidence. <a href="https://arxiv.org/abs/2205.02282">arxiv.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> Davenport, 1998, "Putting the Enterprise into the Enterprise System"; ERP packages integrate processes but create strategic and organizational implementation constraints. <a href="https://hbr.org/1998/07/putting-the-enterprise-into-the-enterprise-system">hbr.org</a></li>
+      <li><span class="vstat ok">Confirmed</span> UiPath first-party materials support persistent automation partner/training ecosystem after RPA scaled. <a href="https://www.uipath.com/partners">uipath.com</a></li>
+      <li><span class="vstat part">Demoted</span> AWS migration claim confirmed directionally via MAP and partner pages; exact 140,000 partner-count claim was not primary-verified. <a href="https://aws.amazon.com/migration-acceleration-program/">aws.amazon.com</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">Storm Research v2 &middot; 22/22 citation clusters checked, 2026-06-30 &middot; 0 fabricated, 2 corrected, 6 demoted &middot; Reliability = evidence quality, not author confidence</div>
+</div>
+</body>
+</html>
