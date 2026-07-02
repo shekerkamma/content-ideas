@@ -61,10 +61,17 @@ yourself, validate explicitly.
 3. **Build with `pptxkit`.** Write a builder script that imports `pptxkit` and composes
    slides. Keep brand/mechanics in the kit; keep content in your script. Use
    `shrink=True` on any text box whose length is data-driven.
-4. **Validate + preview.** `Deck.save()` auto-validates and raises on malformed XML.
+4. **Sanitize client-facing text.** Visible slide text must not expose internal production
+   language unless the user explicitly asks for an audit appendix. Keep tool names, source
+   filenames, timestamps, "synthesis" labels, implementation notes, and validation notes in
+   source/run files rather than on client slides. Use client-facing labels such as
+   `Business implication`, `Decision`, `Operating model`, or `Next move`.
+5. **Validate + preview.** `Deck.save()` auto-validates and raises on malformed XML.
    Then run `python3 scripts/preview_pptx.py <out.pptx>` and actually *look* at the
-   contact sheets; fix any overflow before delivering.
-5. **Deliver.** This user opens decks in Windows PowerPoint from WSL. Copy to
+   contact sheets; fix any overflow before delivering. If the deck embeds image previews,
+   diagrams, or rendered canvases, also run a real render check (PowerPoint, LibreOffice
+   PDF, or equivalent) because `preview_pptx.py` shows pictures as placeholders.
+6. **Deliver.** This user opens decks in Windows PowerPoint from WSL. Copy to
    `/mnt/c/Users/<user>/OneDrive/Desktop/` and open with
    `powershell.exe -NoProfile -Command "Start-Process '<C:\...>'"`. A file open in
    PowerPoint is **locked** — if a re-copy fails with "Permission denied", write the
@@ -157,6 +164,12 @@ At invocation, surface this to the user:
 ## Gotchas
 
 - **Never render unvalidated content:** Every named entity, metric, and claim must be verified before it lands on a slide. If you assembled the data yourself (not from an upstream skill), run a validation pass first. Wrong facts in an executive deck are a delivery failure.
+- **No internal process language on client slides:** Don't show tool names, source paths,
+  timestamps, audit labels, "synthesis" labels, or validation notes as visible slide text.
+  Those belong in the run report, speaker notes only when requested, or source artifacts.
+- **Embedded images need real render QA:** The built-in preview is useful for text and
+  geometry, but it does not show embedded pictures. Render to PDF or inspect in PowerPoint
+  before delivering decks that include diagrams, canvases, screenshots, or previews.
 - **Never re-derive the effectLst:** Appending a second `<a:effectLst>` after `shape.shadow.inherit = False` corrupts the file and triggers PowerPoint's repair prompt. Use `rect(shadow=True)` from the kit — it manages this correctly.
 - **A clean python-pptx round-trip is not proof of validity:** Only `validate_pptx()` or PowerPoint itself catches effectLst and child-order issues. Always call `Deck.save()` (which auto-validates) — do not bypass it.
 - **File locked in PowerPoint:** If re-copy fails with "Permission denied", the deck is open in PowerPoint. Write the corrected file under a new filename — do not attempt to overwrite.
