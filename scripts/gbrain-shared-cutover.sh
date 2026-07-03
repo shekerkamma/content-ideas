@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # gbrain-shared-cutover.sh — consolidate GBrain onto ONE HTTP MCP server that
-# Hermes + OpenClaw + Claude Code all connect to as clients.
+# Hermes + OpenClaw + Claude Code + Antigravity/Gemini all connect to as clients.
 #
 # WHY: PGLite is single-connection. Multiple processes opening ~/.gbrain/brain.pglite
 # directly = corruption (already happened 2026-06-20). This makes exactly one writer
@@ -124,7 +124,38 @@ docker exec "$CTR" openclaw mcp add gbrain \
 docker exec "$CTR" openclaw mcp reload 2>/dev/null || true
 
 # ---------------------------------------------------------------------------
-say "5. Wire Hermes (native) — write config + .env directly (non-interactive)"
+say "5. Wire Antigravity/Gemini (Windows-native) to the shared HTTP client"
+# Antigravity is Windows-native and reads Windows-side Gemini config, not WSL
+# ~/.gemini. Keep both known config paths in sync because different Gemini /
+# Antigravity builds have used different roots.
+WIN_USER="${WIN_USER:-sheke}"
+python3 - "$TOKEN" "$WIN_USER" <<'PY'
+import json, os, sys
+token, win_user = sys.argv[1], sys.argv[2]
+paths = [
+    f"/mnt/c/Users/{win_user}/.gemini/antigravity/mcp_config.json",
+    f"/mnt/c/Users/{win_user}/.gemini/config/mcp_config.json",
+]
+entry = {
+    "serverUrl": "http://127.0.0.1:3131/mcp",
+    "headers": {"Authorization": f"Bearer {token}"},
+}
+for path in paths:
+    data = {"mcpServers": {}}
+    if os.path.exists(path) and os.path.getsize(path):
+        with open(path) as f:
+            data = json.load(f)
+    data.setdefault("mcpServers", {})["gbrain"] = dict(entry)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+        f.write("\n")
+    print(f"  Antigravity/Gemini: wrote gbrain MCP -> {path}")
+PY
+echo "  (restart Antigravity/Gemini to pick up the MCP config)"
+
+# ---------------------------------------------------------------------------
+say "6. Wire Hermes (native) — write config + .env directly (non-interactive)"
 # Hermes stores the token in ~/.hermes/.env as MCP_GBRAIN_API_KEY (bare, no
 # 'Bearer ' prefix) and references it from config.yaml via ${MCP_GBRAIN_API_KEY}.
 HERMES_AGENT_DIR="${HERMES_AGENT_DIR:-$HOME/hermes-agent}"
@@ -150,23 +181,25 @@ else
 fi
 
 # ---------------------------------------------------------------------------
-say "6. Smoke test"
+say "7. Smoke test"
 echo "  server /health:"; curl -fsS "http://127.0.0.1:3131/health" || true; echo
 echo "  OpenClaw probe:"; docker exec "$CTR" openclaw mcp probe 2>/dev/null | grep -i gbrain || echo "  (check manually)"
 echo "  Hermes test:";    hermes mcp test gbrain 2>/dev/null | grep -iE "connected|tools" || echo "  (run: hermes mcp test gbrain)"
 
 cat <<DONE
 
-DONE — GBrain is now one server, three clients.
+DONE — GBrain is now one server, four client surfaces.
   • Server:    systemctl --user status gbrain-http.service   (port 3131, token-gated)
-  • Client token: $CLIENT_TOKEN_FILE  (0600, NOT committed) — same token for all 3 clients
+  • Client token: $CLIENT_TOKEN_FILE  (0600, NOT committed) — same token for all clients
   • OpenClaw:  reaches it at host.docker.internal:3131
   • Hermes:    reaches it at 127.0.0.1:3131
   • Claude Code: relaunch to pick up the http client config
+  • Antigravity/Gemini: restart to pick up the Windows-side MCP config
 
 VERIFY the shared brain end-to-end:
   1. Hermes writes:  hermes chat -q "use gbrain put_page slug 'cutover-test' body 'shared brain works'" --yolo -Q
   2. OpenClaw reads: docker exec $CTR openclaw agent --session-key t --message "use gbrain get_page 'cutover-test'"
   3. Relaunch Claude Code and confirm gbrain search finds 'cutover-test'.
-If all three see it, the layer in your diagram is real.
+  4. Restart Antigravity/Gemini and confirm gbrain tools are listed.
+If all four client surfaces see it, the layer in your diagram is real.
 DONE
