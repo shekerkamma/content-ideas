@@ -1,30 +1,34 @@
 #!/usr/bin/env bash
-# Sync selected WSL-canonical skills into the Windows-side Antigravity skills dir.
+# Stage WSL-canonical skills into a Windows-reachable bundle for Claude Desktop / Cowork.
 #
-# Antigravity IDE is Windows-native and does NOT support WSL — it cannot read the
-# WSL filesystem, so skills must be COPIED to C:\Users\<user>\.agents\skills\.
-# Symlinks can't bridge WSL->Windows for a native app, so there is no live
-# propagation: re-run this script after editing any listed skill.
+# WHY A BUNDLE (not a symlink/copy-into-place like Antigravity):
+# Claude Cowork runs in its OWN isolated sandbox. That sandbox's filesystem is
+# neither the WSL filesystem (where Claude Code reads ~/.claude/skills) nor the
+# shared C:\ mount. There is no folder on disk that both hosts read, so skills
+# cannot be propagated by copy/symlink. The only transfer path into Cowork is
+# THROUGH the Cowork chat: upload this bundle (or its .zip) into a Cowork session
+# and tell the agent to unpack each skill into its own skills dir
+# (e.g. ClaudeOS/skills/<name>/ or ~/.claude/skills/<name>/).
 #
-# Canonical source of truth stays in WSL (~/.claude/skills/... or ~/.agents/skills/...).
-# This script is the single place that defines WHICH skills Antigravity gets.
+# Claude CODE (in Claude Desktop, WSL-backed) already reads ~/.claude/skills
+# directly — it needs nothing from this script. This bundle exists purely to
+# carry the SAME skills across the Cowork sandbox boundary.
+#
+# Canonical source of truth stays in WSL. Re-run after editing any listed skill.
 set -euo pipefail
 
 WIN_USER="${WIN_USER:-sheke}"
-# Antigravity reads user skills from these roots on Windows (the IDE's ~100 skills
-# live in .gemini/antigravity/skills; .gemini/config/skills is the Gemini-CLI mirror).
-# NOTE: NOT ~/.agents/skills — that is a separate toolset Antigravity does not load.
-TARGET_ROOTS=(
-  "/mnt/c/Users/${WIN_USER}/.gemini/antigravity/skills"
-  "/mnt/c/Users/${WIN_USER}/.gemini/config/skills"
-)
+OUT_DIR="${CLAUDE_DESKTOP_BUNDLE:-/mnt/c/Users/${WIN_USER}/claude-skills-bundle}"
+STAGE="$OUT_DIR/skills"
+ZIP_PATH="$OUT_DIR/claude-skills-bundle.zip"
 
-# dest-name = canonical WSL source path. Add skills here to push them to Antigravity.
+# dest-name = canonical WSL source path. Same portable set as the Antigravity sync.
 declare -A SKILLS=(
   [watch]="$HOME/.claude/skills/watch"
   [marp]="$HOME/.claude/skills/marp"
-  [genspark-slides]="$HOME/.claude/skills/genspark-slides"
   [refero-design]="$HOME/.agents/skills/refero-design"
+  [learn-anything]="$HOME/.claude/skills/learn-anything"
+  [genspark-slides]="$HOME/.claude/skills/genspark-slides"
   [content-ideas]="$HOME/content-ideas/skills/content-ideas"
   [pipeline-runner]="$HOME/content-ideas/skills/pipeline-runner"
   [storm-research]="$HOME/content-ideas/skills/storm-research"
@@ -60,46 +64,39 @@ declare -A SKILLS=(
   [skill-builder]="$HOME/content-ideas/.claude/skills/skill-builder"
 )
 
-found_root=0
-for root in "${TARGET_ROOTS[@]}"; do
-  [ -d "$root" ] || { echo "skip root (not found): $root"; continue; }
-  found_root=1
-  for name in "${!SKILLS[@]}"; do
-    src="${SKILLS[$name]}"
-    if [ ! -e "$src" ]; then echo "skip $name (source missing: $src)"; continue; fi
-    dest="$root/$name"
-    rm -rf "$dest"
-    # -L resolves symlinks so Windows receives real files, not dangling links.
-    cp -rL "$src" "$dest"
-    echo "synced $name -> $dest"
-  done
+[ -d "$(dirname "$OUT_DIR")" ] || { echo "ERROR: Windows mount not found: $(dirname "$OUT_DIR")" >&2; exit 1; }
+rm -rf "$STAGE"; mkdir -p "$STAGE"
+
+synced=0
+for name in "${!SKILLS[@]}"; do
+  src="${SKILLS[$name]}"
+  if [ ! -e "$src" ]; then echo "skip $name (source missing: $src)"; continue; fi
+  # -L resolves symlinks so the bundle carries real files, not dangling links.
+  cp -rL "$src" "$STAGE/$name"
+  synced=$((synced + 1))
+  echo "staged $name"
 done
 
-# --- HyperFrames bundle ---------------------------------------------------
-# HyperFrames ships ~19 interdependent skills (~/hyperframes/skills/*) that
-# cross-reference each other with ../sibling/ relative paths and run a Node CLI
-# (`npx hyperframes ...`). They must be copied as INDIVIDUAL top-level sibling
-# skill dirs (NOT one nested folder) so those ../ references still resolve.
-# RUNTIME NOTE: Antigravity executes on Windows, so to actually render you also
-# need Node >=22, FFmpeg, and `npm i -g hyperframes` installed on Windows.
-HF_SKILLS="$HOME/hyperframes/skills"
-if [ -d "$HF_SKILLS" ]; then
-  for root in "${TARGET_ROOTS[@]}"; do
-    [ -d "$root" ] || continue
-    n=0
-    for d in "$HF_SKILLS"/*/; do
-      name="$(basename "$d")"
-      dest="$root/$name"
-      rm -rf "$dest"
-      cp -rL "$d" "$dest"
-      n=$((n + 1))
-    done
-    echo "synced HyperFrames bundle ($n skills) -> $root"
-  done
-else
-  echo "skip HyperFrames bundle (source missing: $HF_SKILLS — clone github.com/heygen-com/hyperframes)"
-fi
+# Zip via Python stdlib (no `zip` binary required on WSL).
+python3 - "$STAGE" "$ZIP_PATH" <<'PY'
+import sys, zipfile, os
+stage, zip_path = sys.argv[1], sys.argv[2]
+if os.path.exists(zip_path):
+    os.remove(zip_path)
+with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
+    for root, _, files in os.walk(stage):
+        for f in files:
+            full = os.path.join(root, f)
+            # arcname keeps a top-level "skills/" prefix for tidy unpacking
+            arc = os.path.join("skills", os.path.relpath(full, stage))
+            z.write(full, arc)
+print(f"zipped -> {zip_path}")
+PY
 
-[ "$found_root" = 1 ] || { echo "ERROR: no Antigravity skill root found" >&2; exit 1; }
-
-echo "Done. Restart Antigravity to pick up changes."
+echo
+echo "Done. Staged $synced skills."
+echo "  Folder: $OUT_DIR/skills"
+echo "  Zip:    $ZIP_PATH"
+echo
+echo "To load into Claude Cowork: open a Cowork session, upload the .zip, and ask"
+echo "the agent to unpack each folder into its skills dir (ClaudeOS/skills/<name>/)."
