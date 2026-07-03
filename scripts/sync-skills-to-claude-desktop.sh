@@ -29,6 +29,7 @@ declare -A SKILLS=(
   [refero-design]="$HOME/.agents/skills/refero-design"
   [learn-anything]="$HOME/.claude/skills/learn-anything"
   [genspark-slides]="$HOME/.claude/skills/genspark-slides"
+  [watch-video]="$HOME/.claude/skills/watch-video"
   [content-ideas]="$HOME/content-ideas/skills/content-ideas"
   [pipeline-runner]="$HOME/content-ideas/skills/pipeline-runner"
   [storm-research]="$HOME/content-ideas/skills/storm-research"

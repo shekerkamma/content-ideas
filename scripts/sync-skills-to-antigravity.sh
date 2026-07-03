@@ -24,6 +24,7 @@ declare -A SKILLS=(
   [watch]="$HOME/.claude/skills/watch"
   [marp]="$HOME/.claude/skills/marp"
   [genspark-slides]="$HOME/.claude/skills/genspark-slides"
+  [watch-video]="$HOME/.claude/skills/watch-video"
   [refero-design]="$HOME/.agents/skills/refero-design"
   [content-ideas]="$HOME/content-ideas/skills/content-ideas"
   [pipeline-runner]="$HOME/content-ideas/skills/pipeline-runner"
