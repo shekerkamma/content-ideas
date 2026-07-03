@@ -70,6 +70,45 @@ Default reconstruction path:
 Default to `svg` or `html/css` for precise slide recreation. Use Excalidraw
 only when a hand-drawn editable source is actually the desired style.
 
+## Non-Negotiable Delivery Gates
+
+Do not call a video deck `reviewed` unless every gate below has passed and the
+run contains the evidence artifacts.
+
+1. **Story gate:** `ai-analyst` produced the upstream story spine when exposed.
+   If it is unavailable, the run status must say `fallback`; do not silently
+   treat fallback synthesis as equivalent.
+2. **Evidence gate:** `grill-me` or the manual fallback challenged every
+   slide-level claim against the transcript/research and recorded rebuild
+   decisions.
+3. **Visual coverage gate:** every meaningful screen-change / hyperframe maps
+   to a slide, recreated visual, grouped duplicate, or explicit skip reason.
+   Presenter-only frames may be excluded, but they must be accounted for.
+4. **Client-language gate:** extracted visible slide text has no internal terms:
+   `transcript`, `hyperframe`, `Excalidraw`, `YouTube`, `source`,
+   `validation`, `synthesis`, `audit`, `Codex`, `Claude`, file paths, or
+   timestamps.
+5. **Render gate:** PPTX XML validation passes and a real render pass
+   (PowerPoint, LibreOffice PDF, Google Slides import, or equivalent) confirms
+   embedded diagrams appear, are readable, and are not cropped. The lightweight
+   preview alone is insufficient for decks with embedded visuals.
+6. **Editability gate:** declare one editability mode in the run report and
+   final response: `PPT-native editable diagrams`, `Excalidraw-source editable
+   diagrams`, or `non-editable visual render`. If the user asks for editable
+   slides and does not accept source-layer editability, rebuild diagrams as
+   native PPT shapes.
+7. **Proof gate:** named examples in the source, such as companies/products,
+   must survive synthesis as named proof cards unless excluded for a stated
+   reason.
+
+Status rules:
+- Use `*-draft.pptx` before all gates pass.
+- Use `*-reviewed.pptx` only after all gates pass.
+- Use `blocked` when a required dependency, render path, or editability mode is
+  unavailable.
+- Use `fallback` when the deck is usable but a required upstream skill was
+  unavailable and a manual equivalent was used.
+
 ## Pipeline
 
 ### Stage 1: Watch → Extract
@@ -175,6 +214,10 @@ Output:
 - `<topic>-grill-me-validation.md`
 - Optional `<topic>-transcript-excerpts.md` with the relevant timestamped
   transcript passages used for validation
+- The validation must include both content and slide-design questions: claim
+  support, client-facing wording, visual readability, layout hierarchy,
+  missing/over-generalized proof, and whether each visual is editable at the
+  declared layer.
 
 **Pass forward:** corrected slide spine, validated claims, visual corrections
 
@@ -270,7 +313,8 @@ Mandatory deck assembly:
     diagram only as a fallback; prefer editable PPTX shapes.
 - Client-facing slide hygiene:
   - Do not show internal workflow/tool terms on slides: `Excalidraw`, `YouTube`,
-    `hyperframe`, `source`, `audit`, `internal`, `recreated`, or skill names.
+    `transcript`, `hyperframe`, `source`, `audit`, `validation`, `synthesis`,
+    `internal`, `recreated`, `Codex`, `Claude`, file paths, or skill names.
     Those belong in run reports and source packages, not client-facing slide
     text.
   - Do not label panels with process terms like `Synthesis`. Use client-facing
@@ -283,14 +327,17 @@ Mandatory deck assembly:
   - Speaker notes may contain internal traceability only when the user wants
     source/audit context preserved in the deck file; otherwise keep notes clean
     too.
-- Run branded PPTX validation and preview QA. Use `*-draft.pptx` until preview
-  has been reviewed; use `*-reviewed.pptx` only after visual QA passes.
+- Run branded PPTX validation and preview QA. Use `*-draft.pptx` until all
+  delivery gates pass; use `*-reviewed.pptx` only after slide-by-slide
+  validation and real render QA pass.
 - For decks with embedded visuals, run a real render QA pass, not only the
   lightweight `preview_pptx.py` placeholder render. Use LibreOffice/PDF or
   another renderer to confirm the actual drawing images appear, are legible, and
   are not cropped.
 - Extract visible PPTX text and scan for forbidden internal terms before
   delivery. If any are found, rebuild before opening the deck.
+- Preserve named proof examples from the source. Do not collapse specific
+  companies/products into generic categories unless the run report states why.
 - If editable diagram recreation is unavailable, mark the deck `blocked`; do
   not silently substitute screenshots as the main deliverable.
 
@@ -309,6 +356,7 @@ Route-specific source package:
 <topic>-transcript-excerpts.md      # timestamped evidence used by validation
 <topic>-findings.json               # optional analyst/strategy synthesis payload
 <topic>-hyperframes.md              # every frame classified and accounted for
+<topic>-screen-change-coverage.md   # every meaningful visual mapped or skipped with reason
 <topic>-visual-spec.json            # source of truth for visual reconstruction
 <topic>-reconstruction.svg          # optional QA intermediate, not final deck asset
 <topic>-reconstruction.html         # optional QA intermediate, not final deck asset
@@ -321,7 +369,8 @@ Route-specific source package:
 <topic>-architecture.drawio         # Route C
 <topic>-architecture.md             # Route C
 <topic>-video-deck-draft.pptx       # mandatory branded PPTX output
-<topic>-video-deck-reviewed.pptx    # only after PPTX preview QA passes
+<topic>-video-deck-reviewed.pptx    # only after all delivery gates pass
+<topic>-slide-validation.md         # slide-by-slide content/design validation
 ```
 
 ## Completion
@@ -393,8 +442,8 @@ At invocation, say:
   drawings with action titles, concise business implication text, and takeaway
   bands.
 - **Client slides must not expose the production process.** Keep tool names,
-  timestamps, source filenames, hyperframe/audit language, and validation notes
-  out of visible slide text.
+  timestamps, source filenames, `transcript`, hyperframe/audit language,
+  synthesis labels, and validation notes out of visible slide text.
 - **Validate against the transcript before delivery.** Run `grill-me` or the
   fallback self-question validation. Unsupported consultant interpretations must
   be softened, removed, or marked as interpretation in source notes. If the
@@ -408,6 +457,14 @@ At invocation, say:
   slide-embeddable recreated diagram preview. Do not use captured video frames
   as the main visual fallback unless the user explicitly asks for source
   evidence.
+- **Rendered Excalidraw must be readable.** If Excalidraw previews are inserted
+  into PPTX, label text must be readable in the exported PDF/contact sheet. If
+  labels are not readable, enlarge the drawing, split the slide, or rebuild the
+  labels/diagram as native PPT text and shapes.
+- **Reviewed is a real QA status, not a filename preference.** Never create or
+  deliver `*-reviewed.pptx` until XML validation, real render QA,
+  internal-term scan, visual coverage, editability declaration, and
+  slide-by-slide grill validation all pass.
 - **Do not copy copyrighted frames exactly.** Use `/watch` frames as reference and redraw the idea in an original editable style unless the user owns the source material or has rights.
 - **Config is persistent across runs.** User answers (theme, NotebookLM, output dir) are saved to config.json and reused silently. Reconfigure with `/video-to-deck config`.
 - **Stage 4 must produce a branded .pptx.** Use `branded-pptx-deck` after Stage

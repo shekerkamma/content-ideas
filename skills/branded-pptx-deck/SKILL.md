@@ -65,13 +65,23 @@ yourself, validate explicitly.
    language unless the user explicitly asks for an audit appendix. Keep tool names, source
    filenames, timestamps, "synthesis" labels, implementation notes, and validation notes in
    source/run files rather than on client slides. Use client-facing labels such as
-   `Business implication`, `Decision`, `Operating model`, or `Next move`.
+   `Business implication`, `Decision`, `Operating model`, or `Next move`. Also scan for
+   internal/source terms such as `transcript`, `hyperframe`, `Excalidraw`, `YouTube`,
+   `source`, `audit`, `validation`, `synthesis`, `Codex`, `Claude`, file paths, and raw
+   timestamps before delivery.
 5. **Validate + preview.** `Deck.save()` auto-validates and raises on malformed XML.
    Then run `python3 scripts/preview_pptx.py <out.pptx>` and actually *look* at the
    contact sheets; fix any overflow before delivering. If the deck embeds image previews,
    diagrams, or rendered canvases, also run a real render check (PowerPoint, LibreOffice
    PDF, or equivalent) because `preview_pptx.py` shows pictures as placeholders.
-6. **Deliver.** This user opens decks in Windows PowerPoint from WSL. Copy to
+6. **Declare editability.** For decks with diagrams, record one of these in the run report
+   and final response: `PPT-native editable diagrams`, `Excalidraw-source editable
+   diagrams`, or `non-editable visual render`. If the user asked for editable slides,
+   source-layer editability is not enough unless they explicitly accept it.
+7. **Set status honestly.** Use `*-draft.pptx` before QA, `*-reviewed.pptx` only after
+   XML validation, real render QA, visible-text scan, and slide-by-slide content/design
+   validation pass, and `blocked` when a required render/editability path is unavailable.
+8. **Deliver.** This user opens decks in Windows PowerPoint from WSL. Copy to
    `/mnt/c/Users/<user>/OneDrive/Desktop/` and open with
    `powershell.exe -NoProfile -Command "Start-Process '<C:\...>'"`. A file open in
    PowerPoint is **locked** — if a re-copy fails with "Permission denied", write the
@@ -165,11 +175,22 @@ At invocation, surface this to the user:
 
 - **Never render unvalidated content:** Every named entity, metric, and claim must be verified before it lands on a slide. If you assembled the data yourself (not from an upstream skill), run a validation pass first. Wrong facts in an executive deck are a delivery failure.
 - **No internal process language on client slides:** Don't show tool names, source paths,
-  timestamps, audit labels, "synthesis" labels, or validation notes as visible slide text.
-  Those belong in the run report, speaker notes only when requested, or source artifacts.
+  timestamps, audit labels, `transcript`, `hyperframe`, "synthesis" labels, or validation
+  notes as visible slide text. Those belong in the run report, speaker notes only when
+  requested, or source artifacts.
 - **Embedded images need real render QA:** The built-in preview is useful for text and
   geometry, but it does not show embedded pictures. Render to PDF or inspect in PowerPoint
   before delivering decks that include diagrams, canvases, screenshots, or previews.
+- **Reviewed requires evidence:** Do not name a deck `*-reviewed.pptx` unless the run
+  contains the validation evidence: XML validation result, real render/contact sheet or
+  PowerPoint inspection, visible-text internal-term scan, and slide-by-slide
+  content/design validation notes.
+- **Readable diagrams are mandatory:** If a deck embeds diagram images, the labels must be
+  readable in the real render. If not, enlarge the visual, split the slide, or rebuild the
+  labels/diagram as native PPT shapes.
+- **Editability must be explicit:** If diagrams are rendered images with editable source
+  files elsewhere, say so. Do not imply PowerPoint-native editability when the deck only
+  embeds image previews.
 - **Never re-derive the effectLst:** Appending a second `<a:effectLst>` after `shape.shadow.inherit = False` corrupts the file and triggers PowerPoint's repair prompt. Use `rect(shadow=True)` from the kit — it manages this correctly.
 - **A clean python-pptx round-trip is not proof of validity:** Only `validate_pptx()` or PowerPoint itself catches effectLst and child-order issues. Always call `Deck.save()` (which auto-validates) — do not bypass it.
 - **File locked in PowerPoint:** If re-copy fails with "Permission denied", the deck is open in PowerPoint. Write the corrected file under a new filename — do not attempt to overwrite.
