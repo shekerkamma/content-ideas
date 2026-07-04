@@ -25,6 +25,18 @@ HTML renderer.
   planning, `docs/design.md`, launch, and roadmap execution.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
   coding, keep solutions minimal, edit surgically, and verify success criteria.
+- `skills/llm-wiki-agent/SKILL.md` — model-neutral Karpathy/Fable-style LLM wiki
+  workflow: `raw/` sources, generated `wiki/` pages, `index.md`, `log.md`,
+  backlinks, and cross-host `AGENTS.md` / `CLAUDE.md` routing rules.
+
+## Cross-Host Browser Testing
+- Use `npm run browser:test` for headless Playwright validation of the LLM Wiki
+  Agent demo.
+- Use `npm run browser:test:headed` when a visible Chromium run is needed.
+- Use `npm run browser:demo` to serve the static demo locally on port `8766`.
+- If Claude Code cannot open a headed browser, run headless mode or open the
+  demo with VS Code Simple Browser.
+- See `docs/browser-testing.md` for Codex and Claude Code setup details.
 
 ## Claude Code Director Skill
 - `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):

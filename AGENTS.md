@@ -53,9 +53,15 @@ Playwright rule:
   - `npm run test:e2e` for all e2e specs
   - `npm run test:e2e:kyc` for the KYC workflow smoke test
   - `npm run test:e2e:headed` when a visible Chromium run is needed
+- Use `playwright.demo.config.ts` for the shareable LLM Wiki Agent demo:
+  - `npm run browser:test` for headless demo validation
+  - `npm run browser:test:headed` for visible demo validation
+  - `npm run browser:demo` for a manual local preview on port `8766`
 - The Playwright config uses `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` when set,
   then falls back to cached Chromium under `~/.cache/ms-playwright` when
   present. If no browser is installed, run `npm run test:e2e:install`.
+- Browser testing instructions for Codex and Claude Code are documented in
+  `docs/browser-testing.md`.
 - If `npm run build` was run while `npm run dev` was still active, restart the
   dev server before Playwright testing. A stale dev server can serve HTML that
   points to missing `.next` chunks such as `main-app.js`, preventing hydration.
@@ -86,6 +92,10 @@ Cross-host product-build skills:
 - Use `skills/karpathy-guidelines/SKILL.md` for coding, review, or refactoring
   work so assumptions are explicit, changes stay surgical, and success criteria
   are verifiable.
+- Use `skills/llm-wiki-agent/SKILL.md` when the user asks to build, initialize,
+  ingest into, query, or maintain an LLM wiki / second brain / markdown knowledge
+  bundle. This skill implements the raw → wiki → index/log routing pattern for
+  both Codex and Claude Code.
 - For Codex `/goal` work, treat the existing PLAID artifacts as the build
   contract:
   - `vision.json`

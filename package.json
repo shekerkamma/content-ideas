@@ -12,7 +12,10 @@
     "test:e2e:install": "playwright install chromium",
     "test:e2e:kyc": "playwright test tests/e2e/kyc-screening.spec.ts",
     "test:e2e:report": "playwright show-report",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "browser:test": "playwright test --config=playwright.demo.config.ts",
+    "browser:test:headed": "playwright test --config=playwright.demo.config.ts --headed",
+    "browser:demo": "python3 -m http.server 8766 --bind 127.0.0.1 --directory runs/2026-07-04-fable5-llm-wiki-pattern/interactive-demo"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.0",

@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LLM Wiki Agent Interactive Demo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5d6675;
+      --line: #d9dee7;
+      --soft: #f4f6f8;
+      --raw: #2d75c7;
+      --wiki: #7057c8;
+      --log: #b07020;
+      --good: #147d64;
+      --bad: #9d2f2f;
+      --paper: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #eef2f6;
+    }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr) 360px;
+      grid-template-rows: 58px minmax(0, 1fr);
+    }
+    header {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+    h1 {
+      font-size: 18px;
+      line-height: 1;
+      margin: 0;
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--good);
+    }
+    aside, main, .inspector {
+      min-height: 0;
+      overflow: auto;
+    }
+    aside {
+      border-right: 1px solid var(--line);
+      background: #f9fafc;
+      padding: 14px;
+    }
+    main {
+      padding: 16px;
+      background: #eef2f6;
+    }
+    .inspector {
+      border-left: 1px solid var(--line);
+      background: var(--paper);
+      padding: 14px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 12px 0 8px;
+    }
+    .tree {
+      display: grid;
+      gap: 6px;
+      font-size: 14px;
+    }
+    .node {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 9px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      min-height: 38px;
+    }
+    .node:hover, .node.active {
+      background: var(--paper);
+      border-color: var(--line);
+    }
+    .folder { font-weight: 680; }
+    .indent { margin-left: 18px; }
+    .raw { color: var(--raw); }
+    .wiki { color: var(--wiki); }
+    .log { color: var(--log); }
+    .workspace {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+      gap: 14px;
+      height: 100%;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    button {
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-weight: 680;
+      cursor: pointer;
+      min-height: 36px;
+    }
+    button:hover { border-color: #aab3c2; background: #f8fafc; }
+    button.primary { background: #17202a; color: #fff; border-color: #17202a; }
+    button.primary:hover { background: #26313d; }
+    .canvas {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr);
+      gap: 14px;
+    }
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      min-width: 0;
+    }
+    .panel h2 {
+      margin: 0;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+    }
+    .page {
+      padding: 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .graph {
+      padding: 14px;
+      min-height: 410px;
+      position: relative;
+    }
+    svg {
+      width: 100%;
+      height: 390px;
+      display: block;
+    }
+    .edge {
+      stroke: #9aa5b5;
+      stroke-width: 1.5;
+    }
+    .g-node circle {
+      stroke: #ffffff;
+      stroke-width: 2;
+    }
+    .g-node text {
+      font-size: 12px;
+      fill: var(--ink);
+      pointer-events: none;
+    }
+    .event {
+      border-left: 3px solid var(--line);
+      padding: 8px 0 8px 10px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .event strong { color: var(--ink); }
+    .event.ingest { border-color: var(--raw); }
+    .event.query { border-color: var(--wiki); }
+    .event.lint { border-color: var(--good); }
+    .answer {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .empty {
+      color: var(--muted);
+    }
+    @media (max-width: 1100px) {
+      .shell {
+        grid-template-columns: 240px minmax(0, 1fr);
+      }
+      .inspector {
+        grid-column: 1 / -1;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+    @media (max-width: 760px) {
+      .shell {
+        display: block;
+      }
+      header, aside, main, .inspector {
+        width: 100%;
+      }
+      .canvas {
+        grid-template-columns: 1fr;
+      }
+      .status {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <h1>LLM Wiki Agent</h1>
+      <div class="status"><span class="dot"></span><span id="phase">Ready for interactive test</span></div>
+    </header>
+    <aside>
+      <div class="label">Files</div>
+      <div class="tree" id="tree"></div>
+    </aside>
+    <main>
+      <div class="workspace">
+        <div class="toolbar">
+          <button class="primary" id="setup">Initialize Wiki</button>
+          <button id="ingest">Ingest Source</button>
+          <button id="query">Ask Query</button>
+          <button id="lint">Run Maintenance</button>
+          <button id="reset">Reset</button>
+        </div>
+        <div class="canvas">
+          <section class="panel">
+            <h2 id="page-title">wiki/index.md</h2>
+            <div class="page" id="page"></div>
+          </section>
+          <section class="panel">
+            <h2>Knowledge Graph</h2>
+            <div class="graph">
+              <svg id="graph" viewBox="0 0 520 390" role="img" aria-label="LLM wiki graph"></svg>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <section class="inspector">
+      <div class="label">Agent Log</div>
+      <div id="events"></div>
+      <div class="label">Answer</div>
+      <div class="answer" id="answer"><span class="empty">Run “Ask Query” after ingest.</span></div>
+    </section>
+  </div>
+
+  <script>
+    const initial = {
+      files: [
+        { path: 'raw/', kind: 'folder', group: 'raw' },
+        { path: 'wiki/', kind: 'folder', group: 'wiki' },
+        { path: 'wiki/index.md', kind: 'file', group: 'wiki' },
+        { path: 'wiki/log.md', kind: 'file', group: 'log' },
+        { path: 'AGENTS.md', kind: 'file', group: 'rules' },
+        { path: 'CLAUDE.md', kind: 'file', group: 'rules' }
+      ],
+      pages: {
+        'wiki/index.md': '# LLM Wiki Index\n\nUse this file first. It routes questions to relevant generated pages.\n\n## Sections\n- sources: no ingested sources yet\n- concepts: no concepts yet\n- entities: no entities yet',
+        'wiki/log.md': '# LLM Wiki Log\n\n## Initial setup\n- initialized raw/wiki/index/log cross-host structure',
+        'AGENTS.md': '# Codex Rules\n\nUse raw/ as read-only input. Write generated knowledge under wiki/. Start queries from wiki/index.md.',
+        'CLAUDE.md': '# Claude Code Rules\n\nUse the same routing schema as Codex. Fable can improve synthesis later, but the wiki is just markdown.'
+      },
+      events: [
+        { type: 'lint', title: 'setup', body: 'raw/, wiki/, index, log, AGENTS, and CLAUDE initialized' }
+      ],
+      selected: 'wiki/index.md',
+      answer: ''
+    };
+
+    let state = structuredClone(initial);
+
+    function setPhase(text) {
+      document.getElementById('phase').textContent = text;
+    }
+
+    function renderTree() {
+      const tree = document.getElementById('tree');
+      tree.innerHTML = '';
+      state.files.forEach(file => {
+        const row = document.createElement('div');
+        row.className = `node ${file.path === state.selected ? 'active' : ''}`;
+        if (file.path.includes('/') && !file.path.endsWith('/')) row.classList.add('indent');
+        const icon = file.kind === 'folder' ? '▸' : '•';
+        row.innerHTML = `<span class="${file.group}">${icon}</span><span class="${file.kind === 'folder' ? 'folder' : ''}">${file.path}</span>`;
+        row.onclick = () => {
+          if (file.kind === 'file' && state.pages[file.path]) {
+            state.selected = file.path;
+            render();
+          }
+        };
+        tree.appendChild(row);
+      });
+    }
+
+    function renderPage() {
+      document.getElementById('page-title').textContent = state.selected;
+      document.getElementById('page').textContent = state.pages[state.selected] || 'Select a generated markdown page.';
+    }
+
+    function renderEvents() {
+      const events = document.getElementById('events');
+      events.innerHTML = state.events.map(e => `<div class="event ${e.type}"><strong>${e.title}</strong><br>${e.body}</div>`).join('');
+      const answer = document.getElementById('answer');
+      answer.innerHTML = state.answer || '<span class="empty">Run “Ask Query” after ingest.</span>';
+    }
+
+    function graphNodes() {
+      const nodes = [
+        { id: 'raw', label: 'raw source', x: 90, y: 80, color: '#2d75c7' },
+        { id: 'source', label: 'source page', x: 240, y: 80, color: '#7057c8' },
+        { id: 'concept', label: 'concept', x: 390, y: 130, color: '#147d64' },
+        { id: 'entity', label: 'entity', x: 250, y: 230, color: '#b07020' },
+        { id: 'index', label: 'index', x: 95, y: 290, color: '#17202a' },
+        { id: 'log', label: 'log', x: 390, y: 300, color: '#9d2f2f' }
+      ];
+      const ingested = state.files.some(f => f.path === 'wiki/concepts/context-engineering.md');
+      return ingested ? nodes : nodes.filter(n => ['raw', 'index', 'log'].includes(n.id));
+    }
+
+    function renderGraph() {
+      const nodes = graphNodes();
+      const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+      const edges = [
+        ['raw', 'source'], ['source', 'concept'], ['source', 'entity'],
+        ['concept', 'entity'], ['index', 'concept'], ['source', 'log']
+      ].filter(([a,b]) => byId[a] && byId[b]);
+      const svg = document.getElementById('graph');
+      svg.innerHTML = '';
+      edges.forEach(([a,b]) => {
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', byId[a].x);
+        line.setAttribute('y1', byId[a].y);
+        line.setAttribute('x2', byId[b].x);
+        line.setAttribute('y2', byId[b].y);
+        line.setAttribute('class', 'edge');
+        svg.appendChild(line);
+      });
+      nodes.forEach(n => {
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        g.setAttribute('class', 'g-node');
+        const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', n.x);
+        c.setAttribute('cy', n.y);
+        c.setAttribute('r', 25);
+        c.setAttribute('fill', n.color);
+        const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        t.setAttribute('x', n.x);
+        t.setAttribute('y', n.y + 44);
+        t.setAttribute('text-anchor', 'middle');
+        t.textContent = n.label;
+        g.appendChild(c);
+        g.appendChild(t);
+        svg.appendChild(g);
+      });
+    }
+
+    function ensureFile(path, group, content) {
+      if (!state.files.some(f => f.path === path)) {
+        state.files.push({ path, kind: 'file', group });
+      }
+      state.pages[path] = content;
+    }
+
+    function setup() {
+      state = structuredClone(initial);
+      setPhase('Initialized raw/wiki routing schema');
+      render();
+    }
+
+    function ingest() {
+      ensureFile('raw/context-engineering-source.md', 'raw', '# Raw Source\n\nContext engineering means giving the model architecture, rules, examples, and validation criteria before implementation.');
+      ensureFile('wiki/sources/context-engineering-source.md', 'wiki', '---\ntype: source\nsource_path: raw/context-engineering-source.md\n---\n\n# Context Engineering Source\n\nA source page preserving the claims extracted from raw input.\n\nLinks: [[Context Engineering]], [[Validation Criteria]]');
+      ensureFile('wiki/concepts/context-engineering.md', 'wiki', '---\ntype: concept\n---\n\n# Context Engineering\n\nContext engineering is the practice of curating architecture, examples, constraints, and validation criteria before asking an agent to build.\n\nBacklinks: [source](../sources/context-engineering-source.md), [validation criteria](validation-criteria.md)');
+      ensureFile('wiki/concepts/validation-criteria.md', 'wiki', '---\ntype: concept\n---\n\n# Validation Criteria\n\nValidation criteria tell the agent how success will be checked: tests, lint, type checks, browser checks, and human review.');
+      ensureFile('wiki/entities/codex.md', 'wiki', '---\ntype: entity\n---\n\n# Codex\n\nA file-reading coding agent that can operate this markdown wiki through AGENTS.md rules.');
+      state.pages['wiki/index.md'] = '# LLM Wiki Index\n\n## Sources\n- [Context Engineering Source](sources/context-engineering-source.md) - source claims from raw input\n\n## Concepts\n- [Context Engineering](concepts/context-engineering.md) - curate context before build\n- [Validation Criteria](concepts/validation-criteria.md) - define checks before execution\n\n## Entities\n- [Codex](entities/codex.md) - agent host that can use AGENTS.md';
+      state.pages['wiki/log.md'] += '\n\n## ingest | context-engineering-source\n- created one source page, two concept pages, one entity page\n- updated index and backlinks';
+      state.events.unshift({ type: 'ingest', title: 'ingest', body: 'raw source became source/concept/entity pages with backlinks' });
+      state.selected = 'wiki/index.md';
+      setPhase('Ingest complete: index and log updated');
+      render();
+    }
+
+    function query() {
+      state.selected = 'wiki/concepts/context-engineering.md';
+      state.answer = '<strong>Answer:</strong> Start with context engineering: curate architecture, examples, constraints, and validation criteria before execution. Source-backed pages: <code>wiki/sources/context-engineering-source.md</code>, <code>wiki/concepts/context-engineering.md</code>, and <code>wiki/concepts/validation-criteria.md</code>.';
+      state.events.unshift({ type: 'query', title: 'query', body: 'read index, opened relevant concept, followed source and validation links' });
+      setPhase('Query answered from routed wiki pages');
+      render();
+    }
+
+    function lint() {
+      state.pages['wiki/log.md'] += '\n\n## lint | maintenance\n- checked orphan pages, backlinks, and source traceability\n- no unresolved core routes';
+      state.events.unshift({ type: 'lint', title: 'maintenance', body: 'checked backlinks, orphans, and source traceability' });
+      state.selected = 'wiki/log.md';
+      setPhase('Maintenance logged');
+      render();
+    }
+
+    function render() {
+      renderTree();
+      renderPage();
+      renderEvents();
+      renderGraph();
+    }
+
+    document.getElementById('setup').onclick = setup;
+    document.getElementById('ingest').onclick = ingest;
+    document.getElementById('query').onclick = query;
+    document.getElementById('lint').onclick = lint;
+    document.getElementById('reset').onclick = setup;
+    render();
+  </script>
+</body>
+</html>
