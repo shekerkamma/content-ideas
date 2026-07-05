@@ -29,11 +29,45 @@ HTML renderer.
   workflow: `raw/` sources, generated `wiki/` pages, `index.md`, `log.md`,
   backlinks, and cross-host `AGENTS.md` / `CLAUDE.md` routing rules.
 
+## BuilderOS Build Pipeline (successor to PLAID)
+
+BuilderOS skills (vendored into `.claude/skills/`, `skills/`, `.agents/skills/`)
+give a repeatable idea → ship system. They chain via `docs/` handoffs, and
+`spar-prd-goal` inserts a per-task `/goal` layer between planning and execution:
+
+```
+idea-generator → idea-validator → product-planner → design-system → build-mvp
+   product-idea    validation       vision/prd/       design.md       (whole
+      .md          -report.md       roadmap.md        design.html      roadmap)
+                                        │
+                                        ▼  [pick one roadmap task]
+                                   spar-prd-goal → /goal → build-loop-{claude-code,codex,cursor}
+                                   (verifiable PRD)         (build → review → test → fix, per task)
+                                        │
+                                        ▼  (product built)
+                                   launch-checklist → docs/launch-checklist.md
+```
+
+Routing rules:
+- **Whole MVP at once** → `build-mvp`. **One task, review-gated** → `spar-prd-goal`
+  (spec a `/goal` target) then a `build-loop-*` matching the host.
+- `spar-prd-goal` should pre-fill from `docs/prd.md` / `docs/product-roadmap.md`
+  when they exist, rather than interviewing cold.
+- **BuilderOS supersedes `plaid`.** Prefer BuilderOS skills for new work; `plaid`
+  remains only for continuity on in-flight builds that already use its docs.
+
 ## Cross-Host Browser Testing
 - Use `npm run browser:test` for headless Playwright validation of the LLM Wiki
   Agent demo.
 - Use `npm run browser:test:headed` when a visible Chromium run is needed.
 - Use `npm run browser:demo` to serve the static demo locally on port `8766`.
+- Use `npm run llm-wiki:smoke` for deterministic PDF + URL wiki ingest.
+- Use `npm run llm-wiki:live` for live Chromium URL/PDF download ingest.
+- Use `npm run llm-wiki:live:headed` only when the user explicitly wants to see
+  the live browser workflow.
+- For live ingests, preserve downloaded files under `raw/`, keep PDFs under
+  `raw/downloads/`, add source URLs and hashes to generated pages, update
+  `wiki/index.md`, and append `wiki/log.md`.
 - If Claude Code cannot open a headed browser, run headless mode or open the
   demo with VS Code Simple Browser.
 - See `docs/browser-testing.md` for Codex and Claude Code setup details.

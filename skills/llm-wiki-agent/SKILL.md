@@ -47,6 +47,28 @@ Profiles:
 - `okf`: creates an OKF-compatible bundle layout with root `index.md`, `log.md`,
   `sources/`, `concepts/`, and `entities/`.
 
+To run the repeatable Fable/Karpathy PDF + URL ingest smoke test:
+
+```bash
+python3 skills/llm-wiki-agent/scripts/smoke_fable_ingest.py --reset
+```
+
+The smoke test creates a sample wiki under `/tmp/llm-wiki-fable-smoke`, drops in
+URL-style and PDF-extract sources under `raw/`, generates linked wiki pages, and
+validates index/log/query routing.
+
+To run the live Chromium download variant:
+
+```bash
+npm run llm-wiki:live
+npm run llm-wiki:live:headed
+```
+
+The live variant uses Playwright Chromium to download a URL and PDF, writes the
+raw captures under `/tmp/llm-wiki-fable-live/raw/`, ingests them into linked
+wiki pages, and validates routing. Use `-- --url <url> --pdf-url <pdf-url>` with
+the npm scripts to override the defaults.
+
 ## Ingest Workflow
 
 1. Identify the source:
@@ -61,6 +83,28 @@ Profiles:
 7. Update `wiki/index.md` with one-line summaries and route hints.
 8. Append an entry to `wiki/log.md`.
 9. Report what changed and what source paths support the changes.
+
+## Live Source Ingest Rules
+
+Use live browser download only when the user explicitly asks for live URL/PDF
+ingest, headed Chromium, or browser-visible validation. Otherwise prefer the
+deterministic smoke test.
+
+When using live download:
+
+- Preserve the original source under `raw/`.
+- For PDFs, preserve the downloaded PDF bytes under `raw/downloads/` and write a
+  markdown extraction/metadata file next to it.
+- Record source URL, content type, byte count, and hash when available.
+- Treat browser-extracted PDF text as best effort unless a real PDF extraction
+  tool is available.
+- Never overwrite or delete existing `raw/` material unless the user explicitly
+  asks.
+- Generated source pages must link back to the raw path and source URL.
+- `wiki/index.md` must include route hints for live-downloaded sources.
+- `wiki/log.md` must record the download and ingest operation.
+- Headed mode is for human-visible validation; headless mode is preferred for
+  repeatable verification.
 
 ## Query Workflow
 
@@ -95,4 +139,3 @@ Run maintenance after every 5-10 ingests or when answers feel weak:
 - Avoid embedding/vector systems as the default. The wiki should work as plain
   markdown first.
 - Make the structure make sense to both the model and the human.
-

@@ -116,6 +116,16 @@ Invoke the `/watch` skill on the provided video URL.
 - Extract the full transcript and key visual frames
 - Identify the core topic, thesis, and structure
 - Produce a structured summary: title, sections, key insights, notable visuals
+- For the first full-video visual pass, invoke watch with `--detail efficient`
+  unless the user explicitly requests a higher-fidelity scan. Efficient mode is
+  the default hyperframe extraction pass for video-to-deck because it uses the
+  updated watch keyframe path, caps the run at 50 frames, drops near-duplicates,
+  and gives enough coverage to build the initial hyperframe manifest.
+- For long videos or visually dense sections, use the efficient pass to find
+  candidate sections, then re-run watch on those exact ranges with
+  `--start`/`--end`, `--timestamps`, or a higher detail mode only where needed.
+  Do not jump directly to `token-burner` for the whole video unless the user
+  explicitly accepts the cost.
 
 **Pass forward:** structured summary + transcript + topic name
 
@@ -153,11 +163,16 @@ Invoke the `/content-research` skill on the extracted content, enriched with dee
 
 **Pass forward:** enriched research note + deck-usable content
 
-### Stage 2.5: Analyst Synthesis → Storyboard
+### Stage 2.5: Story Architect + Analyst Synthesis → Storyboard
 Before visualization or PPTX rendering, run a synthesis/storyboard step so the
 deck has a narrative spine instead of becoming a pile of recreated frames.
 
 Preferred path:
+- Use `story-architect` as the concrete upstream storyboard stage whenever it is
+  installed/exposed or present in the repo. This stage must produce BLUF,
+  audience decision, tension, argument arc, slide spine, evidence map, content
+  cuts, and rebuild instructions. Feed this artifact into the visual spec and
+  PPTX builder.
 - Use `ai-analyst` as the required upstream synthesis step whenever it is
   installed/exposed. Do not skip it for convenience. Without this stage, the
   deck tends to become a pile of frames or notes instead of an executive
@@ -182,6 +197,7 @@ Fallback path when `ai-analyst` is not available:
 
 Output:
 - `<topic>-storyboard.md`
+- `<topic>-story-architect-pack.md/json`
 - `<topic>-analyst-story-pack.md/json` when `ai-analyst` or an
   `ai-analyst`-style fallback is used
 - Optional `<topic>-findings.json` when data-backed findings or chart inputs are

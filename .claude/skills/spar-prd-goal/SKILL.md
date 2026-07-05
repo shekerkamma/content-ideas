@@ -1,6 +1,6 @@
 ---
 name: spar-prd-goal
-description: Use when the user wants a quick, goal-aligned PRD for work they'll run with Claude Code `/goal` — a new build, refactor, bug fix, script, or any project. Interviews the user one question at a time (six topics), then writes a PRD whose Success Criteria are copy-pasteable as a `/goal` condition. Triggers on "/spar-prd-goal", "SPAR brief", "SPAR PRD", "write a PRD for /goal", "interview me for a PRD", "give Claude a target to hit". Grounded in SPAR (Situation·Purpose·Action·Result) × the DBS Framework (Direction·Blueprints·Solutions).
+description: Use when the user wants a quick, goal-aligned PRD for a single unit of work they'll run with Claude Code `/goal` — a new build, refactor, bug fix, script, or one task off a BuilderOS `docs/product-roadmap.md`. Interviews the user one question at a time (six topics), then writes a PRD whose Success Criteria are copy-pasteable as a `/goal` condition. The per-task layer that sits BETWEEN BuilderOS product-planner (macro roadmap) and build-mvp / build-loop (execution). Triggers on "/spar-prd-goal", "SPAR brief", "SPAR PRD", "write a PRD for /goal", "spec this roadmap task for /goal", "give Claude a target to hit". Grounded in SPAR (Situation·Purpose·Action·Result) × the DBS Framework (Direction·Blueprints·Solutions).
 argument-hint: [project name or one-line goal]
 ---
 
@@ -27,6 +27,28 @@ Interview script and PRD output structure: [references/template.md](references/t
 | DATA | Situation + Result | Blueprints / Solutions |
 | CONSTRAINTS | Purpose (non-goals) | Blueprints (rules) |
 | DONE | Purpose + Result (success criteria) | Solutions (verification) |
+
+## Chains with (BuilderOS pipeline)
+
+This skill is the **per-task layer** in the BuilderOS build pipeline:
+
+```
+idea-generator → idea-validator → product-planner → design-system → build-mvp / build-loop-*
+                                        │                                   ▲
+                                        ▼ docs/product-roadmap.md            │
+                                   [pick one task] → spar-prd-goal → /goal ──┘
+```
+
+- **Upstream:** `product-planner` writes `docs/product-roadmap.md` (checkboxed
+  tasks). Take ONE roadmap task as this skill's input instead of a cold prompt —
+  pre-fill SCOPE/STACK/SURFACES from `docs/prd.md` and `docs/product-roadmap.md`
+  if they exist.
+- **Downstream:** hand the PRD's Success Criteria to Claude Code `/goal`, then run
+  `build-loop-claude-code` (or `-codex` / `-cursor`) to build → review → test →
+  fix that task until the criteria pass.
+- Use `build-mvp` instead when the user wants the WHOLE roadmap built at once;
+  use `spar-prd-goal` when they want a single task specced with a verifiable
+  `/goal` target first.
 
 ---
 

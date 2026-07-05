@@ -262,10 +262,12 @@ briefs, strategy docs, deck builders, and client-facing artifacts must still be
 written to the local run folder and repo files.
 
 **Research plugins when available.** In Codex Desktop or another host that
-exposes stronger research plugins such as `exa`, prefer those plugins during
-Stage 1 discovery to find better official product pages, docs, GitHub repos,
-competitive signals, and current operator proof points faster than generic
-search alone.
+exposes stronger research plugins, prefer `you-com-search` first for
+current-web search/research/livecrawl when available, then specialist tools
+such as `exa` for semantic/source discovery and Firecrawl for page capture.
+Use these during Stage 1 discovery to find better official product pages,
+docs, GitHub repos, competitive signals, and current operator proof points
+faster than generic search alone.
 
 In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
 an MCP-connected research server or a local CLI/API wrapper for tools such as
@@ -273,6 +275,8 @@ Exa when available. Treat that as the terminal analogue to desktop plugin
 access.
 
 Concrete terminal patterns to prefer when available:
+- `you-com-search` or Hermes `web.search_backend: you` before generic web
+  search
 - Exa MCP over remote/HTTP MCP
 - a local Exa API wrapper that calls `https://api.exa.ai/search`
 

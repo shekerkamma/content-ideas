@@ -22,6 +22,23 @@ Canonical source:
 Default run root:
 `runs/2026-06-26-agentic-opportunity-blueprints/`
 
+## Source / Tool Order
+
+This wrapper inherits the canonical pipeline's research policy. Before any
+generic WebSearch/search_web call, use the wired dependency chain:
+
+1. Local scorecards, prior run artifacts, and referenced canonical files.
+2. GBrain recall for the use case, vertical, incumbents, and prior research.
+3. `you-com-search`, Hermes `web.search_backend: you`, or equivalent You.com
+   API wrapper for current-web discovery, livecrawl, research, and finance
+   research.
+4. Exa for semantic/source discovery and Firecrawl for page capture after URLs
+   are identified.
+5. Specialist MCPs/plugins for official docs, GitHub, finance, or regulatory
+   sources.
+6. Generic WebSearch/search_web only as a last fallback, never as the first
+   research route.
+
 `.agents/skills` mirroring is intentionally not included here because the
 current sandbox reports that path as read-only. If writable in another host,
 mirror this wrapper there without changing the canonical source.

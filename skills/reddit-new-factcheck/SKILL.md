@@ -115,8 +115,9 @@ Preferred order:
    ```
 
 3. If broad discovery is needed, use the best available Reddit discovery tool:
-   `content-outlier-research`, `/last30days`, Exa, ScrapeCreators, or logged-in
-   Playwright Reddit search. Do not start with generic web search.
+   `content-outlier-research`, `/last30days`, `you-com-search`, Exa,
+   ScrapeCreators, or logged-in Playwright Reddit search. Do not start with
+   generic web search.
 4. If Reddit JSON/API access is blocked but `old.reddit.com` is reachable, use
    the fallback collector:
 
@@ -273,11 +274,16 @@ Recommended visual treatment:
 3. Use GBrain recall for recurring companies, verticals, claims, or prior
    source bundles.
 4. Use existing Reddit skills/tools: `reddit-seo-pipeline`,
-   `content-outlier-research`, `/last30days`, ScrapeCreators, Exa, or logged-in
-   Playwright.
+   `content-outlier-research`, `/last30days`, `you-com-search`,
+   ScrapeCreators, Exa, or logged-in Playwright.
 5. Use official sources only for primary-source corroboration.
 6. Use generic web search only as a fallback and label it as non-Reddit
    discovery.
+
+`you-com-search` may discover candidate Reddit/forum URLs, but it does not
+qualify Reddit evidence. Candidate URLs still need the Reddit evidence gate:
+matching subreddit/source context, practitioner/persona language, workflow
+language, and concrete pain, workaround, objection, or adoption signal.
 
 ## Output Contract
 

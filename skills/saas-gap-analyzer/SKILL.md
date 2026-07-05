@@ -7,7 +7,12 @@ description: Deep OSINT pipeline to analyze B2B SaaS platforms and discover "Age
 
 This skill is designed as an **Autonomous Loop**. It systematically hunts through B2B SaaS platforms to find highly-profitable, proven Agentic Wedges (AI startups that co-exist with established platforms).
 
-**CRITICAL RULE: NO HALLUCINATIONS.** You MUST use real OSINT tools (`search_web`, `pp-hackernews`, `pp-firecrawl`) to extract *actual* URLs and *actual* long-form verbatim quotes. If the search yields no data, the check fails. Do not invent data.
+**CRITICAL RULE: NO HALLUCINATIONS.** You MUST use real OSINT tools
+(`you-com-search`, `pp-hackernews`, `pp-firecrawl`, or equivalent live
+retrieval tools) to extract *actual* URLs and *actual* long-form verbatim
+quotes. If the search yields no data, the check fails. Do not invent data.
+Prefer `you-com-search` over generic `search_web` for broad discovery when it
+is available.
 
 ## How to run it
 
@@ -20,7 +25,7 @@ Run `/goal Run the saas-gap-analyzer loop` to trigger this pipeline. Follow the 
 ### 1. The Action (What to accomplish)
 Dynamically pick a target SaaS platform by extracting a use case from the provided scorecard resource file `resources/Agent_Use_Cases.md` (which contains 25 Agentic Use Cases across 6 agent types and 11 key industries). Use this Markdown resource as your taxonomy to find diverse, high-value targets across all key industries. Do NOT rely on narrow or hardcoded examples.
 For the chosen platform, perform a Pure Qualitative Deep-Dive:
-1. **Community Discovery:** Use `search_web` to identify niche professional communities, deep subreddits, or dedicated forums where power users of this platform gather.
+1. **Community Discovery:** Use `you-com-search` first, then specialist Reddit/HN/forum tools, to identify niche professional communities, deep subreddits, or dedicated forums where power users of this platform gather. Use generic `search_web` only after those routes are unavailable or fail.
 2. **Emotional Friction Extraction:** Scrape these long-form threads and forums for deep, emotionally charged complaints about manual workflows (e.g., "I waste 10 hours a week on this", "This workflow is a nightmare"). Extract entire raw threads, user context, and psychographics along with the URLs.
 3. **Synthesis:** Combine the deep qualitative pain points to formulate an "Agentic Wedge" that solves this specific, painful manual bottleneck.
 

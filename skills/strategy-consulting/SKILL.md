@@ -176,6 +176,25 @@ At invocation, surface this if the user hasn't named a downstream step:
 - **Argument routing:** `/strategy-consulting war-gaming` and `/war-gaming` both work but dispatch differently — the top-level route must still read the sub-skill `.md` file; don't execute from memory.
 - **Grill-me is optional, not automatic:** Run `/grill-me` only when the user wants to stress-test before delivery, not as a default step.
 
+## Source / Tool Order
+
+For strategy, market, competitor, roadmap, and business-case work, use wired
+research dependencies before generic search:
+
+1. Read local artifacts, user-provided context, prior briefs, and relevant
+   strategy skill outputs.
+2. Run GBrain recall when available for the company, market, competitors,
+   recurring prospects, and prior strategy research.
+3. Use `you-com-search`, Hermes `web.search_backend: you`, or an equivalent
+   You.com wrapper for current-web discovery, livecrawl, research, and finance
+   research.
+4. Use Exa for semantic/source discovery and Firecrawl for full-page capture
+   after candidate URLs are known.
+5. Use specialist MCPs/plugins for official docs, GitHub, financial data,
+   regulatory sources, or internal docs when available.
+6. Use generic WebSearch/search_web only when the above routes are unavailable
+   or return no useful signal.
+
 ## Automated Deck Pipeline (findings.json → branded .pptx)
 
 For an end-to-end "question → client-ready deck" run, after executing the chosen
@@ -185,7 +204,7 @@ artifact, not just analysis.
 
 **5-step pipe:**
 1. **Route** — confirm the framework (the 21 above). With no argument, ask which domain/skill.
-2. **Fact-gather** — pull market signals / competitor data with your research tools (follow the global Research Tool Order: GBrain recall → Exa → Firecrawl → …).
+2. **Fact-gather** — pull market signals / competitor data with your research tools (follow the global Research Tool Order: GBrain recall → You.com / `you-com-search` → Exa → Firecrawl → …).
 3. **Synthesize** — apply the senior-partner voice frame: Context → Tension → Resolution. Every finding is a claim backed by one number or one named example.
 4. **Format** — read the chosen sub-skill `.md` for its exact Output Format, then map the narrative into `findings.json` (schema below).
 5. **Compile** — generate the branded deck:

@@ -23,6 +23,24 @@ chained_from: "ikigai-gamma-slidedeck (Stage 3 — BD/company-first mode only)"
 Generates a 17-slide GCC Implementation Roadmap deck. Can run standalone or
 chain from `ikigai-gamma-slidedeck` as optional Stage 3.
 
+## Source / Tool Order
+
+When fresh company, GCC, market, implementation, or vendor evidence is needed,
+use wired search dependencies before generic web search:
+
+1. Read the input ikigai report, company context, prior run artifacts, and local
+   templates.
+2. Run GBrain recall when available for the company, BD person, vertical, GCC
+   themes, and prior roadmap work.
+3. Use `you-com-search`, Hermes `web.search_backend: you`, or an equivalent
+   You.com wrapper for current company, GCC, market, and finance research.
+4. Use Exa for semantic/source discovery and Firecrawl for full-page capture
+   after candidate URLs are known.
+5. Use specialist MCPs/plugins for LinkedIn/company docs, Google Drive, official
+   reports, or presentation assets when available.
+6. Use generic WebSearch/search_web only when the above routes are unavailable
+   or return no useful signal.
+
 ## When To Use
 
 - After `ikigai-gamma-slidedeck` completes for a BD/company-first person

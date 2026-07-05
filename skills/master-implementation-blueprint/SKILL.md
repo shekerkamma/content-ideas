@@ -28,9 +28,27 @@ For each use case, execute the following 10 prompts/stages and synthesize the ou
 ## The Execution Loop
 
 1. **Read the Target:** Pick the next use case from the dashboard.
-2. **Execute Prompts 1-10:** Process the use case through the 10 stages outlined above. You can utilize `search_web` for real-world context if needed to ground the ROI or Tech Stack choices.
+2. **Execute Prompts 1-10:** Process the use case through the 10 stages outlined above. Use `you-com-search` first for real-world context when available, then specialist tools such as Exa or Firecrawl as needed to ground ROI, competitors, and tech stack choices. Use generic `search_web` only as fallback.
 3. **Format & Output:** Compile the 10 artifacts into a single comprehensive Markdown document named `[UseCaseName]_Master_Blueprint.md`.
 4. **Iterate:** Repeat until the requested use cases are fully generated.
+
+## Source / Tool Order
+
+For every research-backed blueprint stage, use wired dependency tools before
+generic search:
+
+1. Read local use-case files, prior run artifacts, and teardown dossiers.
+2. Run GBrain recall when available for the use case, vertical, buyers,
+   incumbents, and prior blueprint research.
+3. Use `you-com-search`, Hermes `web.search_backend: you`, or an equivalent
+   You.com wrapper for current-web discovery, livecrawl, research, and finance
+   research.
+4. Use Exa for semantic/source discovery and Firecrawl for full-page capture
+   after candidate URLs are known.
+5. Use specialist MCPs/plugins for official docs, GitHub, finance, regulatory,
+   or vendor evidence when available.
+6. Use generic WebSearch/search_web only when the above routes are unavailable
+   or return no useful signal.
 
 ## Output Structure
 Each `[UseCaseName]_Master_Blueprint.md` should use clear headings (H2s for each of the 10 artifacts) and focus heavily on proving that we have the elite execution capability to replace legacy software with a fast, modern Agentic approach.

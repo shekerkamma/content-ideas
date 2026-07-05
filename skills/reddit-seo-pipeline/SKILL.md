@@ -18,8 +18,12 @@ When invoked, run the following steps sequentially:
 
 ### Step 0: Organic Discovery (Upstream Skills)
 If the user does not provide a specific URL, **DO NOT use basic web search**. Instead, use specialized upstream skills to find high-value targets organically:
-1. Run the **`content-outlier-research`** skill (or use Exa API directly) to find trending, high-engagement Reddit threads matching the user's B2B SaaS niche.
+1. Run the **`content-outlier-research`** skill, `you-com-search`, or Exa API directly to find trending, high-engagement Reddit threads matching the user's B2B SaaS niche. Prefer `you-com-search` over ordinary WebSearch when it is available.
 2. Extract the absolute best organic URLs from the research output to pass into the next step.
+
+You.com or Exa results are discovery only. A Reddit URL becomes usable only
+after Step 1 extracts the thread and Step 2 confirms the comments actually
+match the intended buyer-language or engagement strategy.
 
 ### Step 1: Deep Extraction (Headless Playwright)
 1. Using the organic URLs discovered in Step 0, ensure dependencies are installed by running `pip install -r requirements.txt` and `playwright install chromium` inside the `scripts` folder.

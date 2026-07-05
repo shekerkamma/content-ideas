@@ -1,0 +1,4 @@
+interface:
+  display_name: "Genspark Branded Deck"
+  short_description: "Build branded HTML/CSS decks as PPTX"
+  default_prompt: "Use $genspark-branded-deck to turn this brief into a branded, QA-reviewed PPTX."
