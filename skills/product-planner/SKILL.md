@@ -9,7 +9,10 @@ description: |
   founder says "plan my product", "plan a product", "define my vision",
   "generate a PRD", "create a roadmap", "spec out my idea", "help me
   build something", or wants to convert an idea into shippable spec
-  documents.
+  documents. Also triggers on the BuilderOS-branded phrases "BuilderOS plan",
+  "product planner", "run product-planner". This is the BuilderOS successor to
+  the legacy `plaid` skill — for un-branded planning requests prefer this skill;
+  only use `plaid` when the user names PLAID explicitly.
 license: MIT
 metadata:
   author: BuilderOS
