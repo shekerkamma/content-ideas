@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>officecli-branded-pptx-smoke-draft.pptx</title>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+:root{--slide-design-w:959.98pt;--slide-design-h:540pt;--slide-aspect:1.7777;}
+/* OfficeCli HTML Preview Stylesheet */
+/* Dynamic variables --slide-design-w, --slide-design-h, --slide-aspect are set inline */
+
+:root {
+    --sidebar-w: 180px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #1a1a2e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: var(--sidebar-w);
+    min-width: var(--sidebar-w);
+    background: #12122a;
+    border-right: 1px solid #2a2a4a;
+    overflow-y: auto;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sidebar-title {
+    color: #888;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.thumb {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: 2px;
+    transition: border-color 0.15s;
+    position: relative;
+}
+.thumb:hover { border-color: #555; }
+.thumb.active { border-color: #5b9bd5; }
+.thumb-inner {
+    width: 100%;
+    aspect-ratio: var(--slide-aspect);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+}
+.thumb-slide {
+    width: var(--slide-design-w);
+    height: var(--slide-design-h);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    background: white;
+}
+.thumb-num {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    color: #888;
+    font-size: 10px;
+}
+
+/* ===== Main area ===== */
+.main {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 24px;
+    scroll-behavior: smooth;
+}
+.file-title {
+    display: none;
+}
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.slide-label {
+    display: none;
+}
+.slide-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.slide {
+    width: var(--slide-design-w);
+    height: var(--slide-design-h);
+    position: relative;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    border-radius: 2px;
+    transform-origin: center top;
+    flex-shrink: 0;
+}
+
+/* ===== Speaker notes (R8-bt-3) ===== */
+.slide-notes {
+    width: var(--slide-design-w);
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: #1f1f1f;
+    color: #ddd;
+    border-left: 3px solid #888;
+    border-radius: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12pt;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+.slide-notes[dir="rtl"] {
+    border-left: none;
+    border-right: 3px solid #888;
+    text-align: right;
+}
+.slide-notes-label {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 4px;
+}
+.slide-notes-body div { margin: 2px 0; }
+
+/* ===== Page counter ===== */
+.page-counter {
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+    background: rgba(0,0,0,0.6);
+    color: #ccc;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    z-index: 100;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* ===== Fullscreen ===== */
+body.fullscreen .sidebar { display: none; }
+body.fullscreen .main {
+    padding: 0;
+    gap: 0;
+    overflow: hidden;
+    scroll-behavior: auto;
+}
+body.fullscreen .file-title { display: none; }
+body.fullscreen .slide-container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    display: none;
+    gap: 0;
+}
+body.fullscreen .slide-container.fs-active { display: flex; }
+body.fullscreen .slide-label { color: #444; font-size: 11px; }
+body.fullscreen .slide {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* ===== Sidebar toggle button ===== */
+.sidebar-toggle {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 200;
+    background: rgba(30,30,60,0.85);
+    color: #aaa;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.sidebar-toggle:hover { color: #fff; border-color: #888; }
+/* Hover zone: top-left 60x60px area reveals the button */
+.toggle-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 199;
+    display: none;
+}
+.toggle-zone:hover + .sidebar-toggle,
+.sidebar-toggle:hover {
+    opacity: 1;
+}
+body.sidebar-hidden .sidebar { display: none; }
+body.sidebar-hidden .sidebar-toggle { left: 8px; }
+/* Headless / automated browser — hide sidebar, toggle, and page counter */
+html.headless .sidebar,
+html.headless .sidebar-toggle,
+html.headless .toggle-zone,
+html.headless .page-counter { display: none !important; }
+
+/* ===== Narrow viewport: auto-hide sidebar ===== */
+@media (max-width: 900px) {
+    .sidebar { display: none; }
+    .sidebar-toggle { display: block; }
+    .toggle-zone { display: block; }
+    body.sidebar-visible .sidebar { display: flex; position: fixed; top: 0; left: 0; bottom: 0; z-index: 150; }
+    body.sidebar-visible .sidebar-toggle { left: calc(var(--sidebar-w) + 8px); opacity: 1; }
+    body.sidebar-visible .toggle-zone { display: none; }
+}
+
+/* ===== Elements ===== */
+.shape {
+    position: absolute;
+    overflow: visible;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.shape.has-fill {
+    overflow: hidden;
+}
+.shape-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.shape-text.valign-top { justify-content: flex-start; }
+.shape-text.valign-center { justify-content: center; }
+.shape-text.valign-bottom { justify-content: flex-end; }
+/* anchorCtr="1": shrink-wrap paragraphs so align-items:center can center the
+   text block horizontally (a width:100% .para would otherwise fill the frame). */
+.shape-text.anchor-ctr .para { width: auto; max-width: 100%; }
+/* Vertical text (writing-mode): the flex main axis is horizontal, so valign-*
+   (justify-content) anchors the text column horizontally — matching PowerPoint's
+   anchor="ctr". A width:100% .para would fill that axis and defeat the centering,
+   so shrink-wrap the paragraphs like anchor-ctr does. */
+.shape-text.has-vert-text .para { width: auto; max-width: 100%; }
+.para { width: 100%; line-height: 1; }
+.picture { position: absolute; overflow: hidden; }
+.picture img { width: 100%; height: 100%; object-fit: fill; }
+/* overflow:visible (not hidden) — with border-collapse:collapse the
+   rightmost/bottommost cell's outer 1pt border sits exactly on the
+   container edge; overflow:hidden would clip its outer half. Cell
+   content overflow is already handled by .slide-table td below. */
+.table-container { position: absolute; overflow: visible; }
+.slide-table { width: 100%; height: 100%; border-collapse: collapse; table-layout: fixed; }
+.slide-table td { padding: 4px 6px; vertical-align: top; overflow: hidden; font-size: 10pt; color: inherit; }
+.connector { position: absolute; pointer-events: none; }
+/* The connector's bounding box is a large rectangle for any diagonal/bent line,
+   so the box stays click-through (pointer-events:none above) — otherwise it would
+   swallow clicks meant for shapes beneath it. But pointer-events is inherited in
+   SVG, so leave the drawn stroke itself hittable: an interactive host (the editor)
+   can then select the connector by clicking the visible line, while the empty box
+   area still passes through. fill="none" means only the stroke receives events. */
+.connector svg line, .connector svg polyline, .connector svg path { pointer-events: stroke; }
+.group { position: absolute; }
+
+</style>
+<script>if(location.hash.indexOf('screenshot')>=0||navigator.webdriver||/HeadlessChrome/.test(navigator.userAgent))document.documentElement.classList.add('headless')</script>
+</head>
+<body>
+<div class="toggle-zone"></div><button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar">
+  <div class="sidebar-title">officecli-branded-pptx-smoke-draft.pptx</div>
+  <div class="thumb" data-slide="1">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">1</span>
+  </div>
+  <div class="thumb" data-slide="2">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">2</span>
+  </div>
+  <div class="thumb" data-slide="3">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">3</span>
+  </div>
+</div>
+<div class="main">
+<h1 class="file-title">officecli-branded-pptx-smoke-draft.pptx</h1>
+<div class="slide-container" data-slide="1">
+  <div class="slide-label">Slide 1</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape" style="left:36pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">1/27/13</span></div>
+</div></div>
+    <div class="shape" style="left:516pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:right"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">1</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=2]" style="left:0pt;top:0pt;width:959.98pt;height:540pt;background:#0A1628"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=3]" style="left:831.6pt;top:0pt;width:128.16pt;height:540pt;background:#12243A"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=4]" style="left:831.6pt;top:0pt;width:5.76pt;height:540pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=5]" style="left:43.2pt;top:64.8pt;width:561.6pt;height:25.2pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:14pt;font-weight:bold;color:#00C9A7">BRANDED PPTX SMOKE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=6]" style="left:43.2pt;top:108pt;width:626.4pt;height:104.4pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:42pt;font-weight:bold;color:#FFFFFF">OfficeCLI closes the blind spot in deck QA</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=7]" style="left:43.2pt;top:228.96pt;width:108pt;height:4.32pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=8]" style="left:43.2pt;top:248.4pt;width:590.4pt;height:50.4pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:17pt;color:#E0F7F1">A native, editable PowerPoint built with pptxkit, then validated through the shared OfficeCLI render gate.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=9]" style="left:43.2pt;top:332.64pt;width:118.8pt;height:30.24pt;background:#12243A;border:1pt solid #00C9A7;border-radius:3.63pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=10]" style="left:52.56pt;top:341.28pt;width:99.36pt;height:11.52pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;font-weight:bold;color:#FFFFFF">Native PPTX</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=11]" style="left:187.2pt;top:332.64pt;width:118.8pt;height:30.24pt;background:#12243A;border:1pt solid #00C9A7;border-radius:3.63pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=12]" style="left:196.56pt;top:341.28pt;width:99.36pt;height:11.52pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;font-weight:bold;color:#FFFFFF">Editable text</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=13]" style="left:331.2pt;top:332.64pt;width:118.8pt;height:30.24pt;background:#12243A;border:1pt solid #00C9A7;border-radius:3.63pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=14]" style="left:340.56pt;top:341.28pt;width:99.36pt;height:11.52pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;font-weight:bold;color:#FFFFFF">OfficeCLI QA</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=15]" style="left:43.2pt;top:509.76pt;width:648pt;height:21.6pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#889098">OfficeCLI Branded PPTX Smoke | 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=16]" style="left:866.38pt;top:508.32pt;width:50.4pt;height:21.6pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:right;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10pt;font-weight:bold;color:#889098">1 / 3</span></div>
+</div></div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="2">
+  <div class="slide-label">Slide 2</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape" style="left:36pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">1/27/13</span></div>
+</div></div>
+    <div class="shape" style="left:516pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:right"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">2</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=2]" style="left:0pt;top:0pt;width:959.98pt;height:540pt;background:#FFFFFF"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=3]" style="left:0pt;top:0pt;width:959.98pt;height:11.52pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=4]" style="left:43.2pt;top:30.24pt;width:873.58pt;height:47.52pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:30pt;font-weight:bold;color:#0A1628">Reviewed Decks Now Get A Real Render Loop</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=5]" style="left:43.2pt;top:80.64pt;width:104.4pt;height:3.6pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=6]" style="left:43.2pt;top:90.72pt;width:873.58pt;height:28.8pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:14.5pt;color:#5B6B7C">Build native slides, then capture evidence before the reviewed filename is allowed.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=7]" style="left:43.2pt;top:144pt;width:270pt;height:216pt;background:#F4F7F8;border:1pt solid #D9DFE5;border-radius:21.6pt;filter:drop-shadow(0pt 2.36pt 6.3pt rgba(10,22,40,0.2))"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=8]" style="left:60.48pt;top:162.72pt;width:34.56pt;height:34.56pt;background:#00C9A7;border-radius:6.91pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=9]" style="left:71.28pt;top:170.64pt;width:12.96pt;height:8.64pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#0A1628">1</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=10]" style="left:60.48pt;top:214.56pt;width:223.2pt;height:27.36pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22pt;font-weight:bold;color:#0A1628">Build</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=11]" style="left:60.48pt;top:255.6pt;width:228.96pt;height:68.4pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13pt;color:#1B2B3C">pptxkit composes native editable shapes and validates the OpenXML package.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=12]" style="left:342pt;top:144pt;width:270pt;height:216pt;background:#F4F7F8;border:1pt solid #D9DFE5;border-radius:21.6pt;filter:drop-shadow(0pt 2.36pt 6.3pt rgba(10,22,40,0.2))"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=13]" style="left:359.28pt;top:162.72pt;width:34.56pt;height:34.56pt;background:#00C9A7;border-radius:6.91pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=14]" style="left:370.08pt;top:170.64pt;width:12.96pt;height:8.64pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#0A1628">2</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=15]" style="left:359.28pt;top:214.56pt;width:223.2pt;height:27.36pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22pt;font-weight:bold;color:#0A1628">Preview</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=16]" style="left:359.28pt;top:255.6pt;width:228.96pt;height:68.4pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13pt;color:#1B2B3C">The lightweight contact sheet catches common text collisions before external render.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=17]" style="left:640.8pt;top:144pt;width:270pt;height:216pt;background:#F4F7F8;border:1pt solid #D9DFE5;border-radius:21.6pt;filter:drop-shadow(0pt 2.36pt 6.3pt rgba(10,22,40,0.2))"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=18]" style="left:658.08pt;top:162.72pt;width:34.56pt;height:34.56pt;background:#00C9A7;border-radius:6.91pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=19]" style="left:668.88pt;top:170.64pt;width:12.96pt;height:8.64pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#0A1628">3</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=20]" style="left:658.08pt;top:214.56pt;width:223.2pt;height:27.36pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22pt;font-weight:bold;color:#0A1628">Render</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=21]" style="left:658.08pt;top:255.6pt;width:228.96pt;height:68.4pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13pt;color:#1B2B3C">OfficeCLI validates, scans issues, writes HTML, and screenshots the final PPTX.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=22]" style="left:43.2pt;top:396pt;width:873.58pt;height:59.04pt;background:#0A1628;border-radius:3.54pt"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=23]" style="left:60.48pt;top:412.56pt;width:839.02pt;height:23.04pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;font-weight:bold;color:#FFFFFF">Decision rule: reviewed delivery requires real screenshot evidence.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=24]" style="left:43.2pt;top:509.76pt;width:648pt;height:21.6pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#5B6B7C">OfficeCLI Branded PPTX Smoke | 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=25]" style="left:866.38pt;top:508.32pt;width:50.4pt;height:21.6pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:right;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10pt;font-weight:bold;color:#5B6B7C">2 / 3</span></div>
+</div></div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="3">
+  <div class="slide-label">Slide 3</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape" style="left:36pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:left"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">1/27/13</span></div>
+</div></div>
+    <div class="shape" style="left:516pt;top:500.5pt;width:168pt;height:28.75pt;padding:3.6pt 7.2pt 3.6pt 7.2pt"><div class="shape-text valign-center"><div class="para" style="text-align:right"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12pt;color:#3F3F3F">3</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=2]" style="left:0pt;top:0pt;width:959.98pt;height:540pt;background:#FFFFFF"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=3]" style="left:0pt;top:0pt;width:959.98pt;height:11.52pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=4]" style="left:43.2pt;top:30.24pt;width:873.58pt;height:47.52pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:30pt;font-weight:bold;color:#0A1628">OfficeCLI Adds The Missing QA Evidence</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=5]" style="left:43.2pt;top:80.64pt;width:104.4pt;height:3.6pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=6]" style="left:43.2pt;top:90.72pt;width:873.58pt;height:28.8pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:14.5pt;color:#5B6B7C">What the practical run should prove.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=7]" style="left:43.2pt;top:144pt;width:230.4pt;height:34.56pt;background:#0A1628"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=8]" style="left:51.84pt;top:154.08pt;width:213.12pt;height:14.4pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;font-weight:bold;color:#FFFFFF">Check</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=9]" style="left:273.6pt;top:144pt;width:194.4pt;height:34.56pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=10]" style="left:282.24pt;top:154.08pt;width:177.12pt;height:14.4pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;font-weight:bold;color:#FFFFFF">Before</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=11]" style="left:468pt;top:144pt;width:194.4pt;height:34.56pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=12]" style="left:476.64pt;top:154.08pt;width:177.12pt;height:14.4pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;font-weight:bold;color:#FFFFFF">After</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=13]" style="left:662.4pt;top:144pt;width:216pt;height:34.56pt;background:#00C9A7"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=14]" style="left:671.04pt;top:154.08pt;width:198.72pt;height:14.4pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;font-weight:bold;color:#FFFFFF">Status</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=15]" style="left:43.2pt;top:178.56pt;width:230.4pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=16]" style="left:53.28pt;top:195.84pt;width:210.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;font-weight:bold;color:#0A1628">OpenXML validity</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=17]" style="left:273.6pt;top:178.56pt;width:194.4pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=18]" style="left:283.68pt;top:195.84pt;width:174.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;color:#1B2B3C">pptxkit</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=19]" style="left:468pt;top:178.56pt;width:194.4pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=20]" style="left:478.08pt;top:195.84pt;width:174.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;color:#1B2B3C">OfficeCLI</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=21]" style="left:662.4pt;top:178.56pt;width:216pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=22]" style="left:672.48pt;top:195.84pt;width:195.84pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;font-weight:bold;color:#1B2B3C">Passed</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=23]" style="left:43.2pt;top:230.4pt;width:230.4pt;height:51.84pt;background:#FFFFFF;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=24]" style="left:53.28pt;top:247.68pt;width:210.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;font-weight:bold;color:#0A1628">Layout visibility</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=25]" style="left:273.6pt;top:230.4pt;width:194.4pt;height:51.84pt;background:#FFFFFF;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=26]" style="left:283.68pt;top:247.68pt;width:174.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;color:#1B2B3C">Contact sheet</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=27]" style="left:468pt;top:230.4pt;width:194.4pt;height:51.84pt;background:#FFFFFF;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=28]" style="left:478.08pt;top:247.68pt;width:174.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;color:#1B2B3C">Screenshot</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=29]" style="left:662.4pt;top:230.4pt;width:216pt;height:51.84pt;background:#FFFFFF;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=30]" style="left:672.48pt;top:247.68pt;width:195.84pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;font-weight:bold;color:#1B2B3C">Passed</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=31]" style="left:43.2pt;top:282.24pt;width:230.4pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=32]" style="left:53.28pt;top:299.52pt;width:210.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;font-weight:bold;color:#0A1628">Delivery status</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=33]" style="left:273.6pt;top:282.24pt;width:194.4pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=34]" style="left:283.68pt;top:299.52pt;width:174.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;color:#1B2B3C">Draft</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=35]" style="left:468pt;top:282.24pt;width:194.4pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=36]" style="left:478.08pt;top:299.52pt;width:174.24pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;color:#1B2B3C">Reviewed gate</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=37]" style="left:662.4pt;top:282.24pt;width:216pt;height:51.84pt;background:#F4F7F8;border:1pt solid #D9DFE5"><div class="shape-text valign-center"><div class="para" style="text-align:center"><span style="font-size:18pt">&nbsp;</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=38]" style="left:672.48pt;top:299.52pt;width:195.84pt;height:12.96pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.5pt;font-weight:bold;color:#1B2B3C">Evidence required</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=39]" style="left:43.2pt;top:361.44pt;width:873.58pt;height:24.48pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:15pt;font-weight:bold;color:#0A1628">Editability mode: PPT-native editable diagrams and text.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=40]" style="left:43.2pt;top:393.84pt;width:873.58pt;height:30.24pt;background:transparent;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;color:#5B6B7C">This smoke deck intentionally uses only native PowerPoint shapes, text boxes, and fills. No flat screenshot is used as a primary slide visual.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=41]" style="left:43.2pt;top:509.76pt;width:648pt;height:21.6pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:left;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#5B6B7C">OfficeCLI Branded PPTX Smoke | 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=42]" style="left:866.38pt;top:508.32pt;width:50.4pt;height:21.6pt;background:transparent;padding:0pt 0pt 0pt 0pt;overflow:visible"><div class="shape-text valign-top"><div class="para" style="text-align:right;line-height:1.05"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10pt;font-weight:bold;color:#5B6B7C">3 / 3</span></div>
+</div></div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="page-counter">1 / 3</div>
+<script>
+// OfficeCli HTML Preview Script
+(function() {
+    const main = document.querySelector('.main');
+    const sidebar = document.querySelector('.sidebar');
+    const counter = document.querySelector('.page-counter');
+    let currentSlide = 0;
+    let isFullscreen = false;
+
+    // ===== Live DOM queries (SSE may add/remove elements) =====
+    function getContainers() { return [...document.querySelectorAll('.main > .slide-container')]; }
+    function getThumbs() { return [...document.querySelectorAll('.sidebar > .thumb')]; }
+    function getTotal() { return getContainers().length; }
+
+    // ===== Responsive scaling =====
+    function scaleSlides() {
+        // 40px breathing room for interactive viewing; headless captures fill the
+        // viewport (the screenshot path sizes it to the slide) so they take none.
+        const headless = document.documentElement.classList.contains('headless');
+        const availW = main.clientWidth - (headless ? 0 : 40);
+        const slides = document.querySelectorAll('.main > .slide-container .slide');
+        // A lone headless slide is a single-slide screenshot: scale it to fill the
+        // viewport in BOTH directions (up or down) so the capture is flush at the
+        // requested resolution regardless of the slide's physical size. Interactive
+        // and multi-slide views only ever shrink to fit.
+        const fill = headless && slides.length === 1;
+        slides.forEach(slide => {
+            const designW = slide.offsetWidth;
+            if (availW > 0 && (fill || designW > availW)) {
+                const s = availW / designW;
+                slide.style.transform = `scale(${s})`;
+                slide.style.transformOrigin = 'center top';
+                const designH = slide.offsetHeight;
+                slide.parentElement.style.height = (designH * s) + 'px';
+                slide.parentElement.style.width = (designW * s) + 'px';
+            } else {
+                slide.style.transform = '';
+                slide.parentElement.style.height = '';
+                slide.parentElement.style.width = '';
+            }
+        });
+    }
+    scaleSlides();
+    window.scaleSlides = scaleSlides;
+    window.addEventListener('resize', scaleSlides);
+
+    // ===== Sidebar thumbnails =====
+    function setActiveThumb(idx) {
+        getThumbs().forEach((t, i) => t.classList.toggle('active', i === idx));
+        currentSlide = idx;
+        if (counter) counter.textContent = `${idx + 1} / ${getTotal()}`;
+    }
+
+    // Event delegation for thumb clicks (handles SSE-added thumbs)
+    if (sidebar) {
+        sidebar.addEventListener('click', function(e) {
+            const thumb = e.target.closest('.thumb');
+            if (!thumb) return;
+            const thumbs = getThumbs();
+            const idx = thumbs.indexOf(thumb);
+            if (idx < 0) return;
+            if (isFullscreen) { showFullscreenSlide(idx); return; }
+            const containers = getContainers();
+            if (containers[idx]) {
+                containers[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            setActiveThumb(idx);
+        });
+    }
+
+    // Track visible slide on scroll (normal mode) — use MutationObserver to auto-observe new slides
+    let scrollObserver;
+    if (main) {
+        scrollObserver = new IntersectionObserver(entries => {
+            if (isFullscreen) return;
+            const containers = getContainers();
+            entries.forEach(e => {
+                if (e.isIntersecting && e.intersectionRatio > 0.3) {
+                    const idx = containers.indexOf(e.target);
+                    if (idx >= 0) setActiveThumb(idx);
+                }
+            });
+        }, { root: main, threshold: 0.3 });
+        getContainers().forEach(c => scrollObserver.observe(c));
+
+        // Auto-observe new slide-containers added to main
+        new MutationObserver(mutations => {
+            mutations.forEach(m => {
+                m.addedNodes.forEach(node => {
+                    if (node.nodeType === 1 && node.classList.contains('slide-container')) {
+                        scrollObserver.observe(node);
+                    }
+                });
+            });
+        }).observe(main, { childList: true });
+    }
+
+    // ===== Fullscreen mode =====
+    function showFullscreenSlide(idx) {
+        const containers = getContainers();
+        const total = containers.length;
+        idx = Math.max(0, Math.min(idx, total - 1));
+        containers.forEach((c, i) => c.classList.toggle('fs-active', i === idx));
+        setActiveThumb(idx);
+        const slide = containers[idx]?.querySelector('.slide');
+        if (slide) {
+            const vw = window.innerWidth, vh = window.innerHeight - 30;
+            const sw = slide.scrollWidth || slide.offsetWidth;
+            const sh = slide.scrollHeight || slide.offsetHeight;
+            const s = Math.min(vw / sw, vh / sh, 1);
+            slide.style.transform = `scale(${s})`;
+            slide.style.transformOrigin = 'center top';
+        }
+    }
+    function enterFullscreen() {
+        isFullscreen = true;
+        document.body.classList.add('fullscreen');
+        showFullscreenSlide(currentSlide);
+    }
+    function exitFullscreen() {
+        isFullscreen = false;
+        document.body.classList.remove('fullscreen');
+        getContainers().forEach(c => { c.classList.remove('fs-active'); c.style.display = ''; });
+        scaleSlides();
+        getContainers()[currentSlide]?.scrollIntoView({ block: 'center' });
+    }
+
+    // ===== Keyboard navigation =====
+    document.addEventListener('keydown', e => {
+        if (e.key === 'f' || e.key === 'F') {
+            e.preventDefault();
+            isFullscreen ? exitFullscreen() : enterFullscreen();
+            return;
+        }
+        if (e.key === 'Escape' && isFullscreen) {
+            e.preventDefault();
+            exitFullscreen();
+            return;
+        }
+        const next = e.key === 'ArrowDown' || e.key === ' ' || e.key === 'ArrowRight';
+        const prev = e.key === 'ArrowUp' || e.key === 'ArrowLeft';
+        if (!next && !prev) return;
+        e.preventDefault();
+
+        const total = getTotal();
+        if (isFullscreen) {
+            showFullscreenSlide(currentSlide + (next ? 1 : -1));
+        } else {
+            const target = next
+                ? Math.min(currentSlide + 1, total - 1)
+                : Math.max(currentSlide - 1, 0);
+            const containers = getContainers();
+            if (containers[target]) {
+                containers[target].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            setActiveThumb(target);
+        }
+    });
+
+    // ===== Populate & scale thumbnail slides via cloneNode (zero base64 duplication) =====
+    function buildThumbs() {
+        const slides = document.querySelectorAll('.main > .slide-container .slide');
+        const inners = document.querySelectorAll('.thumb-inner');
+        slides.forEach((slide, i) => {
+            if (i >= inners.length) return;
+            const inner = inners[i];
+            if (inner.querySelector('.thumb-slide')) return;
+            const clone = slide.cloneNode(true);
+            clone.className = 'thumb-slide';
+            clone.style.transform = '';
+            // Remove IDs from cloned elements to avoid getElementById conflicts (e.g. 3D canvas)
+            clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+            // Remove cloned <script> tags (module scripts won't re-execute but keep DOM clean)
+            clone.querySelectorAll('script').forEach(el => el.remove());
+            inner.appendChild(clone);
+        });
+        scaleThumbs();
+    }
+    function scaleThumbs() {
+        document.querySelectorAll('.thumb-inner').forEach(inner => {
+            const thumbSlide = inner.querySelector('.thumb-slide');
+            if (!thumbSlide) return;
+            const thumbW = inner.clientWidth;
+            const slideW = thumbSlide.scrollWidth || thumbSlide.offsetWidth;
+            if (slideW > 0 && thumbW > 0) {
+                thumbSlide.style.transform = `scale(${thumbW / slideW})`;
+                thumbSlide.style.transformOrigin = '0 0';
+            }
+        });
+    }
+    buildThumbs();
+    window.buildThumbs = buildThumbs;
+    window.scaleThumbs = scaleThumbs;
+    window.addEventListener('resize', scaleThumbs);
+
+    // ===== Sidebar toggle (exposed globally for onclick) =====
+    window.toggleSidebar = function() {
+        document.body.classList.toggle('sidebar-visible');
+        document.body.classList.toggle('sidebar-hidden');
+        // Re-scale after sidebar toggle changes main area width
+        requestAnimationFrame(() => {
+            scaleSlides();
+            buildThumbs();
+            scaleThumbs();
+        });
+    };
+
+    // Init
+    if (getTotal() > 0) setActiveThumb(0);
+})();
+
+</script>
+<script>
+(function() {
+    var _katexRetries = 0;
+    function fallbackKatex() {
+        document.querySelectorAll('.katex-formula:not(.katex-rendered)').forEach(function(el) {
+            el.textContent = el.dataset.formula;
+            el.style.fontFamily = 'monospace';
+            el.style.color = '#666';
+            el.classList.add('katex-rendered');
+        });
+    }
+    function renderKatex() {
+        var pending = document.querySelectorAll('.katex-formula:not(.katex-rendered)');
+        if (pending.length === 0) return;
+        if (typeof katex === 'undefined') {
+            // Lazy-load on first demand — handles watch mode where the initial
+            // doc had no formulas (KaTeX tags omitted from head), then a
+            // formula arrived via SSE patch.
+            if (!window._katexLoading) {
+                window._katexLoading = true;
+                // CONSISTENCY(katex-mirror): mirror-first, CDN retry, then fallback.
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://d.officecli.ai/assets/katex-0.16.11/katex.min.css';
+                link.onerror = function() { if (!this.dataset.f) { this.dataset.f = 1; this.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css'; } else { this.remove(); } };
+                document.head.appendChild(link);
+                var script = document.createElement('script');
+                script.src = 'https://d.officecli.ai/assets/katex-0.16.11/katex.min.js';
+                script.onload = renderKatex;
+                script.onerror = function() { var s2 = document.createElement('script'); s2.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js'; s2.onload = renderKatex; s2.onerror = fallbackKatex; document.head.appendChild(s2); };
+                document.head.appendChild(script);
+                return;
+            }
+            if (++_katexRetries > 20) { fallbackKatex(); return; }
+            setTimeout(renderKatex, 100); return;
+        }
+        pending.forEach(function(el) {
+            try {
+                katex.render(el.dataset.formula, el, { throwOnError: false, displayMode: true });
+                el.classList.add('katex-rendered');
+            } catch(e) { el.textContent = el.dataset.formula + ' (Error: ' + e.message + '. See https://katex.org/docs/supported.html for supported syntax.)'; }
+        });
+    }
+    // Initial render
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', renderKatex);
+    else renderKatex();
+    // Re-render when DOM changes (watch mode incremental updates)
+    new MutationObserver(function() { renderKatex(); }).observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+</body>
+</html>

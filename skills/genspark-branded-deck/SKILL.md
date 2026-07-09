@@ -47,6 +47,9 @@ render it yourself, and get a branded, on-brand deck with no Genspark dependency
   **native PowerPoint text boxes** at the captured coords (shrink-to-fit so text
   can't overflow its slot). `--src <dir> --out <pptx>`.
 - `scripts/contact_sheet.py` — PNGs → review grids. **Your eyes for QA.**
+- `../../scripts/officecli_qa.py` — optional final `.pptx` QA gate: validates,
+  checks issues, and renders the built PowerPoint to HTML/PNG when `officecli` is
+  installed.
 - `references/archetypes.md` — the content contract: every archetype + density budget.
 
 ## Upstream: chain skills for the content — do NOT hand-roll analysis
@@ -99,16 +102,22 @@ entity, count, status, and claim checked against source.
    - *editable (default when they want to edit in PowerPoint):*
      `node scripts/render_hybrid.mjs --deck <deck.html> --out build` then
      `python3 scripts/build_editable_pptx.py --src build --out build/<name>-editable-draft.pptx`
-9. **Declare editability honestly.** State which build you shipped: `image-based`
+9. **QA the final PPTX.** From the repo root, run
+   `python3 scripts/officecli_qa.py <built.pptx> --out <run>/qa/officecli`.
+   Compare the OfficeCLI-rendered final PPTX screenshots with the source HTML
+   contact sheet, especially for the hybrid-editable path where PowerPoint text
+   boxes can reflow differently from HTML. If OfficeCLI is skipped, use
+   LibreOffice/PDF, PowerPoint, Google Slides import, or equivalent.
+10. **Declare editability honestly.** State which build you shipped: `image-based`
    (source-editable in `deck.html`/`theme.css` only) or `hybrid-editable` (native
    text boxes over a design background — headings/cards/stats are click-and-retype;
    vector-diagram shapes stay in the background). If the client must re-layout
    shapes or wants native charts, use `branded-pptx-deck` instead.
-10. **Set status honestly.** `*-draft.pptx` before QA; rename to `*-reviewed.pptx`
+11. **Set status honestly.** `*-draft.pptx` before QA; rename to `*-reviewed.pptx`
     only after the contact-sheet review + visible-text scan pass; `*-blocked.txt`
     if a required path (Chrome, render) is unavailable. Keep `render.mjs` +
     `deck.html` in the run folder so QA fixes are reproducible.
-11. **Deliver.** Copy the **reviewed** deck to `CLIENT_DELIVERY_DIR` (or, for this
+12. **Deliver.** Copy the **reviewed** deck to `CLIENT_DELIVERY_DIR` (or, for this
     user, `/mnt/c/Users/<user>/OneDrive/Desktop/`), and open with
     `powershell.exe -NoProfile -Command "Start-Process '<C:\...>'"`. A deck open in
     PowerPoint is **locked** — on "Permission denied", write a **new filename**.
@@ -139,9 +148,11 @@ deck the client must fully re-layout (move/restyle shapes, native charts), use
 **`branded-pptx-deck`** (pptxkit) instead — or, in Sheker's vault, the
 `presentations:Presentations` chain (`/ce-doc-review` → `vault-presales-pptx-pipeline`).
 
-**QA the editable build** by rendering it back: `soffice --headless --convert-to
-pdf` then PyMuPDF (`fitz`) to PNG, and inspect for overlap/clipping — the shapes
-are real text, so the render is faithful.
+**QA the editable build** by rendering it back. Prefer
+`python3 scripts/officecli_qa.py <pptx> --out <run>/qa/officecli`; if OfficeCLI
+is skipped, use `soffice --headless --convert-to pdf` then PyMuPDF (`fitz`) to
+PNG, and inspect for overlap/clipping — the shapes are real text, so the render
+is faithful.
 
 ## Execution: where render.mjs runs
 
@@ -214,7 +225,8 @@ generator instead of this branded HTML/CSS template pipeline.
 - **No internal language on client slides.** Especially scrub `Genspark`, tool
   names, paths, and `synthesis`/`validation` labels — they belong in run files.
 - **Reviewed requires evidence.** Only name a deck `*-reviewed.pptx` after a real
-  contact-sheet review and a visible-text internal-term scan.
+  contact-sheet review, OfficeCLI final-PPTX QA when available, and a visible-text
+  internal-term scan.
 - **Semantic classes, not raw colours.** `a`/`b`/`alert` keep the argument
   colour-coded through any reskin. A hard-coded colour breaks on theme swap.
 
@@ -229,6 +241,8 @@ Business Automation
 - `render.mjs` — required; needs Windows node + Chrome (Playwright).
 - `build_pptx.py` — required; needs WSL python-pptx.
 - `contact_sheet.py` — required for QA; needs PIL.
+- `officecli-qa` — optional final PowerPoint QA gate; uses repo root
+  `scripts/officecli_qa.py` when `officecli` is installed.
 - `assets/theme.css` + `assets/deck.css` + a `deck.html` — the template triplet.
 
 ### Relationships

@@ -23,6 +23,8 @@ that makes PowerPoint show a **"repair"** prompt.
   `save` with built-in validation), and `validate_pptx()`.
 - `scripts/preview_pptx.py` — render any `.pptx` → per-slide PNGs + contact sheets, with
   red dashed boxes flagging likely text overflow. **Your eyes for QA.**
+- `../../scripts/officecli_qa.py` — optional OfficeCLI QA gate: validates, checks
+  issues, and renders the final `.pptx` to HTML/PNG when `officecli` is installed.
 - `reference/brand.md` — palette, the Canva-Pro template location, slide-pattern recipes,
   and delivery steps.
 
@@ -71,9 +73,13 @@ yourself, validate explicitly.
    timestamps before delivery.
 5. **Validate + preview.** `Deck.save()` auto-validates and raises on malformed XML.
    Then run `python3 scripts/preview_pptx.py <out.pptx>` and actually *look* at the
-   contact sheets; fix any overflow before delivering. If the deck embeds image previews,
-   diagrams, or rendered canvases, also run a real render check (PowerPoint, LibreOffice
-   PDF, or equivalent) because `preview_pptx.py` shows pictures as placeholders.
+   contact sheets; fix any overflow before delivering. After that, run the shared
+   OfficeCLI QA gate from the repo root:
+   `python3 scripts/officecli_qa.py <out.pptx> --out <run>/qa/officecli`.
+   When `officecli` is installed, use its HTML/PNG render as the preferred real
+   render evidence. If OfficeCLI is skipped or fails, use PowerPoint, LibreOffice
+   PDF, Google Slides import, or equivalent because `preview_pptx.py` shows
+   pictures as placeholders.
 6. **Declare editability.** For decks with diagrams, record one of these in the run report
    and final response: `PPT-native editable diagrams`, `Excalidraw-source editable
    diagrams`, or `non-editable visual render`. If the user asked for editable slides,
@@ -112,6 +118,35 @@ d.footer(s, 2, 2)
 d.save("docs/reports/acme-exec.pptx")   # validates; raises if it would need repair
 ```
 
+## Practical OfficeCLI QA Run
+
+For any branded PPTX build, keep the builder, PPTX, and QA evidence in the same
+run folder. This is the repeatable path:
+
+```bash
+RUN=runs/<date>-<topic>-branded-pptx
+python3 "$RUN/build_deck.py"                         # writes *-draft.pptx
+python3 skills/branded-pptx-deck/scripts/preview_pptx.py "$RUN/<name>-draft.pptx"
+python3 scripts/officecli_qa.py "$RUN/<name>-draft.pptx" --out "$RUN/qa/officecli"
+```
+
+If `qa/officecli/qa-summary.md` reports `Status: partial`, the deck's XML,
+issue scan, and HTML render passed, but the managed sandbox blocked Chromium
+screenshot rendering. For client-facing `*-reviewed.pptx`, rerun the exact
+OfficeCLI command with `--required` outside the sandbox or with approved
+escalation:
+
+```bash
+python3 scripts/officecli_qa.py "$RUN/<name>-draft.pptx" --out "$RUN/qa/officecli" --required
+```
+
+Only rename/copy to `*-reviewed.pptx` after:
+- `Deck.save()` validation passed.
+- `preview_pptx.py` contact sheets were inspected.
+- OfficeCLI QA is `passed`, or a documented equivalent real-render fallback was
+  inspected.
+- Visible client-facing text has no internal process terms.
+
 ## Hard rules (learned the hard way)
 
 - **Never** append a second `<a:effectLst>` after `shape.shadow.inherit = False`. The kit's
@@ -139,6 +174,8 @@ Business Automation
 ### Dependencies
 - `pptxkit.py` — required; lives in `scripts/pptxkit.py` within this skill directory
 - `preview_pptx.py` — required for QA; lives in `scripts/preview_pptx.py`
+- `officecli-qa` — optional preferred real-render QA; uses repo root
+  `scripts/officecli_qa.py` when `officecli` is installed
 
 ### Relationships
 
@@ -179,12 +216,14 @@ At invocation, surface this to the user:
   notes as visible slide text. Those belong in the run report, speaker notes only when
   requested, or source artifacts.
 - **Embedded images need real render QA:** The built-in preview is useful for text and
-  geometry, but it does not show embedded pictures. Render to PDF or inspect in PowerPoint
-  before delivering decks that include diagrams, canvases, screenshots, or previews.
+  geometry, but it does not show embedded pictures. Prefer OfficeCLI screenshots via
+  `python3 scripts/officecli_qa.py`; if skipped, render to PDF or inspect in
+  PowerPoint before delivering decks that include diagrams, canvases, screenshots,
+  or previews.
 - **Reviewed requires evidence:** Do not name a deck `*-reviewed.pptx` unless the run
-  contains the validation evidence: XML validation result, real render/contact sheet or
-  PowerPoint inspection, visible-text internal-term scan, and slide-by-slide
-  content/design validation notes.
+  contains the validation evidence: XML validation result, OfficeCLI QA summary
+  when available, real render/contact sheet or PowerPoint inspection, visible-text
+  internal-term scan, and slide-by-slide content/design validation notes.
 - **Readable diagrams are mandatory:** If a deck embeds diagram images, the labels must be
   readable in the real render. If not, enlarge the visual, split the slide, or rebuild the
   labels/diagram as native PPT shapes.

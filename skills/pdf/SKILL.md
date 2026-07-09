@@ -10,6 +10,25 @@ license: Proprietary. LICENSE.txt has complete terms
 
 This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see REFERENCE.md. If you need to fill out a PDF form, read FORMS.md and follow its instructions.
 
+## OfficeCLI Bridge
+
+OfficeCLI is not the default PDF engine. Keep using this skill's PDF-native
+tools for merge/split/rotate, text/table extraction, forms, OCR, and image
+extraction.
+
+Use OfficeCLI only when the PDF is downstream of an Office source artifact:
+
+```bash
+# Run from the repo root
+python3 scripts/officecli_qa.py report.docx --out <run>/qa/officecli
+python3 scripts/officecli_qa.py deck.pptx --out <run>/qa/officecli
+python3 scripts/officecli_qa.py model.xlsx --out <run>/qa/officecli
+```
+
+Then compare the Office-source render against the final PDF images when layout
+fidelity matters. If the task starts and ends as a PDF, OfficeCLI is usually not
+in scope.
+
 ## Quick Start
 
 ```python

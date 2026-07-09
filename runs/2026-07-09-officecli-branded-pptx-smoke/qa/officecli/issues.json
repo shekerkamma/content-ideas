@@ -1,0 +1,13 @@
+{
+  "name": "issues",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-09-officecli-branded-pptx-smoke/officecli-branded-pptx-smoke-draft.pptx",
+    "issues",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"count\": 3,\n    \"issues\": [\n      {\n        \"id\": \"O1\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[2]/shape[@id=9]\",\n        \"message\": \"text overflow: 1 lines at 12.0pt need 13pt, usable 9pt. suggest.height=0.45cm\"\n      },\n      {\n        \"id\": \"O2\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[2]/shape[@id=14]\",\n        \"message\": \"text overflow: 1 lines at 12.0pt need 13pt, usable 9pt. suggest.height=0.45cm\"\n      },\n      {\n        \"id\": \"O3\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[2]/shape[@id=19]\",\n        \"message\": \"text overflow: 1 lines at 12.0pt need 13pt, usable 9pt. suggest.height=0.45cm\"\n      }\n    ]\n  }\n}\n",
+  "stderr": ""
+}

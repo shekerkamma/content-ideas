@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-09-officecli-branded-pptx-smoke/officecli-branded-pptx-smoke-draft.pptx",
+    "screenshot",
+    "-o",
+    "runs/2026-07-09-officecli-branded-pptx-smoke/qa/officecli/render/officecli-branded-pptx-smoke-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-09-officecli-branded-pptx-smoke/qa/officecli/render/officecli-branded-pptx-smoke-draft.png\n",
+  "stderr": "[pages] total=3\n"
+}

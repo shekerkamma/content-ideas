@@ -14,9 +14,29 @@ A .docx file is a ZIP archive containing XML files.
 
 | Task | Approach |
 |------|----------|
-| Read/analyze content | `pandoc` or unpack for raw XML |
+| Simple read/analyze/edit/render QA | Prefer OfficeCLI when installed |
+| Deep content extraction | `pandoc` or unpack for raw XML |
 | Create new document | Use `docx-js` - see Creating New Documents below |
 | Edit existing document | Unpack → edit XML → repack - see Editing Existing Documents below |
+
+### Optional OfficeCLI Path
+
+When `officecli` is installed, prefer it for simple inspection, find/replace,
+formatting checks, and render QA before falling back to raw XML surgery:
+
+```bash
+# Run from the repo root
+officecli view document.docx text
+officecli view document.docx annotated
+officecli view document.docx issues --json
+officecli set document.docx / --find draft --replace final
+python3 scripts/officecli_qa.py document.docx --out <run>/qa/officecli
+```
+
+Use the existing unpack/edit/pack workflow for precise tracked changes,
+comments, relationship edits, or structures OfficeCLI cannot express. If
+OfficeCLI QA is skipped, record that and use the LibreOffice/PDF render fallback
+below.
 
 ### Converting .doc to .docx
 
@@ -75,6 +95,8 @@ Packer.toBuffer(doc).then(buffer => fs.writeFileSync("doc.docx", buffer));
 After creating the file, validate it. If validation fails, unpack, fix the XML, and repack.
 ```bash
 python scripts/office/validate.py doc.docx
+# From the repo root:
+python3 scripts/officecli_qa.py doc.docx --out <run>/qa/officecli
 ```
 
 ### Page Size
@@ -585,6 +607,8 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 ## Dependencies
 
 - **pandoc**: Text extraction
+- **OfficeCLI**: Optional high-level read/edit/render QA via repo root
+  `scripts/officecli_qa.py`
 - **docx**: `npm install -g docx` (new documents)
 - **LibreOffice**: PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
 - **Poppler**: `pdftoppm` for images

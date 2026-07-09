@@ -73,6 +73,18 @@ A user may ask you to create, edit, or analyze the contents of an .xlsx file. Yo
 
 **LibreOffice Required for Formula Recalculation**: You can assume LibreOffice is installed for recalculating formula values using the `scripts/recalc.py` script. The script automatically configures LibreOffice on first run, including in sandboxed environments where Unix sockets are restricted (handled by `scripts/office/soffice.py`)
 
+**OfficeCLI Optional QA**: When `officecli` is installed, use the shared QA gate
+after creating or editing a workbook:
+```bash
+# Run from the repo root
+python3 scripts/officecli_qa.py output.xlsx --out <run>/qa/officecli
+officecli view output.xlsx issues --json
+officecli get output.xlsx '/Sheet1/B2' --json
+```
+This is a complement to, not an immediate replacement for, `scripts/recalc.py`.
+Keep LibreOffice recalculation as the canonical zero-formula-error gate until
+OfficeCLI formula coverage has been compared against the workbook's formulas.
+
 ## Reading and analyzing data
 
 ### Data analysis with pandas
@@ -138,7 +150,14 @@ This applies to ALL calculations - totals, percentages, ratios, differences, etc
    ```bash
    python scripts/recalc.py output.xlsx
    ```
-6. **Verify and fix any errors**: 
+6. **Run OfficeCLI QA when available**:
+   ```bash
+   # Run from the repo root
+   python3 scripts/officecli_qa.py output.xlsx --out <run>/qa/officecli
+   ```
+   Use OfficeCLI screenshots/issues as additional evidence for dashboards, charts,
+   pivots, and visible layout quality.
+7. **Verify and fix any errors**:
    - The script returns JSON with error details
    - If `status` is `errors_found`, check `error_summary` for specific error types and locations
    - Fix the identified errors and recalculate again

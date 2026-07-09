@@ -88,10 +88,13 @@ run contains the evidence artifacts.
    `transcript`, `hyperframe`, `Excalidraw`, `YouTube`, `source`,
    `validation`, `synthesis`, `audit`, `Codex`, `Claude`, file paths, or
    timestamps.
-5. **Render gate:** PPTX XML validation passes and a real render pass
-   (PowerPoint, LibreOffice PDF, Google Slides import, or equivalent) confirms
-   embedded diagrams appear, are readable, and are not cropped. The lightweight
-   preview alone is insufficient for decks with embedded visuals.
+5. **Render gate:** PPTX XML validation passes and a real render pass confirms
+   embedded diagrams appear, are readable, and are not cropped. Prefer the shared
+   OfficeCLI QA gate:
+   `python3 scripts/officecli_qa.py <deck.pptx> --out <run>/qa/officecli`.
+   If OfficeCLI is skipped or fails, use PowerPoint, LibreOffice PDF, Google
+   Slides import, or equivalent. The lightweight preview alone is insufficient
+   for decks with embedded visuals.
 6. **Editability gate:** declare one editability mode in the run report and
    final response: `PPT-native editable diagrams`, `Excalidraw-source editable
    diagrams`, or `non-editable visual render`. If the user asks for editable
@@ -347,9 +350,10 @@ Mandatory deck assembly:
   delivery gates pass; use `*-reviewed.pptx` only after slide-by-slide
   validation and real render QA pass.
 - For decks with embedded visuals, run a real render QA pass, not only the
-  lightweight `preview_pptx.py` placeholder render. Use LibreOffice/PDF or
-  another renderer to confirm the actual drawing images appear, are legible, and
-  are not cropped.
+  lightweight `preview_pptx.py` placeholder render. Prefer
+  `python3 scripts/officecli_qa.py <deck.pptx> --out <run>/qa/officecli`; if
+  skipped, use LibreOffice/PDF or another renderer to confirm the actual drawing
+  images appear, are legible, and are not cropped.
 - Extract visible PPTX text and scan for forbidden internal terms before
   delivery. If any are found, rebuild before opening the deck.
 - Preserve named proof examples from the source. Do not collapse specific
@@ -387,6 +391,8 @@ Route-specific source package:
 <topic>-video-deck-draft.pptx       # mandatory branded PPTX output
 <topic>-video-deck-reviewed.pptx    # only after all delivery gates pass
 <topic>-slide-validation.md         # slide-by-slide content/design validation
+qa/officecli/qa-summary.md          # OfficeCLI QA status when available
+qa/officecli/render/                # OfficeCLI final-PPTX screenshots when available
 ```
 
 ## Completion
@@ -418,6 +424,8 @@ Business Automation
 - `explainer-graphic` — optional visual route for HTML infographics
 - `architecture-presentation` — required only for technical/solution architecture packages; produces drawio + md + pptx
 - `branded-pptx-deck` — required final render stage for native branded PPTX output
+- `officecli-qa` — optional preferred final-PPTX render gate; uses repo root
+  `scripts/officecli_qa.py` when `officecli` is installed
 
 ### Relationships
 
@@ -478,9 +486,9 @@ At invocation, say:
   labels are not readable, enlarge the drawing, split the slide, or rebuild the
   labels/diagram as native PPT text and shapes.
 - **Reviewed is a real QA status, not a filename preference.** Never create or
-  deliver `*-reviewed.pptx` until XML validation, real render QA,
-  internal-term scan, visual coverage, editability declaration, and
-  slide-by-slide grill validation all pass.
+  deliver `*-reviewed.pptx` until XML validation, OfficeCLI QA when available,
+  real render QA, internal-term scan, visual coverage, editability declaration,
+  and slide-by-slide grill validation all pass.
 - **Do not copy copyrighted frames exactly.** Use `/watch` frames as reference and redraw the idea in an original editable style unless the user owns the source material or has rights.
 - **Config is persistent across runs.** User answers (theme, NotebookLM, output dir) are saved to config.json and reused silently. Reconfigure with `/video-to-deck config`.
 - **Stage 4 must produce a branded .pptx.** Use `branded-pptx-deck` after Stage
