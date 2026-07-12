@@ -110,6 +110,100 @@ if [ -r "$HOME/.gbrain/shared-clients.token" ]; then
 fi
 ```
 
+### Client Topology Rule
+
+Codex, Claude Code, Hermes, Antigravity/Gemini, and OpenClaw should use the
+shared HTTP service, not direct stdio.
+
+Codex:
+
+```toml
+[mcp_servers.gbrain]
+url = "http://127.0.0.1:3131/mcp"
+bearer_token_env_var = "MCP_GBRAIN_API_KEY"
+startup_timeout_sec = 60
+```
+
+Claude Code:
+
+```json
+{
+  "mcpServers": {
+    "gbrain": {
+      "type": "http",
+      "url": "http://127.0.0.1:3131/mcp",
+      "headers": {
+        "Authorization": "Bearer <shared client token>"
+      }
+    }
+  }
+}
+```
+
+The older stdio wrapper (`scripts/gbrain_stdio_local.sh`) is only for
+intentional single-client local mode. It opens the PGLite database directly and
+can conflict with the shared HTTP service.
+
+Hermes:
+
+- Uses `http://127.0.0.1:3131/mcp`.
+- Stores its bearer via Hermes' MCP environment handling.
+- Existing Hermes config does not need to change for this Codex recovery path.
+
+Antigravity/Gemini:
+
+- Windows-native config uses `serverUrl: "http://127.0.0.1:3131/mcp"`.
+- Auth is an HTTP `Authorization` header with the shared client token.
+- Existing Antigravity/Gemini config does not need to change for this Codex
+  recovery path.
+
+## GBrain MCP Recovery
+
+Symptom:
+
+```text
+MCP client for `gbrain` failed to start
+handshaking with MCP server failed
+error sending request for url (http://127.0.0.1:3131/mcp)
+```
+
+First check the shared service:
+
+```bash
+scripts/gbrain-recover.sh --check
+```
+
+If the service is down and no live process owns `~/.gbrain/brain.pglite`, repair
+stale PGLite lock artifacts and restart the service:
+
+```bash
+scripts/gbrain-recover.sh --fix
+```
+
+The script only removes:
+
+```text
+~/.gbrain/brain.pglite/.gbrain-lock
+~/.gbrain/brain.pglite/postmaster.pid
+```
+
+It refuses to remove them when `lsof +D ~/.gbrain/brain.pglite` reports a live
+owner.
+
+Manual equivalent:
+
+```bash
+systemctl --user status gbrain-http.service --no-pager
+curl -i http://127.0.0.1:3131/health
+lsof +D ~/.gbrain/brain.pglite
+rm -rf ~/.gbrain/brain.pglite/.gbrain-lock ~/.gbrain/brain.pglite/postmaster.pid
+systemctl --user restart gbrain-http.service
+curl -i http://127.0.0.1:3131/health
+```
+
+After changing any client MCP config or recovering the service, restart the
+affected client so it reloads MCP configuration.
+
 ## Configured Clients
 
 Claude Code:
@@ -279,4 +373,3 @@ If a client cannot reach GBrain:
    ```
 
 4. Relaunch Claude Code, Codex, Hermes, or OpenClaw after config changes.
-

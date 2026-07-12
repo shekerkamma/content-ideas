@@ -6,6 +6,19 @@ GBrain knowledge rule:
 - If `gbrain` is available as an MCP server in Claude Code, Codex, or another
   host, use it by default for cross-session memory and retrieval before
   repeating strategy or pipeline research from scratch.
+- GBrain MCP topology is one shared HTTP server on
+  `http://127.0.0.1:3131/mcp`. Codex reads the bearer from
+  `MCP_GBRAIN_API_KEY`; Claude Code may use its existing HTTP Authorization
+  header config.
+  Hermes, Antigravity/Gemini, and OpenClaw should also remain HTTP clients
+  using their existing token/header mechanisms.
+  Do not switch Codex/Claude Code to direct stdio unless intentionally running
+  single-client local mode; stdio opens PGLite directly and can conflict with
+  the shared service.
+- If Codex reports `MCP client for gbrain failed to start`, first run
+  `scripts/gbrain-recover.sh --check`. If it reports stale PGLite locks and no
+  live owner, run `scripts/gbrain-recover.sh --fix`, then restart Codex so it
+  reloads MCP config.
 - Treat `gbrain` as an explicit skill-chaining stage, not just a background
   preference:
   - `GBrain Recall` happens before `content-research`, strategy synthesis, or
