@@ -21,8 +21,9 @@ Rules:
 Ask me these six questions, one at a time. Wording can adapt to my project type,
 but each question must cover the topic listed:
 
-1. SCOPE — "In one sentence, what are you trying to accomplish? Is this a new build,
-   a change to existing code, or something else?"
+1. SCOPE — "In one sentence, what are you trying to accomplish, and who is it for /
+   why does it matter? Is this a new build, a change to existing code, or something
+   else?"
 2. STACK — "What tech stack, language, or tools are involved? If it's existing code
    and you're not sure, tell me and I'll check the repo."
 3. SURFACES — "What are the concrete things that will exist or change when this is
@@ -43,6 +44,7 @@ After all six answers, produce the PRD in this exact structure:
 
 # [Project Name] PRD
 ## One-Liner
+## Why
 ## Stack
 ## Surfaces
 ## Data
@@ -56,6 +58,17 @@ curl response, a test result, or a specific behavior demonstrated in the transcr
 End with a single sentence describing what seed data should exist before
 verification runs. The whole section must be copy-pasteable as a /goal condition.
 
+After the PRD, also render it as a ready-to-paste /goal prompt in this exact
+5-part shape:
+
+/goal
+
+TASK: [One-Liner]
+WHY: [Why]
+OUTCOME: [Surfaces + Data, phrased as the finished result]
+CONSTRAINTS: [Constraints, ending with "Stop after N turns." — default 30]
+VERIFICATION: [Success Criteria checks + seed data sentence]
+
 Start with question 1 now.
 ```
 
@@ -66,6 +79,9 @@ Start with question 1 now.
 
 ## One-Liner
 Add a dedup pass to the feed generator so repeated competitor posts never appear twice in the For You feed.
+
+## Why
+Duplicate posts make the daily feed feel broken and waste the user's review time; the feed is the product's front door.
 
 ## Stack
 Python 3 stdlib only (json, hashlib); existing generate_feed.py; pytest.
@@ -92,4 +108,16 @@ Python 3 stdlib only (json, hashlib); existing generate_feed.py; pytest.
 4. `grep -r "import " skills/content-ideas/scripts/lib/dedup.py` shows only stdlib — paste output.
 5. Full suite still green: `python3 -m pytest -q` exits 0 — paste the summary line.
 Seed data: a fixture list of 4 items where items[0] and items[2] share a url.
+```
+
+## Worked example — emitted /goal prompt
+
+```
+/goal
+
+TASK: Add a dedup pass to the feed generator so repeated competitor posts never appear twice in the For You feed.
+WHY: Duplicate posts make the daily feed feel broken and waste the user's review time; the feed is the product's front door.
+OUTCOME: New skills/content-ideas/scripts/lib/dedup.py; generate_feed.py calls dedup() before render; new tests/test_dedup.py. Input list[dict] {id, url, title, ts} → first occurrence per url kept, order preserved, pure in-memory.
+CONSTRAINTS: Do not change the feed item schema or HTML template. No pip dependencies (stdlib only). v1 dedups on url only — fuzzy/title matching is out of scope. Stop after 30 turns.
+VERIFICATION: (1) `python3 -m pytest tests/test_dedup.py -q` exits 0 — paste summary. (2) Two items with the same url return one — show assertion + output. (3) Order preserved for non-duplicates — dump returned ids. (4) `grep -r "import " .../dedup.py` shows only stdlib — paste output. (5) Full suite green: `python3 -m pytest -q` exits 0 — paste summary. Seed data: fixture list of 4 items where items[0] and items[2] share a url.
 ```
