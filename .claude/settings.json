@@ -26,5 +26,25 @@
     "/home/shekerk/content-ideas/skills/exa-api/SKILL.md",
     "/home/shekerk/content-ideas/skills/firecrawl/SKILL.md",
     "/home/shekerk/content-ideas/skills/excalidraw/SKILL.md"
-  ]
+  ],
+  "permissions": {
+    "deny": [
+      "Read(/home/shekerk/content-ideas/node_modules/**)",
+      "Read(/home/shekerk/content-ideas/.next/**)",
+      "Read(/home/shekerk/content-ideas/dist/**)",
+      "Read(/home/shekerk/content-ideas/out/**)",
+      "Read(/home/shekerk/content-ideas/build/**)",
+      "Read(/home/shekerk/content-ideas/coverage/**)",
+      "Read(/home/shekerk/content-ideas/playwright-report/**)",
+      "Read(/home/shekerk/content-ideas/test-results/**)",
+      "Read(/home/shekerk/content-ideas/.pytest_cache/**)",
+      "Read(/home/shekerk/content-ideas/runs/**)",
+      "Read(/home/shekerk/content-ideas/graphify-out/**)",
+      "Read(/home/shekerk/content-ideas/OpenHands/**)",
+      "Read(/home/shekerk/content-ideas/SurfSense/**)",
+      "Read(/home/shekerk/content-ideas/SurfSense-fork/**)",
+      "Read(/home/shekerk/content-ideas/skill-framework/**)",
+      "Read(/home/shekerk/content-ideas/tools/mcp_excalidraw/**)"
+    ]
+  }
 }

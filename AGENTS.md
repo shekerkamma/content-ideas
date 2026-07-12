@@ -41,6 +41,23 @@ GBrain knowledge rule:
 - Pipeline artifacts, briefs, decks, feed data, and client-facing outputs must
   still be written to local repo/run files.
 
+Claude Code cost guardrails:
+- Do not use Fable as the default implementation model. Reserve Fable for
+  architecture, planning, hard debugging, high-stakes review, and final
+  merge-readiness checks where better reasoning is worth API-billed tokens.
+- For routine implementation, bulk edits, scraping/research ingestion, simple
+  Q&A, and long-running build loops, use a cheaper Sonnet-class default and
+  escalate to Fable only for the planning/review stages.
+- Keep MCPs lean. GBrain should stay because it is the durable memory layer;
+  optional MCPs such as Excalidraw should be enabled only when actively needed.
+- Use `.claudeignore` and enforced read-deny settings to avoid loading generated
+  folders (`node_modules/`, `.next/`, `dist/`, `runs/`, reports, caches) into
+  context. Treat large generated files and vendored workspaces as artifacts to
+  inspect selectively, not background context.
+- This repo already has its own memory hooks under `~/.claude/memory`; avoid
+  duplicating paid background memory extraction when Claude Code API billing is
+  active.
+
 Research-plugin rule:
 - In Codex Desktop or any host that exposes high-quality research plugins
   such as `exa`, prefer those plugins for source discovery and current web
