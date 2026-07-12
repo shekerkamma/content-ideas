@@ -1,0 +1,18 @@
+{
+  "id": "src-b0fcd4ea51e1",
+  "source_id": "openhands-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Agent Canvas Overview - OpenHands Docs",
+  "url": "https://docs.openhands.dev/openhands/usage/agent-canvas/overview",
+  "canonical_url": "https://docs.openhands.dev/openhands/usage/agent-canvas/overview",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:49.766264+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "A lightweight platform to run agents and automations — locally or in the cloud.",
+  "raw_content_path": null,
+  "dedupe_key": "84041f8b38d5",
+  "status": "new",
+  "errors": []
+}

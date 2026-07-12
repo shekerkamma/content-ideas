@@ -1,0 +1,18 @@
+{
+  "id": "src-78d18dccb4e6",
+  "source_id": "nvidia-ai-blog",
+  "cluster_id": "implementation-proof",
+  "title": "NVIDIA AI Blog signal for Implementation proof points",
+  "url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+  "canonical_url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+  "published_at": "2026-07-01T00:00:00+00:00",
+  "fetched_at": "2026-07-01T05:17:50.929675+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Offline seed item from NVIDIA AI Blog for evaluating reference architectures, customer stories, product docs. Use live mode to replace this with current source content.",
+  "raw_content_path": null,
+  "dedupe_key": "9f2a0b9a7c55",
+  "status": "new",
+  "errors": []
+}

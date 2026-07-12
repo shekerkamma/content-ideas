@@ -1,0 +1,22 @@
+/* Aurora Glass design tokens — generated from DESIGN.md §2/§3/§6.
+   Single source of truth. Every test page imports this + components.css. */
+:root{
+  /* surfaces */
+  --bg:#080b11; --bg-elev:#0f141d; --glass:rgba(255,255,255,.04);
+  --line:rgba(255,255,255,.09);
+  /* text */
+  --ink:#eef2f7; --soft:#aeb8c7; --muted:#69748a;
+  /* accents — teal is the lone default accent */
+  --teal:#2dd4bf; --sky:#38bdf8; --magenta:#e879f9; --amber:#f6b94b;
+  --grad:linear-gradient(135deg,#2dd4bf 0%,#38bdf8 50%,#e879f9 100%);
+  --glow:0 0 16px rgba(45,212,191,.4);
+  /* type */
+  --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  /* radius */
+  --r-ctl:8px; --r-card:12px; --r-pill:999px;
+  /* spacing scale (×4) */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --s12:48px; --s16:64px;
+  /* elevation */
+  --e2:0 8px 24px rgba(0,0,0,.4); --e3:0 16px 48px rgba(0,0,0,.6);
+}

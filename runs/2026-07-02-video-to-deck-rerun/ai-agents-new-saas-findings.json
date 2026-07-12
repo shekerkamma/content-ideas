@@ -1,0 +1,15 @@
+{
+  "synthesis_route": "strategy-consulting fallback",
+  "ai_analyst_status": "unavailable in current Codex session",
+  "headline": "Agent businesses should start from paid human workflows, not generic agent ideas.",
+  "bluf": "Find a narrow, repeated, expensive workflow; shadow the human; extract the spec; sell a pilot; then productize the repeated pattern.",
+  "story_arc": ["Context", "Tension", "Resolution", "Proof", "Decision"],
+  "evidence_frames": ["frame_0001", "frame_0003", "frame_0004", "frame_0006", "frame_0007", "frame_0008", "frame_0009"],
+  "excluded_frames": ["frame_0002", "frame_0005", "frame_0010", "frame_0011", "frame_0012"],
+  "deck_requirements": {
+    "format": "branded native PPTX",
+    "editable_only": true,
+    "screenshots_as_primary_visuals": false,
+    "renderer": "pptxkit"
+  }
+}

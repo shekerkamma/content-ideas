@@ -1,0 +1,3 @@
+{"pattern_id":"p001","label":"per-seat pricing pressure from agent-executed work","mechanism":"AI agents perform workflow actions without mapping neatly to human seats."}
+{"pattern_id":"p002","label":"support outcome pricing as near-term wedge","mechanism":"Support workflows have measurable resolution outcomes and high ticket volume."}
+{"pattern_id":"p003","label":"billing-grade work ledger as moat","mechanism":"Outcome pricing needs auditable action, handoff, quality, attribution, and cost telemetry."}

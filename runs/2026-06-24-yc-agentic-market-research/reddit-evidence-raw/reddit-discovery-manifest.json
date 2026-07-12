@@ -1,0 +1,131 @@
+{
+  "method": "old_reddit_html",
+  "queries": [
+    "CentralComs property management AppFolio Buildium Yardi",
+    "Lance hotel operations Marriott Hilton Hyatt",
+    "Klarify therapists insurance claims practice management",
+    "Dodo clinic communications scheduling refills intake dental",
+    "Kastle mortgage servicing borrower payments collections",
+    "Fazeshift accounts receivable QuickBooks Stripe NetSuite",
+    "Basepilot insurance claims TPAs MGAs",
+    "ProcIndex quote to cash accounts payable month end close ERP",
+    "InspectMind construction drawings rework delays",
+    "Veritus consumer lending loan servicing collections repayment plans",
+    "research-input centralcoms product for property managers focused maintenance calls ticket chasing owner tenant vendor",
+    "research-input lance product for hotel operations focused answering calls closing sales running guest-facing",
+    "research-input klarify for therapists handles notes treatment plans insurance claims supervision prep client acquisition",
+    "research-input dodo product for clinic communications focused scheduling refills intake follow-ups front-office workflows",
+    "research-input kastle voice for mortgage servicing collects payments verifies borrowers qualifies new loan inquiries"
+  ],
+  "threads": [
+    {
+      "title": "'Scary Movie' - Review Thread",
+      "url": "https://old.reddit.com/r/movies/comments/1twmxp1/scary_movie_review_thread/",
+      "query": "CentralComs property management AppFolio Buildium Yardi",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-01.json",
+      "comments": 40,
+      "post_title": "'Scary Movie' - Review Thread",
+      "subreddit": "movies"
+    },
+    {
+      "title": "Evidence of Booking.com fudging reviews",
+      "url": "https://old.reddit.com/r/travel/comments/1pshx5w/evidence_of_bookingcom_fudging_reviews/",
+      "query": "CentralComs property management AppFolio Buildium Yardi",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-02.json",
+      "comments": 40,
+      "post_title": "Evidence of Booking.com fudging reviews",
+      "subreddit": "travel"
+    },
+    {
+      "title": "THE OVERLORDS: Who Was Jeffrey Epstein Really Working For? Four hypotheses. 237,000 documents. 5.37 million data points. One answer.",
+      "url": "https://old.reddit.com/r/Epstein/comments/1rfy0tj/the_overlords_who_was_jeffrey_epstein_really/",
+      "query": "CentralComs property management AppFolio Buildium Yardi",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-03.json",
+      "comments": 40,
+      "post_title": "THE OVERLORDS: Who Was Jeffrey Epstein Really Working For? Four hypotheses. 237,000 documents. 5.37 million data points. One answer.",
+      "subreddit": "Epstein"
+    },
+    {
+      "title": "It appears some Hilton Hotels are beginning to deny reservations to known ICE operations and staff. The Trump White House seems upset about it. But why? Isn't freedom to trade, or not, a foundational conservative position?",
+      "url": "https://old.reddit.com/r/AskConservatives/comments/1q53hn0/it_appears_some_hilton_hotels_are_beginning_to/",
+      "query": "Lance hotel operations Marriott Hilton Hyatt",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-04.json",
+      "comments": 40,
+      "post_title": "It appears some Hilton Hotels are beginning to deny reservations to known ICE operations and staff. The Trump White House seems upset about it. But why? Isn't freedom to trade, or not, a foundational conservative position?",
+      "subreddit": "AskConservatives"
+    },
+    {
+      "title": "Last night Charlotte, NC residents protested outside the Hilton hotel where shithead federal agents were staying, today Border Patrol's \"Operation Charlottes Web\" is ending but ICE is remaining to terrorizes citizens",
+      "url": "https://old.reddit.com/r/chaoticgood/comments/1p2bank/last_night_charlotte_nc_residents_protested/",
+      "query": "Lance hotel operations Marriott Hilton Hyatt",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-05.json",
+      "comments": 11,
+      "post_title": "Last night Charlotte, NC residents protested outside the Hilton hotel where shithead federal agents were staying, today Border Patrol's \"Operation Charlottes Web\" is ending but ICE is remaining to terrorizes citizens",
+      "subreddit": "chaoticgood"
+    },
+    {
+      "title": "Donald Trump, now a Russian intelligence target, opens the Grand Hyatt hotel [9/25/1980]...In 1977, the Czechoslovak Socialist Republic’s secret service (StB), which reported directly to the Soviet’s KGB, began an intelligence gathering operation on Donald and Ivana Trump...",
+      "url": "https://old.reddit.com/r/CzechCoconutCommunity/comments/1nru1wm/donald_trump_now_a_russian_intelligence_target/",
+      "query": "Lance hotel operations Marriott Hilton Hyatt",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-06.json",
+      "comments": 36,
+      "post_title": "Donald Trump, now a Russian intelligence target, opens the Grand Hyatt hotel [9/25/1980]...In 1977, the Czechoslovak Socialist Republic’s secret service (StB), which reported directly to the Soviet’s KGB, began an intelligence gathering operation on Donald and Ivana Trump...",
+      "subreddit": "CzechCoconutCommunity"
+    },
+    {
+      "title": "Supreme Court To Decide If Therapists Can Practice Conversion Therapy - A Christian therapist is challenging Colorado’s ban on conversion therapy, claiming it violates her right to free speech.",
+      "url": "https://old.reddit.com/r/scotus/comments/1nyq0kq/supreme_court_to_decide_if_therapists_can/",
+      "query": "Klarify therapists insurance claims practice management",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-07.json",
+      "comments": 40,
+      "post_title": "Supreme Court To Decide If Therapists Can Practice Conversion Therapy - A Christian therapist is challenging Colorado’s ban on conversion therapy, claiming it violates her right to free speech.",
+      "subreddit": "scotus"
+    },
+    {
+      "title": "There is a new movement on TikTok from many doctors claiming that insurers are “infringing on their practice of medicine” Have denials on medical nessecity gone up recently for you?",
+      "url": "https://old.reddit.com/r/HealthInsurance/comments/1mx4yme/there_is_a_new_movement_on_tiktok_from_many/",
+      "query": "Klarify therapists insurance claims practice management",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-08.json",
+      "comments": 40,
+      "post_title": "There is a new movement on TikTok from many doctors claiming that insurers are “infringing on their practice of medicine” Have denials on medical nessecity gone up recently for you?",
+      "subreddit": "HealthInsurance"
+    },
+    {
+      "title": "I found my boyfriends hidden photos folder.",
+      "url": "https://old.reddit.com/r/GirlDinnerDiaries/comments/1u6olbd/i_found_my_boyfriends_hidden_photos_folder/",
+      "query": "Klarify therapists insurance claims practice management",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-09.json",
+      "comments": 40,
+      "post_title": "I found my boyfriends hidden photos folder.",
+      "subreddit": "GirlDinnerDiaries"
+    },
+    {
+      "title": "Lost both my cats last weekend. I just can't",
+      "url": "https://old.reddit.com/r/CATHELP/comments/1s7rlar/lost_both_my_cats_last_weekend_i_just_cant/",
+      "query": "Dodo clinic communications scheduling refills intake dental",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-10.json",
+      "comments": 40,
+      "post_title": "Lost both my cats last weekend. I just can't",
+      "subreddit": "CATHELP"
+    },
+    {
+      "title": "My (25m) wife (26f) has had lice for almost a year. How to handle this?",
+      "url": "https://old.reddit.com/r/BestofRedditorUpdates/comments/1rpmw94/my_25m_wife_26f_has_had_lice_for_almost_a_year/",
+      "query": "Dodo clinic communications scheduling refills intake dental",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-11.json",
+      "comments": 40,
+      "post_title": "My (25m) wife (26f) has had lice for almost a year. How to handle this?",
+      "subreddit": "BestofRedditorUpdates"
+    },
+    {
+      "title": "I'm hating my life since having a baby and we don't know what to do",
+      "url": "https://old.reddit.com/r/BestofRedditorUpdates/comments/1smsodb/im_hating_my_life_since_having_a_baby_and_we_dont/",
+      "query": "Dodo clinic communications scheduling refills intake dental",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-12.json",
+      "comments": 40,
+      "post_title": "I'm hating my life since having a baby and we don't know what to do",
+      "subreddit": "BestofRedditorUpdates"
+    }
+  ],
+  "thread_count": 12
+}

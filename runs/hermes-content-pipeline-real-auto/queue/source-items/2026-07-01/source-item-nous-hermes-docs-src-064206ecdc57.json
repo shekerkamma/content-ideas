@@ -1,0 +1,18 @@
+{
+  "id": "src-064206ecdc57",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Openhands — Delegate coding to OpenHands CLI (model-agnostic, ...",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-openhands",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-openhands",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:28.240497+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Delegate coding to OpenHands CLI (model-agnostic, LiteLLM)",
+  "raw_content_path": null,
+  "dedupe_key": "afb7248eb9a9",
+  "status": "new",
+  "errors": []
+}

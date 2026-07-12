@@ -1,0 +1,69 @@
+{
+  "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+  "topic": "AI agents disrupting SaaS pricing, customer support SaaS, support agent outcome pricing, Zendesk Intercom Salesforce ServiceNow",
+  "claims": [
+    {
+      "id": "claim-001",
+      "claim": "Reddit Validation Claims: AI SaaS Disruption",
+      "locator": "Section 2",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing customer support outcome zendesk intercom salesforce servicenow reddit claims disruption",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-002",
+      "claim": "Claims To Validate Against Reddit SaaS buyers and operators complain about per-seat or license-based pricing when software usage no longer maps cleanly to human users.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing customer support outcome zendesk intercom salesforce servicenow claims reddit buyers operators",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-003",
+      "claim": "Customer support and service-desk teams are credible early adopters for AI agents because their work is high-volume, repetitive, and measurable by resolved tickets or completed conversations.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing customer support outcome zendesk intercom salesforce servicenow service-desk teams credible early",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-004",
+      "claim": "Buyers are skeptical of fully autonomous AI support agents because of quality failures, escalation issues, hallucinations, compliance concerns, or customer-experience risk.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing customer support outcome zendesk intercom salesforce servicenow buyers skeptical fully autonomous",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-005",
+      "claim": "Practitioners compare AI support agents against existing tools such as Zendesk, Intercom, Salesforce Service Cloud, ServiceNow, outsourced support, or manual workflows.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing customer support outcome zendesk intercom salesforce servicenow practitioners compare existing tools",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-006",
+      "claim": "A useful AI-agent SaaS wedge needs auditability: action logs, handoffs, attribution, quality review, and human override, not just automation.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing customer support outcome zendesk intercom salesforce servicenow useful ai-agent wedge needs",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-007",
+      "claim": "Outcome-based pricing for AI support agents can be attractive, but buyers may worry about how an outcome is defined, measured, disputed, or billed.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing customer support outcome zendesk intercom salesforce servicenow outcome-based for attractive buyers",
+      "primary_source_required": false
+    }
+  ]
+}

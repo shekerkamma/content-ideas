@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aurora Glass — DESIGN.md test matrix</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css"></head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">DESIGN.md · validation run · 2026-06-22</span>
+  <h1 class="mt4">One design system, five surfaces</h1>
+  <p class="lead mt4">Every page below imports the same <code>tokens.css</code> + <code>components.css</code>, both generated from <code>../../DESIGN.md</code> (Aurora Glass). Different use cases — identical identity. That cohesion is the test passing.</p>
+
+  <div class="grid g3 mt8">
+    <a class="card accent hover" href="dashboard.html"><span class="eyebrow">Use case 1</span><h3 class="mt4">Dashboard</h3><p class="soft mt4">KPI stat cards, deal table, source breakdown.</p></a>
+    <a class="card hover" href="landing.html"><span class="eyebrow">Use case 2</span><h3 class="mt4">Landing page</h3><p class="soft mt4">Gradient hero, feature cards, CTA, pills.</p></a>
+    <a class="card hover" href="tool.html"><span class="eyebrow">Use case 3</span><h3 class="mt4">Internal tool</h3><p class="soft mt4">Lead-intake form, validation, routed-leads table.</p></a>
+  </div>
+
+  <div class="hr"></div>
+  <h2>Use case 4 · Presentation</h2>
+  <p class="soft mt4">The fourth surface is the Marp deck — same tokens live in the <code>neon</code> theme (<code>~/.claude/skills/marp/SKILL.md</code> <code>:root</code> block). Run <code>/marp --style neon</code> and the slides match these pages.</p>
+
+  <div class="hr"></div>
+  <h2>Use case 5 · AI use cases <span class="pill m">interactive</span></h2>
+  <p class="soft mt4">A standalone, single-file interactive surface — click a pattern to explore it. Same Aurora Glass tokens, inlined so it opens and shares anywhere.</p>
+  <div class="grid g3 mt4">
+    <a class="card accent hover" href="ai-use-cases.html"><span class="eyebrow">Interactive</span><h3 class="mt4">Enterprise AI · realization patterns →</h3><p class="soft mt4">RAG · Knowledge Graph · Multi-Agent · Document AI — clickable cards with challenge, flow, stack, and hyperscaler fit.</p></a>
+  </div>
+
+  <div class="hr"></div>
+  <span class="eyebrow">What to look for</span>
+  <ul class="arrow mt4">
+    <li>Teal is the only accent on every screen — never a 3-gradient soup.</li>
+    <li>Cards are <code>--glass</code> on dark, hairline borders — never white-on-grey.</li>
+    <li>Mono-uppercase = metadata; sans = content. Gradient only on one H1 per page.</li>
+    <li>Buttons, inputs, pills, tables are byte-identical across all three pages.</li>
+  </ul>
+</div>
+</body></html>

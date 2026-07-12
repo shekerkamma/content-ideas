@@ -1,0 +1,18 @@
+{
+  "id": "src-57b342657c87",
+  "source_id": "openhands-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Evaluation Harness - OpenHands Docs",
+  "url": "https://docs.openhands.dev/openhands/usage/developers/evaluation-harness",
+  "canonical_url": "https://docs.openhands.dev/openhands/usage/developers/evaluation-harness",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:30.311456+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "The user_response_fn is a crucial component in OpenHands’s evaluation workflow. It simulates user interaction with the agent, allowing for automated responses during the evaluation process.",
+  "raw_content_path": null,
+  "dedupe_key": "6174545b262a",
+  "status": "new",
+  "errors": []
+}

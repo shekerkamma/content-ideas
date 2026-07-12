@@ -1,0 +1,250 @@
+{
+  "source": "aeo-evidence-sprint-loop",
+  "method": "semantic_reddit_queue_for_factcheck",
+  "claims": [
+    {
+      "claim_id": "RC-001",
+      "source_locator": "rsp_163",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around ad & creative generation at scale?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:PPC ad & creative generation at scale AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-002",
+      "source_locator": "rsp_030",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around ai shopping / sales consultant?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Entrepreneur ai shopping / sales consultant AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-003",
+      "source_locator": "rsp_001",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around conversational support?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:CustomerSuccess conversational support AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-004",
+      "source_locator": "rsp_114",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around doc summarization & drafting?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Entrepreneur doc summarization & drafting AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-005",
+      "source_locator": "rsp_143",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around legal research & drafting?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Lawyertalk legal research & drafting AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-006",
+      "source_locator": "rsp_085",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around messaging-channel chatbot?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:CustomerSuccess messaging-channel chatbot AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-007",
+      "source_locator": "rsp_184",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around personalized marketing content?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:PPC personalized marketing content AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-008",
+      "source_locator": "rsp_058",
+      "claim_text": "Do Reddit practitioners discuss concrete pain, workarounds, objections, or comparisons around travel & booking planner?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Entrepreneur travel & booking planner AI workflow pain workaround objection comparison",
+      "probe_type": "job_to_be_done",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-009",
+      "source_locator": "rsp_205",
+      "claim_text": "Which specific Reddit threads show a high-intent switching or comparison discussion around Add-On Collapse?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Entrepreneur Add-On Collapse SaaS AI agent replacement workflow",
+      "probe_type": "pattern_validation",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-010",
+      "source_locator": "rsp_209",
+      "claim_text": "Which specific Reddit threads show a high-intent switching or comparison discussion around Data Moat Survival?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Entrepreneur Data Moat Survival SaaS AI agent replacement workflow",
+      "probe_type": "pattern_validation",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-011",
+      "source_locator": "rsp_213",
+      "claim_text": "Which specific Reddit threads show a high-intent switching or comparison discussion around Seat Compression?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Entrepreneur Seat Compression SaaS AI agent replacement workflow",
+      "probe_type": "pattern_validation",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    },
+    {
+      "claim_id": "RC-012",
+      "source_locator": "rsp_217",
+      "claim_text": "Which specific Reddit threads show a high-intent switching or comparison discussion around Workflow Layer Replacement?",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subreddit:Entrepreneur Workflow Layer Replacement SaaS AI agent replacement workflow",
+      "probe_type": "pattern_validation",
+      "semantic_selection_criteria": {
+        "persona_workflow_match": true,
+        "requires_concrete_signal": true,
+        "reject_literal_keyword_only_matches": true,
+        "accepted_signals": [
+          "pain",
+          "workaround",
+          "objection",
+          "adoption signal",
+          "comparison"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Queries are discovery prompts only; accepted evidence requires semantic qualification.",
+    "Do not accept a Reddit result because it matched keywords."
+  ]
+}

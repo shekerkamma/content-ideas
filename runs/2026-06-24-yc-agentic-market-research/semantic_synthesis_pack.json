@@ -1,0 +1,58 @@
+{
+  "status": "draft_synthesis",
+  "method": "Synthesis over Printing Press YC CLI source pack plus qualified Reddit evidence pack. Company records are inputs, not slide copy.",
+  "bluf": "Reddit validates category pain in a narrow subset of YC agentic AI wedges; it does not validate the full company list.",
+  "core_thesis": "The strongest near-term agentic AI opportunities are not generic AI-agent companies. They are workflow wedges where operators coordinate fragmented systems, lose value when handoffs fail, and can point to concrete manual work or rework in public practitioner discussion.",
+  "decision": "Prioritize property management and construction review for deeper diligence; re-test clinic and hotel operations with narrower operator-source collection; keep finance, insurance, mortgage, therapy, and lending claims out of the validated narrative until primary or operator evidence improves.",
+  "semantic_themes": [
+    {
+      "theme": "Coordination-heavy operations",
+      "synthesis": "Agentic value is clearest where the product acts as a coordination layer across people, systems, and follow-up loops.",
+      "companies": ["CentralComs", "Lance", "Dodo"],
+      "evidence_read": "Property management has qualified Reddit support; hotel and clinic operations remain weak signals."
+    },
+    {
+      "theme": "Rework and risk prevention",
+      "synthesis": "The strongest evidence-supported wedge is preventing expensive downstream failure before work reaches the field.",
+      "companies": ["InspectMind AI"],
+      "evidence_read": "Qualified Reddit support exists around construction delays, rework, punch-list friction, and plan/spec issues."
+    },
+    {
+      "theme": "Regulated customer operations",
+      "synthesis": "Mortgage, insurance, and lending are plausible high-value wedges, but Reddit did not produce qualified evidence in this run.",
+      "companies": ["Kastle", "Basepilot", "Veritus"],
+      "evidence_read": "Keep as diligence hypotheses; validate with primary sources, operator interviews, and customer proof."
+    },
+    {
+      "theme": "Back-office financial automation",
+      "synthesis": "AR and accounting agents map to fragmented systems and repetitive workflows, but this Reddit pass did not qualify supporting operator evidence.",
+      "companies": ["Fazeshift", "ProcIndex"],
+      "evidence_read": "YC source facts support the wedge; Reddit does not validate market pain yet."
+    },
+    {
+      "theme": "Professional documentation burden",
+      "synthesis": "Therapy administration has a clear workflow hypothesis, but the evidence base must be collected from practitioner-specific channels.",
+      "companies": ["Klarify"],
+      "evidence_read": "No qualified Reddit evidence in this run."
+    }
+  ],
+  "company_scores": [
+    {"company": "CentralComs", "wedge": "Property management coordination", "workflow_specificity": 3, "reddit_evidence": 3, "integration_burden": 3, "diligence_priority": "High", "synthesis": "Best current evidence fit: concrete operator pain around maintenance, tenants, vendors, spreadsheets, and property systems."},
+    {"company": "InspectMind AI", "wedge": "Construction drawing review", "workflow_specificity": 3, "reddit_evidence": 3, "integration_burden": 2, "diligence_priority": "High", "synthesis": "Evidence supports the pain pattern: rework, delay, punch-list friction, and contract/process failures."},
+    {"company": "Dodo", "wedge": "Clinic communications", "workflow_specificity": 3, "reddit_evidence": 2, "integration_burden": 3, "diligence_priority": "Medium", "synthesis": "Strong workflow logic, but current Reddit support is thin and should be re-tested in clinic/operator channels."},
+    {"company": "Lance", "wedge": "Hotel operations", "workflow_specificity": 2, "reddit_evidence": 2, "integration_burden": 3, "diligence_priority": "Medium", "synthesis": "Plausible operations wedge, but current Reddit evidence is not clean enough to call validated."},
+    {"company": "Klarify", "wedge": "Therapist administration", "workflow_specificity": 3, "reddit_evidence": 1, "integration_burden": 2, "diligence_priority": "Medium", "synthesis": "High workflow plausibility from YC description; needs practitioner evidence for documentation/admin burden."},
+    {"company": "Fazeshift", "wedge": "Accounts receivable", "workflow_specificity": 3, "reddit_evidence": 1, "integration_burden": 3, "diligence_priority": "Medium", "synthesis": "System-fragmentation thesis is plausible, but this Reddit run did not validate AR operator pain."},
+    {"company": "ProcIndex", "wedge": "Accounting operations", "workflow_specificity": 3, "reddit_evidence": 1, "integration_burden": 3, "diligence_priority": "Medium", "synthesis": "Clear operational scope, but current evidence should be primary-source and practitioner-led, not Reddit-led."},
+    {"company": "Kastle", "wedge": "Mortgage servicing voice", "workflow_specificity": 2, "reddit_evidence": 1, "integration_burden": 3, "diligence_priority": "Low", "synthesis": "Potentially valuable but regulated; Reddit gap means no validated claim yet."},
+    {"company": "Basepilot", "wedge": "Insurance claims", "workflow_specificity": 2, "reddit_evidence": 1, "integration_burden": 3, "diligence_priority": "Low", "synthesis": "Customer proof matters more than Reddit for this regulated claims wedge."},
+    {"company": "Veritus", "wedge": "Loan servicing and collections", "workflow_specificity": 2, "reddit_evidence": 1, "integration_burden": 3, "diligence_priority": "Low", "synthesis": "High-value regulated workflow, but current Reddit data is not sufficient evidence."}
+  ],
+  "slide_story": [
+    "Reddit validates pain in only two wedges, not the whole YC company list.",
+    "The semantic pattern is coordination burden plus failed handoffs, not generic agentic AI.",
+    "Qualified evidence is concentrated in property management and construction rework.",
+    "Several attractive wedges remain plausible but unvalidated and need targeted source collection.",
+    "The next sprint should collect operator proof, not more broad Reddit volume."
+  ]
+}

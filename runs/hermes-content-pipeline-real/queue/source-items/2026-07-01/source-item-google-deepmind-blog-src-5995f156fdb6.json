@@ -1,0 +1,18 @@
+{
+  "id": "src-5995f156fdb6",
+  "source_id": "google-deepmind-blog",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Gemini 3.5 — Google DeepMind",
+  "url": "https://deepmind.google/models/gemini/",
+  "canonical_url": "https://deepmind.google/models/gemini/",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:42.312596+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Our latest series of Gemini models combine frontier intelligence with action. Built to help you execute complex, multi-step workflows.",
+  "raw_content_path": null,
+  "dedupe_key": "7a89d3ba2a72",
+  "status": "new",
+  "errors": []
+}

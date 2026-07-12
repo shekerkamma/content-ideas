@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-09-ai-system-design-video-deck/ai-system-design-video-deck-reviewed.pptx",
+    "html",
+    "-o",
+    "runs/2026-07-09-ai-system-design-video-deck/qa/officecli/ai-system-design-video-deck-reviewed.html"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-09-ai-system-design-video-deck/qa/officecli/ai-system-design-video-deck-reviewed.html\n",
+  "stderr": ""
+}

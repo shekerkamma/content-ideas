@@ -1,0 +1,80 @@
+version: 1
+pipeline_id: hermes-content-pipeline-v1
+mode: draft_only
+
+paths:
+  root: runs/hermes-content-pipeline
+  source_queue: queue/source-items
+  topic_queue: queue/topic-clusters
+  research_briefs: queue/research-briefs
+  draft_packages: queue/draft-packages
+  review_decisions: queue/review-decisions
+  run_logs: logs
+  memory_exports: memory-writeback
+  deliverables: deliverables
+
+search:
+  preferred_provider: you
+  fallback_extractors:
+    - firecrawl
+    - exa
+  max_results_per_query: 8
+  freshness_window_days: 14
+  require_source_url: true
+
+memory:
+  preferred_layer: gbrain
+  fallback_layer: local_markdown
+  writeback_requires_reviewed_brief: true
+  include_provenance: true
+  reject_low_confidence_claims: true
+
+model_routing:
+  extraction:
+    model_class: cheap
+    suggested_family: haiku
+  ranking:
+    model_class: standard
+    suggested_family: sonnet
+  research_brief:
+    model_class: standard
+    suggested_family: sonnet
+  article_draft:
+    model_class: standard
+    suggested_family: sonnet
+  editorial_critique:
+    model_class: premium
+    suggested_family: opus
+    max_items_per_run: 1
+
+daily_caps:
+  source_items: 60
+  topic_clusters: 12
+  research_briefs: 3
+  draft_packages: 1
+  estimated_usd: 12.00
+
+approval_gates:
+  publish_allowed: false
+  requires_human_review_before_memory_writeback: false
+  requires_human_review_before_publish: true
+  approved_status_values:
+    - approved
+    - approved_with_edits
+  blocked_status_values:
+    - rejected
+    - needs_revision
+
+quality_gates:
+  min_sources_per_brief: 3
+  require_primary_source_when_available: true
+  max_unsupported_claims: 0
+  require_citation_map: true
+  require_draft_status: true
+
+cron:
+  name: hermes-content-pipeline-daily
+  cadence: daily
+  suggested_time_local: "06:30"
+  lock_file: .locks/content-pipeline.lock
+  failure_summary: true

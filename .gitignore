@@ -38,3 +38,22 @@ feedback.json
 # OS
 .DS_Store
 node_modules
+
+# local repo clones and environments (never commit)
+OpenHands/
+SurfSense/
+SurfSense-fork/
+.venv-pptx-qa/
+.tmp/
+.browser-libs/
+runs/2026-06-15-accenture-style-claude-guide/
+skill-framework/
+tools/mcp_excalidraw/
+# media downloads inside run folders
+runs/**/*.mp4
+runs/**/*.webm
+runs/**/*.m4a
+runs/**/*.wav
+
+# contains live LLM API keys — never commit
+surfsense/global_llm_config.yaml

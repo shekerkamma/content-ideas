@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "source": "live"
+  },
+  "results": {
+    "data": [
+      {
+        "description": "Seat-based pricing is collapsing because one AI-augmented user can now do the work of five, reducing the number of licenses a company needs.",
+        "title": "Usage-Based Chaos: Agentic AI Is Breaking SaaS Pricing Models",
+        "url": "https://www.linkedin.com/pulse/usage-based-chaos-agentic-ai-breaking-saas-pricing-models-prasad-juyoe"
+      },
+      {
+        "description": "AI agents triggered a $2 trillion software stock wipeout in February 2026. Analysis of Atlassian, Salesforce declines and what it means for ...",
+        "title": "The SaaSpocalypse: AI Agents Disrupting Software Industry",
+        "url": "https://www.digitalapplied.com/blog/saaspocalypse-ai-agents-software-industry-analysis"
+      },
+      {
+        "description": "The shift to usage and outcome-based models wasn't a simple flick of a switch – it required rethinking monetization strategy, customer ...",
+        "title": "The 2026 Guide to SaaS, AI, and Agentic Pricing Models - Monetizely",
+        "url": "https://www.getmonetizely.com/blogs/the-2026-guide-to-saas-ai-and-agentic-pricing-models"
+      },
+      {
+        "description": "Subscriptions and seat-based licensing could give way to hybrid approaches that blend usage- and outcome-based pricing. All these advancements ...",
+        "title": "SaaS meets AI agents | Deloitte Insights",
+        "url": "https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/saas-ai-agents.html"
+      },
+      {
+        "description": "TL;DR: AI agents are on track to sit inside 40% of enterprise apps by 2026, up from under 5% in 2025 (Gartner, Aug 2025). By 2030, Gartner and ...",
+        "title": "How AI Agents Are Replacing SaaS: The Next Big Shift in Software ...",
+        "url": "https://pub.towardsai.net/how-ai-agents-are-replacing-saas-the-next-big-shift-in-software-2026-guide-ed587eed3f6e"
+      }
+    ],
+    "id": "019f168f-65ef-70f9-9d5d-129de06faaec",
+    "success": true
+  }
+}

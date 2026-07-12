@@ -1,0 +1,397 @@
+{
+  "post": {
+    "title": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026",
+    "author": "sony9999",
+    "score": 275,
+    "content": "Artificial Intelligence is evolving rapidly, and AI agents are becoming one of the most transformative technologies for businesses, developers, and creators. Unlike traditional chatbots, AI agents can reason, remember, interact with tools, and perform complex tasks autonomously. What Is an AI Agent? An AI agent is an intelligent software system capable of understanding objectives, making decisions, interacting with external tools, and completing tasks with minimal human intervention. Modern AI agents can: Answer questions Conduct research Analyze data Generate content Manage workflows Execute actions through APIs Learn from previous interactions Popular examples include customer support agents, sales assistants, research agents, coding assistants, and personal productivity assistants. Step 1: Start with a Clear Goal The first step in building an AI agent is defining its purpose. Without a clear goal, even the most advanced AI model will struggle to deliver meaningful results. Questions to Ask What problem will the agent solve? Who will use it? What outcomes should it achieve? How will success be measured? Examples of AI Agent Goals Automate customer support tickets Generate marketing content Schedule appointments Research competitors Analyze business reports Define Measurable Outcomes Set clear KPIs such as: Response accuracy Customer satisfaction score Task completion rate Time saved per task A well-defined objective provides direction for every other design decision. Step 2: Choose the Right AI Model Not all AI models are designed for the same purpose. The infographic highlights three important categories: Large Reasoning Models (LRMs) Best for: Complex reasoning Multi-step problem solving Strategic decision-making Use cases: Financial analysis Research agents Advanced planning systems Large Language Models (LLMs) Best for: General-purpose AI tasks Content generation Customer support Conversational AI Use cases: Chatbots Writing assistants Knowledge assistants Popular models include: GPT models Claude Gemini DeepSeek Small Language Models (SLMs) Best for: Fast response times Lower costs Simple routing tasks Use cases: Query classification Content filtering Workflow routing How to Choose Consider: Accuracy requirements Cost per request Speed requirements Context window size Integration capabilities The ideal model depends on your specific business objectives. Step 3: Select an AI Agent Framework Frameworks provide the infrastructure needed to build, deploy, and manage AI agents. LangChain A popular framework for: Agent orchestration Tool integration Memory management CrewAI Designed for: Multi-agent collaboration Role-based AI systems Workflow automation n8n Excellent for: No-code automation API integrations Business workflows Google ADK Useful for: Enterprise AI applications Scalable deployments Factors to Consider Choose a framework based on: Ease of development Scalability Community support Tool compatibility Enterprise requirements Step 4: Implement Memory Systems Memory is what transforms a chatbot into a true AI agent. Cache Memory Stores: Current conversation data Temporary task information Benefits: Faster responses Improved context retention Episodic Memory Stores: Previous interactions Historical events User preferences Benefits: Personalized experiences Better long-term interactions File System Memory Stores: Documents Structured databases Knowledge repositories Benefits: Long-term knowledge retention Enterprise-grade information access Why Memory Matters Without memory, agents start from scratch in every interaction. With memory, they become more intelligent and personalized over time. Step 5: Connect External Tools AI agents become significantly more powerful when connected to tools. Model Context Protocol (MCP) MCP allows agents to interact with external systems in a standardized way. Benefits include: Better interoperability Simplified integrations Enhanced capabilities Function Calling Function calling enables AI models to: Execute commands Query databases Access APIs Trigger workflows Common Agent Tools Examples include: CRM systems Search engines Email platforms Project management software Analytics tools Real-World Example A customer support agent might: Receive a support request. Query a CRM database. Check order status. Generate a response. Send an email automatically. Step 6: Manage Context Effectively Context management is critical for AI agent performance. As conversations grow, context can become expensive and difficult to manage. Context Compression Use summarization techniques to: Reduce token usage Preserve important information Improve efficiency Monitor Metrics Track: Token consumption Response quality Latency User satisfaction Smart Context Handling The best AI agents dynamically determine: What information is relevant What can be summarized What should be discarded This ensures high-quality responses while controlling costs. Step 7: Test and Evaluate Your AI Agent Testing is often the most overlooked stage of AI development. Unit Testing Verify individual components such as: API calls Memory systems Tool integrations Edge Case Testing Evaluate: Unexpected user inputs Ambiguous requests System failures Performance Testing Measure: Response speed Accuracy Reliability Scalability Key Evaluation Metrics Important KPIs include: Task success rate Hallucination rate User satisfaction Cost per completed task Continuous testing helps maintain quality as your AI system evolves. Best Practices for Building AI Agents Keep Objectives Narrow Initially Start with a focused use case before expanding capabilities. Prioritize Tool Integration An AI agent with useful tools often outperforms a larger model without tools. Design Strong Memory Architecture Memory significantly improves user experience and task completion. Monitor Costs Track: API usage Token consumption Infrastructure expenses Iterate Continuously AI agents improve through: Testing User feedback Performance monitoring The Future of AI Agents AI agents are moving beyond simple chat interfaces. Future developments include: Multi-agent collaboration Autonomous decision-making Real-time learning systems Enterprise-wide automation Human-AI teamwork Organizations that invest in AI agents today will be better positioned to compete in an increasingly automated world. Conclusion Building an AI agent involves much more than selecting an AI model. Successful agents require clear goals, the right framework, memory systems, tool integrations, context management, and rigorous testing. By following this seven-step approach—Goal Setting, Model Selection, Framework Choice, Memory Design, Tool Integration, Context Management, and Evaluation—you can create AI agents capable of delivering measurable business value and scalable automation. As AI technology continues to advance, well-designed AI agents will become essential tools for productivity, customer service, research, and decision-making across every industry. What is the difference between an AI agent and a chatbot? A chatbot primarily responds to user messages, while an AI agent can reason, use tools, access memory, and perform actions autonomously. Which AI model is best for building an AI agent? The best model depends on your goals. GPT, Claude, Gemini, and DeepSeek are popular choices for general-purpose AI agents. Why is memory important in AI agents? Memory allows agents to retain information from previous interactions, improving personalization, efficiency, and task completion. What is MCP in AI agents? Model Context Protocol (MCP) is a standardized way for AI agents to connect with external tools, databases, and applications. Which framework is best for beginners? LangChain and n8n are popular starting points due to their extensive documentation and community support. How do AI agents use external tools? AI agents use APIs, function calling, and protocols like MCP to interact with software, databases, search engines, and business systems. How can I measure AI agent performance? Track metrics such as task success rate, accuracy, response time, user satisfaction, hallucination rate, and operational cost. What industries benefit most from AI agents? Industries including customer support, healthcare, finance, marketing, education, e-commerce, and software development can gain significant value from AI agents.",
+    "url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+    "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+    "subreddit": "NextGenAITool"
+  },
+  "comments": [
+    {
+      "id": "t1_or50pft",
+      "author": "zzzzany",
+      "text": "thanks for saving me a single prompt for claude. now let me TLDR that.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/or50pft/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_os0v59n",
+      "author": "NextGenAITool-ModTeam",
+      "text": "r/NextGenAITool follows platform-wide Reddit Rules",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/os0v59n/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_or71izm",
+      "author": "maskofefro",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/or71izm/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_or8gc88",
+      "author": "Free_Many_245",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/or8gc88/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orbvbal",
+      "author": "azog55",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orbvbal/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orcnzkb",
+      "author": "jerseyexpat2020",
+      "text": "Thanks!",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orcnzkb/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_ordjrh5",
+      "author": "Other-Ad-4301",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/ordjrh5/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_ordoqrx",
+      "author": "muuulahman",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/ordoqrx/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orekwsw",
+      "author": "Jerry777777",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orekwsw/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orfpe1p",
+      "author": "TimeScallion6159",
+      "text": "Great bulletpoints to actually make something useful",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orfpe1p/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_org2vi9",
+      "author": "Altruistic-Craft5289",
+      "text": "Well written, much appreciated!",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/org2vi9/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_org4e27",
+      "author": "100110110011001",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/org4e27/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orgkc8p",
+      "author": "Low_Willingness4854",
+      "text": "This is dope! Thanks for this well written post",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orgkc8p/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orh8k0u",
+      "author": "GoldenRetriever182",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orh8k0u/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orh8tm5",
+      "author": "liberallyOptimistic",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orh8tm5/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orhdpnh",
+      "author": "Southern-Drink6766",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orhdpnh/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orhpfps",
+      "author": "Centurion_87",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orhpfps/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_ori93gm",
+      "author": "Ok-Guidance8103",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/ori93gm/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_origgqn",
+      "author": "malicegb",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/origgqn/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orih9gm",
+      "author": "tekneeque",
+      "text": "Excellent!",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orih9gm/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orkpdyu",
+      "author": "Objective-Let3198",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orkpdyu/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orkxpoa",
+      "author": "ZealousidealMath6710",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orkxpoa/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orkziu5",
+      "author": "Cappy20wood",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orkziu5/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orlpzol",
+      "author": "napperdabber",
+      "text": "Remijd me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orlpzol/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_ormpp7u",
+      "author": "mckinney325",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/ormpp7u/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_ormupkx",
+      "author": "Current-District8504",
+      "text": "The big book",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/ormupkx/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_oro5p9u",
+      "author": "idiotdabba",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/oro5p9u/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_oro60cc",
+      "author": "pb7447",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/oro60cc/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orod2fv",
+      "author": "SissyAmberFox",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orod2fv/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orpus2d",
+      "author": "Judas",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orpus2d/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orqubt2",
+      "author": "hallucination_goblin",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orqubt2/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orr0lsl",
+      "author": "poncepretelin",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orr0lsl/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orrhu8k",
+      "author": "TurbulentMarketing14",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orrhu8k/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_ors7c72",
+      "author": "VodkaClubSofa",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/ors7c72/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_orv7ucl",
+      "author": "Oakay-TP",
+      "text": "Remind Me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/orv7ucl/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_os0wj54",
+      "author": "girlykitty021",
+      "text": "remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/os0wj54/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_os32qcn",
+      "author": "Consistent-Pool-604",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/os32qcn/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "id": "t1_os48i1k",
+      "author": "Kitchen_External_560",
+      "text": "Remind me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/os48i1k/",
+      "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "subreddit": "NextGenAITool"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+    "method": "old_reddit_html"
+  }
+}

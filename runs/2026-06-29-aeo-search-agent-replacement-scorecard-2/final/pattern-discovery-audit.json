@@ -1,0 +1,19 @@
+{
+  "method": "concept-anchor semantic scoring plus required subagent/human review",
+  "semantic_provider": "local_concept_anchor_cosine",
+  "external_embedding_model": null,
+  "uses_keyword_pattern_matching": false,
+  "uses_predeclared_concept_anchors": true,
+  "candidate_count": 9,
+  "cluster_count": 9,
+  "evidence_thresholds": {
+    "high": "5+ independent manual live captures, 3+ engines, 2+ source domains, no target-seeded evidence",
+    "medium": "3+ independent manual live captures, 2+ engines, no target-seeded evidence",
+    "low": "thin evidence, target-seeded evidence, non-live evidence, or insufficient independence"
+  },
+  "required_review": [
+    "semantic support review against exact evidence units",
+    "adversarial provenance/independence review",
+    "source/citation support review before authority claims"
+  ]
+}

@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Healthcare AI — Use Case Realization Blueprints</title>
+<style>
+:root {
+  --bg:#080b11;--bg-elev:#0f141d;--ink:#eef2f7;--soft:#aeb8c7;--muted:#69748a;
+  --line:rgba(255,255,255,.09);--glass:rgba(255,255,255,.04);
+  --teal:#2dd4bf;--sky:#38bdf8;--magenta:#e879f9;--amber:#f6b94b;
+  --font-d:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-m:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --td:clamp(2.8rem,5.2vw,5.5rem);
+  --tt:clamp(1.8rem,2.8vw,2.8rem);
+  --tb:clamp(1rem,1.35vw,1.35rem);
+  --tl:clamp(.62rem,.75vw,.78rem);
+  --ts:clamp(.82rem,1.1vw,1.05rem);
+}
+*,::before,::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--font-d)}
+
+.slide{position:fixed;inset:0;display:none;flex-direction:column;justify-content:center;
+  padding:clamp(36px,5vh,68px) clamp(48px,5vw,112px);overflow:hidden;}
+.slide.active{display:flex}
+.slide::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 55% 40% at 10% 20%,rgba(45,212,191,.13) 0%,transparent 70%),
+    radial-gradient(ellipse 42% 36% at 88% 70%,rgba(232,121,249,.11) 0%,transparent 70%),
+    radial-gradient(ellipse 32% 28% at 58% 8%,rgba(56,189,248,.10) 0%,transparent 65%),
+    radial-gradient(ellipse 26% 20% at 28% 86%,rgba(246,185,75,.08) 0%,transparent 60%);
+  filter:blur(14px);}
+.slide::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");}
+.dot-grid{position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:32px 32px;}
+.bar{position:absolute;bottom:0;left:0;right:0;height:3px;z-index:10;
+  background:linear-gradient(90deg,var(--teal),var(--sky),var(--magenta));
+  box-shadow:0 0 14px var(--teal);}
+.top-label{position:absolute;top:clamp(16px,2.2vh,28px);left:clamp(48px,5vw,112px);right:clamp(48px,5vw,112px);
+  z-index:10;display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--font-m);font-size:var(--tl);letter-spacing:.22em;text-transform:uppercase;color:var(--muted);}
+.folio{position:absolute;bottom:clamp(12px,1.8vh,22px);left:clamp(48px,5vw,112px);right:clamp(48px,5vw,112px);
+  z-index:10;display:flex;justify-content:space-between;
+  font-family:var(--font-m);font-size:var(--tl);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.content{position:relative;z-index:5;width:100%;}
+
+/* ── Layouts ── */
+.inner-split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,4vw,80px);
+  align-items:start;width:100%;max-width:min(1640px,94vw);margin:0 auto;}
+.inner-center{max-width:min(860px,70vw);margin:0 auto;text-align:center;}
+.inner-full{max-width:min(1280px,88vw);margin:0 auto;}
+.inner-map{max-width:min(1400px,92vw);margin:0 auto;}
+
+/* ── Typography ── */
+.display-title{font-family:var(--font-d);font-size:var(--td);font-weight:800;
+  letter-spacing:-.02em;line-height:1.05;
+  background:linear-gradient(135deg,var(--teal) 0%,var(--sky) 50%,var(--magenta) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.slide-title{font-family:var(--font-d);font-size:var(--tt);font-weight:800;
+  letter-spacing:-.02em;line-height:1.1;color:var(--ink);margin-bottom:.45em;}
+.slide-title .g{color:var(--teal);text-shadow:0 0 20px rgba(45,212,191,.55);}
+.body-text{font-size:var(--tb);line-height:1.6;color:var(--ink);}
+.challenge-text{font-size:var(--ts);line-height:1.6;color:var(--soft);margin-bottom:.8em;}
+.kicker{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.22em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:.6em;display:block;}
+.subtitle{font-size:clamp(1rem,1.55vw,1.3rem);color:var(--soft);line-height:1.55;
+  margin-top:.55em;max-width:54ch;}
+.closing-sub{font-size:clamp(1rem,1.55vw,1.3rem);color:var(--soft);line-height:1.6;
+  margin-top:.65em;max-width:58ch;}
+
+/* ── UC Left column ── */
+.uc-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;}
+.uc-list li{font-size:var(--ts);color:var(--ink);line-height:1.5;
+  padding-left:1.3em;position:relative;}
+.uc-list li::before{content:'→';position:absolute;left:0;color:var(--teal);font-family:var(--font-m);}
+.uc-list li.pos::before{content:'✓';color:var(--teal);}
+
+/* ── Realization Card (right column) ── */
+.uc-card{background:var(--glass);border:1px solid var(--line);border-radius:14px;
+  padding:clamp(16px,2vw,26px);display:flex;flex-direction:column;gap:12px;
+  backdrop-filter:blur(8px);}
+.card-section{display:flex;flex-direction:column;gap:5px;}
+.card-section+.card-section{padding-top:10px;border-top:1px solid var(--line);}
+.slabel{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.2em;
+  text-transform:uppercase;color:var(--muted);}
+
+/* Pattern badges */
+.pbadge{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.14em;
+  text-transform:uppercase;padding:4px 12px;border-radius:6px;
+  display:inline-block;width:fit-content;font-weight:600;}
+.pbadge.multi{background:rgba(45,212,191,.12);border:1px solid rgba(45,212,191,.35);color:var(--teal);}
+.pbadge.rag{background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);color:var(--sky);}
+.pbadge.docai{background:rgba(232,121,249,.12);border:1px solid rgba(232,121,249,.35);color:var(--magenta);}
+.pbadge.hybrid{background:rgba(246,185,75,.12);border:1px solid rgba(246,185,75,.35);color:var(--amber);}
+
+/* Pipeline */
+.pipeline{display:flex;flex-direction:column;gap:5px;}
+.p-step{display:flex;align-items:baseline;gap:8px;font-size:var(--ts);color:var(--ink);line-height:1.4;}
+.p-num{font-family:var(--font-m);font-size:var(--tl);color:var(--teal);flex-shrink:0;width:1.2em;}
+
+/* Stack */
+.stack-row{display:flex;flex-wrap:wrap;gap:5px;}
+.schip{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 9px;border-radius:4px;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);color:var(--soft);}
+
+/* ROI + Hyperscaler row */
+.roi-hyper{display:flex;gap:clamp(16px,2vw,28px);align-items:flex-end;flex-wrap:wrap;}
+.roi-block{display:flex;flex-direction:column;gap:2px;}
+.roi-num{font-family:var(--font-m);font-size:clamp(1.2rem,2vw,1.8rem);font-weight:800;
+  color:var(--teal);text-shadow:0 0 14px rgba(45,212,191,.4);line-height:1;}
+.hyper-block{display:flex;flex-direction:column;gap:2px;}
+.hbadge{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 10px;border-radius:4px;}
+.hbadge.aws{background:rgba(246,185,75,.12);border:1px solid rgba(246,185,75,.3);color:var(--amber);}
+.hbadge.gcp{background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3);color:var(--sky);}
+.hbadge.azure{background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3);color:var(--sky);}
+.hbadge.multi{background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.25);color:var(--teal);}
+
+/* Compliance */
+.comp-row{display:flex;flex-wrap:wrap;gap:5px;}
+.ctag{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 9px;border-radius:4px;background:rgba(246,185,75,.1);
+  border:1px solid rgba(246,185,75,.25);color:var(--amber);}
+
+/* ── Chips ── */
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.2em;}
+.chip{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 13px;border-radius:999px;border:1px solid var(--teal);color:var(--teal);}
+.chip.s{border-color:var(--sky);color:var(--sky);}
+.chip.m{border-color:var(--magenta);color:var(--magenta);}
+.chip.a{border-color:var(--amber);color:var(--amber);}
+.chip.soft{border-color:var(--line);color:var(--soft);}
+
+/* ── UC Map slide ── */
+.map-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.5vw,24px);
+  max-width:min(1300px,90vw);margin:0 auto;}
+.map-col-label{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.22em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:block;}
+.map-col{display:flex;flex-direction:column;gap:8px;}
+.map-item{background:var(--glass);border:1px solid var(--line);border-radius:10px;
+  padding:clamp(10px,1.2vw,16px);display:flex;flex-direction:column;gap:6px;}
+.map-num{font-family:var(--font-m);font-size:var(--tl);color:var(--muted);letter-spacing:.14em;}
+.map-name{font-size:var(--ts);font-weight:700;color:var(--ink);line-height:1.3;}
+
+/* ── Compliance table ── */
+.comp-table{display:flex;flex-direction:column;gap:0;max-width:min(1100px,88vw);margin:0 auto;}
+.comp-trow{display:flex;align-items:baseline;gap:clamp(14px,2vw,28px);
+  padding:clamp(9px,1.1vh,14px) 0;border-bottom:1px solid var(--line);}
+.comp-trow:last-child{border-bottom:none;}
+.comp-badge{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 10px;border-radius:4px;background:rgba(45,212,191,.1);
+  border:1px solid rgba(45,212,191,.3);color:var(--teal);
+  white-space:nowrap;flex-shrink:0;min-width:clamp(100px,9vw,145px);}
+.comp-desc{font-size:var(--ts);color:var(--ink);line-height:1.45;}
+.comp-scope{font-family:var(--font-m);font-size:var(--tl);letter-spacing:.1em;text-transform:uppercase;
+  white-space:nowrap;padding:3px 8px;border-radius:4px;margin-left:auto;flex-shrink:0;}
+.comp-scope.all{background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.25);color:var(--teal);}
+.comp-scope.ls{background:rgba(246,185,75,.1);border:1px solid rgba(246,185,75,.25);color:var(--amber);}
+.comp-scope.pv{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.25);color:var(--sky);}
+
+/* ── Chapter divider ── */
+.chap-num{font-family:var(--font-m);font-size:clamp(3.5rem,10vh,8rem);font-weight:800;
+  line-height:1;letter-spacing:-.04em;color:var(--teal);
+  text-shadow:0 0 36px rgba(45,212,191,.5),0 0 70px rgba(45,212,191,.22);margin-bottom:.15em;}
+.chap-name{font-family:var(--font-d);font-size:var(--td);font-weight:800;
+  letter-spacing:-.02em;color:var(--ink);line-height:1.08;}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 1 · COVER
+═══════════════════════════════════════ -->
+<section class="slide active" data-type="cover">
+<div class="dot-grid"></div>
+<div class="top-label"><span>OPENKB · AI USE CASES CONSULTANT</span><span>ANTHROPIC · HEALTHCARE · 2025</span></div>
+<div class="content">
+  <div class="inner-full">
+    <span class="kicker">Enterprise AI · Healthcare Vertical · Use Case Realization Blueprints</span>
+    <div class="display-title">Healthcare AI<br>Use Cases:<br>Realization Blueprints</div>
+    <p class="subtitle">Ten Claude workflow use cases across providers, payers, and life sciences — each with realization pattern, pipeline architecture, tech stack, ROI benchmark, hyperscaler guidance, and compliance gate.</p>
+    <div class="chip-row">
+      <span class="chip">10 Use Cases</span>
+      <span class="chip s">4 Realization Patterns</span>
+      <span class="chip m">AWS · GCP · Azure</span>
+      <span class="chip a">HIPAA · CMS · FDA · ONC</span>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>1 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 2 · USE CASE MAP
+═══════════════════════════════════════ -->
+<section class="slide" data-type="data">
+<div class="dot-grid"></div>
+<div class="top-label"><span>USE CASE INDEX</span><span>PROVIDERS · PAYERS · LIFE SCIENCES</span></div>
+<div class="content">
+  <div style="max-width:min(1380px,92vw);margin:0 auto;">
+    <h2 class="slide-title" style="margin-bottom:.8em;">Ten Use Cases · Three Segments · Four Patterns</h2>
+    <div class="map-grid">
+      <div class="map-col">
+        <span class="map-col-label">Providers</span>
+        <div class="map-item">
+          <div class="map-num">UC 02</div>
+          <div class="map-name">Clinical Documentation &amp; Ambient Scribing</div>
+          <span class="pbadge rag" style="margin-top:2px;">RAG + Output</span>
+        </div>
+        <div class="map-item">
+          <div class="map-num">UC 04</div>
+          <div class="map-name">Discharge Summary &amp; Care Transition</div>
+          <span class="pbadge multi" style="margin-top:2px;">Multi-Agent</span>
+        </div>
+        <div class="map-item">
+          <div class="map-num">UC 08</div>
+          <div class="map-name">Patient Communication &amp; Care Navigation</div>
+          <span class="pbadge rag" style="margin-top:2px;">RAG + Conversational</span>
+        </div>
+        <div class="map-item">
+          <div class="map-num">UC 09</div>
+          <div class="map-name">Radiology &amp; Pathology Report Structuring</div>
+          <span class="pbadge docai" style="margin-top:2px;">Document AI</span>
+        </div>
+      </div>
+      <div class="map-col">
+        <span class="map-col-label">Payers / Shared</span>
+        <div class="map-item">
+          <div class="map-num">UC 01</div>
+          <div class="map-name">Prior Authorization Automation</div>
+          <span class="pbadge multi" style="margin-top:2px;">Multi-Agent</span>
+        </div>
+        <div class="map-item">
+          <div class="map-num">UC 03</div>
+          <div class="map-name">Medical Coding &amp; Revenue Cycle</div>
+          <span class="pbadge hybrid" style="margin-top:2px;">Document AI + RAG</span>
+        </div>
+        <div class="map-item">
+          <div class="map-num">UC 06</div>
+          <div class="map-name">Denial Management &amp; Appeals</div>
+          <span class="pbadge hybrid" style="margin-top:2px;">Document AI + RAG</span>
+        </div>
+      </div>
+      <div class="map-col">
+        <span class="map-col-label">Life Sciences</span>
+        <div class="map-item">
+          <div class="map-num">UC 05</div>
+          <div class="map-name">Clinical Trial Eligibility Screening</div>
+          <span class="pbadge hybrid" style="margin-top:2px;">RAG + Multi-Agent</span>
+        </div>
+        <div class="map-item">
+          <div class="map-num">UC 07</div>
+          <div class="map-name">Pharmacovigilance &amp; Drug Safety Reporting</div>
+          <span class="pbadge docai" style="margin-top:2px;">Document AI + Multi-Agent</span>
+        </div>
+        <div class="map-item">
+          <div class="map-num">UC 10</div>
+          <div class="map-name">Regulatory Submission &amp; Clinical Study Reports</div>
+          <span class="pbadge hybrid" style="margin-top:2px;">RAG + Multi-Agent</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>2 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 3 · UC 01 · PRIOR AUTHORIZATION
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>PAYER / PROVIDER · USE CASE 01</span><span>MULTI-AGENT · AWS PRIMARY</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Prior Authorization Automation</span>
+      <h2 class="slide-title">13 hrs/physician/week lost to PA paperwork — <span class="g">CMS-9115-F</span> mandates a fix by Jan 2027</h2>
+      <p class="challenge-text">Prior auth is the highest-burden administrative process in US healthcare. 92% of physicians report PA delays cause care delays; 34% report a serious adverse event traced to a delayed authorization.</p>
+      <ul class="uc-list">
+        <li>Ingests clinical note, lab results, and procedure code in one 200K pass</li>
+        <li>Retrieves payer coverage policy via RAG (policy library up to date)</li>
+        <li>Drafts clinically grounded justification letter in payer-preferred format</li>
+        <li class="pos">Flags evidence gaps for human review before submission</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge multi">Multi-Agent Orchestration</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Document AI — extract clinical data from PDF chart</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>RAG — retrieve payer coverage policy (200K context)</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Claude — draft PA justification letter</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Output — payer portal API submission</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Textract</span><span class="schip">HealthLake FHIR</span>
+          <span class="schip">Bedrock</span><span class="schip">Claude 3.5 Sonnet</span>
+          <span class="schip">Comprehend Medical</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">ROI</div>
+            <div class="roi-num">$37K/yr</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">PER PHYSICIAN</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge aws">AWS</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">CMS-9115-F</span>
+          <span class="ctag">PHI Tokenization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>3 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 4 · UC 02 · AMBIENT SCRIBING
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>PROVIDER · USE CASE 02</span><span>RAG + STRUCTURED OUTPUT · AWS / AZURE</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Clinical Documentation &amp; Ambient Scribing</span>
+      <h2 class="slide-title">35–55% of physician time goes to <span class="g">EHR documentation</span> — not patients</h2>
+      <p class="challenge-text">Ambient scribes capture the encounter; Claude is the reasoning layer. It structures raw ASR transcript into SOAP format, extracts billing codes, flags discrepancies, and pushes to the EHR via FHIR — all before the physician leaves the room.</p>
+      <ul class="uc-list">
+        <li>Post-processes ASR transcripts into structured SOAP notes</li>
+        <li>Extracts ICD-10 / CPT billing codes from visit content</li>
+        <li>Flags plan-vs-documentation discrepancies for review</li>
+        <li class="pos">Pushes structured data to EHR via HL7 FHIR R4 API</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge rag">RAG + Structured Output</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>ASR — transcribe patient-physician encounter (Transcribe Medical / Azure Speech)</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Claude — SOAP structure + ICD-10/CPT code extraction</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Validate — flag plan/order discrepancies</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Output — HL7 FHIR R4 push to Epic / Cerner</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Transcribe Medical</span><span class="schip">Azure AI Speech</span>
+          <span class="schip">Claude 200K</span><span class="schip">Epic FHIR API</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">ROI</div>
+            <div class="roi-num">$75–110K</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">PER CLINICIAN/YEAR</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge multi">AWS / Azure</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">PHI Tokenization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>4 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 5 · UC 03 · MEDICAL CODING
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>PAYER · USE CASE 03</span><span>DOCUMENT AI + RAG · AWS / GCP</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Medical Coding &amp; Revenue Cycle</span>
+      <h2 class="slide-title"><span class="g">$262B</span> lost annually to ICD-10/CPT coding errors in the US</h2>
+      <p class="challenge-text">Claude's 200K context window ingests a full patient encounter — all notes, labs, and imaging — in a single pass. No other model handles this at encounter scale. What human coders miss, Claude surfaces.</p>
+      <ul class="uc-list">
+        <li>Auto-suggests most specific ICD-10 / CPT codes from clinical notes</li>
+        <li>Validates documentation supports the code — reduces audit risk</li>
+        <li>Identifies missed secondary diagnoses that increase reimbursement</li>
+        <li class="pos">Drafts denial appeal letters with cited clinical evidence</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge hybrid">Document AI + RAG</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Ingest — full encounter (200K tokens, one pass)</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Extract — ICD-10/CPT suggestions with validation</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Identify — missed secondary diagnoses + upcoding opportunities</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Output — code set + denial prevention flags</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Comprehend Medical</span><span class="schip">MedLM</span>
+          <span class="schip">Claude 200K</span><span class="schip">Coding Engine</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Market at Risk</div>
+            <div class="roi-num">$262B/yr</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">DENIAL POOL ADDRESSABLE</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge multi">AWS / GCP</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">PHI Tokenization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>5 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 6 · UC 04 · DISCHARGE SUMMARY
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>PROVIDER · USE CASE 04</span><span>MULTI-AGENT · AWS PRIMARY</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Discharge Summary &amp; Care Transition</span>
+      <h2 class="slide-title">Poor discharge summaries cause <span class="g">$26B</span> in preventable 30-day readmissions</h2>
+      <p class="challenge-text">15% of patients are readmitted within 30 days. Two parallel agents run from one chart ingest — one writes for the patient, one writes for the PCP — with full medication reconciliation and pending lab flagging.</p>
+      <ul class="uc-list">
+        <li>Ingests full inpatient chart from admission note to discharge</li>
+        <li>Agent A: patient-readable summary at ≤6th grade reading level</li>
+        <li>Agent B: PCP-readable clinical handoff with medication reconciliation</li>
+        <li class="pos">Flags every open medication and pending lab result automatically</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge multi">Multi-Agent + Structured Output</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Ingest — full inpatient chart (admits → daily notes → discharge)</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Agent A — patient summary (≤6th grade, follow-up instructions)</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Agent B — PCP handoff + medication reconciliation + pending labs</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Output — HL7 FHIR R4 DocumentReference → EHR</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">HealthLake</span><span class="schip">Cloud Healthcare API</span>
+          <span class="schip">Claude 200K</span><span class="schip">FHIR R4/R5</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Market at Risk</div>
+            <div class="roi-num">$26B/yr</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">PREVENTABLE READMISSIONS</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge aws">AWS</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">CMS OP-35</span><span class="ctag">CMS Info Blocking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>6 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 7 · UC 05 · TRIAL SCREENING
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>LIFE SCIENCES · USE CASE 05</span><span>RAG + MULTI-AGENT · GCP / AWS</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Clinical Trial Eligibility Screening</span>
+      <h2 class="slide-title">Average trial runs <span class="g">30% under enrollment</span> — LLMs close the gap in screening speed</h2>
+      <p class="challenge-text">Complex eligibility criteria (30–100 I/E criteria per protocol) are matched against patient charts manually by coordinators. Claude screens entire FHIR populations in hours, not weeks, and drafts recruitment materials at the same time.</p>
+      <ul class="uc-list">
+        <li>Parses 30–100 inclusion/exclusion criteria from protocol document</li>
+        <li>Screens FHIR patient charts — structured match/no-match with evidence</li>
+        <li>Drafts personalized recruitment letters at appropriate reading level</li>
+        <li class="pos">Summarizes protocol amendments for site investigators</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge hybrid">RAG + Multi-Agent</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Parse — protocol I/E criteria extraction</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Screen — FHIR patient charts vs criteria (population-scale)</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Report — match/no-match with chart evidence citations</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Draft — recruitment letters + protocol amendment summaries</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Vertex AI Search</span><span class="schip">Bedrock KBs</span>
+          <span class="schip">Claude 200K</span><span class="schip">FHIR R4</span><span class="schip">TriNetX</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Speed Gain</div>
+            <div class="roi-num">2–3×</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">SCREENING THROUGHPUT</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge gcp">GCP / AWS</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">IRB Requirements</span><span class="ctag">GCP Guidelines</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>7 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 8 · UC 06 · DENIAL MANAGEMENT
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>PAYER · USE CASE 06</span><span>DOCUMENT AI + RAG · AWS PRIMARY</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Denial Management &amp; Appeals</span>
+      <h2 class="slide-title"><span class="g">40–60%</span> of appeals succeed when properly documented — Claude automates the documentation</h2>
+      <p class="challenge-text">Health systems lose 3–5% of revenue to denials. A skilled coder needs hours to draft a single clinically grounded appeal. Claude drafts in seconds — with CPT citations, LCD/NCD policy grounding, and a peer-to-peer review script.</p>
+      <ul class="uc-list">
+        <li>Classifies denial by reason code (clinical / administrative / auth)</li>
+        <li>Retrieves supporting clinical evidence from the patient chart (RAG)</li>
+        <li>Drafts structured appeal citing CPT codes + LCD/NCD guidelines</li>
+        <li class="pos">Generates peer-to-peer review script for physician-to-physician calls</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge hybrid">Document AI + RAG</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Classify — denial reason code extraction (Textract + NLP)</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>RAG — retrieve clinical evidence + LCD/NCD policy grounding</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Claude — draft structured appeal letter with citations</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Output — appeal package + peer-to-peer script</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Textract</span><span class="schip">Comprehend Medical</span>
+          <span class="schip">Bedrock</span><span class="schip">Claude 200K</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Revenue Recoverable</div>
+            <div class="roi-num">3–5%</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">OF PROVIDER REVENUE</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge aws">AWS</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">PHI Tokenization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>8 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 9 · UC 07 · PHARMACOVIGILANCE
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>LIFE SCIENCES · USE CASE 07</span><span>DOCUMENT AI + MULTI-AGENT · AWS / GCP</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Pharmacovigilance &amp; Drug Safety Reporting</span>
+      <h2 class="slide-title">FDA <span class="g">15-day reporting window</span> — unstructured AE text is the bottleneck</h2>
+      <p class="challenge-text">Adverse event descriptions arrive as free text from EHRs, call centers, and patient-reported data. Each one must be structured per MedWatch 3500A fields, classified per ICH E2A severity criteria, and submitted within the FDA's mandatory 15-day window.</p>
+      <ul class="uc-list">
+        <li>Parses AE free text across EHR, call centers, and patient reports</li>
+        <li>Extracts structured MedWatch 3500A fields automatically</li>
+        <li>Classifies event severity per ICH E2A (serious vs non-serious)</li>
+        <li class="pos">Drafts FDA MedWatch 3500A or E2B(R3) XML submission</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge docai">Document AI + Multi-Agent</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Parse — AE free text (EHR + call center + patient report, multi-source)</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Extract — MedWatch 3500A structured fields</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Classify — ICH E2A severity (serious vs non-serious)</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Draft — FDA MedWatch 3500A / E2B(R3) XML submission</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Document AI</span><span class="schip">Comprehend Medical</span>
+          <span class="schip">Claude</span><span class="schip">E2B(R3) XML Schema</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Staff Reduction</div>
+            <div class="roi-num">30–40%</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">MANUAL REVIEW HOURS</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge multi">AWS / GCP</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">FDA AI/ML 2024</span><span class="ctag">ICH E2A</span><span class="ctag">EMA Guidelines</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>9 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 10 · UC 08 · PATIENT COMMUNICATION
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>PROVIDER · USE CASE 08</span><span>RAG + CONVERSATIONAL AI · AZURE / AWS</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Patient Communication &amp; Care Navigation</span>
+      <h2 class="slide-title">Non-clinical messaging consumes <span class="g">nursing time</span> while care gaps go unaddressed</h2>
+      <p class="challenge-text">Post-visit instructions, portal messages, symptom triage, and care gap outreach are high-volume, low-complexity communications that Claude can draft from patient chart context — freeing clinical staff for higher-acuity work.</p>
+      <ul class="uc-list">
+        <li>Generates personalized post-visit instructions at ≤6th grade reading level</li>
+        <li>Drafts portal message replies from patient chart context (for clinician review)</li>
+        <li>Triages patient-reported symptoms to appropriate care pathway</li>
+        <li class="pos">Sends proactive outreach for overdue care gaps (HbA1c, mammography)</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge rag">RAG + Conversational AI</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>RAG — retrieve patient chart context (FHIR record)</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Draft — personalized message / triage response</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Classify — symptom severity → ED / urgent care / telehealth routing</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Output — portal message (draft for clinician review)</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Azure AI Health Bot</span><span class="schip">AWS Connect</span>
+          <span class="schip">Claude</span><span class="schip">Patient Portal API</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Outcome</div>
+            <div class="roi-num" style="font-size:clamp(1rem,1.6vw,1.4rem);line-height:1.3;">Staff time freed<br>+ care gap closure</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge azure">Azure / AWS</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">CMS Info Blocking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>10 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 11 · UC 09 · RADIOLOGY STRUCTURING
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>PROVIDER · USE CASE 09</span><span>DOCUMENT AI · GCP / AWS</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Radiology &amp; Pathology Report Structuring</span>
+      <h2 class="slide-title">Narrative reports are <span class="g">analytically invisible</span> — CMS requires patient-accessible summaries</h2>
+      <p class="challenge-text">Radiology and pathology findings exist as narrative free text — clinically rich but analytically unusable. CMS Information Blocking rules require patient-accessible summaries. Critical findings must trigger immediate radiologist callback workflows.</p>
+      <ul class="uc-list">
+        <li>Converts narrative reports to HL7 FHIR DiagnosticReport resources</li>
+        <li>Extracts key findings: nodule size, Bi-RADS score, lymph node status</li>
+        <li>Generates patient-readable summary at ≤8th grade reading level</li>
+        <li class="pos">Flags critical findings for immediate radiologist callback workflow</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge docai">Document AI + Structured Output</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Parse — narrative radiology / pathology report</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Extract — structured fields (size, severity, laterality, score)</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Classify — critical vs routine; flag critical for callback</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Output — FHIR DiagnosticReport + patient-readable summary</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Document AI</span><span class="schip">Textract Medical</span>
+          <span class="schip">Claude</span><span class="schip">Cloud Healthcare API</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Outcome</div>
+            <div class="roi-num" style="font-size:clamp(1rem,1.6vw,1.4rem);line-height:1.3;">ONC / CMS compliance<br>+ analytics pipeline</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge gcp">GCP / AWS</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">HIPAA BAA</span><span class="ctag">CMS Info Blocking</span><span class="ctag">ONC Rules</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>11 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 12 · UC 10 · REGULATORY SUBMISSION
+═══════════════════════════════════════ -->
+<section class="slide" data-type="uc">
+<div class="dot-grid"></div>
+<div class="top-label"><span>LIFE SCIENCES · USE CASE 10</span><span>RAG + MULTI-AGENT · AWS / GCP</span></div>
+<div class="content">
+  <div class="inner-split">
+    <div>
+      <span class="kicker">Regulatory Submission &amp; Clinical Study Reports</span>
+      <h2 class="slide-title">A single NDA costs <span class="g">$10–30M</span> to author — Claude compresses by 30–50%</h2>
+      <p class="challenge-text">12–18 months of documentation. ICH CTD Module 2/5 content, clinical study reports from raw statistical outputs, TLF consistency validation, and FDA Advisory Committee briefings — all from the same source data. Claude does it in parallel.</p>
+      <ul class="uc-list">
+        <li>Synthesizes Clinical Study Reports from raw statistical analysis outputs</li>
+        <li>Drafts ICH CTD Module 2/5 narrative content per regulatory schema</li>
+        <li>Cross-checks TLF consistency (tables / listings / figures)</li>
+        <li class="pos">Generates FDA Advisory Committee briefing packages</li>
+      </ul>
+    </div>
+    <div class="uc-card">
+      <div class="card-section">
+        <div class="slabel">Realization Pattern</div>
+        <span class="pbadge hybrid">RAG + Multi-Agent</span>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Pipeline</div>
+        <div class="pipeline">
+          <div class="p-step"><span class="p-num">①</span><span>Ingest — raw statistical TLFs + clinical protocols</span></div>
+          <div class="p-step"><span class="p-num">②</span><span>Synthesize — ICH CTD Module 2/5 narrative (Claude 200K)</span></div>
+          <div class="p-step"><span class="p-num">③</span><span>Validate — TLF consistency cross-check across tables/listings/figures</span></div>
+          <div class="p-step"><span class="p-num">④</span><span>Draft — FDA AdCom briefing package + eCTD submission</span></div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Stack</div>
+        <div class="stack-row">
+          <span class="schip">Vertex AI Search</span><span class="schip">Bedrock</span>
+          <span class="schip">Claude 200K</span><span class="schip">eCTD System</span>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="roi-hyper">
+          <div class="roi-block">
+            <div class="slabel">Timeline Compression</div>
+            <div class="roi-num">30–50%</div>
+            <div style="font-size:var(--tl);color:var(--muted);font-family:var(--font-m);letter-spacing:.1em;">ON $10–30M NDA SPEND</div>
+          </div>
+          <div class="hyper-block">
+            <div class="slabel">Primary Cloud</div>
+            <div class="hbadge multi">AWS / GCP</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-section">
+        <div class="slabel">Compliance Gates</div>
+        <div class="comp-row">
+          <span class="ctag">FDA ICH CTD</span><span class="ctag">ICH E6 R2</span><span class="ctag">21 CFR Part 11</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>12 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 13 · COMPLIANCE + GOVERNANCE
+═══════════════════════════════════════ -->
+<section class="slide" data-type="thesis">
+<div class="dot-grid"></div>
+<div class="top-label"><span>CHAPTER 04 · GOVERNANCE GATES</span><span>HIPAA · CMS · FDA · ONC · ICH</span></div>
+<div class="content">
+  <div style="max-width:min(1120px,90vw);margin:0 auto;">
+    <h2 class="slide-title" style="margin-bottom:.9em;">Five Compliance Frameworks — Every Use Case Is Governed</h2>
+    <div class="comp-table">
+      <div class="comp-trow">
+        <div class="comp-badge">HIPAA BAA</div>
+        <div class="comp-desc">All PHI processing requires a signed Business Associate Agreement. Anthropic provides enterprise BAA coverage. Pipeline rule: PHI must be tokenized before any LLM call — store token-to-PHI map in HealthLake/FHIR, never pass raw PHI to a general-purpose endpoint.</div>
+        <span class="comp-scope all">All 10 UCs</span>
+      </div>
+      <div class="comp-trow">
+        <div class="comp-badge">CMS-9115-F</div>
+        <div class="comp-desc">Mandates electronic prior authorization with API interoperability by January 2027. Creates hard regulatory deadline for UC01 — organizations not deploying PA automation now will scramble to comply rather than lead.</div>
+        <span class="comp-scope pv">UC 01</span>
+      </div>
+      <div class="comp-trow">
+        <div class="comp-badge">CMS Info Block</div>
+        <div class="comp-desc">Requires patient-accessible report summaries in plain language. Claude auto-generates these for discharge summaries (UC04, ≤6th grade) and radiology reports (UC09, ≤8th grade) as part of the same pipeline — no separate authoring step.</div>
+        <span class="comp-scope pv">UC 04 · UC 08 · UC 09</span>
+      </div>
+      <div class="comp-trow">
+        <div class="comp-badge">FDA AI/ML 2024</div>
+        <div class="comp-desc">Supports AI-assisted pharmacovigilance with mandatory human oversight. Adverse event classification (UC07) must include a human-in-the-loop review gate before MedWatch submission. Model outputs must be logged with session ID, model version, and output hash.</div>
+        <span class="comp-scope ls">UC 07 · UC 10</span>
+      </div>
+      <div class="comp-trow">
+        <div class="comp-badge">ONC CDS Rules</div>
+        <div class="comp-desc">Requires explainability for AI-based clinical decision support. Rule: administrative AI (PA letters, coding, denial appeals) can fully automate. Clinical AI (treatment recommendations, diagnoses) requires physician sign-off under current state medical practice laws.</div>
+        <span class="comp-scope all">All clinical UCs</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>13 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 14 · CLOSING
+═══════════════════════════════════════ -->
+<section class="slide" data-type="closing">
+<div class="dot-grid"></div>
+<div class="top-label"><span>OPENKB · AI USE CASES CONSULTANT</span><span>ANTHROPIC · CLAUDE FOR ENTERPRISE</span></div>
+<div class="content">
+  <div class="inner-full">
+    <span class="kicker">Pilot scoping rule: maximum 3 use cases in the first 90 days</span>
+    <div class="display-title">Start with<br>PA, Scribing,<br>or Coding.</div>
+    <p class="closing-sub">The three highest-ROI, fastest-payback use cases in this deck. Each has measurable before/after KPIs, an existing vendor ecosystem to build on, and active CMS regulatory drivers. McKinsey 2025: fewer than 10% of gen AI pilots pass — the ones that do have a named process owner and a baseline KPI before Day 1.</p>
+    <div class="chip-row" style="margin-top:1.2em;">
+      <span class="chip">UC01 PA: $37K/physician/year</span>
+      <span class="chip s">UC02 Scribing: $75–110K/clinician/year</span>
+      <span class="chip m">UC03 Coding: $262B denial pool</span>
+      <span class="chip a">90-day pilot → measurable KPI baseline</span>
+    </div>
+  </div>
+</div>
+<div class="folio"><span>14 / 14</span><span>HEALTHCARE AI USE CASE REALIZATION</span></div>
+<div class="bar"></div>
+</section>
+
+<script>
+(function(){
+  const slides=document.querySelectorAll('.slide');
+  let cur=0;
+  function show(n){
+    slides[cur].classList.remove('active');
+    cur=(n+slides.length)%slides.length;
+    slides[cur].classList.add('active');
+  }
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' ')show(cur+1);
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp')show(cur-1);
+    else if(e.key==='f'||e.key==='F'){
+      if(!document.fullscreenElement)document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+    else if(e.key==='p'||e.key==='P')window.print();
+  });
+  document.addEventListener('click',e=>{
+    if(e.clientX>window.innerWidth/2)show(cur+1);else show(cur-1);
+  });
+})();
+</script>
+</body>
+</html>

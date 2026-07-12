@@ -1,0 +1,18 @@
+{
+  "id": "src-34f391a57b7f",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Introducing Claude Opus 4.8 \\ Anthropic",
+  "url": "https://www.anthropic.com/news/claude-opus-4-8",
+  "canonical_url": "https://www.anthropic.com/news/claude-opus-4-8",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:22.371803+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Our latest model, Claude Opus 4.8, is an upgrade to our Opus class of models, with stronger performance across coding, agentic tasks, and professional work, and the consistency to handle long-running work.",
+  "raw_content_path": null,
+  "dedupe_key": "5348a7d23902",
+  "status": "new",
+  "errors": []
+}

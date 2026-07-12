@@ -1,0 +1,18 @@
+{
+  "id": "src-79c636cf2870",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Hermes Agent — Configure, extend, or contribute to Hermes Agent ...",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:47.207591+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Many surfaces — the same agent core drives the CLI, the Ink TUI, a native Electron desktop app, a web dashboard, and an ACP server for IDEs (VS Code / Zed / JetBrains). Provider-agnostic — swap models and providers mid-workflow without changing anything else. Credential pools rotate across multiple API keys automatically...",
+  "raw_content_path": null,
+  "dedupe_key": "06a78523c0cd",
+  "status": "new",
+  "errors": []
+}

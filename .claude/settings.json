@@ -1,12 +1,13 @@
 {
   "skills": [
-    "/home/shekerk/content-ideas/skills/content-ideas-okf/content-ideas/SKILL.md",
     "/home/shekerk/OpenKB/skills/openkb/SKILL.md",
     "/home/shekerk/OpenKB/skills/openkb-deck-neon/SKILL.md",
     "/home/shekerk/OpenKB/skills/openkb-deck-editorial/SKILL.md",
     "/home/shekerk/OpenKB/skills/openkb-html-critic/SKILL.md",
     "/home/shekerk/content-ideas/skills/plaid/SKILL.md",
     "/home/shekerk/content-ideas/skills/karpathy-guidelines/SKILL.md",
+    "/home/shekerk/content-ideas/skills/llm-wiki-agent/SKILL.md",
+    "/home/shekerk/content-ideas/skills/goal-loop-orchestrator/SKILL.md",
     "/home/shekerk/content-ideas/.agents/skills/ikigai/SKILL.md",
     "/home/shekerk/content-ideas/.agents/skills/ikigai-gamma-slidedeck/SKILL.md",
     "/home/shekerk/content-ideas/.agents/skills/gcc-roadmap/SKILL.md",
@@ -17,6 +18,13 @@
     "/home/shekerk/content-ideas/skill-framework/.agents/skills/technical-writer/SKILL.md",
     "/home/shekerk/content-ideas/skill-framework/.agents/skills/openhands-change-validation/SKILL.md",
     "/home/shekerk/content-ideas/skill-framework/.agents/skills/openhands-pr-artifact-handoff/SKILL.md",
-    "/home/shekerk/content-ideas/skills/second-brain/SKILL.md"
+    "/home/shekerk/content-ideas/skills/second-brain/SKILL.md",
+    "/home/shekerk/content-ideas/skills/video-to-deck/SKILL.md",
+    "/home/shekerk/content-ideas/skills/branded-pptx-deck/SKILL.md",
+    "/home/shekerk/content-ideas/skills/story-architect/SKILL.md",
+    "/home/shekerk/content-ideas/skills/officecli-qa/SKILL.md",
+    "/home/shekerk/content-ideas/skills/exa-api/SKILL.md",
+    "/home/shekerk/content-ideas/skills/firecrawl/SKILL.md",
+    "/home/shekerk/content-ideas/skills/excalidraw/SKILL.md"
   ]
 }

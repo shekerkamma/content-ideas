@@ -1,0 +1,474 @@
+{
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "evidence_count": 5,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1071,
+      "suggested_reddit_verdict": "qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.359,
+          "kind": "post",
+          "id": "post",
+          "author": "Sweaty_Ingenuity_824",
+          "reddit_score": 11,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/Landlord/comments/1spks9j/general_uspa_what_softwaretools_do_you_actually/",
+          "permalink": "https://old.reddit.com/r/Landlord/comments/1spks9j/general_uspa_what_softwaretools_do_you_actually/",
+          "subreddit": "Landlord",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:property_management",
+            "profile": "property_management",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "[General US-PA] What software/tools do you actually use to manage your rental properties? Looking for recommendations Hey everyone, I'm currently managing 3 rental properties and honestly, I'm drowning in spreadsheets. I've got separate files for rent tracking, expense logs, tenant info, maintenance requests, and I'..."
+        },
+        {
+          "score": 0.358,
+          "kind": "comment",
+          "id": "t1_ol3jqd7",
+          "author": "OperatorGrade",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1t9gpbw/property_manager_beware_doorloop_is_hot_garbage/",
+          "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1t9gpbw/property_manager_beware_doorloop_is_hot_garbage/ol3jqd7/",
+          "subreddit": "PropertyManagement",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:property_management",
+            "profile": "property_management",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "The notification delay after their AI feature rollout is a documented pattern. Multiple operators have reported the same thing... push notifications moving from real-time to 8-12 hour delays after updates, with support acknowledging the bug but not resolving it. The support instruction issue you described with the r..."
+        },
+        {
+          "score": 0.287,
+          "kind": "comment",
+          "id": "t1_nh11loy",
+          "author": "Jivkost1996",
+          "reddit_score": 6,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+          "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh11loy/",
+          "subreddit": "PropertyManagement",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:property_management",
+            "profile": "property_management",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "I don’t manage rentals personally, but I’ve been working with property management clients for about 7 years now, so I get to see behind the curtain of what they actually use day-to-day. Most small landlords start with spreadsheets because it feels “good enough,” but it gets messy fast once you’ve got more than a cou..."
+        },
+        {
+          "score": 0.286,
+          "kind": "comment",
+          "id": "t1_ol6hgt4",
+          "author": "LandlordOps",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1t9gpbw/property_manager_beware_doorloop_is_hot_garbage/",
+          "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1t9gpbw/property_manager_beware_doorloop_is_hot_garbage/ol6hgt4/",
+          "subreddit": "PropertyManagement",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:property_management",
+            "profile": "property_management",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "This is exactly why small operators care more about trust than feature lists. Once notifications lag, support gives wrong instructions, and payment deposits become uncertain, the software stops being an efficiency tool and becomes an operational risk. If I were stuck in that situation, I would immediately define a t..."
+        },
+        {
+          "score": 0.286,
+          "kind": "comment",
+          "id": "t1_ol7v63b",
+          "author": "SomebodyFromThe90s",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1t9gpbw/property_manager_beware_doorloop_is_hot_garbage/",
+          "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1t9gpbw/property_manager_beware_doorloop_is_hot_garbage/ol7v63b/",
+          "subreddit": "PropertyManagement",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:property_management",
+            "profile": "property_management",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "I'd separate the rent deposit issue from the broader DoorLoop complaints and document it like a payment incident: bank status screenshots, tenant ledger timestamps, support transcript, and owner distribution delay. If you're evaluating a move, ask each platform for sample exports of leases, tenant ledgers, payments,..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-002",
+      "evidence_count": 1,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1085,
+      "suggested_reddit_verdict": "weak_qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.463,
+          "kind": "post",
+          "id": "post",
+          "author": "Due_Presence_6770",
+          "reddit_score": 233,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-05.json",
+          "source_url": "https://old.reddit.com/r/TalesFromTheFrontDesk/comments/1msgxlw/college_kids_and_parents_learn_lesson_the_hard/",
+          "permalink": "https://old.reddit.com/r/TalesFromTheFrontDesk/comments/1msgxlw/college_kids_and_parents_learn_lesson_the_hard/",
+          "subreddit": "TalesFromTheFrontDesk",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:hotel_operations",
+            "profile": "hotel_operations",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "College kids and parents learn lesson the hard way... 2nd attempt First, and foremost, I want to apologize to all of you for the recent posting on this story. It posted by accident while I was working on it when my cat, Scully, decided to walk across my laptop. Once it started to post I couldn't stop it but then cou..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-003",
+      "evidence_count": 0,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1086,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-004",
+      "evidence_count": 1,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1086,
+      "suggested_reddit_verdict": "weak_qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.334,
+          "kind": "post",
+          "id": "post",
+          "author": "DaleInaho",
+          "reddit_score": 1,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/AllAboutPT/comments/1tnewkm/how_do_physical_therapy_clinics_collect_patient/",
+          "permalink": "https://old.reddit.com/r/AllAboutPT/comments/1tnewkm/how_do_physical_therapy_clinics_collect_patient/",
+          "subreddit": "AllAboutPT",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:therapy_clinic_operations",
+            "profile": "therapy_clinic_operations",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "How do physical therapy clinics collect patient reviews consistently without disrupting front desk operations? Online reviews have become one of the most important factors in how patients choose a physical therapy clinic — yet most practices have no reliable system for collecting them. The common approach of asking..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-005",
+      "evidence_count": 0,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1087,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-006",
+      "evidence_count": 0,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1087,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-007",
+      "evidence_count": 0,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1087,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-008",
+      "evidence_count": 0,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1087,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-009",
+      "evidence_count": 3,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1082,
+      "suggested_reddit_verdict": "qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.587,
+          "kind": "post",
+          "id": "post",
+          "author": "Longjumping-Unit698",
+          "reddit_score": 17,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/Homebuilding/comments/1qlnh6o/frustrated_new_build_owner/",
+          "permalink": "https://old.reddit.com/r/Homebuilding/comments/1qlnh6o/frustrated_new_build_owner/",
+          "subreddit": "Homebuilding",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:construction_review",
+            "profile": "construction_review",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "Frustrated New Build Owner Sorry for the long post….. AITA or a very tired homeowner trying not to get burned at the finish line? Quick backstory. After almost two years of design revisions for a custom modern home in the ~$2.5M range, including one full redesign that got scrapped, we finally signed with a builder w..."
+        },
+        {
+          "score": 0.419,
+          "kind": "comment",
+          "id": "t1_o1fdgul",
+          "author": "",
+          "reddit_score": 11,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/Homebuilding/comments/1qlnh6o/frustrated_new_build_owner/",
+          "permalink": "https://old.reddit.com/r/Homebuilding/comments/1qlnh6o/frustrated_new_build_owner/o1fdgul/",
+          "subreddit": "Homebuilding",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:construction_review",
+            "profile": "construction_review",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "NTA - remove all emotion from the equation and just go with the data/facts. It’s not personal, it’s business. Everyone signed a contract and the contract laid out all the stipulations and expectations. If you didn’t have the money to pay you can bet the contractor would be loosing his shit and suing you. Since you h..."
+        },
+        {
+          "score": 0.25,
+          "kind": "comment",
+          "id": "t1_o1fgfbx",
+          "author": "cbushomeheroes",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/Homebuilding/comments/1qlnh6o/frustrated_new_build_owner/",
+          "permalink": "https://old.reddit.com/r/Homebuilding/comments/1qlnh6o/frustrated_new_build_owner/o1fgfbx/",
+          "subreddit": "Homebuilding",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:construction_review",
+            "profile": "construction_review",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "So $52,500 in “late fees” roughly… if you count weekends over those days(does your contract define “days” including counting holidays), so that is the max late fee. Does your contract state the contractor may be responsible for the interest only payments or extra rent upon delays? If not, those are meaningless for a..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-010",
+      "evidence_count": 0,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1087,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-011",
+      "evidence_count": 1,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1071,
+      "suggested_reddit_verdict": "weak_qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.418,
+          "kind": "comment",
+          "id": "t1_nh11loy",
+          "author": "Jivkost1996",
+          "reddit_score": 6,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+          "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh11loy/",
+          "subreddit": "PropertyManagement",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:property_management",
+            "profile": "property_management",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "I don’t manage rentals personally, but I’ve been working with property management clients for about 7 years now, so I get to see behind the curtain of what they actually use day-to-day. Most small landlords start with spreadsheets because it feels “good enough,” but it gets messy fast once you’ve got more than a cou..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-012",
+      "evidence_count": 1,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1085,
+      "suggested_reddit_verdict": "weak_qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.319,
+          "kind": "post",
+          "id": "post",
+          "author": "Due_Presence_6770",
+          "reddit_score": 233,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-05.json",
+          "source_url": "https://old.reddit.com/r/TalesFromTheFrontDesk/comments/1msgxlw/college_kids_and_parents_learn_lesson_the_hard/",
+          "permalink": "https://old.reddit.com/r/TalesFromTheFrontDesk/comments/1msgxlw/college_kids_and_parents_learn_lesson_the_hard/",
+          "subreddit": "TalesFromTheFrontDesk",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:hotel_operations",
+            "profile": "hotel_operations",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "College kids and parents learn lesson the hard way... 2nd attempt First, and foremost, I want to apologize to all of you for the recent posting on this story. It posted by accident while I was working on it when my cat, Scully, decided to walk across my laptop. Once it started to post I couldn't stop it but then cou..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-013",
+      "evidence_count": 1,
+      "items_considered": 1087,
+      "items_rejected_by_qualification_gate": 1086,
+      "suggested_reddit_verdict": "weak_qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.417,
+          "kind": "post",
+          "id": "post",
+          "author": "DaleInaho",
+          "reddit_score": 1,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/AllAboutPT/comments/1tnewkm/how_do_physical_therapy_clinics_collect_patient/",
+          "permalink": "https://old.reddit.com/r/AllAboutPT/comments/1tnewkm/how_do_physical_therapy_clinics_collect_patient/",
+          "subreddit": "AllAboutPT",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:therapy_clinic_operations",
+            "profile": "therapy_clinic_operations",
+            "signals": {
+              "subreddit": true,
+              "workflow": true,
+              "persona": true,
+              "pain": true
+            }
+          },
+          "excerpt": "How do physical therapy clinics collect patient reviews consistently without disrupting front desk operations? Online reviews have become one of the most important factors in how patients choose a physical therapy clinic — yet most practices have no reliable system for collecting them. The common approach of asking..."
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-01.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-06.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-11.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-09.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-12.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-03.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-02.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-10.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-04.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-07.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-05.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-01.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-06.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-11.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-09.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-12.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-03.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-08.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-02.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-10.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-04.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-07.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-raw/reddit-thread-05.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-01.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-06.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-11.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-09.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-12.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-03.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-08.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-02.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-10.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-04.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-07.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-05.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-01.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-06.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-09.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-03.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-08.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-02.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-10.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-04.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-07.json",
+    "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-05.json"
+  ]
+}

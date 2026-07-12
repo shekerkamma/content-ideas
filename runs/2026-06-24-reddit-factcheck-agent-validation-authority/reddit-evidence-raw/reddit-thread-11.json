@@ -1,0 +1,817 @@
+{
+  "post": {
+    "title": "When you skip validation for AI generated results",
+    "author": "Epelep",
+    "score": 39,
+    "content": "",
+    "url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+    "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+    "subreddit": "Wellthatsucks"
+  },
+  "comments": [
+    {
+      "id": "t1_o60ozmz",
+      "author": "Womgi",
+      "text": "The real problem is in the name. AI gives the impression of the capable and competent characters in fiction, like cortana, hal, glados, you know, synthetic but super good at getting their shit done. They give the impression that they're better at people at doing stuff. Real life \"AI\" on the other hand is definitely artificial, but the intelligence part? Yeah, good luck with that.",
+      "score": 3047,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60ozmz/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60rm5n",
+      "author": "CaptainPoset",
+      "text": "It's artificial incompetence for now.",
+      "score": 906,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60rm5n/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61kwgg",
+      "author": "EdricStorm",
+      "text": "My favorite statement on AI/LLM so far: AI doesn't know facts, just what facts look like.",
+      "score": 683,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61kwgg/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61odla",
+      "author": "banmeandidelete",
+      "text": "And it never offers uncertainty like a human (e.g., take with a grain of salt, double check these, I think...). It's always presented as gospel.",
+      "score": 274,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61odla/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61osxt",
+      "author": "BananaPalmer",
+      "text": "I feel the microtext warning \"ChatGPT can make mistakes, always double check answers\" may be a slight understatement",
+      "score": 142,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61osxt/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o620d5e",
+      "author": "DingerSinger2016",
+      "text": "The fact that we, especially companies, just accept \"oh our product probably won't work right, make sure it is\" is insane to me. They basically released an unfinished product and companies are slurping it up",
+      "score": 49,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o620d5e/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62cj6s",
+      "author": "BananaPalmer",
+      "text": "That's the thing, it will never be \"finished\" in this regard. Hallucinations are a fundamental flaw in the technology which will not get better, no matter how much glazing the marketing departments do. LLM and diffusion output will always have to be checked and corrected.",
+      "score": 64,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62cj6s/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62s1v0",
+      "author": "Geno0wl",
+      "text": "That is because LLMs are just text-predicting Markov Chains. They don't \"know\" facts, they just \"know\" that certain words and phrases tend to go together. LLMs can't handle simple things like number compuation and struggle with negatives(ask one of those image creating machines to make a picture of \"an room without an elephant in it\" and see what happens)",
+      "score": 49,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62s1v0/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o65hn2i",
+      "author": "iconocrastinaor",
+      "text": "Or ask it to show you a watch with the time set to 6:00. The only thing it can show you is the typical clock picture of 10:10:35.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o65hn2i/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o65v9vx",
+      "author": "Visible-Air-2359",
+      "text": "Yeah, I just told wombo to create \"A watch set to 4:30\" and this was the result: <image> As you can see, it has no knowledge of what a watch is only what a watch looks like .",
+      "score": 13,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o65v9vx/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61yoxj",
+      "author": "Extension_Arm2790",
+      "text": "The weird part is, that you can ask it to do this and it will do so diligently but it will also not know what uncertainty is, just what uncertainty looks like. They are the perfect \"lie to yourself\" machines.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61yoxj/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o63m94t",
+      "author": "mxzf",
+      "text": "Because it fundamentally doesn't do \"certainty\" like a human does. Or, another way of looking at it, it's always certain that the text it outputs is the natural-language continuation of the conversation (which has no bearing on the truth of anything in the conversation).",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o63m94t/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61ra9x",
+      "author": "tomjone5",
+      "text": "It drives me mad to hear people credulously gasp at how much AI \"knows\" or how much \"knowledge\" it has at its disposal. You might as well argue that a dictionary or a set of index cards knows anything.",
+      "score": 59,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61ra9x/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62jvac",
+      "author": "YouNeedClasses",
+      "text": "Reminds me of the trend, \"How does the mirror know what's behind my hand from this angle?\" 🤣",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62jvac/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o620ju1",
+      "author": "vinyljunkie1245",
+      "text": "Sort of. LLMs know what they think people want. They look at a prompt and return an approximation of the things that occur most often in the data they have been trained on. i.e. \"this is what I've seen the most so this must be the answer\"",
+      "score": 29,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o620ju1/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62qunx",
+      "author": "Praesentius",
+      "text": "It's particularly frustrating when engaging with an LLM on a highly propagandized topic. I might be opening myself up to some flak, but for example, talking about SpaceX's Starship. The LLM has been consuming training data from a veritable mountain of hype and propaganda. To make matters worse, Starship's goalposts have moved more times than I can count. And they've promoted a \"move fast and break things\" narrative that couples with celebration of failure as a way to say, \"look at all the data we've collected\". And the LLM is trained on that and it has no ability to think critically for itself. So, its responses are more like listening to a sycophant talking about the project.",
+      "score": 17,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62qunx/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62bwhs",
+      "author": "correcthorsestapler",
+      "text": "Better than the one a former coworker made: “Well if artificial sweeteners are sweet, then artificial intelligence has to be intelligent.” The coworker was 100% serious, too. She seriously thought the “AI” of today is on par with the sort of AI you see in movies.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62bwhs/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62ra6u",
+      "author": "EdricStorm",
+      "text": "Especially since artificial sweeteners aren't sweet, per se. Most have a very bitter aftertaste that you have to get used to lol",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62ra6u/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61ryk6",
+      "author": "Fett32",
+      "text": "I just went through this as an experiment. Wanted to have ai brute force a solution for part of my program. Very small, just a separate window to drag objects in and out. Took over 2 hours, over 1000 lines of code, and dozens of copy-paste error fixing, with snippets added in almost every script I had to make it work. Reverted, tried myself the proper way, done in 30 minutes and less than 100 lines. Self contained.",
+      "score": 35,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61ryk6/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62790o",
+      "author": "JackOfAllStraits",
+      "text": "But if you force your developers to not do anything except cut-and-paste, then you can claim that they haven't \"had\" to write any code for a whole month!",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62790o/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61kpus",
+      "author": "smilbandit",
+      "text": "probabilistic guessing engine",
+      "score": 57,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61kpus/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61ohdq",
+      "author": "-Bento-Oreo-",
+      "text": "Which for some things is amazing like protein folding and evolutionary models. It really should have been called something else. They're trying to force a probability machine into a logic machine when it should stay in its lane",
+      "score": 46,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61ohdq/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62ttei",
+      "author": "TheBeckofKevin",
+      "text": "The current absolute strong suit of the current LLM systems is justifications. Its not good at building a complex story or answering convoluted questions that have lots of nuance. But if you provide it a situation that does have a lot of nuance, and ask it to justify that situation, it can easily produce fascinating results. Think of it like a fantastic liar who will connect whatever dots you want. The biggest problem we have currently is that it talks like a person so people talk to it like its a person. Its a tool that has to be used, not a person to converse with. Its like typing numbers into a calculator, all its doing is producing numbers based on the numbers you put in there. But instead of numbers, its letters. People so quickly lose track of that because the illusion of conversation is profoundly strong for us humans. Its still unnerving to me.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62ttei/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o645eu8",
+      "author": "-Bento-Oreo-",
+      "text": "But that's a bastardization of it's true strong suit, the ability to recognize patterns based on pure probability. Sure, it can find these connections in real world scenarios but you're going to get a lot of error. Correlation isn't causation. It's a machine built to find correlation but then we're also asking it to use these correlations to explain causation. The situation we're using it for is flawed from the beginning. But give it a scenario where we recognize that we can't establish causation, like protein folding or a 3-body problem model and it'll excel. Or facial recognition and it'll do better than we can ourselves. In these scenarios, it doesn't need to explain the patterns it sees. All these situations are inherently chaotic and non-deterministic. We can't solve them through logic but now we've created a way to solve these problems and people want to use it to replace logical human workers. It should be used in non-deterministic environments to find patterns and correlations that are too complex that they're invisible to us.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o645eu8/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o629yg2",
+      "author": "AcePilot95",
+      "text": "\"Dr. Flattery the Always-Wrong-Robot\" –Angela Collier",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o629yg2/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60rxtu",
+      "author": "Blujay12",
+      "text": "Even the \"smartest\" are just guessing with what it thinks you want to hear.",
+      "score": 43,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60rxtu/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61l0s0",
+      "author": "hungarian_notation",
+      "text": "It's worse, they're just producing statistically likely next words based on the context they're being fed. Saying they output what \"they think you want to hear\" makes it sound like they are aware of you, your expectations, or anything beyond the statistical relation of word incidence in their training corpus.",
+      "score": 69,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61l0s0/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61wqrr",
+      "author": "FlowSoSlow",
+      "text": "Glorified keyboard word suggestions. You can come over and get me a bit of the freezer and the Lion is on the road and I'll be back in about 10 ☺️ minutes and I'll let you can get a similar thing to do with my dad and I have to get a job at least a month and then I have to be there around 10 bucks to do it again.",
+      "score": 24,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61wqrr/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61ypha",
+      "author": "cahagnes",
+      "text": "It's easy to grasp the whole time and had had his face reconstructed and trained to fight me. Don't look around me and weren't actually dead in the middle of a desert. After harvest you set fire to the stalks and the earth were cold enough to be polite and clean. Yet the only bar tab I have been called God's command line is that selfish and the stench is the setup for me and does it really make sense to you?",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61ypha/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61z8st",
+      "author": "FlowSoSlow",
+      "text": "Man what kind of conversations have you been having 😂",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61z8st/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o613sc3",
+      "author": "nomedable",
+      "text": "They're just a really good version of autocomplete.",
+      "score": 36,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o613sc3/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60t0di",
+      "author": "Long-Analysis-8041",
+      "text": "You mean it's a mass fraud? You don't say.",
+      "score": 57,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60t0di/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61je95",
+      "author": "cantadmittoposting",
+      "text": "the business hype is, but that's true of hype cycles in business since forever, basically. The tools and user understanding of the tool's actual purposes will mature in time.",
+      "score": 27,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61je95/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o6181gs",
+      "author": "Hippopotasaurus-Rex",
+      "text": "None of its ai. They are simply LLMs. You probably have better odds in Vegas honestly.",
+      "score": 27,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o6181gs/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61hfw7",
+      "author": "atava",
+      "text": "You are being hyperbolic with the example (it depends on the task), but that's what common people don't understand. An LLM-based AI doesn't reason at all, it only repeats data in highly sophisticated ways (and the larger or more redundant the data, the better). I bet most people think about it as a robot mind or similar shit.",
+      "score": 27,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61hfw7/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61if8u",
+      "author": "WeRip",
+      "text": "They think it thinks. They think it has \"intelligence\". I was at an AI in construction seminar 2 years ago and professor (of AI technologies) at a college with a very good reputation in sciences was one of the keynote speakers. He asked the audience \"what is chatGPTs IQ\" and I responded with a \"0\", of course. It doesn't have an intelligence so it doesn't have an IQ. He said I was wrong and its IQ at the time was 140. I wanted to argue with him that maybe it could get a 140 on an IQ test but that doesn't mean it has intelligence, but he was literally giving a presentation in front of 200 people.. so not the time.. but yes.. people, including those educating our up and coming scientists, believe it is a robot mind.",
+      "score": 26,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61if8u/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61iqtd",
+      "author": "atava",
+      "text": "It's all very sad. But ignorance is a thing, especially in these more technical matters (plus, ordinary people are always ready to embrace \"fancy\" technological advancements of this sort).",
+      "score": 13,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61iqtd/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60ne7o",
+      "author": "Mrbeeznz",
+      "text": "Natural selection",
+      "score": 8835,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60ne7o/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60rv64",
+      "author": "SapirWhorfHypothesis",
+      "text": "Sometimes mating will occur when one of the species isn’t the most powerful, or most resilient, but because they present themselves the right way to “trick” something in the other organism’s brain into thinking “damnnnn!” A lot of companies will survive being bad at business.",
+      "score": 2048,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60rv64/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60sf38",
+      "author": "SirDouglasMouf",
+      "text": "Look at all major healthcare businesses....",
+      "score": 431,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60sf38/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o612zps",
+      "author": "Gebraiwun",
+      "text": "The issue is, they are very good at business. From our point of view they're crap, but clearly they found a way to squeeze a stone until it bleeds money and so they stay in business, regardless of the damage they cause to society.",
+      "score": 349,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o612zps/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61ck37",
+      "author": "TheDoomBlade13",
+      "text": "Yeah, a lot of people think 'good business' means 'good for customers' which is generally untrue for the majority of business models.",
+      "score": 174,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61ck37/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61rxiy",
+      "author": "DuncanFisher69",
+      "text": "This is one of the core problems Ed Zitron has written about with regards to his theory called “The Rot Economy”.",
+      "score": 60,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61rxiy/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62h6wh",
+      "author": "Sarangholic",
+      "text": "And if I'm going to trust anyone to find lemons in this economy, it's somebody named Zitron.",
+      "score": 44,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62h6wh/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61af1z",
+      "author": "SumOldGuy",
+      "text": "It isn't about delivering a product. It is often just being to big or important to fail. They need to make sure the executives are paid.",
+      "score": 17,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61af1z/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61935n",
+      "author": "SelfServeSporstwash",
+      "text": "No, they are largely excellent at business, at least as defined by our society. They make gobs of money. What they suck at is patient care, because being good at caring for people who need treatment is bad business.",
+      "score": 31,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61935n/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61uc72",
+      "author": "cr8zyfoo",
+      "text": "And in the U.S., tax preparation businesses. The reason the IRS does not provide simple free tax prep software (or just provide you finished taxes you can simply review for errors) is due to millions of dollars in lobbying (bribes) paid by companies like Turbo Tax and H&R Block to ensure taxes stay obtuse and confusing to ensure they have a continued revenue stream. They deliberately make a necessary thing worse and more difficult to access so they can continue to sell access to it.",
+      "score": 17,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61uc72/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61eiz6",
+      "author": "Kibichibi",
+      "text": "Smaller male cuttlefish will disguise themselves as female and gain the protection of a large male, only to sneakily mate with the female he was already guarding. The females will happily mate with both males to ensure diversity! 😊",
+      "score": 33,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61eiz6/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o63wokt",
+      "author": "PMmeUrBackDmplesGirl",
+      "text": "Should call the females Sluttlefish then, smh",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o63wokt/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o621ngl",
+      "author": "TheGuyInTheKnown",
+      "text": "The companies might survive, but what about the people showing misleading data to the board? At minimum they are going to lose their jobs, but depending on the specific discrepancies it might be fraud. Some investors will have made finishing decisions based on fraudulent numbers, the question is just how it will be persecuted.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o621ngl/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61nv3i",
+      "author": "hotelmotelshit",
+      "text": "That's gonna be hardest thing about AI for a lot of people, to be critical of what it gives you, because most of the time, it will give you exactly what you would like for it to give you",
+      "score": 72,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61nv3i/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60uk6h",
+      "author": "Critical_Concert_689",
+      "text": "...I love this gif almost as much as I love spreadsheets.",
+      "score": 44,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60uk6h/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60otnq",
+      "author": "F1R3Starter83",
+      "text": "This is funny, but also relatable to what I’m seeing from people who use AI a lot. Blind faith and no checks.",
+      "score": 1633,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60otnq/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60phna",
+      "author": "Pinkishu",
+      "text": "Doesn't help it's sorta how AI gets advertised to people. \"We added an AI sidebar into your browser so you can ask it about data from documents\", seen mulitple diff AIs be advertised with something like that",
+      "score": 510,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60phna/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60uxhm",
+      "author": "hoeassbitchasshoe",
+      "text": "Those ads infuriate me because AI can never do what it does in the ad. super false advertising",
+      "score": 188,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60uxhm/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o60x8bv",
+      "author": "endmostcloud_",
+      "text": "Our one gives me incredibly obvious ‘summaries’ of documents that amount to a recap of the first page or two. ‘This document, Acceptable Usage Policy for IT, is a summary of the acceptable uses for IT assets.’ Thanks copilot, I never would have worked that out for myself.",
+      "score": 161,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o60x8bv/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o613bap",
+      "author": "Wadarkhu",
+      "text": "‘This document, Acceptable Usage Policy for IT, is a summary of the acceptable uses for IT assets.’ me when I need to hit that essay word count",
+      "score": 71,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o613bap/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o62vmmi",
+      "author": "whoknowsifimjoking",
+      "text": "Also Copilot when it needs to increase token use",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o62vmmi/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o615v3k",
+      "author": "thefringeseanmachine",
+      "text": "Gemini (in Gmail) just tried to summarize an email exchange I just had. first it summarized what I wrote - something I was already fairly familiar with, since I wrote it. the single sentence reply was somehow expanded into three sentences, which is literally counterproductive.",
+      "score": 53,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o615v3k/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61oleg",
+      "author": "andreortigao",
+      "text": "One side uses AI to stretch each sentence into three to look more professional, the other side uses AI to summarize to a shorter version.",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61oleg/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61isqg",
+      "author": "KeenJelly",
+      "text": "This reminds me of a situation shortly after my work implemented co-pilot. We ended up losing a big contract because we pitched completely the wrong thing to the customers. A lot of blame was thrown around at the wrong people when what actually happened was - our client team had a 2 hour conversation with the customers and started building the breif. A manager, who was also the instigator for implementing co-pilot, read an AI summary of the call and decided to strong arm his own pitch based on this summary. I read the summary, it basically only included points from the first 10 minutes of the call, when I read the transcript that ran to dozens and dozens of pages almost all of those talking points were later changed, refined or even completely rejected. Surprise, surprise no lessons were learned.",
+      "score": 17,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61isqg/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o612mms",
+      "author": "Krazyguy75",
+      "text": "You'd need a multi-pass agent to do something like that properly. One pass per page or such, creating a summary of that page, then one pass that summarizes all the summaries. And even then it'd be inconsistent.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o612mms/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61cmsf",
+      "author": "radicldreamer",
+      "text": "Leeloo Dallas, multipass",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61cmsf/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o6151pi",
+      "author": "sonicpieman",
+      "text": "\"Hey copilot pick the best linebacker\" like come on guys",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o6151pi/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o615yvg",
+      "author": "Towerss",
+      "text": "AI companies don't understand human behavior. A lot of humans would rather use a manual tool than a power tool for simple tasks even if both are at hand, and this applies to digital behavior too. Nobody is going to use some built in AI wrapper unless forced to",
+      "score": 24,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o615yvg/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61gj4x",
+      "author": "BonnaGroot",
+      "text": "this is such a good analogy i’m totally stealing it",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61gj4x/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61mwhx",
+      "author": "DrowningKrown",
+      "text": "\"Cool Copilot got added to excel\" \"okay copilot, make me a graph out of data from the internet\" copilot: \"I can't edit your file directly\" \"Then why the fuck are you an add-on in excel?",
+      "score": 18,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61mwhx/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o616efw",
+      "author": "Masseyrati80",
+      "text": "The first ever warning example I saw of what exactly is going on was that of a lawyer who thought chatgpt is a super smart search engine, asked for some precedents of a crime type he was working on, and just copy pasted the answers to his own papers. He got destroyed bad as the opposite side debunked every case: no such people, no such lawyers, no such cases.",
+      "score": 83,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o616efw/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61dont",
+      "author": "vertigostereo",
+      "text": "It's weird how people don't even verify.",
+      "score": 38,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61dont/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61gibw",
+      "author": "OldSchoolSpyMain",
+      "text": "“You need to verify literally everything that is produced.”, is never in the sales pitch for AI tools. It’s a footnote in the fine print. If it were part of the pitch, then customers will rightly ask, “What’s the fucking point of buying AI tools if I have to manually verify everything every time?”",
+      "score": 48,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61gibw/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61u31q",
+      "author": "Daxx22",
+      "text": "It's like the opposite of Vaporware, the product is real and it produces real SHIT.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61u31q/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o633zmg",
+      "author": "RadReptile",
+      "text": "What is worse is that AI scans forums in order to get quicker results. Yes, sites like Reddit where anyone can make up anything and be opinion based responses...and those responses will be treated as fact and not verified in order to have quicker results.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o633zmg/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o6374nc",
+      "author": "OldSchoolSpyMain",
+      "text": "Yup. I've tried to explain this very thing to friends/family. \"Think about every idiot that posts online...AI thinks they are all correct.\" Further, AI doesn't understand subtleties like sarcasm or cheeky humor. So, even if AI is using upvotes to gauge \"correct\" information, a cheeky answer that is upvoted because it's hilarious will be treated as an indisputable fact by AI chatbots.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o6374nc/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o63wfh7",
+      "author": "vertigostereo",
+      "text": "My most upvoted comments are also my dumbest.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o63wfh7/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o637c01",
+      "author": "NothingReallyAndYou",
+      "text": "A sub I was in discovered that, and spent a few hours intentionally posting ridiculous made-up \"facts\" about a popular tourist destination. They showed up in Google's AI within minutes of posting.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o637c01/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o6208tr",
+      "author": "thy_bucket_for_thee",
+      "text": "If you're lazy enough to use these tools to do the majority of your job, you aren't going to do the even harder part in verifying everything is correct.",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o6208tr/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o61j0nu",
+      "author": "RebootDarkwingDuck",
+      "text": "When it first launched publicly I was absolutely floored and convinced that it would take my job in a month. Then I tried using it to write a 40 under 40 nomination for one of our PMs. Every fact was completely fabricated and nothing I could do would keep it from making them up.",
+      "score": 22,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o61j0nu/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o64a09l",
+      "author": "jcarter315",
+      "text": "My favorite \"test\" to show people is to ask the AI a simple scenario based question: \"I need to get my car washed but the car wash is only 300m away. Would it be better to walk to the car wash or drive there?\" It'll immediately start contradicting itself if you question it on what it replies. My favorite result involved walking to the car wash, dropping off your car, then walking home and waiting for the car wash to call you to walk back and pick up the car to carry it home by walking again...",
+      "score": 12,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o64a09l/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o663k8j",
+      "author": "RebootDarkwingDuck",
+      "text": "Just tried that. It told me to walk, then drop off my car and walk back, then copped an attitude when I said that was fucking stupid.",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o663k8j/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "id": "t1_o6m0loq",
+      "author": "NoNameas_",
+      "text": "that's a great one lol, just tried and it started rambling about engine wear of driving to the car wash *me on my way to carwash*:",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/o6m0loq/",
+      "source_url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "subreddit": "Wellthatsucks"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+    "method": "old_reddit_html"
+  }
+}

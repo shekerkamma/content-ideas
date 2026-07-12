@@ -1,0 +1,190 @@
+{
+  "target_brand": "Agent Replacement Scorecard",
+  "competitors": [
+    "zendesk",
+    "ccaas",
+    "glean",
+    "westlaw",
+    "lexisnexis",
+    "dam",
+    "adobe",
+    "bi dashboards"
+  ],
+  "summary": {
+    "capture_count": 12,
+    "target_mentions": 2,
+    "competitor_mentions": 13,
+    "target_visibility_rate": 0.16666666666666666,
+    "top_citation_domains": [
+      [
+        "shekerkamma.github.io",
+        2
+      ]
+    ]
+  },
+  "by_query": {
+    "q_061": {
+      "capture_id": "cap_live_001",
+      "query": "Which SaaS workflows are most likely to be replaced by AI agents?",
+      "engine": "ChatGPT",
+      "mentioned_entities": [
+        "Agent Replacement Scorecard"
+      ],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": true,
+      "competitors_mentioned": []
+    },
+    "q_062": {
+      "capture_id": "cap_live_002",
+      "query": "Agentic AI vs SaaS replacement scorecard",
+      "engine": "Perplexity",
+      "mentioned_entities": [
+        "Agent Replacement Scorecard"
+      ],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": true,
+      "competitors_mentioned": []
+    },
+    "q_031": {
+      "capture_id": "cap_live_004",
+      "query": "best ad & creative generation at scale wpp, authentic brands group, pods creative production seats creative platforms",
+      "engine": "Google AI Mode",
+      "mentioned_entities": [
+        "dam",
+        "adobe"
+      ],
+      "citation_domains": [],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "dam",
+        "adobe"
+      ]
+    },
+    "q_006": {
+      "capture_id": "cap_live_006",
+      "query": "best ai shopping / sales consultant platforms",
+      "engine": "Google AI Mode",
+      "mentioned_entities": [
+        "zendesk"
+      ],
+      "citation_domains": [],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "zendesk"
+      ]
+    },
+    "q_001": {
+      "capture_id": "cap_live_008",
+      "query": "best conversational support platforms",
+      "engine": "Google AI Mode",
+      "mentioned_entities": [
+        "zendesk"
+      ],
+      "citation_domains": [],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "zendesk"
+      ]
+    },
+    "q_021": {
+      "capture_id": "cap_live_010",
+      "query": "best doc summarization & drafting kpmg, pwc, deloitte doc / productivity add-ons empl platforms",
+      "engine": "Google AI Mode",
+      "mentioned_entities": [
+        "dam"
+      ],
+      "citation_domains": [],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "dam"
+      ]
+    },
+    "q_026": {
+      "capture_id": "cap_live_012",
+      "query": "best legal research & drafting harvey, thomson reuters, deutsche bank db lumina westlaw, lexisnexis, clm employee platforms",
+      "engine": "Google AI Mode",
+      "mentioned_entities": [
+        "westlaw",
+        "lexisnexis"
+      ],
+      "citation_domains": [],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "westlaw",
+        "lexisnexis"
+      ]
+    }
+  },
+  "by_entity": {
+    "Agent Replacement Scorecard": {
+      "mentions": 2,
+      "captures": [
+        "cap_live_001",
+        "cap_live_002"
+      ],
+      "citation_domains": []
+    },
+    "zendesk": {
+      "mentions": 4,
+      "captures": [
+        "cap_live_005",
+        "cap_live_006",
+        "cap_live_007",
+        "cap_live_008"
+      ],
+      "citation_domains": []
+    },
+    "ccaas": {
+      "mentions": 0,
+      "captures": [],
+      "citation_domains": []
+    },
+    "glean": {
+      "mentions": 0,
+      "captures": [],
+      "citation_domains": []
+    },
+    "westlaw": {
+      "mentions": 2,
+      "captures": [
+        "cap_live_011",
+        "cap_live_012"
+      ],
+      "citation_domains": []
+    },
+    "lexisnexis": {
+      "mentions": 2,
+      "captures": [
+        "cap_live_011",
+        "cap_live_012"
+      ],
+      "citation_domains": []
+    },
+    "dam": {
+      "mentions": 3,
+      "captures": [
+        "cap_live_003",
+        "cap_live_004",
+        "cap_live_010"
+      ],
+      "citation_domains": []
+    },
+    "adobe": {
+      "mentions": 2,
+      "captures": [
+        "cap_live_003",
+        "cap_live_004"
+      ],
+      "citation_domains": []
+    },
+    "bi dashboards": {
+      "mentions": 0,
+      "captures": [],
+      "citation_domains": []
+    }
+  }
+}

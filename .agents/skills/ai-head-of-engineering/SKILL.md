@@ -1,6 +1,6 @@
 ---
 name: ai-head-of-engineering
-description: "Use when you want to run the full founder build-planning system for a custom app, MVP, or internal tool, or to route a build idea into the nine-role planning sequence."
+description: "Use when you want to run the full founder build-planning system for a custom app, MVP, or internal tool, or to route a build idea into the nine-role planning sequence. Also covers any single role: scope killer / cut MVP scope, 30-day scope architect, stack picker, build-vs-buy audit, build estimator (hours/dollars/risk), AI use-case validator, custom internal tool designer, pre-launch audit, or 30-day build roadmap."
 argument-hint: "[build-idea] [constraints]"
 ---
 
@@ -34,17 +34,22 @@ It should produce two kinds of artifacts:
 
 1. Read the founder idea, constraints, team shape, deadline, and any existing notes.
 2. Create a run folder and a master index.
-3. Run the standalone role skills in order:
-   - `ai-head-of-engineering-scope-killer`
-   - `ai-head-of-engineering-scope-architect`
-   - `ai-head-of-engineering-stack-picker`
-   - `ai-head-of-engineering-build-vs-buy-auditor`
-   - `ai-head-of-engineering-build-estimator`
-   - `ai-head-of-engineering-ai-use-case-validator`
-   - `ai-head-of-engineering-custom-internal-tool-designer`
-   - `ai-head-of-engineering-pre-launch-auditor`
-   - `ai-head-of-engineering-30-day-build-roadmap`
+3. Run the roles in order. Each role's full instructions live in
+   `references/roles/` — read the role file, then execute it inline:
+   - `references/roles/01-scope-killer.md`
+   - `references/roles/02-scope-architect.md`
+   - `references/roles/03-stack-picker.md`
+   - `references/roles/04-build-vs-buy-auditor.md`
+   - `references/roles/05-build-estimator.md`
+   - `references/roles/06-ai-use-case-validator.md`
+   - `references/roles/07-custom-internal-tool-designer.md`
+   - `references/roles/08-pre-launch-auditor.md`
+   - `references/roles/09-30-day-build-roadmap.md`
 4. Pass each role the previous role's output file.
+
+**Single-role requests** ("just run the scope killer", "stack choice for X"):
+read only that role file, execute it inline, and still write its numbered
+output file so a later full run can pick up from it.
 5. Write the next role's output file before moving on.
 6. When a role needs external evidence, use research only there, not everywhere.
 

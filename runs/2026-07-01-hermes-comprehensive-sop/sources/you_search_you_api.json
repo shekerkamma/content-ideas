@@ -1,0 +1,151 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://you.com/docs/welcome",
+        "title": "You.com API Docs | Real-Time Web Intelligence for AI Apps | You.com ...",
+        "description": "Real-time web intelligence APIs for AI applications.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fwelcome",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fwelcome",
+        "favicon_url": "https://you.com/favicon?domain=you.com&size=128",
+        "snippets": [
+          "Web Search, Contents, and Research APIs that give your AI app real-time web intelligence. Start with free credits — no credit card required.",
+          "For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page. ... We've created the core infrastructure needed to power private, real-time, reliable AI solutions so that you don't have to. Access real-time Search, Content and Research APIs, all with industry-leading accuracy.",
+          "Connect any MCP-enabled tool (Claude Code, Cursor, VS Code, JetBrains, and more) to https://api.you.com/mcp?profile=free and use you-search with no signup or credentials. Limited to 100 queries per day. For higher limits and access to you-contents, you-research, and you-finance, get an API key at you.com/platform — new accounts start with $100 in complimentary credits."
+        ]
+      },
+      {
+        "url": "https://you.com/docs/search/overview",
+        "title": "Search API Overview | You.com | You.com | Documentation",
+        "description": "Get structured, LLM-optimized search results from web and news sources.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fguides%2Fsearch",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fguides%2Fsearch",
+        "favicon_url": "https://you.com/favicon?domain=you.com&size=128",
+        "snippets": [
+          "Get structured, LLM-optimized search results from web and news sources. Perfect for AI agents, RAG applications, and real-time information retrieval.",
+          "Add livecrawl to any search request and each matching result gains a contents object with the full page content in your chosen format. Crawl web, news or all results. Set livecrawl_formats to markdown (recommended for LLMs) or html. ... Need content from specific URLs you already have? Use the Contents API instead — it takes a list of URLs directly, without requiring a search query.",
+          "Full page content via the livecrawl parameter (HTML, Markdown, or both) is billed separately from the base Search API rate.",
+          "With snippets alone, you get ~100–200 words of extracted text per result. With livecrawl enabled, you get the full page content—often 2,000–10,000 words of HTML or Markdown."
+        ]
+      },
+      {
+        "url": "https://docs.you.com/search/overview",
+        "title": "Search API Overview | You.com | You.com | Documentation",
+        "description": "Get structured, LLM-optimized search results from web and news sources.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fsearch%2Foverview",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fsearch%2Foverview",
+        "favicon_url": "https://you.com/favicon?domain=docs.you.com&size=128",
+        "snippets": [
+          "Get structured, LLM-optimized search results from web and news sources. Perfect for AI agents, RAG applications, and real-time information retrieval.",
+          "Add livecrawl to any search request and each matching result gains a contents object with the full page content in your chosen format. Crawl web, news or all results. Set livecrawl_formats to markdown (recommended for LLMs) or html. ... Need content from specific URLs you already have? Use the Contents API instead — it takes a list of URLs directly, without requiring a search query.",
+          "Full page content via the livecrawl parameter (HTML, Markdown, or both) is billed separately from the base Search API rate.",
+          "With snippets alone, you get ~100–200 words of extracted text per result. With livecrawl enabled, you get the full page content—often 2,000–10,000 words of HTML or Markdown."
+        ]
+      },
+      {
+        "url": "https://you.com/docs/quickstart",
+        "title": "You.com API Quickstart | Search, Contents & Research APIs for AI ...",
+        "description": "Get from zero to working API requests in minutes. Covers the Search API, Contents API, Research API, live crawling, evaluation, and pricing — everything you need to evaluate You.com.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fquickstart",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fquickstart",
+        "favicon_url": "https://you.com/favicon?domain=you.com&size=128",
+        "snippets": [
+          "Real-time web intelligence APIs for AI applications.",
+          "You.com gives you real-time web intelligence through three core APIs: Search, Contents, and Research. This quickstart will get you searching the web and answering questions within minutes. Then, we’ll show you how to evaluate us. ... Returns real-time web and news results as structured, LLM-ready JSON. Use it to ground your AI in fresh information — feed search results directly into your prompt to answer questions without hallucination. Add the livecrawl parameter and each result comes back with its full page content, not just a snippet.",
+          "With the default count=10, a call using livecrawl=all crawls up to 20 pages and adds $0.02 to the $0.005 base cost. ... Results that support live crawling will include a contents.markdown field with the full page. For RAG pipelines that need deep context rather than surface-level snippets, this is the parameter to reach for. ... The Contents API fetches content from URLs you specify, either as raw HTML, Markdown or both. ... The Research API goes beyond a single web search.",
+          "Now your agent can automatically search the entirety of the You.com documentation as necessary. You’re now ready to evaluate. You.com provides an open-source evaluation framework and a trustworthy, reproducible methodology for benchmarking search APIs — so you can measure what actually matters: accuracy, latency, and information retrieval quality. We’re the only search API provider with peer-reviewed evaluation research."
+        ]
+      },
+      {
+        "url": "https://documentation.you.com/quickstart",
+        "title": "You.com API Quickstart | Search, Contents & Research APIs for AI ...",
+        "description": "Get from zero to working API requests in minutes. Covers the Search API, Contents API, Research API, live crawling, evaluation, and pricing — everything you need to evaluate You.com.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fquickstart",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fquickstart",
+        "favicon_url": "https://you.com/favicon?domain=documentation.you.com&size=128",
+        "snippets": [
+          "Real-time web intelligence APIs for AI applications.",
+          "You.com gives you real-time web intelligence through three core APIs: Search, Contents, and Research. This quickstart will get you searching the web and answering questions within minutes. Then, we’ll show you how to evaluate us. ... Returns real-time web and news results as structured, LLM-ready JSON. Use it to ground your AI in fresh information — feed search results directly into your prompt to answer questions without hallucination. Add the livecrawl parameter and each result comes back with its full page content, not just a snippet.",
+          "With the default count=10, a call using livecrawl=all crawls up to 20 pages and adds $0.02 to the $0.005 base cost. ... Results that support live crawling will include a contents.markdown field with the full page. For RAG pipelines that need deep context rather than surface-level snippets, this is the parameter to reach for. ... The Contents API fetches content from URLs you specify, either as raw HTML, Markdown or both. ... The Research API goes beyond a single web search.",
+          "Now your agent can automatically search the entirety of the You.com documentation as necessary. You’re now ready to evaluate. You.com provides an open-source evaluation framework and a trustworthy, reproducible methodology for benchmarking search APIs — so you can measure what actually matters: accuracy, latency, and information retrieval quality. We’re the only search API provider with peer-reviewed evaluation research."
+        ]
+      },
+      {
+        "url": "https://docs.you.com/api-reference/search/v1-search",
+        "title": "Search | You.com | Documentation",
+        "description": "This endpoint is designed to return LLM-ready web results based on a user's query.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fapi-reference%2Fsearch%2Fv1-search",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fapi-reference%2Fsearch%2Fv1-search",
+        "favicon_url": "https://you.com/favicon?domain=docs.you.com&size=128",
+        "snippets": [
+          "Passing a value will turn on live crawling, which returns the full page content of each result in the specified section(s). This may add latency to the request. **Pricing:** Livecrawl is billed at \\$1.00 per 1,000 pages, on top of the base Search API rate of \\$5.00 per 1,000 calls.",
+          "This is the same per-page rate as the Contents API. For example, a single call with `count=10` and `livecrawl=all` crawls up to 20 pages (10 web + 10 news), adding \\$0.02 to the \\$0.005 base call cost.",
+          "Pricing: Livecrawl is billed at $1.00 per 1,000 pages, on top of the base Search API rate of $5.00 per 1,000 calls. This is the same per-page rate as the Contents API.",
+          "Maximum time in seconds to wait for page content when livecrawl is enabled. Must be between 1 and 60 seconds."
+        ]
+      },
+      {
+        "url": "https://documentation.you.com/api-reference/search",
+        "title": "Search | You.com | Documentation",
+        "description": "This endpoint is designed to return LLM-ready web results based on a user's query.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fapi-reference%2Fsearch%2Fv1-search",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fapi-reference%2Fsearch%2Fv1-search",
+        "favicon_url": "https://you.com/favicon?domain=documentation.you.com&size=128",
+        "snippets": [
+          "Passing a value will turn on live crawling, which returns the full page content of each result in the specified section(s). This may add latency to the request. **Pricing:** Livecrawl is billed at \\$1.00 per 1,000 pages, on top of the base Search API rate of \\$5.00 per 1,000 calls.",
+          "This is the same per-page rate as the Contents API. For example, a single call with `count=10` and `livecrawl=all` crawls up to 20 pages (10 web + 10 news), adding \\$0.02 to the \\$0.005 base call cost.",
+          "Pricing: Livecrawl is billed at $1.00 per 1,000 pages, on top of the base Search API rate of $5.00 per 1,000 calls. This is the same per-page rate as the Contents API.",
+          "Maximum time in seconds to wait for page content when livecrawl is enabled. Must be between 1 and 60 seconds."
+        ]
+      },
+      {
+        "url": "https://you.com/docs/api-reference/search/v1-search",
+        "title": "Search | You.com | Documentation",
+        "description": "This endpoint is designed to return LLM-ready web results based on a user's query.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fapi-reference%2Fsearch%2Fv1-search",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fapi-reference%2Fsearch%2Fv1-search",
+        "favicon_url": "https://you.com/favicon?domain=you.com&size=128",
+        "snippets": [
+          "Passing a value will turn on live crawling, which returns the full page content of each result in the specified section(s). This may add latency to the request. **Pricing:** Livecrawl is billed at \\$1.00 per 1,000 pages, on top of the base Search API rate of \\$5.00 per 1,000 calls.",
+          "This is the same per-page rate as the Contents API. For example, a single call with `count=10` and `livecrawl=all` crawls up to 20 pages (10 web + 10 news), adding \\$0.02 to the \\$0.005 base call cost.",
+          "Pricing: Livecrawl is billed at $1.00 per 1,000 pages, on top of the base Search API rate of $5.00 per 1,000 calls. This is the same per-page rate as the Contents API.",
+          "Maximum time in seconds to wait for page content when livecrawl is enabled. Must be between 1 and 60 seconds."
+        ]
+      },
+      {
+        "url": "https://you.com/resources/research-api-by-you-com",
+        "title": "You.com | Introducing the You.com Research API—#1 on DeepSearchQA",
+        "description": "The You.com Research API, a new deep search offering, ranks #1 on DeepSearchQA with the highest publicly reported accuracy and F1 scores.",
+        "thumbnail_url": "https://cdn.prod.website-files.com/687f2dca0cbe61df74670d5b/69a5bde064653e64f4204024_2.26.26_Research%20Release%20(1200%20x%20627%20px)%20(3).png",
+        "original_thumbnail_url": "https://cdn.prod.website-files.com/687f2dca0cbe61df74670d5b/69a5bde064653e64f4204024_2.26.26_Research%20Release%20(1200%20x%20627%20px)%20(3).png",
+        "page_age": "2026-02-26T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=you.com&size=128",
+        "snippets": [
+          "The You.com Finance Research API is here—and it scores 87.29% on FinSearchComp. Learn More > ... TLDR: Today, we are launching our Research API, a new deep search offering that ranks #1 on DeepSearchQA with the highest publicly reported 83.67% accuracy and 93.16% F1 score.",
+          "The research path our Research API takes varies significantly based on the type of query. A mathematics question follows a different trajectory than a compliance question or a competitive landscape analysis. The robust harness, plus super-charged tooling has been designed with extreme thoughtfulness on what data to include, ensuring that Research performs well. We have heavily invested in mapping and understanding public web content via our Search, Contents, and Live News APIs.",
+          "The higher research_effort, exhaustive, call has more effort extended to identify additional cities, more granular data, and completes more thorough cross-referencing to ensure validity. The structure of the response is simple and prioritizes ease of use for downstream workflows. Pricing is fixed per tier. 1. Sign up and get your API key. No credit card required for testing · 2. Full documentation: docs.you.com/api-reference/research/v1-research",
+          "To showcase our Research API’s capabilities, we benchmarked across a breadth of industry standard search and research benchmarks, including SimpleQA, FRAMES, BrowseComp, and DeepSearchQA."
+        ]
+      },
+      {
+        "url": "https://you.com/docs/guides/research",
+        "title": "Research API Overview | You.com | You.com | Documentation",
+        "description": "Get thorough, well-cited answers to complex questions. The Research API runs multiple searches, reads through sources, and returns Markdown or structured JSON with citations.",
+        "thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fguides%2Fresearch",
+        "original_thumbnail_url": "https://you.com/docs/api/fern-docs/og?slug=docs%2Fguides%2Fresearch",
+        "favicon_url": "https://you.com/favicon?domain=you.com&size=128",
+        "snippets": [
+          "Real-time web intelligence APIs for AI applications.",
+          "Use the Research API as the first step in a content pipeline: ask a research question, get a cited draft, then use it as source material for blog posts, reports, or briefings. Don’t use exhaustive for simple factual questions — lite or standard will be faster and cheaper. Save deep and exhaustive for questions where thoroughness and accuracy justify the longer response time. The inline citations make verification straightforward. For legal, financial, or medical contexts, build a step that follows citation URLs to confirm claims before surfacing them to end users.",
+          "Ask a hard question, get a researched answer with sources. The Search API and the Research API serve different purposes by delivering different outputs:",
+          "The research_effort parameter controls how much compute the API allocates to your question. Higher effort means more searches, deeper source reading, and more cross-referencing — at the cost of longer response times."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "You.com Search API livecrawl Research API Finance API documentation",
+    "search_uuid": "28f9c882-c7f0-4edc-b82e-e8d150316ba5",
+    "latency": 0.67938232421875
+  }
+}

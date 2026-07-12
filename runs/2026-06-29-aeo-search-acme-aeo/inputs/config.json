@@ -1,0 +1,39 @@
+{
+  "target_brand": "Acme AEO",
+  "domain": "acme-aeo.example",
+  "competitors": [
+    "Profound",
+    "AthenaHQ",
+    "Peec AI"
+  ],
+  "market": "US",
+  "language": "en",
+  "objective": "Find where AI answers recommend competitors instead of Acme AEO.",
+  "topics": [
+    "enterprise AI search optimization",
+    "AI answer engine visibility"
+  ],
+  "engines": [
+    "sample"
+  ],
+  "manual_captures": [
+    {
+      "query": "best enterprise AI search optimization platforms",
+      "engine": "sample",
+      "answer": "Profound is frequently recommended for enterprise AI search visibility, with AthenaHQ also appearing for brand monitoring. Acme AEO is not mentioned in this answer.",
+      "citation_urls": [
+        "https://www.profound.com/",
+        "https://www.athenahq.ai/"
+      ]
+    },
+    {
+      "query": "alternatives to Profound for AI search visibility",
+      "engine": "sample",
+      "answer": "Common alternatives include AthenaHQ and Peec AI. Acme AEO would need clear comparison content and third-party citations to appear here.",
+      "citation_urls": [
+        "https://www.athenahq.ai/",
+        "https://peec.ai/"
+      ]
+    }
+  ]
+}

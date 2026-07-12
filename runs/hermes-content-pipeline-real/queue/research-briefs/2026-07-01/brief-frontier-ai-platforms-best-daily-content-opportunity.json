@@ -1,0 +1,61 @@
+{
+  "id": "brief-e4ce7eef0f97",
+  "topic_cluster_id": "topic-c3ec7d27cbd5",
+  "title": "Frontier AI platforms: best daily content opportunity",
+  "thesis": "Frontier AI platforms is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+  "angle": "Explain what changed in Frontier AI platforms and convert it into a practical implementation narrative for AI operators.",
+  "evidence": [
+    {
+      "claim": "openai-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c1"
+      ]
+    },
+    {
+      "claim": "openai-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c2"
+      ]
+    },
+    {
+      "claim": "openai-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c3"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "c1",
+      "title": "The state of enterprise AI | OpenAI",
+      "url": "https://openai.com/index/the-state-of-enterprise-ai-2025-report/",
+      "source_id": "openai-blog",
+      "published_at": null,
+      "fetched_at": "2026-07-01T05:11:35.987373+00:00"
+    },
+    {
+      "id": "c2",
+      "title": "The next phase of enterprise AI | OpenAI",
+      "url": "https://openai.com/index/next-phase-of-enterprise-ai/",
+      "source_id": "openai-blog",
+      "published_at": null,
+      "fetched_at": "2026-07-01T05:11:35.987393+00:00"
+    },
+    {
+      "id": "c3",
+      "title": "New tools for building agents | OpenAI",
+      "url": "https://openai.com/index/new-tools-for-building-agents/",
+      "source_id": "openai-blog",
+      "published_at": null,
+      "fetched_at": "2026-07-01T05:11:35.987401+00:00"
+    }
+  ],
+  "risks": [
+    "Offline or snippet-only evidence must be replaced with full source review before publishing.",
+    "The article must avoid overclaiming beyond cited source material."
+  ],
+  "missing_facts": [
+    "Current primary-source details should be verified in live mode before final editorial approval."
+  ],
+  "status": "approved_for_draft"
+}

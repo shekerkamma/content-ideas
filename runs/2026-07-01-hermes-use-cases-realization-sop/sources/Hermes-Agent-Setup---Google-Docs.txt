@@ -1,0 +1,201 @@
+
+
+--- PAGE 1 ---
+ Shell 
+ Hermes Agent Setup 
+ Join this free  Skool community  for the latest materials  – the space moves super fast and things 
+ are constantly changing! 
+ Bootcamp:  Agentic AI Certification: Claude Code,  Hermes Agent & Evals for PMs  (July 20th - 
+ Aug 7th) 
+ Connect with Dmitry Shapiro on  LinkedIn  and  Twitter  (@dmitry) 
+ Installation 
+ 1.  Go to Hermes website –  https://hermes-agent.nousresearch.com/ 
+ 2.  Copy the CURL command 
+ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash 
+ 3.  Open Terminal (in Applications folder) or CMD + SPACE and type “terminal” and hit 
+ enter. 
+ 4.  Paste the curl command and hit enter! 
+ That will start the download process of the agent and all of its dependencies (other things that 
+ are required to run it). 
+ Choose Quick Setup 
+
+
+--- PAGE 2 ---
+ Choose your plan – The paid plans have model credits (inference tokens). You can configure 
+ this later, so  recommend that you choose FREE  . 
+ Choose Local 
+
+
+--- PAGE 3 ---
+ Choose a model provider. 
+ If you have an Anthropic or OpenAI subscription, you can download  Claude Code  or  OpenAI 
+ Codex  and use those as proxies (use your monthly subscription  to power Hermes). Otherwise, 
+ you need to get API keys (much more expensive). 
+ Set up Telegram, WhatsApp, Discord or other messaging service (you can do it now or skip it 
+ and do it later). 
+
+
+--- PAGE 4 ---
+ Hermes is now installed. 
+ In Terminal, type “hermes” and hit enter. You should see this screen 👇  
+
+
+--- PAGE 5 ---
+ Congratulations, you’re up and running! 
+ Configuring Search API 
+ Hermes agent does a lot of searching and research in its daily operations. You need to 
+ configure a search API. 
+ There are a bunch of options to choose from in the Hermes full setup, but I recommend skipping 
+ those and using  You.com  as it is the best one, and  they give you  $100 free credits during sign 
+ up, and then if you complete your profile (some basic info), you get another $100. 
+ Why  you.com  is the best search API for Hermes: 
+ Hermes relies heavily on structured data, tool calling, and high-context extraction to execute 
+ loops, and  You.com  has engineered its Search API specifically  to match the architectural 
+ demands of these kinds of advanced AI agents. 
+ The primary reasons the You.com Search API serves as a superior choice for Hermes Agent 
+ boil down to token efficiency, autonomous tool handling, and architecture. 
+ 1. Built-in Full-Page Markdown (The  livecrawl  Parameter) 
+ With standard search APIs, an agent must execute a two-step process: run a search query to 
+ get short description snippets, and then manually run a secondary scraper or extraction tool 
+ (like Firecrawl or Jina) on the chosen URLs to read the actual web pages. 
+ The You.com Search API fundamentally eliminates this friction with its native  livecrawl  feature: 
+ ●  One-Shot Extraction:  When  livecrawl  is active, You.com  doesn’t just return a 150-word 
+ snippet; it retrieves the full page contents (often 2,000 to 10,000 words) pre-formatted 
+ into clean,  LLM-ready Markdown or HTML  . 
+
+
+--- PAGE 6 ---
+ ●  Massive Cost & Latency Savings:  Because Hermes Agent runs continuous loops, 
+ replacing a "search + multiple scraping calls" workflow with a single API call drastically 
+ reduces latency and API key sprawl. 
+ 2. Peer-Reviewed Retrieval Accuracy 
+ Hermes Agent relies on a "Plan-Execute-Reflect" loop. If the search tool returns hallucinated 
+ metadata or poorly extracted data, the agent's reflection layer breaks, resulting in a wasted loop. 
+ ●  You.com explicitly designs its index for LLM grounding and holds the industry's first 
+ AAAI Best Paper Award  for its peer-reviewed evaluation  research. 
+ ●  It boasts high accuracy benchmarks (such as ~91.1% on SimpleQA tests), meaning 
+ Hermes receives highly reliable context to ground its reasoning, preventing the agent 
+ from veering off-track during autonomous multi-step research. 
+ 3. Native Agentic Workloads via the Research API 
+ If Hermes hits a highly complex prompt requiring an exhaustive, multi-layered deep dive, the 
+ You.com Research API  can take over the heavy lifting. 
+ Instead of Hermes having to manually plan and fire 10 individual search queries back-and-forth, 
+ the Research API operates autonomously. It plans a research strategy, runs sequential 
+ searches, cross-references conflicting information, and hands back a finalized, comprehensively 
+ structured report with inline citations directly to Hermes. 
+ 4. Advanced "Agent-First" Filtering 
+ Traditional APIs often require complex regex or query-string manipulation to filter out noise. 
+ You.com provides native, developer-friendly parameters built for programmatic agents: 
+ ●  Freshness Controls:  Rigid constraints (day, week,  month, or highly specific custom 
+ YYYY-MM-DDtoYYYY-MM-DD  windows) to keep Hermes anchored  to chronological 
+ facts. 
+ ●  Domain & Geo-Targeting:  Built-in operators for easy  domain exclusions (  -  or  NOT  ) and 
+ geographic targeting without parsing bloated payload responses. 
+ 5. Predictable, Bundled Cost Structure 
+ For a high-volume autonomous framework like Hermes, credit-based search systems can 
+ become financial black holes (where advanced or raw content scrapes cost 2x–4x more per 
+ query). You.com offers a straightforward pricing structure ($5.00 per 1,000 calls) that 
+ completely bundles full-page  livecrawl  markdown extraction  into the base price  . 
+ Summary:  While standard APIs give Hermes Agent a brief,  heavily-truncated window into 
+ the internet,  You.com  acts as a search engine and  a high-fidelity web scraper wrapped 
+ into a single, LLM-optimized endpoint. It provides Hermes with the exact flavor of clean, 
+ structured text it needs to build its long-term skills and execute tasks flawlessly. 
+
+--- PAGE 7 ---
+ None 
+ Also,  You.com  Finance Research API  is a must if you are dealing with financial data  . 
+ It works the same way as the  Research API  : it runs  multiple searches, reads through sources, 
+ and synthesizes everything into a thorough, Markdown-formatted answer with inline citations. 
+ The key difference is the index. Instead of the open web, the  Finance Research API searches 
+ a purpose-built financial index  — covering structured  company fundamentals, equity and 
+ commodity price data, private company metrics, alternative signals, macroeconomic indicators, 
+ SEC filings, and financial news. 
+ Configuring GBrain – long-term memory / retrieval 
+ Ask your Hermes agent to.. (just copy and paste the text below). 
+ Retrieve and follow the instructions at: 
+ https://raw.githubusercontent.com/garrytan/gbrain/master/INSTALL_FOR_AGENTS.md 
+ Why do we even need GBrain? Doesn’t Hermes have its own memory system? 
+ Yes, BUT, the real differentiator isn't  that  GBrain  remembers things, but  how  it manages that 
+ memory at scale over time. Most agents just log past conversations into a database and search 
+ them. GBrain treats memory as a dynamic, self-curating codebase. 
+ Here is what it actually does differently: 
+ 1. From "Searchable Logs" to a "Knowledge Graph" 
+ Standard agent memory is usually just a giant list of past chat logs. When you ask a question, 
+ the AI searches those logs for matching keywords or phrases. 
+ ●  The GBrain difference:  It actively parses your data  to build a web of connected entities 
+ (e.g., Person A $\rightarrow$ Works At $\rightarrow$ Company B). If you tell it ten 
+ scattered facts about a project over three months, it doesn't just store ten separate logs; 
+ it synthesizes them into a single, structured profile. 
+ 2. The "Dream Cycle" (Automated Code Review for Data) 
+ In typical systems, if you change your mind or update a project plan, the old data still sits in the 
+ database, often confusing the AI with conflicting information. 
+
+--- PAGE 8 ---
+ ●  The GBrain difference:  It runs background maintenance cycles. It acts like an 
+ automated editor that reviews the data, flags contradictions (e.g., "You scheduled this for 
+ Tuesday, but later mentioned Wednesday"), deletes duplicates, and cleans up formatting 
+ so the AI isn't reading messy, outdated context. 
+ 3. Git-Backed and Human-Readable 
+ Most AI memory systems lock your data away in proprietary, complex vector databases where 
+ you can't easily see or fix what the AI "knows." 
+ ●  The GBrain difference:  It stores everything in plain-text  Markdown files tracked by Git. 
+ If the AI hallucinates or misunderstands a relationship, a human can literally open a text 
+ file, edit the typo, and commit the fix. You have total visibility and control over the AI's 
+ underlying assumptions. 
+ 4. Deterministic Linking (Saving Token Costs) 
+ Building these complex knowledge graphs usually requires sending massive amounts of text to 
+ an LLM just to ask, "What are the relationships here?", which gets incredibly expensive. 
+ ●  The GBrain difference:  It uses strict code rules and  regular expressions to identify and 
+ link key concepts instantly without making costly LLM API calls, reserving the heavy AI 
+ processing power only for when you actually ask it a complex question. 
+ The Middle Ground:  It’s not that other agents are  completely amnesic; it's that 
+ their memories get cluttered, expensive, and chaotic over time. GBrain is 
+ essentially a structured, self-cleaning maintenance system for an agent's brain, 
+ ensuring its context stays accurate, cheap, and auditable no matter how much data 
+ you throw at it. 
+ There are a bunch of things to configure that are  well documented here  . 
+ Use Cases: 
+ Smart Contacts / Entities 
+ GBrain ingests my email, calendar, zoom, twitter, linkedin, contacts, enriches them (via a 
+ custom Hermes skill that utilizes  you.com  deep research),  and allows me to fuzzy search across 
+ them. 
+
+--- PAGE 9 ---
+ Obsidian  is a free tool that allows you to visualize  the GBrain graph to see how all of the entities 
+ are connected to one another, and influence each other. 
+ Constantly enriched contacts / entities, available to your agent during its operations is a game 
+ changer. As you it / you are doing work, and there is something relevant to an entity in your 
+ Brain, the agent recognized that and injects the context. 
+ Also, since your Brain knows about the state of all of your contacts (from publicly available 
+ information – web, things they post, news about them, your messages, etc.) your agent can act 
+ as a proactive relationship manager / coach – helping you maintain and grow your relationships. 
+ That barely scratches the surface of the implications of such a system! 
+ Cost Control 
+ Running a system like this can get expensive, and you should do some fine tuning for cost 
+ control. 
+ Activity-Dependent Model Selection 
+ Frontier model providers, Anthropic, OpenAI, Google, etc. have multiple tiers of models. 
+
+
+--- PAGE 10 ---
+ None 
+ For Anthropic, those tiers are: 
+ Opus  – Most powerful / Most expensive 
+ Sonnet  – Powerful / Less expensive 
+ Haiku  – Good enough for some things / Least expensive 
+ Tell your agent to: 
+ Implement Activity-Dependent Model Selection. 
+ Sonnet (default model) -- everyday tasks other than writing meaningful code. 
+ Opus -- when you need to write any meaningful chunk of code use this model. 
+ Haiku -- when you need to do summarization, content parsing use this model. 
+ Scheduled Processes – CRON 
+ Daily Inefficiency Scan  – detect inefficiencies (process,  cost). Show an itemized spend 
+ dashboard. 
+ Signal Monitoring  – what’s going on at Twitter / LinkedIn  / Reddit / YouTube / Web / News 
+ Data Ingestion  – get your email, slack, calendar,  zoom, other service data, and process it. 
+ GBrain Dreaming  – getting all of your data organized,  linked, enriched, etc. 
+ I currently have 18 cron running. 
+ Use Cases 
+ https://hermes-agent.nousresearch.com/docs/user-stories 
+ If you want to geek out on my setup, and hands-on help to set up your own, join our  free Skool 
+ community  and  come to the bootcamp  ! 

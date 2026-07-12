@@ -1,0 +1,4 @@
+{"source_id": "src_001", "url": "https://acme-aeo.example", "domain": "acme-aeo.example", "source_type": "official", "is_primary": true, "retrieved_at": "2026-06-29T06:03:28Z", "freshness_status": "unknown"}
+{"source_id": "src_002", "url": "https://www.profound.com", "domain": "profound.com", "source_type": "competitor", "is_primary": false, "retrieved_at": "2026-06-29T06:03:28Z", "freshness_status": "unknown"}
+{"source_id": "src_003", "url": "https://www.athenahq.ai", "domain": "athenahq.ai", "source_type": "competitor", "is_primary": false, "retrieved_at": "2026-06-29T06:03:28Z", "freshness_status": "unknown"}
+{"source_id": "src_004", "url": "https://peec.ai", "domain": "peec.ai", "source_type": "competitor", "is_primary": false, "retrieved_at": "2026-06-29T06:03:28Z", "freshness_status": "unknown"}

@@ -1,0 +1,18 @@
+{
+  "id": "src-ab38b94b26be",
+  "source_id": "aws-machine-learning-blog",
+  "cluster_id": "implementation-proof",
+  "title": "AWS Machine Learning Blog signal for Implementation proof points",
+  "url": "https://aws.amazon.com/blogs/machine-learning/",
+  "canonical_url": "https://aws.amazon.com/blogs/machine-learning/",
+  "published_at": "2026-07-01T00:00:00+00:00",
+  "fetched_at": "2026-07-01T05:17:50.928760+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Offline seed item from AWS Machine Learning Blog for evaluating reference architectures, customer stories, product docs. Use live mode to replace this with current source content.",
+  "raw_content_path": null,
+  "dedupe_key": "581aeefb9198",
+  "status": "new",
+  "errors": []
+}

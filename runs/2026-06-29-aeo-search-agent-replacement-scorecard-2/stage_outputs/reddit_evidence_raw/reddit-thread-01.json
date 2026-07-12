@@ -1,0 +1,537 @@
+{
+  "post": {
+    "title": "I got into the ChatGPT Ads Manager beta — sharing my first campaign setup, will report back with data",
+    "author": "Ray_Dev_SG",
+    "score": 99,
+    "content": "A quick note up front: Everything in this post is from my own hands-on experience going through the OpenAI Ads Manager beta — every step, every screenshot, every observation is real. My original write-up was scattered (I was taking notes as I went), so I used AI to help me organize the structure and make it readable. The substance is mine; the formatting got help. Full screenshots included below for anyone who wants to verify. If AI-assisted editing is a dealbreaker, no hard feelings — skip away. TL;DR: Got into the OpenAI Ads Manager beta (15-day wait after applying) Full walkthrough below: dashboard → campaign setup → context hints → ad creative → submit Real performance data coming in a few days Applied for the OpenAI Ads Manager beta about two weeks ago and got approved a few days back — roughly 15 days from submitting the application to receiving the access email. Just finished setting up my first campaign. Since the self-serve beta opened on May 5th there haven't been a ton of hands-on walkthroughs out there, so I figured I'd document the whole process — from the invite email through hitting submit — and come back in a few days with actual performance numbers. Posting this now while it's fresh. Data update will go in the edits. The invite email Came through as a standard transactional email — clean, minimal, just a login button. Nothing fancy. Dashboard — first impression Once you're in, the UI is minimal — almost surprisingly so. Left sidebar has just four sections: Campaigns, Tools, Billing, Settings . No reports tab, no audience manager, no asset library. Compared to the sprawl of Google Ads or Meta Ads Manager, this feels stripped down. The main view defaults to a Campaigns tab with sub-tabs for Campaigns / Ad groups / Ads — so the classic three-level hierarchy is there, just collapsed into one screen instead of separate pages. A green banner at the top confirms \"Account verified — you're approved to launch ads in ChatGPT.\" A few things worth flagging from the sidebar before diving into campaign creation: Tools only has Change History and Conversions right now Billing has the full set (Overview / Activity / Documents / Settings) — payment infrastructure is clearly more built out than the campaign tooling Settings has an API Keys section. So programmatic campaign management is on the table from day one, which is more than I can say for some platforms that have been around for a decade Creating a campaign — Objective First decision: campaign objective. Three options in the dropdown — Reach, Clicks, and Conversions — but Conversions is currently labeled \"Coming soon.\" So right now you're choosing between optimizing for impressions (CPM) or clicks (CPC). The CPC option only launched with this beta — during the earlier managed pilot, CPM was the only buying model. Worth noting: even though Conversions as an objective isn't live, you can still set up conversion tracking to measure results. The algorithm just won't optimize toward those events yet. Country targeting Location targeting at the campaign level is hard-capped to four countries: United States, Canada, Australia, New Zealand . That's it. The \"Enter another location\" field exists but the dropdown won't accept anything else. Matches what OpenAI said publicly: ads only serve to Free and Go tier ChatGPT users in those four markets right now. If you're hoping to run ChatGPT ads in the UK, EU, or anywhere in APAC outside ANZ, you're waiting. Budget Standard setup — pick Campaign budget (total spend cap) or Daily budget (a daily ceiling). Same model as Google Ads and Meta. No minimum spend floor that I could find — which is a real change from the early pilot days when entry was reportedly $50K+. Conversion tracking & the web-only problem Before you can set up conversion events, you have to create a data source . The form asks for a name, then a Type: Web / iOS / Android . Only Web is selectable. iOS and Android are both marked \"Coming soon.\" This is the single biggest limitation for anyone planning to run ChatGPT ads for an app. You can drive traffic to a web landing page and track it, but there's no native app-install or in-app event tracking yet. If your business is app-first, this beta isn't ready for you — though the fact that the form already has iOS/Android slots suggests it's on the roadmap. The Web data source itself gives you a standard pixel: a <script> tag with a unique pixel ID that you drop into your site's <head> . Once installed, you can define conversion events — currently the only base event type is page_viewed , with a configurable conversion window (default 30 days). There's also a separate Conversions module under the Tools sidebar with a \"Manage conversion keys\" option — so the pixel/server-side infrastructure exists, it's just gated to Web for now. Ad group — where it stops looking like Google Ads The Ad group page is where ChatGPT Ads starts to diverge from everything else. Four fields: Ad group name — standard Maximum CPC bid — range is $0.01 to $100.00. The default placeholder is $3.00, which is a tell: OpenAI seems to think that's roughly the right ballpark for early auctions. For context, average Google Search CPC sits around $1-$2 and Meta around $0.50-$1.50 in most verticals. ChatGPT Ads is launching with a higher floor signal than either Website URL — default destination for ads in this group. Standard ad-group-level setting Context hints — and this is the part that's actually new OpenAI's own description of context hints: \"Describe the conversations, topics, or keywords where your products or services may be relevant; these hints guide matching but aren't exact-match targeting rules.\" Read that twice. A few things stand out: It's called hints , not keywords or targets . Soft guidance, not hard filters \" Guide matching \" — the LLM uses these to understand what conversations your ad belongs in, not to do string-matching against user input \" Aren't exact-match targeting rules \" — they're explicitly telling you not to think in Google Ads terms So this isn't keyword bidding. It isn't audience targeting either. It's something closer to: \"here's a description of the context where my ad makes sense — figure out the rest, model.\" The input UI itself is bare. Just a multi-line text box. No tagging, no chips, no autocomplete, no suggested hints, no keyword volume tool, no competitor research. You're writing into a blank text box and trusting the model. That's either liberating or terrifying depending on where you sit. My read on how to write them (happy to be wrong): Too narrow probably under-delivers — the model can semantically expand from transcribing meetings to a lot of related conversations, so being too literal limits reach Too broad probably tanks relevance — productivity is so vague the model has nothing to anchor on Sweet spot is probably scenario + intent , e.g. taking notes during long meetings rather than just notes No one knows the best practice yet. This beta launched two weeks ago. There's no data on what works. Ad creative Five fields: Ad name — internal label Website URL — inherits the ad group default but can override Headline — 50 character limit Description — 100 character limit Ad images — PNG/JPG, square recommended, minimum 256×256px Character limits are tight. For comparison, Google Search Ads gives you 3× 30-char headlines plus 2× 90-char descriptions — roughly 270 characters total. ChatGPT Ads gives you 150 characters total. You have to land the value prop in one sentence. The preview shown in the panel looks like a small card with a \"Sponsored\" label, brand name, headline (truncated at ~35 chars in the preview), description (also truncated), and a small thumbnail image. The ad unit is clearly designed to slot below a ChatGPT response, not to dominate the screen. A few observations on the creative spec: Image displays small in the preview — fine detail in the image is wasted Headline gets truncated well before 50 chars in the actual preview — front-load the most important information No CTA button selection that I could find (no \"Learn More\" / \"Download\" / \"Sign Up\" picker) No A/B testing primitives at the ad level yet — if you want to test creatives, you build multiple ads under one ad group Review and submit The final step is a Review page that summarizes everything: campaign name, objective, locations, budget, conversion event, schedule, ad group settings, context hints, and the ad itself. Hit submit and the campaign goes into review. No timeline given on how long ad review takes. I'll update once mine clears. Surprises, friction, and what's missing A few takeaways after going through the whole flow: 🟢 Surprises (in a good way) API Keys section exists in Settings — programmatic management from day one No minimum spend floor — the rumored $50K pilot entry is gone The three-level Campaign / Ad group / Ad hierarchy is exactly Google Ads — zero conceptual onboarding for anyone with Google experience Conversion tracking infrastructure (pixel + events + conversion keys) is mature for a 2-week-old self-serve beta 🟡 Friction Default CPC suggestion of $3.00 is high relative to other channels — feels like an anchoring move Context hints input is a blank text box with no guidance, no suggestions, no volume estimator — you're flying blind Character limits on headlines/descriptions are aggressive Preview truncates headlines around 35 chars even though the field accepts 50 🔴 Missing (for now) Conversions as an objective — Coming soon iOS / Android data sources — Coming soon Countries outside US / CA / AU / NZ CTA button selection A/B testing tooling Audience exclusion / frequency cap (didn't find these — happy to be corrected if I missed them) What I'm doing next The campaign is configured and ready. I'll come back with actual performance data once it's been live for a few days — impressions, clicks, real CPC, CTR, which context hints actually pulled volume, and how the ads end up looking inside ChatGPT. For anyone else in the beta — would love to compare notes, especially on context hints. Did your first batch get approved on the first try? Any patterns on what gets flagged? https://preview.redd.it/uy8gnpvf7g2h1.png?width=1899&format=png&auto=webp&s=b9c8b343b6ff51c0a5a8c9d0624ac4fe9bce89f3 Will edit this post with the data update soon.",
+    "url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+    "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+    "subreddit": "PPC"
+  },
+  "comments": [
+    {
+      "id": "t1_on0xvdr",
+      "author": "Ray_Dev_SG",
+      "text": "Pixel / attribution: in my setup, OpenAI gave me a separate script + pixel ID. I did not see an option to use GA4 / Meta / other pixels as a fallback for conversion attribution, so I treated it as a separate pixel install. Context hints: this sits at the ad group level, not campaign-level and not per-creative. My read is that it is more about helping the system understand targeting/context, not just describing the offer copy. Creative: what I saw was text + static image upload. I did not see video support in this version. There is a preview, mainly showing how the sponsored card renders, but I did not see a very detailed breakdown across every possible surface yet. Application: I honestly don’t remember the exact wording I used, but my product is an office productivity tool — specifically a voice transcription app — so I likely framed the use case around productivity / workflow / work tools rather than a very generic application. On the discovery vs search point, I’d mostly agree with your read, but I think it’s a bit of a hybrid. It doesn’t feel like classic keyword search ads, but it also isn’t purely feed-style discovery because the conversation context seems to matter a lot. To me, it feels meaningfully different from both Google Search and Meta-style recommendation feeds. Google is intent captured through keywords, Meta is mostly interest/audience-driven distribution, but ChatGPT ads seem closer to context-driven placement inside an active conversation. So I’d call it a hybrid, but not a 1:1 match with either existing model.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on0xvdr/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on0ywn3",
+      "author": "Ray_Dev_SG",
+      "text": "One extra note on the preview: Reddit replies don’t let me attach the screenshot directly here, but the ad preview looked roughly like this: ┌──────────────────────────────────────────────┐ │ Sponsored / ad card │ │ ┌─────────────┐ │ │ AI meeting transcription, 90+ langua... │ │ │ │ Atter AI: 98.7% accurate transcripts, │ 1:1 │ │ │ speaker labels, AI summaries, iOS, ... │ img │ │ │ └─────────────┘ └──────────────────────────────────────────────┘ So basically: compact rounded card, title + short description on the left, and a square image thumbnail on the right. If you want to see the exact render, feel free to DM me and I can send the screenshot.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on0ywn3/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on35yz8",
+      "author": "cmac2992",
+      "text": "One other thing for people to note is how short the title and description. Title max 50 characters with potential truncation happening 25. Description is max 100 with truncation potential at 48.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on35yz8/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on347r1",
+      "author": "cmac2992",
+      "text": "I applied Sunday the 17th, and was approved for beta in 12 hours overnight. D2C consumer electronics / toys.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on347r1/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_ooe23la",
+      "author": "responsivedeveloper",
+      "text": "I just had a discovery call with an Open AI Ads rep. He was overall super helpful, but was extremely vague on anything I asked that was related to reporting and kept referring to campaign setup. It seems like there is not going to be any sort of reporting on placements, or the type of conversations your ads are showing in. I'd be super curious to see what sort of reporting the platform is capable of. Do others have thoughts on this?",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/ooe23la/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on0xo8t",
+      "author": "pizzatacocheese",
+      "text": "Thanks for the write-up. Any intel on what context hints are landing well? Is it going broader or keeping the targeting quite tight?",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on0xo8t/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on0zqw2",
+      "author": "Ray_Dev_SG",
+      "text": "Thanks. This is my first campaign, so I don’t have enough data yet to say which context hints are actually landing well. I’m treating this as an initial test, not a proven playbook. For my transcription app, I used Claude to help brainstorm the hints and grouped them from narrow to broader intent. The recommended structure was roughly: Core use cases: transcribing meetings taking meeting notes recording interviews lecture transcription podcast transcription Pain / problem-based hints: can’t keep up with meeting notes missing details in conversations transcription tool recommendation Competitor / comparison intent: Otter.ai alternative meeting transcription app My current guess is that the best setup is not super broad like “productivity app,” but also not as tight as exact-match search keywords. More like: describe the situations where the user would naturally need this product.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on0zqw2/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oqwfptz",
+      "author": "SorryDependent911",
+      "text": "Hopping in here with my experience so far. The Good: We started running ads around a week ago and have actually seen both lower CPC's and CPM's than we expected to so far which was surprising to me based on the noise I was hearing during the closed beta program. The setup experience was super easy with a really easy bulk upload feature through an excel file which allows for very rapid iterations on ads and copy. The Bad: Targeting is vague and bad. Spent some time in an incognito tab and some of my ads were serving on conversations that I had MUCH more relevant ads also running for. Placement needs to get better based on trial convos + active ads in my account. The manager seems to be down half the time. I get \"Service temporarily unavailable. Ads Manager is temporarily unavailable. Please try again in a few minutes.\" A LOT Conversions are hard to set up and don't really do anything than show you if they are coming through.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oqwfptz/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on14fjr",
+      "author": "Round_Transition_346",
+      "text": "Thank you!! I tried applying before reading your post, let's hope it will be available in the EU soon.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on14fjr/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on5yh44",
+      "author": "Ray_Dev_SG",
+      "text": "Hope you get in soon! Yeah, EU availability will be interesting to watch. Right now I only saw US / CA / AU / NZ in the targeting options, so I’m guessing EU rollout may take longer because of the extra privacy/regulatory requirements.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on5yh44/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on14trr",
+      "author": "Guilty-Dog7928",
+      "text": "tbh, that minimal ui sounds like a nightmare for b2b. the thing is, without audience targeting or any real reporting, how are you even gonna qualify leads? my last ad campaign was all about granular controls for specific icps. this feels like a broad net, which is fine for some. but for b2b sales, you really need precision. curious to see what data you pull, but i'm skeptical about the roi for anything beyond brand awareness.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on14trr/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on16ug8",
+      "author": "Ray_Dev_SG",
+      "text": "Fair skepticism. Honestly the current UI is a v1 — there's a bunch of \"Coming soon\" labels scattered through the platform (Conversions objective, iOS/Android data sources, more geos). Given the scale of ChatGPT's user base, hard to imagine OpenAI doesn't build out the targeting/reporting depth that B2B needs over the next few quarters. For now, you're right — it's closer to a broad-net play than ICP-level precision. I'd say it's worth watching, not committing big budget yet if your model depends on granular control.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on16ug8/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on1fh44",
+      "author": "hundredmore",
+      "text": "Following",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on1fh44/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on1fu6w",
+      "author": "Michael_the_Guido",
+      "text": "Is there only country specific targeting for those few countries or can you go down to the state level (e.g. New York)?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on1fu6w/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on1juc4",
+      "author": "Ray_Dev_SG",
+      "text": "Currently, only the country can be seen.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on1juc4/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_opm4lf7",
+      "author": "sultannabrann",
+      "text": "You can target Australian states too",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/opm4lf7/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on1kvu8",
+      "author": "Creative-Signal6813",
+      "text": "no audience targeting, no retargeting, no lookalikes. ur not running performance ads , ur buying attention and hoping the context model finds the right people. attribution is the actual gap nobody's asking about. if the pixel setup isn't documented, all the \"data coming in a few days\" is sessions and clicks, not conversions. early betas on new ad platforms usually come with subsidized CPMs while they build out inventory. month 3 is the real test.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on1kvu8/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on35f58",
+      "author": "cmac2992",
+      "text": "It's a fixed 30 conversion window for clicks and views. It seems like it will be adjustable in the future. currently it's an un-editable text field. The conversions are super weird. If you set multiple conversions for a campaign, you can't split out which conversion actually happened. Conversion data is flowing.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on35f58/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on1mmtd",
+      "author": "AccomplishedCash3603",
+      "text": "Thank you!",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on1mmtd/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on1ucih",
+      "author": "Old_Dirty_Rat",
+      "text": "Is it still open, can you still sign up? If so, do you mind sharing the link?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on1ucih/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on5y7oh",
+      "author": "Ray_Dev_SG",
+      "text": "I signed up through the official OpenAI Ads Manager page here: https://ads.openai.com Not sure if they’re still accepting everyone at the same pace, but the signup flow was open when I applied. For me, it took roughly 15 days from application to approval.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on5y7oh/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on7tvrx",
+      "author": "Old_Dirty_Rat",
+      "text": "Thanks buddy, I found it yesterday right after posting this, we already submitted. Please do keep us posted about your findings and insights, if you don’t mind. One thing we realized last night, there is no option for “MCC” yet, so you can’t really manage accounts at this point, but this option will exist. Its good to start testing early, and get familiar with mechanics and the UI. I hope this puts a little bit of heat and competition on Google, it will be healthy for everyone.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on7tvrx/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on3wntn",
+      "author": "Ok-Entertainer-1414",
+      "text": "I used AI to help me organize the structure and make it readable Whenever people say this, their post is always horribly written. AI is not actually good at writing. It's bad at writing; just good at mimicking the aesthetics of good writing. In a lot of ways, using AI to \"edit\" actually makes your post worse",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on3wntn/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on5ysa7",
+      "author": "Ray_Dev_SG",
+      "text": "Fair criticism. I probably over-disclosed that because I didn’t want anyone thinking the whole thing was fully AI-generated. The actual setup, screenshots, observations, and notes are mine. I used AI mostly to turn messy notes into a readable sequence. If the style reads too polished or AI-ish, that’s on me.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on5ysa7/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on68pjw",
+      "author": "Ok-Entertainer-1414",
+      "text": "This comment, too, is AI. Do you have an \"agent\" running your Reddit account? Cringe",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on68pjw/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on6e8vn",
+      "author": "Ray_Dev_SG",
+      "text": "No agents, real people replying",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on6e8vn/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on6fzwh",
+      "author": "Ok-Entertainer-1414",
+      "text": "So you copied and pasted my comment into an LLM and then copied and pasted its reply back into Reddit? Or what? I'm honestly curious how people are doing this",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on6fzwh/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on6isn5",
+      "author": "Ray_Dev_SG",
+      "text": "My post was edited using AI, but all my replies were from real people. It's a pity I can't include images in the replies, otherwise I would have sent you screenshots.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on6isn5/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on6jns4",
+      "author": "Ok-Entertainer-1414",
+      "text": "It's weird how those \"real people\" sound just like Claude",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on6jns4/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on6lolw",
+      "author": "Ray_Dev_SG",
+      "text": "I'm not going to argue with you anymore.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on6lolw/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on6lt0w",
+      "author": "Ok-Entertainer-1414",
+      "text": "No, actually I think you should spend more tokens",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on6lt0w/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on6mrju",
+      "author": "Ray_Dev_SG",
+      "text": "Are you the AI?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on6mrju/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on42uxb",
+      "author": "SEAorDie",
+      "text": "Anything to dethrone the scam that is Google Ads is highly welcomed.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on42uxb/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on5z5cp",
+      "author": "Ray_Dev_SG",
+      "text": "I get the frustration. Google Ads has become painful in a lot of ways — rising CPCs, less control, more black-box automation. That said, I’d be cautious about calling ChatGPT Ads a replacement yet. The beta is still very early: limited geos, limited objectives, no conversion optimization yet, and not much reporting depth from what I’ve seen.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on5z5cp/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on607fj",
+      "author": "Ray_Dev_SG",
+      "text": "Yeah, that’s the real test. For my first campaign, the goal is direct response, not pure brand awareness. I’m trying to see whether ChatGPT Ads can drive qualified clicks to a landing page for a transcription app. On conversion tracking: right now I only saw web pixel tracking available. iOS / Android data sources were marked as coming soon, so for app-first advertisers this is still a limitation. I’m tracking landing page arrival for now, not native app installs or in-app events. On minimum spend: I didn’t see a high minimum spend requirement in the self-serve UI. I started with a small daily budget just to test the channel before putting real money behind it. Agree that targeting quality is the main question. If the context matching works, this could be more than an awareness channel. If not, it may just be interesting inventory with weak performance signal.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on607fj/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on4jumm",
+      "author": "TheGK",
+      "text": "Thanks for sharing! When it comes to location targeting in the United States, what was the most granular targeting available? State, City, Zip Code, Radius?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on4jumm/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on60mwm",
+      "author": "Ray_Dev_SG",
+      "text": "Currently it only supports country-level targeting.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on60mwm/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on4uxqn",
+      "author": "D3kim",
+      "text": "thanks for sharing this!! kinda excited i guess",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on4uxqn/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on60pi7",
+      "author": "Ray_Dev_SG",
+      "text": "Still very early, but it’s definitely one of the more interesting new ad channels to watch.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on60pi7/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oo8z2su",
+      "author": "Plus_Reaction3578",
+      "text": "Hey guys, does anyone have a rough estimate for how long openai takes to start serving the ads?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oo8z2su/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oolulze",
+      "author": "Dynames4",
+      "text": "I also got access this week and I’m a little disappointed with the targeting. I just launched my campaigns yesterday and am waiting to see what kind of numbers I get back from my very broad keywords and “prompted responses”. There isn’t much documentation on how the context hints actually work so it feels like a “see what sticks to the wall” kind of approach",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oolulze/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oom2hav",
+      "author": "responsivedeveloper",
+      "text": "That seems to be what they are expecting you to accept and be satisfied with.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oom2hav/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oom3jqa",
+      "author": "Dynames4",
+      "text": "The good ole “trust us and our black box platform and just funnel us cash” approach",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oom3jqa/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oom4pqn",
+      "author": "responsivedeveloper",
+      "text": "On top of that, they require a hefty deposit before your ads can serve (no minimum spend, however). I've noticed in my Google Ads campaigns that I'm seeing more conversions and clicks that are attributed to \"other search terms: Total of search terms not shown in this report that resulted in click but were not searched on by a significant number of people\" and \"Total keywords: Total traffic from broad match keywords created by AI Max for Search campaigns, based on the keywords you added,\" which is the same vibe.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oom4pqn/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_op6ozq9",
+      "author": "Awkward-Moment-2562",
+      "text": "In the ChatGPT Ad Manager, the campaign on/off toggle is not labeled. When the little white dot is on the right does that mean on or off?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/op6ozq9/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_opd0ew0",
+      "author": "Sure-Perception-2030",
+      "text": "thanks for posting this. not many people are sharing actual hands on experiences yet",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/opd0ew0/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_opjwzat",
+      "author": "EmergencyHeat9200",
+      "text": "I've had this for about two weeks and I have gotten leads already with one person signing. I have don't facebooks ads and they never worked. My analytics are good for what I need. I will not be sleeping on this and will be promoting on it more.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/opjwzat/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_opzevjb",
+      "author": "stealthagents",
+      "text": "This is super exciting, can’t wait to see how your campaign performs. The 15-day wait seems long, but at least you got in! Fingers crossed for some solid data coming your way soon.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/opzevjb/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oq09anh",
+      "author": "Original_Dog_7251",
+      "text": "I got in my self too and turned on an ad $25 a day and so far only 2 impressions how slow are they rolling this out.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oq09anh/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oqlhkci",
+      "author": "ParkingReasonable816",
+      "text": "It looks too slow, will it be better to change your context hint ?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oqlhkci/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_oqnpag7",
+      "author": "Original_Dog_7251",
+      "text": "Lol no idea I have gotten 13 impressions in 4 days...0 clicks. They charged me $0 so far. If they don't improve it it will become pretty worthless soon only thing is there stupid $100 aurthoization hit me twice so they took $200 from me waiting for that to recredit.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/oqnpag7/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    },
+    {
+      "id": "t1_on7i6lx",
+      "author": "ppcwithyrv",
+      "text": "TLDR",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/on7i6lx/",
+      "source_url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "subreddit": "PPC"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+    "method": "old_reddit_html"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "src-81544667a6fb",
+  "source_id": "openhands-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Setup - OpenHands Docs",
+  "url": "https://docs.openhands.dev/openhands/usage/run-openhands/local-setup",
+  "canonical_url": "https://docs.openhands.dev/openhands/usage/run-openhands/local-setup",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:49.766274+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Getting started with running OpenHands on your own.",
+  "raw_content_path": null,
+  "dedupe_key": "0ceb47353632",
+  "status": "new",
+  "errors": []
+}

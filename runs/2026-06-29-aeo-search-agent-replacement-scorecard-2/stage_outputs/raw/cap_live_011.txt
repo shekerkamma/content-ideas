@@ -1,0 +1,83 @@
+# Legal Research & Drafting: Traditional Tools vs. AI Agents
+
+## Current Standard Workflows
+
+**Research Phase:**
+- **Westlaw/LexisNexis** - dominant legal databases with citators (KeyCite/Shepard's)
+- **Fastcase/Casetext** - lower-cost alternatives
+- **Google Scholar** - free case law access
+- **Practice guides & treatises** - secondary sources
+- Manual citation checking and validation
+
+**Drafting Phase:**
+- **Microsoft Word** - still the standard (with track changes, comments)
+- **Document automation tools** - HotDocs, Contract Express for templates
+- **Matter management systems** - Clio, MyCase for small firms
+- **DMS (Document Management)** - iManage, NetDocuments for large firms
+- Manual copy-paste from prior work, form files, precedent banks
+
+## Where AI Agents Are Actually Useful
+
+**✅ Research assistance:**
+- Summarizing case law and identifying relevant precedents
+- Finding statutory/regulatory language across jurisdictions
+- Initial "what does the law say about X" scoping queries
+- Extracting holdings and key facts from long opinions
+
+**✅ First-draft generation:**
+- Routine motions, discovery responses, demand letters
+- Contract clause drafting from templates
+- Translating business requirements into legal language
+- Reformatting/restructuring existing text
+
+**✅ Review & analysis:**
+- Spotting inconsistencies across document sets
+- Comparing contract versions (going beyond redlines)
+- Checking defined terms usage
+- Due diligence document review and categorization
+
+## Where AI Agents Fall Short
+
+**❌ Citation reliability:**
+- Hallucinating cases remains a critical problem
+- Can't fully replace Shepardizing/KeyCiting
+- Risk of citing overturned or distinguishable cases
+
+**❌ Jurisdiction-specific nuance:**
+- Misses local rules, standing orders, judge preferences
+- Struggles with circuit splits and evolving standards
+- Can conflate similar-but-distinct doctrines
+
+**❌ Strategic judgment:**
+- Can't assess which arguments will persuade *this* judge
+- Doesn't weigh litigation risk vs. settlement posture
+- Misses client-specific business context
+
+**❌ Complex novel issues:**
+- First-impression questions requiring analogical reasoning
+- Interdisciplinary problems (tax + IP + corporate structure)
+- Predicting how courts will apply law to new technology
+
+## Realistic Hybrid Workflows (2024)
+
+Many forward-looking teams are using:
+
+1. **AI for initial research** → validate with traditional databases
+2. **AI-generated first drafts** → senior attorney heavy editing
+3. **AI document review** → attorney judgment on flagged items
+4. **Human strategy/AI execution** - lawyer outlines argument, AI drafts sections
+
+**Tools gaining traction:**
+- Harvey AI, CoCounsel (Thomson Reuters), Lexis+ AI
+- vLex Vincent, Casetext CoCounsel
+- General LLMs (Claude, ChatGPT) with careful verification
+
+## The Real Workflow Bottlenecks AI Hasn't Solved
+
+- Client communication and expectation management
+- Internal firm knowledge management (finding *our* prior work)
+- Court filing system quirks (many still require physical/fax)
+- Negotiation and adversarial strategy
+- Ethical judgment calls
+
+The pattern I see: **AI is becoming a capable junior associate for mechanical tasks, but still needs senior supervision for anything that matters.**

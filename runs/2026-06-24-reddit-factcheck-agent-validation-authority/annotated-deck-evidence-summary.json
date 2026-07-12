@@ -1,0 +1,7 @@
+{
+  "input_pptx": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/agent-validation-authority.pptx",
+  "output_pptx": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/agent-validation-authority-reddit-validated-evidence-draft.pptx",
+  "claims": 40,
+  "annotated_source_slides": 14,
+  "unmapped_claims": 0
+}

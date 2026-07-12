@@ -1,0 +1,18 @@
+{
+  "id": "src-535fe5e28b3b",
+  "source_id": "openai-blog",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "How frontier firms are pulling ahead | OpenAI",
+  "url": "https://openai.com/index/introducing-b2b-signals/",
+  "canonical_url": "https://openai.com/index/introducing-b2b-signals/",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:35.987438+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Agentic workflows are becoming ... advanced tools, with frontier firms sending 16x as many Codex messages per worker as typical firms. Organizations can move toward the frontier: Leading firms measure depth, build governance for production use, invest in enablement, scale what works, and move from chat-based assistance to delegated work with agents. For many enterprises, the first phase of AI adoption was about ...",
+  "raw_content_path": null,
+  "dedupe_key": "2e46f4902326",
+  "status": "new",
+  "errors": []
+}

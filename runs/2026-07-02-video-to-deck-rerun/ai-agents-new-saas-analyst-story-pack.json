@@ -1,0 +1,79 @@
+{
+  "role": "ai-analyst-style upstream pack supporting video-to-deck storyboard",
+  "source_status": {
+    "ai_analyst_tool_exposed_in_current_codex_session": false,
+    "local_ai_analyst_skill_dir_found": false,
+    "fallback_used": "Recreated ai-analyst-style executive story pack from transcript, dense hyperframes, scene-change audit, and prior ai_analyst_pack schema."
+  },
+  "executive_thesis": "Agent SaaS is not a better chatbot category; it is a business model shift from selling software access to selling completed workflow outcomes.",
+  "business_decision": "Pick one paid, frequent, bounded workflow, shadow the human operator, ship the smallest useful agent with a trust wrapper, sell pilots like labor, and productize only after the workflow repeats across customers.",
+  "confidence": "Medium-high for narrative structure because it is grounded in transcript section notes and 56 scene-change frames; quantitative claims should remain directional unless externally sourced.",
+  "guardrail": "Do not present recreated visuals as exact screenshots. Treat Excalidraw boards as original concept reconstructions based on captured frames and transcript notes.",
+  "storyboard": [
+    "The buyer is not buying AI; they are buying work that gets done.",
+    "The first filter is budget: start where someone already pays for a receptionist, dispatcher, coordinator, or support role.",
+    "The product spec comes from watching real work, not brainstorming prompts.",
+    "The first agent should be minimum useful: draft, triage, coordinate, or bounded action.",
+    "The wrapper creates trust: logs, approvals, controls, handoffs, analytics, and evals.",
+    "Commercialization starts as labor-like pilots and moves toward usage or outcome pricing.",
+    "Defensibility comes from owning workflow context, exception handling, policy, and eval sets.",
+    "Distribution is workflow teardown: old way, agent way, proof, then paid amplification."
+  ],
+  "slide_synthesis": [
+    {
+      "section": "Intro",
+      "claim": "Agent SaaS sells completed work, not access to another tool.",
+      "builder_implication": "Frame the offer around the job and outcome before naming the agent."
+    },
+    {
+      "section": "The Product Is The Job",
+      "claim": "The product surface shifts from software screens to work handoff.",
+      "builder_implication": "Define the complete handoff: input, SLA, exception path, approval point, and success state."
+    },
+    {
+      "section": "Real Examples",
+      "claim": "The strongest examples are boring, frequent service workflows with real budget.",
+      "builder_implication": "Prioritize jobs that already map to headcount, agency, VA, or BPO spend."
+    },
+    {
+      "section": "Pick A Workflow With A Paycheck",
+      "claim": "Budget owner is the forcing function; pain without budget is not a wedge.",
+      "builder_implication": "Score 20 jobs in one niche before writing code."
+    },
+    {
+      "section": "Shadow The Human First",
+      "claim": "The workflow spec is hidden in exceptions, checks, and escalation behavior.",
+      "builder_implication": "Observe 10-20 jobs and write the seven-part spec before prompting."
+    },
+    {
+      "section": "Minimum Useful Agent",
+      "claim": "Autonomy should be earned, not assumed.",
+      "builder_implication": "Start with draft-and-approve, triage, coordinator, or bounded action."
+    },
+    {
+      "section": "Product Wrapper And Evals",
+      "claim": "The wrapper is what makes automation buyable.",
+      "builder_implication": "Build logs, approvals, controls, handoff rules, analytics, and evals from the start."
+    },
+    {
+      "section": "Sell The Pilot Like Labor",
+      "claim": "The first sale should feel like buying labor capacity, not software transformation.",
+      "builder_implication": "Sell three same-niche pilots with setup plus monthly pricing."
+    },
+    {
+      "section": "Own The Workflow",
+      "claim": "Workflow context becomes the moat.",
+      "builder_implication": "Capture exceptions, policy, eval examples, and operating memory as product assets."
+    },
+    {
+      "section": "Distribution And 30-Day Plan",
+      "claim": "Workflow teardowns are the go-to-market engine.",
+      "builder_implication": "Publish old-way vs agent-way proof and put paid ads behind winners."
+    },
+    {
+      "section": "Closing Thoughts",
+      "claim": "The founder action is to choose a paid job, not to ideate an agent category.",
+      "builder_implication": "Use the screen-change audit as source coverage, then sell the painkiller."
+    }
+  ]
+}

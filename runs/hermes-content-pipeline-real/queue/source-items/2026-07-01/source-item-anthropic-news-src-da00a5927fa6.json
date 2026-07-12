@@ -1,0 +1,18 @@
+{
+  "id": "src-da00a5927fa6",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "ServiceNow chooses Claude to power customer apps and increase ...",
+  "url": "https://www.anthropic.com/news/servicenow-anthropic-claude",
+  "canonical_url": "https://www.anthropic.com/news/servicenow-anthropic-claude",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:39.759206+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+  "raw_content_path": null,
+  "dedupe_key": "94f6451e3643",
+  "status": "new",
+  "errors": []
+}

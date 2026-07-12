@@ -1,0 +1,3 @@
+query_id,query,engine,target_brand_mentioned,competitors_mentioned,citation_domains,raw_answer_path
+q_001,best enterprise AI search optimization platforms,sample,True,Profound; AthenaHQ,profound.com; athenahq.ai,stage_outputs/raw/cap_001.txt
+q_002,Acme AEO vs Profound for enterprise AI search optimization,sample,True,AthenaHQ; Peec AI,athenahq.ai; peec.ai,stage_outputs/raw/cap_002.txt

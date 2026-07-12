@@ -1,0 +1,267 @@
+{
+  "post": {
+    "title": "No, Support Traits are not the reason you can’t flex anymore. Balance is.",
+    "author": "TheTrueAfurodi",
+    "score": 673,
+    "content": "There are a lot posts that are putting emphasis on support traits lately, notably as a reason as to why TFT feels not flexible anymore. And I found these super interesting! However, I think this argument is just incorrect. And although I understand that some people like support traits and are disappointed there are less in the game right now, I am convinced that their impact on flex play is much more limited than it can appear. The point I am going to make here is very simple: The current lack of flexibility in TFT is mostly the consequence of a poor balance, especially between 4 costs units, with traitwebs being the 2 nd factor. Support traits have nothing to do with it. Preambular: I tried these last few days to have conversations in the comments as both TFT and flexibility are 2 topics I am very passionate about... just to end up getting downvoted to hell and treated like I am dumb. Please don't do that, it doesn't elevate the discussion in any point and although I try to not let it affect me too much, it does not put a great light on the TFT community or make more people want to express their own opinion. I am sure my way of being very harsh and direct without sugarcoating or the fact I am not a native english speaker plays a part in this, and I apologize for it. But if you disagree with me and want to express it, please do it in a constructive and respectful way and stop saying \"ur wrong\" + mass downvote. I will be very happy to discuss with anyone who disagree and correct my point of view on anything I am wrong about, as long as this gets the discussion further and it does not just become an ego war on who can scream the loudest. . 1) What is (for me) a good TFT Unit ? The Corki Index In order to understand why balance is the main reason for the lack of flex play, we need to define what is a good unit and what is a bad one. My definition of a good unit is how much it is going to be useful and impactful with the least amount of investment. For this, I have been using what I call the Corki Index. The Corki index is a concept I came up with when seeing Set 13’s Scrap/Artillerist 4 cost AD carry Corki. This unit was not only good but also didn’t need either of their traits active to do so, with Scrap being a Shield and an Item and Artillerist being so negligible you would often run Corki Main Carry in Scrap without having it active. He wasn’t even picky in terms of items, just needing any AD to be good. So, I now use him as an example of a 4 cost that is almost a Threat on how they work. When I analyze a set in TFT, I now assign to units a number between 1 and 5, where 1 means they are good with little to no investment and 5 means that in order to be good they need very specific conditions. Keep in mind that the Corki Index can change between patches, but most of the time stays relatively the same as long as units don’t overgo some major reworks and is more indicative of how flexible a unit is by design rather than their overall strength as a meta powerhouse. Set 13 Artillerist Scrap Corki Examples in set 15 : Jarvan has a Corki Index of 1, as he doesn’t really care about the Strategist shield or the Mecha for his stats and is always going to be useful if he casts at least once and stuns enemies. He is not a good tank, but if I put tank items on him, I can expect at least some survivability from him. I am always happy to buy him and put him on my boards. Samira has a Corki Index of 5. She is very picky in terms of items: she doesn’t want Attack Speed, she is a bad RedBuff/LastWhisper user, and the items she seems to like the most are IE + mana with little to no alternatives. In terms of comps, she is okay only on Vertical Soul Fighter, but at the same time she also needs Edgelord if possible or she can die when casting. And even then, on stage 5 she falls off a cliff and you need Viego 3/Gwen 2/5 cost with Soul Fighter spat to hope for a good placement. She is although an okay item holder in stage 3, but I often prefer keeping my AD on kalista/senna. I only buy her when I need to, and I am not always happy with it. For the rest of this post, I will refer to the Corki Index as “CI: ( number) ”. . 2) An example of Flex Play done right: Set 10’s Ezreal Era The best example I can come up with of a meta where flex play was not only possible but also strong is obviously Set 10’s Heartsteel Meta. For those who have not played it or don’t remember, Set 10 Remix Rumble had a comp dominant for multiple patches built around flexibility, where the only constant was the main carry was 4 cost AD caster Ezreal (CI:2) and that the best way to play it was to stack as many traits as possible, with a support trait Jazz rewarding you for doing so (HP and Damage Amp to the team for each trait active). This was possible for 2 main reasons: 1) The headliner mechanic, who would guarantee that if you were going level 8 with 40 gold you would have a 4 cost 2 star unit with a Trait bonus and 2) The CI of the different 4 costs was for a majority of them very low. There were others factors like Heartsteel allowing you to stay rich for the whole game or 5 costs being hyper flexible and splashable, but these are reasons much less impactful in my opinion. For the sake of the length of this post, I am not going to get into too many details. But below, here are some variations just to show you how flexible this comp was: Most standard and considered best overall version on level 8. Emo +1 Poppy was the Headliner you were looking for, while any variation of Ezreal or Zed would be good alternatives. Both Zed and Poppy can act as 2nd carry, with Zed being relevant late game as well Lowroll version where you had to settle for Thresh Healdiner (Guardian Country). Despite that, it was often enough to win on stage 4. Thresh was not often kept on level 9 except if Yorick was around. Perfect stab board to push 9 Caitlyn version where u would focus on 2 backliner instead of the standard Ez + melee. Depending on the Headliner tag of Cait and your rolls, Garen Aphelios and Corki could fit in, despite Lucian being the best by far. Jazz not required Another alternative version around Viego. His traits being both 3 pieces often meant you had to drop Jazz. This version had a lower cap so most of the times when level 9 you would change Viego with any 5 cost an put items on Yorick/Qyiana Complete capped version of the board! This board was the ultimate max cap, but more often than not you would end up with a board close to it: Ez in place of Jhin, Zed/Yone instead of Ziggs etc... All versions of this board were used by me in set 10 master elo and on revival with success Ultimately, what made this possible? The combination of Ezreal being an incredible carry with an investment as low as Blue Buff/IE+ 1 Big shot, and the 4-cost balance being so good that I can flex around almost ANY 4-cost upgraded I can find, with very low CI across the board and unit strength being around items rather than traits. The traitweb was also a huge help, as Sett and Yone Triple traits made flexing very easily while having to basically just hold these 2 units, and MF allowed both Big Shot and Jazz to be active which was what Ezreal was looking for the most. . 3) The Beginning of the Downfall for Flex: Set 12’s Arcana Varus struggles If we want to look out at the opposite example, we can look at the most similar unit to Heartseel Ezreal made in recent sets: set 12’s Magic and Mayhem Pyro Blaster Varus. The conditions were on paper basically the same: Varus was a 4 cost AD caster, low CI of 2, who wanted almost the same items as Ezreal and only cared about Blaster (where Pyro was less important). There was a similar support trait in the form of Arcana Tahm Kench bonus who would essentially be a reprint of Jazz (Bonus HP for each trait active). Tahm was also a very useful Tank with a CI:1 being even better than current Set 15 Jarvan as a stun tank. And the comp did work and was dominant for almost 2 patches. However, soon players figured out the most optimal way to play this comp, and no flexibility was seen anymore as only 1 variant of Arcana Varus was consistently played. Here is the board: Standard version of Arcana Varus. Tahm Kench/Rumble/Varus were the glue of the comp similar to how Sett/MF/Ez worked. Morgana and Witchcraft could replace Xerath and Rakan on 9. But the reality is, if other 4 costs were better, it should’ve been possible to play different variations! Sure, the traitweb was not as permissive, but on paper, you could try out different possibilities. Here are some examples: What if Taric and Nasus were good tanks? What if Olaf was for Varus what set 10's Zed was to Heartsteel Ezreal? This version around Fiora is insane. In theory there was an infinite number of variations with a Varus/Fiora Duo Carry: Morgana for Preserver, Neeko for Shapeshifter which allows you to fit Briar in, Gwen for Warrior so you could triple carry the 2 melee girls etc... So what happened? Simple: Taric, Ryze, Nasus, Olaf, Fiora… all these 4 costs were just Bad Units, or at least nonflexible units that needed specific items or/and vertical traits at their fullest to do something. Despite Varus and Tahm Kench having indeed very low CI, almost every other 4 cost was not in a similar position. So players started playing not only the comp that had the most trait possible, but most importantly the one where you would end up playing the best units. In this case, the board had to meet 2 very specific meta dependant conditions: playing the completely overpowered Preserver trait, and using the only 2 Tanks in the game that were useful outside of verticals Rakan and Tahm Kench. And selfish traits are not the issue here: Preserver was maybe the most broken support trait ever, and all it did was making everyone running them even on verticals, like going 5 Faerie instead of 7 cause Chrono and Preserver where MUCH more impactful than 2 other Faerie traitbots. On the other hand Frost/Witchcraft/Portal could all be considered selfless traits at their lowest 2/3 pieces, but as you seen the 4 cost units in them were so bad by themselves the traits were simply not played outside of full highest vertical. Even Arcana, if you see it from the Tahm Kench bonus, is a selfless trait, and still ended up pushing players to just find the single best way to play it factoring what units were strong and what units weren’t. Because as soon as Varus and Tahm Kench bonus were nerfed, they never were a “flex Bronze 4 life” board anymore in set 12, and players came back to what worked best in set 12: rerolls and verticals + Preserver. Not because the support trait was gone: but because no unit could work if they had not their assigned vertical trait at their fullest. . 4) If Set 15 was balanced: Flex is only one patch away In patch 15.3, I decided to main Varus fast 9 as a way of improving my ability to play fast 9 boards. But as I was playing, I realized I needed to have a backup plan in case things didn’t go my way and I just couldn’t realistically go level 9. So I came up with an hypothetical fast 8 board that could be a plan B if I couldn’t play Varus. Here is the board I came up with, which I named Samira 8/4: Samira 8/4! Jarvan, Kobuko, Ksante, Yasuo are all alternatives that can easily fit with some tweaks, as other flexible 5 costs like Zyra, TF, Braum, Lee Sin... This board was designed with 2 key objectives in mind: being flexible in terms of units I can itemize and not playing around either Ksante (too contested) or any 5-cost unit as I was staying level 8 most of the game. And in theory, this should work! With Samira Jinx and Volibear respectively taking Varus, TF and Braum items, I would guarantee myself to be able to play around anyone upgraded first without having to change my items from the Varus board. Sett, Poppy and even Jarvan all fit in this board, so I also could play around any of these as my main tank, and I am sure, now that Yuumi is dead, even Leona could fit with some tweeks like Rell or Xin Zhao. And even if you somehow end up with AP items Ryze should be able to take those, or even Karma with some more tweaks. You’ll always have some form of support traits in form of Lucha stun or Strategist bonuses and whatever mentor bonus you settled on between Yasuo Kobuko and Ryze. And you know what happened? This board was a disaster. Neither Sett or Poppy would tank a 1/3 of what Ksante could in the same board. Samira would end up dying for no reason if I positioned wrong. Volibear would end up stuck in the opponents Ksante and was never able to be useful late game. Jinx was my only reliable damage dealer, but she was also the hardest to find 2* as too contested by Star Guardians players and it’s not like she was a good carry on this board, just the least bad. Even with Prismatic Bronze For life I would still end up losing. And the only reason this happened was not because trait web is bad designed or because it lacks support traits: it only happened because all my units were useless without their vertical trait active at their highest, even though Voli and Jinx both have a pretty low CI of around 2-3. You could argue that this shouldn’t work, and no unit should be allowed to be good with low investment. I think this defeats the whole purpose of flex play but sure. But then how to explain that KSante can run the game all by himself pre patch, and is now post nerf still the best non 3* tank in the game outside of verticals? You could argue that traits are now too selfish and should grant more teamwide bonuses even at low pieces. I again don’t think this is the issue at play here, as if you compare this to the Set 10’s Ez board only Jazz was a very impactful teamwide buff (and you could even play without it), and so Bronze For Life shouldve prevented this. What is for certain is that this board don’t work and never will in the current state of the game. As long as units but mostly 4 costs are that bad traitless this will continue to happen no matter how many support traits you can throw in. Tiny Team was the closest we got to a flex board, and not only it was nerfed instantely but it also quickly became as optimized as any other board as anyone started playing bastionless/itemless Braum 1 instead of a 2* Volibear with items who could fit easily with Xayah because you know, the guides said so. And the funniest thing? Even Tiny team ended up running Ksante, because why not? No other unit can compare to him anyway, stop flexing. . 5) Going further First of all, I want to be very clear about this: I am firmly convinced that the current lack of flexibility in how TFT is played at higher elos is not a calculated neither intentional plan from the dev and the balance team. I think that TFT is treated with a lot if not the most care out of all the live service games. I just think that balancing a game like this is pretty damn hard and at no point I think I would or anybody on this sub do a better job than them. I also want to emphasize how a lot of efforts, despite not all successful, were made to promote Flex play: Form Swappers in set 13, the augment Bronze For Life, the cap of most classes trait requirements put down to 6 instead of 8 with an emblem to promote diversity in these boards, the increase of 5 costs that are meant to be flexible with 1 or even 0 shared traits, the trait activation going down to 2 pieces instead of 3 for a lot of origins etc... My complete out of nowhere not backed up by anything theory is that since set 11's Kayn/Heavenly incident and the 4 cost general HP buff patch that ended up in the Built Different: the meta, the team is much more careful of putting power in 4 costs units and try to insert more of it in their traits. And while this is completely understandable, for a player like me who enjoys launching a TFT game and still not knowing what I am gonna play on 3-6, I admit it can be frustrating since the correct play is almost always to commit on 2-1 and try to force my way into one specific comp, rather than playing with what the shops, the augments or the items lead me into. If you ask me, the 2 things I would do if I had any sort of agency in all of this would be 1) increase 4 costs odds at level 8 because in my opinion being able to guarantee my 3 cost 2* carry on 7 or my 2 cost 2* on 6 with 40 gold while not being able to do so on level 8 with 4 cost units despite while investing a lot more of my HP and gold feels very, very bad and 2) shift more of the power of 4 costs units in their kit. To be clear: I don't want every 4 cost to feel like a threat, and I also think some higher cap very picky 4 cost that function only with a specific requirements are both fun and healthy, as long as it is not all of them. But seeing how on this set I am sometimes more afraid than traitless Malz or Senna 2 than Samira or Karma 2 feels so wrong. 4 cost 2 star units are meant to be the premium carries of players for a majority of the games, and right now it just doesn't feel like it unless you have put every one of your ressources in a specific comp and specific items for them. And even when you do that, since you are still not guaranteed to hit the specific 4 costs you are looking for, it can feel sometimes like you are playing the wrong way compared to rerollers who stay on 6/7 with their 2x econ augment. (there is also an argument to be made somewhere on how the lack of flexible combat augments right now has made everyone going full econ full reroll early, but hey one topic at the time) For the support trait conversation: I again think it is very interesting to see how they are less and less present in the game, and although I do not share this sentiment, I very much understand the wish to see more of them. But I also reiterate my statement: just because support traits and flex play feel less prevalent in recent sets at the same time, that doesn't necessarly mean that there is a direct correlation. As showed with Preserver in set 12, a good support trait powerwise often means that it just become very redundant which traitbots are going to be on your board, rather than guarantee that you can flex every carry. Ezreal Heartsteel Flex was good because the majority of the 4 cost units in that set needed very little to be good, especially in terms of traits. If this set 4 costs could function with combat augments and specific items as effectively as in their respective \"stack every unit of the same trait\" kind of vertical comp, then you could indeed flex more which 4 cost to play since you know most of them are going to be useful with little to no regard to who is your supporting cast this game. Heavenly Kain was the best example of this: if a support trait becomes too good, then what it leads to is to find the best unit that benefits from it, and it suddenly becomes less about flex and more about another meta vertical comp who just happens to have a carry that has not the trait you are maxing. And if a support trait is invented where any carry + the 6 units of this support trait can function, then not only it does not solve the problem at all since units are still bad just hard carried by this trait, but it also becomes the rush to find these very specific support trait units and suddenly everybody is starting to play the same comp with a 1 or 2 unit difference, and the winner is the one who found the best of these carries/the most of these support traitbots. And if even worse a support trait with only 2-4 units is good enough to make a significant difference in whether or not your itemized carry is good, then it could lead to a situation where it is optimal to ALWAYS run something like 6 Soul Fighter + 2 Strategists, just like in set 12 nobody was running more than 5 Faerie without a spat because both the higher vertical was not worth it and preserver was that good, while Portal comps were instead never going under 8 Portal cause it was the only way to bring out the true power of the trait. And finally, I know how much people and especially challenger players hate this argument: we have to be honest and admit that the increase in quality and quantity of Statistics and guides in TFT has without a doubt not helped with flexibility. This is not the main argument here, and this is not to deny the major part of the balance in all of this. If the game was more balanced, Guides who explain you how to flex properly could very much exist. But with so many stats and pro players telling you what is the most optimal way to farm LPs, often non challenger players don't even bother experimenting with variation on their meta boards because someone said it is better this way so it has to be. And a lot of the times it's absolutely the right thing to do: when the power of your comp is contained in traits and not units not going for the optimized trait version is indeed incorrect. But I would feel not genuine if I did not raise this point. As much a I love Demacian Raptor, reading in his latest guide post \"TFT is not a flexible game\" always breaks my heart. Because on paper there is so much variance that you are suppose to adapt you can't just say better players are those who always got dropped their BIS on 2-1. And even if it's true currently, seeing TFT as a game where your whole gameplan is decided on stage 1 surely does not help to get anyone to try being more open and flexible. . 6) To conclude So here is my contribution to the argument! If you read that far: thank you, hope you had a good read. I am again sorry in advance if I came up as rude or harsh in any way, that is not what my intent is, but I am also both very passionate about this topic and not very good at sugarcoating. Hopefully see you in the comments for some constructive and respectful talks, especially if you disagree! For anyone who thinks I am silver: Loux26 #WUW on EUW. Yes I am not Challenger, Yes i play a lot and I am still 0 lp, I just enjoy the game and sometimes play silly comps or make mistakes :)",
+    "url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+    "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+    "subreddit": "CompetitiveTFT"
+  },
+  "comments": [
+    {
+      "id": "t1_netirtw",
+      "author": "Riot_Mort",
+      "text": "Just jumping in to say I read this and found it very well done. Can't comment really right now, and actions are louder than words....but wanted to say I appreciated the evening read :)",
+      "score": 393,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/netirtw/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neugjn6",
+      "author": "ThaToastman",
+      "text": "Eagerly awaiting a mort design followup video about the corki index and how set 16 is gonna be 5 different corki skins and 5 diff j4 skins 😤😤",
+      "score": 39,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neugjn6/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neu3ceb",
+      "author": "Lunaedge",
+      "text": "Oh man I can TASTE the announcement 😭 I hope you're enjoying this newfound taste for long form posts the sub's discovered! :D cheers!",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neu3ceb/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neuw7vt",
+      "author": "TheTrueAfurodi",
+      "text": "the announcement? what anouncement? Yes haha don't know if you were talking to me but I personnaly love long post. Also props to your great moderation work Luna. Se ho letto bene sei anche italiana no? Grazie mille! Il sub funziona anche grazie a te",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neuw7vt/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neuwu11",
+      "author": "Lunaedge",
+      "text": "the announcement? what anouncement? In the 2025 Roadmap video they said something along the lines of \"Set 16 will see huge changes to how you build your army\", my current hypothesis is that it has something to do with the Trait Web and the flexibility argument. Mort saying he can't go more in depth and that actions speak louder than words make me think I'm onto something :P Also props to your great moderation work Luna. Se ho letto bene sei anche italiana no? Grazie mille! Il sub funziona anche grazie a te Grazie a te per l'apprezzamento :3 è stata dura arrivare a questo punto e ci sono stati dei punti veramente bassi nella storia del sub, ma questo paio di settimane mi ha fatto veramente aprire gli occhi su quanta strada si sia fatta. È bello da vedere 🥹",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neuwu11/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nev0js4",
+      "author": "TheTrueAfurodi",
+      "text": "Grazie della risposta Sono qua sul sub solo da un paio di giorni e quello che posso dire è che secondo me ci sono ancora un po di gente tossica ma anche un sacco di belle discussioni. Secondo me il futuro e positivo :) Ancora grazie e congratulazione per il tuo lavoro, non so se la gente lo dice abbastanza ma la moderazione + tutti i post dove promuovi la positivita sono preziossimi.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nev0js4/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neuu4pz",
+      "author": "TheTrueAfurodi",
+      "text": "I mean if you have an open slot in your team for someone who likes to mess with teambuilders and have very specific opinions... Would not say I would be the best at it but I would certainely say yes ;) Thanks for the answer Mort, it means the world to me. You and the team are doing an amazing job.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neuu4pz/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neufuhm",
+      "author": "Ok_Performance_1380",
+      "text": "Can true flexible TFT exist if every comp has an optimal version? Love the game by the way, thanks for being here. Even if there isn't build flexibility, there is still a lot of skill expression in TFT's current form.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neufuhm/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neuhsuf",
+      "author": "throwawayacc1357902",
+      "text": "Yes, it can. I think one thing a lot of the “flexibility in TFT” people miss is the fact that just because your final board is the same always doesn’t necessarily mean there isn’t flexible TFT. On the above example given (with Heartsteel Ezreal), you almost always wanted to end up with board #1 by the end of the game. It wasn’t so much better than the others that the others were unplayable, but it was still better and eventually you needed to cap out, so you’d always sell Thresh for Poppy. the main idea is having fall-backs during a 4-1 rolldown. You can take a headliner thresh and play him and be strong stage 4. You can play around Zed if you have a bunch of AD items etc etc.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neuhsuf/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neuvs8o",
+      "author": "TheTrueAfurodi",
+      "text": "Yes but it is not entirely true for Heartsteel. The Zed/Poppy variation was the best for Ez on LEVEL 8. But since not a single unit could compare to Ez in the earlier stages, you would often play this board from behind and have little HP when it comes online (and you didn't want to delay your 4-1/2 rolldown with an expensive winstreak or no Ez left). To win the whole thing, you HAD to go level 9 and cap around 5 costs. Zed could make it to the final board, but Poppy most of the times would not and be replaced by Yorick/Thresh while Zac was replaced by Illaoi and Bard kept only if ZIggs otherwise Lucian would take his place. The Poppy board was the most stable and the stronger version while also allowing you to flex your items between tank/melee/AD, but in honesty Thresh + Zed was almost as strong. All the boards I made on the post was to show that on level 8 stage 4 you could be stable in a lot of different ways. Your goal was to end up with the last one, the \"Ultimate cap\" but by the time you did it the game was over you either died or win the whole thing so even on level 9 you had to be flexible. You NEVER sell Thresh for Poppy, that's the point Thresh helps you stabilize almost as much as Poppy. You buy Poppy 2 tho. Your goal was to be stable to go to 9. Illaoi 2 was the real cap of the comp since otherwise Karthus/Akali/Lux would come kill that poor Ez and she was also a hell of a tank. 100% agree with end board being the same does not mean no flexibility. Also it is almost never the same boards on any fast 9 since you can't guarantee to hit every specific 5 cost you are looking for, similar to how on live sometimes it's TF sometimes Zyra sometimes Braum sometimes even Yone + Shen. Varus and Ksante are constants but before hitting them you still could end up play around Jarvan + TF + Zyra. Hope I am clear and not came up as rude. Please tell me if you disagree or need details on anything!",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neuvs8o/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nexhso6",
+      "author": "junnies",
+      "text": "Imo, \"Flexibility' is a spectrum and not a dichotomy. There will almost always be an optimal variation of the comp. But if the suboptimal variations are 90-95% of the optimal variation, then they become a lot more viable. But if the suboptimal variations are 60-70% of the optimal variation, then they become much less relevant. Eg, on your level 4-2 roll-down, if you hit a '90-95%' suboptimal variation, its probably worth to play this suboptimal variation instead of ignoring it and forcing the optimal. But if all the suboptimal variations are '60-70%', then you wouldn't even bother with it. The more 'viable' variations there are, the more flexible the set. This can also apply to reroll comps, eg set 13 Quickstriker reroll comps where at the end of the set, you could flex between noc/tf/akali carry variations, but at the earlier points of the set, mostly only the nocturne variation was played. An example of a rigid, inflexible reroll comp would be the set 13 Gloves Off Vander augment. You always went 3 family + watchers, you always went for BIS for Vander. If you got some emblems, there could be some variation, but otherwise, you almost never deviated from the board and items. The augment was only offered on 2-1, so the moment you picked it, your board and gamplan was more or less decided on 2-1.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nexhso6/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nexutdm",
+      "author": "TheTrueAfurodi",
+      "text": "10000% agree Love the spectrum flexibility. Also yes my post was mostly about 4 costs but a lot of it still apply to rerolls great answer thanks!",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nexutdm/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neuugug",
+      "author": "TheTrueAfurodi",
+      "text": "Very interesting point. My opinion is that if the balance unit is on point, keeping your golds for level 9 and playing with what units you get become better than forcing and spending more gold to play the best variation, but I can be very wrong about it it's been years since set 10",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neuugug/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nf1cebx",
+      "author": "Dontwantausernametho",
+      "text": "\"Nah it's been a couple months.\" - Me after having played more set 10 revival than set 14.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nf1cebx/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_newyq4i",
+      "author": "AGoodRogering",
+      "text": "Hire them pls <3",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/newyq4i/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nexuy3v",
+      "author": "TheTrueAfurodi",
+      "text": "hahahahaha thanks",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nexuy3v/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nf1wsrp",
+      "author": "Lone__Ranger",
+      "text": "Mort gigachad",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nf1wsrp/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_o3bxi1z",
+      "author": "Emergence7",
+      "text": "Seeing OPs recent post reminded me of this With how well received set 16 is & the flexibility of units, this comment aged very well",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/o3bxi1z/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neufzpq",
+      "author": "Rozuem",
+      "text": "appreciate you",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neufzpq/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nes8hau",
+      "author": "CheeseheadRottweiler",
+      "text": "My mans wrote a tft dissertation",
+      "score": 233,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nes8hau/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nev34jm",
+      "author": "TheTrueAfurodi",
+      "text": "finally all the essays done in college are becoming uselful",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nev34jm/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_nesh4sc",
+      "author": "silencecubed",
+      "text": "https://old.reddit.com/r/CompetitiveTFT/comments/xrtwrt/reply_to_real_reason_people_dont_like_newer_sets/ Time is a circle.",
+      "score": 51,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/nesh4sc/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_net9qi4",
+      "author": "geckomage",
+      "text": "Mort was correct then, and OPs current feelings are also valid. What has changed is how Prismatic traits are achieved. It's not about getting the big trait web anymore, it's about hitting something special. This forces gold traits to be good, or the whole trait is worthless. Why bother playing Star Guardian if it isn't good at higher numbers and you can't hit prismatic to make it win? Why bother playing Soul Fighter if you can't win after hitting 8? The big traits have to be powerful at 7/8 if they are to be played at all in high level. Otherwise there is never a reason to chase that dream and hope to win with a prismatic in set 15.",
+      "score": 23,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/net9qi4/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_netihwo",
+      "author": "JustAD0nut",
+      "text": "My personal take is that verticals should be cheap and strong, and that units should be expensive and stronger. I would say in an ideal world, verticals would dominate stage 4, with more horizontal boards get more online stage 5. Just example numbers of course. Unfortunately the current state of tft, I think that the \"late game\" starts after your big roll down for the non-reroll comps.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/netihwo/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "id": "t1_neui0y2",
+      "author": "throwawayacc1357902",
+      "text": "I personally hard disagree. The whole idea around verticals is that once you hit them, you spike hard. On 4-1, you’re rolling down for Samira Sett, not for 8 SF. The order of operations should be 4 costs earlier than verticals earlier than fast 9 boards.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/neui0y2/",
+      "source_url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "subreddit": "CompetitiveTFT"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+    "method": "old_reddit_html"
+  }
+}

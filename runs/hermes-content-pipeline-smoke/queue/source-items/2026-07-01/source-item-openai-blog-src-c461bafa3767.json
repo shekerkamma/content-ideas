@@ -1,0 +1,18 @@
+{
+  "id": "src-c461bafa3767",
+  "source_id": "openai-blog",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "OpenAI Blog signal for Frontier AI platforms",
+  "url": "https://openai.com/news/",
+  "canonical_url": "https://openai.com/news/",
+  "published_at": "2026-07-01T00:00:00+00:00",
+  "fetched_at": "2026-07-01T05:17:50.921119+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Offline seed item from OpenAI Blog for evaluating model releases, agent tooling, enterprise AI adoption. Use live mode to replace this with current source content.",
+  "raw_content_path": null,
+  "dedupe_key": "36b87804a01a",
+  "status": "new",
+  "errors": []
+}

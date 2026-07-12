@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "review-decision.schema.json",
+  "title": "ReviewDecision",
+  "type": "object",
+  "required": [
+    "id",
+    "draft_package_id",
+    "reviewer",
+    "reviewed_at",
+    "decision",
+    "notes"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "draft_package_id": { "type": "string" },
+    "reviewer": { "type": "string" },
+    "reviewed_at": { "type": "string", "format": "date-time" },
+    "decision": {
+      "type": "string",
+      "enum": ["approved", "approved_with_edits", "needs_revision", "rejected"]
+    },
+    "notes": { "type": "string" },
+    "required_changes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "publish_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "memory_writeback_allowed": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}
+

@@ -1,0 +1,104 @@
+{
+  "method": "old_reddit_html",
+  "queries": [
+    "construction drawings review rework delays",
+    "construction plans mistakes rework",
+    "consumer lending collections repayment plans",
+    "loan servicing borrower communications",
+    "insurance claims manual review",
+    "claims processing insurance software"
+  ],
+  "threads": [
+    {
+      "title": "Frustrated New Build Owner",
+      "url": "https://old.reddit.com/r/Homebuilding/comments/1qlnh6o/frustrated_new_build_owner/",
+      "query": "construction drawings review rework delays",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-01.json",
+      "comments": 25,
+      "post_title": "Frustrated New Build Owner",
+      "subreddit": "Homebuilding"
+    },
+    {
+      "title": "Version 2.3.5 Update Announcement | Mar. 25, 2026",
+      "url": "https://old.reddit.com/r/OnceHumanOfficial/comments/1s35zua/version_235_update_announcement_mar_25_2026/",
+      "query": "construction drawings review rework delays",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-02.json",
+      "comments": 13,
+      "post_title": "Version 2.3.5 Update Announcement | Mar. 25, 2026",
+      "subreddit": "OnceHumanOfficial"
+    },
+    {
+      "title": "| U.S POLITICAL BRIEFING | 19.06.2026 | 04:10 AM ET | Last 9 Hours | Supreme Court overturns drug user gun ban, US-Iran preliminary accord details revealed, and FBI escalates counter-drone defense for World Cup sites |",
+      "url": "https://old.reddit.com/r/TrumpGlobalWar/comments/1u9ymh2/us_political_briefing_19062026_0410_am_et_last_9/",
+      "query": "construction drawings review rework delays",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-03.json",
+      "comments": 0,
+      "post_title": "| U.S POLITICAL BRIEFING | 19.06.2026 | 04:10 AM ET | Last 9 Hours | Supreme Court overturns drug user gun ban, US-Iran preliminary accord details revealed, and FBI escalates counter-drone defense for World Cup sites |",
+      "subreddit": "TrumpGlobalWar"
+    },
+    {
+      "title": "[AI WEEKLY NEWS RUNDOWN] SpaceX Buys Cursor for $60B, Meta Fires 10%, Google I/O 2026 wraps up with Gemini Spark & Omni, and the $1.25B Compute Bill (May 17 - 24 2026)",
+      "url": "https://old.reddit.com/user/enoumen/comments/1tm7xh9/ai_weekly_news_rundown_spacex_buys_cursor_for_60b/",
+      "query": "construction drawings review rework delays",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-04.json",
+      "comments": 0,
+      "post_title": "[AI WEEKLY NEWS RUNDOWN] SpaceX Buys Cursor for $60B, Meta Fires 10%, Google I/O 2026 wraps up with Gemini Spark & Omni, and the $1.25B Compute Bill (May 17 - 24 2026)",
+      "subreddit": "u_enoumen"
+    },
+    {
+      "title": "No, Support Traits are not the reason you can’t flex anymore. Balance is.",
+      "url": "https://old.reddit.com/r/CompetitiveTFT/comments/1njqgj3/no_support_traits_are_not_the_reason_you_cant/",
+      "query": "construction plans mistakes rework",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-05.json",
+      "comments": 25,
+      "post_title": "No, Support Traits are not the reason you can’t flex anymore. Balance is.",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "title": "Official r/NFL Week 18 Power Rankings",
+      "url": "https://old.reddit.com/r/nfl/comments/1q5uw63/official_rnfl_week_18_power_rankings/",
+      "query": "construction plans mistakes rework",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-06.json",
+      "comments": 25,
+      "post_title": "Official r/NFL Week 18 Power Rankings",
+      "subreddit": "nfl"
+    },
+    {
+      "title": "TFT's Economy is Broken (In my opinion) - Deep dive, very biased and very long analysis",
+      "url": "https://old.reddit.com/r/CompetitiveTFT/comments/1qu8drj/tfts_economy_is_broken_in_my_opinion_deep_dive/",
+      "query": "construction plans mistakes rework",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-07.json",
+      "comments": 25,
+      "post_title": "TFT's Economy is Broken (In my opinion) - Deep dive, very biased and very long analysis",
+      "subreddit": "CompetitiveTFT"
+    },
+    {
+      "title": "Victoria 3 - Dev Diary #152 - What’s next after 1.9",
+      "url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "query": "construction plans mistakes rework",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-08.json",
+      "comments": 25,
+      "post_title": "Victoria 3 - Dev Diary #152 - What’s next after 1.9",
+      "subreddit": "victoria3"
+    },
+    {
+      "title": "Spirit to focus on Fort Lauderdale, Orlando, New York and Detroit after leaving bankruptcy",
+      "url": "https://old.reddit.com/r/spiritair/comments/1rw4qxf/spirit_to_focus_on_fort_lauderdale_orlando_new/",
+      "query": "consumer lending collections repayment plans",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-09.json",
+      "comments": 25,
+      "post_title": "Spirit to focus on Fort Lauderdale, Orlando, New York and Detroit after leaving bankruptcy",
+      "subreddit": "spiritair"
+    },
+    {
+      "title": "[DO NOT USE] Did you use the 'JA' app? What to do now?",
+      "url": "https://old.reddit.com/r/cashadvanceapps/comments/1skx4ms/do_not_use_did_you_use_the_ja_app_what_to_do_now/",
+      "query": "consumer lending collections repayment plans",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical3/reddit-thread-10.json",
+      "comments": 19,
+      "post_title": "[DO NOT USE] Did you use the 'JA' app? What to do now?",
+      "subreddit": "cashadvanceapps"
+    }
+  ],
+  "thread_count": 10
+}

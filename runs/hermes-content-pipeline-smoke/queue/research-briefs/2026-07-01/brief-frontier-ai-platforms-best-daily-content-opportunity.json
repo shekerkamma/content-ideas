@@ -1,0 +1,61 @@
+{
+  "id": "brief-e4ce7eef0f97",
+  "topic_cluster_id": "topic-c3ec7d27cbd5",
+  "title": "Frontier AI platforms: best daily content opportunity",
+  "thesis": "Frontier AI platforms is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+  "angle": "Explain what changed in Frontier AI platforms and convert it into a practical implementation narrative for AI operators.",
+  "evidence": [
+    {
+      "claim": "openai-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c1"
+      ]
+    },
+    {
+      "claim": "anthropic-news contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c2"
+      ]
+    },
+    {
+      "claim": "google-deepmind-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c3"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "c1",
+      "title": "OpenAI Blog signal for Frontier AI platforms",
+      "url": "https://openai.com/news/",
+      "source_id": "openai-blog",
+      "published_at": "2026-07-01T00:00:00+00:00",
+      "fetched_at": "2026-07-01T05:17:50.921119+00:00"
+    },
+    {
+      "id": "c2",
+      "title": "Anthropic News signal for Frontier AI platforms",
+      "url": "https://www.anthropic.com/news",
+      "source_id": "anthropic-news",
+      "published_at": "2026-07-01T00:00:00+00:00",
+      "fetched_at": "2026-07-01T05:17:50.921559+00:00"
+    },
+    {
+      "id": "c3",
+      "title": "Google DeepMind Blog signal for Frontier AI platforms",
+      "url": "https://deepmind.google/discover/blog/",
+      "source_id": "google-deepmind-blog",
+      "published_at": "2026-07-01T00:00:00+00:00",
+      "fetched_at": "2026-07-01T05:17:50.921981+00:00"
+    }
+  ],
+  "risks": [
+    "Offline or snippet-only evidence must be replaced with full source review before publishing.",
+    "The article must avoid overclaiming beyond cited source material."
+  ],
+  "missing_facts": [
+    "Current primary-source details should be verified in live mode before final editorial approval."
+  ],
+  "status": "approved_for_draft"
+}

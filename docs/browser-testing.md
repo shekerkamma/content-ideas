@@ -29,6 +29,45 @@ Then open:
 http://127.0.0.1:8766/
 ```
 
+## LLM Wiki Agent Real Ingest
+
+Deterministic PDF + URL fixture ingest:
+
+```bash
+npm run llm-wiki:smoke
+```
+
+Live Chromium URL/PDF download ingest:
+
+```bash
+npm run llm-wiki:live
+```
+
+Visible live Chromium ingest:
+
+```bash
+npm run llm-wiki:live:headed
+```
+
+Override live sources:
+
+```bash
+npm run llm-wiki:live:headed -- --url <url> --pdf-url <pdf-url>
+```
+
+Live ingest rules:
+
+- Use deterministic smoke tests unless live download behavior is specifically
+  requested.
+- Preserve downloaded URL/PDF captures under `raw/`.
+- Preserve original PDF bytes under `raw/downloads/`.
+- Record URL, content type, byte count, and hash when available.
+- Treat browser-extracted PDF text as best effort unless a PDF extraction tool
+  is available.
+- Update `wiki/index.md` and append `wiki/log.md` after every ingest.
+- Headed mode is for human-visible validation; headless mode is for repeatable
+  automation.
+
 ## Browser Resolution
 
 The demo Playwright config resolves Chromium in this order:

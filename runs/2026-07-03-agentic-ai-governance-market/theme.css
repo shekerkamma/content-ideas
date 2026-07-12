@@ -1,0 +1,30 @@
+/* HDS executive market-map theme for genspark-branded-deck. */
+:root{
+  --ground:#090d11;
+  --panel:#121922;
+  --panel-2:#18232e;
+  --line:rgba(255,255,255,0.10);
+  --line-strong:rgba(255,255,255,0.18);
+
+  --ink:#edf2f5;
+  --muted:#9ba9b4;
+  --faint:#65727e;
+
+  --accent-a:#f0b35a;
+  --accent-a-dim:rgba(240,179,90,0.13);
+  --accent-b:#36d3c1;
+  --accent-b-dim:rgba(54,211,193,0.12);
+  --alert:#ff6b6b;
+  --alert-dim:rgba(255,107,107,0.12);
+
+  --atmosphere:
+    radial-gradient(980px 640px at 82% -6%, rgba(240,179,90,0.08), transparent 62%),
+    radial-gradient(980px 720px at 10% 112%, rgba(54,211,193,0.08), transparent 58%);
+
+  --font-display:"Aptos Display","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-body:"Aptos","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-mono:"Cascadia Code","SF Mono","JetBrains Mono",ui-monospace,"Roboto Mono",Menlo,Consolas,monospace;
+
+  --display-weight:690;
+  --display-tracking:-0.018em;
+}

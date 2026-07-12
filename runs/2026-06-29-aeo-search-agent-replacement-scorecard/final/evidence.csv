@@ -1,0 +1,13 @@
+query_id,query,engine,target_brand_mentioned,competitors_mentioned,citation_domains,raw_answer_path
+q_001,best conversational support platforms,scorecard_seed,False,zendesk,shekerkamma.github.io,stage_outputs/raw/cap_001.txt
+q_002,Agent Replacement Scorecard vs zendesk for conversational support,scorecard_seed,False,,shekerkamma.github.io,stage_outputs/raw/cap_002.txt
+q_003,alternatives to zendesk for conversational support,scorecard_seed,False,,shekerkamma.github.io,stage_outputs/raw/cap_003.txt
+q_004,how to improve conversational support for B2B buyers,scorecard_seed,False,ccaas,shekerkamma.github.io,stage_outputs/raw/cap_004.txt
+q_005,which conversational support vendor should a B2B company choose,scorecard_seed,False,,shekerkamma.github.io,stage_outputs/raw/cap_005.txt
+q_006,best ai shopping / sales consultant platforms,scorecard_seed,False,westlaw; lexisnexis,shekerkamma.github.io,stage_outputs/raw/cap_006.txt
+q_007,Agent Replacement Scorecard vs zendesk for ai shopping / sales consultant,scorecard_seed,False,dam,shekerkamma.github.io,stage_outputs/raw/cap_007.txt
+q_008,alternatives to zendesk for ai shopping / sales consultant,scorecard_seed,False,adobe,shekerkamma.github.io,stage_outputs/raw/cap_008.txt
+q_009,how to improve ai shopping / sales consultant for B2B buyers,scorecard_seed,False,,shekerkamma.github.io,stage_outputs/raw/cap_009.txt
+q_010,which ai shopping / sales consultant vendor should a B2B company choose,scorecard_seed,False,,shekerkamma.github.io,stage_outputs/raw/cap_010.txt
+q_011,"best travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking platforms",manual_placeholder,False,,shekerkamma.github.io,stage_outputs/raw/cap_011.txt
+q_012,"Agent Replacement Scorecard vs zendesk for travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking",manual_placeholder,False,,shekerkamma.github.io,stage_outputs/raw/cap_012.txt

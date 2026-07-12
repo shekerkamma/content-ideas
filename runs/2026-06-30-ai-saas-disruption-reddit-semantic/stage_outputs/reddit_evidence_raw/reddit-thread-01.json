@@ -1,0 +1,217 @@
+{
+  "post": {
+    "title": "I traced $2 billion in nonprofit grants and 45 states of lobbying records to figure out who's behind the age verification bills. The answer involves a company that profits from your data writing laws that collect more of it.",
+    "author": "Ok_Lingonberry3296",
+    "score": 15,
+    "content": "EDIT/UPDATE: New post and research at https://www.reddit.com/r/linux/comments/1rtd51g/update_i_pulled_irs_filings_for_the_org_that/ Website: https://tboteproject.com Support Findings: https://tboteproject.com/donate/ Repository: https://tboteproject.com/git/hekate/attestation-findings I've been pulling public records on the wave of \"age verification\" bills moving through US state legislatures. IRS 990 filings, Senate lobbying disclosures, state ethics databases, campaign finance records, corporate registries, WHOIS lookups, Wayback Machine archives. What started as curiosity about who was pushing these bills turned into documenting a coordinated influence operation that, from a privacy standpoint, is building surveillance infrastructure at the operating system level while the company behind it faces zero new requirements for its own platforms. I want to be clear about what this is and isn't. I am not the author of the earlier r/linux post by aaronsb and I'm not affiliated with them. I titled this to draw attention on this subreddit because the privacy implications go well beyond Linux. Every source cited here is a public record. What the bills actually require you to hand over Most reporting on these bills says something vague like \"age checks at device setup.\" The statutory language is more specific and more invasive than that. California AB-1043, signed October 2025 and effective January 1, 2027, defines \"Operating system provider\" under Section 1798.500(g) as \"a person or entity that develops, licenses, or controls the operating system software on a computer, mobile device, or any other general purpose computing device.\" Every OS provider must then: provide an interface at account setup collecting a birth date or age, and expose a real-time API that broadcasts the user's age bracket (under 13, 13 to 15, 16 to 17, 18+) to any application running on the system. Read that again. Every app on your device gets to query a system-level API that returns your age bracket in real time. This isn't age verification at the point of accessing restricted content. This is a persistent age-broadcasting service baked into the operating system itself, queryable by every installed application. Colorado SB26-051 (passed the Senate 28-7, now in the House) copies the same definitions in the same order, same penalty structure ($2,500 per child for negligent violations, $7,500 for intentional ones), same exemptions. The template is the ICMEC \"Digital Age Assurance Act,\" and it's been introduced or is pending in Illinois (three separate bills), New York, Kansas, South Carolina, Ohio, Georgia, Florida, and at the federal level. New York's S8102A goes further. It requires device manufacturers to perform \"commercially reasonable and technically feasible age assurance\" at device activation and explicitly bans self-reporting. The AG picks the approved methods. That means biometric age estimation or government ID verification before you can use a device you purchased. Exemptions in all of these bills cover broadband ISPs, telecom services, and physical products. None contain any exemption for open-source software, non-commercial projects, or privacy-preserving verification methods. The status right now: State Bill Status CA AB-1043 Enacted, effective Jan 1, 2027 CO SB26-051 Passed Senate, in House committee LA HB-570 Enacted, effective July 1, 2026 UT SB-142 Enacted, first in nation TX SB-2420 Enjoined by federal judge NY S8102A Pending IL HB-3304, HB-4140, SB-2037 Pending Federal KOSA, ASAA Pending The privacy architecture these bills create What's concerning about these bills is they don't just verify age once. They create persistent identity layer inside the operating system that applications can query at will. The commercial age verification vendors who would provide this infrastructure (Yoti, Veriff, Jumio) charge $0.10 to $2.00 per check, require proprietary SDKs, demand API keys tied to commercial accounts, and operate cloud-only with no self-hosted option. Your age verification data goes to a third-party cloud service. Every time. Compare this to what the EU built. The EU Digital Identity Wallet under eIDAS 2.0 has a reference implementation published under Apache 2.0/EUPL and uses selective disclosure credentials. A user can prove they fall within an age bracket without handing over their date of birth. The EU's Digital Services Act puts age verification obligations on Very Large Online Platforms (45M+ monthly users), not on operating systems. FOSS projects that don't act as intermediary services are explicitly outside scope. Micro and small enterprises get additional exemptions. The EU approach is not without its own problems . The reference code is open , but the operational system is not self-hostable. You cannot run your own trusted identity provider. The wallet apps require Google Play Services or the iOS equivalent, which locks out users of privacy-focused Android distributions like GrapheneOS, CalyxOS, and LineageOS. Device attestation requirements effectively ban rooted or jailbroken devices. The zero-knowledge proof privacy guarantees only hold if you trust that credential issuers and verifiers are not colluding to correlate your activity. ZKP is a cryptographic mechanism, not a trust architecture, and it cannot solve the problem of collusion between parties in the chain. Even with those caveats, the architectural gap between the two approaches is wide. The EU model does not create a persistent age-broadcasting API at the OS level. It does not mandate commercial vendors. It does not force biometric data into a third-party cloud on every check. The US bills assume every operating system is built by a corporation with the infrastructure and revenue to absorb these costs. The EU started from the opposite assumption and built accordingly. EU approach US bills Who's regulated Platforms with 45M+ users FOSS exemption Yes, five separate mechanisms Verification method Open-source wallet, zero-knowledge proofs Cost to non-commercial projects $0 Privacy architecture Selective disclosure, privacy by design Works offline Yes Who wrote the legislation This is where it gets interesting. Rep. Kim Carver (R-Bossier City), the sponsor of Louisiana's HB-570, publicly confirmed that a Meta lobbyist brought the legislative language directly to her. The bill as drafted required only app stores (Apple, Google) to verify user ages. It did not require social media platforms to do anything. Meta deployed 12 lobbyists across 9 confirmed firms for this single bill, paying at least $324,992 (described as a \"very conservative estimate\"). The confirmed firms include Pelican State Partners (who also lobby for Roblox, letting Meta frame this as \"broad industry support\" rather than one company's project), Adams and Reese LLP (the #1 ranked Louisiana government affairs firm), and State Capitol Solutions. Nicole Lopez, Meta's Director of Global Litigation Strategy for Youth, testified at the House Commerce Committee in support. She also testified in South Dakota for a similar bill. She's Meta's national point person for these laws. HB-570 passed unanimously at every stage: House 99-0, Senate 39-0. So why did Meta need 12 lobbyists? Because the votes were never the concern. The lobbyists were there to control the text and block amendments. The key amendment battle came from Senator Jay Morris, who expanded the bill to include app developers alongside app stores after Google's senior director of government affairs publicly questioned why \"Mark Zuckerberg is so keen on passing these bills.\" When Morris introduced his amendment, Meta went silent. The conference committee compromise maintained dual responsibility but kept the primary burden on app stores, which is what Meta wanted from the start. At that same Senate hearing, Morris directly questioned DCA Executive Director Casey Stefanski about who funds her organization. She reportedly deflected, said she \"wasn't comfortable answering,\" then under continued pressure admitted tech companies provide funding but refused to name them. The advocacy group that doesn't legally exist The Digital Childhood Alliance presents itself as a coalition of 50+ conservative child safety organizations (later inflated to 140+, though only six have ever been publicly named). It has been testifying in favor of these bills across states. Here is what public records show about its legal status: I searched all four regional extracts of the IRS Exempt Organizations Business Master File (eo1 through eo4.csv), which cover every tax-exempt organization registered in the United States. DCA is not there. No EIN exists for this organization. I also searched for incorporation records in Colorado, DC, Delaware, and Virginia, plus OpenCorporates (200M+ companies), ProPublica Nonprofit Explorer, GuideStar, and Charity Navigator. No incorporation record exists in any of them. DCA's domain was registered December 18, 2024 through GoDaddy with privacy protection and a four-year registration. The website was live and fully formed one day later: professional design, statistics, testimonials from Heritage Foundation and NCOSE staff, ASAA talking points already loaded. This is not a grassroots launch. This is a staging deployment of a pre-built site. 77 days later, Utah SB-142 became the first ASAA law signed in the country. DCA processes donations through For Good (formerly Network for Good, EIN 68-0480736), which is a Donor Advised Fund. For Good explicitly states in its documentation that it serves \"501(c)(3) nonprofit organizations.\" DCA claims 501(c)(4) status. DCA is classified as a \"Project\" (ID 258136) in the For Good system, not as a standalone nonprofit. I searched all 59,736 For Good grant recipients across five years, roughly $1.73 billion in disbursements. Zero grants to DCA, DCI, NCOSE, or any related entity. The donation page appears to be cosmetic. Bloomberg reporters exposed Meta as a DCA funder in July 2025. The Deseret News detailed the arrangement in December 2025. No version of the website, across 100+ Wayback Machine snapshots, has ever disclosed funding sources. Every blog post and testimony targets Apple and Google. Meta is never mentioned or criticized. DCA's leadership traces directly to NCOSE (National Center on Sexual Exploitation): Casey Stefanski, Executive Director, spent 10 years at NCOSE as Senior Director of Global Partnerships. Unusually, she never appears on any NCOSE 990 filing as an officer, key employee, or among the five highest-compensated staff. A senior director title at a $5.4M organization for a decade with no 990 appearance suggests either below-threshold compensation, an inflated title, or something else about the arrangement. Dawn Hawkins, DCA's Chair, simultaneously serves as CEO of NCOSE. John Read, DCA's Senior Policy Advisor, spent 30 years at the DOJ Antitrust Division investigating app stores and Big Tech. NCOSE's own 501(c)(4) structure turns out to be complicated. Tracing Schedule R filings across four years reveals that NCOSE created \"NCOSE Action\" (EIN 86-2458921) as a c4 in 2021, reclassified it from c4 to c3 in 2022, then created an entirely new c4 called \"Institute for Public Policy\" (EIN 88-1180705) in 2023 with the same address and the same principal officer (Marcel van der Watt). By 2024 the original entity had disappeared from Schedule R entirely. Despite NCOSE's website describing NCOSEAction as \"created by NCOSE,\" and Schedule R listing the Institute as a \"controlled organization,\" all 19 transaction indicators between NCOSE and the Institute are marked \"No.\" No grants, no shared employees, no shared facilities, no reimbursements. Zero reported transactions between a parent and its own controlled c4 while staff move freely between them. Concurrently, NCOSE's lobbying spending tripled from $78,000 to $204,000, coinciding with DCA's launch and the ASAA legislative push. $70M+ in super PACs, deliberately fragmented Meta poured over $70 million into state-level super PACs and structured every one to avoid the FEC's centralized, searchable database: Entity Meta's contribution Type Notable detail ATEP $45M Bipartisan 527 PAC Co-led by Hilltop Public Solutions META California $20M State PAC Chaired by Brian Rice, Meta VP of Public Policy California Leads $5M State PAC Union-partnered Forge the Future Downstream from ATEP State PAC (TX) Policy priorities mirror ASAA language Making Our Tomorrow Downstream from ATEP State PAC (IL) Also chaired by Brian Rice By registering every PAC at the state level rather than federally, Meta scatters filings across dozens of state ethics commission databases with different formats, different disclosure timelines, and no centralized search. Each filing is technically public. Aggregating them into a coherent picture requires manually querying each state. This is structural opacity by fragmentation. Forge the Future's stated policy priorities include: \"Empowering parents with oversight of children's online activities across devices and digital environments.\" That is functionally identical to the ASAA framing. Of 20 Meta-backed candidates across Texas and North Carolina primaries, 19 won (Washington Post, March 12, 2026). The firm that bridges both tracks This is the finding that connects two things I'd been tracking separately. Hilltop Public Solutions, a Democratic consulting firm, shows up in three distinct contexts: Co-leads ATEP, Meta's $45M bipartisan super PAC Involved in DCA's messaging coordination, per investigative reporting Connected to Forge the Future, the downstream Texas PAC with ASAA-aligned policy priorities This makes Hilltop the first confirmed entity bridging Meta's political spending operation and the DCA advocacy campaign. The firm helping Meta elect \"tech-friendly\" state legislators also coordinates messaging for the nominally independent grassroots organization pushing those legislators to pass ASAA. The dark money network Meta's Colorado lobbying runs through Headwaters Strategies, paid $338,500 since 2019, with monthly payments jumping from roughly $5K/month to $14K-$30K/month starting July 2023 as state-level age verification bills accelerated. Headwaters co-founder Adam Eichberg simultaneously serves as a registered Meta lobbyist in Colorado, as Chair of the Board of the New Venture Fund (the flagship entity of the Arabella Advisors network, $669M revenue), and as founding board member of the Windward Fund (another Arabella entity, $311M revenue). The Arabella network operates four entities from the same building at 1828 L Street NW, Washington DC, with combined annual revenue exceeding $1.3 billion. NVF transfers $121.3M per year to the Sixteen Thirty Fund, a 501(c)(4) with no donor disclosure requirements. I parsed the IRS Form 990 Schedule I filings across all five Arabella entities. That's 4,433 grants totaling approximately $2.0 billion. I searched for every child safety, age verification, and tech policy organization I could identify. Zero matches. The Schedule I grant pathway is definitively ruled out. If Meta money flows through this network, it would have to travel via fiscal sponsorship, consulting fees, or non-grant payments, which are inherently less transparent. The Eichberg connection matters not because it proves a pipeline, but because the person receiving Meta's lobbying payments chairs the governance structure of the largest anonymous-donor-funded advocacy network in US politics. That structural overlap is documented regardless of whether money moves through it. The company that benefits Meta's own Horizon OS (powering Quest VR headsets) already has Meta Account age verification, a Get Age Category API, Family Center parental controls, Quest Store age ratings, and default minor account protections. I scored Horizon OS at 83% compliance readiness with these mandates. Meta is not opposing these bills. In Colorado, I pulled lobbying records from the Secretary of State's SODA API and found Meta's four registered lobbyists on SB26-051 listed in a \"Monitoring\" position. Not amending, not opposing. Watching. On every social media regulation bill in Colorado, Meta takes an \"Amending\" position, actively fighting changes. Across 117 lobbying records on 22 bills: Bills regulating social media: Meta position is \"Amending\" (fighting) The one bill putting the burden on OS providers: Meta position is \"Monitoring\" (watching) Meta fights bills that regulate Meta. Meta watches bills that regulate everyone else. In California, Meta spent over $1 million on state lobbying in the first three quarters of 2025 and publicly supported AB-1043, breaking ranks with its own trade associations (TechNet and Chamber of Progress both opposed it). Meta supported a bill that creates surveillance infrastructure at the OS level while leaving social media platforms untouched. Meta's LD-2 filings with the Senate explicitly list H.R. 3149/S. 1586, the App Store Accountability Act, as a lobbied bill. The filing narrative includes \"protecting children, bullying prevention and online safety; youth safety and federal parental approval; youth restrictions on social media.\" In the same filing, Meta also lobbies on KOSA and COPPA 2.0, which would regulate Meta directly. Meta supports the bill that burdens its competitors and lobbies to weaken the bills that burden itself. Both positions appear in the same quarterly disclosure. The privacy questions I've tried to present findings here, not conclusions. But from a privacy standpoint: Why does the company that profits from collecting user data draft legislation requiring every operating system to collect age data and broadcast it to every installed application via a system-level API? Why do these bills mandate commercial age verification vendors (Yoti, Veriff, Jumio) whose business model is collecting biometric data, while the EU's equivalent uses open-source zero-knowledge proofs that reveal nothing beyond \"over 18\"? Why is there no data minimization requirement in any of these bills for the age verification data itself? AB-1043 creates a persistent age signal API. Who governs what happens to the data flowing through it? Why does Meta fund an advocacy group with no legal existence in the IRS system to push legislation that creates new data collection infrastructure at a layer below Meta's own products, while Meta faces zero new requirements? Why does the company whose lobbyist drafted one of these bills write it to specifically exclude social media platforms from the age verification mandate? If the goal is child safety, why regulate the operating system, which has no direct contact with children, instead of the social media platforms where the documented harm occurs? What you can do If you're in CO, IL, or NY, these bills are still in committee. Comment on the record. System76's CEO met with the Colorado bill's sponsor on March 9 and the sponsor suggested excluding open-source software. The conversation is happening now. Contact the EFF, FSF, and Software Freedom Conservancy with the specific statutory language and compliance gap numbers. They need to know these definitions cover volunteer-maintained software with no exemption. Read the actual bill text. CA AB-1043 is searchable on leginfo.legislature.ca.gov. CO SB26-051 is on leg.colorado.gov. The definitions are what matter, not the news summaries. If you maintain software that could be classified as an \"operating system provider\" under these definitions, start thinking about your response now. CA AB-1043 takes effect January 1, 2027. Louisiana HB-570 takes effect July 1, 2026. Sources (all public records) Bill text: CA AB-1043 (Chapter 675, leginfo.legislature.ca.gov), CO SB26-051 (leg.colorado.gov), LA HB-570 Act 481 of 2025 (legis.la.gov), NY S8102A (nysenate.gov), TX SB-2420, UT SB-142 (le.utah.gov) Federal lobbying: OpenSecrets Meta profile (opensecrets.org, client ID D000033563), Senate LDA filing UUID b73445ed-15e5-42e7-a1e8-aeb224755267 Colorado lobbying: CO Secretary of State SODA API (data.colorado.gov, datasets vp65-spyn, dxfk-9ifj, df5p-p6jt) Louisiana lobbying: LA Board of Ethics, F Minus database (fminus.org/clients/pelican-state-partners-llc/, fminus.org/clients/meta-platforms-inc/) California lobbying: CalAccess (cal-access.sos.ca.gov), Bloomberg Government Super PACs: Forge the Future (texasforgefuturepac.com), Texas Ethics Commission, Illinois State Board of Elections, Politico (Feb 2, 2026), Washington Post (Mar 12, 2026) DCA records: WHOIS/RDAP (rdap.org), Wayback Machine CDX API (100+ snapshots), IRS EO BMF (eo1-eo4.csv), OpenCorporates, ProPublica, GuideStar NCOSE: IRS Form 990 FY2020-FY2024 including Schedule R; NCOSEAction/Institute for Public Policy (EIN 88-1180705); original NCOSE Action (EIN 86-2458921) via Schedule R history For Good/Network for Good: forgood.org , DCA donation page source (targetable_type=Project, targetable_id=258136), For Good 990s via ProPublica (EIN 68-0480736, 59,736 recipients searched) IRS 990 filings: ProPublica Nonprofit Explorer: NVF (EIN 20-5806345), STF 2024 (sixteenthirtyfund.org), DCI (EIN 39-3684798), Windward, Hopewell, North Fund, NCOSE (EIN 13-2608326), ConnectSafely (EIN 47-3168168) Campaign finance: CO TRACER bulk data (tracer.sos.colorado.gov), FollowTheMoney.org, FEC API (Meta PAC C00502906) Reporting: Bloomberg (July 2025), Deseret News (Dec 2025), The Center Square, ACT | The App Association, Dome Politics, Pluribus News, Nola.com , Privacy Daily EU framework: EUR-Lex (Digital Services Act, eIDAS 2.0 Regulation), EUDIW GitHub repository, T-Scy consortium Technical: freedesktop.org, GNOME/KDE documentation, Meta developer docs (developer.meta.com/horizon) Full dataset, OSINT tasklist, and all processed findings are published with sources embedded in each file: github.com/upper-up/meta-lobbying-and-other-findings This is an ongoing investigation. Pending: Texas Ethics Commission records for Forge the Future expenditure recipients, NCOSEAction's first 990 filing, IRS Form 8872 for ATEP, and FOIA responses from Colorado and Louisiana. If you have access to lobbying data from states I haven't covered (IL, NY, UT, GA), I'd appreciate a heads up. I am not claiming Meta wrote every one of these bills. Louisiana is confirmed by the sponsor; the others use a shared ICMEC template. I am not claiming there is a direct Arabella-to-DCA funding pipeline; I checked $2 billion in grants and found no evidence. I am not claiming child safety isn't a legitimate concern. What I am documenting is: the company whose lobbyist drafted HB-570 wrote it to exclude its own platforms; the advocacy group pushing these bills nationally has no legal existence and is confirmed funded by Meta; the same consulting firm bridges Meta's super PAC and DCA's messaging; none of these bills exempt open-source or non-commercial software while the EU equivalent does; and the mandatory age-signal API creates persistent surveillance infrastructure at the OS level with no data minimization requirements. The records are above. Draw your own conclusions. This section documents what happened when this investigation was posted to Reddit, and provides context on Meta's documented history of using astroturfing, coordinated reporting, and platform manipulation to suppress unfavorable content. What happened The original version of this investigation was posted to r/linux , where it was mass reported and pulled down pending moderator review (150 upvotes, roughly 15k views before being pulled down some 40 minutes after being posted) The content that was suppressed names Meta lobbying firms, traces documented payments, cites Senate LD-2 filings, and links to IRS records. It identifies Hilltop Public Solutions as the first confirmed entity bridging Meta's $45M super PAC and the DCA astroturf campaign. This is the kind of content that a well-resourced actor would have reason to suppress. I cannot prove the mass reports were coordinated rather than organic. That is the point of the tactic: Reddit's infrastructure makes it impossible to distinguish genuine community objections from manufactured ones, and it rewards the behavior either way by automatically removing the content. Meta has done this before In March 2022, the Washington Post reported that Meta hired Targeted Victory, one of the largest Republican consulting firms in the country, to run a nationwide astroturfing campaign against TikTok. Internal emails obtained by the Post showed the campaign: Placed op-eds and letters to the editor in regional news outlets across the country, none of which disclosed the connection to Meta or Targeted Victory Promoted stories about dangerous TikTok \"trends\" that had actually originated on Facebook Pushed local politicians and political reporters to frame TikTok as a threat to children In an internal email, a campaign director wrote that the \"dream would be to get stories with headlines like 'From dances to danger: how TikTok has become the most harmful social media space for kids'\" Meta's spokesman defended the campaign by saying \"all platforms should face a level of scrutiny consistent with their growing success.\" Meta did not deny hiring the firm or directing the campaign. The story was confirmed by the Washington Post, Fortune, Variety, CBS News, Engadget, Tortoise Media, the Boston Globe, and Techdirt, among others. This is not speculation about what Meta might do. This is what Meta has been publicly documented doing: hiring firms to plant stories, manufacture public concern about competitors using child safety as the framing, and conceal the corporate origin of the messaging. The Targeted Victory campaign and the DCA campaign use the same playbook: fund an outside entity to push messaging that serves Meta's commercial interests while hiding Meta's involvement. Reddit's bot and astroturfing problem is structural Research published in Nature (Scientific Reports) documented coordinated political astroturfing patterns across platforms including Reddit. A separate study found that at least 15% of content in surveyed subreddits was posted by corporate trolls or bot accounts designed to manipulate public opinion. Since June 2025, bot networks have been systematically exploiting Reddit and Meta's own moderation systems through mass reporting. Thousands of legitimate Facebook groups were deleted after coordinated bot reports triggered automated enforcement. The same mass-reporting tactic works on Reddit: a small number of accounts can file reports, trigger automated removal, and flag the poster's account for site-wide spam filtering, all without engaging with the content. Venture-backed firms like Doublespeed now offer astroturfing-as-a-service across Reddit, TikTok, and Instagram, operating physical phone farms to bypass platform detection. The infrastructure for suppressing content through coordinated inauthentic behavior is commercially available. What this means for this investigation Meta spent $26.3 million on federal lobbying in 2025 and deployed 86+ lobbyists across 45 states. It funded a nationally active advocacy group (DCA) with no legal existence in the IRS system. It hired Hilltop Public Solutions to simultaneously run its $45M super PAC and coordinate DCA's messaging. It previously hired Targeted Victory to run a covert astroturfing campaign against TikTok using child safety as the narrative frame. This investigation documents all of that with primary sources. A post containing those findings was mass reported on Reddit within hours and suppressed site-wide by automated systems. Whether the reports were organic or coordinated, the outcome is the same: the content was removed from the platform where Meta has both the motive and the documented capability to suppress it. The research is published in a git repository with every source embedded. It does not depend on Reddit's infrastructure to survive. Sources Washington Post, \"Facebook paid Republican strategy firm to malign TikTok\" (March 30, 2022): https://www.washingtonpost.com/technology/2022/03/30/facebook-tiktok-targeted-victory/ Fortune, \"Meta paid a Republican consulting firm to turn the public against TikTok\" (March 31, 2022): https://fortune.com/2022/03/31/facebook-meta-paid-republican-consulting-firm-targeted-victory-turn-public-opinion-against-tiktok/ Variety, \"Facebook Parent Company Defends Its PR Campaign to Portray TikTok as Threat to American Children\" (March 31, 2022): https://variety.com/2022/digital/news/meta-facebook-tiktok-pr-campaign-1235218866/ Techdirt, \"Facebook-Hired PR Firm Coordinated Anti-TikTok Campaign To Spread Bogus Moral Panics\" (March 31, 2022): https://www.techdirt.com/2022/03/31/facebook-hired-pr-firm-coordinated-anti-tiktok-campaign-to-spread-bogus-moral-panics/ Tortoise Media, \"Meta 'astroturfed' TikTok\" (April 5, 2022): https://www.tortoisemedia.com/2022/04/05/meta-astroturfed-tiktok CBS News, \"Report: Facebook Hired PR Firm To Smear TikTok\": https://www.cbsnews.com/sanfrancisco/news/report-facebook-hired-pr-firm-to-smear-tiktok/ Engadget, \"Meta reportedly paid political consultants to smear TikTok\": https://www.engadget.com/meta-targeted-victory-tiktok-smear-campaign-133139892.html Boston Globe, \"Facebook paid GOP firm to malign TikTok, internal e-mails reveal\" (March 30, 2022): https://www.bostonglobe.com/2022/03/30/business/facebook-paid-gop-firm-malign-tiktok-internal-e-mails-reveal/ Georgetown Free Speech Project, \"Facebook hires GOP consulting firm to smear rival TikTok\": https://freespeechproject.georgetown.edu/tracker-entries/facebook-hires-gop-consulting-firm-in-dc-area-to-smear-rival-tiktok/ Nature Scientific Reports, \"Coordination patterns reveal online political astroturfing across the world\" (2022): https://www.nature.com/articles/s41598-022-08404-9 Medium/HR News, \"Study: At Least 15% of All Reddit Content is Corporate Trolls\": https://medium.com/@hrnews1/study-at-least-15-of-all-reddit-content-is-corporate-trolls-trying-to-manipulate-public-opinion-49cb302c26a5 TechCrunch, \"Facebook Group admins complain of mass bans\" (June 24, 2025): https://techcrunch.com/2025/06/24/facebook-group-admins-complain-of-mass-bans-meta-says-its-fixing-the-problem/ YNet News, \"Public opinion for sale: The new startup causing a storm\" (Doublespeed): https://www.ynetnews.com/tech-and-digital/article/hyraenbmzx Meta Transparency Center, \"Inauthentic Behavior\" policy: https://transparency.meta.com/policies/community-standards/inauthentic-behavior/ The Hacker News, \"Meta Disrupts Influence Ops Targeting Romania, Azerbaijan, and Taiwan\" (May 2025): https://thehackernews.com/2025/05/meta-disrupts-influence-ops-targeting.html",
+    "url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+    "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+    "subreddit": "linux"
+  },
+  "comments": [
+    {
+      "id": "t1_oa7i8xp",
+      "author": "FaultyPly",
+      "text": "If children’s safety was truly a concern, 80% of the political and elite class would be arrested tomorrow. It’s about money, control, and surveillance.",
+      "score": 1045,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa7i8xp/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa7khpw",
+      "author": "ICookWithFire",
+      "text": "Always has been",
+      "score": 168,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa7khpw/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oagfa6h",
+      "author": "ChromaticStrike",
+      "text": "FVEY 5eyes is too long?",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oagfa6h/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oacjziy",
+      "author": "TheHeroBrine422",
+      "text": "I actually don’t know what that is. Although I assume most laws that are “to protect the children” are actually just politicians using that as an excuse to do something we likely wouldn’t want them to do.",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oacjziy/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oadc2q8",
+      "author": "Noldir81",
+      "text": "https://en.wikipedia.org/wiki/Five_Eyes",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oadc2q8/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oaddd3o",
+      "author": "TheHeroBrine422",
+      "text": "Ah ok. I had heard of that, just didnt know the acronym.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oaddd3o/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa85ypx",
+      "author": "DISCONNECTlE",
+      "text": "🌎🧑‍🚀🔫🧑‍🚀",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa85ypx/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa7y6jp",
+      "author": "NdoplasmicRocketfish",
+      "text": "This. If we gave a real shit about kids we'd be jailing all these pedos first",
+      "score": 43,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa7y6jp/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oaeyvin",
+      "author": "dmnsqrl",
+      "text": "and not pretending that queerness/non-whiteness was inherently dangerous to kids/women which is all deflection from those with power who are the actual abusers",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oaeyvin/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oab5my7",
+      "author": "Old_Movie_Fan_Ted",
+      "text": "The state is the biggest bully of them all.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oab5my7/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oaa6way",
+      "author": "3m3raldTux",
+      "text": "It is the spearhead of an information war where the general populace of the world is finally becoming aware of the most evil group of people in the world.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oaa6way/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa6wo1b",
+      "author": "bio3c",
+      "text": "I'm not from the US, but great work on that research, this is insanity.",
+      "score": 899,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa6wo1b/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa81nnm",
+      "author": "NoFap_FV",
+      "text": "This is what money does",
+      "score": 150,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa81nnm/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa94r7a",
+      "author": "SkyNice2442",
+      "text": "The damage that billionaires do this is country is far too great. All of them should be severely taxed so that they can no longer negatively impact country through their selfishness.",
+      "score": 77,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa94r7a/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oaj5g1j",
+      "author": "SirDefiant3171",
+      "text": "Agreed I actually kind of want to float this idea over to Bernie's desk or something so that he could create a new tax law calling it: The E.P.S.T.E.I.N. Act; Eliminating Private Sanctuaries for Trafficking & Exploitation by Immense Net-worth Act: This law exists to prevent the next Epstein. It's unforgettable & frames the opposition as supporting or defending a pedophile's ability to hide severe crimes against children with their large wealth & influence. The same way that they are trying to frame all of these age verification bills as \"protecting children\", we can just use the same tactics against them to get actual legislation passed for regular citizens while making billionaires finally pay their fair share in taxes, fund SS & other programs, pay down the deficit, improve education in public schools & more. Any Dem or Rep who chooses to vote against the bill will be looked at with extreme suspicion as if protecting the predators instead of children & probably would be voted out of office immediately after.",
+      "score": 18,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oaj5g1j/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa87rn7",
+      "author": "ScreamThyLastScream",
+      "text": "People like to blame money, but I think this is what being a greedy immoral piece of shit does.",
+      "score": 73,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa87rn7/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa899c8",
+      "author": "wonklebobb",
+      "text": "it's ouroboros: money is both the goal and the tool to get there",
+      "score": 43,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa899c8/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oa8chd6",
+      "author": "NoFap_FV",
+      "text": "Ehm... So.. being greedy about money... And money is not the problem?",
+      "score": 17,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oa8chd6/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oacntjk",
+      "author": "BrunusManOWar",
+      "text": "It's the American mindset \"It's the owners, not the guns\" So instead of restricting guns they instead have school and mall shootings and stand there helplessly",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oacntjk/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    },
+    {
+      "id": "t1_oab5oqu",
+      "author": "Technical-Seaweed808",
+      "text": "How did this post end up hidden behind moderator approval? Had i not left this in a tab in my browser i could not even get back to the subs. But the info in the post is now being hidden. Where do we question the mods intentions and goals? Edit: The post is back. Mods here seems to have deem the post legit information. And I salute them for it.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/oab5oqu/",
+      "source_url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+      "subreddit": "linux"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/linux/comments/1rshc1f/i_traced_2_billion_in_nonprofit_grants_and_45/",
+    "method": "old_reddit_html"
+  }
+}

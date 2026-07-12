@@ -1,0 +1,18 @@
+{
+  "id": "src-bcfd0b0b4269",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Hermes Agent Documentation | Hermes Agent",
+  "url": "https://hermes-agent.nousresearch.com/docs/",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:47.207644+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "The self-improving AI agent built by Nous Research. A built-in learning loop that creates skills from experience, improves them during use, and remembers across sessions.",
+  "raw_content_path": null,
+  "dedupe_key": "057e50f8d39c",
+  "status": "new",
+  "errors": []
+}

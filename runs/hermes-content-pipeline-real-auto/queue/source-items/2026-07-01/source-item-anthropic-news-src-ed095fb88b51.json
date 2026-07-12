@@ -1,0 +1,18 @@
+{
+  "id": "src-ed095fb88b51",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Claude now available in Microsoft Foundry and Microsoft 365 Copilot ...",
+  "url": "https://www.anthropic.com/news/claude-in-microsoft-foundry",
+  "canonical_url": "https://www.anthropic.com/news/claude-in-microsoft-foundry",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:22.371776+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Claude Sonnet 4.5, Haiku 4.5, and Opus 4.1 models are now available in public preview in Microsoft Foundry, where Azure customers can build production applications and enterprise agents.",
+  "raw_content_path": null,
+  "dedupe_key": "d727334ec778",
+  "status": "new",
+  "errors": []
+}

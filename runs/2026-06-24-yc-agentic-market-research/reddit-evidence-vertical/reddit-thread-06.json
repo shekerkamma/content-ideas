@@ -1,0 +1,277 @@
+{
+  "post": {
+    "title": "Business is growing, but the daily operations are overwhelming me",
+    "author": "Dramatic_Spirit_8436",
+    "score": 29,
+    "content": "We run a small hotel, and business is actually doing okay, which I’m grateful for. But day to day, I feel like I’m constantly underwater. It’s not one huge problem. It’s all the small things stacking up at the same time: guest messages, booking questions, check-in details, repeated FAQs, last-minute requests. None of it is hard on its own, but together it eats up the whole day. What makes it worse is how fast you have to respond now. If I reply too slowly, some people just move on and book somewhere else. That’s probably the most frustrating part, because it feels like we’re losing revenue over response time, not service quality. I looked into hiring, but with a small property the math is tough. One extra person helps, but if they step away to help a guest, answer something in person, or deal with a room issue, the desk is basically uncovered again. Two people would make a real difference, but that cost is hard to justify. So that’s kind of the spot I’m in now: the business is growing, but the operational side doesn’t scale as easily as I hoped. One thing that has helped a bit is automating some of the repetitive guest communication, especially the same pre-booking and check-in questions that come up again and again. I was skeptical at first, but taking those basic replies off my plate has at least given me more time to handle the things that actually need a human. Curious how other founders or small operators deal with this stage. Did you hire earlier, automate more, or just accept that this is part of growing? Edit: A few people asked what automation tool I ended up using, so I’ll mention it here. It’s called SOLVEA. I’ve mainly been using it for repetitive guest messages, booking questions, and check-in details.",
+    "url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+    "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+    "subreddit": "startup"
+  },
+  "comments": [
+    {
+      "id": "t1_ocxwjon",
+      "author": "XonikzD",
+      "text": "This. There needs to be a service operations \"bible\" on site and employees who understand the balance between customer service, conversation flow, and hard cutoffs. Every common question needs a company standard answer. Every custom question, where the service desk might require excess time, needs a troubleshooting bible and an off-ramp, like a free pen and comment card or other consolation prize for problems that will require time juggling the guest. This works best when the incoming lines (in house and outside lines) are answered immediately in the office and only shunted to the guest facing desk when it directly relates to booking or other front terminal interactions. Even the \"speak to a person\" line needs to be behind the office door so front of house guest services can have their own flow for most of the work day.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ocxwjon/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ocszi1s",
+      "author": "EmpowerKit",
+      "text": "What you described is exactly where things start to feel heavy, not because anything is “hard,” but because everything needs attention at the same time. Automation helps, but there’s always that middle layer where things still need a human touch (guest questions, follow-ups, edge cases). That’s usually where having someone handle just the repetitive communication consistently makes a big difference, without needing a full extra staff member on-site. How much of your day is going into guest messages and booking questions right now?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ocszi1s/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ocuakxj",
+      "author": "Inside-Highlight-181",
+      "text": "im an automation eng on the telecom domain, and top rated on Upwork, the only advice i have to u, is NOT use an AI Agent to respond to ur client. automation can handle all the repetitive task u have in the operation side. but don't lose ur clients human interaction at all. let me give u an example , automation can help with all data entry, store them on ur CRM or Google sheet or whatever, it can send u a notifications, finish some booking or any repetitive task , keep the customer service and interaction with human only, thats what we call human in the loop. it will allow ur seals team to focus more on helping ur clients efficiently without losing there time on ant other repetitive task.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ocuakxj/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ocvfxwf",
+      "author": "Inside-Highlight-181",
+      "text": "I get your point, but this wasn’t about hunting Upwork gigs. When I comment on posts like this, it’s usually because the situation matches problems I deal with every day in automation projects. Small teams often think AI agents should replace communication completely, while in reality the strongest setup is automating repetitive operations and keeping the human interaction where it matters most. So my comment was mainly advice based on experience in the field, and a short introduction in case it’s useful to the person who posted. Sharing practical limits and best-fit use cases of automation is part of what we do as engineers working in this space",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ocvfxwf/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ocvma4y",
+      "author": "Nexus_soloution",
+      "text": "I can solve your booking and answering to existing customers problems, which will free up time for the operation team on the tasks that matters. Feel free to DM me",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ocvma4y/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ocyqx0x",
+      "author": "chitraf",
+      "text": "Hi there. I help business automate their repetitive processes. DM me and I can discuss.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ocyqx0x/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ocyrwyz",
+      "author": "hexixim",
+      "text": "You’ve just got a systems/workflows problem We make automated systems for businesses If you need help feel free to dm",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ocyrwyz/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_od1cn2j",
+      "author": "Main-Trash9076",
+      "text": "all of these responses are gold and the consistent sentiment is the absolute need to get absolute clarity on what the prob is that needs solving. then u can decide if it needs automation (a tool) or a person. then you have to prioritize. which, if solved, eliminate the biggest stressors first. prob those dealing w customer items. Don’t know enough about ur industry or specific company but have u thought about hiring an outsourced person via Fiverr or Upworks? I use them a ton for both short and long term engagement. Many are in India Asia Philippines and work US hrs and good ones can also be very inexpensive. so depending on what ur solving for there is very good and inexpensive help via those platforms",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/od1cn2j/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_od3iahe",
+      "author": "DrPocketClaw",
+      "text": "Look at what you can automate, I know it may seem intimidating but software can automate some of the load. If you can have something automatically responding to requests or sorting invoices - it takes the pain away",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/od3iahe/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_od5hmx9",
+      "author": "Few-Needleworker4391",
+      "text": "Curious what you ended up using for the automation side. Was it something built into your booking/PMS setup, or a separate tool? We deal with a lot of the same repetitive guest questions, so I’d love to know what’s actually been useful in practice.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/od5hmx9/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_odnciis",
+      "author": "Burchin5",
+      "text": "I can help you in this. Actually I'm a social media manager helping overwhelmed business owners to overcome their work load so you can reach out.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/odnciis/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_odu4b47",
+      "author": "PuzzledGain8706",
+      "text": "i second with most of the comments, start automating. one step at time.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/odu4b47/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_oe38mg8",
+      "author": "loucereto",
+      "text": "[ Removed by Reddit ]",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/oe38mg8/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_oenf5za",
+      "author": "Mountain-Strength-75",
+      "text": "I suggest hirring someone",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/oenf5za/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_offnt72",
+      "author": "Prize-Patience-8381",
+      "text": "[ Removed by Reddit ]",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/offnt72/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_og85sri",
+      "author": "Proper-Salamander908",
+      "text": "[ Removed by Reddit ]",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/og85sri/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogbf2lx",
+      "author": "Alive-Cake-3045",
+      "text": "Automation for the repetitive stuff is genuinely the right call at this stage, not a shortcut. The real unlock here is separating \"needs a human\" from \"needs a reply\", most messages just need a fast, accurate reply, and that does not have to be you. Hire when the problems left after automation still eat your day, not before.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogbf2lx/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogej5iv",
+      "author": "AssignmentNational98",
+      "text": "The first thing to automate is whatever you do every single day that doesn't require judgment. Check-in reminders, booking confirmations, review requests. Those are the hours you get back immediately.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogej5iv/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogi71vn",
+      "author": "davidg_za",
+      "text": "[ Removed by Reddit ]",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogi71vn/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogl0oum",
+      "author": "Legends_are_Made",
+      "text": "What did you end up doing? Did it help?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogl0oum/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogtlikw",
+      "author": "Large_Total7323",
+      "text": "[ Removed by Reddit ]",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogtlikw/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogm51qo",
+      "author": "Witty-Bodybuilder536",
+      "text": "i like hotels, Pool?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogm51qo/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogny9tp",
+      "author": "Imprenditoreavita",
+      "text": "STAGISTI STAGISTI STAGISTI PRENDI STAGISTI",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogny9tp/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogperqg",
+      "author": "Crazy_Extension857",
+      "text": "yeah this is such a common stage 😬 it’s not one big thing, it’s all the small stuff piling up. sounds like you’re already on the right track with automating the repetitive parts, that usually makes the biggest difference, I’ve seen a mix of simple automation + a basic system for handling messages work really well without needing to hire too early. how are you currently managing everything day to day?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogperqg/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ogtl1aw",
+      "author": "Large_Total7323",
+      "text": "[ Removed by Reddit ]",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ogtl1aw/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    },
+    {
+      "id": "t1_ok9jtta",
+      "author": "magzinews",
+      "text": "Hey we can discuss your requirements if you would like to and we will provide you mobile app or web app DM me.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/ok9jtta/",
+      "source_url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "subreddit": "startup"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+    "method": "old_reddit_html"
+  }
+}

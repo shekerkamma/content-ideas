@@ -72,3 +72,33 @@ python3 skills/llm-wiki-agent/scripts/init_llm_wiki.py --root /tmp/my-llm-wiki -
 ```
 
 Publishing notes are in [PUBLISH.md](PUBLISH.md).
+
+## Real Workflow Smoke Test
+
+The repeatable smoke test for the video pattern is:
+
+```bash
+python3 skills/llm-wiki-agent/scripts/smoke_fable_ingest.py --reset
+```
+
+It tests the concrete workflow shown in the video:
+
+1. initialize a vault
+2. drop a URL-style source and PDF-extract source into `raw/`
+3. ingest them into source/concept/entity/topic/answer pages
+4. update `wiki/index.md`
+5. append `wiki/log.md`
+6. validate that a query can route through the wiki without scanning everything
+
+Adapted test prompts are in [ADAPTED-PROMPTS.md](ADAPTED-PROMPTS.md).
+
+For a live Chromium download test:
+
+```bash
+npm run llm-wiki:live
+npm run llm-wiki:live:headed
+```
+
+The headed variant visibly downloads a URL and PDF through Chromium before
+writing them into `/tmp/llm-wiki-fable-live/raw/` and ingesting them into the
+wiki.

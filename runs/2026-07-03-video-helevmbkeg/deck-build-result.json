@@ -1,0 +1,18 @@
+{
+  "status": "reviewed",
+  "deck": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/claude-code-course-video-deck-reviewed.pptx",
+  "slide_count": 46,
+  "watch_scene_frames": {
+    "section_1": 94,
+    "section_2": 117,
+    "section_3": 230,
+    "section_4": 23,
+    "interrupted_full_scene_scan": 461
+  },
+  "editability_mode": "PPT-native editable diagrams",
+  "qa": [
+    "pptx xml clean",
+    "preview rendered",
+    "visible internal-term scan clean"
+  ]
+}

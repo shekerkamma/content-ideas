@@ -1,0 +1,28 @@
+{
+  "id": "topic-6d3f2fba1313",
+  "date": "2026-07-01",
+  "title": "Operator signals: best daily content opportunity",
+  "theme": "Operator signals",
+  "source_item_ids": [
+    "src-1e0f995b113b",
+    "src-eac7ef32e4a2",
+    "src-79898de0ead3"
+  ],
+  "score": 74.6,
+  "score_breakdown": {
+    "business_relevance": 76,
+    "source_authority": 60.0,
+    "freshness": 80,
+    "novelty": 70,
+    "implementation_value": 88,
+    "audience_fit": 82
+  },
+  "score_reasons": [
+    "3 source item(s) found in the cluster",
+    "Priority is medium",
+    "Topic fits the operator-facing AI content strategy"
+  ],
+  "recommended_angle": "Explain what changed in Operator signals and convert it into a practical implementation narrative for AI operators.",
+  "audience_fit": "AI operators, enterprise solution architects, and founders evaluating agent workflows",
+  "status": "ranked"
+}

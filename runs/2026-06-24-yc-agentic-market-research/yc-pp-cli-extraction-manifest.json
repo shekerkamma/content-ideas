@@ -1,0 +1,127 @@
+{
+  "cli": "/home/shekerk/printing-press/library/yc-companies/yc-companies-pp-cli",
+  "db": "/tmp/yc-agentic.db",
+  "generated_at": "2026-06-24",
+  "queries": [
+    {
+      "query": "CentralComs",
+      "claim_id": "claim-001",
+      "raw_output": "yc-pp-cli-raw/centralcoms.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "centralcoms"
+    },
+    {
+      "query": "Lance",
+      "claim_id": "claim-002",
+      "raw_output": "yc-pp-cli-raw/lance.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "lance"
+    },
+    {
+      "query": "Klarify",
+      "claim_id": "claim-003",
+      "raw_output": "yc-pp-cli-raw/klarify.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "klarify"
+    },
+    {
+      "query": "Dodo",
+      "claim_id": "claim-004",
+      "raw_output": "yc-pp-cli-raw/dodo.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "dodo"
+    },
+    {
+      "query": "Kastle",
+      "claim_id": "claim-005",
+      "raw_output": "yc-pp-cli-raw/kastle.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "kastle"
+    },
+    {
+      "query": "Fazeshift",
+      "claim_id": "claim-006",
+      "raw_output": "yc-pp-cli-raw/fazeshift.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "fazeshift"
+    },
+    {
+      "query": "Basepilot",
+      "claim_id": "claim-007",
+      "raw_output": "yc-pp-cli-raw/basepilot.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "basepilot"
+    },
+    {
+      "query": "ProcIndex",
+      "claim_id": "claim-008",
+      "raw_output": "yc-pp-cli-raw/procindex.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "procindex"
+    },
+    {
+      "query": "InspectMind AI",
+      "claim_id": "claim-009",
+      "raw_output": "yc-pp-cli-raw/inspectmind-ai.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "inspectmind-ai"
+    },
+    {
+      "query": "Veritus",
+      "claim_id": "claim-010",
+      "raw_output": "yc-pp-cli-raw/veritus.json",
+      "meta": {
+        "reason": "user_requested",
+        "resource_type": "search",
+        "source": "local"
+      },
+      "results_returned": 1,
+      "selected_slug": "veritus"
+    }
+  ]
+}

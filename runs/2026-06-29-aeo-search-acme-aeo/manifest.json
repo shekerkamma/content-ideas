@@ -1,0 +1,41 @@
+{
+  "run_id": "2026-06-29-aeo-search-acme-aeo",
+  "created_at": "2026-06-29T06:03:28Z",
+  "target_brand": "Acme AEO",
+  "domain": "acme-aeo.example",
+  "competitors": [
+    "Profound",
+    "AthenaHQ",
+    "Peec AI"
+  ],
+  "market": "US",
+  "language": "en",
+  "objective": "Find where AI answers recommend competitors instead of Acme AEO.",
+  "engines": [
+    "sample"
+  ],
+  "sample": true,
+  "stage_status": {
+    "init": "passed",
+    "query_plan": "passed",
+    "source_discovery": "passed",
+    "answer_capture": "passed",
+    "normalize_extract": "passed",
+    "score": "passed",
+    "synthesize": "passed",
+    "validate": "passed",
+    "render": "passed"
+  },
+  "artifact_paths": {
+    "queries": "stage_outputs/queries.jsonl",
+    "sources": "stage_outputs/sources.jsonl",
+    "answer_captures": "stage_outputs/answer_captures.jsonl",
+    "entities": "normalized/entities.jsonl",
+    "visibility_scores": "normalized/visibility_scores.json",
+    "recommendations": "normalized/recommendations.jsonl",
+    "report": "final/aeo-audit.md",
+    "evidence_csv": "final/evidence.csv"
+  },
+  "validation_status": "draft",
+  "status": "draft"
+}

@@ -1,0 +1,11 @@
+{"entity_id": "ent_001", "name": "Agent Replacement Scorecard", "entity_type": "brand", "aliases": [], "source_capture_ids": ["cap_live_001", "cap_live_002"], "evidence_ids": ["cap_live_001", "cap_live_002"]}
+{"entity_id": "ent_002", "name": "zendesk", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_live_005", "cap_live_006", "cap_live_007", "cap_live_008"], "evidence_ids": ["cap_live_005", "cap_live_006", "cap_live_007", "cap_live_008"]}
+{"entity_id": "ent_003", "name": "ccaas", "entity_type": "competitor", "aliases": [], "source_capture_ids": [], "evidence_ids": []}
+{"entity_id": "ent_004", "name": "glean", "entity_type": "competitor", "aliases": [], "source_capture_ids": [], "evidence_ids": []}
+{"entity_id": "ent_005", "name": "westlaw", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_live_011", "cap_live_012"], "evidence_ids": ["cap_live_011", "cap_live_012"]}
+{"entity_id": "ent_006", "name": "lexisnexis", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_live_011", "cap_live_012"], "evidence_ids": ["cap_live_011", "cap_live_012"]}
+{"entity_id": "ent_007", "name": "dam", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_live_003", "cap_live_004", "cap_live_010"], "evidence_ids": ["cap_live_003", "cap_live_004", "cap_live_010"]}
+{"entity_id": "ent_008", "name": "adobe", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_live_003", "cap_live_004"], "evidence_ids": ["cap_live_003", "cap_live_004"]}
+{"entity_id": "ent_009", "name": "bi dashboards", "entity_type": "competitor", "aliases": [], "source_capture_ids": [], "evidence_ids": []}
+{"entity_id": "ent_010", "name": "shekerkamma.github.io", "entity_type": "source", "aliases": ["https://shekerkamma.github.io/content-ideas/scorecard.html"], "source_capture_ids": ["cap_live_001"], "evidence_ids": ["cap_live_001"]}
+{"entity_id": "ent_011", "name": "shekerkamma.github.io", "entity_type": "source", "aliases": ["https://shekerkamma.github.io/content-ideas/scorecard.html"], "source_capture_ids": ["cap_live_002"], "evidence_ids": ["cap_live_002"]}

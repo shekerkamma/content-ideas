@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "topic-cluster.schema.json",
+  "title": "TopicCluster",
+  "type": "object",
+  "required": [
+    "id",
+    "date",
+    "title",
+    "source_item_ids",
+    "score",
+    "score_reasons",
+    "recommended_angle",
+    "status"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "date": { "type": "string", "format": "date" },
+    "title": { "type": "string" },
+    "theme": { "type": "string" },
+    "source_item_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "score_breakdown": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "score_reasons": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_angle": { "type": "string" },
+    "audience_fit": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["ranked", "approved_for_brief", "rejected", "needs_review"]
+    }
+  },
+  "additionalProperties": false
+}
+

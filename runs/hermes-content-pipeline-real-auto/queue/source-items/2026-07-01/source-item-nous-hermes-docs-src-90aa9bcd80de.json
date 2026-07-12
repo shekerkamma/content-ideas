@@ -1,0 +1,18 @@
+{
+  "id": "src-90aa9bcd80de",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Blackbox — Delegate coding tasks to Blackbox AI CLI agent | Hermes ...",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-blackbox",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-blackbox",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:28.240531+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Configure which models to use via blackbox configure — select multiple providers to enable the Chairman/judge workflow where the CLI evaluates outputs from different models and picks the best one. Blackbox automatically detects images in input and can switch to multimodal analysis.",
+  "raw_content_path": null,
+  "dedupe_key": "43e6bed7609c",
+  "status": "new",
+  "errors": []
+}

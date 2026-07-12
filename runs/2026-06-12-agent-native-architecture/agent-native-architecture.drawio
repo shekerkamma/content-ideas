@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram name="Agent Native Architecture" id="agent-native-architecture">
+    <mxGraphModel dx="1200" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Agent-Native Apps: the user brings the agent, the app becomes the surface"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=26;fontStyle=1;fontFamily=Helvetica;fontColor=#1F3B6E;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="18" width="1120" height="38" as="geometry" />
+        </mxCell>
+
+        <mxCell id="zone-context" value="Context Layer"
+          style="swimlane;startSize=24;fillColor=#F5F7FA;strokeColor=#D0D5DD;strokeWidth=1;rounded=1;arcSize=4;fontFamily=Helvetica;fontSize=12;fontColor=#1F3B6E;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="1120" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="zone-execution" value="Execution Layer"
+          style="swimlane;startSize=24;fillColor=#F5F7FA;strokeColor=#D0D5DD;strokeWidth=1;rounded=1;arcSize=4;fontFamily=Helvetica;fontSize=12;fontColor=#1F3B6E;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="1120" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="zone-surface" value="Shared Surface"
+          style="swimlane;startSize=24;fillColor=#F5F7FA;strokeColor=#D0D5DD;strokeWidth=1;rounded=1;arcSize=4;fontFamily=Helvetica;fontSize=12;fontColor=#1F3B6E;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="1120" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="zone-output" value="Outcome"
+          style="swimlane;startSize=24;fillColor=#F5F7FA;strokeColor=#D0D5DD;strokeWidth=1;rounded=1;arcSize=4;fontFamily=Helvetica;fontSize=12;fontColor=#1F3B6E;fontStyle=1;"
+          vertex="1" parent="1">
+          <mxGeometry x="40" y="570" width="1120" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="user" value="User / Team&#xa;Defines the job to be done"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-context">
+          <mxGeometry x="30" y="48" width="190" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="memory" value="Context.md / notes&#xa;Persistent project memory"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-context">
+          <mxGeometry x="260" y="48" width="230" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="agent" value="Cursor / Codex / Agent Host&#xa;Owns the loop and judgment"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-execution">
+          <mxGeometry x="30" y="50" width="240" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tools" value="MCP / CLI / API&#xa;Atomic tools, not workflows"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-execution">
+          <mxGeometry x="315" y="50" width="230" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="surface" value="App Surface&#xa;Canvas, doc, sheet, dashboard"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-surface">
+          <mxGeometry x="30" y="50" width="230" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="workspace" value="Shared Workspace&#xa;Same files, same state"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-surface">
+          <mxGeometry x="315" y="50" width="230" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tools-out" value="External Systems&#xa;Miro, Notion, Sheets, browser"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-surface">
+          <mxGeometry x="600" y="50" width="250" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="output" value="Outcomes&#xa;Designs, docs, tasks, actions"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-output">
+          <mxGeometry x="30" y="50" width="230" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="feedback" value="User review&#xa;Immediate correction and approval"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-output">
+          <mxGeometry x="315" y="50" width="250" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="memory2" value="Memory growth&#xa;context.md gets richer over time"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D0D5DD;strokeWidth=1.5;fontFamily=Helvetica;fontSize=13;align=center;verticalAlign=middle;"
+          vertex="1" parent="zone-output">
+          <mxGeometry x="600" y="50" width="250" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-1" value="job context"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.55;exitY=1;entryX=0.15;entryY=0;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="user" target="agent" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-2" value="project memory"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="memory" target="agent" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-3" value="tools"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="agent" target="tools" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-4" value="shared surface"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="tools" target="surface" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-5" value="workspace"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="surface" target="workspace" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-6" value="outputs"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="workspace" target="output" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-7" value="review"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="output" target="feedback" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr-8" value="learn"
+          style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#9CA3AF;strokeWidth=2;fontFamily=Helvetica;fontSize=11;fontColor=#6B7280;"
+          edge="1" source="feedback" target="memory2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

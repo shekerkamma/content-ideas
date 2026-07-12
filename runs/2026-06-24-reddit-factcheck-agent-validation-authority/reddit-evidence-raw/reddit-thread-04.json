@@ -1,0 +1,757 @@
+{
+  "post": {
+    "title": "AI Agent Governance and Liability?",
+    "author": "bnyhil31",
+    "score": 7,
+    "content": "Working in business process automation and getting deeper into AI agent research, governance and liability kept coming up as the questions nobody had clean answers for. Not edge cases — central concerns for anyone building agents that touch real data and real outcomes. A few things I've been reading that put it in focus: A recent Accenture/Wharton report found that agents are already spreading across enterprise systems \"ahead of formal strategy and governance,\" with nearly three-quarters of knowledge workers using AI — frequently through unsanctioned tools. The governance stakes, they note, are highest exactly where the revenue opportunity is largest. A piece published this week made a point that stuck with me: technical authorization isn't the same as accountability. When an agent does something it was technically permitted to do but shouldn't have, the system logs confirm it was authorized. That doesn't tell you who's responsible, what context it had, or whether you can prove what actually happened. The questions I keep running into and haven't found satisfying answers to: When an agent acts on the wrong data, how do you reproduce exactly what it had in context at that moment — not just what it output, but what it saw? How do you satisfy a regulator or auditor who wants verifiable evidence, not just logs? How do you enforce that an agent only accesses data it has explicit, scoped consent for — not just what it's technically authorized to see? I've been building toward an answer with an open-source project, but I'm genuinely more interested in how others are approaching this — observability tooling, policy engines, something else entirely? Is this on your radar for production deployments yet, or still theoretical?",
+    "url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+    "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+    "subreddit": "AI_Agents"
+  },
+  "comments": [
+    {
+      "id": "t1_ok2cqa4",
+      "author": "reddithurc",
+      "text": "We have spent months to build out a protocol basically, and validated the framework at a small scale. Going to submit the R&D finings to an AI agent conference. All these are open source but I’m not sure if I can share any names on Reddit these days 😂",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2cqa4/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok49cx1",
+      "author": "fred_pcp",
+      "text": "The attention problem is real, and you're not alone. Same experience here building PiQrypt. What you're building fills a gap I've been thinking about: HumanJudge proves the output was evaluated by a real expert. PiQrypt can prove the evaluation happened, when, by whom, and that the chain hasn't been tampered with since. Different layers, same problem space. And the \"just funding this myself without dancing on TikTok\" sounds familiar .",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok49cx1/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok3hd6r",
+      "author": "reddithurc",
+      "text": "So every node in the agentic process is traceable by design - that way reviewers can evaluate not only on output level, but full granularity, as long as the developer implemented the sdk correctly. Enforcements-focused actions/role assignments/permissions can be implemented upon that layer. The current platform frontend does not reveal that level for the sake of community reviewers’ UX.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok3hd6r/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2b1of",
+      "author": "bnyhil31",
+      "text": "True, I have found that organization want to rely on it, but nobody wants to assume liability. I am looking to resolve the issue across the board, which is where I cam up with the kernel idea. Essentially creates the gates, records, and the connection points amongst common AI architectures. Personally, I do not have a current project that I can speak on, but this has been a side quest of sorts to resolve the issue I keep coming across.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2b1of/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2h1m3",
+      "author": "reddithurc",
+      "text": "Totally feel you, and I can envision that the initiative can be eventually something like Docusign for the “contracts” of AI implementation. One obvious challenge I think would be to generalize the various forms of enterprise AI and to make that easy to explain and adopted at the same time.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2h1m3/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2j30j",
+      "author": "bnyhil31",
+      "text": "That is definitely one of the biggest challenges. I wanted to try and peel everything back and make it simple. The more complex, the harder it becomes to explain, work on, etc.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2j30j/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2okbz",
+      "author": "bnyhil31",
+      "text": "Yes, actually, security was a core focus, so I made it part of the core. https://aevum.build/concepts/five-barriers/ I didn't want to re-create best available software for these areas, so I came up with it being optional to add Cedar ( https://cedarpolicy.com/en ) or and OPA sidecar. Here's the project on GitHub if you want to take a look at the code: https://github.com/aevum-labs/aevum/",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2okbz/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok33bu8",
+      "author": "reddithurc",
+      "text": "Interesting! Have you tried promoting your project? It seems to me that open-source projects cannot be grown as organically as they used to be. Some projects can gain thousands of stars... quality projects like this are worth more attention:)",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok33bu8/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok37tbf",
+      "author": "bnyhil31",
+      "text": "Interestingly enough, this is the first I have made mention of my project. It has a journey of research, fine tuning, minor testing, etc to get to where I am at. It started as a curiosity and has evolved into this. I have been working on some approaches to help spread the word and seek constructive feedback, but I am always open to feedback and suggestions.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok37tbf/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2gynz",
+      "author": "fred_pcp",
+      "text": "These three questions are exactly what drove me to build PiQrypt. On your first question, reproducing what the agent saw at decision time: we hash the input context as part of the signed event payload. Not just what the agent produced, but a fingerprint of what it consumed. Tamper with the context retroactively and the chain breaks. On regulators and auditors: logs confirm authorization. A hash chain proves sequence, attribution, and integrity, independently verifiable with just the agent's public key, no access to your infrastructure needed. That's the difference between \"our logs say\" and \"here's cryptographic proof.\" On consent and data access: that's our TrustGate layer, policy engine that intercepts before execution. REQUIRE_HUMAN pauses the agent until explicit approval. Every decision is a signed chain event, including denials. Your distinction between technical authorization and accountability is the sharpest framing I've seen of this problem. What's the open-source project you're working on? Curious if there's overlap.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2gynz/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2iebs",
+      "author": "bnyhil31",
+      "text": "Sounds like there is overlap. I like your train of thought on this. Feel free to look and/or use anything from my code/project: https://github.com/aevum-labs/aevum",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2iebs/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok33vyw",
+      "author": "fred_pcp",
+      "text": "Thanks for sharing, that's genuinely generous. Spent time on the Aevum repo. The consent ledger and replay primitives are well thought out, especially the OR-Set revocation model. Real overlap in the problem space, different angles. Feel free to check out ours too github.com/piqrypt/piqrypt",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok33vyw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok36d5v",
+      "author": "bnyhil31",
+      "text": "Thanks for sharing as well. That's an interesting project and I can definitely see some of the overlap. Great resource. I have it open on another tab to look into in a bit.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok36d5v/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok3x5ie",
+      "author": "bnyhil31",
+      "text": "Shout-out to your post-quantum forward focus.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok3x5ie/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok57gil",
+      "author": "Deep_Ad1959",
+      "text": "my read: everyone reaches for observability tooling and policy engines on this, and that's the wrong layer. the only context snapshot that holds up to a regulator is one taken before the model call returns, not reconstructed from logs after. that means a gateway in front of every llm invocation and every tool call persists (system prompt + retrieved context + tool defs + scopes + raw output) as a single immutable record keyed by request id. retrieval is non-deterministic and prompts get re-templated, so 'what did it see' is genuinely unanswerable if all you have is output logs. on consent, the failure mode is treating it as a model-layer concern; the enforcement point that survives audit is the tool boundary, where every call passes a scope check and the rejections are themselves logged. the deeper problem is most teams build the agent first and try to bolt this on later, by which point there's no chokepoint to enforce any of it. fwiw the 'immutable context snapshot at the model call boundary' shape is exactly what we wrote up for clients running into audit asks, a gateway pattern that captures system prompt + retrieved context + tool defs + scopes + raw output as one signed record keyed by request id, https://fde10x.com/r/gyeiaaed",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok57gil/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok5lq1v",
+      "author": "bnyhil31",
+      "text": "I appreciate your take. Thanks for taking the time to read it. The main goal I focused on is what perspective did the user (or agent or any other entity) have at the time of the decision? That includes what they know and what they may not know. The deeper complexities then come from exactly that...fragmented builds that create an overhead nightmare and ultimately end up at a point of how do we standardize and consolidate some of this. Since that's a later understanding down the road, it becomes a bolt on, band-aid solution. This led me to strip all the layers back and simplify it as much as possible to avoid that future problem, yet allow for flexibility and adaptability with changing needs, rules, and regulations. Instead of re-creating what already has a solid grounding and performance, how can we implement the accountability and better oversight, including or excluding HITL. A kernel was the simplest approach, so why not start there? It reframes the approach and implementation a little to be less of a bolt on afterthought product and more of an open-source expandable framework to start with.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok5lq1v/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok5nzk6",
+      "author": "Deep_Ad1959",
+      "text": "the kernel framing is the right instinct but it imports a constraint people forget. an os kernel only enforces anything because it owns the syscall boundary, userland literally can't talk to hardware without going through it. for an agent kernel to actually enforce anything, it has to own llm invocation and tool dispatch the same way, otherwise devs route around it the first time it adds friction. the second issue is ABI stability. kernel interfaces stay stable for decades but governance primitives change every time a new regulation lands, so you either ossify or end up with a policy engine bolted on top of your kernel and you're back to where you started.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok5nzk6/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok6pa9w",
+      "author": "bnyhil31",
+      "text": "Genuine great feedback, thank you. You have a great point about the re-routing...sneaky but obvious. This gives me some interesting perspectives to research and analyze.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok6pa9w/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok7n0bc",
+      "author": "Deep_Ad1959",
+      "text": "the wrinkle that bites right after the gateway is in place: regulators usually want reproducibility, not just a snapshot. you can capture system prompt + retrieved context + tool defs perfectly and still not be able to replay the same output, because the provider rotated weights or deprecated the checkpoint underneath you. so the snapshot has to pin model version, provider build, seed, temperature, and you have to track which providers actually expose stable model ids vs aliasing under the hood. otherwise you've got an immutable record of an unreproducible decision, which auditors love about as much as no record at all.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok7n0bc/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok8h5rf",
+      "author": "bnyhil31",
+      "text": "True. I'm thinking that if I can get all of the required data points or metadata into the tool, the sigchain will do the rest. They could see the context (the core data that other systems can utilize to reproduce the results) by reviewing the chain and then connecting the dots. This tool isn't for that part externally, but essentially presents the arguments the tool(s) had at the moment, etc. To your point, it may be set now, but it's always evolving, so how do we take that into account. I tried to keep the codebase broken down into specific blocks that allow for less overhead when implementing these updates. One example/way I tried to achieve this is through the domain packs. https://aevum.build/domain-examples/ Overall I tried to build it like a watch movement with room for custom complications to help expand the core where needed.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok8h5rf/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok8ipgr",
+      "author": "Deep_Ad1959",
+      "text": "the watch-movement framing is right for the model call itself, the place it gets brittle is retrieval. signing prompt + tool args proves what the agent saw at T0, it doesn't prove the same query against the same chain six months later returns identical chunks. embedding models get reversioned, vector indices get rebuilt, retrieval is non-deterministic by design. so the chain answers 'what did it see' but not 'is this still recomputable from primitives,' which is the actual auditor question. domain packs handle schema at the input boundary; the harder unsolved piece is snapshotting the retrieval substrate itself, and most teams treat that as someone else's database problem until it isn't.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok8ipgr/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok9eqhh",
+      "author": "bnyhil31",
+      "text": "True. In this project, the idea is that you would attach any of the MCP, LLM, API, or other python libraries at their respective connection points, so this piece is a component in that audit chain that then reliably helps to provide your arguments and model details to allow further investigation into the specific audit requirements of each entity/component. I'll have to see if I can find it, but I did see a project someone is working towards that is supposed to help visualize and explore the model. So in this case, the end client would be able to utilize a tool like the visualizer and the sigchain from Aevum to answer those questions. So I guess where I am going is that this isn't necessarily to address all audit requirements, but build a foundation for fulfilling those in a uniform way that the endpoints can then utilize to decipher and fulfil the audit requirements. It means the enterprise would still have to have plans in place for maintaining each of those systems so that when they have an audit, they know exactly where to start and how to handle it (or should anyways).",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok9eqhh/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_oka98i9",
+      "author": "Deep_Ad1959",
+      "text": "the layered foundation framing has a specific failure mode that hits in actual audits. when component A logs the prompt, B logs the retrieval, C signs the output, and a separate sigchain ties them together, you've moved the audit problem from 'reconstruct what happened' to 'reconcile across four tools that disagree on timestamps and request IDs.' regulators don't care about your architecture diagram, they want one coherent narrative. distributed signing becomes diffuse accountability the moment any seam fails, and the seams are usually where clock skew or missing trace context kill the chain.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/oka98i9/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okb3sqh",
+      "author": "bnyhil31",
+      "text": "So then it's another layer of continuity that must exist across all systems (in several data points, one being the clock) that utilize the centralized 'kernel', since without it, the accountability begins to break down?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okb3sqh/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_oklc3s3",
+      "author": "Finorix079",
+      "text": "The \"technical authorization isn't accountability\" framing is the most accurate sentence I've read on this. Most governance conversations collapse the two and pretend the audit trail is downstream paperwork rather than a load-bearing requirement. Worth separating your three questions because they live in different layers and need different tools: Question 1 (reproduce what the agent saw in context) is a runtime evidence problem. Logs don't solve it because logs are textual artifacts after the fact. You need step-level input freezing, where each step's exact context (prompts, tool outputs, retrieved data) is captured as a replayable fixture. Then \"what did the agent see\" becomes a question you can answer by re-running the trace, not by reading paragraphs of JSON. Question 2 (verifiable evidence for regulators) builds on Q1. Auditors don't want a screenshot of a dashboard. They want \"show me the exact decision the agent made, the exact data it had, and prove this is the same as what ran in production.\" Replay-with-frozen-inputs is the only thing I've seen that actually satisfies that bar. Logging tools generate evidence that's hard to verify; replay generates evidence that's reproducible by definition. Question 3 (scoped consent vs technical authorization) is a different category. That's policy enforcement before the agent acts, not evidence after. Tools like Aembit, SGNL, or Cerbos are doing real work in that space. It pairs with Q1/Q2 but isn't the same problem. Disclosure since it's directly relevant: I work on ElasticDash, focused on Q1 and Q2 (deterministic step-level replay and trace-to-baseline drift detection for production agents). Built around the assumption that \"what happened\" needs to be reproducible, not just queryable. Happy to talk through specifics if useful, no pitch. The broader point worth being explicit about: this category is going to split into three layers (policy enforcement, runtime evidence, behavioral baseline). Most teams currently have a partial answer to one of the three and assume governance means having all three checked off as line items. The ones who'll survive their first regulator conversation are the ones who built each layer with the assumption an auditor will actually test it.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/oklc3s3/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_omjssiw",
+      "author": "bnyhil31",
+      "text": "I like how you broke it down. The layer approach has been the most critical so far. The question actually started as how to simplify it down and then take a microscope to each layer. It’s been quite a journey.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/omjssiw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okmu4xh",
+      "author": "No_Citron4186",
+      "text": "Governance gets concrete at the action boundary. Who authorized this tool call, under which user context, with which parameters, using what source data, and what state changed? If that chain cannot be reconstructed, liability will be mostly vibes. I’d separate policy documents from enforcement points. Saying “agents should not do X” is governance. Blocking the tool call before X executes is control.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okmu4xh/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok28otl",
+      "author": "AutoModerator",
+      "text": "Thank you for your submission, for any questions regarding AI, please check out our wiki at https://www.reddit.com/r/ai_agents/wiki (this is currently in test and we are actively adding to the wiki) I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok28otl/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2c2h5",
+      "author": "reddithurc",
+      "text": "Tracing mechanism in place, with all temperature set to zero. There’s no definite answer now unfortunately (see below) This is more on rag and agent tools design… I would say it’s better to design the human in the loop mechanism properly in the first place, not the other way around. I have led compliance projects / SOC-2 for AI projects, and there will be more compliance coming you can take reference (EU AI act, effective in August this year, which states clear about the importance of HITL process).",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2c2h5/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2fc5h",
+      "author": "bnyhil31",
+      "text": "In your experience, have you seen any simplified solutions that address this from the root? I keep coming across where it becomes a step in a unique process, rather than across the board, for agents, users, or anything else.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2fc5h/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2i69v",
+      "author": "reddithurc",
+      "text": "To be honest I am building something related to this, but with a slightly different angle. If you are interested I can share more for sure . Assuming you had established the whole framework, what is your plan? Making it something like a community driven project? approaching enterprises to collect real case studies?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2i69v/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2k7hb",
+      "author": "bnyhil31",
+      "text": "My goal is to make this open source for anyone to use and adopt. It seems to be a real problem that everyone can benefit from, so why not open it up to everyone to make it the best we can as a community? Edit: Yes, eventually I would hope to expand to enterprise adoption.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2k7hb/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2nojd",
+      "author": "fred_pcp",
+      "text": "Completely agree on designing HITL in from the start, retrofitting governance onto an existing agent stack is painful and usually incomplete. The EU AI Act deadline is real pressure. What we see in practice: organizations assume \"we have logs\" is sufficient for Art. 12. It isn't, inviolable means tamper-evident by design, not just stored somewhere. SOC-2 for AI systems is an interesting space too,the control requirements don't map cleanly onto agentic workflows yet. Have you seen auditors starting to define specific criteria for agent audit trails, or is it still interpreted case by case?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2nojd/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2v9ed",
+      "author": "reddithurc",
+      "text": "Still in a very case-by-case approach, and 100% on \", the control requirements don't map cleanly onto agentic workflows yet\"- there's a lot of policy making/ evaluation framework setting thing going on, funding to this may not be as excited compared to actual hardware/model development projects",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2v9ed/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2z7m2",
+      "author": "fred_pcp",
+      "text": "That funding asymmetry is real , governance tooling isn't exciting until something goes wrong. Building cryptographic primitives now that will satisfy whatever compliance framework eventually solidifies feels like the right bet.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2z7m2/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok31rvi",
+      "author": "reddithurc",
+      "text": "I have been thinking about the same question lately... Claude and Gemini can create hypes easily with a few random model outputs/ god-like they are, and it seems AI safety/ governance tech is hard to \"visualize\" until something happens, then people start realizing the with/without difference - what's your take?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok31rvi/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok3511r",
+      "author": "fred_pcp",
+      "text": "Exactly,security is invisible until it isn't. But August 2026 is a hard deadline. EU AI Act is forcing the conversation before the incident, which is rare. GDPR taught us how fast priorities shift when the fine lands.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok3511r/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok38q0f",
+      "author": "reddithurc",
+      "text": "Totally! More VCs/ funds should be aware of this; without a robust HITL design in place, AIs can only stay on a research/theoretical level. This will hurt their portfolio's value too- billions went to those \"AI companies\" just because of the hypes - many of them just shut down just because they failed in market adoption. If governance is forced to be done properly from the get-go, they could have vetted these startups much more easily",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok38q0f/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok3foev",
+      "author": "fred_pcp",
+      "text": "One thing we keep seeing: teams aren't using one framework. It's LangChain here, CrewAI there, an AutoGen agent talking to an MCP tool, maybe an Ollama model running locally. The governance layer has to work across all of them,or it doesn't work at all. That's why we built AgentSession: co-signed audit trails across framework boundaries. A CrewAI agent and an AutoGen agent in the same verifiable session, each chain independent but cross-referenced. No shared server. No single point of failure. Just cryptographic proof that these two agents interacted, in this order, with these decisions.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok3foev/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2faog",
+      "author": "deelight_0909",
+      "text": "The part I would separate is authorization from accountability. A tool can be technically allowed to call an API and the system can still be badly governed. \"The agent had permission\" does not answer: what state it believed was true which policy allowed the action who approved the risky part, if anyone what external proof shows the action actually happened what rollback path exists In my own setup the model does not own secrets or final authority. It can propose the action. A non-model layer loads credentials from the OS keychain/helper path, checks the effect type, and either runs it, asks for approval, or refuses. The log row I care about is not just \"tool X called at 10:31.\" It is closer to: claim -> policy decision -> bounded action -> evidence -> next allowed action That gives you something to audit when the agent touched the wrong record or used stale context. Without that, traces prove the system ran, but not that the organization can explain what it did.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2faog/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2kkje",
+      "author": "reddithurc",
+      "text": "Agreed . API, MCP, RAG etc is the technical implementation bit, so that human experts know the scope- the CONTEXT involved for this machine operation . In an agentic setting every action in the nodes should be under governance.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2kkje/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok9e84p",
+      "author": "deelight_0909",
+      "text": "yep. The context part is where a lot of systems get hand-wavy. It is not enough to say node X may call tool Y. The node needs to know which record, user, account, and run it is acting on, why that context is current, and what would make the action invalid. Otherwise governance turns into a permission matrix with no situational awareness.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok9e84p/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok9ksnw",
+      "author": "reddithurc",
+      "text": "Yes, and I know many teams simply won’t version their prompt or miss tracking them in production. They misinterpreted that as redirect in logging/ traces. But hey, this is LLM. We are feeding various LARGE inputs to a machine and it’s our responsibility to keep track of things. All the thoughts and discussions here is 10 times better than those pointless threads on LinkedIn where people are not actually discussing things.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok9ksnw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okfdheh",
+      "author": "deelight_0909",
+      "text": "yeah, prompt/version tracking is the unsexy part that ends up mattering most. I treat the prompt, tool schema, retrieved context, and policy version as part of the input artifact, not background noise. If any of those changed, it was a different run. The failure mode I keep seeing is: final answer gets logged, maybe the final prompt blob gets logged, but nobody records which records were retrieved, which tool schema was exposed, or which policy decision was active at the moment of action. Then debugging turns into archaeology. A plain row is enough to start: template version, context refs/fingerprints, tool schema version, policy decision, action, verifier result. Fancy traces are nice, but a boring row people actually read beats a perfect trace nobody opens.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okfdheh/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2hwap",
+      "author": "bnyhil31",
+      "text": "Good points. Based on my research, I came up with a Merkle chain approach, with a standardized output envelope to handle each step. This way it's not just a log file of decisions and data. I wanted to make sure it was secure and could provide a clear picture of every action in the episode. The authorization was tricky due to the scattered systems with each of their own permissions. That's where I had it build in a centrally located one that can also connect to existing security infrastructure. This way, each of the attached systems can retain their own security measures and still function through the membrane, but also implement a centralized one, should you like that. This is more information on the barriers, since it's a lot to type in here: https://aevum.build/concepts/five-barriers/",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2hwap/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok9e92v",
+      "author": "deelight_0909",
+      "text": "Yeah, the membrane framing is close to how I think about it too. The standardized envelope is the part I would keep very boring. I would be careful with central authority becoming a magic bypass, though. The attached systems still need their native permissions; the central layer should narrow and coordinate, not replace. My preferred split is: local adapter proves what action it can take, central policy decides whether it is allowed for this episode, verifier records the outside outcome. Merkle chain makes sense for tamper evidence. I would still optimize first for rows humans can read when something breaks.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok9e92v/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok9hpp1",
+      "author": "bnyhil31",
+      "text": "I agree. To me, the envelope is the most important piece. How can you keep it simple (boring for sure), but it can be widely adopted across systems and entities (if desired) while still being scalable? Similar to APIs, I tried to focus on simple and something that can scale (versioning for updates and changes) while minimizing the overhead required for storage. As the to security, I found this to fill the gap without recreating the wheel: https://cedarpolicy.com/en",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok9hpp1/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okfdihk",
+      "author": "deelight_0909",
+      "text": "Cedar is a good reference point for the policy side. I would still keep the envelope separate from the policy engine itself. The envelope I would want is basically boring database material: event id, episode id, actor/model, tool, context refs, policy id/version, decision, approval ref if any, action payload hash, outside-world result, verifier result, previous event hash. Then Cedar or whatever policy layer answers: allowed, denied, needs human. The envelope records what was asked, what answered, and what actually happened afterward. That separation is what keeps it portable. Teams can swap policy engines later without rewriting the evidence format.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okfdihk/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okgawqh",
+      "author": "bnyhil31",
+      "text": "The portability is the key for this component. I started with Cedar since it kept coming up, but I did attempt to implement this as well: https://www.openpolicyagent.org/docs/integration Of course that's only the policy engine, not the envelope, so that would still need to be resolved and standardized within regulation specs.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okgawqh/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okmmvuk",
+      "author": "deelight_0909",
+      "text": "OPA is a good reference too. I would be careful not to standardize around any one policy language too early, though. The piece I would standardize first is the envelope of facts around the decision: actor, tool, target resource, context refs, policy version, requested action, decision, approval ref if any, action hash, observed outside result, verifier result, previous event hash. Then Cedar, OPA, a database rule, or a dumb allowlist can all consume the same shape. The policy engine can be swappable; the evidence record should outlive it. For scalability I would keep a tiny required core plus namespaced extensions. Most runs do not need a giant compliance object. They need enough structure that a human, auditor, or second system can reconstruct: what did the agent know, what was it allowed to do, what did it actually do, and how was that checked.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okmmvuk/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_omjra4p",
+      "author": "bnyhil31",
+      "text": "Good points. I did start working on a policy engine to try to keep the swappability alive on each of the endpoints. It’s been a challenge, but I’m open to suggestions (like some of the points you mentioned above). The minimal footprint and maintenance overhead are important so it doesn’t get scope creep and end up ballooning one end up to cater.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/omjra4p/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2iun9",
+      "author": "fred_pcp",
+      "text": "Your sequence maps exactly to what we formalized in PCP: claim - policy decision - bounded action - proof - next authorized action. Each step is a signed chain event including the policy that fired, the human approval if triggered, and an RFC 3161 timestamp anchoring it externally. \"The agent had permission\" becomes \"here's the signed proof of every decision in sequence.\"What stack are you running this on?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2iun9/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok9e8lj",
+      "author": "deelight_0909",
+      "text": "Mostly OpenClaw plus small deterministic helpers, not a full signed-chain system yet. The shape is: AGENTS.md and tool docs define policy, helper scripts own credentials, approvals gate external effects, and every cron/post/call writes a ledger row with claim, evidence, permalink or artifact, and next action. For high-risk actions I would want exactly what you are describing: append-only signed events plus timestamping outside the agent. Today mine is more operational audit trail than compliance-grade proof chain. The useful lesson has been keeping the model out of the signing and secret-owning layer.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok9e8lj/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2kxjm",
+      "author": "bnyhil31",
+      "text": "As of right now, it's solely based on Python. The original idea came from building something simple enough to run on a Raspberry Pi, but scalable to meet enterprise demands while adhering to regulations for a variety of industries (but I do have some domains lined up to start working on: https://aevum.build/domain-examples/ ).",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2kxjm/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2l0v3",
+      "author": "getstackfax",
+      "text": "This is absolutely on the radar for production deployments. Key distinction being…. technical access is not the same as delegated authority. A token, role, or API permission can prove the agent was allowed to call a tool. It does not prove: - the agent had the right business context - the data was appropriate for that workflow - the user/customer consent covered that action - the action matched the intended purpose - the output was reviewed when needed - the decision chain can be reconstructed later For agents, normal logs are not enough. I’d want something closer to a run receipt or decision receipt: - user/request that triggered the run - agent identity - model/version used - tools available - tools actually called - data sources retrieved - exact context or context hash/snapshot - policy checks applied - consent/scope applied - output generated - action proposed - action executed - human approval if required - final system touched - rollback/escalation path The hardest part is “what did it see?” If you cannot reconstruct the active context, retrieved data, prompts, tool results, memory, and policy state, then you cannot really audit the decision. You can only audit the aftermath. For scoped consent, I think the policy has to be enforced at retrieval/action time, not just at login. The system should ask: - is this data allowed for this agent? - is it allowed for this user? - is it allowed for this purpose? - is it allowed for this workflow stage? - can it inform a draft only, or can it trigger an action? - does this require human approval? The failure mode is treating “the agent could access it” as “the agent was allowed to use it.” Those are different. So my answer would be…. observability is necessary, but not sufficient. Production agents need policy enforcement, scoped delegation, context capture, and replayable evidence. Otherwise governance becomes a dashboard that explains the mistake after it already happened. Not good.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2l0v3/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok32ytv",
+      "author": "fred_pcp",
+      "text": "\"Governance becomes a dashboard that explains the mistake after it already happened.\" Saving that one. Your decision receipt list is almost exactly what we landed on after months of iteration, good to see independent convergence on the same primitives. The \"what did it see\" problem kept us up at night too. Our answer: hash the active context into the signed event. Not the raw data — the fingerprint. Proves what informed the decision without storing anything sensitive. \"Technical access ≠ delegated authority\" deserves to be on every AI governance checklist.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok32ytv/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok392ro",
+      "author": "bnyhil31",
+      "text": "Precisely! The next step I have also been looking into is how to allow each department or LOB to maintain their own instance, but also allow for connections to other instances and retain the security permissions. The second challenge to that was also, what happens to the historical data/chain when you remove a node?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok392ro/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok3bku8",
+      "author": "fred_pcp",
+      "text": "Both solved by the same principle: the chain has to be self-contained. A2A handshakes sign interactions into both chains, no shared server needed for cross-instance trust. And when a node leaves, the .pqz archive travels with it. History survives infrastructure changes.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok3bku8/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2mvnd",
+      "author": "bnyhil31",
+      "text": "Great insight. Do either of these help to shed some light on the solution I came up with for this? I'm open to suggestions and insight. https://aevum.build/concepts/how-it-works/ https://aevum.build/concepts/sigchain/",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2mvnd/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2mztl",
+      "author": "reddithurc",
+      "text": "But the truth now is that most fancy AI solutions skip all that and they can’t really be adopted in real world environment. So many of them just died down. They may have a good design, but it just failed at compliance level and the prolonged sales cycle.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2mztl/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2pn2d",
+      "author": "getstackfax",
+      "text": "Exactly. In enterprise, governance is not just a compliance checkbox. It is part of the product. If the buyer cannot answer: - what data the agent saw - why it was allowed to see it - what action it took - who approved it - how to replay the decision - how to stop or roll back the workflow then adoption gets stuck in legal/security review, even if the demo looks good. A lot of AI tools are built to impress users first and satisfy risk/compliance later. For enterprise, that order often kills the sale.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2pn2d/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok2l4ob",
+      "author": "Sufficient_Dig207",
+      "text": "In my automation degisn, the agent is an extension of a human, inheriting their permissions (or a subset) and identify, so it has accountability and security built in.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2l4ob/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok3lbn3",
+      "author": "Beneficial-Ant5311",
+      "text": "Logs alone rarely satisfy regulators who want to see what actually happened. At AI-Harness.com we solve this by recording the entire agent session (full context, prompts, tool calls) and automatically capturing screenshots at key moments. These visual + session records supplement the immutable audit logs, giving auditors a clear, replayable evidence package with documented human oversight. It turns technical logs into real accountability. Curious how you're approaching the recording/replay side in your open-source project? Would love to compare notes on what regulators actually accept.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok3lbn3/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok3rpak",
+      "author": "bnyhil31",
+      "text": "Thanks for sharing. I couldn't tell from the site as to the functionality behind the replay side, so let me know if I overlooked something. Here is more on how my project attempts to achieve this: https://aevum.build/concepts/replay-vs-observability/",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok3rpak/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok6s7p7",
+      "author": "Beneficial-Ant5311",
+      "text": "Thanks for checking the site! You're right — the replay feature isn't clearly shown yet. In AI-Harness we record the full agent session in real-time (context, prompts, tool calls, outputs) and automatically capture screenshots at key moments. Everything is stored immutably with the audit trail, creating an easy visual replay for auditors. Appreciate the feedback, we’ll improve the docs. Curious what you think of this approach vs your sigchain method?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok6s7p7/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok7d2ga",
+      "author": "Samar_Poo",
+      "text": "This is absolutely on the radar for production deployments. Logs alone are not enough, because they usually show what happened, not whether the agent should have been allowed to do it in that exact context. For real governance, I think teams need context snapshots, scoped permissions, policy checks before tool calls, approval records, and replayable evidence of what data the agent saw at decision time. The tricky part is that “authorized” and “accountable” are different things. An agent can have access and still make a bad decision with that access. This is where DOE fits naturally: wrapping agents inside defined business workflows with consent boundaries, review points, audit trails, and escalation paths. Governance can’t be an afterthought once agents touch real customer data or business outcomes.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok7d2ga/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok8eckg",
+      "author": "bnyhil31",
+      "text": "\"An agent can have access and still make a bad decision with that access.\" Well said. I keep coming back to perspective and/or context. So if we need to capture that, what do we capture, how do we capture it, how do we efficiently store it, protect it, etc. What are your thoughts on some of the ways this could be be accomplished?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok8eckg/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_oka5ql0",
+      "author": "One-Ad-2849",
+      "text": "Check out Arden - https://www.arden.sh We’re using this to stop tool invocations before they happen and the dashboard observability helps us dive into each agent session to figure out what’s going wrong. We’ve set some baseline policies to stop bad actions. The issue we ran into with a lot of observability tools is that they’re telling us what went wrong AFTER the damage was done",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/oka5ql0/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okbqnk1",
+      "author": "One_Cheesecake_3543",
+      "text": "The clean-answers gap on governance/liability is real and it's structural — current compliance frameworks weren't built for autonomous agents making sequences of decisions, so every team is improvising. The hardest part isn't identifying that you need governance, it's that the liability surface keeps shifting as agents get chained together. One agent's output becomes another's unvalidated premise, and by the time you trace accountability back, you're looking at 5 hops of context inheritance with no freeze points. What seems to be working for teams navigating this: capturing decision state at each action boundary (not just inputs/outputs at the endpoint), maintaining a clear override record so humans can show when they intervened and what changed as a result, and defining accountability zones before the agent touches prod — not after the incident. The governance frameworks will follow the incident patterns. What's the specific use case you're seeing this in?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okbqnk1/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okg8g3f",
+      "author": "bnyhil31",
+      "text": "Love this point you made: \"The liability surface keeps shifting as agents get chained together.\" This is essentially at the core of the main question I've been focusing on...how to bridge these gaps and mitigate the compliance risks from the inside out, rather than outside in. At the moment, it has been primarily researching and testing theories. I work FT doing business automation, but due to the risks we keep reading about, it's been a current/recent barrier to adoption that has interested me in how to adapt or overcome it. Here is the GitHub project if you are interested in taking a look: https://github.com/aevum-labs/aevum",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okg8g3f/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_okl9d0f",
+      "author": "Hamza_StrategizeLabs",
+      "text": "Liability is where the 'toy' agents get separated from the enterprise systems. Most people try to solve this with better prompts, but you can't prompt your way out of a legal error. We handle this by ensuring Alfrada are sovereign by design running on private Swiss infrastructure where every decision is auditable and reaches consensus within a Hive Mind before it ever touches a production system. If you can't trace the reasoning path, you shouldn't be giving it authority.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okl9d0f/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_onym4on",
+      "author": "umairsheik",
+      "text": "The second question is the hardest one in practice. Logs tell you what happened, not why, and a regulator doesn’t want a CSV dump. They want a reconstruction of the decision chain they can actually read and verify. The scoped consent question is underrated too. Technically authorized and appropriately authorized are not the same thing, and most agent frameworks don’t distinguish between them. Been building in this space. Happy to share what we’ve learned if useful.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/onym4on/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_opqw1uy",
+      "author": "Wild-Annual-4408",
+      "text": "The governance lag you're describing isn't unique to agents, but agents make it more acute because the decision chain becomes harder to reconstruct after the fact. With a human-in-the-loop workflow, there's at least a person who remembers approving something. With an agent chain, the question of who authorized what, at what point, with what data in scope, can get genuinely murky. The liability framing that keeps coming up in regulated industries is less 'who built the agent' and more 'who deployed it and what did they do to verify it was fit for that specific use case.' Mobley v. Workday has already moved the needle on vendor liability, but deployer liability is where most enterprise legal teams are now focused, especially in credit, hiring, and claims workflows. Practically, the governance artifacts that seem to matter most are: documented scope boundaries at deployment time, human override logging, and some evidence that the people supervising the agent can actually evaluate its outputs rather than just rubber-stamp them. The third one is the hardest and the most overlooked.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/opqw1uy/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_ok6go3w",
+      "author": "BidWestern1056",
+      "text": "npcpy if you want to roll your own, celeria.ai if you want a managed SaaS that gives you governance and observability out of the box.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok6go3w/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "subreddit": "AI_Agents"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+    "method": "old_reddit_html"
+  }
+}

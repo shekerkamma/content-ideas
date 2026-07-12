@@ -1,0 +1,18 @@
+{
+  "id": "src-efafc48d92da",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Measuring AI agent autonomy in practice \\ Anthropic",
+  "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
+  "canonical_url": "https://www.anthropic.com/research/measuring-agent-autonomy",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:39.759199+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+  "raw_content_path": null,
+  "dedupe_key": "9f90189258f9",
+  "status": "new",
+  "errors": []
+}

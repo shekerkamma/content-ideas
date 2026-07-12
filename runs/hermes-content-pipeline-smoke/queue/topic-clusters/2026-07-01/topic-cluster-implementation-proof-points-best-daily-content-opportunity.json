@@ -1,0 +1,28 @@
+{
+  "id": "topic-76cf4f44be24",
+  "date": "2026-07-01",
+  "title": "Implementation proof points: best daily content opportunity",
+  "theme": "Implementation proof points",
+  "source_item_ids": [
+    "src-ab38b94b26be",
+    "src-51b0ca5578fe",
+    "src-78d18dccb4e6"
+  ],
+  "score": 79.5,
+  "score_breakdown": {
+    "business_relevance": 76,
+    "source_authority": 95.0,
+    "freshness": 80,
+    "novelty": 70,
+    "implementation_value": 74,
+    "audience_fit": 82
+  },
+  "score_reasons": [
+    "3 source item(s) found in the cluster",
+    "Priority is medium",
+    "Topic fits the operator-facing AI content strategy"
+  ],
+  "recommended_angle": "Explain what changed in Implementation proof points and convert it into a practical implementation narrative for AI operators.",
+  "audience_fit": "AI operators, enterprise solution architects, and founders evaluating agent workflows",
+  "status": "ranked"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "src-39247b6d8da6",
+  "source_id": "openhands-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Software Agent SDK - OpenHands Docs",
+  "url": "https://docs.openhands.dev/sdk",
+  "canonical_url": "https://docs.openhands.dev/sdk",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:30.311415+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Build AI agents that write software. A clean, modular SDK with production-ready tools.",
+  "raw_content_path": null,
+  "dedupe_key": "7ad558336cab",
+  "status": "new",
+  "errors": []
+}

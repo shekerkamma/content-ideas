@@ -1,0 +1,14 @@
+{
+  "status": "fallback",
+  "source_title": "If you're building with AI, watch this (System Design Overview)",
+  "uploader": "Ras Mic",
+  "upload_date": "20260702",
+  "duration": "30:18",
+  "watch_output": "runs/2026-07-09-video-deck-watch",
+  "gates": {
+    "watch": "passed: captions and 50 efficient keyframes extracted",
+    "research": "fallback: no callable Exa/Firecrawl tools exposed; transcript-grounded research note used",
+    "visual_route": "pptx-native editable diagrams",
+    "story_validation": "manual grill-me style validation"
+  }
+}

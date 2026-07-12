@@ -1,0 +1,18 @@
+{
+  "id": "src-34b5cefd1415",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Anthropic and Infosys collaborate to build AI agents for ...",
+  "url": "https://www.anthropic.com/news/anthropic-infosys",
+  "canonical_url": "https://www.anthropic.com/news/anthropic-infosys",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:39.759225+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+  "raw_content_path": null,
+  "dedupe_key": "89c09d6960f2",
+  "status": "new",
+  "errors": []
+}

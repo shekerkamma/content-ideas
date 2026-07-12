@@ -1,0 +1,38 @@
+{
+  "status": "reviewed",
+  "deck_type": "genspark-branded image-rendered PPTX",
+  "slide_count": 32,
+  "source_video": "https://www.youtube.com/watch?v=HELeFVmBkeg",
+  "source_video_title": "The Ultimate Beginner's Guide to Claude Code (2 HOURS)",
+  "source_video_channel": "Albert Olgaard",
+  "source_video_duration": "02:18:34",
+  "source_files": {
+    "html": "runs/2026-07-03-video-helevmbkeg/genspark-branded/deck.html",
+    "theme_css": "runs/2026-07-03-video-helevmbkeg/genspark-branded/theme.css",
+    "deck_css": "runs/2026-07-03-video-helevmbkeg/genspark-branded/deck.css"
+  },
+  "render": {
+    "windows_stage_dir": "C:\\Users\\sheke\\genspark-design-template\\claude-code-course",
+    "png_dir": "C:\\Users\\sheke\\genspark-design-template\\claude-code-course\\build\\png",
+    "rendered_png_count": 32,
+    "render_resolution": "2560x1440"
+  },
+  "outputs": {
+    "draft_pptx": "runs/2026-07-03-video-helevmbkeg/genspark-branded/claude-code-course-genspark-branded-draft.pptx",
+    "reviewed_pptx": "runs/2026-07-03-video-helevmbkeg/genspark-branded/claude-code-course-genspark-branded-reviewed.pptx",
+    "qa_contact_sheets": "runs/2026-07-03-video-helevmbkeg/genspark-branded/qa"
+  },
+  "qa": {
+    "pptx_slide_count_checked": true,
+    "pptx_slide_count": 32,
+    "pptx_media_count": 32,
+    "contact_sheet_review_completed": true,
+    "visible_text_scan_completed": true,
+    "visible_text_scan_result": "clean; remaining retrieve matches are legitimate support-agent slide content",
+    "internal_production_terms_removed": true
+  },
+  "editability": {
+    "powerpoint_editability": "image-per-slide PPTX, not native editable text/shapes",
+    "source_editability": "deck.html, theme.css, and deck.css are the editable source of truth"
+  }
+}

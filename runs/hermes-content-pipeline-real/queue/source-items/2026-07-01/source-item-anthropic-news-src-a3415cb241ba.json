@@ -1,0 +1,18 @@
+{
+  "id": "src-a3415cb241ba",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Introducing Claude 4 \\ Anthropic",
+  "url": "https://www.anthropic.com/news/claude-4",
+  "canonical_url": "https://www.anthropic.com/news/claude-4",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:39.759219+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "New API capabilities: We’re releasing four new capabilities on our API that enable developers to build more powerful AI agents: the code execution tool, MCP connector, Files API, and the ability to cache prompts for up to one hour. Claude Opus 4 and Sonnet 4 are hybrid models offering two modes: near-instant responses and extended thinking for deeper reasoning. The Pro, Max, Team, and Enterprise ...",
+  "raw_content_path": null,
+  "dedupe_key": "4ec03078d316",
+  "status": "new",
+  "errors": []
+}

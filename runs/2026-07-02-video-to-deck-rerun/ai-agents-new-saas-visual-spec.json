@@ -1,0 +1,91 @@
+{
+  "source": "https://www.youtube.com/watch?v=83fWzQSWB10",
+  "title": "AI Agents Are The New SaaS",
+  "rules": {
+    "exclude_presenter_frames": true,
+    "primary_deck_visuals_must_be_editable": true,
+    "screenshots_allowed_only_for_appendix": false,
+    "reconstruction_intermediates": ["svg", "html/css"],
+    "final_renderer": "pptx-native"
+  },
+  "hyperframes": [
+    {
+      "id": "unit-economics",
+      "frames": ["frame_0001.jpg"],
+      "classification": "diagram",
+      "route": "svg -> pptx-native",
+      "slide": 3,
+      "title": "Agents Win When Unit Economics Compress",
+      "elements": [
+        {"type": "comparison", "left": "Human agent", "right": "AI agent", "metric": "cost per customer interaction", "delta": "90% lower cost"},
+        {"type": "table", "rows": ["First response time", "Resolution time", "ROI year 1", "ROI year 2", "ROI year 3"]}
+      ]
+    },
+    {
+      "id": "workflow-scorecard",
+      "frames": ["frame_0003.jpg"],
+      "classification": "diagram",
+      "route": "svg -> pptx-native",
+      "slide": 4,
+      "title": "Pick A Workflow With A Paycheck Attached",
+      "elements": [
+        {"type": "cards", "labels": ["Frequency", "Pain", "Pattern Lens", "Tools", "Budget"]},
+        {"type": "banner", "text": "First rep: pick one niche -> list 20 annoying jobs -> score each one."}
+      ]
+    },
+    {
+      "id": "shadow-human",
+      "frames": ["frame_0004.jpg"],
+      "classification": "diagram",
+      "route": "svg -> pptx-native",
+      "slide": 5,
+      "title": "Shadow The Human Before You Build",
+      "elements": [
+        {"type": "flow", "nodes": ["Watch 10-20 runs", "Extract the spec", "Trusted agent"]}
+      ]
+    },
+    {
+      "id": "agentic-workflows",
+      "frames": ["frame_0006.jpg"],
+      "classification": "text-slide",
+      "route": "html/css -> pptx-native",
+      "slide": 6,
+      "title": "Agentic Workflows Need A Control Pattern",
+      "elements": [
+        {"type": "summary", "text": "Agentic workflows define how agents operate, communicate, hand off tasks, and collaborate."},
+        {"type": "two-column", "labels": ["Sequential workflows", "Hierarchical workflows"]}
+      ]
+    },
+    {
+      "id": "wrapper-saas",
+      "frames": ["frame_0007.jpg"],
+      "classification": "diagram",
+      "route": "svg -> pptx-native",
+      "slide": 7,
+      "title": "The Wrapper Turns Work Into SaaS",
+      "elements": [
+        {"type": "flow", "nodes": ["AI worker does job", "Control room", "Customer trust"]},
+        {"type": "banner", "text": "Eval gym: 50 real calls / tickets / leads -> run the agent -> find failure modes -> improve."}
+      ]
+    },
+    {
+      "id": "pilot-productize",
+      "frames": ["frame_0008.jpg", "frame_0009.jpg"],
+      "classification": "diagram",
+      "route": "svg -> pptx-native",
+      "slide": 8,
+      "title": "Sell The Pilot Like Labor, Then Productize",
+      "elements": [
+        {"type": "flow", "nodes": ["Pilot promise", "Simple pricing", "Product pattern"]},
+        {"type": "note", "text": "You earn the software by doing the work first."}
+      ]
+    }
+  ],
+  "excluded_frames": [
+    {"frame": "frame_0002.jpg", "reason": "talking-head only"},
+    {"frame": "frame_0005.jpg", "reason": "talking-head only"},
+    {"frame": "frame_0010.jpg", "reason": "talking-head only"},
+    {"frame": "frame_0011.jpg", "reason": "talking-head only"},
+    {"frame": "frame_0012.jpg", "reason": "talking-head only"}
+  ]
+}

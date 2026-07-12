@@ -1,0 +1,610 @@
+# Skill #1: Problem-Solution Fit Validation
+
+## What this replaces
+
+The **$10K-$15K diagnostic phase** every serious dev shop runs at the start of an engagement. Senior consultant interviews you, your team, and a sample of users. Returns a one-page assessment of whether the problem is real and the solution actually solves it.
+
+## The prompt
+
+```
+You are a Problem-Solution Fit Validator for a 30-day MVP build.
+
+Your job: stop the founder from spending 30 days building the wrong thing.
+
+Ask these 6 questions, one at a time, waiting for each answer:
+
+1. Who specifically has this problem? Name 3 people by initial + role.
+2. When did each of them last face it? What did it cost them?
+3. What are they doing today to work around it?
+4. Why would they switch to your solution?
+5. Would they pay for it? How much? Has anyone said so?
+6. Could you reach 100 of these people in 30 days for validation?
+
+After all 6, score 0-30:
+- Problem realness: /10
+- Solution fit: /10
+- Buying signal + reachability: /10
+
+Return verdict:
+- 24-30: PROCEED. Move to Skill #2.
+- 14-23: NEEDS WORK. Name 3 specific gaps + 3 actions.
+- 0-13: KILL. Talk to 10 more people first.
+
+My idea: [DESCRIBE IN 2-3 SENTENCES]
+```
+
+## What to expect
+
+- A scored verdict in under 10 minutes
+- Specific gaps named, not vague feedback
+- A decision memo you can show your co-founder or first hire
+
+## Where Claude breaks
+
+- **It can't tell if your 3 named users are actually representative.** If your sample is 3 friends who all said "cool idea," the score will be inflated. The senior operator gates this by asking the founder how they sourced the 3 people.
+- **It scores "buying signal" generously.** Founders interpret polite "I'd use that" as buying signal. It's not. The operator pushes for actual dollar commitments, pre-orders, or LOIs before accepting the buying signal score.
+- **It misses the regulatory or distribution constraint that kills the idea anyway.** "Healthcare data app" scores well on problem realness but the operator knows HIPAA + sales cycle kills the MVP-in-30-days assumption.
+
+## How to use it
+
+- Run BEFORE any code or design work
+- Re-run after every 5 new user interviews
+- If the verdict is KILL, talk to 10 more people. Do not argue.
+
+================
+
+# Skill #2: 30-Day Scope Definition
+
+## What this replaces
+
+The **$15K-$25K scope doc** dev shops produce after their discovery phase. Hand-off-ready spec with feature list, milestones, acceptance criteria, and an explicit "NOT building" list.
+
+## The prompt
+
+```
+You are a 30-Day Scope Writer.
+
+Your job: produce the spec the founder uses as the contract with
+themselves or a builder.
+
+Ask for:
+- The validated problem (1-2 sentences, from Skill #1)
+- The target user (specific characteristics)
+- The ONE thing this MVP must do to prove the hypothesis
+- Tech stack preference (or recommend one)
+- Realistic time per day (solo nights/weekends vs full-time)
+
+Generate the spec:
+
+PROJECT NAME: [1 line]
+PROBLEM: [Verbatim from founder if possible]
+TARGET USER: [Specific]
+CORE HYPOTHESIS: [1 sentence: what this build proves]
+
+IN SCOPE (max 5-7 features):
+- Feature 1: [description + 1-line acceptance criterion]
+- Feature 2: [description + 1-line acceptance criterion]
+
+EXPLICITLY OUT OF SCOPE:
+- [List 10+ features the founder probably wants but isn't building yet]
+
+TECH STACK: [Recommendation + 1-line reasoning per choice]
+
+WEEK-BY-WEEK MILESTONES:
+- Week 1: [milestone + testable deliverable]
+- Week 2: [milestone + testable deliverable]
+- Week 3: [milestone + testable deliverable]
+- Week 4: [milestone + testable deliverable]
+
+DEPENDENCIES: [Stripe, domain, Supabase project, etc.]
+ACCEPTANCE TEST: [3-5 testable statements]
+TOP 3 RISKS + MITIGATIONS
+
+Keep spec to 1.5-2 pages. If longer, scope is too big.
+If scope can't fit in 30 days, say so. Don't generate a spec you don't
+believe ships.
+```
+
+## What to expect
+
+- A 1.5-2 page spec doc
+- Explicit IN SCOPE vs OUT OF SCOPE
+- 4 weekly milestones with testable deliverables
+- Top 3 risks named
+
+## Where Claude breaks
+
+- **It accepts the founder's scope without challenge.** Founders are emotionally attached to features. The operator cuts 30-40% of the "IN SCOPE" list before signing off.
+- **It underestimates integration time.** Claude says "Stripe integration: 1 day." Reality: 3 days including webhook signature verification, idempotency, refund flow, and the production webhook secret being different from the local CLI secret. The operator catches this.
+- **It can't see your team's actual velocity.** A spec that ships in 30 days for a solo full-time founder may take 90 days for a founder doing nights and weekends. The operator calibrates based on hours/week, not calendar days.
+
+## How to use it
+
+- Save as `scope.md` in your workspace
+- Pass relevant sections to every subsequent skill
+- Re-run when you find yourself adding features mid-build
+
+===========
+
+# Skill #3: Tech Stack + Architecture Design
+
+## What this replaces
+
+The **$20K-$40K architecture phase**. Database schema, auth flow, API surface, tech stack recommendation with documented trade-offs.
+
+## The prompt
+
+```
+You are a Tech Stack + Architecture Designer for a 30-day MVP.
+
+Read the scope doc from Skill #2. Output the blueprint that the
+builder uses as ground truth.
+
+Default stack (use unless founder has a strong reason to deviate):
+- Frontend: Next.js 14 (App Router) + TypeScript + Tailwind
+- Backend: Next.js API routes
+- Database + Auth: Supabase (Postgres + auth + storage)
+- Payments: Stripe Checkout + webhooks
+- Email: Resend
+- Hosting: Vercel
+- AI (if needed): Anthropic API
+
+Output in this exact structure:
+
+TECH STACK:
+Every tool + 1-line reasoning per choice.
+
+DATABASE SCHEMA:
+For every table:
+- Name + purpose
+- Columns with types and constraints
+- Foreign keys
+- Indexes worth adding day 1
+- Multi-tenancy approach (tenant_id + RLS if Supabase)
+- Row-Level Security policies as SQL
+
+AUTH FLOW:
+- Signup method, session management, password reset
+- Permission model
+- How auth state is read across server and client
+
+API SURFACE:
+- Every endpoint (method + path)
+- Input/output shape, auth requirements
+
+INTEGRATION PLAN:
+For each third-party service:
+- What it does in our flow
+- Webhook endpoints, signature verification, failure handling
+
+FOLDER STRUCTURE + ENV VARS REQUIRED
+
+CRITICAL DESIGN DECISIONS:
+For each: the decision, what was considered, why we chose what we chose,
+what would force a reconsideration.
+
+Default to the boring, proven stack. 30-day MVPs don't need novel stacks.
+```
+
+## What to expect
+
+- A 1-2 page architecture doc
+- Schema with RLS policies as SQL
+- Every critical decision documented with reasoning
+- Env var checklist
+
+## Where Claude breaks
+
+- **It picks defensible stacks for a generic case, not the founder's specific one.** Claude recommends Supabase + Stripe + Vercel by default. Sometimes the founder's actual situation needs Postgres on Neon (cheaper at their scale) or Clerk (better auth UX than Supabase). The operator knows when to override.
+- **It misses RLS policies that look right but leak data.** A common Claude RLS pattern: `auth.uid() = user_id`. This works until you add an admin role, at which point admins lose access to everything. The operator catches this in code review.
+- **It writes the schema for v1 without future-proofing the migration path.** Claude designs for the spec, not for the v2 the founder will want in 60 days. The operator decides whether to over-build the schema or eat the migration cost later.
+
+## How to use it
+
+- Save as `architecture.md` in your workspace
+- Paste relevant sections into Skill #4 (Build vs Buy Matrix) and skills #7 + #10
+- When mid-build decisions come up, reference back to this doc
+
+=============
+
+# Skill #4: Build vs Buy Decision Matrix
+
+## What this replaces
+
+The **$30K of analysis hidden inside every dev shop SOW**. For every feature, decides whether to build custom or buy SaaS. Returns a per-feature recommendation with 3-year cost math.
+
+## The prompt
+
+```
+You are a Build vs Buy Decision Analyst.
+
+Read the scope doc (Skill #2) and architecture (Skill #3). For each
+feature in scope, run the build vs buy analysis.
+
+For each feature, evaluate:
+
+BUILD:
+- Estimated build time at the founder's velocity
+- Maintenance overhead per month
+- Cost: hosting + storage + compute
+- Risk: complexity, edge cases, security
+
+BUY (SaaS):
+- Available tools that solve this (name 2-3 specific products)
+- Monthly cost per active user / per seat / per event
+- Annual cost at 10 users, 100 users, 1000 users
+- Lock-in risk: data export, integration depth
+
+VERDICT (per feature):
+- BUILD if: 3-year build cost < 3-year SaaS cost AND feature is core to
+  the moat
+- BUY if: SaaS is mature, feature is non-core, scale doesn't justify build
+- HYBRID if: part is core (build), part is generic (buy)
+
+Output a matrix:
+Feature | Build Cost | SaaS Cost (3-yr) | Verdict | Reasoning
+
+Flag any feature where the founder is paying $2K+/month for SaaS that
+would take less than 1 week to build for v1.
+
+Return the bottom-line:
+- Total annual SaaS spend if you BUY everything
+- Total one-time build cost if you BUILD everything
+- Recommended split + payback period
+```
+
+## What to expect
+
+- A feature-by-feature decision matrix
+- 3-year cost math for build vs buy
+- Explicit BUILD / BUY / HYBRID recommendation per feature
+- Total annual SaaS spend if the founder defaults to "buy"
+
+## Where Claude breaks
+
+- **It underestimates SaaS pricing creep.** Claude sees Stripe at "2.9% + 30c" and accepts it. In year 3, you're adding Stripe Tax, Stripe Radar, Stripe Sigma. The operator builds in price escalation.
+- **It overweights generic SaaS solutions for niche workflows.** Claude says "use HubSpot" for a founder whose sales motion needs custom fields HubSpot won't support. The operator knows when SaaS won't fit and the founder ends up at custom anyway in 18 months.
+- **It doesn't see lock-in cost.** Claude scores "BUY" on a CRM that becomes impossible to migrate from in year 3. The operator priced this risk into the build option from day 1.
+
+## How to use it
+
+- Run after Skill #3 (Architecture)
+- Use the matrix to decide which integrations to wire in Skill #7
+- Re-run quarterly as your SaaS bills come in
+
+===========
+
+- If breakeven is past month 36 in the base case, the MVP isn't viable solo
+
+Skill #5: MVP ROI Business Case
+
+===========
+
+# Skill #6: Competitor Product Teardown
+
+## What this replaces
+
+The **$15K market scan** dev shops run during discovery. Identifies 5-10 direct and adjacent competitors, their pricing, their feature gaps, and where your MVP wins.
+
+## The prompt
+
+```
+You are a Competitor Product Teardown Analyst.
+
+Research the 5-10 competitors most relevant to the MVP being built.
+
+For each competitor:
+
+COMPANY OVERVIEW:
+- Name + URL
+- Stage (seed, growth, public)
+- Funding raised (most recent round)
+- Approximate headcount
+- Primary positioning (one sentence)
+
+PRODUCT TEARDOWN:
+- Top 3 features
+- Pricing tiers + what's in each
+- Onboarding flow (how a user gets to value)
+- Notable design or UX patterns
+
+WHERE THEY'RE STRONG:
+- 2-3 specific things they do well
+
+WHERE THEY'RE WEAK:
+- 2-3 gaps a focused MVP could exploit
+
+For the founder's MVP specifically:
+- Which 2 competitors are the most direct threat?
+- Which 2 features should the founder copy (table stakes)?
+- Which 2 things should the founder deliberately NOT do (avoid race to bottom)?
+- The 3 specific feature gaps the MVP should target
+
+Use public data only. Don't fabricate. If competitor data is unverifiable,
+flag it.
+```
+
+## What to expect
+
+- 5-10 competitors profiled with pricing, positioning, features
+- Specific feature gaps your MVP can target
+- The 2 closest threats called out by name
+- A list of patterns to copy and patterns to deliberately avoid
+
+## Where Claude breaks
+
+- **It misses competitors that don't have public marketing.** Claude finds the funded startups. It misses the bootstrapped indie tool that has 60% market share in your niche because they don't run ads. The operator finds these by talking to actual buyers.
+- **It overweights features over positioning.** Claude lists features. The operator knows that in 80% of B2B niches, the buyer chooses based on positioning, not feature count. Your teardown needs to surface positioning patterns, not just feature matrices.
+- **It can't read between the lines on pricing pages.** Public pricing pages are often anchors, not actual prices. The operator knows the real ACVs from talking to customers and prospects.
+
+## How to use it
+
+- Run after Skill #1 (Problem-Solution Fit) is confirmed
+- Update quarterly. Competitors move fast.
+- Cross-reference with Skill #4 (Build vs Buy) — sometimes the right move is to integrate with a competitor's product, not compete with it
+
+============
+
+# Skill #7: Acceptance Criteria + Test Plan
+
+## What this replaces
+
+The **$20K-$35K "what shipped means" definition phase**. For every feature, returns testable acceptance criteria + the test plan a QA team or the founder would run.
+
+## The prompt
+
+```
+You are an Acceptance Criteria + Test Plan Generator.
+
+For every feature in the scope (Skill #2), generate:
+
+USER STORY:
+As a [user type], I want to [action] so that [outcome].
+
+ACCEPTANCE CRITERIA (testable):
+- Given [precondition], when [action], then [observable result]
+- 3-5 criteria per feature
+- Every criterion must be testable in 60 seconds
+- Specific and measurable (no "works well" or "feels fast")
+
+EDGE CASES TO HANDLE:
+- Empty state
+- Error state
+- Invalid input
+- Slow connection (10+ second API response)
+- Concurrent access (user clicks twice)
+- Auth boundary (user A tries to access user B's data)
+
+NOT IN SCOPE FOR THIS FEATURE:
+- Specific things people might assume are part of the feature but aren't
+
+TEST PLAN:
+For each acceptance criterion, document:
+- Manual test steps
+- Expected result
+- How to verify (database query, network request, UI observation)
+
+If you cannot generate testable criteria for a feature, flag it. The
+feature is poorly defined and should be re-scoped.
+```
+
+## What to expect
+
+- Per-feature: user story, 3-5 acceptance criteria, edge cases, test plan
+- A test plan the founder runs before declaring "done"
+- Feature flags for anything poorly defined
+
+## Where Claude breaks
+
+- **It generates criteria that pass but miss the real failure.** "User can sign up" passes. "User can sign up, receive welcome email within 60 seconds, and complete first action without hitting a dead-end screen" is what shipping actually means. The operator pushes for the second formulation.
+- **It misses cross-feature edge cases.** Acceptance criteria for "signup" pass. Acceptance criteria for "payment" pass. But the user who signs up + immediately tries to upgrade hits a race condition Claude didn't test. The operator catches integration-level edge cases.
+- **It writes test plans for happy paths.** Claude tests what should happen. The operator tests what definitely will happen at 2am on launch night.
+
+## How to use it
+
+- Run after Skill #2 (Scope) and Skill #3 (Architecture)
+- Use the test plan as the literal checklist before launching each feature
+- Save as `acceptance.md` and reference back when QA conflicts arise
+
+==========
+
+# Skill #8: Data Architecture Lite
+
+## What this replaces
+
+The data architecture phase of a dev shop engagement. Returns the data model, source-of-truth decisions, and the analytics layer the founder needs from day 1 (not retrofit at month 12).
+
+## The prompt
+
+```
+You are a Data Architecture Designer for a 30-day MVP.
+
+For each data domain in the MVP, define:
+
+SOURCES:
+- Where the data originates (user input, API, scraped, computed)
+- Update frequency
+- Reliability of the source
+
+STORAGE:
+- Where it lives (Postgres table, blob, third-party API)
+- Why this location (not just default)
+- Backup strategy
+
+SOURCE OF TRUTH:
+- For any data that lives in 2 places, which is canonical?
+- Sync mechanism
+- Conflict resolution
+
+ANALYTICS LAYER (even at v1):
+- Top 5 questions the founder needs to answer about user behavior
+- For each: what events get logged, where, with what attributes
+- Recommended tool (PostHog, Mixpanel, or DIY in Postgres)
+
+DATA QUALITY GUARDRAILS:
+- Required fields with non-empty validation
+- Format validation (email, phone, URL)
+- Duplicate detection strategy
+
+FLAG ANY DATA WHERE:
+- Source isn't authoritative
+- Storage is fragile (cache only, etc.)
+- Multiple writes can conflict
+```
+
+## What to expect
+
+- A data model with explicit source-of-truth decisions
+- 5 founder questions + how to answer them with logged events
+- Data quality guardrails baked into the schema
+
+## Where Claude breaks
+
+- **It treats analytics as an afterthought.** Claude says "add analytics later." The operator knows that without event tracking from day 1, the founder can't tell which features actually drove activation. Costs more to retrofit than to build right.
+- **It misses the data that lives in someone's head.** "Customer success uses a Notion doc to track which clients are at risk." That's a data store. Claude won't know it exists unless the operator surfaces it.
+- **It doesn't pressure-test source of truth.** Claude says "Stripe is the source of truth for billing." Then the founder runs a manual refund in Stripe and their internal dashboard shows the wrong status because the webhook didn't fire. The operator builds the reconciliation pattern from day 1.
+
+## How to use it
+
+- Run after Skill #3 (Architecture)
+- Treat the analytics layer recommendations as non-negotiable for v1
+- Re-run when you add a new data source
+
+============
+
+# Skill #9: Deployment Sequencing
+
+## What this replaces
+
+The deployment plan dev shops produce in the final week of an engagement. Returns the staging, production, and rollback sequence + the smoke test the founder runs before announcing launch.
+
+## The prompt
+
+```
+You are a Deployment Sequencing Planner for a Next.js + Supabase + Stripe MVP.
+
+Generate the deployment sequence:
+
+PRE-DEPLOY CHECKLIST:
+- .env.local in .gitignore (verify, don't assume)
+- All test API keys removed from code
+- `npm run build` works locally
+- All P0 edge cases from Skill #7 are fixed
+
+STAGING ENVIRONMENT:
+- Vercel preview deployment connected to a `staging` branch
+- Separate Supabase project (not production DB)
+- Stripe test mode
+- Resend with a test domain
+- 24-hour staging soak test before production
+
+PRODUCTION DEPLOY SEQUENCE:
+1. GitHub push to main
+2. Vercel auto-deploys with production env vars
+3. Verify Supabase production redirect URLs include Vercel domain
+4. Verify Stripe live mode webhook endpoint exists
+5. Verify production webhook secret is different from local CLI secret
+6. Run smoke test (see below)
+7. ONLY THEN: announce launch publicly
+
+SMOKE TEST (run on production URL before any public announcement):
+- Sign up with fresh email
+- Confirmation email arrives within 60 seconds
+- Use core feature end-to-end
+- Complete real payment with $1 test
+- Plan updates within 10 seconds (webhook working)
+- Log out, log back in, session persists
+- User A cannot access User B's data (auth boundary verified)
+
+ROLLBACK PLAN:
+- How to revert in under 5 minutes if smoke test fails
+- Who calls who if rollback fails
+- What gets posted (if anything) if launch needs to be delayed
+
+If any smoke test step fails: DO NOT ANNOUNCE. Debug. Re-test.
+```
+
+## What to expect
+
+- Staging → production sequence with explicit checkpoints
+- Production smoke test checklist
+- Rollback plan with named decisions
+
+## Where Claude breaks
+
+- **It treats deployment as a single event, not a sequence.** Claude says "deploy to Vercel." The operator knows production deploys are a sequence of 12+ steps, half of which fail silently if you skip them. The operator runs the checklist personally.
+- **It misses the env var that breaks at 2am.** Claude lists env vars based on `.env.local`. The operator finds the one your teammate added 3 weeks ago and never committed to version control. Production crashes without it.
+- **It assumes webhooks work because they pass in test mode.** Stripe webhooks in test mode use a CLI-issued secret. Production uses a different secret. Claude doesn't know your production secret isn't in Vercel. The operator forces a real $1 test payment as the final gate.
+
+## How to use it
+
+- Run in week 4 of the build, before announcing launch
+- Do the staging soak test even if you think you don't need to
+- Run the smoke test on production with a real card. Refund afte
+
+===========
+
+# Skill #10: Post-Launch Iteration Plan
+
+## What this replaces
+
+The post-launch advisory dev shops bundle into their engagement (or sell as a separate retainer). Returns the 30-day iteration plan: what to measure, what to fix, what NOT to add.
+
+## The prompt
+
+```
+You are a Post-Launch Iteration Planner.
+
+Plan the 30 days AFTER launch so the founder iterates intentionally, not
+reactively.
+
+The founder will share build status + first user feedback. You will:
+
+1. Define what to measure (3 metrics, no more):
+   - 1 activation metric (did users get to the core moment?)
+   - 1 retention metric (did they come back?)
+   - 1 revenue or willingness-to-pay metric
+
+2. Categorize incoming feedback:
+   - BUGS: fix this week
+   - QUICK WINS: small features < 1 day each
+   - REAL FEATURES: require > 1 day of build
+   - NOT-FOR-YOU SIGNALS: users who aren't ICP
+
+3. Week-by-week plan:
+
+   WEEK 1: Only fix bugs and ship quick wins. NO new features.
+   WEEK 2: Talk to 5 active users. Identify the 1 feature that would 2x
+           their value.
+   WEEK 3: Build that 1 feature. Nothing else.
+   WEEK 4: Measure: did the feature move retention?
+     - YES: keep iterating on this thread
+     - NO: re-talk to users, pick a different feature
+
+4. Pivot signals:
+   - <20% activation rate at day 30 = onboarding broken
+   - <10% week-2 retention = wrong product
+   - 0 paying customers after 30 days of trying = wrong ICP or wrong price
+
+DO NOT let the founder add features in week 1. Founders' instincts are
+always to add. Killing that instinct is the value of this skill.
+```
+
+## What to expect
+
+- 3 metrics to track (not 30)
+- Week-by-week iteration plan
+- "No new features in week 1" rule
+- Pivot signals defined so you know when to change direction
+
+## Where Claude breaks
+
+- **It accepts feature requests as feature priorities.** A user asks for a feature; Claude flags it as "REAL FEATURE." The operator knows that 80% of user feature requests are workarounds for a different unsolved problem. The operator asks the question Claude won't: "what were you trying to do when this came up?"
+- **It can't read between activation and retention.** Claude says "activation is 30%, that's fine." The operator knows 30% activation in a B2B SaaS targeting CFOs is catastrophically low and needs an onboarding rebuild before any feature work.
+- **It lets the founder ignore the pivot signals.** Claude reports the data. The founder rationalizes. The operator forces the conversation.
+
+## How to use it
+
+- Run on launch day, not 2 weeks later
+- Print the metrics + pivot signals and review weekly
+- If users keep asking for X and you keep saying no, X probably belongs in the plan

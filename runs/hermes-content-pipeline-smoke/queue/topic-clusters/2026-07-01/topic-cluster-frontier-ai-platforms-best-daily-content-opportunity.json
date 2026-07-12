@@ -1,0 +1,29 @@
+{
+  "id": "topic-c3ec7d27cbd5",
+  "date": "2026-07-01",
+  "title": "Frontier AI platforms: best daily content opportunity",
+  "theme": "Frontier AI platforms",
+  "source_item_ids": [
+    "src-c461bafa3767",
+    "src-bea6277b2f1f",
+    "src-32089927760b",
+    "src-0c0c486ca3d6"
+  ],
+  "score": 84.3,
+  "score_breakdown": {
+    "business_relevance": 92,
+    "source_authority": 95.0,
+    "freshness": 80,
+    "novelty": 70,
+    "implementation_value": 74,
+    "audience_fit": 82
+  },
+  "score_reasons": [
+    "4 source item(s) found in the cluster",
+    "Priority is high",
+    "Topic fits the operator-facing AI content strategy"
+  ],
+  "recommended_angle": "Explain what changed in Frontier AI platforms and convert it into a practical implementation narrative for AI operators.",
+  "audience_fit": "AI operators, enterprise solution architects, and founders evaluating agent workflows",
+  "status": "ranked"
+}

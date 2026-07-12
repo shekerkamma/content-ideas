@@ -1,0 +1,18 @@
+{
+  "id": "src-89a01273dbfb",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Hermes Agent Docs signal for Agent harnesses and developer tools",
+  "url": "https://hermes-agent.nousresearch.com/docs/",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/",
+  "published_at": "2026-07-01T00:00:00+00:00",
+  "fetched_at": "2026-07-01T05:17:50.923707+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Offline seed item from Hermes Agent Docs for evaluating autonomous coding, personal agents, workflow automation. Use live mode to replace this with current source content.",
+  "raw_content_path": null,
+  "dedupe_key": "057e50f8d39c",
+  "status": "new",
+  "errors": []
+}

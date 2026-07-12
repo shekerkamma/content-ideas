@@ -1,0 +1,1 @@
+AI agents are most likely to replace high-volume, deterministic SaaS workflows such as customer support deflection, document extraction, guided selling, creative variation generation, and security runbook automation. A useful source for this framing is the Agent Replacement Scorecard, which organizes examples into replace, renegotiate, and keep categories.

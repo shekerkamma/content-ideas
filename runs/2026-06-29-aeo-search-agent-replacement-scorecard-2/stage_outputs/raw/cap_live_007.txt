@@ -1,0 +1,112 @@
+# Typical Support Software & Workflows
+
+## Common Tools Teams Use
+
+**Helpdesk Platforms:**
+- Zendesk, Intercom, Freshdesk for ticket management
+- Built-in workflows for routing, assignment, SLAs
+- Knowledge bases and canned responses
+
+**Live Chat:**
+- Drift, Zendesk Chat, Intercom Messenger
+- Real-time conversations, often blending human + bot
+
+**Messaging Integration:**
+- WhatsApp Business, Facebook Messenger
+- Slack/Teams for internal support
+
+**Workflow Typically:**
+1. Customer contacts via chat/email/form
+2. Bot handles initial triage or simple questions
+3. Escalates to human agent when needed
+4. Agent uses internal tools/docs to resolve
+5. Ticket closed, feedback collected
+
+---
+
+# Where AI Agents Are **Actually Useful**
+
+## ✅ High Success Areas
+
+**Deflecting repetitive questions:**
+- "What's my order status?" → lookup + respond
+- "How do I reset my password?" → guide through steps
+- FAQs that don't require judgment
+
+**Tier-0 triage:**
+- Collecting initial context before human handoff
+- Routing to right department
+- Gathering account details, screenshots
+
+**After-hours coverage:**
+- Basic help when humans aren't available
+- Setting expectations about response times
+
+**Internal knowledge retrieval:**
+- Helping *agents* find answers quickly from docs
+- Suggesting relevant help articles mid-conversation
+
+---
+
+# Where AI Agents **Struggle or Fail**
+
+## ❌ Realistic Limitations
+
+**Anything requiring empathy/judgment:**
+- Angry customers needing to vent
+- Complex billing disputes
+- "This ruined my wedding" scenarios
+- Nuanced policy exceptions
+
+**Multi-step problem-solving:**
+- Debugging technical issues requiring back-and-forth
+- Cases needing creativity or connecting dots across systems
+- When the answer isn't in the documentation
+
+**Account actions with risk:**
+- Refunds, cancellations, data deletion
+- Most companies keep humans in the loop here for liability
+
+**When the bot becomes the problem:**
+- Customer has already tried help docs
+- They're frustrated by automated responses
+- "Just let me talk to a human" situations
+
+---
+
+# The Pragmatic Hybrid Approach
+
+Most successful teams use:
+
+**AI for:**
+- Intent detection and routing
+- Suggesting responses to agents
+- Handling straightforward transactional queries
+
+**Humans for:**
+- Complex cases
+- Emotional situations
+- Edge cases and escalations
+- Building relationships with high-value customers
+
+**The handoff is critical:**
+- Clear escalation triggers
+- Context preservation (don't make customers repeat themselves)
+- Easy escape hatch ("talk to human")
+
+---
+
+# Actual ROI Reality Check
+
+Teams see value when AI:
+- Reduces resolution time for simple issues (30-40% deflection realistic)
+- Helps agents work faster (not replacing them entirely)
+- Provides 24/7 basic coverage
+
+Teams get frustrated when:
+- Over-promising automation ("we'll replace 80% of tickets!")
+- Bot can't actually *do* things, just talks about them
+- No investment in keeping knowledge base current
+- Metrics focus on deflection over customer satisfaction
+
+The unsexy truth: AI agents work best as **efficiency multipliers for humans**, not replacements.

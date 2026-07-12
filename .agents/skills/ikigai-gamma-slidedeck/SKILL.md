@@ -1,11 +1,6 @@
 ---
 name: ikigai-gamma-slidedeck
-description: >
-  Compound pipeline: LinkedIn profile (PDF / URL / text) → Ikigai Pro Report
-  → Gamma slide deck (via Gamma MCP) with branded-pptx-deck fallback.
-  One command, fully automated. Reusable for any person.
-  Primary path: Gamma MCP (gammaUrl returned).
-  Fallback path: pptxkit build_deck.py (validated .pptx copied to Desktop).
+description: "Use when someone says 'run ikigai for <name>', 'ikigai slide deck for <name>', 'linkedin to slides', 'ikigai deck', 'linkedin ikigai slides', or 'ikigai deck' — and wants both the written Ikigai Pro report AND a slide deck in one automated pipeline. Also triggers on: \"ikigai deck\", \"linkedin to slides\". Orchestrates the ikigai skill (7-stage report) → Gamma MCP deck (primary) or branded-pptx-deck fallback, with optional gcc-roadmap deck for BD/company-first profiles. Use the standalone ikigai skill instead when only the written report is needed."
 triggers:
   - ikigai-gamma-slidedeck
   - ikigai slide deck
@@ -375,3 +370,44 @@ Use personal offer tiers, personal case studies, personal proof points.
 - Validated founder run: `~/content-ideas/runs/2026-06-13-shravan-ikigai-genspark/`
 - pptxkit API: `~/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
 - Brand palette: `~/.claude/skills/branded-pptx-deck/reference/brand.md`
+
+---
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+- `ikigai` — internally executes stages 1–7 of this skill; the report is the foundation for all deck content
+- `branded-pptx-deck` — invoked as fallback deck builder via pptxkit
+- `gcc-roadmap` — invoked optionally for BD/company-first profiles (Stage 3)
+
+### Relationships
+
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `ikigai` | Orchestrator (sequential upstream) | always — this skill runs the full ikigai 7-stage analysis first | `runs/YYYY-MM-DD-<name>-ikigai/<name>-ikigai-report.md` |
+| `branded-pptx-deck` | Fallback | when Gamma MCP is unavailable or user requests .pptx explicitly | `runs/YYYY-MM-DD-<name>-ikigai/build_deck.py` → `.pptx` |
+| `gcc-roadmap` | Sequential downstream (optional) | BD/company-first framing only, user confirms | ikigai report (company capabilities + offer tiers sections) |
+| `ikigai` | Peer / Alternative | use standalone ikigai when only the report is needed (no deck) | — |
+
+### Runtime Preamble
+
+At invocation, surface this if relevant:
+
+> "This pipeline runs the full ikigai report first, then builds the deck. It takes both steps automatically.
+> If you only want the report (no deck), use `/ikigai` instead.
+> For BD/company-first profiles, I'll also offer a GCC Implementation Roadmap deck (17 slides) after the main deck."
+
+---
+
+## Gotchas
+
+- **Never use Gamma textMode 'generate' or 'condense':** Always use `textMode: "preserve"`. The content is pre-written from the ikigai report. 'generate' or 'condense' rewrites the content and loses the person-specific evidence.
+- **`cardSplit: "inputTextBreaks"` is required when using `---` separators:** Omitting it causes Gamma to split slides in arbitrary places, breaking the slide structure.
+- **pptxkit `validate_pptx()` is non-negotiable:** The pptxkit fallback path must call `Deck.save()` with validation enabled. Do not skip it and do not mark delivery status as `reviewed` without reading the contact sheet PNGs.
+- **build_deck.py must always be generated even on the Gamma path:** The builder script enables offline rebuild and client-specific modification. It is a required output artifact regardless of which deck path was taken.
+- **Do not overwrite a file open in PowerPoint:** The Desktop copy step must check if the file is locked. If locked, write a new name with a `-v2` suffix.
+- **Report must complete all 7 stages before deck generation:** Never start the deck (Stage 2A or 2B) before all 7 ikigai stages are complete and `run-log.md` records the report path. A deck built from a partial report will be missing evidence.
+- **Gamma themes with stock photography break the business deck tone:** Always select a professional dark/navy/midnight/corporate theme. Heavy decorative stock images undercut the executive credibility of the deck.

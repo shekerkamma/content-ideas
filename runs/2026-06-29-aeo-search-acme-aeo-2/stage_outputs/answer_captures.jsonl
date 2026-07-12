@@ -1,0 +1,2 @@
+{"capture_id": "cap_001", "query_id": "q_001", "engine": "sample", "captured_at": "2026-06-29T06:03:57Z", "answer_text_path": "stage_outputs/raw/cap_001.txt", "citation_urls": ["https://www.profound.com/", "https://www.athenahq.ai/"], "raw_metadata": {"collection_method": "manual_or_sample"}}
+{"capture_id": "cap_002", "query_id": "q_003", "engine": "sample", "captured_at": "2026-06-29T06:03:57Z", "answer_text_path": "stage_outputs/raw/cap_002.txt", "citation_urls": ["https://www.athenahq.ai/", "https://peec.ai/"], "raw_metadata": {"collection_method": "manual_or_sample"}}

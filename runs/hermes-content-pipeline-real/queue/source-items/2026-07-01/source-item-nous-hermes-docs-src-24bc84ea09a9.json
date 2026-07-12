@@ -1,0 +1,18 @@
+{
+  "id": "src-24bc84ea09a9",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Claude Code — Delegate coding to Claude Code CLI (features, PRs) ...",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-claude-code",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-claude-code",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:47.207558+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Delegate coding tasks to Claude Code (Anthropic's autonomous coding agent CLI) via the Hermes terminal. Claude Code v2.x can read files, write code, run shell commands, spawn subagents, and manage git workflows autonomously.",
+  "raw_content_path": null,
+  "dedupe_key": "bb5299aeb73f",
+  "status": "new",
+  "errors": []
+}

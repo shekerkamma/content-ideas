@@ -57,6 +57,13 @@ Playwright rule:
   - `npm run browser:test` for headless demo validation
   - `npm run browser:test:headed` for visible demo validation
   - `npm run browser:demo` for a manual local preview on port `8766`
+- For the real LLM Wiki Agent ingest workflow:
+  - `npm run llm-wiki:smoke` for deterministic PDF + URL fixture ingest
+  - `npm run llm-wiki:live` for live Chromium URL/PDF download ingest
+  - `npm run llm-wiki:live:headed` only when visible browser validation is
+    explicitly requested
+  - preserve live downloads under `raw/`, preserve PDFs under `raw/downloads/`,
+    and log source URLs/hashes in generated wiki pages
 - The Playwright config uses `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` when set,
   then falls back to cached Chromium under `~/.cache/ms-playwright` when
   present. If no browser is installed, run `npm run test:e2e:install`.

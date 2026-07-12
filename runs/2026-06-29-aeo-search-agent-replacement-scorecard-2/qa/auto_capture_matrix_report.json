@@ -1,0 +1,32 @@
+{
+  "captured": 0,
+  "errors": [
+    {
+      "task_id": "act_001",
+      "engine": "ChatGPT",
+      "error": "RuntimeError: HTTP 429: {\n  \"error\": {\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"insufficient_quota\"\n  }\n}"
+    },
+    {
+      "task_id": "act_005",
+      "engine": "ChatGPT",
+      "error": "RuntimeError: HTTP 429: {\n  \"error\": {\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"insufficient_quota\"\n  }\n}"
+    },
+    {
+      "task_id": "act_009",
+      "engine": "ChatGPT",
+      "error": "RuntimeError: HTTP 429: {\n  \"error\": {\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"insufficient_quota\"\n  }\n}"
+    },
+    {
+      "task_id": "act_013",
+      "engine": "ChatGPT",
+      "error": "RuntimeError: HTTP 429: {\n  \"error\": {\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"insufficient_quota\"\n  }\n}"
+    },
+    {
+      "task_id": "act_017",
+      "engine": "ChatGPT",
+      "error": "RuntimeError: HTTP 429: {\n  \"error\": {\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"insufficient_quota\"\n  }\n}"
+    }
+  ],
+  "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/ai_live_capture_ingest_template.json",
+  "note": "Run ingest_capture_matrix.py after enough rows are captured."
+}

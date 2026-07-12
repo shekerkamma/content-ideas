@@ -1,0 +1,196 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Title -->
+    <mxCell id="2" value="Intelligent Loan Underwriting — Agent Orchestration Map" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1F3B6E;" vertex="1" parent="1">
+      <mxGeometry x="140" y="10" width="1200" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Pattern Legend -->
+    <mxCell id="3" value="Tool Calling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="20" y="10" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="4" value="ReAct Loop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="140" y="10" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="5" value="Multi-step Reasoning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="260" y="10" width="150" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ===== STAGE 0: APPLICATION INPUT ===== -->
+    <mxCell id="10" value="Loan Application&#xa;Received" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=13;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="20" y="90" width="165" height="65" as="geometry" />
+    </mxCell>
+    <!-- Input docs below -->
+    <mxCell id="11" value="📄 Application form" style="text;html=1;strokeColor=#CCCCCC;fillColor=#FAFAFA;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="20" y="175" width="165" height="28" as="geometry" />
+    </mxCell>
+    <mxCell id="12" value="📄 Income documents" style="text;html=1;strokeColor=#CCCCCC;fillColor=#FAFAFA;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="20" y="205" width="165" height="28" as="geometry" />
+    </mxCell>
+    <mxCell id="13" value="📄 Property details" style="text;html=1;strokeColor=#CCCCCC;fillColor=#FAFAFA;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="20" y="235" width="165" height="28" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow 0→1 -->
+    <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" source="10" target="20" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- ===== STAGE 1: IDENTITY & KYC ===== -->
+    <mxCell id="20" value="Identity &amp; KYC&#xa;Verification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;fontColor=#1F3B6E;" vertex="1" parent="1">
+      <mxGeometry x="225" y="90" width="165" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="20a" value="TOOL CALL" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontStyle=1;fontColor=#6c8ebf;align=center;" vertex="1" parent="1">
+      <mxGeometry x="225" y="162" width="165" height="20" as="geometry" />
+    </mxCell>
+    <!-- Sub-tools -->
+    <mxCell id="21" value="Experian Identity API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF4FB;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="225" y="185" width="165" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="22" value="OFAC Sanctions Screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF4FB;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="225" y="228" width="165" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow 1→2 -->
+    <mxCell id="25" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="20" target="30" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- ===== STAGE 2: CREDIT SCORE ===== -->
+    <mxCell id="30" value="Credit Score Pull&#xa;(FICO)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;fontColor=#1F3B6E;" vertex="1" parent="1">
+      <mxGeometry x="430" y="90" width="165" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="30a" value="TOOL CALL" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontStyle=1;fontColor=#6c8ebf;align=center;" vertex="1" parent="1">
+      <mxGeometry x="430" y="162" width="165" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="31" value="Equifax / TransUnion API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF4FB;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="430" y="185" width="165" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="32" value="Fraud Score (TrueAccord)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF4FB;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="430" y="228" width="165" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow 2→3 -->
+    <mxCell id="35" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="30" target="40" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- ===== STAGE 3: INCOME VERIFICATION ===== -->
+    <mxCell id="40" value="Income &amp; Employment&#xa;Verification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;fontColor=#1F3B6E;" vertex="1" parent="1">
+      <mxGeometry x="635" y="90" width="165" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="40a" value="TOOL CALL" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontStyle=1;fontColor=#6c8ebf;align=center;" vertex="1" parent="1">
+      <mxGeometry x="635" y="162" width="165" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="41" value="Plaid Bank Data API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF4FB;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="635" y="185" width="165" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="42" value="Ocrolus Pay Stub OCR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF4FB;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="635" y="228" width="165" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- Arrow 3→4 -->
+    <mxCell id="45" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" source="40" target="50" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- ===== STAGE 4: ReAct DOC CHASE LOOP ===== -->
+    <mxCell id="50" value="Document&#xa;Completeness Check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;fontColor=#1F3B6E;" vertex="1" parent="1">
+      <mxGeometry x="840" y="90" width="165" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="50a" value="ReAct LOOP" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontStyle=1;fontColor=#82b366;align=center;" vertex="1" parent="1">
+      <mxGeometry x="840" y="162" width="165" height="20" as="geometry" />
+    </mxCell>
+
+    <!-- ReAct sub-flow (below stage 4) -->
+    <mxCell id="51" value="All docs present?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="855" y="200" width="135" height="70" as="geometry" />
+    </mxCell>
+    <mxCell id="52" value="THOUGHT: Which doc is missing?&#xa;ACTION: Send doc request&#xa;OBSERVATION: Doc received?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="840" y="300" width="165" height="65" as="geometry" />
+    </mxCell>
+    <!-- Yes arrow to stage 5 -->
+    <mxCell id="53" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#82b366;strokeWidth=2;fontStyle=1;" edge="1" source="51" target="60" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <!-- No arrow to doc chase -->
+    <mxCell id="54" value="No — loop" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E31837;strokeWidth=2;fontStyle=1;" edge="1" source="51" target="52" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <!-- Loop back from doc chase to check -->
+    <mxCell id="55" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E31837;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="52" target="51" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="812" y="332" />
+          <mxPoint x="812" y="235" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- Stage 4 → Diamond -->
+    <mxCell id="56" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" source="50" target="51" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- Arrow 4→5 (from diamond Yes) handled by id=53 -->
+
+    <!-- ===== STAGE 5: MULTI-STEP RISK ASSESSMENT ===== -->
+    <mxCell id="60" value="Risk &amp; DTI&#xa;Assessment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;fontStyle=1;fontColor=#1F3B6E;" vertex="1" parent="1">
+      <mxGeometry x="1050" y="90" width="165" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="60a" value="MULTI-STEP REASONING" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontStyle=1;fontColor=#9673a6;align=center;" vertex="1" parent="1">
+      <mxGeometry x="1050" y="162" width="165" height="20" as="geometry" />
+    </mxCell>
+    <!-- Multi-step sub-boxes -->
+    <mxCell id="61" value="Step 1: Calculate DTI&#xa;(debt ÷ gross income)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1050" y="185" width="165" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="62" value="Step 2: Assign risk tier&#xa;(A / B / C / D / Decline)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1050" y="238" width="165" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="63" value="Step 3: Apply policy rules&#xa;(LTV, debt ceiling, exceptions)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1050" y="291" width="165" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="64" value="Step 4: Generate rationale&#xa;(explainable, auditable)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1050" y="344" width="165" height="45" as="geometry" />
+    </mxCell>
+    <!-- Multi-step arrows -->
+    <mxCell id="65" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#9673a6;" edge="1" source="61" target="62" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="66" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#9673a6;" edge="1" source="62" target="63" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="67" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#9673a6;" edge="1" source="63" target="64" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- Arrow 5→6 -->
+    <mxCell id="69" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" source="60" target="70" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- ===== STAGE 6: DECISION OUTPUT ===== -->
+    <mxCell id="70" value="Underwriting&#xa;Decision" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F3B6E;strokeColor=#1F3B6E;fontSize=13;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="1265" y="90" width="165" height="65" as="geometry" />
+    </mxCell>
+
+    <!-- Three outcomes -->
+    <mxCell id="71" value="✓ APPROVED&#xa;Offer terms generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1265" y="200" width="165" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="72" value="~ CONDITIONAL&#xa;Additional docs required" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1265" y="285" width="165" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="73" value="✗ DENIED&#xa;Adverse action notice" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1265" y="370" width="165" height="60" as="geometry" />
+    </mxCell>
+    <!-- Decision → outcomes -->
+    <mxCell id="74" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" source="70" target="71" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="75" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#d6b656;strokeWidth=2;" edge="1" source="70" target="72" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="76" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" source="70" target="73" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- Latency annotation strip -->
+    <mxCell id="80" value="Target: &lt;2 minutes end-to-end (vs. 5–7 business days manual)" style="text;html=1;strokeColor=#1F3B6E;fillColor=#F5F7FA;fontSize=12;fontStyle=2;align=center;" vertex="1" parent="1">
+      <mxGeometry x="20" y="450" width="1410" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- Company callouts -->
+    <mxCell id="81" value="Upstart: 91% auto-approval rate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#F9A825;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="225" y="500" width="165" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="82" value="Zest AI: +15% approvals, same loss rate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#F9A825;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="430" y="500" width="165" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="83" value="Ocrolus: 99.6% doc accuracy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#F9A825;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="635" y="500" width="165" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="84" value="Blend: $3.5B/day loan volume" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#F9A825;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="840" y="500" width="165" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="85" value="Better.com: 2-min decision, 24/7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#F9A825;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1050" y="500" width="165" height="35" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

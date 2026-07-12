@@ -1,0 +1,18 @@
+{
+  "id": "src-9e54e6e449d4",
+  "source_id": "openhands-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "OpenHands Enterprise - OpenHands Docs",
+  "url": "https://docs.openhands.dev/enterprise",
+  "canonical_url": "https://docs.openhands.dev/enterprise",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:30.311437+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Communication: Slack integration for notifications and workflows · Every agent runs in an isolated, containerized sandbox environment. This provides safe autonomy—agents can execute code and make changes without risking your production systems.",
+  "raw_content_path": null,
+  "dedupe_key": "e39eab18ccd8",
+  "status": "new",
+  "errors": []
+}

@@ -1,0 +1,204 @@
+{
+  "target_brand": "Agent Replacement Scorecard",
+  "domain": "shekerkamma.github.io/content-ideas",
+  "competitors": [
+    "zendesk",
+    "ccaas",
+    "glean",
+    "westlaw",
+    "lexisnexis",
+    "dam",
+    "adobe",
+    "bi dashboards"
+  ],
+  "market": "US",
+  "language": "en",
+  "objective": "Audit whether AI answers surface this Agent Replacement Scorecard when buyers ask which SaaS workflows agents can replace, renegotiate, or enrich.",
+  "topics": [
+    "conversational support",
+    "ai shopping / sales consultant",
+    "travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking",
+    "messaging-channel chatbot",
+    "doc summarization & drafting kpmg, pwc, deloitte doc / productivity add-ons empl",
+    "legal research & drafting harvey, thomson reuters, deutsche bank db lumina westlaw, lexisnexis, clm employee",
+    "ad & creative generation at scale wpp, authentic brands group, pods creative production seats creative",
+    "personalized marketing content adobe, elevenlabs (voice) marketing content tools",
+    "document ai / extraction",
+    "agentic auto-remediation"
+  ],
+  "engines": [
+    "manual"
+  ],
+  "source_basis": {
+    "type": "scorecard_html",
+    "url": "https://shekerkamma.github.io/content-ideas/scorecard.html",
+    "rows": 25,
+    "replace_rows": 10
+  },
+  "manual_captures": [
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for conversational support?",
+      "engine": "scorecard_seed",
+      "answer": "For conversational support, the scorecard classifies this as Replace in the Customer category. Basis: conversational support mercedes mbux, wendy's freshai, home depot magic apron per-seat help desks (zendesk) customer mercedes-benz routes drive-time questions through its mbux virtual assistant (gemini on vertex ai); wendy's freshai takes drive-thru orders end-to-end; home depot's “magic apron” and macy's “ask macy's” resolve product and order questions in-app. these are live, branded tier-1 agents already handling the bulk of routine contacts — not pilots. the exposed layer is the per-seat help desk (zendesk-class) plus qa-scoring tools and the lower tier of bpo. once an agent resolves ~80% of volume, the buyer stops paying for ~80% of the agent seats and the remaining staff become escalati",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Customer",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for ai shopping / sales consultant?",
+      "engine": "scorecard_seed",
+      "answer": "For ai shopping / sales consultant, the scorecard classifies this as Replace in the Customer category. Basis: ai shopping / sales consultant mercedes smart sales, mobiauto, best buy guided-selling saas customer mercedes-benz added a gen-ai smart sales assistant to its online storefront; mobiauto's “shopping consultant” (gemini + bigquery) recommends the ideal car and auto-generates listings; best buy uses conversational agents for guided product selection. the agent does the consultative selling a human associate or a guided-selling tool used to script. guided-selling and product-recommendation saas — the per-seat configure / quote and merchandising assistants — is the exposed layer. an agent grounded in the catalog and inventory does this natively, so the per-seat tooling compresses. the commerce p",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Customer",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking?",
+      "engine": "scorecard_seed",
+      "answer": "For travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking, the scorecard classifies this as Replace in the Customer category. Basis: travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking / itinerary tools customer agoda's ai vacation planner, priceline's trip tools, latam airlines' “cosmos” and virgin voyages' “rovey” turn a natural-language request into a built itinerary against live inventory. the agent owns the plan-and-book loop end to end. standalone itinerary builders and booking-assist seats are displaced; the agent reads inventory / pms via api and assembles the trip. the reservation system of record stays, but the human-facing booking-tool seats shrink. replace.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Customer",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for messaging-channel chatbot?",
+      "engine": "scorecard_seed",
+      "answer": "For messaging-channel chatbot, the scorecard classifies this as Replace in the Customer category. Basis: messaging-channel chatbot luxgen (line), banglalink ren, dt mindr chatbot / ccaas bots customer luxgen runs a vertex ai agent on its official line account that cut human customer-service workload by ~30%; banglalink's “ren” and deutsche telekom's “mindr” handle high-volume conversational support on messaging channels. these are deterministic, high-throughput deflection agents. per-seat chatbot builders and ccaas bot modules are the target — the same flows now run on a general agent at a fraction of the per-seat cost. the contact-center platform can remain; the bot-builder licenses do not. replace.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Customer",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for doc summarization & drafting kpmg, pwc, deloitte doc / productivity add-ons empl?",
+      "engine": "scorecard_seed",
+      "answer": "For doc summarization & drafting kpmg, pwc, deloitte doc / productivity add-ons empl, the scorecard classifies this as Replace in the Employee category. Basis: doc summarization & drafting kpmg, pwc, deloitte doc / productivity add-ons employee kpmg, pwc, and deloitte deploy agents that summarize, review, and draft across engagements — collapsing a manual research-and-brief task that used to eat an hour into a usable first draft in minutes. this is native llm capability, so per-seat document-productivity add-ons lose their reason to exist. the office suite stays; the bolt-on summarization / drafting seats go. replace at the add-on layer.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Employee",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for legal research & drafting harvey, thomson reuters, deutsche bank db lumina westlaw, lexisnexis, clm employee?",
+      "engine": "scorecard_seed",
+      "answer": "For legal research & drafting harvey, thomson reuters, deutsche bank db lumina westlaw, lexisnexis, clm employee, the scorecard classifies this as Replace in the Employee category. Basis: legal research & drafting harvey, thomson reuters, deutsche bank db lumina westlaw, lexisnexis, clm employee harvey and legora run research, review, and drafting for amlaw firms; thomson reuters embeds gen-ai research; deutsche bank's “db lumina” drafts research at scale. firms are quietly trimming junior classes citing the productivity gain. per-lawyer research platforms (westlaw, lexisnexis) and contract-lifecycle tools are repricing fast as the agent does the lookup-and-draft loop. the proprietary case-law corpus retains value, but per-seat research licenses compress. replace at the seat layer.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Employee",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for ad & creative generation at scale wpp, authentic brands group, pods creative production seats creative?",
+      "engine": "scorecard_seed",
+      "answer": "For ad & creative generation at scale wpp, authentic brands group, pods creative production seats creative, the scorecard classifies this as Replace in the Creative category. Basis: ad & creative generation at scale wpp, authentic brands group, pods creative production seats creative wpp and authentic brands group turn a single hypothesis into hundreds-to-thousands of personalized creative variations in hours; pods built the “world's smartest billboard” that generated 6,000+ headlines across nyc neighborhoods in 29 hours. creative becomes a computational process. per-editor creative-production seats and the freelance long tail are displaced as generation moves from manual to computational. brand / dam systems stay; production seats shrink hard. replace.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Creative",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for personalized marketing content adobe, elevenlabs (voice) marketing content tools?",
+      "engine": "scorecard_seed",
+      "answer": "For personalized marketing content adobe, elevenlabs (voice) marketing content tools, the scorecard classifies this as Replace in the Creative category. Basis: personalized marketing content adobe, elevenlabs (voice) marketing content tools creative adobe's gen workflows and elevenlabs' voice generation produce hyper-personalized, real-time creative; marketing teams generate variant copy, voice, and assets on demand instead of producing each by hand. per-seat marketing-content and copy tools are displaced by an agent that generates on brief. the campaign / martech platform stays as orchestration; the content-tool seats go. replace at the content layer.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Creative",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for document ai / extraction?",
+      "engine": "scorecard_seed",
+      "answer": "For document ai / extraction, the scorecard classifies this as Replace in the Data category. Basis: document ai / extraction document ai deployments idp / ocr saas data document ai deployments parse invoices, forms, and contracts at scale, replacing manual keying and template-based capture. output is structured and deterministic. idp / ocr saas is directly displaced — the agent extracts and routes natively, absorbing the clerk role. the downstream system of record stays; the capture-tool seats go. replace.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Data",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Should AI agents replace or renegotiate SaaS for agentic auto-remediation?",
+      "engine": "scorecard_seed",
+      "answer": "For agentic auto-remediation, the scorecard classifies this as Replace in the Security category. Basis: agentic auto-remediation security-agent deployments soar / runbooks security security-agent deployments write detection rules, isolate compromised workloads, and deploy honeytokens autonomously — neutralizing tier-1 threats without human intervention, within a policy envelope. soar and runbook-automation seats are displaced as the agent becomes the responder. the system of record stays for audit; the playbook-authoring seats go. replace within policy.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "scorecard_seed",
+        "verdict": "REPLACE",
+        "type": "Security",
+        "note": "Seed answer generated from the supplied scorecard, not a live AI-answer capture."
+      }
+    },
+    {
+      "query": "Which SaaS workflows are most likely to be replaced by AI agents?",
+      "engine": "manual_placeholder",
+      "answer": "Paste a real ChatGPT, Claude, Perplexity, or Google AI Mode answer here.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "manual_placeholder",
+        "note": "Replace this with live AI-answer evidence."
+      }
+    },
+    {
+      "query": "Agentic AI vs SaaS replacement scorecard",
+      "engine": "manual_placeholder",
+      "answer": "Paste a real AI answer here and keep the cited URLs in citation_urls.",
+      "citation_urls": [
+        "https://shekerkamma.github.io/content-ideas/scorecard.html"
+      ],
+      "raw_metadata": {
+        "collection_method": "manual_placeholder",
+        "note": "Replace this with live AI-answer evidence."
+      }
+    }
+  ]
+}

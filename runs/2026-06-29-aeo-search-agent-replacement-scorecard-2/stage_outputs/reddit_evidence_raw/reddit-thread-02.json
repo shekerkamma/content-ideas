@@ -1,0 +1,817 @@
+{
+  "post": {
+    "title": "I spent $47k and 18 months building an \"AI startup.\" Here's the brutal truth about why 90% of AI businesses are doomed.",
+    "author": "Nipurn_1234",
+    "score": 1836,
+    "content": "TL;DR: Burned through $47k building an AI tool that 12 people use. Here's what the \"AI gold rush\" really looks like from the trenches, and why most AI startups are just expensive tech demos. The Setup (AKA How I Got Caught Up in the Hype) 18 months ago, I was a perfectly happy software consultant making decent money. Then ChatGPT happened, and suddenly everyone was an \"AI entrepreneur.\" My LinkedIn feed was nothing but: \"I built an AI that does X in 10 minutes!\" \"Our AI startup just raised $2M!\" \"$10k MRR with AI tools!\" I got FOMO and thought, \"How hard can it be?\" Spoiler alert: Very hard. The Idea (That Seemed Brilliant at 2 AM) I decided to build an AI-powered content creation tool for small businesses. The pitch was simple: \"Input your business details, get professional marketing copy in seconds.\" Why this seemed genius: Small businesses suck at copywriting They don't want to hire expensive agencies AI can write decent copy Subscription model = recurring revenue I spent weeks validating this idea by asking friends, \"Would you pay for this?\" Everyone said yes. First mistake: Asking people what they'd pay for instead of asking them to actually pay for it. The Build (18 Months of \"Almost Done\") Months 1-3: The MVP That Wasn't Minimum I started building what I thought was an MVP. Ended up with: Custom AI training pipeline Beautiful UI with 47 different templates User authentication system Payment processing Admin dashboard Analytics suite Cost so far: $12k (mostly my own development time valued at $100/hour) Months 4-8: Feature Creep Hell Beta users started asking for features: \"Can it write in different tones?\" \"What about social media posts?\" \"Can it integrate with WordPress?\" \"What about email templates?\" I said yes to everything. Each feature took 2-3x longer than expected. Cost so far: $28k Months 9-12: The Technical Debt Tsunami Nothing worked together properly. The codebase was a nightmare. I spent 4 months just refactoring and fixing bugs. Cost so far: $39k Months 13-18: Desperation Marketing Launched on Product Hunt (ranked #47 for the day). Posted in Facebook groups. Cold emailed 500 small business owners. Tried Reddit ads, Google ads, LinkedIn outreach. Total additional marketing spend: $8k Total users acquired: 73 Paying customers: 12 Final tally: $47k spent, $340 revenue. What I Got Wrong (Pretty Much Everything) 1. I Built a Solution Looking for a Problem Small businesses don't actually want AI copywriting tools. They want customers. Big difference. When I actually talked to my target market (should've done this first), here's what I learned: They're too busy to learn new tools They don't trust AI for their brand voice They'd rather hire their neighbor's kid for $50 2. I Competed with ChatGPT Why would someone pay me $29/month when ChatGPT Plus is $20/month and does way more? My value proposition was \"it's easier than ChatGPT.\" Reality: It wasn't. And even if it was 10% easier, that's not worth paying 45% more. 3. I Underestimated Sales & Marketing I'm a developer. I thought \"build it and they will come\" was a real strategy. Breakdown of my 18 months: Building: 14 months Marketing/Sales: 4 months Should have been: Building: 4 months Marketing/Sales: 14 months 4. I Ignored Unit Economics Until Too Late My customer acquisition cost: $650 per customer ($8k marketing spend ÷ 12 customers) My average revenue per customer: $28 (most churned after 1 month) Even a business school dropout could see this math doesn't work. 5. I Built for Myself, Not Customers I made assumptions about what small businesses wanted based on what I thought they should want. Turns out, they just want more sales. They don't care how beautiful your UI is. The Real AI Business Landscape (It's Not Pretty) After networking with other \"AI entrepreneurs\" for 18 months, here's what I've observed: Tier 1: The Actually Successful Ones (5%) Had domain expertise BEFORE AI Solved real problems for specific industries Focused on B2B with enterprise budgets Examples: AI for radiology, legal document review, financial compliance Tier 2: The Lifestyle Businesses (15%) Simple wrappers around OpenAI API Serve very specific niches Make $5k-20k/month Examples: AI email responder for dentists, AI job description generator Tier 3: The Strugglers (30%) Built cool tech demos Can't find paying customers Burning through savings/investor money This is where I lived Tier 4: The Delusional (50%) Think they're going to replace Google Have raised money based on PowerPoint slides Will be out of business within 2 years What Actually Works in AI Business After talking to the successful Tier 1 and Tier 2 folks, here are the patterns: 1. Pick Boring Industries The sexiest AI companies get all the attention and funding. But plumbing contractors also need software, and there's way less competition. 2. Charge Enterprise Prices If you're saving a company 40 hours/week, charge them for 40 hours/week. Don't charge $29/month because that's what consumer apps cost. 3. Focus on Compliance/Risk Reduction Companies will pay stupid money to avoid getting sued or fined. AI that helps with compliance is worth 10x more than AI that \"increases productivity.\" 4. Become the Expert First Learn an industry for 2-3 years BEFORE building AI for it. The AI part is easy. Understanding the problem is hard. My Pivot Strategy (What I'm Doing Now) I'm not giving up on entrepreneurship, but I'm definitely giving up on AI for now. New approach: Pick an industry where I have connections (web development agencies) Identify a specific, expensive problem ($10k+ problem) Build the simplest possible solution (no AI needed) Charge properly ($500-2000/month, not $29/month) Get 10 paying customers before building anything fancy The business: Project management tool specifically for web dev agencies that integrates with their existing stack and automates client reporting. No AI. No fancy features. Just solving one expensive problem really well. Hard Truths About the AI Gold Rush Truth 1: Most AI Startups Are Just Expensive Consultants If your business model is \"AI does the work faster,\" you're selling labor arbitrage, not technology. That's a consulting business with extra steps. Truth 2: OpenAI/Google Will Eat Your Lunch If your competitive advantage is \"we fine-tuned GPT for X,\" you don't have a competitive advantage. You have a 6-month head start, max. Truth 3: Customers Don't Care About Your Technology They care about outcomes. \"AI-powered\" is not a benefit. \"Saves you 10 hours per week\" is a benefit. Truth 4: The Technical Barriers Are Lower Than Ever Building AI products is easier than it's ever been. Which means everyone's doing it. Which means you need actual business advantages, not just technical ones. What I Wish Someone Had Told Me Start with the market, not the technology. Find people with expensive problems first. Then figure out how to solve them. B2B > B2C for AI. Businesses have money and understand ROI. Consumers just want free stuff. Niche down relentlessly. \"AI for small businesses\" is not a niche. \"AI for orthodontist appointment scheduling\" is a niche. Test with money, not words. Don't ask if people would pay. Ask them to pay. Budget 3x longer than you think. Everything in AI takes longer because the technology is still figuring itself out. The Question Everyone's Asking \"Should I still start an AI business?\" My answer: Only if you have deep domain expertise in a specific industry, access to that industry's decision-makers, and a problem that costs companies $100k+ per year. If your plan is \"build cool AI thing, figure out customers later,\" just save yourself the time and money. Buy index funds instead. Final Thoughts I don't regret this experience. I learned more about business in 18 months than I did in 5 years of consulting. But I definitely could have learned it for a lot less than $47k. The AI opportunity is real, but it's not what the Twitter influencers are selling you. It's not about building the next ChatGPT wrapper. It's about understanding specific industries so well that you can apply AI to solve their most expensive problems. Most of us (myself included) jumped on AI because the technology was exciting. But technology doesn't build businesses. Understanding customer problems builds businesses. The gold rush mentality is exactly what's wrong with entrepreneurship right now. Everyone's looking for the quick win, the magic bullet, the secret hack. There isn't one. There's just doing the boring work of understanding customers and solving their problems.",
+    "url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+    "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+    "subreddit": "Entrepreneur"
+  },
+  "comments": [
+    {
+      "id": "t1_n77lusm",
+      "author": "AutoModerator",
+      "text": "Welcome to /r/Entrepreneur and thank you for the post, /u/Nipurn_1234 ! Please make sure you read our community rules before participating here. As a quick refresher: Promotion of products and services is not allowed here. This includes dropping URLs, asking users to DM you, check your profile, job-seeking, and investor-seeking. Unsanctioned promotion of any kind will lead to a permanent ban for all of your accounts. AI and GPT-generated posts and comments are unprofessional, and will be treated as spam, including a permanent ban for that account. If you have free offerings, please comment in our weekly Thursday stickied thread. If you need feedback, please comment in our weekly Friday stickied thread. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77lusm/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77x82b",
+      "author": "Joe-Eye-McElmury",
+      "text": "I love how this subreddit is filled with posts saying “I royally screwed up my business / lost a gazillion dollars, so now let me spew out a ton of AI-crappified advice from someone who has a track record that proves they don’t know what they’re talking about.”",
+      "score": 1046,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77x82b/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78hjk7",
+      "author": "ThatCuriousJ",
+      "text": "Might as well rename the sub to r/aitechstartups",
+      "score": 132,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78hjk7/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78mj3y",
+      "author": "david_slays_giants",
+      "text": "based on the topics of most other posts here, this sub could be renamed r/sellyourcourseshere",
+      "score": 78,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78mj3y/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7acg8n",
+      "author": "Chaosmusic",
+      "text": "It is pretty manipulative and shameless. I've gotten pretty good at telling if a post is legitimate or simply a way to sell a course. It's all collected in my 'How to Spot a Course' course, available for $399.99.",
+      "score": 95,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7acg8n/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7c0yj7",
+      "author": "No_Hunt_9960",
+      "text": "And for the ULTIMATE guide on how to spot course sellers in replies to course sellers, I would definitely recommend going to my link in bio. Get the course for only $450, or join my community with one-on-one coaching on how to avoid course sellers in the replies of course sellers.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7c0yj7/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n98pwi5",
+      "author": "Striking-Coach-3858",
+      "text": "This is funny!",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n98pwi5/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78urz0",
+      "author": "zero0n3",
+      "text": "Except that in business, most thing fsil and the good businesses failed A LOT! Reminds me of the quote from suits: Success is like being pregnant, everyone says congratulations but nobody knows how many times you were fucked.",
+      "score": 74,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78urz0/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78cb1t",
+      "author": "",
+      "text": "Bhwahahahah",
+      "score": 58,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78cb1t/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78rucl",
+      "author": "The-Struggle-90806",
+      "text": "I was thinking they were in the delusional stage myself. Just money wise, $46k to say you have an “AI” app? I kept reading trying to figure out what these techies are saying. Most are charletons and shameless. Maybe it’s me but I find it offensive that someone knows the kid down the street can do a better job but still ask someone to pay you for your substandard product. All because you want to call yourself a winner. I just find it disgusting for so many reasons some personal some not so much.",
+      "score": 36,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78rucl/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7ad31j",
+      "author": "Chaosmusic",
+      "text": "I kept reading trying to figure out what these techies are saying. We made an ai app. Ok, what does it do? It's ai. I got that, but what does it do ? It's an ai app.",
+      "score": 24,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7ad31j/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79fwpd",
+      "author": "mile-high-guy",
+      "text": "Charlatans",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79fwpd/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7b48bw",
+      "author": "mile-high-guy",
+      "text": "Charleston Chew",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7b48bw/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7bemcp",
+      "author": "mile-high-guy",
+      "text": "Charlatan Chew",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7bemcp/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7cl6di",
+      "author": "The-Struggle-90806",
+      "text": "And auto correct let it happen wow. Apple owes me a refund.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7cl6di/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7akw60",
+      "author": "nabokovian",
+      "text": "the sheer size (and formatting) of this post made my brain shutdown from the AI-slop.",
+      "score": 29,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7akw60/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7bfcnv",
+      "author": "Safe_Psychology_326",
+      "text": "What's interesting is for the folks who are older, this advice is a repeated pattern seen whenever something new comes into the market like the dotcom era - same story, then SaaS /cloud era same story, now the AI story. I think the important part I figure is the folks who make money are the ones selling the tools, the shovels and pickaxes and the asses for carrying the gold in every era.",
+      "score": 18,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7bfcnv/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7gg2ji",
+      "author": "FullofLovingSpite",
+      "text": "\"I valued my time at extreme costs, so this is why I lost so much money.\" That's just not how it works. This sub is full of fakes.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7gg2ji/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7o5kin",
+      "author": "Sad-Shop-2960",
+      "text": "So true. $100 an hour is a great rate. This bozo should just go and do whatever it is that provided that, assuming he/she wasn’t doing that while working on this venture",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7o5kin/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78hu32",
+      "author": "LadyCEO2015",
+      "text": "I couldn’t have said it better 🤣",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78hu32/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n8172ff",
+      "author": "This-Werewolf-3610",
+      "text": "I couldn’t even read this AI-generated bullshit. Can’t wait until the bubble bursts.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n8172ff/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79o2rb",
+      "author": "allmightysteven",
+      "text": "Hahahahahaha",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79o2rb/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7b5uhd",
+      "author": "Nicolaius",
+      "text": "Brilliant comment! The irony of such posts is just too much, thanks for the laugh Joe.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7b5uhd/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7ephsr",
+      "author": "33ff00",
+      "text": "Does this guy think i am reading all this ai shit",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7ephsr/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7epnth",
+      "author": "33ff00",
+      "text": "Also. 90% of this is normal software dev. None of it is surprising",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7epnth/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7ffj6c",
+      "author": "Canadian-and-Proud",
+      "text": "He probably factored in the time it took to write this post as part of his losses too.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7ffj6c/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77wrfg",
+      "author": "imhereyourewhere",
+      "text": "You're really calculating your hourly cost as a loss... 🤦🏻",
+      "score": 343,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77wrfg/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78tr0s",
+      "author": "Gold_Space8930",
+      "text": "Dude that’s what got me! 100 per hour I worked loss? Bonkers",
+      "score": 139,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78tr0s/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7au3c3",
+      "author": "Awkward_Love_2798",
+      "text": "That’s 3 40 hour work weeks lol! $12k",
+      "score": 35,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7au3c3/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7az8f9",
+      "author": "Independent-Dog8669",
+      "text": "In 18 months no less",
+      "score": 24,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7az8f9/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7b26e1",
+      "author": "Awkward_Love_2798",
+      "text": "That’s actually hilarious",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7b26e1/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78un9j",
+      "author": "imhereyourewhere",
+      "text": "😂 exactly",
+      "score": 12,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78un9j/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n89ciiz",
+      "author": "Pretend_Intern5670",
+      "text": "Bro needs another life lesson to understand what's loss!",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n89ciiz/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7aedm0",
+      "author": "papercup",
+      "text": "Yeah that threw me too. I'm working on an AI-based side project for an idea I had in Jan. I've spent hours upon hours working on it. My loss is $12.54 to date. I've learned so much in those hours, that's not a loss... even if my project fails it was research",
+      "score": 55,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7aedm0/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7buwnz",
+      "author": "Remote_Volume_3609",
+      "text": "It says so much about his mentality. If you're bootstrapping, until you have actual revenue, you can't see your time as money unless someone is paying you actual money for it. It's the one thing you can actually give and use.",
+      "score": 32,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7buwnz/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7ci6sj",
+      "author": "TruthSeekerNS",
+      "text": "If the OP could have been working for someone else making money: then the opportunity cost is real but not actually losing money. OP did not make more money, that's technically not a loss, but for some it is. My teenage boys can't understand why I won't let the neighborhood children mow my lawn for $40 for 20 minutes work, when all I'd be doing is watching tv in the living room. And, yes I won't help the economy that way, or help budding entrepreneurs by giving them a sale they didn't really make.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7ci6sj/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79pnyi",
+      "author": "dontdxmebro",
+      "text": "Yeah I laughed out loud and stopped reading there. Alright, so you gave yourself the majority of the money you \"spent\" on starting this business. Great way to get the banks and any investors to never trust you again. So weird.",
+      "score": 30,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79pnyi/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78gett",
+      "author": "PMMePicsOfDogs141",
+      "text": "Could’ve been working at Burger King so I suppose it counts in that way lol",
+      "score": 24,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78gett/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7awj6n",
+      "author": "qyloo",
+      "text": "$100/hr to prompt engineer",
+      "score": 24,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7awj6n/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7b255t",
+      "author": "UltraAware",
+      "text": "I understand. Time should be measured in dollars. That’s how you really quantify how much you have put into a project.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7b255t/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7cdddb",
+      "author": "hrrm",
+      "text": "Wait, why shouldn’t he include opportunity cost had he never started this in the first place and just worked a job?",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7cdddb/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7deg22",
+      "author": "CommonRequirement",
+      "text": "Because his experience level as an entrepreneur is basically intern/student. You should consider opportunity cost, but you can’t go claiming you actually spent it to any serious person. His work is not worth what he could theoretically be paid for doing something else, it is the value created by the work he did.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7deg22/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7cdf3p",
+      "author": "Noxvord",
+      "text": "I guess it's an opportunity cost calculation",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7cdf3p/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79xy5m",
+      "author": "baummer",
+      "text": "Yeah that’s wild lmao",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79xy5m/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77pokd",
+      "author": "datawazo",
+      "text": "You presumably know how to prompt AI and this still came out so overly AI created and hard to read. idk I'm just not convinced AI is in a spot to really punch out good copy. The more it tries the more it's obvious that AI is AI",
+      "score": 303,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77pokd/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77x0s8",
+      "author": "AndreBerluc",
+      "text": "Being able to better train the AI for more humanized texts didn't happen here, the text actually became robotic!",
+      "score": 46,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77x0s8/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n799dmv",
+      "author": "millenialismistical",
+      "text": "Obviously AI-formatted, super easy to follow and read.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n799dmv/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7c1mtt",
+      "author": "eiketsujinketsu",
+      "text": "The sheer fact that it’s a mile long is a dead giveaway too.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7c1mtt/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7d0u2h",
+      "author": "optimis344",
+      "text": "AI is terrible most things, and copy is one of them. The tone is always so off because it writes in a way that no one else does. They always write like a voice over in an 80s movie, and then when you try to get it to swap tones, it just is the same thing in a different accent. Anyone can tell instantly, and it's just slop all the way down.",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7d0u2h/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78397e",
+      "author": "JoyousGamer",
+      "text": "You didn't spend $48k. Your time is not spending anything. Additionally its doubtful you would have had billable hours 100% of the time you spend on this project. Just annoying when people throw a number on their hours for a personal project. Especially when you spent on average 1.3 hours per day on this project over the first 3 months who knows later what was actually spent vs your hours. Finally it seems like you did no actual market research before all of this. People being scare of AI or not wanting to take on a new tool or AI not being accurate enough for the companies message are all things you should have identified early.",
+      "score": 193,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78397e/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78l6d9",
+      "author": "longh0rnn",
+      "text": "Yeah i after i read “ $12k (mostly my own development time valued at $100/hour)” i just stopped reading and came to the comments lmao",
+      "score": 68,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78l6d9/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78nvkk",
+      "author": "NewShadowR",
+      "text": "Wait till you find out he spent 700 dollars on sleep every night (valued at $100 per hr). Shit's expensive.",
+      "score": 46,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78nvkk/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78krx1",
+      "author": "MaxRoofer",
+      "text": "Ironically, that’s one of the only things on here that made me think it was legit. As a business owner, and an older one, I’m always thinking about my time as money.",
+      "score": 21,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78krx1/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78r8g5",
+      "author": "vanderohe",
+      "text": "That’s because you own a business that presumably is real and makes money. OP doesn’t",
+      "score": 30,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78r8g5/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78scfp",
+      "author": "The-Struggle-90806",
+      "text": "That part seemed like common sense. I can’t imagine this is a real post. So much on the internet is just click bait crap to train the AI lol",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78scfp/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77o7z0",
+      "author": "Slapmeislapyou",
+      "text": "I mean, thanks for the warning, but, you're blaming it on a \"gold rush mentality\" when it just sounds like AI or no AI...you just came up with a bad, outdated idea and embarked on it for far longer than you should have. This is also a result of jumping into a technology without fully understanding it's usefulness. It's like, you're building a Chat Gpt business, but did you even ask Chat Gpt to run analytics on your business idea before hand? Doesn't sound like it. Sorry for your bad luck but don't go knocking a SUPREMELY useful tool just because you had or have supremely bad business judgement. If you spend 47k and make $400 bucks revenue, it's not an industry problem, that's a YOU problem.",
+      "score": 45,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77o7z0/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78w97i",
+      "author": "zero0n3",
+      "text": "The main issue IMO is copywriting is only one small part of the sales pipeline. Either you be the tool that helps glue all the tools into a unified pipeline single pane of glass or you better be the best tool in the toolbox. Neither seems to be the case in this project.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78w97i/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7cv78k",
+      "author": "DubyaKayOh",
+      "text": "Copywriting is a profession for a reason. Copywriters use AI and will be the first to tell you it’s awful at copywriting. Almost as bad as writing Reddit posts.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7cv78k/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79ydf2",
+      "author": "baummer",
+      "text": "Yeah this is an OP problem not an AI one. Maybe don’t copy something LLM AI generators easily do today.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79ydf2/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78rya9",
+      "author": "yupignome",
+      "text": "yet another useless chatgpt vomit",
+      "score": 43,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78rya9/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79z7nc",
+      "author": "baummer",
+      "text": "“AI slop” I think is the preferred phrase",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79z7nc/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n781yue",
+      "author": "krkrkrneki",
+      "text": "If you are just a front for ChatGPT then yeah, you are gonna have a hard time differentiating. In my country there is a wildly popular Math teaching AI service. It really works well and students love it. However, ChatGPT just introduced Study Mode, which does a very similar thing. We'll see how they do in the near future.",
+      "score": 29,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n781yue/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79ya2x",
+      "author": "baummer",
+      "text": "Can’t believe it took him that long to realize he was building.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79ya2x/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7c49tr",
+      "author": "Professional_Local15",
+      "text": "Wrote a whole post assuming we are that stupid, too.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7c49tr/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79sucr",
+      "author": "EvensenFM",
+      "text": "I'm not giving up on entrepreneurship, but I'm definitely giving up on AI for now. Judging from your recent submissions , you clearly aren't giving up on AI for now: This post was clearly composed by AI You have no fewer than 5 AI composed posts submitted within the past 12 hours on a variety of subs. You've refused to reply to any comments here - top kek Congratulations on getting your upvotes, OP. If only there were some substance behind your ramble.",
+      "score": 26,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79sucr/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7d1ecf",
+      "author": "optimis344",
+      "text": "That's because it's just a karma farming bot. None of this happened. This isn't a real person.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7d1ecf/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78nnvk",
+      "author": "chemical_outcome213",
+      "text": "Lol, I couldn't finish reading this. I guess because you haven't paid me $100 an hour. This is an AI fever dream.",
+      "score": 26,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78nnvk/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79iop4",
+      "author": "UsualDue",
+      "text": "HELLO I CREATED SHITTY AI BUSINESS BASED ON SHITTY IDEA AND FAILED SO HERE IS SHIT WRITTEN BY AI HOW ALMOST EVERYONE FAILS fuck you",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79iop4/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n780j5s",
+      "author": "nilarrs",
+      "text": "I feel some of these comments are a bit harsh, clearly feedback from people who never took this journey. No one gets it on their first shot. There is always a pivot. Common Sense is a skill you gain from learning, you are not born with it. Allot of common sense was learned here and u/Nipurn_1234 has walked away 47k poorer but a hole bag of common sense for the next part of the journey. Keep pushing on and eventually you will overcome the blockers to your success.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n780j5s/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77zsq4",
+      "author": "Lokimir",
+      "text": "I just want to say thank you. Thank you for actually sharing your knowledge and not gate keeping it and using this sub as a marketing platform. Also, indeed, I had a very relatable experience, not with AI, but with a pretty solution nobody cares about, or are not willing to pay for it. Up Now, my thought process in new ventures looks like: 1. Can I make sustainable revenue from it? 2. If yes, what's the fastest way to prove that assumption and get my first clients? 3. Try it and iterate.",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77zsq4/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7edv4d",
+      "author": "Radiant-Security-347",
+      "text": "I don’t mind the post but it is absolutely a marketing piece. the entire point of it was to describe his consulting offering, target audience, pricing, etc.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7edv4d/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78pklt",
+      "author": "",
+      "text": "tl;Dr - don't write LLM wrappers",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78pklt/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7a9isv",
+      "author": "FanBeginning4112",
+      "text": "What in the AI slop is this post.",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7a9isv/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77nv91",
+      "author": "JoyousGamer",
+      "text": "We’ve all been there. Expensive lessons but you learned and will crush your next on.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77nv91/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n783pdi",
+      "author": "JoyousGamer",
+      "text": "They put in an hour a day basically and that was most of their cost. Example their 3 months was mostly their own time valued at $100/hr equating out to roughly 1.3 hours per day. So hardly expensive unless the OP wants to write a genuine post show actual expenses not just inflating numbers by including their little amount of time they put in to the project each week.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n783pdi/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n77vza0",
+      "author": "LizardKingTx",
+      "text": "🥱",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n77vza0/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n78s3uw",
+      "author": "StaticDreams",
+      "text": "Stopped reading at \"mostly my own development time valued at $100/hour\" I value myself at $100,000/hour personally, so after I stopped working on a project after an hour I lost $100k on it",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n78s3uw/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79835k",
+      "author": "lunatuna215",
+      "text": "But you still wrote this post using ChatGPT right?",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79835k/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n79hqh5",
+      "author": "gatsby365",
+      "text": "What the fuck did you spend the $47,000 on???",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n79hqh5/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "id": "t1_n7c1w8c",
+      "author": "DrDig1",
+      "text": "“His billable hours”",
+      "score": 13,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/n7c1w8c/",
+      "source_url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "subreddit": "Entrepreneur"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+    "method": "old_reddit_html"
+  }
+}

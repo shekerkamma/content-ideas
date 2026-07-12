@@ -1,0 +1,90 @@
+{
+  "rows":25,
+  "columns":[
+    "#",
+    "Agent type",
+    "Use case",
+    "Proof (short)",
+    "SaaS affected (short)",
+    "Volume",
+    "Determinism",
+    "Data moat",
+    "Verdict",
+    "Build-vs-buy",
+    "Proof \u2014 what's deployed",
+    "SaaS in the crosshairs",
+    "Volume score",
+    "Determinism score",
+    "Moat exposure score",
+    "Replacement exposure score",
+    "Evidence label"
+  ],
+  "null_pct":{
+    "#":0.0,
+    "Agent type":0.0,
+    "Use case":0.0,
+    "Proof (short)":0.0,
+    "SaaS affected (short)":0.0,
+    "Volume":0.0,
+    "Determinism":0.0,
+    "Data moat":0.0,
+    "Verdict":0.0,
+    "Build-vs-buy":0.0,
+    "Proof \u2014 what's deployed":0.0,
+    "SaaS in the crosshairs":0.0,
+    "Volume score":0.0,
+    "Determinism score":0.0,
+    "Moat exposure score":0.0,
+    "Replacement exposure score":0.0,
+    "Evidence label":0.0
+  },
+  "verdict_counts":{
+    "REPLACE":10,
+    "RENEGOTIATE":9,
+    "KEEP":6
+  },
+  "agent_type_verdict":{
+    "REPLACE":{
+      "Code":0,
+      "Creative":2,
+      "Customer":4,
+      "Data":1,
+      "Employee":2,
+      "Security":1
+    },
+    "RENEGOTIATE":{
+      "Code":2,
+      "Creative":1,
+      "Customer":1,
+      "Data":2,
+      "Employee":3,
+      "Security":0
+    },
+    "KEEP":{
+      "Code":1,
+      "Creative":1,
+      "Customer":0,
+      "Data":1,
+      "Employee":0,
+      "Security":3
+    }
+  },
+  "data_moat_verdict":{
+    "REPLACE":{
+      "L":10,
+      "M":0,
+      "H":0
+    },
+    "RENEGOTIATE":{
+      "L":0,
+      "M":9,
+      "H":0
+    },
+    "KEEP":{
+      "L":0,
+      "M":0,
+      "H":6
+    }
+  },
+  "confidence":"Medium-high: source file is complete and internally consistent; market generalization remains curated, not statistical."
+}

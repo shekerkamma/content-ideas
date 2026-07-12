@@ -1,0 +1,18 @@
+{
+  "id": "src-6a3ce71952e4",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Features Overview | Hermes Agent",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/overview",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/overview",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:47.207648+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Hermes Agent includes a rich set of capabilities that extend far beyond basic chat. From persistent memory and file-aware context to browser automation and voice conversations, these features work together to make Hermes a powerful autonomous assistant.",
+  "raw_content_path": null,
+  "dedupe_key": "113d60929be8",
+  "status": "new",
+  "errors": []
+}

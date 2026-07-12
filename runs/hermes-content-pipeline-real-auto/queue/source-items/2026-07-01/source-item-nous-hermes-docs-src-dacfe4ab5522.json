@@ -1,0 +1,18 @@
+{
+  "id": "src-dacfe4ab5522",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Codex — Delegate coding to OpenAI Codex CLI (features, PRs) | ...",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-codex",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-codex",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:28.240470+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "The following is the complete skill definition that Hermes loads when this skill is triggered. This is what the agent sees as instructions when the skill is active. Delegate coding tasks to Codex via the Hermes terminal. Codex is OpenAI's autonomous coding agent CLI.",
+  "raw_content_path": null,
+  "dedupe_key": "c004f4285b49",
+  "status": "new",
+  "errors": []
+}
