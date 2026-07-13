@@ -2,10 +2,13 @@
 name: goal-loop-orchestrator
 description: >
   Use when the user wants to refine a goal, choose or chain multiple skills,
-  run a compound workflow, execute looping skill passes, or continue until
-  acceptance criteria are met. Works across Claude Code and Codex by using
-  local skills first, external skill discovery only when needed, explicit
-  handoffs, verification checks, and stop conditions.
+  run a compound workflow, or plan looping skill passes across several skills.
+  The PLANNER of goal chains — a bare "/goal" or a pasted 5-part
+  TASK/WHY/OUTCOME/CONSTRAINTS/VERIFICATION contract routes to the `goal`
+  skill (the loop engine); use this skill when the goal needs multiple skills
+  chained, skill discovery, or a routing decision first. Works across Claude
+  Code and Codex with explicit handoffs, verification checks, and stop
+  conditions.
 category: Business Automation
 license: MIT
 ---
@@ -143,10 +146,13 @@ Default compound chains:
 - Market wedge with buyer pain: `GBrain/prior recall -> you-com-search -> exa-api -> firecrawl -> Reddit semantic chain -> ai-analyst validation -> strategy synthesis`.
 - Product build: `grill-me if needed -> product-planner -> karpathy-guidelines -> implementation -> verification`.
 
-### Handoff to Claude Code `/goal`
+### Handoff to the `goal` skill (`/goal`)
 
-When the execution phase runs as a Claude Code `/goal` (instead of this skill
-looping inline), render the Goal Contract as the 5-part loop-engineering prompt:
+When the execution phase runs as a `/goal` loop (instead of this skill
+looping inline), hand the contract to the **`goal` skill**
+(`~/.claude/skills/goal/SKILL.md`) — it is the loop engine on this machine:
+PLAN → EXECUTE → VERIFY → FIX with a `GOAL.md` state file, four proof types,
+and stop conditions. Render the Goal Contract as its 5-part prompt:
 
 ```
 /goal
