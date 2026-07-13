@@ -28,6 +28,7 @@ plugin**, not to DealForge or tooling scripts.
 | DealForge TS/TSX (`app/`, `convex/`, `components/`, `lib/`) | `npm run typecheck && npm run lint`, then `npm run test:e2e` (KYC flow only: `npm run test:e2e:kyc`) |
 | LLM Wiki Agent demo | `npm run browser:test` (headless) / `npm run browser:test:headed` |
 | Plugin manifests, `SKILL.md` frontmatter, **or this file / `AGENTS.md`** | `python3 -m pytest -q tests/test_plugin_contract.py` |
+| Any `SKILL.md` across the vendored skill roots (structure, security, trigger collisions) | `python3 tools/skill_evals/run_all.py` (free, stdlib, no tokens — see below) |
 
 **Contract-pinned prose:** `tests/test_plugin_contract.py` asserts pinned
 phrases inside `CLAUDE.md` and `AGENTS.md` (GBrain, Exa, and PPTX-gate wording;
@@ -327,3 +328,35 @@ Notable project-local skills beyond the BuilderOS set:
   user-global CLAUDE.md; executed inline, not via the Skill tool).
 - `skills/officecli-qa/SKILL.md` — OfficeCLI QA gate for Office deliverables
   (see deck delivery gates above).
+
+## Skill evals (tools/skill_evals/)
+
+Free, stdlib-only, no-token hygiene checks across every `SKILL.md` in
+`skills/`, `.claude/skills/`, `.agents/skills/`, and
+`skill-framework/.agents/skills/`. Ported from
+`Shubhamsaboo/awesome-llm-apps` (`agent_skills/evals/`, July 2026) and adapted
+for this repo's multi-root, mirrored-copy layout (the same skill name in two
+roots is a synced copy, not a rival — the trigger/routing checker dedupes by
+name and instead flags description **drift** between copies).
+
+```bash
+python3 tools/skill_evals/run_all.py            # tiers 1, 1b, 2 together
+python3 tools/skill_evals/skill_lint.py <dir>    # tier 1: structural lint only
+python3 tools/skill_evals/skill_scanner.py <dir> # tier 1b: security scan only
+python3 tools/skill_evals/run_trigger_evals.py   # tier 2: trigger/routing collisions + drift
+```
+
+- Tier 1 (structural) and 1b (security, OWASP Agentic Skills Top 10) run
+  per skill directory. Tier 2 (trigger/routing) is lexical-only — it flags
+  near-colliding descriptions and same-name copies whose description text has
+  diverged across roots.
+- Tier 3 (behavioral, via `evals.json`/`expectations[]`) is **not** ported —
+  it costs tokens and is on demand only, not part of this free tier.
+- This complements `skills-analyst` rather than duplicating it:
+  `skills-analyst` mines usage and classifies keep/fix/merge/delete;
+  `skill_evals` is the deterministic regression check that runs on every
+  change, with no transcript mining and no tokens.
+- Existing findings against the current corpus are a triage backlog, not a
+  CI gate — `tests/test_skill_evals.py` unit-tests the tools themselves
+  against synthetic fixtures and smoke-tests `run_all.py` against the real
+  repo (asserts it runs cleanly, not that findings are zero).

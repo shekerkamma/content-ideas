@@ -109,7 +109,7 @@ Preferred order:
 2. Use the existing `reddit-seo-pipeline` extractor for each known URL:
 
    ```bash
-   python3 /home/shekerk/.codex/skills/reddit-seo-pipeline/scripts/reddit_thread_extractor.py \
+   python3 ../reddit-seo-pipeline/scripts/reddit_thread_extractor.py \
      "$REDDIT_URL" \
      --output "$RUN_DIR/reddit-thread-N.json"
    ```
