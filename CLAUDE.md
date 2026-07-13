@@ -102,7 +102,18 @@ npm run dev
 
 ### Cross-host packaging
 - `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json` — Claude Code install
-- `.codex-plugin/plugin.json` (`"skills": "./skills/"`) — Codex install
+- `.codex-plugin/plugin.json` (`"skills": "./skills/"`) — Codex install.
+  Verified 2026-07-13 (`codex debug prompt-input` from inside the repo):
+  Codex actually discovers this repo's skills from **both** `skills/` (this
+  manifest) **and** `.agents/skills/` (a separate root it scans on its own),
+  merged into one list with no automatic dedup — confirmed by watching a
+  same-name skill get listed twice from two different roots. A genuinely
+  diverged (non-wrapper) same-name copy across those two roots is therefore
+  a live Codex routing risk, not just a `skill_evals` hygiene finding — keep
+  running the drift-checker (`tools/skill_evals/run_trigger_evals.py`).
+  Also confirmed: Codex's parser tolerates Claude-Code-only frontmatter
+  fields (`argument-hint`, `user_invocable`, `triggers:` lists) without
+  error.
 - `AGENTS.md` — Codex / generic-agent entry point. It carries its own copy of
   the GBrain and OpenHands rules **and then includes** `@CLAUDE.md` at the end.
   If you change those rules here, update `AGENTS.md` too (and vice versa).
