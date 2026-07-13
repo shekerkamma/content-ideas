@@ -53,6 +53,16 @@ dirs missing SKILL.md, and never-used skills.
 If the machine's roots differ from the defaults, edit `DEFAULT_ROOTS` at the
 top of the script first.
 
+**Complementary check — `tools/skill_evals/` (repo root, `run_all.py`):** run
+this alongside the audit engine. It covers what usage-mining can't: SKILL.md
+structural/security lint and lexical trigger/routing collision + description
+drift detection across the same skill roots — free, stdlib, no tokens, no
+transcript mining. Use `skills-analyst`'s usage data to decide what to
+keep/merge/delete; use `skill_evals` to catch broken references, hardcoded
+absolute paths, install-lure security patterns, and near-colliding
+descriptions between two *different* skills before they cause a routing bug.
+See CLAUDE.md's "Skill evals" section for what's already been triaged.
+
 ### Step 2 — Characterize the repeated work
 
 Read the session first-prompts (the audit script's usage table plus a skim of

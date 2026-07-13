@@ -360,3 +360,31 @@ python3 tools/skill_evals/run_trigger_evals.py   # tier 2: trigger/routing colli
   CI gate — `tests/test_skill_evals.py` unit-tests the tools themselves
   against synthetic fixtures and smoke-tests `run_all.py` against the real
   repo (asserts it runs cleanly, not that findings are zero).
+
+### Already-triaged findings (2026-07-13) — don't re-litigate these
+
+- **7 trigger/routing "collisions" reviewed, none need edits**:
+  `build-loop-claude-code`/`-codex`/`-cursor` (87–95% overlap) are the same
+  job across three hosts, selected by which host you're in, not by
+  description text. `aeo-orchestrator` vs `aeo-gap-analyzer`/
+  `aeo-query-planner` (53–60%) is the orchestrator naming its own
+  sub-stages; real usage splits on argument shape (`config.json` for a full
+  run vs. `run-id` to rerun one stage). `web-design-guidelines` vs
+  `writing-guidelines` (53%) is two Vercel-authored templates sharing
+  boilerplate sentence structure, not real vocabulary overlap.
+  `branded-pptx-deck` vs `genspark-branded-deck` (52%) already
+  cross-references itself in prose and has distinct slash commands.
+- **2 security CRITICALs reviewed, both accepted as-is**: `officecli-qa`'s
+  `curl \| bash` installer step (ClawHavoc-shaped, but it's your own
+  OfficeCLI tool) and `exa-api`'s script reading `$HOME/.hermes/.env` then
+  calling the Exa API in the same file (cred+net co-occurrence — expected
+  for an API-key-based skill, correctly flagged for a human glance).
+- **Remaining ~8 lint errors are cosmetic**, not bugs: doc mentions of
+  scripts that live in another skill/repo without qualifying the path
+  (`officecli-qa`→`recalc.py`, `branded-pptx-deck`→`build_yc_deck_v2.py` in
+  the external `ticketforge` repo), an illustrative citation-format example
+  in `code-reviewer` (`/abs/path/app.py:42`), and one markdown file
+  (`content-research/SKILL.md`) with a nested same-length code fence the
+  linter can't parse — none are unfilled placeholders or broken behavior.
+- If a future run of `run_all.py` shows new findings beyond this list,
+  those are real and worth triaging; don't assume everything is pre-cleared.
