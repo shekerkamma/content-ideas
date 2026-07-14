@@ -142,6 +142,13 @@ Client-facing PPTX rule:
 
 Cross-host product-build skills:
 - Use repo-local skills from `skills/` for both Codex and Claude Code.
+- Use `skills/aianalyst-competitor-analysis/SKILL.md` when competitor analysis
+  must be treated as an AI Analyst evidence-dataset workflow: sourced claim
+  ledger, dataset schema, metric definitions, data quality report, scoring
+  model, confidence labels, quantitative datapoints, branded PPTX, interactive
+  HTML, or GitHub Pages publication. Prefer this over the generic competitor
+  pipeline when the user asks for deeper data points, KPIs, benchmarks,
+  metrics-as-evidence, or AI Analyst involvement.
 - Use `skills/competitor-analysis-pipeline/SKILL.md` when the user asks for
   competitor analysis, competitive landscape, battlecards, market maps,
   positioning comparisons, consulting-firm positioning comparisons, or

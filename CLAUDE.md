@@ -202,6 +202,11 @@ the execution loop — same ordering/verification rules as DealForge above.
   `skills/competitor-analysis-pipeline/SKILL.md`; it codifies the improved
   GBrain/source-order, grill-me, story-architect, GStack review, branded PPTX
   QA, interactive HTML QA, and GitHub Pages publishing pipeline.
+- For competitor analysis that needs AI Analyst discipline, use
+  `skills/aianalyst-competitor-analysis/SKILL.md`: source claims become an
+  evidence ledger dataset, metrics are defined before scoring, data quality and
+  confidence are reported, and the datapoints must drive the PPTX/HTML
+  storyline.
 - Prefer the strongest research tool the host exposes: You.com first as a
   three-level search workflow, prioritizing Level 2 livecrawl evidence
   retrieval by default for competitor analysis, market maps, strategy research,
