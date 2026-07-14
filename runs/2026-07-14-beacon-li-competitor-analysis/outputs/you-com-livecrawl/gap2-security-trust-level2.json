@@ -1,0 +1,122 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.supportbench.com/support-tool-security-checklist-soc2-sso-logs-rbac/",
+        "title": "Support Tool Security Checklist (SOC2, SSO)",
+        "description": "Checklist for SOC 2 Type II, enterprise SSO (SAML/OIDC), SCIM provisioning, immutable audit logs, and RBAC controls buyers require.",
+        "thumbnail_url": "https://www.supportbench.com/wp-content/uploads/2026/04/image_bcff91928ad40f4880eeaa191f9d0da7.png",
+        "original_thumbnail_url": "https://www.supportbench.com/wp-content/uploads/2026/04/image_bcff91928ad40f4880eeaa191f9d0da7.png",
+        "page_age": "2026-04-26T03:30:47",
+        "favicon_url": "https://you.com/favicon?domain=www.supportbench.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://getsecureslate.com/blog/soc-2-controls-full-list-use-cases-and-what-auditors-expect",
+        "title": "SOC 2 Controls List (2026): Full CC Guide + What Auditors Expect",
+        "description": "Complete SOC 2 controls list for 2026 with CC criteria, auditor expectations, and evidence examples. Map controls faster—automate monitoring with SecureSlate.",
+        "thumbnail_url": "https://cdn-images-1.medium.com/max/800/1*_QgAM51DH1ciIvkFBS_whA.png",
+        "original_thumbnail_url": "https://cdn-images-1.medium.com/max/800/1*_QgAM51DH1ciIvkFBS_whA.png",
+        "page_age": "2026-06-02T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=getsecureslate.com&size=128",
+        "snippets": [
+          "IAM & RBAC: Restricting access based on job roles (Principle of Least Privilege).",
+          "Control implemented: Database-level encryption and strict RBAC."
+        ]
+      },
+      {
+        "url": "https://beacon.security/",
+        "title": "Beacon Security",
+        "description": "Manage security telemetry at scale with Beacon. Real-time data pipeline, AI-driven optimization, and smart routing. Reduce costs while improving coverage.",
+        "favicon_url": "https://you.com/favicon?domain=beacon.security&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://soc2auditors.org/insights/soc-2-controls-list/",
+        "title": "SOC 2 Controls List (2026): All 5 TSCs Mapped to Evidence",
+        "description": "Every SOC 2 control across the 5 Trust Services Criteria, mapped to the exact evidence auditors request. 33 Common Criteria (CC1–CC9) plus A1, PI1, C1, P1–P8.",
+        "thumbnail_url": "https://soc2auditors.org/images/insights/soc-2-controls-list-og.png",
+        "original_thumbnail_url": "https://soc2auditors.org/images/insights/soc-2-controls-list-og.png",
+        "page_age": "2026-07-01T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=soc2auditors.org&size=128",
+        "snippets": [
+          "Role-Based Access Control (RBAC): roles with preset permissions so employees see only the data their job needs."
+        ]
+      },
+      {
+        "url": "https://www.walkme.com/walkme-vs-pendo-vs-whatfix/",
+        "title": "WalkMe vs. Pendo vs. Whatfix | The #1 Enterprise Digital Adoption ...",
+        "description": "Compare WalkMe vs. Pendo vs. Whatfix and see why WalkMe is the only AI-powered DAP built for enterprise security, automation, and scalability.",
+        "thumbnail_url": "https://www.walkme.com/wp-content/uploads/2025/01/Meta-Image-Home-Page_66788d20.jpg",
+        "original_thumbnail_url": "https://www.walkme.com/wp-content/uploads/2025/01/Meta-Image-Home-Page_66788d20.jpg",
+        "page_age": "2025-03-12T11:06:16",
+        "favicon_url": "https://you.com/favicon?domain=www.walkme.com&size=128",
+        "snippets": [
+          "Compare WalkMe vs. Pendo vs. Whatfix and see why WalkMe is the only AI-powered DAP built for enterprise security, automation, and scalability. Discover how WalkMe eliminates manual updates, reduces IT workload by 50%, and delivers 85% ROI.",
+          "Enterprises need more than just product analytics or basic in-app guidance. WalkMe’s AI-powered automation, enterprise-grade security, and cross-application scalability set it apart from Pendo and Whatfix—helping organizations drive adoption, reduce IT workload, and maximize ROI.",
+          "WalkMe’s patented DeepUI technology adapts instantly, eliminating manual updates. Pendo lacks AI automation, and Whatfix requires constant maintenance—making WalkMe the only truly intelligent DAP.",
+          "WalkMe is the only DAP with FedRAMP Ready & StateRAMP participation, ensuring enterprise-grade security. Pendo lacks key certifications, and Whatfix falls short of FedRAMP standards."
+        ]
+      },
+      {
+        "url": "https://www.splunk.com/en_us/blog/learn/soc-2-compliance-checklist.html",
+        "title": "SOC 2 Compliance Checklist: How to Pass the Audit (Checklist Inside) ...",
+        "description": "Discover how to prepare for a SOC 2 audit with this comprehensive compliance checklist, key requirements, and tips for choosing the right tools and partners.",
+        "thumbnail_url": "https://www.splunk.com/content/dam/splunk-blogs/images/media_16bc87e5383b218ddbbdda2f5787f0b9d5c85ce2a.webp?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "original_thumbnail_url": "https://www.splunk.com/content/dam/splunk-blogs/images/media_16bc87e5383b218ddbbdda2f5787f0b9d5c85ce2a.webp?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "favicon_url": "https://you.com/favicon?domain=www.splunk.com&size=128",
+        "snippets": [
+          "Access management: Role-based access control (RBAC), principle of least privilege, MFA."
+        ]
+      },
+      {
+        "url": "https://support.pendo.io/hc/en-us/articles/360031862372-Security-and-privacy-in-Pendo",
+        "title": "Security and privacy in Pendo – Pendo Help Center",
+        "description": "Privacy and security are fundamental components of Pendo’s software and services. This article covers what we do to ensure that our solutions don’t negatively impact the confidentiality, integrity,...",
+        "thumbnail_url": "https://support.pendo.io/hc/en-us/articles/360031862372-Security-and-privacy-in-Pendo",
+        "original_thumbnail_url": "https://support.pendo.io/hc/en-us/articles/360031862372-Security-and-privacy-in-Pendo",
+        "page_age": "2025-11-12T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=support.pendo.io&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://www.pendo.io/glossary/saas-ai-security-trust/",
+        "title": "SaaS Security in the Age of AI: Governance, Privacy & Compliance ...",
+        "description": "Explore how Pendo secures SaaS environments with AI-ready controls—covering data isolation, human-in-the-loop oversight, compliance frameworks, and opt-in AI governance. Learn why AI transparency and risk management are essential to modern SaaS security.",
+        "thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F149f2b5a9de6472ca7db4f31cc887f82",
+        "original_thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F149f2b5a9de6472ca7db4f31cc887f82",
+        "page_age": "2025-10-07T18:26:23",
+        "favicon_url": "https://you.com/favicon?domain=www.pendo.io&size=128",
+        "snippets": [
+          "Access management: Multi-factor authentication (MFA), role-based access control (RBAC), and least-privilege principles.",
+          "Identity and access management at Pendo incorporates multi-factor authentication (MFA), role-based access control (RBAC), and least-privilege principles."
+        ]
+      },
+      {
+        "url": "https://www.bitsight.com/learn/compliance/soc-2-compliance-checklist",
+        "title": "SOC 2 Compliance Checklist & Guide | Bitsight",
+        "description": "Trying to understand compliance with SOC2? Learn about the essentials, types of reports, and a checklist guide to ensure you meet compliance requirements.",
+        "favicon_url": "https://you.com/favicon?domain=www.bitsight.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://www.gartner.com/reviews/market/digital-adoption-platforms",
+        "title": "Best Digital Adoption Platforms Reviews 2026 | Gartner Peer Insights",
+        "description": "Find the top Digital Adoption Platforms with Gartner. Compare and filter by verified product reviews and choose the software that’s right for your organization.",
+        "thumbnail_url": "https://www.gartner.com/imagesrv/apps/peerinsights/images/gpi-twitter-img-fa.png",
+        "original_thumbnail_url": "https://www.gartner.com/imagesrv/apps/peerinsights/images/gpi-twitter-img-fa.png",
+        "favicon_url": "https://you.com/favicon?domain=www.gartner.com&size=128",
+        "snippets": [
+          "WalkMe Digital Adoption Platform assists businesses in increasing operational productivity and minimizing user errors by ensuring software features are utilized effectively and employees adapt to new technologies with greater ease. ... Whatfix is the AI-native Digital Adoption Platform built for the modern enterprise.",
+          "WalkMe Digital Adoption Platform vs Whatfix Digital Adoption PlatformUserlane vs WalkMe Digital Adoption PlatformPendo vs WalkMe Digital Adoption PlatformStonly vs WalkMe Digital Adoption Platform",
+          "The software provides features such as product analytics, in-app messaging, onboarding tools, and survey capabilities, allowing teams to understand how users interact with digital products and identify usage patterns. By integrating analytics with engagement and feedback tools, Pendo enables product teams to enhance feature adoption, streamline onboarding experiences, and prioritize development based on user insights."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "Beacon.li SOC 2 ISO security RBAC audit logs data residency enterprise security WalkMe Whatfix Pendo Rocketlane GUIDEcx",
+    "search_uuid": "b08e7b73-7f4e-4efc-a754-3e5614411674",
+    "latency": 0.6860814094543457
+  }
+}

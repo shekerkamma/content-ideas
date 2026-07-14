@@ -1,0 +1,153 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.workato.com/the-connector/agentic-orchestration-future/",
+        "title": "Agentic Orchestration: Driving the Future of Enterprise AI",
+        "description": "Discover agentic orchestration, how it powers enterprise AI, automates workflows, boosts productivity, and enables real-time decisions.",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/10/AI-Agents-Hero.webp",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/10/AI-Agents-Hero.webp",
+        "page_age": "2026-05-05T15:07:56",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "In our recent keynote presentation, we unveiled “Agentic“—a revolutionary leap forward in enterprise automation and AI integration. Agentic promises to boost productivity, streamline operations, and drive unprecedented business agility.",
+          "These advanced agents are empowered to take actions on behalf of users across multiple systems, significantly enhancing productivity by automating complex, multi-step processes. By understanding user intent and context, Agentic orchestration can initiate, manage, and complete entire workflows, seamlessly integrating various enterprise applications and data sources.",
+          "Workato’s platform is designed to accelerate implementation and deliver quick wins for enterprises: Prebuilt Genie apps for IT, Sales, and Customer Support, enabling immediate deployment of AI-driven solutions in critical business areas · Customizable platform for building domain-specific genies, allowing organizations to tailor AI agents to their unique processes and requirements · Low-code/no-code interface for rapid development and iteration of AI-powered workflows",
+          "Unlike solutions that focus on specific departments or functions, Workato’s Agentic orchestration is designed to be implemented at the core of your entire business: Horizontal Scalability: Extend AI capabilities across all departments, from HR and Finance to Operations and Marketing, creating a truly intelligent enterprise. Cross-Functional Workflows: Enable seamless collaboration between different teams and systems, breaking down silos and enhancing overall organizational efficiency."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/agentic",
+        "title": "Workato Agentic Orchestration | AI Agents that Get Results | Workato",
+        "description": "Build and manage AI agents code-free with Workato Genie. Dynamically orchestrate workflows and take actions in any app or system.",
+        "thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "original_thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Enterprise AI agents that blend reasoning, action, and orchestration to transform how business gets done. Powered by your workflows, they connect every system, follow your rules, and deliver measurable results faster than ever."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/the-connector/orchestrate-ai-workflows/",
+        "title": "How to Orchestrate AI-Powered Workflows",
+        "description": "Learn why enterprise orchestration is critical for AI success, and how to get started with building AI powered workflows.",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2025/05/what-is-agentic-orchestration-1024x448.png",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2025/05/what-is-agentic-orchestration-1024x448.png",
+        "page_age": "2025-08-11T18:28:35",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Microsoft CEO Satya Nadella recently declared, “Software is dead; long live AI agents!” While this currently might be an overstatement,...",
+          "This brings up an important question: if software is in fact dead, how will these AI agents communicate with each other and the data and resources needed to make them productive? This is what was discussed in Workato’s recent webinar, “How to Integrate and Automate AI Workflows.” · The current AI landscape is handicapped by its siloed nature. Individual business units implementing AI in isolation create fragmented results.",
+          "For an AI agent to connect to systems, access data, and execute actions, it needs the foundation that enterprise orchestration provides—not just for technical connectivity but also for user management, compliance, and governance. Protik Ganguly, Integration Architect at Asana, implemented AI within their workflow automation to enhance their CRM processes.",
+          "Interested in learning more about implementing AI within your workflows? Schedule a demo today. ... The New Risk Landscape: Why Agents Are Different AI agents introduce a new class of risk because these systems don't… ... Your existing enterprise data is a knowledge base primed to power AI models, agents, and workflow automations."
+        ]
+      },
+      {
+        "url": "https://partners.workato.com/consultants",
+        "title": "Find the right Workato Service Partner",
+        "description": "Need help with a project for Workato? Find the Service Partner with the best skills to assist you.",
+        "thumbnail_url": "https://content.partnerpage.io/eyJidWNrZXQiOiJwYXJ0bmVycGFnZS5wcm9kIiwia2V5IjoibWVkaWEvbG9nby8wNmNhNWRlZS1iZjAyLTQwODAtYjA2ZC1kNDRjYjllOTFmYjEvMmYzMThmOWQtMTMyNy00NGVkLTgyNGQtZTY1NjVjN2YzYzZhLnBuZyIsImVkaXRzIjp7InRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6MTIwMCwiaGVpZ2h0Ijo2MjcsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjowfX19fQ==",
+        "original_thumbnail_url": "https://content.partnerpage.io/eyJidWNrZXQiOiJwYXJ0bmVycGFnZS5wcm9kIiwia2V5IjoibWVkaWEvbG9nby8wNmNhNWRlZS1iZjAyLTQwODAtYjA2ZC1kNDRjYjllOTFmYjEvMmYzMThmOWQtMTMyNy00NGVkLTgyNGQtZTY1NjVjN2YzYzZhLnBuZyIsImVkaXRzIjp7InRvRm9ybWF0Ijoid2VicCIsInJlc2l6ZSI6eyJ3aWR0aCI6MTIwMCwiaGVpZ2h0Ijo2MjcsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjowfX19fQ==",
+        "favicon_url": "https://you.com/favicon?domain=partners.workato.com&size=128",
+        "snippets": [
+          "AGENTIC & AI POSITIONING Beyond traditional integration, UST is helping clients adopt agentic automation: deploying Workato's MCP capabilities and AI genies to reduce manual work in IT operations, HR, finance, and procurement workflows - with responsible AI governance built in from the start. SERVICES • Strategy & architecture — integration + MCP roadmaps, platform selection, and pattern libraries. • Implementation — end-to-end delivery including custom connector development.",
+          "Our certified experts are adept at integrating disparate systems, utilizing cutting-edge technologies like AI, Agents and RPA to optimize data workflows and automate operations. ... Solomon Consulting Group is a forward-thinking technology and business consulting firm dedicated to empowering organizations with innovative solutions. Specializing in AI-driven tools, cloud integrations, and business process automation, Solomon Consulting Group partners with clients to design, build, and implement cutting-edge systems that enhance operational efficiency and drive growth.",
+          "We specialize in financial services integration, enabling institutions to innovate quickly while maintaining compliance and operational excellence. Solutions • Certified Integration Resources: Access to developers, architects, and project managers with proven expertise. • Productivity Bots: Automation workflows that drive efficiency and deliver rapid ROI.",
+          "To ensure the success of these projects, Dispatch uses proprietary project engagement and management methodologies called DEEP™ and DIVE™ to help organizations formulate and implement the right data integration solutions. Our approach ensures our workflow automation design considers the needs of each stakeholder in a business process, and that our customers receive a solution that fundamentally transforms their business processes. Workato for your product: If you are a part of a growing digital product or services company, or a business unit owner looking to build an automation strategy for your organization, we recognize that properly supporting an integration ecosystem is just as important as the development process."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/agentstudio",
+        "title": "Agent Studio | Build, Deploy & Govern Enterprise-Ready AI Agents ...",
+        "description": "Scale AI enterprise-wide with Agent Orchestration—automate multi-agent workflows, trigger event-driven actions, and maintain control with enterprise security.",
+        "thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "original_thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Through Enterprise Skills, Genies orchestrate multi-step workflows, handle exceptions, request approvals, and coordinate across systems to deliver real, measurable outcomes. Powered by Workato’s event-driven iPaaS, Genies don’t wait for prompts, they respond automatically to business triggers, schedules, and APIs. Deliver continuous productivity through AI that anticipates and acts.",
+          "Genies orchestrate multi-step actions across 12,000+ applications, automating end-to-end business processes with repeatable, trusted actions. Patented user authorization, complete auditability, and fully managed MCP servers ensure every action is secure, compliant, and controlled at scale. Deliver trusted, production-grade AI agents on Workato’s Enterprise MCP, powered by the #1 leading iPaaS.",
+          "Empower AI agents to autonomously execute multi-step business actions, manage logic and approvals, and collaborate with teammates or other agents driving measurable business outcomes, not just responses."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/the-connector/gtm-ai-agents/",
+        "title": "From Automation to Autonomy: Transforming GTM with AI Agents",
+        "description": "In a world powered by intelligent, autonomous AI agents, GTM teams must rethink their strategies to go from mere automation to true autonomy.",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2025/04/image-13.png",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2025/04/image-13.png",
+        "page_age": "2025-08-08T22:32:05",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "The landscape of go-to-market (GTM) operations is undergoing a seismic shift. What began with simple chat-based bots is rapidly evolving into a world powered by intelligent, autonomous AI agents. This transformation challenges GTM teams to fundamentally rethink their strategies, demanding a move from mere automation to true autonomy.",
+          "Initially, we amplified outbound efforts by taking first and third-party signals (like website visits, job changes, or competitor research), aggregating data from various sources (Salesforce, Marketo, Demandbase, Snowflake), and feeding it into a prompt to automatically generate and send personalized emails on behalf of our SDRs . While this saved significant time and boosted SDR productivity by allowing them to focus on higher quality leads, monitoring performance and optimizing the messaging still required manual intervention from marketing operations. This often resulted in a bi-weekly cadence for monitoring, evaluation, and implementation of changes.",
+          "Our recent webinar, “From Automation to Autonomy: Enhancing AI-Powered Automation with GTM Agents,” delved deep into how we’re evolving our own GTM strategy to stay ahead of this curve. This isn’t about adopting a single tool; it’s about building a future-proof GTM organization driven by an organization-wide appetite to work smarter, faster, and more independently. We’re embracing agent-centric workflows, continuous iteration, and a fail-fast mindset to create a more adaptive, autonomous GTM engine.",
+          "With over 3,000 active “recipes” (our term for automated workflows) running our business, we’re not discarding our successful automation infrastructure. Instead, we’re building AI agents directly on top of it, leveraging our robust integration and orchestration layers."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/the-connector/devops-ai-agents/",
+        "title": "AI DevOps Agents: What They Are and Why They Matter",
+        "description": "DevOps automation reduces repetitive work, but traditional scripts tend to break when requirements change. AI DevOps agents go further —...",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/05/NetSuite-Hubspot-together.webp",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/05/NetSuite-Hubspot-together.webp",
+        "page_age": "2026-01-19T23:09:18",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "DevOps automation reduces repetitive work, but traditional scripts tend to break when requirements change. AI DevOps agents go further — watching systems, thinking about issues, and fixing problems autonomously.",
+          "Learn how AI agents enhance DevOps workflows, automate tasks, and improve software delivery efficiency with intelligent automation solutions.",
+          "Instead of engineers wiring up tools and workflows, agents coordinate everything across your DevOps pipeline — including deployments and incident response. As more teams adopt these tools, AI agents will get baked deeper into the software development lifecycle. From code changes all the way to production monitoring, they’ll just be another standard part of your DevOps stack.",
+          "While traditional automation tools just do whatever you’ve coded up, agents actually watch your systems, pick up on patterns, figure out what needs to happen, and then execute. The main difference? Autonomy. Tools like Ansible or Terraform make you define exact workflows."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/the-connector/essential-embedded-ai/",
+        "title": "AI at the Core: Why Embedded AI is Essential for Enterprise ...",
+        "description": "In today’s digital economy, technology is no longer just a business enabler—it’s the engine driving growth, differentiation, and resilience. Organizations...",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2025/05/IMG_0876.png",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2025/05/IMG_0876.png",
+        "page_age": "2026-05-08T11:47:32",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Learn why embedded AI is essential for enterprise orchestration and how AI copilots, workflows, and IDP improve automation at scale.",
+          "With copilots and agentic automation on the horizon, Marel sees continued opportunity to democratize automation across the business and maximize productivity from both experts and end users. We talked about how Workato Copilots revolutionized how developers and business users design integrations, AI workflows is another component of enterprise automation and orchestration.",
+          "From copilots to help you build integrations, to AI workflows that can interpret, classify, and make decisions, and IDP that unlocks unstructured data, Workato makes it possible to go beyond task automation to true enterprise orchestration. This blog is the first installment of our series, AI at the Core. In future blogs we’ll explore how embedded AI is transforming how teams build, scale, and evolve automation. Stay tuned for more. ... The New Risk Landscape: Why Agents Are Different AI agents introduce a new class of risk because these systems don't…",
+          "Your existing enterprise data is a knowledge base primed to power AI models, agents, and workflow automations."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/platform",
+        "title": "Workato Platform Features and Benefits | Workato",
+        "description": "Experience Workato's enterprise orchestration platform designed for powerful integrations and automation, connecting your business efficiently and securely.",
+        "thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "original_thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Search systems, get AI help, take real action—all in one place. Enterprise agents that understand your business and get things done. Agents coordinate with people, systems, and each other to complete workflows, collaborate across teams, and drive real business outcomes. Track agent performance, usage, and impact — with full transparency into workflows, KPIs, and ROI to optimize behavior and ensure trust.",
+          "Your AI data scientist agent for operational insights, process analytics, and automation ROI.",
+          "Ensures consistent, policy-driven behavior across agents and automations—preventing shadow AI and enforcing enterprise standards at scale. Protects data, identities, and systems—ensuring every agent and automation runs safely by default with enterprise-grade controls. Maintains enterprise-grade certifications and automated controls—ensuring adherence to SOC 2 Type II, ISO 27001, PCI DSS, and GDPR standards. ... Create governed enterprise skills without code—from simple atomic actions to complex orchestrations across workflows, APIs, and MCP servers.",
+          "Securely exposes enterprise skills to agents and developers—enforcing policy, authentication, and observability at runtime. ... Orchestrate data, apps, and processes in one place. The #1 iPaaS with integration, automation, API management, EDI, and IDP. Manage the moving parts of your business — workflows, documents, legacy screens, and real-time insights — in one cohesive system of execution."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/the-connector/ai-sales-agent/",
+        "title": "AI Sales Agents: The Complete Guide",
+        "description": "Discover how AI sales agents work, their benefits, and best practices for deploying them to transform modern sales workflows.",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/06/Talent-Acquisition-Hero.webp",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/06/Talent-Acquisition-Hero.webp",
+        "page_age": "2026-01-19T23:12:06",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Sales organizations are under growing pressure to move faster and deliver more personalized experiences without adding headcount. Unfortunately, manual lead...",
+          "He is passionate about machine learning and deploying models to production using Docker and Kubernetes. ... Today we're introducing Workato Labs: a home for experimental, open-source developer tools that bring Workato into modern AI-native workflows. Whether… ... The term covers two completely different things — a $20/month app connector and an orchestration layer running a 4,000-seat BPO.… ... How to Make AI Agents Execute Across the Enterprise: Orchestration, Governance, and Architecture On June 10, Workato hosted Work^AI at…",
+          "Refine agent behavior based on performance data and expand into more advanced use cases such as renewals, forecasting, and cross-functional workflows. To maximize the impact of AI sales agents, follow these best practices. Human oversight ensures sales teams handle important decisions and sensitive interactions while AI manages routine tasks. Clear metrics such as conversion rate or response time help measure effectiveness and ROI.",
+          "AI agents can detect stalled deals and automatically trigger nudges, tasks, and alerts to keep opportunities moving. AI sales agents can enforce routing rules, update pipeline stages, manage SLAs, and orchestrate workflows across sales, marketing, and support systems."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:workato.com AI agents workflow automation ROI implementation productivity",
+    "search_uuid": "e004012d-1794-4ff5-8b6a-15456a00a258",
+    "latency": 0.6059684753417969
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.fullstory.com/blog/walkme-alternatives/",
+        "title": "9 WalkMe Alternatives for Digital Adoption in 2026",
+        "description": "WalkMe alternatives compared across guide builders, product analytics, and behavior-backed adoption platforms. Nine options were evaluated for use-case fit, behavioral data depth, and deployment complexity, so you can find the right platform before you build a single walkthrough.",
+        "thumbnail_url": "https://images.ctfassets.net/dkgr2j75jrom/4KgyIIakBdU2yWAEVN8ooh/3025c0a4f6595ae67a72c0a55e265036/Fullstory_vs_WalkMe.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/dkgr2j75jrom/4KgyIIakBdU2yWAEVN8ooh/3025c0a4f6595ae67a72c0a55e265036/Fullstory_vs_WalkMe.png",
+        "page_age": "2026-04-08T12:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.fullstory.com&size=128",
+        "snippets": [
+          "Smaller market presence than WalkMe, Whatfix, or Pendo. Fewer community resources, third-party integrations, and implementation partners.",
+          "Functional, but offers fewer out-of-the-box templates and less conditional branching logic than WalkMe or Whatfix, which have years of iteration behind them. No in-app employee guidance for Fullstory Workforce (yet). Guides and Surveys is on the Fullstory Workforce product roadmap but not yet available to the general public. Pendo combines product analytics with in-app guidance, making it a natural fit for product and customer success teams that want usage data and walkthroughs in one platform.",
+          "Whatfix and Pendo are the right call when walkthrough volume and content governance are your priority.",
+          "Walkthrough volume and content governance at scale? Whatfix and Pendo can handle those. Already in the SAP ecosystem?"
+        ]
+      },
+      {
+        "url": "https://userpilot.com/blog/walkme-competitors/",
+        "title": "Top 6 WalkMe Competitors & Alternatives: Features and Prices",
+        "description": "We'll compare six WalkMe competitors. Let's review their core features and find out which ones are the best fit for your product team.",
+        "thumbnail_url": "https://blog-static.userpilot.com/blog/wp-content/uploads/2025/06/WalkMe-Competitors-Alternatives-to-Consider-in-2026.png",
+        "original_thumbnail_url": "https://blog-static.userpilot.com/blog/wp-content/uploads/2025/06/WalkMe-Competitors-Alternatives-to-Consider-in-2026.png",
+        "page_age": "2026-03-24T10:00:35",
+        "favicon_url": "https://you.com/favicon?domain=userpilot.com&size=128",
+        "snippets": [
+          "You don’t need advanced employee enablement features: WalkMe places greater emphasis on internal workflow optimization through tools such as employee hubs and license management. If your focus is primarily on contextual in-app guidance and software adoption, Whatfix may be the simpler option.",
+          "If your focus is internal training and employee enablement, tools like SAP Enable Now, Lemon Learning, or Apty may make more sense, especially if you already rely heavily on enterprise systems or need stronger process governance. Meanwhile, platforms like Whatfix strike a balance between usability and enterprise functionality for organizations still looking for a full digital adoption platform.",
+          "Whatfix: The closest alternative to WalkMe in terms of scope and functionality.",
+          "Whatfix is a Digital Adoption Platform (DAP) just like WalkMe."
+        ]
+      },
+      {
+        "url": "https://whatfix.com/walkme-alternatives-competitors/",
+        "title": "6 WalkMe Alternatives for Enterprise Adoption Programs (2026)",
+        "description": "We explore the best WalkMe alternatives and competitors to see what digital adoption platform is the best for your enterprise use case.",
+        "thumbnail_url": "https://website.whatfix.com/wp-content/uploads/2026/02/Group-1272631029.png",
+        "original_thumbnail_url": "https://website.whatfix.com/wp-content/uploads/2026/02/Group-1272631029.png",
+        "page_age": "2026-03-31T15:49:44",
+        "favicon_url": "https://you.com/favicon?domain=whatfix.com&size=128",
+        "snippets": [
+          "Main differences between Pendo and WalkMe: Pendo typically wins in organizations where product analytics ownership and product-led onboarding drive decisions, while WalkMe fits enterprise enablement programs that prioritize controlled change operations.",
+          "Main similarities between Pendo and WalkMe: Both deliver in-app guidance and adoption measurement, with different emphases in operating model and risk controls.",
+          "Pendo – For product-led adoption strategies owned by digital and product teams.",
+          "Pendo is a product experience platform that combines user insight, in-app guidance, and user communication, commonly owned by product and digital teams."
+        ]
+      },
+      {
+        "url": "https://www.chameleon.io/alternative/walkme-alternatives",
+        "title": "13 Best WalkMe Alternatives & Competitors in 2026 (Post-SAP ...",
+        "description": "WalkMe alternatives range from $174/month to $60,000+ annually. Compare top 13 platforms including Whatfix, Pendo, and Chameleon post-SAP acquisition.",
+        "thumbnail_url": "https://www.chameleon.io/assets/og-meta.png",
+        "original_thumbnail_url": "https://www.chameleon.io/assets/og-meta.png",
+        "favicon_url": "https://you.com/favicon?domain=www.chameleon.io&size=128",
+        "snippets": [
+          "Userlane, Apty, and Whatfix serve internal training needs. They support multi-application deployments, provide SCORM compliance, and emphasize process enforcement over user delight. ... Stonly and Spekit help support teams access information quickly. They combine knowledge management with contextual guidance, focusing on just-in-time learning rather than structured training. ... Chameleon, Pendo, and Amplitude help users discover and adopt features. They integrate deeply with product analytics, support experimentation, and focus on driving engagement metrics.",
+          "Pendo includes built-in analytics, eliminating the need for separate tools. ... Spekit integrates deeply with Salesforce, understanding the platform's data model and workflows. This matters for sales teams who live in Salesforce. ... Whatfix, Userlane, and WalkMe handle guidance across multiple applications—Salesforce, SAP, Oracle, custom tools.",
+          "Whatfix, Pendo, Chameleon, and Userlane handle complex multi-application deployments. These platforms support thousands of users, integrate with enterprise systems, and provide compliance features.",
+          "WalkMe migration takes 4–12 weeks and requires recreating content manually since proprietary formats aren't portable, though vendors like Chameleon and Whatfix offer forms of migration support to ease the transition. The right WalkMe alternative depends on matching your use case (customer onboarding vs. employee training), technical resources (no-code vs. developer-led), and integration needs (product analytics, Salesforce, multi-app support) rather than choosing the most feature-rich platform."
+        ]
+      },
+      {
+        "url": "https://www.guideflow.com/blog/product-adoption-software-tools",
+        "title": "12 best product adoption software tools compared (2026) - Guideflow ...",
+        "description": "Compare the 12 best product adoption software tools in 2026. In-depth reviews of Pendo, WalkMe, Whatfix, Userpilot, Appcues & more - with pricing, features, and use-case fit.",
+        "thumbnail_url": "https://cdn.prod.website-files.com/66ccf78be99d9f56e3f51096/69de30ec6b0e13d0b615b622_generated_image_385b87da.jpeg",
+        "original_thumbnail_url": "https://cdn.prod.website-files.com/66ccf78be99d9f56e3f51096/69de30ec6b0e13d0b615b622_generated_image_385b87da.jpeg",
+        "page_age": "2026-04-16T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.guideflow.com&size=128",
+        "snippets": [
+          "Best analytics + adoption combo: Pendo - retroactive analytics and in-app guides in one platform · Best for enterprise digital transformation: WalkMe - deep integrations with SAP, Workday, and Salesforce · Best for SaaS onboarding on a mid-market budget: Userpilot - strong flow builder, A/B testing, and surveys from ~$249/mo · Best budget pick: UserGuiding - solid feature set starting at ~$69/mo · Best for employee training: Whatfix - auto-generates training content in multiple formats",
+          "Honest trade-offs: Userlane's market presence is smaller than WalkMe or Whatfix. Its SaaS-facing and customer-facing features are limited. And product analytics depth doesn't match what you'd get from Pendo or Amplitude.",
+          "If you have a dedicated implementation team, platforms like WalkMe, Pendo, or Gainsight PX can deliver more depth. Budget is a real constraint. Here's a rough mapping: Startup/SMB ($69–$249/mo): UserGuiding, Product Fruits, Appcues (Essentials) Mid-market ($249–$680/mo): Userpilot, Userflow, Appcues (Growth) Enterprise ($10K–$100K+/year): WalkMe, Whatfix, Apty, Pendo, Gainsight PX",
+          "Free/freemium tiers are available from Pendo (up to 500 MAU) and Amplitude. SMB-friendly plans run $69–$249/mo (UserGuiding, Product Fruits, Appcues Essentials). Mid-market tools cost $249–$680/mo (Userpilot, Userflow). Enterprise platforms like WalkMe, Whatfix, and Apty typically run $10K–$100K+/year with custom contracts."
+        ]
+      },
+      {
+        "url": "https://www.salesforce.com/sales/partner-ecosystem-management/guide/",
+        "title": "What is a Partner Ecosystem? Importance + Examples | Salesforce",
+        "description": "Partner ecosystems allow a network of businesses to collaborate across marketing and sales to scale and grow.",
+        "thumbnail_url": "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/06/partnercloud-og.jpg?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/06/partnercloud-og.jpg?w=1024",
+        "page_age": "2025-07-18T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.salesforce.com&size=128",
+        "snippets": [
+          "While SIs often focus on regional or industry-specific deployments, GSIs operate at a global scale, bringing deep technical expertise, broad customer reach, and the ability to drive large-scale digital transformation initiatives. These partners are critical in co-selling and co-delivering integrated solutions, especially in enterprise environments.",
+          "For example, the AppExchange Marketplace contains more than 7,000 ISV applications built on its platform, allowing businesses to customize their CRMs. Companies within the ecosystem provide consulting and implementation services or work together to build integrated solutions, extending the company's overall reach and capabilities.",
+          "One legacy brand has consistently shifted with the times, transforming itself from an equipment manufacturer to a smart agriculture platform — largely because the company leveraged its partner ecosystem. Through technology and ISV partners, the brand's agricultural technology integrates with third-party farm management software to enable data-driven farming.",
+          "Once you sign a partner, make sure your journey together doesn't end with the announcement press release. It's essential to provide comprehensive onboarding and partner enablement. The end goal is to make it easy for partners to integrate your solution into their business."
+        ]
+      },
+      {
+        "url": "https://www.introw.io/blog/best-partner-ecosystem-software",
+        "title": "12 Best Partner Ecosystem Software in 2026 | Introw",
+        "description": "Compare the 12 best partner ecosystem software platforms for 2026. From PRM to account mapping to ecosystem orchestration, find the right tool to manage and scale your partner network.",
+        "thumbnail_url": "https://cdn.prod.website-files.com/652549b9d88867d9c5ca4c4f/6a3be7cf388854489cd97567_hero%20(8).png",
+        "original_thumbnail_url": "https://cdn.prod.website-files.com/652549b9d88867d9c5ca4c4f/6a3be7cf388854489cd97567_hero%20(8).png",
+        "page_age": "2026-06-23T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.introw.io&size=128",
+        "snippets": [
+          "Partner ecosystem software is a broad term for the tools companies use to build, manage, scale, and measure a partner network. That can include resellers, referral partners, technology partners, consultants, distributors, system integrators, and alliances.",
+          "Introw is an AI-powered PRM built for SaaS companies that want to manage their entire partner ecosystem from the CRM. It combines partner onboarding, deal registration, partner enablement, commissions, co-selling, and reporting in a single platform with native Salesforce and HubSpot integrations.",
+          "You can manage partners, run a partner portal⁠, automate workflows with the AI agent⁠, and track partner-sourced and partner-influenced revenue directly in your CRM. It also integrates with ecosystem tools like Crossbeam, allowing teams to move from signal to execution without leaving their existing workflows.",
+          "This is why SPIFFs are often used during product launches, pipeline pushes, and other strategic initiatives where timing matters. Teams running incentives alongside their existing HubSpot integration⁠ can track participation and revenue generated without creating separate workflows."
+        ]
+      },
+      {
+        "url": "https://productled.com/blog/best-product-adoption-software-vendor-review",
+        "title": "Comparing 7 top product adoption software solutions [Vendor Review] ...",
+        "description": "Discover top product adoption software solutions to boost SaaS user engagement, feedback, and onboarding. Compare Appcues, Gainsight, etc.",
+        "thumbnail_url": "https://productled.com/cdn-images/635754018bfa6476addffaf9/67a1ebf7f37d216ce9eb87c0_Comparing-7-top-product-adoption-software-solutions-Vendor-Review.png",
+        "original_thumbnail_url": "https://productled.com/cdn-images/635754018bfa6476addffaf9/67a1ebf7f37d216ce9eb87c0_Comparing-7-top-product-adoption-software-solutions-Vendor-Review.png",
+        "favicon_url": "https://you.com/favicon?domain=productled.com&size=128",
+        "snippets": [
+          "Pendo differentiates with web + native mobile onboarding and a broad integration ecosystem (50+ integrations). Userlane is positioned for security-sensitive environments and employee onboarding, including options like on-site installation. WalkMe Growth emphasizes advanced capabilities like AI-driven retention/churn insights and user session recordings, but is among the pricier options. Whatfix is geared toward just-in-time enablement and reducing support load with contextual help and rollout templates for common enterprise apps.",
+          "The article ranks seven product adoption solutions: Appcues, Gainsight, Pendo, Userlane, WalkMe Growth, Whatfix, and UserGuiding.",
+          "Pricing: WalkMe Growth starts at $1,500/month. The company’s pricing plans vary depending on application/user count. ... Whatfix is known for its ease of use, ability to support on-demand enablement, and exceptional service.",
+          "If you want to train your employees in external applications (ie SalesForce), I’d recommend checking out Userlane or Whatfix. If you want a comprehensive solution that includes product analytics, user onboarding, and user feedback, you can’t go wrong with checking out Gainsight, WalkMe Growth, or Userguiding.."
+        ]
+      },
+      {
+        "url": "https://www.gartner.com/reviews/market/digital-adoption-platforms",
+        "title": "Best Digital Adoption Platforms Reviews 2026 | Gartner Peer Insights",
+        "description": "Find the top Digital Adoption Platforms with Gartner. Compare and filter by verified product reviews and choose the software that’s right for your organization.",
+        "thumbnail_url": "https://www.gartner.com/imagesrv/apps/peerinsights/images/gpi-twitter-img-fa.png",
+        "original_thumbnail_url": "https://www.gartner.com/imagesrv/apps/peerinsights/images/gpi-twitter-img-fa.png",
+        "favicon_url": "https://you.com/favicon?domain=www.gartner.com&size=128",
+        "snippets": [
+          "WalkMe Digital Adoption Platform assists businesses in increasing operational productivity and minimizing user errors by ensuring software features are utilized effectively and employees adapt to new technologies with greater ease. ... Whatfix is the AI-native Digital Adoption Platform built for the modern enterprise.",
+          "WalkMe Digital Adoption Platform vs Whatfix Digital Adoption PlatformUserlane vs WalkMe Digital Adoption PlatformPendo vs WalkMe Digital Adoption PlatformStonly vs WalkMe Digital Adoption Platform",
+          "The software provides features such as product analytics, in-app messaging, onboarding tools, and survey capabilities, allowing teams to understand how users interact with digital products and identify usage patterns. By integrating analytics with engagement and feedback tools, Pendo enables product teams to enhance feature adoption, streamline onboarding experiences, and prioritize development based on user insights."
+        ]
+      },
+      {
+        "url": "https://www.sap.com/partners/find-partner-solutions.html",
+        "title": "Find Partner Solutions | SAP Store",
+        "description": "Discover, try, and buy solutions from SAP partners. Browse a wide variety of partner applications, services, and more to find the right solution for your business.",
+        "thumbnail_url": "http://www.sap.com/dam/application/shared/logos/sap_logo_rgb_onwhite_0300_0300.png.adapt.png/1656382976488.png",
+        "original_thumbnail_url": "http://www.sap.com/dam/application/shared/logos/sap_logo_rgb_onwhite_0300_0300.png.adapt.png/1656382976488.png",
+        "favicon_url": "https://you.com/favicon?domain=www.sap.com&size=128",
+        "snippets": [
+          "SAP partner offerings allow customers to extend their existing SAP technology and solutions with a mix of free trials and paid apps and services. Partners can grow their businesses using SAP Store to market and deliver their apps, add-ins, and integration kits to SAP customers globally.",
+          "Reduce your costs and optimize your operations with SAP Integration Suite."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "Beacon.li partners system integrators marketplace ecosystem SAP WalkMe partners Whatfix partners Pendo partners Rocketlane GUIDEcx implementation partner network",
+    "search_uuid": "b6344102-04c5-463a-bda2-069cdebc0a8b",
+    "latency": 0.7096343040466309
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://boomi.com/blog/role-of-security-enterprise-ipaas/",
+        "title": "Enterprise iPaaS Data Security & Certifications - Boomi",
+        "description": "Certifications, compliance standards, and data security practices are needed for an enterprise iPaaS to provide the best functionality and control.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/IMAGE-BlogSecurityBoomi-1-2.jpg",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/IMAGE-BlogSecurityBoomi-1-2.jpg",
+        "page_age": "2024-05-30T15:00:14",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "Control. Fine-grained role-based access control (RBAC) for access to data and applications, minimizing the risk of unauthorized access or data breaches · Auditability.",
+          "The ISO audit assesses the secure handling of personally identifying information (PII). SOC I/SOC II: SOC 1 examines internal controls over financial reporting, while SOC 2 reviews a service organization’s controls relevant to their operations and compliance.",
+          "Consensus Assessment Initiative Questionnaire (CAIQ): CAIQ provides a questionnaire for cloud service providers, buyers, and auditors to use when evaluating the practices of a provider. The CAIQ and Version 4 of the Cloud Controls Matrix have been combined. These are self-reported security assessments, which focus on the unique needs of cloud service customers. They are not as rigorous as ISO and SOC, but are still important for validation.",
+          "Role-Based Access Controls (RBAC): Perhaps the most fundamental tool for safeguarding integration platform security is role-based access controls."
+        ]
+      },
+      {
+        "url": "https://boomi.com/compliance/",
+        "title": "Security & Privacy Compliance: We Keep Customer Data Safe",
+        "description": "Welcome to Boomi's Compliance page! Learn more about how we meet the stringent government and customer standards for security and privacy.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/Boomi-brand-video-thumbnail.jpg",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/Boomi-brand-video-thumbnail.jpg",
+        "page_age": "2024-08-26T19:21:13",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "Boomi-specific Information PCI certification is considered the best way to safeguard sensitive data and information, and Boomi puts this at the forefront as we build a trusted relationship with our customers and partners. The Boomi Enterprise Platform has received attestation of compliance for service providers for PCI-DSS. ... Publicly Available Information System and Organization (SOC) reports utilize independent, third-party auditors to examine various aspects of a company, such as: security, availability, processing integrity, confidentiality, privacy, controls related to financial reporting, and controls related to cybersecurity.",
+          "Boomi-specific Information System and Organization Controls (SOC) reports enable customers to feel confident that Boomi is operating in an ethical and compliant manner. No one likes to hear the word audit, but SOC reports establish credibility and trustworthiness for our customers and partners.",
+          "Thus, in addition to the numerous other applicable promises set forth in the DPA and elsewhere, Boomi will process personal data on behalf of the customer and will not retain, use, or disclose the personal data of any California residents for any purpose other than those set out in the underlying customer agreement (including the DPA) and as permitted under the CCPA. Furthermore, in no event will Boomi sell any personal data. Boomi takes the privacy and security of our customers, partners and their customers and end-users seriously.",
+          "Socio-Economic Inclusiveness Boomi aims to make our AI tools benefit all segments of society that utilize our AI tools. This includes providing non-discriminatory access to our AI tools and developing solutions that help our customers and partners promote their businesses in a socially responsible manner."
+        ]
+      },
+      {
+        "url": "https://boomi.com/platform/api-governance/",
+        "title": "API Governance | Boomi",
+        "description": "Gain enterprise-wide visibility and policy-based control over your APIs, integrations, and data with proven federated governance.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/Website-Link-Cards_APIM.png",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/Website-Link-Cards_APIM.png",
+        "page_age": "2025-06-09T22:24:57",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "Boomi simplifies compliance by enabling granular access controls, configurable security policies, and alignment with regulatory frameworks such as ISO 27001, ISO42001, PCI DSS, SOC 2, and HITRUST. The platform offers automated monitoring, detailed documentation, and regular audits to help meet legal and industry-specific requirements at scale, while also ensuring ongoing compliance throughout the API lifecycle.",
+          "Bring every API under centralized control with dynamic discovery and cataloging across distributed gateways. Give AI agents access to governed, easily discoverable APIs that build trust and reduce friction.",
+          "Move data back and forth between your applications and automate critical business processes.",
+          "Power next-gen digital and AI innovation on trusted APIs"
+        ]
+      },
+      {
+        "url": "https://boomi.com/platform/api-products/",
+        "title": "API Products | Boomi",
+        "description": "Protect critical APIs with scalable, real-time security that enforces access control, prevents abuse, and ensures compliance.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/Website-Link-Cards_APIM.png",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/Website-Link-Cards_APIM.png",
+        "page_age": "2026-03-10T16:23:22",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "It supports exposing APIs via developer portals, where partners can access documentation, manage subscriptions, and monitor usage. How does Boomi ensure compliance with industry standards and regulations? Boomi ensures compliance with various industry standards and regulations, including ISO 27001, GDPR, HIPAA, SOC 2, and PCI DSS. Compliance is achieved through regular audits, robust security measures, and comprehensive documentation, which help organizations meet legal requirements and protect sensitive data effectively.",
+          "Unlock new digital products, partnerships, and AI business models by turning APIs into business-ready services and managing secure access through subscriptions.",
+          "Move data back and forth between your applications and automate critical business processes.",
+          "How can APIs be packaged or exposed to partners and external developers?"
+        ]
+      },
+      {
+        "url": "https://boomi.com/blog/agentic-ai-compliance/",
+        "title": "The Importance of Agentic AI Compliance - Boomi",
+        "description": "Agentic AI offers exciting new opportunities to take advantage of new technology, but businesses need to be sure agents don’t access sensitive data or systems.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/blotg-seoimportance-of-agentic-compliance-1.jpeg",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/blotg-seoimportance-of-agentic-compliance-1.jpeg",
+        "page_age": "2025-11-24T13:00:01",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "Stakeholder Trust and Reputation: Documented AI practices and transparent decision-making processes build credibility with customers, business partners, and regulatory authorities who scrutinize AI deployment. Scalable Compliance Operations: Through guardrail tools, centralized API security policy enforcement, and agentic governance and monitoring, companies using AI tools can maintain quality data oversight as business volume and regulatory complexity increase. Consider the following practices to help companies build AI systems that pass audits and work reliably in regulated industries.",
+          "The regulatory landscape has grown rapidly, with US agencies introducing 59 AI-related regulations in 2024, double the number from 2023. Companies now face requirements like NYC’s automated employment tools law, which mandates bias audits on AI hiring systems within one year of use, with enforcement that began July 5, 2023.",
+          "Improved Accuracy and Detection: Automated systems flag data patterns that match known violation indicators, alerting human reviewers to investigate potential compliance issues with Agent data access and behavior. Faster Regulatory Response: Agents and agentic governance are able to notify compliance teams when suspicious behavior patterns are identified, reducing the time to identify relevant rule changes from weeks to days. Better Audit Readiness: Governance tools are able to simplify documentation and reporting, ensuring organizations maintain thorough records that satisfy regulatory inspections without scrambling to gather evidence.",
+          "Agent Control Tower provides comprehensive oversight of AI agent activities with built-in audit trails and monitoring · The Boomi platform meets SOC 2, HIPAA, and other major regulatory frameworks with a proven track record of enterprise-grade security"
+        ]
+      },
+      {
+        "url": "https://boomi.com/blog/understanding-edi-security-compliance/",
+        "title": "Understanding EDI Security and Compliance - Boomi",
+        "description": "Learn essential EDI security and compliance requirements for safe data exchange, key protocols, regulatory standards, and practical implementation steps.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/blog-seounderstanding-edi-compliance.png",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/blog-seounderstanding-edi-compliance.png",
+        "page_age": "2025-05-15T12:33:46",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "Comprehensive Compliance Certifications: Boomi B2B/EDI Management meets industry standards and regulations, including ISO certifications and SOC audits. Role-Based Access Controls (RBAC): The platform defines user permissions to restrict access to authorized personnel only. Automated Workflows: Boomi reduces manual tasks and errors through process automation.",
+          "CCPA: Gives California residents new data access, and deletion rights, shaping future US state laws. Systematic maintenance of security and compliance is crucial for any EDI implementation, as it helps you protect sensitive data while meeting both trading partner and regulatory requirements.",
+          "Today, strict regulations govern EDI data validation, encryption, and auditing. Despite these measures, vulnerabilities persist, making it crucial to understand the limitations of EDI. Whenever business partners exchange electronic documents such as purchase orders or invoices, there is always some risk that confidential information could be compromised by a third party.",
+          "Audit Logging: Tracks user activities for compliance reviews and flags suspicious behavior. Session Management: Regulates session length, enforces timeouts, and controls concurrent logins. IP Restrictions: Permit only approved network locations by whitelisting partner IPs for connectivity."
+        ]
+      },
+      {
+        "url": "https://boomi.com/blog/what-is-ipaas/",
+        "title": "What is iPaaS? | Boomi",
+        "description": "iPaaS enables enterprise integration with a single platform for API management, workflow automation, and data governance.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/blog-seowhat-is-ipaas-1.png",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/blog-seowhat-is-ipaas-1.png",
+        "page_age": "2025-11-07T23:46:55",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "Boomi supports enterprise security standards like SOC 2, HIPAA, GDPR, and more. You can set role-based access, manage audit logs, and govern integrations centrally. Most platforms are built with low-code or no-code functionality so non-developers can create workflows. But most Enterprise companies need to go beyond out-of-the-box options. With custom integration, developers can still go deeper when needed to add logic, extensions, or scripting where appropriate. Business users can automate tasks visually, while developers can extend functionality as needed.",
+          "Modern enterprise requires businesses to share sensitive information with outside partners, and regulation requires that it be shared securely. Ensure high-volume and large size file transfers are delivered to the right recipient, and connect file transfers to automated workflows, simplifying operations while maintaining regulatory compliance. Use Case: Securely store and manage files with detailed audit logs for compliance and monitoring to track unauthorized access.",
+          "The need to synchronize data doesn’t just happen within your organization. For many businesses, operational bottlenecks appear when it comes to communicating with trading partners. By automating connections to trading partners, transactions happen quickly and accurately.",
+          "Data integration allows users to build low-code ELT pipelines that are built on a foundation of trust with golden records. Create, monitor, and govern all APIs from a single platform. Built-in API management simplifies access control, policy enforcement, and scaling across gateways without custom infrastructure. Design low-code workflows that automate business processes across departments and systems."
+        ]
+      },
+      {
+        "url": "https://community.boomi.com/s/article/Boomi-Blueprint",
+        "title": "Article: Boomi Blueprint: Comprehensive Guide - Boomi Community",
+        "description": "Boomi Blueprint – Comprehensive Guide Introduction The Boomi Blueprint serves as a strategic framework for organizations looking to accelerate their digital transformation journey. Developed by Boomi experts, the Blueprint consolidates years of integration experience, architectural excellence, ...",
+        "page_age": "2025-11-26T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=community.boomi.com&size=128",
+        "snippets": [
+          "Boomi Blueprint – Comprehensive Guide Introduction The Boomi Blueprint serves as a strategic framework for organizations looking to accelerate their digital transformation journey. Developed by Boomi experts, the Blueprint consolidates years of integration experience, architectural excellence, and platform best practices into one cohesive model.",
+          "Single Sign-On (SSO): Implement SAML 2.0 SSO for seamless authentication across the Boomi platform. User Roles and Permissions: Utilize Role-Based Access Control (RBAC) to assign permissions aligned with least-privilege principles.",
+          "Governance in Boomi Blueprint ensures accountability, security, and compliance across all integration activities. It establishes clear controls for versioning, deployment approvals, and audit readiness. The framework supports industry standards such as GDPR, SOC 2, and ISO 27001, helping organizations meet internal and external compliance requirements with confidence.",
+          "It provides a clear roadmap to help businesses design, deploy, and manage scalable, secure, and efficient integration environments that align with modern IT standards. Through prescriptive architectures, operational frameworks, and guided methodologies, Boomi empowers customers and partners to innovate with speed and confidence."
+        ]
+      },
+      {
+        "url": "https://boomi.com/platform/runtime/",
+        "title": "Boomi Runtime | The Data Activation Company",
+        "description": "Boomi Runtime is built for the way enterprises actually operate. Deploy anywhere your business operates. Monitor it all in one platform.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/Boomi-brand-video-thumbnail.jpg",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/Boomi-brand-video-thumbnail.jpg",
+        "page_age": "2026-05-13T07:22:39",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "Compliance requirements shouldn’t be a bottleneck to growth. Keep data in your environment and stay audit-ready. Boomi satisfies FedRAMP, SOC 1/2/3, HIPAA, ISO 27001, and StateRAMP requirements by design so compliance never slows you down.",
+          "The only integration and automation provider that is FedRAMP, SOC 1/2/3, ISO 27001/27701, StateRAMP, and HIPAA compliant.",
+          "A distributed, architecturally independent runtime that processes data locally – in your cloud, behind your firewall, or both. Built to satisfy data residency, security, and compliance requirements without sacrificing performance or flexibility.",
+          "Integration, APIs, and AI agents are mission-critical infrastructure, and where they execute matters as much as how they perform. Data residency laws, compliance mandates, and security policies don't stop at the edge of your cloud provider's network — your runtime shouldn’t either."
+        ]
+      },
+      {
+        "url": "https://boomi.com/workato/",
+        "title": "Boomi vs Workato - iPaaS Comparison",
+        "description": "Boomi gives you the flexibility, control, and customizability Workato can’t, with support for on-premise data processing, EDI/B2B, full API lifecycle management, and data synchronization.",
+        "thumbnail_url": "https://boomi.com/wp-content/uploads/boomi-vs-workato-link-card.png",
+        "original_thumbnail_url": "https://boomi.com/wp-content/uploads/boomi-vs-workato-link-card.png",
+        "page_age": "2024-09-04T17:53:02",
+        "favicon_url": "https://you.com/favicon?domain=boomi.com&size=128",
+        "snippets": [
+          "With Boomi automating routine tasks, we’re on pace to eliminate ~6,000 hours of manual work, and provide new products and services so that members can handle their financial lives better. Referencing Public Facing Workato Documentation on How Workato’s On-prem agent Works · Referencing Workato’s Documentation on API Proxy Collections · Referencing Workato’s not among the listed partners on marketplace.fedramp.gov and Workato’s Security Compliance Overview Documentation",
+          "* Workato FedRAMP status: A search of the official FedRAMP Marketplace returns no listing for Workato. ... Boomi is built to scale across complex enterprise environments, handling high-volume, cross-departmental, and multi-runtime workloads from a single unified platform, spanning cloud, hybrid, and on-premise architectures without requiring organizations to stitch together separate tools. Workato scales well for SaaS-centric workflow automation, but as data volumes grow and integration complexity increases across departments, organizations frequently encounter performance constraints, governance overhead, and consumption-based pricing that escalates unpredictably, challenges independent analysis identifies as a recurring limitation for teams that need Workato to function as a true enterprise-grade integration backbone.*",
+          "Unlike Workato, whose primary MCP architecture routes execution through a remote, cloud-based server, Boomi’s MCP Server runs natively within your own on-premise or hybrid runtime environment — keeping agent orchestration entirely inside your security perimeter. For enterprises with strict data residency, sovereign cloud, or air-gapped environment requirements, that distinction is the difference between a platform you can deploy and one you can’t.*",
+          "Meets strict security standards with FedRAMP, HIPAA, ISO 27001, and more – trusted by global enterprises."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:boomi.com security trust SOC 2 ISO SSO RBAC audit logs data residency pricing partners marketplace automation integration",
+    "search_uuid": "c37cc305-fd77-4dc5-b6c4-b201d9625c60",
+    "latency": 0.5911886692047119
+  }
+}

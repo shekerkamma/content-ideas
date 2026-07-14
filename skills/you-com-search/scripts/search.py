@@ -42,22 +42,37 @@ def _endpoint(mode: str) -> str:
     raise ValueError(f"unsupported mode: {mode}")
 
 
-def _build_params(args: argparse.Namespace) -> dict[str, str]:
-    params = {"query": args.query}
-    if args.mode == "search":
-        params["num_web_results"] = str(args.limit)
-        if args.livecrawl:
-            params["livecrawl"] = "true"
+def _resolve_mode(args: argparse.Namespace) -> str:
+    if args.level == "1":
+        return "search"
+    if args.level == "2":
+        return "search"
+    if args.level == "3":
+        return args.mode if args.mode == "finance" else "research"
+    return args.mode
+
+
+def _resolve_livecrawl(args: argparse.Namespace) -> bool:
+    return args.livecrawl or args.level == "2"
+
+
+def _build_params(args: argparse.Namespace) -> list[tuple[str, str]]:
+    params = [("query", args.query)]
+    mode = _resolve_mode(args)
+    if mode == "search":
+        params.append(("num_web_results", str(args.limit)))
+        if _resolve_livecrawl(args):
+            params.append(("live_crawl", "true"))
     if args.freshness:
-        params["freshness"] = args.freshness
+        params.append(("freshness", args.freshness))
     if args.from_date:
-        params["from_date"] = args.from_date
+        params.append(("from_date", args.from_date))
     if args.to_date:
-        params["to_date"] = args.to_date
+        params.append(("to_date", args.to_date))
     for site in args.site:
-        params.setdefault("site", site)
+        params.append(("site", site))
     for site in args.exclude_site:
-        params.setdefault("exclude_site", site)
+        params.append(("exclude_site", site))
     return params
 
 
@@ -66,7 +81,7 @@ def request_json(args: argparse.Namespace) -> dict:
     if not key:
         raise SystemExit("YOU_API_KEY is not set")
 
-    url = f"{_endpoint(args.mode)}?{urllib.parse.urlencode(_build_params(args))}"
+    url = f"{_endpoint(_resolve_mode(args))}?{urllib.parse.urlencode(_build_params(args))}"
     req = urllib.request.Request(
         url, headers={"X-API-Key": key, "Accept-Encoding": "identity"}
     )
@@ -88,7 +103,16 @@ def main() -> int:
         "--mode",
         choices=["search", "research", "finance"],
         default="search",
-        help="API mode to use",
+        help="API mode to use; overridden by --level 1/2 and usually by --level 3",
+    )
+    parser.add_argument(
+        "--level",
+        choices=["1", "2", "3"],
+        help=(
+            "Three-level You.com search workflow: 1=Search discovery, "
+            "2=Search+livecrawl evidence retrieval, 3=Research synthesis "
+            "(or Finance Research when --mode finance is also set)"
+        ),
     )
     parser.add_argument("--limit", type=int, default=10, help="Search result count")
     parser.add_argument("--livecrawl", action="store_true", help="Request livecrawl")
@@ -100,11 +124,20 @@ def main() -> int:
         "--exclude-site", action="append", default=[], help="Domain exclude"
     )
     parser.add_argument("--timeout", type=int, default=60, help="HTTP timeout seconds")
+    parser.add_argument("--out", help="Write JSON response to this file")
     args = parser.parse_args()
 
     result = request_json(args)
-    json.dump(result, sys.stdout, indent=2, ensure_ascii=False)
-    sys.stdout.write("\n")
+    if args.out:
+        out_path = Path(args.out)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(
+            json.dumps(result, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+    else:
+        json.dump(result, sys.stdout, indent=2, ensure_ascii=False)
+        sys.stdout.write("\n")
     return 0
 
 

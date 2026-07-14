@@ -202,9 +202,14 @@ the execution loop — same ordering/verification rules as DealForge above.
   `skills/competitor-analysis-pipeline/SKILL.md`; it codifies the improved
   GBrain/source-order, grill-me, story-architect, GStack review, branded PPTX
   QA, interactive HTML QA, and GitHub Pages publishing pipeline.
-- Prefer the strongest research tool the host exposes: Exa MCP first, then an
-  MCP-connected research server, then a local Exa API wrapper
-  (`https://api.exa.ai/search`), then Firecrawl, then generic web search.
+- Prefer the strongest research tool the host exposes: You.com first as a
+  three-level search workflow, prioritizing Level 2 livecrawl evidence
+  retrieval by default for competitor analysis, market maps, strategy research,
+  and client-facing claims. Use Level 1 only for discovery seeding when the
+  arena is unknown, and Level 3 for Research/Finance synthesis; then Exa MCP or
+  a local Exa API wrapper (`https://api.exa.ai/search`) for semantic/source
+  discovery; then Firecrawl for full-page capture/crawl/extract; then generic
+  web search.
 - Generic web search is allowed only after that discovery pass, and only for
   targeted verification, primary-source opening, citation checks, or when no
   research plugin/MCP/API route is available. If used as fallback, state the

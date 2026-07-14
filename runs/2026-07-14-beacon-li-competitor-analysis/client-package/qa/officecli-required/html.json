@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-14-beacon-li-competitor-analysis/client-package/beacon-li-competitor-analysis-draft.pptx",
+    "html",
+    "-o",
+    "runs/2026-07-14-beacon-li-competitor-analysis/client-package/qa/officecli-required/beacon-li-competitor-analysis-draft.html"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-14-beacon-li-competitor-analysis/client-package/qa/officecli-required/beacon-li-competitor-analysis-draft.html\n",
+  "stderr": ""
+}

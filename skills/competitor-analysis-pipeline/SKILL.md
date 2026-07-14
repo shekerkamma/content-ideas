@@ -46,6 +46,7 @@ State that this skill will use a chained competitor-analysis pipeline: durable m
    Do not start with generic search. Prefer this order:
    - local repo artifacts and previous run files
    - GBrain/memory recall
+   - `you-com-search` three-level search mode, prioritizing Level 2 livecrawl evidence retrieval by default; use Level 1 only for discovery seeding and Level 3 only for Research/Finance synthesis
    - specialist research tools such as Exa, Firecrawl, content-research, enterprise-ai-competitor-landscape, STORM, or official docs
    - primary sources: company pages, docs, pricing pages, filings, press releases, GitHub repos, product pages
    - generic web search only as fallback or explicit current verification
@@ -128,6 +129,7 @@ Skills that must be installed for this skill to work:
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `you-com-search` | Sequential upstream | current competitor/source discovery is needed before generic search | `outputs/source-notes.md` or `outputs/evidence-register.csv` |
 | `content-research` | Sequential upstream | URL or website ingestion is needed | `outputs/research-notes.md` |
 | `enterprise-ai-competitor-landscape` | Sequential upstream | enterprise AI competitor universe is needed | `outputs/company-table.csv` |
 | `storm-research` | Parallel / Complement | deeper multi-perspective research is useful | `outputs/storm-brief.md` |
@@ -161,7 +163,7 @@ I am using `competitor-analysis-pipeline`, which chains research, structured syn
 
 - **Vendor-list trap:** Do not organize the whole deliverable as one slide per competitor. Start with buyer job, arenas, rubric, heatmap, and threat priority.
 - **Unstructured research trap:** Do not mix sourced facts, assumptions, and recommendations without confidence labels.
-- **Generic search trap:** Do not start with generic web search when GBrain, local artifacts, specialist research tools, Firecrawl, Exa, content-research, or official sources are available.
+- **Generic search trap:** Do not start with generic web search when GBrain, local artifacts, `you-com-search`, specialist research tools, Firecrawl, Exa, content-research, or official sources are available.
 - **Consulting appendix trap:** If Accenture, BCG, McKinsey, IBM, Deloitte, or other consultancies shape buyer expectations, integrate them as an arena or force, not just an appendix.
 - **Deck QA trap:** Do not mark a PPTX reviewed until real render/preview QA and text-overflow checks pass.
 - **HTML QA trap:** Do not publish an interactive page until all tabs activate and every section is reachable.

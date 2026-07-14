@@ -1,0 +1,158 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.mulesoft.com/trust-center",
+        "title": "Anypoint Platform Trust Center | Mulesoft",
+        "description": "MuleSoft maintains a high standard for security and has multiple third-party validations including ISO 27001, SOC 1, SOC2, HIPAA, and PCI DSS.",
+        "thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "favicon_url": "https://you.com/favicon?domain=www.mulesoft.com&size=128",
+        "snippets": [
+          "Use identity management to control access, powerful encryption to protect data whether it's in transit or at rest, regular penetration testing to find and fix vulnerabilities, and detailed audit logs to track everything that happens for complete visibility. We're certified to meet global, industry-specific security standards like ISO 27001, SOC 2, PCI DSS, and HIPAA and use independent auditors to verify our compliance regularly.",
+          "We provide full transparency into our security controls through detailed documentation, compliance certifications, and regular third-party audits that you can review. MuleSoft maintains certifications for major industry standards including ISO 27001, SOC 1, SOC 2, PCI DSS, and HIPAA.",
+          "Get the security, reliability, and compliance you need to integrate and automate with confidence. ... Security, data protection, and uptime are built into every part of Anypoint Platform. We meet and exceed strict industry security standards with regular independant audits.",
+          "Cloud security compliance solutions save significant time and resources by automating many compliance tasks. Instead of manually tracking certifications, managing audit documentation, and maintaining security controls across multiple systems, you get built-in compliance features that are continuously updated."
+        ]
+      },
+      {
+        "url": "https://blogs.mulesoft.com/automation/360-zero-trust-security-fabric/",
+        "title": "360 Zero Trust Security Fabric | MuleSoft Blog",
+        "description": "Discover how Salesforce’s 360 zero trust security fabric, powered by MuleSoft Agent Fabric, uses digital twins to simulate agentic workflows, validate trust boundaries, and enforce secure, explainable governance across regulated environments.",
+        "thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/image-353.png",
+        "original_thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/image-353.png",
+        "page_age": "2025-11-05T20:27:51",
+        "favicon_url": "https://you.com/favicon?domain=blogs.mulesoft.com&size=128",
+        "snippets": [
+          "The emphasis on trust, AI, and platform-native orchestration continues to shape how organizations think about secure access. Salesforce’s vision for…",
+          "The emphasis on trust, AI, and platform-native orchestration continues to shape how organizations think about secure access. | MuleSoft Blog",
+          "It enables Role-Based Access Control (RBAC) for coarse-grained permissions and Attribute-Based Access Control (ABAC) for fine-grained, context-aware decisions. Access is governed through OAuth 2.0, using scopes, claims, and delegated authorization, with JWT tokens providing compact, verifiable identity payloads for PDP consumption. Scopes and claims define entitlements and access boundaries, while identity federation ensures cross-domain trust through SSO, trust chaining, and external IdP integration.",
+          "PEPs may reside within gateways, agents, service meshes, or application layers, enforcing decisions via headers, tokens, or API contracts. Integration with MuleSoft enables programmable enforcement via flows, while compatibility with legacy systems ensures broad coverage."
+        ]
+      },
+      {
+        "url": "https://www.mulesoft.com/api/security",
+        "title": "API Security | Anypoint Security",
+        "description": "Protect data from threats and enforce API security best practices with Anypoint Security.",
+        "thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "favicon_url": "https://you.com/favicon?domain=www.mulesoft.com&size=128",
+        "snippets": [
+          "Set security rules automatically and hide sensitive data with tokens to meet compliance requirements more easily. ... Meet security requirements like ISO 27001, SOC 1 & 2, PCI DSS, and HIPAA while keeping private data protected under GDPR compliance.",
+          "Get the latest news about integration, automation, API management, and AI. ... API security protects the connections between applications from unauthorized access, data breaches, and attacks. APIs often handle sensitive data and provide direct access to your systems, making them prime targets for hackers and a common entry point for security breaches. You can test or audit APIs for security issues with automated scanning tools, penetration testing, and regular security audits to check for vulnerabilities like weak authentication and data exposure.",
+          "Keep your APIs consistent and compliant without additional reviews or manual work. Govern APIs by setting consistent quality standards and best practices across all APIs to help spot issues quickly. Developers can check the rules themselves and validate their work, while new APIs automatically follow your guidelines.",
+          "Start your 30-day free trial of the #1 platform for integration, APIs, and automation. No credit card required."
+        ]
+      },
+      {
+        "url": "https://www.mulesoft.com/integration/what-is-saas",
+        "title": "What is SaaS (Software as a Service)? A Complete Guide | Mulesoft",
+        "description": "Learn what SaaS is, how it works, best practices for adoption, and how it compares to PaaS and IaaS for businesses of all sizes.",
+        "thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "page_age": "2026-03-02T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mulesoft.com&size=128",
+        "snippets": [
+          "Compliance with regulations: SaaS providers must comply with strict regulations to protect sensitive data and maintain industry trust. Regular audits and certifications demonstrate compliance, assuring customers that their data is handled responsibly. User access control and authentication: SaaS platforms implement strong access controls to limit data access to authorized users. Role-based access control (RBAC) ensures users can only access relevant information based on their role. Multi-factor authentication (MFA) adds an extra security layer, and single sign-on (SSO) streamlines access across applications while maintaining tight security.",
+          "Organizations with strict compliance needs should explicitly discuss data residency options during vendor evaluation, review certifications, and ensure contractual guarantees specify where data will be stored and processed. Try MuleSoft Anypoint Platform free for 30 days. No credit card, no installations. ... Tell us a bit more so the right person can reach out faster. ... Get the latest news about integration, automation, API management, and AI.",
+          "Most enterprise SaaS platforms are certified for standards like SOC 2 and ISO 27001, which verify that multi-tenant security measures meet industry requirements. Well-designed SaaS platforms use cloud infrastructure that automatically scales resources to handle traffic spikes without performance degradation.",
+          "Automatic updates: The provider handles updates, patches, and maintenance behind the scenes, so users always have the latest version without needing to manage it themselves."
+        ]
+      },
+      {
+        "url": "https://www.mulesoft.com/platform/enterprise-integration",
+        "title": "Enterprise Integration | Anypoint Platform | Mulesoft",
+        "description": "Meet Anypoint Platform: the complete hybrid integration platform for SOA, SaaS, and APIs. Freedom to integrate on-premises or in the cloud.",
+        "thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "page_age": "2025-10-06T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mulesoft.com&size=128",
+        "snippets": [
+          "Protect your APIs with advanced security features that stop threats and enforce best practices automatically. ... Deploy MuleSoft applications on Salesforce's next-gen cloud infrastructure, Hyperforce, for better performance and data residency control.",
+          "The marketplace to discover and share APIs, connectors, examples, and templates across your organization. ... Use a cloud-native, low-code B2B solution to onboard B2B partners quickly and manage EDI or API-based integrations.",
+          "The newest research from Forrester's Total Economic Impact study shows why leading enterprises use MuleSoft's comprehensive tools to speed up integration projects, streamline API development, and automate workflows: ... Connect every AI agent, SaaS application, legacy system, and partner through a single unified platform.",
+          "Protect APIs, LLMs, and AI agents anywhere they run with high-performance, zero-trust security and unified governance across your entire ecosystem. Learn more · Govern all APIs and AI agents with built-in security policies from a single control center. Learn more · Deploy flexibly across any environment with guaranteed high availability and automatic failover for enterprise-scale integration."
+        ]
+      },
+      {
+        "url": "https://www.mulesoft.com/integration/best-integration-software",
+        "title": "7 Best Enterprise Integration Software in 2026 | Mulesoft",
+        "description": "Evaluate the top seven B2B integration software for 2026. Compare features, performance, and capabilities to find the best tool for your business needs.",
+        "thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/mulesoft/en-us/wp-content/uploads/sites/40/2025/07/image_MuleSoft_OG-1.webp?w=1024",
+        "page_age": "2026-04-24T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mulesoft.com&size=128",
+        "snippets": [
+          "Evaluate encryption, authentication, and audit trail capabilities, and verify compliance with relevant industry regulations such as HIPAA, GDPR, or ISO standards. Strong security and compliance features help prevent data breaches and maintain trust with partners.",
+          "TrueCommerce EDI is a cloud-based platform that connects businesses with over 180,000 trading partners and integrates with 60+ ERP systems. The platform automates document processing, synchronizes real-time data, and provides dashboards for operational visibility across supply chains. TrueCommerce supports EDI and API integrations along with marketplace connectivity, making it easier for businesses to manage orders, fulfillment, and vendor communications while reducing errors and improving accuracy.",
+          "Workflow automation tools to turn repetitive processes into automated sequences · Visual dashboards, alerts, and reporting to monitor insights in real time · Flexible deployment—cloud, on-premises, or hybrid—to match various infrastructure needs · Strong governance, compliance, and security capabilities (audit trails, encryption, regulatory support)",
+          "MuleSoft Anypoint Platform is a unified B2B integration solution designed to connect complex networks of partners, suppliers, and customers. It also integrates with Salesforce, allowing organizations to connect CRM data with other enterprise systems for unified workflows and real-time insights. Supporting both traditional EDI (Electronic Data Interchange) standards and modern API-based integrations, it enables seamless data exchange across disparate systems, automates workflows, and provides real-time visibility into transactions."
+        ]
+      },
+      {
+        "url": "https://blogs.mulesoft.com/news/mulesoft-gdpr-compliance/",
+        "title": "MuleSoft and GDPR compliance | MuleSoft Blog",
+        "description": "At MuleSoft, we are committed to maintaining privacy and security on the data you share with us. Like many of our customers and partners, MuleSoft has been preparing for the GDPR regulations that are changing the global data privacy landscape. Our privacy and security teams have been working ...",
+        "thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/gdpr-mulesoft.jpg",
+        "original_thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/gdpr-mulesoft.jpg",
+        "page_age": "2022-08-23T08:27:14",
+        "favicon_url": "https://you.com/favicon?domain=blogs.mulesoft.com&size=128",
+        "snippets": [
+          "At MuleSoft, we are committed to maintaining privacy and security on the data you share with us. Like many of our customers and partners, MuleSoft has been preparing for the GDPR regulations that are changing the global data privacy landscape. Our privacy and security teams have been working with customers and internal teams to prepare | MuleSoft Blog",
+          "At MuleSoft, we are committed to maintaining privacy and security on the data you share with us. Like many of…",
+          "At MuleSoft, we are committed to maintaining privacy and security on the data you share with us. Like | MuleSoft Blog",
+          "As part of our Security and Compliance Programs, MuleSoft undergoes yearly SOC 1 and SOC 2 audits that provide independent evaluation and assurance that our controls and safeguards are operating effectively throughout the year."
+        ]
+      },
+      {
+        "url": "https://blogs.mulesoft.com/dev-guides/microservices/safe-microservice-journey/",
+        "title": "Have a safe microservice journey! | MuleSoft Blog",
+        "description": "An architecture needs to bend, not break, as new innovations, best practices, and needs emerge. In this post, I’ll explore the broader landscape we are traveling to support that agility. In my last post, I talked about the relentless focus on experiences, rather than spending a lot of calories ...",
+        "thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/mulesoft-layers-of-security.png",
+        "original_thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/mulesoft-layers-of-security.png",
+        "page_age": "2024-03-24T01:59:31",
+        "favicon_url": "https://you.com/favicon?domain=blogs.mulesoft.com&size=128",
+        "snippets": [
+          "An architecture needs to bend, not break, as new innovations, best practices, and needs emerge. In this post, I’ll explore the broader landscape we are traveling to support that agility. In my last post, I talked about the relentless focus on experiences, rather than spending a lot of calories on the things that aren’t directly | MuleSoft Blog",
+          "An architecture needs to bend, not break, as new innovations, best practices, and needs emerge. In this post, I’ll explore…",
+          "An architecture needs to bend, not break, as new innovations, best practices, and | MuleSoft Blog",
+          "The only reasonable and scalable approach to security is to adopt robust, well-known standards. MuleSoft puts the platform through the rigorous checks and audits to achieve ISO 27001, SOC 1, SOC 2, PCI DSS, GDPR, HIPAA, SSO, RBAC, FedRamp in process, and soon, authorized to operate (ATO)."
+        ]
+      },
+      {
+        "url": "https://www.mulesoft.com/integration-partner/finder/technology",
+        "title": "Partner finder: Technology | MuleSoft",
+        "description": "Connect with leading MuleSoft partners today! Discover technology brands that synergize to speed up your business operations.",
+        "thumbnail_url": "https://www.mulesoft.com/sites/default/files/cmm_files/image_MuleSoft_OG.jpg",
+        "original_thumbnail_url": "https://www.mulesoft.com/sites/default/files/cmm_files/image_MuleSoft_OG.jpg",
+        "favicon_url": "https://you.com/favicon?domain=www.mulesoft.com&size=128",
+        "snippets": [
+          "Automation Anywhere is a leading RPA and intelligent automation solution that complements MuleSoft's API integration and provides comprehensive data integration and process automation solution for the enterprise. Learn more ... Axiomatics provides externalized fine-grained authorization for APIs, microservices, databases, Big Data and applications. The Axiomatics authorization suite covers the lifecycle of policy-based access control, helping customers to create the framework, implement and maintain their policies, as well as enforce and audit access control.",
+          "Unlike standard API keys or Role-based Access Control that fail in high-volume complex environments, this framework provides the caliber of access control security that is required to support API initiatives; including security drivers such as secure information sharing, IP and critical asset protection and compliance and audit requirements. Learn more ... Blue Prism has partnered with MuleSoft, the leading API integration platform, to make it easier for organizations to digitally transform by connecting APIs to intelligent digital workers. Companies now have easy, secure access to front and back office automation to improve process performance, reduce costs, and drive operational efficiency.",
+          "If system to system transfers or person to person collaboration involve sharing sensitive data with external parties, MOVEit provides the data security, user access controls and data transfer audit trails necessary to comply with best-practices, internal governance, and regulatory mandates. MOVEit components include MOVEit Transfer and MOVEit Automation as well as reporting, proxy gateways, a host of clients, and high-availability and failover options.",
+          "They leverage industry leading partner technologies from Oracle, UI Path, Automation and work with emerging technologies/programming languages to deliver innovative solutions. Learn more ... With Neosec's API Security Platform Mulesoft expands its full lifecycle API Management with built in security to protect the fastest growing attack surface, APIs. Neosec delivers continuous API discovery and risk audit, API detection and response, and threat hunting capabilities to security teams."
+        ]
+      },
+      {
+        "url": "https://blogs.mulesoft.com/automation/zero-trust-architecture-for-agentic-and-non-agentic-worlds/",
+        "title": "AI Zero Trust Architecture for Agentic and Non-Agentic Worlds | ...",
+        "description": "Leverage MuleSoft to extend zero trust principles and architecture to seamlessly cover both agentic and non-agentic worlds. This unified approach enables organizations to leverage existing investments in their security frameworks and safeguard their data while embracing autonomous agents.",
+        "thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/supercharge-agentic-1.png",
+        "original_thumbnail_url": "https://blogs.mulesoft.com/wp-content/uploads/supercharge-agentic-1.png",
+        "page_age": "2025-02-07T21:53:30",
+        "favicon_url": "https://you.com/favicon?domain=blogs.mulesoft.com&size=128",
+        "snippets": [
+          "We have previously discussed zero trust architecture with MuleSoft, particularly the foundational principles with attribute based access control (ABAC) and…",
+          "Similarly, non-agentic users and systems depend on a combination of static (RBAC) attributes such as user roles, permissions, device type and dynamic attributes (ABAC) such as IP address, device type, and network type. AI-powered anomaly detection is equally effective for agents and traditional systems. For example, MuleSoft can detect unauthorized API calls by agents or unusual login patterns from users, triggering automated actions to mitigate risks.",
+          "APIs must enforce static role based access controls combined with ABAC policies that are pre-configured and straightforward to audit, ensuring compliance with organizational and regulatory standards. For example, a non-agentic system accessing customer data might always receive tokenized data with static masking applied uniformly, regardless of context, ensuring simplicity and stability. The PDP AI engine will still perform checks such as anomaly detection and automated policy enforcement and rate limiting but the rules are simpler to prevent abuse by malicious actors or misconfigured clients.",
+          "The IAM specialist configures and manages ABAC policies, integrating them with MuleSoft’s API Manager and PDP layer to enable real-time identity validation, ABAC and RBAC role enforcements."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:mulesoft.com security trust SOC 2 ISO SSO RBAC audit logs data residency pricing partners marketplace automation integration",
+    "search_uuid": "7ae668f4-be86-42ba-a400-701bc2b922e0",
+    "latency": 0.5878660678863525
+  }
+}

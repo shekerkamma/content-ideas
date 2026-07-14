@@ -63,16 +63,23 @@ Research-plugin rule:
   competitor analysis, strategy research, market maps, pipeline research, or
   current-company positioning work.
 - In Codex Desktop or any host that exposes high-quality research plugins
-  such as `exa`, prefer those plugins for source discovery and current web
-  research during Stage 1 and strategy work.
+  such as You.com or `exa`, prefer those plugins for source discovery and
+  current web research during Stage 1 and strategy work.
 - In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
   an MCP-connected research server or a local CLI/API wrapper for tools such as
-  Exa when available.
+  You.com or Exa when available.
 - Concrete terminal patterns to prefer when available:
+  - repo-local `you-com-search` skill and `skills/you-com-search/scripts/search.py --level 1|2|3`
+  - You.com MCP/API routes for search, livecrawl, research, and finance research
   - Exa MCP over HTTP/remote MCP
   - a local Exa API wrapper that calls `https://api.exa.ai/search`
-- Use them to improve discovery of official product pages, docs, GitHub repos,
-  competitive signals, and current operator proof points.
+- Use You.com before generic web search as a three-level search workflow.
+  Prioritize Level 2 livecrawl evidence retrieval by default for competitor
+  analysis, market maps, strategy research, and client-facing claims. Use
+  Level 1 only for discovery seeding when the arena is unknown, and Level 3 for
+  Research/Finance synthesis. Use Exa as the semantic/source-discovery
+  specialist for official product pages, docs, GitHub repos, competitive
+  signals, and current operator proof points.
 - Generic WebSearch/web.run is allowed only after that discovery pass, and only
   for targeted verification, primary-source opening, citation checks, or when
   no research plugin/MCP/API route is available. If used as fallback, state the

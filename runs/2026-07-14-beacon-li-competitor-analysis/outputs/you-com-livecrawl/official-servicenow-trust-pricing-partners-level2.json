@@ -1,0 +1,140 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.servicenow.com/company/trust/compliance.html",
+        "title": "ServiceNow AI Platform Compliance - ServiceNow",
+        "description": "We consistently ensure we conform to all of the common compliance frameworks to establish security and compliance on a continuous basis.",
+        "thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about.jpg",
+        "original_thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about.jpg",
+        "favicon_url": "https://you.com/favicon?domain=www.servicenow.com&size=128",
+        "snippets": [
+          "ServiceNow has also undertaken an annual SOC 2 Type 2 attestation since 2013, relevant to security, availability and confidentiality controls listed in the AICPA Trust Services Criteria (TSC). ServiceNow’s SOC 2 report covers the period October 1 (of the prior calendar year) to September 30 (current calendar year) and is available via ServiceNow CORE by the end of each calendar year (December). A Bridge Letter is provided between audit periods so that the company is covered for the entire year.",
+          "To demonstrate this compliance, ServiceNow performed an internal audit of over 80 EU Cloud CoC requirements and was subject to an external assessment of that audit effort. ServiceNow's external validation of adherence to the EU Cloud CoC speaks to our ongoing commitment to maintaining the highest privacy and security standards alongside our existing Security and Privacy certifications. Services are verified compliant with the EU Cloud CoC, Verification-ID 2022LVL02SCOPE3113. For Further information please visit https://eucoc.cloud/en/public-register. FedRAMP High P-ATO For US Government Entities and Providers",
+          "The certification is gained by annual independent audit and ServiceNow has been an ISO/IEC 27018:2019 certified organization since 2016. ... This extension to ISO/IEC 27001 focuses on the establishment, and maintenance of a Privacy Information Management System (PIMS). This is relevant to ServiceNow as a processor of customer data which may contain Personally Identifiable Information (PII). ServiceNow received this certification in 2020. ... The Service Organizational Control (SOC) framework is an attestation that ServiceNow meets the required standard regarding having controls in place to protect the confidentiality, integrity and availability of our customers’ data in the cloud.",
+          "C5 is a cloud-specific compliance controls catalog developed by the German Federal Office for Information Security (BSI) and leveraged in both the public and private sectors. The C5 Attestation Report follows a similar process and schema as AICPA SOC 2 reports, and has a high overlap of requirements with the AICPA Trust Services Criteria, with the addition of specific cloud-focused requirements."
+        ]
+      },
+      {
+        "url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/resource-center/ebook/ebk-how-servicenow-delivers-safe-and-secure-cloud-services.pdf",
+        "title": "White Paper Securing the ServiceNow® AI Platform",
+        "description": "Securing the ServiceNow® · How ServiceNow secures and protects customer data",
+        "favicon_url": "https://you.com/favicon?domain=www.servicenow.com&size=128",
+        "snippets": [
+          "• ServiceNow Government Community Cloud and FedRAMP white paper",
+          "The ServiceNow artificial intelligence (AI) services environment has a SOC 2 Type 2 attestation.",
+          "For more information view the Artificial services (AI) SOC 2 Type 2 report on the ServiceNow CORE Compliance Portal.",
+          "Security is a partnership between ServiceNow and the customer, both with specific responsibilities."
+        ]
+      },
+      {
+        "url": "https://www.servicenow.com/company/trust.html",
+        "title": "ServiceNow Trust and Compliance Center - ServiceNow",
+        "description": "Information security is one of the highest priorities at ServiceNow. Our Cloud meets rigorous standards and compliance for security assurance.",
+        "thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about.jpg",
+        "original_thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about.jpg",
+        "favicon_url": "https://you.com/favicon?domain=www.servicenow.com&size=128",
+        "snippets": [
+          "Explore MyNow, your personalized experience for quick access to your workflows, to-do lists, and AI guided recommendations. Start your day with MyNow. ... Increase your ROI and get more value from the ServiceNow platform. Receive long-term adoption guidance and support with an Impact success plan tailored to you. Implement and optimize ServiceNow with expert help from ServiceNow and our partners.",
+          "Meet the global ServiceNow partners leading the way in innovation and value for our customers. Find tasks, alerts, and information you need, all in one place. Explore innovative apps that extend and complement the ServiceNow AI Platform. ... Bring AI Agents to every corner of your business.",
+          "Unite people, processes, and systems with AI-powered products for all your workflows. ... Take action with autonomous AI agents that work for you.",
+          "Find out how your business can reduce manual work and help agents resolve cases faster. (4:08) See how to simplify the way workflows are built and custom code is developed."
+        ]
+      },
+      {
+        "url": "https://trust.servicenow.com/",
+        "title": "ServiceNow TrustShare | Home",
+        "description": "Transparent, real-time security and compliance status to continuously earn the trust of users and customers.",
+        "thumbnail_url": "https://trust.servicenow.com/images/preview-image.png",
+        "original_thumbnail_url": "https://trust.servicenow.com/images/preview-image.png",
+        "favicon_url": "https://you.com/favicon?domain=trust.servicenow.com&size=128",
+        "snippets": [
+          "FedRAMPFor the US public sector, this program provides a standardized approach for assessing, monitoring, and authorizing cloud computing products and services under the Federal Information Security Management Act (FISMA). A Provisional Authorization to Operate (P-ATO) is granted at an impact level: Low, Moderate, or High. ServiceNow first achieved High P-ATO in 2019. ... Request access and we can share more information about our trust and compliance program.Request Access",
+          "ServiceNow is committed to protecting customer data and building trust by maintaining the highest standards of security, privacy and compliance. This portal provides transparency into ServiceNow’s security program by providing access to compliance certifications and attestations, security advisories, notifications, ServiceNow CVEs, Instance security best practices, and SOC reports.",
+          "SOC 2 Type IIThis attestation report is intended to provide customers with information about the design and operating effectiveness of controls that are relevant to security, availability, processing integrity, confidentiality, and/or privacy.",
+          "ServiceNow Shared Responsibility ModelSecurity is a partnership between ServiceNow® and the customer, both with specific responsibilities. Therefore, it is essential that each party understands their role in this partnership."
+        ]
+      },
+      {
+        "url": "https://www.servicenow.com/community/s/cgfwn76974/attachments/cgfwn76974/now-platform-kb/2384/17/Trust,%20Privacy,%20and%20Compliance.pdf",
+        "title": "Trust, Privacy & Compliance",
+        "description": "Compilation of all articles from the Knowledge Base · Trust, Privacy & Compliance",
+        "favicon_url": "https://you.com/favicon?domain=www.servicenow.com&size=128",
+        "snippets": [
+          "US Public Sector / FedRamp .....................................................................................................",
+          "unauthorized access to infrastructure. These are documented in the SOC 2 Type 2 report",
+          "Can customers audit ServiceNow?"
+        ]
+      },
+      {
+        "url": "https://store.servicenow.com/store/app/afb277221be46a50a85b16db234bcb9a",
+        "title": "SOC 2 Accelerator - ServiceNow Store",
+        "description": "ServiceNow App Store: SOC 2 Accelerator by Aprio Advisory Group LLC - Systems and Organization Controls 2",
+        "favicon_url": "https://you.com/favicon?domain=store.servicenow.com&size=128",
+        "snippets": [
+          "The SOC 2 Accelerator is a powerful tool designed to automate and simplify SOC 2 compliance, enhancing security and streamlining processes for organizations. Built on ServiceNow platform using the Systems and Organization Controls 2 (SOC 2) framework, the accelerator streamlines the process of meeting stringent security required for SOC 2 compliance. By leveraging ServiceNow's robust capabilities for risk assessment, policy, compliance, and rich audit features, this accelerator ensures organizations can easily maintain compliance with SOC 2 standards.",
+          "Apps distributed by ServiceNow partners on the Store with generative AI or agentic AI features (\"AI Features\") may consume Assists as specified by the ServiceNow partner. Assists consumed by AI Features are deducted against the total number of Assists available to Customer (at the account level) at the time of execution of a given AI Feature.",
+          "Issue Tracking: automatically generates issues for controls that fail. Comprehensive Dashboard: the dashboard provides an overview of SOC 2 content, including authority documents, citations, control objectives, and assessment questions. ... Be the first one to review this! ... Free Store features and applications built by ServiceNow partners require Customer have entitlement for the number of included custom tables, either through bundled custom tables that are included within their ServiceNow products or through a Now Platform App Engine subscription product.",
+          "In the event of control failures, the accelerator automatically generates issues, ensuring that remediation actions are initiated in a timely manner. This proactive approach helps organizations mitigate risks effectively and maintain a strong security posture. ... Workflow Automation: the accelerator comes with SOC 2 content including authority documents, control objectives, and questionnaires to automate the entire assessment process."
+        ]
+      },
+      {
+        "url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/resource-center/white-paper/instance-security-best-practice.pdf",
+        "title": "White Paper ServiceNow® Security Best Practices Guide",
+        "description": "Each section is structured around the categories of Governance, Identify, Protect, Detect, · The CSF is a set of voluntary guidelines, standards, and practices made available by NIST, · As the data controller, the customer is responsible for determining how data is collected, stored, used, ...",
+        "favicon_url": "https://you.com/favicon?domain=www.servicenow.com&size=128",
+        "snippets": [
+          "• Assess whether to use Step-Up MFA for high-risk access and Step-Down MFA when trust exists. ... When utilizing Single Sign-On (SSO), ensure that at least one Account recovery (ACR) administrator is registered prior to · activation. This precaution secures fallback access to critical systems should primary authentication methods become · misconfigured or unavailable. Thoroughly document all ACR procedures, limit access strictly to authorized personnel, and regularly audit ACR usage to uphold strong security standards.",
+          "This practice helps identify potential issues, ensures compatibility with existing workflows, and reduces the ... In the context of the Security Shared Responsibility Model, customers are responsible for configuring their instance using · supported authentication methods. This configuration process may include setting up multi-provider single sign-on (SSO)",
+          "by independent third-party auditors. ServiceNow will establish and maintain sufficient controls to meet certification and · attestation for the objectives stated in ISO/IEC 27001, 27017, 27018, 27701, 9001, 22301, 42001 (new AI/IT), and SSAE 18 · SOC 2 Type 2 (or equivalent standards) for the security program.",
+          "instance and restrict access to trusted networks using Adaptive authentication or Zero Trust Access (ServiceNow Vault, ... Customer administrators should carefully review available service account options. This may require collaboration · with stakeholders to choose identities that meet the use case requirements and align with the applicable corporate IT · security policies. Consider the following authentication and authorization capabilities: • Decide between agent-less, agent-based, or hybrid access."
+        ]
+      },
+      {
+        "url": "https://servicenow.com/company/trust/privacy-and-compliance/compliance-certifications/SSAE-16-SOC1-Type-2.html",
+        "title": "ServiceNow Trust and Compliance Center - ServiceNow",
+        "description": "Information security is one of the highest priorities at ServiceNow. Our Cloud meets rigorous standards and compliance for security assurance.",
+        "thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about.jpg",
+        "original_thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about.jpg",
+        "favicon_url": "https://you.com/favicon?domain=servicenow.com&size=128",
+        "snippets": [
+          "Explore MyNow, your personalized experience for quick access to your workflows, to-do lists, and AI guided recommendations. Start your day with MyNow. ... Increase your ROI and get more value from the ServiceNow platform. Receive long-term adoption guidance and support with an Impact success plan tailored to you. Implement and optimize ServiceNow with expert help from ServiceNow and our partners.",
+          "Meet the global ServiceNow partners leading the way in innovation and value for our customers. Find tasks, alerts, and information you need, all in one place. Explore innovative apps that extend and complement the ServiceNow AI Platform. ... Bring AI Agents to every corner of your business.",
+          "Unite people, processes, and systems with AI-powered products for all your workflows. ... Take action with autonomous AI agents that work for you.",
+          "Find out how your business can reduce manual work and help agents resolve cases faster. (4:08) See how to simplify the way workflows are built and custom code is developed."
+        ]
+      },
+      {
+        "url": "https://www.servicenow.com/au/company/trust/compliance.html",
+        "title": "ServiceNow AI Platform Compliance",
+        "description": "We consistently ensure that we conform to all of the common compliance frameworks to establish security and compliance on a continuous basis.",
+        "thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about-us.jpg",
+        "original_thumbnail_url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/og-images/og-company-about-us.jpg",
+        "favicon_url": "https://you.com/favicon?domain=www.servicenow.com&size=128",
+        "snippets": [
+          "ServiceNow has also undertaken an annual SOC 2 Type 2 attestation since 2013, relevant to security, availability and confidentiality controls listed in the AICPA Trust Services Criteria (TSC). ServiceNow's SOC 2 report covers the period 1 October (of the prior calendar year) to 30 September (current calendar year) and is available via ServiceNow CORE by the end of each calendar year (December). A Bridge Letter is provided between audit periods so that the company is covered for the entire year.",
+          "They have since incorporated and mapped to many common security standards, including NIST 800-53 and the AICPA SOC 2 Trust Services Criteria. The SOC 2 + HITRUST report is a collaboration between the AICPA and the HITRUST Alliance. It provides a mechanism for the service auditor to opine on the design and effectiveness of the Trust Services Criteria and the HITRUST CSF in the same report.",
+          "To demonstrate this compliance, ServiceNow performed an internal audit of over 80 EU Cloud CoC requirements and was subject to an external assessment of that audit effort. ServiceNow's external validation of adherence to the EU Cloud CoC speaks to our ongoing commitment to maintaining the highest privacy and security standards alongside our existing Security and Privacy certifications. Services are verified compliant with the EU Cloud CoC, Verification-ID 2022LVL02SCOPE3113. For further information please visit https://eucoc.cloud/en/public-register. FedRAMP High P-ATO For US Government Entities and Providers",
+          "The certification is gained by annual independent audit and ServiceNow has been an ISO/IEC 27018:2019 certified organisation since 2016. ... This extension to ISO/IEC 27001 focuses on the establishment, and maintenance of a Privacy Information Management System (PIMS). This is relevant to ServiceNow as a processor of customer data which may contain Personally Identifiable Information (PII). ServiceNow received this certification in 2020. ... The Service Organisational Control (SOC) framework is an attestation that ServiceNow meets the required standard regarding having controls in place to protect the confidentiality, integrity and availability of our customers' data in the cloud."
+        ]
+      },
+      {
+        "url": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/resource-center/white-paper/wp-security-for-financial-services.pdf",
+        "title": "White Paper ServiceNow®— A Secure Platform for Financial Services",
+        "description": "for Financial Services · Understanding the security, resilience, and",
+        "favicon_url": "https://you.com/favicon?domain=www.servicenow.com&size=128",
+        "snippets": [
+          "The ServiceNow AI Platform is available for highly regulated markets and can adhere to strict data residency requirements.",
+          "ServiceNow: A trusted platform for financial services . . . . . . . .",
+          "Workflows with embedded compliance . . . . . . . . . . . . . . .",
+          "resulting financial impact and loss of trust."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:servicenow.com security trust SOC 2 ISO FedRAMP SSO RBAC audit logs data residency pricing partners marketplace AI agents workflow automation",
+    "search_uuid": "13e65701-353d-488a-9a94-7cb94b211e2e",
+    "latency": 0.6019401550292969
+  }
+}

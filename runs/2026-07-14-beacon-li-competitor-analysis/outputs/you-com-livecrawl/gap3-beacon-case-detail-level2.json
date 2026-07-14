@@ -1,0 +1,70 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.beacon.li/case-study/darwinbox-implementation-85-percent-faster-onboarding",
+        "title": "Darwinbox Implementation Case Study: 85% Faster Onboarding | Beacon.li",
+        "description": "Reduce implementation effort and timelines by 60%+ with Beacon’s AI orchestration platform. Watch it run on your product in just 7 days.",
+        "thumbnail_url": "https://framerusercontent.com/images/rdscSw6gCymKn1sQdxq3qKJzuU.png",
+        "original_thumbnail_url": "https://framerusercontent.com/images/rdscSw6gCymKn1sQdxq3qKJzuU.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "The orchestrator performed the same steps a consultant would do inside Darwinbox. It read the documents, set up leave types, applied the right rules, and validated everything instantly. ... With Leave Management streamlined, the focus now shifts to create better alignment across modules and scale onboarding globally.",
+          "Darwinbox, a global HR platform, partners with Beacon.li to simplify client onboarding for its hyper-dependent Leave Module, where every setup ties deeply into Core HR logic.",
+          "Identified 12 leave types and 3 eligibility rules. Mapping them to Darwinbox’s configuration fields… ... Validation complete. No inconsistencies found. Ready to deploy configurations? How Beacon’s AI Orchestration Simplified the Client Onboarding Workflow:",
+          "Setup Dependencies: Some settings only activate after related configurations in the Core HR module, so setup order matters. ... Create the leave policies for Acme Corp. Here is their policy document. Create the leave policies for Acme Corp. Here is their policy document. Got it! Ingesting the document… extracting policy details using NLU. Got it! Ingesting the document… extracting policy details using NLU. Identified 12 leave types and 3 eligibility rules. Mapping them to Darwinbox’s configuration fields…"
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/case-study/workline-hr-intelligent-conversational-implementation",
+        "title": "How Workline Built an Intelligent Conversational HR Ecosystem | ...",
+        "description": "Reduce implementation effort and timelines by 60%+ with Beacon’s AI orchestration platform. Watch it run on your product in just 7 days.",
+        "thumbnail_url": "https://framerusercontent.com/assets/5Th0eh6rHiol43wN29CY3x8EIw.png",
+        "original_thumbnail_url": "https://framerusercontent.com/assets/5Th0eh6rHiol43wN29CY3x8EIw.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "How Darwinbox Achieved 85% Faster Onboarding with Beacon.li · Workline is a modern HRMS platform built to deliver personalized employee experiences at scale.",
+          "Drive faster time-to-value across every client onboarding with Beacon’s AI orchestration"
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/case-study/keka-support-ticket-deflection-ai-orchestration",
+        "title": "Keka Achieves 62% Faster Response with AI Orchestration | Beacon.li",
+        "description": "Reduce implementation effort and timelines by 60%+ with Beacon’s AI orchestration platform. Watch it run on your product in just 7 days.",
+        "thumbnail_url": "https://framerusercontent.com/assets/5Th0eh6rHiol43wN29CY3x8EIw.png",
+        "original_thumbnail_url": "https://framerusercontent.com/assets/5Th0eh6rHiol43wN29CY3x8EIw.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "How Darwinbox Achieved 85% Faster Onboarding with Beacon.li"
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/case-study/zluri-saas-intelligence-conversational-implementation",
+        "title": "Zluri SaaS Intelligence Implementation Case Study | Beacon.li",
+        "description": "Reduce implementation effort and timelines by 60%+ with Beacon’s AI orchestration platform. Watch it run on your product in just 7 days.",
+        "thumbnail_url": "https://framerusercontent.com/assets/5Th0eh6rHiol43wN29CY3x8EIw.png",
+        "original_thumbnail_url": "https://framerusercontent.com/assets/5Th0eh6rHiol43wN29CY3x8EIw.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "How Darwinbox Achieved 85% Faster Onboarding with Beacon.li · Zluri is a SaaS management platform designed to simplify how organizations gain visibility and control over their software ecosystem."
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/case-study/global-retail-marketplace-seller-onboarding",
+        "title": "Global Marketplace Achieves 80% Faster Seller Onboarding | Beacon.li",
+        "description": "Reduce implementation effort and timelines by 60%+ with Beacon’s AI orchestration platform. Watch it run on your product in just 7 days.",
+        "thumbnail_url": "https://framerusercontent.com/images/rdscSw6gCymKn1sQdxq3qKJzuU.png",
+        "original_thumbnail_url": "https://framerusercontent.com/images/rdscSw6gCymKn1sQdxq3qKJzuU.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "How Darwinbox Achieved 85% Faster Onboarding with Beacon.li"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:beacon.li/case-study Darwinbox Beacon 85% faster onboarding Leave Module baseline implementation before after defects cost",
+    "search_uuid": "b8aaa15c-69b0-4e88-80c8-a7fdfb52758c",
+    "latency": 0.4969296455383301
+  }
+}
