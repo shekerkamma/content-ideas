@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beacon.li Competitor Analysis</title>
+  <style>
+    :root {
+      --navy: #0A1628;
+      --navy2: #12243A;
+      --teal: #00C9A7;
+      --accent: #009B82;
+      --gold: #FFB800;
+      --amber: #F2A83B;
+      --coral: #E05A6B;
+      --soft: #F4F7F8;
+      --ink: #1B2B3C;
+      --muted: #5B6B7C;
+      --grid: #D9DFE5;
+      --white: #FFFFFF;
+      --shadow: 0 18px 48px rgba(10, 22, 40, 0.14);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Calibri, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--soft);
+      line-height: 1.45;
+    }
+    header {
+      min-height: 92vh;
+      background:
+        linear-gradient(90deg, rgba(10,22,40,0.98), rgba(10,22,40,0.88)),
+        radial-gradient(circle at 78% 24%, rgba(0,201,167,0.18), transparent 30%),
+        var(--navy);
+      color: var(--white);
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 31vw;
+      height: 100%;
+      background:
+        linear-gradient(180deg, rgba(0,201,167,0.18), rgba(255,184,0,0.10)),
+        var(--navy2);
+      border-left: 6px solid var(--teal);
+    }
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      color: var(--teal);
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: 0.95;
+      letter-spacing: 0;
+      margin: 0 0 20px;
+      max-width: 820px;
+    }
+    .hero-copy {
+      max-width: 760px;
+      color: #E0F7F1;
+      font-size: 22px;
+      margin: 0 0 28px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 780px;
+      margin-top: 34px;
+    }
+    .hero-chip {
+      border: 1px solid rgba(0,201,167,0.42);
+      background: rgba(18,36,58,0.86);
+      padding: 14px;
+      min-height: 72px;
+    }
+    .hero-chip strong {
+      display: block;
+      color: var(--gold);
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--grid);
+    }
+    .tabs {
+      width: min(1180px, calc(100% - 24px));
+      margin: 0 auto;
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    button {
+      border: 1px solid var(--grid);
+      background: var(--white);
+      color: var(--ink);
+      padding: 10px 14px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      min-width: max-content;
+    }
+    button.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    main section {
+      display: none;
+      padding: 54px 0;
+    }
+    main section.active { display: block; }
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: 0;
+      color: var(--navy);
+    }
+    .section-lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 840px;
+    }
+    .grid-3, .grid-2, .grid-4 {
+      display: grid;
+      gap: 18px;
+    }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--grid);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      border-left: 6px solid var(--teal);
+      min-height: 180px;
+    }
+    .card.gold { border-left-color: var(--gold); }
+    .card.coral { border-left-color: var(--coral); }
+    .card.navy { border-left-color: var(--navy); }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      color: var(--navy);
+      letter-spacing: 0;
+    }
+    .card p, .card li {
+      color: var(--muted);
+      margin: 0;
+      font-size: 16px;
+    }
+    .stat {
+      background: var(--navy);
+      color: var(--white);
+      padding: 20px;
+      min-height: 126px;
+    }
+    .stat b {
+      display: block;
+      color: var(--gold);
+      font-size: 38px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      font-size: 15px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--grid);
+      text-align: left;
+      vertical-align: top;
+      padding: 12px;
+    }
+    th {
+      background: var(--navy);
+      color: var(--white);
+      position: sticky;
+      top: 54px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 4px 8px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      background: #E0F7F1;
+      border: 1px solid rgba(0,201,167,0.45);
+    }
+    .quadrant {
+      background: var(--white);
+      border: 1px solid var(--grid);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+    }
+    .quad-cell {
+      min-height: 190px;
+      background: var(--soft);
+      padding: 18px;
+      border: 1px solid var(--grid);
+    }
+    .quad-cell h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+    }
+    .vendor {
+      display: inline-block;
+      margin: 4px 4px 0 0;
+      padding: 6px 8px;
+      background: var(--white);
+      border-left: 4px solid var(--teal);
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .vendor.gold { border-left-color: var(--gold); }
+    .vendor.coral { border-left-color: var(--coral); }
+    .callout {
+      background: var(--navy);
+      color: var(--white);
+      padding: 24px;
+      margin-top: 24px;
+      border-left: 8px solid var(--teal);
+      box-shadow: var(--shadow);
+      font-size: 20px;
+      font-weight: 800;
+    }
+    footer {
+      background: var(--navy);
+      color: #E0F7F1;
+      padding: 34px 0;
+      font-size: 14px;
+    }
+    a { color: var(--accent); }
+    @media (max-width: 860px) {
+      header { min-height: 86vh; }
+      header::after { width: 18vw; opacity: 0.6; }
+      .hero-grid, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .hero-copy { font-size: 18px; }
+      table { font-size: 13px; }
+      th, td { padding: 9px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Competitor analysis · July 2026</div>
+      <h1>Beacon.li</h1>
+      <p class="hero-copy">Where Beacon wins, where it is exposed, and how to prove the implementation-execution wedge.</p>
+      <div class="hero-grid">
+        <div class="hero-chip"><strong>Position</strong>AI implementation execution</div>
+        <div class="hero-chip"><strong>Threat</strong>WalkMe/SAP, Rocketlane, Unframe</div>
+        <div class="hero-chip"><strong>Proof</strong>7-day workflow POC</div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="tabs" role="tablist" aria-label="Report sections">
+      <button class="active" data-tab="take">Executive Take</button>
+      <button data-tab="map">Market Map</button>
+      <button data-tab="matrix">Competitor Matrix</button>
+      <button data-tab="quadrant">Quadrant</button>
+      <button data-tab="pressure">Pressure Test</button>
+      <button data-tab="recommendations">Recommendations</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="take" class="active">
+      <div class="wrap">
+        <h2>The answer: sell the job, not the category.</h2>
+        <p class="section-lead">Beacon is not strongest as “another DAP.” It is strongest as an AI implementation execution layer that configures, validates, tests, sequences, and supports enterprise go-lives inside the product UI.</p>
+        <div class="grid-3">
+          <div class="card coral"><h3>Do not lead with</h3><p>“We are a better DAP.” That invites WalkMe, Pendo, Whatfix, and Appcues comparisons on their strongest terrain.</p></div>
+          <div class="card"><h3>Lead with</h3><p>“We execute implementation work.” That shifts the buyer conversation from adoption guidance to go-live throughput.</p></div>
+          <div class="card gold"><h3>Prove with</h3><p>A 7-day workflow POC: baseline, Beacon execution trace, human interventions, elapsed time, errors, and hypercare load.</p></div>
+        </div>
+        <div class="grid-4" style="margin-top:18px">
+          <div class="stat"><b>60%</b>faster go-lives</div>
+          <div class="stat"><b>50%</b>lower costs</div>
+          <div class="stat"><b>90%</b>fewer errors</div>
+          <div class="stat"><b>7 days</b>POC motion</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="wrap">
+        <h2>Three markets, one wedge.</h2>
+        <p class="section-lead">Each adjacent market solves a legitimate buyer problem. Beacon must stay precise about the job it owns.</p>
+        <div class="grid-3">
+          <div class="card"><h3>Digital adoption</h3><p>WalkMe, Pendo, Whatfix, Appcues. They guide users, measure product behavior, improve adoption, and reduce support after or around launch.</p></div>
+          <div class="card gold"><h3>Implementation operations</h3><p>Rocketlane, GuideCX, Arrows, Dock. They coordinate onboarding projects, customer collaboration, resource planning, and handoffs.</p></div>
+          <div class="card coral"><h3>Enterprise AI delivery</h3><p>Unframe AI, UiPath, and automation incumbents. They deliver governed AI workflows and cross-system automation across many use cases.</p></div>
+        </div>
+        <div class="callout">Beacon’s wedge: execute implementation work that the other buckets mostly manage, guide, measure, or automate as fragments.</div>
+      </div>
+    </section>
+
+    <section id="matrix">
+      <div class="wrap">
+        <h2>Competitor matrix.</h2>
+        <p class="section-lead">The practical sales question is not “who has more features?” It is “who removes implementation labor?”</p>
+        <table>
+          <thead>
+            <tr><th>Company</th><th>Category</th><th>Where It Competes</th><th>Beacon Win</th><th>Beacon Risk</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>WalkMe/SAP</strong></td><td><span class="pill">DAP</span></td><td>Adoption, training, productivity, AI ROI across apps.</td><td>Beacon is more implementation-execution-specific.</td><td>SAP distribution and enterprise trust.</td></tr>
+            <tr><td><strong>Pendo</strong></td><td><span class="pill">Product experience</span></td><td>Analytics, guides, sentiment, product adoption.</td><td>Beacon targets delivery work rather than usage instrumentation.</td><td>Mature product-team budget and analytics footprint.</td></tr>
+            <tr><td><strong>Whatfix</strong></td><td><span class="pill">DAP</span></td><td>Guidance, training, support, enterprise app adoption.</td><td>Beacon can argue labor replacement, not guidance content.</td><td>Enterprise DAP credibility and deployment options.</td></tr>
+            <tr><td><strong>Rocketlane</strong></td><td><span class="pill">Implementation ops</span></td><td>Project portals, services operations, resource planning, revenue recognition.</td><td>Beacon performs work Rocketlane mostly organizes.</td><td>Rocketlane may remain the system of record.</td></tr>
+            <tr><td><strong>Arrows / Dock / GuideCX</strong></td><td><span class="pill">Collaboration</span></td><td>Customer rooms, onboarding visibility, shared plans.</td><td>Beacon is deeper for configuration and validation.</td><td>Simpler fit when the buyer only needs collaboration.</td></tr>
+            <tr><td><strong>Unframe AI</strong></td><td><span class="pill">AI delivery</span></td><td>Managed AI transformation and agentic workflows.</td><td>Beacon is narrower and easier to value for go-live bottlenecks.</td><td>Unframe can absorb implementation as one use case.</td></tr>
+            <tr><td><strong>UiPath</strong></td><td><span class="pill">Automation</span></td><td>Enterprise automation primitives and agentic automation.</td><td>Beacon owns the implementation domain model.</td><td>UiPath already sits in enterprise automation budgets.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="quadrant">
+      <div class="wrap">
+        <h2>Unofficial quadrant view.</h2>
+        <p class="section-lead">Beacon is a visionary on execution depth; incumbents lead on enterprise adoption credibility.</p>
+        <div class="quadrant">
+          <div class="quad-cell"><h3>Leaders</h3><span class="vendor">WalkMe/SAP</span><span class="vendor">UiPath</span><p>Strong enterprise credibility and broad platform reach.</p></div>
+          <div class="quad-cell"><h3>Visionaries</h3><span class="vendor">Beacon.li</span><span class="vendor">Unframe AI</span><p>Stronger execution vision, but proof and category clarity matter.</p></div>
+          <div class="quad-cell"><h3>Challengers</h3><span class="vendor gold">Rocketlane</span><span class="vendor gold">Pendo</span><span class="vendor gold">Whatfix</span><p>Credible adjacent products with mature buyer motions.</p></div>
+          <div class="quad-cell"><h3>Niche Players</h3><span class="vendor coral">Appcues</span><span class="vendor coral">Arrows</span><span class="vendor coral">Dock</span><span class="vendor coral">GuideCX</span><p>Useful for narrower onboarding, collaboration, or engagement jobs.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pressure">
+      <div class="wrap">
+        <h2>The pressure test.</h2>
+        <p class="section-lead">These are the claims a sophisticated buyer will challenge first.</p>
+        <div class="grid-3">
+          <div class="card coral"><h3>Weakest claim</h3><p>“The knowledge graph compounds.” Beacon needs proof that later implementations improve because of platform learning.</p></div>
+          <div class="card gold"><h3>Sharpest objection</h3><p>“Is this just another coordination layer?” The answer has to be a live workflow execution trace.</p></div>
+          <div class="card navy"><h3>Biggest risk</h3><p>Incumbents can reframe Beacon as a feature unless Beacon owns execution, auditability, and implementation-specific learning.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recommendations">
+      <div class="wrap">
+        <h2>Recommended next moves.</h2>
+        <p class="section-lead">The fastest route to a defensible category position is evidence from real implementation work.</p>
+        <div class="grid-3">
+          <div class="card"><h3>1. POC scorecard</h3><p>Baseline time, Beacon time, interventions, errors, audit trail, and hypercare tickets. Turn every trial into evidence.</p></div>
+          <div class="card gold"><h3>2. Category matrix</h3><p>Show who coordinates, guides, measures, automates fragments, and executes full implementation work.</p></div>
+          <div class="card navy"><h3>3. Compounding proof</h3><p>Publish evidence that implementation 50 is faster and less risky than implementation 5 because the system learned.</p></div>
+        </div>
+        <div class="callout">Decision rule: invest in the category only after workflow-level proof, not after a generic platform demo.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Beacon.li competitor analysis · Public-market briefing · Built from source-backed research artifacts dated 2026-07-14.</div>
+  </footer>
+
+  <script>
+    const buttons = [...document.querySelectorAll('button[data-tab]')];
+    const sections = [...document.querySelectorAll('main section')];
+    function activate(id) {
+      buttons.forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+      sections.forEach(s => s.classList.toggle('active', s.id === id));
+      history.replaceState(null, '', '#' + id);
+    }
+    buttons.forEach(button => button.addEventListener('click', () => activate(button.dataset.tab)));
+    const initial = location.hash.slice(1);
+    if (initial && document.getElementById(initial)) activate(initial);
+  </script>
+</body>
+</html>
