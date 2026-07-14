@@ -16,13 +16,14 @@ Status: reviewed
 
 ## QA
 
-- PPTX slide count: 43
+- PPTX slide count: 53
 - OfficeCLI QA: passed with required screenshot render
-- HTML Playwright validation: passed with 15 active tabs and full tab activation
-- GitHub Pages build: pending workflow dispatch for the current rebuild
+- HTML Playwright validation: passed with 16 active tabs and full tab activation
+- GitHub Pages build: published from `gh-pages`; current rebuild pending republish until the latest commit is pushed
 
 ## Notes
 
 - The deck was rebuilt after a grill-me structure review, story-architect pack, and GStack strategy/design review check, then rendered through the branded PPTX workflow.
-- A follow-on AI Analyst experiment found a useful proof-gap metric. The deck includes native branded proof-gap, enterprise-readiness, and commercial-pressure slides after the refreshed Level 2 evidence pass.
+- A follow-on AI Analyst experiment found a useful proof-gap metric. The deck now includes a main-flow evidence spine built from a 588-row comprehensive evidence ledger: coverage counts, expanded Beacon evidence, DAP benchmarks, implementation-ops benchmarks, platform/trust evidence, and AI value-realization datapoints.
+- Comprehensive evidence ledger: `../outputs/you-com-livecrawl/comprehensive-evidence-ledger.csv`
 - The HTML page is self-contained and packaged for GitHub Pages under `pages/beacon-li-competitor-analysis/`.

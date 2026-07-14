@@ -7,6 +7,7 @@ const expected = [
   'map',
   'scoring',
   'evidence',
+  'datapoints',
   'matrix',
   'pressure',
   'buyers',

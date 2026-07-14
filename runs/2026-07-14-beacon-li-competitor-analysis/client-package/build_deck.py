@@ -18,7 +18,7 @@ OUT = OUT_DIR / "beacon-li-competitor-analysis-draft.pptx"
 d = Deck(footer="Beacon.li Competitor Analysis | Public-market briefing")
 b = d.b
 M, CW, W, H = d.M, d.CW, d.W, d.H
-TOTAL = 43
+TOTAL = 53
 
 
 def add_footer(slide, page):
@@ -882,6 +882,146 @@ def pricing_ecosystem_slide(page):
     add_footer(s, page)
 
 
+def datapoint_table_slide(page, title, subtitle, rows, note):
+    s = header(title, subtitle)
+    cols = [("Company", 0.72, 2.0), ("Datapoint", 2.9, 4.4), ("Use In Story", 7.5, 4.3)]
+    for label, x0, w0 in cols:
+        d.rect(s, Inches(x0), Inches(1.72), Inches(w0), Inches(0.42), b.NAVY, radius=0.02)
+        d.text(s, label, Inches(x0 + 0.08), Inches(1.86), Inches(w0 - 0.16), Inches(0.12), size=8.8, color=b.WHITE, bold=True, align=PP_ALIGN.CENTER, shrink=True)
+    for i, (company, datapoint, use) in enumerate(rows):
+        y = 2.25 + i * 0.58
+        accent = b.TEAL if i % 2 == 0 else b.GOLD
+        d.rect(s, Inches(0.72), Inches(y), Inches(2.0), Inches(0.43), b.WHITE, line=b.GRID)
+        d.rect(s, Inches(0.72), Inches(y), Inches(0.07), Inches(0.43), accent)
+        d.text(s, company, Inches(0.9), Inches(y + 0.08), Inches(1.65), Inches(0.23), size=8.5, color=b.NAVY, bold=True, shrink=True)
+        d.rect(s, Inches(2.9), Inches(y), Inches(4.4), Inches(0.43), b.WHITE, line=b.GRID)
+        d.text(s, datapoint, Inches(3.02), Inches(y + 0.06), Inches(4.16), Inches(0.28), size=7.7, color=b.INK, shrink=True)
+        d.rect(s, Inches(7.5), Inches(y), Inches(4.3), Inches(0.43), b.WHITE, line=b.GRID)
+        d.text(s, use, Inches(7.62), Inches(y + 0.06), Inches(4.06), Inches(0.28), size=7.7, color=b.MUTED, shrink=True)
+    d.rect(s, M, Inches(6.05), CW, Inches(0.48), b.SOFT, radius=0.05, line=b.GRID)
+    d.text(s, note, M + Inches(0.24), Inches(6.18), CW - Inches(0.48), Inches(0.18), size=9.3, color=b.NAVY, bold=True, align=PP_ALIGN.CENTER, shrink=True)
+    add_footer(s, page)
+
+
+def beacon_datapoints_slide(page):
+    datapoint_table_slide(page, "Beacon Outcome Evidence", "Public Beacon claims now need to be shown as explicit proof points", [
+        ("Beacon", "60%+ reduction in implementation effort / timelines", "Core wedge: implementation execution removes delivery labor."),
+        ("Darwinbox", "85% faster onboarding / implementation case", "Named proof point for complex HR module implementation."),
+        ("Fintech case", "85% faster handovers; 60% fewer configuration defects; 30% lower implementation costs", "Best multi-metric Beacon proof cluster; still needs denominators."),
+        ("Marketplace", "80% faster seller onboarding", "Shows wedge beyond HR/BFSI into marketplace onboarding."),
+        ("Keka", "62% faster response in support-ticket deflection case", "Extends implementation-execution story into support productivity."),
+        ("Beacon homepage", "90 days of hand-holding reframed as 30 days of guided self-service", "Use as value narrative; treat as vendor claim."),
+    ], "Caveat: Beacon percentages are useful, but raw baselines and independent validation remain open.")
+
+
+def dap_datapoints_slide(page):
+    datapoint_table_slide(page, "DAP Benchmark Evidence", "WalkMe, Whatfix, and Pendo set the proof bar Beacon will be compared against", [
+        ("WalkMe", "368% three-year ROI on Forrester TEI page", "Shows incumbent DAP economic proof standard."),
+        ("WalkMe", "494% three-year ROI; $41.4M new annual revenue; 60% faster adoption; 87% error reduction", "Use as vendor-cited high-end DAP benchmark, with source caveat."),
+        ("WalkMe", "50% IT workload reduction; 85% ROI; 87% fewer errors", "Competitive-page claim; directionally useful, not independent proof."),
+        ("Whatfix", "REG: 50% faster time-to-proficiency; 83% fewer daily app-related IT tickets; three-month reduction", "Strong time-to-proficiency and support-deflection comparator."),
+        ("Whatfix", "Reed: 23% reduction in support calls per user in six months", "Concrete support-productivity benchmark."),
+        ("Pendo", "396% ROI; six-month payback; $1.2M team-efficiency impact", "Product-experience proof benchmark for analytics/adoption vendors."),
+    ], "Implication: Beacon must prove implementation execution as rigorously as DAPs prove adoption and support outcomes.")
+
+
+def implementation_datapoints_slide(page):
+    datapoint_table_slide(page, "Implementation And Onboarding Benchmarks", "Adjacent tools define the operating metrics buyers already understand", [
+        ("Rocketlane", "2026 PS benchmark: low utilization, cost per billable hour, margin compression", "Use these as services-margin pain indicators."),
+        ("Rocketlane", "53.1% margin visibility; 90.2% PSA adoption among SaaS PS", "Supports why implementation ops already has budget gravity."),
+        ("Rocketlane", "20+ concurrent projects as a segment signal", "Clarifies fit: project operations layer, not execution layer."),
+        ("GUIDEcx", "TTV / TTFV positioned as core onboarding metrics", "Use as KPI spine for Beacon POC design."),
+        ("GUIDEcx", "40% more time discussing business outcomes after automated progress tracking", "Shows automation shifts work from status to value conversations."),
+        ("Workato / UiPath", "Agentic orchestration pages emphasize workflows, approvals, exceptions, KPIs, cost, ROI, governance", "Broad platform threat: can absorb implementation as one workflow use case."),
+    ], "Implication: Beacon should map its POC to familiar PS/onboarding KPIs: TTV, utilization, margin, defects, handoffs, and hypercare.")
+
+
+def ai_value_datapoints_slide(page):
+    datapoint_table_slide(page, "Consulting And AI Value-Realization Evidence", "The AI market context supports Beacon's proof-first recommendation", [
+        ("Accenture", "GPT-agent employee platform use case: 30-40% productivity increase", "Sets buyer expectation for agent productivity."),
+        ("Accenture", "97% of executives expect GenAI to transform company/industry; 93% say investments outperform other strategic areas", "Supports urgency, not Beacon-specific proof."),
+        ("Deloitte", "66% report productivity/efficiency gains from enterprise AI", "Validates productivity as primary AI benefit lens."),
+        ("Deloitte", "Nearly 70% moved 30% or fewer GenAI experiments into production", "Supports production-readiness tension."),
+        ("BCG", "Two-thirds dissatisfied with GenAI progress; value comes from end-to-end workflow reshaping", "Supports Beacon's workflow-execution positioning."),
+        ("Gartner", "More than 50% of GenAI projects abandoned after PoC; 57% of I&O AI failures expected too much too fast", "Direct support for controlled POC thresholds."),
+    ], "Implication: the recommendation should be benchmark-first: prove one implementation workflow before scaling the category claim.")
+
+
+def evidence_coverage_slide(page):
+    s = header("Evidence Coverage From Level 2 Livecrawl", "The artifact now uses the full extracted evidence ledger, not a small manual subset")
+    stat_card(s, 0.78, 1.78, "588", "evidence rows extracted")
+    stat_card(s, 3.55, 1.78, "46", "Level 2 raw files")
+    stat_card(s, 6.32, 1.78, "455", "indexed source rows")
+    stat_card(s, 9.09, 1.78, "216", "trust / compliance rows")
+    rows = [
+        ("Top vendor coverage", "WalkMe 66; Beacon 62; Rocketlane 48; Pendo 36; Workato 35; Salesforce 31; UiPath 25; Accenture 23; ServiceNow 23; Whatfix 21."),
+        ("Metric coverage", "Trust/compliance 216; ROI/financial 135; time/velocity 131; support productivity 45; AI/automation 32; quality/risk 17."),
+        ("Artifact change", "Data now appears in explicit evidence slides and HTML datapoint tables, with confidence caveats for vendor vs third-party claims."),
+    ]
+    for i, (label, body) in enumerate(rows):
+        y = 3.35 + i * 0.82
+        d.rect(s, M, Inches(y), CW, Inches(0.58), b.WHITE, radius=0.04, line=b.GRID)
+        d.rect(s, M, Inches(y), Inches(0.08), Inches(0.58), b.TEAL if i == 0 else b.GOLD)
+        d.text(s, label, M + Inches(0.22), Inches(y + 0.14), Inches(2.35), Inches(0.22), size=10.5, color=b.NAVY, bold=True, shrink=True)
+        d.text(s, body, M + Inches(2.85), Inches(y + 0.1), Inches(8.95), Inches(0.3), size=9.1, color=b.MUTED, shrink=True)
+    add_footer(s, page)
+
+
+def expanded_beacon_evidence_slide(page):
+    datapoint_table_slide(page, "Expanded Beacon Evidence Ledger", "More Beacon datapoints from the 62 extracted rows", [
+        ("Customers page", "85% faster handovers; 60% fewer config defects; 30% lower implementation costs", "Use as strongest multi-metric case cluster."),
+        ("Darwinbox", "85% faster implementations on Leave module; extended to Attendance and Payroll", "Shows repeatable module-specific implementation execution."),
+        ("Beacon blog", "IDC baseline cited: 75% implementation delays; 57% time overrun; 43% cost overrun", "Frames market pain behind Beacon's wedge."),
+        ("Retail tech", "4x feature adoption; 80% support tickets resolved autonomously", "Shows support/adoption extension beyond implementation."),
+        ("BFSI", "70-80% support queries resolved; 7-day POC; no PII/API/backend access", "Connects velocity with regulated-industry trust."),
+        ("Trust pages", "SOC 2, RBAC, SSO, audit trails, Trust Center, ISO/GDPR references", "Moves enterprise-readiness score upward."),
+    ], "Remaining gap: raw before/after denominators and independent validation are still not public.")
+
+
+def expanded_dap_evidence_slide(page):
+    datapoint_table_slide(page, "Expanded DAP Evidence Ledger", "DAP incumbents have a much broader proof library than the first artifact showed", [
+        ("WalkMe", "368% ROI over three years; 35% retention increase; 10% upsell growth; 20% software-spend savings signal", "Use as mature economic proof benchmark."),
+        ("WalkMe", "494% three-year ROI; $41.4M new annual revenue; 60% faster adoption; 87% error reduction", "High-end vendor-cited DAP value case."),
+        ("WalkMe", "FedRAMP Ready; SOC 2; ISO; SOC report; 4.5+ years / 1,000+ enterprise-service-provider trust signal", "Procurement and enterprise-trust pressure."),
+        ("Whatfix", "REG: 50% faster proficiency; 83% fewer daily IT tickets; Windward: 5,500 agents, 87% support-query reduction", "Support and proficiency proof comparator."),
+        ("Whatfix", "Sentry: ~$950K annual savings; 40% content-time reduction; 100 daily tickets eliminated; 94%/91% adoption metrics", "Shows DAP can produce quantified operational proof."),
+        ("Pendo", "396% ROI; six-month payback; $1.2M team efficiencies; 1,100 hours of rework saved claim", "Analytics/adoption proof benchmark."),
+    ], "Beacon must match this proof style with implementation-specific before/after metrics.")
+
+
+def expanded_impl_ops_evidence_slide(page):
+    datapoint_table_slide(page, "Expanded Implementation Ops Evidence Ledger", "Rocketlane and GUIDEcx show the metrics post-sales buyers already use", [
+        ("Rocketlane", "Actabl: 88% reduction in time-to-kickoff; 76% faster delivery cycles", "Cycle-time benchmark for implementation operations."),
+        ("Rocketlane", "53.1% margin visibility; 90.2% PSA adoption; satisfaction down 12% to 3.29/5", "Shows tool adoption alone does not solve delivery value."),
+        ("Rocketlane", "HPOs productive in 54 days vs 65.5 days; PMO adoption 49.1% vs 37.0%", "Use to define high-performing services benchmark."),
+        ("Rocketlane", "30% TTV reduction on $5M ARR services business accelerates ~$1.5M revenue recognition; teams handle 3x more projects", "Direct ROI-model input for Beacon POC."),
+        ("Rocketlane", "$200K annual billable revenue consultant creates ~$16.7K/month capacity; three-month vacancy costs ~$50K", "Loaded-cost proxy for implementation capacity value."),
+        ("GUIDEcx", "Discovery templates cut implementation time by 66%; automated tracking shifts 40% more time to business outcomes", "TTV and value-realization comparator."),
+    ], "Beacon's scorecard should map to TTV, kickoff time, utilization, revenue recognition, project capacity, and margin visibility.")
+
+
+def expanded_platform_evidence_slide(page):
+    datapoint_table_slide(page, "Expanded Platform And Trust Evidence Ledger", "Enterprise platforms bring trust, governance, and ecosystem gravity", [
+        ("UiPath", "57% of companies have AI agents in production; ISO/IEC 42001; FedRAMP; audit logs; data residency", "Agentic automation threat with governance credibility."),
+        ("Workato", "SOC 2 Type II, SOC 3, SOC 1 Type II; pricing estimates $15K-$50K mid-market and $100K+ enterprise", "Orchestration threat plus commercial benchmark."),
+        ("MuleSoft", "ISO 27001, SOC 1, SOC 2, HIPAA, PCI DSS; encryption, audit logs, identity management", "API/integration trust benchmark."),
+        ("Boomi", "ISO 27001, GDPR, HIPAA, SOC 2, PCI DSS, RBAC, audit logs, API governance", "iPaaS governance pressure."),
+        ("Salesforce", "Agentforce/Data Cloud/Marketing Cloud/Tableau Next FedRAMP High; vendor agents TTV 38 days vs 94 days custom", "Platform ecosystem and vendor-agent benchmark."),
+        ("ServiceNow", "Annual SOC 2 Type 2 since 2013; FedRAMP High; ISO/IEC 27018 and 27001; data residency", "Workflow-platform governance benchmark."),
+    ], "Beacon should compete on implementation-domain evidence, not generic enterprise-platform trust.")
+
+
+def expanded_ai_value_evidence_slide(page):
+    datapoint_table_slide(page, "Expanded AI Value Evidence Ledger", "Consulting and analyst datapoints justify the proof-first recommendation", [
+        ("Accenture", "30-40% GPT-agent productivity lift; 97% transformation expectation; 93% investment outperformance", "Sets executive appetite and proof expectations."),
+        ("Accenture", "47% data-readiness challenge; 31% significant GenAI investment; $3B AI commitment; ~77K AI pros", "Shows delivery machinery and readiness bottlenecks."),
+        ("Deloitte", "Nearly 70% moved 30% or fewer experiments to production; 85% expect custom agents; 25% transformative impact", "Supports production-gap narrative."),
+        ("Deloitte", "60% workforce AI-tool availability; 74% advanced AI initiatives meet/exceed ROI", "Separates access from implementation quality."),
+        ("BCG", "~10% apply GenAI at scale; 10-15% productivity from tools; 22% substantial gains; 74% struggle", "Supports workflow redesign and value capture."),
+        ("Gartner", ">50% GenAI PoCs abandoned; 57% I&O failures expected too much too fast; 40% agentic apps by 2026", "Justifies strict POC thresholds."),
+    ], "This is why the deck should recommend benchmark-first category building, not positioning-only category building.")
+
+
 def threat_priority_slide(page):
     s = header("Threat Priority Matrix", "Prioritize response by severity, not by brand familiarity")
     card(s, 0.75, 1.78, 5.55, 1.42, "High severity / immediate response", "WalkMe/SAP, Rocketlane, Accenture/IBM/Capgemini\n\nWhy: distribution, enterprise trust, and budget ownership.", b.CORAL)
@@ -982,41 +1122,51 @@ slide_32(5)
 slide_31(6)
 heatmap_slide(7)
 enterprise_readiness_slide(8)
-proof_gap_slide(9)
-threat_priority_slide(10)
-slide_8(11)
-slide_11(12)
-divider(13, "CATEGORY DEEP DIVES", "The Four Competitive Arenas", "Each arena wins a different buyer job; Beacon must prove a narrower execution claim.")
-slide_15(14)
-slide_16(15)
-slide_17(16)
-slide_18(17)
-slide_19(18)
-slide_20(19)
-slide_21(20)
-slide_22(21)
-slide_23(22)
-slide_44(23)
-slide_45(24)
-slide_48(25)
-slide_33(26)
-slide_34(27)
-slide_35(28)
-slide_36(29)
-slide_37(30)
-slide_50(31)
-slide_52(32)
-slide_38(33)
-slide_39(34)
-slide_40(35)
-pricing_ecosystem_slide(36)
-proof_benchmark_slide(37)
-slide_28(38)
-slide_41(39)
-slide_25(40)
-slide_42(41)
-slide_54(42)
-final_recommendation_slide(43)
+evidence_coverage_slide(9)
+beacon_datapoints_slide(10)
+expanded_beacon_evidence_slide(11)
+dap_datapoints_slide(12)
+expanded_dap_evidence_slide(13)
+implementation_datapoints_slide(14)
+expanded_impl_ops_evidence_slide(15)
+ai_value_datapoints_slide(16)
+expanded_platform_evidence_slide(17)
+expanded_ai_value_evidence_slide(18)
+proof_gap_slide(19)
+threat_priority_slide(20)
+slide_8(21)
+slide_11(22)
+divider(23, "CATEGORY DEEP DIVES", "The Four Competitive Arenas", "Each arena wins a different buyer job; Beacon must prove a narrower execution claim.")
+slide_15(24)
+slide_16(25)
+slide_17(26)
+slide_18(27)
+slide_19(28)
+slide_20(29)
+slide_21(30)
+slide_22(31)
+slide_23(32)
+slide_44(33)
+slide_45(34)
+slide_48(35)
+slide_33(36)
+slide_34(37)
+slide_35(38)
+slide_36(39)
+slide_37(40)
+slide_50(41)
+slide_52(42)
+slide_38(43)
+slide_39(44)
+slide_40(45)
+pricing_ecosystem_slide(46)
+proof_benchmark_slide(47)
+slide_28(48)
+slide_41(49)
+slide_25(50)
+slide_42(51)
+slide_54(52)
+final_recommendation_slide(53)
 
 if d.n != TOTAL:
     raise RuntimeError(f"Expected {TOTAL} slides, got {d.n}")
