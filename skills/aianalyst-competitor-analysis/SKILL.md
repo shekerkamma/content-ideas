@@ -7,7 +7,7 @@ description: "Use when the user wants competitor analysis run as an AI Analyst e
 
 Run competitor analysis as a data product: sources become an evidence dataset, metrics are defined before scoring, findings are validated like analysis outputs, and client artifacts are generated only after QA.
 
-Use this skill when competitor work needs deeper quantitative/evidence handling than `competitor-analysis-pipeline` alone. Read [references/dataset-contract.md](references/dataset-contract.md) before building or revising the evidence ledger. Read [references/datapoint-extraction.md](references/datapoint-extraction.md) before extracting quantitative proof from crawled pages, PDFs, press releases, case studies, reviews, or internal datasets. Read [references/story-architect-pipeline.md](references/story-architect-pipeline.md) before building the PPTX or HTML storyboard. Read [references/quality-gates.md](references/quality-gates.md) before rendering or publishing client artifacts.
+Use this skill when competitor work needs deeper quantitative/evidence handling than `competitor-analysis-pipeline` alone. Read [references/dataset-contract.md](references/dataset-contract.md) before building or revising the evidence ledger. Read [references/you-com-search-plan.md](references/you-com-search-plan.md) before running You.com discovery or livecrawl retrieval. Read [references/datapoint-extraction.md](references/datapoint-extraction.md) before extracting quantitative proof from crawled pages, PDFs, press releases, case studies, reviews, or internal datasets. Read [references/story-architect-pipeline.md](references/story-architect-pipeline.md) before building the PPTX or HTML storyboard. Read [references/quality-gates.md](references/quality-gates.md) before rendering or publishing client artifacts.
 
 ## Runtime Preamble
 
@@ -53,7 +53,7 @@ If the user is continuing an existing run, preserve its folder and add missing A
    Use GBrain/durable memory and repo-local prior runs first. Record recall status in `status.json` or run notes. If GBrain is unavailable, continue and document the fallback.
 
 3. **Use research-tool order.**
-   Do not begin with generic search. Prefer local artifacts, GBrain, `you-com-search` Level 2 livecrawl, You.com Level 1/3 as appropriate, Exa, Firecrawl/content-research/STORM, official sources, then generic search only for targeted verification or fallback. Save raw captures or JSON in `outputs/` or `working/`.
+   Do not begin with generic search. Prefer local artifacts, GBrain, `you-com-search` Level 2 livecrawl, You.com Level 1/3 as appropriate, Exa, Firecrawl/content-research/STORM, official sources, then generic search only for targeted verification or fallback. Use [references/you-com-search-plan.md](references/you-com-search-plan.md) for query templates, search logs, and livecrawl API naming. Save raw captures or JSON in `outputs/` or `working/`.
 
 4. **Create the evidence dataset.**
    Treat every useful source claim as a row in `outputs/evidence-ledger.csv`. Use the schema in [references/dataset-contract.md](references/dataset-contract.md). The ledger must include competitor, arena, source URL, source type, metric family, metric value/unit when present, extracted claim, confidence, evidence strength, and storyboard use.

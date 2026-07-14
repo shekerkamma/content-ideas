@@ -1,13 +1,6 @@
 ---
 name: you-com-search
 description: Use when a task needs You.com Search, Research, livecrawl page retrieval, finance research, current competitor research, three-level search workflow, or high-fidelity source discovery before generic web search.
-argument-hint: "<query> [--level 1|2|3] [--mode search|research|finance] [--livecrawl] [--site domain]"
-permissions:
-  env:
-    - YOU_API_KEY
-    - YOU_BASE_URL
-  network:
-    - https://ydc-index.io
 ---
 
 # You.com Search
@@ -48,6 +41,17 @@ The local You.com helper supports three native API modes:
 Live crawl is an option on `search`, not a separate native mode. The helper
 exposes it as `--livecrawl` / `--level 2` and sends You.com's accepted
 `live_crawl=true` API parameter.
+
+Naming convention is strict:
+
+- CLI/user-facing flag: `--livecrawl`
+- workflow label: `Level 2 livecrawl`
+- API query parameter: `live_crawl=true`
+- do not send `livecrawl=true`, `liveCrawl=true`, `live-crawl=true`, or
+  `live_crawl=1`
+
+When patching or reimplementing the helper, preserve this mapping. A common
+failure mode is copying the CLI label into the API parameter name.
 
 ## Three-Level Workflow Overlay
 
@@ -97,6 +101,12 @@ Target official/product pages and exclude noisy domains:
 python3 skills/you-com-search/scripts/search.py \
   "site:beacon.li Beacon.li competitors onboarding AI implementation proof points" \
   --level 2
+```
+
+No-network regression check for the livecrawl API naming convention:
+
+```bash
+python3 skills/you-com-search/scripts/check_livecrawl_param.py
 ```
 
 ## Guidance
@@ -160,6 +170,9 @@ wrappers should delegate here instead of duplicating the workflow.
 ## Gotchas
 
 - Do not claim You.com-backed research when the API key is missing, network is blocked, or the command failed.
+- Do not change the API parameter from `live_crawl=true`; `livecrawl` is a CLI
+  label only.
+- Run `scripts/check_livecrawl_param.py` after modifying `scripts/search.py`.
 - If the API rejects `--site` / `--exclude-site` with live crawl, remove those parameters and put site constraints in the query text or filter results after retrieval.
 - Do not paste raw JSON into client-facing decks; convert it into sourced tables, evidence registers, or concise notes.
 - Do not use You.com as final proof for hard claims when primary sources are available. Follow discovered URLs into official pages, filings, docs, or source documents.

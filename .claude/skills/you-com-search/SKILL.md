@@ -1,7 +1,6 @@
 ---
 name: you-com-search
 description: Use when a task needs You.com Search, Research, livecrawl page retrieval, finance research, current competitor research, three-level search workflow, or high-fidelity source discovery before generic web search.
-argument-hint: "<query> [--level 1|2|3] [--mode search|research|finance] [--livecrawl] [--site domain]"
 ---
 
 # You.com Search
@@ -16,6 +15,11 @@ instructions completely:
 
 Canonical source:
 `skills/you-com-search/`
+
+Livecrawl naming rule:
+Claude Code may say or type `--livecrawl`, but direct You.com Search API calls
+must send `live_crawl=true`. Do not send `livecrawl=true`, `liveCrawl=true`, or
+`live-crawl=true`.
 
 ## Runtime Preamble
 

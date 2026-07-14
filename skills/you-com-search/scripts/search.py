@@ -62,6 +62,8 @@ def _build_params(args: argparse.Namespace) -> list[tuple[str, str]]:
     if mode == "search":
         params.append(("num_web_results", str(args.limit)))
         if _resolve_livecrawl(args):
+            # You.com Search API expects the query parameter name `live_crawl`.
+            # `--livecrawl` is only our CLI alias; do not send livecrawl/liveCrawl.
             params.append(("live_crawl", "true"))
     if args.freshness:
         params.append(("freshness", args.freshness))

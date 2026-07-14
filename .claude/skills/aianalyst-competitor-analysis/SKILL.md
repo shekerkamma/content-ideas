@@ -11,6 +11,7 @@ Before work, read and follow:
 
 - `/home/shekerk/content-ideas/skills/aianalyst-competitor-analysis/SKILL.md`
 - `/home/shekerk/content-ideas/skills/aianalyst-competitor-analysis/references/dataset-contract.md`
+- `/home/shekerk/content-ideas/skills/aianalyst-competitor-analysis/references/you-com-search-plan.md`
 - `/home/shekerk/content-ideas/skills/aianalyst-competitor-analysis/references/datapoint-extraction.md`
 - `/home/shekerk/content-ideas/skills/aianalyst-competitor-analysis/references/story-architect-pipeline.md`
 - `/home/shekerk/content-ideas/skills/aianalyst-competitor-analysis/references/quality-gates.md`
