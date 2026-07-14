@@ -59,6 +59,9 @@ Claude Code cost guardrails:
   active.
 
 Research-plugin rule:
+- Do not use simple/generic web search as the first discovery step for
+  competitor analysis, strategy research, market maps, pipeline research, or
+  current-company positioning work.
 - In Codex Desktop or any host that exposes high-quality research plugins
   such as `exa`, prefer those plugins for source discovery and current web
   research during Stage 1 and strategy work.
@@ -70,6 +73,10 @@ Research-plugin rule:
   - a local Exa API wrapper that calls `https://api.exa.ai/search`
 - Use them to improve discovery of official product pages, docs, GitHub repos,
   competitive signals, and current operator proof points.
+- Generic WebSearch/web.run is allowed only after that discovery pass, and only
+  for targeted verification, primary-source opening, citation checks, or when
+  no research plugin/MCP/API route is available. If used as fallback, state the
+  reason in the run notes.
 - Codex Desktop plugin access is an advantage for discovery, not an exception
   to the repo workflow. The same delivery and verification rules still apply.
 - This does not replace:
@@ -96,7 +103,12 @@ Playwright rule:
     and log source URLs/hashes in generated wiki pages
 - The Playwright config uses `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` when set,
   then falls back to cached Chromium under `~/.cache/ms-playwright` when
-  present. If no browser is installed, run `npm run test:e2e:install`.
+  present. If no browser is installed, or if Playwright's
+  `chromium.executablePath()` resolves to a missing cache revision after a
+  Playwright package upgrade, run `npm run test:e2e:install` and verify the
+  resolved executable exists before continuing. In Codex sandboxed sessions,
+  this install may require escalation because it writes outside the workspace
+  to `~/.cache/ms-playwright`.
 - Browser testing instructions for Codex and Claude Code are documented in
   `docs/browser-testing.md`.
 - If `npm run build` was run while `npm run dev` was still active, restart the
@@ -123,6 +135,13 @@ Client-facing PPTX rule:
 
 Cross-host product-build skills:
 - Use repo-local skills from `skills/` for both Codex and Claude Code.
+- Use `skills/competitor-analysis-pipeline/SKILL.md` when the user asks for
+  competitor analysis, competitive landscape, battlecards, market maps,
+  positioning comparisons, consulting-firm positioning comparisons, or
+  client-ready competitor-analysis deliverables such as branded PPTX plus
+  interactive HTML. This skill codifies the GBrain/source-order, grill-me,
+  story-architect, GStack review, PPTX QA, HTML QA, and GitHub Pages publishing
+  pipeline.
 - Use `skills/plaid/SKILL.md` when the user says `PLAID`, `plaid build`,
   `plaid design`, `execute the roadmap`, `build the app`, asks to generate a
   PRD/product roadmap/design spec, or asks to continue a PLAID product build.

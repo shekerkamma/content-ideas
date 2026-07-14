@@ -89,6 +89,18 @@ To install Playwright's managed Chromium:
 npm run test:e2e:install
 ```
 
+Run this install when no browser is cached, or when the installed Playwright
+package expects a newer cache revision than the one present under
+`~/.cache/ms-playwright`. Confirm the managed executable before testing:
+
+```bash
+node -e "const fs=require('fs'); const {chromium}=require('playwright'); const p=chromium.executablePath(); console.log(p); console.log(fs.existsSync(p) ? 'exists' : 'missing')"
+```
+
+In Codex sandboxed sessions, installing managed browsers can require escalation
+because Playwright writes to `~/.cache/ms-playwright`, outside the repo
+workspace.
+
 ## Codex Notes
 
 - Headless mode is preferred for verification.

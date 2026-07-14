@@ -187,13 +187,28 @@ the execution loop — same ordering/verification rules as DealForge above.
   `raw/downloads/`), add source URLs and hashes to generated pages, update
   `wiki/index.md`, append `wiki/log.md`.
 - If a headed browser won't open, run headless or use VS Code Simple Browser.
+- If Playwright resolves Chromium to a missing cache revision, run
+  `npm run test:e2e:install` and verify `chromium.executablePath()` exists
+  before continuing. This can happen after a Playwright package upgrade when an
+  older browser cache is still present.
 - Setup details: `docs/browser-testing.md`.
 
 ## Research tool order
 
+- Do not use simple/generic web search as the first discovery step for
+  competitor analysis, strategy research, market maps, pipeline research, or
+  current-company positioning work.
+- For client-ready competitor analysis, use
+  `skills/competitor-analysis-pipeline/SKILL.md`; it codifies the improved
+  GBrain/source-order, grill-me, story-architect, GStack review, branded PPTX
+  QA, interactive HTML QA, and GitHub Pages publishing pipeline.
 - Prefer the strongest research tool the host exposes: Exa MCP first, then an
   MCP-connected research server, then a local Exa API wrapper
   (`https://api.exa.ai/search`), then Firecrawl, then generic web search.
+- Generic web search is allowed only after that discovery pass, and only for
+  targeted verification, primary-source opening, citation checks, or when no
+  research plugin/MCP/API route is available. If used as fallback, state the
+  reason in the run notes.
 - Plugin/desktop research access is a discovery advantage — not an exception path.
   It does not replace local file generation, branded PPTX build and QA,
   repo-specific workflow rules, or the requirement that final cited sources are

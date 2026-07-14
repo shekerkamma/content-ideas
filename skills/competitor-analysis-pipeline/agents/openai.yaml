@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitor Analysis Pipeline"
+  short_description: "Build source-backed competitor analysis decks and HTML pages."
+  default_prompt: "Run a structured competitor analysis for <company or product>, producing a sourced briefing, branded PPTX, and interactive HTML page."
