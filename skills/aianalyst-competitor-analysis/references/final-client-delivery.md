@@ -2,6 +2,8 @@
 
 Use this after the evidence ledger, story-architect pack, artifact traceability, and quality gates are ready. This is the final packaging contract for AI Analyst competitor-analysis runs.
 
+Also read [run-state-and-evidence-controls.md](run-state-and-evidence-controls.md) before final delivery. It defines `status.json`, `allowed-numbers.yaml`, `sync-check.md`, editable PPTX verification, and manifest-first final response rules.
+
 ## Required Final Artifacts
 
 A complete client-ready run must include both:
@@ -12,6 +14,8 @@ A complete client-ready run must include both:
    - rendered to PPTX as editable slides: use `genspark-branded-deck` hybrid-editable output at minimum, or `branded-pptx-deck` for fully native editable PowerPoint shapes/charts
    - image-only PPTX exports are draft/reference artifacts only, not final delivery
    - all visible numbers come from upstream AI Analyst dataset artifacts and carry the required source/caveat label
+   - all visible numbers are listed in `outputs/allowed-numbers.yaml`
+   - editable text-shape count is recorded in the manifest
    - QA'd through contact sheets and OfficeCLI or an explicitly documented equivalent
 
 2. **Self-contained HTML artifact**
@@ -119,11 +123,14 @@ The manifest must include:
 - branded deck source path: `client-package/genspark-deck/deck.html`
 - branded deck PPTX path and slide count
 - branded deck editability: `hybrid_editable` or `native_powerpoint`
+- editable text-shape count
+- allowed-number path and scan status
 - self-contained HTML local path
 - GitHub Pages publish source path
 - public URL and verification status when requested
 - hosted Genspark project URL when used upstream
 - whether hosted Genspark, branded deck, and HTML are in sync
+- status path and sync-check path
 
 ## Final Status Rule
 
@@ -134,9 +141,13 @@ Use `reviewed` only when:
 - branded deck has been recreated through `genspark-branded-deck`
 - final PPTX is editable, not image-only
 - visible deck numbers trace to upstream AI Analyst dataset artifacts
+- `outputs/allowed-numbers.yaml` exists and all visible numbers are covered or structural
+- editable text-shape count is greater than zero
 - deck contact-sheet QA passes
 - PPTX QA passes or an accepted equivalent is documented
 - self-contained HTML validates locally
 - GitHub Pages URL is verified when requested
+- `outputs/sync-check.md` passes
+- final response is written from `client-package/delivery-manifest.json`
 
 Otherwise use `draft` or `blocked`.

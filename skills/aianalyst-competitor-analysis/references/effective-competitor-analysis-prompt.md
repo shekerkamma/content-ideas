@@ -94,6 +94,8 @@ dataset_outputs:
   - "outputs/competitor-brief.md"
   - "outputs/story-architect-pack.md"
   - "outputs/artifact-traceability.md"
+  - "outputs/allowed-numbers.yaml"
+  - "outputs/sync-check.md"
 
 analysis_required:
   market_structure:
@@ -131,6 +133,8 @@ required_artifacts:
     requirements:
       - "Final PPTX must be editable, not image-only."
       - "Visible numbers must trace to upstream AI Analyst dataset artifacts."
+      - "Visible numbers must be listed in outputs/allowed-numbers.yaml."
+      - "Editable text-shape count must be recorded in the manifest."
       - "Use assertion titles."
       - "No unsupported numbers."
   html:
@@ -155,6 +159,7 @@ quality_gates:
   - "Story-architect pack completed before deck/HTML build."
   - "Artifact traceability maps every slide/HTML section to claim IDs, metrics, scores, or labeled interpretation."
   - "Allowed-number list and unsupported-number scan completed for slides and HTML."
+  - "Sync check completed across deck, HTML, manifest, and published page."
   - "Editable PPTX QA passed with OfficeCLI or documented equivalent."
   - "Static HTML browser validation passed."
   - "GitHub Pages URL verified when published."

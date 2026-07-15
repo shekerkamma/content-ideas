@@ -12,6 +12,7 @@ Read:
 - `outputs/data-quality-report.md`
 - `outputs/scoring-model.md`
 - `outputs/competitor-brief.md`
+- `outputs/allowed-numbers.yaml` when deck/HTML will contain visible numbers
 - user requirements such as slide count, audience, brand, publish target, and critique
 
 Do not build a story from memory when these files exist. The story pack must be traceable to them.
@@ -86,6 +87,12 @@ Write `outputs/story-architect-pack.md` with these sections:
    - slide count target
    - chart/table treatments
    - evidence/datapoint slides to include in the main flow
+   - Genspark Slides prompt inputs when hosted editable delivery is required
+   - allowed-number list with required caveats for every visible quantitative claim
+   - requirement that final visible deck/HTML numbers must come from `outputs/allowed-numbers.yaml`
+   - banned unsupported datapoint families, such as ROI, market size, pricing, ARR, growth, implementation cost, or arbitrary competitor percentages when not sourced
+   - `genspark-branded-deck` recreation instructions: deck source path, target theme, hybrid-editable or native-PowerPoint path, contact-sheet QA expectations
+   - self-contained HTML instructions: required sections, interactions, local path, GitHub Pages publish path, and URL verification requirement
    - required PPTX output name and reviewed/draft status
    - required HTML local path and publish URL target
    - what to avoid
@@ -162,5 +169,9 @@ Do not proceed to PPTX/HTML build if:
 - the slide spine is topic labels instead of assertions
 - evidence rows do not map to slides
 - datapoint promotion is missing
+- allowed-number guidance is missing when a generated deck is required
+- `outputs/allowed-numbers.yaml` is missing while visible numbers are planned
+- final branded deck recreation instructions are missing when PPTX is required
+- self-contained HTML instructions are missing when client-ready delivery is required
 - the deck would be vendor-by-vendor chronology instead of a decision story
 - the recommendation does not follow from evidence, scoring, and proof gaps

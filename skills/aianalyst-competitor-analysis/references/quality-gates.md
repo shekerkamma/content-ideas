@@ -13,8 +13,9 @@ Block PPTX/HTML build until these exist:
 - `outputs/scoring-model.md`
 - `outputs/competitor-brief.md`
 - `outputs/story-architect-pack.md`
+- `outputs/allowed-numbers.yaml`
 
-`outputs/storyboard-qa.md` and `outputs/artifact-traceability.md` may be created during the readiness gate, but must exist before final QA.
+`outputs/storyboard-qa.md`, `outputs/artifact-traceability.md`, and `outputs/sync-check.md` may be created during the readiness gate, but must exist before final QA.
 
 ## Gate 2: Artifact Traceability
 
@@ -109,13 +110,28 @@ Replace unsupported language:
 
 ## Gate 7: Artifact QA
 
-PPTX:
+PPTX / Slides:
 
-- branded template/workflow used
+- `genspark-slides` / Genspark AI Slides workflow used when hosted Genspark generation or editable Genspark project is required
+- Genspark project/viewer is treated as the hosted editable reference when that workflow is used
+- recovered slide HTML and rendered PNG references are saved when possible
+- `references/genspark-slides-delivery.md` followed for hosted Genspark generation, capture, cleanup, export, and manifest handling
+- allowed-number list exists for every visible quantitative claim promoted into the deck
+- `outputs/allowed-numbers.yaml` is the source of truth for visible quantitative claims
+- visible recovered slide text was scanned for unsupported datapoints before PPTX export
+- supported numbers are plugged in with source labels; unsupported numbers are removed or replaced with qualitative wording
+- repeated Genspark regeneration was not used as the main evidence-fix mechanism after the first correction/expansion pass
+- final client PPTX is recreated through `genspark-branded-deck` from owned `deck.html`, `theme.css`, and `deck.css`
+- branded template/workflow used; do not use an ad hoc blank presentation
+- final client PPTX is editable; image-only exports are draft/reference artifacts only
+- declare whether the branded output is hybrid-editable or native PowerPoint
+- declare whether the final editable source is hosted Genspark, hybrid PowerPoint text, native PowerPoint, or not available
+- every visible quantitative claim in the final PPTX traces to upstream AI Analyst dataset artifacts
+- editable text-shape count is recorded for the final PPTX
 - slide count meets user requirement
 - `client-package/*-draft.pptx` exists before QA
 - `client-package/*-reviewed.pptx` exists only after QA passes
-- render/contact-sheet review completed
+- contact-sheet review completed for recovered/rendered slides
 - no visible text overflow or collisions
 - OfficeCLI QA is mandatory for `reviewed` PPTX status unless the tool is unavailable and the user explicitly accepts `draft`/unreviewed delivery
 - OfficeCLI output is saved under `client-package/qa/officecli/`
@@ -136,12 +152,23 @@ HTML:
 
 - self-contained unless user requested a framework
 - `client-package/site/index.html` exists
+- HTML artifact is a standalone static report, not a screenshot dump or link list
+- HTML includes the same executive answer, competitor arena map, evidence coverage, threat matrix/scorecard, target differentiation, proof gaps, and next moves as the deck
+- CSS/JS/assets are inline or local to the site folder
 - tabs and sections match one-to-one
 - datapoints/evidence tab or section exists when evidence is central
 - Playwright or browser validation activates every tab
-- if the user asked for a shareable/team URL, publish to GitHub Pages or the configured host
+- if the user asked for a shareable/team/client URL, publish to GitHub Pages or the configured host
 - `client-package/pages/<slug>/index.html` or equivalent publish source exists when GitHub Pages is used
 - published URL verified with cache-busting query string when GitHub Pages is used
+- `/publish-static-page` or `github-pages-publisher` used for static GitHub Pages publication unless blocked
+
+Sync:
+
+- `outputs/sync-check.md` exists
+- deck, HTML, manifest, and published page use the same BLUF and supported numbers
+- delivery manifest paths exist
+- final response is based on the manifest, `status.json`, and `sync-check.md`
 
 ## Gate 8: Delivery Manifest
 
@@ -157,6 +184,10 @@ Required fields:
     "draft_path": "client-package/<name>-draft.pptx",
     "reviewed_path": "client-package/<name>-reviewed.pptx",
     "slide_count": 25,
+    "editability": "native_powerpoint|hybrid_editable",
+    "editable_text_shape_count": 0,
+    "branded_deck_source_path": "client-package/genspark-deck/deck.html",
+    "branded_deck_recreated": true,
     "qa_status": "passed",
     "officecli": {
       "status": "passed",
@@ -164,17 +195,32 @@ Required fields:
       "required": true
     }
   },
+  "genspark": {
+    "used": true,
+    "project_url": "https://www.genspark.ai/agents?id=<id>",
+    "project_id": "<id>",
+    "hosted_editable_reference": true,
+    "recovered_html_path": "client-package/<capture>/html",
+    "evidence_clean_scan_status": "passed",
+    "unsupported_datapoints_removed": 0,
+    "hosted_source_sync_status": "in_sync|needs_manual_sync|not_applicable"
+  },
   "html": {
     "local_path": "client-package/site/index.html",
     "publish_source_path": "client-package/pages/<slug>/index.html",
     "public_url": "https://<owner>.github.io/<repo>/<slug>/?v=<sha>",
+    "self_contained": true,
+    "public_url_verified": true,
     "qa_status": "passed"
   },
   "evidence": {
     "ledger_path": "outputs/evidence-ledger.csv",
+    "allowed_numbers_path": "outputs/allowed-numbers.yaml",
     "row_count": 0,
     "story_promoted_count": 0
   },
+  "sync_check_path": "outputs/sync-check.md",
+  "status_path": "status.json",
   "published_commit": "<sha-or-null>",
   "updated_at": "<ISO-8601>"
 }
@@ -184,8 +230,16 @@ Fail conditions:
 
 - `reviewed_path` is missing when the user asked for PPTX
 - OfficeCLI status is missing or not `passed` while PPTX artifact status is `reviewed`
+- final client PPTX was not recreated through `genspark-branded-deck` and no explicit user waiver exists
+- final PPTX is image-only and no explicit user waiver exists
+- final PPTX contains visible numbers that do not trace to upstream AI Analyst dataset artifacts
+- final PPTX editability count is missing or zero
+- evidence-clean scan status is missing for Genspark-derived slides
+- self-contained HTML is missing for final client delivery
 - public URL is missing when the user asked for a shareable/team HTML URL
 - public URL was not verified after publish
+- `outputs/sync-check.md` is missing
+- `status.json` is missing or stale
 - manifest says `reviewed` while PPTX or HTML QA is missing
 
 ## Gate 9: Final Response Checklist
@@ -199,6 +253,8 @@ Final response must state:
 - PPTX path and slide count
 - HTML local path and public URL when requested
 - delivery manifest path
+- `status.json` current stage/status
+- `outputs/sync-check.md` result
 - QA checks run, including OfficeCLI command/result path/status
 - review gates used
 - unresolved evidence gaps or waived gates

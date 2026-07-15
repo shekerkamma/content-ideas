@@ -148,9 +148,11 @@ final_delivery:
     source: "owned deck.html/theme.css/deck.css"
     output: "client-package/genspark-deck/build/<name>-draft.pptx"
     editability: "hybrid_editable or native_powerpoint"
+    allowed_numbers: "outputs/allowed-numbers.yaml"
     required_qa:
       - "contact-sheet review"
       - "visible unsupported-number scan"
+      - "editable text-shape count"
       - "OfficeCLI or documented equivalent"
   html:
     source: "self-contained static index.html"
@@ -168,6 +170,8 @@ final_delivery:
       - "PPTX path and editability"
       - "HTML local and public URL"
       - "evidence-clean scan status"
+      - "editable text-shape count"
+      - "allowed-number path"
       - "sync status across hosted, PPTX, and HTML artifacts"
 ```
 
