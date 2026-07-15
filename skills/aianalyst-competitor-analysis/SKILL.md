@@ -7,7 +7,7 @@ description: "Use when the user wants competitor analysis run as an AI Analyst e
 
 Run competitor analysis as a data product: sources become an evidence dataset, metrics are defined before scoring, findings are validated like analysis outputs, and client artifacts are generated only after QA.
 
-Use this skill when competitor work needs deeper quantitative/evidence handling than `competitor-analysis-pipeline` alone. Read [references/dataset-contract.md](references/dataset-contract.md) before building or revising the evidence ledger. Read [references/you-com-search-plan.md](references/you-com-search-plan.md) before running You.com discovery or livecrawl retrieval. Read [references/datapoint-extraction.md](references/datapoint-extraction.md) before extracting quantitative proof from crawled pages, PDFs, press releases, case studies, reviews, or internal datasets. Read [references/story-architect-pipeline.md](references/story-architect-pipeline.md) before building the PPTX or HTML storyboard. Read [references/quality-gates.md](references/quality-gates.md) before rendering or publishing client artifacts.
+Use this skill when competitor work needs deeper quantitative/evidence handling than `competitor-analysis-pipeline` alone. Read [references/prompt-fit-checklist.md](references/prompt-fit-checklist.md) and [references/effective-competitor-analysis-prompt.md](references/effective-competitor-analysis-prompt.md) before framing the analytical question. Read [references/dataset-contract.md](references/dataset-contract.md) before building or revising the evidence ledger. Read [references/you-com-search-plan.md](references/you-com-search-plan.md) before running You.com discovery or livecrawl retrieval. Read [references/datapoint-extraction.md](references/datapoint-extraction.md) before extracting quantitative proof from crawled pages, PDFs, press releases, case studies, reviews, or internal datasets. Read [references/story-architect-pipeline.md](references/story-architect-pipeline.md) before building the PPTX or HTML storyboard. Read [references/genspark-slides-delivery.md](references/genspark-slides-delivery.md) before using hosted Genspark AI Slides. Read [references/final-client-delivery.md](references/final-client-delivery.md) before building the final branded PPTX, self-contained HTML, or GitHub Pages package. Read [references/quality-gates.md](references/quality-gates.md) before rendering or publishing client artifacts.
 
 ## Runtime Preamble
 
@@ -35,6 +35,11 @@ runs/<YYYY-MM-DD>-<target>-aianalyst-competitor-analysis/
 │   ├── build_deck.py
 │   ├── *-draft.pptx
 │   ├── *-reviewed.pptx
+│   ├── genspark-deck/
+│   │   ├── deck.html
+│   │   ├── theme.css
+│   │   ├── deck.css
+│   │   └── build/
 │   ├── site/index.html
 │   ├── pages/<slug>/index.html
 │   ├── delivery-manifest.json
@@ -48,6 +53,7 @@ If the user is continuing an existing run, preserve its folder and add missing A
 
 1. **Frame the analytical question.**
    Convert the request into a decision question, audience, target company/product, competitor arenas, geography, timeframe, required artifacts, and success criteria. If the user asks for a minimum slide count, treat it as a hard requirement.
+   First run the prompt-fit checklist. Then fill the effective competitor-analysis prompt from [references/effective-competitor-analysis-prompt.md](references/effective-competitor-analysis-prompt.md). If the user's prompt is a launch report, market report, generic vendor list, or oversized template, compress it into this competitor-analysis decision prompt before research or writing. Save the operating prompt in `inputs/operating-prompt.yaml` and, when the original prompt was changed, save `outputs/prompt-fit-review.md`.
 
 2. **Run recall before new research.**
    Use GBrain/durable memory and repo-local prior runs first. Record recall status in `status.json` or run notes. If GBrain is unavailable, continue and document the fallback.
@@ -94,14 +100,18 @@ If the user is continuing an existing run, preserve its folder and add missing A
     Use [references/quality-gates.md](references/quality-gates.md). Do not build PPTX/HTML until required analytical outputs exist, traceability is mapped, datapoint coverage is summarized, search-again triggers are resolved or explicitly waived, and the story-architect pack reflects the latest grill-me critique.
 
 14. **Build client artifacts.**
-    Use the branded PPTX workflow for native `.pptx`; never use an ad hoc blank deck. Build a self-contained interactive HTML page with one-to-one tabs/sections. The datapoints and evidence rows must appear in main narrative sections, not only in appendix or notes. Produce both a reviewed PPTX and a shareable HTML URL when the user asks for client-ready artifacts.
+    Use [references/final-client-delivery.md](references/final-client-delivery.md). When hosted generation is useful or requested, first use `genspark-slides` / Genspark AI Slides for deck generation, expansion, and recoverable editable project creation. Feed it the validated story-architect pack, evidence-led datapoints, final slide spine, allowed-number list, and banned unsupported datapoints; then recover/capture the generated slides, QA them, and keep the Genspark project URL as an upstream editable/reference artifact. If Genspark under-generates, request one expansion pass with specific missing sections. If unsupported datapoints remain after the first correction pass, stop regenerating and clean the recovered artifact deterministically using [references/genspark-slides-delivery.md](references/genspark-slides-delivery.md).
+
+    Final delivery must then recreate/package the deck through `genspark-branded-deck` from owned `deck.html`, `theme.css`, and `deck.css`, using the evidence-clean story and recovered Genspark output only as reference. The final delivery PPTX must be editable: use the `genspark-branded-deck` hybrid-editable path at minimum, or `branded-pptx-deck` when fully native editable PowerPoint shapes/charts are required. Image-only PPTX exports are allowed only as QA/reference drafts, not final delivery. Do not stop at a hosted Genspark URL or recovered export when a client-ready final package is required. Build a self-contained interactive HTML report at `client-package/site/index.html` and, when a shareable URL is requested, stage/publish it through the GitHub Pages path. The datapoints and evidence rows must appear in main narrative sections, not only in appendix or notes.
 
 15. **QA, publish, and manifest.**
-    Run PPTX render/preview QA, mandatory OfficeCLI QA for reviewed PPTX status, text-overflow checks, and Playwright HTML navigation checks. If OfficeCLI is unavailable or fails for environmental reasons, keep the PPTX status `draft` or `blocked` unless the user explicitly accepts an unreviewed deck. If publishing to GitHub Pages, push the final HTML and verify the live URL with a cache-busting query string. Write `client-package/delivery-manifest.json` with PPTX path, slide count, local HTML path, public HTML URL, commit SHA when published, OfficeCLI result path/status, QA status, and artifact status.
+    Run branded-deck render/contact-sheet QA, mandatory OfficeCLI QA for reviewed PPTX status, text-overflow checks, and Playwright HTML navigation checks. If OfficeCLI is unavailable or fails for environmental reasons, keep the PPTX status `draft` or `blocked` unless the user explicitly accepts an unreviewed deck. If publishing to GitHub Pages, push the final self-contained HTML and verify the live URL with a cache-busting query string. Write `client-package/delivery-manifest.json` with hosted Genspark URL when used, branded deck source path, PPTX path, slide count, local HTML path, public HTML URL, commit SHA when published, OfficeCLI result path/status, QA status, sync status, and artifact status.
 
 ## AI Analyst Rules
 
 - Treat external research as data, not prose notes.
+- Use the prompt-fit checklist to prevent overbroad launch-report prompts from driving competitor-analysis outputs. A long prompt can be kept as a QA checklist, but the operating prompt must center on the competitive decision.
+- Use the effective competitor-analysis prompt as the default operating prompt, not a broad launch-report or generic market-map prompt.
 - Use explicit dataset IDs, schemas, metric specs, row counts, and confidence labels.
 - Preserve raw evidence enough to rerun or audit the analysis.
 - Capture both numeric datapoints and structured qualitative datapoints; many competitor signals are binary, categorical, dated, or named-customer proof rather than pure metrics.
@@ -111,6 +121,12 @@ If the user is continuing an existing run, preserve its folder and add missing A
 - Distinguish vendor-published proof, third-party proof, analyst proof, and internal/customer proof.
 - If internal CRM/product/support data is supplied, connect it as a separate dataset and join only through explicit keys or documented assumptions.
 - Do not claim precision from scraped/web evidence that the data cannot support.
+- Supported numbers must be plugged into the deck/report with the correct source label and caveat; unsupported numbers must be removed or replaced with qualitative language.
+- Do not repeatedly ask Genspark to regenerate slides to repair evidence issues. Use a bounded generation loop, then deterministic cleanup and QA.
+- Final client delivery requires both a recreated branded PPTX through `genspark-branded-deck` and a self-contained HTML artifact unless the user explicitly scopes one artifact out.
+- Hosted Genspark output is useful upstream, but it is not the complete final delivery package by itself.
+- Final delivery slides must be editable and must use evidence-based numbers from upstream AI Analyst dataset artifacts: `evidence-ledger.csv`, `metric-definitions.md`, `data-quality-report.md`, `scoring-model.md`, `competitor-brief.md`, and `story-architect-pack.md`.
+- Image-only slide exports are not acceptable final deliverables unless the user explicitly waives editability; keep them as drafts or QA references.
 
 ## Output Standards
 
@@ -125,6 +141,7 @@ Final response must include:
 - run folder
 - evidence ledger row count
 - PPTX path and slide count
+- branded deck source path
 - HTML local path and public URL when client-ready sharing was requested
 - delivery manifest path
 - QA status, including OfficeCLI status for PPTX
@@ -140,7 +157,9 @@ Final response must include:
 - `ai-analyst` conventions for dataset, metric, validation, and presentation discipline
 - `grill-me` for pressure-testing
 - `story-architect` for storyboard
-- `branded-pptx-deck` for native client PPTX
+- `genspark-slides` for Genspark AI Slides generation, recovered HTML, editable hosted project, and visual/export QA
+- `genspark-branded-deck` for final branded PPTX recreation from owned HTML/CSS after evidence cleanup, using its hybrid-editable path for final delivery
+- `branded-pptx-deck` when the client needs fully native PowerPoint shapes/charts or re-layoutable slides
 
 ### Handoffs
 
@@ -150,11 +169,15 @@ Final response must include:
 | `ai-analyst/run-analysis` concepts | embedded analysis method | metric definitions, data quality report, scoring model |
 | `grill-me` | review gate | structure/content/scoring critique |
 | `story-architect` | mandatory narrative pipeline | BLUF, audience decision, tension, argument arc, slide spine, evidence map, content cuts, rebuild instructions |
-| `branded-pptx-deck` | downstream artifact | `*-reviewed.pptx` |
+| `genspark-slides` | upstream hosted slide generation/reference | Genspark project/viewer, recovered slide HTML, rendered references, QA notes |
+| `genspark-branded-deck` | downstream final PPTX recreation | branded `deck.html`, `theme.css`, `deck.css`, contact-sheet QA, hybrid-editable `*-reviewed.pptx`; image exports only as draft/reference |
+| `branded-pptx-deck` | alternate downstream PPTX rebuild | fully native/re-layoutable `*-reviewed.pptx` when explicitly required |
 | `competitor-analysis-pipeline` | peer/base pipeline | publishing and delivery QA |
 
 ## Gotchas
 
+- **Launch-report trap:** do not let sections such as supply chain, packaging design, generic launch tactics, or market-size theater distract from the competitive decision. Use them only if they directly affect the competitor analysis.
+- **Volume trap:** a 12,000-18,000 word target can produce a worse answer when the decision requires a tight brief, battlecard, or proof plan. Prefer decision density over length.
 - **Appendix trap:** evidence-led datapoints belong in the main storyline; an appendix can support, not carry, the argument.
 - **Story-pipeline trap:** do not jump from evidence ledger to PPTX. Build and QA the story-architect pack first, then render artifacts from that slide spine.
 - **Traceability trap:** do not ship slides or sections that cannot be traced to `claim_id`s, defined metrics, or labeled interpretation.
@@ -164,3 +187,8 @@ Final response must include:
 - **Vendor-proof trap:** case studies and vendor pages are useful but must be labeled as vendor-published unless independently verified.
 - **Dataset trap:** do not use `.knowledge` files for secrets or raw credentials.
 - **Generic-search trap:** generic web search is fallback/verification, not the starting point.
+- **Genspark-regeneration trap:** repeated slide regeneration can introduce new unsupported metrics. Expand once when scope is thin, then patch recovered slide content deterministically.
+- **Editable-export trap:** a local image-based PPTX export from Genspark capture is not the editable source of truth. The hosted Genspark project is editable unless a native PowerPoint rebuild is performed.
+- **Unsupported-number trap:** do not leave supported numbers out and do not keep unsupported numbers in. Maintain an allowed-number list and scan visible slide text before delivery.
+- **Final-package trap:** do not call the run delivered after a Genspark project or PPTX alone. Final delivery includes a recreated `genspark-branded-deck` PPTX plus self-contained HTML, with GitHub Pages publication when requested.
+- **Image-deck trap:** do not deliver image-only slides as the final PPTX. Final client decks must be editable and must carry evidence-based numbers from the AI Analyst artifacts.
