@@ -1,5 +1,5 @@
 {
-  "artifact_status": "reviewed_local_pages_ready",
+  "artifact_status": "reviewed_published",
   "run_folder": "runs/2026-07-14-beacon-li-competitor-analysis",
   "updated_at": "2026-07-15T04:28:00Z",
   "evidence": {
@@ -61,15 +61,16 @@
       "sections": 16,
       "tabs": 16
     },
-    "public_url": "https://shekerkamma.github.io/content-ideas/beacon-li-competitor-analysis/",
-    "public_url_status": "staged_not_deployed_in_this_run",
-    "public_url_verified": false,
-    "publish_workflow": ".github/workflows/beacon-competitor-analysis-pages.yml"
+    "public_url": "https://shekerkamma.github.io/content-ideas/beacon-li-competitor-analysis/?v=23edc73",
+    "public_url_status": "published",
+    "public_url_verified": true,
+    "publish_source": "gh-pages",
+    "published_commit": "23edc73"
   },
   "sync_status": {
     "hosted_genspark_to_final_deck": "used_as_reference_after_evidence_cleanup",
     "final_deck_to_html": "aligned_on_core_story_and_supported_numbers",
     "pages_source": "synced_from_client-package/site/index.html"
   },
-  "delivery_note": "Final local artifacts are reviewed. GitHub Pages source is staged and ready for the existing manual Pages workflow; deployment was not triggered in this run."
+  "delivery_note": "Final local artifacts are reviewed. GitHub Pages was published from the gh-pages branch and verified with HTTP 200."
 }
