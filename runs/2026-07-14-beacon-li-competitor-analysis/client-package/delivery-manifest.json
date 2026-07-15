@@ -1,0 +1,75 @@
+{
+  "artifact_status": "reviewed_local_pages_ready",
+  "run_folder": "runs/2026-07-14-beacon-li-competitor-analysis",
+  "updated_at": "2026-07-15T04:28:00Z",
+  "evidence": {
+    "ledger_path": "outputs/evidence-ledger.csv",
+    "row_count": 588,
+    "upstream_artifacts_used": [
+      "outputs/evidence-ledger.csv",
+      "outputs/metric-definitions.md",
+      "outputs/data-quality-report.md",
+      "outputs/scoring-model.md",
+      "outputs/competitor-brief.md",
+      "outputs/story-architect-pack.md"
+    ],
+    "visible_number_policy": "Final PPTX and HTML use supported Beacon outcome numbers and evidence-led source counts; unsupported benchmark numbers were removed or generalized."
+  },
+  "genspark_hosted_reference": {
+    "used_upstream": true,
+    "project_id": "04aeb865-2499-4d40-871c-f9f6d9b8a133",
+    "project_url": "https://www.genspark.ai/agents?id=04aeb865-2499-4d40-871c-f9f6d9b8a133",
+    "captured_slide_count": 39,
+    "captured_html_path": "client-package/genspark-ai-capture-evidence-clean/html",
+    "role": "Upstream hosted reference only; final delivery deck was recreated through genspark-branded-deck."
+  },
+  "pptx": {
+    "tool": "genspark-branded-deck",
+    "branded_deck_source_path": "client-package/genspark-deck/deck.html",
+    "theme_path": "client-package/genspark-deck/theme.css",
+    "deck_css_path": "client-package/genspark-deck/deck.css",
+    "draft_path": "client-package/genspark-deck/build/beacon-li-competitor-decision-genspark-hybrid-editable-draft.pptx",
+    "reviewed_path": "client-package/genspark-deck/build/beacon-li-competitor-decision-genspark-hybrid-editable-reviewed.pptx",
+    "slide_count": 30,
+    "editability": "hybrid_editable",
+    "editable_text_shape_count": 315,
+    "image_only_final": false,
+    "qa_status": "passed",
+    "qa": {
+      "hybrid_render_path": "client-package/genspark-deck/build/hybrid",
+      "contact_sheets": "client-package/genspark-deck/build/qa/hybrid-source-contact/contact-*.png",
+      "officecli": {
+        "status": "passed",
+        "result_path": "client-package/genspark-deck/build/qa/officecli-hybrid",
+        "validate": "passed",
+        "issues": "passed",
+        "html": "passed",
+        "screenshot": "passed",
+        "required": true
+      },
+      "visible_number_scan": "passed",
+      "contact_sheet_review": "passed"
+    }
+  },
+  "html": {
+    "local_path": "client-package/site/index.html",
+    "publish_source_path": "client-package/pages/beacon-li-competitor-analysis/index.html",
+    "self_contained": true,
+    "qa_status": "passed",
+    "browser_validation": {
+      "status": "passed",
+      "sections": 16,
+      "tabs": 16
+    },
+    "public_url": "https://shekerkamma.github.io/content-ideas/beacon-li-competitor-analysis/",
+    "public_url_status": "staged_not_deployed_in_this_run",
+    "public_url_verified": false,
+    "publish_workflow": ".github/workflows/beacon-competitor-analysis-pages.yml"
+  },
+  "sync_status": {
+    "hosted_genspark_to_final_deck": "used_as_reference_after_evidence_cleanup",
+    "final_deck_to_html": "aligned_on_core_story_and_supported_numbers",
+    "pages_source": "synced_from_client-package/site/index.html"
+  },
+  "delivery_note": "Final local artifacts are reviewed. GitHub Pages source is staged and ready for the existing manual Pages workflow; deployment was not triggered in this run."
+}
