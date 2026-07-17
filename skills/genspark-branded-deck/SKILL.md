@@ -143,10 +143,21 @@ the exact design **and** editable headings, cards, and stats. This is the
 
 *Editable-hybrid caveats:* text reflows if a client heavily rewrites a block
 (shrink-to-fit keeps it inside its slot). Complex vector diagrams remain part of
-the background image (their *labels* are editable, the shapes are not). For a
-deck the client must fully re-layout (move/restyle shapes, native charts), use
-**`branded-pptx-deck`** (pptxkit) instead — or, in Sheker's vault, the
-`presentations:Presentations` chain (`/ce-doc-review` → `vault-presales-pptx-pipeline`).
+the background image (their *labels* are editable, the shapes are not).
+
+**This hybrid is NOT "client-ready" under the `Client-Ready PPTX Design System`**, whose
+rule is explicit: *"Do not flatten full slides into images for the client-ready output."*
+The hybrid's layouts ARE flattened (design background + text boxes on top). It is the
+right tool for fast, pixel-perfect, credit-free visual decks — not for a deck governed by
+that design system.
+
+Route out when the client must re-layout shapes or needs native charts:
+- **`/vault-presales-pptx-pipeline`** — the client-ready path. Builds via **artifact-tool
+  presentation JSX** into 100% native objects (zero pictures), on the design system's
+  L01–L16 layouts, gated by OfficeCLI QA. Globally available. Read its
+  `references/artifact-tool-presentation-jsx.md` first.
+- **`/branded-pptx-deck`** (pptxkit) — native shapes/charts on the branded template, for
+  decks outside the vault design system.
 
 **QA the editable build** by rendering it back. Prefer
 `python3 scripts/officecli_qa.py <pptx> --out <run>/qa/officecli`; if OfficeCLI
@@ -156,10 +167,29 @@ is faithful.
 
 ## Execution: where render.mjs runs
 
-`render.mjs` needs **Playwright + a Chromium-family browser**. In this WSL setup
-that means **Windows node + Windows Chrome** — WSL2 cannot reach a Windows Chrome
-debug port. Windows node also **cannot run scripts from a `\\wsl$` UNC path**, so
-**stage the deck on the Windows filesystem** first:
+`render.mjs` needs **Playwright + a Chromium-family browser**. It does *not* care
+which OS supplies them.
+
+### Preferred: WSL Playwright Chromium (verified 2026-07-16 — use this first)
+
+**No Windows staging, no `GENSPARK_DECK_WORKDIR`, no `cmd.exe`.** Run everything in
+WSL from the run folder, passing WSL's own Playwright Chromium via `--chrome`:
+
+```bash
+CHROME=$(node -e "console.log(require('playwright').chromium.executablePath())")
+node render.mjs        --deck deck.html --out build/png    --chrome "$CHROME"
+node render_hybrid.mjs --deck deck.html --out build        --chrome "$CHROME"
+python3 build_editable_pptx.py --src build --out build/<name>-draft.pptx
+```
+
+Playwright resolves from the repo root (`/home/shekerk/content-ideas/node_modules`),
+so run from there or a subdir of it. Proven end-to-end: 28 slides → 2560×1440 PNGs →
+358 native text boxes → OfficeCLI QA 0 issues.
+
+### Fallback: Windows node + Windows Chrome (only if WSL Chromium is missing)
+
+WSL2 cannot reach a Windows Chrome *debug port*, and Windows node cannot run scripts
+from a `\\wsl$` UNC path — so this path requires staging on the Windows filesystem:
 
 1. Resolve the workdir from `GENSPARK_DECK_WORKDIR` (default
    `C:/Users/<user>/genspark-design-template`).
@@ -167,11 +197,16 @@ debug port. Windows node also **cannot run scripts from a `\\wsl$` UNC path**, s
    `scripts/render.mjs` into it (once; `npm i playwright@1.49.1` there with
    `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1` — it reuses system Chrome).
 3. Run `render.mjs` with **Windows node** (via `cmd.exe /c`).
-4. Run `build_pptx.py` and `contact_sheet.py` with **WSL python** against the
-   PNGs (both filesystems see `/mnt/c/...`).
+4. Run `build_pptx.py` and `contact_sheet.py` with **WSL python** against the PNGs.
 
-If Windows Chrome/node is unavailable, set status `blocked` and say the render
-path is missing — do not ship an unrendered deck.
+**This fallback is unavailable whenever WSL interop is off** — check
+`/proc/sys/fs/binfmt_misc/WSLInterop`. If it doesn't exist, no Windows binary
+(`cmd.exe`, `powershell.exe`, Windows node) can execute from WSL at all, and the
+WSL-Chromium path above is the *only* one that works. That was the state on
+2026-07-16.
+
+Only if **both** paths are unavailable: set status `blocked` and say the render path
+is missing — do not ship an unrendered deck.
 
 ## Portable paths
 
@@ -232,6 +267,19 @@ generator instead of this branded HTML/CSS template pipeline.
 
 ---
 
+## Visual sourcing (shared rule)
+
+Before building any graphic, run the sourcing gate in
+`~/.claude/skills/ai-graphics/visual-sourcing-rules.md`:
+
+- **DATA** (tables, KPIs, rankings) → native editable objects, never an image.
+- **A reference image of the exact graphic exists** → EXTRACT & PLACE EXACTLY (high-DPI crop
+  + auto-trim + background-match). Never reconstruct — a hand-drawn copy drifts from the original.
+- **No reference** → AUTHOR by type: HTML/CSS for boxes-and-labels, SVG for true geometry,
+  React for components. Ship the source file beside the PNG.
+
+Match the graphic's background to the surface, and cite provenance.
+
 ## Skill Relationships
 
 ### Category
@@ -255,7 +303,7 @@ Business Automation
 | `ai-analyst` | Sequential upstream | validated quant findings + charts | analysis JSON / chart PNGs |
 | `vertical-scorer` | Sequential upstream | scored lanes | scorer output md |
 | `mkt-visual-identity` | Sequential upstream | brand tokens for `theme.css` | `tokens.json` |
-| `presentations:Presentations` | Sequential downstream (editable rebuild) | user needs native-editable slides; where installed (vault/Codex) | `deck.html` text + `build/png/*` references → editable `.pptx` |
+| `vault-presales-pptx-pipeline` | Sequential downstream (client-ready rebuild) | deliverable must be client-ready / fully native (design system forbids flattened slides); globally available | `deck.html` text + `build/png/*` as reference → native `.pptx` via artifact-tool JSX |
 | `branded-pptx-deck` | Sequential downstream (editable rebuild) | native-editable slides on this machine | `deck.html` text + PNG refs → editable `.pptx` |
 | `genspark-slides` | Alternative / Peer | want Genspark's own generator (credits) | genspark project URL |
 | `marp` | Alternative / Peer | markdown → HTML/PPTX preferred | — |
@@ -291,3 +339,12 @@ At invocation, surface this to the user:
   write a new filename, don't overwrite.
 - **Status before delivery:** label `draft` / `reviewed` / `blocked` with matching
   filename suffixes. Never present an unreviewed deck as final.
+
+## Images & visuals — route to `ai-graphics`
+
+This skill deliberately **flattens** design backgrounds (that is why it is not client-ready). That is fine for the *background* — but **slide text must be live text boxes over the design, never baked into an image by a model**. Generate the background via HTML/SVG → screenshot, not an image model, so nothing text-bearing is rasterized blind. Full contract + live route status: `~/.claude/skills/ai-graphics/deck-image-routing.md`.
+
+- **HTML/SVG → screenshot is the default** (`~/.claude/skills/ai-graphics/scripts/html_to_png.mjs`): free, deterministic, perfect text, ships an editable `.html`. Use it for every visual that carries text.
+- **Image models are for text-free organic/illustrative regions only** (`~/.claude/skills/ai-graphics/scripts/omniroute_image.py`) — and are **all blocked as of 2026-07-17** (codex rate-limited to ~2026-07-23, nvidia upstream 404, nano-banana credits depleted). Check the status file before promising one.
+- **Never send text to an image model** — glyphs render as plausible typos that survive review. And **never present generated imagery as client proof**, a real person/facility, or a source for logos/certifications.
+- **A green `ai-graphics` preflight does not mean an image will render** — it tests reachability, not quota. Gate on the status file; confirm with a real render.

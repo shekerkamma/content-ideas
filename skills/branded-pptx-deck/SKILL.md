@@ -166,6 +166,19 @@ recipes (KPI grid, cards, comparison, scorecard, use-case realization, storyboar
 
 ---
 
+## Visual sourcing (shared rule)
+
+Before building any graphic, run the sourcing gate in
+`~/.claude/skills/ai-graphics/visual-sourcing-rules.md`:
+
+- **DATA** (tables, KPIs, rankings) → native editable objects, never an image.
+- **A reference image of the exact graphic exists** → EXTRACT & PLACE EXACTLY (high-DPI crop
+  + auto-trim + background-match). Never reconstruct — a hand-drawn copy drifts from the original.
+- **No reference** → AUTHOR by type: HTML/CSS for boxes-and-labels, SVG for true geometry,
+  React for components. Ship the source file beside the PNG.
+
+Match the graphic's background to the surface, and cite provenance.
+
 ## Skill Relationships
 
 ### Category
@@ -236,3 +249,12 @@ At invocation, surface this to the user:
 - **Status before delivery:** Label all decks explicitly as `draft`, `reviewed`, or `blocked`. Use filename suffixes that match: `*-draft.pptx`, `*-reviewed.pptx`. Never present an unreviewed deck as final.
 - **tokens.json is required for branded output:** If `/mkt-visual-identity` has not been run, the deck will fall back to hardcoded Brand() defaults. Warn the user and proceed with defaults rather than blocking — but note the deck is not on-brand.
 - **Never fork pptxkit.py for re-skinning:** Pass a different `Brand(...)` object instead. Forking creates maintenance drift.
+
+## Images & visuals — route to `ai-graphics`
+
+Native shapes/charts stay native. But **"native deck" is not "no images"** — a cover photo, product shot, screenshot, or conceptual illustration placed *inside* an otherwise native slide is fine. `0 pictures` is a property of content that had no photo, **not a quality target** to protect by redrawing a photograph as shapes. Any raster asset routes through the `ai-graphics` skill; full contract + live route status: `~/.claude/skills/ai-graphics/deck-image-routing.md`.
+
+- **HTML/SVG → screenshot is the default** (`~/.claude/skills/ai-graphics/scripts/html_to_png.mjs`): free, deterministic, perfect text, ships an editable `.html`. Use it for every visual that carries text.
+- **Image models are for text-free organic/illustrative regions only** (`~/.claude/skills/ai-graphics/scripts/omniroute_image.py`) — and are **all blocked as of 2026-07-17** (codex rate-limited to ~2026-07-23, nvidia upstream 404, nano-banana credits depleted). Check the status file before promising one.
+- **Never send text to an image model** — glyphs render as plausible typos that survive review. And **never present generated imagery as client proof**, a real person/facility, or a source for logos/certifications.
+- **A green `ai-graphics` preflight does not mean an image will render** — it tests reachability, not quota. Gate on the status file; confirm with a real render.
