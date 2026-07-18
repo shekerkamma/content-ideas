@@ -58,8 +58,14 @@ Video-specific interpretation:
 - `image-model` is limited to new text-free organic/editorial regions and can
   never replace a missing hyperframe or product screen.
 
+**Capture contract (source of truth):** the hyperframe set is produced by
+`watch --detail scene-complete --resolution 1280` (dense sample + webcam-masked
+perceptual-hash dedup, uncapped) so **every distinct screen** is captured. A
+capped `efficient`/keyframe sample is discovery only and must NEVER drive the
+storyboard — it drops docs pages, whiteboard panels, and demo screens.
+
 Default reconstruction path:
-`hyperframe -> screen-states.json -> visual-sourcing gate -> extracted/authored PNG asset -> native branded PPTX slide shell`.
+`scene-complete capture -> screen-states.json -> visual-sourcing gate -> extracted/authored PNG asset -> native branded PPTX slide shell`.
 
 Optional illustrative path:
 `storyboard need -> text-free image-model prompt -> generated PNG -> fixed image slot inside native/HTML slide shell`.
@@ -84,9 +90,14 @@ run contains the evidence artifacts.
 2. **Evidence gate:** `grill-me` or the manual fallback challenged every
    slide-level claim against the transcript/research and recorded rebuild
    decisions.
-3. **Visual coverage gate:** every meaningful screen-change / hyperframe maps
-   to a slide, recreated visual, grouped duplicate, or explicit skip reason.
-   Presenter-only frames may be excluded, but they must be accounted for.
+3. **Capture-completeness + coverage gate:** the hyperframe manifest MUST come
+   from a `watch --detail scene-complete` pass (dense sample + webcam-masked dHash
+   dedup, uncapped) — **never** a capped `efficient`/keyframe sample. Record the
+   distinct-screen count in the run report. Then every distinct screen maps to a
+   slide, a recreated visual, a grouped duplicate, or an explicit skip reason;
+   presenter-only frames may be excluded but must be accounted for. Building the
+   storyboard from a sparse/capped sample is a **blocking defect** — it silently
+   drops docs pages, whiteboard panels, and demo screens and guts the storyline.
 4. **Client-language gate:** native/authored visible slide text has no internal terms:
    `transcript`, `hyperframe`, `Excalidraw`, `YouTube`, `source`,
    `validation`, `synthesis`, `audit`, `Codex`, `Claude`, file paths, or
@@ -126,11 +137,16 @@ Invoke the `/watch` skill on the provided video URL.
 - Extract the full transcript and key visual frames
 - Identify the core topic, thesis, and structure
 - Produce a structured summary: title, sections, key insights, notable visuals
-- For the first full-video visual pass, invoke watch with `--detail efficient`
-  only for discovery. For screen recordings, product demonstrations, IDEs,
-  terminals, collaboration tools, or visually dense videos, follow discovery
-  with `scripts/extract_screen_states.py` at 1-2 fps. The coverage pass is the
-  manifest source of truth; a 50-keyframe discovery pass is not sufficient.
+- **Primary hyperframe capture: invoke watch with `--detail scene-complete
+  --resolution 1280`.** This is the screencast-optimized coverage pass — watch
+  densely samples (1 fps), masks the presenter-webcam corner, and keeps every
+  DISTINCT screen via a perceptual-hash + stability dedup (uncapped). The
+  storyboard is then built from ALL scene changes, not a sparse sample. A
+  50-keyframe `efficient` pass is discovery ONLY and is **not** sufficient: it
+  drops docs pages, whiteboard panels, and demo screens, gutting the storyline.
+  Use `efficient` only for a fast topical scan, never as the manifest source of
+  truth. (`scene-complete` supersedes the older two-step efficient +
+  `extract_screen_states.py` coverage pass.)
 - For long videos or visually dense sections, use the efficient pass to find
   candidate sections, then re-run watch on those exact ranges with
   `--start`/`--end`, `--timestamps`, or a higher detail mode only where needed.
@@ -292,7 +308,12 @@ scorecard, slide, or layout-heavy visual.
   `<asset.png>.provenance.json` sidecar and feed its fields into
   `visual-spec.json`.
 
-**Route A — Excalidraw conceptual recreation (default):**
+**Route A — Excalidraw conceptual recreation (NOT the default; opt-in only):**
+Route 0 is the default for every screencast, product demo, IDE/terminal, browser,
+docs, or dashboard video — recreate each screen as an extracted/authored PNG asset
+on a native slide. Use Route A **only** when the user explicitly wants a hand-drawn
+whiteboard aesthetic for genuinely conceptual/framework content, and never for
+product/UI/demo screens (those are `exact-source-evidence` → Route 0 extract).
 Invoke the `/excalidraw` skill using the key frames and transcript from
 `/watch`.
 - Recreate every meaningful diagram/text hyperframe as one or more editable
@@ -475,7 +496,7 @@ Business Automation
 | `content-research` | Sequential upstream | always — enriches transcript with Exa research | `<topic>-research.md` |
 | `ai-analyst` | Sequential upstream | required when exposed before visualization/PPTX rendering | `<topic>-analyst-story-pack.md/json`, BLUF, evidence map, slide spine |
 | `pptx-visual-spec` | Behavioral overlay | every visualization and PPTX build | `<topic>-visual-spec.json` |
-| `excalidraw` | Sequential downstream | default for conceptual models, frameworks, workflows, and non-technical visuals | `<topic>-concept.excalidraw` + preview |
+| `excalidraw` | Sequential downstream | **opt-in only** — hand-drawn whiteboard aesthetic for genuinely conceptual content; NEVER for product/UI/demo screens (those are Route 0 extract) | `<topic>-concept.excalidraw` + preview |
 | `explainer-graphic` | Alternative / Peer | when a polished infographic or analogy is better than an editable diagram | `<topic>-explainer.html` |
 | `architecture-presentation` | Alternative / Peer | when the video is technical architecture or solution architecture | `<topic>-architecture.drawio`, `.md`, `.pptx` |
 | `marp` | Alternative / Peer | marp for markdown-first decks; video-to-deck chains architecture-presentation for .pptx | `<topic>-architecture.pptx` |
@@ -486,7 +507,8 @@ Business Automation
 
 At invocation, say:
 - "Running /video-to-deck — 4-stage pipeline: watch → research → visual route selection → branded PPTX deck/package."
-- "Visuals route per asset: exact evidence → extract; structured/textual → native or HTML/SVG; text-free organic illustration → built-in image generation."
+- "Capture is `watch --detail scene-complete` (every distinct screen, deduped) — the manifest source of truth; a capped efficient sample is discovery only."
+- "Visuals route per asset: exact evidence → extract; structured/textual → native or HTML/SVG; text-free organic illustration → built-in image generation. Each screen becomes a recreated PNG asset on a native editable slide — never a raw talking-head screenshot, never redraw-and-discard."
 - If video is >15 minutes: "This video is long — consider passing a `--start`/`--end` range to focus the deck."
 - Config file at `~/.claude/skills/video-to-deck/config.json` — if missing, onboarding questions will run first.
 
@@ -494,6 +516,8 @@ At invocation, say:
 
 ## Gotchas
 
+- **Never build the storyboard from a capped sample.** Capture with `watch --detail scene-complete` (dense sample + webcam-masked dHash dedup, uncapped) — the manifest source of truth. A 50-keyframe `efficient` pass silently drops docs pages, whiteboard panels, and demo screens and guts the storyline; it is discovery only. Record the distinct-screen count in the run report (Gate 3).
+- **Recreate screens; never scrape-and-paste, never redraw-and-discard.** Each hyperframe is a *reference image*: extract exact UI/app frames as cropped PNGs, author diagrams/whiteboards/screens as HTML/SVG → PNG (keep the source), then place the PNG as the primary visual on an otherwise-native slide (live title/callouts/captions). Do not paste raw talking-head-laden frames, and do not redraw a screen as native shapes only to throw the recreated image away (that is what guts the visuals). Excalidraw/native-redraw is opt-in for conceptual content only.
 - **Never proceed past Stage 1 with empty transcript.** If `/watch` fails, stop and report. An empty transcript produces a fabricated deck.
 - **Always use Exa for Stage 2 research, not basic WebSearch.** Exa + Firecrawl produce richer grounding than generic search.
 - **Always wire `ai-analyst` upstream when exposed.** The analyst story pack is
