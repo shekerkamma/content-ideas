@@ -58,7 +58,8 @@ Refine Goal -> Select Skill Chain -> Execute Pass -> Verify -> Improve -> Repeat
    or deck rendering.
 6. **Use client-ready PPTX skills for decks.** Slide deck, executive deck,
    board deck, PowerPoint, client-ready presentation → `branded-pptx-deck`
-   after upstream validation. No ad hoc slides.
+   after upstream validation, with a validated `pptx-visual-spec` handoff. No ad hoc slides
+   or independent image-provider selection in this orchestrator.
 7. **Every pass needs a handoff.** Each pass must leave enough context for the
    next pass to continue without re-asking or guessing.
 8. **Verification gates completion.** Generation is not completion.

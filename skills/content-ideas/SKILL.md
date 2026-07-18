@@ -521,6 +521,9 @@ For any client-facing PPTX generated downstream, the deck must use the branded
 PowerPoint template/workflow (`/branded-pptx-deck` / `pptxkit`, backed by
 `BRANDED_PPTX_TEMPLATE`, falling back to
 `~/.claude/templates/branded-template.pptx` when unset).
+It must also create and validate `<run>/visual-spec.json` under the mandatory
+`pptx-visual-spec` overlay and pass that artifact to the direct builder. This upstream skill
+does not choose image-generation providers itself.
 Do not fall back to an unbranded blank `.pptx` just to complete the pipeline.
 Also require structured content on every slide; the PPTX stage is not complete
 if it only contains headings and loose bullets without the branded content

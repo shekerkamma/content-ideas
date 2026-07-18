@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Video-to-deck screen-state manifest",
+  "type": "object",
+  "required": ["video", "fps", "sampled_frame_count", "candidate_state_count", "states"],
+  "properties": {
+    "video": {"type": "string"},
+    "fps": {"type": "number", "exclusiveMinimum": 0},
+    "sampled_frame_count": {"type": "integer", "minimum": 1},
+    "candidate_state_count": {"type": "integer", "minimum": 1},
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "timestamp_seconds", "state_frame", "class", "route", "disposition"],
+        "properties": {
+          "id": {"type": "string"},
+          "timestamp_seconds": {"type": "number", "minimum": 0},
+          "state_frame": {"type": "string"},
+          "class": {"type": "string"},
+          "meaningful": {"type": ["boolean", "null"]},
+          "route": {"enum": ["unassigned", "extract", "html/css", "svg", "excalidraw", "pptx-native", "image-model", "skip"]},
+          "asset": {"type": ["string", "null"]},
+          "provenance": {"enum": ["source-extracted", "authored", "generated", "not-applicable"]},
+          "prompt_file": {"type": ["string", "null"]},
+          "execution_path": {"type": ["string", "null"]},
+          "auth_mode": {"type": ["string", "null"]},
+          "orchestration_model": {"type": ["string", "null"]},
+          "requested_engine": {"type": ["string", "null"]},
+          "resolved_engine": {"type": ["string", "null"]},
+          "slide_ids": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+          "disposition": {"enum": ["pending", "placed", "grouped", "omitted", "skipped"]},
+          "reason": {"type": ["string", "null"]},
+          "qa": {
+            "type": "object",
+            "properties": {
+              "visual_checked": {"type": "boolean"},
+              "legible": {"type": "boolean"},
+              "not_cropped": {"type": "boolean"},
+              "embedded_exactly": {"type": "boolean"},
+              "text_free": {"type": "boolean"},
+              "not_evidence": {"type": "boolean"}
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  }
+}

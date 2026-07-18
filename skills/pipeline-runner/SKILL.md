@@ -259,6 +259,10 @@ PIPELINE: {title}
 
 ## Stage 4: Branded PPTX Deck
 
+Create and validate `<run>/visual-spec.json` under the mandatory `pptx-visual-spec`
+overlay, then pass it to the deck builder. The pipeline runner does not select an image
+provider independently.
+
 Invoke `/branded-pptx-deck` to generate a multi-slide presentation from the
 use case data. The deck uses `pptxkit` from the branded-pptx-deck skill and
 follows the Canva-adapted use case realization layout.

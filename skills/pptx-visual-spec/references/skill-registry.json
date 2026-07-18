@@ -1,0 +1,53 @@
+{
+  "contract_version": "1.1",
+  "contract": {
+    "name": "pptx-visual-spec",
+    "source": "skills/pptx-visual-spec",
+    "install_hosts": ["claude", "codex", "agents", "project-agents"]
+  },
+  "host_roots": {
+    "claude": {"env": "CLAUDE_SKILLS_HOME", "default": ".claude/skills"},
+    "codex": {"env": "CODEX_SKILLS_HOME", "default": ".codex/skills"},
+    "agents": {"env": "AGENTS_SKILLS_HOME", "default": ".agents/skills"},
+    "project-agents": {"repo_relative": ".agents/skills"}
+  },
+  "skills": [
+    {"name": "branded-pptx-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/branded-pptx-deck"},
+    {"name": "genspark-branded-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/genspark-branded-deck"},
+    {"name": "video-to-deck", "tier": "orchestrator-builder", "ownership": "repo", "source": "skills/video-to-deck"},
+    {"name": "gcc-roadmap", "tier": "direct-builder", "ownership": "repo", "source": ".agents/skills/gcc-roadmap"},
+    {"name": "ikigai-gamma-slidedeck", "tier": "orchestrator-builder", "ownership": "repo", "source": ".agents/skills/ikigai-gamma-slidedeck"},
+    {"name": "enterprise-ai-competitor-landscape", "tier": "orchestrator", "ownership": "repo", "source": ".agents/skills/enterprise-ai-competitor-landscape"},
+    {"name": "competitor-analysis-pipeline", "tier": "orchestrator", "ownership": "repo", "source": "skills/competitor-analysis-pipeline"},
+    {"name": "aianalyst-competitor-analysis", "tier": "orchestrator", "ownership": "repo", "source": "skills/aianalyst-competitor-analysis"},
+    {"name": "pipeline-runner", "tier": "orchestrator", "ownership": "repo", "source": "skills/pipeline-runner"},
+    {"name": "strategy-consulting", "tier": "orchestrator", "ownership": "repo", "source": "skills/strategy-consulting"},
+    {"name": "reddit-new-factcheck", "tier": "pptx-modifier", "ownership": "repo", "source": "skills/reddit-new-factcheck"},
+    {"name": "goal-loop-orchestrator", "tier": "orchestrator", "ownership": "repo", "source": "skills/goal-loop-orchestrator"},
+    {"name": "mckinsey-audience-researcher", "tier": "orchestrator", "ownership": "repo", "source": "skills/mckinsey-audience-researcher"},
+    {"name": "content-ideas", "tier": "orchestrator", "ownership": "repo", "source": "skills/content-ideas"},
+    {"name": "research-to-deck", "tier": "orchestrator-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/research-to-deck"},
+    {"name": "architecture-presentation", "tier": "direct-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/architecture-presentation"},
+    {"name": "genspark-slides", "tier": "external-source-rebuilder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/genspark-slides"},
+    {"name": "ai-analyst", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/ai-analyst", "upstream": "https://github.com/ai-analyst-lab/ai-analyst-plugin", "license": "MIT"},
+    {"name": "officecli", "tier": "pptx-builder-modifier", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/officecli", "install_hosts": ["claude", "codex"]},
+    {"name": "marp", "tier": "image-slide-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/marp"},
+    {"name": "presentation", "tier": "html-slide-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/presentation"},
+    {"name": "analytics-to-comms", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/analytics-to-comms"},
+    {"name": "presales-deal-prep", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/presales-deal-prep"},
+    {"name": "ai-transformation", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/ai-transformation"},
+    {"name": "competitive-intel-sprint", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/competitive-intel-sprint"},
+    {"name": "architecture-to-everything", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/architecture-to-everything"},
+    {"name": "solution-delivery", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/solution-delivery"},
+    {"name": "research-to-strategy", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/research-to-strategy"},
+    {"name": "agentic-wedge-visibility", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/agentic-wedge-visibility"},
+    {"name": "vault-presales-pptx-pipeline", "tier": "direct-builder", "ownership": "external", "root_env": "PPTX_VAULT_ROOT", "source_relative": ".claude/skills/vault-presales-pptx-pipeline", "optional": true}
+  ],
+  "default_install_hosts": ["claude", "codex", "agents"],
+  "external_capabilities": [
+    {"name": "canva", "kind": "host-connector", "discovery": "Canva presentation tool", "fallback_skill": "branded-pptx-deck", "fallback_output": "native branded PPTX"},
+    {"name": "google-slides", "kind": "host-connector", "discovery": "Google Slides tool", "fallback_skill": "branded-pptx-deck", "fallback_output": "PPTX suitable for Google Slides import"},
+    {"name": "gamma", "kind": "host-connector", "discovery": "Gamma presentation generator", "fallback_skill": "presentation", "fallback_output": "locally rendered HTML/PPTX"},
+    {"name": "genspark-ai-slides", "kind": "host-app", "discovery": "Genspark AI Slides creation tool", "fallback_skill": "genspark-branded-deck", "fallback_output": "local Genspark-style PPTX"}
+  ]
+}

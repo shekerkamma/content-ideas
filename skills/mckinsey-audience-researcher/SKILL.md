@@ -387,6 +387,10 @@ CONSTRAINTS
 
 ## Step 5: Synthesize to Branded PPTX JSON
 
+Before compiling the PPTX, apply `pptx-visual-spec`, create and validate
+`<run>/visual-spec.json`, and pass it with `findings.json` to `branded-pptx-deck`.
+Audience evidence, quotes, metrics, and brand assets may not be fabricated by an image model.
+
 **(Converts the raw markdown outputs of Prompts A, B, C, and D into the Universal Branded Compiler schema)**
 
 Once Prompts A, B, C, and D have been executed, you MUST invoke the `ai-analyst` to map all of these findings into a single `findings.json` payload. 

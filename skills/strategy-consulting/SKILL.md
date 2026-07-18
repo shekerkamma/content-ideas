@@ -197,6 +197,11 @@ research dependencies before generic search:
 
 ## Automated Deck Pipeline (findings.json → branded .pptx)
 
+Before compilation, apply `pptx-visual-spec`, create and validate
+`<run>/visual-spec.json`, and pass it with `findings.json` to the selected direct builder.
+Strategy data and claims remain native; this orchestration layer never selects an image
+provider directly.
+
 For an end-to-end "question → client-ready deck" run, after executing the chosen
 framework (above), serialize its output into the Universal Findings Schema and
 compile it with the bundled `compile.py`. Use this when the user wants a deck

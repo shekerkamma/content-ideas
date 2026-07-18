@@ -267,18 +267,13 @@ generator instead of this branded HTML/CSS template pipeline.
 
 ---
 
-## Visual sourcing (shared rule)
+## Shared Visual Contract
 
-Before building any graphic, run the sourcing gate in
-`~/.claude/skills/ai-graphics/visual-sourcing-rules.md`:
-
-- **DATA** (tables, KPIs, rankings) → native editable objects, never an image.
-- **A reference image of the exact graphic exists** → EXTRACT & PLACE EXACTLY (high-DPI crop
-  + auto-trim + background-match). Never reconstruct — a hand-drawn copy drifts from the original.
-- **No reference** → AUTHOR by type: HTML/CSS for boxes-and-labels, SVG for true geometry,
-  React for components. Ship the source file beside the PNG.
-
-Match the graphic's background to the surface, and cite provenance.
+Read `skills/pptx-visual-spec/references/visual-sourcing-rules.md`, then emit and validate
+`<run>/visual-spec.json`. The contract applies to source regions even when this skill's final
+output mode explicitly permits flattened design backgrounds. Exact references remain exact;
+slide text and claims are never image-model output; generated regions are text-free and
+non-evidentiary.
 
 ## Skill Relationships
 
@@ -292,6 +287,7 @@ Business Automation
 - `officecli-qa` — optional final PowerPoint QA gate; uses repo root
   `scripts/officecli_qa.py` when `officecli` is installed.
 - `assets/theme.css` + `assets/deck.css` + a `deck.html` — the template triplet.
+- `pptx-visual-spec` — mandatory visual-routing overlay and schema.
 
 ### Relationships
 
@@ -303,6 +299,7 @@ Business Automation
 | `ai-analyst` | Sequential upstream | validated quant findings + charts | analysis JSON / chart PNGs |
 | `vertical-scorer` | Sequential upstream | scored lanes | scorer output md |
 | `mkt-visual-identity` | Sequential upstream | brand tokens for `theme.css` | `tokens.json` |
+| `pptx-visual-spec` | Behavioral overlay | every image or hybrid deck build | `<run>/visual-spec.json` |
 | `vault-presales-pptx-pipeline` | Sequential downstream (client-ready rebuild) | deliverable must be client-ready / fully native (design system forbids flattened slides); globally available | `deck.html` text + `build/png/*` as reference → native `.pptx` via artifact-tool JSX |
 | `branded-pptx-deck` | Sequential downstream (editable rebuild) | native-editable slides on this machine | `deck.html` text + PNG refs → editable `.pptx` |
 | `genspark-slides` | Alternative / Peer | want Genspark's own generator (credits) | genspark project URL |
@@ -340,11 +337,9 @@ At invocation, surface this to the user:
 - **Status before delivery:** label `draft` / `reviewed` / `blocked` with matching
   filename suffixes. Never present an unreviewed deck as final.
 
-## Images & visuals — route to `ai-graphics`
+## Images And Visuals
 
-This skill deliberately **flattens** design backgrounds (that is why it is not client-ready). That is fine for the *background* — but **slide text must be live text boxes over the design, never baked into an image by a model**. Generate the background via HTML/SVG → screenshot, not an image model, so nothing text-bearing is rasterized blind. Full contract + live route status: `~/.claude/skills/ai-graphics/deck-image-routing.md`.
-
-- **HTML/SVG → screenshot is the default** (`~/.claude/skills/ai-graphics/scripts/html_to_png.mjs`): free, deterministic, perfect text, ships an editable `.html`. Use it for every visual that carries text.
-- **Image models are for text-free organic/illustrative regions only** (`~/.claude/skills/ai-graphics/scripts/omniroute_image.py`) — and are **all blocked as of 2026-07-17** (codex rate-limited to ~2026-07-23, nvidia upstream 404, nano-banana credits depleted). Check the status file before promising one.
-- **Never send text to an image model** — glyphs render as plausible typos that survive review. And **never present generated imagery as client proof**, a real person/facility, or a source for logos/certifications.
-- **A green `ai-graphics` preflight does not mean an image will render** — it tests reachability, not quota. Gate on the status file; confirm with a real render.
+Follow `pptx-visual-spec` and execute raster work through `ai-graphics`. HTML/CSS owns the
+design background and all glyphs. Built-in Codex `image_gen` may fill only declared
+text-free organic slots; it never renders slide copy. Record its prompt and provenance in
+`visual-spec.json`, then inspect the composited background and final PPTX render.

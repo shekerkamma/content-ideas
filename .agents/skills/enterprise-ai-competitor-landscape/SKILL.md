@@ -202,3 +202,9 @@ outputs/white-space.md
 outputs/competitive-threats.md
 outputs/strategic-recommendations.md
 ```
+## Shared PPTX Visual Contract
+
+Any PowerPoint output from this workflow must use the `pptx-visual-spec` behavioral overlay.
+Create and validate `<run>/visual-spec.json` after evidence/story approval and pass it to the
+selected direct deck builder. Competitive data, rankings, company claims, and logos may not
+route to an image model.

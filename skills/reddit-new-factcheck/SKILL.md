@@ -186,6 +186,9 @@ source-level details live.
 When the input is a PPTX, create a review copy of the original deck and annotate
 the source slides directly. Never overwrite the original file. Do not generate a
 standalone summary deck unless the user explicitly asks for one. The annotated
+deck must also create or update `<run>/visual-spec.json` under `pptx-visual-spec`.
+Existing exact slide evidence remains `extract`/`place-asset`; fact-check marks,
+citations, and labels are native. Do not regenerate or redraw the source deck's evidence.
 original deck is the only default client-facing artifact.
 
 Default output naming:

@@ -60,10 +60,16 @@ yourself, validate explicitly.
 2. **Decide the spine.** For executives: lead with the answer (BLUF), an executive-summary
    one-pager, a storyboard of the argument, then proof, then the ask. Write **action
    titles** (every title is a so-what assertion). Honor explicit slide-count minimums.
-3. **Build with `pptxkit`.** Write a builder script that imports `pptxkit` and composes
+3. **Write and validate the visual specification.** Read
+   `skills/pptx-visual-spec/references/visual-sourcing-rules.md`, classify every meaningful
+   visual region, write `<run>/visual-spec.json`, and validate it with
+   `skills/pptx-visual-spec/scripts/validate_visual_spec.py`. Exact-state evidence is
+   extracted; ordinary data and claims remain native; image models are text-free and
+   non-evidentiary.
+4. **Build with `pptxkit`.** Write a builder script that imports `pptxkit` and composes
    slides. Keep brand/mechanics in the kit; keep content in your script. Use
    `shrink=True` on any text box whose length is data-driven.
-4. **Sanitize client-facing text.** Visible slide text must not expose internal production
+5. **Sanitize client-facing text.** Visible slide text must not expose internal production
    language unless the user explicitly asks for an audit appendix. Keep tool names, source
    filenames, timestamps, "synthesis" labels, implementation notes, and validation notes in
    source/run files rather than on client slides. Use client-facing labels such as
@@ -71,7 +77,7 @@ yourself, validate explicitly.
    internal/source terms such as `transcript`, `hyperframe`, `Excalidraw`, `YouTube`,
    `source`, `audit`, `validation`, `synthesis`, `Codex`, `Claude`, file paths, and raw
    timestamps before delivery.
-5. **Validate + preview.** `Deck.save()` auto-validates and raises on malformed XML.
+6. **Validate + preview.** `Deck.save()` auto-validates and raises on malformed XML.
    Then run `python3 scripts/preview_pptx.py <out.pptx>` and actually *look* at the
    contact sheets; fix any overflow before delivering. After that, run the shared
    OfficeCLI QA gate from the repo root:
@@ -80,14 +86,14 @@ yourself, validate explicitly.
    render evidence. If OfficeCLI is skipped or fails, use PowerPoint, LibreOffice
    PDF, Google Slides import, or equivalent because `preview_pptx.py` shows
    pictures as placeholders.
-6. **Declare editability.** For decks with diagrams, record one of these in the run report
+7. **Declare editability.** For decks with diagrams, record one of these in the run report
    and final response: `PPT-native editable diagrams`, `Excalidraw-source editable
    diagrams`, or `non-editable visual render`. If the user asked for editable slides,
    source-layer editability is not enough unless they explicitly accept it.
-7. **Set status honestly.** Use `*-draft.pptx` before QA, `*-reviewed.pptx` only after
+8. **Set status honestly.** Use `*-draft.pptx` before QA, `*-reviewed.pptx` only after
    XML validation, real render QA, visible-text scan, and slide-by-slide content/design
    validation pass, and `blocked` when a required render/editability path is unavailable.
-8. **Deliver.** This user opens decks in Windows PowerPoint from WSL. Copy to
+9. **Deliver.** This user opens decks in Windows PowerPoint from WSL. Copy to
    `/mnt/c/Users/<user>/OneDrive/Desktop/` and open with
    `powershell.exe -NoProfile -Command "Start-Process '<C:\...>'"`. A file open in
    PowerPoint is **locked** — if a re-copy fails with "Permission denied", write the
@@ -166,18 +172,13 @@ recipes (KPI grid, cards, comparison, scorecard, use-case realization, storyboar
 
 ---
 
-## Visual sourcing (shared rule)
+## Shared Visual Contract
 
-Before building any graphic, run the sourcing gate in
-`~/.claude/skills/ai-graphics/visual-sourcing-rules.md`:
-
-- **DATA** (tables, KPIs, rankings) → native editable objects, never an image.
-- **A reference image of the exact graphic exists** → EXTRACT & PLACE EXACTLY (high-DPI crop
-  + auto-trim + background-match). Never reconstruct — a hand-drawn copy drifts from the original.
-- **No reference** → AUTHOR by type: HTML/CSS for boxes-and-labels, SVG for true geometry,
-  React for components. Ship the source file beside the PNG.
-
-Match the graphic's background to the surface, and cite provenance.
+`pptx-visual-spec` is mandatory and overrides duplicated or dated visual-routing prose.
+Read `skills/pptx-visual-spec/references/visual-sourcing-rules.md`; emit and validate
+`<run>/visual-spec.json`. This skill's output mode is `native`: image assets may occupy
+regions inside otherwise-native slides, but titles, claims, data, diagrams that are feasible
+in PowerPoint, captions, and citations remain editable objects.
 
 ## Skill Relationships
 
@@ -189,6 +190,7 @@ Business Automation
 - `preview_pptx.py` — required for QA; lives in `scripts/preview_pptx.py`
 - `officecli-qa` — optional preferred real-render QA; uses repo root
   `scripts/officecli_qa.py` when `officecli` is installed
+- `pptx-visual-spec` — mandatory visual-routing overlay and schema
 
 ### Relationships
 
@@ -201,6 +203,7 @@ Business Automation
 | `ai-analyst` | Sequential upstream | for quant findings + validated charts | analysis JSON / chart PNGs |
 | `vertical-scorer` | Sequential upstream | for scored lane/vertical tables | scorer output markdown |
 | `mkt-visual-identity` | Sequential upstream | when on-brand visuals required | `{brand_context}/visual-identity/tokens.json` |
+| `pptx-visual-spec` | Behavioral overlay | every deck build | `<run>/visual-spec.json` |
 | `presentation-accessibility` | Amplifier downstream | optional post-QA pass | output `.pptx` |
 | `marp` | Alternative / Peer | if markdown slides preferred over .pptx | — |
 | `mcp__claude_ai_Gamma__generate` | Alternative / Peer | if browser-rendered slides preferred | — |
@@ -250,11 +253,9 @@ At invocation, surface this to the user:
 - **tokens.json is required for branded output:** If `/mkt-visual-identity` has not been run, the deck will fall back to hardcoded Brand() defaults. Warn the user and proceed with defaults rather than blocking — but note the deck is not on-brand.
 - **Never fork pptxkit.py for re-skinning:** Pass a different `Brand(...)` object instead. Forking creates maintenance drift.
 
-## Images & visuals — route to `ai-graphics`
+## Images And Visuals
 
-Native shapes/charts stay native. But **"native deck" is not "no images"** — a cover photo, product shot, screenshot, or conceptual illustration placed *inside* an otherwise native slide is fine. `0 pictures` is a property of content that had no photo, **not a quality target** to protect by redrawing a photograph as shapes. Any raster asset routes through the `ai-graphics` skill; full contract + live route status: `~/.claude/skills/ai-graphics/deck-image-routing.md`.
-
-- **HTML/SVG → screenshot is the default** (`~/.claude/skills/ai-graphics/scripts/html_to_png.mjs`): free, deterministic, perfect text, ships an editable `.html`. Use it for every visual that carries text.
-- **Image models are for text-free organic/illustrative regions only** (`~/.claude/skills/ai-graphics/scripts/omniroute_image.py`) — and are **all blocked as of 2026-07-17** (codex rate-limited to ~2026-07-23, nvidia upstream 404, nano-banana credits depleted). Check the status file before promising one.
-- **Never send text to an image model** — glyphs render as plausible typos that survive review. And **never present generated imagery as client proof**, a real person/facility, or a source for logos/certifications.
-- **A green `ai-graphics` preflight does not mean an image will render** — it tests reachability, not quota. Gate on the status file; confirm with a real render.
+Follow `pptx-visual-spec`; route raster execution through `ai-graphics`. In Codex hosts,
+built-in `image_gen` is the primary subscription-backed route for eligible text-free organic
+imagery. OmniRoute/provider state applies only when that adapter is explicitly selected.
+Confirm image availability with an actual render and inspect the placed crop in OfficeCLI.

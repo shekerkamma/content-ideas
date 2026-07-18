@@ -167,3 +167,10 @@ I am using `competitor-analysis-pipeline`, which chains research, structured syn
 - **Consulting appendix trap:** If Accenture, BCG, McKinsey, IBM, Deloitte, or other consultancies shape buyer expectations, integrate them as an arena or force, not just an appendix.
 - **Deck QA trap:** Do not mark a PPTX reviewed until real render/preview QA and text-overflow checks pass.
 - **HTML QA trap:** Do not publish an interactive page until all tabs activate and every section is reachable.
+## Shared PPTX Visual Contract
+
+Whenever this pipeline produces or rebuilds a PowerPoint deck, it must create
+`<run>/visual-spec.json` under the mandatory `pptx-visual-spec` overlay and pass it unchanged
+to `vault-presales-pptx-pipeline`, `branded-pptx-deck`, or `genspark-branded-deck`. Research
+and story stages do not choose image models directly. The selected direct builder owns visual
+execution and validates the spec before `reviewed` delivery.

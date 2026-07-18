@@ -67,6 +67,7 @@ If chaining from `ikigai-gamma-slidedeck`, all inputs are already available in
 - Run folder: `runs/YYYY-MM-DD-<name>-gcc-roadmap/` (standalone)
   OR same run folder as ikigai if chaining: `runs/YYYY-MM-DD-<name>-ikigai/`
 - `build_roadmap_deck.py` — parameterized builder (always generate)
+- `visual-spec.json` — validated shared per-visual routing and provenance
 - `<name>-gcc-roadmap-deck-draft.pptx` — 17-slide validated deck
 - `_preview/contact_*.png` — QA contact sheets
 - Desktop copy at `/mnt/c/Users/sheke/OneDrive/Desktop/<name>-gcc-roadmap.pptx`
@@ -102,6 +103,12 @@ The validated FPT mapping (reference):
 - INNOVATE: DX Garage, Co-Development, White-Label Modules, CxO Quarterly Roadmap
 
 ### Step 3 — Generate build_roadmap_deck.py
+
+Before writing the builder, read `skills/pptx-visual-spec/SKILL.md`, classify every
+meaningful visual region, write `visual-spec.json`, and validate it. This roadmap's tables,
+matrices, timelines, proof points, and claims route to `native`; exact supplied evidence
+routes to `extract`; text-free image generation is allowed only when the shared contract
+classifies a genuine organic visual need.
 
 Use `~/.claude/skills/gcc-roadmap/build_deck_template.py` as the base.
 Substitute all `{{VAR}}` placeholders with extracted values.
@@ -204,3 +211,10 @@ If file locked: write to a new name with `-v2` suffix.
 - build_deck_template.py: `~/.claude/skills/gcc-roadmap/build_deck_template.py`
 - pptxkit API: `~/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
 - Chained from: `~/.claude/skills/ikigai-gamma-slidedeck/SKILL.md` (Stage 3)
+
+## Shared PPTX Visual Contract
+
+`pptx-visual-spec` is a mandatory behavioral overlay and overrides duplicated or dated image
+guidance. Validate `<run>/visual-spec.json` before building and before delivery. Preserve this
+skill's native 17-slide roadmap structure; the overlay changes visual sourcing, not the
+storyline or platform mapping.

@@ -39,6 +39,7 @@ All artifacts land in `runs/YYYY-MM-DD-<name>-ikigai/`:
 |---|---|
 | `<name>-ikigai-report.md` | Full 7-section ikigai report |
 | `build_deck.py` | Parameterized pptxkit builder (always generated — enables offline rebuild) |
+| `visual-spec.json` | Shared visual routing/provenance contract for PPTX generation and rebuilds |
 | `<name>-ikigai-deck-draft.pptx` | pptxkit-built deck (fallback path, or always if Gamma unavailable) |
 | `_preview/contact_*.png` | QA contact sheets (pptxkit path only) |
 | `run-log.md` | Run log with delivery status, deck URL or Desktop path, deck structure |
@@ -186,6 +187,11 @@ Use when:
 - Gamma returns an error or is blocked
 - User explicitly requests a .pptx file instead of Gamma
 
+Before generating `build_deck.py`, read `skills/pptx-visual-spec/SKILL.md`, write
+`visual-spec.json`, and validate it. The Gamma `noImages` setting does not replace this gate
+when Gamma output is later recovered or rebuilt: classify recovered slide regions before
+using them in the final PPTX.
+
 ### Step 1 — Generate build_deck.py
 
 Create `runs/YYYY-MM-DD-<name>-ikigai/build_deck.py` by substituting extracted
@@ -320,6 +326,14 @@ Status: `<gamma-generated | reviewed | draft>`
 - PPTX: <name>-gcc-roadmap-deck-draft.pptx (if generated)
 - Desktop: C:\Users\sheke\OneDrive\Desktop\<filename>.pptx (if generated)
 ```
+
+## Shared PPTX Visual Contract
+
+`pptx-visual-spec` governs both the local pptxkit fallback and any final PPTX rebuilt from
+Gamma references. Exact supplied visuals remain exact; structured content stays native or
+deterministic; image-model regions are text-free, illustrative, and recorded in
+`visual-spec.json`. Hosted Gamma generation remains an upstream reference surface, not an
+exception to provenance and evidence rules.
 
 ---
 

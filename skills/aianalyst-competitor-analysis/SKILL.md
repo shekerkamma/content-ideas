@@ -202,3 +202,11 @@ Final response must include:
 - **Unsupported-number trap:** do not leave supported numbers out and do not keep unsupported numbers in. Maintain an allowed-number list and scan visible slide text before delivery.
 - **Final-package trap:** do not call the run delivered after a Genspark project or PPTX alone. Final delivery includes a recreated `genspark-branded-deck` PPTX plus self-contained HTML, with GitHub Pages publication when requested.
 - **Image-deck trap:** do not deliver image-only slides as the final PPTX. Final client decks must be editable and must carry evidence-based numbers from the AI Analyst artifacts.
+
+## Shared PPTX Visual Contract
+
+For every required PPTX artifact, add `<run>/visual-spec.json` to the artifact-generation
+plan. Apply `pptx-visual-spec` after the evidence/story gates and before any Genspark recovery
+or local PPTX build. Pass the validated spec to the chosen direct builder. Generated imagery
+cannot carry competitor claims, metrics, logos, product proof, or source evidence; those
+remain native, extracted, or approved assets according to the shared contract.

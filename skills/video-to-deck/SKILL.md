@@ -43,32 +43,35 @@ On subsequent runs, load config silently. User can reconfigure with `/video-to-d
 
 ## Visual Routing Rule
 
-Retain the existing workflow, but choose the visual target based on the video's
-content:
+Read and apply the mandatory `pptx-visual-spec` overlay before visualization:
+`skills/pptx-visual-spec/references/visual-sourcing-rules.md`.
 
-- Use `svg` as the preferred reconstruction intermediate when the frame contains
-  precise boxes, arrows, labels, tables, scorecards, architecture-like diagrams,
-  or any layout where coordinates and alignment matter. SVG is for QA and
-  reconstruction, not the final deck asset.
-- Use `html/css` as the preferred reconstruction intermediate when the frame is
-  slide-like, text-heavy, web-like, dashboard-like, or needs typography/layout
-  fidelity. HTML is for QA and reconstruction, not the final deck asset.
-- Use `excalidraw` when the video contains conceptual models, frameworks,
-  whiteboard-style explanations, business workflows, mental models, process
-  maps, teaching diagrams, or visuals that should be recreated in an editable
-  hand-drawn style.
-- Use `architecture-presentation` / `.drawio` when the video is primarily a
-  technical architecture, solution architecture, system design, integration map,
-  cloud topology, data flow, deployment model, or component-level engineering
-  diagram.
-- Use `explainer-graphic` when the deck needs a polished infographic or analogy
-  visual rather than an editable diagram.
+Video-specific interpretation:
+
+- An exact application, IDE, terminal, browser, document, collaboration, or
+  demonstrable product state is `exact-source-evidence` and routes to `extract`.
+  Do not redraw it even when the pixels contain text or numbers.
+- A reference frame used only for its underlying information routes to `native`
+  or the appropriate deterministic `author-*` route.
+- Use Excalidraw only when a hand-drawn editable source is intentionally desired;
+  use Draw.io/architecture-presentation for explicit technical architecture.
+- `image-model` is limited to new text-free organic/editorial regions and can
+  never replace a missing hyperframe or product screen.
 
 Default reconstruction path:
-`hyperframe -> visual-spec.json -> svg/html/excalidraw reconstruction -> QA preview -> editable branded PPTX shapes`.
+`hyperframe -> screen-states.json -> visual-sourcing gate -> extracted/authored PNG asset -> native branded PPTX slide shell`.
 
-Default to `svg` or `html/css` for precise slide recreation. Use Excalidraw
-only when a hand-drawn editable source is actually the desired style.
+Optional illustrative path:
+`storyboard need -> text-free image-model prompt -> generated PNG -> fixed image slot inside native/HTML slide shell`.
+
+Every meaningful hyperframe must produce a persistent visual asset. The PNG is
+placed inside an otherwise-native slide whose title, callouts, captions,
+citations, and footer remain live editable objects. A full-slide flattened image
+is not allowed, but an image asset inside a native slide is the default contract.
+
+The shared contract owns Codex-versus-provider execution rules. This skill's
+Claude bridge remains `scripts/generate_with_codex_cli.py`; use it only for a
+visual already classified as `image-model`.
 
 ## Non-Negotiable Delivery Gates
 
@@ -84,7 +87,7 @@ run contains the evidence artifacts.
 3. **Visual coverage gate:** every meaningful screen-change / hyperframe maps
    to a slide, recreated visual, grouped duplicate, or explicit skip reason.
    Presenter-only frames may be excluded, but they must be accounted for.
-4. **Client-language gate:** extracted visible slide text has no internal terms:
+4. **Client-language gate:** native/authored visible slide text has no internal terms:
    `transcript`, `hyperframe`, `Excalidraw`, `YouTube`, `source`,
    `validation`, `synthesis`, `audit`, `Codex`, `Claude`, file paths, or
    timestamps.
@@ -97,12 +100,16 @@ run contains the evidence artifacts.
    for decks with embedded visuals.
 6. **Editability gate:** declare one editability mode in the run report and
    final response: `PPT-native editable diagrams`, `Excalidraw-source editable
-   diagrams`, or `non-editable visual render`. If the user asks for editable
-   slides and does not accept source-layer editability, rebuild diagrams as
-   native PPT shapes.
+   diagrams`, `hybrid editable`, or `non-editable visual render`. `Hybrid
+   editable` means native slide structure/text plus source-backed PNG evidence
+   and editable HTML/SVG source for authored diagrams.
 7. **Proof gate:** named examples in the source, such as companies/products,
    must survive synthesis as named proof cards unless excluded for a stated
    reason.
+8. **Generated-asset gate:** every image-model asset is text-free, labeled
+   `generated` in provenance, stores its final prompt and resolved engine, and
+   is not presented as evidence. Any generated glyph, logo, UI, person, result,
+   facility, or certification is a blocking defect.
 
 Status rules:
 - Use `*-draft.pptx` before all gates pass.
@@ -120,10 +127,10 @@ Invoke the `/watch` skill on the provided video URL.
 - Identify the core topic, thesis, and structure
 - Produce a structured summary: title, sections, key insights, notable visuals
 - For the first full-video visual pass, invoke watch with `--detail efficient`
-  unless the user explicitly requests a higher-fidelity scan. Efficient mode is
-  the default hyperframe extraction pass for video-to-deck because it uses the
-  updated watch keyframe path, caps the run at 50 frames, drops near-duplicates,
-  and gives enough coverage to build the initial hyperframe manifest.
+  only for discovery. For screen recordings, product demonstrations, IDEs,
+  terminals, collaboration tools, or visually dense videos, follow discovery
+  with `scripts/extract_screen_states.py` at 1-2 fps. The coverage pass is the
+  manifest source of truth; a 50-keyframe discovery pass is not sufficient.
 - For long videos or visually dense sections, use the efficient pass to find
   candidate sections, then re-run watch on those exact ranges with
   `--start`/`--end`, `--timestamps`, or a higher detail mode only where needed.
@@ -132,11 +139,11 @@ Invoke the `/watch` skill on the provided video URL.
 
 **Pass forward:** structured summary + transcript + topic name
 
-Also create a hyperframe manifest before visualization:
+Also create `screen-states.json` and a human-readable hyperframe manifest before visualization:
 - List every extracted frame/hyperframe with timestamp, path, classification,
   and disposition.
-- Classify as `diagram`, `text-slide`, `demo-screen`, `talking-head`, or
-  `duplicate/low-value`.
+- Classify as `diagram`, `text-slide`, `demo-screen`, `terminal-result`,
+  `collaboration-screen`, `talking-head`, or `duplicate/low-value`.
 - Recreate every `diagram`, `text-slide`, and meaningful `demo-screen` in the
   deck unless it is explicitly marked duplicate.
 - Exclude YouTuber/talking-head frames by default. Do not use presenter face
@@ -149,7 +156,13 @@ Then create a `visual-spec.json` before rendering:
 - One record per meaningful hyperframe or grouped duplicate set.
 - Capture title, layout type, text blocks, cards, table rows, connectors,
   visual hierarchy, colors, and source frame paths.
-- Route each record to `svg`, `html/css`, `excalidraw`, or `pptx-native`.
+- Route each meaningful visual region using the shared vocabulary: `extract`,
+  `place-asset`, `native`, `author-html`, `author-svg`, `author-react`,
+  `image-model`, or `none`.
+- Record source location, evidence status, reason, editable source/asset paths,
+  placement, execution metadata, and QA as required by
+  `skills/pptx-visual-spec/references/visual-spec-schema.json`.
+- Validate with `skills/pptx-visual-spec/scripts/validate_visual_spec.py`.
 - Treat this spec as the source of truth for both reconstruction QA and final
   PPTX rendering.
 
@@ -243,15 +256,41 @@ Output:
 ### Stage 3: Visualize
 Choose one visual route using the Visual Routing Rule.
 
-**Route 0 — SVG/HTML reconstruction QA (preferred for slide recreation):**
+**Route 0 — Persistent hyperframe assets (default for slide recreation):**
 Use this before final PPTX rendering when the frame is a diagram, table,
 scorecard, slide, or layout-heavy visual.
-- Generate SVG for diagrams, tables, boxes, arrows, and scorecards.
-- Generate HTML/CSS for text-heavy slide-like layouts or dashboard/web screens.
-- Render or screenshot the SVG/HTML only for QA comparison.
-- Do not insert the SVG/HTML screenshot as the final deck visual unless the user
-  explicitly accepts non-editable output.
-- Rebuild the same visual with native PowerPoint shapes in Stage 4.
+- Extract exact UI/application frames into cropped PNG assets.
+- Generate SVG for authored diagrams, boxes, arrows, and geometric figures.
+- Generate HTML/CSS for authored text-heavy diagrams and whiteboards.
+- Render authored SVG/HTML to PNG and preserve the editable source file.
+- Insert the PNG as the primary evidence visual inside a native slide shell.
+- Keep data summaries, titles, callouts, captions, and citations native.
+
+**Route 0B — Generated illustrative raster (optional; never hyperframe evidence):**
+- Invoke the installed `imagegen` skill and built-in `image_gen` tool for a new text-free photo,
+  illustration, texture, or metaphor only when the storyboard materially needs
+  it and no exact approved asset exists.
+- Codex writes the prompt and constraints; the image tool generates the PNG.
+  Treat the image tool's returned/logged engine as authoritative.
+- Use the signed-in Codex/ChatGPT subscription path by default. Do not require
+  an API key, OmniRoute, or a separate paid provider for this normal path.
+- Do not send diagrams, labels, KPIs, tables, product screens, terminal output,
+  logos, or factual proof to an image model.
+- Place the generated PNG in a fixed slot owned by a native or HTML/CSS shell.
+  Keep every word and claim outside the generated bitmap.
+- Save the final prompt beside the asset, add `generated` provenance, and record
+  `execution_path`, `auth_mode`, the active orchestration model, and any
+  image-engine identifier actually returned by the tool. Inspect the PNG at full resolution;
+  any glyph-like mark or false product detail requires regeneration or removal.
+- A successful built-in `image_gen` call is the availability check. Consult
+  `~/.claude/skills/ai-graphics/deck-image-routing.md` only for an explicitly
+  requested OmniRoute/provider path; its status does not govern the built-in
+  subscription route.
+- Claude Code invocation:
+  `python3 scripts/generate_with_codex_cli.py --prompt-file <prompt.txt> --out <asset.png> --workdir <run-dir>`.
+  The output must be inside the declared workdir. Preserve the generated
+  `<asset.png>.provenance.json` sidecar and feed its fields into
+  `visual-spec.json`.
 
 **Route A — Excalidraw conceptual recreation (default):**
 Invoke the `/excalidraw` skill using the key frames and transcript from
@@ -303,13 +342,14 @@ Mandatory deck assembly:
   narrative.
 - Build a branded deck with action titles, a clear storyline, an executive
   summary near the front, and a conclusion / next-action slide at the end.
-  Typical length is 10-15 slides for a long-form video; use fewer only when the
-  content is genuinely simple.
+  Typical length is 10-15 slides for a long-form video, but visual coverage wins
+  over a fixed slide count. Add evidence slides when meaningful states would
+  otherwise be omitted.
 - Package captured video diagrams as branded visual story slides:
-  - Use captured frames and hyperframes only as reference inputs.
-  - Do not insert screenshots as the primary slide visual. Screenshots are
-    acceptable only in a clearly labeled appendix/evidence slide when the user
-    asks for source evidence.
+  - Treat captured frames and hyperframes as reference inputs that must route to
+    persistent assets.
+  - Insert exact application/IDE/terminal/collaboration screenshots as primary
+    evidence visuals after cropping and background matching. Do not redraw them.
   - For Route A, insert rendered Excalidraw drawings, not original frame
     screenshots. Keep the `.excalidraw` source files as the editable diagram
     layer. Do not replace visible recreated drawings with native-only PPTX
@@ -320,14 +360,13 @@ Mandatory deck assembly:
   - Account for all meaningful hyperframes from the manifest. The deck can
     combine related hyperframes into one synthesized editable slide, but it
     must not silently miss a captured diagram.
-  - If an SVG/HTML reconstruction was generated, use its structure and
-    coordinates to drive native PPTX layout; do not embed it as a flat image.
+  - If an SVG/HTML reconstruction was generated, preserve its source, render it
+    to PNG, and embed that PNG as the slide visual.
   - Route A: include all `<topic>-<frame-id>-concept.excalidraw` files as
     editable source. Insert only their rendered PNG/SVG previews into the deck,
     never the original hyperframe screenshots.
-  - Route B: include the infographic HTML as source and export/screenshot a
-    deck-ready PNG only when an editable recreation is not feasible; otherwise
-    recreate the visual natively in PPTX.
+  - Route B: include the infographic HTML as source and export a deck-ready PNG
+    for placement inside the native slide shell.
   - Route C: include the `.drawio` source and export/screenshot the architecture
     diagram only as a fallback; prefer editable PPTX shapes.
 - Client-facing slide hygiene:
@@ -426,6 +465,7 @@ Business Automation
 - `branded-pptx-deck` — required final render stage for native branded PPTX output
 - `officecli-qa` — optional preferred final-PPTX render gate; uses repo root
   `scripts/officecli_qa.py` when `officecli` is installed
+- `pptx-visual-spec` — mandatory visual-routing overlay and shared schema
 
 ### Relationships
 
@@ -434,6 +474,7 @@ Business Automation
 | `watch` | Sequential upstream | always — watch provides transcript and frames | structured summary + transcript |
 | `content-research` | Sequential upstream | always — enriches transcript with Exa research | `<topic>-research.md` |
 | `ai-analyst` | Sequential upstream | required when exposed before visualization/PPTX rendering | `<topic>-analyst-story-pack.md/json`, BLUF, evidence map, slide spine |
+| `pptx-visual-spec` | Behavioral overlay | every visualization and PPTX build | `<topic>-visual-spec.json` |
 | `excalidraw` | Sequential downstream | default for conceptual models, frameworks, workflows, and non-technical visuals | `<topic>-concept.excalidraw` + preview |
 | `explainer-graphic` | Alternative / Peer | when a polished infographic or analogy is better than an editable diagram | `<topic>-explainer.html` |
 | `architecture-presentation` | Alternative / Peer | when the video is technical architecture or solution architecture | `<topic>-architecture.drawio`, `.md`, `.pptx` |
@@ -445,7 +486,7 @@ Business Automation
 
 At invocation, say:
 - "Running /video-to-deck — 4-stage pipeline: watch → research → visual route selection → branded PPTX deck/package."
-- "Default visual route is Excalidraw unless this is a technical or solution architecture video."
+- "Visuals route per asset: exact evidence → extract; structured/textual → native or HTML/SVG; text-free organic illustration → built-in image generation."
 - If video is >15 minutes: "This video is long — consider passing a `--start`/`--end` range to focus the deck."
 - Config file at `~/.claude/skills/video-to-deck/config.json` — if missing, onboarding questions will run first.
 
@@ -459,7 +500,10 @@ At invocation, say:
   what turns transcript notes and frames into a client-ready storyboard. Use a
   clearly labeled `ai-analyst`-style fallback only when the callable skill/tool
   is genuinely unavailable.
-- **Default to Excalidraw for conceptual visuals.** Use Draw.io/architecture-presentation only when the content is explicitly technical architecture or solution architecture.
+- **Route per visual; there is no universal Excalidraw default.** Use
+  Excalidraw only for an intentionally hand-drawn conceptual style. Use
+  HTML/CSS for structured boxes and text, SVG for geometry, and
+  Draw.io/architecture-presentation for explicit technical architecture.
 - **Visible drawings and branded deck quality are both required.** For Route A,
   do not choose between "professional deck" and "visible recreated drawings."
   The correct output is a branded PPTX slide system that frames the recreated
@@ -478,9 +522,10 @@ At invocation, say:
   storyboard, speaker notes, citations, and QA. The user-facing deck output is
   the branded `.pptx`.
 - **Capture diagrams into the deck.** Every selected visual route must produce a
-  slide-embeddable recreated diagram preview. Do not use captured video frames
-  as the main visual fallback unless the user explicitly asks for source
-  evidence.
+  slide-embeddable persistent asset. Use exact captured video frames for real
+  UI/application/IDE/terminal/collaboration evidence; use authored previews for
+  diagrams that require reconstruction. Do not substitute generated imagery for
+  missing evidence.
 - **Rendered Excalidraw must be readable.** If Excalidraw previews are inserted
   into PPTX, label text must be readable in the exported PDF/contact sheet. If
   labels are not readable, enlarge the drawing, split the slide, or rebuild the
@@ -489,7 +534,12 @@ At invocation, say:
   deliver `*-reviewed.pptx` until XML validation, OfficeCLI QA when available,
   real render QA, internal-term scan, visual coverage, editability declaration,
   and slide-by-slide grill validation all pass.
-- **Do not copy copyrighted frames exactly.** Use `/watch` frames as reference and redraw the idea in an original editable style unless the user owns the source material or has rights.
+- **Treat rights and provenance explicitly.** Exact UI/application frames may
+  be placed as attributed evidence from the reviewed video; do not present them
+  as original artwork. Do not extract third-party artwork, logos, people, or
+  certifications to imply ownership or endorsement. For an authored conceptual
+  diagram, preserve the idea and evidence while creating an original visual
+  treatment unless the user owns or is licensed to reproduce the source.
 - **Config is persistent across runs.** User answers (theme, NotebookLM, output dir) are saved to config.json and reused silently. Reconfigure with `/video-to-deck config`.
 - **Stage 4 must produce a branded .pptx.** Use `branded-pptx-deck` after Stage
   3 for all routes. `architecture-presentation` may provide source architecture

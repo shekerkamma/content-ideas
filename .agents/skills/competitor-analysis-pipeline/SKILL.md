@@ -50,3 +50,10 @@ Business Automation
 - Do not edit this wrapper instead of the canonical skill. Substantive workflow changes belong in `skills/competitor-analysis-pipeline/`.
 - Do not copy the full canonical skill here; duplicated instructions will drift.
 - This wrapper exists for OpenHands-style discovery. Codex and Claude Code should use their canonical/wrapper paths as documented.
+## Shared PPTX Visual Contract
+
+Whenever this pipeline produces or rebuilds a PowerPoint deck, it must create
+`<run>/visual-spec.json` under the mandatory `pptx-visual-spec` overlay and pass it unchanged
+to `vault-presales-pptx-pipeline`, `branded-pptx-deck`, or `genspark-branded-deck`. Research
+and story stages do not choose image models directly. The selected direct builder owns visual
+execution and validates the spec before `reviewed` delivery.
