@@ -3,13 +3,15 @@
   "contract": {
     "name": "pptx-visual-spec",
     "source": "skills/pptx-visual-spec",
-    "install_hosts": ["claude", "codex", "agents", "project-agents"]
+    "install_hosts": ["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config"]
   },
   "host_roots": {
     "claude": {"env": "CLAUDE_SKILLS_HOME", "default": ".claude/skills"},
     "codex": {"env": "CODEX_SKILLS_HOME", "default": ".codex/skills"},
     "agents": {"env": "AGENTS_SKILLS_HOME", "default": ".agents/skills"},
-    "project-agents": {"repo_relative": ".agents/skills"}
+    "project-agents": {"repo_relative": ".agents/skills"},
+    "antigravity": {"env": "ANTIGRAVITY_SKILLS_HOME", "windows_relative": ".gemini/antigravity/skills", "copy_only": true},
+    "gemini-config": {"env": "GEMINI_SKILLS_HOME", "windows_relative": ".gemini/config/skills", "copy_only": true}
   },
   "skills": [
     {"name": "branded-pptx-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/branded-pptx-deck"},
@@ -44,6 +46,7 @@
     {"name": "vault-presales-pptx-pipeline", "tier": "direct-builder", "ownership": "external", "root_env": "PPTX_VAULT_ROOT", "source_relative": ".claude/skills/vault-presales-pptx-pipeline", "optional": true}
   ],
   "default_install_hosts": ["claude", "codex", "agents"],
+  "default_skill_hosts": ["claude", "codex", "agents", "antigravity", "gemini-config"],
   "external_capabilities": [
     {"name": "canva", "kind": "host-connector", "discovery": "Canva presentation tool", "fallback_skill": "branded-pptx-deck", "fallback_output": "native branded PPTX"},
     {"name": "google-slides", "kind": "host-connector", "discovery": "Google Slides tool", "fallback_skill": "branded-pptx-deck", "fallback_output": "PPTX suitable for Google Slides import"},

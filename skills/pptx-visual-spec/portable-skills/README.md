@@ -11,6 +11,17 @@ The canonical inventory and destination names live in
 python3 skills/pptx-visual-spec/scripts/install_cross_host.py --host all
 ```
 
+For Windows-native Antigravity from WSL:
+
+```bash
+python3 skills/pptx-visual-spec/scripts/install_cross_host.py \
+  --host antigravity --host gemini-config \
+  --windows-home /mnt/c/Users/<name>
+```
+
+Antigravity targets always receive real copies because Windows-native processes cannot follow
+WSL skill symlinks.
+
 Edit these repo mirrors first. Do not edit an installed symlink as if it were a separate copy.
 For copy-only hosts, rerun the installer after edits and audit the result with
 `scripts/audit_portability.py --host <host>`.

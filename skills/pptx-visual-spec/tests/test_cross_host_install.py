@@ -81,3 +81,19 @@ def test_replace_unmanaged_creates_backup(tmp_path: Path) -> None:
     assert destination.is_symlink()
     backup = backup_root / destination.as_posix().lstrip("/")
     assert (backup / "SKILL.md").read_text(encoding="utf-8") == "old\n"
+
+
+def test_windows_host_root_uses_explicit_profile(tmp_path: Path) -> None:
+    config = {
+        "env": "TEST_ANTIGRAVITY_SKILLS_HOME",
+        "windows_relative": ".gemini/antigravity/skills",
+        "copy_only": True,
+    }
+    root = MODULE.host_root(
+        "antigravity",
+        config,
+        tmp_path / "repo",
+        tmp_path / "linux-home",
+        tmp_path / "windows-home",
+    )
+    assert root == tmp_path / "windows-home/.gemini/antigravity/skills"

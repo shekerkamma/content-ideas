@@ -103,4 +103,21 @@ fi
 
 [ "$found_root" = 1 ] || { echo "ERROR: no Antigravity skill root found" >&2; exit 1; }
 
+# Reconcile every PPTX-producing skill through the repo-canonical portability registry.
+# This runs after the legacy list because several entries overlap; the managed pass restores
+# canonical content, writes copy markers, and backs up any genuinely divergent host copy.
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PPTX_INSTALLER="$REPO_ROOT/skills/pptx-visual-spec/scripts/install_cross_host.py"
+if [ -f "$PPTX_INSTALLER" ]; then
+  python3 "$PPTX_INSTALLER" \
+    --host antigravity \
+    --host gemini-config \
+    --windows-home "/mnt/c/Users/${WIN_USER}" \
+    --mode copy \
+    --adopt-identical \
+    --replace-unmanaged
+else
+  echo "skip managed PPTX skills (installer missing: $PPTX_INSTALLER)"
+fi
+
 echo "Done. Restart Antigravity to pick up changes."

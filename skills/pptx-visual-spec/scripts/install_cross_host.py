@@ -37,11 +37,30 @@ def tree_hash(root: Path) -> str:
     return digest.hexdigest()
 
 
-def host_root(name: str, config: dict[str, object], repo: Path, home: Path) -> Path:
+def host_root(
+    name: str,
+    config: dict[str, object],
+    repo: Path,
+    home: Path,
+    windows_home: Path | None = None,
+) -> Path:
     if "repo_relative" in config:
         return repo / str(config["repo_relative"])
     value = os.environ.get(str(config["env"]))
-    return Path(value).expanduser() if value else home / str(config["default"])
+    if value:
+        return Path(value).expanduser()
+    if "windows_relative" in config:
+        base = windows_home or (
+            Path(os.environ["WINDOWS_USER_HOME"]).expanduser()
+            if os.environ.get("WINDOWS_USER_HOME")
+            else None
+        )
+        if base is None:
+            raise ValueError(
+                f"{name} needs --windows-home, WINDOWS_USER_HOME, or {config['env']}"
+            )
+        return base / str(config["windows_relative"])
+    return home / str(config["default"])
 
 
 def is_managed_copy(destination: Path, source: Path) -> bool:
@@ -142,10 +161,11 @@ def _install_one(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--host", action="append", choices=["claude", "codex", "agents", "project-agents", "all"])
+    parser.add_argument("--host", action="append", choices=["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config", "all"])
     parser.add_argument("--mode", choices=["auto", "symlink", "copy"], default="auto")
     parser.add_argument("--repo-root", type=Path, default=ROOT)
     parser.add_argument("--home", type=Path, default=Path.home())
+    parser.add_argument("--windows-home", type=Path, help="Windows user profile as a WSL path, such as /mnt/c/Users/name")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--adopt-identical", action="store_true", help="replace an identical unmanaged copy with the managed installation")
     parser.add_argument("--replace-unmanaged", action="store_true", help="back up and replace non-identical unmanaged destinations")
@@ -167,9 +187,16 @@ def main() -> int:
     entries = [dict(registry["contract"], tier="contract", ownership="repo")]
     entries.extend(e for e in registry["skills"] if e["ownership"] != "external")
     for host in hosts:
-        root = host_root(host, registry["host_roots"][host], repo, args.home)
+        config = registry["host_roots"][host]
+        try:
+            root = host_root(host, config, repo, args.home, args.windows_home)
+        except ValueError as exc:
+            print(f"[{host}] ERROR {exc}")
+            failures += 1
+            continue
+        host_mode = "copy" if config.get("copy_only") else mode
         for entry in entries:
-            allowed = entry.get("install_hosts", registry["default_install_hosts"])
+            allowed = entry.get("install_hosts", registry["default_skill_hosts"])
             if host not in allowed:
                 continue
             source = repo / entry["source"]
@@ -177,7 +204,7 @@ def main() -> int:
             result = install_one(
                 source,
                 destination,
-                mode,
+                host_mode,
                 args.dry_run,
                 args.adopt_identical,
                 args.replace_unmanaged,

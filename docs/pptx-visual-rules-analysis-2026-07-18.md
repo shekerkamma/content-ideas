@@ -65,6 +65,10 @@ video, branded, Genspark, research, and specialist deck workflows.
 - Added an external-capability contract for Canva, Google Slides, Gamma, and Genspark. Host
   authorization remains local, while every absent connector now has a declared portable
   fallback and a diagnostic command.
+- Added copy-only Antigravity and Gemini CLI targets. Their Windows user root is supplied by
+  argument or environment, so the tracked manifest contains no machine-specific username.
+- The legacy `sync-skills-to-antigravity.sh` now finishes with the manifest-driven managed
+  pass, preventing its older copy list from overwriting the canonical PPTX skill set.
 
 ## Deliberate exclusions
 

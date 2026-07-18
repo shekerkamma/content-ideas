@@ -17,9 +17,10 @@ MACHINE_PATH = re.compile(r"/(?:home|Users|mnt/c/Users)/[^/]+", re.IGNORECASE)
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--host", action="append", choices=["claude", "codex", "agents", "project-agents", "all"])
+    parser.add_argument("--host", action="append", choices=["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config", "all"])
     parser.add_argument("--repo-root", type=Path, default=ROOT)
     parser.add_argument("--home", type=Path, default=Path.home())
+    parser.add_argument("--windows-home", type=Path, help="Windows user profile as a WSL path")
     return parser.parse_args()
 
 
@@ -45,9 +46,19 @@ def main() -> int:
     if requested:
         hosts = list(registry["host_roots"]) if "all" in requested else list(dict.fromkeys(requested))
         for host in hosts:
-            root = host_root(host, registry["host_roots"][host], repo, args.home)
+            try:
+                root = host_root(
+                    host,
+                    registry["host_roots"][host],
+                    repo,
+                    args.home,
+                    args.windows_home,
+                )
+            except ValueError as exc:
+                failures.append(f"host root [{host}]: {exc}")
+                continue
             for entry in sources:
-                allowed = entry.get("install_hosts", registry["default_install_hosts"])
+                allowed = entry.get("install_hosts", registry["default_skill_hosts"])
                 if host not in allowed:
                     continue
                 source = repo / entry["source"]
