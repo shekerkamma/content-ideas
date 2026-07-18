@@ -9,7 +9,7 @@ import os
 import re
 from pathlib import Path
 
-from install_cross_host import MARKER, REGISTRY, ROOT, host_root, tree_hash
+from install_cross_host import MARKER, REGISTRY, ROOT, host_root, select_entries, tree_hash
 
 
 MACHINE_PATH = re.compile(r"/(?:home|Users|mnt/c/Users)/[^/]+", re.IGNORECASE)
@@ -18,6 +18,7 @@ MACHINE_PATH = re.compile(r"/(?:home|Users|mnt/c/Users)/[^/]+", re.IGNORECASE)
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", action="append", choices=["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config", "all"])
+    parser.add_argument("--skill", action="append", help="audit only the named registered skill; repeat for multiple skills")
     parser.add_argument("--repo-root", type=Path, default=ROOT)
     parser.add_argument("--home", type=Path, default=Path.home())
     parser.add_argument("--windows-home", type=Path, help="Windows user profile as a WSL path")
@@ -35,8 +36,11 @@ def main() -> int:
     if MACHINE_PATH.search(raw):
         failures.append(f"machine-specific path in registry: {registry_path}")
 
-    sources = [registry["contract"]]
-    sources.extend(e for e in registry["skills"] if e["ownership"] != "external")
+    try:
+        sources = select_entries(registry, args.skill)
+    except ValueError as exc:
+        print(f"ERROR {exc}")
+        return 1
     for entry in sources:
         source = repo / entry["source"]
         if not (source / "SKILL.md").is_file():

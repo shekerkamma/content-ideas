@@ -19,6 +19,8 @@ python3 skills/pptx-visual-spec/scripts/install_cross_host.py \
   --windows-home /mnt/c/Users/<name>
 ```
 
+Add `--skill <registered-name>` (repeatable) to install or audit only selected skills.
+
 Antigravity targets always receive real copies because Windows-native processes cannot follow
 WSL skill symlinks.
 

@@ -78,6 +78,8 @@ python3 skills/pptx-visual-spec/scripts/install_cross_host.py --host all
 - Antigravity is a first-class copy-only target. Install both Windows roots with
   `--host antigravity --host gemini-config --windows-home /mnt/c/Users/<name>`; alternatively
   set `WINDOWS_USER_HOME`, `ANTIGRAVITY_SKILLS_HOME`, or `GEMINI_SKILLS_HOME`.
+- Use repeatable `--skill <registered-name>` arguments for a scoped install or audit when
+  only one governed skill should be refreshed.
 - Use `--dry-run` before changing an existing host. Unmanaged destinations are refused;
   `--adopt-identical` is allowed only when the existing directory hashes to the canonical
   repo source.

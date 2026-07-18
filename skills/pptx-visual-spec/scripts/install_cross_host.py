@@ -63,6 +63,22 @@ def host_root(
     return home / str(config["default"])
 
 
+def select_entries(
+    registry: dict[str, object], requested: list[str] | None = None
+) -> list[dict[str, object]]:
+    entries = [dict(registry["contract"], tier="contract", ownership="repo")]
+    entries.extend(e for e in registry["skills"] if e["ownership"] != "external")
+    if not requested:
+        return entries
+
+    by_name = {str(entry["name"]): entry for entry in entries}
+    names = list(dict.fromkeys(requested))
+    missing = [name for name in names if name not in by_name]
+    if missing:
+        raise ValueError(f"unknown skill(s): {', '.join(missing)}")
+    return [by_name[name] for name in names]
+
+
 def is_managed_copy(destination: Path, source: Path) -> bool:
     marker = destination / MARKER
     if not marker.is_file():
@@ -162,6 +178,7 @@ def _install_one(
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", action="append", choices=["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config", "all"])
+    parser.add_argument("--skill", action="append", help="install only the named registered skill; repeat for multiple skills")
     parser.add_argument("--mode", choices=["auto", "symlink", "copy"], default="auto")
     parser.add_argument("--repo-root", type=Path, default=ROOT)
     parser.add_argument("--home", type=Path, default=Path.home())
@@ -184,8 +201,11 @@ def main() -> int:
     backup_root = args.backup_root or args.home / ".local/state/content-ideas/pptx-skill-backups" / stamp
     failures = 0
 
-    entries = [dict(registry["contract"], tier="contract", ownership="repo")]
-    entries.extend(e for e in registry["skills"] if e["ownership"] != "external")
+    try:
+        entries = select_entries(registry, args.skill)
+    except ValueError as exc:
+        print(f"ERROR {exc}")
+        return 1
     for host in hosts:
         config = registry["host_roots"][host]
         try:

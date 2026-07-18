@@ -171,8 +171,30 @@ Business Automation
 - Codex/OpenAI: yes — built-in OpenAI route plus local CLIProxyAPI adapter.
 - Claude Code: conditional — use its installed host-native image route when available;
   otherwise the local CLIProxyAPI adapter may execute through the script.
+- Antigravity IDE: yes — install a managed Windows-native copy; use its native image route
+  when available or execute the local CLIProxyAPI adapter through the script.
 - OpenHands: conditional — Gemini works only when the host can reach the declared local
   service and config; there is no assumption of a built-in OpenAI image tool.
+
+### Cross-host installation
+
+Run from the repository root:
+
+```bash
+# Claude Code (relative symlink to the canonical repo skill)
+python3 skills/pptx-visual-spec/scripts/install_cross_host.py \
+  --host claude --skill image-generation-router
+
+# Antigravity IDE plus its Gemini-config discovery root (managed Windows copies)
+python3 skills/pptx-visual-spec/scripts/install_cross_host.py \
+  --host antigravity --host gemini-config \
+  --windows-home /mnt/c/Users/<name> \
+  --skill image-generation-router
+```
+
+Audit the installed copies with the same host and `--skill` arguments using
+`scripts/audit_portability.py`. Antigravity copies include a managed-install marker and must
+be refreshed with the installer after the canonical repo skill changes.
 
 ### Canonical Source
 `skills/image-generation-router/` is canonical. Discovery wrappers under `.claude/skills/`

@@ -9,7 +9,7 @@ This is the Codex/OpenHands discovery wrapper for the canonical project skill.
 
 Before routing any image generation, read completely:
 
-- `/home/shekerk/content-ideas/skills/image-generation-router/SKILL.md`
-- `/home/shekerk/content-ideas/skills/image-generation-router/reference.md` when adapter or failure detail is needed
+- `../../../skills/image-generation-router/SKILL.md`
+- `../../../skills/image-generation-router/reference.md` when adapter or failure detail is needed
 
 The repo skill is canonical. Do not duplicate or independently evolve this wrapper.

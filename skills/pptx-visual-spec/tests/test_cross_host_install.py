@@ -97,3 +97,17 @@ def test_windows_host_root_uses_explicit_profile(tmp_path: Path) -> None:
         tmp_path / "windows-home",
     )
     assert root == tmp_path / "windows-home/.gemini/antigravity/skills"
+
+
+def test_select_entries_limits_install_scope() -> None:
+    registry = {
+        "contract": {"name": "contract", "source": "skills/contract"},
+        "skills": [
+            {"name": "router", "source": "skills/router", "ownership": "repo"},
+            {"name": "external", "source": "elsewhere", "ownership": "external"},
+        ],
+    }
+
+    selected = MODULE.select_entries(registry, ["router"])
+
+    assert [entry["name"] for entry in selected] == ["router"]
