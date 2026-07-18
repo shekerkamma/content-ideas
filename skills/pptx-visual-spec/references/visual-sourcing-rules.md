@@ -87,13 +87,20 @@ value, typically a cover, section image, conceptual scene, or editorial illustra
 
 ### Execution precedence
 
-1. In Codex CLI/Desktop, use the built-in `image_gen` tool. It uses the signed-in
-   ChatGPT/Codex subscription and is independent of OmniRoute provider quotas.
-2. In Claude Code, use the installed Codex bridge only when the task is intentionally routed
-   through the Codex subscription: `generate_with_codex_cli.py` -> `codex exec` -> built-in
-   `image_gen`. A successful authenticated render is the availability check.
-3. Use OmniRoute/provider adapters only when the user explicitly requests that route or model
-   control. Provider status never blocks the built-in Codex path.
+Read `skills/image-generation-router/SKILL.md` before executing `image-model` records.
+
+1. Respect an explicit provider request. OpenAI/imagegen selects the built-in route;
+   Gemini/Nano Banana/CLIProxyAPI selects the local Gemini adapter. Never substitute a
+   Flash image model when the user requested Nano Banana Pro.
+2. Without an explicit provider, use the built-in `image_gen` route first. In Codex it uses
+   the signed-in ChatGPT/Codex subscription and is independent of provider-adapter quotas.
+   In Claude Code, use the installed Codex bridge only when intentionally routing through
+   that subscription: `generate_with_codex_cli.py` -> `codex exec` -> built-in `image_gen`.
+3. If the built-in route is unavailable, disclose the failure and probe CLIProxyAPI. Use
+   Gemini only when authenticated `GET /v1/models` reports the requested/selected image
+   model; never rely on a stale model table.
+4. Use OmniRoute/provider adapters only when the user explicitly requests that separate
+   route or model control. Its status never blocks built-in OpenAI or CLIProxyAPI Gemini.
 
 ### Non-negotiable constraints
 

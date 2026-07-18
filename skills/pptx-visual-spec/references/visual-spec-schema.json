@@ -66,7 +66,7 @@
         "execution": {
           "type": ["object", "null"],
           "properties": {
-            "path": {"enum": ["codex-built-in-image_gen", "claude-code-codex-bridge", "omniroute-provider", "not-applicable"]},
+            "path": {"enum": ["codex-built-in-image_gen", "claude-code-codex-bridge", "cliproxyapi-gemini", "omniroute-provider", "not-applicable"]},
             "auth_mode": {"type": ["string", "null"]},
             "orchestration_model": {"type": ["string", "null"]},
             "requested_engine": {"type": ["string", "null"]},

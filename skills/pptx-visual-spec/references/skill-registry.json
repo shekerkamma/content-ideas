@@ -28,6 +28,7 @@
     {"name": "goal-loop-orchestrator", "tier": "orchestrator", "ownership": "repo", "source": "skills/goal-loop-orchestrator"},
     {"name": "mckinsey-audience-researcher", "tier": "orchestrator", "ownership": "repo", "source": "skills/mckinsey-audience-researcher"},
     {"name": "content-ideas", "tier": "orchestrator", "ownership": "repo", "source": "skills/content-ideas"},
+    {"name": "image-generation-router", "tier": "visual-executor", "ownership": "repo", "source": "skills/image-generation-router"},
     {"name": "research-to-deck", "tier": "orchestrator-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/research-to-deck"},
     {"name": "architecture-presentation", "tier": "direct-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/architecture-presentation"},
     {"name": "genspark-slides", "tier": "external-source-rebuilder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/genspark-slides"},

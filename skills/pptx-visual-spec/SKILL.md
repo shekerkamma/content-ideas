@@ -52,6 +52,8 @@ Business Automation
 
 ### Dependencies
 - `ai-graphics` — executes HTML/SVG screenshots and generated raster routes.
+- `image-generation-router` — selects built-in OpenAI first and routes explicit or
+  fallback Gemini generation through CLIProxyAPI without silent model substitution.
 
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |
@@ -61,6 +63,7 @@ Business Automation
 | `video-to-deck` | Behavioral overlay | video-derived PPTX | `<run>/visual-spec.json` |
 | `genspark-branded-deck` | Behavioral overlay | image/hybrid PPTX | `<run>/visual-spec.json` |
 | `ai-graphics` | Sequential downstream | authored/generated raster required | `.html/.svg/.jsx` + `.png`, or prompt + generated `.png` |
+| `image-generation-router` | Behavioral overlay | `image-model` route selected | prompt + generated image + provenance JSON |
 
 ## Host Compatibility
 
