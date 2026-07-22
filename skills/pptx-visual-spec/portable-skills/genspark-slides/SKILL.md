@@ -1,20 +1,62 @@
 ---
 name: genspark-slides
-description: Generate preview slides with Genspark AI Slides, then recover, recreate, and upgrade Genspark AI slide decks from shared Genspark agent/viewer links. Use when Codex needs to call Genspark AI Slides for a first-pass preview deck, inspect a Genspark presentation URL, capture `/api/files/s/...` slide HTML endpoints, save the full slide HTML source, render 16:9 references, package a visual PPTX/PDF, or hand the recovered HTML into the Presentations skill for brand-ready, client-ready, or editable slide rebuilds.
+description: Orchestrate Genspark AI Slides generation, authenticated recovery, and the compound handoff into `genspark-branded-deck` or a native PPTX builder. Use for Genspark AI slide creation, Genspark project/viewer URLs, `/api/files/s/...` HTML recovery, Genspark exports, Genspark-to-branded-deck requests, or Genspark decks that must become branded, editable, executive, pitch-ready, or client-ready PowerPoint.
 ---
 
 # Genspark Slides
 
-Use Genspark AI Slides as the fast preview generator, then treat the generated viewer as the source of truth for HTML recovery.
+Use Genspark AI Slides as the fast preview generator, treat the generated viewer as
+the source of truth for recovery, then continue into the requested delivery builder.
+Do not stop at a hosted project or flattened export when the user asks for branding,
+editability, or client-ready PowerPoint.
 
-> **On WSL / Claude Code: read `references/wsl-execution-blockers.md` FIRST.**
-> Generation is blocked here by Cloudflare bot-check (headless), an unauthenticated
-> session (headed), and OS-bound cookie encryption (copied Windows profile) — all
-> rooted in WSL interop being off (`/proc/sys/fs/binfmt_misc/WSLInterop` missing).
-> Check that file before spending time on browser launches. If generation is blocked,
-> the two working alternatives are: (1) have the user generate in their own Windows
-> browser and hand over the project URL, or (2) skip Genspark and author `deck.html`
-> directly for `genspark-branded-deck`.
+> **On WSL:** read `references/wsl-execution-blockers.md` before launching a
+> browser. Re-test the current boundary; do not reuse a historical conclusion.
+> Prefer the Genspark connector for generation. Use a Windows-authenticated browser
+> lane for gated viewer recovery, and WSL Chromium only for public viewers/local
+> rendering.
+
+## Compound Delivery Contract
+
+Treat `genspark-slides` and `genspark-branded-deck` as sequential stages:
+
+```text
+validated story/brief
+→ Genspark AI Slides connector (optional ideation/generation)
+→ genspark-slides recovery and reference QA
+→ genspark-branded-deck owned HTML/CSS branded rebuild
+→ branded-pptx-deck or vault-presales-pptx-pipeline when fully native/client-ready
+→ OfficeCLI QA and reviewed delivery
+```
+
+Use these routes:
+
+| User outcome | Required route |
+|---|---|
+| Genspark preview/project only | Generate and retain project URL; recover only when requested |
+| Fast visual PPTX | Recover and package image slides; label `draft` or `reviewed-image` |
+| Branded or reskinned deck | Always hand off to `genspark-branded-deck` |
+| Hybrid-editable PowerPoint | `genspark-branded-deck` hybrid path |
+| Fully native/client-ready PowerPoint | Use recovered content and branded references, then rebuild through `branded-pptx-deck` or `vault-presales-pptx-pipeline` |
+
+Write `<run>/genspark-handoff.json` before the branded stage with:
+
+- `project_url` and `viewer_url` when available
+- source slide count and requested slide count
+- recovered HTML and render directories
+- validated content/story source paths
+- brand source or token path
+- requested editability: `image`, `hybrid`, or `native`
+- blocked/omitted pages and the reason
+- final builder and QA status
+
+If hosted generation fails because of access, credits, authentication, or bot
+protection, record the failure and continue directly to `genspark-branded-deck`.
+Hosted failure is not a delivery stop when validated source content exists.
+
+Use `references/prompt-routing.md` as the trigger and acceptance matrix for
+generation, recovery, branding, contextualization, editability, and fallback
+requests.
 
 ## Preview-First Chain
 
@@ -32,13 +74,16 @@ When the user wants a new deck, preview, or first-pass slide concept:
    - If under target, update the same Genspark project once with an explicit expansion request.
    - If it is still under target, report Genspark under-generation and continue with `presentations:Presentations` for the full deck when the user needs the requested count.
 7. Render the HTML to PNG references and package a fast visual PPTX if requested.
-8. For client-ready work, chain into `/ce-doc-review` and `presentations:Presentations`.
+8. Write `genspark-handoff.json` and continue into `genspark-branded-deck` for
+   branding. Route fully native/client-ready output onward to `branded-pptx-deck`
+   or `vault-presales-pptx-pipeline`.
 
 When the user already provides a Genspark URL, skip generation and start with HTML recovery.
 
 ## Core Workflow
 
-1. Open the Genspark agent or viewer URL with Browser.
+1. Open the Genspark agent or viewer URL with the authenticated Windows browser
+   lane. Use local WSL Chromium only for a public viewer.
 2. Click `View` if the page starts in the conversation wrapper.
 3. Watch network requests for `/api/files/s/<id>?pageIndex=<n>&scale=<s>`.
 4. Download each endpoint at `scale=1`; these often return full slide HTML, not images.
@@ -52,7 +97,9 @@ When the user already provides a Genspark URL, skip generation and start with HT
 
 Use these scripts when the page is accessible from local Chrome/Playwright.
 
-In Codex Desktop, call `load_workspace_dependencies` first and run Node with the returned bundled Node executable. Set `NODE_PATH` to include the returned bundled `node_modules` folder and its `.pnpm/node_modules` folder when package resolution needs it.
+In Codex Desktop, use the exposed Genspark connector for generation. For local
+capture, run Node with the workspace Playwright dependency or the bundled Node
+runtime supplied by the host.
 
 ```bash
 node scripts/capture_genspark_slides.mjs --url "<genspark-url>" --out "<workspace>/genspark-source" --headed
@@ -61,13 +108,17 @@ node scripts/render_package_genspark_slides.mjs --html-dir "<workspace>/genspark
 
 Use `--min-slides <n>` when the user requested a minimum count; treat a failure as a retry/quality signal, not a fatal pipeline collapse.
 
-If Playwright cannot launch its bundled browser, pass a local Chrome path:
+If a public viewer is accessible and Playwright cannot launch its bundled browser,
+pass a local Chrome path:
 
 ```bash
 node scripts/capture_genspark_slides.mjs --url "<genspark-url>" --out "<workspace>/genspark-source" --chrome "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe" --headed
 ```
 
-If the Genspark viewer redirects to Google/Genspark sign-in, use a persistent capture profile once and have the user complete sign-in in the opened browser window:
+If the viewer redirects to Google/Genspark sign-in, do not attempt Google login in
+an automated WSL browser. Use the Windows-authenticated Chrome DevTools/extension
+lane. A dedicated persistent capture profile is acceptable only when the browser
+and its encrypted cookie store remain on the same OS:
 
 ```bash
 node scripts/capture_genspark_slides.mjs \
@@ -85,30 +136,28 @@ After that succeeds, reuse the same `--user-data-dir` without needing another si
 
 Do not stop at image packaging when the user asks for an editable, executive, branded, client-ready, or pitch-ready deck.
 
-Inside Sheker's vault, chain through Compound Engineering before final PPTX build:
+Inside Sheker's vault, use the compound chain before final PPTX build:
 
 ```text
 watch-video (for YouTube/video sources)
 →
 Genspark AI Slides app (`_create_slide`)
 → genspark-slides
-→ /ce-doc-review
-→ presentations:Presentations
+→ genspark-branded-deck
 → vault-presales-pptx-pipeline
-→ /ce-compound
+→ OfficeCLI QA
 ```
 
 If a Genspark deck already exists, start at `genspark-slides`:
 
 ```text
 genspark-slides
-→ /ce-doc-review
-→ presentations:Presentations
+→ genspark-branded-deck
 → vault-presales-pptx-pipeline
-→ /ce-compound
+→ OfficeCLI QA
 ```
 
-Then use `presentations:Presentations`:
+For a fully native rebuild:
 
 1. Treat recovered HTML as the source deck.
 2. Treat rendered PNGs as visual references.
@@ -126,7 +175,8 @@ When working inside Sheker's vault, save final PPTX files in `Decks/` unless the
 - If Genspark under-generates, retry expansion once and then state the gap clearly.
 - Inspect a contact sheet before delivery.
 - State whether the PPTX is image-based or fully editable.
-- If the viewer is gated, ask the user to open/share the deck or provide exported HTML/PPTX.
+- If the viewer is gated and the Windows-authenticated lane is unavailable, ask
+  the user to open/share the deck or provide exported HTML/PPTX.
 - Do not fabricate missing slides; record gaps by page index.
 
 ## Images And Visuals

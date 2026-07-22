@@ -15,7 +15,7 @@
   },
   "skills": [
     {"name": "branded-pptx-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/branded-pptx-deck"},
-    {"name": "genspark-branded-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/genspark-branded-deck"},
+    {"name": "genspark-branded-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/genspark-branded-deck", "upstream_skill": "genspark-slides", "handoff": "genspark-handoff.json", "note": "Required branded stage after hosted Genspark generation/recovery; routes native/client-ready output to branded-pptx-deck or vault-presales-pptx-pipeline."},
     {"name": "video-to-deck", "tier": "orchestrator-builder", "ownership": "repo", "source": "skills/video-to-deck"},
     {"name": "gcc-roadmap", "tier": "direct-builder", "ownership": "repo", "source": ".agents/skills/gcc-roadmap"},
     {"name": "ikigai-gamma-slidedeck", "tier": "orchestrator-builder", "ownership": "repo", "source": ".agents/skills/ikigai-gamma-slidedeck"},
@@ -33,7 +33,7 @@
     {"name": "image-generation-router", "tier": "visual-executor", "ownership": "repo", "source": "skills/image-generation-router"},
     {"name": "research-to-deck", "tier": "orchestrator-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/research-to-deck"},
     {"name": "architecture-presentation", "tier": "direct-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/architecture-presentation"},
-    {"name": "genspark-slides", "tier": "external-source-rebuilder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/genspark-slides"},
+    {"name": "genspark-slides", "tier": "external-source-orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/genspark-slides", "downstream_skill": "genspark-branded-deck", "handoff": "genspark-handoff.json", "note": "Generates/recovers Genspark references, then compounds into the branded and native PPTX pipeline."},
     {"name": "ai-analyst", "tier": "orchestrator", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/ai-analyst", "upstream": "https://github.com/ai-analyst-lab/ai-analyst-plugin", "license": "MIT"},
     {"name": "officecli", "tier": "pptx-builder-modifier", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/officecli", "install_hosts": ["claude", "codex"], "note": "CLI runtime unverified on Windows-native; do not add antigravity/gemini-config until verified. See references/externally-ported-skills.md."},
     {"name": "marp", "tier": "image-slide-builder", "ownership": "mirror", "source": "skills/pptx-visual-spec/portable-skills/marp"},
@@ -54,6 +54,6 @@
     {"name": "canva", "kind": "host-connector", "discovery": "Canva presentation tool", "fallback_skill": "branded-pptx-deck", "fallback_output": "native branded PPTX"},
     {"name": "google-slides", "kind": "host-connector", "discovery": "Google Slides tool", "fallback_skill": "branded-pptx-deck", "fallback_output": "PPTX suitable for Google Slides import"},
     {"name": "gamma", "kind": "host-connector", "discovery": "Gamma presentation generator", "fallback_skill": "presentation", "fallback_output": "locally rendered HTML/PPTX"},
-    {"name": "genspark-ai-slides", "kind": "host-app", "discovery": "Genspark AI Slides creation tool", "fallback_skill": "genspark-branded-deck", "fallback_output": "local Genspark-style PPTX"}
+    {"name": "genspark-ai-slides", "kind": "host-app", "discovery": "Genspark AI Slides creation tool", "orchestrator_skill": "genspark-slides", "fallback_skill": "genspark-branded-deck", "fallback_output": "local branded HTML/CSS plus reviewed PPTX"}
   ]
 }

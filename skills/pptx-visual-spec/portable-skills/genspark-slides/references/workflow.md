@@ -20,4 +20,8 @@ Common signs:
 Output choices:
 
 - Image-based PPTX: fastest, visually faithful, text is not editable.
-- Editable PPTX: slower, use Presentations skill; parse HTML text/layout and rebuild as native PowerPoint elements.
+- Branded/hybrid PPTX: write `genspark-handoff.json`, then use
+  `genspark-branded-deck` with recovered HTML and renders as reference.
+- Fully native/client-ready PPTX: continue from the branded handoff into
+  `branded-pptx-deck` or `vault-presales-pptx-pipeline`; recovered Genspark
+  HTML/renders are references, not the final slide objects.

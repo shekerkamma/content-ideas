@@ -1,70 +1,75 @@
-# WSL execution blockers (verified 2026-07-16)
+# WSL and Windows browser boundary
 
-Read this **before** attempting Genspark generation from Claude Code on WSL.
-Every row below was tried and failed on 2026-07-16. Do not re-litigate them.
+Read this before attempting Genspark generation or recovery from WSL. Treat
+historical outcomes as evidence, not permanent configuration. Re-run the short
+checks before choosing a browser lane.
 
-## What actually blocks generation
+## Current verified state (2026-07-22)
 
-| Path | Outcome |
-|---|---|
-| Headless Playwright Chromium → `genspark.ai/ai_slides` | **Cloudflare bot-check** interstitial: "Performing security verification… protect against malicious bots". The homepage loads fine; `/ai_slides` does not. |
-| Headed Playwright Chromium (WSLg; `DISPLAY=:0` works) | Passes Cloudflare, but the page renders **"Sign in / Sign up"** — not authenticated. |
-| Copy Windows profile `C:/Users/sheke/.codex/genspark-browser-profile-9333` → WSL | **Cookies do not decrypt.** Chrome binds its cookie store to an OS key (Windows DPAPI); a Linux Chromium cannot read it. Structural, not a bug. |
-| Fresh Google sign-in inside an automated browser | **Google blocks it** — "this browser or app may not be secure". This is a deliberate anti-automation security control. **Do not attempt to defeat it.** |
-| Windows toolkit `C:/Users/sheke/.codex/genspark-gen/generate.mjs` | **Blocked when WSL interop is off** (see below). |
+- Windows interop works: `powershell.exe` can run from WSL.
+- `genspark.ai` resolves in both WSL and Windows.
+- WSL HTTPS reaches Genspark successfully.
+- Windows Chrome listens on CDP port `9222`.
+- WSL cannot reach Windows Chrome through `127.0.0.1:9222`.
 
-## The root cause: WSL interop
+This is currently a Windows/WSL browser-boundary problem, not a DNS failure. A
+Windows process can connect to Windows loopback; a WSL process cannot assume it
+can.
 
-Check first — it explains most failures in one command:
+## Diagnose before choosing a lane
 
 ```bash
-ls /proc/sys/fs/binfmt_misc/WSLInterop   # missing => interop is OFF
+test -e /proc/sys/fs/binfmt_misc/WSLInterop && echo interop-on || echo interop-off
+getent ahosts genspark.ai
+curl -I --max-time 20 https://genspark.ai/
+curl --max-time 3 http://127.0.0.1:9222/json/version
 ```
 
-When it's missing, **no Windows binary can execute from WSL at all** — not
-`cmd.exe`, `powershell.exe`, `explorer.exe`, nor Windows `node`. That kills the
-Windows Genspark toolkit *and* things like `powershell.exe Start-Process <file>`.
+Interpret the results separately:
 
-**Unlock:** add to `/etc/wsl.conf`:
+| Check | Meaning |
+|---|---|
+| DNS lookup fails | Resolver/network problem; browser configuration is not the fix |
+| HTTPS returns a status | DNS and routing worked; `403` may be bot/auth/method policy |
+| Interop is off | WSL cannot start Windows browser tooling |
+| Windows CDP listens but WSL loopback fails | Run the MCP process on Windows or expose a deliberate bridge |
+| Viewer shows sign-in | Authentication/profile problem, not DNS |
+
+If interop is disabled, add this to `/etc/wsl.conf`:
 
 ```ini
 [interop]
 enabled=true
 ```
 
-then `wsl --shutdown` from Windows PowerShell and reopen. After that, the existing
-Windows toolkit (`generate.mjs` + `capture.mjs`, Windows node + Windows Chrome +
-the authenticated persistent profile) runs as designed — that setup worked on
-2026-07-03.
+Then run `wsl --shutdown` from Windows PowerShell and reopen WSL.
 
-## Traps that waste time
+## Authentication constraints
 
-- **The genspark.ai homepage looks logged-in when it isn't.** It renders a
-  workspace-style sidebar (New / Home / Skills / Workflows / Drive) to logged-out
-  visitors too. **Never** treat that nav as proof of auth. Check `/ai_slides` for
-  "Sign in / Sign up" instead.
-- **A copied profile "succeeds" misleadingly** — it copies ~217MB, launches without
-  error, and renders pages. The cookies are simply undecryptable ciphertext. Auth
-  silently isn't there.
-- **The stale selector.** `generate.mjs` targets `textarea, input[type="text"]`.
-  Genspark's UI is now "AI Slides 5.0" / "Workspace 4.0" and that selector matches
-  nothing (it finds only a hidden input). Re-probe selectors before assuming the
-  driver is current.
+- Headless Chromium may trigger Genspark/Cloudflare verification even when the
+  homepage loads.
+- A copied Windows Chrome profile does not provide Linux authentication because
+  Windows cookies are encrypted with Windows credentials.
+- Google may reject sign-in from an automated browser. Do not attempt to bypass
+  that control.
+- A normal Windows Chrome profile can retain Genspark authentication when the
+  browser and cookie store stay on Windows.
 
-## Working alternatives when generation is blocked
+## Preferred routing
 
-1. **Sheker generates in his own normal Windows browser** and hands over the
-   project/viewer URL. Capture + editable rebuild then run locally with no auth
-   problem. This is the fastest unblock.
-2. **Skip Genspark entirely** — author `deck.html` against `genspark-branded-deck`'s
-   archetypes and render locally with WSL Playwright Chromium. Credit-free, no auth,
-   no Cloudflare. Correct choice whenever the content is already written and there's
-   nothing for Genspark's AI to add.
+1. Use the Genspark AI Slides connector for generation.
+2. Use Windows-authenticated Chrome for gated viewer recovery. Connect through
+   Chrome DevTools MCP or Playwright extension mode running on Windows.
+3. Use WSL Playwright Chromium for public viewers and local HTML rendering.
+4. If the connector or authenticated viewer is unavailable, continue from
+   validated source content with `genspark-branded-deck`.
 
-## Capture returns HTML, not pixels
+Do not repeatedly launch local headed/headless browsers after the diagnosis has
+identified an OS/profile boundary.
 
-Contrary to an older note: `https://public.gensparkspace.com/api/files/s/<id>?pageIndex=N&scale=1`
-returns **real HTML** (~15KB/slide, real CSS, zero `<img>` tags, extractable text) —
-verified across 25/25 slides in `runs/2026-07-16-genspark-branded-deck/capture/`.
-Genspark's *own PPTX export* is image-only; the **recovered HTML is not**. Those are
-different exits — don't conflate them.
+## Capture semantics
+
+`https://public.gensparkspace.com/api/files/s/<id>?pageIndex=N&scale=1` can
+return complete slide HTML rather than pixels. Genspark's own PowerPoint export
+may still be image-based. Treat recovered HTML as a reference/source surface and
+rebuild branded or native deliverables through the compound pipeline.

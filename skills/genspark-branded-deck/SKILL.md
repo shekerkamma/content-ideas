@@ -1,17 +1,49 @@
 ---
 name: genspark-branded-deck
-description: Use when the user wants a client-ready, branded slide deck from the HTML/CSS design template — as either a Genspark-format image-per-slide .pptx (2560×1440) OR an EDITABLE .pptx with native click-and-retype text boxes over the design (built-in hybrid). Triggers on "/genspark-branded-deck", "branded genspark deck", "editable genspark deck", "genspark-style pptx", "design-template deck", "make a branded deck from the template", "editable branded slides", "client-ready deck without genspark credits". Peer of branded-pptx-deck (fully native shapes/charts) and genspark-slides (drives genspark.ai itself). Use branded-pptx-deck instead when the client must re-layout shapes or needs native charts. Use genspark-slides instead when the user specifically wants Genspark's own generator.
-trigger: /genspark-branded-deck
-argument-hint: "[what deck — e.g. 'branded teardown from memo.md', 'reskin the servicenow deck to Aurora Glass']"
-category: Business Automation
+description: Rebuild validated content or recovered Genspark slides into an owned, branded HTML/CSS deck and either an image-based or hybrid-editable PPTX. Use after `genspark-slides`, for `genspark-handoff.json`, branded/reskinned Genspark decks, Genspark-style PPTX, editable Genspark output, or a local credit-free fallback when hosted Genspark fails. This is the branded stage of the compound Genspark pipeline; route fully native or client-ready PowerPoint onward to `branded-pptx-deck` or `vault-presales-pptx-pipeline`.
 ---
 
 # genspark-branded-deck
 
-Produce a **client-ready, branded deck** from the repo's HTML/CSS **design
-template**, rendered to the same **image-per-slide 2560×1440 .pptx** format
-Genspark exports — but the design is 100% yours, editable at source, and
-**credit-free**.
+Produce an owned, branded deck from the repo's HTML/CSS design template. Build
+either an image-per-slide 2560×1440 PPTX or a hybrid with native text over a
+rendered design background. The source is editable and credit-free; the output
+is not fully native PowerPoint unless it is rebuilt by a native downstream
+builder.
+
+## Compound Genspark Contract
+
+This skill is the required branded stage after `genspark-slides` whenever the
+user asks to brand, reskin, contextualize, improve, or make a recovered Genspark
+deck editable.
+
+Accept `<run>/genspark-handoff.json` when present. Use it to resolve:
+
+- validated story/content source
+- Genspark project/viewer URL and recovered HTML/renders
+- requested and recovered slide counts
+- brand tokens or brand-source path
+- requested editability: `image`, `hybrid`, or `native`
+- blocked pages and hosted-generation status
+- selected final builder
+
+Treat recovered Genspark layouts as visual references, not immutable templates.
+Re-author the deck in owned `deck.html` and `theme.css`; correct weak hierarchy,
+crowding, repetition, and unsupported claims rather than reproducing them.
+
+Route outcomes as follows:
+
+| Requested outcome | This skill's output | Required downstream |
+|---|---|---|
+| Fast branded visual deck | Image PPTX | Contact-sheet and OfficeCLI QA |
+| Hybrid-editable deck | Native text over rendered background | OfficeCLI QA |
+| Fully native/editable deck | Branded HTML/render reference | `branded-pptx-deck` |
+| Client-ready presales deck | Branded HTML/render reference | `vault-presales-pptx-pipeline` |
+
+If Genspark generation or capture is blocked, continue from validated source
+content. Do not stop merely because a hosted Genspark artifact is unavailable.
+The shared trigger examples are in
+`../pptx-visual-spec/portable-skills/genspark-slides/references/prompt-routing.md`.
 
 ## Why this skill exists (and when NOT to use it)
 
@@ -26,8 +58,8 @@ render it yourself, and get a branded, on-brand deck with no Genspark dependency
 - **Use `branded-pptx-deck` instead** when the client needs **PowerPoint-native
   editable shapes/charts** (they'll re-type numbers, restyle boxes in PowerPoint).
   This skill's slides are **images** (source-editable in HTML, not in PPT).
-- **Use `genspark-slides` instead** when the user specifically wants Genspark's
-  own generator (needs credits; output stays image-only).
+- **Use `genspark-slides` first** when the user wants Genspark's own generator or
+  supplies a Genspark URL. Return here automatically for branding or editability.
 
 ## Files
 
@@ -71,7 +103,8 @@ entity, count, status, and claim checked against source.
 
 ## Workflow (do these in order)
 
-1. **Get validated content** by chaining the skills above into structured source
+1. **Resolve the compound handoff.** Read `genspark-handoff.json` when present,
+   then get any missing validated content from the upstream skills above.
    (JSON/markdown). Never invent metrics; confirm entity statuses.
 2. **Decide the spine.** Lead with the verdict (BLUF); write **action titles**
    (every `<h2>` is a so-what assertion). Honor slide-count minimums.
@@ -112,7 +145,8 @@ entity, count, status, and claim checked against source.
    (source-editable in `deck.html`/`theme.css` only) or `hybrid-editable` (native
    text boxes over a design background — headings/cards/stats are click-and-retype;
    vector-diagram shapes stay in the background). If the client must re-layout
-   shapes or wants native charts, use `branded-pptx-deck` instead.
+    shapes or wants native charts, continue into `branded-pptx-deck`; use
+    `vault-presales-pptx-pipeline` for client-ready presales delivery.
 11. **Set status honestly.** `*-draft.pptx` before QA; rename to `*-reviewed.pptx`
     only after the contact-sheet review + visible-text scan pass; `*-blocked.txt`
     if a required path (Chrome, render) is unavailable. Keep `render.mjs` +
@@ -170,7 +204,7 @@ is faithful.
 `render.mjs` needs **Playwright + a Chromium-family browser**. It does *not* care
 which OS supplies them.
 
-### Preferred: WSL Playwright Chromium (verified 2026-07-16 — use this first)
+### Preferred: WSL Playwright Chromium (re-verified 2026-07-22)
 
 **No Windows staging, no `GENSPARK_DECK_WORKDIR`, no `cmd.exe`.** Run everything in
 WSL from the run folder, passing WSL's own Playwright Chromium via `--chrome`:
@@ -240,10 +274,9 @@ skill body.
 
 ### Codex Notes
 
-This skill is a local render pipeline, not the Genspark connector. In Codex,
-use the bundled scripts under `skills/genspark-branded-deck/scripts/`; use the
-Genspark AI Slides app only when the user explicitly wants Genspark's hosted
-generator instead of this branded HTML/CSS template pipeline.
+This skill is the local branded stage, not the hosted generator. When the user
+wants Genspark generation, run `genspark-slides` first through the Genspark AI
+Slides app, write `genspark-handoff.json`, and return here for the owned rebuild.
 
 ## Hard rules (learned the hard way)
 
@@ -302,29 +335,31 @@ Business Automation
 | `pptx-visual-spec` | Behavioral overlay | every image or hybrid deck build | `<run>/visual-spec.json` |
 | `vault-presales-pptx-pipeline` | Sequential downstream (client-ready rebuild) | deliverable must be client-ready / fully native (design system forbids flattened slides); globally available | `deck.html` text + `build/png/*` as reference → native `.pptx` via artifact-tool JSX |
 | `branded-pptx-deck` | Sequential downstream (editable rebuild) | native-editable slides on this machine | `deck.html` text + PNG refs → editable `.pptx` |
-| `genspark-slides` | Alternative / Peer | want Genspark's own generator (credits) | genspark project URL |
+| `genspark-slides` | Sequential upstream | hosted generation or a Genspark URL supplies reference slides | `genspark-handoff.json`, recovered HTML/renders |
 | `marp` | Alternative / Peer | markdown → HTML/PPTX preferred | — |
 | `presentation-accessibility` | Amplifier downstream | optional post-QA a11y pass | output `.pptx` |
 
 ### Runtime Preamble
 
-At invocation, surface this to the user:
+At invocation, disclose the selected output class:
 
 > "This produces an **image-per-slide branded .pptx** from the HTML design template
 > (pixel-perfect, one-file rebrandable, credit-free) — but slides are **images**,
 > editable at source in `deck.html`/`theme.css`, not as PowerPoint shapes. If you
 > need **native-editable** PowerPoint, I'll use `/branded-pptx-deck` instead.
 >
-> Have you run upstream skills for the content (`/content-research`,
-> `/ai-strategy-brief`, `/ai-analyst`, `/vertical-scorer`)? And should I use the
-> default 'operations console' theme or your Aurora Glass / `DESIGN.md` identity?"
+> If fully native/client-ready PowerPoint is required, this branded build becomes
+> the reference input to `/branded-pptx-deck` or
+> `/vault-presales-pptx-pipeline`."
 
 ---
 
 ## Gotchas
 
-- **WSL can't render:** `render.mjs` must run on **Windows node + Chrome**, from a
-  **Windows-filesystem** workdir (UNC `\\wsl$` paths fail). Stage first.
+- **Choose the current render lane:** prefer the verified WSL Playwright Chromium
+  path. Use Windows node + Chrome only when WSL Chromium is missing or broken;
+  stage on the Windows filesystem because Windows node cannot run from a UNC
+  `\\wsl$` working directory.
 - **PNG count ≠ slide count:** if the render drops slides, the deck HTML likely
   errored (missing `window.__deck` hook or a bad `<section>`); check the browser
   console via a headed run before building the PPTX.

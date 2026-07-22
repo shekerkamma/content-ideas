@@ -1,4 +1,4 @@
 interface:
   display_name: "Genspark Slides"
-  short_description: "Recover and polish Genspark slide decks"
-  default_prompt: "Use $genspark-slides to recreate this Genspark slide deck as a PPTX, then make it client-ready."
+  short_description: "Generate, recover, and brand Genspark decks"
+  default_prompt: "Use $genspark-slides to generate or recover this Genspark deck, then compound it through $genspark-branded-deck and the native PPTX pipeline when client-ready output is required."
