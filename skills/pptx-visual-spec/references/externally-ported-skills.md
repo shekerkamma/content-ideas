@@ -14,14 +14,16 @@ this file is the reminder the installer cannot give you.
 - **Registry entry:** `root_env: PPTX_VAULT_ROOT`, `source_relative`, `optional: true`.
   This lets a consumer skill *resolve* the vault path at runtime; it does not
   make the installer copy it anywhere.
-- **Manually ported copies** (as of 2026-07-21, replacing a fabricated
+- **Manually ported copies** (synchronized 2026-07-22 after adding the `pptx-toolkit`
+  structural gates, rebuild-by-default routing for broad deck-change requests, and the
+  reviewed-artifact delivery/open contract; originally repaired 2026-07-21 after replacing a fabricated
   Kimi-K3-image-generation SKILL.md that was a live routing hazard):
   - `~/.claude/skills/vault-presales-pptx-pipeline` — symlink to the canonical vault path.
   - `~/.codex/skills/vault-presales-pptx-pipeline` — symlink to the canonical vault path.
   - `C:\Users\sheke\.gemini\config\skills\vault-presales-pptx-pipeline` — real copy + `.ported-from`.
   - `D:\New folder\Antigravity-test\antigravity-skills\.agents\skills\vault-presales-pptx-pipeline` — real copy + `.ported-from`.
   - `C:\Users\sheke\.gemini\antigravity\skills\vault-presales-pptx-pipeline` — real copy + `.ported-from`.
-- **Refresh after any canonical change** (the two Windows copies without a symlink):
+- **Refresh after any canonical change** (the three Windows copies without a symlink):
   ```bash
   SRC="/mnt/c/Users/sheke/Documents/hyundai-ai-vault/.claude/skills/vault-presales-pptx-pipeline"
   for DST in \

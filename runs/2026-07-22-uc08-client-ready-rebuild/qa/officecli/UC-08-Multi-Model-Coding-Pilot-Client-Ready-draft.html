@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UC-08-Multi-Model-Coding-Pilot-Client-Ready-draft.pptx</title>
+<script type="importmap">{"imports":{"three":"https://d.officecli.ai/assets/three-0.170.0/build/three.module.js","three/addons/":"https://d.officecli.ai/assets/three-0.170.0/examples/jsm/"}}</script>
+<style>
+:root{--slide-design-w:960pt;--slide-design-h:540pt;--slide-aspect:1.7778;}
+/* OfficeCli HTML Preview Stylesheet */
+/* Dynamic variables --slide-design-w, --slide-design-h, --slide-aspect are set inline */
+
+:root {
+    --sidebar-w: 180px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #1a1a2e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: var(--sidebar-w);
+    min-width: var(--sidebar-w);
+    background: #12122a;
+    border-right: 1px solid #2a2a4a;
+    overflow-y: auto;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.sidebar-title {
+    color: #888;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.thumb {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: 2px;
+    transition: border-color 0.15s;
+    position: relative;
+}
+.thumb:hover { border-color: #555; }
+.thumb.active { border-color: #5b9bd5; }
+.thumb-inner {
+    width: 100%;
+    aspect-ratio: var(--slide-aspect);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+}
+.thumb-slide {
+    width: var(--slide-design-w);
+    height: var(--slide-design-h);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    background: white;
+}
+.thumb-num {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    color: #888;
+    font-size: 10px;
+}
+
+/* ===== Main area ===== */
+.main {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 24px;
+    scroll-behavior: smooth;
+}
+.file-title {
+    display: none;
+}
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+.slide-label {
+    display: none;
+}
+.slide-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.slide {
+    width: var(--slide-design-w);
+    height: var(--slide-design-h);
+    position: relative;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    border-radius: 2px;
+    transform-origin: center top;
+    flex-shrink: 0;
+}
+
+/* ===== Speaker notes (R8-bt-3) ===== */
+.slide-notes {
+    width: var(--slide-design-w);
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: #1f1f1f;
+    color: #ddd;
+    border-left: 3px solid #888;
+    border-radius: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12pt;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+.slide-notes[dir="rtl"] {
+    border-left: none;
+    border-right: 3px solid #888;
+    text-align: right;
+}
+.slide-notes-label {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 4px;
+}
+.slide-notes-body div { margin: 2px 0; }
+
+/* ===== Page counter ===== */
+.page-counter {
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+    background: rgba(0,0,0,0.6);
+    color: #ccc;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    z-index: 100;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* ===== Fullscreen ===== */
+body.fullscreen .sidebar { display: none; }
+body.fullscreen .main {
+    padding: 0;
+    gap: 0;
+    overflow: hidden;
+    scroll-behavior: auto;
+}
+body.fullscreen .file-title { display: none; }
+body.fullscreen .slide-container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    display: none;
+    gap: 0;
+}
+body.fullscreen .slide-container.fs-active { display: flex; }
+body.fullscreen .slide-label { color: #444; font-size: 11px; }
+body.fullscreen .slide {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* ===== Sidebar toggle button ===== */
+.sidebar-toggle {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 200;
+    background: rgba(30,30,60,0.85);
+    color: #aaa;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.sidebar-toggle:hover { color: #fff; border-color: #888; }
+/* Hover zone: top-left 60x60px area reveals the button */
+.toggle-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 199;
+    display: none;
+}
+.toggle-zone:hover + .sidebar-toggle,
+.sidebar-toggle:hover {
+    opacity: 1;
+}
+body.sidebar-hidden .sidebar { display: none; }
+body.sidebar-hidden .sidebar-toggle { left: 8px; }
+/* Headless / automated browser — hide sidebar, toggle, and page counter */
+html.headless .sidebar,
+html.headless .sidebar-toggle,
+html.headless .toggle-zone,
+html.headless .page-counter { display: none !important; }
+
+/* ===== Narrow viewport: auto-hide sidebar ===== */
+@media (max-width: 900px) {
+    .sidebar { display: none; }
+    .sidebar-toggle { display: block; }
+    .toggle-zone { display: block; }
+    body.sidebar-visible .sidebar { display: flex; position: fixed; top: 0; left: 0; bottom: 0; z-index: 150; }
+    body.sidebar-visible .sidebar-toggle { left: calc(var(--sidebar-w) + 8px); opacity: 1; }
+    body.sidebar-visible .toggle-zone { display: none; }
+}
+
+/* ===== Elements ===== */
+.shape {
+    position: absolute;
+    overflow: visible;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.shape.has-fill {
+    overflow: hidden;
+}
+.shape-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.shape-text.valign-top { justify-content: flex-start; }
+.shape-text.valign-center { justify-content: center; }
+.shape-text.valign-bottom { justify-content: flex-end; }
+/* anchorCtr="1": shrink-wrap paragraphs so align-items:center can center the
+   text block horizontally (a width:100% .para would otherwise fill the frame). */
+.shape-text.anchor-ctr .para { width: auto; max-width: 100%; }
+/* Vertical text (writing-mode): the flex main axis is horizontal, so valign-*
+   (justify-content) anchors the text column horizontally — matching PowerPoint's
+   anchor="ctr". A width:100% .para would fill that axis and defeat the centering,
+   so shrink-wrap the paragraphs like anchor-ctr does. */
+.shape-text.has-vert-text .para { width: auto; max-width: 100%; }
+.para { width: 100%; line-height: 1; }
+.picture { position: absolute; overflow: hidden; }
+.picture img { width: 100%; height: 100%; object-fit: fill; }
+/* overflow:visible (not hidden) — with border-collapse:collapse the
+   rightmost/bottommost cell's outer 1pt border sits exactly on the
+   container edge; overflow:hidden would clip its outer half. Cell
+   content overflow is already handled by .slide-table td below. */
+.table-container { position: absolute; overflow: visible; }
+.slide-table { width: 100%; height: 100%; border-collapse: collapse; table-layout: fixed; }
+.slide-table td { padding: 4px 6px; vertical-align: top; overflow: hidden; font-size: 10pt; color: inherit; }
+.connector { position: absolute; pointer-events: none; }
+/* The connector's bounding box is a large rectangle for any diagonal/bent line,
+   so the box stays click-through (pointer-events:none above) — otherwise it would
+   swallow clicks meant for shapes beneath it. But pointer-events is inherited in
+   SVG, so leave the drawn stroke itself hittable: an interactive host (the editor)
+   can then select the connector by clicking the visible line, while the empty box
+   area still passes through. fill="none" means only the stroke receives events. */
+.connector svg line, .connector svg polyline, .connector svg path { pointer-events: stroke; }
+.group { position: absolute; }
+
+</style>
+<script>if(location.hash.indexOf('screenshot')>=0||navigator.webdriver||/HeadlessChrome/.test(navigator.userAgent))document.documentElement.classList.add('headless')</script>
+</head>
+<body>
+<div class="toggle-zone"></div><button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar">
+  <div class="sidebar-title">UC-08-Multi-Model-Coding-Pilot-Client-Ready-draft.pptx</div>
+  <div class="thumb" data-slide="1">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">1</span>
+  </div>
+  <div class="thumb" data-slide="2">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">2</span>
+  </div>
+  <div class="thumb" data-slide="3">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">3</span>
+  </div>
+  <div class="thumb" data-slide="4">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">4</span>
+  </div>
+  <div class="thumb" data-slide="5">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">5</span>
+  </div>
+  <div class="thumb" data-slide="6">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">6</span>
+  </div>
+  <div class="thumb" data-slide="7">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">7</span>
+  </div>
+  <div class="thumb" data-slide="8">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">8</span>
+  </div>
+  <div class="thumb" data-slide="9">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">9</span>
+  </div>
+  <div class="thumb" data-slide="10">
+    <div class="thumb-inner"></div>
+    <span class="thumb-num">10</span>
+  </div>
+</div>
+<div class="main">
+<h1 class="file-title">UC-08-Multi-Model-Coding-Pilot-Client-Ready-draft.pptx</h1>
+<div class="slide-container" data-slide="1">
+  <div class="slide-label">Slide 1</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=37]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#0A1628"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=2]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#0A1628"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=3]" style="left:36pt;top:39pt;width:429.75pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#00B4D8;font-weight:bold">UC-08 · USE-CASE REALIZATION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=4]" style="left:36pt;top:78pt;width:452.25pt;height:99pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:33.75pt;color:#FFFFFF;font-weight:bold">A low-cost multi-model</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:33.75pt;color:#FFFFFF;font-weight:bold">coding pilot is possible now</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=5]" style="left:36pt;top:195pt;width:422.25pt;height:46.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:13.5pt;color:#B8C7D9">One terminal workflow. Multiple provider options. A bounded pilot before production commitment.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=6]" style="left:36pt;top:267pt;width:127.5pt;height:22.5pt;background:#12243A;border:0.75pt solid #00B4D8;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=7]" style="left:42pt;top:273pt;width:115.5pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#00B4D8;font-weight:bold">PILOT PROPOSITION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=8]" style="left:36pt;top:303.75pt;width:429.75pt;height:49.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#FFFFFF;font-weight:bold">Prototype access can be free or promotional; production economics and terms require validation.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=9]" style="left:494.25pt;top:61.5pt;width:429.75pt;height:345pt;background:#101F33;border:0.75pt solid #28405B"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=10]" style="left:494.25pt;top:61.5pt;width:429.75pt;height:31.5pt;background:#162A43"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=11]" style="left:507.75pt;top:72.75pt;width:7.5pt;height:7.5pt;background:#FF6B6B;border-radius:50%"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=12]" style="left:521.25pt;top:72.75pt;width:7.5pt;height:7.5pt;background:#F6C453;border-radius:50%"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=13]" style="left:534.75pt;top:72.75pt;width:7.5pt;height:7.5pt;background:#39C57A;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=14]" style="left:557.25pt;top:70.5pt;width:351.75pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#9FB4CA">opencode  /models</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=15]" style="left:512.25pt;top:112.5pt;width:393.75pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">SELECT A MODEL BY TASK</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=16]" style="left:510.75pt;top:145.5pt;width:193.13pt;height:84pt;background:#12243A;border:0.75pt solid #28405B;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=17]" style="left:510.75pt;top:145.5pt;width:3.75pt;height:84pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=18]" style="left:524.25pt;top:156pt;width:170.63pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#FFFFFF;font-weight:bold">NVIDIA</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=19]" style="left:524.25pt;top:178.5pt;width:170.63pt;height:42pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">Prototype catalog</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">Open-model endpoints</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=20]" style="left:714.38pt;top:145.5pt;width:193.13pt;height:84pt;background:#12243A;border:0.75pt solid #28405B;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=21]" style="left:714.38pt;top:145.5pt;width:3.75pt;height:84pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=22]" style="left:727.88pt;top:156pt;width:170.63pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#FFFFFF;font-weight:bold">ZENMUX</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=23]" style="left:727.88pt;top:178.5pt;width:170.63pt;height:42pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">Aggregated access</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">Promotional options</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=24]" style="left:510.75pt;top:243pt;width:193.13pt;height:84pt;background:#12243A;border:0.75pt solid #28405B;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=25]" style="left:510.75pt;top:243pt;width:3.75pt;height:84pt;background:#8DB4D4"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=26]" style="left:524.25pt;top:253.5pt;width:170.63pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#FFFFFF;font-weight:bold">KIMI K3</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=27]" style="left:524.25pt;top:276pt;width:170.63pt;height:42pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">Long-horizon work</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">Up to 1M context*</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=28]" style="left:714.38pt;top:243pt;width:193.13pt;height:84pt;background:#12243A;border:0.75pt solid #28405B;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=29]" style="left:714.38pt;top:243pt;width:3.75pt;height:84pt;background:#12855B"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=30]" style="left:727.88pt;top:253.5pt;width:170.63pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#FFFFFF;font-weight:bold">TASK ROUTING</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=31]" style="left:727.88pt;top:276pt;width:170.63pt;height:42pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">Code · vision</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#A9BACD">reasoning · speed</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=32]" style="left:512.25pt;top:355.5pt;width:393.75pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#8FA2B7;font-style:italic">*Availability depends on provider and plan.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=33]" style="left:36pt;top:465pt;width:465pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#8FA2B7;font-weight:bold">CLIENT-READY REBUILD · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[1]/shape[@id=34]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#23364C"></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=35]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#8FA2B7;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[1]/shape[@id=36]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#8FA2B7;font-weight:bold">01</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>Frame this as a pilot proposition, not a permanent zero-cost promise. The source deck&#39;s $0 claim has been qualified because provider promotions and production terms can change.</div>
+      <br/>
+      <div>Sources:</div>
+      <div>https://opencode.ai/docs/providers</div>
+      <div>https://build.nvidia.com/models</div>
+      <div>https://docs.api.nvidia.com/nim/docs/product</div>
+      <div>https://zenmux.ai/provider/moonshotai</div>
+      <div>https://www.kimi.com/code/docs/en/kimi-code/models.html</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="2">
+  <div class="slide-label">Slide 2</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=32]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">01 · EXECUTIVE SUMMARY</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">The opportunity is access without premature platform lock-in</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">Approve a bounded pilot; do not assume promotional access becomes the production model.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">02</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=9]" style="left:36pt;top:126pt;width:436.5pt;height:276pt;background:#0A1628"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=10]" style="left:57pt;top:147pt;width:394.5pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">RECOMMENDATION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=11]" style="left:57pt;top:178.5pt;width:394.5pt;height:67.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:23.25pt;color:#FFFFFF;font-weight:bold">Run a four-week pilot with a small engineering cohort.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=12]" style="left:57pt;top:264pt;width:394.5pt;height:84pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#B8C7D9">The pilot should validate task quality, provider availability, data controls, rate limits, and cost per successful task before any production commitment.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=13]" style="left:57pt;top:363pt;width:112.5pt;height:22.5pt;background:#12243A;border:0.75pt solid #00B4D8;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=14]" style="left:63pt;top:369pt;width:100.5pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#00B4D8;font-weight:bold">DECISION: PILOT</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=15]" style="left:487.5pt;top:126pt;width:210.75pt;height:123pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=16]" style="left:499.5pt;top:136.5pt;width:27pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:18pt;color:#00B4D8;font-weight:bold">1</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=17]" style="left:531pt;top:141pt;width:156.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">TERMINAL WORKFLOW</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=18]" style="left:501pt;top:175.5pt;width:183.75pt;height:60pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#6B7280">OpenCode connects credentials and exposes provider/model selection.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=19]" style="left:713.25pt;top:126pt;width:210.75pt;height:123pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=20]" style="left:725.25pt;top:136.5pt;width:27pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:18pt;color:#00B4D8;font-weight:bold">2</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=21]" style="left:756.75pt;top:141pt;width:156.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">PROVIDER OPTIONS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=22]" style="left:726.75pt;top:175.5pt;width:183.75pt;height:60pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#6B7280">NVIDIA and ZenMux can be evaluated without redesigning the developer workflow.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=23]" style="left:487.5pt;top:264pt;width:210.75pt;height:123pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=24]" style="left:499.5pt;top:274.5pt;width:27pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:18pt;color:#00B4D8;font-weight:bold">3</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=25]" style="left:531pt;top:279pt;width:156.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">BOUNDED ACCESS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=26]" style="left:501pt;top:313.5pt;width:183.75pt;height:60pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#6B7280">Free prototype access and promotions are conditional—not a production entitlement.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[2]/shape[@id=27]" style="left:713.25pt;top:264pt;width:210.75pt;height:123pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=28]" style="left:725.25pt;top:274.5pt;width:27pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:18pt;color:#00B4D8;font-weight:bold">4</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=29]" style="left:756.75pt;top:279pt;width:156.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">MEASURED DECISION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=30]" style="left:726.75pt;top:313.5pt;width:183.75pt;height:60pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#6B7280">Four weeks can establish quality, reliability, governance, and cost evidence.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[2]/shape[@id=31]" style="left:36pt;top:495pt;width:750pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6pt;color:#6B7280;font-style:italic">Sources: OpenCode provider docs; NVIDIA NIM FAQ; ZenMux and Kimi official model pages (accessed 22 Jul 2026).</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>Lead with the decision. The architecture is credible enough to test; the economics and operating fit are not yet proven.</div>
+      <br/>
+      <div>Sources:</div>
+      <div>https://opencode.ai/docs/providers</div>
+      <div>https://build.nvidia.com/models</div>
+      <div>https://docs.api.nvidia.com/nim/docs/product</div>
+      <div>https://zenmux.ai/provider/moonshotai</div>
+      <div>https://www.kimi.com/code/docs/en/kimi-code/models.html</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="3">
+  <div class="slide-label">Slide 3</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=42]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">02 · CURRENT STATE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">Cost and configuration fragment the developer experience</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">The friction is not one expensive model—it is the operating complexity across providers.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">03</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=9]" style="left:36pt;top:148.5pt;width:183pt;height:88.5pt;background:#FFFFFF;border:1.5pt solid #00B4D8"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=10]" style="left:36pt;top:148.5pt;width:183pt;height:3pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=11]" style="left:45pt;top:160.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Fragmented access</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=12]" style="left:45pt;top:180pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Separate subscriptions, credentials, and model catalogs</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=13]" style="left:233.75pt;top:185.25pt;width:22.5pt;height:15pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,66.67% 25%,66.67% 0,100% 50%,66.67% 100%,66.67% 75%,0 75%);background:#00B4D8"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,66.67 25,66.67 0,100 50,66.67 100,66.67 75,0 75" fill="none" stroke="#00B4D8" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=14]" style="left:271pt;top:148.5pt;width:183pt;height:88.5pt;background:#FFFFFF;border:1.5pt solid #0A9396"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=15]" style="left:271pt;top:148.5pt;width:183pt;height:3pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=16]" style="left:280pt;top:160.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Configuration load</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=17]" style="left:280pt;top:180pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Provider-specific setup and uneven model metadata</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=18]" style="left:468.75pt;top:185.25pt;width:22.5pt;height:15pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,66.67% 25%,66.67% 0,100% 50%,66.67% 100%,66.67% 75%,0 75%);background:#00B4D8"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,66.67 25,66.67 0,100 50,66.67 100,66.67 75,0 75" fill="none" stroke="#00B4D8" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=19]" style="left:506pt;top:148.5pt;width:183pt;height:88.5pt;background:#FFFFFF;border:1.5pt solid #8DB4D4"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=20]" style="left:506pt;top:148.5pt;width:183pt;height:3pt;background:#8DB4D4"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=21]" style="left:515pt;top:160.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Unclear economics</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=22]" style="left:515pt;top:180pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Preview access and promotions can change by provider</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=23]" style="left:703.75pt;top:185.25pt;width:22.5pt;height:15pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,66.67% 25%,66.67% 0,100% 50%,66.67% 100%,66.67% 75%,0 75%);background:#00B4D8"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,66.67 25,66.67 0,100 50,66.67 100,66.67 75,0 75" fill="none" stroke="#00B4D8" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=24]" style="left:741pt;top:148.5pt;width:183pt;height:88.5pt;background:#FFFFFF;border:1.5pt solid #B45309"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=25]" style="left:741pt;top:148.5pt;width:183pt;height:3pt;background:#B45309"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=26]" style="left:750pt;top:160.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Governance gap</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=27]" style="left:750pt;top:180pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Task data and model behavior need explicit controls</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=28]" style="left:36pt;top:285pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=29]" style="left:36pt;top:307.5pt;width:135pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">BUSINESS IMPACT</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=30]" style="left:36pt;top:336pt;width:286pt;height:97.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=31]" style="left:36pt;top:336pt;width:3.75pt;height:97.5pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=32]" style="left:49.5pt;top:346.5pt;width:263.5pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">ACCESS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=33]" style="left:49.5pt;top:369pt;width:263.5pt;height:55.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Students and junior developers can be priced out of high-quality assistance.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=34]" style="left:337pt;top:336pt;width:286pt;height:97.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=35]" style="left:337pt;top:336pt;width:3.75pt;height:97.5pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=36]" style="left:350.5pt;top:346.5pt;width:263.5pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">PRODUCTIVITY</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=37]" style="left:350.5pt;top:369pt;width:263.5pt;height:55.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Teams lose time maintaining provider-specific setup and deciding which model to use.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=38]" style="left:638pt;top:336pt;width:286pt;height:97.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[3]/shape[@id=39]" style="left:638pt;top:336pt;width:3.75pt;height:97.5pt;background:#B45309"></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=40]" style="left:651.5pt;top:346.5pt;width:263.5pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">CONTROL</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[3]/shape[@id=41]" style="left:651.5pt;top:369pt;width:263.5pt;height:55.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Unmeasured usage creates risk around data, quality, availability, and production cost.</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>The source deck correctly identifies cost and access friction. This rebuild reframes the issue as an operating-model problem so the pilot can test a repeatable workflow rather than chase a static list of free models.</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="4">
+  <div class="slide-label">Slide 4</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=51]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">03 · TARGET STATE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">One terminal workflow can govern model choice by task</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">A stable developer experience sits above changing providers and models.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">04</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=9]" style="left:36pt;top:151.5pt;width:210.75pt;height:115.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=10]" style="left:36pt;top:151.5pt;width:3.75pt;height:115.5pt;background:#1E293B"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=11]" style="left:49.5pt;top:162pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">ENGINEER</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=12]" style="left:49.5pt;top:184.5pt;width:188.25pt;height:73.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">One terminal interface</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">One permission model</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">One task workflow</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=13]" style="left:248.25pt;top:199.5pt;width:12pt;height:13.5pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%);background:#00B4D8"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,50 25,50 0,100 50,50 100,50 75,0 75" fill="none" stroke="#00B4D8" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=14]" style="left:261.75pt;top:126pt;width:286pt;height:166.5pt;background:#0A1628;border:0.75pt solid #0A1628;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=15]" style="left:278.25pt;top:144pt;width:253pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:16.5pt;color:#FFFFFF;font-weight:bold">OPENCODE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=16]" style="left:278.25pt;top:177pt;width:253pt;height:31.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#B8C7D9">Connect credentials · select models · apply task policy</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=17]" style="left:290.25pt;top:225pt;width:90pt;height:22.5pt;background:#12243A;border:0.75pt solid #00B4D8;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=18]" style="left:296.25pt;top:231pt;width:78pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#00B4D8;font-weight:bold">/CONNECT</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=19]" style="left:429.25pt;top:225pt;width:90pt;height:22.5pt;background:#12243A;border:0.75pt solid #0A9396;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=20]" style="left:435.25pt;top:231pt;width:78pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#0A9396;font-weight:bold">/MODELS</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=21]" style="left:549.25pt;top:199.5pt;width:12pt;height:13.5pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%);background:#0A9396"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,50 25,50 0,100 50,50 100,50 75,0 75" fill="none" stroke="#0A9396" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=22]" style="left:562.75pt;top:126pt;width:175.38pt;height:78pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=23]" style="left:562.75pt;top:126pt;width:3.75pt;height:78pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=24]" style="left:576.25pt;top:136.5pt;width:152.88pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">NVIDIA</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=25]" style="left:576.25pt;top:159pt;width:152.88pt;height:36pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Hosted prototype endpoints</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">and downloadable NIMs</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=26]" style="left:748.63pt;top:126pt;width:175.38pt;height:78pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=27]" style="left:748.63pt;top:126pt;width:3.75pt;height:78pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=28]" style="left:762.13pt;top:136.5pt;width:152.88pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">ZENMUX</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=29]" style="left:762.13pt;top:159pt;width:152.88pt;height:36pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Aggregated models and</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">time-bound promotions</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=30]" style="left:562.75pt;top:216pt;width:175.38pt;height:76.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=31]" style="left:562.75pt;top:216pt;width:3.75pt;height:76.5pt;background:#8DB4D4"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=32]" style="left:576.25pt;top:226.5pt;width:152.88pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">PRIMARY</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=33]" style="left:576.25pt;top:249pt;width:152.88pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Best-fit model for</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">complex implementation</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=34]" style="left:748.63pt;top:216pt;width:175.38pt;height:76.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=35]" style="left:748.63pt;top:216pt;width:3.75pt;height:76.5pt;background:#12855B"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=36]" style="left:762.13pt;top:226.5pt;width:152.88pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">SPECIALIST</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=37]" style="left:762.13pt;top:249pt;width:152.88pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Speed, vision, or</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">reasoning by task</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=38]" style="left:36pt;top:328.5pt;width:888pt;height:103.5pt;background:#F4F8FE;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=39]" style="left:52.5pt;top:343.5pt;width:135pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">GOVERNANCE PLANE</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=40]" style="left:52.5pt;top:376.5pt;width:163.8pt;height:22.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=41]" style="left:58.5pt;top:382.5pt;width:151.8pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#1E293B;font-weight:bold">APPROVED MODELS</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=42]" style="left:225.3pt;top:376.5pt;width:163.8pt;height:22.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=43]" style="left:231.3pt;top:382.5pt;width:151.8pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#1E293B;font-weight:bold">SECRETS HANDLING</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=44]" style="left:398.1pt;top:376.5pt;width:163.8pt;height:22.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=45]" style="left:404.1pt;top:382.5pt;width:151.8pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#1E293B;font-weight:bold">TASK/DATA POLICY</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=46]" style="left:570.9pt;top:376.5pt;width:163.8pt;height:22.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=47]" style="left:576.9pt;top:382.5pt;width:151.8pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#1E293B;font-weight:bold">QUALITY TESTS</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[4]/shape[@id=48]" style="left:743.7pt;top:376.5pt;width:163.8pt;height:22.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=49]" style="left:749.7pt;top:382.5pt;width:151.8pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#1E293B;font-weight:bold">USAGE &amp; COST</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[4]/shape[@id=50]" style="left:36pt;top:495pt;width:750pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6pt;color:#6B7280;font-style:italic">Source: OpenCode provider documentation — opencode.ai/docs/providers.</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>The target state is provider flexibility behind a consistent terminal experience and governance plane. OpenCode documents NVIDIA and ZenMux provider connections via /connect and model selection via /models.</div>
+      <br/>
+      <div>Source:</div>
+      <div>https://opencode.ai/docs/providers</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="5">
+  <div class="slide-label">Slide 5</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=46]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">04 · AI WORKFLOW</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">The workflow is a four-step connection and selection loop</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">The pilot tests the operating loop—not a permanent commitment to any one model.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">05</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=9]" style="left:36pt;top:139.5pt;width:183pt;height:91.5pt;background:#FFFFFF;border:1.5pt solid #1E293B;border-radius:8px"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=10]" style="left:36pt;top:139.5pt;width:183pt;height:3pt;background:#1E293B"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=11]" style="left:45pt;top:151.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Install</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=12]" style="left:45pt;top:171pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Launch OpenCode and confirm the terminal workflow</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=13]" style="left:233.75pt;top:177.75pt;width:22.5pt;height:15pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,66.67% 25%,66.67% 0,100% 50%,66.67% 100%,66.67% 75%,0 75%);background:#00B4D8"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,66.67 25,66.67 0,100 50,66.67 100,66.67 75,0 75" fill="none" stroke="#00B4D8" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=14]" style="left:271pt;top:139.5pt;width:183pt;height:91.5pt;background:#FFFFFF;border:1.5pt solid #00B4D8"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=15]" style="left:271pt;top:139.5pt;width:183pt;height:3pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=16]" style="left:280pt;top:151.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Connect</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=17]" style="left:280pt;top:171pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Add NVIDIA and ZenMux credentials through /connect</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=18]" style="left:468.75pt;top:177.75pt;width:22.5pt;height:15pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,66.67% 25%,66.67% 0,100% 50%,66.67% 100%,66.67% 75%,0 75%);background:#00B4D8"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,66.67 25,66.67 0,100 50,66.67 100,66.67 75,0 75" fill="none" stroke="#00B4D8" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=19]" style="left:506pt;top:139.5pt;width:183pt;height:91.5pt"><div style="position:absolute;inset:0;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:#FFFFFF"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="50 0,100 50,50 100,0 50" fill="none" stroke="#0A9396" stroke-width="1.5pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=20]" style="left:506pt;top:139.5pt;width:183pt;height:3pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=21]" style="left:515pt;top:151.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Select</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=22]" style="left:515pt;top:171pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Use /models to choose an approved model by task</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=23]" style="left:703.75pt;top:177.75pt;width:22.5pt;height:15pt"><div style="position:absolute;inset:0;clip-path:polygon(0 25%,66.67% 25%,66.67% 0,100% 50%,66.67% 100%,66.67% 75%,0 75%);background:#00B4D8"></div><svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0 25,66.67 25,66.67 0,100 50,66.67 100,66.67 75,0 75" fill="none" stroke="#00B4D8" stroke-width="0.75pt" vector-effect="non-scaling-stroke" stroke-linecap="butt" stroke-linejoin="round"/></svg></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=24]" style="left:741pt;top:139.5pt;width:183pt;height:91.5pt;background:#FFFFFF;border:1.5pt solid #12855B"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=25]" style="left:741pt;top:139.5pt;width:183pt;height:3pt;background:#12855B"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=26]" style="left:750pt;top:151.5pt;width:165pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">Measure</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=27]" style="left:750pt;top:171pt;width:165pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Capture quality, latency, failures, usage, and cost</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=28]" style="left:36pt;top:264pt;width:195pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">TASK ROUTING PRINCIPLE</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=29]" style="left:36pt;top:294pt;width:210.75pt;height:97.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=30]" style="left:36pt;top:294pt;width:3.75pt;height:97.5pt;background:#8DB4D4"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=31]" style="left:49.5pt;top:304.5pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">QUICK EDIT</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=32]" style="left:49.5pt;top:327pt;width:188.25pt;height:55.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Favor speed and low overhead</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=33]" style="left:261.75pt;top:294pt;width:210.75pt;height:97.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=34]" style="left:261.75pt;top:294pt;width:3.75pt;height:97.5pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=35]" style="left:275.25pt;top:304.5pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">IMPLEMENTATION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=36]" style="left:275.25pt;top:327pt;width:188.25pt;height:55.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Favor coding quality and tool use</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=37]" style="left:487.5pt;top:294pt;width:210.75pt;height:97.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=38]" style="left:487.5pt;top:294pt;width:3.75pt;height:97.5pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=39]" style="left:501pt;top:304.5pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">UI / VISION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=40]" style="left:501pt;top:327pt;width:188.25pt;height:55.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Require verified multimodal support</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=41]" style="left:713.25pt;top:294pt;width:210.75pt;height:97.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[5]/shape[@id=42]" style="left:713.25pt;top:294pt;width:3.75pt;height:97.5pt;background:#12855B"></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=43]" style="left:726.75pt;top:304.5pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">REASONING</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=44]" style="left:726.75pt;top:327pt;width:188.25pt;height:55.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Favor reliability on complex decisions</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[5]/shape[@id=45]" style="left:36pt;top:495pt;width:750pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6pt;color:#6B7280;font-style:italic">Source: OpenCode provider documentation — connection and model selection steps.</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>The documented OpenCode pattern is to connect a provider, then select from available models. Model names should be discovered at pilot time rather than hard-coded into the operating process.</div>
+      <br/>
+      <div>Source:</div>
+      <div>https://opencode.ai/docs/providers</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="6">
+  <div class="slide-label">Slide 6</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=38]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">05 · PROOF OBJECTS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">Official sources support the core proposition—with conditions</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">The credible claim is “pilot-ready access,” not “permanently free production.”</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">06</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=9]" style="left:36pt;top:126pt;width:888pt;height:27pt;background:#0A1628"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=10]" style="left:43.5pt;top:132.75pt;width:237pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">VERIFIED PROPOSITION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=11]" style="left:291pt;top:132.75pt;width:409.5pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">CURRENT EVIDENCE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=12]" style="left:711pt;top:132.75pt;width:210pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">CONDITION</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=13]" style="left:36pt;top:153pt;width:888pt;height:48pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=14]" style="left:43.5pt;top:159pt;width:237pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Native provider workflow</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=15]" style="left:291pt;top:159pt;width:409.5pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">OpenCode documents NVIDIA and ZenMux under /connect and model selection under /models.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=16]" style="left:711pt;top:159pt;width:210pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Reconfirm in installed version</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=17]" style="left:36pt;top:201pt;width:888pt;height:48pt;background:#F8FAFC;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=18]" style="left:43.5pt;top:207pt;width:237pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Broad prototype catalog</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=19]" style="left:291pt;top:207pt;width:409.5pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">NVIDIA catalog displayed 139 models on 22 Jul 2026; entries vary by free endpoint and download status.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=20]" style="left:711pt;top:207pt;width:210pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Catalog changes over time</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=21]" style="left:36pt;top:249pt;width:888pt;height:48pt;background:#E8F8FC;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=22]" style="left:36pt;top:249pt;width:3pt;height:48pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=23]" style="left:43.5pt;top:255pt;width:237pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Developer prototype access</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=24]" style="left:291pt;top:255pt;width:409.5pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">NVIDIA Developer Program provides hosted NIM access for prototyping, research, development, and testing.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=25]" style="left:711pt;top:255pt;width:210pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Production license required</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=26]" style="left:36pt;top:297pt;width:888pt;height:48pt;background:#F8FAFC;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=27]" style="left:43.5pt;top:303pt;width:237pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Kimi K3 capability</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=28]" style="left:291pt;top:303pt;width:409.5pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Official Kimi docs describe 2.8T parameters and up to 1M context.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=29]" style="left:711pt;top:303pt;width:210pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Context depends on plan</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=30]" style="left:36pt;top:345pt;width:888pt;height:48pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=31]" style="left:43.5pt;top:351pt;width:237pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Promotional free route</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=32]" style="left:291pt;top:351pt;width:409.5pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">ZenMux listed Kimi K3 Free at $0/M tokens for a limited time.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=33]" style="left:711pt;top:351pt;width:210pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Promotion may expire</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[6]/shape[@id=34]" style="left:36pt;top:403.5pt;width:888pt;height:34.5pt;background:#E8F8FC;border:0.75pt solid #00B4D8"></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=35]" style="left:49.5pt;top:414pt;width:90pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#00B4D8;font-weight:bold">DECISION RULE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=36]" style="left:148.5pt;top:410.25pt;width:762pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Verify access, terms, and the available model list on day 1; freeze the tested configuration for the pilot.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[6]/shape[@id=37]" style="left:36pt;top:495pt;width:750pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6pt;color:#6B7280;font-style:italic">Sources: OpenCode · NVIDIA NIM FAQ/catalog · ZenMux K3 listing · Kimi Code model docs; accessed 22 Jul 2026.</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>Use this slide to distinguish facts from conditions. The NVIDIA developer route is for prototype/development use. ZenMux explicitly labels its Kimi K3 free listing as limited-time. Kimi&#39;s 1M context depends on membership tier.</div>
+      <br/>
+      <div>Sources:</div>
+      <div>https://opencode.ai/docs/providers</div>
+      <div>https://build.nvidia.com/models</div>
+      <div>https://docs.api.nvidia.com/nim/docs/product</div>
+      <div>https://zenmux.ai/provider/moonshotai</div>
+      <div>https://www.kimi.com/code/docs/en/kimi-code/models.html</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="7">
+  <div class="slide-label">Slide 7</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=50]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">06 · IMPLEMENTATION ROADMAP</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">Four weeks is enough to test value and operating fit</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">Keep the cohort small, the tasks representative, and the exit criteria explicit.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">07</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=9]" style="left:51pt;top:166.5pt;width:858pt;height:1.5pt;background:#E2E8F0"></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=10]" style="left:36pt;top:132pt;width:210pt;height:19.5pt;background:#00B4D8;border:0.75pt solid #00B4D8"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=11]" style="left:36pt;top:136.5pt;width:210pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">WEEK 1</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=12]" style="left:135.75pt;top:162pt;width:10.5pt;height:10.5pt;background:#00B4D8;border:1.5pt solid #00B4D8;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=13]" style="left:31.5pt;top:181.5pt;width:219pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Baseline</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=14]" style="left:31.5pt;top:198pt;width:219pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#6B7280">Setup · tasks · controls</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=15]" style="left:258pt;top:132pt;width:210pt;height:19.5pt;background:#0A9396;border:0.75pt solid #0A9396"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=16]" style="left:258pt;top:136.5pt;width:210pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">WEEK 2</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=17]" style="left:357.75pt;top:162pt;width:10.5pt;height:10.5pt;background:#0A9396;border:1.5pt solid #0A9396;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=18]" style="left:253.5pt;top:181.5pt;width:219pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Daily use</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=19]" style="left:253.5pt;top:198pt;width:219pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#6B7280">Coding cohort runs</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=20]" style="left:480pt;top:132pt;width:210pt;height:19.5pt;background:#F8FAFC;border:0.75pt solid #8DB4D4"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=21]" style="left:480pt;top:136.5pt;width:210pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#8DB4D4;font-weight:bold">WEEK 3</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=22]" style="left:579.75pt;top:162pt;width:10.5pt;height:10.5pt;background:#FFFFFF;border:1.5pt solid #8DB4D4;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=23]" style="left:475.5pt;top:181.5pt;width:219pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Optimize</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=24]" style="left:475.5pt;top:198pt;width:219pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#6B7280">Routing · prompts · policy</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=25]" style="left:702pt;top:132pt;width:210pt;height:19.5pt;background:#F8FAFC;border:0.75pt solid #12855B"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=26]" style="left:702pt;top:136.5pt;width:210pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#12855B;font-weight:bold">WEEK 4</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=27]" style="left:801.75pt;top:162pt;width:10.5pt;height:10.5pt;background:#FFFFFF;border:1.5pt solid #12855B;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=28]" style="left:697.5pt;top:181.5pt;width:219pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Decide</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=29]" style="left:697.5pt;top:198pt;width:219pt;height:25.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#6B7280">Evidence · economics · gate</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=30]" style="left:36pt;top:255pt;width:165pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">WORKSTREAM OWNERSHIP</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=31]" style="left:36pt;top:283.5pt;width:210.75pt;height:106.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=32]" style="left:36pt;top:283.5pt;width:3.75pt;height:106.5pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=33]" style="left:49.5pt;top:294pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">PLATFORM</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=34]" style="left:49.5pt;top:316.5pt;width:188.25pt;height:64.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Install, credentials, approved endpoints, version freeze</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=35]" style="left:261.75pt;top:283.5pt;width:210.75pt;height:106.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=36]" style="left:261.75pt;top:283.5pt;width:3.75pt;height:106.5pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=37]" style="left:275.25pt;top:294pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">ENGINEERING</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=38]" style="left:275.25pt;top:316.5pt;width:188.25pt;height:64.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Representative tasks, human review, defect capture</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=39]" style="left:487.5pt;top:283.5pt;width:210.75pt;height:106.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=40]" style="left:487.5pt;top:283.5pt;width:3.75pt;height:106.5pt;background:#B45309"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=41]" style="left:501pt;top:294pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">SECURITY</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=42]" style="left:501pt;top:316.5pt;width:188.25pt;height:64.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Secrets, data classification, retention, access policy</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=43]" style="left:713.25pt;top:283.5pt;width:210.75pt;height:106.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=44]" style="left:713.25pt;top:283.5pt;width:3.75pt;height:106.5pt;background:#12855B"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=45]" style="left:726.75pt;top:294pt;width:188.25pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">FINOPS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=46]" style="left:726.75pt;top:316.5pt;width:188.25pt;height:64.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Usage, limits, cost per successful task, production scenario</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[7]/shape[@id=47]" style="left:36pt;top:408pt;width:888pt;height:30pt;background:#0A1628"></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=48]" style="left:49.5pt;top:417.75pt;width:52.5pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#00B4D8;font-weight:bold">GATE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[7]/shape[@id=49]" style="left:105pt;top:414.75pt;width:805.5pt;height:16.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#FFFFFF;font-weight:bold">Scale only if quality, reliability, governance, and production economics all meet the agreed threshold.</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>Week 1 establishes a frozen baseline. Weeks 2–3 test real work and refine routing. Week 4 compares evidence to the exit criteria. Do not expand the cohort before the gate.</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="8">
+  <div class="slide-label">Slide 8</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=50]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">07 · METRICS &amp; PILOT SCOPE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">Pilot success is task quality, reliability, and controlled cost</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">Replace headline ROI claims with a scorecard the cohort can actually measure.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">08</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=9]" style="left:36pt;top:126pt;width:210.75pt;height:112.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=10]" style="left:36pt;top:142.5pt;width:210.75pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:30pt;color:#00B4D8;font-weight:bold">≤ 60 min</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=11]" style="left:45pt;top:187.5pt;width:192.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">SETUP TIME</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=12]" style="left:45pt;top:204pt;width:192.75pt;height:27pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280">Target per participant</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=13]" style="left:261.75pt;top:126pt;width:210.75pt;height:112.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=14]" style="left:261.75pt;top:142.5pt;width:210.75pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:30pt;color:#12855B;font-weight:bold">≥ 80%</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=15]" style="left:270.75pt;top:187.5pt;width:192.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">TASK SUCCESS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=16]" style="left:270.75pt;top:204pt;width:192.75pt;height:27pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280">Human-approved completion</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=17]" style="left:487.5pt;top:126pt;width:210.75pt;height:112.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=18]" style="left:487.5pt;top:142.5pt;width:210.75pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:30pt;color:#0A9396;font-weight:bold">≥ 95%</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=19]" style="left:496.5pt;top:187.5pt;width:192.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">WORKFLOW RELIABILITY</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=20]" style="left:496.5pt;top:204pt;width:192.75pt;height:27pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280">Sessions without provider failure</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=21]" style="left:713.25pt;top:126pt;width:210.75pt;height:112.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=22]" style="left:713.25pt;top:142.5pt;width:210.75pt;height:39pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:30pt;color:#8DB4D4;font-weight:bold">MEASURE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=23]" style="left:722.25pt;top:187.5pt;width:192.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#1E293B;font-weight:bold">COST / SUCCESS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=24]" style="left:722.25pt;top:204pt;width:192.75pt;height:27pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280">No assumed savings baseline</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=25]" style="left:36pt;top:262.5pt;width:888pt;height:25.5pt;background:#0A1628"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=26]" style="left:43.5pt;top:269.25pt;width:154.5pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">DIMENSION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=27]" style="left:208.5pt;top:269.25pt;width:427.5pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">MEASURE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=28]" style="left:646.5pt;top:269.25pt;width:274.5pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">DECISION EVIDENCE</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=29]" style="left:36pt;top:288pt;width:888pt;height:31.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=30]" style="left:43.5pt;top:294pt;width:154.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Quality</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=31]" style="left:208.5pt;top:294pt;width:427.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Acceptance rate · defects · rework</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=32]" style="left:646.5pt;top:294pt;width:274.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Human review rubric</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=33]" style="left:36pt;top:319.5pt;width:888pt;height:31.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=34]" style="left:43.5pt;top:325.5pt;width:154.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Speed</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=35]" style="left:208.5pt;top:325.5pt;width:427.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Cycle time versus cohort baseline</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=36]" style="left:646.5pt;top:325.5pt;width:274.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Comparable task set</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=37]" style="left:36pt;top:351pt;width:888pt;height:31.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=38]" style="left:43.5pt;top:357pt;width:154.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Reliability</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=39]" style="left:208.5pt;top:357pt;width:427.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Rate limits · failed calls · fallback use</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=40]" style="left:646.5pt;top:357pt;width:274.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Session telemetry</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=41]" style="left:36pt;top:382.5pt;width:888pt;height:31.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=42]" style="left:43.5pt;top:388.5pt;width:154.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Governance</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=43]" style="left:208.5pt;top:388.5pt;width:427.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Policy exceptions · sensitive-data events</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=44]" style="left:646.5pt;top:388.5pt;width:274.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Zero critical exceptions</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[8]/shape[@id=45]" style="left:36pt;top:414pt;width:888pt;height:31.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=46]" style="left:43.5pt;top:420pt;width:154.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Economics</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=47]" style="left:208.5pt;top:420pt;width:427.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Usage and production-priced scenario</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=48]" style="left:646.5pt;top:420pt;width:274.5pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Cost per successful task</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[8]/shape[@id=49]" style="left:36pt;top:495pt;width:750pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6pt;color:#6B7280;font-style:italic">Targets are proposed pilot thresholds; they are not measured outcomes.</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>The original deck asserted $0 monthly cost and a $100+ comparison without a measured baseline. This slide converts those claims into testable pilot metrics. Adjust thresholds with the sponsor before kickoff.</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="9">
+  <div class="slide-label">Slide 9</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=37]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=2]" style="left:36pt;top:19.5pt;width:600pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">08 · RISKS &amp; MITIGATIONS</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=3]" style="left:36pt;top:37.5pt;width:870pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:22.5pt;color:#1E293B;font-weight:bold">The main risks are commercial, operational, and governance-related</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=4]" style="left:37.5pt;top:76.5pt;width:851.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#6B7280">Each risk has a control, an owner, and a stop condition.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=5]" style="left:36pt;top:106.5pt;width:888pt;height:1.5pt;background:#1E293B"></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=6]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=7]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=8]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">09</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=9]" style="left:36pt;top:126pt;width:888pt;height:27pt;background:#0A1628"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=10]" style="left:43.5pt;top:132.75pt;width:240pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">RISK</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=11]" style="left:294pt;top:132.75pt;width:102pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">PRIORITY</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=12]" style="left:406.5pt;top:132.75pt;width:514.5pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#FFFFFF;font-weight:bold">MITIGATION / STOP CONDITION</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=13]" style="left:36pt;top:153pt;width:888pt;height:43.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=14]" style="left:43.5pt;top:159pt;width:240pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Promotion or access expires</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=15]" style="left:294pt;top:159pt;width:102pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#B42318">High</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=16]" style="left:406.5pt;top:159pt;width:514.5pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Verify day 1; maintain a paid or alternate-provider fallback.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=17]" style="left:36pt;top:196.5pt;width:888pt;height:43.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=18]" style="left:43.5pt;top:202.5pt;width:240pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Prototype terms do not cover production</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=19]" style="left:294pt;top:202.5pt;width:102pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#B42318">High</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=20]" style="left:406.5pt;top:202.5pt;width:514.5pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Keep the pilot non-production; model enterprise licensing separately.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=21]" style="left:36pt;top:240pt;width:888pt;height:43.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=22]" style="left:43.5pt;top:246pt;width:240pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Rate limits or model drift disrupt work</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=23]" style="left:294pt;top:246pt;width:102pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#B45309">Medium</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=24]" style="left:406.5pt;top:246pt;width:514.5pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Freeze versions where possible; log failures; test fallback routing.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=25]" style="left:36pt;top:283.5pt;width:888pt;height:43.5pt;background:#F8FAFC;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=26]" style="left:43.5pt;top:289.5pt;width:240pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Secrets or sensitive code leave policy boundary</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=27]" style="left:294pt;top:289.5pt;width:102pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#B42318">High</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=28]" style="left:406.5pt;top:289.5pt;width:514.5pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Use approved repos/tasks; redact secrets; enforce data classification.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=29]" style="left:36pt;top:327pt;width:888pt;height:43.5pt;background:#FFFFFF;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=30]" style="left:43.5pt;top:333pt;width:240pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#1E293B;font-weight:bold">Output quality creates hidden rework</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=31]" style="left:294pt;top:333pt;width:102pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#B45309">Medium</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=32]" style="left:406.5pt;top:333pt;width:514.5pt;height:34.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Require human review, task rubrics, and defect/rework measurement.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[9]/shape[@id=33]" style="left:36pt;top:390pt;width:888pt;height:48pt;background:#F4F8FE;border:0.75pt solid #E2E8F0"></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=34]" style="left:49.5pt;top:406.5pt;width:112.5pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#B42318;font-weight:bold">NO-GO CONDITION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=35]" style="left:163.5pt;top:402.75pt;width:747pt;height:19.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Stop if the pilot cannot meet data-policy requirements or if provider terms do not permit the intended test.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[9]/shape[@id=36]" style="left:36pt;top:495pt;width:750pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6pt;color:#6B7280;font-style:italic">Commercial terms: NVIDIA NIM FAQ and ZenMux K3 listing; accessed 22 Jul 2026.</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>This replaces the original slide 9, which repeated the setup checklist rather than presenting risks. The highest risks are terms, data handling, and hidden rework—not installation.</div>
+      <br/>
+      <div>Sources:</div>
+      <div>https://docs.api.nvidia.com/nim/docs/product</div>
+      <div>https://zenmux.ai/provider/moonshotai</div>
+    </div>
+  </div>
+</div>
+<div class="slide-container" data-slide="10">
+  <div class="slide-label">Slide 10</div>
+  <div class="slide-wrapper">
+    <div class="slide" style="background:#FFFFFF;font-family:'Calibri','Calibri','PingFang SC', 'Hiragino Sans', 'Yu Gothic', 'Apple SD Gothic Neo', 'Microsoft YaHei', 'Noto Sans CJK SC',sans-serif;font-size:18pt;color:#000000;">
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=38]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=2]" style="left:0pt;top:0pt;width:960pt;height:540pt;background:#FFFFFF"></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=3]" style="left:0pt;top:0pt;width:390pt;height:540pt;background:#0A1628"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=4]" style="left:36pt;top:31.5pt;width:361.25pt;height:13.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">09 · PILOT DECISION</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=5]" style="left:36pt;top:69pt;width:361.25pt;height:99pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:28.5pt;color:#FFFFFF;font-weight:bold">Approve a bounded pilot with explicit exit criteria</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=6]" style="left:36pt;top:190.5pt;width:361.25pt;height:40.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:12.75pt;color:#B8C7D9">Four weeks · small cohort · non-production scope</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=7]" style="left:36pt;top:258pt;width:130.5pt;height:22.5pt;background:#12243A;border:0.75pt solid #00B4D8;border-radius:6pt"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=8]" style="left:42pt;top:264pt;width:118.5pt;height:10.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#00B4D8;font-weight:bold">DECISION REQUESTED</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=9]" style="left:36pt;top:300pt;width:344.75pt;height:75pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#FFFFFF;font-weight:bold">Authorize setup, representative engineering tasks,</span></div>
+<div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#FFFFFF;font-weight:bold">security review, and measured provider evaluation.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=10]" style="left:412.25pt;top:40.5pt;width:511.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#00B4D8;font-weight:bold">SUCCESS CONDITIONS</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=11]" style="left:412.25pt;top:79.5pt;width:16.5pt;height:16.5pt;background:#12855B;border:0.75pt solid #12855B;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=12]" style="left:413.75pt;top:81pt;width:13.5pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#FFFFFF;font-weight:bold">✓</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=13]" style="left:437.75pt;top:78pt;width:486.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Quality threshold met on representative tasks</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=14]" style="left:412.25pt;top:120pt;width:16.5pt;height:16.5pt;background:#12855B;border:0.75pt solid #12855B;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=15]" style="left:413.75pt;top:121.5pt;width:13.5pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#FFFFFF;font-weight:bold">✓</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=16]" style="left:437.75pt;top:118.5pt;width:486.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Provider reliability and fallback behavior proven</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=17]" style="left:412.25pt;top:160.5pt;width:16.5pt;height:16.5pt;background:#12855B;border:0.75pt solid #12855B;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=18]" style="left:413.75pt;top:162pt;width:13.5pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#FFFFFF;font-weight:bold">✓</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=19]" style="left:437.75pt;top:159pt;width:486.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Data and secrets controls approved</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=20]" style="left:412.25pt;top:201pt;width:16.5pt;height:16.5pt;background:#12855B;border:0.75pt solid #12855B;border-radius:50%"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=21]" style="left:413.75pt;top:202.5pt;width:13.5pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:center;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9pt;color:#FFFFFF;font-weight:bold">✓</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=22]" style="left:437.75pt;top:199.5pt;width:486.25pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:9.75pt;color:#1E293B;font-weight:bold">Production-priced scenario is acceptable</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=23]" style="left:412.25pt;top:244.5pt;width:511.75pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=24]" style="left:412.25pt;top:267pt;width:511.75pt;height:15pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:7.5pt;color:#0A9396;font-weight:bold">FIRST 72 HOURS</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=25]" style="left:412.25pt;top:297pt;width:248.37pt;height:96pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=26]" style="left:412.25pt;top:297pt;width:3.75pt;height:96pt;background:#00B4D8"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=27]" style="left:425.75pt;top:307.5pt;width:225.87pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">1 · VERIFY</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=28]" style="left:425.75pt;top:330pt;width:225.87pt;height:54pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Confirm terms, catalog, model IDs, access limits, and data policy.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=29]" style="left:675.63pt;top:297pt;width:248.37pt;height:96pt;background:#FFFFFF;border:0.75pt solid #E2E8F0;border-radius:6pt"></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=30]" style="left:675.63pt;top:297pt;width:3.75pt;height:96pt;background:#0A9396"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=31]" style="left:689.13pt;top:307.5pt;width:225.87pt;height:18pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:10.5pt;color:#1E293B;font-weight:bold">2 · BASELINE</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=32]" style="left:689.13pt;top:330pt;width:225.87pt;height:54pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:8.25pt;color:#6B7280">Select the cohort, freeze versions, and record benchmark tasks.</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=33]" style="left:412.25pt;top:417pt;width:63pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#00B4D8;font-weight:bold">OUTCOME</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=34]" style="left:478.25pt;top:412.5pt;width:445.75pt;height:22.5pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:11.25pt;color:#1E293B;font-weight:bold">A measured decision to scale, revise, or stop—without platform lock-in.</span></div>
+</div></div>
+    <div class="shape has-fill" data-path="/slide[10]/shape[@id=35]" style="left:36pt;top:512.25pt;width:888pt;height:0.75pt;background:#E2E8F0"></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=36]" style="left:36pt;top:517.5pt;width:570pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:left;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">CLIENT · UC-08 · 22 JUL 2026</span></div>
+</div></div>
+    <div class="shape" data-path="/slide[10]/shape[@id=37]" style="left:881.25pt;top:516.75pt;width:42.75pt;height:12pt;padding:0pt 0pt 0pt 0pt"><div class="shape-text valign-top"><div class="para" style="text-align:right;font-size:18pt;line-height:1.2"><span style="font-family:'Calibri','PingFang SC','Microsoft YaHei','Noto Sans CJK SC','Hiragino Sans GB',sans-serif;font-size:6.75pt;color:#6B7280;font-weight:bold">10</span></div>
+</div></div>
+    </div>
+  </div>
+  <div class="slide-notes">
+    <div class="slide-notes-label">Notes</div>
+    <div class="slide-notes-body">
+      <div>The ask is not permission to deploy to production. It is permission to run a controlled four-week experiment with defined ownership, measurements, and stop conditions.</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="page-counter">1 / 10</div>
+<script>
+// OfficeCli HTML Preview Script
+(function() {
+    const main = document.querySelector('.main');
+    const sidebar = document.querySelector('.sidebar');
+    const counter = document.querySelector('.page-counter');
+    let currentSlide = 0;
+    let isFullscreen = false;
+
+    // ===== Live DOM queries (SSE may add/remove elements) =====
+    function getContainers() { return [...document.querySelectorAll('.main > .slide-container')]; }
+    function getThumbs() { return [...document.querySelectorAll('.sidebar > .thumb')]; }
+    function getTotal() { return getContainers().length; }
+
+    // ===== Responsive scaling =====
+    function scaleSlides() {
+        // 40px breathing room for interactive viewing; headless captures fill the
+        // viewport (the screenshot path sizes it to the slide) so they take none.
+        const headless = document.documentElement.classList.contains('headless');
+        const availW = main.clientWidth - (headless ? 0 : 40);
+        const slides = document.querySelectorAll('.main > .slide-container .slide');
+        // A lone headless slide is a single-slide screenshot: scale it to fill the
+        // viewport in BOTH directions (up or down) so the capture is flush at the
+        // requested resolution regardless of the slide's physical size. Interactive
+        // and multi-slide views only ever shrink to fit.
+        const fill = headless && slides.length === 1;
+        slides.forEach(slide => {
+            const designW = slide.offsetWidth;
+            if (availW > 0 && (fill || designW > availW)) {
+                const s = availW / designW;
+                slide.style.transform = `scale(${s})`;
+                slide.style.transformOrigin = 'center top';
+                const designH = slide.offsetHeight;
+                slide.parentElement.style.height = (designH * s) + 'px';
+                slide.parentElement.style.width = (designW * s) + 'px';
+            } else {
+                slide.style.transform = '';
+                slide.parentElement.style.height = '';
+                slide.parentElement.style.width = '';
+            }
+        });
+    }
+    scaleSlides();
+    window.scaleSlides = scaleSlides;
+    window.addEventListener('resize', scaleSlides);
+
+    // ===== Sidebar thumbnails =====
+    function setActiveThumb(idx) {
+        getThumbs().forEach((t, i) => t.classList.toggle('active', i === idx));
+        currentSlide = idx;
+        if (counter) counter.textContent = `${idx + 1} / ${getTotal()}`;
+    }
+
+    // Event delegation for thumb clicks (handles SSE-added thumbs)
+    if (sidebar) {
+        sidebar.addEventListener('click', function(e) {
+            const thumb = e.target.closest('.thumb');
+            if (!thumb) return;
+            const thumbs = getThumbs();
+            const idx = thumbs.indexOf(thumb);
+            if (idx < 0) return;
+            if (isFullscreen) { showFullscreenSlide(idx); return; }
+            const containers = getContainers();
+            if (containers[idx]) {
+                containers[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            setActiveThumb(idx);
+        });
+    }
+
+    // Track visible slide on scroll (normal mode) — use MutationObserver to auto-observe new slides
+    let scrollObserver;
+    if (main) {
+        scrollObserver = new IntersectionObserver(entries => {
+            if (isFullscreen) return;
+            const containers = getContainers();
+            entries.forEach(e => {
+                if (e.isIntersecting && e.intersectionRatio > 0.3) {
+                    const idx = containers.indexOf(e.target);
+                    if (idx >= 0) setActiveThumb(idx);
+                }
+            });
+        }, { root: main, threshold: 0.3 });
+        getContainers().forEach(c => scrollObserver.observe(c));
+
+        // Auto-observe new slide-containers added to main
+        new MutationObserver(mutations => {
+            mutations.forEach(m => {
+                m.addedNodes.forEach(node => {
+                    if (node.nodeType === 1 && node.classList.contains('slide-container')) {
+                        scrollObserver.observe(node);
+                    }
+                });
+            });
+        }).observe(main, { childList: true });
+    }
+
+    // ===== Fullscreen mode =====
+    function showFullscreenSlide(idx) {
+        const containers = getContainers();
+        const total = containers.length;
+        idx = Math.max(0, Math.min(idx, total - 1));
+        containers.forEach((c, i) => c.classList.toggle('fs-active', i === idx));
+        setActiveThumb(idx);
+        const slide = containers[idx]?.querySelector('.slide');
+        if (slide) {
+            const vw = window.innerWidth, vh = window.innerHeight - 30;
+            const sw = slide.scrollWidth || slide.offsetWidth;
+            const sh = slide.scrollHeight || slide.offsetHeight;
+            const s = Math.min(vw / sw, vh / sh, 1);
+            slide.style.transform = `scale(${s})`;
+            slide.style.transformOrigin = 'center top';
+        }
+    }
+    function enterFullscreen() {
+        isFullscreen = true;
+        document.body.classList.add('fullscreen');
+        showFullscreenSlide(currentSlide);
+    }
+    function exitFullscreen() {
+        isFullscreen = false;
+        document.body.classList.remove('fullscreen');
+        getContainers().forEach(c => { c.classList.remove('fs-active'); c.style.display = ''; });
+        scaleSlides();
+        getContainers()[currentSlide]?.scrollIntoView({ block: 'center' });
+    }
+
+    // ===== Keyboard navigation =====
+    document.addEventListener('keydown', e => {
+        if (e.key === 'f' || e.key === 'F') {
+            e.preventDefault();
+            isFullscreen ? exitFullscreen() : enterFullscreen();
+            return;
+        }
+        if (e.key === 'Escape' && isFullscreen) {
+            e.preventDefault();
+            exitFullscreen();
+            return;
+        }
+        const next = e.key === 'ArrowDown' || e.key === ' ' || e.key === 'ArrowRight';
+        const prev = e.key === 'ArrowUp' || e.key === 'ArrowLeft';
+        if (!next && !prev) return;
+        e.preventDefault();
+
+        const total = getTotal();
+        if (isFullscreen) {
+            showFullscreenSlide(currentSlide + (next ? 1 : -1));
+        } else {
+            const target = next
+                ? Math.min(currentSlide + 1, total - 1)
+                : Math.max(currentSlide - 1, 0);
+            const containers = getContainers();
+            if (containers[target]) {
+                containers[target].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            setActiveThumb(target);
+        }
+    });
+
+    // ===== Populate & scale thumbnail slides via cloneNode (zero base64 duplication) =====
+    function buildThumbs() {
+        const slides = document.querySelectorAll('.main > .slide-container .slide');
+        const inners = document.querySelectorAll('.thumb-inner');
+        slides.forEach((slide, i) => {
+            if (i >= inners.length) return;
+            const inner = inners[i];
+            if (inner.querySelector('.thumb-slide')) return;
+            const clone = slide.cloneNode(true);
+            clone.className = 'thumb-slide';
+            clone.style.transform = '';
+            // Remove IDs from cloned elements to avoid getElementById conflicts (e.g. 3D canvas)
+            clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+            // Remove cloned <script> tags (module scripts won't re-execute but keep DOM clean)
+            clone.querySelectorAll('script').forEach(el => el.remove());
+            inner.appendChild(clone);
+        });
+        scaleThumbs();
+    }
+    function scaleThumbs() {
+        document.querySelectorAll('.thumb-inner').forEach(inner => {
+            const thumbSlide = inner.querySelector('.thumb-slide');
+            if (!thumbSlide) return;
+            const thumbW = inner.clientWidth;
+            const slideW = thumbSlide.scrollWidth || thumbSlide.offsetWidth;
+            if (slideW > 0 && thumbW > 0) {
+                thumbSlide.style.transform = `scale(${thumbW / slideW})`;
+                thumbSlide.style.transformOrigin = '0 0';
+            }
+        });
+    }
+    buildThumbs();
+    window.buildThumbs = buildThumbs;
+    window.scaleThumbs = scaleThumbs;
+    window.addEventListener('resize', scaleThumbs);
+
+    // ===== Sidebar toggle (exposed globally for onclick) =====
+    window.toggleSidebar = function() {
+        document.body.classList.toggle('sidebar-visible');
+        document.body.classList.toggle('sidebar-hidden');
+        // Re-scale after sidebar toggle changes main area width
+        requestAnimationFrame(() => {
+            scaleSlides();
+            buildThumbs();
+            scaleThumbs();
+        });
+    };
+
+    // Init
+    if (getTotal() > 0) setActiveThumb(0);
+})();
+
+</script>
+<script>
+(function() {
+    var _katexRetries = 0;
+    function fallbackKatex() {
+        document.querySelectorAll('.katex-formula:not(.katex-rendered)').forEach(function(el) {
+            el.textContent = el.dataset.formula;
+            el.style.fontFamily = 'monospace';
+            el.style.color = '#666';
+            el.classList.add('katex-rendered');
+        });
+    }
+    function renderKatex() {
+        var pending = document.querySelectorAll('.katex-formula:not(.katex-rendered)');
+        if (pending.length === 0) return;
+        if (typeof katex === 'undefined') {
+            // Lazy-load on first demand — handles watch mode where the initial
+            // doc had no formulas (KaTeX tags omitted from head), then a
+            // formula arrived via SSE patch.
+            if (!window._katexLoading) {
+                window._katexLoading = true;
+                // CONSISTENCY(katex-mirror): mirror-first, CDN retry, then fallback.
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://d.officecli.ai/assets/katex-0.16.11/katex.min.css';
+                link.onerror = function() { if (!this.dataset.f) { this.dataset.f = 1; this.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css'; } else { this.remove(); } };
+                document.head.appendChild(link);
+                var script = document.createElement('script');
+                script.src = 'https://d.officecli.ai/assets/katex-0.16.11/katex.min.js';
+                script.onload = renderKatex;
+                script.onerror = function() { var s2 = document.createElement('script'); s2.src = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js'; s2.onload = renderKatex; s2.onerror = fallbackKatex; document.head.appendChild(s2); };
+                document.head.appendChild(script);
+                return;
+            }
+            if (++_katexRetries > 20) { fallbackKatex(); return; }
+            setTimeout(renderKatex, 100); return;
+        }
+        pending.forEach(function(el) {
+            try {
+                katex.render(el.dataset.formula, el, { throwOnError: false, displayMode: true });
+                el.classList.add('katex-rendered');
+            } catch(e) { el.textContent = el.dataset.formula + ' (Error: ' + e.message + '. See https://katex.org/docs/supported.html for supported syntax.)'; }
+        });
+    }
+    // Initial render
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', renderKatex);
+    else renderKatex();
+    // Re-render when DOM changes (watch mode incremental updates)
+    new MutationObserver(function() { renderKatex(); }).observe(document.body, { childList: true, subtree: true });
+})();
+</script>
+</body>
+</html>

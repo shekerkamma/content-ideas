@@ -24,6 +24,7 @@
     {"name": "aianalyst-competitor-analysis", "tier": "orchestrator", "ownership": "repo", "source": "skills/aianalyst-competitor-analysis"},
     {"name": "pipeline-runner", "tier": "orchestrator", "ownership": "repo", "source": "skills/pipeline-runner"},
     {"name": "strategy-consulting", "tier": "orchestrator", "ownership": "repo", "source": "skills/strategy-consulting"},
+    {"name": "pptx-toolkit", "tier": "pptx-modifier", "ownership": "repo", "source": "skills/pptx-toolkit"},
     {"name": "reddit-new-factcheck", "tier": "pptx-modifier", "ownership": "repo", "source": "skills/reddit-new-factcheck"},
     {"name": "goal-loop-orchestrator", "tier": "orchestrator", "ownership": "repo", "source": "skills/goal-loop-orchestrator"},
     {"name": "mckinsey-audience-researcher", "tier": "orchestrator", "ownership": "repo", "source": "skills/mckinsey-audience-researcher"},

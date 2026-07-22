@@ -1,0 +1,3395 @@
+{
+  "file": "/home/shekerk/content-ideas/runs/2026-07-22-uc08-client-ready-rebuild/source/use-case-realization-uc08-2026-07-22.pptx",
+  "slide_count": 10,
+  "width_in": 10.0,
+  "height_in": 5.625,
+  "comment_parts": [],
+  "slides": [
+    {
+      "slide": 1,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "USE-CASE REALIZATION",
+          "paragraphs": [
+            {
+              "text": "USE-CASE REALIZATION",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "USE-CASE REALIZATION",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Text 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.9,
+          "width_in": 12.333,
+          "height_in": 1.5,
+          "text": "Client-Ready Deck",
+          "paragraphs": [
+            {
+              "text": "Client-Ready Deck",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Client-Ready Deck",
+                  "font_name": "Calibri",
+                  "font_size_pt": 56.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 2.5,
+          "top_in": 2.4,
+          "width_in": 8.333,
+          "height_in": 1.0,
+          "text": "Solution overview",
+          "paragraphs": [
+            {
+              "text": "Solution overview",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Solution overview",
+                  "font_name": "Calibri",
+                  "font_size_pt": 22.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.4,
+          "text": "Confidential · 2026-07-22 · Project",
+          "paragraphs": [
+            {
+              "text": "Confidential · 2026-07-22 · Project",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Confidential · 2026-07-22 · Project",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "475569"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 2,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Executive Summary",
+          "paragraphs": [
+            {
+              "text": "Executive Summary",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Executive Summary",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Text 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "$0",
+          "paragraphs": [
+            {
+              "text": "$0",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "$0",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Monthly Cost",
+          "paragraphs": [
+            {
+              "text": "Monthly Cost",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Monthly Cost",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "✓",
+          "paragraphs": [
+            {
+              "text": "✓",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Text 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 3.6458,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "3",
+          "paragraphs": [
+            {
+              "text": "3",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "3",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 3.6458,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Frontier Models",
+          "paragraphs": [
+            {
+              "text": "Frontier Models",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Frontier Models",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 3.6458,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "✓",
+          "paragraphs": [
+            {
+              "text": "✓",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 9,
+          "name": "Text 7",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7915,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "1M",
+          "paragraphs": [
+            {
+              "text": "1M",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "1M",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 10,
+          "name": "Text 8",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7915,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Token Context",
+          "paragraphs": [
+            {
+              "text": "Token Context",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Token Context",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 11,
+          "name": "Text 9",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7915,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "✓",
+          "paragraphs": [
+            {
+              "text": "✓",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 12,
+          "name": "Text 10",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.9372,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "100%",
+          "paragraphs": [
+            {
+              "text": "100%",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "100%",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 13,
+          "name": "Text 11",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.9372,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Free Tier",
+          "paragraphs": [
+            {
+              "text": "Free Tier",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Free Tier",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 14,
+          "name": "Text 12",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.9372,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "✓",
+          "paragraphs": [
+            {
+              "text": "✓",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 15,
+          "name": "Text 13",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.3,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Complete free AI coding setup: OpenCode agent + NVIDIA NIM model catalog + Kimmy K3 Free via ZenMux",
+          "paragraphs": [
+            {
+              "text": "Complete free AI coding setup: OpenCode agent + NVIDIA NIM model catalog + Kimmy K3 Free via ZenMux",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Complete free AI coding setup: OpenCode agent + NVIDIA NIM model catalog + Kimmy K3 Free via ZenMux",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 16,
+          "name": "Text 14",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Source: YouTube - Free AI Coder Setup",
+          "paragraphs": [
+            {
+              "text": "Source: YouTube - Free AI Coder Setup",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Source: YouTube - Free AI Coder Setup",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 3,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Current State / Problem",
+          "paragraphs": [
+            {
+              "text": "Current State / Problem",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Current State / Problem",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Text 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.3,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "• AI coding agents require expensive subscriptions ($20-100/mo per tool)",
+          "paragraphs": [
+            {
+              "text": "• AI coding agents require expensive subscriptions ($20-100/mo per tool)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• AI coding agents require expensive subscriptions ($20-100/mo per tool)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.95,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "• Frontier models locked behind paywalls (Claude, GPT-4, Opus)",
+          "paragraphs": [
+            {
+              "text": "• Frontier models locked behind paywalls (Claude, GPT-4, Opus)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• Frontier models locked behind paywalls (Claude, GPT-4, Opus)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.6,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "• No single provider offers multimodal + long-horizon + fast + reasoning models free",
+          "paragraphs": [
+            {
+              "text": "• No single provider offers multimodal + long-horizon + fast + reasoning models free",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• No single provider offers multimodal + long-horizon + fast + reasoning models free",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Text 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.25,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "• Complex setup: custom configs, base URLs, provider JSON files",
+          "paragraphs": [
+            {
+              "text": "• Complex setup: custom configs, base URLs, provider JSON files",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• Complex setup: custom configs, base URLs, provider JSON files",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.9,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "• Students/junior devs priced out of quality AI assistance",
+          "paragraphs": [
+            {
+              "text": "• Students/junior devs priced out of quality AI assistance",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• Students/junior devs priced out of quality AI assistance",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Source: YouTube - Free AI Coder Setup",
+          "paragraphs": [
+            {
+              "text": "Source: YouTube - Free AI Coder Setup",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Source: YouTube - Free AI Coder Setup",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 4,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Target State / Vision",
+          "paragraphs": [
+            {
+              "text": "Target State / Vision",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Target State / Vision",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Text 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.3,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "✓ Zero-cost terminal agent with multiple frontier models",
+          "paragraphs": [
+            {
+              "text": "✓ Zero-cost terminal agent with multiple frontier models",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓ Zero-cost terminal agent with multiple frontier models",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.95,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "✓ Kimmy K3 (2.8T params) for long-horizon agentic work",
+          "paragraphs": [
+            {
+              "text": "✓ Kimmy K3 (2.8T params) for long-horizon agentic work",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓ Kimmy K3 (2.8T params) for long-horizon agentic work",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.6,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "✓ NVIDIA NIM catalog: 77+ free models (Nemotron, MiniMax, DeepSeek, GLM)",
+          "paragraphs": [
+            {
+              "text": "✓ NVIDIA NIM catalog: 77+ free models (Nemotron, MiniMax, DeepSeek, GLM)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓ NVIDIA NIM catalog: 77+ free models (Nemotron, MiniMax, DeepSeek, GLM)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Text 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.25,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "✓ One model picker — swap models per task (code, design, reasoning)",
+          "paragraphs": [
+            {
+              "text": "✓ One model picker — swap models per task (code, design, reasoning)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓ One model picker — swap models per task (code, design, reasoning)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.9,
+          "width_in": 12.333,
+          "height_in": 0.6,
+          "text": "✓ No API keys per model — single ZenMux or NVIDIA key",
+          "paragraphs": [
+            {
+              "text": "✓ No API keys per model — single ZenMux or NVIDIA key",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "✓ No API keys per model — single ZenMux or NVIDIA key",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Source: YouTube - Free AI Coder Setup",
+          "paragraphs": [
+            {
+              "text": "Source: YouTube - Free AI Coder Setup",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Source: YouTube - Free AI Coder Setup",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 5,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "AI Workflow / Solution",
+          "paragraphs": [
+            {
+              "text": "AI Workflow / Solution",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "AI Workflow / Solution",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Text 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.3,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "1. Install OpenCode (free, open source, terminal-native)",
+          "paragraphs": [
+            {
+              "text": "1. Install OpenCode (free, open source, terminal-native)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "1. Install OpenCode (free, open source, terminal-native)",
+                  "font_name": "Consolas",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.85,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "         ↓",
+          "paragraphs": [
+            {
+              "text": "         ↓",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "         ↓",
+                  "font_name": "Consolas",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.4,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "2. Connect NVIDIA NIM provider (build.nvidia.com → API key → OpenCode)",
+          "paragraphs": [
+            {
+              "text": "2. Connect NVIDIA NIM provider (build.nvidia.com → API key → OpenCode)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "2. Connect NVIDIA NIM provider (build.nvidia.com → API key → OpenCode)",
+                  "font_name": "Consolas",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Text 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.95,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "         ↓",
+          "paragraphs": [
+            {
+              "text": "         ↓",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "         ↓",
+                  "font_name": "Consolas",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.5,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "3. Connect ZenMux provider (zenmux.ai → API key → OpenCode)",
+          "paragraphs": [
+            {
+              "text": "3. Connect ZenMux provider (zenmux.ai → API key → OpenCode)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "3. Connect ZenMux provider (zenmux.ai → API key → OpenCode)",
+                  "font_name": "Consolas",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 5.05,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "         ↓",
+          "paragraphs": [
+            {
+              "text": "         ↓",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "         ↓",
+                  "font_name": "Consolas",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 9,
+          "name": "Text 7",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 5.6,
+          "width_in": 12.333,
+          "height_in": 0.5,
+          "text": "4. Select model per task: Kimmy K3 (main) → Step 3.7 Flash (fast) → MiniMax M3 (multimodal) → Nemotron 3 Ultra (reasoning)",
+          "paragraphs": [
+            {
+              "text": "4. Select model per task: Kimmy K3 (main) → Step 3.7 Flash (fast) → MiniMax M3 (multimodal) → Nemotron 3 Ultra (reasoning)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "4. Select model per task: Kimmy K3 (main) → Step 3.7 Flash (fast) → MiniMax M3 (multimodal) → Nemotron 3 Ultra (reasoning)",
+                  "font_name": "Consolas",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 10,
+          "name": "Text 8",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.45,
+          "width_in": 12.333,
+          "height_in": 0.4,
+          "text": "Key Technologies:",
+          "paragraphs": [
+            {
+              "text": "Key Technologies:",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Key Technologies:",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 11,
+          "name": "Text 9",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 6.9,
+          "width_in": 12.033,
+          "height_in": 0.4,
+          "text": "• OpenCode — terminal agent with native provider support",
+          "paragraphs": [
+            {
+              "text": "• OpenCode — terminal agent with native provider support",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• OpenCode — terminal agent with native provider support",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 12,
+          "name": "Text 10",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 7.35,
+          "width_in": 12.033,
+          "height_in": 0.4,
+          "text": "• NVIDIA NIM — optimized inference microservices, free preview endpoints",
+          "paragraphs": [
+            {
+              "text": "• NVIDIA NIM — optimized inference microservices, free preview endpoints",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• NVIDIA NIM — optimized inference microservices, free preview endpoints",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 13,
+          "name": "Text 11",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 7.8,
+          "width_in": 12.033,
+          "height_in": 0.4,
+          "text": "• ZenMux — model aggregation platform (Kimmy K3 Free, Gemini Flash Free, GLM Free)",
+          "paragraphs": [
+            {
+              "text": "• ZenMux — model aggregation platform (Kimmy K3 Free, Gemini Flash Free, GLM Free)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• ZenMux — model aggregation platform (Kimmy K3 Free, Gemini Flash Free, GLM Free)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 14,
+          "name": "Text 12",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 8.25,
+          "width_in": 12.033,
+          "height_in": 0.4,
+          "text": "• Kimmy K3 — 2.8T Moonshot model, KingBench 62/80 (3rd place)",
+          "paragraphs": [
+            {
+              "text": "• Kimmy K3 — 2.8T Moonshot model, KingBench 62/80 (3rd place)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "• Kimmy K3 — 2.8T Moonshot model, KingBench 62/80 (3rd place)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 15,
+          "name": "Text 13",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Source: YouTube - Free AI Coder Setup",
+          "paragraphs": [
+            {
+              "text": "Source: YouTube - Free AI Coder Setup",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Source: YouTube - Free AI Coder Setup",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 6,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Proof Objects",
+          "paragraphs": [
+            {
+              "text": "Proof Objects",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Proof Objects",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Text 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.3,
+          "width_in": 12.333,
+          "height_in": 0.4,
+          "text": "Model Quality",
+          "paragraphs": [
+            {
+              "text": "Model Quality",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Model Quality",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 2.7,
+          "width_in": 12.033,
+          "height_in": 0.5,
+          "text": "Kimmy K3: KingBench 62/80 (3rd overall, behind only Fable 5, Opus 4.8)",
+          "paragraphs": [
+            {
+              "text": "Kimmy K3: KingBench 62/80 (3rd overall, behind only Fable 5, Opus 4.8)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Kimmy K3: KingBench 62/80 (3rd overall, behind only Fable 5, Opus 4.8)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.25,
+          "width_in": 12.333,
+          "height_in": 0.4,
+          "text": "Model Variety",
+          "paragraphs": [
+            {
+              "text": "Model Variety",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Model Variety",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Text 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 3.65,
+          "width_in": 12.033,
+          "height_in": 0.5,
+          "text": "77 free NVIDIA NIM endpoints: Nemotron 3 Ultra, MiniMax M3, Step 3.7 Flash, DeepSeek V4, GLM 5.1, Qwen, Gemma",
+          "paragraphs": [
+            {
+              "text": "77 free NVIDIA NIM endpoints: Nemotron 3 Ultra, MiniMax M3, Step 3.7 Flash, DeepSeek V4, GLM 5.1, Qwen, Gemma",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "77 free NVIDIA NIM endpoints: Nemotron 3 Ultra, MiniMax M3, Step 3.7 Flash, DeepSeek V4, GLM 5.1, Qwen, Gemma",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.2,
+          "width_in": 12.333,
+          "height_in": 0.4,
+          "text": "Zero Cost",
+          "paragraphs": [
+            {
+              "text": "Zero Cost",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Zero Cost",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 4.6,
+          "width_in": 12.033,
+          "height_in": 0.5,
+          "text": "NVIDIA preview endpoints free for dev; ZenMux Kimmy K3 Free limited-time promo; no credits needed",
+          "paragraphs": [
+            {
+              "text": "NVIDIA preview endpoints free for dev; ZenMux Kimmy K3 Free limited-time promo; no credits needed",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "NVIDIA preview endpoints free for dev; ZenMux Kimmy K3 Free limited-time promo; no credits needed",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 9,
+          "name": "Text 7",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 5.15,
+          "width_in": 12.333,
+          "height_in": 0.4,
+          "text": "Setup Simplicity",
+          "paragraphs": [
+            {
+              "text": "Setup Simplicity",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Setup Simplicity",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 10,
+          "name": "Text 8",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 5.55,
+          "width_in": 12.033,
+          "height_in": 0.5,
+          "text": "Both providers native in OpenCode — no config files, no custom base URLs, just paste key",
+          "paragraphs": [
+            {
+              "text": "Both providers native in OpenCode — no config files, no custom base URLs, just paste key",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Both providers native in OpenCode — no config files, no custom base URLs, just paste key",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 11,
+          "name": "Text 9",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.1,
+          "width_in": 12.333,
+          "height_in": 0.4,
+          "text": "Real-World Validation",
+          "paragraphs": [
+            {
+              "text": "Real-World Validation",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Real-World Validation",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 12,
+          "name": "Text 10",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.8,
+          "top_in": 6.5,
+          "width_in": 12.033,
+          "height_in": 0.5,
+          "text": "Creator uses daily: Kimmy K3 main, Step 3.7 Flash quick, MiniMax M3 multimodal, Nemotron 3 Ultra reasoning",
+          "paragraphs": [
+            {
+              "text": "Creator uses daily: Kimmy K3 main, Step 3.7 Flash quick, MiniMax M3 multimodal, Nemotron 3 Ultra reasoning",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Creator uses daily: Kimmy K3 main, Step 3.7 Flash quick, MiniMax M3 multimodal, Nemotron 3 Ultra reasoning",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 13,
+          "name": "Text 11",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Source: YouTube - Free AI Coder Setup + Benchmarks",
+          "paragraphs": [
+            {
+              "text": "Source: YouTube - Free AI Coder Setup + Benchmarks",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Source: YouTube - Free AI Coder Setup + Benchmarks",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 7,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Implementation Roadmap",
+          "paragraphs": [
+            {
+              "text": "Implementation Roadmap",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Implementation Roadmap",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Shape 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.5486,
+          "top_in": 2.6,
+          "width_in": 10.2358,
+          "height_in": 0.0,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Shape 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 2.6781,
+          "top_in": 2.45,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.6486,
+          "top_in": 3.0,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Setup",
+          "paragraphs": [
+            {
+              "text": "Setup",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Setup",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Text 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.6486,
+          "top_in": 3.3,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Install OpenCode, get NVIDIA + ZenMux keys",
+          "paragraphs": [
+            {
+              "text": "Install OpenCode, get NVIDIA + ZenMux keys",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Install OpenCode, get NVIDIA + ZenMux keys",
+                  "font_name": "Calibri",
+                  "font_size_pt": 11.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.6486,
+          "top_in": 2.0,
+          "width_in": 2.359,
+          "height_in": 0.4,
+          "text": "Week 1",
+          "paragraphs": [
+            {
+              "text": "Week 1",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Week 1",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Shape 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 5.237,
+          "top_in": 2.45,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 9,
+          "name": "Text 7",
+          "type": "AUTO_SHAPE",
+          "left_in": 4.2075,
+          "top_in": 3.0,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Daily Driver",
+          "paragraphs": [
+            {
+              "text": "Daily Driver",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Daily Driver",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 10,
+          "name": "Text 8",
+          "type": "AUTO_SHAPE",
+          "left_in": 4.2075,
+          "top_in": 3.3,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Kimmy K3 as main agent for all coding tasks",
+          "paragraphs": [
+            {
+              "text": "Kimmy K3 as main agent for all coding tasks",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Kimmy K3 as main agent for all coding tasks",
+                  "font_name": "Calibri",
+                  "font_size_pt": 11.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 11,
+          "name": "Text 9",
+          "type": "AUTO_SHAPE",
+          "left_in": 4.2075,
+          "top_in": 2.0,
+          "width_in": 2.359,
+          "height_in": 0.4,
+          "text": "Week 2",
+          "paragraphs": [
+            {
+              "text": "Week 2",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Week 2",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 12,
+          "name": "Shape 10",
+          "type": "AUTO_SHAPE",
+          "left_in": 7.796,
+          "top_in": 2.45,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 13,
+          "name": "Text 11",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7665,
+          "top_in": 3.0,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Optimize",
+          "paragraphs": [
+            {
+              "text": "Optimize",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Optimize",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 14,
+          "name": "Text 12",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7665,
+          "top_in": 3.3,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Add Step 3.7 Flash for quick edits, MiniMax M3 for UI",
+          "paragraphs": [
+            {
+              "text": "Add Step 3.7 Flash for quick edits, MiniMax M3 for UI",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Add Step 3.7 Flash for quick edits, MiniMax M3 for UI",
+                  "font_name": "Calibri",
+                  "font_size_pt": 11.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 15,
+          "name": "Text 13",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7665,
+          "top_in": 2.0,
+          "width_in": 2.359,
+          "height_in": 0.4,
+          "text": "Week 3",
+          "paragraphs": [
+            {
+              "text": "Week 3",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Week 3",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 16,
+          "name": "Shape 14",
+          "type": "AUTO_SHAPE",
+          "left_in": 10.3549,
+          "top_in": 2.45,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 17,
+          "name": "Text 15",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.3255,
+          "top_in": 3.0,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Scale",
+          "paragraphs": [
+            {
+              "text": "Scale",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Scale",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 18,
+          "name": "Text 16",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.3255,
+          "top_in": 3.3,
+          "width_in": 2.359,
+          "height_in": 0.3,
+          "text": "Team adoption, share model picker workflow",
+          "paragraphs": [
+            {
+              "text": "Team adoption, share model picker workflow",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Team adoption, share model picker workflow",
+                  "font_name": "Calibri",
+                  "font_size_pt": 11.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 19,
+          "name": "Text 17",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.3255,
+          "top_in": 2.0,
+          "width_in": 2.359,
+          "height_in": 0.4,
+          "text": "Week 4",
+          "paragraphs": [
+            {
+              "text": "Week 4",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Week 4",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 20,
+          "name": "Text 18",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Adoption path: individual → team → org",
+          "paragraphs": [
+            {
+              "text": "Adoption path: individual → team → org",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Adoption path: individual → team → org",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 8,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Metrics / ROI",
+          "paragraphs": [
+            {
+              "text": "Metrics / ROI",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Metrics / ROI",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Text 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "$0",
+          "paragraphs": [
+            {
+              "text": "$0",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "$0",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Monthly Cost",
+          "paragraphs": [
+            {
+              "text": "Monthly Cost",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Monthly Cost",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "vs $100+",
+          "paragraphs": [
+            {
+              "text": "vs $100+",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "vs $100+",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Text 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 3.6458,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "4",
+          "paragraphs": [
+            {
+              "text": "4",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "4",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 3.6458,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Models Available",
+          "paragraphs": [
+            {
+              "text": "Models Available",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Models Available",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 3.6458,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "vs 1 locked",
+          "paragraphs": [
+            {
+              "text": "vs 1 locked",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "vs 1 locked",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 9,
+          "name": "Text 7",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7915,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "1M",
+          "paragraphs": [
+            {
+              "text": "1M",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "1M",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 10,
+          "name": "Text 8",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7915,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Token Context",
+          "paragraphs": [
+            {
+              "text": "Token Context",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Token Context",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 11,
+          "name": "Text 9",
+          "type": "AUTO_SHAPE",
+          "left_in": 6.7915,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "vs 200K",
+          "paragraphs": [
+            {
+              "text": "vs 200K",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "vs 200K",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 12,
+          "name": "Text 10",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.9372,
+          "top_in": 2.3,
+          "width_in": 2.8958,
+          "height_in": 1.2,
+          "text": "2.8T",
+          "paragraphs": [
+            {
+              "text": "2.8T",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "2.8T",
+                  "font_name": "Calibri",
+                  "font_size_pt": 84.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 13,
+          "name": "Text 11",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.9372,
+          "top_in": 3.5,
+          "width_in": 2.8958,
+          "height_in": 0.5,
+          "text": "Params (K3)",
+          "paragraphs": [
+            {
+              "text": "Params (K3)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Params (K3)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 16.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 14,
+          "name": "Text 12",
+          "type": "AUTO_SHAPE",
+          "left_in": 9.9372,
+          "top_in": 4.0,
+          "width_in": 2.8958,
+          "height_in": 0.4,
+          "text": "vs 550B",
+          "paragraphs": [
+            {
+              "text": "vs 550B",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "vs 550B",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 15,
+          "name": "Text 13",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Democratizes frontier AI for students, junior devs, open source contributors",
+          "paragraphs": [
+            {
+              "text": "Democratizes frontier AI for students, junior devs, open source contributors",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Democratizes frontier AI for students, junior devs, open source contributors",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "CBD5E1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 9,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Risks / Mitigation",
+          "paragraphs": [
+            {
+              "text": "Risks / Mitigation",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Risks / Mitigation",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Shape 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.4,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 2.3,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Get NVIDIA API Key",
+          "paragraphs": [
+            {
+              "text": "Get NVIDIA API Key",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Get NVIDIA API Key",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 2.6,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "Sign up at build.nvidia.com, filter Preview NIM models",
+          "paragraphs": [
+            {
+              "text": "Sign up at build.nvidia.com, filter Preview NIM models",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Sign up at build.nvidia.com, filter Preview NIM models",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Shape 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.2,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 3.1,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Get ZenMux API Key",
+          "paragraphs": [
+            {
+              "text": "Get ZenMux API Key",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Get ZenMux API Key",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 3.4,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "Create account at zenmux.ai, grab key, verify Kimmy K3 Free available",
+          "paragraphs": [
+            {
+              "text": "Create account at zenmux.ai, grab key, verify Kimmy K3 Free available",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Create account at zenmux.ai, grab key, verify Kimmy K3 Free available",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 9,
+          "name": "Shape 7",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.0,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 10,
+          "name": "Text 8",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 3.9,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Install OpenCode",
+          "paragraphs": [
+            {
+              "text": "Install OpenCode",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Install OpenCode",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 11,
+          "name": "Text 9",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 4.2,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "npm i -g opencode (or curl -fsSL opencode.dev/install.sh | sh)",
+          "paragraphs": [
+            {
+              "text": "npm i -g opencode (or curl -fsSL opencode.dev/install.sh | sh)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "npm i -g opencode (or curl -fsSL opencode.dev/install.sh | sh)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 12,
+          "name": "Shape 10",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.8,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 13,
+          "name": "Text 11",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 4.7,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Connect Providers",
+          "paragraphs": [
+            {
+              "text": "Connect Providers",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Connect Providers",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 14,
+          "name": "Text 12",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 5.0,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "OpenCode → Settings → Providers → Add NVIDIA + ZenMux → paste keys",
+          "paragraphs": [
+            {
+              "text": "OpenCode → Settings → Providers → Add NVIDIA + ZenMux → paste keys",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "OpenCode → Settings → Providers → Add NVIDIA + ZenMux → paste keys",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 15,
+          "name": "Shape 13",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 5.6,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 16,
+          "name": "Text 14",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 5.5,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Start Coding Free",
+          "paragraphs": [
+            {
+              "text": "Start Coding Free",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Start Coding Free",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 17,
+          "name": "Text 15",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 5.8,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "Pick Kimmy K3 as daily driver, swap per task via model picker",
+          "paragraphs": [
+            {
+              "text": "Pick Kimmy K3 as daily driver, swap per task via model picker",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Pick Kimmy K3 as daily driver, swap per task via model picker",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 18,
+          "name": "Text 16",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 5.8,
+          "width_in": 12.333,
+          "height_in": 1.2,
+          "text": "\"A student with zero budget can have a terminal agent running a top-3 model with 1M context, backed by a full catalog of frontier models — and pay literally nothing.\"",
+          "paragraphs": [
+            {
+              "text": "\"A student with zero budget can have a terminal agent running a top-3 model with 1M context, backed by a full catalog of frontier models — and pay literally nothing.\"",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\"A student with zero budget can have a terminal agent running a top-3 model with 1M context, backed by a full catalog of frontier models — and pay literally nothing.\"",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 19,
+          "name": "Text 17",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Source: YouTube - Free AI Coder Setup",
+          "paragraphs": [
+            {
+              "text": "Source: YouTube - Free AI Coder Setup",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Source: YouTube - Free AI Coder Setup",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slide": 10,
+      "title": "",
+      "layout": "MASTER_SLIDE",
+      "notes": "",
+      "shapes": [
+        {
+          "shape_id": 2,
+          "name": "Text 0",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 0.5,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Pilot / Next Steps",
+          "paragraphs": [
+            {
+              "text": "Pilot / Next Steps",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Pilot / Next Steps",
+                  "font_name": "Calibri",
+                  "font_size_pt": 36.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 3,
+          "name": "Shape 1",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 2.4,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 4,
+          "name": "Text 2",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 2.3,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Get NVIDIA API Key",
+          "paragraphs": [
+            {
+              "text": "Get NVIDIA API Key",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Get NVIDIA API Key",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 5,
+          "name": "Text 3",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 2.6,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "Sign up at build.nvidia.com, filter Preview NIM models",
+          "paragraphs": [
+            {
+              "text": "Sign up at build.nvidia.com, filter Preview NIM models",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Sign up at build.nvidia.com, filter Preview NIM models",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 6,
+          "name": "Shape 4",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 3.2,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 7,
+          "name": "Text 5",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 3.1,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Get ZenMux API Key",
+          "paragraphs": [
+            {
+              "text": "Get ZenMux API Key",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Get ZenMux API Key",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 8,
+          "name": "Text 6",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 3.4,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "Create account at zenmux.ai, grab key, verify Kimmy K3 Free available",
+          "paragraphs": [
+            {
+              "text": "Create account at zenmux.ai, grab key, verify Kimmy K3 Free available",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Create account at zenmux.ai, grab key, verify Kimmy K3 Free available",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 9,
+          "name": "Shape 7",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.0,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 10,
+          "name": "Text 8",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 3.9,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Install OpenCode",
+          "paragraphs": [
+            {
+              "text": "Install OpenCode",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Install OpenCode",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 11,
+          "name": "Text 9",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 4.2,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "npm i -g opencode (or curl -fsSL opencode.dev/install.sh | sh)",
+          "paragraphs": [
+            {
+              "text": "npm i -g opencode (or curl -fsSL opencode.dev/install.sh | sh)",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "npm i -g opencode (or curl -fsSL opencode.dev/install.sh | sh)",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 12,
+          "name": "Shape 10",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 4.8,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 13,
+          "name": "Text 11",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 4.7,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Connect Providers",
+          "paragraphs": [
+            {
+              "text": "Connect Providers",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Connect Providers",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 14,
+          "name": "Text 12",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 5.0,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "OpenCode → Settings → Providers → Add NVIDIA + ZenMux → paste keys",
+          "paragraphs": [
+            {
+              "text": "OpenCode → Settings → Providers → Add NVIDIA + ZenMux → paste keys",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "OpenCode → Settings → Providers → Add NVIDIA + ZenMux → paste keys",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 15,
+          "name": "Shape 13",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 5.6,
+          "width_in": 0.3,
+          "height_in": 0.3,
+          "text": "",
+          "paragraphs": [
+            {
+              "text": "",
+              "level": 0,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "shape_id": 16,
+          "name": "Text 14",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 5.5,
+          "width_in": 4.0,
+          "height_in": 0.4,
+          "text": "Start Coding Free",
+          "paragraphs": [
+            {
+              "text": "Start Coding Free",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Start Coding Free",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "FFFFFF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 17,
+          "name": "Text 15",
+          "type": "AUTO_SHAPE",
+          "left_in": 1.0,
+          "top_in": 5.8,
+          "width_in": 11.0,
+          "height_in": 0.3,
+          "text": "Pick Kimmy K3 as daily driver, swap per task via model picker",
+          "paragraphs": [
+            {
+              "text": "Pick Kimmy K3 as daily driver, swap per task via model picker",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Pick Kimmy K3 as daily driver, swap per task via model picker",
+                  "font_name": "Calibri",
+                  "font_size_pt": 14.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 18,
+          "name": "Text 16",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 5.8,
+          "width_in": 12.333,
+          "height_in": 1.2,
+          "text": "\"A student with zero budget can have a terminal agent running a top-3 model with 1M context, backed by a full catalog of frontier models — and pay literally nothing.\"",
+          "paragraphs": [
+            {
+              "text": "\"A student with zero budget can have a terminal agent running a top-3 model with 1M context, backed by a full catalog of frontier models — and pay literally nothing.\"",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "\"A student with zero budget can have a terminal agent running a top-3 model with 1M context, backed by a full catalog of frontier models — and pay literally nothing.\"",
+                  "font_name": "Calibri",
+                  "font_size_pt": 18.0,
+                  "bold": true,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "14A085"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "shape_id": 19,
+          "name": "Text 17",
+          "type": "AUTO_SHAPE",
+          "left_in": 0.5,
+          "top_in": 6.9,
+          "width_in": 12.333,
+          "height_in": 0.0,
+          "text": "Source: YouTube - Free AI Coder Setup",
+          "paragraphs": [
+            {
+              "text": "Source: YouTube - Free AI Coder Setup",
+              "level": 0,
+              "runs": [
+                {
+                  "text": "Source: YouTube - Free AI Coder Setup",
+                  "font_name": "Calibri",
+                  "font_size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "underline": null,
+                  "color_rgb": "64748B"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

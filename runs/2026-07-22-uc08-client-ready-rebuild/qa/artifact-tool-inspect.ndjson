@@ -1,0 +1,434 @@
+{"kind":"deck","id":"pr/swgyb6","name":"Deck"}
+{"kind":"layout","layoutId":"55bd3737-8e7f-4429-91ea-c2b069ae6af8","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"f8c89853-23f3-48fd-bc75-23c0e5059d4b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/xnbg4i","slide":1,"title":"UC-08 · USE-CASE REALIZATION","textShapes":19}
+{"kind":"shape","id":"sh/43m14nmd","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/j2dkbi5s","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/i14j2d4n","slide":1,"text":"UC-08 · USE-CASE REALIZATION","textPreview":"UC-08 · USE-CASE REALIZATION","textChars":28,"textLines":1,"bbox":[48,52,573,22]}
+{"kind":"textbox","id":"sh/dsf2hsna","slide":1,"text":"A low-cost multi-model\ncoding pilot is possible now","textPreview":"A low-cost multi-model | coding pilot is possible now","textChars":51,"textLines":2,"bbox":[48,104,603,132]}
+{"kind":"textbox","id":"sh/srm18nmp","slide":1,"text":"One terminal workflow. Multiple provider options. A bounded pilot before production commitment.","textPreview":"One terminal workflow. Multiple provider options. A bounded pilot before production commitment.","textChars":95,"textLines":1,"bbox":[48,260,563,62]}
+{"kind":"shape","id":"sh/rqdkfi54","slide":1,"bbox":[48,356,170,30]}
+{"kind":"textbox","id":"sh/qp4j6x4j","slide":1,"text":"PILOT PROPOSITION","textPreview":"PILOT PROPOSITION","textChars":17,"textLines":1,"bbox":[56,364,154,14]}
+{"kind":"textbox","id":"sh/9wbi58nq","slide":1,"text":"Prototype access can be free or promotional; production economics and terms require validation.","textPreview":"Prototype access can be free or promotional; production economics and terms require validation.","textChars":95,"textLines":1,"bbox":[48,405,573,66]}
+{"kind":"shape","id":"sh/8v21w3m5","slide":1,"bbox":[659,82,573,460]}
+{"kind":"shape","id":"sh/q907e9s7","slide":1,"bbox":[659,82,573,42]}
+{"kind":"shape","id":"sh/rat87e9s","slide":1,"bbox":[677,97,10,10]}
+{"kind":"shape","id":"sh/cb2pgjad","slide":1,"bbox":[695,97,10,10]}
+{"kind":"shape","id":"sh/dcbq94ry","slide":1,"bbox":[713,97,10,10]}
+{"kind":"textbox","id":"sh/edk7i9s3","slide":1,"text":"opencode  /models","textPreview":"opencode  /models","textChars":17,"textLines":1,"bbox":[743,94,469,18]}
+{"kind":"textbox","id":"sh/zet8be9o","slide":1,"text":"SELECT A MODEL BY TASK","textPreview":"SELECT A MODEL BY TASK","textChars":22,"textLines":1,"bbox":[683,150,525,22]}
+{"kind":"shape","id":"sh/0f2pkja9","slide":1,"bbox":[681,194,257.5,112]}
+{"kind":"shape","id":"sh/1gbqdoru","slide":1,"bbox":[681,194,5,112]}
+{"kind":"textbox","id":"sh/mh47mtsf","slide":1,"text":"NVIDIA","textPreview":"NVIDIA","textChars":6,"textLines":1,"bbox":[699,208,227.5,24]}
+{"kind":"textbox","id":"sh/nid8fy90","slide":1,"text":"Prototype catalog\nOpen-model endpoints","textPreview":"Prototype catalog | Open-model endpoints","textChars":38,"textLines":2,"bbox":[699,238,227.5,56]}
+{"kind":"shape","id":"sh/j6do3yps","slide":1,"bbox":[952.5,194,257.5,112]}
+{"kind":"shape","id":"sh/y547at8n","slide":1,"bbox":[952.5,194,5,112]}
+{"kind":"textbox","id":"sh/l8f6587y","slide":1,"text":"ZENMUX","textPreview":"ZENMUX","textChars":6,"textLines":1,"bbox":[970.5,208,227.5,24]}
+{"kind":"textbox","id":"sh/k7mpc3qd","slide":1,"text":"Aggregated access\nPromotional options","textPreview":"Aggregated access | Promotional options","textChars":37,"textLines":2,"bbox":[970.5,238,227.5,56]}
+{"kind":"shape","id":"sh/bidozepw","slide":1,"bbox":[681,324,257.5,112]}
+{"kind":"shape","id":"sh/ah4n6t8b","slide":1,"bbox":[681,324,5,112]}
+{"kind":"textbox","id":"sh/xkv61o72","slide":1,"text":"KIMI K3","textPreview":"KIMI K3","textChars":7,"textLines":1,"bbox":[699,338,227.5,24]}
+{"kind":"textbox","id":"sh/wjmp8jqh","slide":1,"text":"Long-horizon work\nUp to 1M context*","textPreview":"Long-horizon work | Up to 1M context*","textChars":35,"textLines":2,"bbox":[699,368,227.5,56]}
+{"kind":"shape","id":"sh/netovep0","slide":1,"bbox":[952.5,324,257.5,112]}
+{"kind":"shape","id":"sh/mdkn298f","slide":1,"bbox":[952.5,324,5,112]}
+{"kind":"textbox","id":"sh/cjilwf6x","slide":1,"text":"TASK ROUTING","textPreview":"TASK ROUTING","textChars":12,"textLines":1,"bbox":[970.5,338,227.5,24]}
+{"kind":"textbox","id":"sh/dkrm5kni","slide":1,"text":"Code · vision\nreasoning · speed","textPreview":"Code · vision | reasoning · speed","textChars":31,"textLines":2,"bbox":[970.5,368,227.5,56]}
+{"kind":"textbox","id":"sh/qhg3u5o7","slide":1,"text":"*Availability depends on provider and plan.","textPreview":"*Availability depends on provider and plan.","textChars":43,"textLines":1,"bbox":[683,474,525,24]}
+{"kind":"textbox","id":"sh/ri943a5s","slide":1,"text":"CLIENT-READY REBUILD · 22 JUL 2026","textPreview":"CLIENT-READY REBUILD · 22 JUL 2026","textChars":34,"textLines":1,"bbox":[48,620,620,20]}
+{"kind":"shape","id":"sh/0nil0f69","slide":1,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/1orm9knu","slide":1,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/el03ypo3","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"notes","id":"nt/xnbg4i","slide":1,"text":"Frame this as a pilot proposition, not a permanent zero-cost promise. The source deck's $0 claim has been qualified because provider promotions and production terms can change.\n\nSources:\nhttps://opencode.ai/docs/providers\nhttps://build.nvidia.com/models\nhttps://docs.api.nvidia.com/nim/docs/product\nhttps://zenmux.ai/provider/moonshotai\nhttps://www.kimi.com/code/docs/en/kimi-code/models.html"}
+{"kind":"slide","id":"sl/7dmfh8","slide":2,"title":"01 · EXECUTIVE SUMMARY","textShapes":22}
+{"kind":"shape","id":"sh/6t0rqpkj","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/dwral4ju","slide":2,"text":"01 · EXECUTIVE SUMMARY","textPreview":"01 · EXECUTIVE SUMMARY","textChars":22,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/svi9sz29","slide":2,"text":"The opportunity is access without premature platform lock-in","textPreview":"The opportunity is access without premature platform lock-in","textChars":60,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/jqp8fu1s","slide":2,"text":"Approve a bounded pilot; do not assume promotional access becomes the production model.","textPreview":"Approve a bounded pilot; do not assume promotional access becomes the production model.","textChars":87,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/ipgrmpk7","slide":2,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/5srah4jy","slide":2,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/4ri9oz2d","slide":2,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/nmtsre1w","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/2lkry90r","slide":2,"bbox":[48,168,582,368]}
+{"kind":"textbox","id":"sh/wn6907ap","slide":2,"text":"RECOMMENDATION","textPreview":"RECOMMENDATION","textChars":14,"textLines":1,"bbox":[76,196,526,18]}
+{"kind":"textbox","id":"sh/hofatcba","slide":2,"text":"Run a four-week pilot with a small engineering cohort.","textPreview":"Run a four-week pilot with a small engineering cohort.","textChars":54,"textLines":1,"bbox":[76,238,526,90]}
+{"kind":"textbox","id":"sh/uloryxsj","slide":2,"text":"The pilot should validate task quality, provider availability, data controls, rate limits, and cost per successful task before any production commitment.","textPreview":"The pilot should validate task quality, provider availability, data controls, rate limits, and cost per successful task before any produc...","textChars":153,"textLines":1,"bbox":[76,352,526,112]}
+{"kind":"shape","id":"sh/vmx8r2t4","slide":2,"bbox":[76,484,150,30]}
+{"kind":"textbox","id":"sh/8j69wnud","slide":2,"text":"DECISION: PILOT","textPreview":"DECISION: PILOT","textChars":15,"textLines":1,"bbox":[84,492,134,14]}
+{"kind":"shape","id":"sh/9kfqpsby","slide":2,"bbox":[650,168,281,164]}
+{"kind":"textbox","id":"sh/mh4rudcn","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[666,182,36,34]}
+{"kind":"textbox","id":"sh/7id8nit8","slide":2,"text":"TERMINAL WORKFLOW","textPreview":"TERMINAL WORKFLOW","textChars":17,"textLines":1,"bbox":[708,188,209,20]}
+{"kind":"textbox","id":"sh/kfm9snuh","slide":2,"text":"OpenCode connects credentials and exposes provider/model selection.","textPreview":"OpenCode connects credentials and exposes provider/model selection.","textChars":67,"textLines":1,"bbox":[668,234,245,80]}
+{"kind":"shape","id":"sh/lgvqlsb2","slide":2,"bbox":[951,168,281,164]}
+{"kind":"textbox","id":"sh/103y9kze","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[967,182,36,34]}
+{"kind":"textbox","id":"sh/0zux0fi9","slide":2,"text":"PROVIDER OPTIONS","textPreview":"PROVIDER OPTIONS","textChars":16,"textLines":1,"bbox":[1009,188,209,20]}
+{"kind":"textbox","id":"sh/fylg7aho","slide":2,"text":"NVIDIA and ZenMux can be evaluated without redesigning the developer workflow.","textPreview":"NVIDIA and ZenMux can be evaluated without redesigning the developer workflow.","textChars":78,"textLines":1,"bbox":[969,234,245,80]}
+{"kind":"shape","id":"sh/excfy503","slide":2,"bbox":[650,352,281,164]}
+{"kind":"textbox","id":"sh/tc3y50zi","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[666,366,36,34]}
+{"kind":"textbox","id":"sh/sbuxwvix","slide":2,"text":"BOUNDED ACCESS","textPreview":"BOUNDED ACCESS","textChars":14,"textLines":1,"bbox":[708,372,209,20]}
+{"kind":"textbox","id":"sh/ralg3qhc","slide":2,"text":"Free prototype access and promotions are conditional—not a production entitlement.","textPreview":"Free prototype access and promotions are conditional—not a production entitlement.","textChars":82,"textLines":1,"bbox":[668,418,245,80]}
+{"kind":"shape","id":"sh/69sfu50r","slide":2,"bbox":[951,352,281,164]}
+{"kind":"textbox","id":"sh/xsnyh4zm","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[967,366,36,34]}
+{"kind":"textbox","id":"sh/c7eh8zi1","slide":2,"text":"MEASURED DECISION","textPreview":"MEASURED DECISION","textChars":17,"textLines":1,"bbox":[1009,372,209,20]}
+{"kind":"textbox","id":"sh/ud8v21gj","slide":2,"text":"Four weeks can establish quality, reliability, governance, and cost evidence.","textPreview":"Four weeks can establish quality, reliability, governance, and cost evidence.","textChars":77,"textLines":1,"bbox":[969,418,245,80]}
+{"kind":"textbox","id":"sh/vehcv6x4","slide":2,"text":"Sources: OpenCode provider docs; NVIDIA NIM FAQ; ZenMux and Kimi official model pages (accessed 22 Jul 2026).","textPreview":"Sources: OpenCode provider docs; NVIDIA NIM FAQ; ZenMux and Kimi official model pages (accessed 22 Jul 2026).","textChars":109,"textLines":1,"bbox":[48,660,1000,14]}
+{"kind":"notes","id":"nt/7dmfh8","slide":2,"text":"Lead with the decision. The architecture is credible enough to test; the economics and operating fit are not yet proven.\n\nSources:\nhttps://opencode.ai/docs/providers\nhttps://build.nvidia.com/models\nhttps://docs.api.nvidia.com/nim/docs/product\nhttps://zenmux.ai/provider/moonshotai\nhttps://www.kimi.com/code/docs/en/kimi-code/models.html"}
+{"kind":"slide","id":"sl/ukwe1a","slide":3,"title":"02 · CURRENT STATE","textShapes":20}
+{"kind":"shape","id":"sh/kbu5sfi9","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/zal4jaho","slide":3,"text":"02 · CURRENT STATE","textPreview":"02 · CURRENT STATE","textChars":18,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/y9cnq503","slide":3,"text":"Cost and configuration fragment the developer experience","textPreview":"Cost and configuration fragment the developer experience","textChars":56,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/x83mh0zy","slide":3,"text":"The friction is not one expensive model—it is the operating complexity across providers.","textPreview":"The friction is not one expensive model—it is the operating complexity across providers.","textChars":88,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/c7u5ovid","slide":3,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/bml4fqhs","slide":3,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/qlsnm507","slide":3,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/h4n6t4z2","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/w3e50zih","slide":3,"bbox":[48,198,244,118]}
+{"kind":"shape","id":"sh/q1gz6pkn","slide":3,"bbox":[48,198,244,4]}
+{"kind":"textbox","id":"sh/b2pgzu18","slide":3,"text":"Fragmented access","textPreview":"Fragmented access","textChars":17,"textLines":1,"bbox":[60,214,220,22]}
+{"kind":"textbox","id":"sh/c3yh8z2t","slide":3,"text":"Separate subscriptions, credentials, and model catalogs","textPreview":"Separate subscriptions, credentials, and model catalogs","textChars":55,"textLines":1,"bbox":[60,240,220,46]}
+{"kind":"shape","id":"sh/d47i14je","slide":3,"bbox":[311.67,247,30,20]}
+{"kind":"shape","id":"sh/2xwz2pkr","slide":3,"bbox":[361.33,198,244,118]}
+{"kind":"shape","id":"sh/3y5gbu1w","slide":3,"bbox":[361.33,198,244,4]}
+{"kind":"textbox","id":"sh/ozeh4z2h","slide":3,"text":"Configuration load","textPreview":"Configuration load","textChars":18,"textLines":1,"bbox":[373.33,214,220,22]}
+{"kind":"textbox","id":"sh/p0nyx4j2","slide":3,"text":"Provider-specific setup and uneven model metadata","textPreview":"Provider-specific setup and uneven model metadata","textChars":49,"textLines":1,"bbox":[373.33,240,220,46]}
+{"kind":"shape","id":"sh/mt0ze9kv","slide":3,"bbox":[625,247,30,20]}
+{"kind":"shape","id":"sh/7u907e1g","slide":3,"bbox":[674.67,198,244,118]}
+{"kind":"shape","id":"sh/je1wz61s","slide":3,"bbox":[674.67,198,244,4]}
+{"kind":"textbox","id":"sh/idsv6107","slide":3,"text":"Unclear economics","textPreview":"Unclear economics","textChars":17,"textLines":1,"bbox":[686.67,214,220,22]}
+{"kind":"textbox","id":"sh/5gje1gzy","slide":3,"text":"Preview access and promotions can change by provider","textPreview":"Preview access and promotions can change by provider","textChars":52,"textLines":1,"bbox":[686.67,240,220,46]}
+{"kind":"shape","id":"sh/4fad8bid","slide":3,"bbox":[938.33,247,30,20]}
+{"kind":"shape","id":"sh/r2lw3qho","slide":3,"bbox":[988,198,244,118]}
+{"kind":"shape","id":"sh/6hsfal0j","slide":3,"bbox":[988,198,244,4]}
+{"kind":"textbox","id":"sh/t43e50zu","slide":3,"text":"Governance gap","textPreview":"Governance gap","textChars":14,"textLines":1,"bbox":[1000,214,220,22]}
+{"kind":"textbox","id":"sh/s3uxcvi9","slide":3,"text":"Task data and model behavior need explicit controls","textPreview":"Task data and model behavior need explicit controls","textChars":51,"textLines":1,"bbox":[1000,240,220,46]}
+{"kind":"shape","id":"sh/f6lw7qh0","slide":3,"bbox":[48,380,1184,1]}
+{"kind":"textbox","id":"sh/e5cfel0f","slide":3,"text":"BUSINESS IMPACT","textPreview":"BUSINESS IMPACT","textChars":15,"textLines":1,"bbox":[48,410,180,20]}
+{"kind":"shape","id":"sh/cbed4vyt","slide":3,"bbox":[48,448,381.33,130]}
+{"kind":"shape","id":"sh/dcnex0fy","slide":3,"bbox":[48,448,5,130]}
+{"kind":"textbox","id":"sh/q9wv25gn","slide":3,"text":"ACCESS","textPreview":"ACCESS","textChars":6,"textLines":1,"bbox":[66,462,351.33,24]}
+{"kind":"textbox","id":"sh/ba5wvax8","slide":3,"text":"Students and junior developers can be priced out of high-quality assistance.","textPreview":"Students and junior developers can be priced out of high-quality assistance.","textChars":76,"textLines":1,"bbox":[66,492,351.33,74]}
+{"kind":"shape","id":"sh/o7ud0vyh","slide":3,"bbox":[449.33,448,381.33,130]}
+{"kind":"shape","id":"sh/p83ut0f2","slide":3,"bbox":[449.33,448,5,130]}
+{"kind":"textbox","id":"sh/25cvylgb","slide":3,"text":"PRODUCTIVITY","textPreview":"PRODUCTIVITY","textChars":12,"textLines":1,"bbox":[467.33,462,351.33,24]}
+{"kind":"textbox","id":"sh/36lcrqxw","slide":3,"text":"Teams lose time maintaining provider-specific setup and deciding which model to use.","textPreview":"Teams lose time maintaining provider-specific setup and deciding which model to use.","textChars":84,"textLines":1,"bbox":[467.33,492,351.33,74]}
+{"kind":"shape","id":"sh/g3udwbyl","slide":3,"bbox":[850.67,448,381.33,130]}
+{"kind":"shape","id":"sh/143upgf6","slide":3,"bbox":[850.67,448,5,130]}
+{"kind":"textbox","id":"sh/5ozaxcvy","slide":3,"text":"CONTROL","textPreview":"CONTROL","textChars":7,"textLines":1,"bbox":[868.67,462,351.33,24]}
+{"kind":"textbox","id":"sh/4nqto7ed","slide":3,"text":"Unmeasured usage creates risk around data, quality, availability, and production cost.","textPreview":"Unmeasured usage creates risk around data, quality, availability, and production cost.","textChars":86,"textLines":1,"bbox":[868.67,492,351.33,74]}
+{"kind":"notes","id":"nt/ukwe1a","slide":3,"text":"The source deck correctly identifies cost and access friction. This rebuild reframes the issue as an operating-model problem so the pilot can test a repeatable workflow rather than chase a static list of free models."}
+{"kind":"slide","id":"sl/7n9ddp","slide":4,"title":"03 · TARGET STATE","textShapes":26}
+{"kind":"shape","id":"sh/218jmhgz","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/p4z2xwza","slide":4,"text":"03 · TARGET STATE","textPreview":"03 · TARGET STATE","textChars":17,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/o3qlory5","slide":4,"text":"One terminal workflow can govern model choice by task","textPreview":"One terminal workflow can govern model choice by task","textChars":53,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/b6hkzmhg","slide":4,"text":"A stable developer experience sits above changing providers and models.","textPreview":"A stable developer experience sits above changing providers and models.","textChars":71,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/q583qhgv","slide":4,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/d8j21wzm","slide":4,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/c7qlsry1","slide":4,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/raxkn2hc","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/69ojexgr","slide":4,"bbox":[48,202,281,154]}
+{"kind":"shape","id":"sh/knah0f2h","slide":4,"bbox":[48,202,5,154]}
+{"kind":"textbox","id":"sh/5ojitk32","slide":4,"text":"ENGINEER","textPreview":"ENGINEER","textChars":8,"textLines":1,"bbox":[66,216,251,24]}
+{"kind":"textbox","id":"sh/il8zy5kb","slide":4,"text":"One terminal interface\nOne permission model\nOne task workflow","textPreview":"One terminal interface | One permission model | One task workflow","textChars":61,"textLines":3,"bbox":[66,246,251,98]}
+{"kind":"shape","id":"sh/jm10ralw","slide":4,"bbox":[331,266,16,18]}
+{"kind":"shape","id":"sh/srah4z2d","slide":4,"bbox":[349,168,381.33,222]}
+{"kind":"textbox","id":"sh/tsjix43y","slide":4,"text":"OPENCODE","textPreview":"OPENCODE","textChars":8,"textLines":1,"bbox":[371,192,337.33,30]}
+{"kind":"textbox","id":"sh/6psz2pkn","slide":4,"text":"Connect credentials · select models · apply task policy","textPreview":"Connect credentials · select models · apply task policy","textChars":55,"textLines":1,"bbox":[371,236,337.33,42]}
+{"kind":"shape","id":"sh/7q10vul8","slide":4,"bbox":[387,300,120,30]}
+{"kind":"textbox","id":"sh/8vqhsv29","slide":4,"text":"/CONNECT","textPreview":"/CONNECT","textChars":8,"textLines":1,"bbox":[395,308,104,14]}
+{"kind":"shape","id":"sh/9wzyl03u","slide":4,"bbox":[572.33,300,120,30]}
+{"kind":"textbox","id":"sh/psrypwvi","slide":4,"text":"/MODELS","textPreview":"/MODELS","textChars":7,"textLines":1,"bbox":[580.33,308,104,14]}
+{"kind":"shape","id":"sh/orixgrux","slide":4,"bbox":[732.33,266,16,18]}
+{"kind":"shape","id":"sh/nq9wnmds","slide":4,"bbox":[750.33,168,233.83,104]}
+{"kind":"shape","id":"sh/2pgfehw7","slide":4,"bbox":[750.33,168,5,104]}
+{"kind":"textbox","id":"sh/xgrytwvu","slide":4,"text":"NVIDIA","textPreview":"NVIDIA","textChars":6,"textLines":1,"bbox":[768.33,182,203.83,24]}
+{"kind":"textbox","id":"sh/cfixkru9","slide":4,"text":"Hosted prototype endpoints\nand downloadable NIMs","textPreview":"Hosted prototype endpoints | and downloadable NIMs","textChars":48,"textLines":2,"bbox":[768.33,212,203.83,48]}
+{"kind":"shape","id":"sh/be9gr6do","slide":4,"bbox":[998.17,168,233.83,104]}
+{"kind":"shape","id":"sh/at0fi1c3","slide":4,"bbox":[998.17,168,5,104]}
+{"kind":"textbox","id":"sh/lkbyxgvq","slide":4,"text":"ZENMUX","textPreview":"ZENMUX","textChars":6,"textLines":1,"bbox":[1016.17,182,203.83,24]}
+{"kind":"textbox","id":"sh/kj2xobu5","slide":4,"text":"Aggregated models and\ntime-bound promotions","textPreview":"Aggregated models and | time-bound promotions","textChars":43,"textLines":2,"bbox":[1016.17,212,203.83,48]}
+{"kind":"shape","id":"sh/ipcvidcn","slide":4,"bbox":[750.33,288,233.83,102]}
+{"kind":"shape","id":"sh/jqlcrit8","slide":4,"bbox":[750.33,288,5,102]}
+{"kind":"textbox","id":"sh/4redk3at","slide":4,"text":"PRIMARY","textPreview":"PRIMARY","textChars":7,"textLines":1,"bbox":[768.33,302,203.83,24]}
+{"kind":"textbox","id":"sh/5snut8be","slide":4,"text":"Best-fit model for\ncomplex implementation","textPreview":"Best-fit model for | complex implementation","textChars":41,"textLines":2,"bbox":[768.33,332,203.83,46]}
+{"kind":"shape","id":"sh/6twvmdsz","slide":4,"bbox":[998.17,288,233.83,102]}
+{"kind":"shape","id":"sh/ru5cvitk","slide":4,"bbox":[998.17,288,5,102]}
+{"kind":"textbox","id":"sh/svedonap","slide":4,"text":"SPECIALIST","textPreview":"SPECIALIST","textChars":10,"textLines":1,"bbox":[1016.17,302,203.83,24]}
+{"kind":"textbox","id":"sh/twnuxsba","slide":4,"text":"Speed, vision, or\nreasoning by task","textPreview":"Speed, vision, or | reasoning by task","textChars":35,"textLines":2,"bbox":[1016.17,332,203.83,46]}
+{"kind":"shape","id":"sh/exwvqxsv","slide":4,"bbox":[48,438,1184,138]}
+{"kind":"textbox","id":"sh/fypcz2tg","slide":4,"text":"GOVERNANCE PLANE","textPreview":"GOVERNANCE PLANE","textChars":16,"textLines":1,"bbox":[70,458,180,20]}
+{"kind":"shape","id":"sh/3214nyh8","slide":4,"bbox":[70,502,218.4,30]}
+{"kind":"textbox","id":"sh/21s3utg3","slide":4,"text":"APPROVED MODELS","textPreview":"APPROVED MODELS","textChars":15,"textLines":1,"bbox":[78,510,202.4,14]}
+{"kind":"shape","id":"sh/p4jmp8ze","slide":4,"bbox":[300.4,502,218.4,30]}
+{"kind":"textbox","id":"sh/o3alw3yt","slide":4,"text":"SECRETS HANDLING","textPreview":"SECRETS HANDLING","textChars":16,"textLines":1,"bbox":[308.4,510,202.4,14]}
+{"kind":"shape","id":"sh/b614ryhk","slide":4,"bbox":[530.8,502,218.4,30]}
+{"kind":"textbox","id":"sh/q5s3ydgz","slide":4,"text":"TASK/DATA POLICY","textPreview":"TASK/DATA POLICY","textChars":16,"textLines":1,"bbox":[538.8,510,202.4,14]}
+{"kind":"shape","id":"sh/x83mt8zq","slide":4,"bbox":[761.2,502,218.4,30]}
+{"kind":"textbox","id":"sh/c7ul03y5","slide":4,"text":"QUALITY TESTS","textPreview":"QUALITY TESTS","textChars":13,"textLines":1,"bbox":[769.2,510,202.4,14]}
+{"kind":"shape","id":"sh/rahkfehg","slide":4,"bbox":[991.6,502,218.4,30]}
+{"kind":"textbox","id":"sh/6983m9gv","slide":4,"text":"USAGE & COST","textPreview":"USAGE & COST","textChars":12,"textLines":1,"bbox":[999.6,510,202.4,14]}
+{"kind":"textbox","id":"sh/wfm1wfed","slide":4,"text":"Source: OpenCode provider documentation — opencode.ai/docs/providers.","textPreview":"Source: OpenCode provider documentation — opencode.ai/docs/providers.","textChars":69,"textLines":1,"bbox":[48,660,1000,14]}
+{"kind":"notes","id":"nt/7n9ddp","slide":4,"text":"The target state is provider flexibility behind a consistent terminal experience and governance plane. OpenCode documents NVIDIA and ZenMux provider connections via /connect and model selection via /models.\n\nSource:\nhttps://opencode.ai/docs/providers"}
+{"kind":"slide","id":"sl/diwn7o","slide":5,"title":"04 · AI WORKFLOW","textShapes":23}
+{"kind":"shape","id":"sh/yhc7up47","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/lkn6p43y","slide":5,"text":"04 · AI WORKFLOW","textPreview":"04 · AI WORKFLOW","textChars":16,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/0jepwzmd","slide":5,"text":"The workflow is a four-step connection and selection loop","textPreview":"The workflow is a four-step connection and selection loop","textChars":57,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/nm5orelo","slide":5,"text":"The pilot tests the operating loop—not a permanent commitment to any one model.","textPreview":"The pilot tests the operating loop—not a permanent commitment to any one model.","textChars":79,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/mlw7y943","slide":5,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/9on6t43u","slide":5,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/8nep0jm9","slide":5,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/vqpovel0","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/apg7294f","slide":5,"bbox":[48,186,244,122]}
+{"kind":"shape","id":"sh/onmh8buh","slide":5,"bbox":[48,186,244,4]}
+{"kind":"textbox","id":"sh/9ofi1gb2","slide":5,"text":"Install","textPreview":"Install","textChars":7,"textLines":1,"bbox":[60,202,220,22]}
+{"kind":"textbox","id":"sh/ml4z61cb","slide":5,"text":"Launch OpenCode and confirm the terminal workflow","textPreview":"Launch OpenCode and confirm the terminal workflow","textChars":49,"textLines":1,"bbox":[60,228,220,46]}
+{"kind":"shape","id":"sh/nmd0z6tw","slide":5,"bbox":[311.67,237,30,20]}
+{"kind":"shape","id":"sh/wr61cbud","slide":5,"bbox":[361.33,186,244,122]}
+{"kind":"shape","id":"sh/xsfi5gby","slide":5,"bbox":[361.33,186,244,4]}
+{"kind":"textbox","id":"sh/apojalcn","slide":5,"text":"Connect","textPreview":"Connect","textChars":7,"textLines":1,"bbox":[373.33,202,220,22]}
+{"kind":"textbox","id":"sh/bqx036t8","slide":5,"text":"Add NVIDIA and ZenMux credentials through /connect","textPreview":"Add NVIDIA and ZenMux credentials through /connect","textChars":50,"textLines":1,"bbox":[373.33,228,220,46]}
+{"kind":"shape","id":"sh/kfq1gvup","slide":5,"bbox":[625,237,30,20]}
+{"kind":"shape","id":"sh/lgzi90ba","slide":5,"bbox":[674.67,186,244,122]}
+{"kind":"shape","id":"sh/tcvitg3e","slide":5,"bbox":[674.67,186,244,4]}
+{"kind":"textbox","id":"sh/sbmhkvmt","slide":5,"text":"Select","textPreview":"Select","textChars":6,"textLines":1,"bbox":[686.67,202,220,22]}
+{"kind":"textbox","id":"sh/rad0rql8","slide":5,"text":"Use /models to choose an approved model by task","textPreview":"Use /models to choose an approved model by task","textChars":47,"textLines":1,"bbox":[686.67,228,220,46]}
+{"kind":"shape","id":"sh/69kzil4n","slide":5,"bbox":[938.33,237,30,20]}
+{"kind":"shape","id":"sh/10vix03a","slide":5,"bbox":[988,186,244,122]}
+{"kind":"shape","id":"sh/gzm1ovmp","slide":5,"bbox":[988,186,244,4]}
+{"kind":"textbox","id":"sh/fed0vqlk","slide":5,"text":"Measure","textPreview":"Measure","textChars":7,"textLines":1,"bbox":[1000,202,220,22]}
+{"kind":"textbox","id":"sh/ed4zml4z","slide":5,"text":"Capture quality, latency, failures, usage, and cost","textPreview":"Capture quality, latency, failures, usage, and cost","textChars":51,"textLines":1,"bbox":[1000,228,220,46]}
+{"kind":"textbox","id":"sh/x4bilw36","slide":5,"text":"TASK ROUTING PRINCIPLE","textPreview":"TASK ROUTING PRINCIPLE","textChars":22,"textLines":1,"bbox":[48,352,260,20]}
+{"kind":"shape","id":"sh/w32hcbml","slide":5,"bbox":[48,392,281,130]}
+{"kind":"shape","id":"sh/m9gfmxkj","slide":5,"bbox":[48,392,5,130]}
+{"kind":"textbox","id":"sh/napwv214","slide":5,"text":"QUICK EDIT","textPreview":"QUICK EDIT","textChars":10,"textLines":1,"bbox":[66,406,251,24]}
+{"kind":"textbox","id":"sh/8bixo72p","slide":5,"text":"Favor speed and low overhead","textPreview":"Favor speed and low overhead","textChars":28,"textLines":1,"bbox":[66,436,251,74]}
+{"kind":"shape","id":"sh/9cryxcju","slide":5,"bbox":[349,392,281,130]}
+{"kind":"shape","id":"sh/ad0fqhkf","slide":5,"bbox":[349,392,5,130]}
+{"kind":"textbox","id":"sh/ve9gzm10","slide":5,"text":"IMPLEMENTATION","textPreview":"IMPLEMENTATION","textChars":14,"textLines":1,"bbox":[367,406,251,24]}
+{"kind":"textbox","id":"sh/wfixsr2l","slide":5,"text":"Favor coding quality and tool use","textPreview":"Favor coding quality and tool use","textChars":33,"textLines":1,"bbox":[367,436,251,74]}
+{"kind":"shape","id":"sh/xgry1wj6","slide":5,"bbox":[650,392,281,130]}
+{"kind":"shape","id":"sh/qhwfedkb","slide":5,"bbox":[650,392,5,130]}
+{"kind":"textbox","id":"sh/bi5wni1w","slide":5,"text":"UI / VISION","textPreview":"UI / VISION","textChars":11,"textLines":1,"bbox":[668,406,251,24]}
+{"kind":"textbox","id":"sh/r2x4vap8","slide":5,"text":"Require verified multimodal support","textPreview":"Require verified multimodal support","textChars":35,"textLines":1,"bbox":[668,436,251,74]}
+{"kind":"shape","id":"sh/61432p83","slide":5,"bbox":[951,392,281,130]}
+{"kind":"shape","id":"sh/t4fmxk7e","slide":5,"bbox":[951,392,5,130]}
+{"kind":"textbox","id":"sh/s36l4fqt","slide":5,"text":"REASONING","textPreview":"REASONING","textChars":9,"textLines":1,"bbox":[969,406,251,24]}
+{"kind":"textbox","id":"sh/f6x4zupk","slide":5,"text":"Favor reliability on complex decisions","textPreview":"Favor reliability on complex decisions","textChars":38,"textLines":1,"bbox":[969,436,251,74]}
+{"kind":"textbox","id":"sh/e5o36p8z","slide":5,"text":"Source: OpenCode provider documentation — connection and model selection steps.","textPreview":"Source: OpenCode provider documentation — connection and model selection steps.","textChars":79,"textLines":1,"bbox":[48,660,1000,14]}
+{"kind":"notes","id":"nt/diwn7o","slide":5,"text":"The documented OpenCode pattern is to connect a provider, then select from available models. Model names should be discovered at pilot time rather than hard-coded into the operating process.\n\nSource:\nhttps://opencode.ai/docs/providers"}
+{"kind":"slide","id":"sl/wiifte","slide":6,"title":"05 · PROOF OBJECTS","textShapes":26}
+{"kind":"shape","id":"sh/u587ips7","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/h8zqd4ry","slide":6,"text":"05 · PROOF OBJECTS","textPreview":"05 · PROOF OBJECTS","textChars":18,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/g7qpkzqd","slide":6,"text":"Official sources support the core proposition—with conditions","textPreview":"Official sources support the core proposition—with conditions","textChars":61,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/3ah8fu9o","slide":6,"text":"The credible claim is “pilot-ready access,” not “permanently free production.”","textPreview":"The credible claim is “pilot-ready access,” not “permanently free production.”","textChars":78,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/2987m98j","slide":6,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/pcjqh4ru","slide":6,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/4bapozq9","slide":6,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/jexo3a9k","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/ydo7a5sz","slide":6,"bbox":[48,168,1184,36]}
+{"kind":"textbox","id":"sh/c7yt4nq9","slide":6,"text":"VERIFIED PROPOSITION","textPreview":"VERIFIED PROPOSITION","textChars":20,"textLines":1,"bbox":[58,177,316,18]}
+{"kind":"textbox","id":"sh/d87adsru","slide":6,"text":"CURRENT EVIDENCE","textPreview":"CURRENT EVIDENCE","textChars":16,"textLines":1,"bbox":[388,177,546,18]}
+{"kind":"textbox","id":"sh/q5wr2d83","slide":6,"text":"CONDITION","textPreview":"CONDITION","textChars":9,"textLines":1,"bbox":[948,177,280,18]}
+{"kind":"shape","id":"sh/r6psbi9o","slide":6,"bbox":[48,204,1184,64]}
+{"kind":"textbox","id":"sh/0byt87q5","slide":6,"text":"Native provider workflow","textPreview":"Native provider workflow","textChars":24,"textLines":1,"bbox":[58,212,316,52]}
+{"kind":"textbox","id":"sh/1c7ahcrq","slide":6,"text":"OpenCode documents NVIDIA and ZenMux under /connect and model selection under /models.","textPreview":"OpenCode documents NVIDIA and ZenMux under /connect and model selection under /models.","textChars":86,"textLines":1,"bbox":[388,212,546,52]}
+{"kind":"textbox","id":"sh/e9gb6x8z","slide":6,"text":"Reconfirm in installed version","textPreview":"Reconfirm in installed version","textChars":30,"textLines":1,"bbox":[948,212,280,52]}
+{"kind":"shape","id":"sh/zapsf29k","slide":6,"bbox":[48,268,1184,64]}
+{"kind":"textbox","id":"sh/gfe9w3q1","slide":6,"text":"Broad prototype catalog","textPreview":"Broad prototype catalog","textChars":23,"textLines":1,"bbox":[58,276,316,52]}
+{"kind":"textbox","id":"sh/hgna58rm","slide":6,"text":"NVIDIA catalog displayed 139 models on 22 Jul 2026; entries vary by free endpoint and download status.","textPreview":"NVIDIA catalog displayed 139 models on 22 Jul 2026; entries vary by free endpoint and download status.","textChars":102,"textLines":1,"bbox":[388,276,546,52]}
+{"kind":"textbox","id":"sh/xkvyd0fy","slide":6,"text":"Catalog changes over time","textPreview":"Catalog changes over time","textChars":25,"textLines":1,"bbox":[948,276,280,52]}
+{"kind":"shape","id":"sh/wzmhkved","slide":6,"bbox":[48,332,1184,64]}
+{"kind":"shape","id":"sh/bydgbqx8","slide":6,"bbox":[48,332,4,64]}
+{"kind":"textbox","id":"sh/ax4zi5gn","slide":6,"text":"Developer prototype access","textPreview":"Developer prototype access","textChars":26,"textLines":1,"bbox":[58,340,316,52]}
+{"kind":"textbox","id":"sh/5ovihkfa","slide":6,"text":"NVIDIA Developer Program provides hosted NIM access for prototyping, research, development, and testing.","textPreview":"NVIDIA Developer Program provides hosted NIM access for prototyping, research, development, and testing.","textChars":104,"textLines":1,"bbox":[388,340,546,52]}
+{"kind":"textbox","id":"sh/knmhofep","slide":6,"text":"Production license required","textPreview":"Production license required","textChars":27,"textLines":1,"bbox":[948,340,280,52]}
+{"kind":"shape","id":"sh/jmdgfax4","slide":6,"bbox":[48,396,1184,64]}
+{"kind":"textbox","id":"sh/yl4zm5wj","slide":6,"text":"Kimi K3 capability","textPreview":"Kimi K3 capability","textChars":18,"textLines":1,"bbox":[58,404,316,52]}
+{"kind":"textbox","id":"sh/tsfilkf6","slide":6,"text":"Official Kimi docs describe 2.8T parameters and up to 1M context.","textPreview":"Official Kimi docs describe 2.8T parameters and up to 1M context.","textChars":65,"textLines":1,"bbox":[388,404,546,52]}
+{"kind":"textbox","id":"sh/sr6hsfel","slide":6,"text":"Context depends on plan","textPreview":"Context depends on plan","textChars":23,"textLines":1,"bbox":[948,404,280,52]}
+{"kind":"shape","id":"sh/qxgvmhw3","slide":6,"bbox":[48,460,1184,64]}
+{"kind":"textbox","id":"sh/ry9wfmdo","slide":6,"text":"Promotional free route","textPreview":"Promotional free route","textChars":22,"textLines":1,"bbox":[58,468,316,52]}
+{"kind":"textbox","id":"sh/czidore9","slide":6,"text":"ZenMux listed Kimi K3 Free at $0/M tokens for a limited time.","textPreview":"ZenMux listed Kimi K3 Free at $0/M tokens for a limited time.","textChars":61,"textLines":1,"bbox":[388,468,546,52]}
+{"kind":"textbox","id":"sh/d0rehwvu","slide":6,"text":"Promotion may expire","textPreview":"Promotion may expire","textChars":20,"textLines":1,"bbox":[948,468,280,52]}
+{"kind":"shape","id":"sh/e10fq1cf","slide":6,"bbox":[48,538,1184,46]}
+{"kind":"textbox","id":"sh/z29wj6d0","slide":6,"text":"DECISION RULE","textPreview":"DECISION RULE","textChars":13,"textLines":1,"bbox":[66,552,120,16]}
+{"kind":"textbox","id":"sh/03ixsru5","slide":6,"text":"Verify access, terms, and the available model list on day 1; freeze the tested configuration for the pilot.","textPreview":"Verify access, terms, and the available model list on day 1; freeze the tested configuration for the pilot.","textChars":107,"textLines":1,"bbox":[198,547,1016,24]}
+{"kind":"textbox","id":"sh/14relwvq","slide":6,"text":"Sources: OpenCode · NVIDIA NIM FAQ/catalog · ZenMux K3 listing · Kimi Code model docs; accessed 22 Jul 2026.","textPreview":"Sources: OpenCode · NVIDIA NIM FAQ/catalog · ZenMux K3 listing · Kimi Code model docs; accessed 22 Jul 2026.","textChars":108,"textLines":1,"bbox":[48,660,1000,14]}
+{"kind":"notes","id":"nt/wiifte","slide":6,"text":"Use this slide to distinguish facts from conditions. The NVIDIA developer route is for prototype/development use. ZenMux explicitly labels its Kimi K3 free listing as limited-time. Kimi's 1M context depends on membership tier.\n\nSources:\nhttps://opencode.ai/docs/providers\nhttps://build.nvidia.com/models\nhttps://docs.api.nvidia.com/nim/docs/product\nhttps://zenmux.ai/provider/moonshotai\nhttps://www.kimi.com/code/docs/en/kimi-code/models.html"}
+{"kind":"slide","id":"sl/sorbb1","slide":7,"title":"06 · IMPLEMENTATION ROADMAP","textShapes":28}
+{"kind":"shape","id":"sh/fatwfilc","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/0b2d832x","slide":7,"text":"06 · IMPLEMENTATION ROADMAP","textPreview":"06 · IMPLEMENTATION ROADMAP","textChars":27,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/1cbeh83i","slide":7,"text":"Four weeks is enough to test value and operating fit","textPreview":"Four weeks is enough to test value and operating fit","textChars":52,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/2d4vadk3","slide":7,"text":"Keep the cohort small, the tasks representative, and the exit criteria explicit.","textPreview":"Keep the cohort small, the tasks representative, and the exit criteria explicit.","textChars":80,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/nedwjilo","slide":7,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/ozmxcn29","slide":7,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/p0vels3e","slide":7,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/a14fexkz","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/b2dwn2lk","slide":7,"bbox":[68,222,1144,2]}
+{"kind":"shape","id":"sh/v2h0rmdo","slide":7,"bbox":[48,176,280,26]}
+{"kind":"textbox","id":"sh/u18zyhw3","slide":7,"text":"WEEK 1","textPreview":"WEEK 1","textChars":6,"textLines":1,"bbox":[48,182,280,16]}
+{"kind":"shape","id":"sh/hozitwve","slide":7,"bbox":[181,216,14,14]}
+{"kind":"textbox","id":"sh/wnqh0rut","slide":7,"text":"Baseline","textPreview":"Baseline","textChars":8,"textLines":1,"bbox":[42,242,292,22]}
+{"kind":"textbox","id":"sh/7yx0n2dc","slide":7,"text":"Setup · tasks · controls","textPreview":"Setup · tasks · controls","textChars":24,"textLines":1,"bbox":[42,264,292,34]}
+{"kind":"shape","id":"sh/mxozuxwr","slide":7,"bbox":[344,176,280,26]}
+{"kind":"textbox","id":"sh/90zipcvi","slide":7,"text":"WEEK 2","textPreview":"WEEK 2","textChars":6,"textLines":1,"bbox":[344,182,280,16]}
+{"kind":"shape","id":"sh/8zqhw7ex","slide":7,"bbox":[477,216,14,14]}
+{"kind":"textbox","id":"sh/ru10z6dg","slide":7,"text":"Daily use","textPreview":"Daily use","textChars":9,"textLines":1,"bbox":[338,242,292,22]}
+{"kind":"textbox","id":"sh/6tsj61cb","slide":7,"text":"Coding cohort runs","textPreview":"Coding cohort runs","textChars":18,"textLines":1,"bbox":[338,264,292,34]}
+{"kind":"shape","id":"sh/m1wbep0f","slide":7,"bbox":[640,176,280,26]}
+{"kind":"textbox","id":"sh/n25cnu10","slide":7,"text":"WEEK 3","textPreview":"WEEK 3","textChars":6,"textLines":1,"bbox":[640,182,280,16]}
+{"kind":"shape","id":"sh/o3ytgzil","slide":7,"bbox":[773,216,14,14]}
+{"kind":"textbox","id":"sh/9o7up4j6","slide":7,"text":"Optimize","textPreview":"Optimize","textChars":8,"textLines":1,"bbox":[634,242,292,22]}
+{"kind":"textbox","id":"sh/apgbi90r","slide":7,"text":"Routing · prompts · policy","textPreview":"Routing · prompts · policy","textChars":26,"textLines":1,"bbox":[634,264,292,34]}
+{"kind":"shape","id":"sh/bqpcre1c","slide":7,"bbox":[936,176,280,26]}
+{"kind":"textbox","id":"sh/wrydkjix","slide":7,"text":"WEEK 4","textPreview":"WEEK 4","textChars":6,"textLines":1,"bbox":[936,182,280,16]}
+{"kind":"shape","id":"sh/xs7utoj2","slide":7,"bbox":[1069,216,14,14]}
+{"kind":"textbox","id":"sh/qtcb65kn","slide":7,"text":"Decide","textPreview":"Decide","textChars":6,"textLines":1,"bbox":[930,242,292,22]}
+{"kind":"textbox","id":"sh/rulcfa1s","slide":7,"text":"Evidence · economics · gate","textPreview":"Evidence · economics · gate","textChars":27,"textLines":1,"bbox":[930,264,292,34]}
+{"kind":"textbox","id":"sh/tobel83a","slide":7,"text":"WORKSTREAM OWNERSHIP","textPreview":"WORKSTREAM OWNERSHIP","textChars":20,"textLines":1,"bbox":[48,340,220,20]}
+{"kind":"shape","id":"sh/8n2xcn25","slide":7,"bbox":[48,378,281,142]}
+{"kind":"shape","id":"sh/7mtwjilk","slide":7,"bbox":[48,378,5,142]}
+{"kind":"textbox","id":"sh/6l0fadkz","slide":7,"text":"PLATFORM","textPreview":"PLATFORM","textChars":8,"textLines":1,"bbox":[66,392,251,24]}
+{"kind":"textbox","id":"sh/hsbeps3m","slide":7,"text":"Install, credentials, approved endpoints, version freeze","textPreview":"Install, credentials, approved endpoints, version freeze","textChars":56,"textLines":1,"bbox":[66,422,251,86]}
+{"kind":"shape","id":"sh/gr2xgn21","slide":7,"bbox":[349,378,281,142]}
+{"kind":"shape","id":"sh/vqtwnilg","slide":7,"bbox":[349,378,5,142]}
+{"kind":"textbox","id":"sh/upkfedkv","slide":7,"text":"ENGINEERING","textPreview":"ENGINEERING","textChars":11,"textLines":1,"bbox":[367,392,251,24]}
+{"kind":"textbox","id":"sh/xwredo3i","slide":7,"text":"Representative tasks, human review, defect capture","textPreview":"Representative tasks, human review, defect capture","textChars":50,"textLines":1,"bbox":[367,422,251,86]}
+{"kind":"shape","id":"sh/wvixk3mx","slide":7,"bbox":[650,378,281,142]}
+{"kind":"shape","id":"sh/0b6hsbm5","slide":7,"bbox":[650,378,5,142]}
+{"kind":"textbox","id":"sh/1cfilwnq","slide":7,"text":"SECURITY","textPreview":"SECURITY","textChars":8,"textLines":1,"bbox":[668,392,251,24]}
+{"kind":"textbox","id":"sh/e9ozq14f","slide":7,"text":"Secrets, data classification, retention, access policy","textPreview":"Secrets, data classification, retention, access policy","textChars":54,"textLines":1,"bbox":[668,422,251,86]}
+{"kind":"shape","id":"sh/fax0j650","slide":7,"bbox":[951,378,281,142]}
+{"kind":"shape","id":"sh/sn6horm9","slide":7,"bbox":[951,378,5,142]}
+{"kind":"textbox","id":"sh/d8fihwnu","slide":7,"text":"FINOPS","textPreview":"FINOPS","textChars":6,"textLines":1,"bbox":[969,392,251,24]}
+{"kind":"textbox","id":"sh/ql4zmh43","slide":7,"text":"Usage, limits, cost per successful task, production scenario","textPreview":"Usage, limits, cost per successful task, production scenario","textChars":60,"textLines":1,"bbox":[969,422,251,86]}
+{"kind":"shape","id":"sh/rmx0fm5o","slide":7,"bbox":[48,544,1184,40]}
+{"kind":"textbox","id":"sh/4jmhkrmd","slide":7,"text":"GATE","textPreview":"GATE","textChars":4,"textLines":1,"bbox":[66,557,70,16]}
+{"kind":"textbox","id":"sh/5kvidcni","slide":7,"text":"Scale only if quality, reliability, governance, and production economics all meet the agreed threshold.","textPreview":"Scale only if quality, reliability, governance, and production economics all meet the agreed threshold.","textChars":103,"textLines":1,"bbox":[140,553,1074,22]}
+{"kind":"notes","id":"nt/sorbb1","slide":7,"text":"Week 1 establishes a frozen baseline. Weeks 2–3 test real work and refine routing. Week 4 compares evidence to the exit criteria. Do not expand the cohort before the gate."}
+{"kind":"slide","id":"sl/hzg6dh","slide":8,"title":"07 · METRICS & PILOT SCOPE","textShapes":36}
+{"kind":"shape","id":"sh/jypsf6x4","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4zytobe9","slide":8,"text":"07 · METRICS & PILOT SCOPE","textPreview":"07 · METRICS & PILOT SCOPE","textChars":26,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/50rahgfu","slide":8,"text":"Pilot success is task quality, reliability, and controlled cost","textPreview":"Pilot success is task quality, reliability, and controlled cost","textChars":63,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/utgbihw7","slide":8,"text":"Replace headline ROI claims with a scorecard the cohort can actually measure.","textPreview":"Replace headline ROI claims with a scorecard the cohort can actually measure.","textChars":77,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/vupsbmxs","slide":8,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/wvytkred","slide":8,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/hw7adwfy","slide":8,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/m5wrehwb","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/nq5s7mxw","slide":8,"bbox":[48,168,281,150]}
+{"kind":"textbox","id":"sh/3up8vy94","slide":8,"text":"≤ 60 min","textPreview":"≤ 60 min","textChars":8,"textLines":1,"bbox":[48,190,281,52]}
+{"kind":"textbox","id":"sh/29grmtsz","slide":8,"text":"SETUP TIME","textPreview":"SETUP TIME","textChars":10,"textLines":1,"bbox":[60,250,257,20]}
+{"kind":"textbox","id":"sh/pwrqx8ra","slide":8,"text":"Target per participant","textPreview":"Target per participant","textChars":22,"textLines":1,"bbox":[60,272,257,36]}
+{"kind":"shape","id":"sh/ovi9o3qp","slide":8,"bbox":[349,168,281,150]}
+{"kind":"textbox","id":"sh/by98zy9g","slide":8,"text":"≥ 80%","textPreview":"≥ 80%","textChars":5,"textLines":1,"bbox":[349,190,281,52]}
+{"kind":"textbox","id":"sh/qx0rqt8v","slide":8,"text":"TASK SUCCESS","textPreview":"TASK SUCCESS","textChars":12,"textLines":1,"bbox":[361,250,257,20]}
+{"kind":"textbox","id":"sh/d0rq18rm","slide":8,"text":"Human-approved completion","textPreview":"Human-approved completion","textChars":25,"textLines":1,"bbox":[361,272,257,36]}
+{"kind":"shape","id":"sh/czi9s3q1","slide":8,"bbox":[650,168,281,150]}
+{"kind":"textbox","id":"sh/7258ne9c","slide":8,"text":"≥ 95%","textPreview":"≥ 95%","textChars":5,"textLines":1,"bbox":[650,190,281,52]}
+{"kind":"textbox","id":"sh/61w7e9sr","slide":8,"text":"WORKFLOW RELIABILITY","textPreview":"WORKFLOW RELIABILITY","textChars":20,"textLines":1,"bbox":[662,250,257,20]}
+{"kind":"textbox","id":"sh/ax4b2hsz","slide":8,"text":"Sessions without provider failure","textPreview":"Sessions without provider failure","textChars":33,"textLines":1,"bbox":[662,272,257,36]}
+{"kind":"shape","id":"sh/vydcvmtk","slide":8,"bbox":[951,168,281,150]}
+{"kind":"textbox","id":"sh/wjmt4ra5","slide":8,"text":"MEASURE","textPreview":"MEASURE","textChars":7,"textLines":1,"bbox":[951,190,281,52]}
+{"kind":"textbox","id":"sh/xkvuxwbq","slide":8,"text":"COST / SUCCESS","textPreview":"COST / SUCCESS","textChars":14,"textLines":1,"bbox":[963,250,257,20]}
+{"kind":"textbox","id":"sh/mtkbyxs3","slide":8,"text":"No assumed savings baseline","textPreview":"No assumed savings baseline","textChars":27,"textLines":1,"bbox":[963,272,257,36]}
+{"kind":"shape","id":"sh/nutcr2to","slide":8,"bbox":[48,350,1184,34]}
+{"kind":"textbox","id":"sh/8vmt07a9","slide":8,"text":"DIMENSION","textPreview":"DIMENSION","textChars":9,"textLines":1,"bbox":[58,359,206,18]}
+{"kind":"textbox","id":"sh/9wvutcbu","slide":8,"text":"MEASURE","textPreview":"MEASURE","textChars":7,"textLines":1,"bbox":[278,359,570,18]}
+{"kind":"textbox","id":"sh/ypkbuxc7","slide":8,"text":"DECISION EVIDENCE","textPreview":"DECISION EVIDENCE","textChars":17,"textLines":1,"bbox":[862,359,366,18]}
+{"kind":"shape","id":"sh/zqtsn2tc","slide":8,"bbox":[48,384,1184,42]}
+{"kind":"textbox","id":"sh/hkzet0va","slide":8,"text":"Quality","textPreview":"Quality","textChars":7,"textLines":1,"bbox":[58,392,206,30]}
+{"kind":"textbox","id":"sh/gjqx0vup","slide":8,"text":"Acceptance rate · defects · rework","textPreview":"Acceptance rate · defects · rework","textChars":34,"textLines":1,"bbox":[278,392,570,30]}
+{"kind":"textbox","id":"sh/fihwrqd4","slide":8,"text":"Human review rubric","textPreview":"Human review rubric","textChars":19,"textLines":1,"bbox":[862,392,366,30]}
+{"kind":"shape","id":"sh/uh8fylcj","slide":8,"bbox":[48,426,1184,42]}
+{"kind":"textbox","id":"sh/tgzepgvy","slide":8,"text":"Speed","textPreview":"Speed","textChars":5,"textLines":1,"bbox":[58,434,206,30]}
+{"kind":"textbox","id":"sh/sfqxwvud","slide":8,"text":"Cycle time versus cohort baseline","textPreview":"Cycle time versus cohort baseline","textChars":33,"textLines":1,"bbox":[278,434,570,30]}
+{"kind":"textbox","id":"sh/7ehwnqds","slide":8,"text":"Comparable task set","textPreview":"Comparable task set","textChars":19,"textLines":1,"bbox":[862,434,366,30]}
+{"kind":"shape","id":"sh/6dovulc7","slide":8,"bbox":[48,468,1184,42]}
+{"kind":"textbox","id":"sh/5sfelgv2","slide":8,"text":"Reliability","textPreview":"Reliability","textChars":11,"textLines":1,"bbox":[58,476,206,30]}
+{"kind":"textbox","id":"sh/kr6dsbeh","slide":8,"text":"Rate limits · failed calls · fallback use","textPreview":"Rate limits · failed calls · fallback use","textChars":41,"textLines":1,"bbox":[278,476,570,30]}
+{"kind":"textbox","id":"sh/kvy5sfud","slide":8,"text":"Session telemetry","textPreview":"Session telemetry","textChars":17,"textLines":1,"bbox":[862,476,366,30]}
+{"kind":"shape","id":"sh/lw7m1kvy","slide":8,"bbox":[48,510,1184,42]}
+{"kind":"textbox","id":"sh/ytgnq5c7","slide":8,"text":"Governance","textPreview":"Governance","textChars":10,"textLines":1,"bbox":[58,518,206,30]}
+{"kind":"textbox","id":"sh/jup4zads","slide":8,"text":"Policy exceptions · sensitive-data events","textPreview":"Policy exceptions · sensitive-data events","textChars":41,"textLines":1,"bbox":[278,518,570,30]}
+{"kind":"textbox","id":"sh/8ji5wzup","slide":8,"text":"Zero critical exceptions","textPreview":"Zero critical exceptions","textChars":24,"textLines":1,"bbox":[862,518,366,30]}
+{"kind":"shape","id":"sh/tkr654vu","slide":8,"bbox":[48,552,1184,42]}
+{"kind":"textbox","id":"sh/6h0nupcj","slide":8,"text":"Economics","textPreview":"Economics","textChars":9,"textLines":1,"bbox":[58,560,206,30]}
+{"kind":"textbox","id":"sh/7i9o3ud4","slide":8,"text":"Usage and production-priced scenario","textPreview":"Usage and production-priced scenario","textChars":36,"textLines":1,"bbox":[278,560,570,30]}
+{"kind":"textbox","id":"sh/one5kvu5","slide":8,"text":"Cost per successful task","textPreview":"Cost per successful task","textChars":24,"textLines":1,"bbox":[862,560,366,30]}
+{"kind":"textbox","id":"sh/9onmt0vq","slide":8,"text":"Targets are proposed pilot thresholds; they are not measured outcomes.","textPreview":"Targets are proposed pilot thresholds; they are not measured outcomes.","textChars":70,"textLines":1,"bbox":[48,660,1000,14]}
+{"kind":"notes","id":"nt/hzg6dh","slide":8,"text":"The original deck asserted $0 monthly cost and a $100+ comparison without a measured baseline. This slide converts those claims into testable pilot metrics. Adjust thresholds with the sponsor before kickoff."}
+{"kind":"slide","id":"sl/0notic","slide":9,"title":"08 · RISKS & MITIGATIONS","textShapes":26}
+{"kind":"shape","id":"sh/tcn6h0zm","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/69wn65gv","slide":9,"text":"08 · RISKS & MITIGATIONS","textPreview":"08 · RISKS & MITIGATIONS","textChars":24,"textLines":1,"bbox":[48,26,800,18]}
+{"kind":"textbox","id":"sh/ra5ofqhg","slide":9,"text":"The main risks are commercial, operational, and governance-related","textPreview":"The main risks are commercial, operational, and governance-related","textChars":66,"textLines":1,"bbox":[48,50,1160,46]}
+{"kind":"textbox","id":"sh/4nu54vyp","slide":9,"text":"Each risk has a control, an owner, and a stop condition.","textPreview":"Each risk has a control, an owner, and a stop condition.","textChars":56,"textLines":1,"bbox":[50,102,1135,30]}
+{"kind":"shape","id":"sh/5o36d0za","slide":9,"bbox":[48,142,1184,2]}
+{"kind":"shape","id":"sh/ilcn2l0z","slide":9,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/jmlobqh4","slide":9,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/wju50bit","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"shape","id":"sh/hk369gze","slide":9,"bbox":[48,168,1184,36]}
+{"kind":"textbox","id":"sh/hcrydcn6","slide":9,"text":"RISK","textPreview":"RISK","textChars":4,"textLines":1,"bbox":[58,177,320,18]}
+{"kind":"textbox","id":"sh/gbix4r6l","slide":9,"text":"PRIORITY","textPreview":"PRIORITY","textChars":8,"textLines":1,"bbox":[392,177,136,18]}
+{"kind":"textbox","id":"sh/fa9gbm50","slide":9,"text":"MITIGATION / STOP CONDITION","textPreview":"MITIGATION / STOP CONDITION","textChars":27,"textLines":1,"bbox":[542,177,686,18]}
+{"kind":"shape","id":"sh/u90f2hof","slide":9,"bbox":[48,204,1184,58]}
+{"kind":"textbox","id":"sh/t8re9cnu","slide":9,"text":"Promotion or access expires","textPreview":"Promotion or access expires","textChars":27,"textLines":1,"bbox":[58,212,320,46]}
+{"kind":"textbox","id":"sh/snix0769","slide":9,"text":"High","textPreview":"High","textChars":4,"textLines":1,"bbox":[392,212,136,46]}
+{"kind":"textbox","id":"sh/7m9w7254","slide":9,"text":"Verify day 1; maintain a paid or alternate-provider fallback.","textPreview":"Verify day 1; maintain a paid or alternate-provider fallback.","textChars":61,"textLines":1,"bbox":[542,212,686,46]}
+{"kind":"shape","id":"sh/6l0fyxoj","slide":9,"bbox":[48,262,1184,58]}
+{"kind":"textbox","id":"sh/5k7e5sny","slide":9,"text":"Prototype terms do not cover production","textPreview":"Prototype terms do not cover production","textChars":39,"textLines":1,"bbox":[58,270,320,46]}
+{"kind":"textbox","id":"sh/kjyxwn6d","slide":9,"text":"High","textPreview":"High","textChars":4,"textLines":1,"bbox":[392,270,136,46]}
+{"kind":"textbox","id":"sh/wn2xs7e9","slide":9,"text":"Keep the pilot non-production; model enterprise licensing separately.","textPreview":"Keep the pilot non-production; model enterprise licensing separately.","textChars":69,"textLines":1,"bbox":[542,270,686,46]}
+{"kind":"shape","id":"sh/xobylcvu","slide":9,"bbox":[48,320,1184,58]}
+{"kind":"textbox","id":"sh/a1kfqxw3","slide":9,"text":"Rate limits or model drift disrupt work","textPreview":"Rate limits or model drift disrupt work","textChars":39,"textLines":1,"bbox":[58,328,320,46]}
+{"kind":"textbox","id":"sh/b2tgj2xo","slide":9,"text":"Medium","textPreview":"Medium","textChars":6,"textLines":1,"bbox":[392,328,136,46]}
+{"kind":"textbox","id":"sh/oz2xonex","slide":9,"text":"Freeze versions where possible; log failures; test fallback routing.","textPreview":"Freeze versions where possible; log failures; test fallback routing.","textChars":68,"textLines":1,"bbox":[542,328,686,46]}
+{"kind":"shape","id":"sh/90byhsfi","slide":9,"bbox":[48,378,1184,58]}
+{"kind":"textbox","id":"sh/mx0fmdw7","slide":9,"text":"Secrets or sensitive code leave policy boundary","textPreview":"Secrets or sensitive code leave policy boundary","textChars":47,"textLines":1,"bbox":[58,386,320,46]}
+{"kind":"textbox","id":"sh/ny9wfixs","slide":9,"text":"High","textPreview":"High","textChars":4,"textLines":1,"bbox":[392,386,136,46]}
+{"kind":"textbox","id":"sh/8vmx0reh","slide":9,"text":"Use approved repos/tasks; redact secrets; enforce data classification.","textPreview":"Use approved repos/tasks; redact secrets; enforce data classification.","textChars":70,"textLines":1,"bbox":[542,386,686,46]}
+{"kind":"shape","id":"sh/twvytwv2","slide":9,"bbox":[48,436,1184,58]}
+{"kind":"textbox","id":"sh/3qh0jqx4","slide":9,"text":"Output quality creates hidden rework","textPreview":"Output quality creates hidden rework","textChars":36,"textLines":1,"bbox":[58,444,320,46]}
+{"kind":"textbox","id":"sh/ipojqlgj","slide":9,"text":"Medium","textPreview":"Medium","textChars":6,"textLines":1,"bbox":[392,444,136,46]}
+{"kind":"textbox","id":"sh/5szil0fa","slide":9,"text":"Require human review, task rubrics, and defect/rework measurement.","textPreview":"Require human review, task rubrics, and defect/rework measurement.","textChars":66,"textLines":1,"bbox":[542,444,686,46]}
+{"kind":"shape","id":"sh/4rq1svyp","slide":9,"bbox":[48,520,1184,64]}
+{"kind":"textbox","id":"sh/reh0nqx0","slide":9,"text":"NO-GO CONDITION","textPreview":"NO-GO CONDITION","textChars":15,"textLines":1,"bbox":[66,542,150,18]}
+{"kind":"textbox","id":"sh/qd8julgf","slide":9,"text":"Stop if the pilot cannot meet data-policy requirements or if provider terms do not permit the intended test.","textPreview":"Stop if the pilot cannot meet data-policy requirements or if provider terms do not permit the intended test.","textChars":108,"textLines":1,"bbox":[218,537,996,26]}
+{"kind":"textbox","id":"sh/dgzip0f6","slide":9,"text":"Commercial terms: NVIDIA NIM FAQ and ZenMux K3 listing; accessed 22 Jul 2026.","textPreview":"Commercial terms: NVIDIA NIM FAQ and ZenMux K3 listing; accessed 22 Jul 2026.","textChars":77,"textLines":1,"bbox":[48,660,1000,14]}
+{"kind":"notes","id":"nt/0notic","slide":9,"text":"This replaces the original slide 9, which repeated the setup checklist rather than presenting risks. The highest risks are terms, data handling, and hidden rework—not installation.\n\nSources:\nhttps://docs.api.nvidia.com/nim/docs/product\nhttps://zenmux.ai/provider/moonshotai"}
+{"kind":"slide","id":"sl/kn08bd","slide":10,"title":"09 · PILOT DECISION","textShapes":23}
+{"kind":"shape","id":"sh/7m1w3elw","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/snaxwz21","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/toje543m","slide":10,"bbox":[0,0,520,720]}
+{"kind":"textbox","id":"sh/ix8vqpkz","slide":10,"text":"09 · PILOT DECISION","textPreview":"09 · PILOT DECISION","textChars":19,"textLines":1,"bbox":[48,42,481.67,18]}
+{"kind":"textbox","id":"sh/jyhwzulk","slide":10,"text":"Approve a bounded pilot with explicit exit criteria","textPreview":"Approve a bounded pilot with explicit exit criteria","textChars":51,"textLines":1,"bbox":[48,92,481.67,132]}
+{"kind":"textbox","id":"sh/kjqdsz25","slide":10,"text":"Four weeks · small cohort · non-production scope","textPreview":"Four weeks · small cohort · non-production scope","textChars":48,"textLines":1,"bbox":[48,254,481.67,54]}
+{"kind":"shape","id":"sh/5kje143q","slide":10,"bbox":[48,344,174,30]}
+{"kind":"textbox","id":"sh/2tcf2tkj","slide":10,"text":"DECISION REQUESTED","textPreview":"DECISION REQUESTED","textChars":18,"textLines":1,"bbox":[56,352,158,14]}
+{"kind":"textbox","id":"sh/3elwbylo","slide":10,"text":"Authorize setup, representative engineering tasks,\nsecurity review, and measured provider evaluation.","textPreview":"Authorize setup, representative engineering tasks, | security review, and measured provider evaluation.","textChars":101,"textLines":2,"bbox":[48,400,459.67,100]}
+{"kind":"textbox","id":"sh/fmtczqtc","slide":10,"text":"SUCCESS CONDITIONS","textPreview":"SUCCESS CONDITIONS","textChars":18,"textLines":1,"bbox":[549.67,54,682.33,20]}
+{"kind":"shape","id":"sh/ulkbqlc7","slide":10,"bbox":[549.67,106,22,22]}
+{"kind":"textbox","id":"sh/hobu1gbi","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[551.67,108,18,16]}
+{"kind":"textbox","id":"sh/gn2dsbux","slide":10,"text":"Quality threshold met on representative tasks","textPreview":"Quality threshold met on representative tasks","textChars":45,"textLines":1,"bbox":[583.67,104,648.33,30]}
+{"kind":"shape","id":"sh/3qtc3qto","slide":10,"bbox":[549.67,160,22,22]}
+{"kind":"textbox","id":"sh/2pkvulc3","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[551.67,162,18,16]}
+{"kind":"textbox","id":"sh/pcvu50bu","slide":10,"text":"Provider reliability and fallback behavior proven","textPreview":"Provider reliability and fallback behavior proven","textChars":49,"textLines":1,"bbox":[583.67,158,648.33,30]}
+{"kind":"shape","id":"sh/4bmdwvu9","slide":10,"bbox":[549.67,214,22,22]}
+{"kind":"textbox","id":"sh/redc7atk","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[551.67,216,18,16]}
+{"kind":"textbox","id":"sh/qd4vy5cz","slide":10,"text":"Data and secrets controls approved","textPreview":"Data and secrets controls approved","textChars":34,"textLines":1,"bbox":[583.67,212,648.33,30]}
+{"kind":"shape","id":"sh/m9ofq9w7","slide":10,"bbox":[549.67,268,22,22]}
+{"kind":"textbox","id":"sh/nahgzeds","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[551.67,270,18,16]}
+{"kind":"textbox","id":"sh/obqxszed","slide":10,"text":"Production-priced scenario is acceptable","textPreview":"Production-priced scenario is acceptable","textChars":40,"textLines":1,"bbox":[583.67,266,648.33,30]}
+{"kind":"shape","id":"sh/9czy14vy","slide":10,"bbox":[549.67,326,682.33,1]}
+{"kind":"textbox","id":"sh/e5ofmpwb","slide":10,"text":"FIRST 72 HOURS","textPreview":"FIRST 72 HOURS","textChars":14,"textLines":1,"bbox":[549.67,356,682.33,20]}
+{"kind":"shape","id":"sh/z6xwvudw","slide":10,"bbox":[549.67,396,331.17,128]}
+{"kind":"shape","id":"sh/076xozeh","slide":10,"bbox":[549.67,396,5,128]}
+{"kind":"textbox","id":"sh/18fex4v2","slide":10,"text":"1 · VERIFY","textPreview":"1 · VERIFY","textChars":10,"textLines":1,"bbox":[567.67,410,301.17,24]}
+{"kind":"textbox","id":"sh/y18fytwf","slide":10,"text":"Confirm terms, catalog, model IDs, access limits, and data policy.","textPreview":"Confirm terms, catalog, model IDs, access limits, and data policy.","textChars":66,"textLines":1,"bbox":[567.67,440,301.17,72]}
+{"kind":"shape","id":"sh/j21g7yd0","slide":10,"bbox":[900.83,396,331.17,128]}
+{"kind":"shape","id":"sh/tw3ixsf2","slide":10,"bbox":[900.83,396,5,128]}
+{"kind":"textbox","id":"sh/8vuhonyx","slide":10,"text":"2 · BASELINE","textPreview":"2 · BASELINE","textChars":12,"textLines":1,"bbox":[918.83,410,301.17,24]}
+{"kind":"textbox","id":"sh/7al0vixc","slide":10,"text":"Select the cohort, freeze versions, and record benchmark tasks.","textPreview":"Select the cohort, freeze versions, and record benchmark tasks.","textChars":63,"textLines":1,"bbox":[918.83,440,301.17,72]}
+{"kind":"textbox","id":"sh/69szmdgr","slide":10,"text":"OUTCOME","textPreview":"OUTCOME","textChars":7,"textLines":1,"bbox":[549.67,556,84,16]}
+{"kind":"textbox","id":"sh/l8jit8f6","slide":10,"text":"A measured decision to scale, revise, or stop—without platform lock-in.","textPreview":"A measured decision to scale, revise, or stop—without platform lock-in.","textChars":71,"textLines":1,"bbox":[637.67,550,594.33,30]}
+{"kind":"shape","id":"sh/k7ahk3yl","slide":10,"bbox":[48,683,1184,1]}
+{"kind":"textbox","id":"sh/j610ryx0","slide":10,"text":"CLIENT · UC-08 · 22 JUL 2026","textPreview":"CLIENT · UC-08 · 22 JUL 2026","textChars":28,"textLines":1,"bbox":[48,690,760,16]}
+{"kind":"textbox","id":"sh/y5szidgf","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1175,689,57,16]}
+{"kind":"notes","id":"nt/kn08bd","slide":10,"text":"The ask is not permission to deploy to production. It is permission to run a controlled four-week experiment with defined ownership, measurements, and stop conditions."}

@@ -1,6 +1,6 @@
 ---
 name: branded-pptx-deck
-description: Use when the user wants a native .pptx (not HTML) slide deck built programmatically — executive summary, board deck, KPI/scorecard, use-case realization, or any PowerPoint output. Triggers on "/branded-pptx-deck", "make a pptx deck", "executive deck", "board deck", "slide deck as pptx", "revamp this into slides", "adapt the Canva template", "presentation as PowerPoint". For HTML/CSS slide output use the `presentation` skill instead. For HTML/CSS slide output instead of .pptx, use `marp` instead.
+description: Use when the user wants a new native .pptx (not HTML) slide deck built programmatically — executive summary, board deck, KPI/scorecard, use-case realization, or a material PowerPoint redesign. Triggers on "/branded-pptx-deck", "make a pptx deck", "executive deck", "board deck", "slide deck as pptx", "revamp this into slides", "adapt the Canva template", "presentation as PowerPoint". For controlled inspection, text/notes edits, or slide reordering in an existing .pptx, use `pptx-toolkit`. For HTML/CSS slide output use the `presentation` skill instead. For HTML/CSS slide output instead of .pptx, use `marp` instead.
 trigger: /branded-pptx-deck
 argument-hint: "[what deck — e.g. 'executive deck from analysis.json', 'revamp report.pdf into 25 slides']"
 category: Business Automation
