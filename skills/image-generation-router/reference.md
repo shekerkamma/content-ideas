@@ -10,6 +10,11 @@
 The router intentionally does not merge provider catalogs. Built-in tool metadata and
 CLIProxyAPI model IDs come from different runtimes.
 
+**Kimi K3 is not in this matrix and never will be.** Kimi is a vision-language model with
+no image generation; `scripts/kimi_adapter.py` offers optional prompt refinement and
+vision review only (see SKILL.md "Kimi K3 Helper"). Its sidecar is `<out>.kimi.json` with
+`"is_image_generation": false`; it has no `execution_path` field by design.
+
 ## Normative Contract
 
 - Policy: `contracts/image-generation-routing-contract.json`
@@ -35,6 +40,14 @@ intersects that order with the authenticated live catalog before selecting anyth
 - `CLIPROXYAPI_CONFIG` — optional config path; default `~/cliproxyapi/config.yaml`.
 - `CLIPROXYAPI_KEY` — optional local client key override. Never log it.
 - `CLIPROXYAPI_IMAGE_MODEL` — optional exact image-model ID.
+- `KIMI_API_KEY` — optional; helper only (see SKILL.md "Kimi K3 Helper"). Never log it.
+- `KIMI_CONFIG` — optional config path; default `~/.config/kimi/.env` (mode `0600`),
+  may also carry a `KIMI_BASE_URL=...` line.
+- `KIMI_BASE_URL` — optional; default `https://api.kimi.com/coding/v1`. Set this to
+  `https://zenmux.ai/api/v1` if the supplied key is a ZenMux aggregator key rather than
+  a native Kimi key — 401 against the native endpoint does not by itself mean the key
+  is invalid; see the SKILL.md gotcha before reporting a key as bad.
+- `KIMI_MODEL` — optional exact model ID override for the helper.
 
 ## Output Contract
 

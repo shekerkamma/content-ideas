@@ -5,8 +5,10 @@ argument-hint: "<image request or prompt-file> [provider]"
 permissions:
   network:
     - http://127.0.0.1:8317
+    - https://api.kimi.com
   file_read:
     - ~/cliproxyapi/config.yaml
+    - ~/.config/kimi/.env
   file_write:
     - /tmp/
     - output/imagegen/
@@ -14,6 +16,7 @@ permissions:
   shell:
     allowed_scripts:
       - scripts/generate_gemini.py
+      - scripts/kimi_adapter.py
       - scripts/validate_contract.py
 ---
 
@@ -124,6 +127,58 @@ The base URL defaults to `http://127.0.0.1:8317` and may be overridden with
 `CLIPROXYAPI_BASE_URL`. The script never prints the client key or provider credential. It
 writes `<output>.provenance.json` beside the image.
 
+## Kimi K3 Helper (Not A Provider)
+
+Kimi K3 (OpenAI-compatible endpoint, default `https://api.kimi.com/coding/v1`) is a
+vision-language model with **no raster image generation**. It **MUST NOT** appear in any
+execution path, provider contract entry, or availability claim. The bundled
+`scripts/kimi_adapter.py` supports exactly two optional helper roles around the real routes:
+
+```bash
+# Refine a text-free image spec before the OpenAI or Gemini route renders it
+python3 skills/image-generation-router/scripts/kimi_adapter.py \
+  --refine-prompt --prompt-file <spec.txt> --out <refined.txt>
+
+# Vision second-opinion on an existing image (reference screenshot, generated-asset QA)
+python3 skills/image-generation-router/scripts/kimi_adapter.py \
+  --describe-image --image <asset.png> --prompt-file <question.txt> --out <review.txt>
+
+# Non-generating checks
+python3 skills/image-generation-router/scripts/kimi_adapter.py --probe
+python3 skills/image-generation-router/scripts/kimi_adapter.py --list-models
+```
+
+Rules:
+
+- The helper is optional. A missing `KIMI_API_KEY` never blocks either image route —
+  skip the refinement step and continue.
+- Refined prompts keep the same creative brief and the text-free constraint; record the
+  refinement in run notes as `prompt_refined_by: <resolved model>` using the adapter's
+  `.kimi.json` sidecar, never as an execution path.
+- Vision review supplements the host model's own read; it never becomes the source of
+  truth for EXTRACT/recreate decisions or QA sign-off.
+- Default model order prefers the free tier: `moonshotai/kimi-k3-free`, then
+  `kimi-k3-free`, then `k3`, then whatever the live catalog returns first. Override with
+  `--model` or `KIMI_MODEL`.
+
+Configuration precedence (mirrors the Gemini route's pattern):
+
+1. `KIMI_API_KEY` env var when set; otherwise a `KIMI_API_KEY=...` line in `KIMI_CONFIG`
+   (default `~/.config/kimi/.env`, mode `0600`).
+2. Base URL: `--base-url` flag, then `KIMI_BASE_URL` env var, then a `KIMI_BASE_URL=...`
+   line in the same config file, then the default `https://api.kimi.com/coding/v1`.
+
+**Gotcha — "Kimi K3 API key" often means a ZenMux key, not a native Kimi key.** Verified
+2026-07-21: a key sourced as "the Kimi K3 API key" 401'd against `api.kimi.com` and
+`api.moonshot.ai`/`api.moonshot.cn` on every route (models, chat/completions, and the
+Anthropic-style `/messages` shape) — it authenticated only against the ZenMux aggregator,
+`https://zenmux.ai/api/v1`, serving `moonshotai/kimi-k3-free` at the free tier. If `--probe`
+401s against the default base URL, try `--base-url https://zenmux.ai/api/v1` (or set
+`KIMI_BASE_URL` in the config file) before concluding the key is invalid. Never assume a
+green preflight/probe on one base URL means the key is bad elsewhere, or vice versa.
+- `KIMI_API_KEY` comes from the environment or `~/.config/kimi/.env`
+  (override with `KIMI_CONFIG`); it is never printed or logged.
+
 ## Contract Validation
 
 Run after changing this skill, its adapter, its contract, or any governed consumer:
@@ -155,6 +210,11 @@ Business Automation
 ### Dependencies
 - `imagegen` — prompt shaping, built-in OpenAI execution, edit semantics, and asset QA.
 - `CLIProxyAPI` — optional local Gemini route; required only for explicit Gemini or fallback.
+- `ai-graphics` — the default HTML/SVG-to-screenshot raster route for anything with text;
+  image models here only handle the narrow text-free/organic gate. `ai-graphics` has no
+  copy in this repo (WSL-global at `~/.claude/skills/ai-graphics`) and is not installed by
+  `install_cross_host.py` — see `skills/pptx-visual-spec/references/externally-ported-skills.md`
+  for its cross-host copies and manual refresh command.
 
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |

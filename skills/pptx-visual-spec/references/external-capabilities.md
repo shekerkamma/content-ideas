@@ -23,3 +23,9 @@ At runtime, discover the requested connector before story or rendering work begi
 Use `scripts/check_external_capabilities.py` for installation diagnostics. Agent hosts should
 also use their native tool discovery because a local process cannot enumerate every MCP/app
 tool exposed only inside the active session.
+
+This file covers hosted connectors. For skills that live outside this repo (a separate vault
+repo, a WSL-global skill directory) and are therefore invisible to `install_cross_host.py`,
+see `references/externally-ported-skills.md` — that installer explicitly skips
+`ownership: "external"` registry entries and cannot discover a skill with no repo-relative
+`source` at all, so those copies need manual refresh after any canonical change.
