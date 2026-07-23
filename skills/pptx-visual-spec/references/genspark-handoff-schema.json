@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Genspark video-to-deck handoff",
+  "type": "object",
+  "required": ["contract_version", "run_id", "source", "generation", "recovery", "delivery", "qa"],
+  "properties": {
+    "contract_version": {"const": "1.2"},
+    "run_id": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "required": ["kind", "coverage_rows"],
+      "properties": {
+        "kind": {"enum": ["video", "document", "research", "existing-genspark", "other"]},
+        "uri": {"type": ["string", "null"]},
+        "capture_mode": {"type": ["string", "null"]},
+        "distinct_screen_count": {"type": "integer", "minimum": 0},
+        "max_gap_seconds": {"type": "number", "minimum": 0},
+        "transcript_segment_count": {"type": "integer", "minimum": 0},
+        "screen_manifest": {"type": ["string", "null"]},
+        "context_packet": {"type": ["string", "null"]},
+        "coverage_matrix": {"type": ["string", "null"]},
+        "coverage_rows": {"type": "integer", "minimum": 0},
+        "allowed_claims": {"type": ["string", "null"]},
+        "banned_claims": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "generation": {
+      "type": "object",
+      "required": ["status", "slide_count_policy", "explicit_hard_max", "explicit_credit_error"],
+      "properties": {
+        "provider": {"type": "string"},
+        "project_id": {"type": ["string", "null"]},
+        "project_url": {"type": ["string", "null"]},
+        "viewer_url": {"type": ["string", "null"]},
+        "status": {"enum": ["not_requested", "generating", "completed", "blocked_credit_limit", "blocked_access", "blocked_generation", "skipped_local_fallback"]},
+        "slide_count_policy": {"const": "evidence-driven"},
+        "explicit_hard_max": {"type": "boolean"},
+        "requested_minimum": {"type": "integer", "minimum": 0},
+        "explicit_credit_error": {"type": "boolean"}
+      },
+      "additionalProperties": true
+    },
+    "recovery": {
+      "type": "object",
+      "required": ["browser_lane", "status", "endpoint_count", "captured_slide_count"],
+      "properties": {
+        "browser_lane": {"enum": ["headed-playwright", "windows-authenticated", "host-browser", "not-applicable"]},
+        "status": {"enum": ["not_started", "generating", "captured", "partial", "blocked_auth", "blocked_access", "not_applicable"]},
+        "endpoint_count": {"type": "integer", "minimum": 0},
+        "captured_slide_count": {"type": "integer", "minimum": 0},
+        "html_dir": {"type": ["string", "null"]},
+        "render_dir": {"type": ["string", "null"]},
+        "manifest": {"type": ["string", "null"]},
+        "diagnostic": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "delivery": {
+      "type": "object",
+      "required": ["requested_editability", "artifact_class", "final_builder", "status"],
+      "properties": {
+        "requested_editability": {"enum": ["image", "hybrid", "native"]},
+        "artifact_class": {"enum": ["image-based-reference", "hybrid-editable-text", "fully-native-editable"]},
+        "final_builder": {"type": "string", "minLength": 1},
+        "pptx": {"type": ["string", "null"]},
+        "source_files": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["draft", "reviewed", "blocked"]}
+      },
+      "additionalProperties": true
+    },
+    "qa": {
+      "type": "object",
+      "required": ["coverage_complete", "claims_validated", "unsupported_specifics_clean", "visual_render_reviewed", "editability_verified", "pptx_schema_valid", "office_issues_clean", "blockers"],
+      "properties": {
+        "coverage_complete": {"type": "boolean"},
+        "claims_validated": {"type": "boolean"},
+        "unsupported_specifics_clean": {"type": "boolean"},
+        "visual_render_reviewed": {"type": "boolean"},
+        "editability_verified": {"type": "boolean"},
+        "pptx_schema_valid": {"type": "boolean"},
+        "office_issues_clean": {"type": "boolean"},
+        "blockers": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

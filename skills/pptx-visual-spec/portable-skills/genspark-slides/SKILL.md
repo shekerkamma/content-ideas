@@ -10,6 +10,16 @@ the source of truth for recovery, then continue into the requested delivery buil
 Do not stop at a hosted project or flattened export when the user asks for branding,
 editability, or client-ready PowerPoint.
 
+## Canonical Contract
+
+Read and follow the installed sibling contract at
+`../pptx-visual-spec/references/genspark-video-deck-contract.md` (repo source:
+`skills/pptx-visual-spec/references/genspark-video-deck-contract.md`). It is the
+source of truth for evidence inputs, rich prompt context, slide-count policy,
+same-project expansion, headed Playwright recovery, credit classification,
+editability labels, handoff schema, QA status, and host adapters. Validate the
+handoff with `pptx-visual-spec/scripts/validate_genspark_handoff.py`.
+
 > **On WSL:** read `references/wsl-execution-blockers.md` before launching a
 > browser. Re-test the current boundary; do not reuse a historical conclusion.
 > Prefer the Genspark connector for generation. Use a Windows-authenticated browser
@@ -39,7 +49,14 @@ Use these routes:
 | Hybrid-editable PowerPoint | `genspark-branded-deck` hybrid path |
 | Fully native/client-ready PowerPoint | Use recovered content and branded references, then rebuild through `branded-pptx-deck` or `vault-presales-pptx-pipeline` |
 
-Write `<run>/genspark-handoff.json` before the branded stage with:
+When the selected builder is `vault-presales-pptx-pipeline`, use the reusable
+mapping contract at
+`../../../genspark-branded-deck/references/genspark-to-vault-native.md`. The
+Genspark deck remains the Rule-0 storyline and design reference; Vault owns the
+grid, native object model, design-system conformance, and final QA.
+
+Write `<run>/genspark-handoff.json` before the branded stage using the canonical
+`pptx-visual-spec/references/genspark-handoff-template.json`. It includes:
 
 - `project_url` and `viewer_url` when available
 - source slide count and requested slide count
@@ -53,6 +70,9 @@ Write `<run>/genspark-handoff.json` before the branded stage with:
 If hosted generation fails because of access, credits, authentication, or bot
 protection, record the failure and continue directly to `genspark-branded-deck`.
 Hosted failure is not a delivery stop when validated source content exists.
+Use `blocked_credit_limit` only when the UI/API explicitly reports credit or
+quota exhaustion. Slow generation, remaining task batches, a generic quota asset,
+or anonymous-viewer console noise is not credit evidence.
 
 Use `references/prompt-routing.md` as the trigger and acceptance matrix for
 generation, recovery, branding, contextualization, editability, and fallback
@@ -67,18 +87,51 @@ When the user wants a new deck, preview, or first-pass slide concept:
    - If `mcp__codex_apps__genspark_ai_slides._create_slide` is already exposed, use it.
    - If it is not exposed, use `tool_search` for `Genspark AI Slides create presentation slides`.
    - Only ask the user to enable/install a connector if tool discovery cannot expose Genspark AI Slides.
-3. Call `_create_slide` with clear requirements: topic, audience, slide count, structure, tone, visual direction, and any `watch-video` findings.
+3. Call `_create_slide` with clear requirements: topic, audience, evidence-driven
+   count policy, structure, tone, visual direction, and the complete upstream
+   context packet—not merely summarized `watch-video` findings.
 4. Wait for or open the returned project/view URL.
 5. Use this skill to recover the generated slide HTML from the Genspark viewer.
-6. Confirm the captured slide count meets the requested count.
-   - If under target, update the same Genspark project once with an explicit expansion request.
-   - If it is still under target, report Genspark under-generation and continue with `presentations:Presentations` for the full deck when the user needs the requested count.
+6. Confirm evidence coverage before treating slide count as complete.
+   - For video sources, require a scene-complete hyperframe manifest, timestamped
+     transcript evidence, and a slide-to-evidence coverage matrix in the prompt.
+   - Never impose a maximum slide count merely for neatness. Treat a requested
+     count as a minimum or planning estimate unless the user explicitly states a
+     hard maximum.
+   - If any meaningful story beat or distinct screen state is omitted or
+     overcrowded, update the same project with an explicit expansion request.
+     Continue expanding until coverage is complete; count alone is not a pass.
 7. Render the HTML to PNG references and package a fast visual PPTX if requested.
 8. Write `genspark-handoff.json` and continue into `genspark-branded-deck` for
    branding. Route fully native/client-ready output onward to `branded-pptx-deck`
    or `vault-presales-pptx-pipeline`.
 
 When the user already provides a Genspark URL, skip generation and start with HTML recovery.
+
+## Rich Context Gate For Video Sources
+
+Do not send Genspark a short outline derived from a video. Before `_create_slide`,
+write `<run>/genspark-context-packet.md` containing:
+
+- audience decision, BLUF, tension, and argument arc;
+- transcript section summaries with timestamps and claim status;
+- the scene-complete hyperframe count and maximum time gap;
+- every meaningful screen group, representative frame, observed UI state, and
+  disposition;
+- a slide-to-evidence coverage matrix with action title, content, visual state,
+  caveat, and speaker implication;
+- sensitive values and unsupported claims that must be excluded;
+- design tokens and the downstream editability route.
+
+Paste the substantive packet into the connector `requirements`; a local file
+path alone is not context for the remote generator. If the connector accepts
+only text, encode the visual observations in text and keep frames for downstream
+recovery/native rebuilding. Hyperframes are still essential: they determine
+what screens exist, what the prompt must describe, and what the final deck must
+prove.
+
+The context packet is a blocking gate. `genspark-brief.md` may summarize it for
+humans but must never replace it in the connector call.
 
 ## Core Workflow
 
@@ -101,9 +154,38 @@ In Codex Desktop, use the exposed Genspark connector for generation. For local
 capture, run Node with the workspace Playwright dependency or the bundled Node
 runtime supplied by the host.
 
+Use **headed Chromium first** for connector-generated project recovery. A
+successful connector call runs on a remote service and does not prove that the
+local WSL resolver can open the returned project URL. If headed Chromium reports
+`ERR_NAME_NOT_RESOLVED` while public DNS-over-HTTPS resolves the hostname, rerun
+the same headed capture with `--doh-template`; do not declare the hosted deck
+blocked from a shell `curl` failure alone.
+
 ```bash
 node scripts/capture_genspark_slides.mjs --url "<genspark-url>" --out "<workspace>/genspark-source" --headed
 node scripts/render_package_genspark_slides.mjs --html-dir "<workspace>/genspark-source/html" --out-pptx "<output>.pptx" --title "Deck Title"
+```
+
+WSL resolver recovery, after a headed run reproduces `ERR_NAME_NOT_RESOLVED`:
+
+```bash
+node scripts/capture_genspark_slides.mjs \
+  --url "<genspark-url>" \
+  --out "<workspace>/genspark-source" \
+  --headed \
+  --doh-template "https://dns.google/dns-query{?dns}"
+```
+
+If that Chromium build still reports `ERR_NAME_NOT_RESOLVED`, take a current IP
+from the successful DNS-over-HTTPS answer and scope the mapping to this browser
+process (never copy a stale IP from documentation):
+
+```bash
+node scripts/capture_genspark_slides.mjs \
+  --url "<genspark-url>" \
+  --out "<workspace>/genspark-source" \
+  --headed \
+  --host-resolver-rules "MAP www.genspark.ai <current-ip>, EXCLUDE localhost"
 ```
 
 Use `--min-slides <n>` when the user requested a minimum count; treat a failure as a retry/quality signal, not a fatal pipeline collapse.
@@ -126,11 +208,16 @@ node scripts/capture_genspark_slides.mjs \
   --out "<workspace>/genspark-source" \
   --chrome "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe" \
   --headed \
-  --user-data-dir "C:/Users/sheke/.codex/genspark-browser-profile" \
+  --user-data-dir "C:/Users/<windows-user>/.codex/genspark-browser-profile" \
   --auth-wait-ms 300000
 ```
 
 After that succeeds, reuse the same `--user-data-dir` without needing another sign-in. This is the preferred recovery path for gated or unstable Genspark viewer access.
+
+If Chromium fails with a sandbox-host/`Operation not permitted` error or the host
+blocks GUI launch, rerun the same command through the host's approved headed or
+unsandboxed execution path. Do not convert that browser-runtime failure into a
+Genspark, DNS, or credit diagnosis.
 
 ## Brand-Ready Upgrade
 
@@ -171,8 +258,12 @@ When working inside Sheker's vault, save final PPTX files in `Decks/` unless the
 
 ## Quality Gates
 
-- Confirm the slide count from the captured endpoints.
-- If Genspark under-generates, retry expansion once and then state the gap clearly.
+- Confirm the slide count from the captured endpoints and validate the coverage
+  matrix row by row.
+- If Genspark under-generates or compresses several required states into an
+  illegible summary, update the same project with an explicit expansion request.
+  Do not accept a short deck merely because its endpoint count is internally
+  consistent.
 - Inspect a contact sheet before delivery.
 - State whether the PPTX is image-based or fully editable.
 - If the viewer is gated and the Windows-authenticated lane is unavailable, ask

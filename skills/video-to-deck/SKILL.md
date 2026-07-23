@@ -8,7 +8,6 @@ description: >
   for infographic analogies, architecture-presentation for technical or solution architecture)
   → branded PPTX deck/package output.
   For a Markdown-first slide deck without video input, use `marp` instead.
-user_invocable: true
 ---
 
 # Video-to-Deck Skill System
@@ -18,6 +17,20 @@ complete presentation package. The user provides a video URL (or local path) and
 optionally a focus question. You deliver a full branded PPTX deck package — no
 manual steps between stages. Markdown files are source/audit artifacts, not the
 final deliverable.
+
+## Canonical Genspark Contract
+
+When Genspark participates in the pipeline, read and follow the installed sibling
+contract at `../pptx-visual-spec/references/genspark-video-deck-contract.md` (repo
+source: `skills/pptx-visual-spec/references/genspark-video-deck-contract.md`). It
+governs scene-complete evidence, rich connector context, evidence-driven slide
+count, same-project expansion, headed Playwright recovery, factual-integrity
+scans, editability labels, handoff JSON, QA status, and cross-host behavior. This
+skill may tighten those rules but may not weaken them.
+
+Write and validate `<run>/genspark-handoff.json` whenever Genspark is requested,
+attempted, or used as a reference—even when hosted generation is blocked and the
+pipeline continues locally.
 
 ## Onboarding (first run only)
 
@@ -93,11 +106,21 @@ run contains the evidence artifacts.
 3. **Capture-completeness + coverage gate:** the hyperframe manifest MUST come
    from a `watch --detail scene-complete` pass (dense sample + webcam-masked dHash
    dedup, uncapped) — **never** a capped `efficient`/keyframe sample. Record the
-   distinct-screen count in the run report. Then every distinct screen maps to a
-   slide, a recreated visual, a grouped duplicate, or an explicit skip reason;
-   presenter-only frames may be excluded but must be accounted for. Building the
-   storyboard from a sparse/capped sample is a **blocking defect** — it silently
-   drops docs pages, whiteboard panels, and demo screens and guts the storyline.
+   distinct-screen count **and `meta.max_gap_seconds`** in the run report. A large
+   `max_gap_seconds` on a screencast is a flag to eyeball (a section may have been
+   over-collapsed by the dedup); on a talking-head stretch it is expected. Then
+   every distinct screen maps to a slide, a recreated visual, a grouped duplicate,
+   or an explicit skip reason; presenter-only frames may be excluded but must be
+   accounted for. **Slide count is not a constraint — one slide per distinct
+   captured screen is acceptable and always preferred over dropping a screen.**
+   Building the storyboard from a sparse/capped sample is a **blocking defect** —
+   it silently drops docs pages, whiteboard panels, and demo screens and guts the
+   storyline.
+   **Slide count is never a ceiling.** Derive the count from the evidence map,
+   narrative density, and meaningful screen coverage. A count supplied by the
+   user or an upstream generator is a minimum or planning estimate unless the
+   user explicitly requests a hard maximum. Add slides whenever combining
+   distinct screens would make the evidence illegible or omit an operating step.
 4. **Client-language gate:** native/authored visible slide text has no internal terms:
    `transcript`, `hyperframe`, `Excalidraw`, `YouTube`, `source`,
    `validation`, `synthesis`, `audit`, `Codex`, `Claude`, file paths, or
@@ -275,6 +298,17 @@ Choose one visual route using the Visual Routing Rule.
 **Route 0 — Persistent hyperframe assets (default for slide recreation):**
 Use this before final PPTX rendering when the frame is a diagram, table,
 scorecard, slide, or layout-heavy visual.
+- **Extract is the correct route for a specific screen in a video** — exact-state
+  evidence is placed, never redrawn into native shapes or HTML "to claim
+  editability" (`pptx-visual-spec` gate). Native redraw of an exact UI screen is a
+  route violation; keep native only for titles, captions, callouts, and structured
+  so-what content.
+- **Webcam-mask the extract before placing it.** Screencasts carry a presenter
+  bubble (usually a fixed bottom-right corner). Fill that corner with a
+  locally-sampled background color (PIL: sample a clean patch just left of the
+  bubble, paint the corner rect) so the placed frame reads as clean UI, not a
+  pasted-on screenshot. `scene-complete` already masks the webcam for *dedup*; the
+  saved frame is unmasked, so masking for *display* is a separate prep step.
 - Extract exact UI/application frames into cropped PNG assets.
 - Generate SVG for authored diagrams, boxes, arrows, and geometric figures.
 - Generate HTML/CSS for authored text-heavy diagrams and whiteboards.
@@ -363,9 +397,10 @@ Mandatory deck assembly:
   narrative.
 - Build a branded deck with action titles, a clear storyline, an executive
   summary near the front, and a conclusion / next-action slide at the end.
-  Typical length is 10-15 slides for a long-form video, but visual coverage wins
-  over a fixed slide count. Add evidence slides when meaningful states would
-  otherwise be omitted.
+  Do not target a generic slide-count range. Compute the count after mapping all
+  transcript-supported beats and meaningful screen states. Add evidence slides
+  whenever combining states would reduce legibility, traceability, or operating
+  detail; one slide per distinct captured screen is acceptable.
 - Package captured video diagrams as branded visual story slides:
   - Treat captured frames and hyperframes as reference inputs that must route to
     persistent assets.
@@ -517,6 +552,10 @@ At invocation, say:
 ## Gotchas
 
 - **Never build the storyboard from a capped sample.** Capture with `watch --detail scene-complete` (dense sample + webcam-masked dHash dedup, uncapped) — the manifest source of truth. A 50-keyframe `efficient` pass silently drops docs pages, whiteboard panels, and demo screens and guts the storyline; it is discovery only. Record the distinct-screen count in the run report (Gate 3).
+- **Never compress to a predetermined slide count.** First map every meaningful
+  screen and transcript beat; then let the content determine the deck length.
+  Treat requested/generated counts as minimums or estimates unless the user
+  explicitly sets a hard maximum.
 - **Recreate screens; never scrape-and-paste, never redraw-and-discard.** Each hyperframe is a *reference image*: extract exact UI/app frames as cropped PNGs, author diagrams/whiteboards/screens as HTML/SVG → PNG (keep the source), then place the PNG as the primary visual on an otherwise-native slide (live title/callouts/captions). Do not paste raw talking-head-laden frames, and do not redraw a screen as native shapes only to throw the recreated image away (that is what guts the visuals). Excalidraw/native-redraw is opt-in for conceptual content only.
 - **Never proceed past Stage 1 with empty transcript.** If `/watch` fails, stop and report. An empty transcript produces a fabricated deck.
 - **Always use Exa for Stage 2 research, not basic WebSearch.** Exa + Firecrawl produce richer grounding than generic search.

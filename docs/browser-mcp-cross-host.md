@@ -29,6 +29,12 @@ normal Windows Node maintenance upgrade remains recommended.
 
 ## Genspark routing
 
+The canonical workflow is
+[`genspark-video-deck-contract.md`](../skills/pptx-visual-spec/references/genspark-video-deck-contract.md).
+It governs rich video context, scene-complete hyperframes, evidence-driven slide
+count, same-project expansion, headed Playwright recovery, credit classification,
+editability labels, and QA on every host.
+
 1. Use the Genspark AI Slides connector for generation when exposed.
 2. Use a Windows-authenticated browser for gated project/viewer recovery.
 3. Use WSL Chromium only for public viewer capture and local HTML rendering.
@@ -39,6 +45,16 @@ normal Windows Node maintenance upgrade remains recommended.
 A `403` response means the server was reached; it is not proof of DNS failure.
 Keep DNS, transport, authentication, profile locking, and bot policy as separate
 diagnostic dimensions.
+
+Do not classify a Genspark run as credit-blocked unless the viewer or API
+explicitly reports credit/quota exhaustion. If it reports remaining build/edit
+tasks, keep the same project, wait, and retry recovery. `capture_genspark_slides.mjs`
+writes the machine-readable result to `capture-state.json`.
+
+If Chromium reports `sandbox_host_linux.cc`, `Operation not permitted`, GUI denial,
+or browser-cache access failure, rerun through the host's approved headed or
+unsandboxed execution lane. That is a browser-runtime boundary, not a Genspark,
+DNS, or credit diagnosis.
 
 ## Catalog policy
 
@@ -75,3 +91,22 @@ never prints credential values.
 
 Restart each host after configuration changes. Complete Context7 OAuth in hosts
 where it is enabled; Hermes keeps Context7 disabled until that login is done.
+
+## Ported contract
+
+The governed chain is installed as a unit: `pptx-visual-spec`, `video-to-deck`,
+`genspark-slides`, and `genspark-branded-deck`. Managed targets are Claude Code,
+Codex, global agents, project agents, Antigravity, and Gemini Config. Refresh and
+verify with:
+
+```bash
+python3 skills/pptx-visual-spec/scripts/install_cross_host.py \
+  --host all --windows-home /mnt/c/Users/<windows-user> \
+  --skill pptx-visual-spec --skill video-to-deck \
+  --skill genspark-slides --skill genspark-branded-deck
+
+python3 skills/pptx-visual-spec/scripts/audit_portability.py \
+  --host all --windows-home /mnt/c/Users/<windows-user> \
+  --skill pptx-visual-spec --skill video-to-deck \
+  --skill genspark-slides --skill genspark-branded-deck
+```

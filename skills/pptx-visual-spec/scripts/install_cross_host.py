@@ -170,7 +170,7 @@ def _install_one(
         destination.symlink_to(relative, target_is_directory=True)
     else:
         shutil.copytree(source, destination, symlinks=False)
-        marker = {"source": str(source.resolve()), "contract_version": "1.1"}
+        marker = {"source": str(source.resolve()), "contract_version": "1.2"}
         (destination / MARKER).write_text(json.dumps(marker, indent=2) + "\n", encoding="utf-8")
     return f"installed {source.name} -> {destination}"
 

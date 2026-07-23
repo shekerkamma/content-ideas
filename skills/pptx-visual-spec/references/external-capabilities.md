@@ -18,7 +18,13 @@ At runtime, discover the requested connector before story or rendering work begi
 | Canva presentation | `branded-pptx-deck` |
 | Google Slides | `branded-pptx-deck`, then import the reviewed PPTX |
 | Gamma | `presentation` |
-| Genspark AI Slides | `genspark-branded-deck` |
+| Genspark AI Slides | `genspark-slides` recovery → `genspark-branded-deck`; native/client-ready work continues to `branded-pptx-deck` or `vault-presales-pptx-pipeline` |
+
+For Genspark video-derived decks, connector availability does not change the
+canonical evidence, browser-recovery, editability, or QA contract. Read
+`references/genspark-video-deck-contract.md`. A hosted credit/access failure is
+recorded in the handoff and routed to the local builder; it is not a reason to
+discard the transcript, hyperframes, or coverage matrix.
 
 Use `scripts/check_external_capabilities.py` for installation diagnostics. Agent hosts should
 also use their native tool discovery because a local process cannot enumerate every MCP/app

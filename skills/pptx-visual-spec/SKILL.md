@@ -1,7 +1,6 @@
 ---
 name: pptx-visual-spec
 description: EMBEDDED behavioral overlay for every skill that creates, rebuilds, exports, or materially edits a PowerPoint deck. Establishes one per-visual routing contract for exact reference extraction, native editable content, authored HTML/SVG/React assets, approved assets, and text-free image generation. Direct deck skills must read this before rendering and must emit a validated visual-spec.json.
-category: Business Automation
 ---
 
 # PPTX Visual Specification
@@ -17,6 +16,8 @@ Before rendering any slide deck:
 1. Read [references/visual-sourcing-rules.md](references/visual-sourcing-rules.md).
    For hosted presentation products, also read
    [references/external-capabilities.md](references/external-capabilities.md).
+   For video-derived Genspark work, read the canonical
+   [Genspark video-to-deck contract](references/genspark-video-deck-contract.md).
 2. Classify every meaningful visual region, not merely every slide.
 3. Write `<run>/visual-spec.json` using
    [references/visual-spec-schema.json](references/visual-spec-schema.json).
@@ -62,6 +63,7 @@ Business Automation
 | `branded-pptx-deck` | Behavioral overlay | direct native PPTX build | `<run>/visual-spec.json` |
 | `video-to-deck` | Behavioral overlay | video-derived PPTX | `<run>/visual-spec.json` |
 | `genspark-branded-deck` | Behavioral overlay | image/hybrid PPTX | `<run>/visual-spec.json` |
+| `genspark-slides` | Hosted upstream | Genspark generation/recovery | `<run>/genspark-handoff.json` |
 | `ai-graphics` | Sequential downstream | authored/generated raster required | `.html/.svg/.jsx` + `.png`, or prompt + generated `.png` |
 | `image-generation-router` | Behavioral overlay | `image-model` route selected | prompt + generated image + provenance JSON |
 
@@ -89,6 +91,18 @@ python3 skills/pptx-visual-spec/scripts/install_cross_host.py --host all
   `AGENTS_SKILLS_HOME`. Set `PPTX_VAULT_ROOT` only when auditing the optional vault skill.
 - Audit repo sources with `audit_portability.py`; add `--host claude`, `--host codex`, or
   `--host agents` to verify installed state.
+- The Genspark/video chain is explicitly installed to Claude, Codex, global agents,
+  project agents, Antigravity, and Gemini Config. Port the contract and all three
+  participating skills together:
+
+```bash
+python3 skills/pptx-visual-spec/scripts/install_cross_host.py \
+  --host all \
+  --skill pptx-visual-spec \
+  --skill video-to-deck \
+  --skill genspark-slides \
+  --skill genspark-branded-deck
+```
 - The complete `ai-analyst` distribution is a repo-tracked mirror. Hosted connectors are
   capability-checked and have local fallbacks; authentication remains host-local by design.
 

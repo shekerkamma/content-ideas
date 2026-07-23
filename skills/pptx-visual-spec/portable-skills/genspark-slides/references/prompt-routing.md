@@ -15,6 +15,7 @@ variants with the same intent should follow the same route.
 | "Make a fast branded deck without using Genspark credits." | `genspark-branded-deck` | Local owned HTML/CSS → image or hybrid PPTX |
 | "Genspark is blocked; finish the deck locally." | `genspark-slides` | Record hosted failure → `genspark-branded-deck` fallback |
 | "Diagnose why Genspark login works in Windows but not WSL." | `genspark-slides` | Browser-boundary diagnostics; no deck mutation unless requested |
+| "Use the transcript and every meaningful screen; do not constrain slide count." | `genspark-slides` | scene-complete capture → rich context packet → evidence-driven Genspark expansion → recovery |
 
 ## Routing rules
 
@@ -27,3 +28,6 @@ variants with the same intent should follow the same route.
   `genspark-branded-deck` into the native branded pipeline and mandatory QA.
 - A Genspark URL, project, viewer, or export starts at `genspark-slides` so the
   source and slide count are recovered before rebuilding.
+- For video sources, a requested count is a minimum or estimate unless the user
+  explicitly sets a hard maximum. Complete transcript/hyperframe coverage wins
+  over brevity; expand the same project until every evidence row is represented.
