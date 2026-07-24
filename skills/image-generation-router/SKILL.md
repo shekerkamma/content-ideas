@@ -101,6 +101,20 @@ regions. Structured meaning remains native or deterministically authored.
 
 ## Gemini / CLIProxyAPI Route
 
+**The CLIProxyAPI binary does not run as a persistent service** — if `--probe` returns
+`Cannot reach CLIProxyAPI at http://127.0.0.1:8317/v1/models: [Errno 111] Connection
+refused`, it just hasn't been started this session:
+
+```bash
+cd ~/cliproxyapi && nohup ./cli-proxy-api --config config.yaml > /tmp/cliproxyapi.log 2>&1 &
+```
+
+Binary/config live at `~/cliproxyapi/cli-proxy-api` (symlink to the versioned build,
+e.g. `~/cliproxyapi/7.2.86/`) and `~/cliproxyapi/config.yaml`. This is a native WSL
+process bound to `127.0.0.1` — unlike OmniRoute (below), plain `127.0.0.1:8317` works
+fine from WSL once started; no gateway-IP workaround needed here. Re-probe after
+starting it (first request after cold-start can take a few seconds).
+
 Write the structured prompt to a UTF-8 file, then run:
 
 ```bash
@@ -109,6 +123,23 @@ python3 skills/image-generation-router/scripts/generate_gemini.py \
   --out <durable-output.png> \
   [--model <exact-live-model-id>]
 ```
+
+For **image-conditioned** generation (recreate a supplied reference image's composition,
+not just a text description of it) — the only route in this repo that accepts a reference
+image, since neither `generate_gemini.py` nor OmniRoute's image script take one:
+
+```bash
+python3 skills/image-generation-router/scripts/generate_gemini_img2img.py \
+  --ref <reference-image.png> \
+  --prompt-file <prompt.txt> \
+  --out <durable-output.png>
+```
+
+Verified 2026-07-23 against `gemini-3.1-flash-image`: POSTs an OpenAI-compatible vision
+`content: [{type:"text",...},{type:"image_url",...}]` array. Instruct the model explicitly
+to omit every word/label/number visible in the reference — text-heavy references (data
+diagrams, labeled illustrations) still render clean text-free output with a strongly
+worded "ignore all text" instruction.
 
 Useful non-generating checks:
 
@@ -126,6 +157,11 @@ Configuration precedence:
 The base URL defaults to `http://127.0.0.1:8317` and may be overridden with
 `CLIPROXYAPI_BASE_URL`. The script never prints the client key or provider credential. It
 writes `<output>.provenance.json` beside the image.
+
+**Per-model quota:** the free/OAuth tier caps `gemini-3.1-flash-image` and returns `HTTP
+429: ... Your quota will reset after <Nh Nm>` once exhausted. `--list-models` currently
+returns only this one image model on this proxy — there's no in-proxy fallback. Switch to
+OmniRoute's `nvidia` driver for the rest of a batch rather than waiting out the reset.
 
 ## Kimi K3 Helper (Not A Provider)
 
@@ -231,6 +267,11 @@ Business Automation
 - Codex/OpenAI: yes — built-in OpenAI route plus local CLIProxyAPI adapter.
 - Claude Code: conditional — use its installed host-native image route when available;
   otherwise the local CLIProxyAPI adapter may execute through the script.
+- Gemini CLI: **yes, ported 2026-07-24** — symlink `~/.gemini/skills/image-generation-router`
+  → this repo's canonical `skills/image-generation-router/`, matching the existing
+  symlink-to-master convention for other skills in `.gemini/skills/`. Scripts are
+  host-neutral (python3); discovery not live-verified on this machine (`gemini` binary not
+  on PATH here).
 - Antigravity IDE: yes — install a managed Windows-native copy; use its native image route
   when available or execute the local CLIProxyAPI adapter through the script.
 - OpenHands: conditional — Gemini works only when the host can reach the declared local
