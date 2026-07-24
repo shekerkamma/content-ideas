@@ -1,0 +1,10 @@
+{
+  "source_skill_count_expected": 10,
+  "source_skill_count_complete": 9,
+  "source_skill_count_partial": 1,
+  "partial_source_note": "Skill #5 is only present as a heading plus the breakeven-past-month-36 rule.",
+  "reviewed_opportunity_count": 52,
+  "deck_slide_count": 18,
+  "confidence": "medium-high",
+  "primary_caveat": "Market mapping completeness should not be overstated until Skill #6 teardown sources are attached per use case."
+}

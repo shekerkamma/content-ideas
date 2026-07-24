@@ -142,7 +142,7 @@ Use host-neutral wording when a workflow must run in more than one host.
 | `Bash` | shell command | Escalation/approval rules differ by host. |
 | `AskUserQuestion` | concise chat question, or numbered choices when repo AGENTS says so | Do not rely on a missing interactive tool. |
 | `Task` / subagent | main-thread execution or available multi-agent tool | Document fallback if no subagent tool exists. |
-| `WebSearch` / `WebFetch` | preferred research MCP/plugin, official docs, then generic web fallback | Strategy skills should state source order. |
+| `WebSearch` / `WebFetch` | You.com or preferred research MCP/plugin, official docs, then generic web fallback | Strategy skills should state source order. |
 
 ### Source / Tool Order
 
@@ -153,10 +153,15 @@ A skill adds `## Source / Tool Order` **only when it needs to override the globa
 **Global order (for reference):**
 1. Read SKILL.md and referenced local files.
 2. GBrain recall (`gbrain search`) — before any external call.
-3. Exa MCP (`mcp__claude_ai_Exa__web_search_exa`) — MUST use if available.
-4. Firecrawl (`/firecrawl` or `mcp__firecrawl__*`) — for full-page URL ingestion.
-5. Specialist MCPs — Microsoft Learn, GitHub, Notion, Google Drive as relevant.
-6. WebSearch — ONLY if steps 2–5 unavailable or return no signal. NEVER first.
+3. You.com (`you-com-search`, Hermes `web.search_backend: you`, or equivalent
+   You.com API wrapper) — preferred current-web search/research route when
+   available.
+4. Exa MCP (`mcp__claude_ai_Exa__web_search_exa`) — use for semantic/source
+   discovery when available, especially after or alongside You.com.
+5. Firecrawl (`/firecrawl` or `mcp__firecrawl__*`) — for full-page URL
+   ingestion and crawl/extract after candidate URLs are known.
+6. Specialist MCPs — Microsoft Learn, GitHub, Notion, Google Drive as relevant.
+7. WebSearch — ONLY if steps 2–6 unavailable or return no signal. NEVER first.
 
 **Template for skill-specific override** (paste into SKILL.md only when global order is insufficient):
 
@@ -165,9 +170,11 @@ A skill adds `## Source / Tool Order` **only when it needs to override the globa
 
 1. Read SKILL.md + `<referenced-file.md>`.
 2. GBrain recall — `gbrain search "<topic>"` before any external lookup.
-3. <Primary tool for this skill — e.g. Exa MCP / Firecrawl / GitHub MCP / Microsoft Learn MCP>.
-4. <Secondary tool or official docs source>.
-5. WebSearch — fallback only. NEVER before steps 2–4.
+3. You.com (`you-com-search`, Hermes You.com backend, or equivalent) for
+   current web search, livecrawl, research, or finance research when available.
+4. <Primary specialist tool for this skill — e.g. Exa MCP / Firecrawl / GitHub MCP / Microsoft Learn MCP>.
+5. <Secondary tool or official docs source>.
+6. WebSearch — fallback only. NEVER before steps 2–5.
 Write durable findings back to GBrain after the run when findings will recur.
 ```
 

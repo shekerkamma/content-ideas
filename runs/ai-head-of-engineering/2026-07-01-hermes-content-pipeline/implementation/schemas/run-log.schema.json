@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run-log.schema.json",
+  "title": "RunLog",
+  "type": "object",
+  "required": [
+    "run_id",
+    "started_at",
+    "finished_at",
+    "status",
+    "counts",
+    "cost",
+    "model_routes"
+  ],
+  "properties": {
+    "run_id": { "type": "string" },
+    "started_at": { "type": "string", "format": "date-time" },
+    "finished_at": { "type": "string", "format": "date-time" },
+    "status": {
+      "type": "string",
+      "enum": ["success", "partial", "failed", "skipped"]
+    },
+    "counts": {
+      "type": "object",
+      "required": ["source_items", "topic_clusters", "research_briefs", "draft_packages"],
+      "properties": {
+        "source_items": { "type": "integer", "minimum": 0 },
+        "topic_clusters": { "type": "integer", "minimum": 0 },
+        "research_briefs": { "type": "integer", "minimum": 0 },
+        "draft_packages": { "type": "integer", "minimum": 0 },
+        "memory_candidates": { "type": "integer", "minimum": 0 },
+        "deliverables": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "cost": {
+      "type": "object",
+      "required": ["estimated_usd", "cap_usd", "cap_exceeded"],
+      "properties": {
+        "estimated_usd": { "type": "number", "minimum": 0 },
+        "cap_usd": { "type": "number", "minimum": 0 },
+        "cap_exceeded": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "model_routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step", "model_class"],
+        "properties": {
+          "step": { "type": "string" },
+          "model_class": { "type": "string" },
+          "model_name": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

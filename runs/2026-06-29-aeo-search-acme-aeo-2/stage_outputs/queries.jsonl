@@ -1,0 +1,10 @@
+{"query_id": "q_001", "cluster": "category", "persona": "enterprise buyer", "intent": "commercial investigation", "query": "best enterprise AI search optimization platforms", "priority": 1}
+{"query_id": "q_002", "cluster": "comparison", "persona": "enterprise buyer", "intent": "vendor comparison", "query": "Acme AEO vs Profound for enterprise AI search optimization", "priority": 1}
+{"query_id": "q_003", "cluster": "alternatives", "persona": "growth leader", "intent": "alternative search", "query": "alternatives to Profound for enterprise AI search optimization", "priority": 1}
+{"query_id": "q_004", "cluster": "problem", "persona": "marketing leader", "intent": "problem solution", "query": "how to improve enterprise AI search optimization for B2B buyers", "priority": 2}
+{"query_id": "q_005", "cluster": "selection", "persona": "CRO", "intent": "recommendation", "query": "which enterprise AI search optimization vendor should a B2B company choose", "priority": 2}
+{"query_id": "q_006", "cluster": "category", "persona": "enterprise buyer", "intent": "commercial investigation", "query": "best AI answer engine visibility platforms", "priority": 1}
+{"query_id": "q_007", "cluster": "comparison", "persona": "enterprise buyer", "intent": "vendor comparison", "query": "Acme AEO vs Profound for AI answer engine visibility", "priority": 1}
+{"query_id": "q_008", "cluster": "alternatives", "persona": "growth leader", "intent": "alternative search", "query": "alternatives to Profound for AI answer engine visibility", "priority": 1}
+{"query_id": "q_009", "cluster": "problem", "persona": "marketing leader", "intent": "problem solution", "query": "how to improve AI answer engine visibility for B2B buyers", "priority": 2}
+{"query_id": "q_010", "cluster": "selection", "persona": "CRO", "intent": "recommendation", "query": "which AI answer engine visibility vendor should a B2B company choose", "priority": 2}

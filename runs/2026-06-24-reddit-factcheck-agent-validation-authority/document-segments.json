@@ -1,0 +1,180 @@
+{
+  "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/agent-validation-authority.pptx",
+  "extraction_method": "sidecar:deck.md",
+  "segments": [
+    {
+      "id": "segment-001",
+      "locator": "Section 1",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "<!-- _paginate: false -->\n<span class=\"tag\">Positioning thesis · v1 · 2026-06-24</span>\n\n# The Agent Validation & Assurance Authority\n\n## The UL / SOC-2 for autonomous AI agents\n\nIndependent validation that lets a regulated enterprise put an AI agent into production — and survive the exam.\n\n*Beachhead: U.S. super-regional banks. Vertical 2: automotive captive finance + OEM agent fleets.*"
+    },
+    {
+      "id": "segment-002",
+      "locator": "Section 2",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Agents are shipping faster than anyone can trust them\n\n- Every Fortune 500 is deploying agents into production in 2025–26 — **support, decisioning, SecOps, supply chain.**\n- **40%+ of agentic AI projects will be cancelled by 2027** (Gartner) — killed by trust, not capability.\n- Klarna publicly reversed its AI-first support after quality tanked.\n- The blocker is the same everywhere: *nobody can prove the agent is safe to run.*\n- That proof is a market. We sell it."
+    },
+    {
+      "id": "segment-003",
+      "locator": "Section 3",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## The market moved from \"can we build an agent\" to \"can we trust one\"\n\n- 2023–24: the race was capability — frameworks, models, demos.\n- 2026: capability is commoditized; **the model is no longer the moat.**\n- The new question is operational: predict it, audit it, roll it back.\n- Non-determinism breaks the old QA playbook — same prompt, two different actions.\n- *Trust is now an infrastructure problem before it is a product feature.*"
+    },
+    {
+      "id": "segment-004",
+      "locator": "Section 4",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## April 17, 2026: regulators handed agentic AI back to the banks\n\n- **SR 26-2** (OCC / Fed / FDIC) replaced SR 11-7 — the 15-year model-risk rulebook.\n- One sentence defines the moment: *\"Generative AI and agentic AI models… are not within the scope of this guidance.\"*\n- Translation: banks own agentic-AI governance with **no playbook** — and an AI rulemaking is coming.\n- Examiners still ask: *\"What is your monitoring framework? What is your effective challenge?\"*\n- > \"Can you name the person whose name should be on the examination finding?\""
+    },
+    {
+      "id": "segment-005",
+      "locator": "Section 5",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## The pain is deployed, not hypothetical — and it is failing\n\n- **Wendy's FreshAI** takes drive-thru orders end-to-end; **Mercedes MBUX**, **Home Depot Magic Apron** run live.\n- **SOAR auto-remediation** agents touch production infra without a human.\n- These handle **80%+ of volume** — then break in ways no one tested for.\n- Manual QA covers ~100 scenarios; real users trigger millions.\n- The gap between \"deployed\" and \"validated\" is where we live."
+    },
+    {
+      "id": "segment-006",
+      "locator": "Section 6",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Nobody independent can grade the agents — the labs grade themselves\n\n- Foundation labs ship native guardrails — but they cannot certify their own ecosystem.\n- Eval vendors (Braintrust, Arize, Patronus) sell tooling to the **builder**, not assurance to the **buyer**.\n- The Big 4 do bespoke manual reviews at six figures — slow, unrepeatable, no standard.\n- Internal model-risk teams have no agent-native method.\n- *The one thing none of them can claim is independence. That is our wedge.*"
+    },
+    {
+      "id": "segment-007",
+      "locator": "Section 7",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## 9 ways to position an agent company — 8 are already taken\n\n- **Taken (8):** Adapter → Glean · New primitive → LangChain · Services-as-software → Sierra · Sub-vertical → EvenUp · Replacement → Devin · Data moat → Harvey · Interface → Lovable · Industrial layer → Skild.\n- **Open — pattern 7: Trust. Certify the agent.** *Nobody owns it.*\n- That is our lane: the independent referee for the other eight.\n- Every taken lane builds or runs an agent. **We grade them — and the grader can't also be a player.**"
+    },
+    {
+      "id": "segment-008",
+      "locator": "Section 8",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Where defensible money lives: KEEP, not REPLACE\n\n- A 25-use-case scorecard sorts every deployed agent by moat.\n- **REPLACE = low moat** → commoditizing; labs and incumbents win; wrappers die.\n- **RENEGOTIATE = medium moat** → co-exist, drop the bolt-on seats.\n- **KEEP = high moat** → proprietary data compounds; the defensible zone.\n- We don't build an agent in any zone. **We certify the agents others ship — and own the standard.**"
+    },
+    {
+      "id": "segment-009",
+      "locator": "Section 9",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Our position: certify the autonomous agent before it ships\n\n- Package agent assurance as a **hiring bar for the agent**: *\"passed before you deployed it.\"*\n- Sell to the risk owner, not the developer — that is where pricing power lives.\n- Architecture: supervised validation + adversarial red-team + counterfactual provenance.\n- Output the buyer can show a regulator, a board, or a court.\n- *We are the referee, not another player.*"
+    },
+    {
+      "id": "segment-010",
+      "locator": "Section 10",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## What we are: the UL / SOC-2 for AI agents\n\n- An **independent authority** whose stamp the market trusts.\n- We do not build agents. We do not resell a builder's tool.\n- We validate, certify, and continuously assure autonomous agents in regulated production.\n- We **author the benchmark** that defines what \"safe to deploy\" means.\n- Independence is not a feature — it is the entire product."
+    },
+    {
+      "id": "segment-011",
+      "locator": "Section 11",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## The product: an examiner-ready Agent Validation Dossier\n\n1. **Conceptual soundness** — design, data, guardrails, escalation paths.\n2. **Outcome testing** — vs our domain benchmark + adversarial / red-team suite.\n3. **Monitoring thresholds** — drift, re-validation triggers on prompt/model change.\n4. **Counterfactual provenance** — why it acted, and why it didn't do the near-miss.\n5. **Control attestations** — data handling, human-in-loop, fair-lending.\n\nDeliverable: a report the buyer hands their examiner + a live assurance dashboard + a time-boxed \"Validated\" mark."
+    },
+    {
+      "id": "segment-012",
+      "locator": "Section 12",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Beachhead: the SR 26-2 vacuum in financial services\n\n- Banks must self-determine agentic-AI controls — and have nothing.\n- The buyer and budget already exist: **model risk / AI governance** is a mandated function.\n- We slot in as the independent validation that function is required to obtain.\n- The regulatory vacuum is the opening; the coming AI RFI is the deadline.\n- *First mover authors the standard before the rulebook lands.*"
+    },
+    {
+      "id": "segment-013",
+      "locator": "Section 13",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## We don't certify chatbots — we validate the agents MRM can't\n\n- Skip the BAU: generic support bots and OCR are solved, low-stakes, vendor-benchmarked.\n- Lead with **novel autonomy + high stakes + no validation method**:\n- **Advisory / action-taking** customer agents → suitability, UDAAP, fair-lending.\n- **Agentic decisioning** → credit, underwriting, collections, adverse-action (ECOA).\n- **AML / fraud investigation** agents → SAR quality. **SecOps auto-remediation** → audit risk."
+    },
+    {
+      "id": "segment-014",
+      "locator": "Section 14",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Sell to the CRO; the examiner is the judge\n\n- **Economic buyer:** Head of Model Risk / Chief Risk Officer — holds budget and personal liability.\n- **Champion:** the AI-governance lead whose job is impossible without us.\n- **User:** the line-of-business that must pass our gate to ship.\n- **The rejectable counterparty:** the **bank examiner** — our dossier must survive exams.\n- That bar is the forcing function and the moat: survive exams once, become un-switchable."
+    },
+    {
+      "id": "segment-015",
+      "locator": "Section 15",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## The dossier maps to exactly what examiners already ask\n\n- SR 26-2 keeps three validation pillars: **conceptual soundness, outcomes analysis, ongoing monitoring.**\n- We mirror that structure — instantly legible, hard to argue with.\n- Add the agentic layer SR 26-2 omits: tool-call safety, autonomy bounds, multi-agent error propagation.\n- Anchor to NIST AI RMF + ISO/IEC 42001 so it reads as standard, not startup.\n- *We give examiners the artifact they're about to demand.*"
+    },
+    {
+      "id": "segment-016",
+      "locator": "Section 16",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Pricing: paid pilot first, assurance subscription forever\n\n- **Pilot:** fixed-fee validation of one agent → examiner-ready dossier. Priced like an external model validation (5-figure).\n- **Subscription:** annual per-agent continuous assurance — drift, re-validation, exam support.\n- Buyer-funded, sits in the audit/MRM budget line — not a new category to justify.\n- Pilot proves demand; subscription is the annuity.\n- Same arc as pen-test → continuous security monitoring."
+    },
+    {
+      "id": "segment-017",
+      "locator": "Section 17",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## The moat compounds 5 ways — and none of them is the model\n\n1. **Cross-customer failure corpus** — what breaks, that no single bank or lab sees.\n2. **The benchmark we author** — we define \"good,\" like Harvey's Legal Agent Benchmark.\n3. **Examiner acceptance** — a track record of surviving exams.\n4. **Structural independence** — labs and eval vendors structurally cannot copy it.\n5. **Workflow + board-reporting lock-in** — embedded in MRM's process."
+    },
+    {
+      "id": "segment-018",
+      "locator": "Section 18",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## GTM: services-led, benchmark-amplified, platform-destined\n\n- **Phase 0:** 5+ discovery calls → 1 paid teardown. Buy demand evidence with real fees.\n- **Phase 1:** paid pilots seed the failure corpus + reference logos.\n- **Phase 2:** productize into a platform; publish the benchmark to set the standard.\n- Channel: co-deliver with Big 4 / model-risk consultancies — arm them, don't fight them.\n- Build nothing reusable before pilot #1 is paid."
+    },
+    {
+      "id": "segment-019",
+      "locator": "Section 19",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Demand is already moving: KeyBank, Fifth Third, Regions\n\n- **KeyBank ($189B):** 40 AI POCs; hired an AI Risk Advisor; an AI Security Architect role names *\"controlled autonomy of AI agents.\"*\n- **Fifth Third ($210B):** building *\"governance, kill switches\"* for the agents it's shipping; *\"third part is agentic execution.\"*\n- **Regions ($160B):** AI-integrated lending platform launches **Q2 2026** — decisioning is our wedge.\n- All three: active agents **and** a named model-risk function. Qualified, now.\n- *GTM owns who to call — research handed over the accounts and the signals.*"
+    },
+    {
+      "id": "segment-020",
+      "locator": "Section 20",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Vertical 2: automotive captive finance is the same buyer\n\n- **Toyota Financial Services / TMCC** and **Nissan Motor Acceptance / NMAC** are regulated lenders.\n- Same fair-lending, adverse-action, model-risk, agentic-validation need. Same SR 26-2 vacuum.\n- This is Thesis A's first expansion — **not a new company.**\n- Buyer logic is identical: Chief Risk / Model Risk at the captive arm.\n- One thesis, two regulated doors."
+    },
+    {
+      "id": "segment-021",
+      "locator": "Section 21",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Vertical 2b: OEM agent fleets need a referee, not another agent\n\n- **TMNA** runs a \"system of agents\" + a Cube Command Center; dealer agent serves **2,300 dealers, 7,000+ interactions/mo.**\n- Toyota already bakes legal disclaimers into the dealer agent — wrong spec/price/**recall info = liability.**\n- Dealer-chat agents (Impel, PureCars, Cerence) are crowded BAU — avoid that lane.\n- The open layer: **govern + validate the fleet** — brand safety, legal compliance, multi-agent provenance.\n- Same thesis, applied above the commoditizing apps."
+    },
+    {
+      "id": "segment-022",
+      "locator": "Section 22",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Why now: a 12-month window to author the standard\n\n- SR 26-2 created the vacuum on April 17, 2026; the AI RFI is next.\n- Analysts peg the window to own a vertical position at **mid-2026 → mid-2027.**\n- After that, markets consolidate to 2–3 players per vertical.\n- The standard-setter is decided in that window — by whoever publishes first and survives exams.\n- Move now, or validate someone else's standard later."
+    },
+    {
+      "id": "segment-023",
+      "locator": "Section 23",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Why us: independence you can't fake, no data moat required\n\n- We need **no pre-existing proprietary data** — the moat accrues as we operate.\n- The auditor cannot be the builder — that's our permanent structural edge.\n- A small team can author a benchmark and win design partners before incumbents productize.\n- Founding requirement, stated plainly: an **ex-MRM / ex-examiner** on the cap table — credibility is the product.\n- Everything else is reversible; that hire is not."
+    },
+    {
+      "id": "segment-024",
+      "locator": "Section 24",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Competition: Big 4, Patronus, the labs — and why we win\n\n- **Big 4 / MRM consultancies** — bespoke manual reviews → we productize the work and arm them as channel.\n- **Patronus / eval vendors** — sell evals to the *builder* → we sell assurance to the *buyer*.\n- **Foundation labs** — ship native guardrails → they can't certify their own ecosystem.\n- **In-house MRM** — first-line build → lacks our independence and cross-bank failure corpus."
+    },
+    {
+      "id": "segment-025",
+      "locator": "Section 25",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## The honest risks — and the gates that kill or fund us\n\n- **No demand** (existential) → 5 discovery calls must surface one *blocked, paying* buyer.\n- **No insider** (existential) → no ex-MRM/ex-examiner = don't approach banks.\n- **Self-attestation blessed by regulators** → kill signal; pivot.\n- **Services trap** → every engagement must templatize into the product, or stop.\n- Pass all three gates in 90 days → release platform funding. Fail → pivot, cheaply."
+    },
+    {
+      "id": "segment-026",
+      "locator": "Section 26",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## Two golden rules that keep us honest\n\n- **GR1 — Paid pilots force demand.** Every conversation drives to a *paid* validation pilot. No free pilots. Politeness isn't demand.\n- **GR2 — GTM owns outreach.** Research hands over qualified accounts, signals, and scripts. GTM names and contacts the humans.\n- These are not slogans — they are the discipline that prevents building on a hypothesis.\n- Break either and we're back to slideware with no buyer."
+    },
+    {
+      "id": "segment-027",
+      "locator": "Section 27",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "## 90 days: 5 calls, 1 paid pilot, 1 insider\n\n- **Weeks 1–4:** 5+ MRM/CRO discovery calls; find one *currently blocked* autonomous agent.\n- **Weeks 1–8:** sign 1 paid \"Agent Validation Teardown.\"\n- **Weeks 1–8:** commit an ex-MRM / ex-examiner advisor or co-founder.\n- **Parallel:** draft the FS Agent Validation Benchmark v0 — the teardown spine.\n- Every milestone is observable, not aspirational."
+    },
+    {
+      "id": "segment-028",
+      "locator": "Section 28",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "<!-- _class: lead -->\n## Next action\n\n**Run the 5 discovery calls. Sign one paid pilot. Land one insider.**\n\nEverything in this deck waits behind those three. The vacuum is open now — the standard gets written by whoever moves first and survives the exam.\n\n*Let's go get the first paid pilot.*"
+    },
+    {
+      "id": "segment-029",
+      "locator": "Section 29",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "text": "<!-- _paginate: false -->\n## Appendix — the evidence base\n\n- **Pattern library** (9 patterns) + **emerging patterns** (E1–E9) — `research/agentic-positioning-pattern-library`, `research/emerging-positioning-patterns`\n- **10-company dossiers** (Harvey live; Sierra, Cursor, Cognition, LangChain, Browserbase, OpenEvidence, Glean, Braintrust, Skild queued)\n- **Use-case alignment** to the 25-use-case scorecard — `research/pattern-usecase-alignment`\n- **GTM packages:** FS bank targets + SR 26-2 reframe; automotive (captive finance + OEM fleets)\n- **Discipline:** CEO kill-gates + two golden rules — `research/ceo-verdict-thesis-a-gates`, `research/golden-rules`"
+    }
+  ]
+}

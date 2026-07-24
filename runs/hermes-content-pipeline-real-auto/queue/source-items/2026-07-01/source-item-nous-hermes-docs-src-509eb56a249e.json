@@ -1,0 +1,18 @@
+{
+  "id": "src-509eb56a249e",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "User Stories & Use Cases | Hermes Agent",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-stories",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-stories",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:28.240509+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Real stories from the Hermes Agent community — what people are actually building, scraped from X, GitHub, Reddit, Hacker News, YouTube, blogs, and podcasts.",
+  "raw_content_path": null,
+  "dedupe_key": "04b524110f5d",
+  "status": "new",
+  "errors": []
+}

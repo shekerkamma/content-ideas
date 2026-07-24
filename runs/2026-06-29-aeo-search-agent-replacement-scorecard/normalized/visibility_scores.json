@@ -1,0 +1,240 @@
+{
+  "target_brand": "Agent Replacement Scorecard",
+  "competitors": [
+    "zendesk",
+    "ccaas",
+    "glean",
+    "westlaw",
+    "lexisnexis",
+    "dam",
+    "adobe",
+    "bi dashboards"
+  ],
+  "summary": {
+    "capture_count": 12,
+    "target_mentions": 0,
+    "competitor_mentions": 6,
+    "target_visibility_rate": 0.0,
+    "top_citation_domains": [
+      [
+        "shekerkamma.github.io",
+        12
+      ]
+    ]
+  },
+  "by_query": {
+    "q_001": {
+      "capture_id": "cap_001",
+      "query": "best conversational support platforms",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [
+        "zendesk"
+      ],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "zendesk"
+      ]
+    },
+    "q_002": {
+      "capture_id": "cap_002",
+      "query": "Agent Replacement Scorecard vs zendesk for conversational support",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": []
+    },
+    "q_003": {
+      "capture_id": "cap_003",
+      "query": "alternatives to zendesk for conversational support",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": []
+    },
+    "q_004": {
+      "capture_id": "cap_004",
+      "query": "how to improve conversational support for B2B buyers",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [
+        "ccaas"
+      ],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "ccaas"
+      ]
+    },
+    "q_005": {
+      "capture_id": "cap_005",
+      "query": "which conversational support vendor should a B2B company choose",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": []
+    },
+    "q_006": {
+      "capture_id": "cap_006",
+      "query": "best ai shopping / sales consultant platforms",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [
+        "westlaw",
+        "lexisnexis"
+      ],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "westlaw",
+        "lexisnexis"
+      ]
+    },
+    "q_007": {
+      "capture_id": "cap_007",
+      "query": "Agent Replacement Scorecard vs zendesk for ai shopping / sales consultant",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [
+        "dam"
+      ],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "dam"
+      ]
+    },
+    "q_008": {
+      "capture_id": "cap_008",
+      "query": "alternatives to zendesk for ai shopping / sales consultant",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [
+        "adobe"
+      ],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "adobe"
+      ]
+    },
+    "q_009": {
+      "capture_id": "cap_009",
+      "query": "how to improve ai shopping / sales consultant for B2B buyers",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": []
+    },
+    "q_010": {
+      "capture_id": "cap_010",
+      "query": "which ai shopping / sales consultant vendor should a B2B company choose",
+      "engine": "scorecard_seed",
+      "mentioned_entities": [],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": []
+    },
+    "q_011": {
+      "capture_id": "cap_011",
+      "query": "best travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking platforms",
+      "engine": "manual_placeholder",
+      "mentioned_entities": [],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": []
+    },
+    "q_012": {
+      "capture_id": "cap_012",
+      "query": "Agent Replacement Scorecard vs zendesk for travel & booking planner agoda, priceline, latam cosmos, virgin voyages booking",
+      "engine": "manual_placeholder",
+      "mentioned_entities": [],
+      "citation_domains": [
+        "shekerkamma.github.io"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": []
+    }
+  },
+  "by_entity": {
+    "Agent Replacement Scorecard": {
+      "mentions": 0,
+      "captures": [],
+      "citation_domains": []
+    },
+    "zendesk": {
+      "mentions": 1,
+      "captures": [
+        "cap_001"
+      ],
+      "citation_domains": []
+    },
+    "ccaas": {
+      "mentions": 1,
+      "captures": [
+        "cap_004"
+      ],
+      "citation_domains": []
+    },
+    "glean": {
+      "mentions": 0,
+      "captures": [],
+      "citation_domains": []
+    },
+    "westlaw": {
+      "mentions": 1,
+      "captures": [
+        "cap_006"
+      ],
+      "citation_domains": []
+    },
+    "lexisnexis": {
+      "mentions": 1,
+      "captures": [
+        "cap_006"
+      ],
+      "citation_domains": []
+    },
+    "dam": {
+      "mentions": 1,
+      "captures": [
+        "cap_007"
+      ],
+      "citation_domains": []
+    },
+    "adobe": {
+      "mentions": 1,
+      "captures": [
+        "cap_008"
+      ],
+      "citation_domains": []
+    },
+    "bi dashboards": {
+      "mentions": 0,
+      "captures": [],
+      "citation_domains": []
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+  "topic": "AI agents disrupting SaaS pricing, seat-based software, outcome pricing, customer support AI agents",
+  "claims": [
+    {
+      "id": "claim-001",
+      "claim": "Goal Loop Test: AI Market Insights on Disrupting SaaS Market Date: 2026-06-30 Sample prompt: \"AI market insights on disrupting SAAS market\"",
+      "locator": "Section 2",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support goal loop test market insights date",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-002",
+      "claim": "Acceptance criteria: Exa discovery works, Firecrawl ingestion works, GBrain recall is attempted, Reddit/community evidence is probed, source-backed insights are separated from open gaps, and the run stops within budget.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support acceptance criteria exa discovery works firecrawl",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-003",
+      "claim": "Stop conditions: Stop after evidence collection, source tieout, and synthesis; do not continue chasing community evidence after two failed/weak probes.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support stop conditions evidence collection source tieout",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-004",
+      "claim": "Missing inputs: Target buyer, geography, SaaS category, and output format.",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support missing inputs target buyer geography category",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-005",
+      "claim": "| High for transition mechanics | | Salesforce Agentforce pricing | Primary vendor pricing | Shows Flex Credits at $500 per 100k credits, $2 per conversation, and examples of action/credit-based pricing.",
+      "locator": "Section 6",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support high for transition mechanics salesforce agentforce",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-006",
+      "claim": "| High for vendor behavior | | Intercom pricing | Primary vendor pricing | Shows Fin at $0.99 per outcome and a no-seat-required Fin AI Agent option for existing helpdesks.",
+      "locator": "Section 6",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support high for vendor behavior intercom primary",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-007",
+      "claim": "| Medium-high for platform direction | | Exa Reddit probes | Community discovery attempt | No usable Reddit thread evidence found in this pass.",
+      "locator": "Section 6",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support medium-high for platform direction exa reddit",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-008",
+      "claim": "The disruption is not \"SaaS dies\"; it is \"the seat stops being the clean billing unit.\" The strongest supported signal is pricing-model disruption.",
+      "locator": "Section 8",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support disruption dies seat stops clean billing",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-009",
+      "claim": "Deloitte frames AI agents as pushing SaaS toward usage- and outcome-based pricing, while Bain says seats are not dead but are no longer the only game.",
+      "locator": "Section 8",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support deloitte frames pushing toward usage- outcome-based",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-010",
+      "claim": "RSM is more aggressive, arguing that fixed per-user subscription models are under structural pressure when software performs work independently.",
+      "locator": "Section 8",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support rsm aggressive arguing fixed per-user subscription",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-011",
+      "claim": "Implication: the immediate wedge is not replacing entire systems of record.",
+      "locator": "Section 8",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support implication immediate wedge replacing entire systems",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-012",
+      "claim": "Incumbents are already defending by changing meters.",
+      "locator": "Section 9",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "disrupting saas pricing seat-based software outcome customer support incumbents defending changing meters",
+      "primary_source_required": false
+    }
+  ]
+}

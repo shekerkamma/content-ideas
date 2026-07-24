@@ -1,0 +1,29 @@
+{
+  "name": "hermes-content-pipeline-daily",
+  "prompt": "Run the Hermes content pipeline v1 in draft-only mode. Use /home/shekerk/content-ideas/runs/ai-head-of-engineering/2026-07-01-hermes-content-pipeline/implementation/sources.yaml and /home/shekerk/content-ideas/runs/ai-head-of-engineering/2026-07-01-hermes-content-pipeline/implementation/pipeline-config.yaml. Scan configured sources, normalize source items, rank topic clusters, generate up to 3 sourced research briefs, generate at most 1 draft package with LinkedIn, X, and newsletter variants, write run logs, and prepare memory write-back candidates. Do not publish content. Do not send outbound messages. Do not write secrets into artifacts. Stop if publish_allowed is not false.",
+  "skills": [],
+  "skill": null,
+  "model": null,
+  "provider": null,
+  "base_url": null,
+  "script": null,
+  "no_agent": false,
+  "context_from": null,
+  "schedule": {
+    "kind": "cron",
+    "expression": "30 6 * * *",
+    "display": "daily at 06:30"
+  },
+  "schedule_display": "daily at 06:30",
+  "repeat": {
+    "times": null,
+    "completed": 0
+  },
+  "enabled": true,
+  "state": "scheduled",
+  "deliver": "local",
+  "origin": "content-ideas",
+  "enabled_toolsets": null,
+  "workdir": "/home/shekerk/content-ideas"
+}
+

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source-item.schema.json",
+  "title": "SourceItem",
+  "type": "object",
+  "required": [
+    "id",
+    "source_id",
+    "cluster_id",
+    "title",
+    "url",
+    "fetched_at",
+    "summary",
+    "status"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "source_id": { "type": "string" },
+    "cluster_id": { "type": "string" },
+    "title": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "canonical_url": { "type": "string", "format": "uri" },
+    "published_at": { "type": ["string", "null"], "format": "date-time" },
+    "fetched_at": { "type": "string", "format": "date-time" },
+    "author": { "type": ["string", "null"] },
+    "source_type": {
+      "type": "string",
+      "enum": ["blog", "docs", "github", "newsletter", "video", "news", "other"]
+    },
+    "trust_tier": {
+      "type": "string",
+      "enum": ["primary", "secondary", "unknown"]
+    },
+    "summary": { "type": "string" },
+    "raw_content_path": { "type": ["string", "null"] },
+    "dedupe_key": { "type": ["string", "null"] },
+    "status": {
+      "type": "string",
+      "enum": ["new", "duplicate", "skipped", "failed"]
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}
+

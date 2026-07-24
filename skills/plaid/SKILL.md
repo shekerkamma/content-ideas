@@ -1,6 +1,6 @@
 ---
 name: plaid
-description: Use when someone says "PLAID", "plaid idea", "help me find an idea", "product idea", "plaid validate", "validate my idea", "pressure-test", "is this idea good", "find fatal flaws", "plan a product", "define my vision", "generate a PRD", "product strategy", "plaid design", "design from image", "create design.md", "plaid launch", "go-to-market", "launch plan", "GTM strategy", "plaid build", "build the app", "start building", or "execute the roadmap". Product Led AI Development — full pipeline from idea to launched product.
+description: Use ONLY when someone invokes PLAID by name — "PLAID", "run PLAID", "use plaid", "plaid idea", "plaid validate", "plaid plan", "plaid design", "plaid launch", "plaid build". PLAID is the legacy predecessor to BuilderOS, retained for continuity on in-flight builds that already use its `vision.json`. For any UN-branded product-build request ("validate my idea", "generate a PRD", "plan a product", "design from image", "build the app", "create my launch checklist"), use the BuilderOS skills instead — idea-generator, idea-validator, product-planner, design-system, build-mvp, launch-checklist. Product Led AI Development — full pipeline from idea to launched product.
 category: Business Automation
 license: MIT
 metadata:

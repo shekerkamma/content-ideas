@@ -227,68 +227,19 @@ opposed to audience growth, followers, content creation), set an internal flag:
 (or alongside) content ideas. When in strategy mode, Step 5c generates use
 cases and Step 7 offers pipeline next steps via `/pipeline-runner`.
 
-**OpenHands source of truth for implementation details.** When strategy mode is
-active and the use case involves agent orchestration, coding automation, MCP
-integration, skills, sub-agents, or the source material explicitly references
-OpenHands, verify the implementation stack against:
-- `https://github.com/OpenHands/OpenHands`
-- `https://docs.openhands.dev/`
-
-Use those sources for coding snippets, framework choices, skills/microagents,
-deployment patterns, CLI/headless workflows, and MCP/server integration details.
-Do not invent OpenHands capabilities from analogy or generic agent-tooling lore.
-
-**GBrain when available.** If `gbrain` is exposed as an MCP server in the host,
-use it by default for cross-session memory and retrieval before repeating
-strategy-mode research from scratch. Use it as the durable knowledge layer for
-recurring companies, people, prospects, verticals, themes, named accounts, and
-prior research findings. Read from it first when the current topic may overlap
-with prior work, and write durable findings back after the run when they are
-likely to matter again. Treat GBrain retrieval as embedding-backed semantic
-retrieval by default, not just keyword lookup. Prefer semantic recall first;
-use synthesis only when the task needs merged interpretation rather than simple
-recall.
-
-Treat this as an explicit chain step, not just a preference note:
-- `GBrain Recall` before fresh strategy-mode discovery or downstream handoff
-- `GBrain Write-back` after the run when the findings should become reusable
-  memory for later `/pipeline-runner`, `/vertical-scorer`, or `/ai-strategy-brief`
-
-When a run uses GBrain successfully, note that in the run status or stage
-summary so the chain is auditable.
-
-GBrain is not the system of record for pipeline deliverables. `feed-data.json`,
-briefs, strategy docs, deck builders, and client-facing artifacts must still be
-written to the local run folder and repo files.
-
-**Research plugins when available.** In Codex Desktop or another host that
-exposes stronger research plugins such as `exa`, prefer those plugins during
-Stage 1 discovery to find better official product pages, docs, GitHub repos,
-competitive signals, and current operator proof points faster than generic
-search alone.
-
-In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
-an MCP-connected research server or a local CLI/API wrapper for tools such as
-Exa when available. Treat that as the terminal analogue to desktop plugin
-access.
-
-Concrete terminal patterns to prefer when available:
-- Exa MCP over remote/HTTP MCP
-- a local Exa API wrapper that calls `https://api.exa.ai/search`
-
-Codex Desktop plugin access is a discovery advantage, not an exception to the
-rest of this workflow. The same local artifact-generation, branded-deck, QA,
-repo-rule, and source-verification requirements still apply.
-
-Plugin-assisted research improves source discovery, but it does **not** replace:
-- local file generation
-- branded PPTX build and QA
-- repo-specific workflow rules
-- verifying that final cited sources are primary and current
-
-Host-specific paths must stay portable. Prefer environment-driven paths over
-machine-specific absolute paths for branded templates, delivery directories,
-second-brain exports, and vault locations.
+**Research & memory policy (strategy mode).** Read
+`references/research-and-memory-policy.md` before any strategy-mode discovery.
+It covers: OpenHands as source of truth for implementation details; the
+`gbrain` MCP chain contract — use it by default for cross-session memory and retrieval,
+`GBrain Recall` before fresh discovery, `GBrain Write-back` to write durable findings back
+after the run, treating retrieval as embedding-backed semantic recall first
+(never the system of record for deliverables); and the research-plugin order —
+you-com-search, then exa (Exa MCP over an MCP-connected research server, or a
+local wrapper calling `https://api.exa.ai/search`), then Firecrawl, before
+generic search. Plugin access is a discovery advantage, not an exception to
+this workflow: it does **not** replace local file generation, branded PPTX
+build and QA, repo rules, or primary-source verification. Keep paths portable
+via env vars.
 
 **Recall the user's content taste from your memory.** This skill stores an
 evolving taste profile in your project memory (the auto-memory you maintain). Before generating ideas, recall what you know about what this
@@ -478,33 +429,11 @@ the patterns identified. Cluster them by **industry vertical + AI capability**
 signals, build a **use case realization** — the structured format defined in
 `FILE-SCHEMAS.md` that maps directly to the branded PPTX slide layout:
 
-1. **Kicker + Title** — category label (`USE CASE {N}  ·  {CATEGORY}`) and a
-   short noun-phrase title. Categories: `HORIZONTAL OPS`, `REVENUE`,
-   `KNOWLEDGE WORK`, `ENGINEERING`, `PLATFORM`, `VERTICAL`, `TRUST`,
-   `PROFESSIONAL`.
-2. **Challenge** — exactly 3 bullets: the pain points this use case addresses.
-3. **Solution** — exactly 3 bullets: how AI addresses each challenge.
-4. **How it works** — exactly 3 numbered steps: trigger → process → outcome.
-5. **Stats** — exactly 3 metric tuples: `[number/metric, label]` (e.g.,
-   `["100%", "data on-prem"]`).
-6. **Solution stack** — exactly 4 layers: `EXPERIENCE`, `ORCHESTRATION`,
-   `CONTEXT`, `ACTUATION` — each with a one-line detail.
-7. **Systems + Users** — which systems the solution touches (3–5) and the
-   buyer/user personas.
-8. **Organizations** — 2–4 organizations already delivering this or suggested
-   prospects. Each is `[name, one-line description]` — these also feed
-   `/presales-deal-prep`.
-9. **Signal provenance** — link the supporting posts/comments with `signalType`
-   (`demand` / `thesis` / `gap` / `trend` / `competitive_move`) and a one-line
-   evidence extract.
-10. **Downstream pass-throughs** — `verticalName` (exact input for
-    `/vertical-scorer`), `sourceUrls` (for `/research-to-strategy`),
-    `confidence` (`high` / `medium` / `exploratory`).
-
-If OpenHands is relevant to the use case, prefer verified stack entries such as
-OpenHands SDK agents, skills/repository agents, MCP transports, CLI/headless
-execution, and self-hosted deployment modes rather than generic labels like
-"agent orchestrator" or "custom runtime".
+Build each cluster into a **use case realization** — the 10-part structure in
+`references/use-case-realization.md` (kicker/title, 3 challenges, 3 solutions,
+3 how-it-works steps, 3 stats, 4 solution-stack layers, systems + users,
+organizations, signal provenance, downstream pass-throughs). Read that file
+before writing use cases; the JSON schema is in `FILE-SCHEMAS.md`.
 
 Generate 3–7 use cases, ranked by signal density and confidence. Write them
 into `feed-data.json` under the `useCases` key (see `FILE-SCHEMAS.md` for the

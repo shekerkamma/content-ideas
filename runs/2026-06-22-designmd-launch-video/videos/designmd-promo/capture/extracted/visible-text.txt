@@ -1,0 +1,48 @@
+PRODUCT / TOPIC: DESIGN.md — design-as-text for AI coding agents (Aurora Glass)
+
+ONE-LINE PROMISE
+Give the agent a system, not a vibe. One markdown file kills the generic-AI look.
+
+THE PROBLEM (the hook)
+Every AI-built UI converges on the same look:
+- Same-looking cards
+- Random purple/blob gradients
+- Inconsistent buttons
+- Weak spacing
+- "AI startup" sameness everywhere
+The model isn't the problem. Missing design context is. Tell an agent "make it modern"
+and it averages the internet.
+
+THE FIX
+DESIGN.md is design-as-text the agent reads first. A plain markdown file in the repo root
+(Google Stitch's spec). Coding agents read AGENTS.md for HOW to build; design agents read
+DESIGN.md for HOW IT SHOULD LOOK.
+- Color tokens — exact hex, not "a nice blue"
+- Typography, spacing, components, states
+- Hard do/don't guardrails that kill the slop
+
+THE PROOF (before -> after)
+Before: generic light SaaS dashboard — light-gray canvas, indigo accent, looks like every
+AI demo.
+After: one token remap. The whole system flips from a single CSS edit. Every variable-driven
+surface follows. No component rewrites.
+
+IT HOLDS ACROSS SURFACES
+One DESIGN.md held across four surfaces — dashboard, landing page, internal tool, slide deck —
+built from the same tokens.css + components.css. Teal stayed the lone accent on every screen.
+Glass cards on dark, zero white-on-grey.
+
+ANY BRAND, SAME PLUMBING
+Rebranded to "Summit Estate" — swapped Aurora Glass teal for warm charcoal + brushed gold.
+Same :root mechanism, completely different identity. Real KPIs proved it:
+47 active listings · 2.8% lead conversion · $18.4M pipeline · 24 avg days on market,
+with earthy, on-brand charts (gold, evergreen, slate, terracotta, sage) — not rainbow defaults.
+
+THE CLOSE
+Drop a DESIGN.md in the repo root, map its tokens to your theme, and the "generic AI look"
+stops being the model's fault — because it finally has context to follow.
+
+BRAND VOICE: precise, technical, confident. Verdict first. Numbers beat adjectives.
+Aurora Glass identity: near-black canvas (#080b11), teal (#2dd4bf) as the lone accent,
+aurora gradient (teal -> sky -> magenta) reserved for the one hero heading, mono-uppercase
+for metadata, hairline dividers, no white cards, no drop-shadow decoration.

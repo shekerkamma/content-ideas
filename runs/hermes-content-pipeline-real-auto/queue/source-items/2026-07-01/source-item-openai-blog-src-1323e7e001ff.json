@@ -1,0 +1,18 @@
+{
+  "id": "src-1323e7e001ff",
+  "source_id": "openai-blog",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "New tools for building agents | OpenAI",
+  "url": "https://openai.com/index/new-tools-for-building-agents/",
+  "canonical_url": "https://openai.com/index/new-tools-for-building-agents/",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:19.246445+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "With today’s releases, we’re introducing the first building blocks to empower developers and enterprises to more easily build, deploy, and scale reliable, high-performing AI agents. As model capabilities become more and more agentic, we’ll continue investing in deeper integrations across our APIs and new tools ...",
+  "raw_content_path": null,
+  "dedupe_key": "78593f4b387f",
+  "status": "new",
+  "errors": []
+}

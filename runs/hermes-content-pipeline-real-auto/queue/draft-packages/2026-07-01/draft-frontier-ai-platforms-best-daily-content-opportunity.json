@@ -1,0 +1,51 @@
+{
+  "id": "draft-f3dc0ce5060e",
+  "research_brief_id": "brief-e4ce7eef0f97",
+  "title": "Frontier AI platforms: best daily content opportunity",
+  "dek": "A practical operator-facing draft generated from a sourced research brief.",
+  "article_markdown_path": "/home/shekerk/content-ideas/runs/hermes-content-pipeline-real-auto/queue/draft-packages/2026-07-01/draft-frontier-ai-platforms-best-daily-content-opportunity.md",
+  "target_audience": "AI operators, enterprise solution architects, and founders",
+  "seo_aeo": {
+    "primary_query": "frontier ai platforms best daily content opportunity",
+    "secondary_queries": [
+      "Hermes agent content pipeline",
+      "AI agent workflow automation",
+      "source grounded AI content workflow"
+    ],
+    "answer_targets": [
+      "What can a Hermes content pipeline automate?",
+      "How do you keep AI-generated content reviewable?",
+      "Where should human approval stay in an agent workflow?"
+    ]
+  },
+  "variants": {
+    "linkedin": "A useful Hermes content pipeline is not an auto-publisher. It is a daily system for finding signals, drafting sourced briefs, and handing humans review-ready work.",
+    "x_thread": [
+      "Hermes content pipeline v1 should be draft-only.",
+      "The useful loop is: source scan -> ranked topic -> sourced brief -> draft package -> human review.",
+      "The dangerous step is publishing. Keep that manual until provenance, voice, and cost controls are proven."
+    ],
+    "newsletter": "This week's implementation pattern: use Hermes to turn source monitoring into review-ready content packages, while keeping publishing behind an editorial gate."
+  },
+  "citation_map": [
+    {
+      "draft_claim": "openai-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c1"
+      ]
+    },
+    {
+      "draft_claim": "openai-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c2"
+      ]
+    },
+    {
+      "draft_claim": "openai-blog contributes evidence for the Frontier AI platforms opportunity.",
+      "citation_ids": [
+        "c3"
+      ]
+    }
+  ],
+  "status": "draft"
+}

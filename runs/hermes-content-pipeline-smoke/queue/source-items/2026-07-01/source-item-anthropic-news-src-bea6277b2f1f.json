@@ -1,0 +1,18 @@
+{
+  "id": "src-bea6277b2f1f",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Anthropic News signal for Frontier AI platforms",
+  "url": "https://www.anthropic.com/news",
+  "canonical_url": "https://www.anthropic.com/news",
+  "published_at": "2026-07-01T00:00:00+00:00",
+  "fetched_at": "2026-07-01T05:17:50.921559+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Offline seed item from Anthropic News for evaluating model releases, agent tooling, enterprise AI adoption. Use live mode to replace this with current source content.",
+  "raw_content_path": null,
+  "dedupe_key": "f6aa679babd7",
+  "status": "new",
+  "errors": []
+}

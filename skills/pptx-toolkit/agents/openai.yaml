@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPTX Toolkit"
+  short_description: "Inspect and safely edit existing PowerPoint files"
+  default_prompt: "Use $pptx-toolkit to inspect and modify this existing PowerPoint while preserving its structure."

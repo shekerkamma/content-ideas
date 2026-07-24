@@ -1,0 +1,13 @@
+query_id,query,engine,target_brand_mentioned,competitors_mentioned,citation_domains,raw_answer_path
+q_061,Which SaaS workflows are most likely to be replaced by AI agents?,ChatGPT,True,,shekerkamma.github.io,stage_outputs/raw/cap_live_001.txt
+q_062,Agentic AI vs SaaS replacement scorecard,Perplexity,True,,shekerkamma.github.io,stage_outputs/raw/cap_live_002.txt
+q_031,"best ad & creative generation at scale wpp, authentic brands group, pods creative production seats creative platforms",Claude,False,dam; adobe,,stage_outputs/raw/cap_live_003.txt
+q_031,"best ad & creative generation at scale wpp, authentic brands group, pods creative production seats creative platforms",Google AI Mode,False,dam; adobe,,stage_outputs/raw/cap_live_004.txt
+q_006,best ai shopping / sales consultant platforms,Claude,False,zendesk,,stage_outputs/raw/cap_live_005.txt
+q_006,best ai shopping / sales consultant platforms,Google AI Mode,False,zendesk,,stage_outputs/raw/cap_live_006.txt
+q_001,best conversational support platforms,Claude,False,zendesk,,stage_outputs/raw/cap_live_007.txt
+q_001,best conversational support platforms,Google AI Mode,False,zendesk,,stage_outputs/raw/cap_live_008.txt
+q_021,"best doc summarization & drafting kpmg, pwc, deloitte doc / productivity add-ons empl platforms",Claude,False,dam,,stage_outputs/raw/cap_live_009.txt
+q_021,"best doc summarization & drafting kpmg, pwc, deloitte doc / productivity add-ons empl platforms",Google AI Mode,False,dam,,stage_outputs/raw/cap_live_010.txt
+q_026,"best legal research & drafting harvey, thomson reuters, deutsche bank db lumina westlaw, lexisnexis, clm employee platforms",Claude,False,westlaw; lexisnexis,,stage_outputs/raw/cap_live_011.txt
+q_026,"best legal research & drafting harvey, thomson reuters, deutsche bank db lumina westlaw, lexisnexis, clm employee platforms",Google AI Mode,False,westlaw; lexisnexis,,stage_outputs/raw/cap_live_012.txt

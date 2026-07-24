@@ -1,0 +1,817 @@
+{
+  "post": {
+    "title": "The developers are making a mistake - An arguement against allowing paid mods",
+    "author": "TurklerRS",
+    "score": 5761,
+    "content": "I'm sure everyone here is familiar with the TwistedMexi situation, but here's some coverage of that if you're not . The gist of it is that they put up a mod for sale within the very first days of the game's release, and the developers decided to allow this. This is, to put it lightly, a mistake. If not stopped, this tolerance is going to recreate the same culture of greed that currently exists around the Sims franchise. Monetisation is simply not compatible with traditional modding values that make up the pillars of gigantic, welcoming modding communities. In this post, I'm going to walk through my arguements against allowing paid mods and the potential consequences of allowing it. For context, I am a modder who has been poking at games for years now. https://preview.redd.it/mbwi6vddne4h1.png?width=490&format=png&auto=webp&s=50cb602618e99c7b5eb83b926bf80e32c630d576 I've released many mods, and my mods on the Steam Workshop alone have >500k active subscribers in total. I've been involved in various modding communities, and I believe I know a thing or two about the practice. In this thread, I will use the term 'modder' to describe members of a community who make and publish mods for free, and the term 'salesmen' to describe members of a community who make and publish mods for an explicit financial return on their investment. Don't read too deeply into the words chosen here, I just needed a strict seperation between people who make mods for fun and those who make mods for money. Now, onto my arguements: IT IS EXPLICITLY ANTI-COMMUNITY The desire to create and contribute is the core of modding. In communities where paid mods are completely banned, most modders will happily share with each other. When a friend recently asked me if they could have the entire contents of one of my old mods to refurbish and use in their new mod, I said yes. Just put my name somewhere in the credits. Likewise, when I was working on a big project, I made extensive use of a public framework with almost two million subscribers, by simply adding it as a dependency. However, this simply cannot happen with a prolific paid-modding culture. Someone who makes mods for an explicit expected money return will never freely share their work. In such a system, other salesmen are not comrades who enjoy the game as much as they do, but competition. A salesman who wants nothing more than money will never develop and maintain an extensive public framework. Helping others would directly harm their revenue stream, so why would they? Over time, this kind of anti-social behavior in a community will simply drive at least some modders away from the community. Mods that could have existed in a community less tolerant of paid mods will not exist because modding resources are kept under lock and key by the seasoned salesmen who do not want their territory contested. IT IS INCREDIBLY WEST-CENTRIC A vast majority of paid user-made content is priced with western currencies. If you live in a country whose currency is basically worthless against the United States dollar, or a country where purchasing United States dollars is difficult, annoying or outright impossible, you're out of luck. Gaming platforms like Steam address this with things like regional pricing, working with local banking systems of countries to facilitate poorer countries. Salesmen don't do this. As a person from the middle east myself, the notion of refusing a large chunk of a community purely based on their level of income and their origin of birth is insane. You can't pretend to hold progressive values, monetise those progressive values and then run a marketplace where poor people are not welcome. IT'S A SPIRAL TO THE BOTTOM https://preview.redd.it/yeeurh1xze4h1.png?width=3410&format=png&auto=webp&s=12828c05db176e2d6504e816222a62043709d766 In the Sims 4 community, there recently was some drama regarding the 'Seline hairstyle' content. It was a single hair style being sold for two euros. Some people were appalled at this, but this is just the simple outcome of allowing monetised user-made content. Let's presume a world where the standard for hair packs is costing 5 euros and including fifteen hair styles. Salesmen will immediately push their luck - maybe increasing the price to 6 euros, or reducing the amount of hair styles in a pack to fourteen - because they have a profit motive. They will constantly, and I mean constantly , test the waters to see if the community they're trying to sell to is willing to accept less content for a bigger pricetag, because they have a simple profit motive and making more money while doing less work is their primary interest. Once monetisation is normalized, competitive pressure among salesmen pushes toward doing less for more money. IT JUST SUCKS https://preview.redd.it/neow7d0eqe4h1.png?width=1246&format=png&auto=webp&s=9e32507b5e3a5f68b189e4c13de6a34f373478a1 This one is a bit less objective, but I do believe I have a leg to stand on. Monetisation of user-made content is not a new practice. Be it the Sims series, ROBLOX, Minecraft, Bethesda's Creations Marketplace or any of the communities where monetised user-made content is commonplace, they all just generally suck. The products on offer are generally repetitive, low quality 'slop' designed to sell, tasteless and meaningless products that have been gutted to have as much broad appeal as possible. This is an unavoidable part of allowing paid mods, there will be a large caste of salesmen who have very little interest in the game nonetheless making content for it because it's popular and this popularity can be monetised. The modding community of the Sims series is one of the most fractured and exploitative modding ecosystems in gaming precisely because of this system. Now, I should clarify, that is not to say any given paid user-made mod is bad. I'm not pointing fingers at any specific mod here but observing the effects of monetised user-made content in general. IT RAPIDLY ACCELERATES MOD ABONDONMENT A modder who has poured their heart and soul into a mod will generally maintain it to the best of their abilities. Life might get in the way, they might lose interest, but that's inevitable and mods can live on even if the original author is not able to continue development. In the modding scene of the game Rimworld, for example, there are many 'Continued' mods - mods of one author updated by another. In contrast, if you're making content purely for profit, it makes no sense for you to maintain the content which doesn't sell. This is the end of the niche, the unpopular. And it would be absolutely insane to let a perceived competitor take the mod off your hands. A salesman has every incentive to kill unpopular/niche/eccentric mods, while a modder has every incentive to support unpopular/niche/eccentric mods. Combined with the point above, this leads to a huge library of mods that were once made to cash in on some trend or another before being abondoned. LIES AS A SERVICE One should question what exactly is being bought and sold. In a huge number of cases the answer isn't very clear, and even the salesmen themselves, caught in the promise of a payday, don't know and don't care. The use of the term 'paid mod' is actually a bit misleading because in a vast majority of cases, you're not buying a mod. You're not paying for access to a mod either. You're paying for limited permission to borrow a mod. The distinction is imporant because a lot of salesmen do their best to hide this fact. Let's call it what it is - you are paying for limited permission to borrow a mod in the form of a subscription. The salesmen give you no guarantees about being able to access the content you've paid for because you're not buying access to a mod. If you cancel your subscription, this access is revoked forever until you subscribe again. You can't end your subscription and then demand the salesman send you the version of the mod you paid for, because you didn't pay for a mod. This, frankly, sucks. It means you can't just buy one version of a mod and stick with it. You pay forever and own nothing. Now, I should add that I don't think this is done out of malice. This is addressed more extensively in my next point, but this is just the natural consequence of salesmen wanting to avoid any and all responsibility while making as much money as possible. PRODUCTS, UNTIL THEY'RE NOT Another reason salesmen will hide behind labels like 'early access' and firmly refuse the term 'sale' is because it acts as an excuse to get out of responsibilities that would come from selling a product. As products, most paid user-made content is laughable: They have an incredibly poor value proposition, a few packs of hair will cost you as much as the base game you are modding. As 'pinky promise not-products' they often come with no guarantees, no policies, no nothing. You cannot get a refund because your 'early access' doesn't run on your machine nor will you ever be given a list of how the mod should be used, any known incompatibilities or a list of supported mods. A vast majority of these mods simply do not account for mods! Salesmen will happily blame some mod or another for any issues their audience may experience while dodging the elpehant in the room, which is that paid content should be performant, highly compatible and just, good software. Most paid user-made content also lacks a coherent and public support system. Many salesmen will go as far as refusing to help those who are not actively subscribed to their Patreon. Others will demand you join their Discord server and contribute to their optics, where your demands for support will often be met with dismissive, toxic comments. Much ink has been spilled about this topic but no one wants to admit the plain truth. Salesmen who contribute little to the overall community use lies and deception to get out of responsibilities they would otherwise have because they are, for all intents and purposes, selling a product. They insist it's not a product so that they can shrug off the responsibilities they would have while selling a product.",
+    "url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+    "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+    "subreddit": "Paralives"
+  },
+  "comments": [
+    {
+      "id": "t1_op7np8y",
+      "author": "toilandbubble",
+      "text": "The Paralives devs officially support and moderate the Steam Workshop, a free community driven platform, which welcomed 12,000 items within its first week! Players are free to search for mods and CC wherever they like, but keep in mind that the team does not have control over the overwhelming amount of mods or CC being shared outside of the Steam Workshop. We encourage players to use the Workshop and support the community that's thriving there!",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op7np8y/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oslgsbh",
+      "author": "Meallaire",
+      "text": "Sounds like we need paysitesmustbedestroyed for paralives, lmao.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oslgsbh/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oqsjhum",
+      "author": "plumbob_potato",
+      "text": "I think we also forget that there are other ways to support/monetize modders. The amount of buy me a coffee links I have seen in the sims community for CC and mods. Having Patreon tiers for players who want specific CC/mods (with being free for everyone upon release), or any other perks that doesn’t lock modding content behind a paywall. At the end of the day, people who aren't willing/can’t to pay for mods won’t pay for it anyways. By making it free you enable access to everyone- and that in itself could create more traction/support for the modder.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oqsjhum/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oqcolrd",
+      "author": "Familiar-Figure-5692",
+      "text": "Agreed. Not a fan of all these patreon modders.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oqcolrd/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oq8lfg8",
+      "author": "BerlinMiri",
+      "text": "I understand all this arguments. And my question comes from curiosity more than any opinion. Making mods takes time and skill. Are you just doing it for the fun of it? I feel in this economy 😅 it’s quite hard to justify spending so much time on something that doesn’t pay? Relying on community works in a village where people know who you are. And will pay back your house party with a baby sitting visit. But online?",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oq8lfg8/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oq8lxaz",
+      "author": "TurklerRS",
+      "text": "Go look at the Workshop pages of games like Stellaris, Rimworld, or the Nexus Mods pages of games like Skyrim - you'll see gigantic mods with millions of downloads, being made for the sake of it. We absolutely do not need the salesmen. There's also another interesting detail here, a vast majority of salesmen will not try to monetise their mods if there's no market for it. It's precisely because passionate fans like you and I have made and released so many free mods, completely free for us all to enjoy, that salesmen consider monetising the space in the first place. Like, this goes without saying, but the salesmen wouldn't be around if there was no market for mods.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oq8lxaz/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oq2xg2e",
+      "author": "Status-Revolution-46",
+      "text": "You are truly the realest consumer gamer and MVP!!! Sims downfall was the greed and ripping us off for basic mods. IMO the whole incentive around Paralives was to avoid Mods and game add ons, whole reason I got the game. After buying so many Sims expansions and being disappointed that they barely increase gameplay so it’s a breath of fresh air to have a life sim franchise absolutely deliver.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oq2xg2e/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oqbwb1e",
+      "author": "Status-Revolution-46",
+      "text": "Until my game crashed and wouldn’t launch def taking back all my compliments lol tried uninstalling, verifying all files, removing mods, restarting, all still failed. 😞",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oqbwb1e/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oq0vkrm",
+      "author": "Zealousideal-One2903",
+      "text": "I can’t believe we already have paid mods like wtf it’s barely been two weeks😭😭.",
+      "score": 25,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oq0vkrm/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oq3ocnk",
+      "author": "TurklerRS",
+      "text": "Yep, and that actually shouldn't be very surprising. If the developers allow monetising their product's community, and said community is rather big, you create huge incentives for a salesman and to come in and exploit (exploit as in use) this community. More importantly, these incentives are wholly different from the usual incentives that drive modders to make and release free mods. The salesman, driven by a purely mercenary profit motive, doesn't care about the game. The salesman who released a paid mod within days of the game's release didn't do so because the few hours they could have played the game convinced them this was the future. They saw an audience and moved to capitalise on it. Testing the waters, as I've explained in my post.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oq3ocnk/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opx17kf",
+      "author": "Fun-Rhubarb6043",
+      "text": "ts4 idnt boring. its a sand box Sanf bixes need xou to creat. if xou ar bored you have no idea what to create",
+      "score": -10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opx17kf/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opx0oob",
+      "author": "Fun-Rhubarb6043",
+      "text": "the sims did that since 1 ther knew after 4 ther cabt do it like that again",
+      "score": -10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opx0oob/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opwz459",
+      "author": "Fun-Rhubarb6043",
+      "text": "the issie is these sims modders made it ther job. so now with paralifes you tell them to go back to find a real job and do this for free or just stop",
+      "score": -6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opwz459/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opt684s",
+      "author": "SharpOutfitChan",
+      "text": "You control the buttons you press. You are not entitled to mods.",
+      "score": -8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opt684s/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oppn20n",
+      "author": "Southern_Juice_1400",
+      "text": "I dearly hope there will eventually (as fast as possible) be some official word from the devs on not endorsing paid mod content, simply because it fosters a terrible atmosphere in the community.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oppn20n/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opn0x0n",
+      "author": "Darkelvenchic",
+      "text": "Just don't pay for it. He will release it later for free no-doubt, he always does. This is a lot of drama over what is actually a patreon member perk. And no I'm not a member, not do I need the perk of his community that I'm not a member of.",
+      "score": 22,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opn0x0n/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opmuh9y",
+      "author": "princefruit",
+      "text": "I don't disagree with many of your points and I appreciate the modders persoective, but the people who get modders paid are players. It's not the devs' problem to solve a player problem. Don't buy paid mods. That's it. If no one buys the mods, awesome. Everyone is entitled to their opinion but many of these comments just sound mad that some people will have access to mods that they can't access, and well, that's life. The devs' responsibility is to make the game fun and playable without mods at all, not to be your parent and prevent you from making the choice to spend money. I've put hundreds if not thousands of hours into every sims game. I have been playing FFXIV for 10 years. I have many many hours in Rimworld, Minecraft, and other games with big mod scenes. I have not paid a single cent for any mod ever, and I have never felt that my game was ruined because of paid mods existing out there somewhere. I always have had fun with no mods, or free mods. If other people want to pay for mods, so be it. If that breaks my fun, then something else is the problem. I don't like the \"If I don't have it, you can't have it\" mentality I see in a lot of comments. For cheat mods in a multiplayer game, absolutely it shouldn't be allowed to exist. In a single player game? Who cares, so long as the game is in a state where it does not require mods to function? If paralives is in that state now, it's because the game is still at least two years away from full release.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opmuh9y/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opjwchb",
+      "author": "Easy-Childhood-250",
+      "text": "This has really helped me understand the perspective against even early access mods. Though I truly feel like I understand both sides, as I know these modders do put a lot of work into their mods in the Sims community, and I'm not against them getting support in some way for what they do, it does seem like paid access to mods creates a somewhat toxic community that isn't very accessible, which sucks.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opjwchb/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_ophfpve",
+      "author": "Background-Rub6135",
+      "text": "Over time, this kind of anti-social behavior in a community will simply drive at least some modders away from the community. Mods that could have existed in a community less tolerant of paid mods will not exist because modding resources are kept under lock and key by the seasoned salesmen who do not want their territory contested. Also mods that could have exist in a community with paid mods (cause a lot of people want money for their work and won't do it for free) won't exist in a community without them. Anyway it's not like devs can really forbid paid mods, like who would even ask them? Just put it in your patreon behind a paywall.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/ophfpve/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opkr5x2",
+      "author": "CarsnCarsnCarsnCars",
+      "text": "They can send DMCAs the people posting paid mods on patreon, quite easily.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opkr5x2/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_osf1bvj",
+      "author": "Weird_Lead_1788",
+      "text": "Patreon doesn’t care, you can upload other peoples content on Patreon and they’ll still happily take the cut of the subscription",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/osf1bvj/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opj08je",
+      "author": "Odd_Ad_882",
+      "text": "Eh. Modding communities where paid is not the norm in my experience have a bigger variety of complex mods. If one is gonna have to go easy to prefer those than the same guaranteed sale low effort slop people \"who won't do it for free\" usually put out.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opj08je/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oph0v6d",
+      "author": "LordesTruth",
+      "text": "Why wouldn't you allow people to ask for a payment for their own work??? What kind of entitlement have we reached to where you want to demand free labour from others? If $2 for a mod is going to destroy your financials then you shouldn't have paid $40 for the game.",
+      "score": -5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oph0v6d/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opmfxyv",
+      "author": "Defiant_Delivery_799",
+      "text": "It's the modders' choice to create the mods, nobody is forcing them to do it. If somebody paid 2 dollars for a mod and downloaded 20 mods that would be the cost of the game with likely much less content.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opmfxyv/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oq8ojyc",
+      "author": "FriendofFlounder",
+      "text": "And its players choice to buy the mods, nobody is forcing them either?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oq8ojyc/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_ophg8ap",
+      "author": "nokonuuka",
+      "text": "Sims 4's marketplace called, there's another custom hair for five dollars for you.",
+      "score": 17,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/ophg8ap/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_ophj6f9",
+      "author": "xKittyForman",
+      "text": "i don’t understand this thought process like if you don’t wanna pay for anything then don’t? there’s thousands upon thousands of free mods for the sims, what’s so bad about just using those?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/ophj6f9/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opl92tb",
+      "author": "GuavaBlackTea0",
+      "text": "Entitlement",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opl92tb/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opsc99l",
+      "author": "xKittyForman",
+      "text": "are you saying i am entitled? or are you answering my question? i still do not understand lol i have never spent any money on mods before because theres sooooo many free ones ive never even thought about paying for any.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opsc99l/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opscxaw",
+      "author": "GuavaBlackTea0",
+      "text": "Im saying users against modders selling feel entitled to free mods",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opscxaw/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opsdbpc",
+      "author": "xKittyForman",
+      "text": "aah i see ty.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opsdbpc/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_ophkeac",
+      "author": "nokonuuka",
+      "text": "This post explains it pretty well in my opinion",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/ophkeac/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opfecni",
+      "author": "lithigos",
+      "text": "The title of this post seems misleading... Devs have nothing to do with what third party content creators do or charge for their work. Devs have said they're never going to charge for DLC or extra content, mods do not fall under that. This is a non issue IMO. Small creators are allowed to ask for payment to support all the effort they put into mods, since creating mods involves a lot of work and upkeep. These people are creating mods in their free time for the benefit of others who can't, what's the fuss?",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opfecni/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opf7mj4",
+      "author": "ApexSectMaster",
+      "text": "Granted I have to imagine being a Sims 4 modder kind of sucks. The game breaks so very often with it's updates... Probably really is easy to get burnt out. At least Skyrim modders rarely have to deal with all the bad updates Sims 4 modders do.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opf7mj4/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opd9k8e",
+      "author": "GuavaBlackTea0",
+      "text": "Idc if some modders charge, i just wont use them. If some games NEEDS mods to be entertaining, then its a sorry excuse for a game.",
+      "score": 19,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opd9k8e/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opel2d3",
+      "author": "ExtraordinaryPen-",
+      "text": "Either listen to what came before you or suffer the future",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opel2d3/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opexrcn",
+      "author": "GuavaBlackTea0",
+      "text": "What do you mean?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opexrcn/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opl2hwn",
+      "author": "Flashy-Ingenuity-182",
+      "text": "Other game communities have explicitly banned paid mods and their modding communities thrive, whereas modding communities in paid ecosystems stagnate and become a race to the bottom.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opl2hwn/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_osf20q6",
+      "author": "Weird_Lead_1788",
+      "text": "that doesn’t take away the point being made though, games shouldn’t need mods to be playable/fun, they enhance it, most of my games I have zero mods, the only one I really have mods for is the sims series , mods aren’t essential..",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/osf20q6/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oshkp0u",
+      "author": "Flashy-Ingenuity-182",
+      "text": "Mods aren't essential? Mods are pretty much the only reason TES is such a successful series. Sims 4 would have likely died out ages ago if it wasn't for the active CC community. Respectfully you have no idea what you are talking about.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oshkp0u/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opd0pls",
+      "author": "WitchofGremlinEnergy",
+      "text": "The problem I think your missing is that paralives can't realistically enforce banning of paywalled mods. The solution is to never use paywalled mods and just use the steam workshop.",
+      "score": 21,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opd0pls/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opel5hc",
+      "author": "ExtraordinaryPen-",
+      "text": "They can, legally selling content for a game that you don't own isn't legal",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opel5hc/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opep94i",
+      "author": "romulo27",
+      "text": "It's a bit iffy. Some games allow paid mods (Minecraft, Paralives allgedly according to it's TOS and The Sims 4 to some degree) Some games don't say anything about it, which leaves paid mods in a gray area, for example, you could make a mod with 100% original content and allege it to just be software that happens to work in tandem with a game, it's simultaneously legal and not legal, and some mods and tools use that defense, primarily for older elder scrolls games. Some games don't allow modding at all, such as Nintendo games making it explicitly against in their TOS in all forms And then there's the \"How the hell is this even legal\" where I'd like to shout out Sims 4 Multiplayer for paywalling basegame content, such as travelling, which is free if you don't have the mod. Like, I know Sims 4 allows paid mods but that *HAS* to be illegal somehow.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opep94i/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_oper7oq",
+      "author": "ExtraordinaryPen-",
+      "text": "It's not about modding itself, it's about charging for mods. Minecraft and the sims has it because they get their cut. But legally you can't charge for something that only works for someone else's IP",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/oper7oq/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opf71vd",
+      "author": "romulo27",
+      "text": "Again, it's not straight up illegal, it's a very gray area. And I'm saying this counting my limited knowledge of the US legislation, we're not even counting international laws. Making a derivative work and charging for it itself WITHOUT PRIOR PERMISSION is illegal, yes, but you also have to prove what you're taking down is paid derivative work. And that's where it tends to get hard more often than not because there's a bajillion loopholes modders can use to allege that isn't the case. Unless you cover what can and can't be done with derivative works in a TOS (Which Paralives very likely didn't) you're setting yourself for a hard time when it comes to thwarting charged mods.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opf71vd/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opc8ca7",
+      "author": "FuckMyBakaChungusLif",
+      "text": "The response of \"well there's nothing we can do, 15-person dev team, we don't have control outside Steam Workshop.\" The TOS explicitly allows paid mods. You can just not allow paid mods on the TOS and this wouldn't be an issue. You can ban paid mods officially and not enforce it, it just means mod devs that try to monetize their work would have to go to smaller websites so it's discouraged. It's bizzare to explicitly allow it and try to wash your hands of the situation that it was inevitably going to cause of paid mods.",
+      "score": 30,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opc8ca7/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op9ef6j",
+      "author": "Key-Cap6569",
+      "text": "Damn I agree they need to not allow paid mods it makes everything awful.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op9ef6j/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opavda5",
+      "author": "AseroR",
+      "text": "Indeed. After reading some of the horrific replies here, I'll never allow my money to end up in these 'modders' hands again. Everyone hates Bethesda for having paid mods, but at least they are playing by the rules. Intellectual property laws exist for a good reason.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opavda5/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op9d2nl",
+      "author": "nokonuuka",
+      "text": "https://www.tumblr.com/arro-now/818094629664817152/addressing-a-few-concerns The modder of the free cam mod is being accused of copying the paywalled mod. Link includes github timestamps to prove that they both worked fast, but the free mod was here first.",
+      "score": 25,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op9d2nl/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_ope3ec7",
+      "author": "TheSammy58",
+      "text": "i love that my going rogue in tmex's discord for answers now lives in infamy as a screenshot",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/ope3ec7/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opaca0q",
+      "author": "TurklerRS",
+      "text": "Drama in the modding community isn't anything new but I should also add that salesmen have every incentive to try and call foul on any and all mods which infringe on their territory, so to speak. ''Just make your own mods if you don't like the paid options!'' until someone does and they get dogpiled over ''Copying'' and whatnot.",
+      "score": 18,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opaca0q/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opgcj5r",
+      "author": "nokonuuka",
+      "text": "Yeah this is exactly what my problem with this is. Like noo come baaack you were supposed to pay MEE",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opgcj5r/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op8ibqv",
+      "author": "Nightvyxen",
+      "text": "Such a shame this prolly is just gonan be another \"Sims Mod Greed\" experience. i struggle today even with hwo sims has gone, but we can thank Bethesa for this dreadful Circle of Mods making money, I recall when skyrim modding community was friendly, people shared, Helped right to other modders picking up and adding or updating. It still is too But Yes bethseday added there mod shop so EA had to follow suit I really Hope paralices Doesnt follow this trend If it does I prolly wont play. Gaming about people making money and we all in a situtaion wors e than we where pry to covid apearring. My only advice as a Modder is you choice you if yu wanan pay knock yourself out but Kep in mid Your helping Slaughter a community in two. If your asgist this Encourage your friends and family to go free Mod supporting we are out there Ist a matter of Leaving where we are are Until then Yes Steam workshop is the bomb to go too.",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op8ibqv/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op7uc1n",
+      "author": "CorpusPineale",
+      "text": "I remembered a story that I just want to leave here. There is a game Vampire: the masquerade - bloodlines. It went on sale literally unfinished, because the studio that developed this game was experiencing great financial difficulties. There were a lot of bugs and broken mechanics in the game on release. Instead of abandoning this game and forgetting it, the fans started to fix and refine it. The so-called Unofficial Patch appeared, which was started by Wesp5. This mod has been updated for years (for more than 20 years now) absolutely free of charge. Fans fixed critical errors, restored the cut content (locations, quests, characters). It is thanks to the work of the community that this game has become the most beloved for many and has become truly iconic.",
+      "score": 23,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op7uc1n/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op997tl",
+      "author": "snuffbby",
+      "text": "this is an excellent comparison and a great shout out to a legendary game :')",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op997tl/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op7j4e9",
+      "author": "Interesting_Pack_991",
+      "text": "this is my 2-cents: paid mods create the worst version of both worlds. if its “just a hobby,” then it should stay part of the shared community, be easy to update, & ideally centralized somewhere like the workshop. if its a product tho, then ppl should be getting product-level expectations including refunds & compatibility info + updates when the game breaks it. a lot of paywalled modding tries to take the money side of being a product while still retreating back to “its just a passion project” whenever accountability comes up. i agree w some other commenters here that donations are the healthier middle ground, let ppl support creators; i have zero issue w modders being appreciated financially, but the actual mod should be free from day 1. once access itself is monetized, the whole culture changes from “look what i made for the community” to “here is another mini-storefront” the only reason ive invested my time & interest into paralives in the first place is because when my ex introduced me to it a while ago, i saw that the devs had built up so much goodwill around accessibility & not doing paid DLC. would be a shame for the official game to reject nickel-&-diming, only for the modding scene to recreate it from the side. even if they cant enforce everything perfectly, a clear statement against paywalled mods would help set the culture early before this becomes normal",
+      "score": 26,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op7j4e9/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opacuyd",
+      "author": "TurklerRS",
+      "text": "Oh, I absolutely agree. I've paid for community-made content before but only because they were actually products. The developer clearly spelled out what I would get, how I could use it, what I could expect during updates and whatnot, so on and so forth. Gave me guarantees and offered refunds if they couldn't meet them. But in a vast majority of cases, you don't get that. You get to rent limited access to mod. That sucks, it's the worst of both worlds!",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opacuyd/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op79tga",
+      "author": "darknesssoulvampire",
+      "text": "i’m genuinely concerned with any modder paywalling mods on a early access when that mod could easily break with every other patch / update that come out, however I’m not against modders seeking money for their mod, personally I don’t buy mods from anyone unless I really want to? but like I genuinely wouldn’t understand why paywall mods with the game in the state it’s in right now, and I especially hope the modding community doesn’t turn toxic like in the sims community already.",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op79tga/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opmgn0z",
+      "author": "Defiant_Delivery_799",
+      "text": "I genuinely wouldn’t understand why paywall mods with the game in the state it’s in right now That's not even something I thought about! It is just so weird the week and a half after early access gets released when there's constant updates does make it especially weird for paywall mods. Not to mention you can still do early access for paying.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opmgn0z/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op7adb8",
+      "author": "Pine21",
+      "text": "That’s my main concern. I don’t really care if someone paywalls their mod for a couple weeks. It doesn’t impact anyone at all, just wait. I basically consider it advertising time. The real problem is if this becomes a major thing in the community. And the solution is to just not buy any paid mods. No one will bother paywalling if they get no money.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op7adb8/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op75q7p",
+      "author": "CorpusPineale",
+      "text": "In general, it seems to me that we, as a market, simply should not create demand for paid mods, if we do not want this to take root in the community. I don't see a problem in posting links to your patreon or boosty, so that you might get a donation, but selling mods? I didn't leave the Sims 4 community to see the same thing here. And I've seen people writing that if you don't like early access, then make a similar mod, but for free. Okay, sir, but then don't complain that someone stole your idea.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op75q7p/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op6rzhw",
+      "author": "yukimasahiko",
+      "text": "I disagree. They are still working on the game yet.",
+      "score": -6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op6rzhw/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op6rqax",
+      "author": "InternationalCamp572",
+      "text": "I see where you're coming from OP but honestly, I cant fully agree. TS4 is a greedy company that has been releasing $40 packs for things as simple as pets, rain, vacations, etc. When the game itself costs $40-$60, which is ridiculous to say the least. But the main reason they still have millions people still playing the game is because of the mods, I personally wouldn't touch that game without them. I do not see an issue paying for EA to a mod...? People are taking their time creating things that help fix a game (they did not make and arent receiving thousands a month for) and/or adding things that spice it up and make it more interesting, so I just cannot see the harm in that. Mind you, I have never made a mod, I do not have the time to although I wish I did. Although, I did pay for a few mods in the past for TS4 (EA to them), which I had no problem doing because I simply didnt want to wait. People who make hundreds of mods AND constantly update them with every update that comes out, deserved to be paid! I mean, I think its so kind of people to do it for free, especially when its a mod as big as WW or the realistic childbirth, MCC mods. Those are crucial to alot of peoples gameplay. I do understand the frustration with thinking everything in this game will be free, and Paralives themselves said that would be the case, but the people modding did not and I personally think its a little unfair to be upset with someone for charging for early access to something they created. EDIT: just wanted to make it clear that Im referring to EA, if the mod is behind a paywall forever thats a different story.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op6rqax/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opx10p8",
+      "author": "Fun-Rhubarb6043",
+      "text": "also ts4 isnt as broken as people say. a majodity of the fr issues seam fixed and the rest ar grafic glitches. ther spenfing atleast a year or 2 as the community asked them to do fixing issues and adding QoL changes but tgat wont chabge ts4 beeing ts4",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opx10p8/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op7zlv1",
+      "author": "AdPlayful8134",
+      "text": "If people really want to monetize something they make, they could probably should just make their own game instead of piggybacking off another's IP. It's just greedy to make people pay for something that's equally if not more unstable.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op7zlv1/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op694v0",
+      "author": "ContestImpossible181",
+      "text": "I am so old I remember playing Sims 2 with all free mods/cc and sharing screenshots was niche. Now everyone wants to charge for mods/cc and be an influencer and we’ve all forgotten just to play the fucking game for fun.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op694v0/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opju3lg",
+      "author": "Easy-Childhood-250",
+      "text": "I get your first part, but what is wrong with people wanting to share their screenshots and stories? I don't see it as wanting to be influencers, but people playing the way they want and sharing that.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opju3lg/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_opo1mvd",
+      "author": "ContestImpossible181",
+      "text": "I never said it was wrong to share screenshots and stories. But I feel like influencer culture has hit the sims community and it has been impacted in a way where that’s what a lot of people want to do. Not everyone, but a big majority. They worry too much about sharing for clout and/or money. And then now when people are going to another game; they’re bringing that culture over here when it’s fresh and a different vibe.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/opo1mvd/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op624p0",
+      "author": "Classic-Lie7836",
+      "text": "i can confirm in rimworld paywall can kill off mods but some people are greedy enough to actually let it happen lol",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op624p0/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op60yen",
+      "author": "Equivalent_Nerve3498",
+      "text": "Sighs…. I can’t play the sims 4 without mods because it’s so boring but what’s going to end up happening… the modders are going to walk away. All this drama because people with lives who have to UPDATE THEIR MODS EVERY 3-4-5 WEEKS WHEN NEW UPDATES COME OUT are asking for $$$ for their time. I can’t imagine what it must be like, finishing a project and 2 weeks later you have to check the project because the game had an update and RIGHT AWAY BECAUSE PEOPLE ARE GOING CRAZY!!!!! BUT THEY GOT IT FOR FREE AND THEY CAN’T WAIT 24 HOURS. And then when you check it, something is broken now you have to fix it right away!!!!! 3 weeks later… another update and the cycle continues. Forget having a real job, family, school, illness…. LIFE!!!! I don’t care about mods in paralives but I know we are talking about the same modders for the sims. Stop pushing people away. Mental health is real and at this point I wouldn’t be surprised if MORE people start walking away from making mods. AND FOR ALL THE PEOPLE SAYING THE DEVS SHOULD GET INVOLVED….. ARE YOU SERIOUS!?!??????? THERE ARE 15 on the team and they are trying to give us updates and new DLC. You really care more about being entitled to a piece of free clothing OVER NEW BUG FIXES? Are you kidding me!????",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op60yen/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op5uifi",
+      "author": "diakonon",
+      "text": "I’m going to go down your list and explain why every point is just your opinion or not true. Starting with number one, the word modder has legitimately nothing to do with the price of the mods that they create. You manipulating the definition doesn’t change that. However, the first part of your definition is good, so I'll use it. I will define modders as just that, members of a community who make and publish mods. I will also define community as this, a group of people having a particular characteristic, such as an interest, in common. “It’s explicitly anti-community” The first anecdote you mention about you letting your friend use your old mod for theirs, and the second one about you using a public framework are nice sure, but both of these things were someone's choice. They had the choice to give their work out for free and they decided to. I don’t see how someone being forced to do this would improve people's sense of community. I personally think it would be stifling to constantly be expected to do things for free for other members. I’d even go so far to say that this idea is selfish on the part of the other members to expect others to continuously go out of their way for them without anything in return. These modders you're saying will leave over time, who have to use other modders' work as a crutch or else they keel over… don't seem to be the best people to be modding. That’s just the bottom line. “It’s incredibly west-centric” Individuals aren’t equivalent to a large company. A majority of user made content is priced with western currencies because the majority of the people in the community live in the western hemisphere. Steam is a massive global brand. The two aren’t even close to comparable so I'm unsure why you even made the comparison. This entire point seems to boil down to… “well what if some people can't afford it?”. No matter where you live, it's a universal idea that if you can't afford something you don't get to have it. That’s life. With the way you’re talking you’d think we weren’t living on a planet where that was the case since the beginning of time. “It’s a spiral to the bottom” So I'm just going to get this out of the way immediately. This isn’t a modder problem, it's an EA problem. The actual modder only gets 30% of this 2 dollar sale. The rest goes to EA. To do the math for you, the actual modder gets 60 cents. The price for this hair has to do with corporate greed, which has nothing to do with the point you're attempting to make. The second paragraph, again mostly aligns with corporate greed. EA upcharges people for less and less and the years go by. I haven't seen this be the case with individual modders yet. “It Just Sucks” Well, hate to break it to you but there are also free slop mods. Literally anyone can make a mod so it's inevitable. This problem is solved by using your discretion to know which mods to use, and which mods not to use. This isn’t solely an effect of paid mods. “It rapidly accelerates mod abandonment” I don’t like the idea that someone who pours their heart and soul in a mod is inherently unable to ask for payment. It undermines their effort. Also, I have yet to see a modder kill off their mod due to low popularity. Most people who make mods (at least on the sims side of things) use a subscription service for access to their entire catalog so I doubt it would be in their best interest. “Lies of a service” This entire post has been for the most part, unobjective, so not much of a difference to everything else. When you purchase a subscription service, you own the version of the mod that you download when you purchase the subscription, and you still own it when the subscription is over. The constant subscription is for the mod to be updated with new features. “Products Until They’re Not” The concept of early access was a compromise, so the creator can benefit from getting payments from people who would rather not wait, and the community benefits by waiting a month and getting it anyhow. All of these seem to be umbrella statements for an entire subsector of modders. I can’t say none of them do these kinds of things because… I don’t know all paid modders, nor all modders in general. In the same breath, you can’t make the statement that most modders who ask for payment for their services do these kinds of things either, because you don’t know all modders. This is not an objective statement, and more of a bias against any modder who asks for payment. Modders who ask for payment for their work aren’t any less members of the community than modders who don’t.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op5uifi/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op5otha",
+      "author": "slow_unsteady55",
+      "text": "It's the way it only took like a week for something like this to happen sigh I really shouldn't be surprised anymore.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op5otha/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op5orj3",
+      "author": "HeeeydevonGaming",
+      "text": "Okay, but paid mods aren't the only mods out there, you can use others if you want and someone went out of their way to buy the hardware to run programs like Blender, learn how to use the software, create the assets, and code them into the game. Not only that, there's an expectation to update the mods (presumably without pay). So, if someone wants to make something for people who don't have the time/expertise to do themselves, with an expectation to update their creation, for a community that has a long history of treating content creators poorly (just look at Turbodriver), then why should the individual be forced to do it for free?",
+      "score": -1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op5orj3/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op6cbqp",
+      "author": "TurklerRS",
+      "text": ">then why should the individual be forced to do it for free? No one is forced to do anything, you can just leave. Here's one of the mods from the Steam Workshop of the game Rimworld, which has a strict 'no paid mods' policy: <image> We don't need salesmen. I say this both as a player and a modder, we can get by without salesmen just fine. Big/popular mods will exist, and there will arguably be more of them.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op6cbqp/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op6fgkr",
+      "author": "HeeeydevonGaming",
+      "text": "For sure, what I'm saying though is that if the developers say that they don't mind if people create additional content at a cost and someone wants to go through the effort of doing so and charge for it, then they should be able to do so. No one is forcing the player to buy the mod, they have complete access to the game, they have complete access to all of the additional content for free, they can play the game the way that it was intended for the initial upfront cost of the game, not a single person is forcing them to play with that mod. It's not like they're charging people for food and water, it's something additional that someone has created for the game, if they think their time is worth a fee then the community can disagree with it and just not play with it. I've played several games where I see a mod that I'm interested in, see that there's a cost associated with it, and think \"well, I can just find something else that's free\" and moved on with my life. It literally costs $0 to not pay extra money for something you don't think is worth the dollar value and if I really want the mod I'll pay for it. But the Life Sim community is well known for very high expectations from the modding community to have their content updated and working asap, just look at Turbodriver who was doxxed on his honeymoon for not updating his mod. At that point, there is an expectation for service for something that people want to be provided for free",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op6fgkr/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op4y4va",
+      "author": "love_swan",
+      "text": "other things of note: early access mods/cc aren't guaranteed to become free. I have seen content from 2024 that is still labeled as \"early access\"... some creators don't even use \"early access\", they just paywall their content. there is 0 chance of getting their content for free. it's a small step from \"early access\" to straight up paywalling. incidentally enough, some of the same creators that are paywalling have also used their content to outright doxx people. like, jobs were called over... pirating cc? I wish I was kidding. most paid content tends to be hosted on third party sites. these sites can be hacked and some creators also had viruses attached to their content. (sims 3 cursed doll, SFS hack, MTS hack, etc.) the viruses being attached to content could also happen intentionally. I am pretty sure there was a creator who did admit to doing this recently, but I can't find who. considering there are multiple creators that use their content to doxx others, it sadly isn't surprising... I want to support paralives, but this? this isn't a red flag, it's a life-sized red banner yelling at you to stop, turn around and reverse. don't be super lax about modders/cc creators like the sims is. it's dangerous.",
+      "score": 23,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op4y4va/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op6csmo",
+      "author": "TurklerRS",
+      "text": "I agree. And by the way, I want to point out something - there's a lot of posts disagreeing with me here but no one can really disagree with the premise that, you know, it all sucks. Salesmen use 'early access' to never release their mods, basically selling their mods. They doxx, spread malware, commit actual crimes to 'stop leaks of early access content' and whatnot, all this - no one can disagree because it all sucks, and the best arguement people can come up with is just dismissing it all with no explanation. In truth, they can't handwave this stuff away, but they want to make money, so they will justify anything as long as they can keep making money.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op6csmo/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op4rbb7",
+      "author": "Additional_Gas6451",
+      "text": "Preach",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op4rbb7/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op3kp2q",
+      "author": "annoying-and",
+      "text": "Isn’t the whole point of the steam workshop for mods/CC is the ease of access? And to avoid thing like this? I could’ve swore I read a message/post from texi that the devs are “against” script mods.",
+      "score": 35,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op3kp2q/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    },
+    {
+      "id": "t1_op5oshe",
+      "author": "Quirkxofxart",
+      "text": "On their FAQ under mods, it says “script mods are not planned at this moment” so not necessarily an “against” but they do mention not planning to have them",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/op5oshe/",
+      "source_url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "subreddit": "Paralives"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+    "method": "old_reddit_html"
+  }
+}

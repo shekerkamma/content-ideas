@@ -1,0 +1,47 @@
+{
+  "post": {
+    "title": "Startup Roundup — May 22: AI distribution at $19/mo, YC's new coding-agent platform, and a $1B beauty booking unicorn",
+    "author": "ayushchat",
+    "score": 8,
+    "content": "Quick roundup of the most interesting startup / indie hacker stories from the last 24 hours. 1. Founder slashes AI distribution spend from $400/mo to $19/mo — and doubles output An indie hacker behind Flowly.run (a productivity workspace for solo founders) replaced six expensive AI tools with five Python scripts costing $19/month total. The biggest insight: a \"never-write list\" — explicit rules for what the bot should never say — outperforms any prompt. He also kept human approval gates on every outreach step, discovering that only 12 tasks actually required his judgment and drove all conversions. The other 28 were automatable busy-work. 2. Runtime (YC P26) launches sandboxed coding agents for whole teams Runtime shipped out of YC's P26 batch with a platform that lets non-engineers — PMs, marketers, finance — safely run Claude Code, Codex, and other coding agents without breaking production. It spins up sandboxes in milliseconds with configurable guardrails and full session observability. Pricing: flat platform fee plus compute, no token markup, with a free tier. Real use cases already live: PagerDuty incident response and Stripe/NetSuite finance reconciliation. 3. Habit Pixel: $0 to $1K MRR in 8 months, solo bootstrapped A solo developer launched a pixel-art habit tracker in May 2025 and crossed $1K MRR by January 2026. What worked: PPP pricing to unlock emerging markets, localization to 12 languages, a Black Friday lifetime deal (that single month brought $2K), and timing a push around New Year resolutions. He built in public on X the whole way. Concrete playbook that any solo founder can copy. 4. Fresha becomes the UK's newest unicorn with $80M KKR round London's beauty and wellness booking platform — 11 years old, already profitable — just crossed the $1B valuation mark. It processes $15B in annual GMV across 35 million monthly appointments and serves 140,000 businesses. Their moat: the software is free (subscription-based), and they make money on payments. Classic platform playbook executed over a long time horizon. 5. Chinese AI models surge from 1% to 60% of OpenRouter developer traffic in 18 months Databricks CEO Ali Ghodsi revealed the shift: Chinese AI models went from roughly 1% of OpenRouter usage in 2024 to more than 60% by May 2026. This is largely price-sensitive indie devs and smaller startups switching providers. Large enterprise Anthropic and OpenAI customers haven't followed yet — but for bootstrapped builders watching costs, the default AI provider is shifting fast. 6. Fazeshift's $17M Series A shows exactly what investors want in 2026 Fazeshift uses AI agents to automate accounts receivable — a narrow, unglamorous, but measurable problem. Investors are now openly saying what gets funded: one specific pain point, clear ROI, AI replacing identifiable headcount. Vertical AI SaaS with a verifiable payback period is the 2026 template for Series A raises, not broad AI platforms. 7. Rentman bootstrapped to $15M+ ARR — founder started the company at 16 Roy van den Broek started an AV equipment rental business at 16, hated the clunky software that existed, and built Rentman to fix it. He bootstrapped for 8 years before taking outside capital, growing to $15–20M ARR purely through word-of-mouth in the tight-knit event production industry. Domain expertise plus genuine pain point plus patience: the oldest playbook in SaaS. Stay up to date — sign up for the Superframeworks newsletter for weekly indie hacker case studies and validated startup ideas.",
+    "url": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/",
+    "permalink": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/",
+    "subreddit": "Superframeworks"
+  },
+  "comments": [
+    {
+      "id": "t1_on8iy3g",
+      "author": "ayushchat",
+      "text": "Sources: 1. https://www.indiehackers.com/post/ai-runs-70-of-my-distribution-the-exact-stack-fda9c0d2c9 2. https://news.ycombinator.com/item?id=48225040 3. https://www.indiehackers.com/post/from-0-to-1k-mrr-in-8-months-bootstrapping-habit-pixel-as-a-solo-dev-53d8687d15 4. https://techcrunch.com/2026/05/21/booking-platform-fresha-announces-80m-investment-unicorn-valuation/ 5. https://techstartups.com/2026/05/21/top-tech-news-today-may-21-2026/ 6. https://www.saasultra.com/startup-funding/ 7. https://www.indiehackers.com/post/building-a-15m-arr-saas-from-a-gap-he-found-at-his-brick-and-mortar-HFriCBQLHukAmdXVEj1q",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/on8iy3g/",
+      "source_url": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/",
+      "subreddit": "Superframeworks"
+    },
+    {
+      "id": "t1_oobhwei",
+      "author": "Deep_Ad1959",
+      "text": "the $19/mo distribution category splits cleanly along one axis: does the tool generate or does it post. the generators (jasper, copy.ai descendants) hit ceiling at week four because output quality plateaus and you still have to schedule. the posters (buffer, hypefury) don't make anything so you burn the founder's time. the wedge nobody's pricing in is the loop closed end-to-end with engagement signal feeding back into the generator, which is what makes the $19 sustainable at scale instead of a thin wrapper that breaks the first time the user looks at the queue. written with ai",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/oobhwei/",
+      "source_url": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/",
+      "subreddit": "Superframeworks"
+    },
+    {
+      "id": "t1_oobiwa5",
+      "author": "Deep_Ad1959",
+      "text": "the $19/mo distribution category splits cleanly along one axis: does the tool generate or does it post. the generators (jasper, copy.ai descendants) hit ceiling at week four because output quality plateaus and you still have to schedule. the posters (buffer, hypefury) don't make anything so you burn the founder's time. the wedge nobody's pricing in is the loop closed end-to-end with engagement signal feeding back into the generator, which is what makes the $19 sustainable at scale instead of a thin wrapper that breaks the first time the user looks at the queue. written with ai",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/oobiwa5/",
+      "source_url": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/",
+      "subreddit": "Superframeworks"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/",
+    "method": "old_reddit_html"
+  }
+}

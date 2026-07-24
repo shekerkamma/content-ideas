@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-09-officecli-branded-pptx-smoke/officecli-branded-pptx-smoke-draft.pptx",
+    "html",
+    "-o",
+    "runs/2026-07-09-officecli-branded-pptx-smoke/qa/officecli/officecli-branded-pptx-smoke-draft.html"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-09-officecli-branded-pptx-smoke/qa/officecli/officecli-branded-pptx-smoke-draft.html\n",
+  "stderr": ""
+}

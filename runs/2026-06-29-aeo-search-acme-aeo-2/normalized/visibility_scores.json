@@ -1,0 +1,102 @@
+{
+  "target_brand": "Acme AEO",
+  "competitors": [
+    "Profound",
+    "AthenaHQ",
+    "Peec AI"
+  ],
+  "summary": {
+    "capture_count": 2,
+    "target_mentions": 0,
+    "competitor_mentions": 4,
+    "target_visibility_rate": 0.0,
+    "top_citation_domains": [
+      [
+        "athenahq.ai",
+        2
+      ],
+      [
+        "profound.com",
+        1
+      ],
+      [
+        "peec.ai",
+        1
+      ]
+    ]
+  },
+  "by_query": {
+    "q_001": {
+      "capture_id": "cap_001",
+      "query": "best enterprise AI search optimization platforms",
+      "engine": "sample",
+      "mentioned_entities": [
+        "Profound",
+        "AthenaHQ"
+      ],
+      "citation_domains": [
+        "profound.com",
+        "athenahq.ai"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "Profound",
+        "AthenaHQ"
+      ]
+    },
+    "q_003": {
+      "capture_id": "cap_002",
+      "query": "alternatives to Profound for enterprise AI search optimization",
+      "engine": "sample",
+      "mentioned_entities": [
+        "AthenaHQ",
+        "Peec AI"
+      ],
+      "citation_domains": [
+        "athenahq.ai",
+        "peec.ai"
+      ],
+      "target_brand_mentioned": false,
+      "competitors_mentioned": [
+        "AthenaHQ",
+        "Peec AI"
+      ]
+    }
+  },
+  "by_entity": {
+    "Acme AEO": {
+      "mentions": 0,
+      "captures": [],
+      "citation_domains": []
+    },
+    "Profound": {
+      "mentions": 1,
+      "captures": [
+        "cap_001"
+      ],
+      "citation_domains": [
+        "profound.com"
+      ]
+    },
+    "AthenaHQ": {
+      "mentions": 2,
+      "captures": [
+        "cap_001",
+        "cap_002"
+      ],
+      "citation_domains": [
+        "athenahq.ai",
+        "athenahq.ai"
+      ]
+    },
+    "Peec AI": {
+      "mentions": 1,
+      "captures": [
+        "cap_002"
+      ],
+      "citation_domains": [
+        "peec.ai"
+      ]
+    }
+  }
+}

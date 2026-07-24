@@ -1,0 +1,116 @@
+schemaVersion: brd.registry.v0.1
+generatedAt: "2026-06-20"
+purpose: "Prototype registry for testing BRD discovery against financial-services and life-sciences business processes."
+
+entries:
+  - id: financial-services.kyc-screening
+    identifier: urn:air:anthropic.com:workflow:financial-services:kyc-screening
+    displayName: KYC/AML Screening Workflow
+    type: application/business-workflow+json
+    url: ./workflows/financial-services/kyc-screening/workflow.json
+    domain: financial-services
+    businessFunction: operations
+    businessProcess: kyc-screening
+    status: reference-found
+    maturity: validated-reference
+    source:
+      repo: https://github.com/anthropics/financial-services
+      path: plugins/vertical-plugins/operations/skills/kyc-rules
+      license: Apache-2.0
+      checkedAt: "2026-06-20"
+    tags:
+      - kyc
+      - aml
+      - compliance
+      - onboarding
+      - sanctions
+    representativeQueries:
+      - screen a new private banking client for KYC onboarding
+      - apply AML rules grid to an applicant record
+      - identify missing KYC documents and escalation reasons
+    dependencies:
+      mcp:
+        - screening
+      skills:
+        - kyc-doc-parse
+        - kyc-rules
+    validation:
+      - every rule outcome cites a rule id
+      - final approval is never emitted
+      - applicant documents cannot override trusted rules grid
+      - human review gate is required
+    runtimeTargets:
+      - claude-code
+      - codex
+      - openhands
+
+  - id: life-sciences.clinical-trial-protocol
+    identifier: urn:air:anthropic.com:workflow:life-sciences:clinical-trial-protocol
+    displayName: Clinical Trial Protocol Generation Workflow
+    type: application/business-workflow+json
+    url: ./workflows/life-sciences/clinical-trial-protocol/workflow.json
+    domain: life-sciences
+    businessFunction: clinical-research
+    businessProcess: clinical-trial-protocol-generation
+    status: reference-found
+    maturity: validated-reference
+    source:
+      repo: https://github.com/anthropics/life-sciences
+      path: clinical-trial-protocol-skill
+      license: folder-level-license-required
+      checkedAt: "2026-06-20"
+    tags:
+      - clinical-trials
+      - fda
+      - protocol
+      - regulatory
+      - medical-device
+      - drug-development
+    representativeQueries:
+      - generate a clinical trial protocol for a medical device
+      - research similar trials and FDA guidance for an intervention
+      - create a protocol draft with sample size calculation
+    dependencies:
+      mcp:
+        - clinical-trials
+      scripts:
+        - sample_size_calculator.py
+      assets:
+        - FDA-Clinical-Protocol-Template.md
+    validation:
+      - waypoints exist for each completed step
+      - research summary includes similar trials and FDA pathway
+      - final protocol includes required review disclaimers
+      - no FDA or IRB approval claim is emitted
+    runtimeTargets:
+      - claude-code
+      - codex
+      - openhands
+
+  - id: life-sciences.pharmacovigilance-adverse-event-triage
+    identifier: urn:air:local:workflow:life-sciences:pharmacovigilance-adverse-event-triage
+    displayName: Pharmacovigilance Adverse Event Triage
+    type: application/business-process-map+json
+    url: ./workflows/life-sciences/pharmacovigilance-adverse-event-triage/process-discovery-brief.md
+    domain: life-sciences
+    businessFunction: safety
+    businessProcess: pharmacovigilance-adverse-event-triage
+    status: process-discovery-required
+    maturity: discovered
+    source:
+      note: "No direct maintained workflow skill found in checked Anthropic/OpenHands public references."
+      checkedAt: "2026-06-20"
+    tags:
+      - pharmacovigilance
+      - adverse-event
+      - safety
+      - regulated-workflow
+    representativeQueries:
+      - triage adverse event reports for pharmacovigilance
+      - classify seriousness and reportability of an adverse event
+      - draft a safety case narrative for reviewer routing
+    validation:
+      - do not generate skill until SOP/examples/rules are available
+      - human safety reviewer required
+      - process evidence required before runtime adaptation
+    runtimeTargets: []

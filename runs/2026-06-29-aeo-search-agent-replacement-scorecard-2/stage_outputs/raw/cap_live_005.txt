@@ -1,0 +1,111 @@
+# AI Shopping/Sales Consultant Tech Stack & Workflows
+
+## Common Software Solutions
+
+### **Conversational AI Platforms**
+- **Zendesk AI** - integrates with existing helpdesk
+- **Intercom** - AI chatbots with human handoff
+- **Drift/Qualified** - B2B sales chat with routing
+- **Ada/Kustomer** - customer service automation
+- **Salesforce Einstein** - CRM-integrated AI
+
+### **Custom-Built Stack** (more common for sophisticated use cases)
+```
+Frontend: Widget/Chat UI
+    ↓
+LLM Layer: GPT-4, Claude, or fine-tuned models
+    ↓
+Knowledge Base: Vector DB (Pinecone, Weaviate)
+    ↓
+Integrations: Product catalog, CRM, inventory APIs
+    ↓
+Monitoring: LangSmith, Helicone, custom analytics
+```
+
+### **Workflow Tools**
+- **Zapier/Make** - connect AI to existing systems
+- **LangChain/LlamaIndex** - orchestration frameworks
+- **Botpress/Voiceflow** - visual bot builders
+
+## Where AI Agents Work Well ✅
+
+### **High-Value Zones**
+1. **Product Discovery & Filtering**
+   - "Find me winter boots under $150 with good traction"
+   - Handles 20-50 filtering dimensions better than traditional search
+
+2. **FAQ & Simple Troubleshooting**
+   - Shipping policies, return windows, sizing guides
+   - 70-80% resolution rate for common questions
+
+3. **Lead Qualification (B2B)**
+   - Gathering requirements before human sales involvement
+   - Scheduling demos, routing to right rep
+
+4. **Upsell/Cross-sell Suggestions**
+   - "Customers also bought..." with conversational context
+   - Works when product catalog is well-structured
+
+5. **After-Hours Coverage**
+   - Handling inquiries when humans aren't available
+   - Capturing leads for follow-up
+
+## Where AI Agents Struggle ❌
+
+### **Realistic Limitations**
+
+1. **Complex Negotiations**
+   - Custom pricing, bulk discounts, contract terms
+   - **Handoff to human essential**
+
+2. **Emotional/Sensitive Issues**
+   - Complaints, defective products, billing disputes
+   - Customers want human empathy, not algorithms
+
+3. **High-Stakes Purchases**
+   - Enterprise software, cars, medical devices
+   - Trust factor still requires human relationship
+
+4. **Nuanced Product Advice**
+   - "Which camera is best for wildlife photography in low light?"
+   - Requires deep expertise AI often lacks or hallucinates
+
+5. **Unstructured Data**
+   - Product info scattered across PDFs, images, videos
+   - Garbage in = garbage out
+
+6. **Return/Refund Processing**
+   - Requires system access and exception handling
+   - Legal/financial implications need human oversight
+
+## Realistic Hybrid Model
+
+Most successful teams use this approach:
+
+```
+1. AI handles initial contact (80% of volume)
+   ↓
+2. AI detects complexity/frustration signals
+   ↓
+3. Seamless handoff to human with full context
+   ↓
+4. Human resolves, AI learns from interaction
+```
+
+### **Key Metrics Teams Track**
+- **Containment rate**: % resolved without human (target: 40-70%)
+- **Handoff smoothness**: Context preservation score
+- **CSAT differential**: AI vs human satisfaction
+- **Cost per interaction**: Should be 5-10x cheaper for AI
+- **Hallucination rate**: Wrong info given (must be <2%)
+
+## Emerging Patterns (2024-2025)
+
+- **Voice AI** gaining traction for phone sales (Bland AI, Retell)
+- **Visual search integration** (upload photo → find similar products)
+- **Proactive outreach** (AI initiating conversations based on browsing)
+- **Multi-agent systems** (specialist bots for different departments)
+
+## Bottom Line
+
+AI works as a **first-line triage and simple resolution tool**, not a complete human replacement. Teams that succeed treat it as an *assistant to both customers and human reps*, with clear escalation paths and continuous monitoring for accuracy.

@@ -1,11 +1,6 @@
 ---
 name: ikigai
-description: >
-  Run an Ikigai Pro solo-founder analysis for any person given their LinkedIn
-  profile (PDF, URL, or extracted text). Produces a structured report covering
-  the four ikigai columns, niche positioning, validation score, competitive
-  landscape, offer architecture, income math, and a 7-day launch plan.
-  Validated on Shravan Siramdas (Jun 2026). Run for any new person.
+description: "Use when someone asks for ikigai analysis, founder positioning, career clarity, or solo-founder niche discovery for a person — triggers on 'run ikigai for <name>', 'ikigai analysis', 'solo founder analysis', 'career positioning', 'founder positioning', 'solo founder positioning', or when a LinkedIn profile (PDF path, URL, or pasted text) is provided and the user wants a written report only (no slide deck). Also triggers on: \"solo founder positioning\". For report + deck in one command, use ikigai-gamma-slidedeck instead."
 triggers:
   - ikigai
   - ikigai analysis
@@ -20,6 +15,24 @@ validated_on: "runs/2026-06-13-shravan-ikigai-genspark"
 # Ikigai Skill
 
 Turn a LinkedIn profile into a full Ikigai Pro solo-founder analysis report.
+
+## Narrative Frame
+
+**This skill's job:** Tell this person the niche they should own — specifically enough that they could write a cold email today and it would land.
+
+**Voice:** You are a career strategist who has worked with 200 founders and senior operators. You do not reflect their LinkedIn back at them. You synthesize it into something they haven't said out loud yet but will recognize as true the moment they read it.
+
+**Per-section voice rules:**
+- **Ikigai columns (love/good at/world needs/paid for):** Each item is a named, specific capability — not a category. Not "leadership" → "leading a 12-person distributed team through a product pivot under funding pressure."
+- **Niche statement:** One sentence. "X who helps Y achieve Z without W." Specific enough that the person could use it verbatim as a LinkedIn headline.
+- **Validation score:** The score is secondary. The primary output is the one sentence that names why the score is what it is and what would make it higher.
+- **Offer architecture:** Three tiers — entry, core, premium — with specific price points and a named deliverable per tier. Not "consulting packages" → "$2,500 for a 90-minute AI readiness assessment with a written recommendation report."
+- **7-day launch plan:** Day 1 is a single action that takes under 2 hours and produces a visible artifact. Day 7 is the first conversation with a potential client.
+
+**Anti-patterns:**
+- Do not describe their background — synthesize it into a forward-looking position
+- Do not list generic strengths — name the specific intersection that no one else in this space has
+- Do not give income ranges — give income math: N clients × $X = $Y/mo, with churn assumption
 
 ## Use When
 
@@ -244,3 +257,40 @@ If profile is missing or unreadable:
   - Gamma MCP path (primary): generates Gamma presentation, returns gammaUrl
   - pptxkit fallback path: generates `build_deck.py` + validated .pptx + Desktop copy
   - See `.agents/skills/ikigai-gamma-slidedeck/SKILL.md`
+
+---
+
+## Skill Relationships
+
+### Category
+Runbook
+
+### Dependencies
+None required. Standalone — runs from a LinkedIn profile source alone.
+
+### Relationships
+
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `ikigai-gamma-slidedeck` | Sequential downstream | always — report is the primary input for the deck pipeline | `runs/YYYY-MM-DD-<name>-ikigai/<name>-ikigai-report.md` |
+| `ikigai-gamma-slidedeck` | Peer / Alternative | use this skill (report only) when deck is not needed; use ikigai-gamma-slidedeck when report + deck in one command | — |
+| `gcc-roadmap` | Sequential downstream (optional) | BD/company-first framing only — invoked from ikigai-gamma-slidedeck after report | ikigai report (company capabilities section) |
+
+### Runtime Preamble
+
+At invocation, surface this if relevant:
+
+> "Do you want a report only, or a report + slide deck?
+> For report only: this skill. For report + deck in one command: use `/ikigai-gamma-slidedeck` instead.
+> After the report is complete, you can pipe it to `/ikigai-gamma-slidedeck` to generate the deck separately."
+
+---
+
+## Gotchas
+
+- **Do not invent achievements:** Every ikigai column item must be traceable to a specific role, achievement, or stated fact in the profile. Invented items destroy credibility — the person will immediately spot what isn't true.
+- **Sparse profiles require a user checkpoint:** If the profile has fewer than 3 substantive roles, stop after Stage 2 and confirm with the user before proceeding. A thin profile produces a thin and speculative report that the person won't trust.
+- **BD/partnerships roles must use company-first framing:** A BD/sales/partnerships person at a tech company is NOT a solo founder. Their offer architecture is the company's engagement tiers, not personal consulting rates. The framing rule is: "person = trusted door-opener; company = the product." Validated on Srikumar V R (FPT Software), Jun 2026.
+- **Validation score must have explicit per-dimension evidence:** The score is secondary to the evidence. Never output a score without the evidence column populated. A score without evidence is a guess.
+- **Niche statement must be specific enough to use verbatim:** If the niche statement could apply to any senior professional in the space, it failed. Test: could the person put this on their LinkedIn headline and DM 5 prospects with it today? If not, rewrite.
+- **Deck is optional and requires user confirmation:** Never generate the deck without the user confirming. The report is the primary artifact. Stage 8 (deck) is not automatic.

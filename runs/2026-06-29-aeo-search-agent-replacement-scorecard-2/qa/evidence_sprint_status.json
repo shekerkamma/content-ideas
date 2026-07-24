@@ -1,0 +1,36 @@
+{
+  "status": "evidence_collecting",
+  "gates": {
+    "reddit_buyer_language_min_5": true,
+    "independent_ai_answer_captures_min_20": false,
+    "independent_answer_engines_min_3": false,
+    "no_promoted_target_seeded_patterns": true,
+    "review_acceptance_or_package_ready": true,
+    "prompt_pack_ready": true
+  },
+  "counts": {
+    "reddit_buyer_language_rows": 88,
+    "ai_answer_prompt_rows": 8,
+    "answer_captures": 12,
+    "manual_live_captures": 12,
+    "independent_ai_answer_captures": 10,
+    "independent_answer_engines": 2,
+    "target_seeded_capture_ids": 2,
+    "pattern_candidates": 9,
+    "accepted_pattern_reviews": 0
+  },
+  "engine_counts": {
+    "ChatGPT": 1,
+    "Perplexity": 1,
+    "Claude": 5,
+    "Google AI Mode": 5
+  },
+  "independent_engine_counts": {
+    "Claude": 5,
+    "Google AI Mode": 5
+  },
+  "next_missing_gates": [
+    "independent_ai_answer_captures_min_20",
+    "independent_answer_engines_min_3"
+  ]
+}

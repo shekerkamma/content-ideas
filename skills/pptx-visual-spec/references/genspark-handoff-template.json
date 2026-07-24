@@ -1,0 +1,57 @@
+{
+  "contract_version": "1.2",
+  "run_id": "YYYY-MM-DD-topic",
+  "source": {
+    "kind": "video",
+    "uri": "https://example.com/video",
+    "capture_mode": "scene-complete",
+    "distinct_screen_count": 0,
+    "max_gap_seconds": 0,
+    "transcript_segment_count": 0,
+    "screen_manifest": "screen-states.json",
+    "context_packet": "genspark-context-packet.md",
+    "coverage_matrix": "genspark-context-packet.md",
+    "coverage_rows": 0,
+    "allowed_claims": "allowed-claims.json",
+    "banned_claims": "banned-claims.md"
+  },
+  "generation": {
+    "provider": "genspark-ai-slides",
+    "project_id": null,
+    "project_url": null,
+    "viewer_url": null,
+    "status": "not_requested",
+    "slide_count_policy": "evidence-driven",
+    "explicit_hard_max": false,
+    "requested_minimum": 0,
+    "explicit_credit_error": false
+  },
+  "recovery": {
+    "browser_lane": "headed-playwright",
+    "status": "not_started",
+    "endpoint_count": 0,
+    "captured_slide_count": 0,
+    "html_dir": null,
+    "render_dir": null,
+    "manifest": null,
+    "diagnostic": null
+  },
+  "delivery": {
+    "requested_editability": "native",
+    "artifact_class": "fully-native-editable",
+    "final_builder": "branded-pptx-deck",
+    "pptx": null,
+    "source_files": [],
+    "status": "draft"
+  },
+  "qa": {
+    "coverage_complete": false,
+    "claims_validated": false,
+    "unsupported_specifics_clean": false,
+    "visual_render_reviewed": false,
+    "editability_verified": false,
+    "pptx_schema_valid": false,
+    "office_issues_clean": false,
+    "blockers": []
+  }
+}

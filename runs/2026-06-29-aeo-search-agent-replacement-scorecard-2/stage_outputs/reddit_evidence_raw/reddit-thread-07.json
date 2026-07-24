@@ -1,0 +1,747 @@
+{
+  "post": {
+    "title": "Customer Kickoffs are Killing me.",
+    "author": "c0ntent_c0ntent",
+    "score": 23,
+    "content": "6 CSMs on my team. 12-15 new customers onboarding every month. Sounds manageable, right? Wrong. Here's what actually happens: Sales closes a deal Friday. CSM gets the account Monday. Customer kickoff is Wednesday. And between Friday and Monday? The \"handoff\" is a half-empty Salesforce opportunity, maybe a Gong link if we're lucky, and a Slack DM that says \"customer is excited, let's crush this.\" So every Monday morning, I'm doing forensics. Listening to 3-4 sales calls at 2x speed. Ctrl+F through email threads. Hunting down the AE (who's already moved on to next month's pipeline). Trying to piece together: What did we actually promise? What were their objections? Who are the decision-makers? What's the real timeline? 2.5 hours later , I finally understand the deal well enough to not look clueless on the kickoff call. And then the customer says \"I already explained this to Jake in discovery\" and I die a little inside. This happens. Every. Single. Week. I've tried templates (sales fills them out 10% of the time). I've tried required fields in SFDC (they copy-paste gibberish to close the deal). I've triedSync meetings (AEs are too busy, and honestly, I don't blame them). So here's my dumb question: What if there was a tool that just... read everything? Every Gong call, every email, every Slack thread, every CRM note. And gave CSMs an AI-generated handoff doc before the kickoff. With a chat interface so you could ask \"what objections came up?\" or \"what integrations did they mention?\" I'm not trying to sell anything—I'm literally just annoyed enough that I'm thinking about building this. But before I waste months building the wrong thing, I want to talk to 3-5 CS leaders who feel this pain as badly as I do. If you waste 2+ hours per customer doing handoff prep , would you be open to a 20-min call? I'll manually create a handoff doc for your next customer (free, just want to learn). If it saves you time, maybe we figure out how to automate it. Not looking for cheerleaders. Looking for people who will tell me if this is actually useful or just my personal neurosis. Comment or DM if you're interested. Or tell me I'm an idiot and there's already a tool for this (genuinely, please tell me if there is).",
+    "url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+    "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+    "subreddit": "CustomerSuccess"
+  },
+  "comments": [
+    {
+      "id": "t1_nlr7l5x",
+      "author": "Outrageous-Fix-1579",
+      "text": "I feed presales call transcripts into ai and get great summaries.",
+      "score": 23,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlr7l5x/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nltobj3",
+      "author": "Exotic-Sale-3003",
+      "text": "Yeah that tool is called ChatGPT",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nltobj3/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfa3h5",
+      "author": "c0ntent_c0ntent",
+      "text": "That's exactly what I'm doing now—works great for one call at a time. Here's my break down: I've got deals with 4-5 discovery calls + 12 email threads + Slack convos + half-baked SFDC notes. Manually feeding all that into ChatGPT turns into a 45-min copy-paste marathon. Are you handling multi-call deals? And if so, what's your workflow for aggregating everything before you feed it to AI? Always looking for better manual processes while I figure out if automation is worth it.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfa3h5/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfdmbg",
+      "author": "Outrageous-Fix-1579",
+      "text": "I don’t have the process automated but I’ve gotten fast at the manual stuff through repetition. I prefer to keep all sources in their own separate documents so that I can specify a document in the prompt. I upload multiple documents to the chat and then write up a prompt explaining what I need.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfdmbg/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfdr81",
+      "author": "Outrageous-Fix-1579",
+      "text": "And I use both Gemini and the AI tool that my company sells, which is trained on our products.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfdr81/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrl1am",
+      "author": "AnimaLepton",
+      "text": "Glean does this too, as does really any AI tool that's hooked into searching your internal data, Gong recordings, Slack, and Salesforce. Gong already has an 'ask questions about this call' feature and easy ways to search the transcript for the major callouts. It should absolutely be able to pull out at least a preliminary list of objections or integrations that were mentioned. And if they're important, your team will hear about them and learn specifics through the onboarding process and ongoing engagement with the customer. At the end of the day this is also a business process and priority issue. AEs are seriously too busy to take a 15 or 30 minute internal call with the entire account team? If AEs have part of their metrics or compensation tied to ongoing account health, then they'll care. You shouldn't be doing this yourself, or writing it off as 'I don't blame them.' If there's nothing driving it from the top down as something important, then that means it's not actually important to the company and not worth the time now without socializing some level of operational change. The customer saying \"I already explained this in discovery\" is also not a 'die inside' moment. That's an opportunity to follow up and decide if a deeper dive into finding that existing specific recording and reviewing it is worth it (and it doesn't need to be you doing it), or if you decide to do something else in terms of framing it as a deeper dive into the process or specifics or for clarity.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrl1am/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfagat",
+      "author": "c0ntent_c0ntent",
+      "text": "You're 100% right on the business process issue—and trust me, I've tried that route. Got RevOps to tie 10% of AE comp to handoff quality. Lasted 6 weeks before sales leadership pushed back (\"this adds friction to closing\"). Re: Glean—haven't used it, but looked at their pricing and it's enterprise-level. We're a 45-person company. That's my core question: is there a mid-market gap between \"ChatGPT + manual effort\" and \"Glean + $50k+ budget\"? On the \"I already explained this\" moment—you're right, it's not a die-inside moment when you frame it as confirmation/deeper dive. That's a mindset shift I needed. Appreciate the reframe. Still think there's a tool opportunity here, but you've convinced me it only works if it's absurdly easy and doesn't require sales to change behavior. That's the design constraint.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfagat/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrrf0w",
+      "author": "heelsovertoes",
+      "text": "NotebookLM. Done.",
+      "score": 12,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrrf0w/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfaj6s",
+      "author": "c0ntent_c0ntent",
+      "text": "Okay, sold—just tested NotebookLM with my last 3 deals. Works shockingly well for single deals (uploaded 4 Gong transcripts + email export, asked it questions, got solid answers). Way better than I expected. Two gaps I'm still hitting: It's manual upload per deal (not automated when deal closes) Doesn't pull from live sources (Slack, SFDC, etc.) But honestly, this might be 80% of the solution for $0. Appreciate the rec—this is exactly the kind of \"just use X\" answer I was hoping someone would give me.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfaj6s/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrudx9",
+      "author": "Any-Neighborhood-522",
+      "text": "Push back on sales, you can’t do your job if they don’t do theirs and provide you with the info you need. This isn’t sustainable. I don’t know that the tool would be useful with companies building out their own AI or version of ChatGPT. My company has its own ChatGPT that reads everything and then you just ask it for what you need. It builds docs. Heard this is common.",
+      "score": 12,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrudx9/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlvhujn",
+      "author": "SomeContext346",
+      "text": "This is literally your job, though as CSM. Why would the company want sales to waste their time doing all this admin shit when should be hunting deals? I feel like CSM just don’t understand that. The company wants sales to go close deals. Everything else is a waste of sales dollars.",
+      "score": -8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlvhujn/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlvj6cv",
+      "author": "Any-Neighborhood-522",
+      "text": "What in the world? No sales needs to do a proper hand off so we can come in as a strong technical advisor. The worst products send their reps out to sell anything without setting them up for success. If you set them up properly, then there should be opps for expansion and further sales which is worth more to the business than new biz sales - acquiring new clients is costly. Instead, you’re setting the customer up for churn. It takes nothing to log some notes. Strong organizations won’t even mark the opportunity as closed won without the use case properly documented Maybe stick to your little sales subs bc you don’t know CS. And try not to be lazy, log some notes.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlvj6cv/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlvwnqw",
+      "author": "SomeContext346",
+      "text": "No - you’re setting up the customer for churn by not doing YOUR job - which is some basic research to know what’s going on with the account. Not have everything spoonfed to you from the AE, putting work on their plate. Why would the OP’s company want AEs wasting time doing your administrative tasks when they could be out finding business? What are they paying the CSMs for??",
+      "score": -7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlvwnqw/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlwbxsb",
+      "author": "jmhjmh428",
+      "text": "This is an insane take. And I’m incredibly grateful I don’t work with you. I highly doubt you on the sales team is so busy that you can’t provide context to your CS team on the deal you just closed…. But I can guarantee your CS team could be a lot more productive if you did one extra step.",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlwbxsb/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlw6igj",
+      "author": "Any-Neighborhood-522",
+      "text": "My job is not to find out why you sold something. Do your job and share their use case. It takes 2 seconds. The lazy ass sales bro shtick is so played out. You wouldn’t be able to sell anything at my company. They require you to use your one brain cell to write up the customers use case",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlw6igj/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlweh7f",
+      "author": "SomeContext346",
+      "text": "My job is to sell. Your job is to mitigate churn. My job isn’t to play admin and do your job for you.",
+      "score": -2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlweh7f/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlwgb7k",
+      "author": "Any-Neighborhood-522",
+      "text": "The irony of you trying to tell me what my job is when you can’t even do your own 😂",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlwgb7k/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlwiayr",
+      "author": "SomeContext346",
+      "text": "The irony of you trying to tell me what my job is when you couldn’t close a door 😆",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlwiayr/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlwj5s1",
+      "author": "Any-Neighborhood-522",
+      "text": "Okay bye girl! Please go farm your downvotes elsewhere",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlwj5s1/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlr525x",
+      "author": "fraslin",
+      "text": "This tool exists. I was using Backengine for it. Highly recommended. There are a couple others too that are also trying to do the same thing across the whole enterprise.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlr525x/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfawfv",
+      "author": "c0ntent_c0ntent",
+      "text": "This is exactly the kind of answer I was hoping for—thank you. Just looked up Backengine. Looks like they're doing cross-enterprise knowledge management (not just handoffs). Solid product. Quick question: when you used it, how long did implementation take? And did it require sales to change their behavior, or did it just pull data automatically? Trying to figure out if the \"handoff-specific\" angle is actually valuable, or if CSMs just want general AI search and I'm overthinking the niche.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfawfv/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nng1dor",
+      "author": "fraslin",
+      "text": "Implementation was quick as is connecting your various information sources. It does it all in the backend so if you have gong, fireflies, etc it will pick them up. Sales didn't need to change anything except to make sure that the call recorder was in there. They had some people that did a little too much on cell phones so the call didn't get recorded. I can intro you to their CEO if you want, sent you a DM with my info. He is good to talk to and can advise on use cases vs it being just a sales call.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nng1dor/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlre8if",
+      "author": "aevyn",
+      "text": "Too many tools like this already exist. I'd recommend you use pylon and other tools via mcp into your llm chatbot of choice.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlre8if/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfb156",
+      "author": "c0ntent_c0ntent",
+      "text": "Appreciate the direct feedback—\"too many tools\" is useful data. Just looked up Pylon + MCP approach. This is actually closer to what I'm imagining (LLM + context protocol + integrations). For someone who's not a dev, how painful is the setup? If the answer is \"20 min YouTube tutorial,\" then yeah, I'm solving a non-problem. If it's \"you need a solutions engineer and 3 weeks,\" then maybe there's a gap for a plug-and-play version. have you set this up yourself, or seen it done?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfb156/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnftrhl",
+      "author": "aevyn",
+      "text": "Probably takes about 5 minutes to connect the different tools you use. If you have a call recorder, a shared slack channel, and a crm you basically can have all the data funneling into pylon and use their notebook feature to capture the data you need.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnftrhl/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrk6np",
+      "author": "MakeItLookSexy_",
+      "text": "Are AEs not on those kick off calls? I feel like that’s the only way to avoid the awkwardness of the “i already talked about this with the sales rep” kind of responses.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrk6np/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlr5qdg",
+      "author": "Masshole205",
+      "text": "We’re trying ask.ai, which does this except it hallucinates too much and isn’t generative AI so I end up have to copy and paste everything into a google doc or into ChatGPT so I can run some generative prompts. Ask ChatGPT if there’s a tool similar to ask.ai but it’s generative",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlr5qdg/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfb67k",
+      "author": "c0ntent_c0ntent",
+      "text": "Okay THIS is exactly the kind of real-world feedback I need. So ask.ai does the aggregation/search part, but the accuracy isn't good enough that you'd trust it before a kickoff call? That's the trust problem I've been worried about. Follow-up: what % accuracy would you need to trust it? Like, if it was right 90% of the time, would you still verify everything manually? Or is it more about knowing when it's wrong (confidence scores, source links, etc.)? I'm trying to figure out if this is a \"make AI better\" problem or a \"make AI transparent\" problem",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfb67k/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnhtkp4",
+      "author": "Masshole205",
+      "text": "I’d settle for 80% of the time. Right now it’s 50/50. Our enablement team told me it gets easily confused by conflicting information. So if on one call you discuss tool X with a client but the next call you pivot to a solution using tool Y, it might not know what to go with. The search aspect of it does give you confidence ratings and that part isn’t terrible as it’s built on top of our knowledge base and internal wikis. But the chat part, which is supposed to be used for client related inquiries as it pulls from salesforce, gong and slack, is pretty bad. I give it prompts to get the story of a client’s journey and I get a lot of generic, non value add fluff instead of specific client details and when I do get those details, i have little trust in them",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnhtkp4/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrsvb8",
+      "author": "Tough_Policy9292",
+      "text": "Glean is what you need.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrsvb8/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfbcy3",
+      "author": "c0ntent_c0ntent",
+      "text": "does it do handoff-specific structured output, or is it more like \"search everything, ask questions, manually compile the doc yourself\"? Not trying to compete with Glean just trying to understand if there's a gap between \"generic enterprise AI search\" and \"handoff automation for mid-market teams.\"",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfbcy3/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrfek3",
+      "author": "WarmMud9975",
+      "text": "We use Slack for everything at my company, so the entire sales process and conversations are input into the customer slack channel, even when they’re still a prospect. Then you can just use slack’s AI to get a summary. I’m more curious what your kickoff calls include to be going into a deep level of detail about their business?",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrfek3/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfdfel",
+      "author": "c0ntent_c0ntent",
+      "text": "That Slack workflow is clean—everything in one channel from prospect to customer. We're the opposite: Gong recordings, Gmail buried three folders deep, half-baked SFDC notes, and DMs scattered everywhere. Re: kickoff depth—good question. Here's what I need before I get on the call: Their actual problem (not the generic pain point from our marketing) Tech stack and integrations they mentioned (implementation surprises suck) Specific promises made (timelines, features, deliverables) Who's using it vs. who bought it (economic buyer ≠ daily user) Objections and how we addressed them (tells me what they're nervous about) Could be overkill. But I've walked into too many calls where the customer says \"we bought this specifically for X\" and I'm sitting there with no documentation that we ever promised X. That's a resume-generating event waiting to happen. How do you structure your kickoffs? Starting to wonder if I'm doing archaeology when I should just be executing.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfdfel/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlriypg",
+      "author": "Txkevo",
+      "text": "Staircase.ai",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlriypg/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nltw0bm",
+      "author": "photoshoptho",
+      "text": "Bro went from storytelling to upsell. Nice.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nltw0bm/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfdu2o",
+      "author": "c0ntent_c0ntent",
+      "text": "Players gotta play!",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfdu2o/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nluh4i0",
+      "author": "scottysnacktimee",
+      "text": "I built an internal GPT (as the primary closer here) that has all the transcripts and information about the opportunity. One of the prompts is ‘handoff’ when I run that, it summaries everything, and I paste that in slack for the CSM to review. I’m on the handoff call as well",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nluh4i0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nluoa88",
+      "author": "erickrealz",
+      "text": "This pain is real as hell and you're not alone. The sales to CS handoff is broken at basically every B2B company. Sales is incentivized to close, not document. CS is stuck doing detective work before every kickoff. Tools like Grain, Chorus, and even native Gong features can surface call highlights and key moments but they don't synthesize everything into an actual handoff doc. You still gotta piece it together yourself. Our clients using those tools say it cuts the time from 2.5 hours to maybe 1 hour but it's not solving the core problem. The AI aggregation angle you're describing makes sense but here's where it gets tricky. You need access to multiple data sources which means integrations with Gong, Salesforce, email, Slack, maybe HubSpot or whatever CRM. Each integration is a pain to build and maintain. Then you need the AI to actually understand context well enough to pull out what matters, not just keyword match on \"integration\" or \"timeline.\" The other issue is trust. CSMs won't rely on an AI summary if they think it might miss something critical that makes them look stupid on the call. You'd need really high accuracy or at minimum a way to quickly verify the summary against source material. That said, if you can actually pull this off, there's definitely a market. CSMs at scale up companies are drowning in handoffs and wasting hours on prep that should take 15 minutes. The ROI is obvious if it works. Before you build anything, manually create those handoff docs for 5 to 10 real customers like you mentioned. Time how long it takes you versus how long the CSM normally spends. Get their feedback on what's missing or what's noise. That'll tell you if the value prop is actually there or if CSMs want something different than what you're imagining. The chat interface for asking follow up questions is smart. That's where the real value might be beyond just the doc. Being able to ask \"what pricing tier did we quote\" and get an instant answer from across all sources would save time on the call itself. One warning though, you're describing a product that requires heavy lifting on integrations and AI accuracy. That's not a weekend project, it's months of dev work. Make damn sure the pain is acute enough that CS leaders will actually pay real money for it before you sink time into building.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nluoa88/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlx8t0r",
+      "author": "Agitated-Fun615",
+      "text": "Gong does this. My company built a \"handoff\" ai brief template- strongly recommend looking into it",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlx8t0r/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlr6iuu",
+      "author": "pruplegti",
+      "text": "Check out value blueprint process and set some stage gates in salesforce they cannot close the deal until cs signs off on the deal.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlr6iuu/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrd3qd",
+      "author": "suttons27",
+      "text": "Gainsight",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrd3qd/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrj73v",
+      "author": "adventurejihad",
+      "text": "Spiro.ai does this",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrj73v/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrqmm4",
+      "author": "lightskin_jew",
+      "text": "what id recommend is using n8n to create flows that do just this. we essentially have a similar process, but prior to CS kickoffs, post closed-won status updated in SFDC, n8n uses that as a trigger to scrape gong calls for that account and any other context available in SF etc to provide a high level summary (which you can define based on the most relevant datapoints for you). this gives your team a cheat sheet prior to each kick off.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrqmm4/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlrzp8l",
+      "author": "Mememememememememine",
+      "text": "My company created this for us internally! It’s been an absolute game changer. Idk anything about how they did it. Also. This is wild and your company needs to get their shit together. CSMs shouldn’t be in this position.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlrzp8l/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nls8di4",
+      "author": "gnomex96",
+      "text": "We're currently involving CSMs in the discovery call so they would be in the action with customers from day one, the CSMs part is to do the demo and answer questions beyond the sales scope. I find it beneficial since handover is always a mess, and it removes the awkwardness of the first introduction meeting with the customer after closing.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nls8di4/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlshagu",
+      "author": "imajinthat",
+      "text": "I have a tool that does this, it’s called Glean. Go to chat and tell it to pull from all internal data sources and build me an opportunity summary with objectives, persona mapping, timelines, friction points, etc. works like a charm",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlshagu/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlsii9d",
+      "author": "Jrastikali83",
+      "text": "Somebody beat me to it saying BackEngine, so I’ll just second that. The company I’m currently with uses it, and it would have been such a lifesaver at previous roles. It consolidates all communication, has a great AI tool, and so far their customer support is awesome too. I think it’s what you’re looking for.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlsii9d/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlt10cb",
+      "author": "rgivs",
+      "text": "Glean! We use this in my company which is fairly large with lots of offerings and people involved. You can search and summarize any deal/opp in any communication channel that you allow it to have access to. I love the tool and use it many times per day. I hope this helps, you’re not alone is the cycle you’re describing. #LetsCrushIt",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlt10cb/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlt8u5d",
+      "author": "Due_Lake94",
+      "text": "Project manager. Follows the entire process once the contract is signed. And the signed contract has the entirety of the deal outlined. There is a business process problem here that software isn’t going to solve. .02",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlt8u5d/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nltf4nu",
+      "author": "Teaching_Mammoth",
+      "text": "Just go into the account and ask those discovery questions that you couldn’t find in emails, but just let them know ahead of time. “I’ve been working with Jake on the account but there are just a few missing items that I need to confirm with you” Works every time for me, customers really don’t get annoyed as long as you let them know that you just want everything in writing so you can create a mutual success plan for them. 8 years csm experience in enterprise & strat, still do it for all my customers I onboard. Why stress yourself for something that was broken in the handoff process?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nltf4nu/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfdqr5",
+      "author": "c0ntent_c0ntent",
+      "text": "This is actually a great reframe and probably the right move when handoff info is genuinely missing. I've done the \"I've been working with Jake on the account but there are just a few missing items\" approach. Works fine for filling gaps. But here's where I still hit friction: A: Customer already told sales their tech stack, integrations, timeline, and key concerns. I ask again. They answer (politely), but I can feel the \"didn't Jake write any of this down?\" energy. Small trust hit. B: Sales overpromised something I don't know about. Customer says \"Jake said you could integrate with our custom API by end of Q1.\" I have no record of this promise. Now I'm either backtracking on a commitment or scrambling to figure out if we can deliver. The discovery-on-kickoff approach works when handoff is incomplete. But when handoff info exists and I just can't find it efficiently, that's the problem I'm trying to solve. Maybe the real answer is: if you've got 8 years in enterprise/strat, you've learned how to navigate these moments gracefully. For newer CSMs (or high-velocity teams), the lack of prep creates more damage. What's your take—does the \"ask on the call\" approach work as well for CSMs with <2 years experience?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfdqr5/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlu8opb",
+      "author": "cublank",
+      "text": "Use the same template for the kickoff call and know about the options purchased. Make sure AM is on the call to answer any deviation from the template. Assure the customer that the process is solid and you will be able to deploy in their timeframe and get them the deliverables in good order. Admirable that you are doing your homework but in the end the product doesn’t change, and a kickoff , like the metaphor , is to a field that doesn’t change size.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlu8opb/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfe5jf",
+      "author": "c0ntent_c0ntent",
+      "text": "This is a different philosophy than I've been operating under, and I'm trying to figure out if you're right. Your approach: standardized template + AM backup + confidence in process. The product doesn't change, so why customize the prep? Where this breaks for me: the product is the same, but what the customer thinks they bought varies wildly. Example from last month: Customer A bought us for workflow automation. Customer B bought us for reporting dashboards. Same product, same features—but if I run the same templated kickoff for both, one of them is going to feel like we're not addressing what they care about. The \"field doesn't change size\" metaphor is interesting though. You're saying I'm over-rotating on deal archaeology when I should just execute the standard play and let the AM handle curveballs? Two questions: Does your template kickoff include deal-specific context (their stated goals, their industry), or is it truly one-size-fits-all? How often does the AM actually show up and know the answers when a customer asks about something from the sales cycle? Not arguing trying to understand if my prep is actually solving a problem or just security theater for my own anxiety.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfe5jf/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfizl0",
+      "author": "cublank",
+      "text": "We have a comprehensive template that is trimmed to customer purchase. So for each feature we list , time to deploy, level of effort to deploy, a brief description and expected outcomes. For the AM part, perhaps I’m spoiled but we are pretty tight with our account teams. If they don’t have accountability for the customer lifecycle , that can be a problem. This is a leadership issue that they need to sell use cases/outcomes for the customer.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfizl0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nluabka",
+      "author": "cranston_snord",
+      "text": "The AI generation is phase I of the complete solution. It is the discernment to create relationship data. But ultimately we don't want some long 50 page document generated by AI for the hand-off, you want an explorable, queryable data thread (idealy with an easy-to-navigate dashboard). The REAL solution (IMO) is to build a KnowledgeGraph that creates RELATIONSHIPS that document a sales process, so you can elevate RELATIONSHIPS between data into first class citizens, so the implementation/deployment teams can quickly understand (and leverage) all the work and effort that the AE/SE team does during the sales cycle. You want the genAI to adhere to strict ontology and semantics that you've defined in your graph (to avoid hallucinations, and sloppy data models) (:Stakeholder)-[:CHAMPIONS]->(:BusinessGoal)-[:DRIVES]->(:Requirement)-[:VALIDATED_BY]-(:Asset {category:'PoC',type:'git_repository',description:'data loading pipeline example' ,uri:'github.com/username/reponame'}) Simple version of a query that shows the thread through the sales process for a particular business decision influencer: MATCH (s:Stakeholder {name: 'Jane Doe'})-[:CHAMPIONS]->(g:BusinessGoal), (g)-[:DRIVES]->(r:Requirement), (r)-[:VALIDATED_BY]->(a:PoC) RETURN s, g, r, a This could be fed by loading data via API calls to CRM (salesforce or whatever) - having an LLM parse through email threads, reading transcripts of zoom meetings etc. and then format them and ingest your existing Graph Model. And of course manual entry from the Account Exec/Sales Engineer teams. This tool would help pre-sales track progress holistically and show nuanced relationships that are difficult to do in a CRM alone. This all could then be handed off /shared with the implementation/onboarding team during the kick-off. The implementation team doesn't have to read long documents, or scan over existing CRM notes to determine important relationship data that the sales team already determined months prior, they can VISUALLY SEE these relationships in realtime by browsing the knowledgegraph. This not only helps the enablement, but also increases the chance for success, and improves the chances the customer actually gets this solution into production, which then means annual renewals for the vendor (net revenue retention). No brainer, and missed so often it is sadly trragic as you've experienced. TLDR: (Sales Tools/CRM/Email/Confluence/Sharepoint Docs/POC assets) -> Generative AI with strict schema requirements -> KnowledgeGraph",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nluabka/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlubr13",
+      "author": "elen_ud",
+      "text": "I hear this a lot — that gap between Sales and CS is where momentum and context usually fall apart. We fixed it with automated workflows in Flowla. When a deal moves to “Closed Won,” it automatically: Pulls the latest Fireflies or Gong transcript Summarizes key goals, objections, and promised deliverables Compiles them into a Sales-to-CS Handoff doc inside the customer’s shared room Notifies the assigned CSM in Slack with the full context and kickoff checklist By the time the CSM opens the room, they already have everything they need — recordings, summaries, next steps, even who said what on the call. The kickoff becomes a continuation, not a restart. That one workflow easily saved us hours per customer and completely changed how “handoffs” feel.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlubr13/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfehf0",
+      "author": "c0ntent_c0ntent",
+      "text": "This is close to what I'm imagining, so I need to understand where Flowla stops and the gap begins. The automated trigger on \"Closed Won\" > pull transcripts > summarize > deliver to CSM is the exact workflow. Question is whether the summary is good enough that I'd trust it without verification. What I'm hearing from other comments is that AI summaries miss context or hallucinate details just enough that CSMs still listen to the calls anyway \"just to be sure.\" If Flowla's solved that, then yeah, I'm late to a solved problem.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfehf0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnmez8t",
+      "author": "deliciouswolves",
+      "text": "Full disclosure: I work at Dock (Flowla competitor). Flowla and Dock have similar workflows here. You're 100% correct that even the state-of-the-art AI is going to hallucinate facts sometimes. I'm not exactly sure how Flowla manages this, but one way we've seen Dock clients deal with this is by giving the AI document generator really specific prompt instructions about what it can't assume/hallucinate. \"If [X] isn't mentioned in the call, state 'Information missing'.\" That way, the CSM knows where there's still more discovery to be done with the customer. (e.g. They didn't ask the client for their success metrics). So no, it's not a solved problem, but there are workarounds that get you 90% of the way there.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnmez8t/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnkudue",
+      "author": "elen_ud",
+      "text": "That's a valid concern. Yes, Flowla, like any other tool out there, uses the transcripts to extract insights. What it does differently is that it can combine the transcript with sales room activity (who the stakeholders are, what they looked at, what their roles are, etc.) and all the content inside the deal room. So it's still more accurate than dropping transcripts out of context into ChatGPT.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnkudue/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nludpnv",
+      "author": "Helpful-Fun-533",
+      "text": "Salesloft does this and probably countless others. Records calls and gives you a transcript but also key takeaways. However we had this issue and basically without the sales side being completed properly and them not doing a handover call our leadership kicked those back to them. You need leadership to lead here or sales will do nothing they’re just like that in every company",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nludpnv/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfemq3",
+      "author": "c0ntent_c0ntent",
+      "text": "You've nailed the core tension tools exist, but they only work if sales actually uses them properly. And when they don't, it becomes a leadership problem, not a technology problem. We tried the \"kick it back to sales\" approach. Lasted about a month before deals started sitting in limbo and revenue targets got threatened. Sales leadership came back with \"CS needs to meet sales where they are, not slow down the pipeline.\" So I accepted that in most growth-stage companies, sales will win that fight. The question becomes: do you keep fighting for process discipline (which requires executive air cover I don't have), or do you build something that works even when sales does the bare minimum? Salesloft's transcripts + takeaways help, but from what I understand, someone still needs to go find the right calls, review the takeaways, and compile it into a coherent handoff. That's the part eating my time. Real question: when your leadership kicked deals back to sales, what enforcement stuck? Did they tie it to comp? Block deals in the CRM? Trying to understand what actually works vs. what gets rolled back after one bad quarter.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfemq3/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnkubrw",
+      "author": "Helpful-Fun-533",
+      "text": "Your place sounds truly disorganised. Salesloft I find great but at least we have the procedure of including company name in meeting title and makes it easy to find. What leadership did was on CRM block sales from marking anything close won, recordings were tied to comp as it became a company wide CRM for all customer facing teams. Now it isn’t perfect as some customers will not allow you to record but it’s few and far between. It’s still not perfect but gives us enough to work on. But also sounds like sales manager is just a bit of the mindset we got the sale our job is done.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnkubrw/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlur6vq",
+      "author": "MrDreamWorks",
+      "text": "You don’t have a tool problem. You have a management problem. The deal shouldn’t be closed unless there’s a proper handover form filled out.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlur6vq/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlvt16u",
+      "author": "Beginning-Box-1787",
+      "text": "te deje un privado",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlvt16u/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlvza14",
+      "author": "Medical-Specific-942",
+      "text": "Onboardly.tech is that girl. Automates all the admin. (Revenue) handover, kick off docs, qbrs and throws in some external intelligence to highlight signals of account expansion.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlvza14/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlw082v",
+      "author": "witchykitty99",
+      "text": "Should be on the sales team to give you the overview of the deal/context!",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlw082v/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlwgb68",
+      "author": "agass07",
+      "text": "Does your team have a customer success platform? This should be possible if you have a tool with built in AI and the ability to take in data from your AEs call recordings, emails, and salesforce CRM/opp fields. We use Vitally and all this syncs in. Granted, totally on the AE to ask the right questions when closing the deal, but what your describing should be possible in most CSPs",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlwgb68/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlzo2mj",
+      "author": "Pavel_at_Nimbus",
+      "text": "Totally get this, the Sales - CS handoff can feel like starting from scratch every time. I think FuseBase could help you automate that whole transition + it has built-in auto-transcribing. It lets you set up a branded onboarding portal where an AI Agent pulls deal context straight from Salesforce and call transcripts, then auto-creates a handoff summary with key stakeholders, promised deliverables, and even objections. During onboarding, everything lives in one place (recordings, docs, MAP updates, next steps), and you're not redoing detective work every week. So you open the portal Monday morning and already know what was sold, what matters to the client, and what to prep before kickoff. Doesn't solve every alignment issue, but it makes the kickoff feel like a true continuation instead of a reset. I'm the founder of FuseBase so happy to answer anything specific.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlzo2mj/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nm5ht6s",
+      "author": "Aquarius6870",
+      "text": "You know what you need? Velaris' Headlines feature so you can stop watching the sales calls at 2x speed and reading through emails. (Their AI features will summarise everything for you so you don't need a third part AI summariser). Their AI is also capable of doing sentiment analysis on emails and the messages shared between your sales teams, AEs and the customer.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nm5ht6s/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nmi4fv0",
+      "author": "Hot-Snow3789",
+      "text": "Ask sales to shortlist deals likely to close in next 2 weeks (or 30 days depending on your avg sales cycle) - they’re likely already doing this & you could ask to join those meetings or get a weekly report, assign CSMs, & ask sales to do intros early and make them part of the closing process. The AE and/or SC should do some level of a catch up with the CSM, without anyone having to sift through calls/notes manually or with the help of AI. You can create a list of required hand off information to manage pre-sales expectations & partner with sales leadership to get buy in/support.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nmi4fv0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nnfnf6z",
+      "author": "Teaching_Mammoth",
+      "text": "If those scenarios happen often then what I would probably do in your shoes is make sure to meet all AEs for the handoff and make sure to highlight things such as tech stack, promised features etc. if they still don’t provide enough details even though the customer claims this was all said then it’s a sales problem at this point which leadership should be involved for additional training. The good thing is a lot of companies are requiring zoom AI, or some sort of AI note tracking that you can utilize moving forward if you can ask for the recording of such calls. To answer your question, ask on the call approach should work for all years of experience, just need to be prepared to write down what you plan on asking and how to deflect certain replies. What I learned as a csm is not buckling when the customer throws a fit on something that we as a company should’ve known / or figured out as a team before wasting a customers time. Heck… if you really want to deflect the customer being upset then being honest may work too, “Unfortunately Jake may of forgotten this part as we’re pretty understaff at the moment, so I ask you to kindly repeat this information so I can make sure I covered all my basis to better support your initiatives”.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nnfnf6z/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nphaboa",
+      "author": "BigPresentation9770",
+      "text": "Honestly, this hit way too close. The Monday-morning “forensics” phase is painfully real, scrubbing through Gong, chasing AEs for context, piecing together promises from scattered notes… and then getting hit with the classic, “I already explained this in discovery.” Happens in almost every B2B onboarding process. What you’re describing is exactly why tools built specifically for onboarding teams are starting to pop up. We’ve been experimenting with Projetly’s customer onboarding workflows, and the biggest relief has been not having to manually stitch every conversation together. It centralizes deal context, pulls in tasks, timelines, and owners, and actually gives the CSM a structured view before kickoff without begging Sales for info. So the idea of an AI-generated handoff doc? Not dumb at all. It’s exactly where this space needs to go. If you’re talking to CS leaders, I’d definitely be open to a 20-minute chat. Anything that cuts down the 2–3 hours of prep hell before a kickoff is worth exploring. Happy to share what’s working (and not working) for us just DM me.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nphaboa/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_nlvhk4o",
+      "author": "SomeContext346",
+      "text": "I mean, you have 12-15 new customers a month and 6 CSMs, that’s only 2-3 customers per CSM per month. So something that’s really only taking 4 to 6 hours of work per month per rep - does that really justify an investment from your overlords?",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/nlvhk4o/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "subreddit": "CustomerSuccess"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+    "method": "old_reddit_html"
+  }
+}

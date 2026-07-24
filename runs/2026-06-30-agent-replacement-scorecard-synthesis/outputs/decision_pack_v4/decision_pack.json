@@ -1,0 +1,16 @@
+{
+  "recommendation": "Approve a 30-day AI agent software-portfolio diagnostic.",
+  "decision_required": "Use the scorecard as a client-facing workshop operating model.",
+  "options": [
+    "Wait for vendors",
+    "Run isolated pilots",
+    "Run portfolio diagnostic"
+  ],
+  "recommended_option": "Run portfolio diagnostic",
+  "evidence_counts": {
+    "REPLACE": 10,
+    "RENEGOTIATE": 9,
+    "KEEP": 6
+  },
+  "guardrail": "Curated scorecard; source URL tieout required before external final."
+}

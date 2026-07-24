@@ -1,0 +1,228 @@
+{
+  "bluf": "Production AI apps need designed systems, not only generated code.",
+  "slides": [
+    {
+      "title": "AI makes prototypes easy; production still needs system design",
+      "subtitle": "Executive briefing from Ras Mic's system-design walkthrough",
+      "points": [
+        "The talk argues that AI-generated apps fail when they skip architecture decisions.",
+        "The proposed operating lens is explicit trade-offs across scale, reliability, speed, and cost.",
+        "The Pluto case study shows a practical stack for an AI-agent product built on managed abstractions."
+      ],
+      "evidence": [
+        "00:01-00:31",
+        "01:00-02:59",
+        "18:56-29:45"
+      ]
+    },
+    {
+      "title": "Use four design questions before choosing the stack",
+      "subtitle": "The speaker frames engineering as trade-off management, not tool collection",
+      "cards": [
+        [
+          "Scale",
+          "Can the system absorb more users or data by adding capacity?"
+        ],
+        [
+          "Reliability",
+          "How likely is each provider or service to fail under real usage?"
+        ],
+        [
+          "Performance",
+          "Will the architecture keep the product fast enough?"
+        ],
+        [
+          "Cost",
+          "Which choices protect runway, and which deliberately buy speed?"
+        ]
+      ],
+      "evidence": [
+        "01:49-02:59"
+      ]
+    },
+    {
+      "title": "Modern app platforms compress heavy infrastructure work",
+      "subtitle": "The video positions cloud and managed platforms as abstraction layers",
+      "layers": [
+        [
+          "Product platforms",
+          [
+            "Convex",
+            "Vercel",
+            "Supabase",
+            "Neon"
+          ],
+          "Fast setup; agent-friendly DX"
+        ],
+        [
+          "Cloud platforms",
+          [
+            "AWS",
+            "GCP",
+            "Azure",
+            "Cloudflare"
+          ],
+          "Managed infra; powerful but broader"
+        ],
+        [
+          "Physical servers",
+          [
+            "Metal"
+          ],
+          "High control; expensive and hard to scale"
+        ]
+      ],
+      "evidence": [
+        "03:08-06:16"
+      ]
+    },
+    {
+      "title": "Pluto is presented as an enterprise-oriented AI-agent app",
+      "subtitle": "The product context drives the architecture choices",
+      "points": [
+        "Multiple client surfaces: web, desktop, mobile, and admin experiences.",
+        "Agent execution requires durable backend state, inference, sandboxed workspaces, and browser access.",
+        "The target buyer is business teams, which raises auth, compliance, monitoring, and reliability requirements."
+      ],
+      "evidence": [
+        "08:36-10:36",
+        "18:56-19:26",
+        "25:28-26:55"
+      ]
+    },
+    {
+      "title": "The core architecture separates experience, control plane, and specialized services",
+      "subtitle": "The deck recreates the speaker's final architecture map as editable PowerPoint shapes",
+      "architecture": true,
+      "evidence": [
+        "18:56-22:25",
+        "25:28-26:55"
+      ]
+    },
+    {
+      "title": "The recommended repo model keeps agents and developers aligned",
+      "subtitle": "One codebase gives AI agents enough context to work across surfaces",
+      "points": [
+        "Start with a monorepo so web, mobile, desktop, backend, and services share context.",
+        "Use familiar, documented tools because AI coding agents are more reliable with common ecosystems.",
+        "Segment services only where the domain has a clean boundary and independent failure modes."
+      ],
+      "evidence": [
+        "10:46-12:42",
+        "20:04-22:25",
+        "28:15-29:13"
+      ]
+    },
+    {
+      "title": "Convex is treated as the control plane for product state and workflows",
+      "subtitle": "The backend choice is tied to data, actions, jobs, and agent-readable code",
+      "points": [
+        "The speaker prefers Convex because backend behavior is expressed as code.",
+        "Workflows, scheduled jobs, queues, and external integrations are positioned as first-class backend needs.",
+        "The product's main state should remain simple enough for agents to understand and modify."
+      ],
+      "evidence": [
+        "13:11-19:26",
+        "28:37-29:04"
+      ]
+    },
+    {
+      "title": "Specialized services carry riskier domains outside the main app path",
+      "subtitle": "Inference, payments, and messaging are separated because they have distinct responsibilities",
+      "service_boundary": true,
+      "evidence": [
+        "20:04-23:21"
+      ]
+    },
+    {
+      "title": "Payments architecture should match the pricing model",
+      "subtitle": "The talk distinguishes subscription billing from credit-based usage",
+      "points": [
+        "Stripe is framed as sufficient for straightforward subscription billing.",
+        "Autumn is chosen for Pluto because credits, top-ups, and consumption accounting are central to the product.",
+        "The inference ledger becomes a control point for tracking wallet balance and model-provider consumption."
+      ],
+      "evidence": [
+        "23:43-24:34"
+      ]
+    },
+    {
+      "title": "Observability is a production requirement, not a cleanup task",
+      "subtitle": "Once AI-generated code reaches users, failures need traceability",
+      "points": [
+        "The speaker recommends Sentry and PostHog for error logging, analytics, and failure visibility.",
+        "The practical requirement is to know what failed, when it failed, and which path produced the issue.",
+        "Monitoring becomes more important as the system spans client, backend, services, and sandbox providers."
+      ],
+      "evidence": [
+        "24:37-25:28"
+      ]
+    },
+    {
+      "title": "The explicit trade-off is spending more to protect product experience",
+      "subtitle": "The case study prioritizes reliability and speed over early cost optimization",
+      "points": [
+        "Separate services and larger sandbox resources increase cost.",
+        "The rationale is to keep agents fast and the product resilient while the business model is still learning.",
+        "Cost optimization is acknowledged as future work, not ignored as a non-issue."
+      ],
+      "evidence": [
+        "27:01-28:02"
+      ]
+    },
+    {
+      "title": "A repeatable AI-build playbook falls out of the walkthrough",
+      "subtitle": "Translate the case study into operating principles for future builds",
+      "steps": [
+        [
+          "1",
+          "Define product surfaces and state boundaries"
+        ],
+        [
+          "2",
+          "Choose managed abstractions where they reduce undifferentiated work"
+        ],
+        [
+          "3",
+          "Keep everything in a monorepo until a service boundary is justified"
+        ],
+        [
+          "4",
+          "Instrument errors, analytics, and usage ledgers before launch"
+        ],
+        [
+          "5",
+          "Let AI optimize within a designed system, not invent the system live"
+        ]
+      ],
+      "evidence": [
+        "28:02-29:45"
+      ]
+    },
+    {
+      "title": "Decision: ship AI apps on deliberate architecture, not vibes",
+      "subtitle": "Client-ready checklist",
+      "cards": [
+        [
+          "Stack",
+          "Does each tool reduce complexity the team would otherwise own?"
+        ],
+        [
+          "Boundaries",
+          "Can the system explain why each service exists?"
+        ],
+        [
+          "Operations",
+          "Can failures be observed, traced, and repaired quickly?"
+        ],
+        [
+          "Economics",
+          "Do costs match the current growth and learning stage?"
+        ]
+      ],
+      "evidence": [
+        "29:27-30:02"
+      ]
+    }
+  ]
+}

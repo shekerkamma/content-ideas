@@ -1,0 +1,517 @@
+{
+  "post": {
+    "title": "The Future of CS Might Be Strategic Account Management",
+    "author": "Final_Vegetable_5092",
+    "score": 58,
+    "content": "I went through a layoff last year that didn't fully make sense to me at the time. Looking back, I think I understand why it happened. My company eliminated the Customer Success Manager role and folded those responsibilities into a new Strategic Account Management function within Sales. At first, I thought it was simply a cost-cutting measure. With the rise of AI, I believe this may be where much of the SaaS industry is headed. In many SaaS organizations there are too many people involved in managing the same customer: - Account Executives - Account Managers - Customer Success Managers - Support Teams - Solution Engineers - Product Specialists From the customer's perspective, this can be confusing. Multiple people are reaching out with overlapping responsibilities and mixed messages. When you strip Customer Success down to its core, the role is about understanding the customer's objectives, helping them realize value, and identifying growth opportunities. In theory, Account Managers should already be doing this. The challenge is that many have historically focused more on renewals and upsells than on deeply understanding the customer's business. That gap led to the creation of Customer Success as a separate function. AI is changing that equation with tools that can summarize meetings, analyze product usage, identify adoption gaps, and surface expansion opportunities, Account Managers can become far more strategic and productive. If they are given a smaller book of business, they can spend more time understanding each customer's goals and grow accounts in a way that aligns with real business outcomes. In this model, Customer Success does not disappear entirely. Its responsibilities become embedded within a more consultative Account Management role. I believe this could be beneficial for everyone: - Customers deal with fewer points of contact. - Companies reduce organizational complexity. - Account Managers become more strategic and less stressed with a smaller book of business. - Former Customer Success professionals can move into higher-compensation roles. - Growth opportunities are identified in a way that are aligned with customer objectives rather than quota-driven. To be clear, I am not saying all Customer Success jobs will disappear overnight. I do believe the standalone CSM role will become less common, especially in organizations where AI can augment discovery, planning, and account analysis. The future may involve a smaller number of highly strategic account managers supported by AI, rather than multiple overlapping roles all trying to manage the same relationship. Curious if others are seeing the same trend.",
+    "url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+    "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+    "subreddit": "CustomerSuccess"
+  },
+  "comments": [
+    {
+      "id": "t1_oll35jq",
+      "author": "Willing_Theory5044",
+      "text": "I think this is something that will continually cycle back and forth. AMs with high commercial responsibility are always going to prioritize sales which is reasonable, it’s how they make money. This shift often leaves customers feeling either neglected or over sold to and creates a weird customer dynamic that increases churn. CS is an “easy” department to cut, but I’ve never seen an org successfully execute AMs as relationship holders without deteriorating relationships. I only see this being long term successful if they have a software that is wither niche, or leaps and bounds better than the competition.",
+      "score": 18,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/oll35jq/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olm2vhe",
+      "author": "TwentyTwoEightyEight",
+      "text": "Yeah, this is the trade off. If you pivot to account managers, where their pay is more directly tied to sales, they will always prioritize the expansion over the health of the account. They just don’t have time to meet quota and take the time to find issues and fix them in a meaningful way.",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olm2vhe/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oloelxr",
+      "author": "Final_Vegetable_5092",
+      "text": "They can if you reduce the number of accounts they manage.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/oloelxr/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olp01dt",
+      "author": "Willing_Theory5044",
+      "text": "Absolutely, but if you’re cutting CS you’re likely not looking to reduce portfolio sizes.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olp01dt/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olp2w8k",
+      "author": "Final_Vegetable_5092",
+      "text": "You use your CSMs as strategic account managers and add them to the team so that you can reduce the portfolio size.",
+      "score": -1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olp2w8k/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olox2fe",
+      "author": "TwentyTwoEightyEight",
+      "text": "100%",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olox2fe/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olkn42k",
+      "author": "peachazno",
+      "text": "I agree overall. CSM will continue to shift towards Account Management with commercial responsibility.",
+      "score": 28,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olkn42k/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olkowku",
+      "author": "Final_Vegetable_5092",
+      "text": "Yeah, it’s getting to a point where I feel like my QBRs are becoming a pageant show. I’m just presenting and trying to charm them into providing info on their goals. However, they can’t take me serious because leadership doesn’t want to give us access to a demo environment and we’re not encouraged to ask discovery questions for new opportunities - that’s account management.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olkowku/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olkyren",
+      "author": "TigerLemonade",
+      "text": "Lol yeah where I work we are supposed to pass it off to sales when we identify an opportunity. So it's like, I nurture and maintain the relationship, identify opportunities for expansion, convince the client it's a worthwhile option to explore and then pass it off for sales to get the commission cheque??",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olkyren/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olm1rfb",
+      "author": "TwentyTwoEightyEight",
+      "text": "100% some of the overlap doesn’t make sense.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olm1rfb/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olksomv",
+      "author": "DnDnADHD",
+      "text": "Interesting. We have new biz who get the sale and then handover to the CSM. The CSM owns the customer in all respects, including commercial, with the sole exception of expansion, which sits with a Strategic Account Manager. The two are expected to work as partners, ccing each other in emails, attending meetings together etc. We add the SAM as a trial with one person in 2024 and expanded that into a while new team last year with the team lead reporting to the head of CS. It's not without hiccups but it's been well worth it so far. Cs can focus on their core role and not having to balance it with chasing expansions.",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olksomv/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_ologxlz",
+      "author": "Final_Vegetable_5092",
+      "text": "I think having the SAM just adds another cook to the kitchen. They should have support driven CS teams and account management driven CS teams.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/ologxlz/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_om35sah",
+      "author": "StipulateFred",
+      "text": "I worked for a publicly traded B2B SaaS unicorn where we made this switch because of customer feedback. The CSMs were not as \"trusted\" because they were seen as having alterior commercial motives vs just making sure the customer got the most out of our software. This worked well when the ownership lines are genuinely clear and not just clear on paper. The split you describe makes sense because it lets CS stay close to adoption, implementation, and day-to-day customer signals, while the SAM can carry the more explicit commercial motion without every conversation feeling like a renewal setup. Usually the hiccups show up in handoff and account planning cadence. The CSM is then measured by adoption/active usage of what SKUs the customer purchased vs the SAM's KPI of upsell/cross-sell (NRR). OP's setup can still work, it's a matter of how much a single person is accountable for and how they're measured... depending on the nature of your business, accountability for metrics like adoption and upsell could be orthogonal or more aligned, just depends.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/om35sah/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olkw3y2",
+      "author": "Nearby_Astronomer570",
+      "text": "I have seen a few different models at points in my career and while I agree it seems that the tide is shifting back to an account management commercially focused blended role, it will likely revert back at some point. At least in technical products in a SaaS model. Where this model breaks is when account managers are spread so thin by high volumes of accounts, unrealistic or aggressive quota expectations, that customer adoption, health and overall satisfaction falls to the wayside, as AMs need to hit quota first and foremost. Essentially every customer interaction becomes a commercial conversation while there is no focus on if the customer is actually getting value in the platform. Inevitably there will be high addressable churn and an executive will come in and re introduce CSMs or custom adoption programs with roles to address churn and customer satisfaction and to get account management focused on selling and fix customer turnover. I’ve been through enough reorgs to see the pattern, unfortunately customer success is usually hit first if not directly tied to revenue.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olkw3y2/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olm5avw",
+      "author": "TwentyTwoEightyEight",
+      "text": "I never see the point of having Account Managers and CSMs. You should have one or the other. Honestly, as a CSM, I could handle expansions myself no problem if I had more help with the paperwork (I can do it, it’s just time consuming) or I have less accounts. Otherwise, I don’t need the AE. Sales should handle new business and someone else (whatever you want to call it) can handle the rest. Cut head count, but keep enough staff that everyone can have less accounts, and you’ll be golden. I can handle complicated tech and sales, I’m sure plenty of people can. I think that’s the ideal role. Having overlap is just annoying. Where something like that fails is having too many accounts. I would rather have half the accounts and be responsible for everything and get paid the sales commission. If companies cut out overlap, we could all have less accounts while getting the same work done. That would be a dream. Whatever happens, the days of being a CSM and not having to be technical or salesy are coming to an end. If you’re in this role and not good at more than just relationship management, you should probably start thinking about other careers.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olm5avw/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oloi184",
+      "author": "Final_Vegetable_5092",
+      "text": "I think you’re understanding where I’m coming from. The model just doesn’t make sense. CSMs in today’s world have to be more technical or learn some sales skills. If you have Account Managers and CSMs manage a book of 70 accounts, then reduce the number of customers to 35 and merge the two teams.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/oloi184/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olondsm",
+      "author": "salaciousremoval",
+      "text": "I’m an SE with more and more pressure to do less post-sales and “let it fall” if CS can’t handle it. If we hired & empowered CSMs to be a better-enabled post sales roles, as you’re describing, it would be better all around. I can’t easily prioritize post-sales because the SE persona is primarily measured and paid on new business. In other companies throughout my career, my persona got zero comp on renewals and the CSM + renewals rep really had to work together to ensure we booked some types of recurring rev 😅 What a ride tech is, eh?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olondsm/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olowt72",
+      "author": "TwentyTwoEightyEight",
+      "text": "Yeah, it’s definitely an evolving field. Having less people to bring in for a call is easier for me anyways. I know the customer, I know what they need and what to highlight and it doesn’t take me that long to learn a product when I’m new somewhere. Having to bring in an SE or an AE for something just means I have to take time to get them up to speed, find a time in our busy schedules and the customers, and still be focused on the call so I can interject and be sure to point out key details that I know will be important for the customer because I’m the one with the relationship. As I said, I couldn’t do everything post sales with my current book of 30 high touch customers (and definitely not in the roles I’ve had with double or more than that). But get me down to 20 or so, or give me a mix of some lower touch customers and it would make my life easier. Just break it up into pre and post sales and stick one person on the account.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olowt72/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olloj0b",
+      "author": "luodaint",
+      "text": "The structural reason for cutting CS has nothing to do with the CS role itself; it is due to the fact that the majority of CS teams have been operating in good faith without any sort of systematic feedback loop into the product. You can have a dozen customer complaints surfaced during a quarterly business review, but in the absence of a system for feedback, all those concerns disappear once you step out of the room. Product made what Sales promised and the founders thought was right. CS played catch-up. \"Sales & account management with commercial accountability\" is an equally truthful description, you own both the relationship and the revenue. However, if the SAM team still lacks systematic influence over the product development process, then all you've done is add a revenue goal to their plate. Organizations that retain CS (or SAM) as a strategically relevant organization seem to have one common factor among themselves: a structured feedback loop where CS input influences product backlog. Not some Slack channel. An actual loop.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olloj0b/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olm2wcw",
+      "author": "Imnewhere04589",
+      "text": "Yep - agreed and pushed for this a lot at my last company. Definitely depends on the product and how hands on you have to be but I think it makes for a better customer experience when you have the least amount of points of contact as possible.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olm2wcw/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oloiev0",
+      "author": "Final_Vegetable_5092",
+      "text": "Right, you can have a quota and do success plans for customers. Just reduce the number of accounts and merge the two teams. You don’t have to do a mass layoff, but coordinate with the resources you have.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/oloiev0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olpen8y",
+      "author": "topCSjobs",
+      "text": "The companies that cut CS & fold it into AM.. will spend the next yrs wondering why churn went up. And then rebuild a CS function & call it smthing else.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olpen8y/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olwvrz9",
+      "author": "Bart_At_Tidio",
+      "text": "I can see the logic. Customers definitely feel the pain when five different people own pieces of the relationship. I’m not sure CSM disappears though. Feels more like the role changes. AI can surface risks, summarize meetings, and flag opportunities, but trust, strategy, and navigating messy customer situations still need people. What I am seeing is more pressure for CS roles to become more consultative and tied to business outcomes instead of just account coverage.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olwvrz9/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olxzuik",
+      "author": "Final_Vegetable_5092",
+      "text": "My whole thing is that instead of SaaS having all of these people managing accounts, reduce the number of customers per person and have a more focused relationship with customers where only one face represents the org. CS is important, but it’s not full time job, it’s a function or a duty that ideally should be within Account Management. Heavy quotas and a large volume of accounts to manage has created this scattered model of relationship management within SaaS.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olxzuik/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_omgqql9",
+      "author": "Bart_At_Tidio",
+      "text": "I get what you mean. From the customer side, one person owning the relationship is a much cleaner experience than getting passed between five different roles. The challenge is scale. Once account loads get too big, that single owner starts getting pulled between strategy, renewals, support escalation, and growth conversations. AI could help make that model more realistic though. Smaller books of business plus better visibility might let account teams go deeper instead of wider.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/omgqql9/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olli8g5",
+      "author": "MasbyTV",
+      "text": "I'm at a startup where I don't have responsibility of commercials and am not leading implementations and I feel useless - the value of a CSM is definitely in the commercial aspect of the business and having someone who can handle it who your customers know, trust, and talk to regularly.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olli8g5/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olkr9b7",
+      "author": "Final_Vegetable_5092",
+      "text": "I’m thinking the AM team will be extended and manage a much smaller book of accounts while the CS function goes away. The account team in SaaS is way too saturated for customers. I have managed relationships in non-SaaS roles and scratch my head as to why tech companies operate this way.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olkr9b7/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olkx3d1",
+      "author": "Queen0flif3",
+      "text": "I agree. They’re doing this now at my company. It makes perfect sense.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olkx3d1/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oloi4y4",
+      "author": "Final_Vegetable_5092",
+      "text": "Were you a CSM?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/oloi4y4/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_omennm6",
+      "author": "Queen0flif3",
+      "text": "Yes",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/omennm6/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olkyulr",
+      "author": "SilverAsparagus2985",
+      "text": "Agreed. I am the first account manager they hired at my company and I brought strategic integration to the table with deep-seated industry knowledge. They are now scaling it across all clients.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olkyulr/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olllmr6",
+      "author": "Mocktail_Courage6460",
+      "text": "It’s either moving towards commercial or deployment / implementation. 100% agree with you on the commercial argument On the deployment / implementation: AI rollouts tend to focus on short time to value windows but then have a massive upside since plans are usage-based, not seat-based. That’s why we’re seeing more FDE roles, AI deployment strategists etc.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olllmr6/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olo6jd0",
+      "author": "IceSt0rrm",
+      "text": "If you are AI native, and the aim of your solution is to do the work if a person, then CS is core to your strategy. Look at Anthropic's strategy, it's centered on Customer Success, not Account Management. \"Embedded Engineers\" is just code for Customer Success. They are embedding CS in organizations to map their processes and automate those processes with vibe coded or integrated AI solutions. But IMHO, you don't need to be a great engineer to do this effectively, you need to have great communication and listening skills, to understand business process and prompt the AI. You need to be able to build trust in the solution, calm fears, and manage change to implement the solution. Once implemented, you need to communicate the value you are delivering (soft dollar savings) to influence organizational redesign (hard dollar savings). Once you've automated real work and they are organizatioally dependent on that automation, you are a critical solution, that's your retention motion. To me, that sounds like Customer Success. They may give it a different title, but it's still CS. In that world, Account Management is maybe still there for upsell. But the cost in AI is token consumption. In that world, upsell can be automatic (or there is a work stoppage) and as long as the cost of manually doing that work is greater than the token cost + other costs from AI (e.g. customer experience costs) then it makes sense. Now if you are a non-AI company with a land and expand motion that's easy to to get to value (presumably with AI), then I mostly agree that CS will become Strategic AM for that segment.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olo6jd0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oloyibq",
+      "author": "TwentyTwoEightyEight",
+      "text": "But why do you even need AMs for upsells? I’m a CSM and I’m never “salesy” with my customers, but it’s so easy to find the right fit for your customers when you know them. What’s the point of nurturing your customer, finding the upsell, getting buy-in, and then calling on someone else to close the deal and get the comp? When I have a good relationship with the AM, we divide up the work a bit, but it would be easier to just make us all the same role and reduce the size of our book. I only actually need the assistance due to my workload, not because I need any help closing a deal. I get that they’re supposed to be the sales person and I’m the trusted advisor, but when you find the right fit, nothing about the sale leaves a bad taste in the customer’s mouth. The roles are redundant.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/oloyibq/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olps0qv",
+      "author": "Worth_Influence_7324",
+      "text": "I think this pendulum keeps swinging because companies confuse two different questions: who owns the commercial number? who owns the customer getting value? Those can sit in one role, but only if incentives are designed carefully. If the new strategic account role is paid and measured mostly on renewal/expansion, the customer will eventually feel the difference. Every “value” conversation starts to smell like a sales motion. The cleaner model imo is not CS vs AM. It’s one accountable owner with a very explicit operating system around: customer goals adoption risk open commitments commercial moments product gaps who is allowed to ask for budget AI probably removes some coordination work here, but it doesn’t remove the trust problem. Customers still need to know whether the person helping them is actually helping or just working the renewal.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olps0qv/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olu1f4b",
+      "author": "Final_Vegetable_5092",
+      "text": "From the customer’s perspective, the person that sold them the solution is the person that should own the value realization aspect of the relationship too. The model is too scattered right now. Of course if you give an AM high quotas as and a book of 70+ accounts they will not be able to help customers achieve goals, which results into churn. Maybe instead of having the 100% bonus, up the guaranteed salary amount, reduce the bonus, and reduce the book of business, so that customers will get managed right by one person for the entire lifecycle.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olu1f4b/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olq56jh",
+      "author": "Dangerous_Royal3783",
+      "text": "I agree, to an extent. Here's the situation: AI has brought (apparent) efficiencies across work. People can do more in less time, thanks to AI. However, people aren't driven by efficiency gains, they are driven by compensation. The complication is that most Account Managers are compensated on growth, not adoption. A prevalent trend in tech products is self-cannibalisation. Basically, a company offers two competing products that accomplish similar business functions. For ex: Microsoft running both Outlook and Mail applications. Therefore, an AM can sell another product to a customer, who owns a product they have not adopted yet, because they are compensated on new sales, rather than adoption. Another caveat you rightly added is that the role merge strategy would work if and only if an Account Manager has fewer number of accounts. That would mean having more people onboard for one role to cover the overall customer base. Headcount is technically only moving around from one role to another. The function will still remain, but the designation of the person doing the job may change.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olq56jh/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olqidxr",
+      "author": "End_Of_A_Millennium",
+      "text": "I work at a small SaaS ERP company of around 25 people, we don't really have official job titles. We're called \"implementers\" and basically do a mix of: Account management / customer success Business analysis -> Implementation Support Product ownership and some manual testing tasks \"Project management\" The mix depends on each employee's strengths and time of hiring (lol), mine is: Account management + customer success for my customers (ones I started with plus ones handed over to me from others), I handle everything with \"my customers\" after signing the deal w/ the sales execs, so implementation, renewals, and either I or sales exec cross sell and upsell. So my team is called \"support\" cuz we're the only ones answering support calls/messages while the rest (\"product owners\", \"project managers\", \"customization\") either get more customers to implement for OR have \"product ownership\" responsibilities or act as \"project managers\" for other \"implementers\", kinda weird, I know lol.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olqidxr/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olr14fw",
+      "author": "Final_Vegetable_5092",
+      "text": "How do you like the model though?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olr14fw/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_ols9xye",
+      "author": "End_Of_A_Millennium",
+      "text": "Honestly, it depends on the amount of work. Logically it makes sense to have ONE point of contact: it makes the customer's life easier, costs the company less, and is overall easier to track and manage. It might feel like too much when you have too many customers who you have to configure for, train, follow up with and make sure they paid on time. Also customers need time to understand that you need to call tech support on the land line and NOT your AM, lol. Recently, handling renewals has be handed over to the newly hired jack-off-all-trades admin assistant (presumably called HR & collection officer), the AMs only need to make sure the customer is happy or at least contempt cuz if he's not, he ain't payin' lol. Before I started they event had to collect from customers (ones paying cash).",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/ols9xye/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olrsp3t",
+      "author": "Imaginary-Assist-730",
+      "text": "A colleague of mine and I were discussing this very thing - I think this is spot on.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olrsp3t/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olt0ol2",
+      "author": "Effective-Eagle5926",
+      "text": "the part that breaks when CS gets folded into AM is nobody's reading the long-tail support ticket pattern. AMs talk to executive sponsors. sponsors don't see the 30 tickets a month about the same broken integration. that gap used to be where CSMs caught churn-causing friction 6 months early. AI summaries help if someone is reading them. an AM carrying quota usually isn't. what i'd want before believing the new model works: who owns 'i noticed support volume from this account jumped 40% last quarter'? if the answer is 'nobody specifically, the AM will see it in the dashboard,' the account is already churning by the time they look. someone has to be paid to read the ugly data, not just summarize it.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olt0ol2/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olu233h",
+      "author": "Final_Vegetable_5092",
+      "text": "Support should own support items. That KPI should 100% fall on the person managing the support team.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olu233h/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olyfqhh",
+      "author": "TSIASupport",
+      "text": "I think you’re describing a real shift happening across SaaS right now. A lot of companies are realizing customers don’t want five different people reaching out with overlapping responsibilities. What we’re seeing is less about Customer Success disappearing and more about the role evolving. AI is taking over a lot of the operational work like meeting summaries, health monitoring, usage analysis, and identifying risks or expansion signals. That allows account-focused roles to become more strategic and outcome-oriented. The challenge historically was that Account Managers often focused on renewals and upsells, while CSMs focused on adoption and value realization. Now companies are trying to combine those motions into a more unified customer ownership model. That said, the companies doing this well are usually very clear about role definition and customer outcomes. Otherwise it just turns into cost-cutting that overloads AMs and hurts the customer experience. The long-term trend does seem to be fewer, more strategic customer-facing roles supported heavily by AI and automation.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olyfqhh/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_olzxfyk",
+      "author": "stealthagents",
+      "text": "definitely a tricky balance. I've seen similar shifts in companies where they try to combine roles to save costs, but it often backfires. Customers need that dedicated support to really feel valued, and when they're just seen as another sales opportunity, it can lead to frustration and churn. Without proper care, the customer relationship just feels transactional.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/olzxfyk/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_om0kke9",
+      "author": "ninadpathak",
+      "text": "The pattern here is older than SaaS. Companies see CS as a cost center, merge it into Sales to \"align incentives,\" and then wonder why their renewal data looks healthy for two quarters and then collapses. The reason this keeps happening is that the value of CS is invisible on a spreadsheet until it's gone. The real asset isn't the QBR or the health score. It's the one person at the account who tells you the truth about product gaps, implementation struggles, and whether they're actually getting value. That stops happening the moment the customer suspects every conversation is leading to a renewal conversation or an upsell. I've watched this play out twice now. The first quarter after the merger looks great, cost savings show up, leadership calls it a win. When you hit quarter three, your customers have stopped flagging problems because they've learned that flagging problems triggers a sales call. Your CS team is now just a slower path to the same conversations Sales was already having, except now there's one more person in the thread. The companies that figure this out end up rebuilding a separate CS function within 18 months, just with a different name and a more complicated reporting structure.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/om0kke9/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_om0s3k1",
+      "author": "Effective-Eagle5926",
+      "text": "the bit nobody's modeling in this thread is what happens to support when CS folds into AM. in the two orgs i've watched this happen in, the AM didn't want to spend cycles on \"this report is broken\" tickets because it's not expansion work, so they got punted to support. we ended up doing the \"understand the customer's objectives\" piece by accident, through ticket patterns, with none of the relationship context the CSM had. the other gap: CSMs used to catch the \"we're not actually using this\" signal at 60 days. AMs at quota don't have time to notice until the renewal conversation. AI usage dashboards help on paper but in practice they flag adoption gaps the AM doesn't have the bandwidth to act on. so \"AI augments AM\" becomes \"AI generates more alerts the AM ignores.\"",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/om0s3k1/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_om89izj",
+      "author": "sarbeans9001",
+      "text": "coming at this from support rather than CS but the pattern feels pretty familiar. we went through something similar where AI handling repetitive tickets (we use Kayako AI Agent for that, though Fin and Ada are in the same space) basically changed what \"headcount justified\" looks like. once volume reduction is real and measurable, leadership starts asking why certain roles exist as standalone functions. the cycling pattern Willing_Theory5044 mentioned tracks though. the AM-handles-everything model breaks the second book of business gets too big, because commercial pressure always wins when there's a conflict. seen it firsthand. the CSMs who survive these reorgs tend to be the ones who can do both technical and commercial conversations, not just the relationship stuff. TwentyTwoEightyEight basically nailed it tbh. generalist with fewer accounts probably beats two specialists with overlapping ones, if the incentives are set up right.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/om89izj/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_omv4g2r",
+      "author": "jnoble100",
+      "text": "We did a podcast a few months back with an incredible guest on exactly this - a great discussion. Link here if you fancy a listen... https://podcasts.apple.com/gb/podcast/breakthrough-saas-growth-with-the-jasons/id1450638487?i=1000725695548 .",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/omv4g2r/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osxkpoe",
+      "author": "venusianvagabondxv",
+      "text": "I have seen a few different models after doing CS/AM for the last 7 years. My current employer got rid of the CSM and now have AMs (Ent, MM & strategic) strong emphasis on defend and grow through relationship management/health of account. AI has been rolled out to the entire company but especially the revenue team, lots of initiatives/demo sessions on how to utilise within our workflow. In essence, the role has to be tied to business outcomes to survive, and that usually means it has to be a revenue generating role",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/osxkpoe/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "subreddit": "CustomerSuccess"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+    "method": "old_reddit_html"
+  }
+}

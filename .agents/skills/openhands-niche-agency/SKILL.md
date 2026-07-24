@@ -1,11 +1,6 @@
 ---
 name: openhands-niche-agency
-description: >
-  Full business-model kit for the "Done-For-You AI Engineering Team" micro-agency
-  model. Takes a niche (real estate, dental, law, etc.) and produces: validated
-  vertical score, top 5 use cases, pricing tiers, tech stack blueprint, AGENTS.md
-  template, landing page copy, and 7-day first-client plan. Monetization focus —
-  designed to generate $2k–$5k/mo per client running OpenHands + subagents + MCPs.
+description: "Use when someone wants to start or evaluate the OpenHands micro-agency model for a specific SMB niche — includes 'done-for-you AI engineering', 'AI engineering team for [niche]', 'SMB AI agency', 'openhands agency', 'done-for-you AI team', 'SMB niche agency', or any request to build a $2k–$5k/mo managed-AI-team business for real estate, dental, law, HVAC, or other verticals. Also triggers on: \"done-for-you AI team\", \"SMB niche agency\". Produces vertical score, top 5 use cases, pricing tiers, AGENTS.md, landing page copy, and 7-day GTM plan."
 triggers:
   - openhands-niche-agency
   - done-for-you AI engineering
@@ -242,101 +237,13 @@ For each niche, select 6-8 MCP servers from the 14k+ available:
 
 ## Stage 5 — AGENTS.md Template
 
-Generate a niche-specific `AGENTS.md` file. This is what OpenHands reads to understand
-the agent's role, capabilities, and constraints. It is the operational heart of the product.
-
-```markdown
-# AI Engineering Team — [NICHE]
-## Role
-You are a specialized AI engineering team for [niche] businesses. Your job is to
-build, maintain, and operate custom software workflows that replace manual, repetitive
-tasks — so the [niche] owner can focus on [core value of the niche, e.g. "closing deals",
-"treating patients", "practicing law"].
-
-## Capabilities
-- Read and edit code in this repository
-- Run tests and validate outputs before delivering
-- Open pull requests for review
-- Connect to MCP servers: [list the 6-8 servers for this niche]
-- Process documents: [specific doc types for the niche]
-- Communicate via [email/SMS/Slack] when workflows complete or exceptions occur
-
-## Active Workflows
-[List the use cases from Stage 2 — one section per use case]
-
-### [Use Case 1 Name]
-- Trigger: [what starts this workflow]
-- Input: [what the agent reads/receives]
-- Process: [step-by-step what the agent does]
-- Output: [what gets delivered to the client or their clients]
-- Exception: [when to pause and notify the human supervisor]
-
-## Constraints
-- Never take irreversible actions without human confirmation
-  (e.g., don't send mass emails, don't delete records, don't charge cards)
-- Flag any PHI / PII and apply [niche-specific] compliance rules
-- All outputs go to staging for review before going live — unless the operator
-  explicitly enables autopilot for a specific workflow
-- Log every action to [Notion/Postgres/Google Sheet] for the weekly review
-
-## Escalation Protocol
-If any workflow encounters an unexpected state, stop and notify the supervisor via
-[Slack/email/SMS] with: workflow name, step where it stopped, and the data it was
-processing. Do not retry without explicit confirmation.
-
-## Quality Standard
-Before marking any task complete: verify the output matches the expected format,
-check that all required fields are populated, and confirm the downstream system
-received the data. If verification fails, log the failure and escalate.
-```
+> Reference: Read `templates/agents-md-template.md` for the complete AGENTS.md template. Sections: Role, Capabilities, Active Workflows (one per use case), Constraints, Escalation Protocol, Quality Standard. Fill in with niche-specific content from Stages 1-3.
 
 ---
 
 ## Stage 6 — Landing Page Copy
 
-Generate `landing-page.md` with full copy in buyer's language:
-
-### Structure
-
-```
-H1: [Niche-specific claim — not tech jargon]
-   e.g. "Your AI Engineering Team for Real Estate Brokerages"
-   or   "We Build the Software Your Dental Practice Has Been Waiting For"
-
-SUBHEADING: [Pain in their language]
-   e.g. "Custom software you need. Developer costs you can't afford. Not anymore."
-
-SOCIAL PROOF BAR: [3 proof points — use real data from the use case math]
-   e.g. "Replaces $2,000/mo TC fees · Works 24/7 · No long-term contract"
-
-PROBLEM SECTION (3 pains)
-   Headline: "Here's the software problem you've been living with"
-   Pain 1: [Buyer Line from Use Case #1]
-   Pain 2: [Buyer Line from Use Case #2]
-   Pain 3: [Buyer Line from Use Case #3]
-
-SOLUTION SECTION (3 capabilities, in plain language)
-   Headline: "Here's what we build for you"
-   [Capability 1]: [Plain English, 2 sentences, niche language]
-   [Capability 2]: [Plain English, 2 sentences, niche language]
-   [Capability 3]: [Plain English, 2 sentences, niche language]
-
-HOW IT WORKS (4 steps)
-   1. Discovery call (30 min) — you describe the problem in plain English
-   2. We build it in OpenHands — takes 1-2 weeks for a Wave 1 use case
-   3. You review + approve before it goes live — you're in control
-   4. We maintain it, update it, and expand it as you grow
-
-PRICING TABLE
-   [From Stage 3 pricing tiers]
-
-FAQ (5 questions)
-   [From Stage 3 objection handling]
-
-CTA:
-   Primary: "Book a free 30-minute discovery call"
-   Secondary: "See what we've built for [niche] businesses →"
-```
+> Reference: Read `templates/landing-page-copy.md` for the landing page copy template. Structure: hero headline + subheadline, problem statement, solution reveal, 3 key capabilities (with outcome phrases), social proof placeholder, pricing tiers summary, and CTA.
 
 ---
 
@@ -384,33 +291,7 @@ Day 7 — Convert One
 
 ### Content Strategy (X / LinkedIn / YouTube)
 
-**Content angle:** "What my AI engineering team built this week for [niche]"
-
-**10 opening post ideas for [niche]:**
-[Generate 10 specific, concrete post openings using the use cases from Stage 2.
-Each must: start with a buyer pain statement, use buyer language, include ROI math,
-be written for a [niche] owner scrolling their feed — not for a tech audience.]
-
-**Format template:**
-```
-Here's what [specific niche pain] is costing [niche] businesses every month:
-
-[Break it down with numbers]
-
-I built a [plain-English description of the tool] that:
-- [Specific result 1]
-- [Specific result 2]
-- [Specific result 3]
-
-It costs [price]. It replaces [what it replaces].
-
-If you're a [niche] and this is your life, DM me.
-```
-
-**Channel priority for [niche]:**
-- Where buyers actually are (Facebook groups? LinkedIn? local networking?)
-- Identify the 2-3 niche-specific communities and forums
-- One piece of content per week minimum; one case study per month once you have a client
+> Reference: Read `reference/content-strategy.md` for the week-by-week content calendar template across X, LinkedIn, and YouTube. Includes post types, hooks, and cadence for each platform for the first 4 weeks post-launch.
 
 ---
 
@@ -477,6 +358,46 @@ Use `branded-pptx-deck` skill with this structure:
 - Slide 8: The Operator Model — 1-person setup → $50k/mo team
 - Slide 9: Your Vertical Score — why [niche] is the right place to start
 - Slide 10: Next Step — discovery call + 7-day launch plan
+
+---
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+None required. Standalone — can run from niche name alone.
+- `vertical-scorer` — optional upstream: use if niche not already in the 8-vertical cache
+
+### Relationships
+
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `landing-page-gen` | Sequential downstream | when user wants a live landing page from the GTM plan | `gtm-plan.md` + `landing-page.md` (run folder) |
+| `vertical-scorer` | Sequential upstream (optional) | when niche is not in the 8-vertical cache | vertical score (inline or `runs/` file) |
+| `founders-build-stack` | Peer / Alternative | complementary — agency model (sell AI services) vs founder model (build your own SaaS) | — |
+| `ai-use-cases-consultant` | Domain cluster | same AI-use-case scoping domain — this skill goes narrower (SMB niche + OpenHands) | — |
+| `vertical-scorer` | Domain cluster | same vertical-selection domain | — |
+| `ikigai-gamma-slidedeck` | Sequential downstream (optional) | when output should feed into a personal BD positioning deck | run folder artifacts |
+
+### Runtime Preamble
+
+At invocation, surface this if relevant:
+
+> "Is the target niche already in the 8-vertical cache (Real Estate, Dental, Law, E-Commerce, Accounting, Marketing Agencies, Med Spa, HVAC)? If yes, I'll load the score and skip re-scoring.
+> After this run, pipe the GTM plan to `/landing-page-gen` for a live landing page, or to `/ikigai-gamma-slidedeck` for a personal BD deck."
+
+---
+
+## Gotchas
+
+- **Never pitch the tech stack to SMB buyers:** Never use "OpenHands", "subagents", "MCP", or "agents" in any client-facing copy. The buyer's language is "your AI engineering team", "the bot", "the system". Violating this makes the pitch unsellable.
+- **Cache check is mandatory:** The 8-vertical score cache (`runs/2026-06-16-openhands-smb-use-cases/vertical-scores.md`) must be checked before running `/vertical-scorer`. Re-running the scorer for a cached niche wastes tokens and may return inconsistent scores.
+- **Niche concentration rule:** Never run more than one niche simultaneously in the first 90 days. The GTM plan assumes single-vertical focus. Multi-vertical output confuses the content strategy and dilutes outreach.
+- **Healthcare/Legal compliance ceiling:** Niches with regulatory ceilings (HIPAA for healthcare, bar regulations for law) require explicit BAA and compliance notes before ANY client data is processed. Do not omit this even if the vertical scores as a GO.
+- **Wave 2 use cases before first client:** Building Wave 2 use cases before landing the first paying client is a common failure pattern. The pipeline explicitly gates Wave 2 behind first-client proof. Do not surface Wave 2 builds in the GTM plan.
+- **Score below 25 — stop:** A score below 25/35 without a clear moat strategy is a CAUTION verdict. Do not generate a full GTM plan for a CAUTION niche without the user explicitly overriding and naming their moat.
 
 ---
 

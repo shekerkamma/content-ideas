@@ -1,0 +1,52 @@
+# Hyperframe Coverage
+
+- `frame_0001.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0008.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0014.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0025.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0044.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0054.jpg`: diagram; recreated as native PPT concept
+- `frame_0073.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0085.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0092.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0104.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0115.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0128.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0141.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0152.jpg`: diagram; recreated as native PPT concept
+- `frame_0169.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0188.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0204.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0213.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0235.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0242.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0250.jpg`: diagram; recreated as native PPT concept
+- `frame_0268.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0290.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0303.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0311.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0318.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0331.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0338.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0347.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0356.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0363.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0380.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0387.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0393.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0413.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0429.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0438.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0445.jpg`: diagram; recreated as native PPT concept
+- `frame_0454.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0460.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0467.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0475.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0481.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0490.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0499.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0511.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0521.jpg`: diagram; recreated as native PPT concept
+- `frame_0535.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0541.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual
+- `frame_0552.jpg`: talking-head/demo/reference; accounted for; not used as primary client visual

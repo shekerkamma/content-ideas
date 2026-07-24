@@ -1,0 +1,217 @@
+{
+  "post": {
+    "title": "I built an airgapped agent governance system in a week by changing how I use LLMs",
+    "author": "MacFall-7",
+    "score": 4,
+    "content": "I want to share a concrete example of what 100% AI-native workflows can accomplish. Because most discussions still treat LLMs and specialized coding tools as autocomplete for code, but without guardrails. Last week I built a production agent governance system to protect high-value IP from autonomous agents. This was not a demo or a notebook. It is a system I actually trust with sensitive data. The interesting part is not the feature set. It is how it was built. The problem I run agents that analyze unreleased music IP. If an agent hallucinates, chains actions incorrectly, or is prompt-injected into exfiltrating data, the liability is catastrophic. Most existing tools fall into two categories: • Guardrails: regex filters, prompt rules, “don’t say X” • Observability: logs that tell you what leaked after it happened Neither solves containment. The architecture (high level) I ended up with three non-negotiable invariants. Split-brain execution • Agents can only propose actions. • A separate runner executes approved actions. • Agents never execute code directly. Airgap by infrastructure, not policy • Runners execute in Docker with network_mode: none. • No amount of prompt injection can bypass a physical constraint. Stateful behavior analysis • Individual actions are often harmless. • Sequences are not. • Redis tracks temporal patterns, such as reading secrets followed by a delayed network attempt. • Suspicious patterns trigger a human cryptographic challenge. Where AI-native workflows mattered The speed did not come from having Claude write everything. It came from changing the division of labor. I used Claude and Claude Code to: • Generate scaffolding such as FastAPI endpoints, Pydantic models, and React components • Fill in mechanical glue code • Iterate quickly on schemas and edge cases I did not let the model: • Decide invariants • Design trust boundaries • Define threat models • Control execution authority My LLM systems role was to: • Lock invariants first • Treat LLMs as implementation accelerators • Reject anything that violated the containment model Because of that, compressing the timeline did not erode security. It made the system stricter, because there was no incentive to ship now and harden later. The outcome • Fully airgapped execution layer • Stateful detection of multi-step exfiltration • Human-in-the-loop overrides that require deliberate action • Immutable audit trail for every exception It was built solo (with my LLM system) in about seven days, but the more important point is that safety was not traded for speed. The takeaway AI-native development is not about replacing engineers or typing faster. It is about: • Holding invariants constant • Letting models collapse implementation time • Moving human effort up to system design and risk control Most teams I see are using LLMs to move faster inside broken architectures. The leverage comes from redesigning the architecture first, then letting the model help you fill it in. Happy to answer technical questions, but these tools do the work.",
+    "url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+    "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+    "subreddit": "aiagents"
+  },
+  "comments": [
+    {
+      "id": "t1_o72uoqc",
+      "author": "Otherwise_Wave9374",
+      "text": "This is a great writeup, especially the invariants first mindset. \"Split-brain execution\" (agents propose, separate runner executes) feels like the right baseline if you are worried about exfil/prompt injection. The other point that resonates is moving human effort up to trust boundaries and threat modeling, and letting the model accelerate the glue code. I have been collecting similar governance and guardrail patterns for agents here: https://www.agentixlabs.com/blog/",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o72uoqc/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3p5b7f",
+      "author": "Malafa3rd",
+      "text": "Very impressive",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3p5b7f/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3szaru",
+      "author": "saurabhjain1592",
+      "text": "Strong write-up. The split-brain execution and infra-level airgapping stood out. One thing I’m curious about: for the immutable audit trail, what do you actually persist per step so you can answer why an action was admissible at the time it ran (not just what ran)? That’s where we kept losing context in our own systems.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3szaru/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3t7zy9",
+      "author": "MacFall-7",
+      "text": "The proposal context What the agent believed it was doing at the time. Inputs, declared intent, and the bounded capabilities it thought it was operating under. The authorization context The state of the world at the moment the action was approved. Active invariants, trust boundaries, policy versions, and any stateful signals that influenced the decision. The execution context What actually ran, where it ran, and under which physical constraints. The important part is that these are snapshotted at decision time, not reconstructed after the fact. When something is reviewed later, the question isn’t “does this look OK now?” but “was this admissible given what the system knew then?” We deliberately avoid relying on mutable state or replayed reasoning. Every approval is evaluated against the frozen context that existed at that moment.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3t7zy9/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3urg6k",
+      "author": "MacFall-7",
+      "text": "I agree that snapshotting context only solves part of the problem. Once you introduce retries, delayed execution, or operator intervention, admissibility has to behave monotonically or the system becomes impossible to reason about. At a high level, I think about this along three axes. Replay resistance: approvals are bound to a specific decision boundary and cannot be reused once surrounding state has advanced. If the world has moved, the proposal is no longer admissible by construction. Irreversibility classes: actions are explicitly classified as reversible, conditionally reversible, or irreversible. That classification feeds back into approval strictness and retry semantics. Invariant drift between proposal and execution: invariants are treated as versioned commitments, not ambient truths. If the invariant set changes after approval but before execution, execution must revalidate against the new world or fail closed. The unifying idea is that admissibility is not a boolean property of an action. It is a property of an action within a frozen slice of reality. Once you leave that slice, nothing is implicitly grandfathered. That framing has kept the system legible even under distributed retries and operator intervention. Happy to keep swapping notes at the conceptual level.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3urg6k/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3wvyxr",
+      "author": "MacFall-7",
+      "text": "We treat operator intervention as a new admissibility boundary, not a continuation of the existing one. The moment a human steps in, the prior slice is considered closed. Whatever happens next is evaluated against a fresh decision context with explicit intent, updated invariants, and a new authorization surface. That avoids the ambiguity of trying to “patch” an in-flight approval and keeps the audit trail legible. There’s no notion of partially advancing a slice. Either you remain inside it, or you leave it entirely. Practically, that means intervention always advances state, even if the requested outcome looks similar to the original proposal. We bias hard against implicit continuity because that’s where systems quietly accumulate undefined behavior. Treating intervention as a first-class boundary keeps retries, overrides, and recovery paths understandable, and it prevents human judgment from smearing across machine decisions in ways you can’t reason about later.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3wvyxr/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3wprtt",
+      "author": "TroubledSquirrel",
+      "text": "This is easily the best take on agentic security I’ve seen in a while. Everyone is obsessed with prompt engineering their way out of jail, but airgap by infrastructure, not policy is the only way to actually sleep at night when you're dealing with high value IP. Using Redis for stateful behavior analysis is a brilliant move treating agent safety like fraud detection rather than just a keyword filter is a massive leap forward. Quick question on the split-brain execution, how are you handling the latency between the agent proposal and the runner execution? I imagine for unreleased music, the friction of a human cryptographic challenge is a feature, not a bug, but I'm curious if you found a specific sweet spot in the workflow where the security doesn't completely throttle the speed gains you got from the AI-native build.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3wprtt/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3wuvg2",
+      "author": "MacFall-7",
+      "text": "We stopped treating latency as a single metric and started treating it as a function of risk. Most proposals never incur human friction. The agent proposes, admissibility is evaluated, and the runner executes immediately inside hard constraints. On that path, the split-brain boundary doesn’t meaningfully affect end-to-end time. Latency only appears when something crosses a risk threshold, and at that point it’s intentional. For unreleased music or other high-value IP, a human cryptographic challenge is a feature, not a failure mode. The proposal-to-execution path stays cheap and asynchronous, while escalation is explicit and rare. Security doesn’t slow the system by default. It only intervenes in the cases where moving fast would be the wrong outcome.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3wuvg2/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3wyslg",
+      "author": "TroubledSquirrel",
+      "text": "That’s a really elegant way to frame it... latency as a function of risk. So you basically turn your governance layer into a high-pass filter rather than a bottleneck if Im understanding that correctly. The cheap and asynchronous proposal to execution path is the real winner here. Most people over engineer for the 1% edge case (I am probably the worst offender) and end up killing the UX for the other 99%, rare escalation under explicit conditions is really damn brilliant for and makes the system actually usable at scale. Its super reminiscent of high frequency trading systems or modern clearinghouses handle risk with automatic execution until a circuit breaker trips. Are you finding that the admissibility evaluation is evolving into its own specialized model or agent, or are you keeping that logic strictly deterministic for now?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3wyslg/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3xfuhp",
+      "author": "MacFall-7",
+      "text": "We’ve kept admissibility strictly deterministic so far, and that’s intentional. The moment admissibility itself becomes agentic or probabilistic, you lose the ability to reason cleanly about why something was allowed or blocked at a specific boundary, which undermines the whole governance layer. Models are useful for surfacing context or signals upstream, but the final admissibility decision needs to be legible, replayable, and fail-closed under stress. If it ever evolves, it would be as a bounded, advisory component feeding a deterministic core, not as an autonomous decision-maker.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3xfuhp/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3zzple",
+      "author": "TroubledSquirrel",
+      "text": "So true. As agents move into legal, medical, and finance, everyone is pushing for 'transparency' on how decisions are reached, but almost no one is asking if the agent should have been making the call in the first place. I've been so careful to bake in specific limitations. Like there’s a conflict between two memories, the model isn't allowed to 'infer' the truth. It has to flag it for human review. Same for missing info or tools for a task. It's required to report that state. I've yet to have a single person tell me they'd rather an agent guess over telling them it's not capable of accurately completing a task... Sometimes I feel like 80% of what I do is build digital corrals to keep agents from \"helping\" people straight into a lawsuit, unemployment, or bankruptcy.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3zzple/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o40ajtx",
+      "author": "MacFall-7",
+      "text": "Most conversations stop at explainability and skip the prior question of admissibility. The hard part is not making agents transparent, it is enforcing limits: knowing when inference is disallowed, when uncertainty has to be surfaced, and when escalation is required. Once “not allowed to decide” is treated as a real system state instead of a failure, a lot of downstream safety problems disappear. The work ends up looking less like intelligence and more like deliberately adding friction where automation would otherwise cause harm.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o40ajtx/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o41319g",
+      "author": "TroubledSquirrel",
+      "text": "That’s a solid articulation. Treating admissibility as a first-class citizen definitely makes downstream shenanigans less likely. My approach is a bit more localized. I don’t use it as a global heuristic constraint because it doesn't quite fit my specific use case, but I enforce those boundaries strictly at the local level. Outside of that it's intentionally heuristic. Relevance is allowed to be fuzzy and occasional uncertainty is inevitable Which makes agentic control risk I cannot justify yet. At any rate, I appreciate the insight on the split-brain execution. It’s definitely given me some ideas for hardening my own trust boundaries.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o41319g/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3xgy5c",
+      "author": "MacFall-7",
+      "text": "We make the boundary explicit, but we treat the explicitness as a semantic guarantee rather than a specific artifact. Slice closure always results in a new decision context that cannot be confused with the prior one, and nothing from the previous slice is implicitly reusable. Whether that manifests as versioned intent, refreshed authority, or a hard transition in the state machine is an implementation detail, but the invariant is the same: once a slice is closed, it is no longer addressable. That’s what prevents operators from accidentally smearing uncertainty forward when the prior slice ended in an unknown external state. Any attempt to continue requires an explicit re-entry into a new admissibility boundary, with ambiguity surfaced and resolved up front rather than carried silently.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3xgy5c/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o3xf14t",
+      "author": "MacFall-7",
+      "text": "We treat the threshold as a structured boundary rather than a tunable score. There’s a static floor based on action class and irreversibility, below which nothing ever auto-executes, and everything else is evaluated relative to a frozen decision slice rather than learned over time. We’re deliberately cautious about adaptive thresholds because anything that silently shifts becomes gameable, especially under adversarial or pathological inputs. The low-risk path stays cheap by construction, not by optimization, and escalation is triggered by crossing explicit invariants, not by accumulating soft signals. That way the system stays legible, hard to manipulate, and predictable under pressure.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3xf14t/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o6xfhds",
+      "author": "Otherwise_Wave9374",
+      "text": "Split-brain execution + airgapped runners is a really clean way to make \"agent safety\" concrete instead of vibe-based. I like that you framed it as invariants first, LLM as implementation accelerator second. How are you handling tool approval, like allowlists per agent or per task type? Been reading a bunch about agent governance / containment patterns lately, some notes here too: https://www.agentixlabs.com/blog/",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o6xfhds/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o6yd60q",
+      "author": "MacFall-7",
+      "text": "Invariants first means the constraints exist before any model touches the system. The model accelerates implementation inside a bounded space, not an open one. On tool approval: the audit agent handles it at the task type level, not per agent. Rules are scoped by what a tool does, not which agent calls it. The same rule fires regardless of which agent triggers the exec call. Per-agent allowlists make sense when agents have genuinely different trust levels, an orchestrator vs a worker. Per-task-type enforcement is cleaner when the risk is in the operation itself regardless of who's calling it. The harder question is what happens when the same agent needs different permissions in different contexts. That's where session-scoped capability envelopes make more sense than static allowlists.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o6yd60q/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o6yayng",
+      "author": "Otherwise_Wave9374",
+      "text": "This is the kind of agent post I wish there were more of, threat model first, invariants locked, then let the LLM speed up implementation. Split-brain execution and a real infra airgap (network_mode none) is a solid answer to prompt injection hand-waving. The \"stateful behavior\" angle is interesting too, sequences matter more than individual tool calls. Ive been collecting similar governance/guardrail patterns and tradeoffs here: https://www.agentixlabs.com/blog/ . How are you handling artifact access, like allowing read-only mounts vs copying inputs into the sandbox each run?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o6yayng/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o6ygibc",
+      "author": "MacFall-7",
+      "text": "Copy inputs into the sandbox each run. Mounts introduce state drift and the receipt needs to describe a fixed artifact, not a live path.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o6ygibc/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    },
+    {
+      "id": "t1_o73hjqe",
+      "author": "Otherwise_Wave9374",
+      "text": "The split-brain invariant (agents propose, separate runner executes) is such a strong pattern, especially for anything that touches sensitive data. Infrastructure-enforced airgaps beat policy every time. The stateful sequence detection bit is also interesting, a lot of people only think in single-step terms and miss the \"benign action sequence becomes exfil\" problem. If you ever do a deeper writeup on the threat model and how you test the governance layer (prompt injection suites, red team scripts, etc), I have been collecting similar agent safety/guardrail notes here: https://www.agentixlabs.com/blog/ - would love to compare approaches.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o73hjqe/",
+      "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "subreddit": "aiagents"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+    "method": "old_reddit_html"
+  }
+}

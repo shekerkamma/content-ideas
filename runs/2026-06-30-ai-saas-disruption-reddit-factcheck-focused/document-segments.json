@@ -1,0 +1,18 @@
+{
+  "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+  "extraction_method": "plain-text",
+  "segments": [
+    {
+      "id": "segment-001",
+      "locator": "Section 2",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "text": "# Reddit Validation Claims: AI SaaS Disruption"
+    },
+    {
+      "id": "segment-002",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-reddit-claims.md",
+      "text": "## Claims To Validate Against Reddit\n\n1. SaaS buyers and operators complain about per-seat or license-based pricing when software usage no longer maps cleanly to human users.\n\n2. Customer support and service-desk teams are credible early adopters for AI agents because their work is high-volume, repetitive, and measurable by resolved tickets or completed conversations.\n\n3. Buyers are skeptical of fully autonomous AI support agents because of quality failures, escalation issues, hallucinations, compliance concerns, or customer-experience risk.\n\n4. Practitioners compare AI support agents against existing tools such as Zendesk, Intercom, Salesforce Service Cloud, ServiceNow, outsourced support, or manual workflows.\n\n5. A useful AI-agent SaaS wedge needs auditability: action logs, handoffs, attribution, quality review, and human override, not just automation.\n\n6. Outcome-based pricing for AI support agents can be attractive, but buyers may worry about how an outcome is defined, measured, disputed, or billed."
+    }
+  ]
+}

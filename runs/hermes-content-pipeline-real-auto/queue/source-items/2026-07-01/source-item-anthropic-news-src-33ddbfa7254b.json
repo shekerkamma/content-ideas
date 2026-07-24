@@ -1,0 +1,18 @@
+{
+  "id": "src-33ddbfa7254b",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Introducing the Model Context Protocol \\ Anthropic",
+  "url": "https://www.anthropic.com/news/model-context-protocol",
+  "canonical_url": "https://www.anthropic.com/news/model-context-protocol",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:22.371826+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "To help developers start exploring, ... popular enterprise systems like Google Drive, Slack, GitHub, Git, Postgres, and Puppeteer. Early adopters like Block and Apollo have integrated MCP into their systems, while development tools companies including Zed, Replit, Codeium, and Sourcegraph are working with MCP to enhance their platforms—enabling AI agents to better ...",
+  "raw_content_path": null,
+  "dedupe_key": "e283b9c34207",
+  "status": "new",
+  "errors": []
+}

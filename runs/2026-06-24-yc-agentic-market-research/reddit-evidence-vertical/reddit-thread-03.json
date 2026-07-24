@@ -1,0 +1,317 @@
+{
+  "post": {
+    "title": "What software do you actually use to manage your rentals?",
+    "author": "Nice-Criticism-2619",
+    "score": 2,
+    "content": "Hey Reddit! I’m curious about what tools you guys actually use to manage your properties day-to-day. Whether it’s tracking rent payments, organizing maintenance requests, keeping tenant info in order, or just staying on top of paperwork — what’s working for you? Do you stick with spreadsheets or paper? Are there apps or software you swear by? Anything that’s been a total headache or life-saver? I’m trying to get a sense of what landlords find useful vs. what’s overhyped. Would love to hear your honest opinions — good, bad, and ugly! Thanks in advance for sharing your experiences.",
+    "url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+    "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+    "subreddit": "PropertyManagement"
+  },
+  "comments": [
+    {
+      "id": "t1_nh1500y",
+      "author": "secondphase",
+      "text": "DO YOU STICK WITH SPREADSHEETS OR PAPER?! My guy, we have sticks that we leave in the fire pit. Then on the first of the month we use the charred ends of the stick to write the rents that are owed on the cave wall. When tenants submit payments, we cross them off using the same stick. Then we go kill a mammoth. This is an oversaturated market, we do not need more technology. And based on the fact that you posted this exact question in 3 subs, I'm assuming this is a start at an ill-advised attempt to create MORE software to sell to us. No thanks.",
+      "score": 17,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1500y/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh1p18j",
+      "author": "unsuspectinggoose",
+      "text": "I agree with the oversaturated part. There are SO many options that are all virtually the same, the main difference being the pricing😭 I've seen so many vibe-coders creating what they think is revolutionary (but has actually been done countless times before lol).",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1p18j/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_ohcb64e",
+      "author": "Compducer",
+      "text": "What do you use, if any software?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/ohcb64e/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh11loy",
+      "author": "Jivkost1996",
+      "text": "I don’t manage rentals personally, but I’ve been working with property management clients for about 7 years now, so I get to see behind the curtain of what they actually use day-to-day. Most small landlords start with spreadsheets because it feels “good enough,” but it gets messy fast once you’ve got more than a couple doors. The ones that really scale usually end up on software like Buildium, AppFolio, Rent Manager, or Propertyware, mainly because of how they handle online rent payments, maintenance tracking, and accounting all in one place. That said, I’ve also seen plenty of people overpay for bloated platforms they don’t fully use. Sometimes something lighter like TenantCloud, Avail, or even a combo of QuickBooks + Google Sheets works better depending on portfolio size. The biggest life-saver across the board is automated rent collection. Chasing down payments manually is what drains the most time/energy, and once clients move to a system where it’s auto-drafted and tracked, it’s night and day. Curious to hear what others here are using, I’m always comparing notes with my clients.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh11loy/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh17k4t",
+      "author": "wethethreeandyou",
+      "text": "How do those pm clients you know deal with reconciliation?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh17k4t/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh1b6b7",
+      "author": "Jivkost1996",
+      "text": "Most of them just use the reconciliation tools built into the software (Buildium, AppFolio, etc.) since those are designed for trust accounts. A few still keep QuickBooks in the mix and have their bookkeeper double-check everything monthly, but once it’s set up right, the software handles most of it.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1b6b7/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nhfy54u",
+      "author": "wethethreeandyou",
+      "text": "from what i understand from my ppl its still a huge pita even with those apps.. the reason i ask is because I'm building a tool that solves for this in a very cool way. I'd love to show it to you if you'd be willing to give me some feedback on it?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nhfy54u/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh1walp",
+      "author": "Jug888",
+      "text": "Do not use door loop",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1walp/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nisf8wb",
+      "author": "2v2l2nch2",
+      "text": "why?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nisf8wb/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nivaiuv",
+      "author": "Jug888",
+      "text": "Any pm software you can’t pay vendors through or have them accept a work order is a non functional software for any professional organization. I’m almost one hundred percent sure they are running a scam, their marketing is incredible but the product has fallen short in every way, the rental applications don’t even show the address and unit number on the first page just makes you enter your email like you are subscribing to a newsletter. As a certified high performing property manager door loop has been incredibly difficult to use to run a somewhat efficient operation. The tenants also hate it. You have to teach the door loop staff how to manage property so they recommend to the software engineers what to put in next to make it even capable of being a professional software. It’s been a nightmare so far.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nivaiuv/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nivb3w6",
+      "author": "2v2l2nch2",
+      "text": "Appreciate the response. Any alternatives you recommend?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nivb3w6/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nivb5x7",
+      "author": "Jug888",
+      "text": "AppFolio all day if you have the unit count",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nivb5x7/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nisfe03",
+      "author": "2v2l2nch2",
+      "text": "I'm exploring options now and DoorLoop is on my list.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nisfe03/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nvrehim",
+      "author": "standishcouple",
+      "text": "DoorLoop is ok for \"managing\" the rentals but the accounting side of it is very rudimentarty and almost useless. We just started Buildium and seems worlds apart better.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nvrehim/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh4hgcy",
+      "author": "Concern-6969420",
+      "text": "Leasing agent here. We use AppFolio now and it’s okay, sort of dated in its aesthetic. But we just started the process of switching to DoorLoop and the transition was NOT seamless. I do not suggest DoorLoop so far!",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh4hgcy/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh1foyx",
+      "author": "homeladder",
+      "text": "Appfolio, LeadSimple, and ShowMojo is our tech stack",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1foyx/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh4eee4",
+      "author": "Mugz5603",
+      "text": "I’m paying for leadsimple for a year now and haven’t used it. Mainly my fault but I’m pissed I’m throwing $900 out the window a month. But 2026 will be the year I put it to work",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh4eee4/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh6rj7f",
+      "author": "homeladder",
+      "text": "Highly recommend taking advantage of all its features. It really helps you scale while delivering consistent customer experiences. We used an outside consulting company to help us turn on automations and conditional logic, which opened up even more possibilities.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh6rj7f/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nhgbcyt",
+      "author": "Mugz5603",
+      "text": "Do you have the name of the outside consultant",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nhgbcyt/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh13whb",
+      "author": "kgrav22",
+      "text": "Don’t mess around with spreadsheets! Buildium is my favorite",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh13whb/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh1myuy",
+      "author": "Responsible_Equal629",
+      "text": "Yardi is understood as the industry leader for managing all of the above however may be more geared to larger landlords.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1myuy/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh1plnj",
+      "author": "unsuspectinggoose",
+      "text": "Personally, I use Innago. Free, easy, customizable. Don't overthink it.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1plnj/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh5h2sx",
+      "author": "kiriguy",
+      "text": "Doesn’t bank sync. I really need it. How do you reconcile ?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh5h2sx/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh68g3c",
+      "author": "unsuspectinggoose",
+      "text": "They have pretty seamless API options. I use an accounting software called Ledgre, which is really cheap ($10/month) & it has bank sync. Cheap and incredibly effective setup.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh68g3c/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh3s9nt",
+      "author": "Filandro",
+      "text": "Appfolio + ShowMojo is weapons-grade combo. Tenant Cloud nice, too.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh3s9nt/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh4ndhx",
+      "author": "ProofMap8034",
+      "text": "Appfolio!",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh4ndhx/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh1eplw",
+      "author": "Randomly_Real420",
+      "text": "We use Buildium",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh1eplw/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh37qmc",
+      "author": "AcceptableFan8934",
+      "text": "Why no door loop?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh37qmc/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nh5cmw2",
+      "author": "LetMany4907",
+      "text": "Tried a bunch of different tools before landing on RentPost. It’s simple enough that I don’t feel buried in features I’ll never use, but covers rent collection and maintenance tickets smoothly. Before that, I was drowning in emails and paper notes. Big difference once it was all centralized.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nh5cmw2/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "id": "t1_nhi1377",
+      "author": "yyyk49",
+      "text": "I started the same way you did: Excel + paper receipts + way too many texts/emails from tenants. Barely worked For me the biggest difference wasn’t the “all-in-one” amazing tool, it was just getting rent + expenses + docs under 1 app so I wasn’t juggling 1000 diff apps. Once I had that, late rent was easier to track, and tax time wasn’t a nightmare Everyone's got different pain points though... some want full-blown platforms, others just want something simple that won’t get in the way. What’s the one thing you’d want solved first: rent, expenses, or maintenance?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/nhi1377/",
+      "source_url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "subreddit": "PropertyManagement"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+    "method": "old_reddit_html"
+  }
+}

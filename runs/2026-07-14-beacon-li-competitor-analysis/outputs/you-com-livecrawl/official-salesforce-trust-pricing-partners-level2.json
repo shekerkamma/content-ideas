@@ -1,0 +1,137 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/data360_security_architecture",
+        "title": "Data 360 Security Architecture | Data 360 and Integration | ...",
+        "description": "Salesforce Data 360 transforms how enterprises connect, harmonize, and activate customer data at scale. Its true strength, however, lies in how secure",
+        "favicon_url": "https://you.com/favicon?domain=architect.salesforce.com&size=128",
+        "snippets": [
+          "At Salesforce, he serves as a trusted advisor to customers and a key leader in the Security and Compliance Customer Trust function within the CISO organization. Previously, Krishna spent 10 years at Cisco, leading security architecture across IAM, network security, and PKI, and driving key certifications including ISO 27001, SOC 1–3, PCI, FedRAMP, and FIPS 140-2.",
+          "The next step is continuous modernization — embedding audit automation, policy enforcement, and encryption lifecycle management into day-to-day operations. As enterprises evolve toward agentic, AI-driven architectures, the same principles that protect data today will form the backbone of AI governance tomorrow — ensuring that every model, agent, and decision is explainable, policy-aware, and compliant by design. Ultimately, trust becomes the new currency of digital transformation.",
+          "SOC 1, SOC 2, and SOC 3: Independent reports confirming the design and operational effectiveness of Salesforce’s security and privacy controls. PCI DSS: Ensures the secure processing and storage of payment card information. FedRAMP High & DoD Impact Level 4: Certifies Salesforce Government Cloud for use by U.S.",
+          "Compliance Alignment: Satisfies security standards like ISO 27001, SOC 2, and FedRAMP."
+        ]
+      },
+      {
+        "url": "https://www.salesforce.com/news/stories/fedramp-high-agentforce-salesforce-platform/",
+        "title": "Salesforce Powers Limitless Government Capacity and Efficient ...",
+        "description": "This authorization enables U.S. public sector organizations to improve constituent experiences and gain higher levels of efficiency by accessing a",
+        "thumbnail_url": "https://www.salesforce.com/news/wp-content/uploads/sites/3/2025/06/Salesforce-Unites-AI-Agents-Apps-and-Data-on-a-Secure-U.S.-Public-Sector-Platform-with-FedRAMP-High-Authorization.png",
+        "original_thumbnail_url": "https://www.salesforce.com/news/wp-content/uploads/sites/3/2025/06/Salesforce-Unites-AI-Agents-Apps-and-Data-on-a-Secure-U.S.-Public-Sector-Platform-with-FedRAMP-High-Authorization.png",
+        "page_age": "2025-08-18T19:56:16",
+        "favicon_url": "https://you.com/favicon?domain=www.salesforce.com&size=128",
+        "snippets": [
+          "Salesforce partner ecosystem helps government leaders get up and running fast: U.S. public sector leaders can speed up implementation and increase ROI by working with trusted partners who can help them quickly make the most of Salesforce technology. Accenture Federal Services: “Accenture Federal Services’ highly skilled Agentforce practitioners have built a portfolio of agents designed to deliver on federal priorities including expediting government permits and reinventing contact centers. Our Federal customers can see greater impact and efficiency with Agentforce and achieving the FedRAMP High authorization is a game-changer to power agencies toward these goals.” – Aaron Jackson, Technology Growth Platform Leader and Senior Managing Director at Accenture Federal Services",
+          "Salesforce products including Agentforce, Data Cloud, Marketing Cloud, and Tableau Next have achieved FedRAMP High authorization, uniting AI agents, apps, and data for U.S. public sector organizations for the first time · The Salesforce partner ecosystem, including Accenture Federal Services and AWS, help make implementation fast and development simple",
+          "What is now authorized: The following Salesforce products are now FedRAMP High authorized: Agentforce increases service capacity with digital labor that can complete tasks with speed and scale while continuously learning and adapting. Data Cloud enables public sector organizations to break down data silos and harmonize information from Customer 360 apps, data lakes, warehouses, and business applications — regardless of format — using low-code tools and Zero Copy. Marketing Cloud builds trusted relationships through personalized engagement and communication across the entire outreach lifecycle.",
+          "Digital Engagement empowers government contact centers to compliantly scale consistent and personalized experiences across trusted digital channels. Key Salesforce capabilities are already FedRAMP High authorized. What sets Salesforce apart: Unlike other AI agents or limited LLMs, ‌Agentforce has built-in trust standards and a unified approach that meets FedRAMP High security controls."
+        ]
+      },
+      {
+        "url": "https://www.salesforce.com/company/legal/trust-and-compliance-documentation/",
+        "title": "Salesforce Trust and Compliance Documentation | Salesforce",
+        "description": "Explore all Salesforce trust and compliance documentation and information, including security, architecture, subprocessors, and third-party terms.",
+        "thumbnail_url": "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/06/legal-og.jpg?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/06/legal-og.jpg?w=1024",
+        "favicon_url": "https://you.com/favicon?domain=www.salesforce.com&size=128",
+        "snippets": [
+          "The Notices and License Information (“NLI”) which describes the features, restrictions and notices associated with any: • Information sourced from third parties or public sources and provided to customers via these services, • Functionality that allows customers to interact with social media, other websites, and/or non-Salesforce applications, including licensor terms, and • Desktop and mobile device software applications provided in connection with these services.",
+          "The Security, Privacy, and Architecture (“SPARC”), which describes: • The architecture of the services, • The security and privacy related audits and certifications received for the services, and • The administrative, technical and physical controls applicable to these services.",
+          "The service and features branded as “Agentforce” including:"
+        ]
+      },
+      {
+        "url": "https://compliance.salesforce.com/en/documents/a006e00001ANHpZAAX",
+        "title": "SOC 2 Report - OpenAI - Salesforce Compliance Site",
+        "description": "View details and download versions for the document: SOC 2 Report - OpenAI.",
+        "favicon_url": "https://you.com/favicon?domain=compliance.salesforce.com&size=128",
+        "snippets": [
+          "The MuleSoft Government Cloud is a secure, FedRAMP-compliant deployment environment that enables U.S. Government agencies to use t · Applicable to the services branded as Tableau Next, including the underlying Data Cloud, Tableau Semantics and Agentforce Services.",
+          "Applicable to the services and features branded as: Agentforce (collectively, \"Agentforce\") which includes the following features: Agentforce Assistant, Agentforce Sales Coach, Agentforce SDR, Agent"
+        ]
+      },
+      {
+        "url": "https://compliance.salesforce.com/en/documents/a005A00000jGuSUQA0",
+        "title": "SOC 2 Report - Government Cloud Plus - Salesforce Compliance Site",
+        "description": "View details and download versions for the document: SOC 2 Report - Government Cloud Plus.",
+        "favicon_url": "https://you.com/favicon?domain=compliance.salesforce.com&size=128",
+        "snippets": [
+          "Granting Access: Upon receiving the notification from the FedRAMP PMO, Salesforce will grant you access to the Public Sector Document Portal. For State, Local, Quasi-Governmental Agencies and Implementation Partners:",
+          "Submit the Completed Form: Email the completed form to the email address, package-access@fedramp.gov, shown on the form.",
+          "You must have a .gov or .mil email address to access a FedRAMP Security Package.",
+          "Wait for Notification: Once the FedRAMP Program Management Office (PMO) reviews and processes your request, Salesforce will receive a notification."
+        ]
+      },
+      {
+        "url": "https://compliance.salesforce.com/en/documents/a006e000011Py43AAC",
+        "title": "SOC 2 Report - Amazon Web Services (AWS) - Salesforce Compliance Site",
+        "description": "View details and download versions for the document: SOC 2 Report - Amazon Web Services (AWS).",
+        "favicon_url": "https://you.com/favicon?domain=compliance.salesforce.com&size=128",
+        "snippets": [
+          "Applicable only to the services branded as MuleSoft Government Cloud. The MuleSoft Government Cloud is a secure, FedRAMP-compliant deployment environment that enables U.S.",
+          "Applicable to the services branded as Tableau Next, including the underlying Data Cloud, Tableau Semantics and Agentforce Services.",
+          "Applicable to the services and features branded as: Agentforce (collectively, \"Agentforce\") which includes the following features: Agentforce Assistant, Agentforce Sales Coach, Agentforce SDR, Agent"
+        ]
+      },
+      {
+        "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/platform-transformation",
+        "title": "The Salesforce Platform - Transformed for Tomorrow | Get Started ...",
+        "description": "Over two decades ago, Salesforce pioneered the first multitenant cloud platform, setting a precedent in the industry. Since then, Salesforce has evolv",
+        "favicon_url": "https://you.com/favicon?domain=architect.salesforce.com&size=128",
+        "snippets": [
+          "Salesforce adheres to over 40 security and compliance standards such as PCI/DSS, GDPR, HIPAA, FedRamp, and more. Key security principles include Zero Trust Architecture (ZTA) and end-to-end encryption, ensuring the protection of customer data across all processing stages.",
+          "Rapid advancements in AI, including machine learning, generative AI, and agentic experiences. Increased data residency and regulatory requirements across industries and countries.",
+          "Apps and Industries: Provides a suite of customizable apps and industry-specific solutions built on the platform’s integrated capabilities, leveraging the full range of lower-layer functionalities, and with deeply integrated AI agents. Salesforce has been developing global data center infrastructure for nearly 25 years, predating many current hyperscalers and IaaS vendors. Hyperforce, the current generation of Salesforce’s infrastructure evolution, is designed to operate across multiple public cloud providers worldwide. It’s tailored to meet customer needs for elastic B2C scale, global data residency, enhanced availability, top-tier security, and regulatory compliance.",
+          "In response to these changes, particularly the seismic shift of AI and its impact on businesses, Salesforce has completely transformed its platform from the ground up, laying the groundwork for the next generation of applications and customer use cases, all while upholding our trust goals. The launch of Agentforce at Dreamforce 2024 and the diagram below represents the culmination of this extensive effort, involving thousands of Salesforce Technology and Product organization team members."
+        ]
+      },
+      {
+        "url": "https://www.salesforce.com/en-us/wp-content/uploads/sites/4/documents/legal/misc/salesforce-security-privacy-and-architecture.pdf",
+        "title": "​Salesforce Services and other services and features​ ...",
+        "description": "​Salesforce Services and other services and features​ ​Security, Privacy​ · ​and Architecture​",
+        "page_age": "2026-06-19T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.salesforce.com&size=128",
+        "snippets": [
+          "​3402), SOC 2 and SOC 3 reports are available for download on Salesforce’s compliance website.​ · ​●​ ​Information System Security Management and Assessment Program (ISMAP)​: ISMAP is a​ · ​program that was established to assess and register cloud services that meet security criteria​ · ​defined by the Japanese government. This audit is undertaken annually.",
+          "​to certain Covered Services and features. Information about security and privacy-related audits and​ · ​certifications received by AWS, including ISO 27001 certification and SOC reports, is available from the​",
+          "​and features. Information about security and privacy-related audits and certifications received by Heroku,​ · ​including ISO 27001 certification and SOC reports, is available in the “​Heroku Security, Privacy and​",
+          "​of SOC 1 (SSAE 18 / ISAE 3402), SOC 2 or SOC 3 audits with the exclusion of Communications​"
+        ]
+      },
+      {
+        "url": "https://www.salesforce.com/en-us/wp-content/uploads/sites/4/documents/legal/misc/trust-and-compliance-change-log.pdf",
+        "title": "Trust & Compliance Home Page Change Log Table of Contents 1",
+        "description": "Trust & Compliance Home Page · Change Log Table of Contents",
+        "page_age": "2025-09-16T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.salesforce.com&size=128",
+        "snippets": [
+          "Audits and Certifications: Clarified which audits and certifications apply to Commerce Marketplace. ... User Authentication: Noted that passwords are encrypted for Commerce Marketplace. ... No changes. ... No changes. ... Organization Controls (SOC) reports.",
+          "Audits and Certifications: Einstein Bots, Einstein Case Wrap-up, Einstein Recommendation Builder, and · Einstein Reply Recommendation added to ISO 27001/27017/27018 certification; and \"Einstein Case Wrap- up, Einstein Recommendation Builder, and Einstein Reply Recommendation added to SOC 2.",
+          "Audits & Certifications: Amended to include SOC Reports and ISO 27001/27017/27018 Certificates.",
+          "Audits and Certifications: Managed Runtime is excluded from the ISO and SOC report certifications."
+        ]
+      },
+      {
+        "url": "https://www.salesforce.com/platform/cloud-data-security/cloud-security-framework/",
+        "title": "Top 7 Most Common Cloud Security Frameworks | Salesforce",
+        "description": "Cloud security frameworks ensure data protection and compliance. Learn about the 7 most common frameworks and how Salesforce optimizes security",
+        "thumbnail_url": "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/05/marquee-blade-image-SEO-Articles-LP-Image-Assets-–-What-Is-Cyber-Resilience-and-How-Does-It-Work_-A-Complete-Guide-1440x1440-1.png?w=1024",
+        "original_thumbnail_url": "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/05/marquee-blade-image-SEO-Articles-LP-Image-Assets-–-What-Is-Cyber-Resilience-and-How-Does-It-Work_-A-Complete-Guide-1440x1440-1.png?w=1024",
+        "page_age": "2025-05-16T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.salesforce.com&size=128",
+        "snippets": [
+          "Compliance support: NIST 800-53 underpins other standards like FedRAMP and FISMA and supports internal audit and governance efforts. Implementation: Organizations should select appropriate controls based on their system categorization (low, moderate, or high), and use CSPM tools and internal assessments to monitor and enforce them. Stay ahead of AI regulations and maintain customer trust with the Regulations Whitepaper.",
+          "The Salesforce Platform also supports secure development for your apps and Agentforce, so your teams can build confidently without compromising compliance · Hyperforce boosts global security and performance by deploying Salesforce in major public cloud infrastructure across regions — while keeping data residency and regulatory requirements in check.",
+          "That’s why matching your cloud security approach to a trusted platform matters. The Salesforce Platform offers built-in security features to help you meet leading cloud security standards — all while staying flexible enough to evolve with your business. Salesforce gives you enterprise-grade security tools to help meet compliance requirements and protect sensitive data from day one. Salesforce Shield brings together field-level encryption, event monitoring, and audit trails to support compliance with regulations like GDPR and HIPAA.",
+          "Privacy Center helps automate data rights management and consent tracking, so you can follow changing global privacy laws while building trust with customers. Data Mask & Seed protects Sandbox environments by masking sensitive data and providing realistic test data for secure development and QA workflows. Backup & Recover automatically backs up your Salesforce data and metadata. This allows for faster recovery, which reduces downtime. Archive boosts performance by archiving older data — while still keeping it easily accessible for audits and compliance needs."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:salesforce.com security trust SOC 2 ISO FedRAMP SSO RBAC audit logs data residency pricing partners AppExchange AI agents Service Cloud",
+    "search_uuid": "faa705af-f864-4d53-b9c9-2aeb65951296",
+    "latency": 0.6141829490661621
+  }
+}

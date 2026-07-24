@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "brd.workflow.v0.1",
+  "identifier": "urn:air:anthropic.com:workflow:life-sciences:clinical-trial-protocol",
+  "displayName": "Clinical Trial Protocol Generation Workflow",
+  "domain": "life-sciences",
+  "businessFunction": "clinical-research",
+  "businessProcess": "clinical-trial-protocol-generation",
+  "maturity": "validated-reference",
+  "source": {
+    "repo": "https://github.com/anthropics/life-sciences",
+    "path": "clinical-trial-protocol-skill",
+    "license": "folder-level-license-required",
+    "checkedAt": "2026-06-20"
+  },
+  "owner": {
+    "team": "Clinical Affairs",
+    "reviewRole": "Clinical/Regulatory/Biostatistics Reviewer"
+  },
+  "triggerEvents": [
+    "new-intervention-protocol-request",
+    "research-only-protocol-scouting",
+    "protocol-draft-request"
+  ],
+  "inputContracts": [
+    {
+      "name": "interventionMetadata",
+      "type": "application/json",
+      "requiredFields": [
+        "intervention_type",
+        "intervention_name",
+        "indication",
+        "description"
+      ]
+    }
+  ],
+  "outputContracts": [
+    {
+      "name": "researchSummary",
+      "type": "text/markdown"
+    },
+    {
+      "name": "protocolDraft",
+      "type": "text/markdown"
+    },
+    {
+      "name": "sampleSizeCalculation",
+      "type": "application/json"
+    }
+  ],
+  "state": {
+    "mode": "waypoint",
+    "directory": "waypoints/",
+    "resumable": true
+  },
+  "steps": [
+    {
+      "id": "initialize-intervention",
+      "description": "Collect intervention details and write intervention metadata.",
+      "resources": ["reference:00-initialize-intervention.md"]
+    },
+    {
+      "id": "research-protocols",
+      "description": "Search similar trials and FDA guidance using ClinicalTrials.gov MCP and FDA databases.",
+      "resources": ["reference:01-research-protocols.md", "mcp:clinical-trials"]
+    },
+    {
+      "id": "protocol-foundation",
+      "description": "Draft protocol sections covering foundation, design, and population.",
+      "resources": ["reference:02-protocol-foundation.md"]
+    },
+    {
+      "id": "protocol-intervention",
+      "description": "Draft intervention details.",
+      "resources": ["reference:03-protocol-intervention.md"]
+    },
+    {
+      "id": "protocol-operations",
+      "description": "Draft assessments, statistics, operations, and sample-size calculation.",
+      "resources": ["reference:04-protocol-operations.md", "script:sample_size_calculator.py"]
+    },
+    {
+      "id": "concatenate-protocol",
+      "description": "Create final protocol markdown from section waypoints.",
+      "resources": ["reference:05-concatenate-protocol.md", "asset:FDA-Clinical-Protocol-Template.md"],
+      "humanReviewGate": true
+    }
+  ],
+  "decisionGates": [
+    {
+      "id": "mode-selection",
+      "rule": "User must choose research-only or full-protocol mode.",
+      "required": true
+    },
+    {
+      "id": "expert-review",
+      "rule": "Protocol must be reviewed by clinical, regulatory, biostatistics, IRB, and legal experts before use.",
+      "required": true
+    }
+  ],
+  "runtimeProjection": {
+    "agentName": "clinical-trial-protocol-workflow",
+    "role": "clinical affairs protocol drafting assistant",
+    "skills": [
+      "clinical-trial-protocol",
+      "initialize-intervention",
+      "research-protocols",
+      "protocol-foundation",
+      "protocol-intervention",
+      "protocol-operations"
+    ],
+    "tools": ["read", "write", "clinical_trials_mcp", "python"],
+    "outputs": [
+      "waypoints/research_summary.md",
+      "waypoints/02_protocol_draft.md",
+      "waypoints/protocol_complete.md"
+    ]
+  },
+  "validation": {
+    "requiredChecks": [
+      "intervention metadata exists",
+      "research summary includes similar trials and FDA pathway",
+      "protocol sections are present",
+      "sample-size calculation is recorded",
+      "professional review disclaimers are included",
+      "no FDA or IRB approval claim is emitted"
+    ],
+    "recommendedScripts": ["scripts/validate_protocol_waypoints.py"]
+  }
+}

@@ -1,0 +1,817 @@
+{
+  "post": {
+    "title": "I Tested OpenAI's $20/month “Agent” So You Don’t Have To. It Can’t Shop, Book, or Reserve Anything",
+    "author": "dahle44",
+    "score": 3269,
+    "content": "Spent my afternoon stress-testing the new “Agent” feature that’s supposed to handle shopping, travel, and reservations for you. Here’s the real-world outcome: What the Marketing Promised: AI agent that browses the web and completes tasks! What Actually Happened: A token-devouring Wikipedia wrapper that can’t access any major commercial site. My Test Results What Failed: Amazon: “Sorry, something went wrong” (classic Amazon error dog screen) Best Buy, Walmart, Target: All blocked Travel/Booking Sites: No bookings, no reservations Any JavaScript-heavy site: Non-functional What Worked: Wikipedia Some government sites Generating PowerPoints explaining its own failures Technical Architecture Exposed Agent uses two browsers (text and GUI). Both get shut down by anti-bot systems everywhere that matters. The “API Tool” (which should connect to partners) is disabled , with zero transparency on when or why. Token usage is wild: my first big task looped for 18 minutes, retrying the same failures until I killed it. No visibility on token consumption: Agent admits it cannot show you how many tokens it’s burning. Notable Moments Asked if Agent was worth $20/month. No answer—just endless “thinking” until my quota ran out. When confronted (“You can’t complete tasks, you’re not worth $20/month”), it only replied: Understood. Thank you for sharing your perspective. TL;DR You’re paying $20/month to beta test a product that: Can’t shop (blocked everywhere) Can’t book travel Can’t make reservations Burns tokens at a crazy rate (no tracking) Fails silently unless you force it to admit it https://preview.redd.it/g2ldfl47g9ff1.png?width=1626&format=png&auto=webp&s=c27ecd4de935876b4eea5e2d39429184a5f95ba9 https://preview.redd.it/7ej7fej9g9ff1.png?width=1536&format=png&auto=webp&s=44e9b4c05cf1a88133e69d0e2b87908727e91206 https://preview.redd.it/0jnxxdqfg9ff1.png?width=1189&format=png&auto=webp&s=436670df1e0f693c3cee7e2870b74a9526fb4680 https://preview.redd.it/37z2ctuhg9ff1.png?width=1680&format=png&auto=webp&s=f02ed5d641fbb2fa0a282738526b6fb07181b6aa https://preview.redd.it/tqm7d3xjg9ff1.png?width=1272&format=png&auto=webp&s=c241f99bfc420f6fc9100f672805bc7cdadc8671 I will continue to share on a new post in this thread I am limited by Reddit",
+    "url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+    "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+    "subreddit": "ChatGPT"
+  },
+  "comments": [
+    {
+      "id": "t1_n55vbbs",
+      "author": "AutoModerator",
+      "text": "Hey /u/dahle44 ! If your post is a screenshot of a ChatGPT conversation, please reply to this message with the conversation link or prompt. If your post is a DALL-E 3 image post, please reply with the prompt used to make this image. Consider joining our public discord server ! We have free bots with GPT-4 (with vision), image generators, and more! 🤖 Note: For any ChatGPT-related concerns, email support@openai.com I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n55vbbs/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56d9ys",
+      "author": "db1037",
+      "text": "Weird, I tested out Walmart and it worked fine right from the jump.",
+      "score": 295,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56d9ys/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56mtc4",
+      "author": "rufio313",
+      "text": "I got the bot detection thing where it asks me to press and hold to confirm I’m not a bot. I took control and did that but it still wouldn’t load. Other sites like target worked fine for me though. In fact, the majority of (retail) sites I had it browse for some competitive analysis stuff loaded fine. It even took screenshots for me on the relevant parts.",
+      "score": 89,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56mtc4/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56sc5f",
+      "author": "db1037",
+      "text": "Oh having it browse multiple and compare is smart. I got the bot detection, held it down and it worked fine. It’s definitely still early and quirky but you can see how useful this will be in a year or two.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56sc5f/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58a469",
+      "author": "qwrtgvbkoteqqsd",
+      "text": "you have to watch it each step of the way ? and what happens when it gets to the payment screen ?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58a469/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n59f4c9",
+      "author": "db1037",
+      "text": "Right now I’m sure we are all watching it just out of amusement and to check it. Of course the goal will be as someone posted, you eventually will say “Get my pizza” and it will know to navigate to Domino’s, place your favorite order, and have the pizza delivered to your door.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n59f4c9/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58dt86",
+      "author": "bakraofwallstreet",
+      "text": "The hits coming from the user's own browser will not bypass bot detection systems. Websites monitor user actions also and typically can easily spot human action vrs expected bot action. Otherwise it would be a pretty easy way to bypass bot detection.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58dt86/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n59erp5",
+      "author": "db1037",
+      "text": "Oh it’s definitely slow but I’d rather pass off a task that would take me 10-15 minutes(regardless of how long it takes it) and get that time back. That happening 40 times a month will be a substantial amount of time in my life. And yeah it struggles on its browser. It clicked a couple of times before the page fully loaded, looked like frustration though I know it’s not. Lol I can’t even imagine though. The thing thinks way faster than me and has to deal with a dial up internet equivalent 😂",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n59erp5/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5c4ali",
+      "author": "SeanBannister",
+      "text": "Yep, and find someone on Craigslist to cook it for you.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5c4ali/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5zfsip",
+      "author": "zennifer",
+      "text": "I used it to create a 4 meal plan for a family of 4 and let me approve or change it and create the ingredients list but leave out common items like four, butter, oil, etc.... and add it to my Instacart cart. It worked well for me. I didn't have it actually place the order.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5zfsip/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n561njv",
+      "author": "MagicMike2212",
+      "text": "Asked it to login to my bybit account and make profitable trades. It did not comply. I am furious.",
+      "score": 256,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n561njv/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56pusm",
+      "author": "dahle44",
+      "text": "😂 The fact that it can’t, and won’t is not only by design, but essential for user safety. Anyone selling an “AI agent” that can make live trades on your behalf, via web scraping, without strict controls, is offering a massive attack surface for fraud, theft, and abuse.",
+      "score": 58,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56pusm/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57zpk8",
+      "author": "YetiTrix",
+      "text": "I think (I hope) he was being sarcastic.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57zpk8/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58e14k",
+      "author": "bakraofwallstreet",
+      "text": "I pray",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58e14k/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5zsmz8",
+      "author": "The-Unkindness",
+      "text": "I literally built this myself. Took about a month to build the agentic model. I had to work with my brokerage firm to get the appropriate API key, and I created a new account within my profile and funded it with $2000. It operates on tight rules about what companies I accept (ie: no russian, chinese, etc), and what its rules were. Ensuring the 6 ML models that make up the overall agentic reasoning algorithm was trained appropriately it was only allowed access to information I approved of. So no, obviously this is NOT ChatGPT's agent. For the first few days it operated only for a few hours a day. From market open (where it would auto log in right at 9:30), until noon. And I would spend the rest of the day evaluating its results. Not just trades it made, but trades it didn't. So far its worst model is operating BELOW mean, which is frustrating. But the others are operating above (with one WAY above mean). So I'm dialing it in. HFT shouldn't just be for big hedge funds! :) Not that this will be HFT, but, still.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5zsmz8/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5auhrr",
+      "author": "NotAComplete",
+      "text": "Yeah, but if you're part of a mulibillion dollar hege fund its perfectly fine and on the up and up.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5auhrr/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5futiu",
+      "author": "BrikenEnglz",
+      "text": "Same, I asked to hack KGB and it refused :((",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5futiu/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n55xod1",
+      "author": "sply450v2",
+      "text": "only used it for two things. my friend sent me his flight confirmation and i sent a screenshot to agent. i asked it to book me the same flight. worked fine. i gave it my info on the initial prompt. i also ordered groceries on instacart. will keep testing.",
+      "score": 663,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n55xod1/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56909m",
+      "author": "ReasonableCat1980",
+      "text": "WTF you allow an AI to book you shit? What if it books the wrong flight?",
+      "score": 526,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56909m/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n569gpz",
+      "author": "ReasonableCat1980",
+      "text": "See and that. I love Ai, pro Ai, will use it in several months but I am not gonna be the guy it orders 100,000,000 bananas for or some shit like that. I can’t wait to use it… but also I can wait to use it",
+      "score": 406,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n569gpz/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56g324",
+      "author": "ascandalia",
+      "text": "4000 lbs of meat? https://youtu.be/m0b_D2JgZgY?si=JyJHmgwRdrc6zs5G",
+      "score": 56,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56g324/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56ghfj",
+      "author": "ReasonableCat1980",
+      "text": "Me just standing in front of my car covered in bananas like some asshole going “so I decided I wanted to make a banana split-“ with like “Local AI Idiot” under me the whole time",
+      "score": 27,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56ghfj/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n583yl8",
+      "author": "turbo_dude",
+      "text": "\"oops! I thought you wanted a First Class ticket!\"",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n583yl8/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56k14m",
+      "author": "TheMegnutt",
+      "text": "Lmao that's hilarious. But the Agent stops at important steps to ask for confirmation so unless you arent paying attention and just accept whatever it does you'll be able to catch it. I havent had any problems with that yet, personally.",
+      "score": 33,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56k14m/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56oaz0",
+      "author": "dahle44",
+      "text": "It did not stop to tell me anything. Probably because API was disabled. However I am skeptical whether it will let me know next time since it had no problem trying to do tasks that required API 😂 <image>",
+      "score": 21,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56oaz0/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56nzfy",
+      "author": "DapperCam",
+      "text": "How can it possibly know what is important in a fully general way? It can’t.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56nzfy/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57dznc",
+      "author": "ReasonableCat1980",
+      "text": "I mean it can with enough training data… but that data is best trained when it makes a mistake, lol. Happy to try it in a few months, but I don’t want to be the teachable moment, lol.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57dznc/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57mfxx",
+      "author": "Ok-Comedian-9377",
+      "text": "Sounds reasonable dawg",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57mfxx/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56mi8e",
+      "author": "rufio313",
+      "text": "Impossible because there are points where it asks the user to take over to input payment details and such, so you’d catch a mistake like that.",
+      "score": 24,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56mi8e/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56q2uz",
+      "author": "Deliverah",
+      "text": "N-no man you clearly don’t get it AI is stealing your credit card and booking you a one way trip to North Korea and there’s nothing you can do about it!!!1!1",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56q2uz/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58mi7k",
+      "author": "Environmental-Bag-77",
+      "text": "This is total shit anyway. The future of AI is not manipulating systems that are designed for humans. That's my prediction anyway.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58mi7k/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56fqd3",
+      "author": "frank26080115",
+      "text": "there's a law that says you can get a refund if you cancel within 24 hours I've made that mistake without AI, it's not that big of a deal",
+      "score": 47,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56fqd3/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56ohdq",
+      "author": "dahle44",
+      "text": "appreciate that info, Thanks.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56ohdq/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n59p60y",
+      "author": "Intensive__Purposes",
+      "text": "That’s only true for flights with a USA leg.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n59p60y/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57svjk",
+      "author": "TopHour2741",
+      "text": "This does not apply to flights that depart in the next 7 days.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57svjk/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58ck30",
+      "author": "",
+      "text": "If you need to confirm all the info anyways why not just do it yourself?",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58ck30/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56o6a0",
+      "author": "SeoulGalmegi",
+      "text": "Probably just hallucinated a boarding pass that will get them laughed out of JFK.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56o6a0/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57jzng",
+      "author": "pm_me_your_kindwords",
+      "text": "That’s actually funny to think about.",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57jzng/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57kiu2",
+      "author": "SeoulGalmegi",
+      "text": "The next stage is when you discover that the money that did actually leave your account went to a company called 'AA Tickets' that was newly created a second before the payment went through from your IP address .......",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57kiu2/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57evam",
+      "author": "lazyboy76",
+      "text": "From what i read, AI only do the finding/shopping for you. You still handle the payment part, outside chatgpt environment, for PCI-compliance.",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57evam/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57jy3x",
+      "author": "KnockKnockPizzasHere",
+      "text": "You realize you have to take over to put your cc info in right? At which point you’d verify it was correct?",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57jy3x/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58fk2l",
+      "author": "",
+      "text": "So then what's the point of the agent? Isn't it easier to just visit the booking page yourself and fill out the info?",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58fk2l/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5zivwe",
+      "author": "zennifer",
+      "text": "Also assuming you have an account and it added it to the cart, you can just open your own browser and complete the financial part of the transaction there.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5zivwe/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56nrre",
+      "author": "florodude",
+      "text": "You gave chatgpt you're banking info? What the fuuuuck",
+      "score": 37,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56nrre/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56oop1",
+      "author": "sply450v2",
+      "text": "credit card - yeah don’t care honestly",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56oop1/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56ta8t",
+      "author": "Icy-Inc",
+      "text": "lol. It’s bad at this point. OpenAI has access not only to an extreme amount of voluntarily shared personal information, but is also making major headway in mapping individuals internal thinking patterns based on some users’ conversations. Shit is getting very dystopian very quickly The information is already available to create behavioral profiles on people. Now many are 1:1 mapping their internal dialogues for a company to use as they will. For free! We are screwed",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56ta8t/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56vq7f",
+      "author": "dedreo58",
+      "text": "Yea, the thought kept creeping into my mind the last few weeks while I'm idling away at work \"You know, the LLM's know an awful lot about a lot of people, that'd be priceless marketable information\" Anytime I'm in a position to search info about it, I'd rather just not know in case this is realized, and is yet another commercialized ethics battle in my mental load, lol.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56vq7f/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n575yok",
+      "author": "biznatch11",
+      "text": "Aren't the millions of people paying for ChatGPT already giving OpenAI their banking info? What's the big deal?",
+      "score": 12,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n575yok/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n55yqvz",
+      "author": "dahle44",
+      "text": "I am happy for you that it worked. I'll need to wait until next month to try again because it ran out quickly at 40 queries. Hopefully it will be improved, thanks for your experience.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n55yqvz/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n560vbb",
+      "author": "Popular_Lab5573",
+      "text": "worked for me as well. my prompt wasn't really very complex: I gave a link to our local website and asked it to find products based on my plan (which is attached to the project files) and put them into the CSV file (to include product name, price, discounts, and macros if listed). it took 8 minutes to complete this task. I'll be testing more complex requests though",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n560vbb/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56pi55",
+      "author": "dahle44",
+      "text": "<image> The difference seems to be the type of access Agent has. If you supply an open site with simple data and a clear structure (or attach the needed files), it can process that, though even then, 8 minutes is slow. But as soon as the workflow requires crossing multiple sites, handling real-world logins, or synthesizing complex business logic (like a true decision matrix or shopping assistant would), Agent either fails, stalls, or hallucinates results. This highlights that “success” cases are currently edge scenarios, most advertised use cases (travel, e-commerce, reservations, cross-site comparisons) still don’t work due to architectural and access limits.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56pi55/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n561vy6",
+      "author": "mountainyoo",
+      "text": "When web search on ChatGPT came out it was dogshit. Constantly failed to navigate websites and search results. I’m sure Agent will get way better of course. Question is timeframe",
+      "score": 101,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n561vy6/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56r91u",
+      "author": "dahle44",
+      "text": "Agreed 😂 the original web search was barely usable, and many of those limitations (site blocking, CAPTCHAs, login walls, lack of context) remain. Will Agent improve? Probably. But improvement isn’t guaranteed by “iteration” alone especially with legal, security, and anti-bot roadblocks escalating. Many of these barriers aren’t technical; they’re policy and business-driven. The real question is whether Agent can ever deliver reliable, repeatable outcomes at scale, or will it always be chasing a moving target of website defenses and compliance constraints.",
+      "score": 18,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56r91u/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n578av0",
+      "author": "mountainyoo",
+      "text": "I remember when web search first came out it would continuously tell me it was failing on clicking a link lol. Now it’s hard to do a query without it hitting up 10 different webpages",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n578av0/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56juau",
+      "author": "ChiaraStellata",
+      "text": "I have had good luck with all my requests so far, but it only works when restricted to smaller websites that don't have anti-bot protections. For example \"go over all the therapists on this clinic's page and see which one is the best fit for me\" or \"find a desk that fits these dimensions\" (it returned me options on small furniture vendors' websites rather than Amazon) or \"calculate and compare letter statistics over public lists of English words.\" Larger websites it just won't be able to access till it's able to circumvent bot protection and that will limit the tasks you can carry out. Even on smaller websites it does take up to 20 minutes and does do a ton of queries and backtracking, but I don't mind that if I'm doing something else meanwhile. It's definitely not ready for prime time but when it works, it works. I think on future queries, to avoid unnecessary backtracking, I'll tell it not to access major websites that may have anti-bot restrictions, and get it to intentionally focus on smaller websites.",
+      "score": 19,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56juau/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56uy85",
+      "author": "dahle44",
+      "text": "Exactly. Agent’s only consistent wins are on small, open sites with no bot protection, and even then, it’s slow, burns tokens, and needs a lot of micromanaging. Steering it away from major/commercial sites toward “softer targets” is smart for now, but the main issue remains: as soon as you try to use Agent for anything that really matters (shopping, booking, authentication, or anything at scale), it falls apart. (Some users do get results occasionally-so it’s not totally broken, just wildly inconsistent.) For niche or non-critical needs, it’s an interesting sandbox. For real tasks, it’s just brittle web scraping dressed up in natural language. *The biggest risk is users not realizing these boundaries and wasting time or money on tasks that are likely to fail. Until the core limitations are fixed, honest user feedback-positive and negative-is essential if the product’s ever going to improve.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56uy85/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n568d11",
+      "author": "durinsbane47",
+      "text": "I had the agent examine my sessions with a project and compile information based on patterns trends commonly used phrases and gaps. This was regarding health and exercise. It completely made things up and inserted information and reflections that never happened or were even alluded to. I want to believe it will be more useful but that was a somewhat simple task and it hallucinated immediately.",
+      "score": 93,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n568d11/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56qt5x",
+      "author": "dahle44",
+      "text": "This is exactly the kind of “soft failure” that makes Agent risky for serious use: when asked to synthesize or summarize data (especially unstructured logs, chat transcripts, or behavioral sessions), it often “fills in the blanks” with hallucinated insights or fabricated details. This isn’t a bug it’s a direct result of how large language models operate: they generate plausible-sounding text, not guaranteed factual summaries, unless you give them highly-structured input and strict instructions. For any task involving pattern analysis, logs, or personal reflection, Agent’s tendency to insert fictional content makes its outputs untrustworthy without close human review. Until this is solved, users should treat its “insights” as speculative at best. Thanks for reporting this it is critical for anyone considering Agent for health, coaching, or business intelligence.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56qt5x/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56ltul",
+      "author": "goddessofthecats",
+      "text": "Generating PowerPoints explaining its own failures lmfffffao",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56ltul/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56ygsj",
+      "author": "dahle44",
+      "text": "If only self-awareness paid the bills, Agent would be a unicorn already. 😂",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56ygsj/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58bgqk",
+      "author": "qwrtgvbkoteqqsd",
+      "text": "try o3 for powerpoints",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58bgqk/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56fa0q",
+      "author": "Sky952",
+      "text": "Best Buy wasn’t blocked for me? I ordered a 5070ti <image>",
+      "score": 40,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56fa0q/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56q1un",
+      "author": "Agitated-Ad1484",
+      "text": "Wisconsinite!",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56q1un/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58b4qv",
+      "author": "qwrtgvbkoteqqsd",
+      "text": "how long did this take and how many prompts ?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58b4qv/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n593gsw",
+      "author": "Sky952",
+      "text": "Around 7 minutes, definitely not breaking any speed records, but hey, this is just the beginning!",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n593gsw/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56955g",
+      "author": "ReasonableCat1980",
+      "text": "Yeah I love that agentic features are here/coming but I’ll let yall beta test that shit for about 6 months before I trust it with anything",
+      "score": 40,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56955g/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56w6ox",
+      "author": "dahle44",
+      "text": "😂 No problem, I am looking forward to next month when I can attempt again.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56w6ox/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56y5vs",
+      "author": "ReasonableCat1980",
+      "text": "It’ll get there lol I’m just not letting it alpha/beta test while attached to my real shizz. I can wait a few months to kick the bugs out if it",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56y5vs/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56ce0j",
+      "author": "James--Trickington",
+      "text": "I just used it to book the cheapest flight that allows at least 45 lbs checkin bag and it worked fine",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56ce0j/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n57h7l7",
+      "author": "dronegoblin",
+      "text": "\"Burns tokens at a crazy rate (no tracking)\" Why would you care? You're not paying per token, you're paying per task at basically $0.50 per tasks. Also, I've had it shop, book travel, and make reservations successfully. I also had it successfully do an in depth audit of my 2024 taxes, and research and build a ready to go web app in a single shot, alongside branding, a presentation, and a setup guide for deploy",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n57h7l7/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58wfzx",
+      "author": "GoodDayToCome",
+      "text": "also that's fifty cent a task if you only use agents, depending how much you're using all the other tools it's less",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58wfzx/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5a9zkl",
+      "author": "kodat",
+      "text": "How's the taxes? Was it accurate? I'm pretty certain CPAs will soon be gone with. But it's hard to imagine trusting an AI with potentially tricky things. If it could integrate with bookkeeping then it certainly would be more precise",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5a9zkl/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56rzi9",
+      "author": "Wear_A_Damn_Helmet",
+      "text": "Asked if Agent was worth $20/month. No answer—just endless “thinking” until my quota ran out. When confronted (“You can’t complete tasks, you’re not worth $20/month”), it only replied: Understood. Thank you for sharing your perspective. These are terribly unserious things to ask it, and yet, these are the only prompts you disclosed in your post. Why don’t you share the prompts that yielded the other results? Overall, I just have a hard time taking any who \"bullies\" AI seriously, and I say this as someone who was also very underwhelmed by ChatGPT Agent .",
+      "score": 25,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56rzi9/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56cl5c",
+      "author": "Key-Balance-9969",
+      "text": "We are the alpha testers.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56cl5c/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5660hz",
+      "author": "pixiecub",
+      "text": "I got it yesterday and tested it out today. Had a bit of a hiccup. I was trying to get it to filter and export some of my game data on TrueAchievements and it struggled to work out the correct filter options. It was a pleasure to watch though. Luckily the site has an option to download a CSV file of your data, which normal chatGPT can easily filter, so I did that and then as a sort of test asked him to input the filtered data back into the site, creating my own custom game list of games that I actually own/have played on gamepass. Rather than owned games+every gamepass game. And yes, it took three sessions (let’s check with user the title of the game list is correct, game lists can only have 100 games, let’s check with user) and added 6 versions of Forza by accident. It was mostly spot on. Honestly, I would not pay £20 for agent if I was only interested in getting productivity out of AI, but I enjoy playing around with AI and watching it evolve. It’s so fun to watch it navigate a website like a human would, make some hilarious mistakes, correct their own mistakes, try to come up with automated solutions then realise the website doesn’t allow that. I personally think it’s amazing as it is, but obviously far from perfect. And people should not yet expect perfect",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5660hz/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n58llq8",
+      "author": "Few_Calligrapher1935",
+      "text": "“Fails silently unless you force it to admit it” Same.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n58llq8/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n55vu0e",
+      "author": "Environmental-Bag-77",
+      "text": "I was just given Agent Mode. Then it took it away. So yeah. Thanks...",
+      "score": 13,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n55vu0e/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n568nsq",
+      "author": "Singularity-42",
+      "text": "I just got a pop-up \"Introducing agent mode\", but when I clicked on it, it didn't do anything, and I cannot see a link to it anywhere...",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n568nsq/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n5699le",
+      "author": "Singularity-42",
+      "text": "On the prompt input box click the plus icon to the left (it shows a list of tools like deep research) and you'll see agent listed",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5699le/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "id": "t1_n56a357",
+      "author": "Singularity-42",
+      "text": "Thanks, I see it now",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56a357/",
+      "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "subreddit": "ChatGPT"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+    "method": "old_reddit_html"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "evidence_count": 0,
+      "items_considered": 21,
+      "items_rejected_by_qualification_gate": 21,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-002",
+      "evidence_count": 0,
+      "items_considered": 21,
+      "items_rejected_by_qualification_gate": 21,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-003",
+      "evidence_count": 1,
+      "items_considered": 21,
+      "items_rejected_by_qualification_gate": 20,
+      "suggested_reddit_verdict": "weak_qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.287,
+          "kind": "post",
+          "id": "post",
+          "author": "Prowlbeast",
+          "reddit_score": 2148,
+          "depth": 0,
+          "source_json": "runs/2026-06-30-ai-saas-disruption-reddit-factcheck-focused/reddit-evidence-raw/reddit-thread-10.json",
+          "source_url": "https://old.reddit.com/r/CozyGamers/comments/1tdjq4s/paralives_finally_comes_to_ea_may_25th/",
+          "permalink": "https://old.reddit.com/r/CozyGamers/comments/1tdjq4s/paralives_finally_comes_to_ea_may_25th/",
+          "subreddit": "CozyGamers",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:generic_claim_overlap_with_pain",
+            "profile": "generic",
+            "signals": {
+              "shared_terms": [
+                "early",
+                "for",
+                "pricing",
+                "support"
+              ],
+              "pain": true
+            }
+          },
+          "excerpt": "Paralives finally comes to EA May 25th! Paralives will be releasing for Early Access after its delay in December on May 25th! As an active follower of this game im happy to talk about it and why you all should be excited as well! Paralives is a life simulation game in the same genre as The Sims, Inzoi and the cancel..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-004",
+      "evidence_count": 0,
+      "items_considered": 21,
+      "items_rejected_by_qualification_gate": 21,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-005",
+      "evidence_count": 0,
+      "items_considered": 21,
+      "items_rejected_by_qualification_gate": 20,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-006",
+      "evidence_count": 0,
+      "items_considered": 21,
+      "items_rejected_by_qualification_gate": 21,
+      "suggested_reddit_verdict": "no_qualified_reddit_evidence",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-007",
+      "evidence_count": 1,
+      "items_considered": 21,
+      "items_rejected_by_qualification_gate": 20,
+      "suggested_reddit_verdict": "weak_qualified_reddit_support",
+      "evidence": [
+        {
+          "score": 0.457,
+          "kind": "post",
+          "id": "post",
+          "author": "Prowlbeast",
+          "reddit_score": 2148,
+          "depth": 0,
+          "source_json": "runs/2026-06-30-ai-saas-disruption-reddit-factcheck-focused/reddit-evidence-raw/reddit-thread-10.json",
+          "source_url": "https://old.reddit.com/r/CozyGamers/comments/1tdjq4s/paralives_finally_comes_to_ea_may_25th/",
+          "permalink": "https://old.reddit.com/r/CozyGamers/comments/1tdjq4s/paralives_finally_comes_to_ea_may_25th/",
+          "subreddit": "CozyGamers",
+          "qualification": {
+            "qualified": true,
+            "reason": "qualified:generic_claim_overlap_with_pain",
+            "profile": "generic",
+            "signals": {
+              "shared_terms": [
+                "for",
+                "how",
+                "may",
+                "pricing",
+                "support"
+              ],
+              "pain": true
+            }
+          },
+          "excerpt": "Paralives finally comes to EA May 25th! Paralives will be releasing for Early Access after its delay in December on May 25th! As an active follower of this game im happy to talk about it and why you all should be excited as well! Paralives is a life simulation game in the same genre as The Sims, Inzoi and the cancel..."
+        }
+      ]
+    }
+  ],
+  "source_files": [
+    "runs/2026-06-30-ai-saas-disruption-reddit-factcheck-focused/reddit-evidence-raw/reddit-thread-10.json"
+  ]
+}

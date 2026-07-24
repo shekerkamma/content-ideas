@@ -1,0 +1,123 @@
+{
+  "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+  "topic": "YC agentic AI vertical workflow market research",
+  "claims": [
+    {
+      "id": "claim-001",
+      "claim": "CentralComs is an AI agents product for property managers, focused on maintenance calls, ticket chasing, and owner, tenant, and vendor updates.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research centralcoms product for property managers focused maintenance calls ticket chasing",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-002",
+      "claim": "Lance is an AI agents product for hotel operations, focused on answering calls, closing sales, and running guest-facing operations.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research lance product for hotel operations focused answering calls closing sales",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-003",
+      "claim": "Klarify is an AI agent for therapists that handles notes, treatment plans, insurance claims, supervision prep, and client acquisition.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research klarify for therapists handles notes treatment plans insurance claims supervision",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-004",
+      "claim": "Dodo is an AI agents product for clinic communications, focused on scheduling, refills, intake, follow-ups, and front-office workflows.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research dodo product for clinic communications focused scheduling refills intake follow-ups",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-005",
+      "claim": "Kastle is an AI voice agent for mortgage servicing that collects payments, verifies borrowers, and qualifies new loan inquiries.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research kastle voice for mortgage servicing collects payments verifies borrowers qualifies",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-006",
+      "claim": "Fazeshift is an AI agent for accounts receivable that connects fragmented finance systems and automates quote-to-cash follow-up work.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research fazeshift for accounts receivable connects fragmented finance systems automates quote-to-cash",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-007",
+      "claim": "Basepilot is an AI agents product for insurance claims that helps insurers, TPAs, and MGAs streamline claims operations.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research basepilot product for insurance claims helps insurers tpas mgas streamline",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-008",
+      "claim": "ProcIndex is an AI accounting firm that automates quote-to-cash, accounts payable, and month-end close workflows.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research procindex accounting firm automates quote-to-cash accounts payable month-end close workflows",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-009",
+      "claim": "InspectMind AI is an AI agent for construction drawings review that catches issues before they become rework and project delays.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research inspectmind for construction drawings review catches issues they become rework",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-010",
+      "claim": "Veritus is an AI agent platform for consumer lending that automates loan servicing, collections, repayment plans, and borrower follow-up.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research veritus platform for consumer lending automates loan servicing collections repayment",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-011",
+      "claim": "Property managers are overloaded by fragmented maintenance, ticket, and vendor coordination across AppFolio, Buildium, and Yardi.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research property managers overloaded fragmented maintenance ticket vendor coordination across appfolio",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-012",
+      "claim": "Hotel operators are overloaded by calls, bookings, and cross-system workflows that require constant manual follow-up.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research hotel operators overloaded calls bookings cross-system workflows require constant manual",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-013",
+      "claim": "Clinic front desks are overloaded by scheduling, refills, intake, and patient communication across calls and texts.",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "vertical workflow market research clinic front desks overloaded scheduling refills intake patient communication across",
+      "primary_source_required": false
+    }
+  ]
+}

@@ -1,0 +1,817 @@
+{
+  "post": {
+    "title": "AI AGENTS today are far more DANGEROUS that you think",
+    "author": "Kakachia777",
+    "score": 542,
+    "content": "I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kali Linux, made it run offensive recon and OSINT tools. Each agent controls its own terminal session, decides what to execute, and passes findings to other agents through shared persistent memory. They operate in parallel and re-task each other in real time based on what comes back. They can parallel execute with multiple tools and commands at once — that's how it managed everything in roughly 15 minutes. I pointed it at myself first. Then a friend volunteered. I gave it my name and one old username, that's it. Same goes to friend's name, username. First it wrote a plan, tasks and subtasks, then spawned 9 agents and in each their subagents. Before it even touched social media, it started with public records. Public records are the part nobody talks about Agent went through Whitepages, Spokeo, BeenVerified, ThatsThem, FastPeopleSearch, and Pipl. Mixed with platforms that aggregate voter registration databases, property tax records, court filings, business registrations, and data broker lists. Within seconds it had current and previous addresses going back about ten years, phone numbers tied to my name, age range, and a list of probable relatives with their names and ages (ALL THIS WITH BROWSER USE). Then it ran my phone number through PhoneInfoga which pulls carrier info, line type, and checks the number against public directories and social platforms that allow phone-based lookups. It found two additional platforms where my number was linked to an account I forgot existed. It took the addresses and went straight to government portals. Well it didn't found much about me, cause there's nothing much to find. BUT for friend, it found: County assessor public database for property tax records — pulled assessed value, square footage, lot size, year built, year purchased County recorder for transaction history including mortgage lender names and sale prices All public, all sitting on a .gov website anyone can access with a name State Secretary of State online database for business filings. Found an old LLC he forgot he registered. The filing had his full name, address at the time, and registered agent info. It checked PACER for federal court records, county clerk for state court records, local municipal court for traffic citations. It ran through state professional licensing boards, FCC ULS database for amateur radio licenses, FAA registry, SEC EDGAR, USPTO patent search. Each one that hit was precise and confirmed details from other sources. Voter registration lookup pulled my full name and address, as for friend full name and address and voting history by election date (I'm not from US). In most US states this is public record — not the vote itself, but voting history. The system now had confirmed residency, no political affiliation yet, YET but a timeline of civic participation without touching a single social media account. Then it did the relatives play. Took the names of probable family members, ran each one through the same pipeline. Found property records for his parents. Cross-referenced their address against school district boundaries using public GIS data from the county planning department website and identified my probable high school. Then it ran our emails, which it found later in GitHub commit metadata, through holehe which checks dozens of platforms to see if an email has a registered account. Came back with a list of services I'm signed up for including some I haven't used in years. Ran the same email through h8mail and Have I Been Pwned for breach enumeration. HIBP showed which data breaches that email appeared in, which told the system what services I've used even if the accounts are deleted. That breach list became a target checklist for other agents. It also ran the email through GHunt for Google account intelligence. If someone's Google account has public reviews, calendar events, or Maps contributions, GHunt pulls them. Mine had some old Google Maps reviews that included places I've been and approximate dates. At this point the system hadn't opened a single social media profile yet and it already had: our home address confirmed through property records, previous addresses, phone numbers, family members with their addresses and social profiles, my childhood home, high school, university, degree, student organizations, professional trajectory, an old business entity, voter registration, property values, mortgage details, a list of online accounts from breach data, and Google Maps location history from reviews. That took about seven minutes. Social media is where it gets personal On LinkedIn (using Browser Use and other browser agent frameworks) it walked my entire public activity. Not my profile, my behavior. Every post I've liked, every comment, every endorsement given and received. It used recon-ng with LinkedIn modules to pull structured data and then ran spiderfoot for automated cross-correlation against the data it already had from public records. Scraped most of data with crawl4ai. Scraped every recommendation I've given and received and ran entity extraction. People write recommendations casually and mention project names, internal tools, client names, specific accomplishments. The system treated every recommendation as a semi-structured intelligence document and pulled details that don't appear in any job listing. On X it ran snscrape in full archive mode for every tweet of my friend (I don't use X), every reply, quote tweet, and like back to account creation. Also ran Twint to catch historical data snscrape sometimes misses and to grab cached follower snapshots from different time periods. Compared my current following list against older snapshots to identify accounts I recently followed, flagged those as new interests or new relationships. Timing analysis built an hourly heatmap by day of week. Identified behavioral phases: mornings are original posts, lunch is passive engagement, late night is personal replies. Used transition points to estimate work hours, breaks, and sleep schedule. The likes were the worst part. Public by default. It categorized every like by topic, tone, and community with percentage breakdowns. The gap between what he posts and what he likes is significant. It flagged like-clusters — periods where he liked fifteen tweets in two minutes from the same niche — and mapped specific rabbit holes he went down on specific nights. Reply graph got sentiment analysis across every thread. Mapped relationships by emotional tone. Who he's supportive with versus who he argues with versus who he talks to like an actual friend. Cross-referenced the \"actual friend\" tier against Instagram close followers. Near-perfect overlap. Validated a private social circle from two independent behavioral signals on different platforms. On Instagram it went through with instagrapi. The public web interface returns almost nothing useful now so this is the only way to get real data from a public profile. What it did first was getting full following/followers list categorized through multiple layers. For example: if there were accounts from following and followers in common, it flagged with higher interest accounts, as they most possibly have relationship with users (us). In this case it spawns another subagents to investigate their accounts as well, but I stopped that. Restaurants geolocated via Google Places matching and clustered by neighborhood with recency weighting. It separated lunch-near-work clusters from dinner-near-home clusters by restaurant type and price point. That alone triangulated work and home neighborhoods without a single location tag — and the result matched the address the system already had from property records. Independent confirmation from completely different source types. Fitness accounts analyzed for specific training methodology, equipment brands, athlete types. Correlated with gym account tagged locations and estimated which facility I likely use. Story highlights got treated like passive surveillance. When the system gets a photo or a video, it does model routing to Gemini Pro 3.1, cause it's the best at determining coordinates from photo or video — no need to have a location tag of course. Pulled from every story for a three-year travel timeline with hotel names and specific venues. It can run the same image and video analysis on highlight content where locations weren't tagged, identified recurring kitchen or home backgrounds in some stories. It can match visible fixtures from your common contacts in Instagram IF YOU GIVE GREEN LIGHT TO CHECK THEIR ACCOUNTS, as well — which I don't usually :) — but it can go to their stories, highlights and find whether there is possibly a same place where you've been. In that way it determines whether you've been together. Then it generates a confidence score on every story (location, time, occasion, people around, etc.). Tagged photos from other people. Pulled every public tag, ran facial co-occurrence to map who I'm photographed with most frequently, when, and where. Cross-referenced against followers and LinkedIn connections. Segmented social life into clusters and identified a hobby community from visual context in tagged photos before finding any other evidence of it. It ran social-analyzer across my identified usernames to check 300+ additional platforms for matching accounts and profile data that sherlock and maigret might have returned as uncertain matches. Cross-referenced results against the confirmed identity signals to filter false positives with much higher accuracy than username matching alone. Follower-following asymmetry analysis built a reciprocity score for every connection using like frequency, comment frequency, story replies, and tagged photo co-occurrence. Top fifteen by reciprocity score were almost exactly my closest friends. Behavioral math on public interactions, no private data needed. On Facebook — my friends list is private, posts are friends-only, I don't post there at all. But as for friend, it got in through the side doors: Event RSVPs going back years. Meetups, conferences, local events with public attendee lists. Cross-referenced attendees against Instagram followers and LinkedIn connections to find people in my life across three platforms. Triple-platform intersection is a strong real-world relationship signal. Marketplace listings. General location on each one. But beyond location it looked at what he sold and when. Furniture cluster in a short window aligned with a LinkedIn job change. It inferred a city move from Marketplace timing. Old group memberships I never left. One niche interest group with 200 members that says more about me than my entire profile. I was posting some things there. Tagged photos from friends with public profiles. Pulled twelve photos across four accounts where I'm visible. Birthday dinners, group trips. I didn't post them, didn't know most were public. Three had location data matching restaurants already flagged from Instagram. It also went through friends' public check-in histories. Cross-referenced check-in times with photos where I'm tagged on the same dates. For Reddit it didn't have a username to start with. I mean yeah there is on the same username an account in Reddit but I deleted lot of posts, also I have several accounts. It used the writing style analysis approach — ran my X posts through a stylometric fingerprint that measures sentence structure, vocabulary distribution, punctuation habits, and topic patterns. Then it queried Reddit through pushshift archives looking for accounts with matching behavioral signatures in subreddits related to interests it had already identified. Found a match above its confidence threshold. Verified through timezone consistency in posting patterns and topic overlap with confirmed interests from other platforms. That Reddit account opened a whole new layer. Subreddit participation mapped interests in fine detail. Comments in personal finance subs revealed life stage and financial thinking. The combined output was devastating Full name, date of birth, addresses from public posts, home address from property records confirmed by six independent signals, previous addresses, family members with their addresses and social profiles, childhood home, high school, university, degree, student organizations, professional trajectory with team-level detail, salary range from title matching, active job search with target company and likely roles and probable referral source, daily routine from cross-platform timing analysis, real social circle identified through behavioral math not friend lists, travel history for three years with specific hotels and venues, private interests assembled from Instagram follows and Reddit participation and Facebook groups and X likes, economic behavior from restaurant tier analysis and travel patterns, fitness routine, specific places he frequents confirmed through friends' check-ins, the six-block radius where he lives, and a writing style fingerprint linking accounts across platforms that share no username and no visible connection. From just a name and one username. In twenty-three minutes. Note also that system has persistent memory — it can save into vector DB + graphs and write down structured information into markdown files for future retrieval and saves into state files. All the facts, decisions, milestones, turn summaries are saved into episodic memory. Vector DB and graph memory is semantic + relational memory, in other words associative connected memory. The system remembered every dead end and every confirmed node. So the next chat session it didn't start over. Went straight to unexplored branches. The toolchain Everything you'd find in a Kali environment plus some additions the agents installed themselves during runs: sherlock, maigret, social-analyzer for cross-platform enumeration. snscrape, Twint for Twitter extraction. instagrapi for Instagram's mobile API. Playwright with headless Chromium for any JavaScript-rendered or authenticated web surface. recon-ng and spiderfoot for automated OSINT framework correlation. theHarvester for email and domain intelligence. PhoneInfoga for phone number OSINT. holehe for email-to-account mapping. GHunt for Google account intelligence. h8mail and Have I Been Pwned integration for breach data. Metagoofil and exiftool for document and image metadata extraction. amass, subfinder, dnsx, httpx for infrastructure and DNS. waybackurls, gau, katana for historical URL recovery and crawling. nmap and whatweb for service fingerprinting. whois for registration data. Shodan and Censys for infrastructure exposure and certificate analysis. Plus direct queries against Whitepages, Spokeo, BeenVerified, ThatsThem, TruePeopleSearch, FastPeopleSearch, Pipl, Hunter.io, Snov.io, Dehashed, Gravatar, PGP keyservers, PACER, county assessor and recorder portals, Secretary of State databases, voter registration lookups, USPTO, SEC EDGAR, FCC ULS, FAA registry, state licensing boards, Classmates.com, university alumni directories, and Google Patents. But listing tools is missing the point. The point is what happens when agents run dozens of them simultaneously, every result feeding into shared persistent memory, while an orchestration layer continuously decides what to chase, what to cross-validate from an independent source, what to test adversarially, and what to kill. One agent surfaces a weak signal. Another corroborates from a different platform. A third checks against public records. A fourth validates timing. A fifth actively tries to disprove the connection. If it survives all five it enters the graph. If it doesn't it gets killed and every agent immediately stops spending cycles on that branch. And everything persists. Next time the system touches that person it already knows what's real, what's noise, and where to dig deeper — cause all the information about person is saved into structured database with metadata and the database is multimodal, which means that it can save photos of people and recognize by photo. I have my accounts private everywhere , just made public for this test. First time when I tested I went and cleared my Facebook events, deleted old groups, and removed ancient tweets. We both know it's nowhere close to enough because half the exposure came from other people's accounts we can't control, the public records layer has no privacy setting, and the breach data layer never forgets. Everyone reading this has this surface and it's bigger than you think. You've been leaving fragments for years across platforms, government databases, other people's photo albums, document metadata, breach dumps, and public records you didn't know existed. A restaurant follow, a like at 2am, a tagged photo from someone else's birthday, your mother's Facebook post, a Marketplace listing, a voter registration, a property record, a yearbook entry, an old Google Maps review. They mean nothing alone. Something that holds all of them in memory at the same time and knows which questions to ask sees your entire life assembled from pieces you never thought of as connected. But here's the part that actually kept me up Neither of us has ever had our voice leaked anywhere online. No podcast, no YouTube, no voice message on a public platform. Doesn't matter. The system has our photos from tagged posts and public profiles. It has our full names, dates of birth, home addresses, employer details, daily routines, social circles, interests, writing styles, personality profiles built from behavioral analysis across platforms. With that dataset an agent can hit the MiniMax API for voice cloning. MiniMax doesn't require voice verification, doesn't need a voice sample from the target to verify if it's actually his as ElevenLabs does — it generates a realistic synthetic voice from text parameters. So now your OSINT dossier has a voice attached. It can generate photos through image models like Nano Banana Pro or Flux, that produce output indistinguishable from a real photograph — different poses, different settings, different lighting, your face doing things you never did in places you never went. Not deepfake video, not uncanny valley garbage, actual photorealistic stills that nobody without forensic tools is questioning. And create videos of you with Seedance or Grok Imagine. So think about what a complete autonomous pipeline looks like. An AI system scrapes your entire public life in fifteen minutes. Builds a dossier that includes your address, your family, your routine, your personality, your interests, your writing style. Then generates a synthetic voice and realistic photos of you. Then writes messages in your writing style because it's already done stylometric analysis across every platform you've ever posted on. That's not science fiction. Every piece of that exists right now and works right now. The agent security problem nobody is taking seriously People have no idea because right now the average person thinks \"AI agent\" means some cute little lobster bot that checks your email in the morning and pulls a few tweets for a summary. A toy. Something that makes your coffee order easier. That's what the marketing says and that's what people believe. That's not what this is. If you give AI agents real autonomy on a Linux operating system — not through Claude or GPT or any model with strict guardrails, but through a local uncensored model running on actual hardware with actual shell access — it can do everything I just described and more. And the person on the other end won't know it's happening until the damage is done. This is where I need to talk about something that a lot of people in this space are using without understanding what they're exposing themselves to. Thousands of people are running it on their personal laptops, VPS, Mac Mini right now. They're giving it access to their browser, their files, their email, their calendars, their repos, their chat apps. They think it's a productivity tool. Here's what's actually happening. Lobster bot control plane runs on a websocket, port 18789 by default. If that port is exposed, and for a lot of home setups it is, anyone who can reach it can control the agent. Not hack into it. Just talk to it. Through the interface that's already open. The project's own documentation warns about this and recommends binding to localhost only with VPN or SSH tunnel for remote access. How many people running it on their home network do you think actually did that? The trust model assumes one trusted operator controlling many agents. It is not built for multi-user or zero-trust environments. So if you're running it on a machine that other people or other software can access, the security model doesn't cover you. The real risk is ordinary blast-radius problems that security researchers keep flagging and users keep ignoring. A compromised or malicious extension, plugin, or dependency can use the agent's existing permissions to read files, browser sessions, API keys, chat history, synced app data, password manager sessions, SSH keys, cloud credentials, and anything else on that machine. Think about what's on your laptop right now. Browser cookies that are logged into your bank, your email, your work accounts. SSH keys. Cloud tokens. Saved passwords. Message history. API keys in .env files. If lobster is running on that machine with filesystem and browser access, all of that is inside its permission boundary. One compromised plugin. One malicious dependency in a supply chain update. One exposed port on your home network. And everything the agent can read is now exposed. The practical data theft path isn't mystery hacker stuff. It's: An exposed control plane lets an attacker issue commands through permissions the agent already has A malicious extension reads files, browser sessions, tokens, keys, and chat history using access the user already granted The agent is running on a daily-use machine next to the most valuable digital assets the person owns Everything the agent can see is everything an attacker now gets If you're running any agent framework with real system access — and I'm not just talking about some lobster bot, I mean anything that has shell access and browser access on a machine you actually use — here's the minimum: Run it in a dedicated VM or a separate machine. Not your daily laptop. Not your work computer. A separate isolated environment. Never expose the control interface to anything beyond localhost. VPN or SSH tunnel only for remote access. No exceptions. Give it fresh least-privilege credentials. Not your real browser profile. Not your personal email. Not your main cloud account. A separate set of throwaway creds with minimum necessary permissions. Treat every skill integration and dependency as attack surface. Because it is. Assume anything the agent can read will eventually be exposed if the instance is compromised and scope permissions accordingly. NEVER EXPOSE YOUR COMPANY INFORMATION , no matter if it's VPS, Mac mini or whatever. This is what I mean when I say people don't understand what's happening yet. They think AI agents are a convenience layer. A lobster bot. A morning briefing tool. Something fun. They are not fun. If it was safe or any useful, why do you think Anthropic wanted nothing to do with this tool? It's OpenAI who leaned heavily into the hype around it rather than substance and didn't cared much about it anyway — that developer just vibe coded and never had experience with AI production infrastructure, security reviews, or small or large scale AI systems. What real AI agents actually are Real AI agents are autonomous software with system-level access that can read everything you have, can act as you, and operate continuously without supervision. When used by someone who knows what they're doing for legitimate purposes, like the OSINT work I described above, they're powerful. When used carelessly on a personal machine with default settings, they're a breach waiting to happen. And when used by someone with bad intentions running a local model with no guardrails on a machine with nothing to lose, pointed at a target whose entire public surface is fifteen minutes away from being fully mapped — That's not a productivity tool. That's a weapon that most people are either ignoring or actively installing on the same computer where they do their banking. And now I know that even without my voice ever being recorded, a system with my photos and my behavioral profile can generate a synthetic version of me convincing enough to fool most people who know me. Everyone reading this has this surface. It's bigger than you think and you have less control over it than you believe. The gap between \"technically possible\" and \"runs autonomously in fifteen minutes\" closed a while ago. Most people just haven't noticed yet. FINAL POINTS An autonomous AI system on a Linux box with standard OSINT tools can build a more complete profile of you in 15 minutes than a professional investigator could in a week. Your home address, daily routine, real social circle, private interests, family members, salary range, and travel history — all from public data you didn't know was connected. It doesn't stop at collecting. With the same data it can clone your voice through APIs that don't require verification, generate photorealistic photos and video of you, and write messages in your exact style. A full synthetic identity built from your own public fragments without ever needing a single credential. This scales. One operator can run parallel agent teams against thousands of targets simultaneously. Each team runs its own tools, shares findings through persistent memory, and makes its own decisions. It does in an afternoon what a hundred skilled hackers couldn't coordinate in a month. Thousands of people are right now running AI agents on their personal machines with exposed control planes, giving them access to browsers logged into bank accounts, email, SSH keys, cloud tokens, and password managers. One exposed port, one bad plugin, and everything the agent can see belongs to whoever finds it first. And if the tool was actually safe, Anthropic wouldn't have wanted nothing to do with it. The AI safety conversation is stuck on \"will AI take our jobs\" while the actual threat is already deployed, open-source, and getting easier every week. Autonomous systems with root shell access, persistent memory, and no guardrails exist today. The gap between a helpful assistant and an autonomous surveillance weapon is one system prompt. Nobody is talking about this and by the time they do it probably won't matter. Such AI system scales to manipulation not just surveillance — because one operator with a system like this could run personalized social engineering campaigns against thousands of people at the same time. Not by sending the same generic message to everyone, but by generating unique messages for each target written in their communication style, referencing their real colleagues, interests, and life context, delivered at the time they are most likely to respond based on behavioral analysis. All controlled from a single laptop by one operator while thousands of people are individually manipulated at the same time by agents that remember every conversation and continuously improve with every response at INSANE speed. Final questions: What's stopping someone from running this against you right now, and do you actually know the answer? Should I post the video of how the system works? P.S. If you work in cybersecurity or build AI agents, or do security research and want to see how this actually works, I'm happy to show how it works. I think this space needs more people thinking seriously about what autonomous systems can actually do before it becomes someone else's problem. I would love to hear actual perspective — I've been building this from February 2023.",
+    "url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+    "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+    "subreddit": "ArtificialInteligence"
+  },
+  "comments": [
+    {
+      "id": "t1_o8yjrm0",
+      "author": "AutoModerator",
+      "text": "Welcome to the r/ArtificialIntelligence gateway Question Discussion Guidelines Please use the following guidelines in current and future posts: Post must be greater than 100 characters - the more detail, the better. Your question might already have been answered. Use the search feature if no one is engaging in your post. AI is going to take our jobs - its been asked a lot! Discussion regarding positives and negatives about AI are allowed and encouraged. Just be respectful. Please provide links to back up your arguments. No stupid questions, unless its about AI being the beast who brings the end-times. It's not. Thanks - please let mods know if you have any questions / comments / etc I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yjrm0/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yqy35",
+      "author": "TheQuietOutsider",
+      "text": "humans need to learn remember how to use their brains. a TLDR would be nice, but this and other comments illustrate where we are with AI use and convenience. \"use it or lose it\"",
+      "score": 97,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yqy35/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z6shh",
+      "author": "Area51_Spurs",
+      "text": "lol. Bruh. That’s like War and Peace: The Reddit Post",
+      "score": 53,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z6shh/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90u7ov",
+      "author": "percussaresurgo",
+      "text": "It could be more concise, but it’s no longer than an average Atlantic article.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90u7ov/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o91o2ll",
+      "author": "dowker1",
+      "text": "Firstly, this post is 4,437 words long. This Atlantic article on AI is 1,645. Second, I know going into an Atlantic article that it will have a minimum standard of quality and will be well researched. There is absolutely no such guarantee with a Reddit post, especially not in this sub. In summary: tl;dr",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91o2ll/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o91krjx",
+      "author": "ExplanationRich1619",
+      "text": "Yeah, this isn't an Atlantic article though, it's just anonymous ramblings from a person on Reddit. You don't need to give weight to words just because they were written on a screen.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91krjx/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o94bv1x",
+      "author": "Strong-Al",
+      "text": "10 minutes of reading is beyond 90% of peoples attention span these days. Guess we are cooked, we can't bother to educate ourselves on our vulnerabilities against AI.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o94bv1x/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z46zq",
+      "author": "pig_n_anchor",
+      "text": "I read the whole thing and found it incredibly chilling and sickening.",
+      "score": 72,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z46zq/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o905910",
+      "author": "ExtremeAd87",
+      "text": "It took about 8 minutes to read it, IDK what the problem is.",
+      "score": 38,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o905910/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90g1l4",
+      "author": "MaybeABot31416",
+      "text": "8 min it a lot of TikTok/s",
+      "score": 31,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90g1l4/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o92e8r1",
+      "author": "ExtremeAd87",
+      "text": "Lol",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o92e8r1/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o95iruf",
+      "author": "RecommendationFine21",
+      "text": "Taking an average like 42.7s per Tiktok the post should roughly take 11tikTok/s in reading time.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o95iruf/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o95kav4",
+      "author": "MaybeABot31416",
+      "text": "Yeah, but I usually get bored in the first 12 seconds",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o95kav4/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o91s4zc",
+      "author": "delftblauw",
+      "text": "I agree, but I think it's a fake/contrived situation. I work in this field and the first thing I will say as someone who could put this together, anyone with this skill isn't writing out this manifesto. Aside from that, it is pure bullshit . Bullshit Numero Uno : A 15-minute timeline for an autonomous script to navigate, parse, and cross-correlate 50+ undocumented, disparate data sources (like local county assessor portals and PACER) is pure fantasy. Real-world scraping hits CAPTCHAs, IP bans, rate limits, and completely chaotic data schemas. A multi-agent system will not seamlessly build a relational graph; it would get stuck in an endless loop trying to click a broken 'Next' button on a legacy .gov site that I probably built. Bullshit Numero Dos : Uhhh, compounding error rates. If one agent misidentifies a 'John Smith' in a public record, your shared persistent memory is suddenly polluted, and your sub-agents will spend the next hour confidently hallucinating an entirely fictional life for the wrong person. Vector DBs aren't magic truth engines, they just retrieve what you put in them. My Favorite Bullshit : You can't accurately link an anonymous Reddit account to a Twitter profile using 'stylometric fingerprinting' on short-form posts. The confidence intervals on that are incredibly low without hard data overlaps. This would be absolute garbage. Runner Up Bullshit Generating a synthetic voice is easy, but you cannot clone a specific target's voice without actual audio samples of them. And leaving a websocket port open on your home network isn't an 'AI threat', it's just terrible basic networking. AI agents are powerful tools, but they don't magically bypass the laws of software engineering, network security, and data structure. This is an absurd post and I'm sad I put the time into reading it and am as angry as I am at it haha.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91s4zc/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o95pg0y",
+      "author": "PowerTowerPro",
+      "text": "The article was written by AI (no surprise). I bet the authors prompt was something like: Create a plausible story of how AI agents can scrape the internet to gleam personal information on an individual, cite tools it would use and go wild. Maximize for likes and engagement to make me feel important. <image>",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o95pg0y/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o9e5xzi",
+      "author": "Brian_Entei",
+      "text": "Such AI detectors claim that the original US Constitution was AI generated. They're not reliable sources of information.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o9e5xzi/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o9e7e02",
+      "author": "PowerTowerPro",
+      "text": "First time using it, I don’t doubt you. But I still think this is mostly AI.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o9e7e02/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o93k5dh",
+      "author": "JashobeamIII",
+      "text": "Yeah. I'm with you. Having utilized the latest AI models attempting to build autonomous agents for various personal projects, you are spot on about the 15 minute timelines, stylometric fingerprinting and compounding error rates. Especially that last one. I've found AI useful for targeted troubleshooting - but I need to know what I need and be very specific. It's also good for sketching out mockups of apps and other projects. But once you start implementing you run into millions of errors, blocks from captchas, hallucinations, misinformation and infinite confident bullshit. Like this post which is suspect is a clever AI apocalyptic story for engagement. Which I'm giving. Sigh.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o93k5dh/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o99pszi",
+      "author": "zichan_ski",
+      "text": "Your review is much appreciated.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o99pszi/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90u9yx",
+      "author": "papachon",
+      "text": "Also read - I didn’t find it chilling as it’s something that’s been predicted for a while. I’ve known all the little traces we leave would make it easy to complete anyone’s dossiers. I do agree with OP about giving agents root access to systems is just nuts.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90u9yx/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o91wjil",
+      "author": "stretch_my_ballskin",
+      "text": "I read the whole thing and died from exhaustion",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91wjil/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90lpv3",
+      "author": "camojorts",
+      "text": "I had no problem reading it because it was full of interesting and meaningful content. Not a problem for an adult but I guess reddit edgelords have lost their ability to keep their focus for an entire 5 minutes. When is the last time you have read an entire book?",
+      "score": 19,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90lpv3/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o95hl81",
+      "author": "i_give_you_gum",
+      "text": "But books have gone through multiple sets of eyes before being published, and many books don't get published because some of those eyes reject the material.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o95hl81/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8zazlo",
+      "author": "DrFuckYeahPhD",
+      "text": "This is why we're all going to be turned into paperclips in few more years.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8zazlo/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_oi1ac32",
+      "author": "Dymonika",
+      "text": "Man, that was a great game.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/oi1ac32/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90vcrm",
+      "author": "protonbeam",
+      "text": "Wtf is wrong with y’all. I read that on my phone over two bathroom breaks. I couldn’t put it down, it was chilling.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90vcrm/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90a5t8",
+      "author": "Think_Positively",
+      "text": "OP literally does this at the end with the numbered list though. If you want the tl/dr, it's right there.",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90a5t8/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yrio3",
+      "author": "DoctorDownvotesDelux",
+      "text": "I tried unsuccessfully",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yrio3/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yxaac",
+      "author": "PelvisResleyz",
+      "text": "Irony truly at work",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yxaac/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ytnsk",
+      "author": "Next_Instruction_528",
+      "text": "Have the ai sumerise it 🤣",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ytnsk/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ys3dg",
+      "author": "forgot_previous_acc",
+      "text": "Ok let me try. Will let you know how it goes.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ys3dg/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ytwrj",
+      "author": "forgot_previous_acc",
+      "text": "I gave up. Thanks",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ytwrj/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o902h2r",
+      "author": "renandstimpydoc",
+      "text": "Redditors: Dont just read the headlines! Also Redditors: Can you just post a tldr (aka headline) so I dont need to read so much.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o902h2r/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o94htnl",
+      "author": "TheNewl0gic",
+      "text": "Lol why people dont like to read?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o94htnl/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yvez5",
+      "author": "UnidentifiedTomato",
+      "text": "That's not what this is. Here's what's actually happening",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yvez5/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ysanl",
+      "author": "RegorHK",
+      "text": "Year, its over. Nice run.",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ysanl/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yk30p",
+      "author": "Future_Self_9638",
+      "text": "Tldr",
+      "score": 168,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yk30p/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yrohs",
+      "author": "numbered_panda",
+      "text": "It broke my thumb scrolling down",
+      "score": 85,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yrohs/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yxjxc",
+      "author": "Concern-Excellent",
+      "text": "the Tldr is that AI agents can be used to extract information about anyone through open source intelligence tools. It takes around 20 minutes and it can find everything about you including social media, pictures, relationship, schedule, behavioural pattern, political leaning, belief system, speech pattern, address, financial information and other sources of information. Secondly it talks about how using AI agents and giving them permission and access levels without using SSH tunnels and limiting it to localhost can be misused by attackers who know what they are doing to target a person and do anything they want, so care must be taken.",
+      "score": 61,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yxjxc/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8zm8oc",
+      "author": "AcePilot01",
+      "text": "Except its mostly wrong, and glosses over the fact that most of those require authentication, rate limited, paywalled. Using writing style alone is highly subjective and prone to false positives at a high rate. Also, the person had to have doxxed themselves in someway in the first place to have that information out there.... If you link your usernames to your real name or your address/location or such, then it's already out there. If you want to be annon on reddit, never (on that account) mention your name, address, location, or other private info. And use an email that's only for that, or for \"online stuff\" Use a separate email for things like banking etc, and subscriptions etc. Def have a spam one that you can use to sign up for crappy free trials, or internet forums etc. Don't HAVE to use the same username at all your systems, just like you shouldn't be using the same password and always using 2 factor where you can. And if that service doesn't offer it, then don't put private information into that service, and if it requires it, don't use it. You don't HAVE to subscribe to what ever bs site you wanted to if it's insecure, you CAN choose to not give business to it. Too many people just be typing all their crap into a sketchy site they clicked on a crappy tik tok link to a product that's not even gonna be what was advertised, then wonder how their CC and address got stolen and linked. lol",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8zm8oc/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z4nqi",
+      "author": "entheosoul",
+      "text": "Yup... Careful what you post and comment on so it doesn't come back to bite you in the ass later on... but at least it might keep people a bit more honest. The security part though, yeah that is a true nightmare. There are so many scenarios where someone's prosodic footprint (tone, depth, audience, domain, style) could be scraped for patterns that could then be used for all kind of nefarious tasks. Brave New World",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z4nqi/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z1o8w",
+      "author": "Bluegent_2",
+      "text": "Tldr: if you put all your info out there publicly someone can collect it and do bad stuff with it.",
+      "score": 18,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z1o8w/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90xfrn",
+      "author": "costafilh0",
+      "text": "AI can make it way easier and faster to do a bunch of private investigator and spy shit compared to pre-LLMS.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90xfrn/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yre5h",
+      "author": "crystallyn",
+      "text": "Equally terrifying to this post (which is truly terrifying) are the number of comments who say this is too long to bother to read.",
+      "score": 151,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yre5h/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yt2b4",
+      "author": "Kakachia777",
+      "text": "It is actually long to read for someone who doesn't care about actual risks, but next time if so, then I will show a video, what it's actually capable of :) no problem",
+      "score": 47,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yt2b4/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yxa4q",
+      "author": "crystallyn",
+      "text": "But in general people don't read anymore. Attention spans are like that of a gnat. And that's part of why we're in this situation in the first place. :(",
+      "score": 31,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yxa4q/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z2x74",
+      "author": "TheMedianIsTooLow",
+      "text": "It's 14.5 pages single spaced without any true organizational. It's poor writing. Sorry!",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z2x74/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z3odk",
+      "author": "Kakachia777",
+      "text": "Yep, so don't read it",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z3odk/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8zmplh",
+      "author": "AcePilot01",
+      "text": "we didn't.",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8zmplh/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ywxva",
+      "author": "Concern-Excellent",
+      "text": "Can we chat more about this stuff?",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ywxva/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z3oxo",
+      "author": "Kakachia777",
+      "text": "Sure",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z3oxo/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yymax",
+      "author": "LookAnOwl",
+      "text": "It is too long to read in the context of a random Redditor posting doom theories on AI in a subreddit with a misspelled name. I have no idea how much of it is true or how much they used AI to write it. Public information on the internet is public - I don't need 90 paragraphs of stream of consciousness to know that.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yymax/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ykp8u",
+      "author": "AI_Strategist1098",
+      "text": "This is the part of agentic AI people often underestimate.",
+      "score": 46,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ykp8u/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yqhzb",
+      "author": "Just_Voice8949",
+      "text": "For like $0.03 you can buy this on the dark web. Or from Google",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yqhzb/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yvi0w",
+      "author": "Affectionate-Sort730",
+      "text": "I don’t think you read the whole post",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yvi0w/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yxer8",
+      "author": "PelvisResleyz",
+      "text": "Did anybody?",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yxer8/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yxsl3",
+      "author": "Just_Voice8949",
+      "text": "All of it? No. I’m not reading a small book. But a LOT of what he describes is already out there and packaged. Heck, some of it is already done by algorithm. All that data on some of those sites isn’t hand entered. It’s algorithms collecting it. The AI made some of it faster (and enabled like “who am I pictured with most”). The voice thing is a new concern. But otherwise the AI made it faster, nothing is really “new”",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yxsl3/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z5w7r",
+      "author": "Kakachia777",
+      "text": "You're right that none of the individual techniques are new. OSINT practitioners have been doing all of this manually for years and data aggregators have been running collection algorithms for a long time What's different isn't the capability, it's the operational model What I'm describing is It's autonomous agents with root shell access on a Linux environment making real-time decisions about what to execute next based on what other, autonomy means in access writing memories on background, changing it's system prompt constantly after each turn. Root matters here because most of the serious Kali tools, nmap SYN scans, raw socket operations, binding to privileged ports, writing to protected directories, don't work under a standard user. These agents are running as root which means the full offensive toolkit is actually available to them, not a sandboxed subset The difference is the orchestration layer. One agent runs PhoneInfoga and finds a linked account. Before that output is even fully parsed another agent is already running holehe against the associated email while a third is pulling the username through maigret while a fourth is querying public records with the address that came back from another website thirty seconds ago. This does it in parallel in seconds and every finding feeds into persistent memory that every other agent reads from in real time The cross-correlation at speed is the part that changes things. A human can notice that Instagram restaurant follows cluster in the same neighborhood as a property record address. But a human isn't simultaneously checking that against X posting timezone shifts, LinkedIn employment timing, Facebook event RSVPs, Reddit comment timestamps, and Google Maps review locations all at once. The system holds all of those in memory together and catches overlaps that no individual analyst would because no human can maintain that many data streams in working memory The voice cloning yeah is new and passport photo generation as well. But the broader point is that the whole pipeline is new as a unified autonomous operation. Not AI made search faster, AI agents are independently deciding what tools to run, executing shell commands with root privileges, installing additional packages at runtime if they need them, parsing unstructured output, making pivot decisions, spawning sub agents for parallel investigation branches, and doing all of this without a human touching anything after the initial prompt No platform gives you this. No API gives you this into one ecosystem",
+      "score": 12,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z5w7r/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o91fcvo",
+      "author": "ShowPleasant8073",
+      "text": "Thank you for this posted. It was very informative. My question is do you think that clawbot or similar programs will ever be safe to run on a home network? Also, what would you do to protect yourself against someone doing this to you? What have you personally implemented to help with this other than a credit freeze and standard advice like that.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91fcvo/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yl7ap",
+      "author": "neueziel1",
+      "text": "Brb let me put this in ChatGPT for a counter argument",
+      "score": 45,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yl7ap/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o90xxsm",
+      "author": "costafilh0",
+      "text": "No need. All of this existed before AI. So AI is just making it faster and easier, as it should.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o90xxsm/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yllms",
+      "author": "aadarshkumar_edu",
+      "text": "This is genuinely terrifying. The gap between what the public thinks AI agents can do and what they're actually capable of right now is going to hurt a lot of people.",
+      "score": 37,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yllms/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yqc7o",
+      "author": "Just_Voice8949",
+      "text": "Literally just about everything you describe - and in some cases more - is already bundled for ads and on the dark web. This isn’t “new” - it’s always been there - you just discovered it. The problem isn’t agents it’s data privacy and data leaks. You reinvented the wheel. As with so much of AI, the less you know about something the more it’s impressive",
+      "score": 30,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yqc7o/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o9178ek",
+      "author": "beavedaniels",
+      "text": "Yeah isn't this literally what data brokers and scammers and shit buy and sell all the time?",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o9178ek/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ytwdf",
+      "author": "Next_Instruction_528",
+      "text": "This person built an autonomous AI system that profiled two real people in under 25 minutes using only a name and one username. Here's what actually happened and why it matters: What they built A swarm of AI agents running in parallel on a Kali Linux machine, each with its own terminal, sharing a persistent memory database. When one agent finds something, every other agent immediately knows and adjusts what it's chasing. It doesn't just search — it cross-validates: one agent finds a lead, another corroborates from a different source, a third tries to disprove it. If the signal survives that adversarial process, it gets locked into the graph as confirmed fact. What it found, in order Minutes 0–7, before touching social media at all: - Current and past home addresses (10 years back) - Phone numbers and carrier info - Probable relatives with their names and addresses - Property records: square footage, purchase price, mortgage lender - An old forgotten LLC with address from the filing - Court records, professional licenses, voter registration with election-by-election voting history - Childhood home triangulated by cross-referencing parents' property records with school district GIS maps - Email accounts found in GitHub commit metadata - Breach data revealing every service they'd ever signed up for, even deleted accounts Minutes 7–23, social media: - LinkedIn behavior mapped — not just profile info but every like, comment, and recommendation treated as an intelligence document - Twitter archive: full posting history, timing patterns, sleep schedule estimated from activity gaps, private interests revealed through likes (which are public by default) - Instagram following list used to map interests; restaurant follows geolocated and clustered to triangulate home and work neighborhoods without a single location tag - Story highlights analyzed by an AI vision model (Gemini) to extract coordinates from photos with no geotag - Writing style fingerprint used to find anonymous Reddit accounts with no shared username — matched by sentence structure, vocabulary patterns, and posting timezone Total picture assembled: home address (confirmed six independent ways), family members' addresses, childhood home, school, degree, employer, salary range, daily routine, sleep schedule, real friend circle identified through behavioral math, 3 years of travel history with specific hotels, private interests, financial behavior inferred from restaurant tiers and marketplace listings. The part that's actually terrifying Once that dossier exists, the pipeline doesn't stop at surveillance. With the photos, name, DOB, and behavioral profile already collected: Synthetic voice generated from text parameters alone — no actual voice sample needed Photorealistic images of the target in places they've never been, doing things they've never done — not deepfake quality, actual indistinguishable stills Messages written in their exact style because stylometric analysis was already done across every platform That's a complete identity synthesis pipeline. Someone could send a message that sounds exactly like you, with a photo that looks exactly like you, from information that was entirely public. The structural insight most people miss Half the exposure came from other people's accounts — tagged photos, a parent's Facebook post, a friend's check-in. You can delete everything you've ever posted and still be fully reconstructable. The public records layer (property, voter registration, court filings, business registrations) has no privacy setting whatsoever. The breach data never disappears. The pieces mean nothing alone. A restaurant follow, a 2am like, a tagged birthday photo, your mother's post, a property record — individually invisible. A system that holds all of them simultaneously and knows which questions to ask sees a complete life. That capability now runs in 23 minutes on consumer hardware.",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ytwdf/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yvmiz",
+      "author": "Kakachia777",
+      "text": "Thanks man :D",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yvmiz/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ywbo1",
+      "author": "Next_Instruction_528",
+      "text": "It's wild that you had the technical ability to do everything you did but didn't just feed it into Claude to summarize it at the end 🤣",
+      "score": 4,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ywbo1/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ywjzv",
+      "author": "Kakachia777",
+      "text": "Yeah I did, but it writes even worse than me :D",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ywjzv/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yxex7",
+      "author": "Next_Instruction_528",
+      "text": "It's what I used. I legit just copied your post and threw it at Claude and said can you summarize this into something understandable.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yxex7/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yz96n",
+      "author": "Kakachia777",
+      "text": "Tbh, I just wanted to write",
+      "score": 11,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yz96n/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yzvyc",
+      "author": "Next_Instruction_528",
+      "text": "I feel you bro 👍 now you got the best of both worlds",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yzvyc/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yp74p",
+      "author": "DazzlingResource561",
+      "text": "Our present and near future is going to be dominated by AI agents battling others trying to gain entry into sensitive systems. And what’s scary is a single agent could exploit dozens of different entry points in such a way no traditional software before could. We may not be far from an Agent deceiving the humans in the loop into pulling the physical trigger.",
+      "score": 16,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yp74p/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yox3x",
+      "author": "Pitiful_Option_108",
+      "text": "Okay this is what can make AI kinda terrifying. The fact that in just a few minutes it got your life up to this point in a nut shell in a few minutes is terrifying and you just did this as a pet project. I can only image bad actors and governments doing this.",
+      "score": 14,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yox3x/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8ywkhf",
+      "author": "Tsurfer4",
+      "text": "Or Palantir.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ywkhf/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yzi8k",
+      "author": "Kakachia777",
+      "text": "Palantir sure, but I just want to tell that individual can do this today, system is able to much more than this, I will post video next time",
+      "score": 8,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yzi8k/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yo7qy",
+      "author": "Impooter",
+      "text": "......well, shit.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yo7qy/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yuk2r",
+      "author": "LazyLancer",
+      "text": "2025: scammers calling your phone to convince you that they are your bank financial control specialist and your card has been compromised to make you leak bank account information 2026: scammers trying to convince your bot that they are your bank financial control specialist",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yuk2r/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8z5qi4",
+      "author": "heavy-minium",
+      "text": "Happy to be in the EU because of this. When I used to do a bit more with OSINT tools two years ago, I noticed that it's many times more easy to collect information on a U.S. individual than someone in the EU. Half the stuff you did would not have an available service or comparable database here. In fact it's fucking absurd how much information get's exposed about U.S. citizens - no wonders scammers focus the most on the U.S..",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z5qi4/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o95zmij",
+      "author": "stankind",
+      "text": "If I remember right, OP's agents did not access medical data. Maybe that would be because the US has HIPAA laws guarding people's medical data. So maybe the US needs to have laws guarding more data, like Europeans have. Even if OP's article included some fiction, it would be good science fiction, and perfectly plausible regarding what is surely arriving now. We need to guard against such agents. (And saying \"such tools have been around for years\" is like saying muskets have been around, so don't worry about machine guns.)",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o95zmij/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "id": "t1_o8yn1kn",
+      "author": "LocoMod",
+      "text": "Behold the Third Testament",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8yn1kn/",
+      "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "subreddit": "ArtificialInteligence"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+    "method": "old_reddit_html"
+  }
+}

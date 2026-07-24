@@ -1,0 +1,123 @@
+{
+  "method": "old_reddit_html",
+  "queries": [
+    "property management maintenance requests software",
+    "hotel operations guest calls messaging automation",
+    "therapist practice management insurance claims",
+    "clinic front desk scheduling text automation",
+    "mortgage servicing collections borrower communications",
+    "accounts receivable automation QuickBooks NetSuite Stripe",
+    "insurance claims automation manual review",
+    "quote to cash automation accounts payable month end close",
+    "construction drawing review rework delays",
+    "consumer lending servicing collections repayment plans"
+  ],
+  "threads": [
+    {
+      "title": "[General US-PA] What software/tools do you actually use to manage your rental properties? Looking for recommendations",
+      "url": "https://old.reddit.com/r/Landlord/comments/1spks9j/general_uspa_what_softwaretools_do_you_actually/",
+      "query": "property management maintenance requests software",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-01.json",
+      "comments": 30,
+      "post_title": "[General US-PA] What software/tools do you actually use to manage your rental properties? Looking for recommendations",
+      "subreddit": "Landlord"
+    },
+    {
+      "title": "Property Manager BEWARE: Doorloop is hot garbage!",
+      "url": "https://old.reddit.com/r/PropertyManagement/comments/1t9gpbw/property_manager_beware_doorloop_is_hot_garbage/",
+      "query": "property management maintenance requests software",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-02.json",
+      "comments": 30,
+      "post_title": "Property Manager BEWARE: Doorloop is hot garbage!",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "title": "What software do you actually use to manage your rentals?",
+      "url": "https://old.reddit.com/r/PropertyManagement/comments/1nuh2br/what_software_do_you_actually_use_to_manage_your/",
+      "query": "property management maintenance requests software",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-03.json",
+      "comments": 30,
+      "post_title": "What software do you actually use to manage your rentals?",
+      "subreddit": "PropertyManagement"
+    },
+    {
+      "title": "Best CRM for Managing Rental Properties and Tenant Relationships",
+      "url": "https://old.reddit.com/r/CRMSoftware/comments/1u7rk9s/best_crm_for_managing_rental_properties_and/",
+      "query": "property management maintenance requests software",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-04.json",
+      "comments": 14,
+      "post_title": "Best CRM for Managing Rental Properties and Tenant Relationships",
+      "subreddit": "CRMSoftware"
+    },
+    {
+      "title": "College kids and parents learn lesson the hard way... 2nd attempt",
+      "url": "https://old.reddit.com/r/TalesFromTheFrontDesk/comments/1msgxlw/college_kids_and_parents_learn_lesson_the_hard/",
+      "query": "hotel operations guest calls messaging automation",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-05.json",
+      "comments": 30,
+      "post_title": "College kids and parents learn lesson the hard way... 2nd attempt",
+      "subreddit": "TalesFromTheFrontDesk"
+    },
+    {
+      "title": "Business is growing, but the daily operations are overwhelming me",
+      "url": "https://old.reddit.com/r/startup/comments/1s58xtp/business_is_growing_but_the_daily_operations_are/",
+      "query": "hotel operations guest calls messaging automation",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-06.json",
+      "comments": 26,
+      "post_title": "Business is growing, but the daily operations are overwhelming me",
+      "subreddit": "startup"
+    },
+    {
+      "title": "UAE 10 Year Golden Visa for Top graduates of international universities Process",
+      "url": "https://old.reddit.com/r/UAE/comments/1qykmju/uae_10_year_golden_visa_for_top_graduates_of/",
+      "query": "hotel operations guest calls messaging automation",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-07.json",
+      "comments": 22,
+      "post_title": "UAE 10 Year Golden Visa for Top graduates of international universities Process",
+      "subreddit": "UAE"
+    },
+    {
+      "title": "Lista de jogos do PS5 que não estão no PS4 (traduzida para o português)",
+      "url": "https://old.reddit.com/r/playstationbrasil/comments/1ntzesy/lista_de_jogos_do_ps5_que_não_estão_no_ps4/",
+      "query": "hotel operations guest calls messaging automation",
+      "error": "UnicodeEncodeError: 'ascii' codec can't encode character '\\xe3' in position 69: ordinal not in range(128)"
+    },
+    {
+      "title": "AITA for bashing my sister in the head with a Christmas present and telling her to consider me dead? (6 parts)",
+      "url": "https://old.reddit.com/r/BestofRedditorUpdates/comments/1p6ky4o/aita_for_bashing_my_sister_in_the_head_with_a/",
+      "query": "therapist practice management insurance claims",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-09.json",
+      "comments": 30,
+      "post_title": "AITA for bashing my sister in the head with a Christmas present and telling her to consider me dead? (6 parts)",
+      "subreddit": "BestofRedditorUpdates"
+    },
+    {
+      "title": "AITA for blocking my friend of 10 years after she committed a HIPAA violation against me?",
+      "url": "https://old.reddit.com/r/BestofRedditorUpdates/comments/1mylsqv/aita_for_blocking_my_friend_of_10_years_after_she/",
+      "query": "therapist practice management insurance claims",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-10.json",
+      "comments": 30,
+      "post_title": "AITA for blocking my friend of 10 years after she committed a HIPAA violation against me?",
+      "subreddit": "BestofRedditorUpdates"
+    },
+    {
+      "title": "Why Your Therapy Practice Management Software Is Stuck in 2015 — And What Comes Next",
+      "url": "https://old.reddit.com/r/SignalbyTherapreneur/comments/1s96t3o/why_your_therapy_practice_management_software_is/",
+      "query": "therapist practice management insurance claims",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-11.json",
+      "comments": 0,
+      "post_title": "Why Your Therapy Practice Management Software Is Stuck in 2015 — And What Comes Next",
+      "subreddit": "SignalbyTherapreneur"
+    },
+    {
+      "title": "Therapist Office Shady Billing Practices and Refusal to Return Money Owed Location: California",
+      "url": "https://old.reddit.com/r/legal/comments/1qv0zv8/therapist_office_shady_billing_practices_and/",
+      "query": "therapist practice management insurance claims",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical/reddit-thread-12.json",
+      "comments": 2,
+      "post_title": "Therapist Office Shady Billing Practices and Refusal to Return Money Owed Location: California",
+      "subreddit": "legal"
+    }
+  ],
+  "thread_count": 11
+}

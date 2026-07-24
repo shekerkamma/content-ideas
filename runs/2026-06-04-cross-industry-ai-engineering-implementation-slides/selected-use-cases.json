@@ -1,0 +1,39 @@
+{
+  "source_pdf": "/mnt/c/Users/sheke/Downloads/Ai Engineering Use Cases Framework Document.pdf",
+  "captured_on": "2026-06-04",
+  "industries": [
+    {
+      "id": "UC-MFG-01",
+      "industry": "Manufacturing & Plant Operations",
+      "title": "Predictive Maintenance AI Agent",
+      "revenue": "$5K-10K/month per client",
+      "priority": "1",
+      "pdf_sections": ["2.5", "5 UC06"]
+    },
+    {
+      "id": "UC-LAW-01",
+      "industry": "Law Firms",
+      "title": "Contract Generation & Review Agent",
+      "revenue": "$3K-5K/month per client",
+      "priority": "3",
+      "pdf_sections": ["2.3"]
+    },
+    {
+      "id": "UC-HEALTH-01",
+      "industry": "Dental & Healthcare Practices",
+      "title": "Patient Intake Automation + Insurance Verification",
+      "revenue": "$3K-5K/month per client",
+      "priority": "4",
+      "pdf_sections": ["2.1"]
+    },
+    {
+      "id": "UC-MKT-01",
+      "industry": "Marketing Agencies",
+      "title": "Automated Reporting Dashboard + SEO Agent",
+      "revenue": "$2K-4K/month per client",
+      "priority": "5",
+      "pdf_sections": ["2.4"]
+    }
+  ]
+}
+

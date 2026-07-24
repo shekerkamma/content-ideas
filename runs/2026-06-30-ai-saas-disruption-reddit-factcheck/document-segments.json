@@ -1,0 +1,96 @@
+{
+  "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+  "extraction_method": "plain-text",
+  "segments": [
+    {
+      "id": "segment-001",
+      "locator": "Section 2",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "# Goal Loop Test: AI Market Insights on Disrupting SaaS Market\n\nDate: 2026-06-30\n\nSample prompt: \"AI market insights on disrupting SAAS market\""
+    },
+    {
+      "id": "segment-002",
+      "locator": "Section 3",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Goal Contract\n\n- Outcome: Test `goal-loop-orchestrator` on a broad AI/SaaS market-insight prompt using the upgraded real-research chain.\n- Artifacts: This run note plus raw Exa and Firecrawl evidence files in `runs/`.\n- Constraints: Use real research tools, not simple web search; use local skills first; use `ai-analyst` as the upstream synthesis/validation gate; no deck requested; bounded loop; no infinite loop.\n- Acceptance criteria: Exa discovery works, Firecrawl ingestion works, GBrain recall is attempted, Reddit/community evidence is probed, source-backed insights are separated from open gaps, and the run stops within budget.\n- Verification: Saved raw evidence, source table, confidence labels, and loop stop state.\n- Research mode: `validated-market-pricing-thesis-with-gaps`.\n- Loop budget: 3 total passes.\n- Stop conditions: Stop after evidence collection, source tieout, and synthesis; do not continue chasing community evidence after two failed/weak probes.\n- Known inputs: Broad SaaS market disruption prompt.\n- Missing inputs: Target buyer, geography, SaaS category, and output format."
+    },
+    {
+      "id": "segment-003",
+      "locator": "Section 4",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Skill Chain\n\n| Phase | Skill/action | Why | Input | Output | Verification |\n|---|---|---|---|---|---|\n| 1 | `goal-loop-orchestrator` | Refine vague prompt, bound loop, select chain | User prompt | Goal contract and research plan | Contract includes loop budget and stop conditions |\n| 2 | GBrain recall | Required durable-memory stage for strategy/pipeline work | AI agents + SaaS pricing query | Blocked | `GBrain: Timed out waiting for PGLite lock.` |\n| 3 | `exa-api` | Semantic discovery, preferred over generic search | SaaS disruption/pricing query | 5 high-signal sources | `runs/2026-06-30-ai-saas-disruption-exa-search.json` |\n| 4 | `firecrawl` | Full-page ingestion of important pages | Vendor/pricing/analyst URLs | Live page captures | Firecrawl `meta.source=live`, status 200 on captured pages |\n| 5 | Reddit/community probe via Exa | Buyer-language validation attempt | Reddit/community queries | No usable Reddit evidence | Two probe files saved; first 0 results, second mostly non-Reddit |\n| 6 | `ai-analyst` validation contract | Synthesize data-backed claim with source tieout | Raw evidence files | Confidence-scored insights | Claims mapped to source table below |\n\nNo `branded-pptx-deck` stage was triggered because the prompt did not ask for slides or PowerPoint."
+    },
+    {
+      "id": "segment-004",
+      "locator": "Section 5",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Evidence Files\n\n- Exa discovery: `runs/2026-06-30-ai-saas-disruption-exa-search.json`\n- Firecrawl discovery: `runs/2026-06-30-ai-saas-disruption-firecrawl-search.json`\n- Reddit probe 1: `runs/2026-06-30-ai-saas-disruption-exa-reddit-probe.json`\n- Reddit probe 2: `runs/2026-06-30-ai-saas-disruption-exa-reddit-probe-2.json`\n- Salesforce Agentforce pricing: `runs/2026-06-30-ai-saas-salesforce-agentforce-firecrawl.json`\n- Intercom pricing: `runs/2026-06-30-ai-saas-intercom-pricing-firecrawl.json`\n- Microsoft Copilot Studio: `runs/2026-06-30-ai-saas-microsoft-copilot-studio-firecrawl.json`\n- Deloitte SaaS meets AI agents: `runs/2026-06-30-ai-saas-deloitte-firecrawl.json`\n- RSM SaaS pricing models: `runs/2026-06-30-ai-saas-rsm-firecrawl.json`\n- Bain per-seat pricing: `runs/2026-06-30-ai-saas-bain-firecrawl.json`"
+    },
+    {
+      "id": "segment-005",
+      "locator": "Section 6",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Source Table\n\n| Source | Category | Evidence used | Confidence |\n|---|---|---|---|\n| Deloitte, \"SaaS meets AI agents\" | Analyst/market thesis | Predicts SaaS AI agents will shift SaaS toward hybrid usage/outcome pricing; says full replacement is more gradual than 2026 hype. | High for directional market framing |\n| RSM, \"SaaS vendors must adjust pricing models...\" | Analyst/pricing thesis | States subscription/per-user pricing is under pressure as software performs work autonomously; recommends outcome-based pricing and shadow pricing models. | High for pricing-risk framing |\n| Bain, \"Per-Seat Software Pricing Isn't Dead...\" | Analyst/pricing operating model | Finds hybrid pricing is the dominant interim strategy and says vendors need telemetry, billing, sales enablement, and customer transition support. | High for transition mechanics |\n| Salesforce Agentforce pricing | Primary vendor pricing | Shows Flex Credits at $500 per 100k credits, $2 per conversation, and examples of action/credit-based pricing. | High for vendor behavior |\n| Intercom pricing | Primary vendor pricing | Shows Fin at $0.99 per outcome and a no-seat-required Fin AI Agent option for existing helpdesks. | High for outcome-pricing proof |\n| Microsoft Copilot Studio | Primary vendor/product | Positions Copilot Studio as a platform for creating, managing, and launching AI agents, including autonomous capabilities and usage/ROI tracking. | Medium-high for platform direction |\n| Exa Reddit probes | Community discovery attempt | No usable Reddit thread evidence found in this pass. | Low; validation gap |"
+    },
+    {
+      "id": "segment-006",
+      "locator": "Section 7",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Market Insights"
+    },
+    {
+      "id": "segment-007",
+      "locator": "Section 8",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "### 1. The disruption is not \"SaaS dies\"; it is \"the seat stops being the clean billing unit.\"\n\nThe strongest supported signal is pricing-model disruption. Deloitte frames AI agents as pushing SaaS toward usage- and outcome-based pricing, while Bain says seats are not dead but are no longer the only game. RSM is more aggressive, arguing that fixed per-user subscription models are under structural pressure when software performs work independently.\n\nImplication: the immediate wedge is not replacing entire systems of record. It is attacking categories where value can be metered by work completed: resolved tickets, completed workflows, actions, conversations, documents processed, leads qualified, invoices reconciled."
+    },
+    {
+      "id": "segment-008",
+      "locator": "Section 9",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "### 2. Incumbents are already defending by changing meters.\n\nSalesforce and Intercom are not only adding AI features; they are publishing new billing units. Salesforce uses Flex Credits, action/conversation pricing, and Digital Wallet-style usage visibility. Intercom prices Fin at $0.99 per outcome and explicitly offers Fin with existing helpdesks with no seat requirement.\n\nImplication: the market is moving from \"AI add-on\" to \"AI work meter.\" Startups that pitch only cheaper seats are fighting the old game. Startups that meter completed work can align to the new buying logic."
+    },
+    {
+      "id": "segment-009",
+      "locator": "Section 10",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "### 3. Hybrid pricing is the transition zone.\n\nBain's analysis is the best operating-model counterweight: most established SaaS vendors are not jumping straight to pure outcome pricing. They are layering AI usage or outcome meters on top of existing seats because billing systems, revenue recognition, sales comp, customer procurement, and telemetry are not ready for a clean switch.\n\nImplication: a SaaS disruptor should expect coexistence with incumbents. The best wedge is often an overlay that proves measurable work volume first, then expands into budget once the customer has pricing evidence."
+    },
+    {
+      "id": "segment-010",
+      "locator": "Section 11",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "### 4. The new moat is instrumentation plus trust, not just model quality.\n\nOutcome pricing creates disputes: what counts as a resolved issue, who gets attribution, how quality is audited, and who absorbs failure. The durable moat is therefore telemetry, audit trail, workflow control, identity/permissions, ROI reporting, and contract-safe definitions of outcomes.\n\nImplication: \"agent does task\" is not enough. A serious SaaS disruptor needs a billing-grade work ledger."
+    },
+    {
+      "id": "segment-011",
+      "locator": "Section 12",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "### 5. Customer support is the cleanest near-term wedge.\n\nIntercom/Fin and Salesforce both expose customer-facing agent meters. Support has high volume, clear outcomes, measurable before/after cost, and fewer ambiguous attribution problems than complex ERP/CRM transformation.\n\nImplication: if selecting a first category, prioritize support/customer operations, internal service desk, claims intake, invoice/document processing, or SDR/research workflows over full CRM/ERP replacement."
+    },
+    {
+      "id": "segment-012",
+      "locator": "Section 13",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Recommended Strategy\n\nBuild around the \"work execution layer\" thesis:\n\n1. Pick a high-volume workflow with a measurable unit of work.\n2. Integrate with existing SaaS rather than ask the buyer to replace it on day one.\n3. Track actions, outcomes, handoffs, exceptions, quality, and cost per completed unit.\n4. Price as hybrid first: low platform fee plus outcome/action meter.\n5. Use the usage ledger to create renewal leverage against seat-heavy incumbents.\n\nBest initial wedge: AI customer-ops outcome layer that resolves support/service workflows across existing helpdesk, CRM, billing, and knowledge-base systems."
+    },
+    {
+      "id": "segment-013",
+      "locator": "Section 14",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Validation Gaps\n\n- GBrain recall was attempted but blocked by PGLite lock timeout.\n- Reddit/community evidence was attempted twice through Exa but did not yield usable Reddit threads.\n- No customer interview, procurement conversation, or renewal-contract sample was used.\n- This is market/pricing-thesis validated, not full buyer-pain validated."
+    },
+    {
+      "id": "segment-014",
+      "locator": "Section 15",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Loop State\n\n- Pass 1: Goal refined; chain selected; capability probe updated with Exa and Firecrawl.\n- Pass 2: Exa discovery and Firecrawl ingestion executed.\n- Pass 3: Source tieout, Reddit gap check, synthesis, and handoff completed.\n\nStop: 3/3 passes used. No infinite loop."
+    },
+    {
+      "id": "segment-015",
+      "locator": "Section 16",
+      "source": "runs/2026-06-30-ai-saas-disruption-goal-loop-test.md",
+      "text": "## Handoff\n\nFor a deeper run, specialize the prompt by SaaS category and buyer:\n\n> \"Find AI disruption wedges for customer support SaaS sold to mid-market B2B software companies in the US.\"\n\nThen run:\n\n1. Exa discovery across vendor pages, pricing pages, docs, review sites, and forums.\n2. Firecrawl ingestion of every primary page.\n3. Reddit/thread extraction only after specific thread URLs or subreddits are found.\n4. Deep research subagents split into pricing, buyer pain, incumbent product gaps, and workflow proof.\n5. `ai-analyst` synthesis into a scored wedge table.\n6. `branded-pptx-deck` only if a client-ready deck is requested."
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "task_id": "act_001",
+    "prompt_id": "aip_001",
+    "query_id": "q_031",
+    "engine": "ChatGPT",
+    "prompt": "What software or workflow do teams usually use to handle ad & creative generation at scale, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_002",
+    "prompt_id": "aip_001",
+    "query_id": "q_031",
+    "engine": "Claude",
+    "prompt": "What software or workflow do teams usually use to handle ad & creative generation at scale, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_003",
+    "prompt_id": "aip_001",
+    "query_id": "q_031",
+    "engine": "Perplexity",
+    "prompt": "What software or workflow do teams usually use to handle ad & creative generation at scale, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_004",
+    "prompt_id": "aip_001",
+    "query_id": "q_031",
+    "engine": "Google AI Mode",
+    "prompt": "What software or workflow do teams usually use to handle ad & creative generation at scale, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_005",
+    "prompt_id": "aip_002",
+    "query_id": "q_006",
+    "engine": "ChatGPT",
+    "prompt": "What software or workflow do teams usually use to handle ai shopping / sales consultant, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_006",
+    "prompt_id": "aip_002",
+    "query_id": "q_006",
+    "engine": "Claude",
+    "prompt": "What software or workflow do teams usually use to handle ai shopping / sales consultant, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_007",
+    "prompt_id": "aip_002",
+    "query_id": "q_006",
+    "engine": "Perplexity",
+    "prompt": "What software or workflow do teams usually use to handle ai shopping / sales consultant, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_008",
+    "prompt_id": "aip_002",
+    "query_id": "q_006",
+    "engine": "Google AI Mode",
+    "prompt": "What software or workflow do teams usually use to handle ai shopping / sales consultant, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_009",
+    "prompt_id": "aip_003",
+    "query_id": "q_001",
+    "engine": "ChatGPT",
+    "prompt": "What software or workflow do teams usually use to handle conversational support, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_010",
+    "prompt_id": "aip_003",
+    "query_id": "q_001",
+    "engine": "Claude",
+    "prompt": "What software or workflow do teams usually use to handle conversational support, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_011",
+    "prompt_id": "aip_003",
+    "query_id": "q_001",
+    "engine": "Perplexity",
+    "prompt": "What software or workflow do teams usually use to handle conversational support, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_012",
+    "prompt_id": "aip_003",
+    "query_id": "q_001",
+    "engine": "Google AI Mode",
+    "prompt": "What software or workflow do teams usually use to handle conversational support, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_013",
+    "prompt_id": "aip_004",
+    "query_id": "q_021",
+    "engine": "ChatGPT",
+    "prompt": "What software or workflow do teams usually use to handle doc summarization & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_014",
+    "prompt_id": "aip_004",
+    "query_id": "q_021",
+    "engine": "Claude",
+    "prompt": "What software or workflow do teams usually use to handle doc summarization & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_015",
+    "prompt_id": "aip_004",
+    "query_id": "q_021",
+    "engine": "Perplexity",
+    "prompt": "What software or workflow do teams usually use to handle doc summarization & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_016",
+    "prompt_id": "aip_004",
+    "query_id": "q_021",
+    "engine": "Google AI Mode",
+    "prompt": "What software or workflow do teams usually use to handle doc summarization & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_017",
+    "prompt_id": "aip_005",
+    "query_id": "q_026",
+    "engine": "ChatGPT",
+    "prompt": "What software or workflow do teams usually use to handle legal research & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_018",
+    "prompt_id": "aip_005",
+    "query_id": "q_026",
+    "engine": "Claude",
+    "prompt": "What software or workflow do teams usually use to handle legal research & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_019",
+    "prompt_id": "aip_005",
+    "query_id": "q_026",
+    "engine": "Perplexity",
+    "prompt": "What software or workflow do teams usually use to handle legal research & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  },
+  {
+    "task_id": "act_020",
+    "prompt_id": "aip_005",
+    "query_id": "q_026",
+    "engine": "Google AI Mode",
+    "prompt": "What software or workflow do teams usually use to handle legal research & drafting, and where are AI agents realistically useful or not useful?",
+    "captured_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "answer": "",
+    "citation_urls": [],
+    "notes": "Fill answer/citations after running the exact prompt in the named engine. Leave prompt unchanged."
+  }
+]

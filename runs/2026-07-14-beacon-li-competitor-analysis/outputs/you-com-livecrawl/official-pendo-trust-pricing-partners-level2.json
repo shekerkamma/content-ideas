@@ -1,0 +1,138 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://support.pendo.io/hc/en-us/articles/360031862372-Security-and-privacy-in-Pendo",
+        "title": "Security and privacy in Pendo – Pendo Help Center",
+        "description": "Privacy and security are fundamental components of Pendo’s software and services. This article covers what we do to ensure that our solutions don’t negatively impact the confidentiality, integrity,...",
+        "thumbnail_url": "https://support.pendo.io/hc/en-us/articles/360031862372-Security-and-privacy-in-Pendo",
+        "original_thumbnail_url": "https://support.pendo.io/hc/en-us/articles/360031862372-Security-and-privacy-in-Pendo",
+        "page_age": "2025-11-12T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=support.pendo.io&size=128",
+        "snippets": [
+          "Pendo completes an SOC2 Type II audit every year, covering all five Trust Service Principles: Security, Availability, Processing Integrity, Confidentiality, and Privacy.",
+          "We also conduct independent third-party security audits annually and undergo third-party penetration testing twice per year. The results of these audits are available on our Trust Center. We have also passed stringent internal security review audits from numerous large enterprise clients.",
+          "Because user data and other identifying information can be highly sensitive, we invest in data compliance and observe industry standards (SOC2, GDPR, HIPAA)."
+        ]
+      },
+      {
+        "url": "https://trust.pendo.io/faq",
+        "title": "Trust Center - Pendo",
+        "description": "At Pendo, security and data privacy are first-order considerations, the north star for how we design our products and policies as an organization. Language: English 日本語",
+        "thumbnail_url": "https://app.vanta.com/doc?s=2prczp35sbzjmuo66o3j87",
+        "original_thumbnail_url": "https://app.vanta.com/doc?s=2prczp35sbzjmuo66o3j87",
+        "favicon_url": "https://you.com/favicon?domain=trust.pendo.io&size=128",
+        "snippets": [
+          "Pendo customers can choose to use multi-factor authentication for their access to Pendo's service by either using SAML to integrate with their own identity management system, or by using Google SSO. Also note that Pendo employees use multi-factor authentication for access to all systems containing customer and other sensitive data. ... Yes, Pendo lets you set granular access controls to grant and restrict capabilities based on specific roles and authorities. See the Role-Based Access Control (RBAC) instructions [here](https://support.pendo.io/hc/en-us/articles/360058639932-Roles-and-permissions).",
+          "Pendo has been assessed by an independent auditor for HIPAA Criteria that is addressed by the AICPA Trust Services Criteria. The HIPAA Criteria that is address by the AICPA Trust Services Criteria are as follows: * HIPAA Security Rule (45 CFR Part 160 and Subparts A and C of Part 164) * HIPAA Privacy Rule (45 CFR Part 160 and Subparts A and E of Part 164) * HIPAA Breach Notification Rule (45 CFR Part 164.400-414) Under NDA, Pendo can provide a SOC2 Type II + HIPAA audit report.",
+          "Pendo conducts an annual SOC 2 Type II audit that includes all 5 Trust Services Principles: Security, Availability, Processing Integrity, Confidentiality, and Privacy. This report can be provided under NDA. Pendo's most recent SOC2 Type II report may be requested from Resources, here in the Trust Center.",
+          "Pendo is hosted in Google Cloud Platform (GCP) and Amazon Web Services (AWS). GCP and AWS employ industry-leading security controls and are extensively audited. Both hold multiple certifications, including SOC2 Type II, ISO 27001, PCI, and FedRAMP."
+        ]
+      },
+      {
+        "url": "https://www.pendo.io/pendo-for-enterprise/",
+        "title": "AI-Powered Product Experience for Enterprise | Pendo",
+        "description": "Enterprise product experience platform powered by AI. Accelerate adoption, prove ROI faster, and maintain compliance across global teams — with the security and governance enterprise IT requires.",
+        "thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F931c08a9a5af437fa67687c5f4b39bd4",
+        "original_thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F931c08a9a5af437fa67687c5f4b39bd4",
+        "page_age": "2025-07-29T22:00:26",
+        "favicon_url": "https://you.com/favicon?domain=www.pendo.io&size=128",
+        "snippets": [
+          "Enterprise organizations trust Pendo to meet their compliance requirements across every deployment — and Pendo is designed for uninterrupted uptime and enterprise scale, processing millions of events per hour and billions per day with no degradation of performance. ... Pendo completes a SOC 2 Type II audit every year covering all five Trust Service Principles: Security, Availability, Processing Integrity, Confidentiality, and Privacy.",
+          "Pendo complies with HIPAA requirements as part of its global privacy and compliance program, alongside SOC2, GDPR, and CCPA. Pendo has self-certified under the Data Privacy Framework and is committed to acting in accordance with GDPR regulations. EU data residency is supported via Google Cloud Platform infrastructure distributed across geographic regions.",
+          "Pendo is hosted on Google Cloud Platform with separate data hosting environments in the United States, European Union, Japan, and Australia. Each environment is fully independent, with data persisted across multiple regions within each geography — supporting global enterprise deployments and local data residency requirements.",
+          "Pendo's success team provides the support, enablement, and training you need to implement Pendo and integrate with your existing systems. This includes Professional Services for tailored onboarding, dedicated Customer Success management throughout the partnership, and Technical Account Management for complex infrastructure and deployment needs."
+        ]
+      },
+      {
+        "url": "https://www.pendo.io/data-privacy-security/",
+        "title": "Data Privacy and Security | Pendo.io",
+        "description": "At Pendo, performance, security, and data privacy are first-order considerations. Learn how we are investing in the security of your and your users' data.",
+        "thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F33896f37411e48f8954dc2a312456008",
+        "original_thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F33896f37411e48f8954dc2a312456008",
+        "page_age": "2025-12-11T16:49:39",
+        "favicon_url": "https://you.com/favicon?domain=www.pendo.io&size=128",
+        "snippets": [
+          "Pendo observes key industry best practices and regulatory schemes to protect the security and privacy of our customers’ data: SOC2, GDPR, TX-RAMP, and HIPAA.",
+          "Pendo logs and stores every change, every action and every event, including the deletion of data, for easy auditing and root cause analysis."
+        ]
+      },
+      {
+        "url": "https://www.pendo.io/product/agent-analytics/",
+        "title": "Pendo Agent Analytics | Prove AI Agent Value & Adoption",
+        "description": "Track AI agent adoption, measure prompts-to-outcomes, and monitor compliance risks with Pendo Agent Analytics. Prove AI value across your SaaS product with full visibility.",
+        "thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F18baf8e1715d42b69bb479710566f217",
+        "original_thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F18baf8e1715d42b69bb479710566f217",
+        "page_age": "2025-12-30T15:41:11",
+        "favicon_url": "https://you.com/favicon?domain=www.pendo.io&size=128",
+        "snippets": [
+          "The platform supports role-based access, SSO/SAML, data governance controls, and integration with your existing tech stack (CRM, data warehouse, support systems)—so it works for both a single product team and an enterprise IT organization managing dozens of applications.",
+          "Your data is safe with us. Pendo meets the highest standards in data protection, with certifications and compliance across SOC II, ISO 27001, CCPA, GDPR, and enterprise-grade security measures."
+        ]
+      },
+      {
+        "url": "https://support.pendo.io/hc/en-us/articles/360031869612-General-Data-Protection-Regulation-GDPR",
+        "title": "General Data Protection Regulation (GDPR) – Pendo Help Center",
+        "description": "Pendo is both a data processor and data controller. Pendo processes your customer data and controls the data of our own customers that log in to Pendo. Thus, General Data Protection Regulation (GDP...",
+        "thumbnail_url": "https://support.pendo.io/hc/en-us/articles/360031869612-General-Data-Protection-Regulation-GDPR",
+        "original_thumbnail_url": "https://support.pendo.io/hc/en-us/articles/360031869612-General-Data-Protection-Regulation-GDPR",
+        "favicon_url": "https://you.com/favicon?domain=support.pendo.io&size=128",
+        "snippets": [
+          "To demonstrate our commitment to trust and security, Pendo obtains relevant security certifications and undergoes regular testing and audits to ensure continued compliance. Pendo has self-certified under the Data Privacy Framework and has completed a SOC 2 Type II audit that included all five Trust Services Principles of security, privacy, confidentiality, availability, and processing integrity."
+        ]
+      },
+      {
+        "url": "https://www.pendo.io/pendo-blog/how-to-get-pendos-ai-features-approved-at-your-company/",
+        "title": "How to get Pendo's AI features approved at your company | Pendo.io",
+        "description": "From our own security team to you, here are the steps to take to get Pendo AI features in.",
+        "thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F9b74baecd6454e5cbcdc25998ed70c26",
+        "original_thumbnail_url": "https://cdn.builder.io/api/v1/image/assets%2F6a96e08774184353b3aa88032e406411%2F9b74baecd6454e5cbcdc25998ed70c26",
+        "page_age": "2026-06-22T20:21:28",
+        "favicon_url": "https://you.com/favicon?domain=www.pendo.io&size=128",
+        "snippets": [
+          "Send them to trust.pendo.io first. Most security teams will start with the SOC 2 report and work from there.",
+          "SOC 2 Type II reports, subprocessor list, penetration testing documentation, and attestations for HIPAA and PCI DSS all live at trust.pendo.io.",
+          "EU data residency: For customers in the EU data environment, Google Generative AI, OpenAI, and Pendo AI features are all off by default with opt-in available.",
+          "For teams using Claude specifically: Pendo is available in Claude's official Connectors Directory and can be set up directly from Claude without manual configuration. That's a meaningful trust signal: Anthropic has its own vetting process for connectors in that directory."
+        ]
+      },
+      {
+        "url": "https://trust.pendo.io/resources",
+        "title": "Pendo Trust Center",
+        "description": "At Pendo, security and data privacy are first-order considerations, the north star for how we design our products and policies as an organization. Language: English 日本語",
+        "thumbnail_url": "https://app.vanta.com/doc?s=2prczp35sbzjmuo66o3j87",
+        "original_thumbnail_url": "https://app.vanta.com/doc?s=2prczp35sbzjmuo66o3j87",
+        "favicon_url": "https://you.com/favicon?domain=trust.pendo.io&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://support.pendo.io/hc/en-us/articles/41103184012315-Data-collection-and-security-for-Agent-Analytics",
+        "title": "Data collection and security for Agent Analytics – Pendo Help Center",
+        "description": "Agent Analytics helps you understand how your visitors interact with AI-powered agents in your application by capturing and reporting on visitor-submitted prompts and conversations.This article out...",
+        "thumbnail_url": "https://support.pendo.io/hc/en-us/articles/41103184012315-Data-collection-and-security-for-Agent-Analytics",
+        "original_thumbnail_url": "https://support.pendo.io/hc/en-us/articles/41103184012315-Data-collection-and-security-for-Agent-Analytics",
+        "page_age": "2026-06-26T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=support.pendo.io&size=128",
+        "snippets": [
+          "Pendo uses Google Cloud Platform (GCP) to host customer data in a secure, multi-tenant environment. GCP services meet industry standards for security and compliance, including SOC 2 Type II and ISO 27001.",
+          "For more information about how Pendo uses AI and protects customer data, see Artificial intelligence (AI) at Pendo. For general information about Pendo’s security and data privacy practices, see our Trust Center."
+        ]
+      },
+      {
+        "url": "https://www.pendo.io/pricing/",
+        "title": "Plans and pricing for Pendo software experience management solutions ...",
+        "description": "From product analytics to in-app guides and discovery tools, Pendo’s flexible pricing helps your team deliver better software experiences at scale.",
+        "page_age": "2025-08-06T16:21:47",
+        "favicon_url": "https://you.com/favicon?domain=www.pendo.io&size=128",
+        "snippets": [
+          "Enterprise-grade trust: Move fast with the confidence of SOC2, GDPR, and HIPAA compliance built into the platform."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:pendo.io security trust SOC 2 ISO SSO RBAC audit logs data residency pricing partners marketplace",
+    "search_uuid": "271b1d0d-cb08-48ac-a221-f3d784ff1de2",
+    "latency": 0.5595963001251221
+  }
+}

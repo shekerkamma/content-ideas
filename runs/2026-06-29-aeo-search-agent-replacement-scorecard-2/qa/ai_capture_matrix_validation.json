@@ -1,0 +1,47 @@
+{
+  "status": "blocked",
+  "template": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/ai_live_capture_ingest_template.available-api.json",
+  "errors": [
+    "aapi_001:missing_answer",
+    "aapi_001:missing_captured_at",
+    "aapi_003:missing_answer",
+    "aapi_003:missing_captured_at",
+    "aapi_004:missing_answer",
+    "aapi_004:missing_captured_at",
+    "aapi_006:missing_answer",
+    "aapi_006:missing_captured_at",
+    "aapi_007:missing_answer",
+    "aapi_007:missing_captured_at",
+    "aapi_009:missing_answer",
+    "aapi_009:missing_captured_at",
+    "aapi_010:missing_answer",
+    "aapi_010:missing_captured_at",
+    "aapi_012:missing_answer",
+    "aapi_012:missing_captured_at",
+    "aapi_013:missing_answer",
+    "aapi_013:missing_captured_at",
+    "aapi_015:missing_answer",
+    "aapi_015:missing_captured_at",
+    "aapi_016:missing_answer",
+    "aapi_016:missing_captured_at",
+    "aapi_018:missing_answer",
+    "aapi_018:missing_captured_at",
+    "aapi_019:missing_answer",
+    "aapi_019:missing_captured_at",
+    "aapi_021:missing_answer",
+    "aapi_021:missing_captured_at",
+    "aapi_022:missing_answer",
+    "aapi_022:missing_captured_at",
+    "aapi_024:missing_answer",
+    "aapi_024:missing_captured_at"
+  ],
+  "counts": {
+    "rows": 24,
+    "engines": {
+      "Claude": 8,
+      "Google AI Mode": 8,
+      "Groq": 8
+    },
+    "filled_answers": 8
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "post": {
+    "title": "Victoria 3 - Dev Diary #152 - What’s next after 1.9",
+    "author": "Pelhamds",
+    "score": 620,
+    "content": "https://pdxint.at/44SNDwn Happy Thursday today, Happy Thursday forever! As is by now long established tradition, after each major update, today we’ll be returning to the future update plans, which we last went over in Dev Diary #141 . As we always do, we’ll be going over what changes and improvements we have planned for the game in future free updates such as 1.10, 1.11 and beyond. Can you tell I copy the previous dev diary and slightly rephrase the intro each time? You probably can! Before hopping into post-release plans, I do want to take a moment to reflect on the release of 1.9 and Charters of Commerce, and what can I really say except that I am absolutely blown away by its reception! 1.9/Charters of Commerce not only exceeded all our expectations (in players, reviews and sales), not only had the highest active player count since November of 2022 (when counting Monthly Active Users - Steam concurrent players got close but didn’t quite exceed 1.5), but also finally brought Victoria 3 to Mostly Positive overall reviews on Steam . This is of course something we have been working towards ever since the release of the game by addressing the community’s feedback and constructive criticism, one item at a time. It hasn’t always been an easy road, but we never had any intention of giving up on Vicky, and clearly, neither did you! The future of Victoria 3 has never looked brighter, and we have all of you to thank for it. Just as it’s important to learn from your mistakes, it’s equally important to look at your successes and try to figure out why they were successes so that you can try and repeat them. We’re still very much in the process of doing so for 1.9/CoC but I do want to list a few things off the top of my head that I believe were contributing factors in the positive reception: The Trade Rework managed to find a good balance between autonomous economic actors and player control, giving the player powerful strategic tools to manipulate trade but removing the micromanagement aspect present in the previous trade system. This level of control is something we intend to use as a guideline when creating or redesigning features in the future - for example, I could envision doing something similar with production methods on privately owned building levels. Having a much more robust trade system also paid considerable dividends towards improving the performance of the AI and allowing countries to actually properly specialize in resources, removing much of the samey-ness present in the old, autarky-centric economic loop. We spent extra effort on ensuring that the features of 1.9 and Charters of Commerce would all hook heavily into and compliment each other, which made them individually much stronger. As an example, without the Grant Monopoly Treaty Article, Monopolies would be a feature with much more limited, internal-only use instead of a tool of unbridled economic imperialism. To celebrate hitting Mostly Positive, we got the team some custom-ordered cake! All of this is to say that while we’re very happy with how everything’s gone, we’re not just planning to rest on our laurels! There are still many things about the game we want to improve and expand on, so let’s get to talking about that. Once more we will be talking about the same key four improvement areas of Military, Historical Immersion, Diplomacy, Internal Politics as well as Other for anything that falls outside those four categories. Just as before, I’ll also be aiming to give you an updated overview of where we stand and where we’re heading by going through each of these four categories and marking on each one with one of the below statuses: Done: This is a part of the game that we now consider to be in good shape. Something being Done of course doesn’t mean we’re never going to expand or improve on it in the future, just that it’s no longer a high priority for us. Any points that were already marked as Done in previous updates will be removed from the list, to avoid it growing unmanageably long, but you can look at the older dev diaries (#79, #89, #102, #124 and #141) if you’re interested in what was done previously. Updated: This is a part of the game where we have made some of the improvements and changes that we want to make, but aren’t yet satisfied with where it stands and plan to make further improvements to it in future updates. Not Updated: This is a part of the game where we haven’t yet released any of our planned changes/improvements in any currently released updates but still plan to do so for future updates. New: This is a planned change or improvement that is newly added, i.e. wasn’t present on the list last time we went over it Reconsidered: This is a previously planned change or improvement that we have reconsidered our approach to how to tackle from previous updates. For these points we will explain what our new plans are, and change the list appropriately in future updates. For the final bit of repetition: Just as before we will still only be talking about improvements, changes and new features that are part of planned free updates in this dev diary. I will also remind you that this is not an exhaustive list of the things we are going to do , and that something being ‘Done’ doesn’t mean we’re not going to bugfix, balance or make UX improvements to it afterwards. I know we say this every time, but it really is a pretty necessary disclaimer. Anyway, let’s get to the good stuff! Our updated Post-release Plans infographic summarizing the information below! Military Done: Tweaking and improving the frontline system to eliminate excessive front splitting and troop teleportation once and for all Adding a proper system of military access and finding solutions for the other remaining rough edges in the frontline system. New: Make generals/admirals into more meaningful and noticeable actors in countries and reduce the micromanagement of large numbers of commanders. Updated: Make sure that supply is an important and meaningful part of the military system that can win or lose you wars. Supply is a lot more significant in 1.9 but we still want to do more in terms of adding interesting gameplay around logistics and tying them to the navy Make navies more important for projecting global power and securing control of coasts. The addition of blockades has made navies more important for global power projection, but of course much remains to be done here! Not Updated: Turn individual ships into proper pieces of military hardware that can be built, sunk and repaired rather than just being manpower packages. Add a system for limited wars to reduce the number of early-game global wars between Great Powers Historical Immersion New: Improve the way we simulate certain historical conflicts such as the Opium Wars, American Civil War and similar to play out a bit closer to the way they did historically. For example, the Opium Wars should not regularly play out as 100k British regulars seizing control of Beijing. Updated: Going through the base game Journal Entries and events and making improvements and additions to ensure that they feel meaningful and impactful for players to interact with As always, we’ve updated some of our older Journal Entries for 1.9 and will continue to do so in future updates. Adding more country, state and region-specific content to enhance historical flavor of different countries Also as always, this is something we continue to do each update and which I will keep on this list as it remains an important priority. Diplomacy Done: Improve on the Treaty Port mechanic and create more ways for countries to cooperate, compete with and exploit others using trade Improving the war support system to be much clearer UX-wise about what is needed to contest wargoals. New: Rework the War Exhaustion system from one where a single uncontrolled war goal can stalemate wars towards one where war goal control and war outcomes are more dynamic and interesting (and much less frustrating). Not Updated: Make declaring and holding onto diplomatic Interests a more rewarding and challenging aspect of global empire-building Allowing peace deals to be negotiated during a Diplomatic Play instead of only having the option to give in Internal Politics Updated: Adding laws that expand on diversity of countries and introduce new ways to play the game In 1.9 we introduced the concept of ‘Law Variants’, which we plan to use extensively, creating unique national variants of baseline laws so that those countries' political systems feel more distinct and flavorful. Not Updated: Turn legitimacy into a more interesting mechanic, where the strength of a government depends on their successes and failures, and highly legitimate governments can’t simply be ousted at a whim but have to be undermined first. Introduce a concept of national pride which can increase or decrease depending on a country’s actions and which ties directly into legitimacy. Other Done: Find a way to deal with the excessive fiddliness of the trade system in large economies, possibly by allowing for autonomous trade based on your laws in a similar way to the autonomous investment system. Improve on Companies by turning them into actual actors in your country that can own/expand buildings and interact with characters/politics. As is always and forever the case I’m not able to make specific promises about when all these improvements will come out, but I can say that the next three updates (1.10, 1.11 and 1.12) which are all coming out later this year will be smaller in scale than 1.9 and will be more focused on bug fixing, quality of life and general game polish. You may have noticed that there’s not too much new added to the plans this time around, and if you choose to believe that’s because some longstanding, boat-shaped things may be looming on the horizon beyond 1.12, all I can say is [words drowned out by a very loud foghorn]. Right then, that’s all for this Happy Thursday, and also for this side of the traditional July summer vacations. We’ll be back in early August to talk about 1.10 and National Awakening, the Immersion Pack that will be accompanying it. See you then, and hope you all have a lovely summer!",
+    "url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+    "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+    "subreddit": "victoria3"
+  },
+  "comments": [
+    {
+      "id": "t1_n14otao",
+      "author": "TheModernDaVinci",
+      "text": "for example, I could envision doing something similar with production methods on privately owned building levels. PARADOX, DO THIS AND MY LIFE IS YOURS!",
+      "score": 323,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14otao/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14yme6",
+      "author": "Gastroid",
+      "text": "Semi-autonomous production methods plus privately owned construction sectors (especially now that construction materials can be properly sourced from the global market) would be chef's kiss.",
+      "score": 157,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14yme6/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n15nqm4",
+      "author": "blublub1243",
+      "text": "I still feel like construction really needs more of a larger rework, but I'd honestly be happy about anything other than construction sectors being exclusively paid for and run by the government.",
+      "score": 54,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n15nqm4/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n19rmsb",
+      "author": "UnskilledScout",
+      "text": "Wiz mentioned in a comment that they are planning a larger rework for construction, but that it will take time to prototype and test since construction is such a core part of the gameplay loop at the moment.",
+      "score": 22,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n19rmsb/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n154kni",
+      "author": "Shadowsake",
+      "text": "Came here to say this. YES, DO IT! Automation and the rapid pace of technology should cause major unemployment issues.",
+      "score": 40,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n154kni/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n1525sk",
+      "author": "TheModernDaVinci",
+      "text": "Seems better than using your literacy as innovation cap. Instead, the literacy of your engineers determines how fast they can adopt the new technology.",
+      "score": 30,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n1525sk/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n15fq43",
+      "author": "TheModernDaVinci",
+      "text": "And then that helps to actually make universities important. Since if you fall behind on literacy, you are going to be stuck with obsolete and inefficient production methods compared to your rivals.",
+      "score": 32,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n15fq43/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n15jxpa",
+      "author": "Unhelpful-Future9768",
+      "text": "I think this is how it already works in theory, more advanced PMs require jobs with higher qualifications. It's just the balancing seems to make that only matter in really really backwards parts of the world and even then throwing down the social mobility authority thing quickly makes that a non issue. I think the game would be massively improved by just cutting all the authority stuff that doesn't relate to politics. Authoritarianism granting education and efficiency makes no sense anyways.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n15jxpa/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n15nlmt",
+      "author": "",
+      "text": "The separation between authority and bureaucracy makes no sense at all. It just appears like PDX wanted players to be able to get rid of strong government (the bad kind) while also being able to get strong government™ (the good kind). Like, building more offices for your civil service doesn't help you build your authority?",
+      "score": 19,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n15nlmt/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n16o426",
+      "author": "LordOfTurtles",
+      "text": "Universities don't give literacy",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n16o426/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14xu20",
+      "author": "Gespensterpanzer",
+      "text": "LET'S GOOOO!",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14xu20/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n15qj2y",
+      "author": "alzer9",
+      "text": "It’s still something they should work towards (since it could create some interesting dynamics) but I felt much stronger about this before the trade update. It’s much less punishing now to simply update to the newly unlocked PM and trade will figure out how to supply you with the new resources. Unless it involves electricity…",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n15qj2y/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14mw1s",
+      "author": "Pelhamds",
+      "text": "Rule 5: Dev Diary time, and the last until August! This time on what is coming next for free updates in the future! As always here’s the link if you can’t see it above: https://pdxint.at/44SNDwn Upvotes are always welcome for the link visibility!",
+      "score": 128,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14mw1s/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14x83u",
+      "author": "Alice_Oe",
+      "text": "Hi, just a heads up - the link in the OP is wrong and links to the post-1.8 dev diary.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14x83u/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n150yqa",
+      "author": "Pelhamds",
+      "text": "I just checked but I'm not sure what you mean, the link in the first image is to the forum version of this diary and the other link for 141 is meant to be the post 1.8 diary?",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n150yqa/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n151oin",
+      "author": "Alice_Oe",
+      "text": "Oh okay, you're right - I'm just stupid. I for some reason assumed the first link I could click on would take me to the paradox forum to read it directly, I didn't realize there IS no such link in the OP and it's just the dev diary copied exactly. I just saw the dev diary in blue and clicked on it and was then confused because I realized halfway through that it was an old one 😭 anyway, nevermind. Would be nice if the link to the paradox website was clickable though.",
+      "score": 15,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n151oin/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14z5z4",
+      "author": "_Some_Two_",
+      "text": "Paradox is such an interesting company. I really like how the team of Victoria 3 manages the community. It’s almost baffling to see you at work. I don’t remember exactly but during this month alone I’ve seen at least three occasions when someone posted a suggestion on Reddit, it got a lot of upvotes and the feature was implemented into the game. It’s actually insanely fast compared to the responses of other developers (don’t want to point fingers here though). I think this shows how well the company picked their employees from community managers and sales team all the way to programmers (Victoria 3 Engine/Platform is outright amazing). It’s like you are one of the few, who have the patience, the resources, the incredible will to ask for them, and the skills to make success from long-term orientation for the project in times when so many firms are not willing to look beyond sales in the next quarter. I am happy for your success, I hope all of you were well-compensated too!",
+      "score": 107,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14z5z4/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n15xgns",
+      "author": "rabidfur",
+      "text": "The fact that the devs actively read and post on Reddit, Discord and the official forum, and regularly implement stuff based on community posts, is absolutely fantastic. It increases my tolerance of jank in the game by about 500% because I have a reasonable amount of faith that someone will effort post about it in the future and the devs will take notice and fix it",
+      "score": 37,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n15xgns/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n1dgn4w",
+      "author": "SexyChernyshevsky",
+      "text": "Heartily agree - I also love that this level of detail and love into such an important and overlooked time period as well. Keep up the good work, Victoria 3 team! (P.S. add Chernyshevsky and other famous novelists/economists to the game like Henry George, Charles Fourier, and Tolstoy. The more agitators, the merrier!)",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n1dgn4w/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14qsmy",
+      "author": "uvr610",
+      "text": "The limited war part is the feature I’m most anticipating, as we do need a middle ground between negotiations and an all out war. Hopefully with the implementation of a better naval system, we will witness “gunboat diplomacy” and having your newest pre dreadnaughts arrive at unrecognized nations capitals for some sweet trade deals when “owe an obligation” is not enough.",
+      "score": 189,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14qsmy/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14u9c9",
+      "author": "Mysteryman64",
+      "text": "It would be really, really nice to be able to negotiate with the GP that has decided they're going to kill me. Where is my ability to go: \"Hey, hey! I'm just a little guy! You don't wanna kill me! You uhhhh...you want all of this fun oil, yeah? Take it! I'm not even using it! Oh, maybe a protectorate? Yeah! You want me as a protectorate! NO! NOT THE SHRAPNEL ARTILLERY! I WANT TO LIVE!\"",
+      "score": 99,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14u9c9/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14vh9o",
+      "author": "TheModernDaVinci",
+      "text": "Alternatively, I have long argued there needs to be a “Concert of Europe” system, where it is only GP can negotiate through it. And then by that, they can carve out spheres of influence, who can ally with who, stop wars between each other or agree to limit them, etc. This would help make it so that there is less chance of a world war breaking out in 1850 because Austria agreed to help Egypt fight the Ottomans, and apparently the UK took that personally. But on a long enough timeline (just like real life) all of these agreements will pile up until you reach a point where it all hits at once and now you get that world war.",
+      "score": 64,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14vh9o/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n14xja6",
+      "author": "Mysteryman64",
+      "text": "That could also be another interesting system, with similar benefits for smaller nations having to try to balance themselves around the state of the Concert. It's an area that also seems like it would be ripe for the inclusion of Power Blocs, which largely correspond to GPs anyway, with there being a negotiation between Power Bloc leaders.",
+      "score": 20,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n14xja6/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n15bb2h",
+      "author": "elcapitansmirk",
+      "text": "I assume(d) they were going this direction with the Treaty of Lonfon/Belgium content but they have yet to do anything with it and it's fairly half baked in its current form",
+      "score": 13,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n15bb2h/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    },
+    {
+      "id": "t1_n289cs1",
+      "author": "initialwa",
+      "text": "I think the fundamental driver of the concert of europe is the balance of power. And i think that needs to be its own mechanic. It needs to be really prominent. Perhaps a meter or something. Where countries all strive to balance it to where no faction can overpower any other. Basically trying to keep it 5050. Wacky stuff can arise. If i as germany is the leading power in europe and decided to ally with russia, that should ring alarm bells for gb. Perhaps an increased willingness to accept alliance with france. But i think to implement this kind of system the current alliance system is not enough.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/n289cs1/",
+      "source_url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+      "subreddit": "victoria3"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/victoria3/comments/1lqqckn/victoria_3_dev_diary_152_whats_next_after_19/",
+    "method": "old_reddit_html"
+  }
+}

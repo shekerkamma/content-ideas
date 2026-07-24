@@ -1,0 +1,817 @@
+{
+  "post": {
+    "title": "Most of you shouldnt build an AI agent and heres why",
+    "author": "Decent-Phrase-4161",
+    "score": 577,
+    "content": "After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companies have no business building an AI agent right now. Like zero business. And the data backs this up, Gartner says 40% of these projects will be straight up cancelled by 2027. Another study found that 95% of enterprise AI projects fail to deliver the ROI anyone expected.​ Thats not because the technology sucks. Its because everyone's building the wrong thing at the wrong time for the wrong reasons. Here's my framework for when to say no Your transaction volume is too low - If youre handling under 500 support tickets a month, you dont need a $50k AI agent. You need better documentation and maybe one more person. I had a client obsessing over automating their customer service when they were getting 200 tickets monthly. The math didnt math. Even if the agent worked perfectly, theyd save maybe 40 hours a month. Thats not worth the headache of maintaining an unpredictable system.​ Your data is a mess - This is the big one. Only few of the companies have data thats actually clean enough for AI. If your customer info lives in three different systems, your product docs are outdated PDFs scattered across Google Drive, and Susan from sales keeps the real pricing in a personal spreadsheet, youre not ready. Your agent will just hallucinate confidently wrong answers.​ Ive seen this kill more projects than anything else. The agent works great in the demo with clean test data. Then it goes live and starts telling customers about products you discontinued in 2022. You cant explain what success looks like - If you cant write down a specific number that will improve and by how much, youre building because of FOMO not strategy. \"We want to be innovative\" isnt a use case. \"We need to reduce our average support response time from 4 hours to 30 minutes\" is a use case.​ Most projects I see start with \"we should do something with AI\" and then go find a problem to solve. Thats backwards.​ The task takes 30 minutes per week - Seriously. Some things dont need automation. I watched a startup spend two months building an agent to automate a weekly report that took their intern half an hour to compile. The agent needed constant tweaking and broke every time their data schema changed slightly. The intern would have been faster and more reliable.​ You have no one to own it - AI agents arent set and forget. They need constant monitoring, tweaking, and updating. If you dont have someone technical who can debug weird behavior and tune prompts, your agent will slowly get worse over time until people just stop using it.​ The uncomfortable truth - The companies making AI agents work have boring advantages. They have clean data pipelines. They have clear metrics. They have technical teams who can maintain these things. They started with simple, well defined problems.​ If you dont have those things, you need to build that foundation first. Its not sexy. Nobody writes LinkedIn posts about \"we spent six months cleaning our data warehouse.\" But thats what actually works. The best decision you can make might be deciding not to build an agent right now. Fix your data. Document your processes. Get clear on what success actually looks like. Then come back to this.",
+    "url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+    "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+    "subreddit": "AI_Agents"
+  },
+  "comments": [
+    {
+      "id": "t1_nkajzd6",
+      "author": "ThatLocalPondGuy",
+      "text": "HOODafuq is paying $50k for an AI agent?",
+      "score": 27,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkajzd6/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaw7nm",
+      "author": "TheCritFisher",
+      "text": "Our company is developing our own internal agentic systems. There are 3 software engineers, one designer, one data engineer, and one data scientist fully dedicated to building it out. There are also quite a few roles that are supporting the process. So overall, we're easily spending $2M+ for the first year of developing this system. We think we have a compelling use case. Our customers are begging for it. Hard not to invest when 15-20x the cost is hanging in the balance for contract expansions over the next 2 quarters. And I'm not sure what other potential sales prospects exist (outside of expansions). So it may be more. That said, I agree with what OP said. But there are a lot of good use cases. Most people just don't realize what those are.",
+      "score": 10,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaw7nm/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbvci3",
+      "author": "maigpy",
+      "text": "they said \"contract expansions\" not \"contract explanations\"",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbvci3/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkejbpg",
+      "author": "Tall-Reach-581",
+      "text": "Can I ask you about this via DM?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkejbpg/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkg22dw",
+      "author": "qncapper",
+      "text": "Can you talk about the core functionality of these “agents”?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkg22dw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkg9w91",
+      "author": "reeldeele",
+      "text": "You seem to be counting only the salaries towards the cost. What about the cost of software license and compute? What's the tech stack?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkg9w91/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkmcmsh",
+      "author": "jeramyfromthefuture",
+      "text": "I think you'll find that building anything against a moving target is an exercise in frustration",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkmcmsh/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaywiz",
+      "author": "ThatLocalPondGuy",
+      "text": "An AI agent: this implies one focused agent in my broken brain. An agentic system might be worth that but not one agent. Example: we have a team of three data scientists using agentic AI for massive amounts of LIMS data. We spent roughly $50k/mo on cloud for this usage (Databricks + Data Factory SQL + api gateway + AKS + plus the maintenance + electricity for 8 local servers. We don't call that agentic use an \"agent\". It is a crap ton of math in deterministic scripts, with scheduled agentic actions where needed. Each AI agent does very little in the enterprise schema, but they are critical. Could one of you kind folk please describe an agent worth $50k/mo as a single agent? What am I missing here? My feeling is that many do not know how to use this stuff, so they pay way more for things that are relatively easy for someone with knowledge to assemble.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaywiz/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkb5bk9",
+      "author": "prescod",
+      "text": "So you take this whole system and expose it to an executive as an interface where they can ask questions and get answers. Now it’s an agent from that executive’s point of view. You put an API and let other agents call it. Now it’s an agent from the other API’s point of view. The word “agent” is as vague and unconstrained as the word “app”. One can make an app to roll dice or one can make an app like Instagram. Then someone who made a dice rolling app could say “how could someone pay more than 50k to build an app?”",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkb5bk9/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbgsrn",
+      "author": "ThatLocalPondGuy",
+      "text": "That's what I needed for the concept to click. Thanks. Marketing terminology vs. Tech stack actual. Got it.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbgsrn/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbwb5p",
+      "author": "maigpy",
+      "text": "this is incorrect. agentic implies non-deterministic. the execution plan is established at runtime, and in its current incarnation it should be decided by an llm call.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbwb5p/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nn0zsfp",
+      "author": "b_nodnarb",
+      "text": "You're spot on with this, u/prescod - the next moves are for people to start packaging their agents as apps and them have them run in a standardized runtime (there will be paid proprietary platforms and open source platforms). I'm rooting for (and supporting) the open source ones: https://github.com/agentsystems/agentsystems",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nn0zsfp/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkejff5",
+      "author": "SalishSeaview",
+      "text": "How much experience do you have developing and deploying enterprise-grade software? I can’t imagine an enterprise-grade agentic tool of any sort being less than $50K all-in.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkejff5/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkekwpe",
+      "author": "ThatLocalPondGuy",
+      "text": "When you build it yourself over the years with a big team of MLops data scientists, the resulting infrastructure does not continue to cost that much per \"agent\". I noted above the conflating of \"agent\" with \"agent system\", and then later the inclusion of dev cost was noted, none of which I considered in my original reply. Noted.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkekwpe/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkely4g",
+      "author": "SalishSeaview",
+      "text": "Oh, even without that, using off-the-shelf tooling like N8N and some sort of data mart purpose-built on the edge of the data warehouse or data lake, it’s going to take at least one developer and one data analyst probably two months to put something together, not to mention the business analyst to gather the requirements and build the spec, who would have put a good month into that work ahead of the developer and DA digging in. In an enterprise, it has to go through an architectural review, and for a tool like N8N, purchasing. And you’ll assign at least a part-time project manager to the effort. All that looks like $80K to me, not counting the time the business takes to validate the thing before it rolls to production.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkely4g/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkemtfj",
+      "author": "SalishSeaview",
+      "text": "Scratch that, it looks no less than $160K to me for everything. Enterprise implementations are not cheap.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkemtfj/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nku7ttj",
+      "author": "LordArioch999",
+      "text": "You aren’t getting anything for less than double that in an enterprise lol",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nku7ttj/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkha6bd",
+      "author": "soundboyselecta",
+      "text": "I actually almost looked up Company: HOODafuq. You got me!",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkha6bd/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkak9d0",
+      "author": "Decent-Phrase-4161",
+      "text": "You'd be surprised. $50k is actually on the low end for enterprise builds XD",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkak9d0/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkank8q",
+      "author": "ThatLocalPondGuy",
+      "text": "Blows my mind. That's just a big knowledge gap enabling that. Don't get used to those revenues.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkank8q/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkb4kqi",
+      "author": "prescod",
+      "text": "$50k is cheap for an enterprise project. Just the project management hand holding and customer support will cost that.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkb4kqi/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkdovap",
+      "author": "Puzzleheaded_Fold466",
+      "text": "Man, it costs $50k to build the case, write the project proposal with very loose conceptual level specs (no time, no money yet) and get the budget / schedule reviewed by the PMO, and get it approved. Then you can finally actually start the work … of figuring out what the work is.",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkdovap/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbybt9",
+      "author": "Puzzleheaded-Taro660",
+      "text": "I disagree with you, it's just a very different use case and framing of the problem.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbybt9/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaovd0",
+      "author": "burntoutdev8291",
+      "text": "It's a small amount for big companies, especially if it can remove some headcount, that's what I learnt. Don't think about yourself as an individual, but imagine you are already making millions a month 😂",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaovd0/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkddaek",
+      "author": "expliciitz",
+      "text": "Walmart has spent billions. They have deployed agents all across the enterprise.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkddaek/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkeqrsw",
+      "author": "musicthiink",
+      "text": "What AI agents are they using? Sounds like code for machine learning",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkeqrsw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nk9x82b",
+      "author": "burntoutdev8291",
+      "text": "But at the end of this, did you make 80k from this? From a business POV, are there any cons on companies wanting to fork out money for technology they cannot adopt? This isn't just pertaining to AI, but even traditional pipelines and SaaS. Like how users spend thousands on API calls trying to vibe something out but it fails, it isn't on the providers as well. By the way, I am neither a client nor a provider, but curious about your views. So not saying all these as though I lost clients from this reddit post or smth.",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nk9x82b/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaisux",
+      "author": "Decent-Phrase-4161",
+      "text": "Nah I'm not pocketing the 80k. I'm either the guy they hire before they make the mistake, or the one cleaning up after. Fair question though. Here's the thing there's spending money on R&D and experiments, which is fine. Then there's lighting cash on fire because you skipped the basics. My post is about the second one. Like, if you're trying to build on a foundation that doesn't exist (messy data, no clear metrics, tiny volume), you're gonna fail. That's not exploration that's just ignoring reality. A good consultant tells you not to waste your money upfront, not takes the check and watches you crash. Yeah, providers aren't responsible for bad client decisions. But someone in the room should be honest enough to say this won't work for you instead of just taking the money. That's what I'm trying to do here. Appreciate you actually asking this!",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaisux/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkapnzi",
+      "author": "burntoutdev8291",
+      "text": "Yup I agree, I have been at the stage of cleaning up as well. But I actually don't blame the providers, I blame the internal consultants and the gullible CTO who believes everything about how agents will replace developers. It's an exaggeration, but it's like OF.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkapnzi/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbwo5g",
+      "author": "Fun-Estimate4561",
+      "text": "It’s 100 percent this Everyone’s using AI as air cover for mass layoffs But these guys also have gotten caught up in the BS hype of AI Most companies have crap Governance which makes AI useless for their orgs I still haven’t seen really any good AI agents that make massive waves in corporations",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbwo5g/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkahsgx",
+      "author": "ItinerantFella",
+      "text": "OP is a AI agent that doesn't answer questions about its posts.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkahsgx/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaiwvx",
+      "author": "Decent-Phrase-4161",
+      "text": "Weird, because I just answered yours.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaiwvx/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkai3fw",
+      "author": "burntoutdev8291",
+      "text": "Wait... an AI agent that says you shouldn't use AI agents??? thats new...",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkai3fw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkxtj9a",
+      "author": "billcy",
+      "text": "Well. They are not getting paid",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkxtj9a/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaieah",
+      "author": "ItinerantFella",
+      "text": "It's saying that you shouldn't be building AI agents, because only it really knows how to build AI agents. Gotta admire the moxie.",
+      "score": -1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaieah/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkhnpk3",
+      "author": "SoftwareAny3363",
+      "text": "it definitely depends what kind of an agent you’re building, and whether it’s for end-user usage or for internal stuff. I’d say for the latter most agents can be built with a prompt builder, as most of the work is pretty easy to do. I use vellum to do it. But outlining the process and how to approach this + getting everyone on board is the hard part",
+      "score": 6,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkhnpk3/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbloop",
+      "author": "michael-sagittal",
+      "text": "I've got another reason for you - *you shouldn't build anything that doesn't make YOUR beer taste better*. Engineering teams notoriously have a horrible not-invented-here syndrome for every tech wave, and they're extra bad when it comes to AI. Your internal eng team shouldn't be building better accounting platforms for finance, and your CS team buys a COTS solution for their tickets - why should you build an agent when there are multiple startups doing this? What, are you going to be better at it than those startups? Cmon, yes, you're a good eng and if you worked for those companies you'd do a great job, but _that's not your job right now_. Don't you have your own product to work on? Get over yourself and build your own product - and as you mentioned - clean up your own house/data/metrics first. Don't bikeshed with an agent framework.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbloop/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaagjx",
+      "author": "Lmao45454",
+      "text": "I saw a company I worked for doing exactly this, trying to build a streamlined knowledge base that was slow and unreliable when all you could do was create a Google site and organise your work with a simple front end maintainable by anyone in the team (plugging in new reports would take around 30 minutes every 2 weeks)",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaagjx/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaih31",
+      "author": "DavidG2P",
+      "text": "How do you create a \"Google site\" for your company's internal document repositories?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaih31/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkavu1s",
+      "author": "Lmao45454",
+      "text": "Tell the people in your team to organise folders when saving deliverables, then you link to said reports/slides etc on your site when you’ve create them. Takes very little time",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkavu1s/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkb4fk0",
+      "author": "DavidG2P",
+      "text": "What \"site\" is it that you are talking about? How does this \"site\" provide an internal search engine?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkb4fk0/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbwkcw",
+      "author": "maigpy",
+      "text": ":) typing the questions for me",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbwkcw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkc5qhw",
+      "author": "karriesully",
+      "text": "Even before jumping straight to “solution” or “tech” - the team needs to prove to the CFO that they can do 3 things: identify high value use cases, get more than 20% adoption on a pilot, and use that pilot to write a business case. Then think about investing in all of the things required to build an agent.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkc5qhw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkcbijh",
+      "author": "bdavid21wnec",
+      "text": "I was recently tasked with turning a business requirements doc into a technical doc laying out all the infra, tech, and deliverables for an AI Agent for our cs team. When I started deep diving into the BRD I realized there were several full startups, charging thousands if not tens of thousands of dollars monthly for what we were trying to build. When I brought this up to my manager and showed them examples, they said ya that BRD probably has to be redone, 😂. I think half the time, these managers have no idea what there asking for and the level of effort required for even a MVP",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkcbijh/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkdcuct",
+      "author": "expliciitz",
+      "text": "Thank you for posting this! Many people on here need to hear and understand exactly what you said. Companies without clean data, well documented processes, problems you cannot quantify and provide a dollar figure on simply should not be looking into AI agents. Those who have experience in product development for business system understand this well. From my experience leaders either (a) want to use AI because it’s all the buzz and will throw money into a burning barrel till some magic happens or (b) don’t believe in AI, thus refuse to prioritize researching prior to developing. Both cases, I believe anyway, will lead companies into the dirt as the competition waves “hello” as they fly by. The thing is, AI isn’t going anywhere. It’s critically important to understand the What, When, Where, Why, and How AI can be used. We’re in the biggest evolution of our lifetime. Always be learning. Always strive for improvement.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkdcuct/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkdpk3o",
+      "author": "",
+      "text": "“And here’s why”",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkdpk3o/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkfsula",
+      "author": "dograAlwaysOnHunt",
+      "text": "This is the absolute gold, could never agree more and this more than i would say publicly",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkfsula/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkl02lt",
+      "author": "Similar_Plum4766",
+      "text": "I agree with my observation. I have been working on this for two years to find out what I can implement for solo entrepreneurs. But questions followed questions. VPS, cloud, or local. Is the customer ready for maintenance and prepared for interruptions? Is the cloud subscription worthwhile for this target group? Because we now have so many subscriptions for AI tools. Getting stuck in AI prevents us from looking for solutions without AI that can be solved with existing software. In addition, people are not yet ready to allow AI to do everything – whether due to feeling overwhelmed, ignorance, or resistance. In groups, I see how workflows are created with n8n, then again with Vectorshift or other tools, for which connectors are needed, which also cost money. And it's not secure, if we think about the worst-case scenario of power outages, natural disasters, etc. I am rarely taken seriously when I ask questions about this. You're right. Why should a provider of AI automation still create YouTube videos and TikToks when business is going well? That's critical thinking, which is why I like your comment. From my observation, critical thinking is being neglected in the age of AI.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkl02lt/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkl7gv7",
+      "author": "Plenty_Lie1081",
+      "text": "Most teams don’t realize how messy their data is until they try to build an agent on top of it. We’ve seen that the biggest wins come when companies start by mapping out their processes and cleaning up data before touching any AI tools. Most so-called “AI failures” I’ve seen were actually data and ownership issues, not model problems.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkl7gv7/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkvzp3s",
+      "author": "ConversationalGame",
+      "text": "ha! i would love to prove this idea false. Welcome to the Palace. An AI governance operating system that can even be built cheaply https://romeviharo.substack.com/p/the-palace-open-public-testing-model",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkvzp3s/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nl9s24q",
+      "author": "Siddhant_AdoptAI",
+      "text": "I have gone through all the comments in this thread. I need to share some views from the perspective of someone who actually puts these systems together. I am a forward-deployed engineer at a firm that develops production-level AI agents. I have sat in more than 50 meetings with clients. We were trying to turn their real applications into agent-based setups. Not every one signed on as a customer. Not every idea turned out to be practical. I have witnessed the whole range though. Some concepts were clever but not quite there yet. Others involved chaotic setups that acted like they were prepared. People often do not realize the effort required to make an AI agent truly ready for production. It is not as simple as slapping a large language model onto the issue and walking away. A big part of the work involves exploring APIs. That means poring over documentation. It means tracking down where data hides. It means uncovering endpoints that no one bothered to document. It also means sorting through clutter spread across half a dozen systems. Our team uses tools that automatically spot APIs. Even so, you end up manually sifting through the application half the time to grab what you need. The process is tough. It is far from a simple one-click operation. Several points in the thread hit the mark pretty well. If your data sits scattered everywhere, your workflows lack clear definition, or your goals do not measure up easily, the AI project will likely fail. That observation comes from more than just stories. Studies from MIT and NTT Data show that about 70 to 95 percent of enterprise AI efforts do not produce real returns on investment. Gartner predicts that over 40 percent of projects involving agentic AI will get scrapped by 2027. The technology itself is not the problem. Most teams build the wrong solutions at the wrong moments for misguided motives. I have watched companies pour months into agents that handle tasks needing only 30 minutes weekly. I have seen others roll out test versions with disorganized data. Those agents then spouted confident but wrong details from old sources right in front of clients. When it comes to costs, that $50k number people mention seems low in reality. Add in the integrations, data scrubbing, workflow planning, security measures, service level agreements, monitoring setups, and upkeep after launch. Production-grade agents often run into hundreds of thousands of dollars. These are not systems you build and then ignore. They demand constant attention. That includes ownership, fixing bugs, tweaking prompts, and retraining as the business changes. Leave it without dedicated care, and your so-called AI agent turns into a forgotten test model within six months. Here is the tough part to accept. Companies that succeed with AI agents rely on some pretty ordinary advantages. They have solid data pipelines in place. They set clear metrics for success. They boast capable technical staff. They tackle straightforward, well-outlined problems. These outfits avoid the buzz. They focus on concrete, trackable improvements. Think reducing response times from four hours down to 30 minutes. I do agree with the initial post in that sense. Most companies should hold off on creating AI agents for now. Clean up the data first. Document those processes properly. Work out what success really means. It might not sound exciting. Still, that approach draws the line between flashy demos that wow crowds and setups that truly provide worth.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nl9s24q/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nlccbtm",
+      "author": "DavidG2P",
+      "text": "I have never understood why everyone tries to build agents and tries to automate everything. In my view it would be more than enough to be able to chat with your data, i.e. having a dialogue with your data. I believe that this is incredibly helpful already, and actually better than an \"agent\". It has the advantage that a dialogue is not something set in stone, but evolves together with your task, in contrast to those agents, where people seem to think they can set them once and then forget (and have them work forever).",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nlccbtm/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nlcn4zt",
+      "author": "Siddhant_AdoptAI",
+      "text": "I get your point, the capability of chatting with Data can be achieved, but would you not like if your tasks like updating something, adding something (basically POST and PATCH requests) could be done with simple natural language prompts? Take for example you own 5 Airbnb properties across the city, December is a peak season, you want to increase the prices for all your properties by a fixed value(say $100) or by 10%, instead of manually updating the price for every listing(calculating the best price and stuff like that) you just fire up your agent, prompt it \"Increase the price for all my properties by 10%\" and boom - the agent does that for you, or you can ask for analysis of prices across different properties for the month and update your prices accordingly. I just made your 20 mins task to a 2 min task.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nlcn4zt/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nlcuh15",
+      "author": "DavidG2P",
+      "text": "Yes but would you need to build an \"agent\" for tasks like this? Then something in an API or booking system or GUI changes, and the agent breaks. Shouldn't AI (soon) be \"agentic\" in itself for basic tasks like this without having to tailor-build \"static\" agents for every task? Not even the tasks are static to begin with, they can be slightly, or entirely, different every time.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nlcuh15/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkabstk",
+      "author": "GrungeWerX",
+      "text": "God, these bot posts. Another trash post telling us we’re all doing it wrong, or shouldn’t be doing it at all. Zero value.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkabstk/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkafx6s",
+      "author": "tzt1324",
+      "text": "There are no \"normal\" posts anymore. Basically everyone uses AI somehow. Even if it's rewriting an idea to create a reddit post",
+      "score": 7,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkafx6s/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkaiejd",
+      "author": "Decent-Phrase-4161",
+      "text": "What value did your comment add exactly? Tell me you're about to sign off on a doomed AI project without telling me you're about to sign off on a doomed AI project.",
+      "score": -3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkaiejd/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkakc5x",
+      "author": "GrungeWerX",
+      "text": "Dude, stop spreading spam posts.",
+      "score": 5,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkakc5x/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nk9uk8x",
+      "author": "AutoModerator",
+      "text": "Thank you for your submission, for any questions regarding AI, please check out our wiki at https://www.reddit.com/r/ai_agents/wiki (this is currently in test and we are actively adding to the wiki) I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nk9uk8x/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkabhp9",
+      "author": "apet84",
+      "text": "Bots gotta do what bots gotta do, but seriously, this topic is way too important for just automated responses. There's a lot of nuance in AI projects that needs real discussions.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkabhp9/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbwouf",
+      "author": "maigpy",
+      "text": "shut up",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbwouf/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkddxy6",
+      "author": "Holiday_Fact_3352",
+      "text": "Your response was the best one I've seen yet someone needs to buy you a beer at least yours made the most sense I got some value out of it",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkddxy6/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkb6ns3",
+      "author": "ive-noclue",
+      "text": "100% this. After 4 months of development the returns are not worth the investment. AI is just not ready yet.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkb6ns3/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkb8067",
+      "author": "gregb_parkingaccess",
+      "text": "Phone agents?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkb8067/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkb98p0",
+      "author": "CrossonTheGroove",
+      "text": "Yeah I just got let go after three months from a company with all of the problems you stated, all of which I shared with them about two weeks after being hired and beginning my Discovery phase. AI wasn't the quick fix the guy who hired me seemed to think it was. He hired me to be the \"strategic mind\" behind his AI vision. Every turn, he said \"don't waste your time doing that\" when I came to him saying \"here's what I would need to do to make this 'Agent' you want that answers a simple question about a report you get emailed every week.\" Now I'm out of a job, lured away from a stable one, and have no current path towards stable employment thanks to this guy's inability to break from his own master idea of what AI is and how it works. I'm pro-AI and believe in the hands of the individual, it is one of the greatest inventions of mankind, but I really hope this bubble bursts to dethrone some of these egotistical business leaders who are using their personal Grok account further feedback their misinformed \"visions\" for AI and how it will be the magic wand wave that will save their business. It won't. Especially if you prevent those who understand it from leading the charge.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkb98p0/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbaeiw",
+      "author": "LaserToy",
+      "text": "Most people (99.9999..%) are incapable of building reliable agentic flows, including those working for fancy tech companies. We still don’t have a good solution for evals, or for optimizations. You transaction levels are irrelevant, the problem is technology and companies that sell bad products.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbaeiw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkbwyjg",
+      "author": "maigpy",
+      "text": "expand on evals and optimisations.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbwyjg/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkfb6mm",
+      "author": "LaserToy",
+      "text": "Eval - evaluations. Every time someone writes a prompt, they should be able to measure the precision of the outcomes, something we don’t know how to do in a good generic way. After you have a measurement, the next step is to iterate and improve your prompt (assuming model stays the same). That is a very standard way of productionazing ML systems.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkfb6mm/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkge67z",
+      "author": "maigpy",
+      "text": "I understand what evals mean. I was requesting more details on how you see them being different / important for this use case . why do we not know how to measure the impact of a prompt change? we can measure how our results change as a consequence of that, and compare them to good known results.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkge67z/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkicuts",
+      "author": "SeaKoe11",
+      "text": "There is a reason why prompts isn’t a guarded secret anymore and companies can give em them out without fear. Evals has emerged as trade secret at this point.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkicuts/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkby5x0",
+      "author": "Puzzleheaded-Taro660",
+      "text": "I love how companies build agents hoping they’ll fix the mess their teams don’t want to deal with. Bad handoffs, poor ownership, docs that are irrelevant etc. For real, it doesn’t work. An agent will likely make it worse. Maybe they just want accountability without confrontation. An “AI teammate” that magically cleans up after their very human dysfunction without anyone taking blame or having to admit the process is broken. Is anyone surprised these builds tend to implode?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkby5x0/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkc2sys",
+      "author": "no_onions_pls_ty",
+      "text": "This isnt anything new. Not sure if you were around for IOT. Or especially the BI craze. I pivoted to BI when it was hot and it was wild. Same stats, more the %80 of BI projects fails... why? Because they first didn't even know what benefits they wanted from it... they were just sold the idea from slide decks. Second, they have no idea about the state of their data, the state of their processes, etc. Start doing a BI project and all of a suddent all middle to senior leadership are fighting, things are getting uncovered, but they are realizing this will take quarters if not years to rework. The largest implementation was only a couple of million, after a year it was fully scraped. But we did find out we were backing into our monthly reconciliation snd were not gaap compliant. This shit, ai, is the same as it always was dude. It's judt execs being sold a bag by sales and marketing folks making bank of their ignorance and want to make more obscene profits. I wish someone actually told these decisions makes what ai is in one of the slides- weights and biases, layers, transformations. The math isnt even that hard. All of a sudden it isnt this mystery magical money generating machine they are being sold, its just boring developer stuff that's been around for decades.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkc2sys/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkidc9m",
+      "author": "SeaKoe11",
+      "text": "Ah so this has existed before. Makes sense when you think about BI. Most businesses don’t seem to value data and the care that goes into them when building these systems. It makes sense, why AI projects are failing. Context engineering and Data strategy goes hand in hand",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkidc9m/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkcmygp",
+      "author": "tb758",
+      "text": "Hey man, you still got the sources for this? Not trying to debate you, i am just curious",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkcmygp/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkdd5yi",
+      "author": "Holiday_Fact_3352",
+      "text": "What the hell is this guy talking about or is he just talking it's not my place to tell a company how to spend their money and he's going to see everybody's building for the wrong reasons and building the wrong thing like he knows somebody give you a cardboard box in a toothbrush",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkdd5yi/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkdghd6",
+      "author": "mouhcine_ziane",
+      "text": "🔥",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkdghd6/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nke14ve",
+      "author": "Sad_Yellow6662",
+      "text": "Don't forget the security breach most of these agents too easily allow. One prompt or poisoned dataset, and your agent is leaking private data, bugging in production, giving wrong output...its a mess. We are early still.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nke14ve/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkfoyvw",
+      "author": "HystericalSail",
+      "text": "Large, poorly understood attack surface, often with read and write access to key internal systems. Throw some vibe coding into the mix and what could possibly go wrong?",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkfoyvw/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkeat8e",
+      "author": "databasehead",
+      "text": "You're probably right, but who cares? Build it, ship it, fuck it. You like the wealth disparity between CFO, CTO, and ordinary engineers?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkeat8e/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "id": "t1_nkfj28e",
+      "author": "Meem002",
+      "text": "Why do all the weird ones say \"sexy\" and \"not sexy\" when talking about business decisions?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkfj28e/",
+      "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "subreddit": "AI_Agents"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+    "method": "old_reddit_html"
+  }
+}

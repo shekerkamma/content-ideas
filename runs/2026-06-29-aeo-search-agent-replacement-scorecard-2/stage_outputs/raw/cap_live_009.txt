@@ -1,0 +1,94 @@
+# Current Reality of Doc Workflows & AI Agents
+
+## Traditional Software Stack
+
+**Most teams still use:**
+- **Word processors** (Word, Google Docs) + manual summarization
+- **Legal/enterprise**: iManage, NetDocuments with built-in summaries
+- **Knowledge management**: Confluence, Notion with manual TL;DRs
+- **Contract tools**: Ironclad, DocuSign CLM with template libraries
+
+**Workflows are surprisingly manual:**
+- Someone reads the doc and writes a summary email/memo
+- Teams maintain template libraries and copy-paste-edit
+- Junior staff spend hours distilling partner/exec decks
+- Review cycles involve lots of "can you shorten this?" feedback
+
+## Where AI Agents Are Actually Useful Now
+
+**✅ High-value, working today:**
+
+1. **First-draft summarization** - Save 30-60 min per long doc
+   - Works: Board decks, research papers, legal briefs, RFPs
+   - Limitation: Still need human review for accuracy/tone
+
+2. **Bulk document processing** - Analyze 50 contracts in minutes vs. days
+   - Works: Due diligence, compliance reviews, extracting key terms
+   - Limitation: Can't replace final human judgment on risk
+
+3. **Format conversion/restructuring** - Turn meeting notes into memos
+   - Works: Meeting → action items, report → exec summary
+   - Limitation: Loses context that wasn't explicitly written
+
+4. **Template-based drafting** - Generate standard docs 10x faster
+   - Works: NDAs, standard responses, status reports
+   - Limitation: Anything requiring creativity/negotiation still needs humans
+
+## Where AI Agents Fall Short
+
+**❌ Overpromised, underdelivering:**
+
+1. **Complex synthesis requiring judgment**
+   - Merging conflicting stakeholder input
+   - Strategic recommendations based on docs
+   - "Read these 5 contracts and tell me our negotiation position"
+
+2. **Nuanced tone/persuasion**
+   - Investor pitches
+   - Diplomatic communications
+   - Anything where subtext matters
+
+3. **Maintaining context across long projects**
+   - Remembering decisions from 3 months ago
+   - Consistent voice across 50-page reports
+   - Understanding unstated organizational politics
+
+4. **Full autonomous workflows**
+   - "Analyze this, draft response, and send" - too risky
+   - Requires human checkpoints at each stage
+
+## Realistic Adoption Pattern
+
+**What actually works:**
+
+```
+Human defines scope → AI generates draft → Human edits → AI reformats → Human approves
+```
+
+**Not:** AI does everything autonomously
+
+**Successful teams use AI as:**
+- A **research assistant** (find relevant sections across docs)
+- A **first-drafter** (80% draft in 5 min vs. 60 min blank page)
+- A **formatting helper** (convert bullet points to prose)
+
+**They don't use it for:**
+- Final decision-making
+- Anything customer/court-facing without heavy review
+- Situations where error cost is high
+
+## The Integration Gap
+
+Most AI is still **bolted on** rather than integrated:
+- Copy-paste into ChatGPT/Claude (security risk)
+- Browser extensions that feel clunky
+- IT departments blocking everything due to data concerns
+
+**The winners will be:**
+- Tools embedded in existing workflows (Office 365 Copilot approach)
+- API integrations with document management systems
+- Companies solving the compliance/security piece properly
+
+---
+
+**TL;DR:** AI agents are legitimately useful for **speeding up drafting** and **processing volume**, but the "autonomous AI paralegal/analyst" vision is oversold. The realistic use case is "make good people 2-3x faster" not "replace people."

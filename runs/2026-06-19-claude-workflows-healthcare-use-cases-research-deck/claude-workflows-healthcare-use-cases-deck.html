@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude in Healthcare — AI Workflow Use Cases</title>
+<style>
+:root {
+  --bg:      #080b11;
+  --bg-elev: #0f141d;
+  --ink:     #eef2f7;
+  --soft:    #aeb8c7;
+  --muted:   #69748a;
+  --line:    rgba(255,255,255,.09);
+  --glass:   rgba(255,255,255,.04);
+  --teal:    #2dd4bf;
+  --sky:     #38bdf8;
+  --magenta: #e879f9;
+  --amber:   #f6b94b;
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --type-display: clamp(2.8rem,5.2vw,5.5rem);
+  --type-title:   clamp(1.9rem,3.2vw,3rem);
+  --type-body:    clamp(1.05rem,1.4vw,1.4rem);
+  --type-quote:   clamp(1.6rem,2.6vw,2.2rem);
+  --type-label:   clamp(.66rem,.8vw,.8rem);
+}
+*,::before,::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--font-display)}
+
+.slide{
+  position:fixed;inset:0;display:none;flex-direction:column;
+  justify-content:center;
+  padding:clamp(40px,5vh,72px) clamp(56px,5vw,128px);
+  overflow:hidden;
+}
+.slide.active{display:flex}
+
+.slide::before{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 55% 42% at 12% 18%, rgba(45,212,191,.13) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 38% at 88% 72%, rgba(232,121,249,.11) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 30% at 60% 10%, rgba(56,189,248,.10) 0%, transparent 65%),
+    radial-gradient(ellipse 28% 22% at 30% 85%, rgba(246,185,75,.08) 0%, transparent 60%);
+  filter:blur(14px);
+}
+.slide::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+  opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.dot-grid{
+  position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.bar{
+  position:absolute;bottom:0;left:0;right:0;height:3px;z-index:10;
+  background:linear-gradient(90deg,var(--teal),var(--sky),var(--magenta));
+  box-shadow:0 0 14px var(--teal);
+}
+.top-label{
+  position:absolute;top:clamp(18px,2.5vh,32px);left:clamp(56px,5vw,128px);right:clamp(56px,5vw,128px);
+  z-index:10;display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--font-mono);font-size:var(--type-label);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+}
+.folio{
+  position:absolute;bottom:clamp(14px,2vh,24px);left:clamp(56px,5vw,128px);right:clamp(56px,5vw,128px);
+  z-index:10;display:flex;justify-content:space-between;
+  font-family:var(--font-mono);font-size:var(--type-label);
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.content{position:relative;z-index:5;width:100%;}
+
+.inner-split{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:clamp(40px,5vw,96px);align-items:center;
+  width:100%;max-width:min(1600px,92vw);margin:0 auto;
+}
+.inner-center{max-width:min(900px,72vw);margin:0 auto;text-align:center;}
+.inner-compare{
+  max-width:min(1180px,90vw);margin:0 auto;
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:clamp(24px,3vw,56px);align-items:start;
+}
+.inner-full{max-width:min(1300px,88vw);margin:0 auto;}
+
+.display-title{
+  font-family:var(--font-display);font-size:var(--type-display);
+  font-weight:800;letter-spacing:-.02em;line-height:1.05;
+  background:linear-gradient(135deg,var(--teal) 0%,var(--sky) 50%,var(--magenta) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.slide-title{
+  font-family:var(--font-display);font-size:var(--type-title);
+  font-weight:800;letter-spacing:-.02em;line-height:1.12;color:var(--ink);margin-bottom:.5em;
+}
+.slide-title .glow{color:var(--teal);text-shadow:0 0 24px rgba(45,212,191,.55);}
+.body-text{font-size:var(--type-body);line-height:1.6;color:var(--ink);}
+.kicker{
+  font-family:var(--font-mono);font-size:var(--type-label);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--teal);
+  margin-bottom:.8em;display:block;
+}
+.subtitle{font-size:clamp(1.05rem,1.6vw,1.35rem);color:var(--soft);line-height:1.55;margin-top:.6em;max-width:52ch;}
+
+.compare-panel{
+  background:var(--glass);border:1px solid var(--line);border-radius:12px;
+  padding:clamp(24px,3vw,40px);backdrop-filter:blur(8px);
+  display:flex;flex-direction:column;gap:14px;
+}
+.compare-rule{
+  width:1px;
+  background:linear-gradient(180deg,transparent 0%,var(--teal) 20%,var(--teal) 80%,transparent 100%);
+  box-shadow:0 0 10px var(--teal);align-self:stretch;flex-shrink:0;
+}
+.panel-label{
+  font-family:var(--font-mono);font-size:var(--type-label);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:4px;
+}
+.panel-title{font-size:clamp(1.1rem,1.6vw,1.45rem);font-weight:700;color:var(--ink);margin-bottom:8px;}
+.panel-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;}
+.panel-list li{
+  font-size:clamp(.92rem,1.2vw,1.15rem);color:var(--ink);line-height:1.5;
+  padding-left:1.3em;position:relative;
+}
+.panel-list li::before{content:'→';position:absolute;left:0;color:var(--teal);font-family:var(--font-mono);}
+.panel-list li.pos::before{content:'✓';color:var(--teal);}
+.panel-list li.neg::before{content:'✕';color:var(--magenta);}
+.panel-tag{
+  font-family:var(--font-mono);font-size:var(--type-label);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal);
+  padding-top:12px;border-top:1px solid var(--line);margin-top:auto;
+}
+.panel-tag.m{color:var(--magenta);}.panel-tag.s{color:var(--sky);}
+
+.chapter-num{
+  font-family:var(--font-mono);
+  font-size:clamp(4rem,12vh,9rem);font-weight:800;line-height:1;letter-spacing:-.04em;
+  color:var(--teal);
+  text-shadow:0 0 40px rgba(45,212,191,.5),0 0 80px rgba(45,212,191,.25);
+  margin-bottom:.2em;
+}
+.chapter-name{
+  font-family:var(--font-display);font-size:var(--type-display);
+  font-weight:800;letter-spacing:-.02em;color:var(--ink);line-height:1.08;
+}
+
+.data-number{
+  display:inline-block;width:max-content;max-width:92vw;white-space:nowrap;
+  font-family:var(--font-mono);font-size:clamp(3.5rem,11vh,9rem);
+  font-weight:800;letter-spacing:-.04em;line-height:1;
+  background:linear-gradient(135deg,var(--teal),var(--sky));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 28px rgba(45,212,191,.5));margin:0 auto;
+}
+.data-label{
+  font-family:var(--font-mono);font-size:var(--type-label);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+  display:block;margin-bottom:.5em;
+}
+.data-sub{
+  font-family:var(--font-mono);font-size:var(--type-label);
+  letter-spacing:.18em;text-transform:uppercase;color:var(--teal);
+  display:block;margin-top:.5em;
+}
+
+.quote-wrap{display:flex;gap:clamp(20px,2.5vw,36px);align-items:stretch;}
+.quote-rule{
+  width:4px;flex-shrink:0;border-radius:2px;
+  background:var(--teal);box-shadow:0 0 16px rgba(45,212,191,.6);
+}
+.quote-text{font-size:var(--type-quote);font-style:italic;color:var(--soft);line-height:1.35;}
+.quote-attr{
+  font-family:var(--font-mono);font-size:var(--type-label);
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+  margin-top:1em;display:block;
+}
+
+.stat-card{
+  background:var(--glass);border:1px solid var(--line);border-radius:12px;
+  padding:clamp(18px,2.2vw,28px);display:flex;flex-direction:column;gap:8px;
+}
+.stat-card+.stat-card{margin-top:14px;}
+.card-num{
+  font-family:var(--font-mono);font-size:clamp(1.8rem,3.2vw,2.8rem);
+  font-weight:800;color:var(--teal);text-shadow:0 0 20px rgba(45,212,191,.4);
+}
+.card-label{font-family:var(--font-mono);font-size:var(--type-label);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.card-desc{font-size:clamp(.88rem,1.1vw,1.05rem);color:var(--soft);}
+
+.comp-row{
+  display:flex;align-items:baseline;gap:clamp(16px,2vw,28px);
+  padding:clamp(10px,1.2vh,16px) 0;border-bottom:1px solid var(--line);
+}
+.comp-row:last-child{border-bottom:none;}
+.comp-badge{
+  font-family:var(--font-mono);font-size:var(--type-label);letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 10px;border-radius:4px;
+  background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.3);
+  color:var(--teal);white-space:nowrap;flex-shrink:0;min-width:clamp(100px,9vw,140px);
+}
+.comp-desc{font-size:clamp(.9rem,1.1vw,1.05rem);color:var(--ink);line-height:1.45;}
+
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.4em;}
+.chip{
+  font-family:var(--font-mono);font-size:var(--type-label);letter-spacing:.14em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;border:1px solid var(--teal);color:var(--teal);
+}
+.chip.s{border-color:var(--sky);color:var(--sky);}
+.chip.m{border-color:var(--magenta);color:var(--magenta);}
+.chip.soft{border-color:var(--line);color:var(--soft);}
+.closing-sub{font-size:clamp(1.05rem,1.6vw,1.4rem);color:var(--soft);line-height:1.6;margin-top:.7em;max-width:58ch;}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 · COVER -->
+<section class="slide active" data-type="cover">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>OPENKB</span><span>ANTHROPIC · HEALTHCARE AI · 2025</span></div>
+  <div class="content">
+    <div class="inner-full">
+      <span class="kicker">Claude AI · Workflow Automation · Healthcare Industry</span>
+      <div class="display-title">Claude in Healthcare:<br>From Admin Burden<br>to Clinical Intelligence</div>
+      <p class="subtitle">Ten workflow use cases where Claude's long-context reasoning, structured output, and low hallucination rate address the $950B US healthcare administrative cost wall — and the compliance frameworks that govern every deployment.</p>
+      <div class="chip-row">
+        <span class="chip">Providers</span>
+        <span class="chip s">Payers</span>
+        <span class="chip m">Life Sciences</span>
+        <span class="chip soft">HIPAA · CMS · FDA · ONC</span>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>1 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 2 · THESIS — The Problem -->
+<section class="slide" data-type="thesis">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 00 · THE PROBLEM</span><span>AMA · JAMA · 2023–24</span></div>
+  <div class="content">
+    <div class="inner-split">
+      <div>
+        <span class="kicker">The core constraint</span>
+        <h2 class="slide-title">Physicians spend more time on <span class="glow">paperwork</span> than patients</h2>
+        <p class="body-text">35–55% of a physician's workday goes to EHR documentation. Prior authorization alone consumes 13 hours per physician per week — time spent on forms, not care. Healthcare's core problem is not clinical capability. It is administrative throughput — and that is exactly what Claude solves.</p>
+        <div class="chip-row">
+          <span class="chip">13 hrs/week on PA</span>
+          <span class="chip s">55% doc burden</span>
+          <span class="chip m">$950B admin spend</span>
+        </div>
+      </div>
+      <div>
+        <div class="stat-card">
+          <div class="card-num">13 hrs</div>
+          <div class="card-label">Per physician per week</div>
+          <div class="card-desc">Lost to prior authorization alone — AMA 2024 survey</div>
+        </div>
+        <div class="stat-card">
+          <div class="card-num">55%</div>
+          <div class="card-label">Of physician workday</div>
+          <div class="card-desc">Spent on documentation, not patient interaction — JAMA 2023</div>
+        </div>
+        <div class="stat-card">
+          <div class="card-num">$500K+</div>
+          <div class="card-label">Cost per burned-out physician</div>
+          <div class="card-desc">Replacement cost when admin burden drives attrition</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>2 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 3 · DATA — $262B -->
+<section class="slide" data-type="data">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 00 · REVENUE AT RISK</span><span>CHANGE HEALTHCARE 2023</span></div>
+  <div class="content">
+    <div class="inner-center">
+      <span class="data-label">US healthcare revenue lost annually to coding errors</span>
+      <div style="text-align:center;"><div class="data-number">$262B</div></div>
+      <span class="data-sub">Denied or underpaid claims · Change Healthcare 2023</span>
+      <p class="body-text" style="margin-top:1.4em;max-width:54ch;margin-left:auto;margin-right:auto;">Medical coding errors and improperly documented procedures flow directly to denied claims. On top of this, 3–5% of provider revenue is lost to denials — and 40–60% of those denials are overturned on appeal when properly documented. Claude automates the documentation.</p>
+    </div>
+  </div>
+  <div class="folio"><span>3 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 4 · CHAPTER 01 — Providers -->
+<section class="slide" data-type="chapter">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>OPENKB</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="content">
+    <div class="inner-split">
+      <div>
+        <div class="chapter-num">01</div>
+        <div class="chapter-name">Provider<br>Workflows</div>
+      </div>
+      <div>
+        <p class="body-text" style="color:var(--soft);font-size:clamp(1.1rem,1.5vw,1.35rem);line-height:1.65;">Four use cases that return physician time, reduce readmissions, and structure clinical data — all under existing HIPAA Business Associate Agreement coverage that Anthropic provides for enterprise customers.</p>
+        <div class="chip-row" style="margin-top:1.6em;">
+          <span class="chip">Ambient Scribing</span>
+          <span class="chip s">Prior Authorization</span>
+          <span class="chip">Discharge Summaries</span>
+          <span class="chip m">Care Navigation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>4 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 5 · COMPARE — Doc vs PA -->
+<section class="slide" data-type="compare">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 01 · PROVIDER WORKFLOWS</span><span>NUANCE DAX · ABRIDGE · COHERE HEALTH</span></div>
+  <div class="content">
+    <div style="max-width:min(1200px,92vw);margin:0 auto;">
+      <h2 class="slide-title" style="margin-bottom:.8em;">The Two Biggest Time Sinks — Both Automatable</h2>
+      <div class="inner-compare">
+        <div class="compare-panel">
+          <div class="panel-label">Provider · Use Case 01</div>
+          <div class="panel-title">Clinical Documentation<br>&amp; Ambient Scribing</div>
+          <ul class="panel-list">
+            <li>Post-processes ASR transcripts into structured SOAP notes</li>
+            <li>Extracts ICD-10 / CPT billing codes from visit content</li>
+            <li>Flags discrepancies between spoken plan and documented order</li>
+            <li class="pos">Saves 2–3 hrs/day per physician — $75K–$110K/yr per clinician recovered</li>
+          </ul>
+          <div class="panel-tag">Nuance DAX · Abridge · Suki · Ambience</div>
+        </div>
+        <div class="compare-rule"></div>
+        <div class="compare-panel">
+          <div class="panel-label">Provider / Payer · Use Case 02</div>
+          <div class="panel-title">Prior Authorization<br>Automation</div>
+          <ul class="panel-list">
+            <li>Ingests clinical note, labs, and procedure code in one pass</li>
+            <li>Cross-references payer coverage policy (200K context window)</li>
+            <li>Drafts clinically grounded justification letter</li>
+            <li class="pos">Eliminates 13 hrs/physician/week — $37K/physician/year recovered</li>
+          </ul>
+          <div class="panel-tag s">Cohere Health · Abridge · CMS-9115-F mandate Jan 2027</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>5 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 6 · THESIS — Discharge / Readmissions -->
+<section class="slide" data-type="thesis">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 01 · PROVIDER WORKFLOWS</span><span>CMS CORE MEASURE OP-35</span></div>
+  <div class="content">
+    <div class="inner-split">
+      <div>
+        <span class="kicker">Use Case 03</span>
+        <h2 class="slide-title">Poor discharge summaries cost <span class="glow">$26B</span> in preventable readmissions</h2>
+        <p class="body-text">15% of patients are readmitted within 30 days — almost always traceable to unclear instructions, medication reconciliation gaps, or missed follow-up. Claude generates a patient-readable summary (≤6th grade) and a PCP-readable clinical handoff from the same inpatient chart, flagging every open medication and pending lab result automatically.</p>
+      </div>
+      <div>
+        <div class="stat-card">
+          <div class="card-num">15%</div>
+          <div class="card-label">30-day readmission rate</div>
+          <div class="card-desc">Nationally · $26B/year in preventable hospitalizations</div>
+        </div>
+        <div class="stat-card">
+          <div class="card-num">2 ×</div>
+          <div class="card-label">Outputs per chart</div>
+          <div class="card-desc">Patient-readable + PCP-readable discharge summary from one ingest</div>
+        </div>
+        <div class="stat-card">
+          <div class="card-num">FHIR</div>
+          <div class="card-label">HL7 R4 / R5 output</div>
+          <div class="card-desc">Structured data ready for Epic, Cerner, athenahealth ingestion</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>6 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 7 · CHAPTER 02 — Payers -->
+<section class="slide" data-type="chapter">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>OPENKB</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="content">
+    <div class="inner-split">
+      <div>
+        <div class="chapter-num">02</div>
+        <div class="chapter-name">Payer<br>Workflows</div>
+      </div>
+      <div>
+        <p class="body-text" style="color:var(--soft);font-size:clamp(1.1rem,1.5vw,1.35rem);line-height:1.65;">Revenue cycle integrity from coding to claim recovery. Claude's 200K-token context ingests the full patient encounter — every note, lab, and imaging report — in one pass, surfacing missed diagnoses and automating denial appeals that succeed 40–60% of the time.</p>
+        <div class="chip-row" style="margin-top:1.6em;">
+          <span class="chip">Medical Coding</span>
+          <span class="chip s">Revenue Cycle</span>
+          <span class="chip m">Denial Management</span>
+          <span class="chip">Appeals Automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>7 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 8 · COMPARE — Coding vs Denial -->
+<section class="slide" data-type="compare">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 02 · PAYER WORKFLOWS</span><span>CHANGE HEALTHCARE · HFMA 2023</span></div>
+  <div class="content">
+    <div style="max-width:min(1200px,92vw);margin:0 auto;">
+      <h2 class="slide-title" style="margin-bottom:.8em;">Revenue Recovery at Both Ends of the Claim Lifecycle</h2>
+      <div class="inner-compare">
+        <div class="compare-panel">
+          <div class="panel-label">Payer · Use Case 04</div>
+          <div class="panel-title">Medical Coding &amp;<br>Revenue Cycle</div>
+          <ul class="panel-list">
+            <li>Auto-suggests most specific ICD-10 / CPT codes from clinical notes</li>
+            <li>Validates documentation supports the code — reduces audit risk</li>
+            <li>Identifies missed secondary diagnoses that increase reimbursement</li>
+            <li class="pos">Addresses $262B/year in denied or underpaid claims</li>
+          </ul>
+          <div class="panel-tag">200K context · full encounter in one pass</div>
+        </div>
+        <div class="compare-rule"></div>
+        <div class="compare-panel">
+          <div class="panel-label">Payer · Use Case 05</div>
+          <div class="panel-title">Denial Management<br>&amp; Appeals</div>
+          <ul class="panel-list">
+            <li>Classifies denial by reason code (clinical / admin / authorization)</li>
+            <li>Retrieves supporting clinical evidence from the patient chart</li>
+            <li>Drafts structured appeal citing CPT codes + clinical guidelines</li>
+            <li class="pos">40–60% appeal success rate when properly documented · Claude automates the doc</li>
+          </ul>
+          <div class="panel-tag m">3–5% of provider revenue recoverable</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>8 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 9 · CHAPTER 03 — Life Sciences -->
+<section class="slide" data-type="chapter">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>OPENKB</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="content">
+    <div class="inner-split">
+      <div>
+        <div class="chapter-num">03</div>
+        <div class="chapter-name">Life Sciences<br>Workflows</div>
+      </div>
+      <div>
+        <p class="body-text" style="color:var(--soft);font-size:clamp(1.1rem,1.5vw,1.35rem);line-height:1.65;">From trial recruitment to FDA submission packages. Claude compresses the documentation timelines that cost pharma and biotech organizations months of delay and tens of millions in authoring — with structured output that maps directly to regulatory schemas.</p>
+        <div class="chip-row" style="margin-top:1.6em;">
+          <span class="chip">Trial Eligibility</span>
+          <span class="chip s">Pharmacovigilance</span>
+          <span class="chip m">Regulatory Submissions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>9 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 10 · COMPARE — Trials vs Regulatory -->
+<section class="slide" data-type="compare">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 03 · LIFE SCIENCES</span><span>FDA · ICH E2A · TRINETX · MENDEL.AI</span></div>
+  <div class="content">
+    <div style="max-width:min(1200px,92vw);margin:0 auto;">
+      <h2 class="slide-title" style="margin-bottom:.8em;">Accelerating the Drug Development Timeline</h2>
+      <div class="inner-compare">
+        <div class="compare-panel">
+          <div class="panel-label">Life Sciences · Use Case 08</div>
+          <div class="panel-title">Clinical Trial<br>Eligibility Screening</div>
+          <ul class="panel-list">
+            <li>Parses 30–100 inclusion/exclusion criteria per protocol</li>
+            <li>Screens patient charts against criteria — structured match report</li>
+            <li>Drafts recruitment letters at target reading level per diagnosis</li>
+            <li class="pos">30% average trial under-enrollment addressed · 2–3× screening speed</li>
+          </ul>
+          <div class="panel-tag">TriNetX · Mendel.ai · Mayo Clinic · Vanderbilt</div>
+        </div>
+        <div class="compare-rule"></div>
+        <div class="compare-panel">
+          <div class="panel-label">Life Sciences · Use Case 09</div>
+          <div class="panel-title">Pharmacovigilance &amp;<br>Drug Safety Reporting</div>
+          <ul class="panel-list">
+            <li>Parses adverse event free text from EHR, call centers, patient reports</li>
+            <li>Extracts structured MedWatch 3500A fields automatically</li>
+            <li>Classifies event severity per ICH E2A criteria</li>
+            <li class="pos">FDA 15-day serious event reporting window — met without manual entry</li>
+          </ul>
+          <div class="panel-tag s">FDA AI/ML Action Plan 2024 · ICH E2A</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>10 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 11 · DATA — NDA Cost -->
+<section class="slide" data-type="data">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 03 · REGULATORY SUBMISSIONS</span><span>FDA NDA / BLA PROCESS</span></div>
+  <div class="content">
+    <div class="inner-center">
+      <span class="data-label">Cost to author a single NDA / BLA submission package</span>
+      <div style="text-align:center;"><div class="data-number">$10–30M</div></div>
+      <span class="data-sub">12–18 months of documentation · Claude compresses by 30–50%</span>
+      <p class="body-text" style="margin-top:1.4em;max-width:58ch;margin-left:auto;margin-right:auto;">Claude synthesizes clinical study reports from raw statistical outputs, drafts ICH CTD Module 2/5 content, cross-checks table/listing/figure consistency, and generates FDA Advisory Committee briefing packages — all from the same source data that previously took teams months to manually compile.</p>
+    </div>
+  </div>
+  <div class="folio"><span>11 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 12 · COMPARE — Compliance -->
+<section class="slide" data-type="compare">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 04 · COMPLIANCE FRAMEWORK</span><span>HIPAA · CMS · FDA · ONC · ICH</span></div>
+  <div class="content">
+    <div style="max-width:min(1100px,90vw);margin:0 auto;">
+      <h2 class="slide-title" style="margin-bottom:1em;">Every Use Case Has a Governing Framework</h2>
+      <div class="comp-row">
+        <div class="comp-badge">HIPAA BAA</div>
+        <div class="comp-desc">All PHI processing requires a Business Associate Agreement. Anthropic offers enterprise BAA coverage for all Claude deployments handling patient data.</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-badge">CMS-9115-F</div>
+        <div class="comp-desc">Mandates electronic prior authorization by January 2027. Creates regulatory tailwind for PA automation — the CMS clock is running for every payer and provider.</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-badge">CMS Info Block</div>
+        <div class="comp-desc">Requires patient-accessible report summaries. Claude generates them at appropriate reading levels (≤6th grade) automatically as part of the discharge workflow.</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-badge">FDA AI/ML 2024</div>
+        <div class="comp-desc">Supports AI-assisted pharmacovigilance with human oversight. Sets the standard for autonomous adverse event parsing and MedWatch submission drafting.</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-badge">ONC CDS Rules</div>
+        <div class="comp-desc">Requires explainability for AI clinical decision support. Human-in-the-loop is mandatory for clinical decisions; administrative workflows (PA, coding, appeals) can fully automate.</div>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>12 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 13 · QUOTE -->
+<section class="slide" data-type="quote">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>CHAPTER 04 · MARKET TIMING</span><span>SYNTHESIS · 2025</span></div>
+  <div class="content">
+    <div class="inner-center">
+      <div class="quote-wrap" style="text-align:left;">
+        <div class="quote-rule"></div>
+        <div>
+          <div class="quote-text">"The organizations that move from L2 (supervised) to L3 (delegated) automation in 2025–2026 will operate ahead of CMS mandate deadlines — not scrambling to comply with them."</div>
+          <span class="quote-attr">Healthcare AI Synthesis · Claude Workflow Use Cases Research · 2025</span>
+        </div>
+      </div>
+      <div class="chip-row" style="margin-top:2em;justify-content:center;">
+        <span class="chip">L2 Supervised — most enterprises today</span>
+        <span class="chip s">L3 Delegated — 2025–26 target</span>
+        <span class="chip m">L4 Autonomous — emerging in PA, coding</span>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>13 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<!-- SLIDE 14 · CLOSING -->
+<section class="slide" data-type="closing">
+  <div class="dot-grid"></div>
+  <div class="top-label"><span>OPENKB</span><span>ANTHROPIC · CLAUDE FOR ENTERPRISE</span></div>
+  <div class="content">
+    <div class="inner-full">
+      <span class="kicker">The window is open now</span>
+      <div class="display-title">Build for L3.<br>The mandate<br>clock is ticking.</div>
+      <p class="closing-sub">$950B in annual US healthcare administrative spend. CMS-9115-F enforcement arriving January 2027. Ten use cases, three segments, five compliance frameworks — Claude's 200K context window, HIPAA BAA coverage, and structured output make it purpose-built for every workflow in this deck.</p>
+      <div class="chip-row" style="margin-top:1.4em;">
+        <span class="chip">10 Use Cases</span>
+        <span class="chip s">3 Segments</span>
+        <span class="chip m">5 Compliance Frameworks</span>
+        <span class="chip soft">enterprise.anthropic.com</span>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>14 / 14</span><span>CLAUDE HEALTHCARE USE CASES</span></div>
+  <div class="bar"></div>
+</section>
+
+<script>
+(function(){
+  const slides=document.querySelectorAll('.slide');
+  let cur=0;
+  function show(n){
+    slides[cur].classList.remove('active');
+    cur=(n+slides.length)%slides.length;
+    slides[cur].classList.add('active');
+  }
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown')show(cur+1);
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp')show(cur-1);
+    else if(e.key==='f'||e.key==='F'){
+      if(!document.fullscreenElement)document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+    else if(e.key==='p'||e.key==='P')window.print();
+  });
+  document.addEventListener('click',e=>{
+    if(e.clientX>window.innerWidth/2)show(cur+1);else show(cur-1);
+  });
+})();
+</script>
+</body>
+</html>

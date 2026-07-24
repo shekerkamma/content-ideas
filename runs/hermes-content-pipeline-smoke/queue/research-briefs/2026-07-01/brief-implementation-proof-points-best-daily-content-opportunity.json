@@ -1,0 +1,61 @@
+{
+  "id": "brief-286934031492",
+  "topic_cluster_id": "topic-76cf4f44be24",
+  "title": "Implementation proof points: best daily content opportunity",
+  "thesis": "Implementation proof points is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+  "angle": "Explain what changed in Implementation proof points and convert it into a practical implementation narrative for AI operators.",
+  "evidence": [
+    {
+      "claim": "aws-machine-learning-blog contributes evidence for the Implementation proof points opportunity.",
+      "citation_ids": [
+        "c1"
+      ]
+    },
+    {
+      "claim": "google-cloud-ai-blog contributes evidence for the Implementation proof points opportunity.",
+      "citation_ids": [
+        "c2"
+      ]
+    },
+    {
+      "claim": "nvidia-ai-blog contributes evidence for the Implementation proof points opportunity.",
+      "citation_ids": [
+        "c3"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "c1",
+      "title": "AWS Machine Learning Blog signal for Implementation proof points",
+      "url": "https://aws.amazon.com/blogs/machine-learning/",
+      "source_id": "aws-machine-learning-blog",
+      "published_at": "2026-07-01T00:00:00+00:00",
+      "fetched_at": "2026-07-01T05:17:50.928760+00:00"
+    },
+    {
+      "id": "c2",
+      "title": "Google Cloud AI Blog signal for Implementation proof points",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning",
+      "source_id": "google-cloud-ai-blog",
+      "published_at": "2026-07-01T00:00:00+00:00",
+      "fetched_at": "2026-07-01T05:17:50.929133+00:00"
+    },
+    {
+      "id": "c3",
+      "title": "NVIDIA AI Blog signal for Implementation proof points",
+      "url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+      "source_id": "nvidia-ai-blog",
+      "published_at": "2026-07-01T00:00:00+00:00",
+      "fetched_at": "2026-07-01T05:17:50.929675+00:00"
+    }
+  ],
+  "risks": [
+    "Offline or snippet-only evidence must be replaced with full source review before publishing.",
+    "The article must avoid overclaiming beyond cited source material."
+  ],
+  "missing_facts": [
+    "Current primary-source details should be verified in live mode before final editorial approval."
+  ],
+  "status": "approved_for_draft"
+}

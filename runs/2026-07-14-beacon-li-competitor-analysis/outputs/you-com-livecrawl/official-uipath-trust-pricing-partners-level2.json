@@ -1,0 +1,151 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.uipath.com/platform/agentic-automation/foundation",
+        "title": "Agentic Automation Security and Governance | UiPath",
+        "description": "Discover how the UiPath Platform delivers auditing, compliance, and governance, plus secure integrations and easy-to-use tools for every developer.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "The UiPath Platform provides auditing, compliance, and governance, as well as secure integration services and easy-to-use tools for every developer. ... With trust, choice, and visibility built in, you define the guardrails–and we enforce them. ... Work with your preferred technologies, including third-party AI models, agent ecosystems, and enterprise systems and applications.",
+          "Rigorous security and compliance standards required for handling government data and operations: FedRAMP, StateRAMP, C5, ENS, IRAP ... “Perfectly aligning with our vision for intelligent automation at scale, UiPath is the ideal foundation for building enterprise-grade autonomous AI agents.",
+          "Design reusable data models for Apps, Agents, API workflows, and processes. Ensure robust enterprise data governance with strict access controls and full auditability.",
+          "Use our managed retrieval augmented generation (RAG) service to empower AI agents with the right data, insight, and knowledge."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/blog/product-and-updates/iso-iec-42001-2023-certification-trusted-agentic-automation",
+        "title": "ISO/IEC 42001:2023 ushers in a new era of trusted agentic automation ...",
+        "description": "Learn how UiPath added more trust into agentic automation with ISO/IEC 42001:2023, the new global standard for secure, transparent, and responsible AI.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/6sDupXEL1hcP3XGTVJfUlj/0e9eceab812f2dba73f5171ba1331a5b/GettyImages-1249879063_copy.jpg",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/6sDupXEL1hcP3XGTVJfUlj/0e9eceab812f2dba73f5171ba1331a5b/GettyImages-1249879063_copy.jpg",
+        "page_age": "2025-10-08T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Agentic governance: guardrails that keep agents, robots, and workflows safe, with jailbreak defenses, personally identifiable information (PII) protection, and policy-first controls · IT governance: policies that protect data regardless of actor, with data loss prevention, unified audit trails, and natural language policy creation via UiPath Autopilot™ · Infrastructure governance: encryption, customer-managed keys, and strict data residency to meet sovereignty and compliance needs",
+          "“In April 2025, UiPath Platform™ for agentic automation was released publicly. By May, driven by our confidence in the governance built-in from day one, we had already kicked off ISO/IEC 42001:2023 certification with our audit partners, Schellman, not for a fragment, but for the entire UiPath AIMS scope.",
+          "Agent guardrails policies will block AI agents from crossing approved data boundaries and escalate exceptions to human-in-the-loop review · PII detection and in-flight masking ensure sensitive data detection and pseudonymization before the LLM call is made · LLM restriction policies will determine that only specific models will be used, ensuring that data compliance won’t be breached · Unified audit logs provide full trace logging of each agent prompt, output, decision, and action taken",
+          "Faster adoption: assessments and audits move more quickly, allowing enterprises to confidently deploy agentic automation where it matters most: to critical and heavy processes that really make a difference when automated"
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/legal/trust-and-security",
+        "title": "Trust and Security – Built for Secure Agentic Scale | UiPath",
+        "description": "Experience UiPath Trust and security: zero-trust architecture, scalable governance, and compliance-ready protection that safeguards your data, actions & outcomes.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Discover our Global Partner Code of Conduct, our compliance standards, and our certifications and attestations.Find out more"
+        ]
+      },
+      {
+        "url": "https://docs.uipath.com/automation-cloud/automation-cloud/latest/admin-guide/data-security-and-compliance",
+        "title": "Automation Cloud - Data security and compliance",
+        "description": "Security design and compliance posture of UiPath cloud platforms, including data protection principles, security attestations, and ongoing security operations.",
+        "page_age": "2026-05-07T23:38:37",
+        "favicon_url": "https://you.com/favicon?domain=docs.uipath.com&size=128",
+        "snippets": [
+          "Access control: Access to the FedRAMP-compliant environment is strictly limited to US permanent residents and citizens located within US soil, reinforcing data security.",
+          "Automation Cloud Public Sector operates within a FedRAMP-compliant environment, adhering to the requirements of the Federal Risk and Authorization Management Program.",
+          "Data encryption: To achieve FedRAMP compliance, we employ FIPS 140-2 validated encryption for data at rest and in transit, ensuring the highest level of data protection.",
+          "Integration assurance: Any third-party services integrated with our platform maintain an equivalent FedRAMP certification."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/newsroom/uipath-automation-suite-delivers-agentic-ai-for-public-sector",
+        "title": "UiPath Automation Suite™ Delivers On-Premises Agentic AI for ...",
+        "description": "UiPath announced the release of agentic AI capabilities on UiPath Automation Suite™, helping government agencies and regulated industries accelerate agentic AI and automation adoption while meeting strict data sovereignty and compliance requirements.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "page_age": "2026-05-05T13:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Trust and governance: A unified governance model spans agentic, IT, and infrastructure controls – enabling the operation of AI agents within defined policies, with full auditability, data protection, and compliance. UiPath meets leading standards, including ISO/IEC 42001, FedRAMP, and AIUC-1.",
+          "The platform runs across AWS, Microsoft Azure, and OpenShift environments, allowing agencies to use the infrastructure they already trust. Flexible Model Deployment: Customers can deploy agentic AI using cloud-hosted models (OpenAI, Google Gemini, Anthropic) or fully self-hosted models, providing flexibility to meet data residency, security, and compliance requirements.",
+          "These new capabilities empower agencies to deploy agentic AI within their own infrastructure using cloud-hosted or self-hosted large language models (LLMs), maintaining control over data residency while advancing workforce productivity, operational efficiency, and constituent services.",
+          "NEW YORK, NY, May 05, 2026 – UiPath (NYSE: PATH), a leader in agentic business orchestration, today announced the release of agentic AI capabilities on UiPath Automation Suite™. The Automation Suite updates help government agencies and regulated industries accelerate agentic AI and automation adoption and are designed to address strict data sovereignty and compliance requirements."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/blog/product-and-updates/agentic-enterprise-governance-and-security-2025-10-release",
+        "title": "Governance and security for the agentic enterprise: new in the ...",
+        "description": "See what’s new in UiPath 2025.10 governance—agentic guardrails, in-flight PII masking, unified audit, and BYO LLM controls that enhance AI safety and compliance.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/45KxSye8kI3Kh9LFPX9rkc/b65bc9520d117600306752b7dbc29df2/644938226-adobestock_637953761-2.jpg",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/45KxSye8kI3Kh9LFPX9rkc/b65bc9520d117600306752b7dbc29df2/644938226-adobestock_637953761-2.jpg",
+        "page_age": "2025-11-19T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Beneath this sits IT governance, which manages access, identity, and collaboration across people, robots, and agents. Role-based controls, folder permissions, and unified audit capabilities ensure that every automation operates under intentional and traceable authorization. Finally, infrastructure governance provides the foundation. It enforces encryption standards, data-residency requirements, network isolation, and compliance alignment with frameworks such as GDPR, FedRAMP, and ISO 27001.",
+          "Customers can now connect their own large language models—or existing cloud subscriptions—while maintaining all of the platform’s governance and auditing safeguards. Whether the model runs on a private endpoint, a regional cloud, or through a preferred provider, the AI Trust Layer validates schemas, logs usage, and applies the same policy rules. This capability gives IT complete flexibility over model selection, cost control, and data residency without fragmenting oversight. Agent design policies extend UiPath Automation Ops to agent creation.",
+          "UiPath mitigates that through in-flight masking: the AI Trust Layer pseudonymizes personally identifiable information before it reaches a model, replaces it with reversible tokens, and ensures maximum accuracy by rehydrating the data once the model’s output returns. It’s the same logic data-loss-prevention systems use for storage, now applied to AI inference in real time. Finally, auditability remains essential. As one IT director told us, “If I can’t prove what an agent did, it didn’t happen safely.” Our unified governance model captures every agentic action as an auditable event: the decision trigger, the model used, the confidence level, and the policy context.",
+          "Explore the UiPath Trust Center, your hub for agentic automation security, compliance, audit certifications, and more."
+        ]
+      },
+      {
+        "url": "https://ir.uipath.com/news/detail/430/uipath-achieves-aiuc-1-certification-setting-new-standard-for-ai-agent-security-and-reliability",
+        "title": "UiPath Achieves AIUC-1 Certification, Setting New Standard for ...",
+        "description": "Agentic Automation leader becomes the first enterprise automation platform to meet independent verification standard for safe AI agent…...",
+        "thumbnail_url": "https://d1io3yog0oux5.cloudfront.net/_007ac455dd2bcbfdab3ec20deef8c613/uipath/db/1188/12856/social_image_resized.jpg",
+        "original_thumbnail_url": "https://d1io3yog0oux5.cloudfront.net/_007ac455dd2bcbfdab3ec20deef8c613/uipath/db/1188/12856/social_image_resized.jpg",
+        "page_age": "2026-03-09T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=ir.uipath.com&size=128",
+        "snippets": [
+          "Founded by experts with experience at organizations like Anthropic and developed with Orrick, Stanford, the Cloud Security Alliance, MIT, and MITRE, AIUC-1 is the first comprehensive security, safety, and reliability standard for AI agents. About Schellman Schellman is a leading global provider of attestation and compliance services, enabling enterprises to build trust, meet regulatory demands, and scale with confidence. By combining technical depth, worldwide reach, and operational discipline, Schellman delivers industry-recognized assessments — including SOC, ISO, FedRAMP, PCI, HITRUST, CMMC, and AI governance — that help the world's most demanding organizations satisfy customers and unlock growth.",
+          "NEW YORK--(BUSINESS WIRE)-- UiPath (NYSE: PATH), a global leader in agentic automation, today announced it has achieved AIUC-1 certification, becoming the first enterprise automation platform to meet the world's reference standard for AI agent security and reliability. The certification, conducted by Schellman, the largest specialized cybersecurity auditor, validates that UiPath's AI agents operate safely and securely in real-world business environments.",
+          "This demonstrates UiPath’s commitment to responsible AI agent deployment in enterprise environments.” · “UiPath’s achievement of AIUC-1 certification reflects a real commitment to the governance, transparency, and security standards that enterprise AI now requires,” said Avani Desai, CEO at Schellman. “As the independent auditor for both their ISO 42001 and AIUC-1 certifications, we can attest that this validation was earned through rigorous evaluation.",
+          "UiPath is also a Founding Technical Contributor to AIUC-1, actively shaping standards for safe AI agent deployment. For more information about UiPath's security and compliance certifications, visit the UiPath Trust Center at www.uipath.com/legal/trust-and-security. About AIUC The Artificial Intelligence Underwriting Company builds confidence infrastructure for secure AI adoption, through certification, auditing, and insurance for AI agents."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/blog/ai/agent-ops-operationalizing-ai-agents-for-enterprise",
+        "title": "AgentOps and operationalizing AI agents for the enterprise | UiPath",
+        "description": "AgentOps is the new discipline for running AI agents in production. Learn best practices for governance, observability, tool control, human oversight, and cost management, plus how UiPath supports them.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/7nlFJ77dnMLdFXSB7wS5tX/99b875be2ffce7cd3c7fa6f98f43b318/stock-photo-getty-images-1130267585-8660x5773-jpg.jpg",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/7nlFJ77dnMLdFXSB7wS5tX/99b875be2ffce7cd3c7fa6f98f43b318/stock-photo-getty-images-1130267585-8660x5773-jpg.jpg",
+        "page_age": "2026-03-03T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "IT governance: UiPath provides identity for runnable artifacts, trace role-based access control (RBAC), personally identifiable information (PII) in-flight detection, and data governance to protect sensitive agentic automations. Access is intentional and transparent. Infrastructure governance: data residency, encryption, network boundaries, security hardening, and compliance with standards like General Data Protection Regulation (GDPR), Health Insurance Portability and Accountability Act of 1996 (HIPAA), Federal Risk and Authorization Management Program (FedRAMP®), and ISO 27001.",
+          "According to G2's 2025 AI Agents Insights report, 57% of companies already have AI agents running in production, a clear signal that this is no longer experimental. Yet with production deployment comes a new class of operational burdens: tool access control, auditability, drift detection, and runaway cost prevention.",
+          "Every tool invocation should be observable and auditable so operators can understand what happened and why. Standardized approaches to publishing tools and context can help teams scale this safely. For example, Model Context Protocol (MCP) servers provide a structured way to expose enterprise resources to agents in a consistent, discoverable format while enforcing authentication, authorization, and policy controls.",
+          "Production-grade AgentOps requires the ability to understand what the AI agent did, which tools it called, what inputs and outputs were involved, and why it made a decision. This traceability supports audits, incident review, and trust building across technical and business stakeholders."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/newsroom/uipath-automation-cloud-achieves-soc-2-type-1-certification",
+        "title": "UiPath Automation Cloud Achieves SOC 2 Type 1 Certification | UiPath",
+        "description": "UiPath today announced its Automation Cloud has received its System and Organization Controls 2 (SOC 2) Type 1 certification.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "page_age": "2020-10-14T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "For more details about UiPath trust and security initiatives, please visit the Trust and Security Center on UiPath.com. UiPath (NYSE: PATH) is a global leader in agentic automation, empowering enterprises to harness the full potential of AI agents to autonomously execute and optimize complex business processes.",
+          "Receiving SOC 2 certification meant UiPath demonstrated the achievement of service commitments and system requirements based on the security, confidentiality, and availability trust services criteria. UiPath partnered with CPA firm Schellman & Company, LLC to undertake this certification.",
+          "At UiPath, nothing is more important to us than earning the trust of our customers and ensuring security and confidentiality of their data. Establishing trust with our customers is a continuous commitment, and SOC 2 is a key milestone our customers can rely on.",
+          "We continue to invest in all aspects of building trust in our services, and look forward to sharing further milestones as that journey continues."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/product/automation-cloud",
+        "title": "Complete cloud-based enterprise automation solution | UiPath",
+        "description": "Learn how UiPath cloud-based automation platform is transforming organizations’ approach through RPA technology managed in the cloud. Discover the benefits of UiPath Automation Cloud.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Every service in-scope for regular audit and verification: SOC 1 Type 2, SOC 2 Type 2, ISO 9001, ISO/IEC 27001, HIPAA, FedRAMP Moderate and StateRAMP",
+          "A new, streamlined audit experience to filter audit logs across supported services by date, time range, user, product, and audit activity – all from a single, cohesive experience."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:uipath.com security trust SOC 2 ISO FedRAMP SSO RBAC audit logs data residency pricing partners marketplace agentic automation",
+    "search_uuid": "dbe01f12-641e-4f45-ae07-235683b7fb79",
+    "latency": 0.5784592628479004
+  }
+}

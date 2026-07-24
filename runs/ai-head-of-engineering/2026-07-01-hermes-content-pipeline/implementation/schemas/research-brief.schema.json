@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-brief.schema.json",
+  "title": "ResearchBrief",
+  "type": "object",
+  "required": [
+    "id",
+    "topic_cluster_id",
+    "title",
+    "thesis",
+    "evidence",
+    "citations",
+    "risks",
+    "status"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "topic_cluster_id": { "type": "string" },
+    "title": { "type": "string" },
+    "thesis": { "type": "string" },
+    "angle": { "type": "string" },
+    "evidence": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["claim", "citation_ids"],
+        "properties": {
+          "claim": { "type": "string" },
+          "citation_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "citations": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "url", "fetched_at"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "source_id": { "type": ["string", "null"] },
+          "published_at": { "type": ["string", "null"], "format": "date-time" },
+          "fetched_at": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "missing_facts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["briefed", "needs_more_sources", "approved_for_draft", "rejected"]
+    }
+  },
+  "additionalProperties": false
+}
+

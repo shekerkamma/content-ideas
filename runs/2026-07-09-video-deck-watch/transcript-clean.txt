@@ -1,0 +1,1652 @@
+[00:00:00] Building applications has gone a lot
+[00:00:01] Building applications has gone a lot
+[00:00:01] Building applications has gone a lot easier thanks to AI. But let's be
+[00:00:03] easier thanks to AI. But let's be
+[00:00:03] easier thanks to AI. But let's be honest, when I say applications, I
+[00:00:05] honest, when I say applications, I
+[00:00:05] honest, when I say applications, I really mean prototypes. There's not that
+[00:00:06] really mean prototypes. There's not that
+[00:00:06] really mean prototypes. There's not that much quality that's shipped. Whenever
+[00:00:08] much quality that's shipped. Whenever
+[00:00:08] much quality that's shipped. Whenever you see someone vibe code an app, the
+[00:00:10] you see someone vibe code an app, the
+[00:00:10] you see someone vibe code an app, the moment they have 10 users, that app
+[00:00:12] moment they have 10 users, that app
+[00:00:12] moment they have 10 users, that app crashes. And that's because they don't
+[00:00:14] crashes. And that's because they don't
+[00:00:14] crashes. And that's because they don't know how to design a system. And that's
+[00:00:16] know how to design a system. And that's
+[00:00:16] know how to design a system. And that's the same reason why a developer who uses
+[00:00:18] the same reason why a developer who uses
+[00:00:18] the same reason why a developer who uses AI will build a more robust app compared
+[00:00:21] AI will build a more robust app compared
+[00:00:21] AI will build a more robust app compared to someone who's not a developer. But
+[00:00:23] to someone who's not a developer. But
+[00:00:23] to someone who's not a developer. But that's what today's video is going to
+[00:00:24] that's what today's video is going to
+[00:00:24] that's what today's video is going to help with. I'm going to show you how to
+[00:00:27] help with. I'm going to show you how to
+[00:00:27] help with. I'm going to show you how to design a robust system when a gentic
+[00:00:30] design a robust system when a gentic
+[00:00:30] design a robust system when a gentic engineering when you're building your
+[00:00:31] engineering when you're building your
+[00:00:31] engineering when you're building your applications with AI. And the way I'm
+[00:00:33] applications with AI. And the way I'm
+[00:00:33] applications with AI. And the way I'm going to do it is I'm going to explain
+[00:00:34] going to do it is I'm going to explain
+[00:00:34] going to do it is I'm going to explain to you how my app Pluto was built from
+[00:00:37] to you how my app Pluto was built from
+[00:00:37] to you how my app Pluto was built from the ground up. All the tools that I use,
+[00:00:39] the ground up. All the tools that I use,
+[00:00:39] the ground up. All the tools that I use, the tech stack that I use, the info that
+[00:00:40] the tech stack that I use, the info that
+[00:00:40] the tech stack that I use, the info that I use, the decisions I made, how the
+[00:00:42] I use, the decisions I made, how the
+[00:00:42] I use, the decisions I made, how the code is structured, how I use AI. I'm
+[00:00:45] code is structured, how I use AI. I'm
+[00:00:45] code is structured, how I use AI. I'm literally going to cover everything. If
+[00:00:47] literally going to cover everything. If
+[00:00:47] literally going to cover everything. If you have plans on building an app that's
+[00:00:49] you have plans on building an app that's
+[00:00:49] you have plans on building an app that's going to go to production that people
+[00:00:50] going to go to production that people
+[00:00:50] going to go to production that people are going to be using, you're going to
+[00:00:52] are going to be using, you're going to
+[00:00:52] are going to be using, you're going to need to watch this video. I'm going to
+[00:00:54] need to watch this video. I'm going to
+[00:00:54] need to watch this video. I'm going to leave no stone unturned. This might be
+[00:00:56] leave no stone unturned. This might be
+[00:00:56] leave no stone unturned. This might be 20 minutes, 30 minutes, however long
+[00:00:57] 20 minutes, 30 minutes, however long
+[00:00:57] 20 minutes, 30 minutes, however long this video is. Let's get straight into
+[00:01:00] this video is. Let's get straight into
+[00:01:00] this video is. Let's get straight into it. So, building robust applications
+[00:01:02] it. So, building robust applications
+[00:01:02] it. So, building robust applications with AI. First and foremost, what does
+[00:01:04] with AI. First and foremost, what does
+[00:01:04] with AI. First and foremost, what does system design mean? And I'm going to
+[00:01:06] system design mean? And I'm going to
+[00:01:06] system design mean? And I'm going to more so focus in this age of AI. The
+[00:01:08] more so focus in this age of AI. The
+[00:01:08] more so focus in this age of AI. The simple definition of system design, the
+[00:01:10] simple definition of system design, the
+[00:01:10] simple definition of system design, the fancy definition is it's a process of
+[00:01:12] fancy definition is it's a process of
+[00:01:12] fancy definition is it's a process of planning the architecture, components,
+[00:01:15] planning the architecture, components,
+[00:01:15] planning the architecture, components, modules, interfaces, and data flow of
+[00:01:17] modules, interfaces, and data flow of
+[00:01:17] modules, interfaces, and data flow of the software system to satisfy specific
+[00:01:20] the software system to satisfy specific
+[00:01:20] the software system to satisfy specific requirements. In the old days preai, we
+[00:01:23] requirements. In the old days preai, we
+[00:01:23] requirements. In the old days preai, we used to watch a lot of videos like this
+[00:01:24] used to watch a lot of videos like this
+[00:01:24] used to watch a lot of videos like this to learn how to design systems, right?
+[00:01:26] to learn how to design systems, right?
+[00:01:26] to learn how to design systems, right? You had to figure out what you're going
+[00:01:28] You had to figure out what you're going
+[00:01:28] You had to figure out what you're going to use for storage, where you're going
+[00:01:30] to use for storage, where you're going
+[00:01:30] to use for storage, where you're going to place your load balancer, what
+[00:01:32] to place your load balancer, what
+[00:01:32] to place your load balancer, what service you're going to use for alerts,
+[00:01:33] service you're going to use for alerts,
+[00:01:33] service you're going to use for alerts, what your CI/CD pipeline look like. All
+[00:01:35] what your CI/CD pipeline look like. All
+[00:01:36] what your CI/CD pipeline look like. All this stuff was something that a system
+[00:01:37] this stuff was something that a system
+[00:01:37] this stuff was something that a system designer has to think about. But in this
+[00:01:39] designer has to think about. But in this
+[00:01:40] designer has to think about. But in this current age of AI, there are a lot of
+[00:01:41] current age of AI, there are a lot of
+[00:01:41] current age of AI, there are a lot of tools that abstract this that make it a
+[00:01:43] tools that abstract this that make it a
+[00:01:43] tools that abstract this that make it a lot easier for us to implement these
+[00:01:45] lot easier for us to implement these
+[00:01:45] lot easier for us to implement these things in our system. Now, one thing you
+[00:01:47] things in our system. Now, one thing you
+[00:01:47] things in our system. Now, one thing you need to realize about designing a system
+[00:01:49] need to realize about designing a system
+[00:01:49] need to realize about designing a system is in engineering, whether you're an
+[00:01:50] is in engineering, whether you're an
+[00:01:50] is in engineering, whether you're an engineer or not, one thing you need to
+[00:01:52] engineer or not, one thing you need to
+[00:01:52] engineer or not, one thing you need to understand is engineering is all about
+[00:01:54] understand is engineering is all about
+[00:01:54] understand is engineering is all about trade-offs. Meaning, there is no such
+[00:01:56] trade-offs. Meaning, there is no such
+[00:01:56] trade-offs. Meaning, there is no such thing as a perfect system. There is no
+[00:01:58] thing as a perfect system. There is no
+[00:01:58] thing as a perfect system. There is no such thing as this system handles every
+[00:02:01] such thing as this system handles every
+[00:02:01] such thing as this system handles every scenario, every case. Everything has
+[00:02:04] scenario, every case. Everything has
+[00:02:04] scenario, every case. Everything has trade-offs. Every stack has trade-offs.
+[00:02:06] trade-offs. Every stack has trade-offs.
+[00:02:06] trade-offs. Every stack has trade-offs. Every tool you use has trade-offs. Every
+[00:02:08] Every tool you use has trade-offs. Every
+[00:02:08] Every tool you use has trade-offs. Every info provider you use has trade-offs.
+[00:02:10] info provider you use has trade-offs.
+[00:02:10] info provider you use has trade-offs. Nothing is perfect except Jesus. So,
+[00:02:12] Nothing is perfect except Jesus. So,
+[00:02:12] Nothing is perfect except Jesus. So, understanding this, when designing our
+[00:02:14] understanding this, when designing our
+[00:02:14] understanding this, when designing our system, there's a couple things we need
+[00:02:15] system, there's a couple things we need
+[00:02:15] system, there's a couple things we need to think about. First, the is
+[00:02:16] to think about. First, the is
+[00:02:16] to think about. First, the is scalability. The system's ability to
+[00:02:18] scalability. The system's ability to
+[00:02:18] scalability. The system's ability to handle growing amount of traffic or data
+[00:02:20] handle growing amount of traffic or data
+[00:02:20] handle growing amount of traffic or data by adding resources. Meaning, if your
+[00:02:23] by adding resources. Meaning, if your
+[00:02:23] by adding resources. Meaning, if your app starts to get bombarded, is your
+[00:02:25] app starts to get bombarded, is your
+[00:02:25] app starts to get bombarded, is your system designed in a way where all you
+[00:02:26] system designed in a way where all you
+[00:02:26] system designed in a way where all you have to do is go to some dashboard, add
+[00:02:28] have to do is go to some dashboard, add
+[00:02:28] have to do is go to some dashboard, add some servers, and then you're good to
+[00:02:29] some servers, and then you're good to
+[00:02:29] some servers, and then you're good to go. Or does it autoscale? Reliability.
+[00:02:32] go. Or does it autoscale? Reliability.
+[00:02:32] go. Or does it autoscale? Reliability. What is the chance of your system going
+[00:02:34] What is the chance of your system going
+[00:02:34] What is the chance of your system going down? Is the provider you're using known
+[00:02:35] down? Is the provider you're using known
+[00:02:35] down? Is the provider you're using known to go down always? That's a decision we
+[00:02:37] to go down always? That's a decision we
+[00:02:37] to go down always? That's a decision we have to take into consideration.
+[00:02:39] have to take into consideration.
+[00:02:39] have to take into consideration. Performance, does this allow your app to
+[00:02:41] Performance, does this allow your app to
+[00:02:41] Performance, does this allow your app to be fast? Right? We need our apps to be
+[00:02:43] be fast? Right? We need our apps to be
+[00:02:43] be fast? Right? We need our apps to be zooming fast. If the tool that we're
+[00:02:45] zooming fast. If the tool that we're
+[00:02:45] zooming fast. If the tool that we're using or the way we've architected the
+[00:02:47] using or the way we've architected the
+[00:02:47] using or the way we've architected the app is slow, that's something we need to
+[00:02:49] app is slow, that's something we need to
+[00:02:49] app is slow, that's something we need to think about. And last but not least is
+[00:02:51] think about. And last but not least is
+[00:02:51] think about. And last but not least is the money. Is this going to cost us an
+[00:02:53] the money. Is this going to cost us an
+[00:02:53] the money. Is this going to cost us an arm and a leg? Can we only afford an arm
+[00:02:55] arm and a leg? Can we only afford an arm
+[00:02:55] arm and a leg? Can we only afford an arm or can we afford an arm and a leg or can
+[00:02:57] or can we afford an arm and a leg or can
+[00:02:57] or can we afford an arm and a leg or can we afford nothing? These are things we
+[00:02:59] we afford nothing? These are things we
+[00:02:59] we afford nothing? These are things we need to think about. Engineering is all
+[00:03:01] need to think about. Engineering is all
+[00:03:01] need to think about. Engineering is all about trade-offs. Before we get into
+[00:03:03] about trade-offs. Before we get into
+[00:03:03] about trade-offs. Before we get into Pluto system design, I want to kind of
+[00:03:05] Pluto system design, I want to kind of
+[00:03:05] Pluto system design, I want to kind of give you a breakdown of all the info
+[00:03:06] give you a breakdown of all the info
+[00:03:06] give you a breakdown of all the info available and how all these things work.
+[00:03:08] available and how all these things work.
+[00:03:08] available and how all these things work. In the old days, the way websites and
+[00:03:10] In the old days, the way websites and
+[00:03:10] In the old days, the way websites and apps would be served is companies had
+[00:03:12] apps would be served is companies had
+[00:03:12] apps would be served is companies had their own servers. They had their own
+[00:03:14] their own servers. They had their own
+[00:03:14] their own servers. They had their own metal. They had server racks in their
+[00:03:16] metal. They had server racks in their
+[00:03:16] metal. They had server racks in their office. There was an couple of IT nerds.
+[00:03:19] office. There was an couple of IT nerds.
+[00:03:19] office. There was an couple of IT nerds. There was a couple of, you know,
+[00:03:20] There was a couple of, you know,
+[00:03:20] There was a couple of, you know, computer programmers. There's a couple
+[00:03:22] computer programmers. There's a couple
+[00:03:22] computer programmers. There's a couple of DevOps people. And you are basically
+[00:03:25] of DevOps people. And you are basically
+[00:03:25] of DevOps people. And you are basically scaling the website yourself. So, if you
+[00:03:27] scaling the website yourself. So, if you
+[00:03:27] scaling the website yourself. So, if you have a lot of traffic and you don't have
+[00:03:28] have a lot of traffic and you don't have
+[00:03:28] have a lot of traffic and you don't have the hardware to support you, you are
+[00:03:30] the hardware to support you, you are
+[00:03:30] the hardware to support you, you are cooked. If you have all these server
+[00:03:32] cooked. If you have all these server
+[00:03:32] cooked. If you have all these server racks and you don't have traffic, you
+[00:03:33] racks and you don't have traffic, you
+[00:03:33] racks and you don't have traffic, you just wasted a bunch of money. So, it was
+[00:03:35] just wasted a bunch of money. So, it was
+[00:03:35] just wasted a bunch of money. So, it was a time where you had to be very
+[00:03:37] a time where you had to be very
+[00:03:37] a time where you had to be very calculated. It's very expensive. It's
+[00:03:39] calculated. It's very expensive. It's
+[00:03:39] calculated. It's very expensive. It's hard to predict and it's not easy to
+[00:03:41] hard to predict and it's not easy to
+[00:03:41] hard to predict and it's not easy to scale up. Then companies like Amazon,
+[00:03:44] scale up. Then companies like Amazon,
+[00:03:44] scale up. Then companies like Amazon, uh, Google and Microsoft built their own
+[00:03:46] uh, Google and Microsoft built their own
+[00:03:46] uh, Google and Microsoft built their own cloud providers, right? Amazon built
+[00:03:48] cloud providers, right? Amazon built
+[00:03:48] cloud providers, right? Amazon built AWS, Google built GCP, Microsoft built
+[00:03:51] AWS, Google built GCP, Microsoft built
+[00:03:52] AWS, Google built GCP, Microsoft built Azure, and then you have Cloudflare. And
+[00:03:54] Azure, and then you have Cloudflare. And
+[00:03:54] Azure, and then you have Cloudflare. And these guys basically bought their own
+[00:03:56] these guys basically bought their own
+[00:03:56] these guys basically bought their own metal, placed it in different areas, and
+[00:03:58] metal, placed it in different areas, and
+[00:03:58] metal, placed it in different areas, and they're like, we will be the provider
+[00:04:01] they're like, we will be the provider
+[00:04:01] they're like, we will be the provider where you can run your apps, right? And
+[00:04:03] where you can run your apps, right? And
+[00:04:04] where you can run your apps, right? And what was cool about AWS and GCP and
+[00:04:06] what was cool about AWS and GCP and
+[00:04:06] what was cool about AWS and GCP and Azure is that I didn't have to manage my
+[00:04:09] Azure is that I didn't have to manage my
+[00:04:09] Azure is that I didn't have to manage my own server racks anymore. I didn't need
+[00:04:11] own server racks anymore. I didn't need
+[00:04:11] own server racks anymore. I didn't need IT guys on the floor plugging in stuff.
+[00:04:13] IT guys on the floor plugging in stuff.
+[00:04:13] IT guys on the floor plugging in stuff. I can just deploy my application
+[00:04:16] I can just deploy my application
+[00:04:16] I can just deploy my application straight to AWS, straight to Azure. They
+[00:04:18] straight to AWS, straight to Azure. They
+[00:04:18] straight to AWS, straight to Azure. They have all these different services and
+[00:04:20] have all these different services and
+[00:04:20] have all these different services and tools, right, that are all managed by
+[00:04:22] tools, right, that are all managed by
+[00:04:22] tools, right, that are all managed by them. And they handle the nitty-gritty
+[00:04:24] them. And they handle the nitty-gritty
+[00:04:24] them. And they handle the nitty-gritty and heavy stuff. And this is when the
+[00:04:26] and heavy stuff. And this is when the
+[00:04:26] and heavy stuff. And this is when the web exploded. This is when sites
+[00:04:28] web exploded. This is when sites
+[00:04:28] web exploded. This is when sites exploded, backends exploded. A lot of
+[00:04:31] exploded, backends exploded. A lot of
+[00:04:31] exploded, backends exploded. A lot of cool stuff started to show up in the
+[00:04:32] cool stuff started to show up in the
+[00:04:32] cool stuff started to show up in the web. And this is also what we call an
+[00:04:34] web. And this is also what we call an
+[00:04:34] web. And this is also what we call an abstraction. Now, you might feel like
+[00:04:36] abstraction. Now, you might feel like
+[00:04:36] abstraction. Now, you might feel like these are all big engineering terms. If
+[00:04:37] these are all big engineering terms. If
+[00:04:37] these are all big engineering terms. If you want to build something cool, lock
+[00:04:39] you want to build something cool, lock
+[00:04:39] you want to build something cool, lock in and listen. Abstraction in computer
+[00:04:41] in and listen. Abstraction in computer
+[00:04:41] in and listen. Abstraction in computer science is the process of hiding complex
+[00:04:43] science is the process of hiding complex
+[00:04:43] science is the process of hiding complex implementation details and focusing only
+[00:04:45] implementation details and focusing only
+[00:04:45] implementation details and focusing only on essential highle features of an
+[00:04:48] on essential highle features of an
+[00:04:48] on essential highle features of an object or system. So they basically AWS,
+[00:04:51] object or system. So they basically AWS,
+[00:04:51] object or system. So they basically AWS, GCP and Azure and cloud for they
+[00:04:53] GCP and Azure and cloud for they
+[00:04:53] GCP and Azure and cloud for they basically abstracted the need for me to
+[00:04:56] basically abstracted the need for me to
+[00:04:56] basically abstracted the need for me to have a physical server, the need for me
+[00:04:58] have a physical server, the need for me
+[00:04:58] have a physical server, the need for me to set up software to run stuff on the
+[00:05:00] to set up software to run stuff on the
+[00:05:00] to set up software to run stuff on the physical server. They took care of that.
+[00:05:02] physical server. They took care of that.
+[00:05:02] physical server. They took care of that. And then as time went on, another layer
+[00:05:04] And then as time went on, another layer
+[00:05:04] And then as time went on, another layer of abstraction popped up, right? And you
+[00:05:06] of abstraction popped up, right? And you
+[00:05:06] of abstraction popped up, right? And you have Convex, you have Versel, you have
+[00:05:08] have Convex, you have Versel, you have
+[00:05:08] have Convex, you have Versel, you have Superbase, you have Neon and all these
+[00:05:11] Superbase, you have Neon and all these
+[00:05:11] Superbase, you have Neon and all these different companies. Now just, you know,
+[00:05:13] different companies. Now just, you know,
+[00:05:13] different companies. Now just, you know, if any of the employees from the
+[00:05:14] if any of the employees from the
+[00:05:14] if any of the employees from the companies watch, yes, Versel for example
+[00:05:17] companies watch, yes, Versel for example
+[00:05:17] companies watch, yes, Versel for example does have their own metal. I I I think
+[00:05:20] does have their own metal. I I I think
+[00:05:20] does have their own metal. I I I think so does Planet Scale, but just
+[00:05:22] so does Planet Scale, but just
+[00:05:22] so does Planet Scale, but just hypothetically, Verscell when they
+[00:05:23] hypothetically, Verscell when they
+[00:05:24] hypothetically, Verscell when they started wrapped AWS, GCP or one of these
+[00:05:26] started wrapped AWS, GCP or one of these
+[00:05:26] started wrapped AWS, GCP or one of these guys, right? Convex wrapped, same thing,
+[00:05:29] guys, right? Convex wrapped, same thing,
+[00:05:29] guys, right? Convex wrapped, same thing, right? So this level abstraction made it
+[00:05:32] right? So this level abstraction made it
+[00:05:32] right? So this level abstraction made it a lot easier to use these tools which
+[00:05:35] a lot easier to use these tools which
+[00:05:35] a lot easier to use these tools which made it a lot easier to use this right
+[00:05:38] made it a lot easier to use this right
+[00:05:38] made it a lot easier to use this right because I don't know if many of you have
+[00:05:39] because I don't know if many of you have
+[00:05:40] because I don't know if many of you have used AWS. AWS is pretty fine. I don't
+[00:05:42] used AWS. AWS is pretty fine. I don't
+[00:05:42] used AWS. AWS is pretty fine. I don't know if many of you have used GCP or
+[00:05:43] know if many of you have used GCP or
+[00:05:43] know if many of you have used GCP or Azure. I have an Azure certificate.
+[00:05:45] Azure. I have an Azure certificate.
+[00:05:45] Azure. I have an Azure certificate. Azure is terrible to use. GCP is
+[00:05:48] Azure is terrible to use. GCP is
+[00:05:48] Azure is terrible to use. GCP is terrible to use. I don't even know
+[00:05:50] terrible to use. I don't even know
+[00:05:50] terrible to use. I don't even know anyone who knows how to deploy React app
+[00:05:52] anyone who knows how to deploy React app
+[00:05:52] anyone who knows how to deploy React app on Azure in under 5 minutes. It's that
+[00:05:55] on Azure in under 5 minutes. It's that
+[00:05:55] on Azure in under 5 minutes. It's that messed up and all over the place. So you
+[00:05:57] messed up and all over the place. So you
+[00:05:57] messed up and all over the place. So you have tools and info providers like
+[00:05:59] have tools and info providers like
+[00:05:59] have tools and info providers like convex, versel, superbase and all these
+[00:06:01] convex, versel, superbase and all these
+[00:06:01] convex, versel, superbase and all these other companies that basically wrap or
+[00:06:04] other companies that basically wrap or
+[00:06:04] other companies that basically wrap or abstract AWS, GCP, Azure and Cloudflare.
+[00:06:08] abstract AWS, GCP, Azure and Cloudflare.
+[00:06:08] abstract AWS, GCP, Azure and Cloudflare. The reason why I say this, this layer of
+[00:06:11] The reason why I say this, this layer of
+[00:06:11] The reason why I say this, this layer of infrastructure has essentially made it
+[00:06:13] infrastructure has essentially made it
+[00:06:14] infrastructure has essentially made it easy for you and me to build our
+[00:06:16] easy for you and me to build our
+[00:06:16] easy for you and me to build our applications. I don't deploy on AWS,
+[00:06:20] applications. I don't deploy on AWS,
+[00:06:20] applications. I don't deploy on AWS, GCP, Azure. Uh sometimes I use
+[00:06:22] GCP, Azure. Uh sometimes I use
+[00:06:22] GCP, Azure. Uh sometimes I use Cloudflare, but for the most part I use
+[00:06:23] Cloudflare, but for the most part I use
+[00:06:23] Cloudflare, but for the most part I use Verscell. For my back end, I use convex.
+[00:06:26] Verscell. For my back end, I use convex.
+[00:06:26] Verscell. For my back end, I use convex. If I need a Postgress database, I'm
+[00:06:28] If I need a Postgress database, I'm
+[00:06:28] If I need a Postgress database, I'm going to use planet scale. I no longer
+[00:06:30] going to use planet scale. I no longer
+[00:06:30] going to use planet scale. I no longer have to go this level down the
+[00:06:31] have to go this level down the
+[00:06:32] have to go this level down the abstraction path, nor do I have to go
+[00:06:33] abstraction path, nor do I have to go
+[00:06:33] abstraction path, nor do I have to go this level down. Now, you might be like,
+[00:06:35] this level down. Now, you might be like,
+[00:06:35] this level down. Now, you might be like, why are you explaining this to me? I'm
+[00:06:37] why are you explaining this to me? I'm
+[00:06:38] why are you explaining this to me? I'm trying to enic engineer because when I
+[00:06:40] trying to enic engineer because when I
+[00:06:40] trying to enic engineer because when I talk about Pluto's system design, all
+[00:06:42] talk about Pluto's system design, all
+[00:06:42] talk about Pluto's system design, all this stuff is going to help it make
+[00:06:44] this stuff is going to help it make
+[00:06:44] this stuff is going to help it make sense. And to just give you a breakdown
+[00:06:45] sense. And to just give you a breakdown
+[00:06:45] sense. And to just give you a breakdown of how things are today, you still have
+[00:06:47] of how things are today, you still have
+[00:06:47] of how things are today, you still have people who use their own metal, don't
+[00:06:49] people who use their own metal, don't
+[00:06:49] people who use their own metal, don't recommend. You have things that are
+[00:06:51] recommend. You have things that are
+[00:06:51] recommend. You have things that are built. You have companies that provide
+[00:06:53] built. You have companies that provide
+[00:06:53] built. You have companies that provide this service for you like the AWS's, the
+[00:06:55] this service for you like the AWS's, the
+[00:06:55] this service for you like the AWS's, the GCPs, these things are very powerful.
+[00:06:57] GCPs, these things are very powerful.
+[00:06:57] GCPs, these things are very powerful. But the developer experience or should I
+[00:06:58] But the developer experience or should I
+[00:06:58] But the developer experience or should I say the agent experience sucks and then
+[00:07:00] say the agent experience sucks and then
+[00:07:00] say the agent experience sucks and then you have tools like convex forcell and
+[00:07:02] you have tools like convex forcell and
+[00:07:02] you have tools like convex forcell and all these other companies that have
+[00:07:03] all these other companies that have
+[00:07:03] all these other companies that have amazing developer experience can easily
+[00:07:06] amazing developer experience can easily
+[00:07:06] amazing developer experience can easily scale up. They do a lot of the hard work
+[00:07:08] scale up. They do a lot of the hard work
+[00:07:08] scale up. They do a lot of the hard work for you that you and I don't need to
+[00:07:09] for you that you and I don't need to
+[00:07:09] for you that you and I don't need to worry about. Yo yo, wake up.
+[00:07:13] worry about. Yo yo, wake up.
+[00:07:13] worry about. Yo yo, wake up. &gt;&gt; You can't be sleeping on the job. Who's
+[00:07:15] &gt;&gt; You can't be sleeping on the job. Who's
+[00:07:15] &gt;&gt; You can't be sleeping on the job. Who's going to review the code?
+[00:07:20] I hate code review, but it has to get
+[00:07:22] I hate code review, but it has to get
+[00:07:22] I hate code review, but it has to get done. And that's why I love Gretile.
+[00:07:24] done. And that's why I love Gretile.
+[00:07:24] done. And that's why I love Gretile. See, I have a huge PR here on an open
+[00:07:26] See, I have a huge PR here on an open
+[00:07:26] See, I have a huge PR here on an open source project I have called Ralphie.
+[00:07:28] source project I have called Ralphie.
+[00:07:28] source project I have called Ralphie. Over 4,341
+[00:07:30] Over 4,341
+[00:07:30] Over 4,341 lines done by this contributor. Now,
+[00:07:32] lines done by this contributor. Now,
+[00:07:32] lines done by this contributor. Now, this is a lot of lines of code, and I'm
+[00:07:33] this is a lot of lines of code, and I'm
+[00:07:33] this is a lot of lines of code, and I'm probably going to miss something, but
+[00:07:35] probably going to miss something, but
+[00:07:35] probably going to miss something, but the way I use Gravile in my code reviews
+[00:07:37] the way I use Gravile in my code reviews
+[00:07:37] the way I use Gravile in my code reviews as follows. I have a Gravile review
+[00:07:39] as follows. I have a Gravile review
+[00:07:39] as follows. I have a Gravile review that's run on this PR. Mind you, this is
+[00:07:41] that's run on this PR. Mind you, this is
+[00:07:41] that's run on this PR. Mind you, this is a pretty large PR. And what I love about
+[00:07:43] a pretty large PR. And what I love about
+[00:07:43] a pretty large PR. And what I love about Gravile is the summary it gives me plus
+[00:07:45] Gravile is the summary it gives me plus
+[00:07:45] Gravile is the summary it gives me plus the confidence score. The confidence
+[00:07:47] the confidence score. The confidence
+[00:07:47] the confidence score. The confidence score tells me whether this is worth my
+[00:07:49] score tells me whether this is worth my
+[00:07:49] score tells me whether this is worth my time reviewing or not. Anything below a
+[00:07:51] time reviewing or not. Anything below a
+[00:07:51] time reviewing or not. Anything below a four out of five is something I'm not
+[00:07:53] four out of five is something I'm not
+[00:07:53] four out of five is something I'm not going to personally review. Imagine
+[00:07:55] going to personally review. Imagine
+[00:07:55] going to personally review. Imagine spending all that time only to find out
+[00:07:56] spending all that time only to find out
+[00:07:56] spending all that time only to find out this PR still requires work. But with
+[00:07:58] this PR still requires work. But with
+[00:07:58] this PR still requires work. But with Gravile, all I need to do is read the
+[00:08:00] Gravile, all I need to do is read the
+[00:08:00] Gravile, all I need to do is read the summary, review the confidence score. If
+[00:08:02] summary, review the confidence score. If
+[00:08:02] summary, review the confidence score. If it's under a four out of five, it's not
+[00:08:04] it's under a four out of five, it's not
+[00:08:04] it's under a four out of five, it's not worth merging. Doing this has allowed me
+[00:08:06] worth merging. Doing this has allowed me
+[00:08:06] worth merging. Doing this has allowed me and my team to ship at warp speed. So,
+[00:08:09] and my team to ship at warp speed. So,
+[00:08:09] and my team to ship at warp speed. So, make sure to check out Greile. The link
+[00:08:10] make sure to check out Greile. The link
+[00:08:10] make sure to check out Greile. The link is in the description down below, or you
+[00:08:12] is in the description down below, or you
+[00:08:12] is in the description down below, or you can go to rosmike.link/greptile.
+[00:08:14] can go to rosmike.link/greptile.
+[00:08:14] can go to rosmike.link/greptile. They have a two-eek free trial and it's
+[00:08:16] They have a two-eek free trial and it's
+[00:08:16] They have a two-eek free trial and it's pretty generous. So, take advantage of
+[00:08:18] pretty generous. So, take advantage of
+[00:08:18] pretty generous. So, take advantage of it. Believe me, once you start using it,
+[00:08:20] it. Believe me, once you start using it,
+[00:08:20] it. Believe me, once you start using it, you won't want to stop. Check them out.
+[00:08:22] you won't want to stop. Check them out.
+[00:08:22] you won't want to stop. Check them out. The link is down in the description
+[00:08:23] The link is down in the description
+[00:08:23] The link is down in the description below. So, let's talk about Pluto. So,
+[00:08:25] below. So, let's talk about Pluto. So,
+[00:08:25] below. So, let's talk about Pluto. So, when building Pluto, there's a couple
+[00:08:27] when building Pluto, there's a couple
+[00:08:27] when building Pluto, there's a couple things that are pretty interesting.
+[00:08:28] things that are pretty interesting.
+[00:08:28] things that are pretty interesting. First and foremost, with Pluto, I needed
+[00:08:31] First and foremost, with Pluto, I needed
+[00:08:31] First and foremost, with Pluto, I needed OOTH that businesses could use, right? I
+[00:08:34] OOTH that businesses could use, right? I
+[00:08:34] OOTH that businesses could use, right? I needed the big boy OOTH. I needed people
+[00:08:37] needed the big boy OOTH. I needed people
+[00:08:37] needed the big boy OOTH. I needed people who maybe want sock two compliance and
+[00:08:39] who maybe want sock two compliance and
+[00:08:39] who maybe want sock two compliance and all these other things, right? So, O is
+[00:08:41] all these other things, right? So, O is
+[00:08:41] all these other things, right? So, O is something I had to think about. And then
+[00:08:42] something I had to think about. And then
+[00:08:42] something I had to think about. And then I know there might be people who are
+[00:08:44] I know there might be people who are
+[00:08:44] I know there might be people who are using this for personal use, but there
+[00:08:46] using this for personal use, but there
+[00:08:46] using this for personal use, but there also might be businesses. And if
+[00:08:48] also might be businesses. And if
+[00:08:48] also might be businesses. And if businesses want to use this, maybe it's
+[00:08:50] businesses want to use this, maybe it's
+[00:08:50] businesses want to use this, maybe it's a manager who's setting this up. And
+[00:08:51] a manager who's setting this up. And
+[00:08:51] a manager who's setting this up. And then the manager invites the employees
+[00:08:53] then the manager invites the employees
+[00:08:53] then the manager invites the employees of the company and then they set it up.
+[00:08:55] of the company and then they set it up.
+[00:08:55] of the company and then they set it up. And then I have to think about billing,
+[00:08:57] And then I have to think about billing,
+[00:08:57] And then I have to think about billing, right? What kind of billing do I want?
+[00:08:59] right? What kind of billing do I want?
+[00:08:59] right? What kind of billing do I want? Do I want a subscription? People already
+[00:09:00] Do I want a subscription? People already
+[00:09:00] Do I want a subscription? People already pay for subscriptions and I think people
+[00:09:02] pay for subscriptions and I think people
+[00:09:02] pay for subscriptions and I think people are tired of subscriptions. Maybe we can
+[00:09:03] are tired of subscriptions. Maybe we can
+[00:09:03] are tired of subscriptions. Maybe we can do a credit based system where you can
+[00:09:05] do a credit based system where you can
+[00:09:05] do a credit based system where you can just top up and use as you go. So then
+[00:09:07] just top up and use as you go. So then
+[00:09:07] just top up and use as you go. So then you have to build that out as well.
+[00:09:09] you have to build that out as well.
+[00:09:09] you have to build that out as well. Another thing is again, this is an
+[00:09:10] Another thing is again, this is an
+[00:09:10] Another thing is again, this is an agent, right? So, I need to think about
+[00:09:12] agent, right? So, I need to think about
+[00:09:12] agent, right? So, I need to think about where I'm going to deploy this agent.
+[00:09:13] where I'm going to deploy this agent.
+[00:09:13] where I'm going to deploy this agent. The place I deploy needs to be sort of
+[00:09:15] The place I deploy needs to be sort of
+[00:09:15] The place I deploy needs to be sort of affordable, but it also needs to be able
+[00:09:17] affordable, but it also needs to be able
+[00:09:17] affordable, but it also needs to be able to scale and needs to not go down. It
+[00:09:19] to scale and needs to not go down. It
+[00:09:20] to scale and needs to not go down. It needs to be something that's reliable.
+[00:09:21] needs to be something that's reliable.
+[00:09:21] needs to be something that's reliable. So, these are all the things I had to
+[00:09:23] So, these are all the things I had to
+[00:09:23] So, these are all the things I had to think about when initially planning out
+[00:09:24] think about when initially planning out
+[00:09:24] think about when initially planning out Pluto. Now, let's talk about Pluto.
+[00:09:26] Pluto. Now, let's talk about Pluto.
+[00:09:26] Pluto. Now, let's talk about Pluto. Pluto has four client surfaces, right?
+[00:09:29] Pluto has four client surfaces, right?
+[00:09:29] Pluto has four client surfaces, right? There's a web app, there's a desktop
+[00:09:31] There's a web app, there's a desktop
+[00:09:31] There's a web app, there's a desktop app, there's a mobile app. Well, the
+[00:09:33] app, there's a mobile app. Well, the
+[00:09:34] app, there's a mobile app. Well, the mobile app was just one fable run, and
+[00:09:36] mobile app was just one fable run, and
+[00:09:36] mobile app was just one fable run, and then there's an admin site, right? Like
+[00:09:37] then there's an admin site, right? Like
+[00:09:38] then there's an admin site, right? Like an internal admin site. Now, when you're
+[00:09:40] an internal admin site. Now, when you're
+[00:09:40] an internal admin site. Now, when you're building your app, you got to think of a
+[00:09:42] building your app, you got to think of a
+[00:09:42] building your app, you got to think of a couple things. You got to think of the
+[00:09:45] couple things. You got to think of the
+[00:09:45] couple things. You got to think of the client, the server, and the database.
+[00:09:48] client, the server, and the database.
+[00:09:48] client, the server, and the database. The client is basically the place where
+[00:09:50] The client is basically the place where
+[00:09:50] The client is basically the place where people interact with your app. So, this
+[00:09:52] people interact with your app. So, this
+[00:09:52] people interact with your app. So, this could be your website, your mobile app,
+[00:09:56] could be your website, your mobile app,
+[00:09:56] could be your website, your mobile app, or your desktop app. Now, it's important
+[00:09:59] or your desktop app. Now, it's important
+[00:09:59] or your desktop app. Now, it's important to pick the tool you're familiar with.
+[00:10:01] to pick the tool you're familiar with.
+[00:10:01] to pick the tool you're familiar with. And in this case, for my web apps, I use
+[00:10:04] And in this case, for my web apps, I use
+[00:10:04] And in this case, for my web apps, I use spelt kit. So, spelt kit is basically
+[00:10:07] spelt kit. So, spelt kit is basically
+[00:10:07] spelt kit. So, spelt kit is basically the nex.js for spelt. I love Spelkit. A
+[00:10:09] the nex.js for spelt. I love Spelkit. A
+[00:10:09] the nex.js for spelt. I love Spelkit. A I love Spelkit. It's very minimal. It's
+[00:10:12] I love Spelkit. It's very minimal. It's
+[00:10:12] I love Spelkit. It's very minimal. It's fast. It's easy to build performance
+[00:10:14] fast. It's easy to build performance
+[00:10:14] fast. It's easy to build performance sites with it. So, I'm using Spelkit for
+[00:10:16] sites with it. So, I'm using Spelkit for
+[00:10:16] sites with it. So, I'm using Spelkit for the client. But here's the thing. What
+[00:10:18] the client. But here's the thing. What
+[00:10:18] the client. But here's the thing. What if I wanted a mobile app, right? If I
+[00:10:20] if I wanted a mobile app, right? If I
+[00:10:20] if I wanted a mobile app, right? If I wanted a mobile app, I can build a
+[00:10:22] wanted a mobile app, I can build a
+[00:10:22] wanted a mobile app, I can build a native Mac OS app. But let's say I want
+[00:10:24] native Mac OS app. But let's say I want
+[00:10:24] native Mac OS app. But let's say I want an Android app as well. Expo Plus React
+[00:10:28] an Android app as well. Expo Plus React
+[00:10:28] an Android app as well. Expo Plus React Native for the mobile app, right? And
+[00:10:31] Native for the mobile app, right? And
+[00:10:31] Native for the mobile app, right? And let's say I want a desktop app. And then
+[00:10:32] let's say I want a desktop app. And then
+[00:10:32] let's say I want a desktop app. And then for the desktop app, I'm going to use
+[00:10:34] for the desktop app, I'm going to use
+[00:10:34] for the desktop app, I'm going to use Electron. And I'm just going to wrap the
+[00:10:36] Electron. And I'm just going to wrap the
+[00:10:36] Electron. And I'm just going to wrap the website. Right? This is these are things
+[00:10:38] website. Right? This is these are things
+[00:10:38] website. Right? This is these are things that I can do with Electron. Now I have
+[00:10:41] that I can do with Electron. Now I have
+[00:10:41] that I can do with Electron. Now I have a web app, I have a mobile app, and then
+[00:10:44] a web app, I have a mobile app, and then
+[00:10:44] a web app, I have a mobile app, and then I have a desktop app. Like am I going to
+[00:10:46] I have a desktop app. Like am I going to
+[00:10:46] I have a desktop app. Like am I going to have like three different projects with
+[00:10:48] have like three different projects with
+[00:10:48] have like three different projects with three different repos? Like how am I
+[00:10:50] three different repos? Like how am I
+[00:10:50] three different repos? Like how am I going to manage this? Let me introduce
+[00:10:52] going to manage this? Let me introduce
+[00:10:52] going to manage this? Let me introduce you to our good friend called a mono
+[00:10:55] you to our good friend called a mono
+[00:10:55] you to our good friend called a mono repo. A monorreo is basically one giant
+[00:11:00] repo. A monorreo is basically one giant
+[00:11:00] repo. A monorreo is basically one giant repository of code where multiple
+[00:11:03] repository of code where multiple
+[00:11:03] repository of code where multiple different pieces of your application can
+[00:11:06] different pieces of your application can
+[00:11:06] different pieces of your application can live. Right? So I can have my web app in
+[00:11:09] live. Right? So I can have my web app in
+[00:11:09] live. Right? So I can have my web app in one repo. I can have my mobile app in
+[00:11:12] one repo. I can have my mobile app in
+[00:11:12] one repo. I can have my mobile app in one repo. I can have my desktop in one
+[00:11:15] one repo. I can have my desktop in one
+[00:11:15] one repo. I can have my desktop in one repo. And I can also have my backend,
+[00:11:19] repo. And I can also have my backend,
+[00:11:19] repo. And I can also have my backend, right? That all these different
+[00:11:21] right? That all these different
+[00:11:21] right? That all these different services, right? The desktop app
+[00:11:23] services, right? The desktop app
+[00:11:24] services, right? The desktop app communicates with the backend, the
+[00:11:25] communicates with the backend, the
+[00:11:26] communicates with the backend, the mobile app communicates with the
+[00:11:27] mobile app communicates with the
+[00:11:27] mobile app communicates with the backend, and the web app communicates
+[00:11:29] backend, and the web app communicates
+[00:11:29] backend, and the web app communicates with the back end. The reason why a
+[00:11:30] with the back end. The reason why a
+[00:11:30] with the back end. The reason why a monor repo is cool or having all this in
+[00:11:33] monor repo is cool or having all this in
+[00:11:33] monor repo is cool or having all this in one codebase is cool is because when I'm
+[00:11:36] one codebase is cool is because when I'm
+[00:11:36] one codebase is cool is because when I'm using my agent, when I'm using my AI of
+[00:11:40] using my agent, when I'm using my AI of
+[00:11:40] using my agent, when I'm using my AI of choice, in this case Fable 5, it's
+[00:11:42] choice, in this case Fable 5, it's
+[00:11:42] choice, in this case Fable 5, it's finally back. When I'm using Fable 5 or
+[00:11:45] finally back. When I'm using Fable 5 or
+[00:11:45] finally back. When I'm using Fable 5 or whatever model of choice, Fable 5, the
+[00:11:48] whatever model of choice, Fable 5, the
+[00:11:48] whatever model of choice, Fable 5, the agent has access to the entire codebase
+[00:11:51] agent has access to the entire codebase
+[00:11:51] agent has access to the entire codebase even though I have a web app, a desktop
+[00:11:52] even though I have a web app, a desktop
+[00:11:52] even though I have a web app, a desktop app, a mobile app, right? If I have like
+[00:11:55] app, a mobile app, right? If I have like
+[00:11:55] app, a mobile app, right? If I have like a web app, a separate repository for the
+[00:11:56] a web app, a separate repository for the
+[00:11:56] a web app, a separate repository for the web app, a separate repository for the
+[00:11:58] web app, a separate repository for the
+[00:11:58] web app, a separate repository for the mobile app, a separate repository for
+[00:11:59] mobile app, a separate repository for
+[00:11:59] mobile app, a separate repository for the desktop app, then there's all these
+[00:12:02] the desktop app, then there's all these
+[00:12:02] the desktop app, then there's all these separated contexts, it's very hard for
+[00:12:04] separated contexts, it's very hard for
+[00:12:04] separated contexts, it's very hard for me, the human to manage. And you might
+[00:12:06] me, the human to manage. And you might
+[00:12:06] me, the human to manage. And you might be someone who doesn't really know how
+[00:12:07] be someone who doesn't really know how
+[00:12:07] be someone who doesn't really know how to code. Good luck. It's going to be a
+[00:12:10] to code. Good luck. It's going to be a
+[00:12:10] to code. Good luck. It's going to be a tough time. So whenever I initialize my
+[00:12:13] tough time. So whenever I initialize my
+[00:12:13] tough time. So whenever I initialize my applications, whenever I start my
+[00:12:15] applications, whenever I start my
+[00:12:15] applications, whenever I start my application, I almost always start with
+[00:12:19] application, I almost always start with
+[00:12:19] application, I almost always start with a monor repo. And in this case, because
+[00:12:22] a monor repo. And in this case, because
+[00:12:22] a monor repo. And in this case, because I use Verscell to deploy, I use Turbo
+[00:12:24] I use Verscell to deploy, I use Turbo
+[00:12:24] I use Verscell to deploy, I use Turbo Repo. And this is how I architect my
+[00:12:26] Repo. And this is how I architect my
+[00:12:26] Repo. And this is how I architect my apps, right? So I always start with a
+[00:12:28] apps, right? So I always start with a
+[00:12:28] apps, right? So I always start with a monor repo. The reason I start with a
+[00:12:30] monor repo. The reason I start with a
+[00:12:30] monor repo. The reason I start with a monor repo is it allows me to have, you
+[00:12:33] monor repo is it allows me to have, you
+[00:12:33] monor repo is it allows me to have, you know, multiple different clients, one
+[00:12:35] know, multiple different clients, one
+[00:12:35] know, multiple different clients, one unified backend. I can even have one
+[00:12:37] unified backend. I can even have one
+[00:12:37] unified backend. I can even have one component library, one UI library, and
+[00:12:39] component library, one UI library, and
+[00:12:39] component library, one UI library, and it be shared with all these different
+[00:12:42] it be shared with all these different
+[00:12:42] it be shared with all these different client services, right? And in terms of
+[00:12:44] client services, right? And in terms of
+[00:12:44] client services, right? And in terms of what I use for my web app, I told you I
+[00:12:46] what I use for my web app, I told you I
+[00:12:46] what I use for my web app, I told you I use Felt. for mobile, unless I don't
+[00:12:48] use Felt. for mobile, unless I don't
+[00:12:48] use Felt. for mobile, unless I don't need an Android app. I usually I like to
+[00:12:50] need an Android app. I usually I like to
+[00:12:50] need an Android app. I usually I like to go Swift, but I'm going to use Expo and
+[00:12:52] go Swift, but I'm going to use Expo and
+[00:12:52] go Swift, but I'm going to use Expo and React Native. And then I'm using
+[00:12:53] React Native. And then I'm using
+[00:12:53] React Native. And then I'm using Electron for the desktop app. But now I
+[00:12:56] Electron for the desktop app. But now I
+[00:12:56] Electron for the desktop app. But now I have to think about my server and my
+[00:12:58] have to think about my server and my
+[00:12:58] have to think about my server and my database. And by the way, if you feel
+[00:12:59] database. And by the way, if you feel
+[00:12:59] database. And by the way, if you feel like this is a lot of information, I'm
+[00:13:01] like this is a lot of information, I'm
+[00:13:01] like this is a lot of information, I'm literally going to put this all of this
+[00:13:02] literally going to put this all of this
+[00:13:02] literally going to put this all of this together. So just listen and take notes.
+[00:13:05] together. So just listen and take notes.
+[00:13:05] together. So just listen and take notes. When it comes to my server and database
+[00:13:08] When it comes to my server and database
+[00:13:08] When it comes to my server and database and particularly my server or my
+[00:13:10] and particularly my server or my
+[00:13:10] and particularly my server or my backend, there's a couple things I need
+[00:13:11] backend, there's a couple things I need
+[00:13:11] backend, there's a couple things I need to think about. My server is going to
+[00:13:13] to think about. My server is going to
+[00:13:13] to think about. My server is going to allow me to read data from my database.
+[00:13:17] allow me to read data from my database.
+[00:13:17] allow me to read data from my database. My server is going to allow me to write
+[00:13:19] My server is going to allow me to write
+[00:13:19] My server is going to allow me to write data to my database. My server is going
+[00:13:21] data to my database. My server is going
+[00:13:21] data to my database. My server is going to allow me to interact with external
+[00:13:25] to allow me to interact with external
+[00:13:26] to allow me to interact with external services, right? Like make an API call
+[00:13:28] services, right? Like make an API call
+[00:13:28] services, right? Like make an API call to like a a weather API, right? And
+[00:13:31] to like a a weather API, right? And
+[00:13:31] to like a a weather API, right? And there's a couple things I also want. I
+[00:13:32] there's a couple things I also want. I
+[00:13:32] there's a couple things I also want. I want to make sure these don't fail and
+[00:13:36] want to make sure these don't fail and
+[00:13:36] want to make sure these don't fail and these aren't slow. Now, here's the
+[00:13:38] these aren't slow. Now, here's the
+[00:13:38] these aren't slow. Now, here's the thing. One thing that I want you to know
+[00:13:40] thing. One thing that I want you to know
+[00:13:40] thing. One thing that I want you to know is you should never ever ever ever ever
+[00:13:43] is you should never ever ever ever ever
+[00:13:43] is you should never ever ever ever ever ever read data from the client directly
+[00:13:47] ever read data from the client directly
+[00:13:48] ever read data from the client directly to the database. The client should never
+[00:13:51] to the database. The client should never
+[00:13:51] to the database. The client should never ever ever ever talk to the database. And
+[00:13:54] ever ever ever talk to the database. And
+[00:13:54] ever ever ever talk to the database. And this is one of the biggest reasons why
+[00:13:55] this is one of the biggest reasons why
+[00:13:55] this is one of the biggest reasons why why I'm not a fan of Superbase. Now,
+[00:13:56] why I'm not a fan of Superbase. Now,
+[00:13:56] why I'm not a fan of Superbase. Now, Superbase does have a server library, so
+[00:13:58] Superbase does have a server library, so
+[00:13:58] Superbase does have a server library, so you can not do this, but most people do
+[00:14:00] you can not do this, but most people do
+[00:14:00] you can not do this, but most people do this and then they set up RLS. And to
+[00:14:03] this and then they set up RLS. And to
+[00:14:03] this and then they set up RLS. And to me, that's just a fool's game. Real
+[00:14:05] me, that's just a fool's game. Real
+[00:14:05] me, that's just a fool's game. Real system should work as follows. The
+[00:14:07] system should work as follows. The
+[00:14:07] system should work as follows. The client calls the server. The server
+[00:14:10] client calls the server. The server
+[00:14:10] client calls the server. The server calls the database. The database
+[00:14:13] calls the database. The database
+[00:14:13] calls the database. The database responds to the server. And then the
+[00:14:15] responds to the server. And then the
+[00:14:15] responds to the server. And then the server tells the client. This is secure.
+[00:14:19] server tells the client. This is secure.
+[00:14:19] server tells the client. This is secure. But if I have my client talking to my
+[00:14:21] But if I have my client talking to my
+[00:14:21] But if I have my client talking to my database, what basically someone can do
+[00:14:23] database, what basically someone can do
+[00:14:23] database, what basically someone can do is they can inspect element, go to the
+[00:14:25] is they can inspect element, go to the
+[00:14:25] is they can inspect element, go to the network tab, see the networks, read your
+[00:14:27] network tab, see the networks, read your
+[00:14:27] network tab, see the networks, read your API key, and then you're cooked. You're
+[00:14:29] API key, and then you're cooked. You're
+[00:14:29] API key, and then you're cooked. You're absolutely cooked. So when I am
+[00:14:32] absolutely cooked. So when I am
+[00:14:32] absolutely cooked. So when I am designing my backend, I need my backend
+[00:14:34] designing my backend, I need my backend
+[00:14:34] designing my backend, I need my backend to do all these things, but I also need
+[00:14:36] to do all these things, but I also need
+[00:14:36] to do all these things, but I also need to make sure my backend communicates
+[00:14:38] to make sure my backend communicates
+[00:14:38] to make sure my backend communicates with my database. In the old days, you
+[00:14:40] with my database. In the old days, you
+[00:14:40] with my database. In the old days, you would have or not in the old days, I
+[00:14:42] would have or not in the old days, I
+[00:14:42] would have or not in the old days, I mean people still do it now. You can
+[00:14:43] mean people still do it now. You can
+[00:14:43] mean people still do it now. You can have a NodeJS backend and then you have
+[00:14:46] have a NodeJS backend and then you have
+[00:14:46] have a NodeJS backend and then you have a Postgress DB, right? You would build
+[00:14:49] a Postgress DB, right? You would build
+[00:14:49] a Postgress DB, right? You would build this and then build this and have these
+[00:14:51] this and then build this and have these
+[00:14:51] this and then build this and have these communicate. Remember when I told you
+[00:14:53] communicate. Remember when I told you
+[00:14:53] communicate. Remember when I told you there are abstractions that make things
+[00:14:55] there are abstractions that make things
+[00:14:55] there are abstractions that make things easier, right? Back in the day, I would
+[00:14:57] easier, right? Back in the day, I would
+[00:14:57] easier, right? Back in the day, I would have to deploy my Node.js app, a backend
+[00:15:01] have to deploy my Node.js app, a backend
+[00:15:01] have to deploy my Node.js app, a backend on AWS, and then I would have to set up
+[00:15:04] on AWS, and then I would have to set up
+[00:15:04] on AWS, and then I would have to set up an AWS Postgress instance or I could use
+[00:15:07] an AWS Postgress instance or I could use
+[00:15:07] an AWS Postgress instance or I could use GCP, whatever it is, and then I'd have
+[00:15:09] GCP, whatever it is, and then I'd have
+[00:15:09] GCP, whatever it is, and then I'd have those two communicate. But then we have
+[00:15:11] those two communicate. But then we have
+[00:15:11] those two communicate. But then we have an abstraction layer above AWS called
+[00:15:13] an abstraction layer above AWS called
+[00:15:13] an abstraction layer above AWS called Convex. And Convex is a beautiful thing.
+[00:15:16] Convex. And Convex is a beautiful thing.
+[00:15:16] Convex. And Convex is a beautiful thing. Why is Convex a beautiful thing? Convex
+[00:15:19] Why is Convex a beautiful thing? Convex
+[00:15:19] Why is Convex a beautiful thing? Convex takes my server, right, my back end, and
+[00:15:24] takes my server, right, my back end, and
+[00:15:24] takes my server, right, my back end, and marries it to my database. And what I
+[00:15:27] marries it to my database. And what I
+[00:15:27] marries it to my database. And what I mean by marries it, let me use better
+[00:15:28] mean by marries it, let me use better
+[00:15:28] mean by marries it, let me use better language. I basically get both of them
+[00:15:31] language. I basically get both of them
+[00:15:31] language. I basically get both of them in one box. So I get a backend. I think
+[00:15:34] in one box. So I get a backend. I think
+[00:15:34] in one box. So I get a backend. I think a backend is better here, where I can
+[00:15:36] a backend is better here, where I can
+[00:15:36] a backend is better here, where I can read data from the DB, write data to the
+[00:15:38] read data from the DB, write data to the
+[00:15:38] read data from the DB, write data to the to my DB, interact with external
+[00:15:39] to my DB, interact with external
+[00:15:39] to my DB, interact with external services. These don't fail and these
+[00:15:41] services. These don't fail and these
+[00:15:41] services. These don't fail and these aren't slow. And I also get a database.
+[00:15:44] aren't slow. And I also get a database.
+[00:15:44] aren't slow. And I also get a database. So instead of managing a separate
+[00:15:46] So instead of managing a separate
+[00:15:46] So instead of managing a separate backend and a separate database, I'm
+[00:15:48] backend and a separate database, I'm
+[00:15:48] backend and a separate database, I'm managing one infrastructure and that's
+[00:15:50] managing one infrastructure and that's
+[00:15:50] managing one infrastructure and that's called convex. And what's cool about
+[00:15:53] called convex. And what's cool about
+[00:15:53] called convex. And what's cool about convex is everything is real time. So
+[00:15:56] convex is everything is real time. So
+[00:15:56] convex is everything is real time. So it's fast. I can read data from the
+[00:15:58] it's fast. I can read data from the
+[00:15:58] it's fast. I can read data from the database. I can write data to my
+[00:16:00] database. I can write data to my
+[00:16:00] database. I can write data to my database and I can interact with
+[00:16:01] database and I can interact with
+[00:16:01] database and I can interact with external services. If you're familiar
+[00:16:03] external services. If you're familiar
+[00:16:03] external services. If you're familiar with convex, these are basically called
+[00:16:05] with convex, these are basically called
+[00:16:05] with convex, these are basically called queries, mutations, and actions, right?
+[00:16:08] queries, mutations, and actions, right?
+[00:16:08] queries, mutations, and actions, right? Queries is querying data. Read.
+[00:16:10] Queries is querying data. Read.
+[00:16:10] Queries is querying data. Read. Mutations is mutating data, right? and
+[00:16:13] Mutations is mutating data, right? and
+[00:16:13] Mutations is mutating data, right? and actions is interacting with external
+[00:16:15] actions is interacting with external
+[00:16:15] actions is interacting with external services. But here's another thing I
+[00:16:17] services. But here's another thing I
+[00:16:17] services. But here's another thing I need to think about. When I'm building a
+[00:16:19] need to think about. When I'm building a
+[00:16:19] need to think about. When I'm building a backend, what if, let's say, I'm
+[00:16:22] backend, what if, let's say, I'm
+[00:16:22] backend, what if, let's say, I'm building a chat app and someone types a
+[00:16:25] building a chat app and someone types a
+[00:16:25] building a chat app and someone types a message and they leave the chat app,
+[00:16:26] message and they leave the chat app,
+[00:16:26] message and they leave the chat app, right? Is the chat going to continue or
+[00:16:29] right? Is the chat going to continue or
+[00:16:29] right? Is the chat going to continue or is it going to fail? Now, if you build
+[00:16:31] is it going to fail? Now, if you build
+[00:16:31] is it going to fail? Now, if you build the standard way, it will probably fail.
+[00:16:33] the standard way, it will probably fail.
+[00:16:33] the standard way, it will probably fail. If you're vibe coding and you don't
+[00:16:34] If you're vibe coding and you don't
+[00:16:34] If you're vibe coding and you don't understand how chat stream works and all
+[00:16:36] understand how chat stream works and all
+[00:16:36] understand how chat stream works and all stuff, it will probably fail. I know
+[00:16:38] stuff, it will probably fail. I know
+[00:16:38] stuff, it will probably fail. I know that I need durable processes. Now
+[00:16:41] that I need durable processes. Now
+[00:16:41] that I need durable processes. Now again, you feel like I'm throwing all
+[00:16:43] again, you feel like I'm throwing all
+[00:16:43] again, you feel like I'm throwing all these big words. I'm telling you, lock
+[00:16:44] these big words. I'm telling you, lock
+[00:16:44] these big words. I'm telling you, lock in. This is easy. Durable processes. A
+[00:16:46] in. This is easy. Durable processes. A
+[00:16:46] in. This is easy. Durable processes. A durable process is basically a process
+[00:16:49] durable process is basically a process
+[00:16:49] durable process is basically a process that's durable, right? That continues to
+[00:16:51] that's durable, right? That continues to
+[00:16:51] that's durable, right? That continues to go on. Even if you close the tab, close
+[00:16:53] go on. Even if you close the tab, close
+[00:16:53] go on. Even if you close the tab, close the page, refresh, whatever it is, it
+[00:16:56] the page, refresh, whatever it is, it
+[00:16:56] the page, refresh, whatever it is, it will continue to work. Now, if I didn't
+[00:16:58] will continue to work. Now, if I didn't
+[00:16:58] will continue to work. Now, if I didn't have Convix, this is an additional thing
+[00:17:00] have Convix, this is an additional thing
+[00:17:00] have Convix, this is an additional thing I have to build. Convix already builds
+[00:17:02] I have to build. Convix already builds
+[00:17:02] I have to build. Convix already builds this. They call it workflow. I can set
+[00:17:04] this. They call it workflow. I can set
+[00:17:04] this. They call it workflow. I can set up a workflow using their workflow
+[00:17:06] up a workflow using their workflow
+[00:17:06] up a workflow using their workflow component. And if you don't know how to
+[00:17:08] component. And if you don't know how to
+[00:17:08] component. And if you don't know how to set this up, literally if you have
+[00:17:10] set this up, literally if you have
+[00:17:10] set this up, literally if you have convix, you go to convex components,
+[00:17:12] convix, you go to convex components,
+[00:17:12] convix, you go to convex components, right? And you go search workflow and
+[00:17:14] right? And you go search workflow and
+[00:17:14] right? And you go search workflow and you can literally copy paste this to
+[00:17:16] you can literally copy paste this to
+[00:17:16] you can literally copy paste this to your agent. Simplify programming
+[00:17:17] your agent. Simplify programming
+[00:17:18] your agent. Simplify programming longrunning code flows. Workflow
+[00:17:19] longrunning code flows. Workflow
+[00:17:19] longrunning code flows. Workflow executes durably with configurable
+[00:17:22] executes durably with configurable
+[00:17:22] executes durably with configurable retries and delays. So I need this
+[00:17:24] retries and delays. So I need this
+[00:17:24] retries and delays. So I need this because I'm building an AI agent and the
+[00:17:26] because I'm building an AI agent and the
+[00:17:26] because I'm building an AI agent and the AI agent can't stop working if people go
+[00:17:29] AI agent can't stop working if people go
+[00:17:29] AI agent can't stop working if people go and leave. What if I wanted like a
+[00:17:32] and leave. What if I wanted like a
+[00:17:32] and leave. What if I wanted like a lineup? Like let's say you're building
+[00:17:34] lineup? Like let's say you're building
+[00:17:34] lineup? Like let's say you're building like a ticket master type site and
+[00:17:36] like a ticket master type site and
+[00:17:36] like a ticket master type site and people are just hammering the site. You
+[00:17:37] people are just hammering the site. You
+[00:17:37] people are just hammering the site. You have thousands of people using your site
+[00:17:39] have thousands of people using your site
+[00:17:39] have thousands of people using your site and you want a queue, right? Again, with
+[00:17:41] and you want a queue, right? Again, with
+[00:17:41] and you want a queue, right? Again, with back-end engineering, you would have to
+[00:17:43] back-end engineering, you would have to
+[00:17:44] back-end engineering, you would have to build this yourself. But with convex,
+[00:17:46] build this yourself. But with convex,
+[00:17:46] build this yourself. But with convex, this is available. I can have cues. I
+[00:17:49] this is available. I can have cues. I
+[00:17:49] this is available. I can have cues. I can have coordinated parallel tasks,
+[00:17:51] can have coordinated parallel tasks,
+[00:17:52] can have coordinated parallel tasks, which means I can have things run
+[00:17:53] which means I can have things run
+[00:17:53] which means I can have things run parallelly. That's a hard word to say.
+[00:17:56] parallelly. That's a hard word to say.
+[00:17:56] parallelly. That's a hard word to say. Parallel.
+[00:17:58] Parallel.
+[00:17:58] Parallel. Parallel. You know what I'm trying to
+[00:18:00] Parallel. You know what I'm trying to
+[00:18:00] Parallel. You know what I'm trying to say? Have bunch tasks run in parallel.
+[00:18:02] say? Have bunch tasks run in parallel.
+[00:18:02] say? Have bunch tasks run in parallel. And I could do this. And they have a
+[00:18:03] And I could do this. And they have a
+[00:18:03] And I could do this. And they have a component for this called workpool.
+[00:18:06] component for this called workpool.
+[00:18:06] component for this called workpool. Right? Again, if I wanted a que, I can
+[00:18:09] Right? Again, if I wanted a que, I can
+[00:18:09] Right? Again, if I wanted a que, I can use I believe it's Amazon AWS Q's. Is is
+[00:18:12] use I believe it's Amazon AWS Q's. Is is
+[00:18:12] use I believe it's Amazon AWS Q's. Is is it called SQS, right? Amazon simple Q
+[00:18:15] it called SQS, right? Amazon simple Q
+[00:18:15] it called SQS, right? Amazon simple Q service, right? So if I wanted a queue,
+[00:18:17] service, right? So if I wanted a queue,
+[00:18:17] service, right? So if I wanted a queue, I would have to use this. If I wanted a
+[00:18:19] I would have to use this. If I wanted a
+[00:18:19] I would have to use this. If I wanted a database, I would have to use RDS. If I
+[00:18:22] database, I would have to use RDS. If I
+[00:18:22] database, I would have to use RDS. If I wanted virtual servers, I would use
+[00:18:23] wanted virtual servers, I would use
+[00:18:23] wanted virtual servers, I would use this, right? So there's all these
+[00:18:24] this, right? So there's all these
+[00:18:24] this, right? So there's all these different services. They're powerful,
+[00:18:27] different services. They're powerful,
+[00:18:27] different services. They're powerful, but it's terrible user experience,
+[00:18:29] but it's terrible user experience,
+[00:18:30] but it's terrible user experience, developer experience, agent experience.
+[00:18:32] developer experience, agent experience.
+[00:18:32] developer experience, agent experience. Convex simplifies this, abstracts this,
+[00:18:35] Convex simplifies this, abstracts this,
+[00:18:35] Convex simplifies this, abstracts this, and gives me one complete package. So, I
+[00:18:37] and gives me one complete package. So, I
+[00:18:37] and gives me one complete package. So, I get all this and then on top of that, I
+[00:18:40] get all this and then on top of that, I
+[00:18:40] get all this and then on top of that, I have my database. So, when it comes to
+[00:18:42] have my database. So, when it comes to
+[00:18:42] have my database. So, when it comes to my backend and database, instead of
+[00:18:44] my backend and database, instead of
+[00:18:44] my backend and database, instead of building these out separately, why don't
+[00:18:46] building these out separately, why don't
+[00:18:46] building these out separately, why don't I use a service like Convex to do it? It
+[00:18:49] I use a service like Convex to do it? It
+[00:18:49] I use a service like Convex to do it? It makes my life easier. Another pro to
+[00:18:51] makes my life easier. Another pro to
+[00:18:51] makes my life easier. Another pro to Convex is everything is code. And the
+[00:18:53] Convex is everything is code. And the
+[00:18:53] Convex is everything is code. And the reason why this is necessary and is
+[00:18:54] reason why this is necessary and is
+[00:18:54] reason why this is necessary and is important is I want the agent to do the
+[00:18:56] important is I want the agent to do the
+[00:18:56] important is I want the agent to do the work. I want the agent to build these
+[00:18:57] work. I want the agent to build these
+[00:18:57] work. I want the agent to build these features on. I want the agent to do this
+[00:19:00] features on. I want the agent to do this
+[00:19:00] features on. I want the agent to do this that and the third. And if the entire
+[00:19:02] that and the third. And if the entire
+[00:19:02] that and the third. And if the entire backend is all code, if the database is
+[00:19:04] backend is all code, if the database is
+[00:19:04] backend is all code, if the database is code, if everything is code, then the
+[00:19:05] code, if everything is code, then the
+[00:19:06] code, if everything is code, then the agent can do those things for me. So
+[00:19:08] agent can do those things for me. So
+[00:19:08] agent can do those things for me. So going back to Pluto, we have the client
+[00:19:11] going back to Pluto, we have the client
+[00:19:11] going back to Pluto, we have the client surface, right? And then Pluto's control
+[00:19:13] surface, right? And then Pluto's control
+[00:19:14] surface, right? And then Pluto's control plane, meaning the main orchestrator,
+[00:19:15] plane, meaning the main orchestrator,
+[00:19:15] plane, meaning the main orchestrator, the main backend is Convex. Convex is
+[00:19:18] the main backend is Convex. Convex is
+[00:19:18] the main backend is Convex. Convex is the source of truth. Convex is the
+[00:19:21] the source of truth. Convex is the
+[00:19:21] the source of truth. Convex is the bridge. Convex handles everything and I
+[00:19:24] bridge. Convex handles everything and I
+[00:19:24] bridge. Convex handles everything and I use Convex components. And again, here's
+[00:19:26] use Convex components. And again, here's
+[00:19:26] use Convex components. And again, here's the thing. Another thing I love Convex
+[00:19:27] the thing. Another thing I love Convex
+[00:19:27] the thing. Another thing I love Convex for and it just makes life easier is
+[00:19:29] for and it just makes life easier is
+[00:19:29] for and it just makes life easier is integrations, right? And what do I mean
+[00:19:31] integrations, right? And what do I mean
+[00:19:31] integrations, right? And what do I mean by integrations is let's say I wanted to
+[00:19:32] by integrations is let's say I wanted to
+[00:19:32] by integrations is let's say I wanted to integrate Cloudflare's R2 storage. All I
+[00:19:34] integrate Cloudflare's R2 storage. All I
+[00:19:34] integrate Cloudflare's R2 storage. All I do is search R2 and Convex has a
+[00:19:37] do is search R2 and Convex has a
+[00:19:37] do is search R2 and Convex has a component for that. You know how I set
+[00:19:38] component for that. You know how I set
+[00:19:38] component for that. You know how I set this up? I copy this link, give it to my
+[00:19:40] this up? I copy this link, give it to my
+[00:19:40] this up? I copy this link, give it to my agent, and my agent set it up. Now I
+[00:19:42] agent, and my agent set it up. Now I
+[00:19:42] agent, and my agent set it up. Now I have storage in my app and it's
+[00:19:44] have storage in my app and it's
+[00:19:44] have storage in my app and it's connected to my back end. Now this seems
+[00:19:46] connected to my back end. Now this seems
+[00:19:46] connected to my back end. Now this seems amazing, right? I have my client. I have
+[00:19:49] amazing, right? I have my client. I have
+[00:19:49] amazing, right? I have my client. I have my backend and database. And that's it.
+[00:19:53] my backend and database. And that's it.
+[00:19:53] my backend and database. And that's it. That's all to it. That's all Pluto is.
+[00:19:56] That's all to it. That's all Pluto is.
+[00:19:56] That's all to it. That's all Pluto is. But hold on. There's a lot to Pluto. One
+[00:19:58] But hold on. There's a lot to Pluto. One
+[00:19:58] But hold on. There's a lot to Pluto. One thing that Pluto has is services. And to
+[00:20:02] thing that Pluto has is services. And to
+[00:20:02] thing that Pluto has is services. And to best explain a service, I'm going to use
+[00:20:04] best explain a service, I'm going to use
+[00:20:04] best explain a service, I'm going to use AI. It says a service is a
+[00:20:06] AI. It says a service is a
+[00:20:06] AI. It says a service is a self-contained reusable block of
+[00:20:08] self-contained reusable block of
+[00:20:08] self-contained reusable block of software functionality that performs a
+[00:20:10] software functionality that performs a
+[00:20:10] software functionality that performs a specific task for other parts of the
+[00:20:12] specific task for other parts of the
+[00:20:12] specific task for other parts of the application or for external clients. So
+[00:20:15] application or for external clients. So
+[00:20:15] application or for external clients. So there are two services in Pluto
+[00:20:17] there are two services in Pluto
+[00:20:17] there are two services in Pluto inference/payments and iMessage. Let me
+[00:20:20] inference/payments and iMessage. Let me
+[00:20:20] inference/payments and iMessage. Let me explain iMessage because it's easier. So
+[00:20:22] explain iMessage because it's easier. So
+[00:20:22] explain iMessage because it's easier. So with Pluto one of the ways you can
+[00:20:24] with Pluto one of the ways you can
+[00:20:24] with Pluto one of the ways you can communicate with your agent apart from
+[00:20:26] communicate with your agent apart from
+[00:20:26] communicate with your agent apart from the internal chat or using telegram,
+[00:20:28] the internal chat or using telegram,
+[00:20:28] the internal chat or using telegram, slack, discord soon is you can use
+[00:20:31] slack, discord soon is you can use
+[00:20:31] slack, discord soon is you can use iMessage. You can talk with your agent
+[00:20:34] iMessage. You can talk with your agent
+[00:20:34] iMessage. You can talk with your agent using iMessage. Now, um there's quite a
+[00:20:37] using iMessage. Now, um there's quite a
+[00:20:37] using iMessage. Now, um there's quite a bit of work to it and it almost felt
+[00:20:40] bit of work to it and it almost felt
+[00:20:40] bit of work to it and it almost felt like the iMessage code should live in
+[00:20:43] like the iMessage code should live in
+[00:20:43] like the iMessage code should live in its own little contained box. Reason
+[00:20:46] its own little contained box. Reason
+[00:20:46] its own little contained box. Reason being is it doesn't really mess with the
+[00:20:48] being is it doesn't really mess with the
+[00:20:48] being is it doesn't really mess with the rest of the codebase. Like it doesn't
+[00:20:50] rest of the codebase. Like it doesn't
+[00:20:50] rest of the codebase. Like it doesn't have that much of a foothold in many
+[00:20:52] have that much of a foothold in many
+[00:20:52] have that much of a foothold in many different places and it feels like it's
+[00:20:54] different places and it feels like it's
+[00:20:54] different places and it feels like it's better off being its own contained
+[00:20:56] better off being its own contained
+[00:20:56] better off being its own contained thing. Now, this is a decision sort of
+[00:20:58] thing. Now, this is a decision sort of
+[00:20:58] thing. Now, this is a decision sort of made off of experience/vibes
+[00:21:02] made off of experience/vibes
+[00:21:02] made off of experience/vibes and it made sense for iMessage to be its
+[00:21:05] and it made sense for iMessage to be its
+[00:21:05] and it made sense for iMessage to be its own contained thing. So, in my monor
+[00:21:07] own contained thing. So, in my monor
+[00:21:07] own contained thing. So, in my monor repo, I can I'll remove UI and then I
+[00:21:09] repo, I can I'll remove UI and then I
+[00:21:09] repo, I can I'll remove UI and then I can have iMessage here. This is its own
+[00:21:12] can have iMessage here. This is its own
+[00:21:12] can have iMessage here. This is its own service. And then for
+[00:21:13] service. And then for
+[00:21:13] service. And then for inference/payments,
+[00:21:15] inference/payments,
+[00:21:15] inference/payments, again, this might be thinking a little
+[00:21:16] again, this might be thinking a little
+[00:21:16] again, this might be thinking a little too ahead. I plan on Pluto having its
+[00:21:19] too ahead. I plan on Pluto having its
+[00:21:19] too ahead. I plan on Pluto having its own inference system and the inference
+[00:21:22] own inference system and the inference
+[00:21:22] own inference system and the inference is very tied and coupled with payments,
+[00:21:24] is very tied and coupled with payments,
+[00:21:24] is very tied and coupled with payments, right? Again, people are able to fund
+[00:21:27] right? Again, people are able to fund
+[00:21:27] right? Again, people are able to fund credits and these credits can be used
+[00:21:29] credits and these credits can be used
+[00:21:29] credits and these credits can be used for inference and they use different
+[00:21:30] for inference and they use different
+[00:21:30] for inference and they use different sort of models. This felt like a system
+[00:21:32] sort of models. This felt like a system
+[00:21:32] sort of models. This felt like a system that should be on its own. A because the
+[00:21:36] that should be on its own. A because the
+[00:21:36] that should be on its own. A because the convex backend started to get big. I
+[00:21:38] convex backend started to get big. I
+[00:21:38] convex backend started to get big. I wanted to separate some things that
+[00:21:39] wanted to separate some things that
+[00:21:39] wanted to separate some things that could be their own standalone service.
+[00:21:41] could be their own standalone service.
+[00:21:41] could be their own standalone service. But second, God willing, if Pluto
+[00:21:43] But second, God willing, if Pluto
+[00:21:43] But second, God willing, if Pluto succeeds and other developers are
+[00:21:45] succeeds and other developers are
+[00:21:45] succeeds and other developers are working on it, I assume that there would
+[00:21:47] working on it, I assume that there would
+[00:21:47] working on it, I assume that there would be a dedicated person solely working on
+[00:21:50] be a dedicated person solely working on
+[00:21:50] be a dedicated person solely working on this, right? There would be a dedicated
+[00:21:52] this, right? There would be a dedicated
+[00:21:52] this, right? There would be a dedicated person solely focused on this. Now, the
+[00:21:54] person solely focused on this. Now, the
+[00:21:54] person solely focused on this. Now, the iMessage thing might be too small, but
+[00:21:55] iMessage thing might be too small, but
+[00:21:55] iMessage thing might be too small, but again, it's literally its own thing, its
+[00:21:58] again, it's literally its own thing, its
+[00:21:58] again, it's literally its own thing, its own box, and it makes sense to me for it
+[00:22:01] own box, and it makes sense to me for it
+[00:22:01] own box, and it makes sense to me for it to be its own service. When we think of
+[00:22:03] to be its own service. When we think of
+[00:22:03] to be its own service. When we think of services, I want us to think of a block
+[00:22:05] services, I want us to think of a block
+[00:22:05] services, I want us to think of a block of code that can that touches one
+[00:22:07] of code that can that touches one
+[00:22:07] of code that can that touches one surface area that does one specific
+[00:22:10] surface area that does one specific
+[00:22:10] surface area that does one specific thing that doesn't really have a
+[00:22:11] thing that doesn't really have a
+[00:22:11] thing that doesn't really have a foothold in the entire codebase, but can
+[00:22:14] foothold in the entire codebase, but can
+[00:22:14] foothold in the entire codebase, but can be cleanly architected separately. I
+[00:22:16] be cleanly architected separately. I
+[00:22:16] be cleanly architected separately. I think that makes sense to be a service.
+[00:22:19] think that makes sense to be a service.
+[00:22:19] think that makes sense to be a service. Again, it's more experience and vibes
+[00:22:21] Again, it's more experience and vibes
+[00:22:21] Again, it's more experience and vibes than it is a specific formula. So I
+[00:22:23] than it is a specific formula. So I
+[00:22:23] than it is a specific formula. So I chose to make these two things separate
+[00:22:25] chose to make these two things separate
+[00:22:25] chose to make these two things separate services. Now what stack did I use? Now
+[00:22:27] services. Now what stack did I use? Now
+[00:22:28] services. Now what stack did I use? Now this may shock you. I used effect
+[00:22:32] this may shock you. I used effect
+[00:22:32] this may shock you. I used effect TS and Postgress. Now I used effect TS
+[00:22:37] TS and Postgress. Now I used effect TS
+[00:22:37] TS and Postgress. Now I used effect TS for the inference payments and
+[00:22:39] for the inference payments and
+[00:22:39] for the inference payments and Postgress. For the iMessage it was just
+[00:22:42] Postgress. For the iMessage it was just
+[00:22:42] Postgress. For the iMessage it was just effects. You might be asking me why
+[00:22:44] effects. You might be asking me why
+[00:22:44] effects. You might be asking me why effect and the reason why I used effect
+[00:22:47] effect and the reason why I used effect
+[00:22:47] effect and the reason why I used effect is a AI is actually very good with
+[00:22:49] is a AI is actually very good with
+[00:22:49] is a AI is actually very good with writing effect code but b I needed
+[00:22:52] writing effect code but b I needed
+[00:22:52] writing effect code but b I needed really strong error handling because if
+[00:22:55] really strong error handling because if
+[00:22:56] really strong error handling because if things go wrong in inference and
+[00:22:57] things go wrong in inference and
+[00:22:57] things go wrong in inference and payments I need to know about it. It
+[00:22:59] payments I need to know about it. It
+[00:22:59] payments I need to know about it. It needs to be clean. It needs to be
+[00:23:00] needs to be clean. It needs to be
+[00:23:00] needs to be clean. It needs to be architected and when it comes to error
+[00:23:02] architected and when it comes to error
+[00:23:02] architected and when it comes to error handling nothing is as good as effect.
+[00:23:06] handling nothing is as good as effect.
+[00:23:06] handling nothing is as good as effect. Right? So I use effect in the inference
+[00:23:09] Right? So I use effect in the inference
+[00:23:09] Right? So I use effect in the inference service. I use effect in the iMessage
+[00:23:12] service. I use effect in the iMessage
+[00:23:12] service. I use effect in the iMessage service and for the payment stuff it
+[00:23:15] service and for the payment stuff it
+[00:23:15] service and for the payment stuff it there's it its own DB I have a postgress
+[00:23:17] there's it its own DB I have a postgress
+[00:23:17] there's it its own DB I have a postgress database I'm using planet scale for this
+[00:23:19] database I'm using planet scale for this
+[00:23:19] database I'm using planet scale for this but you can use any other provider and
+[00:23:21] but you can use any other provider and
+[00:23:21] but you can use any other provider and this again also lives in the monor repo
+[00:23:24] this again also lives in the monor repo
+[00:23:24] this again also lives in the monor repo so when I'm using whatever agent I'm
+[00:23:27] so when I'm using whatever agent I'm
+[00:23:27] so when I'm using whatever agent I'm using that agent has access to all the
+[00:23:30] using that agent has access to all the
+[00:23:30] using that agent has access to all the information and understands how the
+[00:23:32] information and understands how the
+[00:23:32] information and understands how the system works again going back when you
+[00:23:34] system works again going back when you
+[00:23:34] system works again going back when you think of how to set up your services
+[00:23:36] think of how to set up your services
+[00:23:36] think of how to set up your services think about what things in your app that
+[00:23:38] think about what things in your app that
+[00:23:38] think about what things in your app that you want to segment you also ask Fable
+[00:23:41] you want to segment you also ask Fable
+[00:23:41] you want to segment you also ask Fable 5, which is back this question. And for
+[00:23:44] 5, which is back this question. And for
+[00:23:44] 5, which is back this question. And for payments, you might be wondering,
+[00:23:45] payments, you might be wondering,
+[00:23:45] payments, you might be wondering, payments, what am I using again? There's
+[00:23:47] payments, what am I using again? There's
+[00:23:47] payments, what am I using again? There's Stripe, there's Polar, there's Autumn.
+[00:23:49] Stripe, there's Polar, there's Autumn.
+[00:23:49] Stripe, there's Polar, there's Autumn. Most of you probably be like, why don't
+[00:23:50] Most of you probably be like, why don't
+[00:23:50] Most of you probably be like, why don't you you could just use Stripe. I wanted
+[00:23:52] you you could just use Stripe. I wanted
+[00:23:52] you you could just use Stripe. I wanted to use Autumn because I have a credit
+[00:23:54] to use Autumn because I have a credit
+[00:23:54] to use Autumn because I have a credit based system and the way my payments is
+[00:23:57] based system and the way my payments is
+[00:23:57] based system and the way my payments is architected is uh very unique where
+[00:23:59] architected is uh very unique where
+[00:23:59] architected is uh very unique where there's credits and there's things that
+[00:24:01] there's credits and there's things that
+[00:24:01] there's credits and there's things that consume credits, there's things that are
+[00:24:03] consume credits, there's things that are
+[00:24:03] consume credits, there's things that are free, there's things that you need to
+[00:24:04] free, there's things that you need to
+[00:24:04] free, there's things that you need to top up and all this different stuff.
+[00:24:06] top up and all this different stuff.
+[00:24:06] top up and all this different stuff. Like for example on Pluto, you can give
+[00:24:09] Like for example on Pluto, you can give
+[00:24:09] Like for example on Pluto, you can give your agent a card and this card you
+[00:24:11] your agent a card and this card you
+[00:24:11] your agent a card and this card you obviously need to give it money and you
+[00:24:13] obviously need to give it money and you
+[00:24:13] obviously need to give it money and you can use your credits to top that up. So
+[00:24:15] can use your credits to top that up. So
+[00:24:15] can use your credits to top that up. So that's something that Autumn takes care
+[00:24:17] that's something that Autumn takes care
+[00:24:17] that's something that Autumn takes care of well. And what's cool again about
+[00:24:19] of well. And what's cool again about
+[00:24:19] of well. And what's cool again about using Convex is Convex has an Autumn
+[00:24:22] using Convex is Convex has an Autumn
+[00:24:22] using Convex is Convex has an Autumn component. So you know what I did? I
+[00:24:24] component. So you know what I did? I
+[00:24:24] component. So you know what I did? I literally copied this and gave it to the
+[00:24:27] literally copied this and gave it to the
+[00:24:27] literally copied this and gave it to the agent. So for payments, if it's just
+[00:24:29] agent. So for payments, if it's just
+[00:24:29] agent. So for payments, if it's just direct straight up subscription, use
+[00:24:31] direct straight up subscription, use
+[00:24:31] direct straight up subscription, use Stripe. If you have some credit based
+[00:24:33] Stripe. If you have some credit based
+[00:24:33] Stripe. If you have some credit based stuff going on, I would use Autumn. Now,
+[00:24:35] stuff going on, I would use Autumn. Now,
+[00:24:35] stuff going on, I would use Autumn. Now, you could already tell this is a pretty
+[00:24:37] you could already tell this is a pretty
+[00:24:37] you could already tell this is a pretty large app. There's many places things
+[00:24:39] large app. There's many places things
+[00:24:39] large app. There's many places things can go wrong, right? There's many places
+[00:24:41] can go wrong, right? There's many places
+[00:24:41] can go wrong, right? There's many places in the client on the back end, the
+[00:24:44] in the client on the back end, the
+[00:24:44] in the client on the back end, the different services. Heck, the monor
+[00:24:46] different services. Heck, the monor
+[00:24:46] different services. Heck, the monor repo, you might be using Nex.js,
+[00:24:48] repo, you might be using Nex.js,
+[00:24:48] repo, you might be using Nex.js, Tanstack star, you might whatever it is
+[00:24:50] Tanstack star, you might whatever it is
+[00:24:50] Tanstack star, you might whatever it is that you're using. There's a lot of
+[00:24:51] that you're using. There's a lot of
+[00:24:51] that you're using. There's a lot of places where this goes wrong. I
+[00:24:53] places where this goes wrong. I
+[00:24:53] places where this goes wrong. I recommend checking out, and this is not
+[00:24:54] recommend checking out, and this is not
+[00:24:54] recommend checking out, and this is not sponsored, Sentry and Post Hog. This is
+[00:24:58] sponsored, Sentry and Post Hog. This is
+[00:24:58] sponsored, Sentry and Post Hog. This is what I use for analytics, error logging,
+[00:25:02] what I use for analytics, error logging,
+[00:25:02] what I use for analytics, error logging, and all that type of stuff. You need to
+[00:25:04] and all that type of stuff. You need to
+[00:25:04] and all that type of stuff. You need to have robust logging because you want to
+[00:25:06] have robust logging because you want to
+[00:25:06] have robust logging because you want to make sure when something goes wrong,
+[00:25:08] make sure when something goes wrong,
+[00:25:08] make sure when something goes wrong, when your app goes down, whatever it is,
+[00:25:10] when your app goes down, whatever it is,
+[00:25:10] when your app goes down, whatever it is, when a build fails, whatever it is, you
+[00:25:12] when a build fails, whatever it is, you
+[00:25:12] when a build fails, whatever it is, you want to make sure that you know exactly
+[00:25:15] want to make sure that you know exactly
+[00:25:15] want to make sure that you know exactly what happened. And if you're a
+[00:25:16] what happened. And if you're a
+[00:25:16] what happened. And if you're a non-technical person asking how do I do
+[00:25:18] non-technical person asking how do I do
+[00:25:18] non-technical person asking how do I do this, you just tell AI, hey, I want to
+[00:25:20] this, you just tell AI, hey, I want to
+[00:25:20] this, you just tell AI, hey, I want to make sure whenever an error happens, I
+[00:25:22] make sure whenever an error happens, I
+[00:25:22] make sure whenever an error happens, I need to know how to track it. I need to
+[00:25:24] need to know how to track it. I need to
+[00:25:24] need to know how to track it. I need to know when it happened. Use sentry and
+[00:25:26] know when it happened. Use sentry and
+[00:25:26] know when it happened. Use sentry and post talk to make this happen. The
+[00:25:28] post talk to make this happen. The
+[00:25:28] post talk to make this happen. The system architecture diagram drawn by
+[00:25:29] system architecture diagram drawn by
+[00:25:29] system architecture diagram drawn by cursor agent. um explain about con
+[00:25:32] cursor agent. um explain about con
+[00:25:32] cursor agent. um explain about con explain convex control plane to you
+[00:25:34] explain convex control plane to you
+[00:25:34] explain convex control plane to you explain how I use components uh we have
+[00:25:36] explain how I use components uh we have
+[00:25:36] explain how I use components uh we have the inference ledger system right this
+[00:25:39] the inference ledger system right this
+[00:25:39] the inference ledger system right this is again built with effect we have a
+[00:25:41] is again built with effect we have a
+[00:25:41] is again built with effect we have a postgress wallet ledger we're using open
+[00:25:43] postgress wallet ledger we're using open
+[00:25:43] postgress wallet ledger we're using open router as the underlying you know
+[00:25:45] router as the underlying you know
+[00:25:46] router as the underlying you know inference provider and I'm obviously
+[00:25:48] inference provider and I'm obviously
+[00:25:48] inference provider and I'm obviously using open claw the agent openclaw is
+[00:25:51] using open claw the agent openclaw is
+[00:25:51] using open claw the agent openclaw is being deployed on Daytona I need Daytona
+[00:25:53] being deployed on Daytona I need Daytona
+[00:25:53] being deployed on Daytona I need Daytona because Daytona is a great sandbox
+[00:25:55] because Daytona is a great sandbox
+[00:25:55] because Daytona is a great sandbox provider and not only do I get sandbox
+[00:25:57] provider and not only do I get sandbox
+[00:25:58] provider and not only do I get sandbox with Daytona but every agent also
+[00:26:01] with Daytona but every agent also
+[00:26:01] with Daytona but every agent also gets a computer, right? So, right here,
+[00:26:04] gets a computer, right? So, right here,
+[00:26:04] gets a computer, right? So, right here, you're going to see that my very own
+[00:26:06] you're going to see that my very own
+[00:26:06] you're going to see that my very own Pluto agent has its own computer with a
+[00:26:08] Pluto agent has its own computer with a
+[00:26:08] Pluto agent has its own computer with a browser. I asked it to take a screenshot
+[00:26:11] browser. I asked it to take a screenshot
+[00:26:11] browser. I asked it to take a screenshot and believe it or not, something broke.
+[00:26:13] and believe it or not, something broke.
+[00:26:13] and believe it or not, something broke. It selfhealed and then it sent me the
+[00:26:15] It selfhealed and then it sent me the
+[00:26:15] It selfhealed and then it sent me the screenshot. Right? So, this is something
+[00:26:18] screenshot. Right? So, this is something
+[00:26:18] screenshot. Right? So, this is something I can't build myself. Again, I need an
+[00:26:20] I can't build myself. Again, I need an
+[00:26:20] I can't build myself. Again, I need an abstraction layer that makes it easy.
+[00:26:22] abstraction layer that makes it easy.
+[00:26:22] abstraction layer that makes it easy. Daytona is great. And then for OOTH, I'm
+[00:26:25] Daytona is great. And then for OOTH, I'm
+[00:26:25] Daytona is great. And then for OOTH, I'm using work OS. And the reason why I'm
+[00:26:26] using work OS. And the reason why I'm
+[00:26:26] using work OS. And the reason why I'm using work OS is for one simple main
+[00:26:31] using work OS is for one simple main
+[00:26:31] using work OS is for one simple main reason. First and foremost, it's uh
+[00:26:33] reason. First and foremost, it's uh
+[00:26:33] reason. First and foremost, it's uh pretty good. And second of all, it's
+[00:26:35] pretty good. And second of all, it's
+[00:26:35] pretty good. And second of all, it's enterprise ready, right? Pluto, I'm not
+[00:26:37] enterprise ready, right? Pluto, I'm not
+[00:26:37] enterprise ready, right? Pluto, I'm not really targeting personal agent people.
+[00:26:39] really targeting personal agent people.
+[00:26:39] really targeting personal agent people. I really want to go for businesses, you
+[00:26:41] I really want to go for businesses, you
+[00:26:41] I really want to go for businesses, you know, small to medium, like 15 to like
+[00:26:44] know, small to medium, like 15 to like
+[00:26:44] know, small to medium, like 15 to like 60 employees. Manager sets it up,
+[00:26:47] 60 employees. Manager sets it up,
+[00:26:47] 60 employees. Manager sets it up, invites people. Work OS makes the OOTH
+[00:26:50] invites people. Work OS makes the OOTH
+[00:26:50] invites people. Work OS makes the OOTH for like companies and if there's a
+[00:26:52] for like companies and if there's a
+[00:26:52] for like companies and if there's a specific compliance that I need, it
+[00:26:54] specific compliance that I need, it
+[00:26:54] specific compliance that I need, it makes it really, really easy. and the
+[00:26:55] makes it really, really easy. and the
+[00:26:56] makes it really, really easy. and the agents love it, so I'm using it. Now,
+[00:26:58] agents love it, so I'm using it. Now,
+[00:26:58] agents love it, so I'm using it. Now, when I look at this system that I've
+[00:27:01] when I look at this system that I've
+[00:27:01] when I look at this system that I've designed for Pluto, what are some of the
+[00:27:03] designed for Pluto, what are some of the
+[00:27:03] designed for Pluto, what are some of the trade-offs I made? The first one is
+[00:27:05] trade-offs I made? The first one is
+[00:27:05] trade-offs I made? The first one is cost. I don't know how this business is
+[00:27:07] cost. I don't know how this business is
+[00:27:07] cost. I don't know how this business is going to make money. Like, I more so
+[00:27:09] going to make money. Like, I more so
+[00:27:09] going to make money. Like, I more so want people to try it out and really
+[00:27:10] want people to try it out and really
+[00:27:10] want people to try it out and really like it and that's a problem for later.
+[00:27:13] like it and that's a problem for later.
+[00:27:13] like it and that's a problem for later. So, that's the one thing I have not like
+[00:27:15] So, that's the one thing I have not like
+[00:27:15] So, that's the one thing I have not like thought of like cost optimizations, this
+[00:27:17] thought of like cost optimizations, this
+[00:27:17] thought of like cost optimizations, this this that and the third. I just want to
+[00:27:18] this that and the third. I just want to
+[00:27:18] this that and the third. I just want to make sure when people use the app, it
+[00:27:20] make sure when people use the app, it
+[00:27:20] make sure when people use the app, it doesn't break. Even like the Daytona
+[00:27:22] doesn't break. Even like the Daytona
+[00:27:22] doesn't break. Even like the Daytona boxes that we're using are, you know,
+[00:27:25] boxes that we're using are, you know,
+[00:27:25] boxes that we're using are, you know, medium to large size boxes. I want to
+[00:27:26] medium to large size boxes. I want to
+[00:27:26] medium to large size boxes. I want to make sure everyone's agent is fast. You
+[00:27:28] make sure everyone's agent is fast. You
+[00:27:28] make sure everyone's agent is fast. You know, work OS has a pretty generous free
+[00:27:30] know, work OS has a pretty generous free
+[00:27:30] know, work OS has a pretty generous free tier. So does Convex. And then like
+[00:27:32] tier. So does Convex. And then like
+[00:27:32] tier. So does Convex. And then like again, I have a separate service. Like
+[00:27:34] again, I have a separate service. Like
+[00:27:34] again, I have a separate service. Like if I wanted to save money, I would just
+[00:27:35] if I wanted to save money, I would just
+[00:27:35] if I wanted to save money, I would just literally put everything in Convex, but
+[00:27:37] literally put everything in Convex, but
+[00:27:37] literally put everything in Convex, but I have a separate service. Um I'm using
+[00:27:39] I have a separate service. Um I'm using
+[00:27:39] I have a separate service. Um I'm using Versell for deployments and I can
+[00:27:41] Versell for deployments and I can
+[00:27:41] Versell for deployments and I can actually show you that. and with Versel.
+[00:27:44] actually show you that. and with Versel.
+[00:27:44] actually show you that. and with Versel. So I have Pluto, I have a staging
+[00:27:46] So I have Pluto, I have a staging
+[00:27:46] So I have Pluto, I have a staging environment, I have the inference uh
+[00:27:48] environment, I have the inference uh
+[00:27:48] environment, I have the inference uh service, I have an admin site, you know,
+[00:27:50] service, I have an admin site, you know,
+[00:27:50] service, I have an admin site, you know, all these like are like deploying these
+[00:27:52] all these like are like deploying these
+[00:27:52] all these like are like deploying these and shipping changes like you can see
+[00:27:54] and shipping changes like you can see
+[00:27:54] and shipping changes like you can see I'm on the $20 a month plan, but I've
+[00:27:56] I'm on the $20 a month plan, but I've
+[00:27:56] I'm on the $20 a month plan, but I've spent over $100 so far. So cost is the
+[00:27:59] spent over $100 so far. So cost is the
+[00:27:59] spent over $100 so far. So cost is the one thing where I'm like, you know what,
+[00:28:00] one thing where I'm like, you know what,
+[00:28:00] one thing where I'm like, you know what, we ball. So this is why I think it's
+[00:28:02] we ball. So this is why I think it's
+[00:28:02] we ball. So this is why I think it's very important when you're building your
+[00:28:04] very important when you're building your
+[00:28:04] very important when you're building your app out to think about this, right? to
+[00:28:07] app out to think about this, right? to
+[00:28:07] app out to think about this, right? to architect it in a way where adding new
+[00:28:10] architect it in a way where adding new
+[00:28:10] architect it in a way where adding new features and tools and stuff won't break
+[00:28:13] features and tools and stuff won't break
+[00:28:13] features and tools and stuff won't break your app. This is why I always start
+[00:28:15] your app. This is why I always start
+[00:28:15] your app. This is why I always start with a monor repo, right? One repo that
+[00:28:17] with a monor repo, right? One repo that
+[00:28:17] with a monor repo, right? One repo that can have multiple different things. A
+[00:28:19] can have multiple different things. A
+[00:28:19] can have multiple different things. A web app, a mobile app, a desktop app,
+[00:28:21] web app, a mobile app, a desktop app,
+[00:28:21] web app, a mobile app, a desktop app, one unified backend, many backends, many
+[00:28:23] one unified backend, many backends, many
+[00:28:23] one unified backend, many backends, many services, whatever it is, right? Cuz the
+[00:28:25] services, whatever it is, right? Cuz the
+[00:28:25] services, whatever it is, right? Cuz the agent has everything in one repo, has
+[00:28:28] agent has everything in one repo, has
+[00:28:28] agent has everything in one repo, has access to all the code. And then even
+[00:28:30] access to all the code. And then even
+[00:28:30] access to all the code. And then even the tools I use are tools that the
+[00:28:32] the tools I use are tools that the
+[00:28:32] the tools I use are tools that the agents are very familiar with and know
+[00:28:34] agents are very familiar with and know
+[00:28:34] agents are very familiar with and know how to use. Versel, excellent, right?
+[00:28:37] how to use. Versel, excellent, right?
+[00:28:37] how to use. Versel, excellent, right? Excellent place to deploy. Uh, Convex,
+[00:28:40] Excellent place to deploy. Uh, Convex,
+[00:28:40] Excellent place to deploy. Uh, Convex, excellent. Everything is code. The
+[00:28:42] excellent. Everything is code. The
+[00:28:42] excellent. Everything is code. The agents love it. Payments, Autumn. Autumn
+[00:28:44] agents love it. Payments, Autumn. Autumn
+[00:28:44] agents love it. Payments, Autumn. Autumn is really pretty good. Like I, again,
+[00:28:46] is really pretty good. Like I, again,
+[00:28:46] is really pretty good. Like I, again, because I'm using Convex, there's tools
+[00:28:48] because I'm using Convex, there's tools
+[00:28:48] because I'm using Convex, there's tools that maybe the agent might not be good
+[00:28:50] that maybe the agent might not be good
+[00:28:50] that maybe the agent might not be good at using the tool specifically, but it's
+[00:28:52] at using the tool specifically, but it's
+[00:28:52] at using the tool specifically, but it's good at using the Convex component. So,
+[00:28:54] good at using the Convex component. So,
+[00:28:54] good at using the Convex component. So, the Convex component helps me integrate
+[00:28:56] the Convex component helps me integrate
+[00:28:56] the Convex component helps me integrate tools that I like, like Autumn, like
+[00:28:58] tools that I like, like Autumn, like
+[00:28:58] tools that I like, like Autumn, like Reset, like Stripe, like whatever it is.
+[00:29:01] Reset, like Stripe, like whatever it is.
+[00:29:01] Reset, like Stripe, like whatever it is. I literally just go to Convex components
+[00:29:02] I literally just go to Convex components
+[00:29:02] I literally just go to Convex components and then I search it. And because this
+[00:29:04] and then I search it. And because this
+[00:29:04] and then I search it. And because this is how I start my applications now
+[00:29:07] is how I start my applications now
+[00:29:07] is how I start my applications now adding on services, segmenting specific
+[00:29:09] adding on services, segmenting specific
+[00:29:09] adding on services, segmenting specific things. It's not difficult. The agent
+[00:29:11] things. It's not difficult. The agent
+[00:29:11] things. It's not difficult. The agent itself can do it. And every tool I'm
+[00:29:13] itself can do it. And every tool I'm
+[00:29:13] itself can do it. And every tool I'm using can handle scale. Versel can
+[00:29:16] using can handle scale. Versel can
+[00:29:16] using can handle scale. Versel can handle scale. Convex can handle scale.
+[00:29:19] handle scale. Convex can handle scale.
+[00:29:19] handle scale. Convex can handle scale. Autumn can handle scale. You know, all
+[00:29:21] Autumn can handle scale. You know, all
+[00:29:21] Autumn can handle scale. You know, all these tools that I'm using are tried and
+[00:29:23] these tools that I'm using are tried and
+[00:29:23] these tools that I'm using are tried and true. A lot of people use them. A lot of
+[00:29:25] true. A lot of people use them. A lot of
+[00:29:25] true. A lot of people use them. A lot of successful companies use them. And for
+[00:29:27] successful companies use them. And for
+[00:29:27] successful companies use them. And for the most part, there's not like like
+[00:29:29] the most part, there's not like like
+[00:29:29] the most part, there's not like like increasing like let's say a thousand
+[00:29:31] increasing like let's say a thousand
+[00:29:31] increasing like let's say a thousand users join in the app. The only thing
+[00:29:33] users join in the app. The only thing
+[00:29:33] users join in the app. The only thing that I need to do for the most part is
+[00:29:35] that I need to do for the most part is
+[00:29:35] that I need to do for the most part is up my subscription and then I can use AI
+[00:29:37] up my subscription and then I can use AI
+[00:29:37] up my subscription and then I can use AI to sort of optimize the app. There's not
+[00:29:40] to sort of optimize the app. There's not
+[00:29:40] to sort of optimize the app. There's not going to be a reason why the app goes
+[00:29:42] going to be a reason why the app goes
+[00:29:42] going to be a reason why the app goes down because I built it on solid infra
+[00:29:45] down because I built it on solid infra
+[00:29:45] down because I built it on solid infra unless there's bad code, but we're
+[00:29:47] unless there's bad code, but we're
+[00:29:47] unless there's bad code, but we're talking about system design here. That's
+[00:29:48] talking about system design here. That's
+[00:29:48] talking about system design here. That's pretty much it. This video is pretty
+[00:29:50] pretty much it. This video is pretty
+[00:29:50] pretty much it. This video is pretty long. I hope you enjoyed it. I hope you
+[00:29:52] long. I hope you enjoyed it. I hope you
+[00:29:52] long. I hope you enjoyed it. I hope you enjoy me talking about the decisions and
+[00:29:55] enjoy me talking about the decisions and
+[00:29:55] enjoy me talking about the decisions and and the design and the way I'm building
+[00:29:57] and the design and the way I'm building
+[00:29:57] and the design and the way I'm building things. Again, I'm not saying this is
+[00:29:59] things. Again, I'm not saying this is
+[00:29:59] things. Again, I'm not saying this is the greatest way to do so, but this is
+[00:30:01] the greatest way to do so, but this is
+[00:30:01] the greatest way to do so, but this is how I'm thinking about apps. This is how
+[00:30:02] how I'm thinking about apps. This is how
+[00:30:02] how I'm thinking about apps. This is how I build apps at my agency, Hey Fabrica.
+[00:30:05] I build apps at my agency, Hey Fabrica.
+[00:30:06] I build apps at my agency, Hey Fabrica. And I hope this makes sense. I hope you
+[00:30:07] And I hope this makes sense. I hope you
+[00:30:07] And I hope this makes sense. I hope you enjoyed it. Make sure to like, comment,
+[00:30:09] enjoyed it. Make sure to like, comment,
+[00:30:09] enjoyed it. Make sure to like, comment, subscribe. Let me know if you want to
+[00:30:10] subscribe. Let me know if you want to
+[00:30:10] subscribe. Let me know if you want to watch more videos like this. I'll cook
+[00:30:12] watch more videos like this. I'll cook
+[00:30:12] watch more videos like this. I'll cook them up for you. But as always, you've
+[00:30:14] them up for you. But as always, you've
+[00:30:14] them up for you. But as always, you've been awesome. My name is Ross. I'll see
+[00:30:16] been awesome. My name is Ross. I'll see
+[00:30:16] been awesome. My name is Ross. I'll see you in the next one. Peace.

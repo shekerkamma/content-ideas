@@ -1,0 +1,1 @@
+An agentic AI versus SaaS replacement scorecard should compare workflow volume, determinism, and data moat. The Agent Replacement Scorecard argues that high-volume deterministic workflows with weak data moats are replace candidates, while strong systems of record are more likely to be kept and enriched.

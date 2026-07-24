@@ -1,0 +1,18 @@
+{
+  "id": "src-3d2c7fb83203",
+  "source_id": "openai-blog",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Building Governed AI Agents - A Practical Guide to Agentic Scaffolding",
+  "url": "https://developers.openai.com/cookbook/examples/partners/agentic_governance_guide/agentic_governance_cookbook",
+  "canonical_url": "https://developers.openai.com/cookbook/examples/partners/agentic_governance_guide/agentic_governance_cookbook",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:35.987423+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "A cookbook for enabling safe, scalable AI agent adoption in your organization Every enterprise faces the same tension: the pressure to adop",
+  "raw_content_path": null,
+  "dedupe_key": "89a0d8752f3d",
+  "status": "new",
+  "errors": []
+}

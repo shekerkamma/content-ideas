@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI Analyst Competitor Analysis"
+  short_description: "Evidence-led competitor analytics workflow"
+  default_prompt: "Use $aianalyst-competitor-analysis to analyze competitors for [target], treating source claims as an evidence dataset and producing reviewed PPTX/HTML artifacts."
+policy:
+  allow_implicit_invocation: true

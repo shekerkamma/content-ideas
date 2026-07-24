@@ -1,0 +1,126 @@
+{
+  "method": "old_reddit_html",
+  "queries": [
+    "AI agent governance production",
+    "AI agent governance liability",
+    "AI agents production failure",
+    "AI agent monitoring framework",
+    "agent validation authority klarna publicly reversed ai-first support quality tanked",
+    "agent validation authority blocker same everywhere nobody prove safe run proof market",
+    "agent validation authority market moved build trust one race was capability frameworks models demos",
+    "agent validation authority trust now infrastructure problem product feature",
+    "agent validation authority april regulators handed agentic back banks occ fed fdic replaced year",
+    "agent validation authority one sentence defines moment generative agentic models within scope guidance translation"
+  ],
+  "threads": [
+    {
+      "title": "I Tested OpenAI's $20/month “Agent” So You Don’t Have To. It Can’t Shop, Book, or Reserve Anything",
+      "url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+      "query": "AI agent governance production",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-01.json",
+      "comments": 80,
+      "post_title": "I Tested OpenAI's $20/month “Agent” So You Don’t Have To. It Can’t Shop, Book, or Reserve Anything",
+      "subreddit": "ChatGPT"
+    },
+    {
+      "title": "AI AGENTS today are far more DANGEROUS that you think",
+      "url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+      "query": "AI agent governance production",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+      "comments": 80,
+      "post_title": "AI AGENTS today are far more DANGEROUS that you think",
+      "subreddit": "ArtificialInteligence"
+    },
+    {
+      "title": "What are the real challenges of automating with AI agents?",
+      "url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "query": "AI agent governance production",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+      "comments": 30,
+      "post_title": "What are the real challenges of automating with AI agents?",
+      "subreddit": "u_ibm"
+    },
+    {
+      "title": "AI Agent Governance and Liability?",
+      "url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+      "query": "AI agent governance liability",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+      "comments": 74,
+      "post_title": "AI Agent Governance and Liability?",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "title": "\"Something Big Is Happening Every time someone asks me what's going on with AI, I give them the safe answer. Because the real one sounds insane. I'm done holding back. I wrote what I wish I could sit down and tell everyone I care about.",
+      "url": "https://old.reddit.com/r/accelerate/comments/1r1pypd/something_big_is_happening_every_time_someone/",
+      "query": "AI agent governance liability",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-05.json",
+      "comments": 80,
+      "post_title": "\"Something Big Is Happening Every time someone asks me what's going on with AI, I give them the safe answer. Because the real one sounds insane. I'm done holding back. I wrote what I wish I could sit down and tell everyone I care about.",
+      "subreddit": "accelerate"
+    },
+    {
+      "title": "I built an airgapped agent governance system in a week by changing how I use LLMs",
+      "url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+      "query": "AI agent governance liability",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+      "comments": 20,
+      "post_title": "I built an airgapped agent governance system in a week by changing how I use LLMs",
+      "subreddit": "aiagents"
+    },
+    {
+      "title": "The PocketOS boss puts greater blame on Railway’s architecture than on the deranged AI agent",
+      "url": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+      "query": "AI agents production failure",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-07.json",
+      "comments": 80,
+      "post_title": "The PocketOS boss puts greater blame on Railway’s architecture than on the deranged AI agent",
+      "subreddit": "whennews"
+    },
+    {
+      "title": "Most of you shouldnt build an AI agent and heres why",
+      "url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+      "query": "AI agent monitoring framework",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+      "comments": 80,
+      "post_title": "Most of you shouldnt build an AI agent and heres why",
+      "subreddit": "AI_Agents"
+    },
+    {
+      "title": "I created an AI-driven meme coin automated trading tool with GMGN Agent Skills. It looks very cool.",
+      "url": "https://old.reddit.com/r/GMGNAI/comments/1sew9tn/i_created_an_aidriven_meme_coin_automated_trading/",
+      "query": "AI agent monitoring framework",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-09.json",
+      "comments": 1,
+      "post_title": "I created an AI-driven meme coin automated trading tool with GMGN Agent Skills. It looks very cool.",
+      "subreddit": "GMGNAI"
+    },
+    {
+      "title": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026",
+      "url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+      "query": "AI agent monitoring framework",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-10.json",
+      "comments": 38,
+      "post_title": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026",
+      "subreddit": "NextGenAITool"
+    },
+    {
+      "title": "When you skip validation for AI generated results",
+      "url": "https://old.reddit.com/r/Wellthatsucks/comments/1r7x023/when_you_skip_validation_for_ai_generated_results/",
+      "query": "agent validation authority klarna publicly reversed ai-first support quality tanked",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-11.json",
+      "comments": 80,
+      "post_title": "When you skip validation for AI generated results",
+      "subreddit": "Wellthatsucks"
+    },
+    {
+      "title": "The developers are making a mistake - An arguement against allowing paid mods",
+      "url": "https://old.reddit.com/r/Paralives/comments/1tsnbmj/the_developers_are_making_a_mistake_an_arguement/",
+      "query": "agent validation authority klarna publicly reversed ai-first support quality tanked",
+      "output": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-12.json",
+      "comments": 80,
+      "post_title": "The developers are making a mistake - An arguement against allowing paid mods",
+      "subreddit": "Paralives"
+    }
+  ],
+  "thread_count": 12
+}

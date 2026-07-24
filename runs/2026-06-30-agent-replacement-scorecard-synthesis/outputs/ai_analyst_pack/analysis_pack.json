@@ -1,0 +1,106 @@
+{
+  "analysis_classification": "L5 presentation repair / full analytical deck",
+  "question": "Which SaaS layers are exposed to agent replacement, renegotiation, or durability?",
+  "data_source": "/mnt/c/Users/sheke/OneDrive/Desktop/Agent-Replacement-Scorecard.csv",
+  "data_quality": {
+    "rows": 25,
+    "columns": [
+      "#",
+      "Agent type",
+      "Use case",
+      "Proof (short)",
+      "SaaS affected (short)",
+      "Volume",
+      "Determinism",
+      "Data moat",
+      "Verdict",
+      "Build-vs-buy",
+      "Proof \u2014 what's deployed",
+      "SaaS in the crosshairs",
+      "Volume score",
+      "Determinism score",
+      "Moat exposure score",
+      "Replacement exposure score",
+      "Moat label",
+      "Rank"
+    ],
+    "null_pct": {
+      "#": 0.0,
+      "Agent type": 0.0,
+      "Use case": 0.0,
+      "Proof (short)": 0.0,
+      "SaaS affected (short)": 0.0,
+      "Volume": 0.0,
+      "Determinism": 0.0,
+      "Data moat": 0.0,
+      "Verdict": 0.0,
+      "Build-vs-buy": 0.0,
+      "Proof \u2014 what's deployed": 0.0,
+      "SaaS in the crosshairs": 0.0,
+      "Volume score": 0.0,
+      "Determinism score": 0.0,
+      "Moat exposure score": 0.0,
+      "Replacement exposure score": 0.0,
+      "Moat label": 0.0,
+      "Rank": 0.0
+    },
+    "duplicate_use_cases": 0,
+    "blockers": [],
+    "warnings": [
+      "Dataset is curated, not statistically sampled; market-wide claims must be guarded."
+    ]
+  },
+  "validated_findings": {
+    "verdict_counts": {
+      "REPLACE": 10,
+      "RENEGOTIATE": 9,
+      "KEEP": 6
+    },
+    "data_moat_verdict": {
+      "REPLACE": {
+        "L": 10,
+        "M": 0,
+        "H": 0
+      },
+      "RENEGOTIATE": {
+        "L": 0,
+        "M": 9,
+        "H": 0
+      },
+      "KEEP": {
+        "L": 0,
+        "M": 0,
+        "H": 6
+      }
+    },
+    "volume_verdict": {
+      "REPLACE": {
+        "H": 9,
+        "M": 1
+      },
+      "RENEGOTIATE": {
+        "H": 4,
+        "M": 5
+      },
+      "KEEP": {
+        "H": 2,
+        "M": 4
+      }
+    },
+    "formula_violations": [],
+    "confidence": "Medium-high for internal scorecard synthesis; medium for external market generalization."
+  },
+  "story_architecture": [
+    "Start with dataset and score mechanics.",
+    "Show use cases domain by domain before making the executive argument.",
+    "Establish data moat as the central explanatory mechanism.",
+    "Translate verdicts into replace, renegotiate, and keep commercial playbooks.",
+    "Use AEO pages to publish model-derived buyer answers, not generic AI claims."
+  ],
+  "guardrails": [
+    "Do not claim statistical market validation.",
+    "Do not claim universal SaaS replacement.",
+    "Do not imply guaranteed savings without client spend data.",
+    "Use proof rows as examples unless source URLs are tied out."
+  ]
+}

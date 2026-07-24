@@ -16,6 +16,12 @@ def _json(rel):
     return json.loads((REPO / rel).read_text(encoding="utf-8"))
 
 
+def _prose(rel):
+    """Read a markdown file with whitespace collapsed, so pinned phrases keep
+    matching across line re-wraps. Only paraphrasing breaks the contract."""
+    return " ".join((REPO / rel).read_text(encoding="utf-8").split())
+
+
 def _skill_version():
     fm = (SKILL / "SKILL.md").read_text(encoding="utf-8").split("\n---\n", 1)[0]
     match = re.search(r'(?m)^version:\s*"([^"]+)"\s*$', fm)
@@ -141,7 +147,7 @@ class CrossHostPackagingTests(unittest.TestCase):
 
     def test_agents_md_delegates_to_claude_md(self):
         # Codex reads AGENTS.md; it should re-use the single CLAUDE.md guidance.
-        agents = (REPO / "AGENTS.md").read_text(encoding="utf-8")
+        agents = _prose("AGENTS.md")
         self.assertIn("@CLAUDE.md", agents)
         self.assertIn("OpenHands", agents)
         self.assertIn("github.com/OpenHands/OpenHands", agents)
@@ -181,7 +187,7 @@ class CrossHostPackagingTests(unittest.TestCase):
         self.assertIn(".claude/plugins/cache", text)
 
     def test_claude_md_mentions_openhands_source_of_truth(self):
-        text = (REPO / "CLAUDE.md").read_text(encoding="utf-8")
+        text = _prose("CLAUDE.md")
         self.assertIn("github.com/OpenHands/OpenHands", text)
         self.assertIn("docs.openhands.dev", text)
         self.assertIn("gbrain", text)
@@ -192,7 +198,7 @@ class CrossHostPackagingTests(unittest.TestCase):
         self.assertIn("embedding-backed semantic retrieval", text)
 
     def test_claude_md_requires_branded_pptx_template(self):
-        text = (REPO / "CLAUDE.md").read_text(encoding="utf-8")
+        text = _prose("CLAUDE.md")
         self.assertIn("exa", text)
         self.assertIn("MCP-connected research server", text)
         self.assertIn("https://api.exa.ai/search", text)

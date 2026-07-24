@@ -1,0 +1,61 @@
+{
+  "id": "brief-df8d379d3be2",
+  "topic_cluster_id": "topic-e6aa53877f42",
+  "title": "Agent harnesses and developer tools: best daily content opportunity",
+  "thesis": "Agent harnesses and developer tools is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+  "angle": "Explain what changed in Agent harnesses and developer tools and convert it into a practical implementation narrative for AI operators.",
+  "evidence": [
+    {
+      "claim": "nous-hermes-docs contributes evidence for the Agent harnesses and developer tools opportunity.",
+      "citation_ids": [
+        "c1"
+      ]
+    },
+    {
+      "claim": "nous-hermes-docs contributes evidence for the Agent harnesses and developer tools opportunity.",
+      "citation_ids": [
+        "c2"
+      ]
+    },
+    {
+      "claim": "nous-hermes-docs contributes evidence for the Agent harnesses and developer tools opportunity.",
+      "citation_ids": [
+        "c3"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "c1",
+      "title": "Claude Code — Delegate coding to Claude Code CLI (features, PRs) ...",
+      "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-claude-code",
+      "source_id": "nous-hermes-docs",
+      "published_at": null,
+      "fetched_at": "2026-07-01T05:18:28.240376+00:00"
+    },
+    {
+      "id": "c2",
+      "title": "Opencode — Delegate coding to OpenCode CLI (features, PR review) ...",
+      "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-opencode",
+      "source_id": "nous-hermes-docs",
+      "published_at": null,
+      "fetched_at": "2026-07-01T05:18:28.240437+00:00"
+    },
+    {
+      "id": "c3",
+      "title": "Hermes Agent — Configure, extend, or contribute to Hermes Agent ...",
+      "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent",
+      "source_id": "nous-hermes-docs",
+      "published_at": null,
+      "fetched_at": "2026-07-01T05:18:28.240456+00:00"
+    }
+  ],
+  "risks": [
+    "Offline or snippet-only evidence must be replaced with full source review before publishing.",
+    "The article must avoid overclaiming beyond cited source material."
+  ],
+  "missing_facts": [
+    "Current primary-source details should be verified in live mode before final editorial approval."
+  ],
+  "status": "approved_for_draft"
+}

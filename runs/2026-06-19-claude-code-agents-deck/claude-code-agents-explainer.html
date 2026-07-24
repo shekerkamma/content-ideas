@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code Agents — The Killer Analogy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #0d0d10;
+    --bg2: #141418;
+    --white: #f0f0f4;
+    --dim: #888899;
+    --cyan: #4ecfba;
+    --blue: #4a9eff;
+    --purple: #9b7de8;
+    --green: #4ecb71;
+    --yellow: #f0c040;
+    --orange: #f07840;
+    --red: #e05050;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 48px;
+  }
+
+  /* ── Header ── */
+  header {
+    text-align: center;
+    max-width: 700px;
+  }
+
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    opacity: 0.8;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+
+  h1 em { color: var(--cyan); font-style: normal; }
+
+  .subtitle {
+    font-size: 15px;
+    color: var(--dim);
+    line-height: 1.6;
+  }
+
+  /* ── Main infographic ── */
+  .infographic {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* ── Analogy: Orchestra / Conductor ── */
+  .analogy-section {
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 36px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .analogy-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cyan), var(--blue), var(--purple));
+    border-radius: 16px 16px 0 0;
+  }
+
+  .analogy-heading {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 24px;
+  }
+
+  .analogy-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .analogy-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .col-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .col-title.old { background: rgba(224,80,80,0.12); color: var(--red); }
+  .col-title.new { background: rgba(78,207,186,0.12); color: var(--cyan); }
+
+  .analogy-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .ai-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+
+  .divider-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0 16px;
+  }
+
+  .arrow-big {
+    font-size: 28px;
+    color: var(--cyan);
+  }
+
+  .arrow-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--dim);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ── The Factory Floor metaphor ── */
+  .factory-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .meta-card {
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 24px 26px;
+  }
+
+  .meta-card-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  /* ── Loop Gear visual ── */
+  .loop-gear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 16px 0;
+    position: relative;
+  }
+
+  .gear-node {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--bg);
+    line-height: 1.3;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .gear-connector {
+    height: 2px;
+    width: 24px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .gear-connector::after {
+    content: '→';
+    position: absolute;
+    right: -4px;
+    top: -9px;
+    font-size: 12px;
+    color: inherit;
+  }
+
+  /* ── Staircase metaphor ── */
+  .staircase-section {
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 32px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .stair-info { display: flex; flex-direction: column; gap: 14px; }
+
+  .stair-title {
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .stair-desc {
+    font-size: 14px;
+    color: var(--dim);
+    line-height: 1.7;
+  }
+
+  .stair-visual {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 140px;
+    padding: 0 8px;
+  }
+
+  .s-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 6px;
+  }
+
+  .s-block {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .s-block-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bg);
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .s-sub {
+    font-size: 10px;
+    color: var(--dim);
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* ── Data bar ── */
+  .data-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    max-width: 960px;
+  }
+
+  .data-card {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 22px;
+    text-align: center;
+  }
+
+  .data-number {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .data-label {
+    font-size: 12px;
+    color: var(--dim);
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.5;
+  }
+
+  /* ── Quote strip ── */
+  .quote-strip {
+    width: 100%;
+    max-width: 960px;
+    border: 1px solid rgba(78,207,186,0.2);
+    border-left: 4px solid var(--cyan);
+    background: rgba(78,207,186,0.04);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    font-style: italic;
+  }
+
+  footer {
+    font-size: 11px;
+    color: var(--dim);
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+    opacity: 0.6;
+    padding-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="label">Explainer · Video-to-Deck · Claude Code Agents 2026</div>
+  <h1>The <em>Conductor</em> Analogy</h1>
+  <p class="subtitle">
+    You don't play every instrument. You conduct. That's the shift from vibe coding to directing Claude Code.
+  </p>
+</header>
+
+<!-- Analogy section -->
+<div class="infographic">
+  <div class="analogy-section">
+    <div class="analogy-heading">The Core Shift — Two Mental Models</div>
+    <div class="analogy-grid">
+      <!-- Old way -->
+      <div class="analogy-col">
+        <div class="col-title old">🎰 Slot Machine Mode</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--red);"></div>Pull the prompt lever</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--red);"></div>Hope for a good result</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--red);"></div>Re-roll when it fails</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--red);"></div>~20% of potential unlocked</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--red);"></div>Random outcomes, fragile</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--red);"></div>No memory, no system</div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="divider-col">
+        <div class="arrow-big">→</div>
+        <div class="arrow-label">shift<br>your<br>model</div>
+      </div>
+
+      <!-- New way -->
+      <div class="analogy-col">
+        <div class="col-title new">🎼 Orchestra Conductor</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--cyan);"></div>Set the tempo (PLAN.md)</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--cyan);"></div>Direct the section (context)</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--cyan);"></div>Listen, correct, evolve</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--cyan);"></div>~92% accuracy with verify</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--cyan);"></div>Same result, on purpose</div>
+        <div class="analogy-item"><div class="ai-dot" style="background:var(--cyan);"></div>System gets smarter weekly</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loop + Cards -->
+  <div class="factory-section">
+    <!-- The Loop -->
+    <div class="meta-card" style="border-top: 3px solid var(--yellow);">
+      <div class="meta-card-title" style="color:var(--yellow);">The 4-Step Repeatable Loop</div>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 12px; background:rgba(240,192,64,0.06); border-radius:8px; border:1px solid rgba(240,192,64,0.15);">
+          <div style="width:28px; height:28px; border-radius:50%; background:var(--yellow); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:var(--bg); flex-shrink:0;">1</div>
+          <div><div style="font-size:14px; font-weight:700;">Plan</div><div style="font-size:11px; color:var(--dim); font-family:'JetBrains Mono',monospace;">PLAN.md · north star · goal + tasks</div></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 12px; background:rgba(78,203,113,0.06); border-radius:8px; border:1px solid rgba(78,203,113,0.15);">
+          <div style="width:28px; height:28px; border-radius:50%; background:var(--green); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:var(--bg); flex-shrink:0;">2</div>
+          <div><div style="font-size:14px; font-weight:700;">Context</div><div style="font-size:11px; color:var(--dim); font-family:'JetBrains Mono',monospace;">right info · not all info · lean window</div></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 12px; background:rgba(78,207,186,0.06); border-radius:8px; border:1px solid rgba(78,207,186,0.15);">
+          <div style="width:28px; height:28px; border-radius:50%; background:var(--cyan); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:var(--bg); flex-shrink:0;">3</div>
+          <div><div style="font-size:14px; font-weight:700;">Verify</div><div style="font-size:11px; color:var(--dim); font-family:'JetBrains Mono',monospace;">don't trust first pass · gate output</div></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; padding:10px 12px; background:rgba(74,158,255,0.06); border-radius:8px; border:1px solid rgba(74,158,255,0.15);">
+          <div style="width:28px; height:28px; border-radius:50%; background:var(--blue); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:var(--bg); flex-shrink:0;">4</div>
+          <div><div style="font-size:14px; font-weight:700;">Evolve</div><div style="font-size:11px; color:var(--dim); font-family:'JetBrains Mono',monospace;">permanent upgrade · system compounds</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agent architecture -->
+    <div class="meta-card" style="border-top: 3px solid var(--cyan); display:flex; flex-direction:column; gap:16px;">
+      <div class="meta-card-title" style="color:var(--cyan);">Agent = Model + Harness</div>
+      <div style="position:relative; width:220px; height:220px; margin:0 auto;">
+        <!-- Outer ring -->
+        <div style="position:absolute; inset:0; border-radius:50%; border:2px solid var(--cyan); background:rgba(78,207,186,0.04); display:flex; align-items:center; justify-content:center;">
+          <!-- Mid ring -->
+          <div style="position:absolute; inset:44px; border-radius:50%; border:2px solid var(--blue); background:rgba(74,158,255,0.04);">
+            <!-- Inner -->
+            <div style="position:absolute; inset:38px; border-radius:50%; border:2px solid var(--purple); background:rgba(155,125,232,0.08); display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; gap:2px;">
+              <div style="font-size:10px; font-weight:700; color:var(--purple); line-height:1.3;">The<br>Model</div>
+            </div>
+          </div>
+        </div>
+        <!-- Labels -->
+        <div style="position:absolute; top:12px; left:0; right:0; text-align:center; font-size:9px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan);">THE AI LAYER<br><span style="font-weight:400; font-family:'JetBrains Mono',monospace; letter-spacing:0; font-size:8px; opacity:0.7;">Rules · Skills · Hooks · MCP</span></div>
+        <div style="position:absolute; top:58px; left:0; right:0; text-align:center; font-size:9px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--blue);">HARNESS</div>
+      </div>
+      <div style="font-size:12px; color:var(--dim); text-align:center; font-style:italic; line-height:1.6;">
+        Same workflow, taller building.<br>Only the ceiling changes.
+      </div>
+    </div>
+  </div>
+
+  <!-- Staircase section -->
+  <div class="staircase-section">
+    <div class="stair-info">
+      <div style="font-size:12px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--blue);">Build The System</div>
+      <div class="stair-title">The Rising <em style="color:var(--cyan); font-style:normal;">Floor</em></div>
+      <div class="stair-desc">Every bug is not just fixed — it becomes a permanent upgrade. You're not maintaining code, you're building a compounding system that gets smarter with every failure.</div>
+      <div style="margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:13px;">
+          <div style="width:8px; height:8px; border-radius:50%; background:var(--orange);"></div>
+          <strong>Bug hits</strong>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:13px;">
+          <div style="font-size:11px; color:var(--cyan); font-weight:700; width:8px; text-align:center;">→</div>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--cyan);">Write a rule + reference doc + /command</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:13px;">
+          <div style="width:8px; height:8px; border-radius:50%; background:var(--green);"></div>
+          <strong>Floor rises permanently</strong>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:12px; align-items:center;">
+      <div class="stair-visual">
+        <div class="s-step">
+          <div class="s-block" style="height:30px; background:var(--orange);">
+            <div class="s-block-label">rule</div>
+          </div>
+          <div class="s-sub">week 1</div>
+        </div>
+        <div class="s-step">
+          <div class="s-block" style="height:60px; background:var(--yellow);">
+            <div class="s-block-label">doc</div>
+          </div>
+          <div class="s-sub">week 2</div>
+        </div>
+        <div class="s-step">
+          <div class="s-block" style="height:90px; background:var(--cyan);">
+            <div class="s-block-label">cmd</div>
+          </div>
+          <div class="s-sub">week 4</div>
+        </div>
+        <div class="s-step">
+          <div class="s-block" style="height:130px; background:var(--blue);">
+            <div class="s-block-label">skill</div>
+          </div>
+          <div class="s-sub">month 2</div>
+        </div>
+      </div>
+      <div style="font-size:11px; color:var(--dim); font-family:'JetBrains Mono',monospace; text-align:center;">floor keeps rising + smarter every week</div>
+    </div>
+  </div>
+</div>
+
+<!-- Data row -->
+<div class="data-row">
+  <div class="data-card" style="border-top: 3px solid var(--green);">
+    <div class="data-number" style="color:var(--green);">92%</div>
+    <div class="data-label">first-pass accuracy<br>with verification</div>
+  </div>
+  <div class="data-card" style="border-top: 3px solid var(--red);">
+    <div class="data-number" style="color:var(--red);">65%</div>
+    <div class="data-label">accuracy without<br>verification step</div>
+  </div>
+  <div class="data-card" style="border-top: 3px solid var(--orange);">
+    <div class="data-number" style="color:var(--orange);">250K</div>
+    <div class="data-label">token "dumb zone"<br>for Opus 4.8</div>
+  </div>
+  <div class="data-card" style="border-top: 3px solid var(--cyan);">
+    <div class="data-number" style="color:var(--cyan);">20%</div>
+    <div class="data-label">of Claude Code potential<br>most users unlock</div>
+  </div>
+</div>
+
+<div class="quote-strip">
+  "You're not learning to code, you're learning to direct."
+</div>
+
+<footer>
+  Source: Nate Herk | AI Automation × Cole · "How to Build Effective Claude Code Agents in 2026" · youtube.com/watch?v=RzLV8sfFdMM
+</footer>
+
+</body>
+</html>

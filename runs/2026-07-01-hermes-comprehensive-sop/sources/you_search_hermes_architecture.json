@@ -1,0 +1,158 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://hermes-agent.nousresearch.com/docs/",
+        "title": "Hermes Agent Documentation | Hermes Agent",
+        "description": "The self-improving AI agent built by Nous Research. A built-in learning loop that creates skills from experience, improves them during use, and remembers across sessions.",
+        "thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "original_thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "page_age": "2026-06-08T13:50:05",
+        "favicon_url": "https://you.com/favicon?domain=hermes-agent.nousresearch.com&size=128",
+        "snippets": [
+          "MCP support — Connect to any MCP server for extended tool capabilities",
+          "Scheduled automations — Built-in cron with delivery to any platform"
+        ]
+      },
+      {
+        "url": "https://blakecrosley.com/guides/hermes",
+        "title": "Hermes Agent: The Practitioner's Reference (2026)",
+        "description": "A practitioner's reference to Hermes Agent, the open-source self-improving AI agent from Nous Research: provider auth and OAuth, the config files, the skills system, and running it as a multi-platform messaging gateway.",
+        "thumbnail_url": "https://blakecrosley.com/og/guide/hermes.png",
+        "original_thumbnail_url": "https://blakecrosley.com/og/guide/hermes.png",
+        "page_age": "2026-06-22T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=blakecrosley.com&size=128",
+        "snippets": [
+          "Architecture. Background subagents return a handle immediately and re-enter their result as a new turn; an MCP elicitation handler allows mid-tool-call confirmation, and late-connecting MCP tools are exposed between turns (cache-safe); cron becomes a pluggable CronScheduler with a Chronos managed-cron provider; and a new Managed scope (/etc/hermes) lets an administrator pin user-immutable config, alongside a Gateway-Gateway relay for multi-gateway topologies.21",
+          "SOUL.md — identity, tone, style, communication defaults, personality-level behavior. AGENTS.md — project architecture, coding conventions, tool preferences, repo-specific workflows, commands, ports, paths, deployment notes.",
+          "├── .env # API keys and secrets ├── auth.json # OAuth provider credentials (Nous Portal, Codex, Anthropic) ├── SOUL.md # Primary agent identity (slot #1 in system prompt) ├── memories/ # Persistent memory (MEMORY.md, USER.md) ├── skills/ # Bundled + agent-created + hub-installed skills ├── cron/ # Scheduled jobs ├── sessions/ # Gateway session state └── logs/ # agent.log, gateway.log, errors.log (secrets auto-redacted)",
+          "Security. v0.17.0 closes a shell-escape denylist bypass, fails closed on missing approval modules and own-policy gateway adapters, sanitizes the environment for cron job-script subprocesses, redacts secrets in request debug dumps, screens MCP stdio configs for exfil patterns, and bumps urllib3 and PyJWT to clear CVEs.21"
+        ]
+      },
+      {
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/profiles",
+        "title": "Profiles: Running Multiple Agents | Hermes Agent",
+        "description": "Run multiple independent Hermes agents on the same machine — each with its own config, API keys, memory, sessions, skills, and gateway state.",
+        "thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "original_thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "page_age": "2026-06-29T11:38:02",
+        "favicon_url": "https://you.com/favicon?domain=hermes-agent.nousresearch.com&size=128",
+        "snippets": [
+          "A profile you built on one machine can be packaged as a git repository and installed with one command on another machine — your own workstation, a teammate's laptop, or a community user's environment. The shared package includes the SOUL, config, skills, cron jobs, and MCP connections.",
+          "Same API keys, model, and capabilities, but fresh sessions and memory. Edit ~/.hermes/profiles/work/.env for different API keys, or ~/.hermes/profiles/work/SOUL.md for a different personality. ... Copies everything — config, API keys, personality, all memories, skills, cron jobs, plugins.",
+          "A profile is a separate Hermes home directory. Each profile gets its own directory containing its own config.yaml, .env, SOUL.md, memories, sessions, skills, cron jobs, and state database.",
+          "A profile gives Hermes its own state directory: config.yaml, .env, SOUL.md, sessions, memory, logs, cron jobs, and gateway state."
+        ]
+      },
+      {
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/configuration",
+        "title": "Configuration | Hermes Agent - nous research",
+        "description": "Configure Hermes Agent — config.yaml, providers, models, API keys, and more",
+        "thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "original_thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "page_age": "2026-05-18T12:25:03",
+        "favicon_url": "https://you.com/favicon?domain=hermes-agent.nousresearch.com&size=128",
+        "snippets": [
+          "├── SOUL.md # Primary agent identity (slot #1 in system prompt) ├── memories/ # Persistent memory (MEMORY.md, USER.md) ├── skills/ # Agent-created skills (managed via skill_manage tool) ├── cron/ # Scheduled jobs ├── sessions/ # Gateway sessions └── logs/ # Logs (errors.log, gateway.log — secrets auto-redacted)",
+          "Empty language follows the conversation; # set e.g. \"English\" or \"Japanese\" to pin titles to one language. title_generation: provider: \"auto\" model: \"\" base_url: \"\" api_key: \"\" timeout: 30 language: \"\" # Skills hub — skill matching and search skills_hub: provider: \"auto\" model: \"\" base_url: \"\" api_key: \"\" timeout: 30 # MCP tool dispatch mcp: provider: \"auto\" model: \"\" base_url: \"\" api_key: \"\" timeout: 30 # Kanban triage specifier — `hermes kanban specify ` (or the # dashboard's ✨ Specify button on Triage-column cards) uses this # slot to expand a one-liner into a concrete spec and promote the # task to `todo`. Cheap fast models work well here; spec expansion # is short and doesn't need reasoning depth.",
+          "fallback_chain is available on any auxiliary task — compression, vision, web_extract, approval, skills_hub, mcp, etc.",
+          "Controls how much content Hermes loads from each automatic context file before applying head/tail truncation. This applies to files injected into the system prompt such as SOUL.md, .hermes.md, AGENTS.md, CLAUDE.md, and .cursorrules."
+        ]
+      },
+      {
+        "url": "https://lumadock.com/tutorials/hermes-memory-architecture-explained",
+        "title": "Hermes Agent memory: SOUL.md, MEMORY.md and state.db - LumaDock",
+        "description": "How Hermes Agent memory really works: SOUL.md persona, MEMORY.md facts and state.db sessions, with how to edit each.",
+        "thumbnail_url": "https://lumadock.com/templates/lagom2/assets/img/page-manager/lumadock-hermes-memory-architecture-explained.webp",
+        "original_thumbnail_url": "https://lumadock.com/templates/lagom2/assets/img/page-manager/lumadock-hermes-memory-architecture-explained.webp",
+        "page_age": "2026-05-05T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=lumadock.com&size=128",
+        "snippets": [
+          "Markdown files at ~/.hermes/SOUL.md and ~/.hermes/memories/MEMORY.md and ~/.hermes/memories/USER.md. These get loaded into the system prompt at the start of every session. Stable, slow-changing, hand-curated. The agent doesn't write to these by default; you do. Tokens spent: typically 1500 to 5000 tokens, depending on how much you've put in. Worth being judicious because every session pays this cost. Layer 2: skills.",
+          "Tokens spent: zero per session unless the skill is invoked, in which case you pay for the SKILL.md content as part of the active context for the duration of that skill's task. Layer 3: session search. A SQLite database at ~/.hermes/state.db holding every message ever sent in any session, with FTS5 full-text search on top.",
+          "They capture procedures, not facts. \"How do I deploy a Next.js app to Coolify\" is a skill; \"BrightCart deploys to Coolify\" is a memory. The ~/.hermes/skills/ directory has one folder per skill, each containing a SKILL.md plus optional supporting files (templates, scripts, lookup tables).",
+          "The learning loop generates skills automatically from successful task patterns. After three or four successful runs of similar work, Hermes generates a skill that captures the procedure. You can read it, edit it, delete it. Editing a generated skill is fine, but Hermes may regenerate over your edits if it sees similar successful runs again."
+        ]
+      },
+      {
+        "url": "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/profiles.md",
+        "title": "hermes-agent/website/docs/user-guide/profiles.md at main · ...",
+        "description": "The agent that grows with you. Contribute to NousResearch/hermes-agent development by creating an account on GitHub.",
+        "thumbnail_url": "https://opengraph.githubassets.com/249cd48338cd681b61e575758e1f3b524258e854ceb4a95195d5b90d2cf1a2ff/NousResearch/hermes-agent",
+        "original_thumbnail_url": "https://opengraph.githubassets.com/249cd48338cd681b61e575758e1f3b524258e854ceb4a95195d5b90d2cf1a2ff/NousResearch/hermes-agent",
+        "page_age": "2026-06-13T18:00:28",
+        "favicon_url": "https://you.com/favicon?domain=github.com&size=128",
+        "snippets": [
+          "The default profile is simply ~/.hermes itself. No migration needed — existing installs work identically. A profile you built on one machine can be packaged as a git repository and installed with one command on another machine — your own workstation, a teammate's laptop, or a community user's environment. The shared package includes the SOUL, config, skills, cron jobs, and MCP connections. Credentials, memories, and sessions stay per-machine.",
+          "Edit ~/.hermes/profiles/work/.env for different API keys, or ~/.hermes/profiles/work/SOUL.md for a different personality. ... Copies everything — config, API keys, personality, all memories, skills, cron jobs, plugins. A complete working snapshot. Per-profile history is excluded (session history, state.db, backups/, state-snapshots/, checkpoints/) — these belong to the source profile and can reach tens of GB.",
+          "A profile is a separate Hermes home directory. Each profile gets its own directory containing its own config.yaml, .env, SOUL.md, memories, sessions, skills, cron jobs, and state database.",
+          "A profile gives Hermes its own state directory: config.yaml, .env, SOUL.md, sessions, memory, logs, cron jobs, and gateway state."
+        ]
+      },
+      {
+        "url": "https://www.mindstudio.ai/blog/hermes-agent-5-pillar-architecture-memory-skills-soul-crons",
+        "title": "Hermes Agent's 5-Pillar Architecture: How It Learns, Schedules, ...",
+        "description": "Hermes Agent is built on five pillars: memory, skills, soul, crons, and a self-improving loop. Here's how each one works and why the combination matters.",
+        "thumbnail_url": "https://i.mscdn.ai/b4ffc41c-fcef-4043-b587-9921a5ca401e/generated-images/e5b3d377-0e25-46b0-a106-74347ad1ecae.png?fm=auto&#38;w=1200&#38;h=630&#38;fit=crop",
+        "original_thumbnail_url": "https://i.mscdn.ai/b4ffc41c-fcef-4043-b587-9921a5ca401e/generated-images/e5b3d377-0e25-46b0-a106-74347ad1ecae.png?fm=auto&#38;w=1200&#38;h=630&#38;fit=crop",
+        "page_age": "2026-05-10T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mindstudio.ai&size=128",
+        "snippets": [
+          "The answer is architectural. Hermes is built on five pillars: memory (user.md + memory.md), skills, soul, crons, and a self-improving loop. Each pillar solves a specific failure mode that makes most AI agents frustrating to use over time.",
+          "You can inspect it at any time: “read me your soul file” returns exactly what’s in there. This is where Hermes separates itself most clearly from terminal-first agents like Claude Code. You can say, in plain English: “Every night at 12am Central time, push changes to this GitHub repo.” Hermes creates both a skill and a cron job from that single instruction.",
+          "Soul prevents tone drift — an agent that gradually becomes more verbose or less aligned with your communication style because there’s no persistent personality definition. Crons prevent the agent from being purely reactive — you get proactive, scheduled work without managing infrastructure.",
+          "The nightly sync cron (“every night at 12am Central time, push changes to this GitHub repo”) is a single sentence that produces a skill, a cron job, and a safety net for everything you build afterward. Second, spend 10 minutes on onboarding. Tell it your name, your goals, your team structure, what you’re working on. This populates user.md and memory.md with enough context that every subsequent session starts with a working model of you."
+        ]
+      },
+      {
+        "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent",
+        "title": "Hermes Agent — Configure, extend, or contribute to Hermes Agent ...",
+        "description": "Configure, extend, or contribute to Hermes Agent · The following is the complete skill definition that Hermes loads when this skill is triggered. This is what the agent sees as instructions when the skill is active",
+        "thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "original_thumbnail_url": "https://hermes-agent.nousresearch.com/docs/img/hermes-agent-banner.png",
+        "favicon_url": "https://you.com/favicon?domain=hermes-agent.nousresearch.com&size=128",
+        "snippets": [
+          "Web dashboard (hermes dashboard) — full admin panel: configure every messaging channel, the MCP catalog, webhooks/hooks, memory, and a complete profile builder (model + skills + MCPs) from the browser, plus an embedded hermes --tui chat. Secured behind an OAuth/token gate. OpenAI-compatible proxy (hermes proxy) — exposes a http://localhost:port OpenAI API backed by whichever OAuth provider you're signed into (Claude Pro, ChatGPT Pro, SuperGrok). Point Codex CLI, Aider, Cline, Continue, or any script at it — no API key. Automation Blueprints — pick a named automation and Hermes asks for what it needs (no cron syntax).",
+          "Extensible — plugins, MCP servers, custom tools, webhook triggers, cron scheduling, and the full Python ecosystem.",
+          "For scheduled tasks, use the cronjob tool instead of spawning — handles delivery and retry · Four systems run alongside the main conversation loop. Quick reference here; full developer notes live in AGENTS.md, user-facing docs under website/docs/user-guide/features/.",
+          "Schedules: duration (\"30m\", \"2h\"), \"every\" phrase (\"every monday 9am\"), 5-field cron (\"0 9 * * *\"), or ISO timestamp. Per-job knobs: skills, model/provider override, script (pre-run data collection; no_agent=True makes the script the whole job), context_from (chain job A's output into job B), workdir (run in a specific dir with its AGENTS.md / CLAUDE.md loaded), multi-platform delivery."
+        ]
+      },
+      {
+        "url": "https://www.dailydoseofds.com/p/hermes-agent-masterclass/",
+        "title": "Hermes Agent Masterclass",
+        "description": "Everything you need to understand and customize Hermes Agent.",
+        "thumbnail_url": "https://storage.ghost.io/c/3f/df/3fdf6ed2-17ac-4b12-a693-8078bd13e748/content/images/2026/05/b526bcd4-4732-4c62-8372-826d45ed663a_722x511.webp",
+        "original_thumbnail_url": "https://storage.ghost.io/c/3f/df/3fdf6ed2-17ac-4b12-a693-8078bd13e748/content/images/2026/05/b526bcd4-4732-4c62-8372-826d45ed663a_722x511.webp",
+        "page_age": "2026-05-14T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.dailydoseofds.com&size=128",
+        "snippets": [
+          "Model choice, terminal backend, tool enablement, MCP servers all live here. Edit with hermes config edit or set values one at a time with hermes config set  . .env holds your secrets. API keys, bot tokens, passwords. Hermes routes secret-looking values here automatically. SOUL.md is slot #1 in the system prompt, before everything else.",
+          "The researcher’s SOUL.md says it’s responsible for a daily Telegram digest. That implies a job running on its own schedule, without you remembering to ask. That’s what Hermes cron is for.",
+          "Hermes solves this with a single file: SOUL.md.",
+          "It lives at ~/.hermes/SOUL.md and occupies slot #1 in the system prompt, before anything else loads."
+        ]
+      },
+      {
+        "url": "https://www.mindstudio.ai/blog/hermes-agent-five-pillars-memory-skills-soul-crons",
+        "title": "Hermes Agent Five Pillars: Memory, Skills, Soul, Crons, and ...",
+        "description": "Hermes Agent is built on five core pillars that make it a self-improving personal AI. Learn how memory, skills, crons, and the soul file work together.",
+        "thumbnail_url": "https://i.mscdn.ai/70cbb1ad-08d7-4fdc-ab31-e343780966a6/generated-images/efa664b5-3c6b-4e92-8cfc-c24e2d235980.png?fm=auto&#38;w=1200&#38;h=630&#38;fit=crop",
+        "original_thumbnail_url": "https://i.mscdn.ai/70cbb1ad-08d7-4fdc-ab31-e343780966a6/generated-images/efa664b5-3c6b-4e92-8cfc-c24e2d235980.png?fm=auto&#38;w=1200&#38;h=630&#38;fit=crop",
+        "page_age": "2026-05-10T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mindstudio.ai&size=128",
+        "snippets": [
+          "Hermes Agent is a framework for building personal AI assistants organized around five core pillars: memory, skills, soul, crons, and self-improvement. Rather than treating AI as a stateless chatbot, it defines the architectural components that make an agent genuinely useful over time.",
+          "Hermes Agent is an architecture for personal AI that prioritizes continuity, autonomy, and growth.",
+          "That’s the problem Hermes Agent was designed to solve. Built around five core pillars — memory, skills, soul, crons, and self-improvement — it’s a framework for what a truly capable personal AI looks like.",
+          "Platforms like MindStudio provide the building blocks — persistent memory, integrations, scheduled runs, configurable personas — through a visual no-code builder. You can assemble an agent that covers all five Hermes pillars without writing infrastructure code, though custom JavaScript or Python can extend capability when needed."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "Hermes Agent official docs architecture memory skills cron MCP profiles SOUL.md",
+    "search_uuid": "58dd14c6-a22a-483a-b963-4f3274043ba2",
+    "latency": 0.5820591449737549
+  }
+}

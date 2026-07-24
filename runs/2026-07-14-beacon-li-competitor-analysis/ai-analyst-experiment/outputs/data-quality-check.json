@@ -1,0 +1,60 @@
+{
+  "company_rows": 11,
+  "scored_rows": 7,
+  "company_duplicate_names": 0,
+  "score_duplicate_vendors": 0,
+  "company_missing_confidence": 0,
+  "scores_out_of_range": 0,
+  "source_csv_parse_warnings": [
+    {
+      "line": 3,
+      "expected_fields": 12,
+      "actual_fields": 15
+    },
+    {
+      "line": 4,
+      "expected_fields": 12,
+      "actual_fields": 16
+    },
+    {
+      "line": 5,
+      "expected_fields": 12,
+      "actual_fields": 15
+    },
+    {
+      "line": 6,
+      "expected_fields": 12,
+      "actual_fields": 13
+    },
+    {
+      "line": 7,
+      "expected_fields": 12,
+      "actual_fields": 16
+    },
+    {
+      "line": 8,
+      "expected_fields": 12,
+      "actual_fields": 15
+    },
+    {
+      "line": 11,
+      "expected_fields": 12,
+      "actual_fields": 15
+    }
+  ],
+  "scored_vendors_not_in_company_table": [
+    "Accenture/IBM",
+    "Pendo/Whatfix",
+    "WalkMe/SAP"
+  ],
+  "company_table_not_scored": [
+    "Appcues",
+    "Arrows",
+    "Dock",
+    "GuideCX",
+    "Pendo",
+    "WalkMe",
+    "Whatfix"
+  ],
+  "status": "warning"
+}

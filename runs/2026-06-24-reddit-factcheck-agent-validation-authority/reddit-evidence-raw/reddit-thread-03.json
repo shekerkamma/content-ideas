@@ -1,0 +1,317 @@
+{
+  "post": {
+    "title": "What are the real challenges of automating with AI agents?",
+    "author": "ibm",
+    "score": 911,
+    "content": "Automating with Agentic AI can get messy behind the scenes. Maybe a workflow breaks without context. Maybe tools don’t talk, or an agent takes an unexpected path. Let’s talk. What teams need to know about AI agents 🤖 Every team wants the efficiency. But let’s talk about the days where you want to get a handle on your AI agent. If you have worked with agents for more than a week, you know you want clarity on: → How your agent is performing → Whether dependencies are still valid → Where and why a failure occurred Without quick access to that information, it’s hard to know whether the workflow is operating as intended. Why devs keep talking about agentic workflows 🧑‍💻 Because we want to avoid : → brittle scripts that break if you look at them wrong → little insight into what happened at 3 AM → compliance checks that turn into hours of manual digging → debugging workflows that hop across systems like a squirrel Devs are chasing productivity and clarity. A solid agentic workflow adds structure where chaos normally lives: → predictable toolchains → guardrails that to keep agents from freelancing → transparent data flow you can actually trace Nobody wants magic. Everyone wants visibility. Governance is the part people might skip 🔒 Governance is not exciting, but it can be the difference between confidence and complete guesswork. You need to know: → what data the agent accessed → what tools it called and in what order → why it made the decision it made → where the failure happened when something breaks Monitoring tools can treat agents like ghosts. You cannot fix what you cannot see. Governance provides tracking. watsonx Orchestrate helps close this gap 🤝 Not more AI. Not fluff. Actual control. Actual insight. Actual clarity. Here is what you get: → A comprehensive view of your agents: One place to see every workflow, action and interaction. → A single monitoring dashboard: Usage, success rates, latency, drift and anomalies in real time. → Lifecycle tracking across the entire agent development lifecycle: From initial build through deployment and production. → Tool call accuracy checks: What the agent used. Why it used it. Whether it behaved correctly. This is the stuff teams ask for but may not get. What governance looks like in real life 👥 Customer Service Before: A ticket jumps three levels with no explanation. After: You can open the workflow and see why it escalated. Operations and DevOps Before: Issues across systems are hard to spot, and you lose hours digging for answers. After: Observability shows where things break so you can fix them quickly. Security and Compliance Before: An agent touches restricted data, and nobody notices until afterwards. After: Built-in governance can flag the access attempt and alert your team. These are the quiet problems that can turn into loud problems without proper visibility. Summary ✍️ Agentic workflows work best when agents are: → governable → measurable → auditable → observable → predictable This is how you can tell if your workflows are doing what you need them to . Now we want to hear from you! 🗣️ Poll: Let's talk automation challenges... Which of these scenarios feels most familiar? A. Automations that break with no explanation B. No visibility into agent performance C. Agents creating unexpected steps D. Dev to production without a meltdown Tell us what you’re seeing in the real world. Explore how IBM watsonx Orchestrate offers scalable agentic workflows and governance.",
+    "url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+    "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+    "subreddit": "u_ibm"
+  },
+  "comments": [
+    {
+      "id": "t1_nu6cqci",
+      "author": "Vaxtin",
+      "text": "Nobody is going to bring AI into their workflow other than developers, and they aren’t using AI the way you think they are. They’re just using it to write code faster which allows them to create the workflows you think you can automate with AI. They reality is that business specific workflows are too niche for someone to describe to an AI that does not have a CS background, and those that do take it to the fullest extant and create software that handles the automation, instead of using any agent as an intermediary. Good luck trying to save your investment. The world is not going to have an AI agent running their software behind the scenes. lol.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu6cqci/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntkeuek",
+      "author": "JustARandomDrunkGuy",
+      "text": "I do non-profit organizing, under no circumstances would I let my team rely on AI without strict oversight. I do prefer humans for most tasks though because they don’t have any of the issues mentioned in this article/advert. AI has good uses in agriculture, a few other industries but I know the most about AI and agriculture. This is not one of those good uses.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntkeuek/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntr3alk",
+      "author": "StalinIsBackAgain",
+      "text": "Did AI fully author this post? It is a good text whether create by AI or by a human being.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntr3alk/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntx0xw7",
+      "author": "VulpesFennekin",
+      "text": "Oh boy, 38 comments and I can’t see any? This would’ve been a fun read.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntx0xw7/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntx7utf",
+      "author": "stormblaz",
+      "text": "Perfect, just need the agent to provide unlimited potato salad recipes",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntx7utf/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntofraq",
+      "author": "Valkreaper",
+      "text": "How about we don’t give everything we’re working on to an ai",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntofraq/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntsw02q",
+      "author": "micseydel",
+      "text": "Lol why are there 20 comments, but none are visible?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntsw02q/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntq769v",
+      "author": "",
+      "text": "Maybe we use humans instead, ever thought of that",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntq769v/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu7dqvn",
+      "author": "InnovativeBureaucrat",
+      "text": "I wish this was a real post with comments.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu7dqvn/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu9b6xl",
+      "author": "Gullible_Bear_5725",
+      "text": "Love that you guys used AI to write this!",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu9b6xl/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu1gyqq",
+      "author": "Crunchy_Biscuit",
+      "text": "We don't want AI to take jobs",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu1gyqq/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nujj73b",
+      "author": "",
+      "text": "Nobody likes them or wants them",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nujj73b/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu5ec39",
+      "author": "imoverhere29",
+      "text": "That looks like chatgpt output",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu5ec39/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu0jqrz",
+      "author": "rilesmcjiles",
+      "text": "Mostly that they don't work",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu0jqrz/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nuctkui",
+      "author": "TubeOfOintment",
+      "text": "AI is destroying the planet",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nuctkui/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nulop1p",
+      "author": "Viracochina",
+      "text": "Why can't I see comments?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nulop1p/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntobrpl",
+      "author": "Wind2Energy",
+      "text": "AI RUINS EVERYTHING .",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntobrpl/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu4859x",
+      "author": "idownvotefirecapes",
+      "text": "i vibe code everything",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu4859x/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu5mthn",
+      "author": "Natufian_Ted_Nugent",
+      "text": "Me and my boys hate AI",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu5mthn/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu6kruk",
+      "author": "Aggressive-Ideal-911",
+      "text": "This was written by ai",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu6kruk/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntowd3f",
+      "author": "SupermarketNo3265",
+      "text": "Thanks ChatGPT",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntowd3f/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntucso4",
+      "author": "InquisitiveMushroom",
+      "text": "This is terrible",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntucso4/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nuptsf3",
+      "author": "FrenchCanadaIsWorst",
+      "text": "Written with AI",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nuptsf3/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nuvawye",
+      "author": "fanboyree",
+      "text": "Pop the bubble",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nuvawye/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntka9do",
+      "author": "00403",
+      "text": "🤷‍♂️",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntka9do/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nur1sth",
+      "author": "Joeygrtgamer",
+      "text": "Dude",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nur1sth/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu11u0k",
+      "author": "sand_sandwich",
+      "text": "Bad",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu11u0k/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nu483cg",
+      "author": "idownvotefirecapes",
+      "text": "lol",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu483cg/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_nto6ibx",
+      "author": "Metavance",
+      "text": "no",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nto6ibx/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    },
+    {
+      "id": "t1_ntwzbvg",
+      "author": "",
+      "text": "Ok",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/ntwzbvg/",
+      "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+      "subreddit": "u_ibm"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+    "method": "old_reddit_html"
+  }
+}

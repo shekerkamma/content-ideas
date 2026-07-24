@@ -1,0 +1,29 @@
+{
+  "id": "topic-e6aa53877f42",
+  "date": "2026-07-01",
+  "title": "Agent harnesses and developer tools: best daily content opportunity",
+  "theme": "Agent harnesses and developer tools",
+  "source_item_ids": [
+    "src-89a01273dbfb",
+    "src-a124a76c972d",
+    "src-a64f9582be65",
+    "src-a9c320e72be6"
+  ],
+  "score": 82.55,
+  "score_breakdown": {
+    "business_relevance": 92,
+    "source_authority": 86.25,
+    "freshness": 80,
+    "novelty": 70,
+    "implementation_value": 74,
+    "audience_fit": 82
+  },
+  "score_reasons": [
+    "4 source item(s) found in the cluster",
+    "Priority is high",
+    "Topic fits the operator-facing AI content strategy"
+  ],
+  "recommended_angle": "Explain what changed in Agent harnesses and developer tools and convert it into a practical implementation narrative for AI operators.",
+  "audience_fit": "AI operators, enterprise solution architects, and founders evaluating agent workflows",
+  "status": "ranked"
+}

@@ -1,0 +1,155 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.uipath.com/automation/agentic-automation",
+        "title": "What is Agentic Automation? | UiPath",
+        "description": "Discover how agentic automation, powered by advanced AI like LLMs, GenAI, and LAMs, marks the next evolution in automation by enabling software agents to take autonomous action.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "With agentic automation delivered through advanced automation technology, agents can now handle these types of probabilistic, less-well-structured tasks, allowing more processes to be fully automated end-to-end. The result: a high-performing, accurate automated process on the one hand, and more time for people to focus productively on higher-impact work on the other. For many enterprises, many decisions require rapidly analyzing massive amounts of data, drawing accurate conclusions, and taking quick action (think, for example, about real-time supply chain optimization, instant fraud identification, or on-demand next-best customer actions).",
+          "Now, with the addition of agentic automation to the panoply of automation approaches, we can automate complex business processes that were previously too non-routinized, or unpredictable to be automated. That means enterprises can now fully automate complex end-to-end workflows.",
+          "Agentic automation may include processes involving sensitive data, making data privacy and security a top concern. As these systems become increasingly interconnected with enterprise applications and infrastructure, implementing stringent security measures is a must-have.",
+          "A process orchestration capability must be able to support dynamic workflow execution—that is, ensuring that multiple agents performing a range of different tasks can efficiently work together in harmony. And it must also enable multi-agent collaboration, so that processes involving multiple agents, robots, and people happen smoothly and synchronously. End-to-end processes almost always involve multiple systems, apps, and technologies. Therefore, orchestration capabilities should be cross-enterprise and agnostic—able to work across the entire enterprise technology ecosystem."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/resources/automation-whitepapers/boost-productivity-with-agentic-automation",
+        "title": "Boost Productivity with Agentic Automation: E-Book | UiPath",
+        "description": "Agentic automation is an evolutionary leap in how enterprises leverage AI-driven technologies to enhance productivity and operational efficiency. Agentic automation empowers AI agents, human employees, and automation robots to automate complex workflows end to end, transforming the enterprise ...",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Agentic automation is an evolutionary leap in how enterprises leverage AI-driven technologies to enhance productivity and operational efficiency. Agentic automation empowers AI agents, human employees, and automation robots to automate complex workflows end to end, transforming the enterprise landscape.",
+          "Get your copy of Enterprise-wide transformation E-Book to learn how agentic automation boosts productivity, and scales AI agents for business success.",
+          "It lays out the core principles for enterprise-wide transformation using agentic automation, providing a robust framework for continuous improvement and adaptation in financial services and other industries. Download your copy of Enterprise-wide transformation: Boosting productivity with agentic automation, and learn:",
+          "How strategic deployment of agentic automation enhances productivity across the enterprise"
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/ai/agentic-ai",
+        "title": "What is Agentic AI? | UiPath",
+        "description": "Discover Agentic AI, a breakthrough advancement in artificial intelligence that creates autonomous agents capable of analyzing data, setting goals, and taking action on their own.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Agentic AI is a new form of AI that enables agents to act autonomously to pursue goals, performing complex, decision-intensive workflows that until recently were considered too dynamic, contextual, and consequential to be automated. Agentic AI reaches enterprise scale through BOAT (Business Orchestration and Automation Technologies) the category that describes the integrated set of capabilities, including AI agents, robots, orchestration, and people, that work together to automate complex, end-to-end business workflows.",
+          "These capabilities help teams validate system behavior, detect drift or unexpected outcomes, and maintain reliable, compliant operation across workflows. By powering next-generation AI agents to perform a wider array of complex tasks than ever before possible, agentic AI vastly expands what can be automated. For enterprises, this delivers a number of important benefits:",
+          "BOAT is the category that describes the integrated set of technologies, AI agents, robots, orchestration, and people—that work together to deliver agentic AI at enterprise scale. Through BOAT, organizations can automate end-to-end business workflows that combine autonomous decision making with structured system actions, all within a governed and observable environment.",
+          "Where GenAI stops at creation, agentic AI continues implementing actions, triggering workflows, and adapting to new circumstances. Together, these technologies are complementary. For example, GenAI might draft marketing content, while agentic AI launches and iterates the campaign automatically based on real-time performance data."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/community-blog/tutorials/agentic-automation-with-uipath-autopilot",
+        "title": "Agentic automation with UiPath Autopilot™ for everyone | Community ...",
+        "description": "Discover UiPath Autopilot for Everyone: A powerful tool that enables dynamic workflow execution with intelligent agents, simplifying automation and empowering productivity",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "If you'd like to be at the forefront of multi-agency and experience the official UiPath Agent Builder capability, delivering enterprise agents, make sure you register to their preview program. Use the link below to get ready with your agentic use cases! ... UiPath Autopilot for Everyone isn’t just another automation tool. It is a way to rethink how you manage complex workflows.",
+          "These tools can be as simple as download tools, web scraping tools, web search tools, or direct integrations with your third party systems like CRM, productivity tools, ERP, etc, with a definite set of input and output parameters. But at the same time,‌ regarding a complex end-to-end process, it can never be just a discrete number of scenarios. There can be lots ‌of nuances and exception paths, that can never be defined in a static workflow. But agents could create the processes, through planning, reasoning, and action orchestrations.",
+          "In contrast, having one agent do everything would make it harder to troubleshoot issues, scale up, or customize parts of the workflow. In short, having multiple agents helps to focus on specific roles or tasks, allowing its context window to not ‌be contaminated. It also lowers overall complexity and helps with modularity and you can change a specific agent behavior without having to change the main one or even having to deal with the unpredictable side effects of changing a big system prompt. Linked video below, is an 'unofficial' implementation of Autopilot interacting with an external multi-agent system.",
+          "Explore UiPath Autopilot™ for Everyone, a tool that lets you use agents to execute workflows or specialized tools dynamically. Elevate your development skills and explore new possibilities in automation — sign up for UiPath free trial today and transform the way you build software."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/blog/ai/agentic-automation-path-to-orchestrated-enterprise",
+        "title": "Agentic automation: the path to an orchestrated enterprise | UiPath",
+        "description": "Humans will use agents and robots ... their productivity, creating new agentic workflows as needed. Human in the loop will be crucial for exception management, with employees stepping in to solve ‌problems that agents and robots can’t. Human judgment, compassion, and responsibility can’t be replicated. That’s why people are the leaders, supervisors, and ultimate decision makers of agentic automation. Agents are core to agentic automation. But enterprises don’t just ...",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/5KQBtcewpH0BHNKYtwB8pQ/af54bd2d78c33011ee208aa0aea2773f/644938360-adobestock_292340795__1_.jpg",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/5KQBtcewpH0BHNKYtwB8pQ/af54bd2d78c33011ee208aa0aea2773f/644938360-adobestock_292340795__1_.jpg",
+        "page_age": "2024-12-10T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Humans will use agents and robots as tools to supercharge their productivity, creating new agentic workflows as needed. Human in the loop will be crucial for exception management, with employees stepping in to solve ‌problems that agents and robots can’t. Human judgment, compassion, and responsibility can’t be replicated. That’s why people are the leaders, supervisors, and ultimate decision makers of agentic automation. Agents are core to agentic automation. But enterprises don’t just need autonomous agents who can do things—they need enterprise agents they can trust to do them safely, accurately, and reliably.",
+          "Take a deeper dive into the UiPath vision of how all the pieces of agentic automation fit together.",
+          "Combining agents, robots, AI, and people, agentic automation can automate even the longest, most complex processes end to end. Working effortlessly across disparate systems, it will deliver transformational outcomes across the enterprise, making businesses more autonomous and productive while enhancing the experiences of customers and employees.",
+          "Investment has poured into siloed enterprise systems, with the average large company now using over 175 enterprise applications across their workflows. Data has become more siloed and processes more fragmented. Many decisions within a workflow aren't clear-cut, requiring people to step in—all of which adds to the operational burden. Finally, the complexity of these processes means they cannot cohesively be monitored, optimized, or fully automated. A new era for automation—agentic automation—provides a new path forward."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/ai/agentic-workflows",
+        "title": "What are Agentic Workflows? | UiPath",
+        "description": "What’s the real potential of agentic automation for your enterprise? What’s the right way to apply it in transforming your enterprise? Get real-world, experienced-based answers to these questions—and many more— in this joint report by PwC and UiPath. Agentic workflows bring remarkable capabilities to the table, but they’re not without their challenges. Like any cutting-edge technology, successful implementation ...",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "What’s the real potential of agentic automation for your enterprise? What’s the right way to apply it in transforming your enterprise? Get real-world, experienced-based answers to these questions—and many more— in this joint report by PwC and UiPath. Agentic workflows bring remarkable capabilities to the table, but they’re not without their challenges. Like any cutting-edge technology, successful implementation requires navigating a few hurdles.",
+          "Discover how agentic workflows revolutionize automation with AI agents, generative AI, and NLP, enabling adaptive, real-time decision-making without oversight.",
+          "Some problems are so complex they’ve historically been out of reach for automation. Agentic workflows are breaking those barriers. By integrating advanced tools like LLMs and generative AI, they tackle challenges in industries like healthcare—think personalized treatment recommendations—and technology, where they power iterative product design and testing.",
+          "Global coordination: AI agents streamline tasks such as warehouse allocation and fleet management, ensuring seamless operations from production to delivery. In a data-driven industry like finance, agentic workflows provide a competitive edge by automating complex processes and enhancing decision making:"
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/platform/agentic-automation",
+        "title": "Agentic Automation Platform & Features | UiPath",
+        "description": "See how unified orchestration turns AI agents and automation into coordinated performance that drives results. Most agents never make it to production. Learn why the platform is the difference, ensuring agents are secure, governed, reliable, and ready to deliver enterprise outcomes. ... Free up HR teams for more valuable work while ensuring compliance with SAP® workflows...",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/3m2Xa9fD2WA0K7pjCgBTKS/9117d5ec45e082ffcef646c6d38c8f81/ui-251022-brand-cleanup-twitter-url-v2-1200x630.png",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Discover UiPath Agentic Automation—where agents think, robots do, and people lead. See agentic automation in action!",
+          "Agent Builder enables enterprises to create, customize, and deploy AI agents for complex processes like invoice dispute resolution. ... Bringing together AI agents, robots, tools, AI models, and people to transform processes end to end. ... If UI interfaces change, no problem. UiPath Healing agent will automatically adapt for uninterrupted automation. ... A conversational AI agent that boosts everyone’s productivity from interns to CEOs.",
+          "Identify opportunities, automate processes end-to-end, make informed decisions, and execute tasks with consistency and accuracy. ... Reuse assets to launch AI workflows in weeks, not months Explore Agentic AI Explore RPA & API Explore IDP · Maestro coordinates hybrid work—AI agents, robots, people—across long-running, adaptive processes · Real-time decisioning turns siloed AI investments into enterprise outcomes",
+          "Deploy prebuilt, industry- and use-case-tailored automation solutions with robots and AI agents · Get enterprise-grade workflows that start delivering results in weeks, not months"
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/blog/ai/agentic-automation-reinventing-workflows",
+        "title": "Make the leap to light speed with agentic automation | UiPath",
+        "description": "From robotic process automation ... has made enterprises more productive, profitable, and agile. But now, something bigger is happening. A new technology—agentic automation—is disrupting this cycle of incremental improvement, unlocking workflow reinvention the likes ...",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/7egAGT9oVl00EswDcl7RjP/1196dc09b7d9443223aa41b9ee3d9dfd/event-241115-uipath-live-blog-post-hero-image-2000x1000.jpg",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/7egAGT9oVl00EswDcl7RjP/1196dc09b7d9443223aa41b9ee3d9dfd/event-241115-uipath-live-blog-post-hero-image-2000x1000.jpg",
+        "page_age": "2025-02-25T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "From robotic process automation (RPA) to intelligent document processing (IDP), each new innovation has made enterprises more productive, profitable, and agile. But now, something bigger is happening. A new technology—agentic automation—is disrupting this cycle of incremental improvement, unlocking workflow reinvention the likes of which we’ve never seen.",
+          "So it's created this openness between the product and the tech teams that we haven't had in traditional coding in the past. Emily Krohne, Enterprise Automation Principal at WEX · Let’s address the elephant in the room: with the ability to function across systems and processes, how can I be sure agents do what I want them to do? It's a valid concern. Agents are non-deterministic, and their inherent unpredictability is part of what makes them so powerful. Implementing agentic automation safely requires the right guardrails to ensure agents operate reliably, securely, and transparently.",
+          "Discover how enterprises are unlocking unprecedented efficiency by leveraging agentic automation to tackle complex workflows from end to end.",
+          "Now, AI agents handle this variability automatically. They extract key details, cross-check them against compliance requirements, and escalate only the most complex cases to human teams. Varying inputs aren’t the only barrier to widespread enterprise automation. There’s also overwhelming process complexity. Too many conditional \"if\" statements, too many variations, too many exceptions…at a certain point, trying to automate workflows like these with traditional methods becomes unwieldy."
+        ]
+      },
+      {
+        "url": "https://www.uipath.com/blog/product-and-updates/orchestrating-the-agentic-enterprise-whats-new-in-uipath-2025-10",
+        "title": "Orchestrating the agentic enterprise: what’s new in UiPath 2025.10 ...",
+        "description": "The UiPath 2025.10 release expands Maestro with new Case Management, Process Apps, and orchestration features that give enterprises greater visibility, control, and productivity.",
+        "thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/6GwpAiOcR69dACt9cxxVA3/a5e33a0388de195f3ca474105e59e75a/stock-photo-stocksy-txpb437412926G300-original-delivery-3346510-1920x960-jpg.jpg",
+        "original_thumbnail_url": "https://images.ctfassets.net/5965pury2lcm/6GwpAiOcR69dACt9cxxVA3/a5e33a0388de195f3ca474105e59e75a/stock-photo-stocksy-txpb437412926G300-original-delivery-3346510-1920x960-jpg.jpg",
+        "page_age": "2025-11-19T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.uipath.com&size=128",
+        "snippets": [
+          "Even the most elegantly designed workflow can’t deliver consistent results if it’s fed by incomplete, outdated, or siloed information. In most enterprises, this remains the norm: customer records in CRM, transactions in ERP, risk data in spreadsheets, and operational metrics scattered across analytics tools. Now in preview, UiPath Data Fabric closes this gap by serving as the unified data backbone for agentic automation.",
+          "Without orchestration, enterprises risk repeating the productivity paradox: massive investment, minimal transformation. We introduced UiPath Maestro™ earlier this year to give enterprises a way to turn disjointed automation and AI efforts into cohesive, outcome-driven workflows.",
+          "Its promise lies not in automating isolated tasks but in restructuring entire workflows around intelligence and data flow. Take customer onboarding in financial services. A single process might involve document extraction, background checks, credit scoring, risk assessment, and human review. Each step may be automated or AI-enabled, yet if they operate independently—without shared context, visibility, or governance—the process still breaks. The inefficiency simply moves faster. That’s where agentic orchestration proves essential.",
+          "Modeling enterprise workflows has traditionally been slow and technical. Teams would spend weeks mapping processes, translating business logic into BPMN diagrams, and aligning IT with operations before anything could run in production."
+        ]
+      },
+      {
+        "url": "https://ir.uipath.com/news/detail/382/how-agents-are-accelerating-enterprise-wide-transformation-uipath-to-unveil-latest-agentic-automation-solutions-at-agentic-ai-summit",
+        "title": "How Agents are Accelerating Enterprise-Wide Transformation: UiPath ...",
+        "description": "NEW YORK--(BUSINESS WIRE)-- UiPath ... for implementing agentic AI and automation to deliver consistent, reliable, and transformative business outcomes. Agentic automation integrates AI agents, robots, and people to streamline operations, automate complex end-to-end business processes with multiple workflows and contextual decision-making, improve scalability, and unlock new levels of productivity...",
+        "thumbnail_url": "https://d1io3yog0oux5.cloudfront.net/_007ac455dd2bcbfdab3ec20deef8c613/uipath/db/1188/12856/social_image_resized.jpg",
+        "original_thumbnail_url": "https://d1io3yog0oux5.cloudfront.net/_007ac455dd2bcbfdab3ec20deef8c613/uipath/db/1188/12856/social_image_resized.jpg",
+        "page_age": "2025-03-18T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=ir.uipath.com&size=128",
+        "snippets": [
+          "NEW YORK--(BUSINESS WIRE)-- UiPath (NYSE: PATH), a leading enterprise automation and AI software company, today announced its annual UiPath Agentic AI Summit will take place online on March 25, offering attendees deeper insight into the latest UiPath agentic automation innovations and strategies for implementing agentic AI and automation to deliver consistent, reliable, and transformative business outcomes. Agentic automation integrates AI agents, robots, and people to streamline operations, automate complex end-to-end business processes with multiple workflows and contextual decision-making, improve scalability, and unlock new levels of productivity.",
+          "UiPath to hold Agentic AI Summit on March 25 to demonstrate its latest agentic automation innovations and how UiPath customers are…...",
+          "These agents handle complex workflows, provide autonomous decision-making, and integrate various enterprise tools and applications at scale. Agent Builder features include from-scratch agent creation, pre-built templates, testing tools, API deployment, and seamless workflow integration. At the summit, UiPath will also announce the launch of UiPath Test Cloud, a revolutionary new approach to software testing that uses advanced AI to amplify tester productivity across the entire testing lifecycle to help customers achieve greater efficiency and cost savings.",
+          "At the Summit, viewers will learn how to unlock and accelerate agentic automation initiatives with AI agents that are equipped with enterprise-grade tools and capabilities, orchestrated in complex, end-to-end workflows with robots and human-in-the-loop."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:uipath.com agentic automation enterprise workflow productivity implementation",
+    "search_uuid": "9070c01e-068b-4347-9141-59b51436d2ea",
+    "latency": 0.5863656997680664
+  }
+}

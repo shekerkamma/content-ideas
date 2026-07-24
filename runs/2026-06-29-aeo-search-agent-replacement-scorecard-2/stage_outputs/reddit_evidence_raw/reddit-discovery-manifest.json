@@ -1,0 +1,88 @@
+{
+  "method": "old_reddit_html",
+  "queries": [
+    "subreddit:PPC ad & creative generation at scale AI workflow pain workaround objection comparison",
+    "subreddit:Entrepreneur ai shopping / sales consultant AI workflow pain workaround objection comparison",
+    "subreddit:CustomerSuccess conversational support AI workflow pain workaround objection comparison",
+    "subreddit:Entrepreneur doc summarization & drafting AI workflow pain workaround objection comparison",
+    "subreddit:Lawyertalk legal research & drafting AI workflow pain workaround objection comparison",
+    "subreddit:CustomerSuccess messaging-channel chatbot AI workflow pain workaround objection comparison",
+    "subreddit:PPC personalized marketing content AI workflow pain workaround objection comparison",
+    "subreddit:Entrepreneur travel & booking planner AI workflow pain workaround objection comparison"
+  ],
+  "threads": [
+    {
+      "title": "I got into the ChatGPT Ads Manager beta — sharing my first campaign setup, will report back with data",
+      "url": "https://old.reddit.com/r/PPC/comments/1tjds0l/i_got_into_the_chatgpt_ads_manager_beta_sharing/",
+      "query": "subreddit:PPC ad & creative generation at scale AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-01.json",
+      "comments": 52,
+      "post_title": "I got into the ChatGPT Ads Manager beta — sharing my first campaign setup, will report back with data",
+      "subreddit": "PPC"
+    },
+    {
+      "title": "I spent $47k and 18 months building an \"AI startup.\" Here's the brutal truth about why 90% of AI businesses are doomed.",
+      "url": "https://old.reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/",
+      "query": "subreddit:Entrepreneur ai shopping / sales consultant AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-02.json",
+      "comments": 80,
+      "post_title": "I spent $47k and 18 months building an \"AI startup.\" Here's the brutal truth about why 90% of AI businesses are doomed.",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "title": "This pitch deck made me over $200k",
+      "url": "https://old.reddit.com/r/Entrepreneur/comments/1loy2bg/this_pitch_deck_made_me_over_200k/",
+      "query": "subreddit:Entrepreneur ai shopping / sales consultant AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-03.json",
+      "comments": 80,
+      "post_title": "This pitch deck made me over $200k",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "title": "[Requested] Nobody wants to talk about buying a septic business. Thats exactly why the margins are 60%+ and the multiples are 2.5x. Full breakdown inside.",
+      "url": "https://old.reddit.com/r/Entrepreneur/comments/1sb2zxs/requested_nobody_wants_to_talk_about_buying_a/",
+      "query": "subreddit:Entrepreneur ai shopping / sales consultant AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-04.json",
+      "comments": 78,
+      "post_title": "[Requested] Nobody wants to talk about buying a septic business. Thats exactly why the margins are 60%+ and the multiples are 2.5x. Full breakdown inside.",
+      "subreddit": "Entrepreneur"
+    },
+    {
+      "title": "The Future of CS Might Be Strategic Account Management",
+      "url": "https://old.reddit.com/r/CustomerSuccess/comments/1tc0xni/the_future_of_cs_might_be_strategic_account/",
+      "query": "subreddit:CustomerSuccess conversational support AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-05.json",
+      "comments": 50,
+      "post_title": "The Future of CS Might Be Strategic Account Management",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "title": "AI support is breaking for the same reason old support systems broke, no operational layer.",
+      "url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "query": "subreddit:CustomerSuccess conversational support AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-06.json",
+      "comments": 32,
+      "post_title": "AI support is breaking for the same reason old support systems broke, no operational layer.",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "title": "Customer Kickoffs are Killing me.",
+      "url": "https://old.reddit.com/r/CustomerSuccess/comments/1ohwpfx/customer_kickoffs_are_killing_me/",
+      "query": "subreddit:CustomerSuccess conversational support AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-07.json",
+      "comments": 73,
+      "post_title": "Customer Kickoffs are Killing me.",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "title": "AI is killing “how-to” work. The real job is picking “what to do” and “why”.",
+      "url": "https://old.reddit.com/r/Entrepreneur/comments/1pych6j/ai_is_killing_howto_work_the_real_job_is_picking/",
+      "query": "subreddit:Entrepreneur doc summarization & drafting AI workflow pain workaround objection comparison",
+      "output": "runs/2026-06-29-aeo-search-agent-replacement-scorecard-2/stage_outputs/reddit_evidence_raw/reddit-thread-08.json",
+      "comments": 64,
+      "post_title": "AI is killing “how-to” work. The real job is picking “what to do” and “why”.",
+      "subreddit": "Entrepreneur"
+    }
+  ],
+  "thread_count": 8
+}

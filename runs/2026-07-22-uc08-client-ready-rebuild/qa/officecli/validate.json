@@ -1,0 +1,12 @@
+{
+  "name": "validate",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "validate",
+    "runs/2026-07-22-uc08-client-ready-rebuild/UC-08-Multi-Model-Coding-Pilot-Client-Ready-draft.pptx",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": \"Validation passed: no errors found.\",\n  \"message\": \"Validation passed: no errors found.\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,140 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.workato.com/platform",
+        "title": "Workato Platform Features and Benefits | Workato",
+        "description": "Experience Workato's enterprise orchestration platform designed for powerful integrations and automation, connecting your business efficiently and securely.",
+        "thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "original_thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "From BYOK and hourly key rotation to container isolation and full audit trails, Workato offers end-to-end protection aligned with enterprise compliance standards like SOC 2, ISO 27001, and PCI.",
+          "Maintains enterprise-grade certifications and automated controls—ensuring adherence to SOC 2 Type II, ISO 27001, PCI DSS, and GDPR standards.",
+          "Power real-time business by connecting to the events that matter — from app updates to partner workflows and external transactions.",
+          "Securely expose and manage APIs with built-in gateway, federation, and portal capabilities — designed for internal teams and external partners alike."
+        ]
+      },
+      {
+        "url": "https://docs.workato.com/security.html",
+        "title": "Security | Workato docs",
+        "description": "Explore Workato security features for access and authentication, data protection, and best practices that give you control over key security controls.",
+        "favicon_url": "https://you.com/favicon?domain=docs.workato.com&size=128",
+        "snippets": [
+          "Customers using a SAML-based SSO provider can use just-in-time provisioning to automatically create Workato users. This eliminates the need to manually configure user accounts and further enhances the enforcement of security policies. For more information, see Team collaboration - Just in time provisioning. To minimize the risk of data exposure, Workato follows the principle of least privilege through a role-based access control (RBAC) model when provisioning system access.",
+          "For more information, see Audit log streaming. We recommend implementing one of the following authentication methods for enhanced security: Two-factor authentication (2FA): Enable 2FA to add an extra layer of protection to your account. Single sign-on (SSO) with SAML: Enforce SSO with SAML for centralized access management and improved user experience.",
+          "Workspace admins use role-based access control (RBAC) to manage collaborator access to projects, folders, and assets.",
+          "Workato supports integration with third-party SAML-compliant SSO systems."
+        ]
+      },
+      {
+        "url": "https://docs.workato.com/security/security-faqs.html",
+        "title": "Security FAQs | Workato docs",
+        "description": "Get answers to frequently asked security questions · Workato has a comprehensive approach to security, including a complete security program with documented policies and procedures, verified by an annual audit, secure development and testing, a secure and scalable infrastructure, and product ...",
+        "favicon_url": "https://you.com/favicon?domain=docs.workato.com&size=128",
+        "snippets": [
+          "SOC 1 Type II, SOC 2 Type II, and SOC 3: Audited controls for financial and security integrity. HIPAA: Healthcare data protection, with Business Associate Agreements (BAAs) available. IRAP: Strict cybersecurity standards aligned to Australian government requirements. NIST 800-171A r2: Controlled Unclassified Information (CUI) protection for federal contractors, partners, and subcontractors.",
+          "Refer to the SSO documentation for a complete list of SSO options. How does Workato handle user provisioning and authorization to minimize data exposure? Workato follows the principle of least privilege through a role-based access control (RBAC) model when provisioning system access.",
+          "Workato has a comprehensive approach to security, including a complete security program with documented policies and procedures, verified by an annual audit, secure development and testing, a secure and scalable infrastructure, and product capabilities that enhance security.",
+          "What single sign-on (SSO) options does Workato support?"
+        ]
+      },
+      {
+        "url": "https://docs.workato.com/process-automation.html",
+        "title": "Process automation | Workato docs",
+        "description": "Workato process automation lets organizations design, run, and manage no-code workflows that connect apps and data across cloud and on-premises systems.",
+        "page_age": "2026-06-30T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=docs.workato.com&size=128",
+        "snippets": [
+          "Workato allows automatic creation of user accounts using SAML-based SSO, aligning with security policies. Role-based access control (RBAC) implements the principle of least privilege, minimizing data exposure risk.",
+          "RBAC encompasses controlling access to connections, API endpoints, integration configurations, and other critical aspects. ... Workato logs user activities in the activity audit log, providing an audit trail that administrators can review to track changes, monitor usage, and ensure compliance with security policies.",
+          "Workato maintains the following compliance frameworks: PCI-DSS v4.0.1 − Level 1, ISO 27001, ISO 27701, ISO 42001, SOC 1 Type II, SOC 2 Type II, SOC 3, HIPAA, IRAP, and NIST 800-171A r2. In addition, Workato provides an activity audit log to track user actions, supporting external analysis and data retention.",
+          "Workato adheres to the latest TLS and HTTPS standards for secure data transmission. The platform also supports Single Sign-On (SSO) through SAML-compliant systems and third-party credentials like Google and Microsoft Office 365."
+        ]
+      },
+      {
+        "url": "https://docs.workato.com/workato-faqs.html",
+        "title": "Workato FAQs | Workato docs",
+        "description": "Get answers to frequently asked questions (FAQs) about Workato · Workato is an intelligent automation platform that enables both business and IT teams to integrate apps and automate business workflows without compromising security and governance",
+        "favicon_url": "https://you.com/favicon?domain=docs.workato.com&size=128",
+        "snippets": [
+          "Workato follows industry-standard security practices, including encryption of data in transit and at rest, role-based access control (RBAC), and audit logs. Workato maintains the following compliance frameworks: PCI-DSS v4.0.1 − Level 1: Secure cardholder data. ISO 27001, 27701 & 42001: Information, privacy, and AI management aligned with global standards. SOC 1 Type II, SOC 2 Type II, and SOC 3: Audited controls for financial and security integrity.",
+          "NIST 800-171A r2: Controlled Unclassified Information (CUI) protection for federal contractors, partners, and subcontractors. Users can also implement additional security measures like IP whitelisting and single sign-on (SSO).",
+          "Workato has a comprehensive approach to security, which includes a complete security program with documented policies and procedures, secure development and testing, a secure and scalable infrastructure, and product capabilities that enhance security. Workato employs encryption for data at rest and in transit, supports SAML 2.0-based authentication, two-factor authentication, and has robust access control with role-based access control (RBAC) for assigning user privileges.",
+          "Product docs (English)"
+        ]
+      },
+      {
+        "url": "https://docs.workato.com/security/security-compliance.html",
+        "title": "Security compliance | Workato docs",
+        "description": "Workato prioritizes data security and regulatory compliance, ensuring that users can rely on our platform to automate workflows and integrate applications without compromising sensitive data · Workato maintains comprehensive security compliance frameworks to safeguard customer data.",
+        "page_age": "2026-05-28T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=docs.workato.com&size=128",
+        "snippets": [
+          "SOC 1 Type II, SOC 2 Type II, and SOC 3: Audited controls for financial and security integrity. HIPAA: Healthcare data protection, with Business Associate Agreements (BAAs) available. IRAP: Strict cybersecurity standards aligned to Australian government requirements. NIST 800-171A r2: Controlled Unclassified Information (CUI) protection for federal contractors, partners, and subcontractors.",
+          "Audit reports available to customers under NDA. The SOC 2 Type II certification is aligned with the American Institute of CPAs (AICPA) Trust Services Criteria, and evaluates Workato’s effectiveness in the following data concerns:",
+          "Audit reports available to customers under NDA. Our SOC 3 certification provides independent validation of Workato's controls based on the same AICPA Trust Services Criteria as SOC 2:",
+          "Our SOC 1 Type II certification evaluates Workato’s controls related to customers’ financial reporting, specifically assessing the internal controls relevant to user entities’ financial statements. This compliance is essential for organizations that require financial statement audits, providing assurance on the impact of Workato’s services on their reporting."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/the-connector/data-protection-measures/",
+        "title": "A Guide to Workato Data Residency, Security, and Compliance",
+        "description": "Learn how Workato supports data residency, security, and compliance with EU data centers, encryption, audit logs, and GDPR standards.",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2021/05/workato-security-requirments-4.png",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2021/05/workato-security-requirments-4.png",
+        "page_age": "2026-05-08T06:00:11",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "The data your applications collect and store is often extremely sensitive. Your HRIS likely has identifiable information on employees, like...",
+          "We comply with GDPR, which imposes stringent data privacy and security standards for organizations that target and/or collect data from people living in the EU. In addition, we’ve been audited to the SOC-2 standard for over five years and completed another annual SOC-2 Type II security audit in 2020.",
+          "Jon Gitlin is the Managing Editor of The Connector, where you can get the latest news on Workato and uncover tips, examples, and frameworks for implementing powerful integrations and automations. In his free time, he loves to run outside, watch soccer (er...football) matches, and explore local restaurants.",
+          "We strive to pass and go well beyond the requirements set forth in important security regulations and audit evaluations."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/the-connector/workato-vs-jitterbit/",
+        "title": "Workato vs Jitterbit: Which Integration Platform Wins for Enterprise?",
+        "description": "If you are evaluating integration and automation platforms in 2025, Workato and Jitterbit will likely be on your shortlist. Which wins?",
+        "thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/05/Zapier-vs-Workato-Hero.webp",
+        "original_thumbnail_url": "https://workato.com/the-connector/wp-content/uploads/2024/05/Zapier-vs-Workato-Hero.webp",
+        "page_age": "2025-10-16T17:23:59",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Workato vs. Jitterbit: Which Integration & Automation Platform Wins for the Enterprise? If you are evaluating integration and automation platforms...",
+          "Workato is enterprise-grade by default, with SOC 1/2 Type II, ISO 27001/27701, HIPAA, PCI DSS Level 1, GDPR, and regional data centers. It offers patented runtime user authentication, granular RBAC/ABAC, EKM/BYOK, hourly key rotation, and out-of-the-box audit and monitoring. Jitterbit provides strong security with SOC 1/2/3, HIPAA, ISO certifications, and SSO/SCIM options.",
+          "Jitterbit includes an EDI application within its product suite, visible as its own app alongside Harmony. While it comes with a prebuilt library of trading partners, building EDI workflows can still be cumbersome, as it does not operate natively inside Harmony’s core integration environment.",
+          "In 2025, the question is no longer whether to automate, but how to orchestrate automation and AI with agility, security, and enterprise-wide trust."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/agentstudio",
+        "title": "Agent Studio | Build, Deploy & Govern Enterprise-Ready AI Agents ...",
+        "description": "Scale AI enterprise-wide with Agent Orchestration—automate multi-agent workflows, trigger event-driven actions, and maintain control with enterprise security.",
+        "thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "original_thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Genies orchestrate multi-step actions across 12,000+ applications, automating end-to-end business processes with repeatable, trusted actions. Patented user authorization, complete auditability, and fully managed MCP servers ensure every action is secure, compliant, and controlled at scale."
+        ]
+      },
+      {
+        "url": "https://www.workato.com/agentic/mcp",
+        "title": "Workato Enterprise MCP | Secure, Scalable Agent Access to Enterprise ...",
+        "description": "Workato Enterprise MCP provides AI agents secure, governed access to 12,000+ apps, verified user access, unified orchestration, and instant AI enablement.",
+        "thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "original_thumbnail_url": "https://public-workato-files.s3.us-east-2.amazonaws.com/Uploads/workato-logo-1.png",
+        "favicon_url": "https://you.com/favicon?domain=www.workato.com&size=128",
+        "snippets": [
+          "Become an agentic enterprise fast by enabling all of your apps and systems with trusted MCP servers, so agents can safely take real actions ... Agent actions inherit the authenticated user's identity, enforcing role-based access control and maintaining audit trails automatically.",
+          "Built on the #1 iPaaS. Trusted by Fortune 500."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:workato.com security trust SOC 2 ISO SSO RBAC audit logs data residency pricing partners marketplace agent studio",
+    "search_uuid": "a0cbadd7-b99c-4392-bd13-5c6937403b30",
+    "latency": 0.5353338718414307
+  }
+}

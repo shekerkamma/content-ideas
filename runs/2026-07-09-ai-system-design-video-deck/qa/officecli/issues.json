@@ -1,0 +1,13 @@
+{
+  "name": "issues",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-09-ai-system-design-video-deck/ai-system-design-video-deck-reviewed.pptx",
+    "issues",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"count\": 1,\n    \"issues\": [\n      {\n        \"id\": \"O1\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[3]/shape[@id=34]\",\n        \"message\": \"text overflow: 2 lines at 10.5pt need 22pt, usable 20pt. suggest.height=0.8cm\"\n      }\n    ]\n  }\n}\n",
+  "stderr": ""
+}

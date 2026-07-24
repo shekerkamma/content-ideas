@@ -1,0 +1,18 @@
+{
+  "id": "src-a124a76c972d",
+  "source_id": "openhands-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "OpenHands Docs signal for Agent harnesses and developer tools",
+  "url": "https://docs.openhands.dev/",
+  "canonical_url": "https://docs.openhands.dev/",
+  "published_at": "2026-07-01T00:00:00+00:00",
+  "fetched_at": "2026-07-01T05:17:50.924931+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Offline seed item from OpenHands Docs for evaluating autonomous coding, personal agents, workflow automation. Use live mode to replace this with current source content.",
+  "raw_content_path": null,
+  "dedupe_key": "ab1ed35ae429",
+  "status": "new",
+  "errors": []
+}

@@ -1,0 +1,152 @@
+# Hermes content pipeline source configuration.
+# Keep this file free of credentials.
+
+version: 1
+owner: content-pipeline
+default_language: en
+default_region: global
+
+source_clusters:
+  - id: frontier-ai-platforms
+    label: Frontier AI platforms
+    priority: high
+    cadence: daily
+    topic_fit:
+      - model releases
+      - agent tooling
+      - enterprise AI adoption
+      - developer workflows
+    sources:
+      - id: openai-blog
+        name: OpenAI Blog
+        url: https://openai.com/news/
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: primary
+      - id: anthropic-news
+        name: Anthropic News
+        url: https://www.anthropic.com/news
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: primary
+      - id: google-deepmind-blog
+        name: Google DeepMind Blog
+        url: https://deepmind.google/discover/blog/
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: primary
+      - id: microsoft-ai-blog
+        name: Microsoft AI Blog
+        url: https://blogs.microsoft.com/ai/
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: primary
+
+  - id: agent-harnesses-and-devtools
+    label: Agent harnesses and developer tools
+    priority: high
+    cadence: daily
+    topic_fit:
+      - autonomous coding
+      - personal agents
+      - workflow automation
+      - AI-native software delivery
+    sources:
+      - id: nous-hermes-docs
+        name: Hermes Agent Docs
+        url: https://hermes-agent.nousresearch.com/docs/
+        type: docs
+        extraction: livecrawl
+        trust_tier: primary
+      - id: openhands-docs
+        name: OpenHands Docs
+        url: https://docs.openhands.dev/
+        type: docs
+        extraction: livecrawl
+        trust_tier: primary
+      - id: openhands-github
+        name: OpenHands GitHub
+        url: https://github.com/OpenHands/OpenHands
+        type: github
+        extraction: search_then_livecrawl
+        trust_tier: primary
+      - id: yc-ai
+        name: Y Combinator AI
+        url: https://www.ycombinator.com/blog/tag/ai
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: secondary
+
+  - id: operator-signals
+    label: Operator signals
+    priority: medium
+    cadence: daily
+    topic_fit:
+      - founder workflows
+      - enterprise operating model
+      - AI implementation patterns
+      - GTM and content angles
+    sources:
+      - id: latent-space
+        name: Latent Space
+        url: https://www.latent.space/
+        type: newsletter
+        extraction: search_then_livecrawl
+        trust_tier: secondary
+      - id: interconnects
+        name: Interconnects
+        url: https://www.interconnects.ai/
+        type: newsletter
+        extraction: search_then_livecrawl
+        trust_tier: secondary
+      - id: every-ai-and-i
+        name: Every - AI and I
+        url: https://every.to/ai-and-i
+        type: newsletter
+        extraction: search_then_livecrawl
+        trust_tier: secondary
+
+  - id: implementation-proof
+    label: Implementation proof points
+    priority: medium
+    cadence: daily
+    topic_fit:
+      - reference architectures
+      - customer stories
+      - product docs
+      - applied agent workflows
+    sources:
+      - id: aws-machine-learning-blog
+        name: AWS Machine Learning Blog
+        url: https://aws.amazon.com/blogs/machine-learning/
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: primary
+      - id: google-cloud-ai-blog
+        name: Google Cloud AI Blog
+        url: https://cloud.google.com/blog/products/ai-machine-learning
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: primary
+      - id: nvidia-ai-blog
+        name: NVIDIA AI Blog
+        url: https://blogs.nvidia.com/blog/category/deep-learning/
+        type: blog
+        extraction: search_then_livecrawl
+        trust_tier: primary
+
+ranking_weights:
+  business_relevance: 0.30
+  source_authority: 0.20
+  freshness: 0.15
+  novelty: 0.15
+  implementation_value: 0.15
+  audience_fit: 0.05
+
+exclusions:
+  - pure funding announcements without implementation angle
+  - generic listicles
+  - unsourced hot takes
+  - duplicate summaries of the same press release
+  - content requiring login to verify claims
+

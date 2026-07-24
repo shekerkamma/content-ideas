@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-22-uc08-client-ready-rebuild/UC-08-Multi-Model-Coding-Pilot-Client-Ready-draft.pptx",
+    "html",
+    "-o",
+    "runs/2026-07-22-uc08-client-ready-rebuild/qa/officecli/UC-08-Multi-Model-Coding-Pilot-Client-Ready-draft.html"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-22-uc08-client-ready-rebuild/qa/officecli/UC-08-Multi-Model-Coding-Pilot-Client-Ready-draft.html\n",
+  "stderr": ""
+}

@@ -1,0 +1,366 @@
+{
+  "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/agent-validation-authority.pptx",
+  "topic": "agent validation authority",
+  "claims": [
+    {
+      "id": "claim-001",
+      "claim": "Klarna publicly reversed its AI-first support after quality tanked.",
+      "locator": "Section 2",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "klarna publicly reversed ai-first support quality tanked",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-002",
+      "claim": "The blocker is the same everywhere: *nobody can prove the agent is safe to run.* That proof is a market.",
+      "locator": "Section 2",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "blocker same everywhere nobody prove safe run proof market",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-003",
+      "claim": "The market moved from \"can we build an agent\" to \"can we trust one\" 2023–24: the race was capability — frameworks, models, demos.",
+      "locator": "Section 3",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "mixed",
+      "reddit_query": "market moved build trust one race was capability frameworks models demos",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-004",
+      "claim": "2026: capability is commoditized; **the model is no longer the moat.** The new question is operational: predict it, audit it, roll it back.",
+      "locator": "Section 3",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "capability commoditized model longer moat new question operational predict audit roll back",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-005",
+      "claim": "*Trust is now an infrastructure problem before it is a product feature.*",
+      "locator": "Section 3",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "trust now infrastructure problem product feature",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-006",
+      "claim": "April 17, 2026: regulators handed agentic AI back to the banks **SR 26-2** (OCC / Fed / FDIC) replaced SR 11-7 — the 15-year model-risk rulebook.",
+      "locator": "Section 4",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "mixed",
+      "reddit_query": "april regulators handed back banks occ fed fdic replaced year model-risk rulebook",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-007",
+      "claim": "One sentence defines the moment: *\"Generative AI and agentic AI models… are not within the scope of this guidance.\"* Translation: banks own agentic-AI governance with **no playbook** — and an AI rulemaking is coming.",
+      "locator": "Section 4",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "one sentence defines moment generative models within scope guidance translation banks own agentic-ai governance",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-008",
+      "claim": "Examiners still ask: *\"What is your monitoring framework?",
+      "locator": "Section 4",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "examiners still ask what your monitoring framework",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-009",
+      "claim": "What is your effective challenge?\"* > \"Can you name the person whose name should be on the examination finding?\"",
+      "locator": "Section 4",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "what your effective challenge you name person whose examination finding",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-010",
+      "claim": "The pain is deployed, not hypothetical — and it is failing **Wendy's FreshAI** takes drive-thru orders end-to-end; **Mercedes MBUX**, **Home Depot Magic Apron** run live.",
+      "locator": "Section 5",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "pain deployed hypothetical failing wendy freshai takes drive-thru orders end-to-end mercedes mbux home depot",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-011",
+      "claim": "Manual QA covers ~100 scenarios; real users trigger millions.",
+      "locator": "Section 5",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "manual covers scenarios real users trigger millions",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-012",
+      "claim": "The gap between \"deployed\" and \"validated\" is where we live.",
+      "locator": "Section 5",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "gap deployed where live",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-013",
+      "claim": "Nobody independent can grade the agents — the labs grade themselves Foundation labs ship native guardrails — but they cannot certify their own ecosystem.",
+      "locator": "Section 6",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "nobody independent grade labs themselves foundation ship native guardrails they certify own ecosystem",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-014",
+      "claim": "Eval vendors (Braintrust, Arize, Patronus) sell tooling to the **builder**, not assurance to the **buyer**.",
+      "locator": "Section 6",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "eval vendors braintrust arize patronus sell tooling builder assurance buyer",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-015",
+      "claim": "Internal model-risk teams have no agent-native method.",
+      "locator": "Section 6",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "internal model-risk teams agent-native method",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-016",
+      "claim": "*The one thing none of them can claim is independence.",
+      "locator": "Section 6",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "one thing none claim independence",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-017",
+      "claim": "Certify the agent.** *Nobody owns it.* That is our lane: the independent referee for the other eight.",
+      "locator": "Section 7",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "certify nobody owns lane independent referee for other eight",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-018",
+      "claim": "Our position: certify the autonomous agent before it ships Package agent assurance as a **hiring bar for the agent**: *\"passed before you deployed it.\"* Sell to the risk owner, not the developer — that is where pricing power lives.",
+      "locator": "Section 9",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "position certify autonomous ships package assurance hiring bar for passed you deployed sell risk",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-019",
+      "claim": "Output the buyer can show a regulator, a board, or a court.",
+      "locator": "Section 9",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "output buyer show regulator board court",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-020",
+      "claim": "What we are: the UL / SOC-2 for AI agents An **independent authority** whose stamp the market trusts.",
+      "locator": "Section 10",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "what soc-2 for independent whose stamp market trusts",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-021",
+      "claim": "Independence is not a feature — it is the entire product.",
+      "locator": "Section 10",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "independence feature entire product",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-022",
+      "claim": "Deliverable: a report the buyer hands their examiner + a live assurance dashboard + a time-boxed \"Validated\" mark.",
+      "locator": "Section 11",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "deliverable report buyer hands examiner live assurance dashboard time-boxed mark",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-023",
+      "claim": "Beachhead: the SR 26-2 vacuum in financial services Banks must self-determine agentic-AI controls — and have nothing.",
+      "locator": "Section 12",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "beachhead vacuum financial services banks self-determine agentic-ai controls nothing",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-024",
+      "claim": "The buyer and budget already exist: **model risk / AI governance** is a mandated function.",
+      "locator": "Section 12",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "buyer budget exist model risk governance mandated function",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-025",
+      "claim": "The regulatory vacuum is the opening; the coming AI RFI is the deadline.",
+      "locator": "Section 12",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "regulatory vacuum opening coming rfi deadline",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-026",
+      "claim": "We don't certify chatbots — we validate the agents MRM can't Skip the BAU: generic support bots and OCR are solved, low-stakes, vendor-benchmarked.",
+      "locator": "Section 13",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "don certify chatbots mrm skip bau generic support bots ocr solved low-stakes vendor-benchmarked",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-027",
+      "claim": "**AML / fraud investigation** agents → SAR quality.",
+      "locator": "Section 13",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "aml fraud investigation sar quality",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-028",
+      "claim": "**SecOps auto-remediation** → audit risk.",
+      "locator": "Section 13",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "secops auto-remediation audit risk",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-029",
+      "claim": "Sell to the CRO; the examiner is the judge **Economic buyer:** Head of Model Risk / Chief Risk Officer — holds budget and personal liability.",
+      "locator": "Section 14",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "sell cro examiner judge economic buyer head model risk chief officer holds budget personal",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-030",
+      "claim": "**Champion:** the AI-governance lead whose job is impossible without us.",
+      "locator": "Section 14",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "champion ai-governance lead whose job impossible",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-031",
+      "claim": "**User:** the line-of-business that must pass our gate to ship.",
+      "locator": "Section 14",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "user line-of-business pass gate ship",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-032",
+      "claim": "**The rejectable counterparty:** the **bank examiner** — our dossier must survive exams.",
+      "locator": "Section 14",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "rejectable counterparty bank examiner dossier survive exams",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-033",
+      "claim": "That bar is the forcing function and the moat: survive exams once, become un-switchable.",
+      "locator": "Section 14",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "bar forcing function moat survive exams once become un-switchable",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-034",
+      "claim": "The dossier maps to exactly what examiners already ask SR 26-2 keeps three validation pillars: **conceptual soundness, outcomes analysis, ongoing monitoring.** We mirror that structure — instantly legible, hard to argue with.",
+      "locator": "Section 15",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "dossier maps exactly what examiners ask keeps three pillars conceptual soundness outcomes analysis ongoing",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-035",
+      "claim": "Add the agentic layer SR 26-2 omits: tool-call safety, autonomy bounds, multi-agent error propagation.",
+      "locator": "Section 15",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "add layer omits tool-call safety autonomy bounds multi-agent error propagation",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-036",
+      "claim": "Anchor to NIST AI RMF + ISO/IEC 42001 so it reads as standard, not startup.",
+      "locator": "Section 15",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "primary_required",
+      "reddit_query": "anchor nist rmf iso iec reads standard startup",
+      "primary_source_required": true
+    },
+    {
+      "id": "claim-037",
+      "claim": "*We give examiners the artifact they're about to demand.*",
+      "locator": "Section 15",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "give examiners artifact they demand",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-038",
+      "claim": "**Subscription:** annual per-agent continuous assurance — drift, re-validation, exam support.",
+      "locator": "Section 16",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "subscription annual per-agent continuous assurance drift re-validation exam support",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-039",
+      "claim": "Buyer-funded, sits in the audit/MRM budget line — not a new category to justify.",
+      "locator": "Section 16",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "buyer-funded sits audit mrm budget line new category justify",
+      "primary_source_required": false
+    },
+    {
+      "id": "claim-040",
+      "claim": "Pilot proves demand; subscription is the annuity.",
+      "locator": "Section 16",
+      "source": "/mnt/c/Users/sheke/Desktop/agent-validation-authority-deck/deck.md",
+      "evidence_need": "reddit_evidence",
+      "reddit_query": "pilot proves demand subscription annuity",
+      "primary_source_required": false
+    }
+  ]
+}

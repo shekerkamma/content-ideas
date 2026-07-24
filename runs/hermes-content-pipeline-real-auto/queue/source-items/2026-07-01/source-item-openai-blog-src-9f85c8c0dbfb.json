@@ -1,0 +1,18 @@
+{
+  "id": "src-9f85c8c0dbfb",
+  "source_id": "openai-blog",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "The state of enterprise AI | OpenAI",
+  "url": "https://openai.com/index/the-state-of-enterprise-ai-2025-report/",
+  "canonical_url": "https://openai.com/index/the-state-of-enterprise-ai-2025-report/",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:19.246417+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "The AI landscape is evolving rapidly; OpenAI releases a new feature or capability roughly every three days. The primary constraints for organizations are no longer model performance or tooling, but rather organizational readiness and implementation. The state of enterprise AI report⁠(opens in a new window) is designed to do more than describe how AI adoption ...",
+  "raw_content_path": null,
+  "dedupe_key": "65d70d1bb8a1",
+  "status": "new",
+  "errors": []
+}

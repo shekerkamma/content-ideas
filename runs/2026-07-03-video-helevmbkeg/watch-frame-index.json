@@ -1,0 +1,302 @@
+[
+  {
+    "index": 1,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0001.jpg",
+    "timestamp": "00:00",
+    "reason": "keyframe"
+  },
+  {
+    "index": 2,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0028.jpg",
+    "timestamp": "00:45",
+    "reason": "keyframe"
+  },
+  {
+    "index": 3,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0056.jpg",
+    "timestamp": "02:01",
+    "reason": "keyframe"
+  },
+  {
+    "index": 4,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0118.jpg",
+    "timestamp": "06:18",
+    "reason": "keyframe"
+  },
+  {
+    "index": 5,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0154.jpg",
+    "timestamp": "07:51",
+    "reason": "keyframe"
+  },
+  {
+    "index": 6,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0222.jpg",
+    "timestamp": "13:06",
+    "reason": "keyframe"
+  },
+  {
+    "index": 7,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0267.jpg",
+    "timestamp": "15:58",
+    "reason": "keyframe"
+  },
+  {
+    "index": 8,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0310.jpg",
+    "timestamp": "18:58",
+    "reason": "keyframe"
+  },
+  {
+    "index": 9,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0348.jpg",
+    "timestamp": "21:11",
+    "reason": "keyframe"
+  },
+  {
+    "index": 10,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0385.jpg",
+    "timestamp": "23:20",
+    "reason": "keyframe"
+  },
+  {
+    "index": 11,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0435.jpg",
+    "timestamp": "26:11",
+    "reason": "keyframe"
+  },
+  {
+    "index": 12,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0500.jpg",
+    "timestamp": "30:44",
+    "reason": "keyframe"
+  },
+  {
+    "index": 13,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0540.jpg",
+    "timestamp": "32:51",
+    "reason": "keyframe"
+  },
+  {
+    "index": 14,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0584.jpg",
+    "timestamp": "35:17",
+    "reason": "keyframe"
+  },
+  {
+    "index": 15,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0618.jpg",
+    "timestamp": "37:07",
+    "reason": "keyframe"
+  },
+  {
+    "index": 16,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0660.jpg",
+    "timestamp": "39:08",
+    "reason": "keyframe"
+  },
+  {
+    "index": 17,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0718.jpg",
+    "timestamp": "43:02",
+    "reason": "keyframe"
+  },
+  {
+    "index": 18,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0749.jpg",
+    "timestamp": "44:34",
+    "reason": "keyframe"
+  },
+  {
+    "index": 19,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0788.jpg",
+    "timestamp": "46:24",
+    "reason": "keyframe"
+  },
+  {
+    "index": 20,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0822.jpg",
+    "timestamp": "47:53",
+    "reason": "keyframe"
+  },
+  {
+    "index": 21,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0863.jpg",
+    "timestamp": "50:05",
+    "reason": "keyframe"
+  },
+  {
+    "index": 22,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0903.jpg",
+    "timestamp": "52:05",
+    "reason": "keyframe"
+  },
+  {
+    "index": 23,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_0937.jpg",
+    "timestamp": "53:28",
+    "reason": "keyframe"
+  },
+  {
+    "index": 24,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1018.jpg",
+    "timestamp": "59:55",
+    "reason": "keyframe"
+  },
+  {
+    "index": 25,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1069.jpg",
+    "timestamp": "1:03:17",
+    "reason": "keyframe"
+  },
+  {
+    "index": 26,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1143.jpg",
+    "timestamp": "1:09:14",
+    "reason": "keyframe"
+  },
+  {
+    "index": 27,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1182.jpg",
+    "timestamp": "1:10:49",
+    "reason": "keyframe"
+  },
+  {
+    "index": 28,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1232.jpg",
+    "timestamp": "1:13:11",
+    "reason": "keyframe"
+  },
+  {
+    "index": 29,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1287.jpg",
+    "timestamp": "1:16:35",
+    "reason": "keyframe"
+  },
+  {
+    "index": 30,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1326.jpg",
+    "timestamp": "1:18:30",
+    "reason": "keyframe"
+  },
+  {
+    "index": 31,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1374.jpg",
+    "timestamp": "1:21:35",
+    "reason": "keyframe"
+  },
+  {
+    "index": 32,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1426.jpg",
+    "timestamp": "1:24:39",
+    "reason": "keyframe"
+  },
+  {
+    "index": 33,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1466.jpg",
+    "timestamp": "1:26:50",
+    "reason": "keyframe"
+  },
+  {
+    "index": 34,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1511.jpg",
+    "timestamp": "1:30:17",
+    "reason": "keyframe"
+  },
+  {
+    "index": 35,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1558.jpg",
+    "timestamp": "1:33:59",
+    "reason": "keyframe"
+  },
+  {
+    "index": 36,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1601.jpg",
+    "timestamp": "1:35:40",
+    "reason": "keyframe"
+  },
+  {
+    "index": 37,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1641.jpg",
+    "timestamp": "1:37:40",
+    "reason": "keyframe"
+  },
+  {
+    "index": 38,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1686.jpg",
+    "timestamp": "1:40:23",
+    "reason": "keyframe"
+  },
+  {
+    "index": 39,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1727.jpg",
+    "timestamp": "1:42:16",
+    "reason": "keyframe"
+  },
+  {
+    "index": 40,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1764.jpg",
+    "timestamp": "1:43:53",
+    "reason": "keyframe"
+  },
+  {
+    "index": 41,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1813.jpg",
+    "timestamp": "1:46:19",
+    "reason": "keyframe"
+  },
+  {
+    "index": 42,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1857.jpg",
+    "timestamp": "1:49:23",
+    "reason": "keyframe"
+  },
+  {
+    "index": 43,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1915.jpg",
+    "timestamp": "1:53:19",
+    "reason": "keyframe"
+  },
+  {
+    "index": 44,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_1959.jpg",
+    "timestamp": "1:56:54",
+    "reason": "keyframe"
+  },
+  {
+    "index": 45,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_2011.jpg",
+    "timestamp": "2:00:35",
+    "reason": "keyframe"
+  },
+  {
+    "index": 46,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_2047.jpg",
+    "timestamp": "2:02:35",
+    "reason": "keyframe"
+  },
+  {
+    "index": 47,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_2105.jpg",
+    "timestamp": "2:06:17",
+    "reason": "keyframe"
+  },
+  {
+    "index": 48,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_2149.jpg",
+    "timestamp": "2:09:16",
+    "reason": "keyframe"
+  },
+  {
+    "index": 49,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_2219.jpg",
+    "timestamp": "2:15:09",
+    "reason": "keyframe"
+  },
+  {
+    "index": 50,
+    "path": "/home/shekerk/content-ideas/runs/2026-07-03-video-helevmbkeg/watch-local/frames/frame_2268.jpg",
+    "timestamp": "2:18:31",
+    "reason": "keyframe"
+  }
+]

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="Solo-Agent-Agency-Architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Done-For-You AI Agent Micro-Agency — High-Level Solution Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="1620" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="One operator + a control-plane agent that builds &amp; manages per-client agents. Sell a digital employee, not an agent. $5K&#8211;$10K / client / month." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1620" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ============ LAYER A: Clients & Channels ============ -->
+        <mxCell id="A" value="① CLIENTS &amp; CHANNELS — SMB executives reach their agent where they already are" style="swimlane;startSize=28;html=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=13;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="1620" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="A1" value="SMB Executive&#xa;(law / insurance / real estate /&#xa;manufacturing / agencies)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="A">
+          <mxGeometry x="30" y="44" width="290" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="A2" value="Telegram /&#xa;WhatsApp / iMessage&#xa;(chat gateway)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="A">
+          <mxGeometry x="350" y="44" width="290" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="A3" value="Email&#xa;(agent has its own inbox)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="A">
+          <mxGeometry x="670" y="44" width="290" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="A4" value="Voice / Walk-and-talk&#xa;(Limitless mic &#8594; long-horizon tasks)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="A">
+          <mxGeometry x="990" y="44" width="290" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="A5" value="Content engine&#xa;(inbound: 1 post &#8594; warm leads)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" vertex="1" parent="A">
+          <mxGeometry x="1310" y="44" width="280" height="62" as="geometry" />
+        </mxCell>
+
+        <!-- ============ LAYER B: Customer-Facing Ops ============ -->
+        <mxCell id="B" value="② DELIVERY &amp; CLIENT OPS — productized service surface (scope, status, comms)" style="swimlane;startSize=28;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="1620" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B1" value="Trello&#xa;client Kanban&#xa;(req cap: 1&#8211;2 / 48h)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="B">
+          <mxGeometry x="30" y="44" width="240" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="B2" value="Granola&#xa;meetings &#8594; MCP&#xa;(auto-sync to Trello)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="B">
+          <mxGeometry x="290" y="44" width="240" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="B3" value="Loom&#xa;async progress updates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="B">
+          <mxGeometry x="550" y="44" width="240" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="B4" value="Calendly + site&#xa;booking / funnel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="B">
+          <mxGeometry x="810" y="44" width="240" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="B5" value="Superhuman&#xa;client email throughput" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="B">
+          <mxGeometry x="1070" y="44" width="240" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="B6" value="Asana&#xa;internal-only tracking" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="B">
+          <mxGeometry x="1330" y="44" width="260" height="62" as="geometry" />
+        </mxCell>
+
+        <!-- ============ LAYER C: Control Plane ============ -->
+        <mxCell id="C" value="③ CONTROL PLANE — the operator + one meta-agent that builds &amp; runs all the others" style="swimlane;startSize=28;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="1620" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="C1" value="You (solo operator)&#xa;phone / desktop&#xa;Claude Code · Codex" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="C">
+          <mxGeometry x="30" y="44" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C2" value="CONTROL-PLANE AGENT (&#8220;Orgo-Claw&#8221;)&#xa;orchestrates every client agent&#xa;&#8220;more agents is the answer&#8221;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0b3e0;strokeColor=#9673a6;fontSize=11;fontStyle=1;" vertex="1" parent="C">
+          <mxGeometry x="360" y="44" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C3" value="Orgo MCP&#xa;provision / configure / fix VMs&#xa;(one connector &#8594; all clients)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="C">
+          <mxGeometry x="770" y="44" width="340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C4" value="Setup-context MCPs&#xa;Perplexity · Exa · Context7 · X MCP&#xa;(grounded, current install docs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="C">
+          <mxGeometry x="1140" y="44" width="450" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ============ LAYER D: Per-Client Agent Runtime ============ -->
+        <mxCell id="D" value="④ PER-CLIENT AGENT RUNTIME — Orgo cloud computers, one isolated workspace per client" style="swimlane;startSize=28;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="540" width="1620" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" value="Workspace: Client A&#xa;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#xa;Agent VM &#8220;Mia&#8221;&#xa;Harness: Hermes / OpenClaw&#xa;own desktop + own email" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="D">
+          <mxGeometry x="30" y="44" width="370" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D2" value="Workspace: Client B&#xa;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#xa;Agent VM(s)&#xa;exec agent + vertical skills&#xa;(e.g. demand-letter agent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="D">
+          <mxGeometry x="420" y="44" width="370" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" value="Workspace: Client C &#8230; N&#xa;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#xa;27+ VMs across all clients&#xa;1 connector manages all&#xa;delete / re-spin in &lt; 1s" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="D">
+          <mxGeometry x="810" y="44" width="370" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="D4" value="Why cloud VMs (not Mac minis)&#xa;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#xa;remote-manage from anywhere&#xa;sandboxed blast radius&#xa;visual demo = sells trust" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef7ec;strokeColor=#82b366;fontSize=11;align=center;fontStyle=2;" vertex="1" parent="D">
+          <mxGeometry x="1200" y="44" width="390" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ============ LAYER E: Capabilities & Context ============ -->
+        <mxCell id="E" value="⑤ AGENT CAPABILITIES &amp; CONTEXT — installed into every agent out of the box" style="swimlane;startSize=28;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=13;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="730" width="1620" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="E1" value="Composio&#xa;1 MCP &#8594; 1000s of apps&#xa;Gmail · Slack · Notion · GitHub&#xa;handles auth + tool-calling" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="E">
+          <mxGeometry x="30" y="44" width="370" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="E2" value="Agent Mail&#xa;per-agent email identity&#xa;(send / receive as &#8220;Mia&#8221;)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="E">
+          <mxGeometry x="420" y="44" width="370" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="E3" value="Obsidian Vault (Second Brain)&#xa;markdown wiki: people · projects · cases&#xa;the durable context layer per client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#d79b00;fontSize=11;fontStyle=1;" vertex="1" parent="E">
+          <mxGeometry x="810" y="44" width="370" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="E4" value="Skills / Sub-agents&#xa;reusable install + vertical skills&#xa;spawn 5 sub-agents &#8594; merge best practice" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="E">
+          <mxGeometry x="1200" y="44" width="390" height="64" as="geometry" />
+        </mxCell>
+
+        <!-- ============ LAYER F: Model Router ============ -->
+        <mxCell id="F" value="⑥ MODEL ROUTER — harness is model-agnostic; swap on price/capability, never marry a model" style="swimlane;startSize=28;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="880" width="1620" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="F1" value="GPT-5.5  &#9733; default&#xa;efficient tool-calls, token-light" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="F">
+          <mxGeometry x="30" y="44" width="370" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="F2" value="GLM-5.1 (Z.ai) / Kimi&#xa;cheap, lightweight tasks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="F">
+          <mxGeometry x="420" y="44" width="370" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="F3" value="Opus 4.7 + Claude Code&#xa;long-horizon coding tasks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="F">
+          <mxGeometry x="810" y="44" width="370" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="F4" value="Billing posture&#xa;flat $/mo offer; no &#8220;tokens/credits&#8221; to client&#xa;model cost = your margin lever" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbe6;strokeColor=#d6b656;fontSize=11;fontStyle=2;" vertex="1" parent="F">
+          <mxGeometry x="1200" y="44" width="390" height="56" as="geometry" />
+        </mxCell>
+
+        <!-- ============ LAYER G: Reliability & Observability ============ -->
+        <mxCell id="G" value="⑦ RELIABILITY &amp; OBSERVABILITY — the moat: fix it before the client notices" style="swimlane;startSize=28;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1020" width="1620" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="G1" value="Watchdog&#xa;auto-restart crashed gateways&#xa;(Telegram / WhatsApp bridges)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="G">
+          <mxGeometry x="30" y="44" width="370" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="G2" value="Alerts&#xa;agent emails YOU on cron/skill failure&#xa;before client is impacted" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="G">
+          <mxGeometry x="420" y="44" width="370" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="G3" value="Security / Isolation&#xa;per-client sandboxed VM&#xa;auth via Composio, not shared creds" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="G">
+          <mxGeometry x="810" y="44" width="370" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="G4" value="SLA &amp; self-evolve&#xa;&lt;48h to first agent · weekly improvement&#xa;Hermes self-heals &gt; OpenClaw" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="G">
+          <mxGeometry x="1200" y="44" width="390" height="56" as="geometry" />
+        </mxCell>
+
+        <!-- ============ SPINE EDGES ============ -->
+        <mxCell id="eAB" value="requests / context" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="A" target="B">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBC" value="scoped work" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="B" target="C">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eCD" value="provision / manage via Orgo MCP" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="C" target="D">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDE" value="agents use tools + context" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="D" target="E">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eEF" value="inference calls" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="E" target="F">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Reliability watches the runtime + alerts back to control plane (side spine on right) -->
+        <mxCell id="eDG" value="telemetry / health" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="D" target="G">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1690" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eGC" value="alerts &#8594; operator fixes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#b85450;fontColor=#b85450;" edge="1" parent="1" source="G" target="C">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="1075" />
+              <mxPoint x="20" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

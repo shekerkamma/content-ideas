@@ -1,0 +1,42 @@
+{
+  "run_id": "run-d6df62d0d71f",
+  "started_at": "2026-07-01T05:11:33.160996+00:00",
+  "finished_at": "2026-07-01T05:11:49.773789+00:00",
+  "status": "success",
+  "counts": {
+    "source_items": 60,
+    "topic_clusters": 2,
+    "research_briefs": 2,
+    "draft_packages": 1,
+    "memory_candidates": 2
+  },
+  "cost": {
+    "estimated_usd": 4.2,
+    "cap_usd": 12.0,
+    "cap_exceeded": false
+  },
+  "model_routes": [
+    {
+      "step": "source_scan",
+      "model_class": "none",
+      "model_name": null
+    },
+    {
+      "step": "topic_ranking",
+      "model_class": "standard",
+      "model_name": "configured-by-hermes"
+    },
+    {
+      "step": "research_brief",
+      "model_class": "standard",
+      "model_name": "configured-by-hermes"
+    },
+    {
+      "step": "draft_package",
+      "model_class": "standard",
+      "model_name": "configured-by-hermes"
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

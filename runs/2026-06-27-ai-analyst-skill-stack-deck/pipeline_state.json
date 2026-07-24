@@ -1,0 +1,33 @@
+{
+  "run_id": "2026-06-27-ai-analyst-skill-stack-deck",
+  "status": "draft_corrected_storyline",
+  "question": "How should we present the 10-skill operator stack as a market-facing capability system for 30-day agentic MVPs, using the 52 reviewed opportunities as proof of breadth?",
+  "plan": "full_presentation",
+  "phases": [
+    {
+      "name": "framing",
+      "status": "complete",
+      "artifacts": ["working/question-framing.md"]
+    },
+    {
+      "name": "source_tieout",
+      "status": "complete",
+      "artifacts": ["working/source-validation.md"]
+    },
+    {
+      "name": "findings",
+      "status": "complete",
+      "artifacts": ["working/findings.md"]
+    },
+    {
+      "name": "storyboard",
+      "status": "complete",
+      "artifacts": ["outputs/deck-storyboard.md", "outputs/10-skill-operator-stack-marp.md"]
+    },
+    {
+      "name": "pptx_export",
+      "status": "not_started",
+      "notes": "Build from corrected Marp/storyboard only; ignore earlier blueprint-first PPTX files."
+    }
+  ]
+}

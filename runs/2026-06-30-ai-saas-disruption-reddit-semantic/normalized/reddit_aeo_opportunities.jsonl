@@ -1,0 +1,3 @@
+{"opportunity_id": "rao_001", "type": "discovery_needed", "priority": "high", "signal": "no_reddit_evidence_loaded", "action": "Run Reddit thread discovery before claiming buyer-language patterns.", "evidence_count": 0}
+{"opportunity_id": "rao_002", "type": "hypothesis_to_validate", "priority": "medium", "signal": "subagent_revised_patterns", "action": "Use Reddit examples to sharpen revised pattern labels before using them in a diagnostic.", "evidence_count": 3}
+{"opportunity_id": "rao_003", "type": "search_plan", "priority": "high", "signal": "reddit_semantic_probes", "action": "Review the top 30 Reddit semantic probes with semantic retrieval or human screening, then save matched threads to stage_outputs/reddit_threads.jsonl.", "evidence_count": 152}

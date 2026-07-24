@@ -1,0 +1,18 @@
+{
+  "id": "src-e9b5c89a784a",
+  "source_id": "anthropic-news",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "Cognizant will make Claude available to 350,000 employees, ...",
+  "url": "https://www.anthropic.com/news/cognizant-partnership",
+  "canonical_url": "https://www.anthropic.com/news/cognizant-partnership",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:39.759089+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+  "raw_content_path": null,
+  "dedupe_key": "db8b9d45a99e",
+  "status": "new",
+  "errors": []
+}

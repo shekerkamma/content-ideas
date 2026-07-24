@@ -1,0 +1,124 @@
+{
+  "method": "old_reddit_html",
+  "queries": [
+    "clinic front desk scheduling text automation",
+    "mortgage servicing collections borrower communications",
+    "accounts receivable automation QuickBooks NetSuite Stripe",
+    "insurance claims automation manual review",
+    "quote to cash automation accounts payable month end close",
+    "construction drawing review rework delays",
+    "consumer lending servicing collections repayment plans",
+    "insurance claims line of business workflows"
+  ],
+  "threads": [
+    {
+      "title": "How do physical therapy clinics collect patient reviews consistently without disrupting front desk operations?",
+      "url": "https://old.reddit.com/r/AllAboutPT/comments/1tnewkm/how_do_physical_therapy_clinics_collect_patient/",
+      "query": "clinic front desk scheduling text automation",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-01.json",
+      "comments": 0,
+      "post_title": "How do physical therapy clinics collect patient reviews consistently without disrupting front desk operations?",
+      "subreddit": "AllAboutPT"
+    },
+    {
+      "title": "I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down but kept my equity, and started completely over. 3 months in and we're doing $250K/month.",
+      "url": "https://old.reddit.com/r/EntrepreneurRideAlong/comments/1rzaelo/i_built_a_mobile_iv_therapy_company_from_0_to_2m/",
+      "query": "clinic front desk scheduling text automation",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-02.json",
+      "comments": 30,
+      "post_title": "I built a mobile IV therapy company from $0 to $2M in 12 months, merged it into a competitor I ran as CEO and scaled from $2.4M to $10M, stepped down but kept my equity, and started completely over. 3 months in and we're doing $250K/month.",
+      "subreddit": "EntrepreneurRideAlong"
+    },
+    {
+      "title": "Title: AMA: Earned-secure man. My pregnant, avoidant partner packed up and left after I handed a 20-page history of her behavioral loops to her therapist.",
+      "url": "https://old.reddit.com/r/AvoidantBreakUps/comments/1ud6tq8/title_ama_earnedsecure_man_my_pregnant_avoidant/",
+      "query": "clinic front desk scheduling text automation",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-03.json",
+      "comments": 30,
+      "post_title": "Title: AMA: Earned-secure man. My pregnant, avoidant partner packed up and left after I handed a 20-page history of her behavioral loops to her therapist.",
+      "subreddit": "AvoidantBreakUps"
+    },
+    {
+      "title": "[HIRING] REMOTE PATIENT MONITORING",
+      "url": "https://old.reddit.com/r/VirtualAssistant4Hire/comments/1u25qi6/hiring_remote_patient_monitoring/",
+      "query": "clinic front desk scheduling text automation",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-04.json",
+      "comments": 24,
+      "post_title": "[HIRING] REMOTE PATIENT MONITORING",
+      "subreddit": "VirtualAssistant4Hire"
+    },
+    {
+      "title": "Apes and the Epstein Files - The Dilorio Emails and Market History",
+      "url": "https://old.reddit.com/r/Superstonk/comments/1qwvb05/apes_and_the_epstein_files_the_dilorio_emails_and/",
+      "query": "mortgage servicing collections borrower communications",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-05.json",
+      "comments": 30,
+      "post_title": "Apes and the Epstein Files - The Dilorio Emails and Market History",
+      "subreddit": "Superstonk"
+    },
+    {
+      "title": "A Return to the Self through the Twelve Houses",
+      "url": "https://old.reddit.com/r/Advancedastrology/comments/1n2z4og/a_return_to_the_self_through_the_twelve_houses/",
+      "query": "mortgage servicing collections borrower communications",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-06.json",
+      "comments": 30,
+      "post_title": "A Return to the Self through the Twelve Houses",
+      "subreddit": "Advancedastrology"
+    },
+    {
+      "title": "Why Modernization Needs a New Balance Sheet",
+      "url": "https://old.reddit.com/user/Substantial-Bug9616/comments/1ud42uf/why_modernization_needs_a_new_balance_sheet/",
+      "query": "mortgage servicing collections borrower communications",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-07.json",
+      "comments": 0,
+      "post_title": "Why Modernization Needs a New Balance Sheet",
+      "subreddit": "u_Substantial-Bug9616"
+    },
+    {
+      "title": "KNOWLEDGE OF DEBT COLLECTION IN AMERICA |Focus on: Perú (Republic of Peru) — National Overview",
+      "url": "https://old.reddit.com/r/debtcollectionideas/comments/1tx0gtl/knowledge_of_debt_collection_in_america_focus_on/",
+      "query": "mortgage servicing collections borrower communications",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-08.json",
+      "comments": 0,
+      "post_title": "KNOWLEDGE OF DEBT COLLECTION IN AMERICA |Focus on: Perú (Republic of Peru) — National Overview",
+      "subreddit": "debtcollectionideas"
+    },
+    {
+      "title": "E-commerce Industry News Recap 🔥 Week of Mar 23rd, 2026",
+      "url": "https://old.reddit.com/r/ecommerce/comments/1s1qu9v/ecommerce_industry_news_recap_week_of_mar_23rd/",
+      "query": "accounts receivable automation QuickBooks NetSuite Stripe",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-09.json",
+      "comments": 14,
+      "post_title": "E-commerce Industry News Recap 🔥 Week of Mar 23rd, 2026",
+      "subreddit": "ecommerce"
+    },
+    {
+      "title": "This Week's Top E-commerce News Stories 💥 April 27th, 2026",
+      "url": "https://old.reddit.com/r/shopify/comments/1sxb1ni/this_weeks_top_ecommerce_news_stories_april_27th/",
+      "query": "accounts receivable automation QuickBooks NetSuite Stripe",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-10.json",
+      "comments": 8,
+      "post_title": "This Week's Top E-commerce News Stories 💥 April 27th, 2026",
+      "subreddit": "shopify"
+    },
+    {
+      "title": "Startup Roundup — May 22: AI distribution at $19/mo, YC's new coding-agent platform, and a $1B beauty booking unicorn",
+      "url": "https://old.reddit.com/r/Superframeworks/comments/1tkhrgx/startup_roundup_may_22_ai_distribution_at_19mo/",
+      "query": "accounts receivable automation QuickBooks NetSuite Stripe",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-11.json",
+      "comments": 3,
+      "post_title": "Startup Roundup — May 22: AI distribution at $19/mo, YC's new coding-agent platform, and a $1B beauty booking unicorn",
+      "subreddit": "Superframeworks"
+    },
+    {
+      "title": "7 Of The Best Subscription Management Software Solutions For B2B SaaS Startups",
+      "url": "https://old.reddit.com/r/Quote_to_Cash/comments/1tpk3pv/7_of_the_best_subscription_management_software/",
+      "query": "accounts receivable automation QuickBooks NetSuite Stripe",
+      "output": "runs/2026-06-24-yc-agentic-market-research/reddit-evidence-vertical2/reddit-thread-12.json",
+      "comments": 0,
+      "post_title": "7 Of The Best Subscription Management Software Solutions For B2B SaaS Startups",
+      "subreddit": "Quote_to_Cash"
+    }
+  ],
+  "thread_count": 12
+}

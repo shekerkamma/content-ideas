@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>DESIGN.md — give the agent a system, not a vibe</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+    <style>
+      /* ---- local fonts (captured woff2) ---- */
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/7cHpv4kjgoGqM7E_A8s52Hs.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/7cHpv4kjgoGqM7E_Ass52Hs.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/7cHpv4kjgoGqM7E_DMs5.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3_-gs6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3_-gs6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3_-gs51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E30-8s6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E30-8s6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E30-8s51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3t-4s6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3t-4s6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3t-4s51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3q-0s6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3q-0s6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3q-0s51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3j-ws6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3j-ws6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3j-ws51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1iIq129k.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1isq129k.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1iAq129k.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1iEq129k.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl1FgtIU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwlRFgtIU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl9FgtIU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl5FgtIU.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl1FgtIU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlRFgtIU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl9FgtIU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl5FgtIU.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFgg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+      :root {
+        --bg: #080b11;
+        --bg-elev: #0f141d;
+        --ink: #eef2f7;
+        --soft: #aeb8c7;
+        --muted: #69748a;
+        --teal: #2dd4bf;
+        --sky: #38bdf8;
+        --magenta: #e879f9;
+        --line: #1f2530;
+        --grad: linear-gradient(115deg, #2dd4bf 0%, #38bdf8 48%, #e879f9 100%);
+        --glow: 0 0 40px rgba(45, 212, 191, 0.28);
+        --sans: "Barlow", system-ui, sans-serif;
+        --mono: "IBM Plex Mono", ui-monospace, monospace;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1920px; height: 1080px; overflow: hidden;
+        background: var(--bg); color: var(--ink); font-family: "Barlow", system-ui, sans-serif;
+      }
+
+      .stage { position: absolute; inset: 0; overflow: hidden; background: var(--bg); }
+
+      /* ---- persistent ambient (always on, behind every scene) ---- */
+      .aurora {
+        position: absolute; inset: -20%;
+        background:
+          radial-gradient(38% 40% at 22% 30%, rgba(45, 212, 191, 0.16), transparent 70%),
+          radial-gradient(34% 38% at 78% 68%, rgba(232, 121, 249, 0.10), transparent 70%),
+          radial-gradient(40% 42% at 60% 20%, rgba(56, 189, 248, 0.10), transparent 70%);
+        will-change: transform; pointer-events: none; z-index: 0;
+      }
+      .grid-faint {
+        position: absolute; inset: 0; z-index: 0; opacity: 0.5; pointer-events: none;
+        background-image:
+          linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+        background-size: 80px 80px;
+      }
+      .vignette {
+        position: absolute; inset: 0; z-index: 60; pointer-events: none;
+        background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%);
+      }
+
+      /* ---- scene scaffold ---- */
+      .scene {
+        position: absolute; inset: 0; z-index: 10;
+        padding: 96px 120px; display: flex; flex-direction: column;
+        justify-content: center; will-change: opacity, transform;
+      }
+      .kicker {
+        font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 22px; font-weight: 500;
+        letter-spacing: 0.28em; text-transform: uppercase; color: var(--teal);
+      }
+      .catalogue {
+        position: absolute; top: 96px; right: 120px;
+        font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 20px; letter-spacing: 0.24em;
+        text-transform: uppercase; color: var(--muted);
+      }
+      .lead { color: var(--soft); font-weight: 400; line-height: 1.45; max-width: 1080px; }
+
+      .display {
+        font-weight: 900; letter-spacing: -0.035em; line-height: 0.92;
+        text-transform: lowercase; color: var(--ink);
+      }
+      .grad-text {
+        background: var(--grad); -webkit-background-clip: text; background-clip: text;
+        -webkit-text-fill-color: transparent; color: transparent;
+      }
+      .teal-clause { color: var(--teal); }
+
+      /* tags / pills */
+      .tagrow { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+      .tag {
+        font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 18px; letter-spacing: 0.16em;
+        text-transform: uppercase; color: var(--soft);
+        border: 1px solid var(--line); border-radius: 999px; padding: 9px 20px;
+      }
+      .pill {
+        display: inline-flex; align-items: center; gap: 10px;
+        font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 19px; letter-spacing: 0.16em;
+        text-transform: uppercase; padding: 10px 22px; border-radius: 999px;
+        border: 1px solid var(--teal); color: var(--teal); background: rgba(45,212,191,0.06);
+      }
+      .pill.neutral { border-color: var(--line); color: var(--soft); background: transparent; }
+
+      /* bullets (broadside: `/` marker in teal) */
+      .bullets { list-style: none; margin-top: 44px; display: flex; flex-direction: column; gap: 26px; }
+      .bullets li {
+        font-size: 44px; font-weight: 500; color: var(--ink); line-height: 1.2;
+        display: flex; align-items: baseline; gap: 22px;
+      }
+      .bullets li .mark { font-family: "IBM Plex Mono", ui-monospace, monospace; color: var(--teal); font-weight: 600; }
+
+      /* framed screenshots */
+      .shot { position: relative; border: 1px solid var(--line); border-radius: 12px;
+        overflow: hidden; background: var(--bg-elev); box-shadow: var(--glow); }
+      .shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+      .shot .shot-label {
+        position: absolute; left: 0; bottom: 0; right: 0;
+        font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 17px; letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--ink); padding: 12px 16px; background: linear-gradient(0deg, rgba(8,11,17,0.92), transparent);
+      }
+
+      /* scene 4 — compare */
+      .compare { display: flex; align-items: center; justify-content: center; gap: 0; margin-top: 8px; }
+      .compare .col { display: flex; flex-direction: column; align-items: center; gap: 22px; }
+      .compare .divider { width: 1px; align-self: stretch; margin: 30px 70px;
+        background: linear-gradient(180deg, transparent, var(--teal) 18%, var(--teal) 82%, transparent);
+        box-shadow: 0 0 16px rgba(45,212,191,0.6); transform-origin: top; }
+      .takeaway { text-align: center; margin-top: 40px; font-weight: 800; font-size: 40px;
+        letter-spacing: -0.02em; text-transform: lowercase; color: var(--ink); }
+      .takeaway b { color: var(--teal); font-weight: 800; }
+
+      /* scene 5 — four-up */
+      .fourup { display: flex; gap: 36px; justify-content: center; align-items: flex-end; margin-top: 56px; }
+      .fourup .shot { width: 348px; height: 420px; }
+
+      /* scene 6 — stats */
+      .s6-wrap { display: flex; align-items: center; gap: 80px; }
+      .statgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 56px; flex: 1; }
+      .stat { border-top: 1px solid var(--line); padding-top: 20px; }
+      .stat .num { font-weight: 900; font-size: 92px; letter-spacing: -0.04em; line-height: 1; color: var(--teal); }
+      .stat .lbl { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 18px; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--soft); margin-top: 12px; }
+      .s6-shot { width: 520px; height: 720px; }
+
+      /* scene 7 — CTA */
+      .cta { display: flex; flex-direction: column; gap: 30px; }
+      .footnote { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 20px; letter-spacing: 0.2em;
+        text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="34"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="stage clip" data-start="0" data-duration="34" data-track-index="1" id="stage">
+        <div class="aurora" id="aurora" data-layout-allow-overflow></div>
+        <div class="grid-faint"></div>
+
+        <!-- ============ S1 · HOOK ============ -->
+        <div class="scene" id="s1">
+          <div class="catalogue" id="s1-cat">NO. 01</div>
+          <div class="kicker" id="s1-kicker" style="margin-bottom: 40px">DESIGN AS TEXT</div>
+          <div class="display grad-text" id="s1-hero" style="font-size: 300px">design.md</div>
+          <div class="lead" id="s1-lead" style="font-size: 46px; margin-top: 34px">
+            give the agent a system, not a vibe.
+          </div>
+        </div>
+
+        <!-- ============ S2 · PROBLEM ============ -->
+        <div class="scene" id="s2">
+          <div class="kicker" id="s2-kicker" style="margin-bottom: 36px">THE DIAGNOSIS</div>
+          <div class="display" id="s2-head" style="font-size: 132px">every ai ui<br />looks the same.</div>
+          <div class="lead" id="s2-verdict" style="font-size: 50px; color: var(--ink); font-weight: 600; margin-top: 40px">
+            the model isn't the problem — <span class="teal-clause" id="s2-clause">missing design context is.</span>
+          </div>
+          <div class="tagrow" id="s2-tags">
+            <span class="tag">Same cards</span>
+            <span class="tag">Random gradients</span>
+            <span class="tag">Weak spacing</span>
+          </div>
+        </div>
+
+        <!-- ============ S3 · THE FIX ============ -->
+        <div class="scene" id="s3">
+          <div class="kicker" id="s3-kicker" style="margin-bottom: 36px">THE FIX</div>
+          <div class="display" id="s3-head" style="font-size: 120px">
+            design.md is the spec<br />the agent reads <span class="teal-clause">first.</span>
+          </div>
+          <ul class="bullets" id="s3-bullets">
+            <li><span class="mark">/</span><span>exact hex — not &ldquo;a nice blue&rdquo;</span></li>
+            <li><span class="mark">/</span><span>type, spacing, components, states</span></li>
+            <li><span class="mark">/</span><span>hard do &amp; don't guardrails</span></li>
+          </ul>
+        </div>
+
+        <!-- ============ S4 · PROOF (before → after) ============ -->
+        <div class="scene" id="s4" style="padding: 70px 120px">
+          <div class="kicker" id="s4-kicker" style="text-align: center; margin-bottom: 26px">
+            THE PROOF · ONE TOKEN REMAP
+          </div>
+          <div class="compare">
+            <div class="col" id="s4-before">
+              <div class="shot" style="width: 612px; height: 722px">
+                <img src="assets/before-dashboard.png" alt="before" />
+              </div>
+              <span class="pill neutral" data-layout-allow-overlap>Before · Generic light SaaS</span>
+            </div>
+            <div class="divider" id="s4-divider"></div>
+            <div class="col" id="s4-after">
+              <div class="shot" style="width: 612px; height: 722px">
+                <img src="assets/after-dashboard.png" alt="after" />
+              </div>
+              <span class="pill" data-layout-allow-overlap>After · Aurora Glass</span>
+            </div>
+          </div>
+          <div class="takeaway" id="s4-take">one css edit. <b>the whole system flips.</b></div>
+        </div>
+
+        <!-- ============ S5 · IT HOLDS ============ -->
+        <div class="scene" id="s5">
+          <div class="kicker" id="s5-kicker" style="margin-bottom: 28px">IT HOLDS</div>
+          <div class="display" id="s5-head" style="font-size: 104px">one file. four surfaces.<br />one identity.</div>
+          <div class="fourup" id="s5-grid">
+            <div class="shot"><img src="assets/surface-dashboard.png" alt="dashboard" /><span class="shot-label">Dashboard</span></div>
+            <div class="shot"><img src="assets/surface-landing.png" alt="landing" /><span class="shot-label">Landing</span></div>
+            <div class="shot"><img src="assets/surface-tool.png" alt="tool" /><span class="shot-label">Tool</span></div>
+            <div class="shot"><img src="assets/surface-deck.png" alt="deck" style="object-fit:contain;background:#0f141d;object-position:center" /><span class="shot-label">Deck</span></div>
+          </div>
+        </div>
+
+        <!-- ============ S6 · ANY BRAND (stats) ============ -->
+        <div class="scene" id="s6">
+          <div class="kicker" id="s6-kicker" style="margin-bottom: 26px">ANY BRAND, SAME PLUMBING</div>
+          <div class="display" id="s6-head" style="font-size: 84px; margin-bottom: 44px">rebranded to summit estate.</div>
+          <div class="s6-wrap">
+            <div class="statgrid" id="s6-stats">
+              <div class="stat"><div class="num" data-to="47" data-suffix="">0</div><div class="lbl">Active listings</div></div>
+              <div class="stat"><div class="num" data-to="2.8" data-dec="1" data-suffix="%">0%</div><div class="lbl">Lead conversion</div></div>
+              <div class="stat"><div class="num" data-to="18.4" data-dec="1" data-prefix="$" data-suffix="M">$0M</div><div class="lbl">Pipeline value</div></div>
+              <div class="stat"><div class="num" data-to="24" data-suffix="">0</div><div class="lbl">Avg days on market</div></div>
+            </div>
+            <div class="shot s6-shot" id="s6-shot"><img src="assets/rebrand-estate-charts.png" alt="summit estate charts" /></div>
+          </div>
+        </div>
+
+        <!-- ============ S7 · CTA ============ -->
+        <div class="scene" id="s7">
+          <div class="cta">
+            <div class="display grad-text" id="s7-hero" style="font-size: 196px">give it a system.</div>
+            <div class="display" id="s7-sub" style="font-size: 132px; color: var(--ink)">not a vibe.</div>
+            <div style="margin-top: 26px"><span class="pill" id="s7-chip">Drop a DESIGN.md in your repo root</span></div>
+            <div class="footnote" id="s7-foot">hyperframes.dev/design</div>
+          </div>
+        </div>
+
+        <div class="vignette"></div>
+      </div>
+    </div>
+
+    <script>
+      const TOTAL = 34;
+
+      /* ---------- initial states ---------- */
+      const ALL_SCENES = ["#s1", "#s2", "#s3", "#s4", "#s5", "#s6", "#s7"];
+      gsap.set(ALL_SCENES, { opacity: 0 });
+
+      gsap.set("#s1-kicker", { opacity: 0, y: 18 });
+      gsap.set("#s1-hero", { opacity: 0, scale: 0.82, letterSpacing: "0.12em" });
+      gsap.set("#s1-lead", { opacity: 0, y: 26 });
+      gsap.set("#s1-cat", { opacity: 0 });
+
+      gsap.set("#s2-kicker", { opacity: 0, x: -24 });
+      gsap.set("#s2-head", { opacity: 0, y: 40 });
+      gsap.set("#s2-verdict", { opacity: 0, y: 24 });
+      gsap.set("#s2-clause", { color: "#aeb8c7" });
+      gsap.set("#s2-tags .tag", { opacity: 0, x: -30 });
+
+      gsap.set("#s3-kicker", { opacity: 0, x: -24 });
+      gsap.set("#s3-head", { opacity: 0, y: 40 });
+      gsap.set("#s3-bullets li", { opacity: 0, x: 40 });
+
+      gsap.set("#s4-kicker", { opacity: 0, y: 16 });
+      gsap.set("#s4-before", { opacity: 0, x: -120, scale: 0.92 });
+      gsap.set("#s4-after", { opacity: 0, x: 120, scale: 0.92 });
+      gsap.set("#s4-divider", { scaleY: 0 });
+      gsap.set("#s4-take", { opacity: 0, y: 22 });
+
+      gsap.set("#s5-kicker", { opacity: 0, x: -24 });
+      gsap.set("#s5-head", { opacity: 0, y: 40 });
+      gsap.set("#s5-grid .shot", { opacity: 0, y: 80, scale: 0.9 });
+
+      gsap.set("#s6-kicker", { opacity: 0, x: -24 });
+      gsap.set("#s6-head", { opacity: 0, y: 36 });
+      gsap.set("#s6-stats .stat", { opacity: 0, y: 40 });
+      gsap.set("#s6-shot", { opacity: 0, x: 80, scale: 0.94 });
+
+      gsap.set("#s7-hero", { opacity: 0, scale: 0.86, letterSpacing: "0.1em" });
+      gsap.set("#s7-sub", { opacity: 0, y: 30 });
+      gsap.set("#s7-chip", { opacity: 0, scale: 0.6 });
+      gsap.set("#s7-foot", { opacity: 0 });
+
+      /* ---------- timeline ---------- */
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+
+      const fadeIn = (sel, at, d = 0.5) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, at);
+      const fadeOut = (sel, at, d = 0.4) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, at);
+
+      // S1 0.2 → 4.0
+      fadeIn("#s1", 0.2, 0.01);
+      tl.to("#s1-cat", { opacity: 1, duration: 0.6, ease: "power2.out" }, 0.3);
+      tl.to("#s1-kicker", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.35);
+      tl.to("#s1-hero", { opacity: 1, scale: 1, letterSpacing: "-0.035em", duration: 0.8, ease: "back.out(1.5)" }, 0.6);
+      tl.to("#s1-lead", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 1.25);
+      fadeOut("#s1", 3.65, 0.4);
+
+      // S2 3.7 → 9.0
+      fadeIn("#s2", 3.7);
+      tl.to("#s2-kicker", { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 3.85);
+      tl.to("#s2-head", { opacity: 1, y: 0, duration: 0.7, ease: "expo.out" }, 4.05);
+      tl.to("#s2-verdict", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 5.0);
+      tl.to("#s2-clause", { color: "#2dd4bf", duration: 0.45, ease: "power2.out" }, 5.55);
+      tl.to("#s2-tags .tag", { opacity: 1, x: 0, duration: 0.5, ease: "power2.out", stagger: 0.13 }, 6.0);
+      fadeOut("#s2", 8.6);
+
+      // S3 8.7 → 14.5
+      fadeIn("#s3", 8.7);
+      tl.to("#s3-kicker", { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 8.85);
+      tl.to("#s3-head", { opacity: 1, y: 0, duration: 0.7, ease: "expo.out" }, 9.05);
+      tl.to("#s3-bullets li", { opacity: 1, x: 0, duration: 0.55, ease: "power3.out", stagger: 0.22 }, 10.1);
+      fadeOut("#s3", 14.1);
+
+      // S4 14.2 → 21.0
+      fadeIn("#s4", 14.2);
+      tl.to("#s4-kicker", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 14.35);
+      tl.to("#s4-before", { opacity: 1, x: 0, scale: 1, duration: 0.75, ease: "power3.out" }, 14.6);
+      tl.to("#s4-divider", { scaleY: 1, duration: 0.6, ease: "power2.inOut" }, 15.1);
+      tl.to("#s4-after", { opacity: 1, x: 0, scale: 1, duration: 0.75, ease: "power3.out" }, 15.0);
+      tl.to("#s4-take", { opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.4)" }, 16.4);
+      fadeOut("#s4", 20.6);
+
+      // S5 20.7 → 25.5
+      fadeIn("#s5", 20.7);
+      tl.to("#s5-kicker", { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 20.85);
+      tl.to("#s5-head", { opacity: 1, y: 0, duration: 0.65, ease: "expo.out" }, 21.0);
+      tl.to("#s5-grid .shot", { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "power3.out", stagger: 0.14 }, 21.7);
+      fadeOut("#s5", 25.1);
+
+      // S6 25.2 → 30.5
+      fadeIn("#s6", 25.2);
+      tl.to("#s6-kicker", { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 25.35);
+      tl.to("#s6-head", { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 25.5);
+      tl.to("#s6-shot", { opacity: 1, x: 0, scale: 1, duration: 0.7, ease: "power3.out" }, 25.9);
+      tl.to("#s6-stats .stat", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.18 }, 26.1);
+      const nums = gsap.utils.toArray("#s6-stats .num");
+      nums.forEach((el, i) => {
+        const to = parseFloat(el.dataset.to);
+        const dec = parseInt(el.dataset.dec || "0", 10);
+        const pre = el.dataset.prefix || "";
+        const suf = el.dataset.suffix || "";
+        const proxy = { v: 0 };
+        tl.to(proxy, {
+          v: to, duration: 1.1, ease: "power2.out",
+          onUpdate: () => { el.textContent = pre + proxy.v.toFixed(dec) + suf; },
+        }, 26.2 + i * 0.18);
+      });
+      fadeOut("#s6", 30.1);
+
+      // S7 30.2 → 34.0 (holds)
+      fadeIn("#s7", 30.2);
+      tl.to("#s7-hero", { opacity: 1, scale: 1, letterSpacing: "-0.035em", duration: 0.8, ease: "expo.out" }, 30.4);
+      tl.to("#s7-sub", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 31.0);
+      tl.to("#s7-chip", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, 31.5);
+      tl.to("#s7-foot", { opacity: 1, duration: 0.5, ease: "power2.out" }, 31.9);
+
+      /* ---------- one ambient: aurora glow drift (full duration, deterministic) ---------- */
+      const aurora = document.getElementById("aurora");
+      tl.to({ t: 0 }, {
+        t: 1, duration: TOTAL, ease: "none",
+        onUpdate: () => {
+          const t = tl.time();
+          const x = Math.sin(t * 0.18) * 26;
+          const y = Math.cos(t * 0.13) * 22;
+          const s = 1 + Math.sin(t * 0.1) * 0.04;
+          gsap.set(aurora, { x: x, y: y, scale: s });
+        },
+      }, 0);
+
+      tl.set({}, {}, TOTAL);
+    </script>
+  </body>
+</html>

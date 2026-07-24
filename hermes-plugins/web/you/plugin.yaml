@@ -1,0 +1,9 @@
+name: web-you
+version: 1.0.0
+description: "You.com web search provider for Hermes Agent. Requires YOU_API_KEY from https://you.com/platform."
+author: content-ideas
+kind: backend
+provides_web_providers:
+  - you
+requires_env:
+  - YOU_API_KEY

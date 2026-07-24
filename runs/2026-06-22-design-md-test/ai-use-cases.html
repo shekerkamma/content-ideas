@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Enterprise AI — Realization Patterns · Aurora Glass</title>
+<style>
+  /* ===== Aurora Glass tokens (inlined from DESIGN.md §2/§3/§6 — self-contained) ===== */
+  :root{
+    --bg:#080b11; --bg-elev:#0f141d; --glass:rgba(255,255,255,.04); --line:rgba(255,255,255,.09);
+    --ink:#eef2f7; --soft:#aeb8c7; --muted:#69748a;
+    --teal:#2dd4bf; --sky:#38bdf8; --magenta:#e879f9; --amber:#f6b94b;
+    --grad:linear-gradient(135deg,#2dd4bf 0%,#38bdf8 50%,#e879f9 100%);
+    --glow:0 0 16px rgba(45,212,191,.4); --e2:0 8px 24px rgba(0,0,0,.4);
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+    --r-ctl:8px; --r-card:12px; --r-pill:999px;
+    --s2:8px; --s3:12px; --s4:16px; --s6:24px; --s8:32px; --s12:48px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;
+    -webkit-font-smoothing:antialiased;min-height:100vh}
+  a{color:var(--teal);text-decoration:none}
+
+  /* atmosphere: one aurora spotlight, not wallpaper */
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(60% 50% at 80% 0%,rgba(56,189,248,.10),transparent 60%),
+               radial-gradient(50% 45% at 0% 100%,rgba(232,121,249,.07),transparent 60%)}
+
+  .nav{display:flex;align-items:center;gap:var(--s8);padding:var(--s4) var(--s8);
+    background:var(--bg-elev);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+  .nav .brand{font-weight:800;letter-spacing:-.02em}
+  .nav .brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .nav .spacer{flex:1}
+  .nav a{color:var(--soft);font-size:.92rem}
+  .nav a:hover{color:var(--teal)}
+  .nav a.active{color:var(--ink);border-bottom:2px solid var(--teal);padding-bottom:4px}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:var(--s12) var(--s8)}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+  .eyebrow-row{display:flex;align-items:center;gap:var(--s4);margin-bottom:var(--s4)}
+  h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  h2{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+  h3{font-size:1.15rem;font-weight:700;color:var(--ink)}
+  .lead{color:var(--soft);font-size:1.15rem;max-width:64ch;margin-top:var(--s4)}
+  .soft{color:var(--soft)} .muted{color:var(--muted)}
+  .mt4{margin-top:var(--s4)} .mt6{margin-top:var(--s6)} .mt8{margin-top:var(--s8)}
+  .hr{height:1px;background:var(--line);margin:var(--s8) 0}
+
+  .pill{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+    text-transform:uppercase;padding:5px 14px;border:1px solid var(--line);border-radius:var(--r-pill);
+    color:var(--soft);margin:0 6px 6px 0}
+  .pill.t{border-color:var(--teal);color:var(--teal)}
+  .pill.s{border-color:var(--sky);color:var(--sky)}
+  .pill.m{border-color:var(--magenta);color:var(--magenta)}
+
+  ul.arrow{list-style:none} ul.arrow li{position:relative;padding-left:1.5em;margin-bottom:.4em;color:var(--ink)}
+  ul.arrow li::before{content:'→';position:absolute;left:0;color:var(--teal);font-family:var(--mono)}
+
+  /* explorer layout */
+  .explorer{display:grid;grid-template-columns:360px 1fr;gap:var(--s6);margin-top:var(--s8);align-items:start}
+  .selector{display:flex;flex-direction:column;gap:var(--s3)}
+  .pcard{display:block;width:100%;text-align:left;cursor:pointer;background:var(--glass);
+    border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s4) var(--s6);
+    color:var(--ink);font-family:var(--font);transition:.15s}
+  .pcard:hover{border-color:var(--teal)}
+  .pcard:focus-visible{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(45,212,191,.15)}
+  .pcard.active{border-color:transparent;border-top:3px solid transparent;border-image:var(--grad) 1;
+    background:rgba(45,212,191,.05);box-shadow:var(--e2)}
+  .pcard .pc-head{display:flex;align-items:center;gap:var(--s3)}
+  .pcard .ico{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;color:var(--teal)}
+  .pcard .pc-name{font-weight:700;font-size:1.05rem}
+  .pcard .pc-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-left:auto}
+  .pcard .pc-one{color:var(--soft);font-size:.9rem;margin-top:8px}
+
+  .panel{background:var(--glass);border:1px solid var(--line);border-radius:var(--r-card);
+    padding:var(--s8);min-height:520px;border-top:3px solid transparent;border-image:var(--grad) 1}
+  .panel .p-kick{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+  .panel h2{margin-top:8px}
+  .panel .p-sol{color:var(--soft);font-size:1.05rem;margin-top:var(--s4);max-width:62ch}
+  .sect{margin-top:var(--s8)}
+  .sect > .label{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:var(--s4)}
+
+  .flow{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center}
+  .flow .step{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--ink);
+    background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-ctl);padding:8px 12px}
+  .flow .arr{color:var(--teal);font-family:var(--mono)}
+
+  .clouds{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
+  .cloud{background:var(--bg-elev);border:1px solid var(--line);border-radius:var(--r-ctl);padding:var(--s4)}
+  .cloud .cn{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .cloud .cv{color:var(--ink);font-size:.9rem;margin-top:6px;line-height:1.45}
+
+  .example{border-left:4px solid var(--teal);box-shadow:-4px 0 12px rgba(45,212,191,.3);
+    padding:var(--s4) var(--s6);margin-top:var(--s4);background:rgba(45,212,191,.04);border-radius:0 8px 8px 0}
+  .example .label{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+  .example p{color:var(--ink);font-style:italic;margin-top:6px}
+
+  .helper{margin-top:var(--s12)}
+  .chips{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s4)}
+  .chip{cursor:pointer;background:transparent;border:1px solid var(--line);border-radius:var(--r-pill);
+    color:var(--soft);font-family:var(--font);font-size:.9rem;padding:8px 16px;transition:.15s}
+  .chip:hover{border-color:var(--teal);color:var(--teal)}
+  .chip:focus-visible{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(45,212,191,.15)}
+
+  .foot{margin-top:var(--s12);color:var(--muted);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em}
+
+  @media(max-width:880px){.explorer{grid-template-columns:1fr}.clouds{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <span class="brand">Aurora <b>Glass</b></span>
+    <span class="spacer"></span>
+    <a href="index.html">Surfaces</a>
+    <a href="#" class="active">AI Use Cases</a>
+  </nav>
+
+  <div class="wrap">
+    <div class="eyebrow-row">
+      <span class="eyebrow">Enterprise AI · Realization Patterns</span>
+      <span class="pill m">Use case 5 · interactive</span>
+    </div>
+    <h1>Pick the pattern, not the hype.</h1>
+    <p class="lead">Most enterprise AI reduces to four realization patterns. Pick one to see the problem it solves,
+      how it actually works, when to reach for it, and which cloud service fits.</p>
+
+    <div class="explorer">
+      <div class="selector" id="selector" role="tablist" aria-label="AI realization patterns"></div>
+      <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+
+    <div class="helper">
+      <div class="hr"></div>
+      <span class="eyebrow">Not sure? Choose by your problem</span>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <p class="foot">Self-contained Aurora Glass surface · same tokens as the dashboard, landing, tool &amp; deck · one DESIGN.md, five surfaces.</p>
+  </div>
+
+<script>
+/* ---------- data: 4 enterprise AI realization patterns ---------- */
+const ICONS = {
+  rag:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a8 3 0 0 0 16 0a8 3 0 0 0-16 0"/><path d="M4 5v6a8 3 0 0 0 16 0V5"/><path d="M4 11v6a8 3 0 0 0 16 0v-6"/></svg>',
+  kg:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8 7.5l8 .5M7 8l4 8M17 9l-4 7"/></svg>',
+  agents:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="5" rx="1.4"/><rect x="3" y="15" width="6" height="5" rx="1.4"/><rect x="15" y="15" width="6" height="5" rx="1.4"/><path d="M12 8v3M12 11H6v4M12 11h6v4"/></svg>',
+  docai:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>'
+};
+const PATTERNS = [
+  {
+    key:'rag', name:'RAG', tag:'Ground answers', icon:'rag',
+    one:'Answer from your own documents — with citations.',
+    challenge:'LLMs hallucinate and have no access to your private, current, or proprietary data. Ask about an internal policy and you get a confident, wrong answer.',
+    solution:'Retrieve the most relevant passages from your corpus at query time and make the model answer strictly from them, returning citations back to the source.',
+    flow:['Ingest','Chunk','Embed','Vector store','Retrieve top-k','Rerank','Answer + cite'],
+    best:['Q&A over docs, support, policies, knowledge bases','Facts change often and must stay current','You need source citations and auditability'],
+    stack:['Embeddings','Vector DB · pgvector / Pinecone','Reranker','LLM'],
+    clouds:{gcp:'Vertex AI Search', aws:'Bedrock Knowledge Bases', azure:'AI Search + Azure OpenAI'},
+    example:'A policy assistant that answers from 10,000 internal PDFs and links every claim to its page.'
+  },
+  {
+    key:'kg', name:'Knowledge Graph', tag:'Connect the dots', icon:'kg',
+    one:'Multi-hop, explainable reasoning over relationships.',
+    challenge:'Plain RAG retrieves isolated chunks. It misses how entities relate, so "connect the dots" and multi-hop questions fall apart — and answers are hard to explain.',
+    solution:'Model entities and relationships as a graph, then traverse it for structured, explainable answers. Combine with retrieval (GraphRAG) for the best of both.',
+    flow:['Extract entities','Build graph','Community summaries','Traverse + retrieve','Reason','Explain path'],
+    best:['Complex domains: finance, healthcare, supply chain','Compliance needs an explainable reasoning path','Multi-hop questions across many entities'],
+    stack:['Graph DB · Neo4j / Neptune','Entity + relation extraction','GraphRAG','LLM'],
+    clouds:{gcp:'Spanner Graph', aws:'Neptune + Bedrock', azure:'Azure + Neo4j'},
+    example:'Trace beneficial ownership across shell entities for a KYC / AML review.'
+  },
+  {
+    key:'agents', name:'Multi-Agent', tag:'Do the work', icon:'agents',
+    one:'Decompose multi-step work across tools and systems.',
+    challenge:'A single prompt cannot reliably run a long, multi-step task that spans tools and systems — it loses the plot and has no way to check itself.',
+    solution:'Split the job across specialized agents (planner, workers, critic) wired to tools via MCP, coordinated by an orchestrator that verifies each step before moving on.',
+    flow:['Plan','Dispatch sub-agents','Call tools / MCP','Observe','Critic verifies','Assemble'],
+    best:['Long workflows that touch multiple systems','Tool use, browsing, code, or data ops','Research and operations automation'],
+    stack:['Agent framework · OpenHands / ADK','Tools via MCP','Eval + guardrails','LLM'],
+    clouds:{gcp:'Vertex Agent Builder (ADK)', aws:'Bedrock Agents', azure:'AI Foundry Agents'},
+    example:'A pre-sales agent: research the prospect → score the fit → draft the brief → build the demo.'
+  },
+  {
+    key:'docai', name:'Document AI', tag:'Free the data', icon:'docai',
+    one:'Turn PDFs, scans, and forms into structured data.',
+    challenge:'Critical data is trapped in PDFs, scans, and forms. Manual keying is slow, costly, and error-prone — and it does not scale with volume.',
+    solution:'Classify and parse documents (OCR + layout + LLM), extract structured fields against a schema, and route into your systems — with humans reviewing only low-confidence cases.',
+    flow:['Classify','OCR + layout','Extract fields','Validate / confidence','Human-in-the-loop','Post to system'],
+    best:['Invoices, claims, contracts, onboarding, prior-auth','High volume, structured output required','Confidence thresholds + audit trail matter'],
+    stack:['Document AI / OCR','Schema extraction','Validation rules','HITL review queue'],
+    clouds:{gcp:'Document AI', aws:'Textract + Bedrock', azure:'Document Intelligence'},
+    example:'Prior-authorization intake: 30-page faxes become a structured request in 90 seconds.'
+  }
+];
+
+/* ---------- render ---------- */
+const selector = document.getElementById('selector');
+const panel = document.getElementById('panel');
+const chips = document.getElementById('chips');
+
+PATTERNS.forEach((p, i) => {
+  const b = document.createElement('button');
+  b.className = 'pcard'; b.id = 'tab-' + p.key; b.dataset.key = p.key;
+  b.setAttribute('role','tab'); b.setAttribute('aria-selected', i===0 ? 'true':'false');
+  b.innerHTML =
+    '<div class="pc-head"><span class="ico">'+ICONS[p.icon]+'</span>'+
+    '<span class="pc-name">'+p.name+'</span><span class="pc-tag">'+p.tag+'</span></div>'+
+    '<div class="pc-one">'+p.one+'</div>';
+  b.addEventListener('click', () => select(p.key));
+  selector.appendChild(b);
+});
+
+const PROBLEMS = [
+  {q:'“Answer questions from our docs”', key:'rag'},
+  {q:'“Explain how these entities connect”', key:'kg'},
+  {q:'“Automate a multi-step workflow”', key:'agents'},
+  {q:'“Get data out of PDFs and forms”', key:'docai'}
+];
+PROBLEMS.forEach(pr => {
+  const c = document.createElement('button');
+  c.className = 'chip'; c.textContent = pr.q;
+  c.addEventListener('click', () => { select(pr.key); document.getElementById('tab-'+pr.key).focus(); });
+  chips.appendChild(c);
+});
+
+function select(key){
+  const p = PATTERNS.find(x => x.key === key);
+  if(!p) return;
+  if(location.hash !== '#'+key){ try{ history.replaceState(null,'','#'+key); }catch(e){} }
+  document.querySelectorAll('.pcard').forEach(el => {
+    const on = el.dataset.key === key;
+    el.classList.toggle('active', on);
+    el.setAttribute('aria-selected', on ? 'true':'false');
+  });
+  panel.innerHTML =
+    '<span class="p-kick">'+p.name+' · the pattern</span>'+
+    '<h2>'+p.challenge_title()+'</h2>'+
+    '<p class="p-sol"><b style="color:var(--ink)">Challenge.</b> '+p.challenge+'</p>'+
+    '<p class="p-sol"><b style="color:var(--teal)">Solution.</b> '+p.solution+'</p>'+
+    '<div class="sect"><span class="label">How it works</span><div class="flow">'+
+      p.flow.map((s,i)=> (i?'<span class="arr">→</span>':'')+'<span class="step">'+s+'</span>').join('')+
+    '</div></div>'+
+    '<div class="sect"><span class="label">Reach for it when</span><ul class="arrow">'+
+      p.best.map(b=>'<li>'+b+'</li>').join('')+'</ul></div>'+
+    '<div class="sect"><span class="label">Core stack</span><div>'+
+      p.stack.map(s=>'<span class="pill t">'+s+'</span>').join('')+'</div></div>'+
+    '<div class="sect"><span class="label">Hyperscaler fit</span><div class="clouds">'+
+      '<div class="cloud"><div class="cn">Google Cloud</div><div class="cv">'+p.clouds.gcp+'</div></div>'+
+      '<div class="cloud"><div class="cn">AWS</div><div class="cv">'+p.clouds.aws+'</div></div>'+
+      '<div class="cloud"><div class="cn">Azure</div><div class="cv">'+p.clouds.azure+'</div></div>'+
+    '</div></div>'+
+    '<div class="example"><span class="label">Example</span><p>'+p.example+'</p></div>';
+}
+PATTERNS.forEach(p => p.challenge_title = function(){
+  return ({rag:'Stop the model from making things up.',
+           kg:'Answer the questions RAG can’t.',
+           agents:'One prompt can’t run a workflow.',
+           docai:'Your data is trapped in documents.'})[this.key];
+});
+
+const initKey = (location.hash || '').replace('#','');
+select(PATTERNS.some(p => p.key === initKey) ? initKey : 'rag');
+window.addEventListener('hashchange', () => {
+  const k = (location.hash || '').replace('#','');
+  if (PATTERNS.some(p => p.key === k)) select(k);
+});
+</script>
+</body>
+</html>

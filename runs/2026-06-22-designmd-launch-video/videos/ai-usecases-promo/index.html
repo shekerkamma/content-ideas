@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Real Estate Brokerage AI — built, not bought</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+/* local fonts */
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/7cHpv4kjgoGqM7E_A8s52Hs.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/7cHpv4kjgoGqM7E_Ass52Hs.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/7cHpv4kjgoGqM7E_DMs5.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3_-gs6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3_-gs6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3_-gs51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E30-8s6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E30-8s6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E30-8s51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3t-4s6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3t-4s6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3t-4s51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3q-0s6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3q-0s6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3q-0s51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3j-ws6FospT4.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3j-ws6VospT4.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(assets/fonts/7cHqv4kjgoGqM7E3j-ws51os.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1iIq129k.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1isq129k.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1iAq129k.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1iEq129k.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl1FgtIU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwlRFgtIU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl9FgtIU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwl5FgtIU.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl1FgtIU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlRFgtIU.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl9FgtIU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl5FgtIU.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(assets/fonts/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFgg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+      :root {
+        --bg: #080b11; --bg-elev: #0f141d; --ink: #eef2f7; --soft: #aeb8c7; --muted: #69748a;
+        --teal: #2dd4bf; --sky: #38bdf8; --magenta: #e879f9; --amber: #f6b94b; --line: #1f2530;
+        --grad: linear-gradient(115deg, #2dd4bf 0%, #38bdf8 48%, #e879f9 100%);
+        --glow: 0 0 40px rgba(45, 212, 191, 0.28);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--bg);
+        color: var(--ink); font-family: "Barlow", system-ui, sans-serif; }
+      .stage { position: absolute; inset: 0; overflow: hidden; background: var(--bg); }
+
+      .aurora { position: absolute; inset: -20%; z-index: 0; pointer-events: none; will-change: transform;
+        background:
+          radial-gradient(38% 40% at 22% 30%, rgba(45,212,191,0.16), transparent 70%),
+          radial-gradient(34% 38% at 78% 68%, rgba(232,121,249,0.10), transparent 70%),
+          radial-gradient(40% 42% at 60% 20%, rgba(56,189,248,0.10), transparent 70%); }
+      .grid-faint { position: absolute; inset: 0; z-index: 0; opacity: 0.5; pointer-events: none;
+        background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 80px 80px; }
+      .vignette { position: absolute; inset: 0; z-index: 60; pointer-events: none;
+        background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%); }
+
+      .scene { position: absolute; inset: 0; z-index: 10; padding: 90px 120px;
+        display: flex; flex-direction: column; justify-content: center; will-change: opacity, transform; }
+      .kicker { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 22px; font-weight: 500;
+        letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); }
+      .catalogue { position: absolute; top: 90px; right: 120px; font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-size: 120px; font-weight: 600; letter-spacing: -0.02em; color: rgba(255,255,255,0.05); }
+      .lead { color: var(--soft); font-weight: 400; line-height: 1.45; max-width: 1160px; }
+      .display { font-weight: 900; letter-spacing: -0.035em; line-height: 0.94; text-transform: lowercase; color: var(--ink); }
+      .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text;
+        -webkit-text-fill-color: transparent; color: transparent; }
+      .tc { color: var(--teal); }
+      .solu { color: var(--soft); font-size: 36px; font-weight: 400; line-height: 1.4; max-width: 1180px; margin-top: 30px; }
+
+      .flow { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 48px; }
+      .step { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 23px; letter-spacing: 0.03em;
+        color: var(--ink); background: var(--bg-elev); border: 1px solid var(--line); border-radius: 8px; padding: 13px 20px; }
+      .arr { color: var(--teal); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 23px; }
+      .out { margin-top: 36px; display: inline-flex; align-items: center; gap: 14px;
+        border: 1px solid var(--teal); border-radius: 999px; padding: 12px 24px; background: rgba(45,212,191,0.06); }
+      .out .ol { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 16px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+      .out .ov { font-size: 22px; font-weight: 700; color: var(--teal); }
+
+      /* five lane cards */
+      .lanes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 56px; }
+      .lane { background: rgba(255,255,255,0.04); border: 1px solid var(--line); border-radius: 12px;
+        padding: 26px 22px; display: flex; flex-direction: column; gap: 12px; }
+      .lane .ln { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+      .lane .lt { font-size: 25px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); line-height: 1.1; }
+      .lane .lb { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--soft); }
+      .lane .lo { font-size: 18px; color: var(--soft); line-height: 1.35; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+      .lane.t { border-top: 3px solid var(--teal); } .lane.s { border-top: 3px solid var(--sky); }
+      .lane.m { border-top: 3px solid var(--magenta); } .lane.a { border-top: 3px solid var(--amber); }
+      .lane.t2 { border-top: 3px solid var(--teal); }
+
+      /* demo scene */
+      .demo { display: flex; align-items: center; gap: 72px; margin-top: 8px; }
+      .demo .shot { position: relative; border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+        background: var(--bg-elev); box-shadow: var(--glow); width: 760px; height: 620px; flex: 0 0 760px; }
+      .demo .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+      .demo .side { flex: 1; }
+      .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 40px; margin-top: 28px; }
+      .kpi .n { font-weight: 900; font-size: 64px; letter-spacing: -0.04em; line-height: 1; color: var(--teal); }
+      .kpi .l { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--soft); margin-top: 8px; }
+
+      /* stack layers */
+      .layers { display: flex; flex-direction: column; gap: 18px; margin-top: 48px; max-width: 1320px; }
+      .layer { display: flex; align-items: center; gap: 24px; background: rgba(255,255,255,0.04);
+        border: 1px solid var(--line); border-radius: 12px; padding: 22px 28px; }
+      .layer .lk { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 16px; letter-spacing: 0.16em;
+        text-transform: uppercase; color: var(--teal); width: 240px; flex: 0 0 240px; }
+      .layer .lv { font-size: 27px; font-weight: 600; color: var(--ink); }
+      .layer .lv b { color: var(--teal); font-weight: 700; }
+
+      .pill { display: inline-flex; align-items: center; font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-size: 20px; letter-spacing: 0.14em; text-transform: uppercase; padding: 12px 24px; border-radius: 999px;
+        border: 1px solid var(--teal); color: var(--teal); background: rgba(45,212,191,0.06); }
+      .cta { display: flex; flex-direction: column; gap: 24px; }
+      .footnote { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 19px; letter-spacing: 0.18em;
+        text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="38" data-width="1920" data-height="1080">
+      <div class="stage clip" data-start="0" data-duration="38" data-track-index="1" id="stage">
+        <div class="aurora" id="aurora" data-layout-allow-overflow></div>
+        <div class="grid-faint"></div>
+
+        <!-- S1 HOOK -->
+        <div class="scene" id="s1">
+          <div class="kicker" id="s1-kicker" style="margin-bottom: 36px">REAL ESTATE BROKERAGE · AI ENGINEERING</div>
+          <div class="display grad-text" id="s1-hero" style="font-size: 200px">the brokerage,</div>
+          <div class="display" id="s1-sub" style="font-size: 168px; color: var(--ink)">automated.</div>
+          <div class="lead" id="s1-lead" style="font-size: 38px; margin-top: 34px">five workflow lanes, one execution layer — and your CRM stays the system of record.</div>
+        </div>
+
+        <!-- S2 FIVE LANES -->
+        <div class="scene" id="s2">
+          <div class="kicker" id="s2-kicker" style="margin-bottom: 26px">FIVE SELLABLE LANES · PICK THE WEDGE BY THE PAIN</div>
+          <div class="display" id="s2-head" style="font-size: 88px">not a chatbot — workflow automation.</div>
+          <div class="lanes" id="s2-lanes">
+            <div class="lane t"><div class="ln">Lane 01</div><div class="lt">Lead routing &amp; TC</div><div class="lb">Revenue teams</div><div class="lo">Faster speed-to-lead, clean handoffs.</div></div>
+            <div class="lane s"><div class="ln">Lane 02</div><div class="lt">Multifamily leasing</div><div class="lb">Leasing ops</div><div class="lo">Faster response, smoother renewals.</div></div>
+            <div class="lane m"><div class="ln">Lane 03</div><div class="lt">Commission &amp; payout</div><div class="lb">Brokerage finance</div><div class="lo">Fewer exceptions, auditable payouts.</div></div>
+            <div class="lane a"><div class="ln">Lane 04</div><div class="lt">Service &amp; maintenance</div><div class="lb">Property ops</div><div class="lo">Faster triage, queue visibility.</div></div>
+            <div class="lane t2"><div class="ln">Lane 05</div><div class="lt">Title, escrow &amp; closing</div><div class="lb">Closing teams</div><div class="lo">Cleaner files, closing readiness.</div></div>
+          </div>
+        </div>
+
+        <!-- S3 LANE 01 SPOTLIGHT -->
+        <div class="scene" id="s3">
+          <div class="catalogue">01</div>
+          <div class="kicker" id="s3-kicker" style="margin-bottom: 26px">LANE 01 · LEAD ROUTING + TRANSACTION COORDINATION</div>
+          <div class="display" id="s3-head" style="font-size: 130px">win the first<br />five <span class="tc">minutes.</span></div>
+          <div class="solu" id="s3-solu">Score every lead, route it to the right agent, draft the handoff, and keep the deal moving — inside the CRM you already run.</div>
+          <div class="flow" id="s3-flow">
+            <span class="step">Capture</span><span class="arr">→</span><span class="step">Score</span><span class="arr">→</span>
+            <span class="step">Route</span><span class="arr">→</span><span class="step">Coordinate</span><span class="arr">→</span><span class="step">Close</span>
+          </div>
+          <div class="out" id="s3-out"><span class="ol">Outcome</span><span class="ov">Faster speed-to-lead · cleaner handoffs</span></div>
+        </div>
+
+        <!-- S4 LANE 03 SPOTLIGHT -->
+        <div class="scene" id="s4">
+          <div class="catalogue">03</div>
+          <div class="kicker" id="s4-kicker" style="margin-bottom: 26px">LANE 03 · COMMISSION + PAYOUT AUTOMATION</div>
+          <div class="display" id="s4-head" style="font-size: 130px">kill payout<br /><span class="tc">exceptions.</span></div>
+          <div class="solu" id="s4-solu">Validate the deal, apply commission logic, flag the exceptions, draft reconciliation — finance stays in control, every step auditable.</div>
+          <div class="flow" id="s4-flow">
+            <span class="step">Validate</span><span class="arr">→</span><span class="step">Apply logic</span><span class="arr">→</span>
+            <span class="step">Flag exceptions</span><span class="arr">→</span><span class="step">Reconcile</span><span class="arr">→</span><span class="step">Pay</span>
+          </div>
+          <div class="out" id="s4-out"><span class="ol">Outcome</span><span class="ov">Fewer exceptions · faster, auditable payouts</span></div>
+        </div>
+
+        <!-- S5 WORKING DEMO -->
+        <div class="scene" id="s5" style="padding: 80px 120px">
+          <div class="kicker" id="s5-kicker" style="margin-bottom: 22px">A WORKING AGENT, NOT A SLIDE</div>
+          <div class="demo">
+            <div class="shot" id="s5-shot"><img src="assets/dashboard-charts.png" alt="Summit Realty live dashboard" /></div>
+            <div class="side">
+              <div class="display" id="s5-head" style="font-size: 76px">live dashboard,<br />real <span class="tc">data.</span></div>
+              <div class="kpis" id="s5-kpis">
+                <div class="kpi"><div class="n" data-to="47">0</div><div class="l">Active listings</div></div>
+                <div class="kpi"><div class="n" data-to="2.8" data-dec="1" data-suffix="%">0%</div><div class="l">Lead conversion</div></div>
+                <div class="kpi"><div class="n" data-to="18.4" data-dec="1" data-prefix="$" data-suffix="M">$0M</div><div class="l">Pipeline value</div></div>
+                <div class="kpi"><div class="n" data-to="24">0</div><div class="l">Avg days on market</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="footnote" id="s5-foot" style="margin-top: 30px">SUMMIT REALTY · BUILT ON ADK GENERATIVE-UI CANVAS — THE AGENT WRITES THE CHARTS</div>
+        </div>
+
+        <!-- S6 THE STACK -->
+        <div class="scene" id="s6">
+          <div class="kicker" id="s6-kicker" style="margin-bottom: 24px">HOW IT'S BUILT</div>
+          <div class="display" id="s6-head" style="font-size: 104px">built, not <span class="tc">bought.</span></div>
+          <div class="layers" id="s6-layers">
+            <div class="layer"><span class="lk">Generative UI</span><span class="lv">ADK + CopilotKit — the agent <b>writes the dashboard</b></span></div>
+            <div class="layer"><span class="lk">Orchestration</span><span class="lv">OpenHands multi-agent — <b>policy, exceptions, repeatable runs</b></span></div>
+            <div class="layer"><span class="lk">Tools</span><span class="lv">MCP into your <b>CRM, accounting &amp; MLS</b> — they stay the system of action</span></div>
+          </div>
+        </div>
+
+        <!-- S7 CTA -->
+        <div class="scene" id="s7">
+          <div class="cta">
+            <div class="kicker" id="s7-kicker" style="margin-bottom: 12px">LAND, THEN EXPAND</div>
+            <div class="display grad-text" id="s7-hero" style="font-size: 158px">start with one queue.</div>
+            <div class="display" id="s7-sub" style="font-size: 104px; color: var(--ink)">expand to the suite.</div>
+            <div style="margin-top: 18px"><span class="pill" id="s7-chip">Book the brokerage AI workshop</span></div>
+            <div class="footnote" id="s7-foot">DataStaq AI · done-for-you AI engineering</div>
+          </div>
+        </div>
+
+        <audio id="bgm" data-start="0" data-duration="38" data-track-index="2" data-volume="0.9" src="assets/bgm.mp3"></audio>
+        <div class="vignette"></div>
+      </div>
+    </div>
+
+    <script>
+      const TOTAL = 38;
+      const ALL = ["#s1","#s2","#s3","#s4","#s5","#s6","#s7"];
+      gsap.set(ALL, { opacity: 0 });
+
+      gsap.set("#s1-kicker", { opacity: 0, y: 18 });
+      gsap.set("#s1-hero", { opacity: 0, scale: 0.84, letterSpacing: "0.1em" });
+      gsap.set("#s1-sub", { opacity: 0, y: 30 });
+      gsap.set("#s1-lead", { opacity: 0, y: 24 });
+      gsap.set("#s2-kicker", { opacity: 0, x: -24 });
+      gsap.set("#s2-head", { opacity: 0, y: 36 });
+      gsap.set("#s2-lanes .lane", { opacity: 0, y: 56, scale: 0.92 });
+      ["s3","s4"].forEach(s => {
+        gsap.set("#"+s+"-kicker", { opacity: 0, x: -24 });
+        gsap.set("#"+s+"-head", { opacity: 0, y: 44 });
+        gsap.set("#"+s+"-solu", { opacity: 0, y: 24 });
+        gsap.set("#"+s+"-flow .step", { opacity: 0, y: 20 });
+        gsap.set("#"+s+"-flow .arr", { opacity: 0 });
+        gsap.set("#"+s+"-out", { opacity: 0, scale: 0.8 });
+      });
+      gsap.set("#s5-kicker", { opacity: 0, y: 16 });
+      gsap.set("#s5-shot", { opacity: 0, x: -80, scale: 0.94 });
+      gsap.set("#s5-head", { opacity: 0, y: 30 });
+      gsap.set("#s5-kpis .kpi", { opacity: 0, y: 30 });
+      gsap.set("#s5-foot", { opacity: 0 });
+      gsap.set("#s6-kicker", { opacity: 0, x: -24 });
+      gsap.set("#s6-head", { opacity: 0, y: 40 });
+      gsap.set("#s6-layers .layer", { opacity: 0, x: -40 });
+      gsap.set("#s7-kicker", { opacity: 0, y: 16 });
+      gsap.set("#s7-hero", { opacity: 0, scale: 0.86, letterSpacing: "0.1em" });
+      gsap.set("#s7-sub", { opacity: 0, y: 30 });
+      gsap.set("#s7-chip", { opacity: 0, scale: 0.6 });
+      gsap.set("#s7-foot", { opacity: 0 });
+
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+      const fIn = (sel, at, d = 0.5) => tl.to(sel, { opacity: 1, duration: d, ease: "power2.out" }, at);
+      const fOut = (sel, at, d = 0.4) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, at);
+
+      // S1 0.2-4.2
+      fIn("#s1", 0.2, 0.01);
+      tl.to("#s1-kicker", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.3);
+      tl.to("#s1-hero", { opacity: 1, scale: 1, letterSpacing: "-0.035em", duration: 0.8, ease: "back.out(1.4)" }, 0.55);
+      tl.to("#s1-sub", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 1.2);
+      tl.to("#s1-lead", { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.75);
+      fOut("#s1", 3.85);
+
+      // S2 3.9-10.2
+      fIn("#s2", 3.9);
+      tl.to("#s2-kicker", { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 4.05);
+      tl.to("#s2-head", { opacity: 1, y: 0, duration: 0.65, ease: "expo.out" }, 4.25);
+      tl.to("#s2-lanes .lane", { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "power3.out", stagger: 0.13 }, 4.9);
+      fOut("#s2", 9.8);
+
+      // spotlights
+      [{s:"s3",inAt:9.9,outAt:15.6},{s:"s4",inAt:15.3,outAt:21.0}].forEach(({s,inAt,outAt}) => {
+        fIn("#"+s, inAt);
+        tl.to("#"+s+"-kicker", { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, inAt + 0.15);
+        tl.to("#"+s+"-head", { opacity: 1, y: 0, duration: 0.7, ease: "expo.out" }, inAt + 0.35);
+        tl.to("#"+s+"-solu", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, inAt + 1.0);
+        tl.to("#"+s+"-flow .arr", { opacity: 1, duration: 0.3, ease: "power1.out" }, inAt + 1.7);
+        tl.to("#"+s+"-flow .step", { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.5)", stagger: 0.16 }, inAt + 1.5);
+        tl.to("#"+s+"-out", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, inAt + 2.7);
+        fOut("#"+s, outAt);
+      });
+
+      // S5 demo 20.7-27.2
+      fIn("#s5", 20.7);
+      tl.to("#s5-kicker", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 20.85);
+      tl.to("#s5-shot", { opacity: 1, x: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 21.05);
+      tl.to("#s5-head", { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 21.5);
+      tl.to("#s5-kpis .kpi", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.15 }, 21.9);
+      tl.to("#s5-foot", { opacity: 1, duration: 0.5, ease: "power2.out" }, 23.0);
+      const nums = gsap.utils.toArray("#s5-kpis .n");
+      nums.forEach((el, i) => {
+        const to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10);
+        const pre = el.dataset.prefix || "", suf = el.dataset.suffix || "";
+        const proxy = { v: 0 };
+        tl.to(proxy, { v: to, duration: 1.1, ease: "power2.out",
+          onUpdate: () => { el.textContent = pre + proxy.v.toFixed(dec) + suf; } }, 22.0 + i * 0.15);
+      });
+      fOut("#s5", 26.8);
+
+      // S6 stack 26.9-32.6
+      fIn("#s6", 26.9);
+      tl.to("#s6-kicker", { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 27.05);
+      tl.to("#s6-head", { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 27.25);
+      tl.to("#s6-layers .layer", { opacity: 1, x: 0, duration: 0.55, ease: "power3.out", stagger: 0.2 }, 27.9);
+      fOut("#s6", 32.4);
+
+      // S7 CTA 32.5-38
+      fIn("#s7", 32.5);
+      tl.to("#s7-kicker", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 32.65);
+      tl.to("#s7-hero", { opacity: 1, scale: 1, letterSpacing: "-0.035em", duration: 0.8, ease: "expo.out" }, 32.85);
+      tl.to("#s7-sub", { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 33.5);
+      tl.to("#s7-chip", { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, 34.0);
+      tl.to("#s7-foot", { opacity: 1, duration: 0.5, ease: "power2.out" }, 34.4);
+
+      const aurora = document.getElementById("aurora");
+      tl.to({ t: 0 }, { t: 1, duration: TOTAL, ease: "none", onUpdate: () => {
+        const t = tl.time();
+        gsap.set(aurora, { x: Math.sin(t*0.18)*26, y: Math.cos(t*0.13)*22, scale: 1 + Math.sin(t*0.1)*0.04 });
+      }}, 0);
+      tl.set({}, {}, TOTAL);
+    </script>
+  </body>
+</html>

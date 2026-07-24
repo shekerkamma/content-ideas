@@ -1,0 +1,40 @@
+{
+  "candidates": [
+    {
+      "id": "mem-4b074f0a7395",
+      "type": "topic",
+      "title": "Frontier AI platforms: best daily content opportunity",
+      "summary": "Frontier AI platforms is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+      "provenance": [
+        "https://openai.com/news/",
+        "https://www.anthropic.com/news",
+        "https://deepmind.google/discover/blog/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "mem-7384e5069691",
+      "type": "topic",
+      "title": "Agent harnesses and developer tools: best daily content opportunity",
+      "summary": "Agent harnesses and developer tools is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+      "provenance": [
+        "https://hermes-agent.nousresearch.com/docs/",
+        "https://docs.openhands.dev/",
+        "https://github.com/OpenHands/OpenHands"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "mem-33cc2421c1ad",
+      "type": "topic",
+      "title": "Implementation proof points: best daily content opportunity",
+      "summary": "Implementation proof points is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+      "provenance": [
+        "https://aws.amazon.com/blogs/machine-learning/",
+        "https://cloud.google.com/blog/products/ai-machine-learning",
+        "https://blogs.nvidia.com/blog/category/deep-learning/"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

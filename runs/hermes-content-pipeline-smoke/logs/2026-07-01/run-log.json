@@ -1,0 +1,45 @@
+{
+  "run_id": "run-0b5d30569c00",
+  "started_at": "2026-07-01T05:17:50.920503+00:00",
+  "finished_at": "2026-07-01T05:17:50.945218+00:00",
+  "status": "success",
+  "counts": {
+    "source_items": 14,
+    "topic_clusters": 4,
+    "research_briefs": 3,
+    "draft_packages": 1,
+    "memory_candidates": 3,
+    "deliverables": 9
+  },
+  "cost": {
+    "estimated_usd": 2.9,
+    "cap_usd": 12.0,
+    "cap_exceeded": false
+  },
+  "model_routes": [
+    {
+      "step": "source_scan",
+      "model_class": "none",
+      "model_name": null
+    },
+    {
+      "step": "topic_ranking",
+      "model_class": "standard",
+      "model_name": "configured-by-hermes"
+    },
+    {
+      "step": "research_brief",
+      "model_class": "standard",
+      "model_name": "configured-by-hermes"
+    },
+    {
+      "step": "draft_package",
+      "model_class": "standard",
+      "model_name": "configured-by-hermes"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "offline mode used; source items are fixture artifacts"
+  ]
+}

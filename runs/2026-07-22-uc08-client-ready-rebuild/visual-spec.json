@@ -1,0 +1,110 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "output_mode": "native",
+    "editability": "All titles, text, cards, charts, process flows, risk tables, and architecture elements remain native editable PowerPoint objects.",
+    "reference_deck": "source/use-case-realization-uc08-2026-07-22.pptx"
+  },
+  "visuals": [
+    {
+      "id": "s01-terminal-model-switch",
+      "slide_ids": [1],
+      "purpose": "Frame the low-cost multi-model pilot proposition with a native terminal and provider-routing motif.",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "The visual communicates a structured workflow and must remain editable.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s02-decision-tiles",
+      "slide_ids": [2],
+      "purpose": "Summarize the decision case and its conditions.",
+      "artifact_type": "data",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Claims and decision conditions belong in editable KPI and evidence tiles.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s03-friction-chain",
+      "slide_ids": [3],
+      "purpose": "Show how fragmented access creates operational friction.",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "A causal process chain is clearer and editable as native shapes.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s04-target-architecture",
+      "slide_ids": [4],
+      "purpose": "Show one terminal workflow routing tasks to governed provider options.",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Architecture and control points should remain editable.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s05-connection-loop",
+      "slide_ids": [5],
+      "purpose": "Explain the four-step provider connection and model selection workflow.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The official documented steps can be expressed as an editable process chain.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s06-evidence-matrix",
+      "slide_ids": [6],
+      "purpose": "Separate verified facts from commercial and availability conditions.",
+      "artifact_type": "data",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "A native evidence matrix keeps claims and qualifications readable and editable.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s07-pilot-roadmap",
+      "slide_ids": [7],
+      "purpose": "Show the four-week pilot sequence, owners, and decisions.",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "The roadmap is structured project information and must remain editable.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s08-metric-scorecard",
+      "slide_ids": [8],
+      "purpose": "Define measurable pilot outcomes without asserting unsupported ROI.",
+      "artifact_type": "data",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Targets and measures belong in native KPI objects.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s09-risk-matrix",
+      "slide_ids": [9],
+      "purpose": "Pair each commercial, operational, or governance risk with a mitigation.",
+      "artifact_type": "data",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Risk and mitigation relationships are best kept as an editable table.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    },
+    {
+      "id": "s10-decision-gate",
+      "slide_ids": [10],
+      "purpose": "Make the pilot approval ask and exit criteria explicit.",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "The decision panel and checklist should remain editable.",
+      "qa": {"visual_checked": true, "legible": true, "not_cropped": true, "background_matched": true, "provenance_recorded": true}
+    }
+  ]
+}

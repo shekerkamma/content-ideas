@@ -1,0 +1,64 @@
+{
+  "topic": "Claude Code beginner course",
+  "route": "pptx-native",
+  "editability_mode": "PPT-native editable diagrams",
+  "records": [
+    {
+      "id": "setup-ladder",
+      "frames": [4, 5, 6],
+      "layout_type": "ladder",
+      "deck_slides": [4, 5],
+      "visual_hierarchy": "browser chat versus local execution, then setup sequence",
+      "rendering": "native PowerPoint shapes"
+    },
+    {
+      "id": "website-flow",
+      "frames": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+      "layout_type": "process flow",
+      "deck_slides": [6, 9, 10],
+      "visual_hierarchy": "prompt to local run to deployment to reusable offer",
+      "rendering": "native PowerPoint shapes"
+    },
+    {
+      "id": "automation-flow",
+      "frames": [24, 25, 26, 27, 28, 29, 30],
+      "layout_type": "workflow cards",
+      "deck_slides": [11, 12],
+      "visual_hierarchy": "capture process, choose connectors, build UI, run jobs, package",
+      "rendering": "native PowerPoint shapes"
+    },
+    {
+      "id": "support-inbox",
+      "frames": [34, 35, 36, 37, 38, 39, 40],
+      "layout_type": "case card",
+      "deck_slides": [13],
+      "visual_hierarchy": "challenge, solution, business implication",
+      "rendering": "native PowerPoint shapes"
+    },
+    {
+      "id": "build-method",
+      "frames": [41, 42, 43],
+      "layout_type": "hub and spoke",
+      "deck_slides": [14],
+      "visual_hierarchy": "build plan, implementation plan, agent build, test and refine",
+      "rendering": "native PowerPoint shapes"
+    },
+    {
+      "id": "lead-enricher",
+      "frames": [44, 45, 46],
+      "layout_type": "case card",
+      "deck_slides": [15],
+      "visual_hierarchy": "vague request to spec to implementation to debug",
+      "rendering": "native PowerPoint shapes"
+    },
+    {
+      "id": "pricing",
+      "frames": [47, 48, 49],
+      "layout_type": "offer model cards",
+      "deck_slides": [18, 19],
+      "visual_hierarchy": "ROI rule, result-based, setup plus recurring, tiered usage",
+      "rendering": "native PowerPoint shapes"
+    }
+  ]
+}
+

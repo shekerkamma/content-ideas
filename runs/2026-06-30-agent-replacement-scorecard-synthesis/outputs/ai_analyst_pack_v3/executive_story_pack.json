@@ -1,0 +1,41 @@
+{
+  "role": "ai-analyst upstream pack supporting executive story deck",
+  "executive_thesis": "Agents are not simply replacing SaaS categories; they are shifting value from seat-based workflow software to agent-executed work, while governed data substrates remain durable.",
+  "business_decision": "Use the scorecard to decide which workflow layers to replace, which vendor modules to renegotiate, and which systems of record to keep.",
+  "validated_counts": {
+    "REPLACE": 10,
+    "RENEGOTIATE": 9,
+    "KEEP": 6
+  },
+  "data_quality": {
+    "rows": 25,
+    "null_pct": {
+      "#": 0.0,
+      "Agent type": 0.0,
+      "Use case": 0.0,
+      "Proof (short)": 0.0,
+      "SaaS affected (short)": 0.0,
+      "Volume": 0.0,
+      "Determinism": 0.0,
+      "Data moat": 0.0,
+      "Verdict": 0.0,
+      "Build-vs-buy": 0.0,
+      "Proof \u2014 what's deployed": 0.0,
+      "SaaS in the crosshairs": 0.0,
+      "Volume score": 0.0,
+      "Determinism score": 0.0,
+      "Moat exposure score": 0.0,
+      "Exposure score": 0.0,
+      "Moat": 0.0
+    },
+    "duplicate_use_cases": 0,
+    "guardrail": "Curated evidence base; do not present as statistically sampled market proof."
+  },
+  "storyboard": [
+    "The SaaS value pool is moving from seats to executable work.",
+    "Replacement happens at the workflow layer, not usually at the system-of-record layer.",
+    "Data moat separates replace, renegotiate, and keep decisions.",
+    "Use cases show where each motion applies.",
+    "The client action is a portfolio diagnostic, not a blanket replacement campaign."
+  ]
+}

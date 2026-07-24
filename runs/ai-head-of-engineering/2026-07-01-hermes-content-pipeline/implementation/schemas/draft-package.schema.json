@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "draft-package.schema.json",
+  "title": "DraftPackage",
+  "type": "object",
+  "required": [
+    "id",
+    "research_brief_id",
+    "title",
+    "article_markdown_path",
+    "variants",
+    "citation_map",
+    "status"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "research_brief_id": { "type": "string" },
+    "title": { "type": "string" },
+    "dek": { "type": "string" },
+    "article_markdown_path": { "type": "string" },
+    "target_audience": { "type": "string" },
+    "seo_aeo": {
+      "type": "object",
+      "properties": {
+        "primary_query": { "type": "string" },
+        "secondary_queries": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "answer_targets": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "variants": {
+      "type": "object",
+      "required": ["linkedin", "x_thread", "newsletter"],
+      "properties": {
+        "linkedin": { "type": "string" },
+        "x_thread": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "newsletter": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "citation_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["draft_claim", "citation_ids"],
+        "properties": {
+          "draft_claim": { "type": "string" },
+          "citation_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "needs_revision", "rejected", "approved", "approved_with_edits"]
+    }
+  },
+  "additionalProperties": false
+}
+

@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Use case 3 · Internal tool — Aurora Glass</title>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css"></head>
+<body>
+<nav class="nav">
+  <span class="brand">Lead<b>Intake</b></span>
+  <a href="#" class="active">Intake</a><a href="#">Queue</a><a href="#">Routing rules</a>
+  <span class="spacer"></span><span class="pill t">Internal · v2.1</span>
+</nav>
+<div class="wrap">
+  <span class="eyebrow">Operations tool</span>
+  <h2 class="mt4">Log a new lead</h2>
+  <p class="lead mt4">Fields validate inline. Hit save and routing assigns an owner automatically.</p>
+
+  <div class="grid mt8" style="grid-template-columns:1fr 1.4fr;gap:var(--s8)">
+    <div class="card">
+      <div class="field"><label>Company</label><input placeholder="Meridian Logistics"></div>
+      <div class="field"><label>Contact email</label><input placeholder="ops@meridian.com"></div>
+      <div class="field"><label>Source</label><select><option>Outbound</option><option>Referral</option><option>Inbound</option><option>Event</option></select></div>
+      <div class="field"><label>Est. value (USD)</label><input placeholder="120000"></div>
+      <div class="field"><label>Notes</label><textarea rows="3" placeholder="Context for the owner…"></textarea></div>
+      <button class="btn btn-primary">Save & route</button> <button class="btn btn-ghost">Clear</button>
+    </div>
+    <div class="card">
+      <h3>Recently routed</h3>
+      <div class="mt4"><span class="pill t">All</span><span class="pill s">Mine</span><span class="pill m">Unassigned</span></div>
+      <table class="mt4">
+        <thead><tr><th>Company</th><th>Source</th><th>Value</th><th>Owner</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Northwind Retail</td><td>Referral</td><td>$210K</td><td>Sam P.</td><td><span class="badge win">Routed</span></td></tr>
+          <tr><td>Atlas Mfg</td><td>Outbound</td><td>$95K</td><td>Lee K.</td><td><span class="badge win">Routed</span></td></tr>
+          <tr><td>Cobalt Health</td><td>Event</td><td>$640K</td><td>—</td><td><span class="badge warm">Needs owner</span></td></tr>
+          <tr><td>Vertex Labs</td><td>Inbound</td><td>$48K</td><td>—</td><td><span class="badge cold">Low priority</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body></html>

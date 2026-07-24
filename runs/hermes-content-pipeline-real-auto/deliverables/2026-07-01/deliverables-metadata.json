@@ -1,0 +1,26 @@
+{
+  "date": "2026-07-01",
+  "mode": "live",
+  "topic_id": "topic-c3ec7d27cbd5",
+  "brief_id": "brief-e4ce7eef0f97",
+  "draft_ids": [
+    "draft-f3dc0ce5060e"
+  ],
+  "business_angle": {
+    "title": "The Enterprise Agent Shift Is Not More Tools. It Is Governed Operating Layers.",
+    "claim": "Agent adoption is moving from isolated tools to governed operating layers.",
+    "decision": "Publish a business-facing piece that connects enterprise agent adoption with the operating-layer pattern: sources, memory, tools, schedules, controls, and approval gates."
+  },
+  "source_count": 40,
+  "deliverables": [
+    "README.md",
+    "business-outcome-memo.md",
+    "source-register.md",
+    "editorial-brief.md",
+    "article-draft.md",
+    "linkedin-post.md",
+    "x-thread.md",
+    "newsletter-blurb.md"
+  ],
+  "publish_allowed": false
+}

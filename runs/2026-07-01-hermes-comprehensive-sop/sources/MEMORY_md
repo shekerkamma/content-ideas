@@ -1,0 +1,17 @@
+WSL host has uv package manager configured. Executing tests or python scripts in workspace should default to 'uv run pytest' or 'uv run' to avoid pathing and dependency mismatches.
+§
+User tracks 'uv' (astral-sh/uv) as their primary package manager with verified baseline version 0.11.23.
+§
+User's primary ClaudeOS workspace is located at Windows path 'D:\AppliedAICourse\Claude Cowork\ClaudeOS' (WSL: '/mnt/d/AppliedAICourse/Claude Cowork/ClaudeOS'). This directory contains canonical dotfiles (SOUL.md, CLAUDE.md, etc.) and project structure.
+§
+Active Accounts: TMNA (Power Platform + SAP on Azure) and Hyundai (Plant ops / manufacturing).
+§
+GBrain is live via systemd service (gbrain-http.service) at http://127.0.0.1:3131/mcp. Engine: pglite v0.42.25.0. Hermes MCP connected with 81 tools. Token rotated and stored in MCP_GBRAIN_API_KEY env var. Use 'gbrain' skill for instructions on querying/writing.
+§
+Deliverable Standard: Every POC requires 1) Live demo on real data, 2) Architecture diagram, 3) Cost analysis (TCO/tokens), 4) Business-story deck (Midnight Executive theme).
+§
+Tool Defaults: Use 'drawio' skill for diagrams. Use 'architecture-presentation' skill for architecture docs.
+§
+Notion Integration: Connected via 'claudeosnotion' bot in 'Sheker Kamma's Notion'. Contains Project Docs, Content Calendar, etc.
+§
+When migrating config files from other agents (ClaudeOS, Codex, etc.) to Hermes: (1) replace tool-specific references with Hermes equivalents (e.g. AskUserQuestion → clarify tool), (2) translate Windows paths to WSL equivalents (/mnt/d/ for D:\), (3) verify env var references in config.yaml aren't mangled by secret redaction — check with cat -v.

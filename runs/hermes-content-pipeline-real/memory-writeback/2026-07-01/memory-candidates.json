@@ -1,0 +1,28 @@
+{
+  "candidates": [
+    {
+      "id": "mem-4b074f0a7395",
+      "type": "topic",
+      "title": "Frontier AI platforms: best daily content opportunity",
+      "summary": "Frontier AI platforms is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+      "provenance": [
+        "https://openai.com/index/the-state-of-enterprise-ai-2025-report/",
+        "https://openai.com/index/next-phase-of-enterprise-ai/",
+        "https://openai.com/index/new-tools-for-building-agents/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "mem-7384e5069691",
+      "type": "topic",
+      "title": "Agent harnesses and developer tools: best daily content opportunity",
+      "summary": "Agent harnesses and developer tools is a content opportunity because the sources point to practical operator demand, not just general AI news.",
+      "provenance": [
+        "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-claude-code",
+        "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-opencode",
+        "https://hermes-agent.nousresearch.com/docs/user-guide/skills/bundled/autonomous-ai-agents/autonomous-ai-agents-hermes-agent"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

@@ -116,10 +116,12 @@ Treat this as a named chain stage:
   work may exist
 - reflect that stage in pipeline status when it was used successfully
 
-If the host exposes stronger research plugins such as `exa`, prefer them for
-discovery in this stage so official product pages, docs, GitHub repos,
-competitive/vendor signals, and current operator proof points are found faster
-and with less search noise than generic web search alone.
+If the host exposes stronger research plugins, prefer `you-com-search` first
+for current-web search/research/livecrawl when available, then specialist tools
+such as `exa` for semantic/source discovery and Firecrawl for page capture.
+This helps official product pages, docs, GitHub repos, competitive/vendor
+signals, and current operator proof points be found faster and with less search
+noise than generic web search alone.
 
 In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
 an MCP-connected research server or a local CLI/API wrapper for tools such as
@@ -127,6 +129,8 @@ Exa when available. Treat that as the terminal analogue to desktop plugin
 access.
 
 Concrete terminal patterns to prefer when available:
+- `you-com-search` or Hermes `web.search_backend: you` before generic web
+  search
 - Exa MCP over remote/HTTP MCP
 - a local Exa API wrapper that calls `https://api.exa.ai/search`
 
@@ -254,6 +258,10 @@ PIPELINE: {title}
 ---
 
 ## Stage 4: Branded PPTX Deck
+
+Create and validate `<run>/visual-spec.json` under the mandatory `pptx-visual-spec`
+overlay, then pass it to the deck builder. The pipeline runner does not select an image
+provider independently.
 
 Invoke `/branded-pptx-deck` to generate a multi-slide presentation from the
 use case data. The deck uses `pptxkit` from the branded-pptx-deck skill and

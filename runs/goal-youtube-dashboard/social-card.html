@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --bg:#080b11; --glass:rgba(255,255,255,.04); --line:rgba(255,255,255,.09);
+    --ink:#eef2f7; --soft:#aeb8c7; --muted:#69748a; --teal:#2dd4bf;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:100%;height:100%}
+  body{background:var(--bg);font-family:ui-sans-serif,system-ui,"Segoe UI",sans-serif;color:var(--ink);overflow:hidden}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace}
+  .card{position:relative;width:100%;height:100%;padding:7vh 6vw;display:flex;flex-direction:column;justify-content:space-between}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;
+    background:linear-gradient(135deg,#2dd4bf,#38bdf8,#e879f9)}
+  .card::after{content:"";position:absolute;right:-18vw;top:-30vh;width:55vw;height:80vh;
+    background:radial-gradient(closest-side, rgba(45,212,191,.10), transparent 70%);pointer-events:none}
+  .eyebrow{font-size:1.5vh;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+  h1{margin-top:2.2vh;font-size:7.6vh;font-weight:800;line-height:1.07;letter-spacing:-.02em;
+    background:linear-gradient(135deg,#2dd4bf,#38bdf8,#e879f9);
+    -webkit-background-clip:text;background-clip:text;color:transparent;max-width:30ch}
+  .sub{margin-top:2.4vh;font-size:2.8vh;color:var(--soft);line-height:1.5;max-width:60ch}
+  .sub b{color:var(--ink);font-weight:600}
+  .stats{display:flex;gap:2vw}
+  .stat{flex:1;background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:2.8vh 1.8vw}
+  .stat .n{font-size:5.6vh;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--teal)}
+  .stat .l{margin-top:1.3vh;font-size:1.45vh;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+  .foot{display:flex;justify-content:space-between;align-items:center;font-size:1.7vh;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:2.2vh}
+  .foot .url{color:var(--teal)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div>
+      <div class="eyebrow mono">executive briefing &middot; free ai adoption library &middot; 1.4M views analyzed</div>
+      <h1>98 free videos that teach a business to run on AI &mdash; mapped to the problems they solve</h1>
+      <div class="sub">Cut software spend. Automate operations. Win clients. Launch new revenue.
+        <b>One creator published the entire playbook for free</b> &mdash; this briefing organizes it so your team
+        can go straight to the problem you have.</div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">165K</div><div class="l mono">views on &ldquo;cut software spend&rdquo; &mdash; the build-don&rsquo;t-subscribe demand signal</div></div>
+      <div class="stat"><div class="n">15+ hrs</div><div class="l mono">of free structured courses &mdash; a team enablement program</div></div>
+      <div class="stat"><div class="n">4 stages</div><div class="l mono">starter playlist synopsis: foundation &rarr; ops &rarr; clients &rarr; strategy</div></div>
+    </div>
+    <div class="foot mono">
+      <span>full briefing + clickable library</span>
+      <span class="url">shekerkamma.github.io/creator-intel</span>
+    </div>
+  </div>
+</body>
+</html>

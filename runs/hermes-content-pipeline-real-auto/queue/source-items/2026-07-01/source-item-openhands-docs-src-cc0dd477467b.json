@@ -1,0 +1,18 @@
+{
+  "id": "src-cc0dd477467b",
+  "source_id": "openhands-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Agent Skills & Context - OpenHands Docs",
+  "url": "https://docs.openhands.dev/sdk/guides/skill",
+  "canonical_url": "https://docs.openhands.dev/sdk/guides/skill",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:30.311468+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Skills add specialized behaviors, domain knowledge, and context-aware triggers to your agent through structured prompts.",
+  "raw_content_path": null,
+  "dedupe_key": "c856c3c9a7da",
+  "status": "new",
+  "errors": []
+}

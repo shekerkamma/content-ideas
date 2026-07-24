@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-14-beacon-li-competitor-analysis/client-package/beacon-li-competitor-analysis-draft.pptx",
+    "screenshot",
+    "-o",
+    "runs/2026-07-14-beacon-li-competitor-analysis/client-package/qa/officecli/render/beacon-li-competitor-analysis-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Error: No headless browser available. Install Chrome/Edge/Chromium or Firefox, or `pip install playwright && playwright install chromium`. Last error: chrome:   =: Operation canceled\n"
+}

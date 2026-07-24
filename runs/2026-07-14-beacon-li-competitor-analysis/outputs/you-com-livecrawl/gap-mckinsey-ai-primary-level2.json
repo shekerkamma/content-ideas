@@ -1,0 +1,157 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/seizing-the-agentic-ai-advantage",
+        "title": "Seizing the agentic AI advantage | McKinsey",
+        "description": "Discover how the GenAI paradox shapes AI agents in both vertical and horizontal use cases, highlighting the potential of agentic AI.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/seizing%20the%20agentic%20ai%20advantage/thumb-gettyimages-1334668309-1536x1536.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/seizing%20the%20agentic%20ai%20advantage/thumb-gettyimages-1334668309-1536x1536.jpg?mw=677&amp;car=42:25",
+        "page_age": "2025-06-13T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "The agents assist RMs by extracting data, drafting memo sections, generating confidence scores to prioritize review, and suggesting relevant follow-up questions. In this model, the analyst’s role shifts from manual drafting to strategic oversight and exception handling. Impact: A potential 20 to 60 percent increase in productivity, including a 30 percent improvement in credit turnaround · Realizing AI’s full potential in the vertical realm requires more than simply inserting agents into legacy workflows.",
+          "LLMs have revolutionized how organizations interact with data—enabling information synthesis, content generation, and natural language interaction. But despite their power, LLMs have been fundamentally reactive and isolated from enterprise systems, largely unable to retain memory of past interactions or context across sessions or queries. Their role has been largely limited to enhancing individual productivity through isolated tasks. AI agents mark a major evolution in enterprise AI—extending gen AI from reactive content generation to autonomous, goal-driven execution.",
+          "Beyond this first step, organizations should start preparing for their next-generation architecture, in which all enterprise systems will be reshuffled around agents in terms of user interface, business logic, and day-to-day operations. Data: Accelerate data productization and address quality gaps in unstructured data.",
+          "All of this has laid the groundwork for a more integrated and transformative second phase—the emerging age of AI agents.10Lareina Yee, Michael Chui, Roger Roberts, and Stephen Xu, “Why agents are the next frontier of generative AI,” McKinsey Quarterly, July 24, 2024. ... By automating complex business workflows, agents unlock the full potential of vertical use cases. Forward-looking companies are already harnessing the power of agents to transform core processes. To realize the potential of agents, companies must reinvent the way work gets done—changing task flows, redefining human roles, and building agent-centric processes from the ground up."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/featured-insights/mckinsey-live/webinars/agentic-ai-moving-beyond-pilots-to-enterprise-impact",
+        "title": "Agentic AI: Moving beyond pilots to enterprise impact | McKinsey ...",
+        "description": "The time for experimenting with individual initiatives is over; the age of AI agents is here.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/featured%20insights/mckinsey%20live/agentic%20ai%20moving%20beyond%20pilots%20to%20enterprise%20impact/oct-2025.png?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/featured%20insights/mckinsey%20live/agentic%20ai%20moving%20beyond%20pilots%20to%20enterprise%20impact/oct-2025.png?mw=677&amp;car=42:25",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "However, although 80 percent of companies are using generative AI in some form in at least one business function, its impact on the bottom line is not yet material at the enterprise-wide level. During a McKinsey Live event, partner Dave Kerr and senior partner Klemens Hjartar discussed the state of agentic AI at forward-looking companies, the importance of being in the race to realize agentic AI’s full potential and be an early adopter, and the requirements to scale.",
+          "It’s still early days for agentic AI, but realizing its full value requires transformation, not just new technology. Leading companies are resetting their AI transformation by reimagining their structures, processes, and workflows from the ground up and using agents to automate end-to-end workflows.",
+          "For more on this topic, see the research Seizing the AI advantage, The state of AI: How organizations are rewiring to capture value, Superagency in the workplace: Empowering people to unlock AI’s full potential, and the McKinsey Quarterly article “Why agents are the next frontier of generative AI,” all on McKinsey.com.",
+          "Capturing the value of agentic AI requires wielding the power of an agentic AI mesh—a composable, distributed, and governed architecture that enables multiple agents to reason, collaborate, and act autonomously across systems in a secure and scalable way."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/one-year-of-agentic-ai-six-lessons-from-the-people-doing-the-work",
+        "title": "One year of agentic AI: Six lessons from the people doing the work",
+        "description": "A successful agentic AI deployment isn’t easy to achieve. We look at six key factors your business should consider when deploying your own program.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/one%20year%20of%20agentic%20ai%20six%20lessons%20from%20the%20people%20doing%20the%20work/one%20year%20of%20agentic%20ai-1392741979-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/one%20year%20of%20agentic%20ai%20six%20lessons%20from%20the%20people%20doing%20the%20work/one%20year%20of%20agentic%20ai-1392741979-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "page_age": "2025-09-12T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "As AI agents continue to proliferate, the question of what role humans will play has generated much anxiety—about job security, on the one hand, and about high expectations for productivity increases, on the other.",
+          "An agentic enterprise transformation holds the promise of unmatched productivity. While some companies are enjoying early successes with such activities, many more are finding it challenging to see value from their investments.",
+          "These tasks demanded information aggregation, verification checks, and compliance analysis—tasks where agents can be effective. When deciding which AI tool to use for different tasks, the following guidelines can help: If the task is rule based and repetitive, with structured input (say, data entry), use rule-based automation. If the input is unstructured (for example, lengthy documents), but the task is still extractive or generative, use gen AI, natural language processing, or predictive analytics.",
+          "An important part of this human–agent collaborative design is developing simple visual user interfaces that make it easy for people to interact with agents. For example, one property and casualty insurance company developed interactive visual elements (such as bounding boxes, highlights, and automated scrolling) to help reviewers quickly validate AI-generated summaries."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/bridging-the-great-ai-agent-and-erp-divide-to-unlock-value-at-scale",
+        "title": "Bridging the great AI agent and ERP divide to unlock value at scale",
+        "description": "Discover how AI and ERP integration drives agentic enterprise, domain transformation, and AI-enabled workflows for seamless ERP modernization for AI.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/technology/our%20insights/bridging%20the%20great%20ai%20agent%20and%20erp%20divide%20to%20unlock%20value%20at%20scale/thumb-gettyimages-2049699196.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/technology/our%20insights/bridging%20the%20great%20ai%20agent%20and%20erp%20divide%20to%20unlock%20value%20at%20scale/thumb-gettyimages-2049699196.jpg?mw=677&amp;car=42:25",
+        "page_age": "2026-01-09T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "While it is unlikely that AI agents will replace the ERP in the near or medium term because of system complexity, companies should consider not only how AI agents will disrupt ERP operations but also how they provide a powerful capability for evolving and modernizing ERP itself. AI is projected to generate between $17 trillion and $26 trillion in global economic impact (Exhibit 2).3“The economic potential of generative AI: The next productivity frontier,” McKinsey, June 14, 2023.",
+          "A more resilient approach is to buy standardized capabilities—such as embedded approval agents, predefined data products, ERP-integrated orchestration frameworks—and reserve custom development for the select areas where domain-specific logic or proprietary workflows create real competitive advantage. The decision is also not one and done; unlike the traditional software as a service (SaaS) world, AI requires a continuous, deliberate reassessment of what to create and what to consume. Enterprises that get this balance right avoid fragmentation, reduce long-term maintenance burdens, and accelerate value realization.",
+          "As our colleagues have highlighted in other articles,7See, for example, “The change agent: Goals, decisions, and implications for CEOs in the agentic age,” McKinsey Quarterly, October 1, 2025; Lareina Yee, Michael Chui, Roger Roberts, and Stephen Xu, “One year of agentic AI: Six lessons from the people doing the work,” McKinsey, September 12, 2025. addressing these opportunities for AI requires them to drill down to the workflow level, not at the use case or tool level. For each priority AI workflow (such as dynamic inventory allocation, intelligent sourcing, or AI-assisted production",
+          "Given the unpredictability of agentic solutions for the foreseeable future, it’s important to properly resource testing capabilities. Be clear on the unit economics of change and rigorously track P&L impact. With rising pressure on margins and productivity, AI investments must show direct, traceable impact on the P&L."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/empowering-advanced-industries-with-agentic-ai",
+        "title": "Agentic AI implementations in advanced industries | McKinsey",
+        "description": "Discover how advanced industries are beginning to realize the promise of agentic AI, driving real-world implementations to boost efficiency, foster innovation, and stay ahead in a competitive market.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/empowering%20advanced%20industries%20with%20agentic%20ai/empowering-advanced-industries-with-agentic-ai-1536x1536.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/empowering%20advanced%20industries%20with%20agentic%20ai/empowering-advanced-industries-with-agentic-ai-1536x1536.jpg?mw=677&amp;car=42:25",
+        "page_age": "2025-09-08T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "The capabilities described above may sound like science fiction. But early movers are already realizing significant gains through agentic systems. Below are two examples illustrating the form these first-generation deployments are taking.",
+          "From quality inspection and R&D to sales and customer engagement, agents have the potential to deliver tangible and measurable impact by boosting productivity, accelerating innovation, and creating new pathways to growth. This article is a collaborative effort by Sören Jautelat, with Jens Niemann, Johannes Barg, Patrick Wollner, Peter Cholewinski, Sarah Kühne, and Vincent Steinweg, representing views from McKinsey’s Automotive & Assembly Practice. Of course, realizing agentic impact involves more than technology deployment.",
+          "Leveraging a frontier large language model alongside LangGraph, an open-source agentic framework, the supplier developed and deployed a specialized squad of AI agents specifically trained to navigate its extensive database of historical requirements and corresponding test descriptions. Intelligently synthesizing and adapting relevant historical data, the system allowed the company to automate the generation of initial test case descriptions for incoming requirements. The impact has been significant. The supplier has seen strong productivity improvements, particularly for junior or less experienced engineers, who are benefiting greatly from the agents’ ability to swiftly generate accurate test descriptions, with some requirement types now taking 50 percent less time.",
+          "Drawing on diverse and sometimes unconventional data sources—including government-issued licensing applications, company websites, news and media sources, and even data from visual imagery—the system evaluates customer suitability, prioritizing prospects based on factors like financial stability, market attractiveness, and fit-with-product offerings to generate comprehensive and insightful profiles equipped with curated sales arguments, company-specific details, and direct contact information. The agentic system features multiple specialized agents, each tailored to perform distinct yet interconnected tasks—including verifier, or “critic,” agents able to validate the work of research agents for accuracy, reliability, and actionable quality."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/cn/our-insights/our-insights/beyond-the-hype-unlocking-value-from-the-ai-revolution",
+        "title": "Generative AI has ignited a wave of enthusiasm and investment. ...",
+        "description": "Building flashy AI prototypes is easy, but generating measurable business value is not.",
+        "thumbnail_url": "https://www.mckinsey.com/cn/~/media/mckinsey/locations/asia/greater%20china/our%20insights/beyond%20the%20hype%20%20unlocking%20value%20from%20the%20ai%20revolution/hero-1536-864-gettyimages-2149615636-0902-ai.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/cn/~/media/mckinsey/locations/asia/greater%20china/our%20insights/beyond%20the%20hype%20%20unlocking%20value%20from%20the%20ai%20revolution/hero-1536-864-gettyimages-2149615636-0902-ai.jpg?mw=677&amp;car=42:25",
+        "page_age": "2025-09-08T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "AI tools that help with general tasks can make employees more productive, but the small time savings they create often don't lead to noticeable financial benefits. Meanwhile, high-value vertical use cases, often tailored to specific business functions, remain largely stuck in the pilot phase — a phenomenon we call the “Generative AI Value Paradox” (Exhibit 1). The wave of generative AI continues to gain momentum, with agentic AI pushing the boundaries even further.",
+          "Shared understanding: Leadership used strategic messaging, internal events, and live demos to highlight the importance and potential of generative AI. These efforts built confidence and alignment across the organization. Skill building: Structured learning paths were launched for all employees, with tailored programs for key roles. Training included workshops, coaching sessions, product demonstrations, and access to internal knowledge hubs. Employees were also encouraged to create their own AI agents to deepen their familiarity with the technology.",
+          "In the future, agentic AI will fundamentally reshape organizational structures and ways of working. What starts as tools and copilots for individual employees will evolve into hybrid human-machine teams, where a single employee may orchestrate 15–20 AI agents, unlocking massive productivity gains.",
+          "Some business functions may eventually become led by “fusion teams,” where a few staff manage hundreds of agents, with a potential twenty-fold increase in productivity."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/seizing%20the%20agentic%20ai%20advantage/seizing-the-agentic-ai-advantage.pdf",
+        "title": "Seizing the agentic AI advantage",
+        "description": "The agents assist RMs by extracting · data, drafting memo sections, generating confidence scores to prioritize review, and suggesting relevant follow- up questions. In this model, the analyst’s role shifts from manual drafting to strategic oversight and exception ... Impact: A potential 20 to 60 percent increase in productivity, including a 30 percent improvement in credit ... Realizing ...",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "The agents assist RMs by extracting · data, drafting memo sections, generating confidence scores to prioritize review, and suggesting relevant follow- up questions. In this model, the analyst’s role shifts from manual drafting to strategic oversight and exception ... Impact: A potential 20 to 60 percent increase in productivity, including a 30 percent improvement in credit ... Realizing AI’s full potential in the vertical realm requires more than simply inserting agents into legacy",
+          "Agents unlock the full potential of vertical use cases, offering companies a path to generate value well · beyond efficiency gains. But realizing that potential requires a reimagined approach to AI transformation—",
+          "generation, and natural language interaction. But despite their power, LLMs have been fundamentally · reactive and isolated from enterprise systems, largely unable to retain memory of past interactions · or context across sessions or queries. Their role has been largely limited to enhancing individual · productivity through isolated tasks. AI agents mark a major evolution in enterprise AI—extending gen AI",
+          "and codifying it, and generating tailored insights for clients. The process, conducted manually, was prone to · error, with a staggering 80 percent of mistakes identified by the clients themselves. ... The agentic approach: A multiagent solution autonomously identifies data anomalies and explains shifts in sales · or market share. It analyzes internal signals, such as changes in product taxonomy, and external events identified"
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-promise-and-the-reality-of-gen-ai-agents-in-the-enterprise",
+        "title": "The promise and the reality of gen AI agents in the enterprise",
+        "description": "The evolution of generative AI has opened the door to new opportunities, particularly with gen AI agents than can now perform essential duties and tasks.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/industries/technology%20media%20and%20telecommunications/telecommunications/our%20insights/the%20promise%20and%20the%20reality%20of%20gen%20ai%20agents%20in%20the%20enterprise/the-promise-and-the-reality-of-gen-ai-1813251184-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/industries/technology%20media%20and%20telecommunications/telecommunications/our%20insights/the%20promise%20and%20the%20reality%20of%20gen%20ai%20agents%20in%20the%20enterprise/the-promise-and-the-reality-of-gen-ai-1813251184-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "page_age": "2024-05-17T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "Barr Seitz: Where do you see the greatest value from gen AI agents? ... Jorge Amar: We have estimated that gen AI enterprise use cases could yield $2.6 trillion to $4.4 trillion annually in value across more than 60 use cases.1“The economic potential of generative AI: The next productivity frontier,” McKinsey, June 14, 2023. But how much of this value is realized as business growth and productivity will depend on how quickly enterprises can reimagine and truly transform work in priority domains—that is, user journeys, processes across an entire chain of activities, or a function.",
+          "And adoption will require sustained effort and new incentives so that people learn to trust the tools and realize the benefits. This is particularly true with more tenured agents, who believe their own skills cannot be augmented or improved on with gen AI agents. For customer operations alone, we’re talking about a broad effort here, but with more than $400 billion of potential value from gen AI at stake, it’s worth it.6“The economic potential of generative AI: The next productivity frontier,” McKinsey, June 14, 2023.",
+          "For example, in work we published earlier this year, we looked at 5,000 customer service agents using gen AI and found that issue resolution increased by 14 percent an hour, while time spent handling issues went down 9 percent.2“The economic potential of generative AI: The next productivity frontier,” McKinsey, June 14, 2023.",
+          "One thing that gen AI agents are so good at, for example, is in helping customer service representatives get personalized coaching not only from a hard-skill perspective but also in soft skills like understanding the context of what is being said. We estimate that applying generative AI to customer care functions could increase productivity by between 30 to 45 percent.3“The economic potential of generative AI: The next productivity frontier,” McKinsey, June 14, 2023."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/capabilities/operations/our-insights/the-future-of-customer-experience-embracing-agentic-ai",
+        "title": "Agentic AI and the future of customer experience | McKinsey",
+        "description": "Agentic AI offers the potential to unlock new levels of productivity in service operations. We look at how this technology can enhance the customer experience.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/operations/our%20insights/the%20future%20of%20customer%20experience%20embracing%20agentic%20ai/the-future-of-customer-experience-embracing-agentic-ai-2161304984-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/operations/our%20insights/the%20future%20of%20customer%20experience%20embracing%20agentic%20ai/the-future-of-customer-experience-embracing-agentic-ai-2161304984-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "page_age": "2025-06-11T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "Let’s look at the next chapter of AI—agentic AI, and how it could unlock the next generation of operational excellence and productivity in service operations. We dig into the high stakes of continued investment in digital transformation and the potential payoffs.",
+          "In this episode of McKinsey Talks Operations, McKinsey’s Christian Johnson talks to Malte Kosub, the cofounder and CEO of Parloa, an agentic AI platform that helps customer-centric enterprises build and manage millions of AI agents for customer support and communication. Joining them are Oana Cheta, a partner in McKinsey’s Chicago office who leads generative AI and agentic AI in service operations in North America, and Brian Blackader, a partner in McKinsey’s Düsseldorf office who spends much of his time working with service providers in the customer service space.",
+          "What we’re seeing now is that we’re moving from a generative AI world into an agentic world. Agentic AI is more about a goal-driven approach, where the AI is capable of making decisions and taking actions on behalf of the human. In this third phase, we see companies implementing agentic AI to get value from goal-driven and process-driven tasks and work. We are already seeing enterprises moving to a fourth phase, in which they are integrating agentic workflows into their dealings with the outside world, and agentic AI is helping customers to solve problems in real time.",
+          "Christian Johnson: Excellent, thank you, Oana. Malte, building on Oana’s comment, could you clarify for our audience the links between gen AI and agentic AI? Malte Kosub: Happy to go deeper into that topic. Everything started with generative AI, which was about creating images, texts, and videos."
+        ]
+      },
+      {
+        "url": "https://www.mckinsey.com/capabilities/operations/our-insights/how-coos-maximize-operational-impact-from-gen-ai-and-agentic-ai",
+        "title": "How COOs maximize operational impact from gen AI and agentic AI ...",
+        "description": "By defining the right operating structure, data governance model, and change management approach, COOs can help their companies make the most of their AI investments.",
+        "thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/operations/our%20insights/how%20coos%20maximize%20operational%20impact%20from%20gen%20ai%20and%20agentic%20ai/how-coos-maximize-operational-impact-ai-1354570520-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "original_thumbnail_url": "https://www.mckinsey.com/~/media/mckinsey/business%20functions/operations/our%20insights/how%20coos%20maximize%20operational%20impact%20from%20gen%20ai%20and%20agentic%20ai/how-coos-maximize-operational-impact-ai-1354570520-thumb-1536x1536.jpg?mw=677&amp;car=42:25",
+        "page_age": "2025-03-20T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.mckinsey.com&size=128",
+        "snippets": [
+          "Only 12 percent of these organizations have been able to find revenue-generating use cases for gen AI. And while the ultimate goal for these organizations is to achieve gen AI maturity, with gen AI fundamentally changing how work gets done, a mere 1 percent of executives say their organization has reached that point. That’s where the COO plays a critical role, as illustrated by several recent success stories where gen AI and gen-AI-based agents have helped redefine how a company creates value.",
+          "McKinsey estimates that over the long term, gen AI could yield $4.4 trillion in productivity growth potential.1Hannah Mayer, Lareina Yee, Michael Chui, and Roger Roberts, Superagency in the workplace: Empowering people to unlock AI’s full potential, McKinsey, January 28, 2025; The economic potential of generative AI: The next productivity frontier, McKinsey, June 14, 2023.",
+          "To build a tool that could generate statements of work for more than a dozen product lines, the company needed to scale quickly. The answer for this organization was to centralize.",
+          "Production line. Future production lines could take these ideas even further by deploying gen AI agents that, underpinned by the most advanced large language models, are increasingly able to take autonomous action to complete complex tasks. Picture a shift turnover in a factory or hospital—a moment notoriously prone to miscommunication, delay, and rework."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:mckinsey.com generative AI value realization implementation productivity agentic AI enterprise",
+    "search_uuid": "0bb03633-fb46-4a7e-8d22-3f9efec12eb7",
+    "latency": 0.6655912399291992
+  }
+}

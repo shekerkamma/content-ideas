@@ -23,6 +23,24 @@ chained_from: "ikigai-gamma-slidedeck (Stage 3 — BD/company-first mode only)"
 Generates a 17-slide GCC Implementation Roadmap deck. Can run standalone or
 chain from `ikigai-gamma-slidedeck` as optional Stage 3.
 
+## Source / Tool Order
+
+When fresh company, GCC, market, implementation, or vendor evidence is needed,
+use wired search dependencies before generic web search:
+
+1. Read the input ikigai report, company context, prior run artifacts, and local
+   templates.
+2. Run GBrain recall when available for the company, BD person, vertical, GCC
+   themes, and prior roadmap work.
+3. Use `you-com-search`, Hermes `web.search_backend: you`, or an equivalent
+   You.com wrapper for current company, GCC, market, and finance research.
+4. Use Exa for semantic/source discovery and Firecrawl for full-page capture
+   after candidate URLs are known.
+5. Use specialist MCPs/plugins for LinkedIn/company docs, Google Drive, official
+   reports, or presentation assets when available.
+6. Use generic WebSearch/search_web only when the above routes are unavailable
+   or return no useful signal.
+
 ## When To Use
 
 - After `ikigai-gamma-slidedeck` completes for a BD/company-first person
@@ -49,6 +67,7 @@ If chaining from `ikigai-gamma-slidedeck`, all inputs are already available in
 - Run folder: `runs/YYYY-MM-DD-<name>-gcc-roadmap/` (standalone)
   OR same run folder as ikigai if chaining: `runs/YYYY-MM-DD-<name>-ikigai/`
 - `build_roadmap_deck.py` — parameterized builder (always generate)
+- `visual-spec.json` — validated shared per-visual routing and provenance
 - `<name>-gcc-roadmap-deck-draft.pptx` — 17-slide validated deck
 - `_preview/contact_*.png` — QA contact sheets
 - Desktop copy at `/mnt/c/Users/sheke/OneDrive/Desktop/<name>-gcc-roadmap.pptx`
@@ -84,6 +103,12 @@ The validated FPT mapping (reference):
 - INNOVATE: DX Garage, Co-Development, White-Label Modules, CxO Quarterly Roadmap
 
 ### Step 3 — Generate build_roadmap_deck.py
+
+Before writing the builder, read `skills/pptx-visual-spec/SKILL.md`, classify every
+meaningful visual region, write `visual-spec.json`, and validate it. This roadmap's tables,
+matrices, timelines, proof points, and claims route to `native`; exact supplied evidence
+routes to `extract`; text-free image generation is allowed only when the shared contract
+classifies a genuine organic visual need.
 
 Use `~/.claude/skills/gcc-roadmap/build_deck_template.py` as the base.
 Substitute all `{{VAR}}` placeholders with extracted values.
@@ -186,3 +211,10 @@ If file locked: write to a new name with `-v2` suffix.
 - build_deck_template.py: `~/.claude/skills/gcc-roadmap/build_deck_template.py`
 - pptxkit API: `~/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
 - Chained from: `~/.claude/skills/ikigai-gamma-slidedeck/SKILL.md` (Stage 3)
+
+## Shared PPTX Visual Contract
+
+`pptx-visual-spec` is a mandatory behavioral overlay and overrides duplicated or dated image
+guidance. Validate `<run>/visual-spec.json` before building and before delivery. Preserve this
+skill's native 17-slide roadmap structure; the overlay changes visual sourcing, not the
+storyline or platform mapping.

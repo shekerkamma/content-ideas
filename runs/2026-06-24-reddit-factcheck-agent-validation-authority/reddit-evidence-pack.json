@@ -1,0 +1,1304 @@
+{
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-002",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.656,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.335,
+          "kind": "post",
+          "id": "post",
+          "author": "bnyhil31",
+          "reddit_score": 7,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "subreddit": "AI_Agents",
+          "excerpt": "AI Agent Governance and Liability? Working in business process automation and getting deeper into AI agent research, governance and liability kept coming up as the questions nobody had clean answers for. Not edge cases — central concerns for anyone building agents that touch real data and real outcomes. A few things..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_ok2l0v3",
+          "author": "getstackfax",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2l0v3/",
+          "subreddit": "AI_Agents",
+          "excerpt": "This is absolutely on the radar for production deployments. Key distinction being…. technical access is not the same as delegated authority. A token, role, or API permission can prove the agent was allowed to call a tool. It does not prove: - the agent had the right business context - the data was appropriate for th..."
+        },
+        {
+          "score": 0.322,
+          "kind": "post",
+          "id": "post",
+          "author": "dahle44",
+          "reddit_score": 3269,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "subreddit": "ChatGPT",
+          "excerpt": "I Tested OpenAI's $20/month “Agent” So You Don’t Have To. It Can’t Shop, Book, or Reserve Anything Spent my afternoon stress-testing the new “Agent” feature that’s supposed to handle shopping, travel, and reservations for you. Here’s the real-world outcome: What the Marketing Promised: AI agent that browses the web..."
+        },
+        {
+          "score": 0.225,
+          "kind": "comment",
+          "id": "t1_o8z5w7r",
+          "author": "Kakachia777",
+          "reddit_score": 12,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z5w7r/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "You're right that none of the individual techniques are new. OSINT practitioners have been doing all of this manually for years and data aggregators have been running collection algorithms for a long time What's different isn't the capability, it's the operational model What I'm describing is It's autonomous agents..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-003",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "reddit_signal_found_primary_source_required",
+      "evidence": [
+        {
+          "score": 0.645,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.455,
+          "kind": "comment",
+          "id": "t1_n5zsmz8",
+          "author": "The-Unkindness",
+          "reddit_score": 4,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n5zsmz8/",
+          "subreddit": "ChatGPT",
+          "excerpt": "I literally built this myself. Took about a month to build the agentic model. I had to work with my brokerage firm to get the appropriate API key, and I created a new account within my profile and funded it with $2000. It operates on tight rules about what companies I accept (ie: no russian, chinese, etc), and what..."
+        },
+        {
+          "score": 0.419,
+          "kind": "post",
+          "id": "post",
+          "author": "sony9999",
+          "reddit_score": 275,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-10.json",
+          "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "subreddit": "NextGenAITool",
+          "excerpt": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026 Artificial Intelligence is evolving rapidly, and AI agents are becoming one of the most transformative technologies for businesses, developers, and creators. Unlike traditional chatbots, AI agents can reason, remember, interact with tools, and..."
+        },
+        {
+          "score": 0.282,
+          "kind": "post",
+          "id": "post",
+          "author": "ibm",
+          "reddit_score": 911,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "subreddit": "u_ibm",
+          "excerpt": "What are the real challenges of automating with AI agents? Automating with Agentic AI can get messy behind the scenes. Maybe a workflow breaks without context. Maybe tools don’t talk, or an agent takes an unexpected path. Let’s talk. What teams need to know about AI agents 🤖 Every team wants the efficiency. But let’..."
+        },
+        {
+          "score": 0.282,
+          "kind": "post",
+          "id": "post",
+          "author": "krizzalicious49",
+          "reddit_score": 5473,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-07.json",
+          "source_url": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+          "permalink": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+          "subreddit": "whennews",
+          "excerpt": "The PocketOS boss puts greater blame on Railway’s architecture than on the deranged AI agent https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-powered-ai-coding-agent-deletes-entire-company-database-in-9-seconds-backups-zapped-after-cursor-tool-powered-by-anthropics-claude-goes-rogue The foun..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-004",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "requires_primary_source_corroboration",
+      "evidence": [
+        {
+          "score": 0.419,
+          "kind": "comment",
+          "id": "t1_o8z5w7r",
+          "author": "Kakachia777",
+          "reddit_score": 12,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z5w7r/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "You're right that none of the individual techniques are new. OSINT practitioners have been doing all of this manually for years and data aggregators have been running collection algorithms for a long time What's different isn't the capability, it's the operational model What I'm describing is It's autonomous agents..."
+        },
+        {
+          "score": 0.35,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_o6yd60q",
+          "author": "MacFall-7",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o6yd60q/",
+          "subreddit": "aiagents",
+          "excerpt": "Invariants first means the constraints exist before any model touches the system. The model accelerates implementation inside a bounded space, not an open one. On tool approval: the audit agent handles it at the task type level, not per agent. Rules are scoped by what a tool does, not which agent calls it. The same..."
+        },
+        {
+          "score": 0.253,
+          "kind": "comment",
+          "id": "t1_o8ytwdf",
+          "author": "Next_Instruction_528",
+          "reddit_score": 16,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ytwdf/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "This person built an autonomous AI system that profiled two real people in under 25 minutes using only a name and one username. Here's what actually happened and why it matters: What they built A swarm of AI agents running in parallel on a Kali Linux machine, each with its own terminal, sharing a persistent memory d..."
+        },
+        {
+          "score": 0.25,
+          "kind": "comment",
+          "id": "t1_ok9e8lj",
+          "author": "deelight_0909",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok9e8lj/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Mostly OpenClaw plus small deterministic helpers, not a full signed-chain system yet. The shape is: AGENTS.md and tool docs define policy, helper scripts own credentials, approvals gate external effects, and every cron/post/call writes a ledger row with claim, evidence, permalink or artifact, and next action. For hi..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-005",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.834,
+          "kind": "post",
+          "id": "post",
+          "author": "MacFall-7",
+          "reddit_score": 4,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "subreddit": "aiagents",
+          "excerpt": "I built an airgapped agent governance system in a week by changing how I use LLMs I want to share a concrete example of what 100% AI-native workflows can accomplish. Because most discussions still treat LLMs and specialized coding tools as autocomplete for code, but without guardrails. Last week I built a production..."
+        },
+        {
+          "score": 0.767,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.6,
+          "kind": "post",
+          "id": "post",
+          "author": "krizzalicious49",
+          "reddit_score": 5473,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-07.json",
+          "source_url": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+          "permalink": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+          "subreddit": "whennews",
+          "excerpt": "The PocketOS boss puts greater blame on Railway’s architecture than on the deranged AI agent https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-powered-ai-coding-agent-deletes-entire-company-database-in-9-seconds-backups-zapped-after-cursor-tool-powered-by-anthropics-claude-goes-rogue The foun..."
+        },
+        {
+          "score": 0.6,
+          "kind": "post",
+          "id": "post",
+          "author": "Decent-Phrase-4161",
+          "reddit_score": 577,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Most of you shouldnt build an AI agent and heres why After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companie..."
+        },
+        {
+          "score": 0.433,
+          "kind": "post",
+          "id": "post",
+          "author": "dahle44",
+          "reddit_score": 3269,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "subreddit": "ChatGPT",
+          "excerpt": "I Tested OpenAI's $20/month “Agent” So You Don’t Have To. It Can’t Shop, Book, or Reserve Anything Spent my afternoon stress-testing the new “Agent” feature that’s supposed to handle shopping, travel, and reservations for you. Here’s the real-world outcome: What the Marketing Promised: AI agent that browses the web..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-006",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-007",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-008",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.814,
+          "kind": "post",
+          "id": "post",
+          "author": "ibm",
+          "reddit_score": 911,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "subreddit": "u_ibm",
+          "excerpt": "What are the real challenges of automating with AI agents? Automating with Agentic AI can get messy behind the scenes. Maybe a workflow breaks without context. Maybe tools don’t talk, or an agent takes an unexpected path. Let’s talk. What teams need to know about AI agents 🤖 Every team wants the efficiency. But let’..."
+        },
+        {
+          "score": 0.769,
+          "kind": "post",
+          "id": "post",
+          "author": "sony9999",
+          "reddit_score": 275,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-10.json",
+          "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "subreddit": "NextGenAITool",
+          "excerpt": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026 Artificial Intelligence is evolving rapidly, and AI agents are becoming one of the most transformative technologies for businesses, developers, and creators. Unlike traditional chatbots, AI agents can reason, remember, interact with tools, and..."
+        },
+        {
+          "score": 0.671,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.671,
+          "kind": "post",
+          "id": "post",
+          "author": "Decent-Phrase-4161",
+          "reddit_score": 577,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Most of you shouldnt build an AI agent and heres why After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companie..."
+        },
+        {
+          "score": 0.575,
+          "kind": "comment",
+          "id": "t1_o8ytwdf",
+          "author": "Next_Instruction_528",
+          "reddit_score": 16,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ytwdf/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "This person built an autonomous AI system that profiled two real people in under 25 minutes using only a name and one username. Here's what actually happened and why it matters: What they built A swarm of AI agents running in parallel on a Kali Linux machine, each with its own terminal, sharing a persistent memory d..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-009",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.8,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.503,
+          "kind": "comment",
+          "id": "t1_o8zm8oc",
+          "author": "AcePilot01",
+          "reddit_score": 16,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8zm8oc/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "Except its mostly wrong, and glosses over the fact that most of those require authentication, rate limited, paywalled. Using writing style alone is highly subjective and prone to false positives at a high rate. Also, the person had to have doxxed themselves in someway in the first place to have that information out..."
+        },
+        {
+          "score": 0.503,
+          "kind": "comment",
+          "id": "t1_o8ytwdf",
+          "author": "Next_Instruction_528",
+          "reddit_score": 16,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8ytwdf/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "This person built an autonomous AI system that profiled two real people in under 25 minutes using only a name and one username. Here's what actually happened and why it matters: What they built A swarm of AI agents running in parallel on a Kali Linux machine, each with its own terminal, sharing a persistent memory d..."
+        },
+        {
+          "score": 0.5,
+          "kind": "post",
+          "id": "post",
+          "author": "Decent-Phrase-4161",
+          "reddit_score": 577,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Most of you shouldnt build an AI agent and heres why After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companie..."
+        },
+        {
+          "score": 0.404,
+          "kind": "comment",
+          "id": "t1_o91s4zc",
+          "author": "delftblauw",
+          "reddit_score": 20,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91s4zc/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "I agree, but I think it's a fake/contrived situation. I work in this field and the first thing I will say as someone who could put this together, anyone with this skill isn't writing out this manifesto. Aside from that, it is pure bullshit . Bullshit Numero Uno : A 15-minute timeline for an autonomous script to navi..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-010",
+      "evidence_count": 2,
+      "suggested_reddit_verdict": "weak_reddit_support",
+      "evidence": [
+        {
+          "score": 0.267,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.211,
+          "kind": "post",
+          "id": "post",
+          "author": "ibm",
+          "reddit_score": 911,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "subreddit": "u_ibm",
+          "excerpt": "What are the real challenges of automating with AI agents? Automating with Agentic AI can get messy behind the scenes. Maybe a workflow breaks without context. Maybe tools don’t talk, or an agent takes an unexpected path. Let’s talk. What teams need to know about AI agents 🤖 Every team wants the efficiency. But let’..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-011",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-012",
+      "evidence_count": 4,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.6,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.433,
+          "kind": "post",
+          "id": "post",
+          "author": "ibm",
+          "reddit_score": 911,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "subreddit": "u_ibm",
+          "excerpt": "What are the real challenges of automating with AI agents? Automating with Agentic AI can get messy behind the scenes. Maybe a workflow breaks without context. Maybe tools don’t talk, or an agent takes an unexpected path. Let’s talk. What teams need to know about AI agents 🤖 Every team wants the efficiency. But let’..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_oklc3s3",
+          "author": "Finorix079",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/oklc3s3/",
+          "subreddit": "AI_Agents",
+          "excerpt": "The \"technical authorization isn't accountability\" framing is the most accurate sentence I've read on this. Most governance conversations collapse the two and pretend the audit trail is downstream paperwork rather than a load-bearing requirement. Worth separating your three questions because they live in different l..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_opqw1uy",
+          "author": "Wild-Annual-4408",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/opqw1uy/",
+          "subreddit": "AI_Agents",
+          "excerpt": "The governance lag you're describing isn't unique to agents, but agents make it more acute because the decision chain becomes harder to reconstruct after the fact. With a human-in-the-loop workflow, there's at least a person who remembers approving something. With an agent chain, the question of who authorized what,..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-013",
+      "evidence_count": 1,
+      "suggested_reddit_verdict": "weak_reddit_support",
+      "evidence": [
+        {
+          "score": 0.408,
+          "kind": "post",
+          "id": "post",
+          "author": "Decent-Phrase-4161",
+          "reddit_score": 577,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Most of you shouldnt build an AI agent and heres why After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companie..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-014",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-015",
+      "evidence_count": 2,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.433,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_nkbloop",
+          "author": "michael-sagittal",
+          "reddit_score": 3,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkbloop/",
+          "subreddit": "AI_Agents",
+          "excerpt": "I've got another reason for you - *you shouldn't build anything that doesn't make YOUR beer taste better*. Engineering teams notoriously have a horrible not-invented-here syndrome for every tech wave, and they're extra bad when it comes to AI. Your internal eng team shouldn't be building better accounting platforms..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-016",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.433,
+          "kind": "post",
+          "id": "post",
+          "author": "Decent-Phrase-4161",
+          "reddit_score": 577,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Most of you shouldnt build an AI agent and heres why After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companie..."
+        },
+        {
+          "score": 0.337,
+          "kind": "comment",
+          "id": "t1_o91s4zc",
+          "author": "delftblauw",
+          "reddit_score": 20,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91s4zc/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "I agree, but I think it's a fake/contrived situation. I work in this field and the first thing I will say as someone who could put this together, anyone with this skill isn't writing out this manifesto. Aside from that, it is pure bullshit . Bullshit Numero Uno : A 15-minute timeline for an autonomous script to navi..."
+        },
+        {
+          "score": 0.336,
+          "kind": "comment",
+          "id": "t1_o8z5w7r",
+          "author": "Kakachia777",
+          "reddit_score": 12,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8z5w7r/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "You're right that none of the individual techniques are new. OSINT practitioners have been doing all of this manually for years and data aggregators have been running collection algorithms for a long time What's different isn't the capability, it's the operational model What I'm describing is It's autonomous agents..."
+        },
+        {
+          "score": 0.335,
+          "kind": "comment",
+          "id": "t1_oinjr5p",
+          "author": "Szkieletor",
+          "reddit_score": 7,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-07.json",
+          "source_url": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+          "permalink": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/oinjr5p/",
+          "subreddit": "whennews",
+          "excerpt": "Yes. Generative AI is a tool. In many industries, it's the \"brand new thing\", but in software development, it's really not that different from tools we've already been using for decades. Only dipshits vibe code their entire app, but most devs use AI to some degree, like shitting out Pydantic models from an already e..."
+        },
+        {
+          "score": 0.335,
+          "kind": "comment",
+          "id": "t1_oioxrsd",
+          "author": "theguidetoldmetodoit",
+          "reddit_score": 6,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-07.json",
+          "source_url": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+          "permalink": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/oioxrsd/",
+          "subreddit": "whennews",
+          "excerpt": "They used some tool called Railway that lets Claude make API calls on it's own and the devs of that tool randomly gave it the ability to delete entire volumes without confirmation but through their API. So the original company had a backup of their database on what was a Virtual Volume on a cloud, which already prov..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-017",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.656,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_nu6cqci",
+          "author": "Vaxtin",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/nu6cqci/",
+          "subreddit": "u_ibm",
+          "excerpt": "Nobody is going to bring AI into their workflow other than developers, and they aren’t using AI the way you think they are. They’re just using it to write code faster which allows them to create the workflows you think you can automate with AI. They reality is that business specific workflows are too niche for someo..."
+        },
+        {
+          "score": 0.322,
+          "kind": "post",
+          "id": "post",
+          "author": "ibm",
+          "reddit_score": 911,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+          "source_url": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "permalink": "https://old.reddit.com/user/ibm/comments/1pii4tg/what_are_the_real_challenges_of_automating_with/",
+          "subreddit": "u_ibm",
+          "excerpt": "What are the real challenges of automating with AI agents? Automating with Agentic AI can get messy behind the scenes. Maybe a workflow breaks without context. Maybe tools don’t talk, or an agent takes an unexpected path. Let’s talk. What teams need to know about AI agents 🤖 Every team wants the efficiency. But let’..."
+        },
+        {
+          "score": 0.322,
+          "kind": "post",
+          "id": "post",
+          "author": "Decent-Phrase-4161",
+          "reddit_score": 577,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Most of you shouldnt build an AI agent and heres why After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companie..."
+        },
+        {
+          "score": 0.224,
+          "kind": "post",
+          "id": "post",
+          "author": "bnyhil31",
+          "reddit_score": 7,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "subreddit": "AI_Agents",
+          "excerpt": "AI Agent Governance and Liability? Working in business process automation and getting deeper into AI agent research, governance and liability kept coming up as the questions nobody had clean answers for. Not edge cases — central concerns for anyone building agents that touch real data and real outcomes. A few things..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-018",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-019",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.6,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.335,
+          "kind": "post",
+          "id": "post",
+          "author": "bnyhil31",
+          "reddit_score": 7,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "subreddit": "AI_Agents",
+          "excerpt": "AI Agent Governance and Liability? Working in business process automation and getting deeper into AI agent research, governance and liability kept coming up as the questions nobody had clean answers for. Not edge cases — central concerns for anyone building agents that touch real data and real outcomes. A few things..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_ok57gil",
+          "author": "Deep_Ad1959",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok57gil/",
+          "subreddit": "AI_Agents",
+          "excerpt": "my read: everyone reaches for observability tooling and policy engines on this, and that's the wrong layer. the only context snapshot that holds up to a regulator is one taken before the model call returns, not reconstructed from logs after. that means a gateway in front of every llm invocation and every tool call p..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_oklc3s3",
+          "author": "Finorix079",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/oklc3s3/",
+          "subreddit": "AI_Agents",
+          "excerpt": "The \"technical authorization isn't accountability\" framing is the most accurate sentence I've read on this. Most governance conversations collapse the two and pretend the audit trail is downstream paperwork rather than a load-bearing requirement. Worth separating your three questions because they live in different l..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_okbqnk1",
+          "author": "One_Cheesecake_3543",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/okbqnk1/",
+          "subreddit": "AI_Agents",
+          "excerpt": "The clean-answers gap on governance/liability is real and it's structural — current compliance frameworks weren't built for autonomous agents making sequences of decisions, so every team is improvising. The hardest part isn't identifying that you need governance, it's that the liability surface keeps shifting as age..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-020",
+      "evidence_count": 2,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.375,
+          "kind": "comment",
+          "id": "t1_ok2nojd",
+          "author": "fred_pcp",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2nojd/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Completely agree on designing HITL in from the start, retrofitting governance onto an existing agent stack is painful and usually incomplete. The EU AI Act deadline is real pressure. What we see in practice: organizations assume \"we have logs\" is sufficient for Art. 12. It isn't, inviolable means tamper-evident by d..."
+        },
+        {
+          "score": 0.25,
+          "kind": "comment",
+          "id": "t1_ok2c2h5",
+          "author": "reddithurc",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2c2h5/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Tracing mechanism in place, with all temperature set to zero. There’s no definite answer now unfortunately (see below) This is more on rag and agent tools design… I would say it’s better to design the human in the loop mechanism properly in the first place, not the other way around. I have led compliance projects /..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-021",
+      "evidence_count": 1,
+      "suggested_reddit_verdict": "weak_reddit_support",
+      "evidence": [
+        {
+          "score": 0.433,
+          "kind": "post",
+          "id": "post",
+          "author": "dahle44",
+          "reddit_score": 3269,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "subreddit": "ChatGPT",
+          "excerpt": "I Tested OpenAI's $20/month “Agent” So You Don’t Have To. It Can’t Shop, Book, or Reserve Anything Spent my afternoon stress-testing the new “Agent” feature that’s supposed to handle shopping, travel, and reservations for you. Here’s the real-world outcome: What the Marketing Promised: AI agent that browses the web..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-022",
+      "evidence_count": 3,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.3,
+          "kind": "post",
+          "id": "post",
+          "author": "Decent-Phrase-4161",
+          "reddit_score": 577,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Most of you shouldnt build an AI agent and heres why After watching another client spend $80k on an AI agent they shut down three months later, I need to say this out loud. The vendors wont tell you this. Your CTO who just came back from a conference definitely wont tell you this. But someone needs to. Most companie..."
+        },
+        {
+          "score": 0.2,
+          "kind": "comment",
+          "id": "t1_oklc3s3",
+          "author": "Finorix079",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/oklc3s3/",
+          "subreddit": "AI_Agents",
+          "excerpt": "The \"technical authorization isn't accountability\" framing is the most accurate sentence I've read on this. Most governance conversations collapse the two and pretend the audit trail is downstream paperwork rather than a load-bearing requirement. Worth separating your three questions because they live in different l..."
+        },
+        {
+          "score": 0.2,
+          "kind": "comment",
+          "id": "t1_nkb98p0",
+          "author": "CrossonTheGroove",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1oajp38/most_of_you_shouldnt_build_an_ai_agent_and_heres/nkb98p0/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Yeah I just got let go after three months from a company with all of the problems you stated, all of which I shared with them about two weeks after being hired and beginning my Discovery phase. AI wasn't the quick fix the guy who hired me seemed to think it was. He hired me to be the \"strategic mind\" behind his AI v..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-023",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "requires_primary_source_corroboration",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-024",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.5,
+          "kind": "comment",
+          "id": "t1_o3wyslg",
+          "author": "TroubledSquirrel",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o3wyslg/",
+          "subreddit": "aiagents",
+          "excerpt": "That’s a really elegant way to frame it... latency as a function of risk. So you basically turn your governance layer into a high-pass filter rather than a bottleneck if Im understanding that correctly. The cheap and asynchronous proposal to execution path is the real winner here. Most people over engineer for the 1..."
+        },
+        {
+          "score": 0.475,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.376,
+          "kind": "post",
+          "id": "post",
+          "author": "MacFall-7",
+          "reddit_score": 4,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "subreddit": "aiagents",
+          "excerpt": "I built an airgapped agent governance system in a week by changing how I use LLMs I want to share a concrete example of what 100% AI-native workflows can accomplish. Because most discussions still treat LLMs and specialized coding tools as autocomplete for code, but without guardrails. Last week I built a production..."
+        },
+        {
+          "score": 0.375,
+          "kind": "comment",
+          "id": "t1_ok2pn2d",
+          "author": "getstackfax",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/ok2pn2d/",
+          "subreddit": "AI_Agents",
+          "excerpt": "Exactly. In enterprise, governance is not just a compliance checkbox. It is part of the product. If the buyer cannot answer: - what data the agent saw - why it was allowed to see it - what action it took - who approved it - how to replay the decision - how to stop or roll back the workflow then adoption gets stuck i..."
+        },
+        {
+          "score": 0.375,
+          "kind": "comment",
+          "id": "t1_o6yd60q",
+          "author": "MacFall-7",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o6yd60q/",
+          "subreddit": "aiagents",
+          "excerpt": "Invariants first means the constraints exist before any model touches the system. The model accelerates implementation inside a bounded space, not an open one. On tool approval: the audit agent handles it at the task type level, not per agent. Rules are scoped by what a tool does, not which agent calls it. The same..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-025",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-026",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-027",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-028",
+      "evidence_count": 2,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.334,
+          "kind": "post",
+          "id": "post",
+          "author": "MacFall-7",
+          "reddit_score": 4,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "subreddit": "aiagents",
+          "excerpt": "I built an airgapped agent governance system in a week by changing how I use LLMs I want to share a concrete example of what 100% AI-native workflows can accomplish. Because most discussions still treat LLMs and specialized coding tools as autocomplete for code, but without guardrails. Last week I built a production..."
+        },
+        {
+          "score": 0.334,
+          "kind": "comment",
+          "id": "t1_o6yd60q",
+          "author": "MacFall-7",
+          "reddit_score": 1,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/o6yd60q/",
+          "subreddit": "aiagents",
+          "excerpt": "Invariants first means the constraints exist before any model touches the system. The model accelerates implementation inside a bounded space, not an open one. On tool approval: the audit agent handles it at the task type level, not per agent. Rules are scoped by what a tool does, not which agent calls it. The same..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-029",
+      "evidence_count": 3,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.433,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.201,
+          "kind": "post",
+          "id": "post",
+          "author": "MacFall-7",
+          "reddit_score": 4,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+          "source_url": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "permalink": "https://old.reddit.com/r/aiagents/comments/1qwanou/i_built_an_airgapped_agent_governance_system_in_a/",
+          "subreddit": "aiagents",
+          "excerpt": "I built an airgapped agent governance system in a week by changing how I use LLMs I want to share a concrete example of what 100% AI-native workflows can accomplish. Because most discussions still treat LLMs and specialized coding tools as autocomplete for code, but without guardrails. Last week I built a production..."
+        },
+        {
+          "score": 0.188,
+          "kind": "post",
+          "id": "post",
+          "author": "sony9999",
+          "reddit_score": 275,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-10.json",
+          "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "subreddit": "NextGenAITool",
+          "excerpt": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026 Artificial Intelligence is evolving rapidly, and AI agents are becoming one of the most transformative technologies for businesses, developers, and creators. Unlike traditional chatbots, AI agents can reason, remember, interact with tools, and..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-030",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-031",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-032",
+      "evidence_count": 1,
+      "suggested_reddit_verdict": "weak_reddit_support",
+      "evidence": [
+        {
+          "score": 0.386,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-033",
+      "evidence_count": 2,
+      "suggested_reddit_verdict": "weak_reddit_support",
+      "evidence": [
+        {
+          "score": 0.277,
+          "kind": "post",
+          "id": "post",
+          "author": "sony9999",
+          "reddit_score": 275,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-10.json",
+          "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "subreddit": "NextGenAITool",
+          "excerpt": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026 Artificial Intelligence is evolving rapidly, and AI agents are becoming one of the most transformative technologies for businesses, developers, and creators. Unlike traditional chatbots, AI agents can reason, remember, interact with tools, and..."
+        },
+        {
+          "score": 0.223,
+          "kind": "comment",
+          "id": "t1_oklc3s3",
+          "author": "Finorix079",
+          "reddit_score": 2,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+          "source_url": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/",
+          "permalink": "https://old.reddit.com/r/AI_Agents/comments/1t4gm62/ai_agent_governance_and_liability/oklc3s3/",
+          "subreddit": "AI_Agents",
+          "excerpt": "The \"technical authorization isn't accountability\" framing is the most accurate sentence I've read on this. Most governance conversations collapse the two and pretend the audit trail is downstream paperwork rather than a load-bearing requirement. Worth separating your three questions because they live in different l..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-034",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "requires_primary_source_corroboration",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-035",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "requires_primary_source_corroboration",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-036",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "requires_primary_source_corroboration",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-037",
+      "evidence_count": 5,
+      "suggested_reddit_verdict": "supported_by_reddit_evidence",
+      "evidence": [
+        {
+          "score": 0.433,
+          "kind": "post",
+          "id": "post",
+          "author": "Kakachia777",
+          "reddit_score": 542,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "AI AGENTS today are far more DANGEROUS that you think I know it's a long post, but I think this is something AI industry needs to talk about more. I'd love to hear the opinion from everyone. Real quick, so I built a multi-agent AI system that has root shell access to any Linux environment, this one I chose under Kal..."
+        },
+        {
+          "score": 0.337,
+          "kind": "comment",
+          "id": "t1_n56qt5x",
+          "author": "dahle44",
+          "reddit_score": 20,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-01.json",
+          "source_url": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/",
+          "permalink": "https://old.reddit.com/r/ChatGPT/comments/1m9bv7d/i_tested_openais_20month_agent_so_you_dont_have/n56qt5x/",
+          "subreddit": "ChatGPT",
+          "excerpt": "This is exactly the kind of “soft failure” that makes Agent risky for serious use: when asked to synthesize or summarize data (especially unstructured logs, chat transcripts, or behavioral sessions), it often “fills in the blanks” with hallucinated insights or fabricated details. This isn’t a bug it’s a direct resul..."
+        },
+        {
+          "score": 0.337,
+          "kind": "comment",
+          "id": "t1_o8zm8oc",
+          "author": "AcePilot01",
+          "reddit_score": 16,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o8zm8oc/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "Except its mostly wrong, and glosses over the fact that most of those require authentication, rate limited, paywalled. Using writing style alone is highly subjective and prone to false positives at a high rate. Also, the person had to have doxxed themselves in someway in the first place to have that information out..."
+        },
+        {
+          "score": 0.335,
+          "kind": "comment",
+          "id": "t1_o91krjx",
+          "author": "ExplanationRich1619",
+          "reddit_score": 9,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+          "source_url": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/",
+          "permalink": "https://old.reddit.com/r/ArtificialInteligence/comments/1rmdiu3/ai_agents_today_are_far_more_dangerous_that_you/o91krjx/",
+          "subreddit": "ArtificialInteligence",
+          "excerpt": "Yeah, this isn't an Atlantic article though, it's just anonymous ramblings from a person on Reddit. You don't need to give weight to words just because they were written on a screen."
+        },
+        {
+          "score": 0.335,
+          "kind": "comment",
+          "id": "t1_oiow67t",
+          "author": "theguidetoldmetodoit",
+          "reddit_score": 7,
+          "depth": 1,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-07.json",
+          "source_url": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/",
+          "permalink": "https://old.reddit.com/r/whennews/comments/1sxfm3b/the_pocketos_boss_puts_greater_blame_on_railways/oiow67t/",
+          "subreddit": "whennews",
+          "excerpt": "That's why those companies run on Cloud infrastructure, backups happen automatically. But for some reason they also decided to give their car keys to the toddler in the driver's seat."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-038",
+      "evidence_count": 1,
+      "suggested_reddit_verdict": "weak_reddit_support",
+      "evidence": [
+        {
+          "score": 0.277,
+          "kind": "post",
+          "id": "post",
+          "author": "sony9999",
+          "reddit_score": 275,
+          "depth": 0,
+          "source_json": "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-10.json",
+          "source_url": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "permalink": "https://old.reddit.com/r/NextGenAITool/comments/1u315jd/how_to_actually_build_an_ai_agent_a_complete/",
+          "subreddit": "NextGenAITool",
+          "excerpt": "How to Actually Build an AI Agent: A Complete Step-by-Step Guide for 2026 Artificial Intelligence is evolving rapidly, and AI agents are becoming one of the most transformative technologies for businesses, developers, and creators. Unlike traditional chatbots, AI agents can reason, remember, interact with tools, and..."
+        }
+      ]
+    },
+    {
+      "claim_id": "claim-039",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    },
+    {
+      "claim_id": "claim-040",
+      "evidence_count": 0,
+      "suggested_reddit_verdict": "no_reddit_evidence_found",
+      "evidence": []
+    }
+  ],
+  "source_files": [
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-01.json",
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-02.json",
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-03.json",
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-04.json",
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-06.json",
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-07.json",
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-08.json",
+    "runs/2026-06-24-reddit-factcheck-agent-validation-authority/reddit-evidence-raw/reddit-thread-10.json"
+  ]
+}

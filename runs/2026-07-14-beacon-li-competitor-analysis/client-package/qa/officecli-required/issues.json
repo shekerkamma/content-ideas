@@ -1,0 +1,13 @@
+{
+  "name": "issues",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-14-beacon-li-competitor-analysis/client-package/beacon-li-competitor-analysis-draft.pptx",
+    "issues",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"count\": 7,\n    \"issues\": [\n      {\n        \"id\": \"O1\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[19]/shape[@id=17]\",\n        \"message\": \"Text \\\"-3\\\" is hidden behind overlapping shape /slide[19]/shape[@id=51]\"\n      },\n      {\n        \"id\": \"O2\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[19]/shape[@id=19]\",\n        \"message\": \"Text \\\"-2\\\" is hidden behind overlapping shape /slide[19]/shape[@id=51]\"\n      },\n      {\n        \"id\": \"O3\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[19]/shape[@id=21]\",\n        \"message\": \"Text \\\"-1\\\" is hidden behind overlapping shape /slide[19]/shape[@id=51]\"\n      },\n      {\n        \"id\": \"O4\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[19]/shape[@id=23]\",\n        \"message\": \"Text \\\"0\\\" is hidden behind overlapping shape /slide[19]/shape[@id=51]\"\n      },\n      {\n        \"id\": \"O5\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[19]/shape[@id=25]\",\n        \"message\": \"Text \\\"1\\\" is hidden behind overlapping shape /slide[19]/shape[@id=51]\"\n      },\n      {\n        \"id\": \"O6\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[19]/shape[@id=27]\",\n        \"message\": \"Text \\\"2\\\" is hidden behind overlapping shape /slide[19]/shape[@id=51]\"\n      },\n      {\n        \"id\": \"O7\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[19]/shape[@id=29]\",\n        \"message\": \"Text \\\"3\\\" is hidden behind overlapping shape /slide[19]/shape[@id=51]\"\n      }\n    ]\n  }\n}\n",
+  "stderr": ""
+}

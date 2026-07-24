@@ -1,0 +1,53 @@
+file	bytes	words	required_sections_found	missing_sections	status
+AI_Shopping_Sales_Consultant_Master_Blueprint.md	10183	1538	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+AI_code_assistant_Master_Blueprint.md	20097	2768	9	Competitor Teardown	draft-needs-upgrade
+Ad_and_creative_generation_at_scale_Master_Blueprint.md	9847	1552	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Agentic_Auto_Remediation_Master_Blueprint.md	12419	1860	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+App_build_migration_automation_Master_Blueprint.md	9606	1527	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Audit_Tax_Document_Synthesis_Master_Blueprint.md	9465	1517	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Bid_RFP_Response_Automation_Master_Blueprint.md	10240	1633	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Brand_and_3D_asset_generation_Master_Blueprint.md	9578	1539	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+CRM_Data_Hygiene_Auto-Logging_Master_Blueprint.md	11073	1720	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Claim_Denial_Management_Master_Blueprint.md	10506	1667	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Clinical_Trial_Matching_Master_Blueprint.md	10219	1594	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Commercial_Lease_Abstraction_Master_Blueprint.md	10333	1612	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Commission_Dispute_Resolution_Master_Blueprint.md	9907	1558	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Compliance_and_Audit_Agent_Master_Blueprint.md	12117	1842	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Contact_Center_Agent_Assist_Master_Blueprint.md	10670	1672	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Conversational_Support_Master_Blueprint.md	34096	4654	9	Competitor Teardown	draft-needs-upgrade
+Customs_and_Bill_of_Lading_Extraction_Master_Blueprint.md	9536	1533	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Deal_Desk_Pricing_Approvals_Master_Blueprint.md	10025	1588	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Doc_Summarization_Drafting_Master_Blueprint.md	10758	1689	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Document_AI_extraction_Master_Blueprint.md	10379	1582	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Dynamic_Competitor_Pricing_Agent_Master_Blueprint.md	9610	1503	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Enterprise_Knowledge_Search_Master_Blueprint.md	10169	1608	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Financial_Report_Reconciliation_Master_Blueprint.md	11819	1799	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Forecasting_predictive_ops_Master_Blueprint.md	10720	1612	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Fraud_and_Risk_Detection_Master_Blueprint.md	11215	1744	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Freight_Quote_and_Routing_Agent_Master_Blueprint.md	9604	1526	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+HOA_Compliance_Violations_Master_Blueprint.md	9656	1517	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+HR_Onboarding_Agent_Master_Blueprint.md	21300	2911	9	Competitor Teardown	draft-needs-upgrade
+IT_Service_Desk_Master_Blueprint.md	11246	1756	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+In_Product_Owner_Assistant_Master_Blueprint.md	13492	2100	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Influencer_Campaign_Orchestration_Master_Blueprint.md	9924	1535	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Inventory_Forecasting_and_Re_routing_Master_Blueprint.md	9907	1504	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+KYC_AML_Onboarding_Agent_Master_Blueprint.md	21009	2787	9	Competitor Teardown	draft-needs-upgrade
+Legacy-IT_modernization_NL_to_SAP_Master_Blueprint.md	9924	1551	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Legal_Research_Drafting_Master_Blueprint.md	9980	1520	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Loan_Origination_Underwriting_Master_Blueprint.md	10296	1589	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Maintenance_Ticket_Orchestration_Master_Blueprint.md	9880	1524	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Messaging_Channel_Chatbot_Master_Blueprint.md	9776	1525	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+NL_analytics_text-to-SQL_Master_Blueprint.md	10287	1549	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Patient_Intake_Triage_Master_Blueprint.md	10279	1595	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Personalized_marketing_content_Master_Blueprint.md	9716	1521	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Portfolio_Rebalancing_Reporting_Master_Blueprint.md	9488	1419	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Prior_Authorization_Agent_Master_Blueprint.md	20393	2741	9	Competitor Teardown	draft-needs-upgrade
+Research_and_Insight_Agent_Master_Blueprint.md	9822	1559	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Retail_Inventory_Reconciliation_Master_Blueprint.md	9172	1427	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Returns_Refund_Triage_Master_Blueprint.md	10456	1641	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Supplier_Dispute_Resolution_Master_Blueprint.md	8988	1419	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Tenant_Screening_Underwriting_Master_Blueprint.md	9325	1421	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Threat_Detection_SecOps_Master_Blueprint.md	11201	1755	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Travel_Booking_Planner_Master_Blueprint.md	9105	1386	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Vendor_Catalog_Enrichment_Master_Blueprint.md	9971	1578	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade
+Video_generation_Master_Blueprint.md	9809	1550	7	The Diagnostic, The 30-Day Scope, Competitor Teardown	draft-needs-upgrade

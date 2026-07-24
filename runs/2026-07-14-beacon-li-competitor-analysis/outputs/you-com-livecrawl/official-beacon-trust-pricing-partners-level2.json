@@ -1,0 +1,118 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.beacon.li/bfsi-agentic-automation",
+        "title": "BFSI | beacon.li",
+        "description": "Absolutely. Beacon operates entirely above your UI layer and never accesses databases, APIs, or sensitive data. It's SOC 2 compliant with built-in RBAC, SSO, and audit trails.",
+        "thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "original_thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "Absolutely. Beacon never accesses PII, APIs, or backend systems. It’s SOC 2 compliant, RBAC-ready, and can be deployed on-prem, in VPC, or with your own model (BYOM).",
+          "Natural language querying allows clients to generate reports, track compliance metrics, and analyze workforce trends independently. Automated audit trails and compliance monitoring reduce regulatory risks and support overhead.",
+          "Teams spend hours reconciling data, validating workflows, and handling exception cases — increasing cost and audit risk.",
+          "Surface alerts, automate logs, and reduce risk—all within daily operations Beacon tracks decisions, flags anomalies, and enables users to generate audit-ready logs on demand."
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/overview",
+        "title": "Overview | beacon.li",
+        "description": "Absolutely. Beacon operates entirely above your UI layer and never accesses databases, APIs, or sensitive data. It's SOC 2 compliant with built-in RBAC, SSO, and audit trails.",
+        "thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "original_thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://trust.beacon.li/compliance",
+        "title": "Compliance frameworks followed by Trust Center - Beacon.li",
+        "description": "Explore compliance standards met by Trust Center to ensure security, privacy, and regulatory adherence for all stakeholders. Powered by Sprinto.",
+        "favicon_url": "https://you.com/favicon?domain=trust.beacon.li&size=128",
+        "snippets": [
+          "SOC 2 is a voluntary compliance standard for service organizations, developed by the American Institute of CPAs (AICPA), which specifies how organizations should manage customer data. The standard is based on the following Trust Services Criteria: security, availability, processing integrity, confidentiality, and privacy. ... The California Consumer Privacy Act provides data privacy rights to California residents, allowing them control over how their personal information is collected and used.",
+          "Beacon.li recognises that the confidentiality, integrity and availability of information and data created, maintained and hosted by us are vital to the success of the business and privacy of our partners."
+        ]
+      },
+      {
+        "url": "https://trust.beacon.li/controls",
+        "title": "Trust Center Security Controls & Measures | By Sprinto",
+        "description": "Explore Trust Center’s security controls covering product, data, network, and corporate security safeguards. Powered by Sprinto.",
+        "favicon_url": "https://you.com/favicon?domain=trust.beacon.li&size=128",
+        "snippets": [
+          "Role-Based Access Control (RBAC) to manage user permissions securely and efficiently. Each user is assigned roles aligned with their job responsibilities, ensuring access is limited to only the systems and data required for their duties.",
+          "The RBAC framework supports the principle of least privilege and helps prevent unauthorized access.",
+          "Beacon.li recognises that the confidentiality, integrity and availability of information and data created, maintained and hosted by us are vital to the success of the business and privacy of our partners.",
+          "Our infrastructure is deployed within isolated Virtual Private Clouds (VPCs) in AWS and Azure.Network boundaries are enforced using subnets, routing rules, and security groups or network security groups."
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/implementation-automation",
+        "title": "Accelerate Enterprise software implementation | Beacon.li",
+        "description": "Beacon.li slashes enterprise software implementation time by 75%. Go live in weeks, not months with 60% less delivery effort and zero integration hassle.",
+        "thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "original_thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "Absolutely. Beacon operates entirely above your UI layer and never accesses databases, APIs, or sensitive data. It's SOC 2 compliant with built-in RBAC, SSO, and audit trails."
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/itc-vegas-2025",
+        "title": "ITC Vegas 2025 | beacon.li",
+        "description": "Insurance has entered the AI Era; but most tools automate tasks in silos. At ITC Vegas, we’re introducing a different path: Agentic Orchestration · Beacon.li is the system-agnostic AI layer that coordinates outcomes across acquisition, claims, and support – without touching backend systems.",
+        "thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "original_thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "Beacon.li is built to solve exactly these pain points – through composable, compliant, and human-auditable orchestration that proves value in weeks, not years. Deploy without disrupting core systems. Experience orchestration live on your product in just a week. Use any LLM, BYOM, or deploy on your own infrastructure; works across any tech stack. No training on PII or transactional data; Built in security with SOC 2, ISO 27001, GDPR, and RBAC"
+        ]
+      },
+      {
+        "url": "https://trust.beacon.li/",
+        "title": "Trust Center - Trust Center - Security & Privacy",
+        "description": "Trust Center's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+        "favicon_url": "https://you.com/favicon?domain=trust.beacon.li&size=128",
+        "snippets": [
+          "Beacon.li recognises that the confidentiality, integrity and availability of information and data created, maintained and hosted by us are vital to the success of the business and privacy of our partners."
+        ]
+      },
+      {
+        "url": "https://trust.beacon.li/resources",
+        "title": "Security Policies & Docs | Trust Center Trust Center",
+        "description": "Access Trust Center’s security resources, including policies, procedures, and compliance documentation. Powered by Sprinto.",
+        "favicon_url": "https://you.com/favicon?domain=trust.beacon.li&size=128",
+        "snippets": [
+          "Beacon.li recognises that the confidentiality, integrity and availability of information and data created, maintained and hosted by us are vital to the success of the business and privacy of our partners."
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/real-time-insights",
+        "title": "From Reporting Backlog to Real-Time Insights with Beacon",
+        "description": "Stop waiting weeks for reports. Beacon delivers instant, in-product insights without dashboards or devs. See 3x faster decision-making.",
+        "thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "original_thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "Yes. Beacon never pulls raw data outside your platform. It works above the UI and adheres to SOC 2, ISO, and GDPR compliance standards."
+        ]
+      },
+      {
+        "url": "https://www.beacon.li/retail-tech-agentic-orchestration",
+        "title": "Retail Tech | beacon.li",
+        "description": "Beacon helps e-commerce and retail tech platforms onboard merchants faster, drive 4x feature adoption, and resolve 80% of support tickets autonomously—all without touching your backend or scaling support ops · Weeks spent configuring catalogs, pricing rules, and payout setups delay revenue ...",
+        "thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "original_thumbnail_url": "https://static.wixstatic.com/media/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png/v1/fit/w_2500,h_1330,al_c/a57663_d5e70c080a004b5d922f770d560b9178%7Emv2.png",
+        "favicon_url": "https://you.com/favicon?domain=www.beacon.li&size=128",
+        "snippets": [
+          "Yes. Beacon never touches your backend or customer data. It works above the UI, with enterprise-grade SOC 2, ISO, and GDPR compliance built in."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:beacon.li security trust SOC 2 ISO SSO RBAC audit logs data residency pricing partners",
+    "search_uuid": "2be605ff-fb0e-4077-94fa-b9301a94bb1c",
+    "latency": 0.5245611667633057
+  }
+}

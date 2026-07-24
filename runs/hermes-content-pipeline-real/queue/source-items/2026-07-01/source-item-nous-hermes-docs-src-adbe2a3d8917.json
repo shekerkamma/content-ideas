@@ -1,0 +1,18 @@
+{
+  "id": "src-adbe2a3d8917",
+  "source_id": "nous-hermes-docs",
+  "cluster_id": "agent-harnesses-and-devtools",
+  "title": "Grok — Delegate coding to xAI Grok Build CLI (features, PRs) ...",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-grok",
+  "canonical_url": "https://hermes-agent.nousresearch.com/docs/user-guide/skills/optional/autonomous-ai-agents/autonomous-ai-agents-grok",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:11:47.207609+00:00",
+  "author": null,
+  "source_type": "docs",
+  "trust_tier": "primary",
+  "summary": "Delegate coding tasks to Grok Build (xAI's autonomous coding agent CLI, the grok command) via the Hermes terminal. Grok can read files, write code, run shell commands, spawn subagents, and manage git workflows.",
+  "raw_content_path": null,
+  "dedupe_key": "4c1c4182e8f7",
+  "status": "new",
+  "errors": []
+}

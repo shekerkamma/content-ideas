@@ -1,0 +1,36 @@
+{
+  "editability_mode": "PPT-native editable diagrams",
+  "records": [
+    {
+      "visual": "Infrastructure abstraction layers",
+      "source_frames": [
+        "frame_0054.jpg",
+        "frame_0250.jpg"
+      ],
+      "route": "pptx-native"
+    },
+    {
+      "visual": "Baseline client/server/database",
+      "source_frames": [
+        "frame_0152.jpg"
+      ],
+      "route": "pptx-native"
+    },
+    {
+      "visual": "Final Pluto architecture",
+      "source_frames": [
+        "frame_0445.jpg",
+        "frame_0521.jpg"
+      ],
+      "route": "pptx-native"
+    },
+    {
+      "visual": "Specialized service boundaries",
+      "source_frames": [
+        "frame_0413.jpg",
+        "frame_0460.jpg"
+      ],
+      "route": "pptx-native"
+    }
+  ]
+}

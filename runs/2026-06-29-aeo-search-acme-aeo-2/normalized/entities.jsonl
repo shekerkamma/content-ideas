@@ -1,0 +1,8 @@
+{"entity_id": "ent_001", "name": "Acme AEO", "entity_type": "brand", "aliases": [], "source_capture_ids": [], "evidence_ids": []}
+{"entity_id": "ent_002", "name": "Profound", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_001"], "evidence_ids": ["cap_001"]}
+{"entity_id": "ent_003", "name": "AthenaHQ", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_001", "cap_002"], "evidence_ids": ["cap_001", "cap_002"]}
+{"entity_id": "ent_004", "name": "Peec AI", "entity_type": "competitor", "aliases": [], "source_capture_ids": ["cap_002"], "evidence_ids": ["cap_002"]}
+{"entity_id": "ent_005", "name": "profound.com", "entity_type": "source", "aliases": ["https://www.profound.com/"], "source_capture_ids": ["cap_001"], "evidence_ids": ["cap_001"]}
+{"entity_id": "ent_006", "name": "athenahq.ai", "entity_type": "source", "aliases": ["https://www.athenahq.ai/"], "source_capture_ids": ["cap_001"], "evidence_ids": ["cap_001"]}
+{"entity_id": "ent_007", "name": "athenahq.ai", "entity_type": "source", "aliases": ["https://www.athenahq.ai/"], "source_capture_ids": ["cap_002"], "evidence_ids": ["cap_002"]}
+{"entity_id": "ent_008", "name": "peec.ai", "entity_type": "source", "aliases": ["https://peec.ai/"], "source_capture_ids": ["cap_002"], "evidence_ids": ["cap_002"]}

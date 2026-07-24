@@ -1,0 +1,18 @@
+{
+  "id": "src-3ac5fd25483b",
+  "source_id": "openai-blog",
+  "cluster_id": "frontier-ai-platforms",
+  "title": "THE SHIFT TO AGENTIC AI: EVIDENCE FROM CODEX Drew Johnston1,* David ...",
+  "url": "https://cdn.openai.com/pdf/5d1e1489-21c0-43e4-9d42-f87efdbf0082/the-shift-to-agentic-ai-evidence-from-codex.pdf",
+  "canonical_url": "https://cdn.openai.com/pdf/5d1e1489-21c0-43e4-9d42-f87efdbf0082/the-shift-to-agentic-ai-evidence-from-codex.pdf",
+  "published_at": null,
+  "fetched_at": "2026-07-01T05:18:19.246451+00:00",
+  "author": null,
+  "source_type": "blog",
+  "trust_tier": "primary",
+  "summary": "sational: users ask questions or ... and the model generates responses. Agentic AI · tools extend this paradigm by enabling users to delegate multi-step tasks to AI systems that can au- tonomously use external tools, inspect files, execute commands, and create or modify artifacts. This paper studies this shift to agentic AI by analyzing data on the adoption and use of Codex, Ope- nAI’s agentic1 coding and work platform, which was initially released in April 2025.2 ...",
+  "raw_content_path": null,
+  "dedupe_key": "7fc4c92082cd",
+  "status": "new",
+  "errors": []
+}

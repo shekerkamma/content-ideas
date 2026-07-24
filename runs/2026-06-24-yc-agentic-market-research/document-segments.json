@@ -1,0 +1,12 @@
+{
+  "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+  "extraction_method": "plain-text",
+  "segments": [
+    {
+      "id": "segment-001",
+      "locator": "Section 1",
+      "source": "runs/2026-06-24-yc-agentic-market-research/research-input.txt",
+      "text": "CentralComs is an AI agents product for property managers, focused on maintenance calls, ticket chasing, and owner, tenant, and vendor updates.\nLance is an AI agents product for hotel operations, focused on answering calls, closing sales, and running guest-facing operations.\nKlarify is an AI agent for therapists that handles notes, treatment plans, insurance claims, supervision prep, and client acquisition.\nDodo is an AI agents product for clinic communications, focused on scheduling, refills, intake, follow-ups, and front-office workflows.\nKastle is an AI voice agent for mortgage servicing that collects payments, verifies borrowers, and qualifies new loan inquiries.\nFazeshift is an AI agent for accounts receivable that connects fragmented finance systems and automates quote-to-cash follow-up work.\nBasepilot is an AI agents product for insurance claims that helps insurers, TPAs, and MGAs streamline claims operations.\nProcIndex is an AI accounting firm that automates quote-to-cash, accounts payable, and month-end close workflows.\nInspectMind AI is an AI agent for construction drawings review that catches issues before they become rework and project delays.\nVeritus is an AI agent platform for consumer lending that automates loan servicing, collections, repayment plans, and borrower follow-up.\n\nProperty managers are overloaded by fragmented maintenance, ticket, and vendor coordination across AppFolio, Buildium, and Yardi.\nHotel operators are overloaded by calls, bookings, and cross-system workflows that require constant manual follow-up.\nTherapists spend too much time on documentation, insurance claims, and practice administration outside client sessions.\nClinic front desks are overloaded by scheduling, refills, intake, and patient communication across calls and texts.\nMortgage servicing teams need better borrower communication, collections workflows, and payment follow-up over the phone."
+    }
+  ]
+}

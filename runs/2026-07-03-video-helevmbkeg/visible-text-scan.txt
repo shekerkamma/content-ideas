@@ -1,0 +1,66 @@
+slide 1: Claude: Claude Code Beginner Course
+slide 1: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 2: Claude: Claude Code is positioned as the beginner-friendly interface for turning intent into shipped websites, automations, dashboards, and sellable AI services.
+slide 2: Claude: The core upgrade is local agency: Claude Code reads the project, edits files, runs commands, tests changes, and keeps behavior rules in the repo.
+slide 2: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 3: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 4: Claude: Claude Code
+slide 4: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 5: Claude: Set up Claude Code and a code editor before any business promise.
+slide 5: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 6: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 7: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 8: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 9: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 10: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 11: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 12: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 13: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 14: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 15: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 16: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 17: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 18: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 19: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 20: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 21: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 22: Claude: The decision is whether to treat Claude Code as a toy or as a delivery stack
+slide 22: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 23: Claude: NodeJS enables the Claude Code install and the JavaScript project workflow.
+slide 23: Claude: Install Claude Code
+slide 23: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 24: Claude: Claude Code onboarding teaches both environment and agency control
+slide 24: Claude: •  NodeJS installation •  VS Code project folder •  Terminal inside the editor •  Claude account authorization
+slide 24: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 25: Claude: Claude Code generates a NextJS project, installs dependencies, and gives the run command for local inspection.
+slide 25: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 26: Claude: Let Claude install dependencies and scaffold the app.
+slide 26: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 27: Claude: The `claude.md` lesson is really about governance
+slide 27: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 28: Claude: Ask Claude to install
+slide 28: Claude: Have Claude research the installation path and place the skill correctly.
+slide 28: Claude: Reload Claude Code so the new skill is discoverable.
+slide 28: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 29: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 30: Claude: Ask Claude to push only the website project to the repo.
+slide 30: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 31: Claude: Claude combines a NextJS frontend, Trigger.dev workflow hosting, Composio authentication, and environment variables.
+slide 31: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 32: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 33: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 34: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 35: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 36: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 37: Claude: A front-end design skill is used to improve layout, dark/light modes, and visual polish, then bugs are fed back to Claude.
+slide 37: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 38: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 39: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 40: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 41: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 42: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 43: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 44: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 45: Claude: Claude Code Beginner Course | Executive Briefing | 2026
+slide 46: source: •  50 frames were extracted from 2,268 keyframe candidates across the 2h18m course. •  Meaningful screen changes were grouped into setup screens, website demos, automation screens,
+slide 46: Claude: Claude Code Beginner Course | Executive Briefing | 2026

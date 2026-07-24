@@ -1,0 +1,337 @@
+{
+  "post": {
+    "title": "AI support is breaking for the same reason old support systems broke, no operational layer.",
+    "author": "iso_royale",
+    "score": 0,
+    "content": "AI handles the easy stuff, but everything around the edges falls apart. Not because the model is wrong. Not because the prompts are bad. But because the workflow underneath is missing. Things like: multi‑channel conversations splitting into 3 threads agents + AI stepping on each other follow‑ups living in Slack instead of a system onboarding steps getting lost “circle back” items disappearing no rules for when AI should act vs escalate no unified view of the customer Everyone wants AI to be the fix, but AI just exposes the cracks that were already there. The teams who are actually succeeding with AI support are the ones who: unify conversations enforce workflow rules keep context consistent route intelligently treat support like an operational system, not a chat app AI isn’t replacing ops. AI is forcing teams to finally build ops. How are you handling this, especially the non‑ticket stuff like onboarding milestones, follow‑ups, and internal handoffs. Are you pushing those into your CRM, or tracking them somewhere else?",
+    "url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+    "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+    "subreddit": "CustomerSuccess"
+  },
+  "comments": [
+    {
+      "id": "t1_osgmldw",
+      "author": "fraslin",
+      "text": "This is impossible to read and make any sense of. Write like a real human with real punctuation and sentences. If your support is broken it might be that you are sending your customers responses written like that.",
+      "score": 9,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osgmldw/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osnhaly",
+      "author": "ancientastronaut2",
+      "text": "It's not a real human.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osnhaly/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osytmwm",
+      "author": "Good_Science_3176",
+      "text": "I knew it from the word go because there is no way somebody could have written like this",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osytmwm/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osgjfgh",
+      "author": "CharacterDry4912",
+      "text": "The \"circle back\" items disappearing thing is so real it hurts. We had a whole informal system where CSMs would DM each other about follow-ups and then those just... evaporated when someone was out sick or switched accounts. We ended up pushing everything into the CRM, even the stuff that felt too small to log. Took about a month before people stopped resisting it, but now at least there's a paper trail when something falls through. Onboarding milestones especially needed a home outside of Slack because Slack is basically a black hole with a search function. The AI escalation rules point is where I see most teams still struggling though. Nobody defines it upfront, so you get AI attempting to handle something emotionally loaded while a human is also jumping in, and the customer gets three different tones in one conversation. You have to treat those escalation triggers like actual policy, not vibes-based judgment calls. The teams that document \"AI handles X, human takes Y, here's the handoff signal\" are the ones where it actually holds up under volume.",
+      "score": 3,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osgjfgh/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osgkib0",
+      "author": "iso_royale",
+      "text": "Slack is amazing for speed and terrible for memory. Anything that lives in DMs is basically guaranteed to disappear the moment someone is OOO or switches accounts. And you nailed the AI escalation point. Most teams treat it like “we’ll know it when we see it,” but AI doesn’t operate on vibes. If you don’t define: what AI owns what humans own what triggers a handoff what the handoff looks like you get the tonal whiplash you described. Three voices in one conversation and nobody knows who’s driving. The teams that actually hold up under volume are the ones who treat escalation rules like policy, not preference. Clear lanes, clear triggers, clear ownership. Did you formalize your escalation rules inside the CRM, or is that documented somewhere else.",
+      "score": 0,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osgkib0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osgtha2",
+      "author": "Effective-Eagle5926",
+      "text": "the follow-up layer was where we bled the most. AI handled first-response on tickets fine, but the \"circle back next week\" items and onboarding milestones lived in CSM heads. someone caught flu and a 7-figure account drifted 11 days before anyone noticed. what fixed it: every commitment over 1 business day became a CRM task with owner + due date. we audited weekly and counted misses. first month surfaced 38 dropped follow-ups. by month 3 under 5. the escalation-rules piece is harder because it's not a tool problem, it's a policy problem. ours is a 1-page doc with concrete examples: \"AI handles refund <$50 with no prior escalation. human takes everything else. handoff = ticket flagged + DM to the CSM with one-line summary.\" vague rules died fast. specific examples held. curious how you're sizing the miss rate. the count was what made finance actually staff this.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osgtha2/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osgx4ii",
+      "author": "iso_royale",
+      "text": "On escalation rules, it’s never a tooling problem. It’s a policy problem. AI can follow rules, but it can’t follow vibes. The teams that write down concrete examples (“AI owns X, humans own Y, handoff = Z”) are the only ones who avoid tonal whiplash. On sizing miss rate, I treat it as a funnel: Total commitments made, commitments requiring follow‑up, commitments completed on time, commitments completed late, commitments never completed. The two numbers that matter are: % of commitments that require follow‑up and % of those that are missed or late. Most teams don’t know either number. Once you show them the miss rate, the staffing conversation becomes a math problem instead of a feelings problem.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osgx4ii/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oshbim0",
+      "author": "Effective-Eagle5926",
+      "text": "yeah the funnel framing nails it. we ran a similar split: total commitments vs caught vs missed. the dropoff nobody talks about is \"commitments where the owner switched mid-week\" because account changes silently invalidate the due date. those looked completed but actually got reassigned to nobody. what flipped finance for us was reframing the miss rate as a churn proxy, not an ops metric. once we showed 4 of the last 6 churn calls had a missed commitment in the prior 30 days, leadership stopped asking \"do we need this\" and started asking \"why is it not weekly yet.\" are you tracking the missed-commitment-to-churn correlation, or does it still live as an ops KPI? curious if your finance team needed the same translation ours did.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/oshbim0/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oskt6qp",
+      "author": "iso_royale",
+      "text": "The funnel framing is exactly how I’ve been sizing it too. The part teams underestimate is the silent reassignment problem, when ownership changes mid‑week and the due date quietly dies. On paper it looks “completed,” but in reality it got handed to nobody. We’ve also seen the same thing you described with finance. Once you show that missed commitments correlate with churn, it stops being an ops debate and becomes a revenue conversation. The math gets a lot clearer when you can point to “X% of churned accounts had an unresolved commitment in the prior 30 days.” How are you handling the owner‑switching edge cases? Do you freeze ownership until the commitment closes, or reassign with a fresh due date?",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/oskt6qp/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osi3ca3",
+      "author": "Optlo_team",
+      "text": "Most chatbot tools can do escalation and some customization, but the gap is usually how much control you get over the actual workflow. I’m with Optlo, and we’ve focused on letting teams define the flow end to end, including prompts, what the AI can access, where the conversation goes next, and when to escalate with full context. That matters a lot for non-ticket work, where ownership and follow-up rules are usually the first things to break.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osi3ca3/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osks1q3",
+      "author": "iso_royale",
+      "text": "Yeah, the workflow‑control layer is where most teams hit the wall. If you can define prompts, access rules, and escalation logic in one place, the non‑ticket work finally stops slipping through the cracks.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osks1q3/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osj8ayf",
+      "author": "TheChandrianX",
+      "text": "This is the bit a lot of teams underestimate. The model can answer the clean, self-contained question, but it can’t fix messy ownership around the question. Before adding more tooling, I’d get clear on: where the conversation of record lives who owns the customer when it moves channels what counts as “done” vs “needs a human” what context has to be passed forward how exceptions get reviewed later Otherwise the bot just becomes a faster way to create half-resolved tickets. The boring workflow layer is usually what makes the experience feel good or terrible to the customer.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osj8ayf/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oskkfrr",
+      "author": "iso_royale",
+      "text": "Exactly this. The model can answer the clean question, but it can’t fix ownership ambiguity or context gaps . We’ve been forcing clarity on: where the conversation of record lives what counts as “done” what requires a human what context must be passed forward Once those are stable, the AI layer stops creating half‑resolved tickets and starts actually reducing load.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/oskkfrr/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oskovyh",
+      "author": "TheChandrianX",
+      "text": "Yep — and once those rules are written down, the AI part gets a lot less mysterious. I’d still keep a review loop for the messy cases though, because that is where the ownership gaps usually sneak back in: escalations, channel switches, “not done but not obviously open” tickets, that kind of thing.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/oskovyh/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osjjcko",
+      "author": "AnyCarrot5783",
+      "text": "I agree about \"AI exposes cracks that were already there\". Quite many people in my experience discover their ops are broken through AI support rollouts as well as they discover their signal infrastructure is fragmented. Conversations are unified in theory. An onboarding issue gets handled in the ticket, logged loosely in the CRM, mentioned in a Slack thread, and never reaches product as a pattern. The AI resolved the individual interaction but the systemic signal died anyway. The teams getting the most out of AI support in practice are treating it as two separate problems: - the operational layer you described: routing, context, handoffs, escalation rules. - the intelligence layer: what do all those interactions tell you collectively, where are the recurring friction points, what should change upstream so the same issues stop generating tickets at all. Most rollouts invest heavily in the first and almost nothing in the second. On your specific question about non-ticket tracking: the best practice is to push milestones and follow-ups into the CRM with a clear owner and a due date attached, not into Slack. Slack is where follow-ups go to die. The discipline of making it a CRM record with an owner is what actually closes the loop.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osjjcko/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oskk1eo",
+      "author": "iso_royale",
+      "text": "Agree, most teams treat AI support as a workflow problem and ignore the signal layer entirely. The AI can resolve the ticket, but if the underlying pattern never reaches product or CS, the system doesn’t actually improve. And yes,Slack is where follow‑ups go to die. We’ve been pushing everything into the CRM with an owner + due date for exactly that reason. Once it becomes a record instead of a message, the loop finally closes.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/oskk1eo/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osnic9e",
+      "author": "iso_royale",
+      "text": "Ha, Yeah, I tend to write like I structure code, everything isolated in blocks. And you’re right: the need for a proper operational layer is bigger than ever. That’s basically the problem I’ve been deep in for the last 18 months.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osnic9e/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osm1icc",
+      "author": "Crescitaly",
+      "text": "Agree with the operational layer point. AI support gets judged like a magic answer machine, but the real failure is usually ownership. Who updates the source of truth? Who reviews bad answers? What gets escalated? What changes in the product after the same ticket appears 50 times? Without that loop, AI just makes the old mess faster.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osm1icc/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osngcg9",
+      "author": "iso_royale",
+      "text": "Yes, great point, the real failure is always ownership. If no one owns the source of truth, no one owns the review loop, and no one owns escalation rules, the whole system drifts. That’s exactly what I keep seeing: teams automate replies but never automate responsibility . Without that loop, AI just accelerates whatever mess was already there.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osngcg9/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_otq9v8x",
+      "author": "Crescitaly",
+      "text": "Exactly. Automating replies without automating ownership just makes the old mess faster. The review loop and escalation rules are the actual system.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/otq9v8x/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_otqcera",
+      "author": "iso_royale",
+      "text": "True. The replies are actually the easy part. The system is the ownership loop: who maintains the source of truth, who reviews failures, and who defines escalation boundaries. Once those aren’t owned, AI doesn’t break anything, it just exposes what was already broken.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/otqcera/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_otwq0ph",
+      "author": "Crescitaly",
+      "text": "Exactly. AI support does not fix the ownership loop, it stress-tests it. If the source of truth is stale or nobody owns escalation rules, the model just makes the broken process faster and more visible.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/otwq0ph/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_otyfczf",
+      "author": "iso_royale",
+      "text": "You are right. AI is basically a stress test for whatever process already exists. If ownership is weak, the model just amplifies the drift that was already there.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/otyfczf/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_ou3i0vw",
+      "author": "Crescitaly",
+      "text": "Exactly. AI does not fix ownership. It makes weak ownership visible faster because the model keeps touching the same broken handoffs and unclear rules.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/ou3i0vw/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osq3z9o",
+      "author": "Crescitaly",
+      "text": "Exactly. 'Automate replies but not responsibility' is the pattern. The source of truth, failure review, escalation rules, and product feedback loop all need named owners. Otherwise the system looks modern but behaves like the same old support queue.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osq3z9o/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osxahkb",
+      "author": "Crescitaly",
+      "text": "Exactly. AI makes the ownership gap louder. If nobody owns the source of truth, escalation path, and review cadence, automation just moves the same confusion faster. The operational loop matters more than the model choice.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osxahkb/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osmmp9c",
+      "author": "Bitter_Big4525",
+      "text": "This matches what I’ve seen: the handoff rules matter more than the model. If a follow-up doesn’t have an owner and a place of record, it’s basically no one’s job.",
+      "score": 2,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osmmp9c/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osnbe5m",
+      "author": "iso_royale",
+      "text": "Yes, the handoff rules end up mattering more than the model. If a follow‑up doesn’t have an owner and a place of record, it basically becomes “everyone’s job,” which means it’s no one’s job. AI can draft replies all day, but without clear ownership and a system that tracks commitments, the follow‑through collapses. That’s the gap I’m working on. not just replying to messages but following up on ownership layer behind the message.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osnbe5m/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_oshbrud",
+      "author": "Founder-Awesome",
+      "text": "the thing that makes the follow-up problem sticky is that commitments get made in slack, not in the ticket. the crm task never gets created because the conversation happened somewhere else. effective-eagle's 38 dropped follow-ups in month 1 is what that gap looks like when you finally measure it. wrote about the ops layer piece here: Your Ops Team Doesn't Need to Be a Bottleneck",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/oshbrud/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osibkkr",
+      "author": "MasbyTV",
+      "text": "AI is not doing jack shit besides helping me write emails and stay organized",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osibkkr/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osmc87t",
+      "author": "misanthrope2327",
+      "text": "Why did you use AI to write this slop",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osmc87t/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    },
+    {
+      "id": "t1_osnh8r8",
+      "author": "ancientastronaut2",
+      "text": "F off with your AI slop.",
+      "score": 1,
+      "depth": 1,
+      "permalink": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/osnh8r8/",
+      "source_url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+      "subreddit": "CustomerSuccess"
+    }
+  ],
+  "source": {
+    "url": "https://old.reddit.com/r/CustomerSuccess/comments/1u9iniw/ai_support_is_breaking_for_the_same_reason_old/",
+    "method": "old_reddit_html"
+  }
+}

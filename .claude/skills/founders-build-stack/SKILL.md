@@ -9,6 +9,25 @@ argument-hint: [product idea or existing COMPANY.md path]
 
 Full 24-agent pipeline from idea to shipped product. Stack defaults: **Next.js 14+ / Supabase / Vercel / Stripe**.
 
+## Source / Tool Order
+
+When the build stack needs market, competitor, pricing, validation, or technical
+source research, use wired research dependencies before generic web search:
+
+1. Read `COMPANY.md`, local product artifacts, repo docs, and any referenced
+   skill files.
+2. Run GBrain recall when available for the product idea, ICP, competitors,
+   prior founder/build decisions, and named accounts.
+3. Use `you-com-search`, Hermes `web.search_backend: you`, or an equivalent
+   You.com wrapper for current-web discovery, livecrawl, research, or finance
+   research.
+4. Use Exa for semantic/source discovery and Firecrawl for full-page capture
+   after candidate URLs are known.
+5. Use specialist MCPs/plugins for official docs, GitHub, package/library docs,
+   payments, deployment, or analytics sources.
+6. Use generic WebSearch/search_web only when the above routes are unavailable
+   or return no useful signal.
+
 ## Narrative Frame
 
 **This skill's job:** Kill the ideas that will waste the founder's runway. Then build the surviving idea as leanly as possible — in 30 days, with one engineer, spending $0 on infrastructure until it's worth paying for.
