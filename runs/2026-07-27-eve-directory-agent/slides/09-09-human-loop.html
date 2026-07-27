@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Human in the Loop</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="09 Human Loop">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot" style="background:var(--red);box-shadow:0 0 12px var(--red);"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">Human In The Loop</span>
+      <span class="hud-right">09 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow red">Gate &nbsp;·&nbsp; Trust boundary</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Full power &mdash; <span class="accent-red">gated exactly where it counts.</span></div>
+  </div>
+
+  <!-- Left: Slack mock -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:940px;height:620px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;background:#0b1218;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:940px;height:44px;background:#111a24;border-bottom:1px solid var(--line);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:140px;top:342px;width:900px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.16em;color:var(--ink-mute);text-transform:uppercase;">#analytics &nbsp;·&nbsp; eve&#8209;analyst · SLACK</div>
+  </div>
+
+  <!-- User message -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:400px;width:860px;z-index:10;">
+    <div style="font-size:15px;color:var(--ink-mute);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;">@dana &nbsp;·&nbsp; 10:42</div>
+    <div style="font-size:22px;color:var(--ink);margin-top:8px;line-height:1.4;">run SELECT * FROM order_items</div>
+  </div>
+
+  <!-- Agent alert bubble -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:160px;top:500px;width:860px;height:250px;z-index:2;">
+    <div style="width:100%;height:100%;background:rgba(255,93,93,0.06);border:1px solid rgba(255,93,93,0.4);border-radius:4px;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:160px;top:500px;width:4px;height:250px;background:var(--red);z-index:3;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:190px;top:520px;width:820px;z-index:10;">
+    <div style="font-size:15px;color:var(--red);font-family:'JetBrains Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;">&#9888; approval required</div>
+    <div style="font-size:20px;color:var(--ink);margin-top:10px;line-height:1.4;font-weight:600;">Full-table scan detected on <span class="mono accent-red">order_items</span> (194 rows)</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.5;font-family:'JetBrains Mono',monospace;">query: SELECT * FROM order_items;</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:6px;line-height:1.5;">Waiting for a human <span style="color:var(--ink);font-weight:600;">Allow</span> before running. Nothing has executed.</div>
+  </div>
+
+  <!-- Buttons -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:190px;top:686px;width:160px;height:52px;z-index:3;">
+    <div style="width:100%;height:100%;background:var(--teal);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;color:#062a24;font-weight:700;letter-spacing:0.1em;font-size:16px;">ALLOW</div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:366px;top:686px;width:160px;height:52px;z-index:3;">
+    <div style="width:100%;height:100%;background:transparent;border:1px solid var(--line-2);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;color:var(--ink-dim);font-weight:600;letter-spacing:0.1em;font-size:16px;">DENY</div>
+  </div>
+
+  <!-- pending indicator -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:790px;width:860px;z-index:10;">
+    <div style="font-size:14px;color:var(--ink-mute);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;">status: <span style="color:var(--amber);">PENDING</span> &nbsp;·&nbsp; workflow paused &nbsp;·&nbsp; durable checkpoint held</div>
+  </div>
+
+  <!-- Right: verdict column -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1090px;top:330px;width:710px;height:620px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1120px;top:360px;width:660px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">The trust boundary</div>
+    <div style="font-size:34px;font-weight:800;margin-top:16px;line-height:1.15;">The setup that lets an internal team <span class="accent-teal">trust an agent in production.</span></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1120px;top:520px;width:640px;height:1px;background:var(--line);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1120px;top:540px;width:640px;z-index:10;">
+    <div style="font-size:20px;color:var(--ink);line-height:1.55;">
+      <div style="display:flex;gap:14px;align-items:baseline;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>Risky tool calls pause automatically</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:14px;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>Approval happens in the channel &mdash; not a console</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:14px;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>Workflow resumes exactly where it paused</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:14px;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>The reviewer &mdash; and the decision &mdash; is logged</span></div>
+    </div>
+  </div>
+
+  <!-- red rule -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1120px;top:790px;width:640px;height:1px;background:var(--red);opacity:0.5;z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1120px;top:810px;width:640px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--red);text-transform:uppercase;">Discipline</div>
+    <div style="font-size:22px;color:var(--ink);line-height:1.4;margin-top:12px;font-weight:600;">Locking the agent down so it cannot act is safe &mdash; and useless.</div>
+    <div style="font-size:18px;color:var(--ink-dim);line-height:1.5;margin-top:10px;">Approvals let you keep the power on, and put a human on the trigger where it matters.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>APPROVAL AS FIRST&#8209;CLASS PRIMITIVE</span>
+      <span class="right">Slide 09</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

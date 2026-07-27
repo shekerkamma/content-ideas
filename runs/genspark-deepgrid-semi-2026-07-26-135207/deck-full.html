@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepGrid Semi — Executive Investor Presentation (37 slides)</title>
+  <link rel="stylesheet" href="./deck.css" />
+  <link rel="stylesheet" href="./theme.css" />
+</head>
+<body>
+  <div class="deck">
+
+    <!-- SECTION 1: COMPANY, PROBLEM, SOLUTION (slides 1-6) -->
+
+    <!-- Slide 1: Cover -->
+    <section class="slide title-cover">
+      <div class="slide-content">
+        <h1>DeepGrid Semi</h1>
+        <p class="subtitle">Edge-AI Silicon for Autonomous &amp; ADAS</p>
+        <div class="highlight-grid">
+          <div class="highlight">
+            <span class="label">Pre-Series A Ask</span>
+            <span class="value">₹55 Cr Blended</span>
+          </div>
+          <div class="highlight">
+            <span class="label">Primary ICP Score</span>
+            <span class="value">79.2%</span>
+          </div>
+          <div class="highlight">
+            <span class="label">Cost Advantage</span>
+            <span class="value">12.9× vs Mobileye</span>
+          </div>
+        </div>
+        <p class="decision">GTM Decision: Proceed with Conditions</p>
+      </div>
+    </section>
+
+    <!-- Slide 2: Executive Summary -->
+    <section class="slide executive-summary">
+      <h2>The FPGA Paradox → Custom ASIC Path</h2>
+      <div class="two-col">
+        <div class="col">
+          <h3 class="a">Validation Complete</h3>
+          <p><strong>39.3 TOPS INT8</strong> architecture proven on FPGA</p>
+          <p class="detail">Dual-issue 600MHz, 64×512 MAC lattice</p>
+        </div>
+        <div class="col alert">
+          <h3>The Problem</h3>
+          <p>FPGA boards: <strong>~₹35,000/unit</strong></p>
+          <p class="detail">Uneconomic at volume; kills software stack margins</p>
+        </div>
+        <div class="col">
+          <h3 class="b">Solution: 28nm ASIC</h3>
+          <p><strong>Die cost $3.876</strong> (<$4) @ 1M units</p>
+          <p><strong>Board BOM ~$30</strong> | 96.7% yield predicted</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Core Problem -->
+    <section class="slide problem">
+      <h2>The Merchant Silicon Squeeze Zone</h2>
+      <div class="chain">
+        <div class="chain-link a">
+          <h4>Pure-Play AI Software</h4>
+          <p>ML stack vendors, zero silicon margins</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="chain-link alert">
+          <h4>The Squeeze Zone</h4>
+          <p>Merchant SoC dependency</p>
+          <p><strong>BOM &gt; $6,000</strong></p>
+          <p>Economics collapse</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="chain-link">
+          <h4>Outcome</h4>
+          <p>Sales limited to developed economies only</p>
+          <p>Emerging markets priced out</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Solution - DGrid Alpha -->
+    <section class="slide solution">
+      <h2>DGrid Alpha: 3D Systolic Tensor Cube</h2>
+      <div class="spec-matrix">
+        <div class="spec">
+          <h4>Compute Engine</h4>
+          <p class="number">39.3 TOPS INT8</p>
+          <p class="detail">64×512×600MHz dual-issue</p>
+        </div>
+        <div class="spec">
+          <h4>Process Node</h4>
+          <p class="number">TSMC 28nm HPC+</p>
+          <p class="detail">~57.1mm² die</p>
+        </div>
+        <div class="spec">
+          <h4>Cost @ 1M Units</h4>
+          <p class="number">$3.876</p>
+          <p class="detail">(Under $4, Muse validated)</p>
+        </div>
+        <div class="spec">
+          <h4>Board BOM</h4>
+          <p class="number">~$30</p>
+          <p class="detail">Combo-die + minimal discrete</p>
+        </div>
+        <div class="spec">
+          <h4>Yield Prediction</h4>
+          <p class="number">96.7%</p>
+          <p class="detail">Murphy 0.1/cm²</p>
+        </div>
+        <div class="spec">
+          <h4>Batch Firmware</h4>
+          <p class="number">200× efficiency</p>
+          <p class="detail">vs naive dispatch</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Architecture - Six Chiplets -->
+    <section class="slide architecture">
+      <h2>Vertically Integrated: Six Chiplets, One Combo-Die</h2>
+      <div class="chiplet-grid">
+        <div class="chiplet primary">
+          <h4 class="a">A100</h4>
+          <p>ADAS/AI Engine</p>
+          <p class="spec">39.3 TOPS</p>
+        </div>
+        <div class="chiplet">
+          <h4>R100</h4>
+          <p>Radar DSP</p>
+          <p class="spec">77 GHz</p>
+        </div>
+        <div class="chiplet">
+          <h4>T100</h4>
+          <p>Thermal/LiDAR DSP</p>
+        </div>
+        <div class="chiplet">
+          <h4>D100</h4>
+          <p>Secure Enclave</p>
+          <p class="spec">Lockstep RISC-V</p>
+        </div>
+        <div class="chiplet">
+          <h4>S100</h4>
+          <p>SDV Telematics</p>
+          <p class="spec">AIS-140 compliant</p>
+        </div>
+        <div class="chiplet">
+          <h4>H100</h4>
+          <p>Health/Bio-ADC</p>
+          <p class="spec">Drowsiness detect</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Corrections & Reconciliation -->
+    <section class="slide corrections">
+      <h2>Corrections from Earlier Draft</h2>
+      <table class="corrections-table">
+        <tr class="header">
+          <th>Earlier Figure</th>
+          <th>Corrected Figure</th>
+          <th>Source/Reason</th>
+        </tr>
+        <tr class="alert">
+          <td>₹25 Cr ask</td>
+          <td><strong>₹55 Cr blended</strong> (₹45 CCPS + ₹10 CGTMSE)</td>
+          <td>Use of Funds reconciliation</td>
+        </tr>
+        <tr class="alert">
+          <td>&lt;$3 die cost</td>
+          <td><strong>$3.876</strong> @ 1M units</td>
+          <td>Muse/GSME quote, verified</td>
+        </tr>
+        <tr class="alert">
+          <td>774× cost advantage</td>
+          <td><strong>12.9×</strong> vs Mobileye ASP $50</td>
+          <td>Sourced comparison, unsourced figure retracted</td>
+        </tr>
+        <tr class="info">
+          <td>~₹35,000 FPGA/unit</td>
+          <td>FPGA cost basis validated</td>
+          <td>Cost delta = $3.876 die + $30 BOM</td>
+        </tr>
+      </table>
+      <p class="note"><strong>GLOBAL RULE:</strong> Every correction appears on-slide, never silent swaps. Do not repeat banned figures outside their correction context.</p>
+    </section>
+
+    <!-- SECTION 2: ICP & GTM STRATEGY (slides 7-19) - THE HEART -->
+
+    <!-- Slide 7: GTM Pipeline Overview -->
+    <section class="slide pipeline">
+      <h2>GTM Pipeline: 5-Stage Gate Model</h2>
+      <div class="pipeline-compact">
+        <p><strong>Stage 0-1:</strong> Source Intake (34 claims) → <strong>Stage 2:</strong> ICP Score (10-dim) → <strong>Gate 1:</strong> Approval</p>
+        <p><strong>Stage 3:</strong> Validation (27 Qs) → <strong>Stages 4-5:</strong> GTM System (pricing, 13-wk)</p>
+      </div>
+    </section>
+
+    <!-- Slide 8: ICP Methodology -->
+    <section class="slide methodology">
+      <h2>ICP Methodology: 10 Weighted Dimensions</h2>
+      <div class="dimensions">
+        <div class="dimension primary">
+          <h4>Core 5</h4>
+          <ul>
+            <li><strong>Regulatory Compulsion</strong></li>
+            <li><strong>Integration/Cert Friction</strong></li>
+            <li><strong>Price Elasticity / BOM Limit</strong></li>
+            <li><strong>Sales Cycle</strong></li>
+            <li><strong>ODD Entropy</strong></li>
+          </ul>
+        </div>
+        <div class="dimension secondary">
+          <h4>Added 5</h4>
+          <ul>
+            <li><strong>Budget Authority</strong></li>
+            <li><strong>Competitive Pressure</strong></li>
+            <li><strong>Unit Economics Margin</strong></li>
+            <li><strong>Repeatability</strong></li>
+            <li><strong>Evidence Strength</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: ICP Weighted Scorecard -->
+    <section class="slide scorecard">
+      <h2>Weighted ICP Scorecard (10 Segments, 5-Point Scale)</h2>
+      <table class="score-table">
+        <tr>
+          <th>Segment</th>
+          <th>Score</th>
+          <th>% Blended</th>
+          <th>Verdict</th>
+        </tr>
+        <tr class="primary">
+          <td><strong>Tactical Defense &amp; Off-Highway/Port</strong></td>
+          <td><strong>3.96 / 5.0</strong></td>
+          <td><strong>79.2%</strong></td>
+          <td class="b">PRIMARY ICP</td>
+        </tr>
+        <tr class="secondary">
+          <td>3PL / Dedicated Fleet Retrofit</td>
+          <td>3.40 / 5.0</td>
+          <td>68.0%</td>
+          <td>Secondary experiment</td>
+        </tr>
+        <tr>
+          <td>AD0 Owner-Operator Direct</td>
+          <td>2.62 / 5.0</td>
+          <td>52.4%</td>
+          <td>Below threshold</td>
+        </tr>
+        <tr>
+          <td>Automobile OEM / Tier-1</td>
+          <td>2.32 / 5.0</td>
+          <td>46.4%</td>
+          <td>Deferred (high friction)</td>
+        </tr>
+        <tr class="anti">
+          <td>Commercial Motor Insurers</td>
+          <td>2.15 / 5.0</td>
+          <td>43.0%</td>
+          <td class="alert">ANTI-ICP</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Slide 10: ICP Option A - Defense -->
+    <section class="slide icp-defense">
+      <h2>ICP Option A: Tactical Defense &amp; Robotics (Primary, 79.2%)</h2>
+      <div class="option-card primary">
+        <h3 class="a">Target Segments</h3>
+        <ul>
+          <li>Sovereign UGVs / border surveillance</li>
+          <li>Seaport AGVs, constrained robotics</li>
+        </ul>
+        <h3 class="a">Winning Dimensions</h3>
+        <div class="dimension-wins">
+          <div class="win">Evidence Strength: <strong>5/5</strong> (Real ₹1 Cr revenue booked)</div>
+          <div class="win">Budget Authority: <strong>5/5</strong> (Cost-insensitive sovereign)</div>
+          <div class="win">Technical Fit: <strong>5/5</strong> (Ships today, FPGA-validated)</div>
+          <div class="win">Data Sovereignty: <strong>D100 lockstep enclave</strong></div>
+        </div>
+        <h3 class="alert">Red Team Flag</h3>
+        <p><strong>CRITICAL OPEN:</strong> Nature of ₹1 Cr revenue unconfirmed (commercial sale vs grant/subsidy?) — gates Defense resourcing decision.</p>
+      </div>
+    </section>
+
+    <!-- Slide 11: ICP Option B - Fleet -->
+    <section class="slide icp-fleet">
+      <h2>ICP Option B: Non-Discretionary Aftermarket Fleet (Secondary, 68.0%)</h2>
+      <div class="option-card secondary">
+        <h3>Target Segments</h3>
+        <ul>
+          <li>Medium / Heavy trucks (N2/N3 class)</li>
+          <li>Highly cost-sensitive, retrofit aftermarket</li>
+        </ul>
+        <h3>Founder's Working Hypothesis</h3>
+        <p>Fleet is the long-term, 5M+ vehicle scale opportunity. But currently <strong>ZERO signed customers</strong>.</p>
+        <h3>Kill Criterion (Hard Gate)</h3>
+        <p><strong>At least 1 of first 20 buyer interviews must convert to paid pilot within 90 days.</strong></p>
+        <p class="small">If this fails, Fleet stays secondary; escalate Defense resourcing.</p>
+        <h3>Pricing Signal</h3>
+        <p>Retrofkit priced ₹2–2.5 Lakh (roadmap figure, not yet validated in market)</p>
+      </div>
+    </section>
+
+    <!-- Slide 12: ICP Option C - OEM -->
+    <section class="slide icp-oem">
+      <h2>ICP Option C: OEM Factory Line-Fit (Deferred, 46.4%)</h2>
+      <div class="option-card deferred">
+        <h3>Target Segments</h3>
+        <ul>
+          <li>Automobile OEMs / Tier-1 suppliers</li>
+          <li>Factory line-fit embedding</li>
+        </ul>
+        <h3>Why Deferred</h3>
+        <table class="friction-table">
+          <tr>
+            <th>Dimension</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <td class="alert">Certification Friction</td>
+            <td class="alert">1/5 (worst)</td>
+          </tr>
+          <tr>
+            <td class="alert">Sales Cycle</td>
+            <td class="alert">1/5 (worst)</td>
+          </tr>
+          <tr>
+            <td>Competitor Pressure</td>
+            <td>2/5</td>
+          </tr>
+        </table>
+        <h3>Entry Gate</h3>
+        <p><strong>Signed Tier-1 partnership required before OEM GTM spend.</strong></p>
+      </div>
+    </section>
+
+    <!-- Slide 13: Deferred & Anti-ICP -->
+    <section class="slide anti-icp">
+      <h2>Deferred &amp; Anti-ICP Segments</h2>
+      <div class="row">
+        <div class="col segment-card deferred">
+          <h3>OEM / Tier-1 (Deferred)</h3>
+          <p class="score">46.4%</p>
+          <p>High cert friction (1/5), long sales cycle (1/5). Real scale opportunity but wrong timing.</p>
+          <p class="gate"><strong>Gate:</strong> Signed partnership first</p>
+        </div>
+        <div class="col segment-card alert">
+          <h3 class="alert">Commercial Insurers (Anti-ICP)</h3>
+          <p class="score alert">43.0% (Lowest score)</p>
+          <p class="alert"><strong>CARRYING UNVALIDATED CLAIM:</strong> "Insurance premium reductions via loss history"</p>
+          <p><strong>Zero insurer-revenue rows in financial model.</strong> May be evidence partner or pilot, never primary customer until revenue is proven.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 14: ICP Synthesis & Two-Track Strategy -->
+    <section class="slide synthesis">
+      <h2>ICP Synthesis: Defense + Fleet Two-Track (Not a Pivot)</h2>
+      <div class="synthesis-box">
+        <h3 class="b">The Paradox</h3>
+        <ul>
+          <li><strong>Defense wins on evidence, budget, fit.</strong> But worst repeatability (2/5) — contracts are lumpy, don't scale to the 88%-systems-revenue model.</li>
+          <li><strong>Fleet has the 5M+ market scale.</strong> But zero signed customers — needs pilot validation first.</li>
+        </ul>
+        <h3 class="b">Resolution: Sequenced Two-Track (NOT a flat pivot)</h3>
+        <ul>
+          <li><strong>Months 0–6: Defense resourced primary</strong> (fastest path to evidence, validates ₹1 Cr revenue nature, proves demand)</li>
+          <li><strong>Parallel: Fleet runs as secondary experiment</strong> (discovery interviews, first pilot pipeline)</li>
+          <li><strong>Day-90 checkpoint:</strong> If Fleet pilot converts, escalate; if not, stay Defense-primary through Series B</li>
+        </ul>
+        <h3 class="alert">Strongest Counter-Case</h3>
+        <p>Defense-first motion risks the narrative built on a 5M+ truck TAM — this ONLY holds as a sequenced two-track plan, never a flat pivot.</p>
+      </div>
+    </section>
+
+    <!-- Slide 15: Buyer Committee - Defense -->
+    <section class="slide buyer-defense">
+      <h2>Buyer Committee Roles: Tactical Defense</h2>
+      <table class="buyer-roles">
+        <tr>
+          <th>Role</th>
+          <th>Title / Org</th>
+          <th>Primary Concern</th>
+          <th>Blocker</th>
+        </tr>
+        <tr>
+          <td class="b"><strong>Economic</strong></td>
+          <td>Defense procurement / port authority</td>
+          <td>Vendor lock-in risk</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="b"><strong>Technical</strong></td>
+          <td>Systems integration engineer</td>
+          <td>Undocumented failure modes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="b"><strong>Champion</strong> (TBD)</td>
+          <td>Program manager</td>
+          <td>Advocacy and timeline</td>
+          <td>Not yet identified</td>
+        </tr>
+        <tr class="alert">
+          <td class="alert"><strong>Blocker</strong></td>
+          <td>Security / compliance office</td>
+          <td>Clearances, audit trail</td>
+          <td class="alert">Mandatory gate</td>
+        </tr>
+        <tr>
+          <td><strong>End User</strong></td>
+          <td>UGV / AGV operator</td>
+          <td>Reliability in field</td>
+          <td></td>
+        </tr>
+      </table>
+      <p class="gate"><strong>Minimum proof to advance:</strong> Second signed contract OR audited confirmation of ₹1 Cr revenue</p>
+    </section>
+
+    <!-- Slide 16: Buyer Committee - Fleet -->
+    <section class="slide buyer-fleet">
+      <h2>Buyer Committee Roles: 3PL / Fleet Retrofit</h2>
+      <table class="buyer-roles">
+        <tr>
+          <th>Role</th>
+          <th>Title / Org</th>
+          <th>Primary Concern</th>
+          <th>Kill Criterion</th>
+        </tr>
+        <tr>
+          <td class="b"><strong>Economic</strong></td>
+          <td>Fleet owner / operator</td>
+          <td>Unproven ROI, payback period</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="b"><strong>Technical</strong></td>
+          <td>Fleet maintenance / telematics manager</td>
+          <td>Integration burden, downtime</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="b"><strong>Champion</strong> (TBD)</td>
+          <td>Safety / compliance officer</td>
+          <td>Mandate readiness (AIS-184 etc.)</td>
+          <td class="alert">Mandated upgrade timeline</td>
+        </tr>
+        <tr>
+          <td class="b"><strong>Blocker</strong></td>
+          <td>Procurement / vehicle owner</td>
+          <td>Attached fleet vendor approval</td>
+          <td class="alert">Fleet lease restrictions</td>
+        </tr>
+        <tr>
+          <td><strong>End User</strong></td>
+          <td>Driver</td>
+          <td>Cabin tech reliability</td>
+          <td></td>
+        </tr>
+      </table>
+      <p class="gate"><strong>Minimum proof to advance:</strong> 1 signed paid pilot from first 20 discovery interviews (90-day kill gate)</p>
+    </section>
+
+    <!-- Slide 17: Positioning Statement -->
+    <section class="slide positioning">
+      <h2>Positioning: Two Independent Tracks</h2>
+      <div class="positioning-dual">
+        <div class="track primary">
+          <h3 class="a">Defense Positioning</h3>
+          <p class="statement">"Sovereign data-security edge-AI silicon via D100 lockstep enclave"</p>
+          <p class="detail">Emphasis: data sovereignty, security-cleared supply chain, no foreign dependencies</p>
+          <h4>Kill Criterion</h4>
+          <p>Second signed defense contract OR audited ₹1 Cr revenue confirmation within 6 months</p>
+        </div>
+        <div class="track secondary">
+          <h3>Fleet Positioning</h3>
+          <p class="statement">"Disruptive retrofit price point (₹2–2.5 Lakh) pending market validation"</p>
+          <p class="detail">Emphasis: cost leadership, mandate readiness, insurance premium partner test</p>
+          <h4>Kill Criterion</h4>
+          <p>Paid pilot from first 20 interviews within 90 days, or deprioritize</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 18: Five Claims to Stop Using -->
+    <section class="slide claims-stop">
+      <h2>Five Claims to Stop Using (Effective Immediately)</h2>
+      <table class="claims-table">
+        <tr class="header alert">
+          <th>Claim</th>
+          <th>Why Banned</th>
+          <th>Use Instead</th>
+        </tr>
+        <tr class="alert">
+          <td>"84% ASIC-stage gross margin"</td>
+          <td>Unreconciled; implies 92–93% in text, inconsistency</td>
+          <td>FY32 gross margin: 88% (from P&L model)</td>
+        </tr>
+        <tr class="alert">
+          <td>Any "insurance-premium-reduction %" (10%, 15%, etc.)</td>
+          <td>Unvalidated; insurers carry zero revenue rows in model; partner-test-only</td>
+          <td>"Insurer as evidence partner pending premium-data pilot results"</td>
+        </tr>
+        <tr class="alert">
+          <td>"Mandate-ready for AD2"</td>
+          <td>Unvalidated against MoRTH actual timeline</td>
+          <td>"Roadmap targets AD2 (Oct 2027 AEBS+ESC, Jan 2028 all functions)"</td>
+        </tr>
+        <tr class="alert">
+          <td>Any "accident-reduction %" claim</td>
+          <td>Nothing measured; no vehicle trials published</td>
+          <td>"Theoretical ADAS performance per chiplet spec; real-world validation pending fleet pilot"</td>
+        </tr>
+        <tr class="alert">
+          <td>"5M+ truck TAM as pipeline"</td>
+          <td>Market forecast, not validated demand; treated as pipeline implies orders exist</td>
+          <td>"₹55 Cr raise funds 90-day Fleet discovery test (20 interviews, 1 pilot gate)"</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Slide 19: Pricing, Channel, 90-Day Plan -->
+    <section class="slide pricing-channel-90d">
+      <h2>Pricing Logic &amp; 90-Day Execution Plan</h2>
+      <div class="two-col">
+        <div class="col">
+          <h3>Pricing Discipline</h3>
+          <p><strong>AD2 retrofit: ₹2–2.5 Lakh</strong> is a roadmap figure, not yet market-validated</p>
+          <p class="small">Output: data-collection plan (willingness-to-pay questions in 27-question discovery guide), not false precision</p>
+          <p><strong>Defense: contract-negotiated</strong> pricing per sovereign buyer</p>
+        </div>
+        <div class="col">
+          <h3>Channel Strategy</h3>
+          <ul>
+            <li><strong>Direct (Defense):</strong> Recommended primary</li>
+            <li><strong>Direct (Fleet):</strong> Recommended for pilot phase</li>
+            <li><strong>System integrators:</strong> Not yet (no partner identified)</li>
+            <li><strong>Defense primes:</strong> Only after 2+ Defense contracts signed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="execution-90d">
+        <h3>90-Day Execution Plan</h3>
+        <div class="phase">
+          <strong>Weeks 1–4: Evidence Gathering</strong><br/>
+          Revenue audit (₹1 Cr nature confirmed), 10 buyer interviews, 3 named accounts
+        </div>
+        <div class="phase">
+          <strong>Weeks 5–9: Conversion Attempts</strong><br/>
+          First Fleet pilot sold, Defense technical evaluation advances, second contract pipeline
+        </div>
+        <div class="phase">
+          <strong>Weeks 10–13: Governance &amp; Re-Scoring</strong><br/>
+          Day-90 checkpoint, hard gate decision (Fleet continues vs deprioritized), Series A narrative lock
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COMPETITIVE LANDSCAPE (slides 20-25) -->
+
+    <!-- Slide 20: Competitor Strategic Playbooks -->
+    <section class="slide competitors-playbooks">
+      <h2>Competitive Strategic Playbooks (Global ADAS Tier)</h2>
+      <div class="competitor-cards">
+        <div class="competitor card-a">
+          <h4>Aurora (USA)</h4>
+          <p><strong>Wedge:</strong> Heavy-haul long-distance</p>
+          <p><strong>Silicon:</strong> Dual NVIDIA DRIVE Thor</p>
+          <p><strong>BOM:</strong> $6,000+</p>
+          <p><strong>OEM Partner:</strong> Continental</p>
+        </div>
+        <div class="competitor card-b">
+          <h4>Kodiak Robotics (USA/DoD)</h4>
+          <p><strong>Wedge:</strong> Dual-use (freight + defense)</p>
+          <p><strong>Silicon:</strong> Ambarella CV3-AD685</p>
+          <p><strong>Route:</strong> Highway freight</p>
+        </div>
+        <div class="competitor card-c">
+          <h4>Gatik (USA)</h4>
+          <p><strong>Wedge:</strong> Constrained middle-mile</p>
+          <p><strong>Silicon:</strong> NVIDIA DRIVE AGX Orin</p>
+          <p><strong>Fleet Partner:</strong> Walmart, Kroger</p>
+        </div>
+        <div class="competitor card-d">
+          <h4>DeepWay (China)</h4>
+          <p><strong>Wedge:</strong> Domestic fleet scale</p>
+          <p><strong>Silicon:</strong> Baidu Apollo + Xingtu NPU</p>
+          <p><strong>EV Platform:</strong> Electric truck family</p>
+        </div>
+      </div>
+      <p class="insight"><strong>Lesson:</strong> Every credible player picks ONE lane. None run all three at DeepGrid's ~$30 BOM.</p>
+    </section>
+
+    <!-- Slide 21: Global Semiconductor & Dependency Matrix -->
+    <section class="slide dependency-matrix">
+      <h2>Silicon Dependency & Economics Across Tier</h2>
+      <table class="dependency-table">
+        <tr>
+          <th>Company</th>
+          <th>Silicon Partner</th>
+          <th>Compute Model</th>
+          <th>BOM Cost</th>
+          <th>Integration Risk</th>
+        </tr>
+        <tr>
+          <td class="a"><strong>Aurora</strong></td>
+          <td>NVIDIA (USA)</td>
+          <td>2× DRIVE Thor</td>
+          <td>$6,000+</td>
+          <td>High (vendor lock-in)</td>
+        </tr>
+        <tr>
+          <td class="b"><strong>Kodiak</strong></td>
+          <td>Ambarella (USA)</td>
+          <td>CV3-AD685</td>
+          <td>$4,500–5,500</td>
+          <td>Medium (limited upgrade)</td>
+        </tr>
+        <tr>
+          <td class="c"><strong>Gatik</strong></td>
+          <td>NVIDIA (USA)</td>
+          <td>DRIVE AGX Orin</td>
+          <td>$3,500–4,500</td>
+          <td>Medium (margin squeeze)</td>
+        </tr>
+        <tr>
+          <td class="d"><strong>DeepWay</strong></td>
+          <td>In-house (China) + Baidu Apollo</td>
+          <td>Xingtu NPU family</td>
+          <td>$2,000–3,000</td>
+          <td>Low (domestic stack)</td>
+        </tr>
+        <tr class="primary">
+          <td class="b"><strong>DeepGrid Semi</strong></td>
+          <td><strong>None (vertically integrated)</strong></td>
+          <td><strong>Custom ASIC (39.3 TOPS)</strong></td>
+          <td><strong>~$30 (1/200th tier avg)</strong></td>
+          <td><strong>Lowest (own design, sovereign)</strong></td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Slide 22: India's Semiconductor Wave -->
+    <section class="slide india-semi-wave">
+      <h2>India's Semiconductor Wave: Young but Accelerating</h2>
+      <div class="indian-startups">
+        <div class="startup">
+          <h4>Netrasemi</h4>
+          <p><strong>Product:</strong> A2000 SoC (TSMC 12nm)</p>
+          <p><strong>Raised:</strong> ₹125 Cr</p>
+          <p><strong>Timeline:</strong> Mid-2027 launch (1 year behind DeepGrid)</p>
+        </div>
+        <div class="startup">
+          <h4>Mindgrove</h4>
+          <p><strong>Product:</strong> RISC-V MCU (TSMC 28nm)</p>
+          <p><strong>Partner:</strong> Bosch MoU signed</p>
+          <p><strong>Raised:</strong> $10.3M</p>
+        </div>
+        <div class="startup">
+          <h4>Agnit Semiconductors</h4>
+          <p><strong>Product:</strong> GaN devices for RF/power</p>
+          <p><strong>Focus:</strong> Defense radar pilots</p>
+          <p><strong>Raised:</strong> $7.47M</p>
+        </div>
+      </div>
+      <p class="insight"><strong>India's advantage:</strong> Real wave, but nascent. DeepGrid's already-revenue-generating position places it ~1 year ahead of the next credible domestic ASIC competitor.</p>
+    </section>
+
+    <!-- Slide 23: Software-First Autonomy Competitors -->
+    <section class="slide software-competitors">
+      <h2>Software-First Autonomy: Hardware-Agnostic Models</h2>
+      <div class="software-comp">
+        <div class="player">
+          <h4>Minus Zero</h4>
+          <p>Pure-play ADAS software</p>
+          <p class="cost">Inherits merchant-silicon BOM cost structure</p>
+        </div>
+        <div class="player">
+          <h4>Swaayatt Robots</h4>
+          <p>Constrained-route autonomy stack</p>
+          <p class="cost">Algorithm quality ≠ cost advantage (uses standard SoCs)</p>
+        </div>
+        <div class="player">
+          <h4>RoshAI</h4>
+          <p>Fleet autonomy middleware</p>
+          <p class="cost">Hardware-agnostic: no chip economics leverage</p>
+        </div>
+      </div>
+      <p class="insight"><strong>Key insight:</strong> Without vertically integrated silicon, software-only players cannot escape the $6,000+ BOM trap, no matter how good their algorithm.</p>
+    </section>
+
+    <!-- Slide 24: Competitive Positioning Synthesis -->
+    <section class="slide competitive-synthesis">
+      <h2>DeepGrid's Unique Position: Only Vertically Integrated ASIC Combo-Die</h2>
+      <div class="positioning-unique">
+        <div class="unique-claim">
+          <h3 class="b">Silicon Architecture</h3>
+          <p>Only Indian startup with a single-die, vertically integrated ADAS combo-die</p>
+          <p class="vs">vs Aurora/Kodiak/Gatik (merchant silicon dependency)</p>
+          <p class="vs">vs DeepWay (China-domestic, no export positioning)</p>
+        </div>
+        <div class="unique-claim">
+          <h3 class="b">Cost Structure</h3>
+          <p>~$30 die + board BOM vs $3,500–6,000+ tier average</p>
+          <p class="stat">12.9× cost advantage vs Mobileye ASP $50</p>
+          <p class="stat">3–7× vs company-stated imported ADAS retrofit bands (₹5–18L)</p>
+        </div>
+        <div class="unique-claim">
+          <h3 class="b">Market Timing</h3>
+          <p>First-mover in India + GCC for retrofittable, mandate-ready ADAS</p>
+          <p>Competitor launches 12–24 months behind (Netrasemi mid-2027)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: GTM ROADMAP + REGULATORY (slides 26-30) -->
+
+    <!-- Slide 25: Phase 1 - Defense Wedge -->
+    <section class="slide roadmap-phase1">
+      <h2>Phase 1 (Months 0–6): Tactical Defense Wedge</h2>
+      <div class="phase-content">
+        <h3 class="a">Objectives</h3>
+        <ul>
+          <li>Direct FPGA field deployments (proof-of-concept with sovereign buyers)</li>
+          <li>Tactical defense positioning (data sovereignty via D100 enclave)</li>
+          <li>Revenue model validation (confirm ₹1 Cr revenue nature: commercial vs grant)</li>
+        </ul>
+        <h3 class="a">Metrics / Gates</h3>
+        <div class="gate-list">
+          <div class="gate">Gate 1: ₹1 Cr revenue audited (confirm nature)</div>
+          <div class="gate">Gate 2: Second signed contract or contract LOI</div>
+          <div class="gate">Gate 3: First Fleet pilot in pipeline (secondary experiment)</div>
+        </div>
+        <h3 class="detail">Open question:</h3>
+        <p>₹1 Cr already generated — commercial sale or grant/subsidy? Critical for Defense scoring.</p>
+      </div>
+    </section>
+
+    <!-- Slide 26: Phase 2 - Regulatory Aftermarket Volume -->
+    <section class="slide roadmap-phase2">
+      <h2>Phase 2 (Months 6–18): Regulatory Aftermarket Volume</h2>
+      <div class="phase-content">
+        <h3 class="b">Milestones</h3>
+        <ul>
+          <li><strong>Month 6:</strong> Series A raise close (₹55 Cr blended)</li>
+          <li><strong>Month 8:</strong> MeitY Design Linked Incentive application submitted</li>
+          <li><strong>Month 9:</strong> TSMC 28nm HPC+ MPW tape-out (A100+R100 dual validate)</li>
+          <li><strong>Month 14:</strong> Full-die MPW results, design-for-manufacture freeze</li>
+          <li><strong>Month 16–18:</strong> Retrofit kit launch (₹2–2.5 Lakh, market-validated pricing)</li>
+        </ul>
+        <h3 class="b">Parallel: Fleet Pilot Conversion Test</h3>
+        <p>First 20 buyer interviews; kill gate = 1 paid pilot within 90 days (by ~Month 3)</p>
+      </div>
+    </section>
+
+    <!-- Slide 27: Phase 3 - OEM & Tier-1 Integration -->
+    <section class="slide roadmap-phase3">
+      <h2>Phase 3 (Months 18–36): OEM &amp; Tier-1 Integration</h2>
+      <div class="phase-content">
+        <h3>Strategic Moves</h3>
+        <ul>
+          <li>Tier-1 partnerships signed (Uno Minda, Spark Minda, Bosch India preferred)</li>
+          <li>Sovereign OEM line-fit wins (Mahindra EV, Ashok Leyland new platform)</li>
+          <li>Production ramp to 1M+ units annually (TSMC 28nm full fab allocation)</li>
+          <li>Shift to recurring SaaS revenue (sovereign data moat, ₹10K–25K/vehicle/year tiers)</li>
+        </ul>
+        <h3>Outcome</h3>
+        <p>By end of Phase 3: FY32 revenue ₹1,387.95 Cr achieved, EBITDA ₹536.63 Cr (39%), net income positive sustained</p>
+      </div>
+    </section>
+
+    <!-- Slide 28: Regulatory Mandate - India -->
+    <section class="slide regulatory-india">
+      <h2>Regulatory Mandate: India Automotive (Corrected Timeline)</h2>
+      <table class="regulatory-table">
+        <tr>
+          <th>Standard</th>
+          <th>Function</th>
+          <th>Chiplet</th>
+          <th>Operative Date</th>
+          <th>Status</th>
+        </tr>
+        <tr class="mandate">
+          <td>AIS-184</td>
+          <td>AEBS (Autonomous Emergency Braking)</td>
+          <td>A100 (primary) + R100 (radar)</td>
+          <td><strong>1 Oct 2027</strong></td>
+          <td>Compulsory M2/M3/N2/N3</td>
+        </tr>
+        <tr class="mandate">
+          <td>AIS-186</td>
+          <td>ESC (Electronic Stability Control)</td>
+          <td>A100 + D100 (lockstep) + H100 (sensors)</td>
+          <td><strong>1 Oct 2027</strong></td>
+          <td>Compulsory M2/M3/N2/N3</td>
+        </tr>
+        <tr class="mandate">
+          <td>AIS-187, 188, 189, 190</td>
+          <td>Lane Keeping, Curve Speed, Fatigue Detection, AIS-140 Telematics</td>
+          <td>A100 + S100 (telematics)</td>
+          <td><strong>1 Jan 2028</strong></td>
+          <td>Phased M3/N3 rollout</td>
+        </tr>
+        <tr class="alert">
+          <td colspan="5" class="correction">
+            <strong>CORRECTION:</strong> Earlier materials cited 2026 dates (incorrect draft MoRTH).
+            <strong>Verified operative dates: Oct 2027 (AEBS+ESC) and Jan 2028 (all functions).</strong>
+            Confirm against final MoRTH Gazette before 2027 execution.
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Slide 29: Regulatory Mandate - GCC -->
+    <section class="slide regulatory-gcc">
+      <h2>Regulatory Mandate: GCC (Saudi Arabia, UAE)</h2>
+      <div class="gcc-mandates">
+        <div class="mandate-block">
+          <h3>Saudi Arabia (TGA / WASL)</h3>
+          <ul>
+            <li><strong>ADAS Mandate:</strong> TGA 2027+ (enterprise delivery vehicles mandatory)</li>
+            <li><strong>Telematics:</strong> WASL fleet tracking compulsory</li>
+            <li><strong>DeepGrid Advantage:</strong> S100 (AIS-140 compliant telematics) eliminates need for secondary tracker hardware</li>
+          </ul>
+        </div>
+        <div class="mandate-block">
+          <h3>UAE (FMSA / DTA)</h3>
+          <ul>
+            <li><strong>ADAS Roadmap:</strong> 2028+ for commercial fleets (tighter than India timelines)</li>
+            <li><strong>Insurance Premium Link:</strong> Potential future integration (zero current evidence)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="insight">GCC market entry deferred to Phase 3; beachhead remains India + domestic fleet.</p>
+    </section>
+
+    <!-- SECTION 5: FINANCIALS (slides 31-35) -->
+
+    <!-- Slide 30: Hardware Unit Economics -->
+    <section class="slide unit-economics">
+      <h2>Hardware Unit Economics: Die to Retrofit Kit</h2>
+      <div class="economics-table">
+        <div class="econ-item">
+          <h4>ASIC Die Cost</h4>
+          <p class="metric"><strong>$3.876</strong> @ 1M units</p>
+          <p class="source">TSMC 28nm HPC+, Muse quote validated</p>
+          <p class="note alert"><strong>CORRECTION:</strong> Earlier claim "&lt;$3" retracted. Verified figure: $3.876 (under $4)</p>
+        </div>
+        <div class="econ-item">
+          <h4>Board &amp; Integration BOM</h4>
+          <p class="metric"><strong>~$30</strong> total</p>
+          <p class="detail">Power delivery, DDR4, RF shielding, connectors, thermal mgmt</p>
+        </div>
+        <div class="econ-item">
+          <h4>Retrofit Kit (Landed)</h4>
+          <p class="metric"><strong>~₹2–2.5 Lakh</strong> (roadmap target, not yet validated)</p>
+          <p class="detail">ASIC $30 + Radar $100 + Cameras $50 + Enclosure/labor $20 = ~$200 BOM</p>
+          <p class="metric">Installed: ₹2–2.5L ÷ $30 BOM = 266–333× markup for integration/IP/support</p>
+        </div>
+      </div>
+      <p class="insight"><strong>Cost Advantage vs Mobileye ASP $50:</strong> <strong>12.9×</strong> (die level) | 3–7× (retrofit kit vs ₹5–18L import bands)</p>
+    </section>
+
+    <!-- Slide 31: Cost Curves & Break-Even Analysis -->
+    <section class="slide break-even">
+      <h2>Tapeout NRE & Break-Even: Full Phasing</h2>
+      <div class="nre-breakdown">
+        <h3>NRE Phasing (Total $3.17M)</h3>
+        <table class="nre-table">
+          <tr>
+            <th>Phase</th>
+            <th>Cost</th>
+            <th>Gate</th>
+          </tr>
+          <tr class="at-risk">
+            <td>A100 MPW + Validation</td>
+            <td>$69K</td>
+            <td class="alert">At-risk: compute verification</td>
+          </tr>
+          <tr class="at-risk">
+            <td>R100 MPW + Validation</td>
+            <td>$69K</td>
+            <td class="alert">At-risk: routing &amp; timing</td>
+          </tr>
+          <tr class="at-risk">
+            <td>Full-Die MPW + Test</td>
+            <td>$232K</td>
+            <td class="alert">At-risk: yield &amp; power (370K = 11.7% of total)</td>
+          </tr>
+          <tr>
+            <td>Backend → GDSII</td>
+            <td>$1.0M</td>
+            <td>Post-MPW proven</td>
+          </tr>
+          <tr>
+            <td>Mask &amp; Reticle</td>
+            <td>$1.0M</td>
+            <td>Production ready</td>
+          </tr>
+          <tr>
+            <td>IP Licensing (PrimeSoC + Terminus PHY)</td>
+            <td>$800K</td>
+            <td>Full-die validated</td>
+          </tr>
+        </table>
+      </div>
+      <p class="gate"><strong>Break-even:</strong> ~174,908 chips @ $18.12 margin = crossing in FY2032 (per reviewed analysis)</p>
+      <p class="alert"><strong>MARQUEE CORRECTION:</strong> Earlier "$8M NRE, 3,636-unit break-even" figure RETRACTED entirely. Do not repeat.</p>
+    </section>
+
+    <!-- Slide 32: 6-Year Revenue Trajectory -->
+    <section class="slide revenue-trajectory">
+      <h2>6-Year Revenue Ramp (Management Projection, Unaudited)</h2>
+      <div class="revenue-chart">
+        <div class="rev-bar" style="width: 6%">
+          <span class="year">FY27</span>
+          <span class="amount">₹6 Cr</span>
+        </div>
+        <div class="rev-bar" style="width: 41%">
+          <span class="year">FY28</span>
+          <span class="amount">₹41.17 Cr</span>
+        </div>
+        <div class="rev-bar" style="width: 145%">
+          <span class="year">FY29</span>
+          <span class="amount">₹144.73 Cr</span>
+        </div>
+        <div class="rev-bar" style="width: 351%">
+          <span class="year">FY30</span>
+          <span class="amount">₹351.35 Cr</span>
+        </div>
+        <div class="rev-bar" style="width: 732%">
+          <span class="year">FY31</span>
+          <span class="amount">₹731.54 Cr</span>
+        </div>
+        <div class="rev-bar primary" style="width: 1388%">
+          <span class="year">FY32</span>
+          <span class="amount">₹1,387.95 Cr</span>
+        </div>
+      </div>
+      <div class="margin-growth">
+        <h3>Gross Margin Progression</h3>
+        <p><strong>FY27: 53% → FY28: 74% → FY29: 79% → FY30: 82% → FY31: 85% → FY32: 88%</strong></p>
+        <p class="detail">Driven by TSMC 28nm volume ramps and manufacturing automation</p>
+      </div>
+    </section>
+
+    <!-- Slide 33: EBITDA & Net Income -->
+    <section class="slide profitability">
+      <h2>Profitability Path: FY2029 Breakeven, FY32 EBITDA 39%</h2>
+      <div class="profit-metrics">
+        <div class="metric-box">
+          <h4>FY32 EBITDA</h4>
+          <p class="number">₹536.63 Cr</p>
+          <p class="percent">39% of revenue (≈ gross margin 88% − opex)</p>
+        </div>
+        <div class="metric-box">
+          <h4>FY32 Net Income</h4>
+          <p class="number">₹381.37 Cr</p>
+          <p class="percent">27.5% of revenue (after D&amp;A, tax)</p>
+        </div>
+        <div class="metric-box alert">
+          <h4>Profitable from FY2029</h4>
+          <p class="year">Year 3 of operations</p>
+          <p class="milestone">Post-Series A, pre-Series B</p>
+        </div>
+      </div>
+      <p class="note"><strong>Label:</strong> All projections are management estimates, unaudited. Actual results subject to regulatory, competitive, and capital-availability risks.</p>
+    </section>
+
+    <!-- Slide 34: SaaS Monetization Tiers -->
+    <section class="slide saas-tiers">
+      <h2>SaaS Monetization: Sovereign Data Moat &amp; Recurring Revenue</h2>
+      <table class="saas-table">
+        <tr>
+          <th>Tier</th>
+          <th>Annual Fee</th>
+          <th>Features</th>
+          <th>Market Segment</th>
+        </tr>
+        <tr>
+          <td class="tier-base">Base</td>
+          <td class="price">₹10,000/year</td>
+          <td>Telemetry + basic dashboard</td>
+          <td>Individual owner-operators, small fleets (&lt;20)</td>
+        </tr>
+        <tr>
+          <td class="tier-adv">Advanced</td>
+          <td class="price">₹15,000/year</td>
+          <td>Telematics + compliance reporting (AIS-140) + insurance integration API</td>
+          <td>Medium fleets (20–100 vehicles)</td>
+        </tr>
+        <tr>
+          <td class="tier-prem">Premium</td>
+          <td class="price">₹25,000/year</td>
+          <td>Custom dashboards + fleet analytics + OTA chip updates + data governance</td>
+          <td>Large fleets (100+ vehicles) + OEMs</td>
+        </tr>
+      </table>
+      <p class="insight"><strong>Sovereign data moat:</strong> All telematics &amp; behavioral data remain on-device / in-India (D100 enclave), never exported. Enables premium pricing &amp; regulatory advantage.</p>
+    </section>
+
+    <!-- Slide 35: Capital Structure & Subsidies -->
+    <section class="slide capital-subsidies">
+      <h2>Capital Efficiency: Subsidies, Debt, &amp; Use of Funds</h2>
+      <div class="capital-structure">
+        <h3>₹55 Cr Blended Raise</h3>
+        <div class="capital-item">
+          <span class="component a">₹45 Cr Equity</span>
+          <span class="detail">CCPS, preference terms negotiable</span>
+        </div>
+        <div class="capital-item">
+          <span class="component b">₹10 Cr Debt</span>
+          <span class="detail">CGTMSE (draws over 25 months)</span>
+        </div>
+        <h3>Expected Subsidies (if applied)</h3>
+        <ul>
+          <li><strong>P-DLI:</strong> Up to 50% design cost reimbursement, capped ₹15 Cr (covers NRE risk)</li>
+          <li><strong>Deployment-Linked Incentive:</strong> 4–6% of net sales capped ₹30 Cr (phase 2–3)</li>
+          <li><strong>ChipIN Centre EDA support:</strong> Tool licensing &amp; academic access (minimal direct $ impact)</li>
+        </ul>
+        <p class="note"><strong>Planning assumption:</strong> Subsidies are upside; raise is sized standalone at ₹55 Cr blended.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 6: RISK, RED TEAM, DECISION, CLOSE (slides 36-37) -->
+
+    <!-- Slide 36: Red Team Findings & Open Conditions -->
+    <section class="slide red-team-risk">
+      <h2>Red Team Findings &amp; Critical Conditions</h2>
+      <div class="red-team">
+        <h3 class="alert">Gap #1: Indian Defense Primes Absent from Competitive Benchmark</h3>
+        <p>A startup vs an established security-cleared incumbent is a different competitive problem than vs Netrasemi/Minus Zero. <strong>Action:</strong> Add HAL, Bharat Electronics, Godrej Defence to competitor framework.</p>
+
+        <h3 class="alert">Gap #2: ₹1 Cr Revenue Nature Unconfirmed</h3>
+        <p>If revenue is grant/subsidy, not commercial sale, re-score Defense ICP as evidence-equal with Fleet. <strong>Kill gate:</strong> Confirm within 1 week of Series A close.</p>
+
+        <h3 class="alert">Circular Evidence Risk</h3>
+        <p>ICP scorecard methodology assumes independence; but Defense evidence (₹1 Cr) is the same revenue that justifies Defense weighting. If revenue is unconfirmed, scoring is circular.</p>
+
+        <h3 class="alert">Working Capital Exposure</h3>
+        <p>₹2.48 Cr raised to date vs ₹55 Cr ask. Government payment cycles 90–180+ days. Working capital burn: ~₹15 Cr across FY27–28. Cash flow positive not until FY2029.</p>
+      </div>
+    </section>
+
+    <!-- Slide 37: Final Decision & Closing -->
+    <section class="slide final-decision">
+      <h2>GTM Decision: Proceed With Conditions (NOT Unconditional)</h2>
+      <div class="decision-frame">
+        <h3 class="decision-status">Decision Status: <span class="proceed">PROCEED WITH CONDITIONS</span></h3>
+
+        <div class="conditions">
+          <h4>Five Conditions in Priority Order:</h4>
+          <ol>
+            <li><strong>Confirm ₹1 Cr revenue nature within 1 week.</strong> Commercial sale or grant? Gates Defense resourcing.</li>
+            <li><strong>Add Indian defense primes to competitive benchmark.</strong> HAL, BEL, Godrej Defence assessment by day-30 Series A.</li>
+            <li><strong>Model working-capital exposure to government payment-cycle delay.</strong> Cash flow forecast to profitability (FY2029) under 90–180-day payment assumption.</li>
+            <li><strong>Keep all external documents in sequenced-plan framing, never flat-pivot narrative.</strong> Communicate Defense-first Phase 1 as tactic, not strategy pivot.</li>
+            <li><strong>Day-90 checkpoint as hard re-scoring gate.</strong> If Fleet pilot does not convert by day 90, formally demote; update Series A narrative at that point.</li>
+          </ol>
+        </div>
+
+        <div class="closing-pillars">
+          <h3 class="b">Four Pillars of This Ask</h3>
+          <ul>
+            <li><strong>Eliminating the hardware squeeze zone:</strong> $30 die + board BOM vs $6,000+ incumbent</li>
+            <li><strong>De-risked technical validation:</strong> FPGA-proven 39.3 TOPS, one open risk (MPW yield)</li>
+            <li><strong>Non-discretionary mandate capture:</strong> India AEBS/ESC Oct 2027 + GCC 2027–2028 mandates</li>
+            <li><strong>Capital-efficient engineering:</strong> $3.17M NRE funded 90% by raise, evidence-gated deployment</li>
+          </ul>
+        </div>
+
+        <div class="closing-kpi">
+          <h4>Closing KPI Row</h4>
+          <p>₹55 Cr blended ask | 79.2% primary ICP score | 5 conditions to proceed | FY2029 profitable from | Series A valuation TBD pending Day-1 technical review</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    window.__deck = {
+      slides: slides,
+      total: slides.length,
+      fitOne: () => {
+        slides.forEach(s => s.style.display = 'none');
+        if (slides.length > 0) slides[0].style.display = 'block';
+      },
+      show: (i) => {
+        slides.forEach(s => s.style.display = 'none');
+        if (i >= 0 && i < slides.length) {
+          slides[i].style.display = 'block';
+        }
+      }
+    };
+    window.__deck.fitOne();
+  </script>
+</body>
+</html>

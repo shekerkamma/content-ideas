@@ -1,0 +1,39 @@
+/* DeepGrid Semi — dark technical design system */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Palette */
+  --bg-0: #05090F;          /* deepest navy */
+  --bg-1: #0A1220;          /* midnight */
+  --bg-2: #0F1A2E;          /* panel */
+  --bg-3: #16243D;          /* elevated */
+  --line: #1E3253;          /* rule */
+  --line-soft: #172642;
+
+  --ink-0: #E8F1FF;         /* primary text */
+  --ink-1: #B7C7DE;         /* secondary */
+  --ink-2: #7A8CA6;         /* tertiary */
+  --ink-3: #4E617D;         /* muted */
+
+  --cyan: #22D3EE;          /* primary accent */
+  --cyan-soft: #67E8F9;
+  --teal: #14B8A6;
+  --amber: #F59E0B;         /* caution / correction */
+  --amber-soft: #FCD34D;
+  --red: #EF4444;           /* anti / kill */
+  --green: #22C55E;         /* pass */
+  --violet: #8B5CF6;
+
+  /* Type */
+  --font-header: 'Space Grotesk', 'IBM Plex Sans', sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Type scale */
+.h-eyebrow { font-family: var(--font-mono); font-size: 16px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); }
+.h-title   { font-family: var(--font-header); font-size: 52px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink-0); line-height: 1.05; }
+.h-sub     { font-family: var(--font-body); font-size: 22px; font-weight: 400; color: var(--ink-1); line-height: 1.4; }
+.h-body    { font-family: var(--font-body); font-size: 18px; font-weight: 400; color: var(--ink-1); line-height: 1.5; }
+.h-small   { font-family: var(--font-body); font-size: 15px; font-weight: 400; color: var(--ink-2); line-height: 1.45; }
+.h-mono    { font-family: var(--font-mono); }

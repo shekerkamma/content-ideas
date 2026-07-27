@@ -20,11 +20,26 @@ canonical nested v1.2 `genspark-handoff.json`; tolerate older flat handoffs only
 as migration input and rewrite them to v1.2 before delivery. Never weaken its
 factual-integrity, editability-label, slide-count, or reviewed-status gates.
 
+Do not start the branded rebuild until `validation.status=passed`. Require the
+exact generation prompt, its SHA-256, the multimodal manifest, and
+`genspark-content-validation.json`. Validation must cover every recovered slide
+and every required audio/visual/temporal segment. If it fails, revise the same
+Genspark project; do not locally summarize around missing content.
+
 ## Compound Genspark Contract
 
 This skill is the required branded stage after `genspark-slides` whenever the
 user asks to brand, reskin, contextualize, improve, or make a recovered Genspark
 deck editable.
+
+### Conversion completion invariant
+
+Recovery is not delivery. The run is incomplete until a distinct branded
+artifact has been built and QA'd. When Genspark expands or edits the project,
+all earlier branded derivatives become stale immediately. Rebuild from the new
+reference before reporting success. Record `delivery.slide_count` and require it
+to be at least `recovery.captured_slide_count`; never leave a 14-slide branded
+derivative attached to a newly recovered 38-slide project.
 
 Accept `<run>/genspark-handoff.json` when present. Use it to resolve:
 
@@ -36,9 +51,11 @@ Accept `<run>/genspark-handoff.json` when present. Use it to resolve:
 - blocked pages and hosted-generation status
 - selected final builder
 
-Treat recovered Genspark layouts as visual references, not immutable templates.
-Re-author the deck in owned `deck.html` and `theme.css`; correct weak hierarchy,
-crowding, repetition, and unsupported claims rather than reproducing them.
+On the **re-author** route only (see Route 0), treat recovered layouts as visual
+references rather than immutable templates: correct weak hierarchy, crowding,
+repetition and unsupported claims instead of reproducing them. On the **verbatim**
+route this does not apply — reproduce the slides as they are and fix only defects
+that make text unreadable, saying what you changed.
 
 Before rebuilding, scan every Genspark-created number, URL, provider/model name,
 price, machine specification, performance metric, completion percentage, and
@@ -54,35 +71,31 @@ Route outcomes as follows:
 | Fully native/editable deck | Branded HTML/render reference | `branded-pptx-deck` |
 | Client-ready presales deck | Branded HTML/render reference | `vault-presales-pptx-pipeline` |
 
-For the client-ready route, apply
-[`references/genspark-to-vault-native.md`](references/genspark-to-vault-native.md).
-This is the “best of both worlds” contract: preserve Genspark's storyline,
-semantic roles, and useful archetypes, then translate them into the Vault grid,
-layout library, typography, and fully native object model. Do not flatten the
-Genspark styling into a background image for the final.
-Use [`assets/genspark-vault-concept-prompt.md`](assets/genspark-vault-concept-prompt.md)
-as the reusable upstream Genspark prompt when the intended final route is Vault-native.
+Client-ready route: apply [`references/genspark-to-vault-native.md`](references/genspark-to-vault-native.md)
+— preserve Genspark's storyline, semantic roles and useful archetypes, then translate
+them into the Vault grid, layout library, typography and fully native object model;
+never flatten Genspark styling into a background image for the final. The reusable
+upstream prompt is [`assets/genspark-vault-concept-prompt.md`](assets/genspark-vault-concept-prompt.md).
 
-If Genspark generation or capture is blocked, continue from validated source
-content. Do not stop merely because a hosted Genspark artifact is unavailable.
-The shared trigger examples are in
+If Genspark *generation* is blocked, continue from validated source content rather
+than stopping: Codex/GPT-5.6-sol is the local authoring engine, preserving the frozen
+prompt and multimodal IDs, authoring structured visual assets deterministically, and
+routing fully native output through `branded-pptx-deck`.
+Do not wait past the shared 600-second/two-no-progress ceiling. (Reading an existing
+deck is never blocked — see the recovery lane under Execution.) Trigger examples:
 `../pptx-visual-spec/portable-skills/genspark-slides/references/prompt-routing.md`.
 
 ## Why this skill exists (and when NOT to use it)
 
-Genspark returns **flattened images** at every exit (its viewer endpoints *and*
-its PPTX export are baked PNGs — no editable `theme.css`), so you cannot reskin
-or brand Genspark's own output. This skill inverts that: **you own the HTML/CSS**,
-render it yourself, and get a branded, on-brand deck with no Genspark dependency.
+Genspark's own PPTX export is baked PNGs with no editable `theme.css`, so you
+cannot reskin or edit its output. This skill inverts that: **you own the HTML/CSS**,
+render it yourself, and get a deck with no Genspark dependency.
 
-- **Use this** for pixel-perfect design fidelity python-pptx can't easily do —
-  gradients, web typography, custom diagrams (tower/ground-floor, gap bars),
-  glassmorphism — plus one-file rebranding, matching Genspark's format.
-- **Use `branded-pptx-deck` instead** when the client needs **PowerPoint-native
-  editable shapes/charts** (they'll re-type numbers, restyle boxes in PowerPoint).
-  This skill's slides are **images** (source-editable in HTML, not in PPT).
-- **Use `genspark-slides` first** when the user wants Genspark's own generator or
-  supplies a Genspark URL. Return here automatically for branding or editability.
+- **Use this** for design fidelity python-pptx can't reach — gradients, web type,
+  custom diagrams — plus one-file rebranding and native click-and-retype text.
+- **Use `branded-pptx-deck` instead** when the client must re-layout *shapes* or
+  needs native charts. Hybrid text is editable; the design furniture is not.
+- **Use `genspark-slides` first** for Genspark's own generator.
 
 ## Files
 
@@ -90,28 +103,32 @@ render it yourself, and get a branded, on-brand deck with no Genspark dependency
   reskin every slide. Colours, fonts, atmosphere.
 - `assets/deck.css` — **structure**: 10 slide archetypes reading `theme.css`
   tokens. No hard-coded colours.
-- `assets/deck.example.html` — a complete 13-slide worked example (ServiceNow
-  teardown). Copy it as the starting point for a new deck.
-- `scripts/render.mjs` — deck HTML → one 2560×1440 PNG per slide (Windows node +
-  Chrome). `--deck <html> --out <png-dir>`; honours `CHROME_PATH`. *(image path)*
+- `assets/deck.example.html` — complete 13-slide worked example; copy it to start.
+- `scripts/render.mjs` — deck HTML → one 2560×1440 PNG per slide. `--deck <html> --out <png-dir>`; honours `CHROME_PATH`.
 - `scripts/build_pptx.py` — PNGs → image-per-slide `.pptx` (WSL / python-pptx). *(image path)*
-- `scripts/render_hybrid.mjs` — **editable path.** Per slide, captures every text
-  block's bbox + runs (colour/bold) + font/line-height/align, and renders a
-  **text-free background** PNG. `--deck <html> --out <dir>` → `bg/` + `pos/`.
-- `scripts/build_editable_pptx.py` — **editable path.** Background image +
-  **native PowerPoint text boxes** at the captured coords (shrink-to-fit so text
-  can't overflow its slot). `--src <dir> --out <pptx>`.
+- `scripts/render_hybrid.mjs` — **editable path.** Captures every text block's bbox,
+  runs, font family/size/line-height/align, and renders a **text-free background**
+  PNG. `--deck <html> --out <dir>` → `bg/` + `pos/`.
+- `scripts/build_editable_pptx.py` — background image + **native PowerPoint text
+  boxes** at the captured coords. `--src <dir> --out <pptx> [--stage 1920]`.
 - `scripts/contact_sheet.py` — PNGs → review grids. **Your eyes for QA.**
-- `../../scripts/officecli_qa.py` — optional final `.pptx` QA gate: validates,
-  checks issues, and renders the built PowerPoint to HTML/PNG when `officecli` is
-  installed.
+  Point it at `build/png`. `build/bg` is the text-free pass and will look blank.
+- `scripts/build_verbatim_deck.py` — VERBATIM route: wraps recovered source slides
+  into a renderable deck unchanged, plus a generic auto-fit. `--src slides --css chrome.css`.
+- `scripts/install_fonts.sh` — installs the deck's own families. `--from <css>` / `--check`.
+- `scripts/check_export_coverage.mjs` — **mandatory hybrid gate.** Diffs every
+  visible DOM string against the captured text boxes. Catches silent content
+  loss that the PNG and OfficeCLI both miss. `--deck <html> --pos build/pos`.
+- `scripts/check_layout_overflow.mjs` — overflow + collision report. `--deck <html> [--min 20]`.
+- `../../scripts/officecli_qa.py` — final `.pptx` gate: validate / issues / html /
+  screenshot. Use `--required`. **`issues: 0` only means nothing crosses a slide
+  edge** — it is blind to wrapped, doubled or missing text that stays in-bounds.
 - `references/archetypes.md` — the content contract: every archetype + density budget.
 
 ## Upstream: chain skills for the content — do NOT hand-roll analysis
 
-This skill is the **render/brand stage only**. Findings, scores, and narrative
-should come from the existing skills; chaining is the default. Feed their outputs
-into `deck.html`.
+This skill is the **render/brand stage only**. Findings, scores and narrative come
+from the skills below; feed their outputs into `deck.html`.
 
 | Need | Use first |
 |------|-----------|
@@ -121,14 +138,38 @@ into `deck.html`.
 | Scored lanes / verticals | `vertical-scorer` |
 | Brand tokens (colours/fonts) | `mkt-visual-identity` → map `tokens.json` into `theme.css` |
 
-Always run content through a **validation pass** before rendering — every named
-entity, count, status, and claim checked against source.
+Always run a **validation pass** before rendering: every named entity, count,
+status and claim checked against source.
+
+## Route 0 — decide FIRST: reproduce verbatim, or re-author?
+
+Answer before authoring: **does the user want *this* deck, or a new deck informed
+by it?** Guessing wrong wastes the entire build.
+
+| The user says | Route |
+|---|---|
+| "make a PPTX of this deck", "convert", "make it editable", "faithful" | **Verbatim** — recover the source slides, use them unchanged. No re-titling, re-layout or re-theming. |
+| "upgrade", "improve", "fix the claims", "rebuild on our brand" | **Re-author** — steps 1–12. Extract the reference's storyline *and* its design tokens first: [`references/design-template-from-source.md`](references/design-template-from-source.md). |
+
+**Default to Verbatim when a deck URL is supplied.** Do not scrape the agent-chat
+page — it yields the generation *prompt*, not the slides, and the viewer
+virtualises to ~10 mounted iframes. The deck is served as data:
+`GET /api/project/slide_data?project_id=<id>&deck=<deck>` returns every slide's
+HTML plus its `chrome.css` design system. Full procedure, the 1920-stage retarget
+table and font handling: [`references/verbatim-recovery.md`](references/verbatim-recovery.md).
 
 ## Workflow (do these in order)
 
 1. **Resolve the compound handoff.** Read `genspark-handoff.json` when present,
    then get any missing validated content from the upstream skills above.
-   (JSON/markdown). Never invent metrics; confirm entity statuses.
+   (JSON/markdown). Verify `genspark-prompt.txt`,
+   `genspark-multimodal-context.json`, and
+   `genspark-content-validation.json`. Never invent metrics; confirm entity
+   statuses.
+   **Read `references/archetypes.md`, `assets/deck.example.html` and
+   `assets/deck.css` before writing a single slide.** The archetypes are a
+   closed set and `deck.css` is the only class inventory that exists; inventing
+   class names produces slides that render as empty panels.
 2. **Decide the spine.** Lead with the verdict (BLUF); write **action titles**
    (every `<h2>` is a so-what assertion). Derive slide count from evidence
    coverage and density; honor minimums but never treat them as ceilings.
@@ -154,13 +195,35 @@ entity, count, status, and claim checked against source.
    overflow, an eyebrow/label present on each slide. Because slides are rendered
    HTML, the PNGs are faithful — no placeholder problem. Fix `deck.html`/`theme.css`
    and re-render until clean.
+
+   **Point it at `build/png`, never `build/bg`.** `bg/` is the text-free
+   background pass — it is *supposed* to look empty. Running the contact sheet
+   over `bg/` and declaring QA green is a fabricated pass. Sanity check: a real
+   sheet is hundreds of KB; a `bg/` sheet is ~20KB.
+
+   Overlap hides at thumbnail size — measure it:
+   `node scripts/check_layout_overflow.mjs --deck <deck.html> --min 20`. Fixed-height
+   title boxes are the usual culprit: a two-line title prints over its subtitle.
+
+7b. **Export-fidelity gate (hybrid path) — run after `render_hybrid.mjs`:**
+   `node scripts/check_export_coverage.mjs --deck <deck.html> --pos build/pos`
+
+   Not optional, and covered by nothing else. It diffs every visible DOM string
+   against the capture. A predicate bug deletes content while the PNG looks perfect
+   (real screenshot) and OfficeCLI reports `issues: 0` (survivors are in-bounds) —
+   one instance dropped whole table columns across 36 of 37 slides and shipped.
+   Exit 0 or do not build the PPTX.
 8. **Build the PPTX — pick the output** (see "Two outputs" below):
    - *image/fast:* `python3 scripts/build_pptx.py --png build/png --out build/<name>-draft.pptx`
    - *editable (default when they want to edit in PowerPoint):*
      `node scripts/render_hybrid.mjs --deck <deck.html> --out build` then
      `python3 scripts/build_editable_pptx.py --src build --out build/<name>-editable-draft.pptx`
 9. **QA the final PPTX.** From the repo root, run
-   `python3 ../../scripts/officecli_qa.py <built.pptx> --out <run>/qa/officecli`.
+   `python3 ../../scripts/officecli_qa.py <built.pptx> --out <run>/qa/officecli --required`.
+   **`--required` is mandatory for anything client-facing:** without it the helper
+   exits 0 and writes `Status: skipped` when OfficeCLI is absent, so a silent skip
+   reads exactly like a pass. Confirm `Status: passed` plus all three artifacts
+   (`qa-summary.md`, `render/<name>.png`, `<name>.html`).
    Compare the OfficeCLI-rendered final PPTX screenshots with the source HTML
    contact sheet, especially for the hybrid-editable path where PowerPoint text
    boxes can reflow differently from HTML. If OfficeCLI is skipped, use
@@ -196,22 +259,14 @@ non-editable. Use when the client only receives the file.
 node render_hybrid.mjs --deck deck.html --out build      # bg/ (text-free design) + pos/ (text boxes)
 python3 build_editable_pptx.py --src build --out build/<name>-editable.pptx
 ```
-It renders the **design as a text-free background**, then lays **native
-PowerPoint text boxes** (real, click-and-retype) at the captured coordinates with
-matching colour/weight/line-height, shrink-to-fit so nothing overflows. Result:
-the exact design **and** editable headings, cards, and stats. This is the
-"wire both" path — design fidelity + editability in one pipeline, credit-free.
+Renders the **design as a text-free background**, then lays **native PowerPoint
+text boxes** at the captured coordinates with matching family/colour/weight/
+line-height, shrink-to-fit. Design fidelity *and* click-and-retype text, credit-free.
+Add `--stage 1920` for a recovered deck. *Caveats:* heavy client rewrites reflow
+within the slot; vector diagrams stay in the background (labels editable, shapes not).
 
-*Editable-hybrid caveats:* text reflows if a client heavily rewrites a block
-(shrink-to-fit keeps it inside its slot). Complex vector diagrams remain part of
-the background image (their *labels* are editable, the shapes are not).
-
-**This hybrid is NOT "client-ready" under the `Client-Ready PPTX Design System`**, whose
-rule is explicit: *"Do not flatten full slides into images for the client-ready output."*
-The hybrid's layouts ARE flattened (design background + text boxes on top). It is the
-right tool for fast, pixel-perfect, credit-free visual decks — not for a deck governed by
-that design system.
-
+**Not "client-ready" under the `Client-Ready PPTX Design System`** — its rule is
+*"do not flatten full slides into images"*, and hybrid layouts are flattened.
 Route out when the client must re-layout shapes or needs native charts:
 - **`/vault-presales-pptx-pipeline`** — the client-ready path. Builds via **artifact-tool
   presentation JSX** into 100% native objects (zero pictures), on the design system's
@@ -220,18 +275,29 @@ Route out when the client must re-layout shapes or needs native charts:
 - **`/branded-pptx-deck`** (pptxkit) — native shapes/charts on the branded template, for
   decks outside the vault design system.
 
-**QA the editable build** by rendering it back. Prefer
-`python3 ../../scripts/officecli_qa.py <pptx> --out <run>/qa/officecli`; if OfficeCLI
-is skipped, use `soffice --headless --convert-to pdf` then PyMuPDF (`fitz`) to
-PNG, and inspect for overlap/clipping — the shapes are real text, so the render
-is faithful.
+**QA the editable build** per step 9. If OfficeCLI is unavailable, fall back to
+`soffice --headless --convert-to pdf` plus PyMuPDF (`fitz`) and inspect for
+overlap and clipping.
 
-## Execution: where render.mjs runs
+## Execution: two different browser lanes
 
-`render.mjs` needs **Playwright + a Chromium-family browser**. It does *not* care
-which OS supplies them.
+Do not conflate these. Picking the wrong one is why a build stalls.
 
-### Preferred: WSL Playwright Chromium (re-verified 2026-07-22)
+| Lane | Purpose | Use |
+|---|---|---|
+| **Recovery** | Drive a *live, logged-in* Genspark deck | `mcp__chrome-devtools-windows__*` (Windows Chrome) |
+| **Render** | Screenshot *your own local* `deck.html` | WSL Playwright Chromium, headless |
+
+### Recovery lane — authenticated browsing
+
+**There is no Genspark connector tool.** Do not wait for one, and never ask the
+user to export or screenshot the deck by hand. To read a Genspark URL, use the
+Windows-side Chrome DevTools MCP — it carries the authenticated session that WSL
+Chromium lacks. A WSL sign-in/cookie wall is **not** a blocker to report; it is
+the signal to switch lanes. Drive it with `list_network_requests` +
+`evaluate_script`, passing `filePath` for large payloads so they never cross context.
+
+### Render lane — WSL Playwright Chromium (re-verified 2026-07-22)
 
 **No Windows staging, no `GENSPARK_DECK_WORKDIR`, no `cmd.exe`.** Run everything in
 WSL from the run folder, passing WSL's own Playwright Chromium via `--chrome`:
@@ -243,31 +309,25 @@ node render_hybrid.mjs --deck deck.html --out build        --chrome "$CHROME"
 python3 build_editable_pptx.py --src build --out build/<name>-draft.pptx
 ```
 
-Playwright resolves from the active repository root (`<repo>/node_modules`), so
-run from there or a subdirectory of it. Proven end-to-end: 28 slides → 2560×1440 PNGs →
-358 native text boxes → OfficeCLI QA 0 issues.
+Playwright resolves from the active repository root (`<repo>/node_modules`), so run
+from there or a subdirectory. Headless is correct here — the render is deterministic
+and needs no session. Flip `headless:false` **only** to debug a blank or short render
+(missing `window.__deck`, a bad `<section>`), then put it back.
 
 ### Fallback: Windows node + Windows Chrome (only if WSL Chromium is missing)
 
-WSL2 cannot reach a Windows Chrome *debug port*, and Windows node cannot run scripts
-from a `\\wsl$` UNC path — so this path requires staging on the Windows filesystem:
+WSL2 cannot reach a Windows Chrome *debug port*, and Windows node cannot run from a
+`\\wsl$` UNC path, so this path needs Windows-filesystem staging: copy the CSS,
+`deck.html` and `render.mjs` into `GENSPARK_DECK_WORKDIR` (default
+`C:/Users/<user>/genspark-design-template`), `npm i playwright@1.49.1` there with
+`PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1` (reuses system Chrome), run `render.mjs` via
+`cmd.exe /c`, then run the Python steps in WSL against the PNGs.
 
-1. Resolve the workdir from `GENSPARK_DECK_WORKDIR` (default
-   `C:/Users/<user>/genspark-design-template`).
-2. Copy `assets/theme.css`, `assets/deck.css`, your `deck.html`, and
-   `scripts/render.mjs` into it (once; `npm i playwright@1.49.1` there with
-   `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1` — it reuses system Chrome).
-3. Run `render.mjs` with **Windows node** (via `cmd.exe /c`).
-4. Run `build_pptx.py` and `contact_sheet.py` with **WSL python** against the PNGs.
-
-**This fallback is unavailable whenever WSL interop is off** — check
-`/proc/sys/fs/binfmt_misc/WSLInterop`. If it doesn't exist, no Windows binary
-(`cmd.exe`, `powershell.exe`, Windows node) can execute from WSL at all, and the
-WSL-Chromium path above is the *only* one that works. That was the state on
-2026-07-16.
-
-Only if **both** paths are unavailable: set status `blocked` and say the render path
-is missing — do not ship an unrendered deck.
+Unavailable whenever WSL interop is off — check `/proc/sys/fs/binfmt_misc/WSLInterop`;
+if absent, no Windows binary can execute from WSL and the WSL-Chromium path is the
+only one. If **both** render paths are gone, set status `blocked`; do not ship an
+unrendered deck. (Note this constrains only *rendering* — the recovery lane above
+runs through the DevTools MCP, not through WSL.)
 
 ## Portable paths
 
@@ -304,9 +364,27 @@ skill body.
 This skill is the local branded stage, not the hosted generator. When the user
 wants Genspark generation, run `genspark-slides` first through the Genspark AI
 Slides app, write `genspark-handoff.json`, and return here for the owned rebuild.
+When that lane stalls or under-generates, Codex/GPT-5.6-sol becomes the authoring
+engine; Genspark is no longer a delivery dependency.
 
 ## Hard rules (learned the hard way)
 
+- **A reference deck is the design system, not just the storyline.** If a deck
+  URL is supplied, open the *rendered slides* and extract their real tokens
+  (palette, type roles, scale, chrome) before choosing anything. Scraping the
+  agent-chat page gets you the generation prompt and none of the design.
+  Substituting this skill's default theme for the client's is a rebuild, not a
+  reskin, and will be rejected.
+- **Never re-author content the user asked you to reproduce.** Re-titling,
+  re-laying-out, or "improving" a 37-slide source into your own 43-slide arc
+  destroys work they chose. Verbatim is the default for a supplied deck.
+- **Never claim a gate passed without opening the artifact it produces.**
+  Checking `build/bg` instead of `build/png`, or reporting `issues: 0` without
+  looking at the render, is a fabricated pass. Every gate in this skill has a
+  specific artifact to *look at*; a green exit code is not the evidence.
+- **Match effort to the ask.** When the source is already well-designed HTML,
+  the job is recover → wrap → render → export. Building a template system and a
+  generator to reproduce a deck that already exists is the expensive wrong turn.
 - **Declare the actual build.** Image path = `non-editable visual render`.
   Hybrid path = `hybrid-editable text over rendered design background`. Do not
   imply fully native PowerPoint shapes/charts unless you used `branded-pptx-deck`.
@@ -316,7 +394,8 @@ Slides app, write `genspark-handoff.json`, and return here for the owned rebuild
   If content doesn't fit the density budget, split the slide — never shrink type
   past legibility. QA the contact sheet every time.
 - **Never render unvalidated content.** Wrong facts in a client deck are a delivery
-  failure. Validate every entity/number/status against source first.
+  failure. Validate every entity/number/status against source first and require a
+  passed exact-prompt/multimodal validation before branding.
 - **No internal language on client slides.** Especially scrub `Genspark`, tool
   names, paths, and `synthesis`/`validation` labels — they belong in run files.
 - **Reviewed requires evidence.** Only name a deck `*-reviewed.pptx` after a real
@@ -340,14 +419,26 @@ non-evidentiary.
 ### Category
 Business Automation
 
-### Dependencies
-- `render.mjs` — required; needs Windows node + Chrome (Playwright).
-- `build_pptx.py` — required; needs WSL python-pptx.
-- `contact_sheet.py` — required for QA; needs PIL.
-- `officecli-qa` — optional final PowerPoint QA gate; uses the repository QA
-  script when `officecli` is installed.
-- `assets/theme.css` + `assets/deck.css` + a `deck.html` — the template triplet.
-- `pptx-visual-spec` — mandatory visual-routing overlay and schema.
+### Dependencies — preflight before rendering
+
+| Need | Check | If missing |
+|---|---|---|
+| Playwright + Chromium | `node -e "console.log(require('playwright').chromium.executablePath())"` | run from the repo root; `npm run test:e2e:install` |
+| python-pptx | `python3 -c "import pptx"` | both PPTX builders need it |
+| Pillow | `python3 -c "import PIL"` | `contact_sheet.py` needs it |
+| officecli | `which officecli` | final QA gate degrades to LibreOffice/PDF |
+| **The deck's fonts** | `scripts/install_fonts.sh --check --from <chrome.css\|deck.html>` | `scripts/install_fonts.sh --from <css>` |
+
+**Fonts are not optional on the hybrid path.** `render_hybrid.mjs` captures each
+box's *real* family and the builder writes it into the PPTX; uninstalled means the
+PNG substitutes silently, OfficeCLI misrepresents what the client sees, and
+PowerPoint substitutes again on their machine. Install first, **ship the `.ttf`s
+beside the deck**, and say a machine without them will substitute.
+
+**Stage width:** `build_editable_pptx.py --stage` defaults to 1280 (this skill's
+template); pass `--stage 1920` for a recovered Genspark deck or every coordinate
+and font size is halved. Also required: the `theme.css`+`deck.css`+`deck.html`
+triplet, and `pptx-visual-spec`.
 
 ### Relationships
 
@@ -383,10 +474,6 @@ At invocation, disclose the selected output class:
 
 ## Gotchas
 
-- **Choose the current render lane:** prefer the verified WSL Playwright Chromium
-  path. Use Windows node + Chrome only when WSL Chromium is missing or broken;
-  stage on the Windows filesystem because Windows node cannot run from a UNC
-  `\\wsl$` working directory.
 - **PNG count ≠ slide count:** if the render drops slides, the deck HTML likely
   errored (missing `window.__deck` hook or a bad `<section>`); check the browser
   console via a headed run before building the PPTX.
@@ -398,6 +485,15 @@ At invocation, disclose the selected output class:
   write a new filename, don't overwrite.
 - **Status before delivery:** label `draft` / `reviewed` / `blocked` with matching
   filename suffixes. Never present an unreviewed deck as final.
+
+### Hybrid-export traps — read before debugging a PPTX/PNG mismatch
+
+Three traps corrupt the PowerPoint while the PNG stays perfect, and two are
+invisible to OfficeCLI: **inline-only text silently dropped**, **inline tags
+styled `display:block` captured twice**, and **tight bboxes re-wrapping** under
+PowerPoint's font metrics. Full symptoms, the correct capture predicate, the
+stylesheet audit command and the verification order are in
+[`references/hybrid-export-traps.md`](references/hybrid-export-traps.md).
 
 ## Images And Visuals
 

@@ -1,0 +1,12 @@
+{
+  "name": "validate",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "validate",
+    "runs/genspark-deepgrid-semi-2026-07-26-135207/DeepGrid-Semi-Investor-Deck-v1-editable-fixed.pptx",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": \"Validation passed: no errors found.\",\n  \"message\": \"Validation passed: no errors found.\"\n}\n",
+  "stderr": ""
+}

@@ -57,3 +57,13 @@ runs/**/*.wav
 
 # contains live LLM API keys — never commit
 surfsense/global_llm_config.yaml
+
+# Regenerable deck-render artifacts (genspark-branded-deck / pptx pipelines).
+# The reproducible inputs stay tracked — slides/, chrome.css, deck.html, the
+# build scripts, fonts/ and the final .pptx — plus build/qa/, which the
+# officecli-qa skill names as required passing evidence. These three are pure
+# output: `render.mjs` and `render_hybrid.mjs` regenerate them in minutes, and
+# they were ~50MB per session.
+runs/**/build/png/
+runs/**/build/bg/
+runs/**/build/pos/

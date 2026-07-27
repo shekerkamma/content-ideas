@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-26-deepgrid-semi-verbatim/DeepGrid-Semi-PreSeriesA-draft.pptx",
+    "screenshot",
+    "-o",
+    "runs/2026-07-26-deepgrid-semi-verbatim/build/qa/officecli/render/DeepGrid-Semi-PreSeriesA-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-26-deepgrid-semi-verbatim/build/qa/officecli/render/DeepGrid-Semi-PreSeriesA-draft.png\n",
+  "stderr": "[pages] total=37\n"
+}

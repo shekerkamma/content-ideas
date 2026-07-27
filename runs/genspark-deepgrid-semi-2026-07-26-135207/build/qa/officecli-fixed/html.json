@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/genspark-deepgrid-semi-2026-07-26-135207/DeepGrid-Semi-Investor-Deck-v1-editable-fixed.pptx",
+    "html",
+    "-o",
+    "runs/genspark-deepgrid-semi-2026-07-26-135207/build/qa/officecli-fixed/DeepGrid-Semi-Investor-Deck-v1-editable-fixed.html"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/genspark-deepgrid-semi-2026-07-26-135207/build/qa/officecli-fixed/DeepGrid-Semi-Investor-Deck-v1-editable-fixed.html\n",
+  "stderr": ""
+}

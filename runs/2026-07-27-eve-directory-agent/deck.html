@@ -1,0 +1,1661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Eve — A Production Agent Is Just a Folder of Files</title>
+<link rel="stylesheet" href="chrome.css">
+<style>
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;padding:0}
+  body{background:var(--bg-0,#000);color:var(--ink-0,#fff);overflow:hidden;
+    -webkit-font-smoothing:antialiased}
+  .viewport{position:fixed;inset:0;display:grid;place-items:center;overflow:hidden;
+    background:var(--bg-0,#000)}
+  .stage{width:1920px;height:1080px;position:relative;flex:none;
+    transform:scale(var(--fit,1));transform-origin:center center}
+  .slide{position:absolute;inset:0;overflow:hidden;opacity:0;visibility:hidden}
+  .slide.is-active,.slide.render-static{opacity:1;visibility:visible}
+  /* text-free background pass for the hybrid export */
+  body.export-bg .stage,body.export-bg .stage *{color:transparent!important;text-shadow:none!important}
+  .deck-nav{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:14px;
+    align-items:center;z-index:99;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.18);
+    border-radius:40px;padding:8px 14px}
+  .nav-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.22);
+    background:transparent;color:#fff;cursor:pointer}
+  .counter{font-family:ui-monospace,monospace;font-size:13px;color:#ddd;min-width:64px;text-align:center}
+  .export-mode .deck-nav{display:none!important}
+</style>
+</head>
+<body>
+<div class="viewport"><div class="stage" id="stage">
+<section class="slide" data-title="01 Thesis">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Thesis</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="01 Thesis">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <!-- HUD top -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">A Production Agent Is Just a Folder of Files</span>
+      <span class="hud-right">01 / 13 · THESIS</span>
+    </div>
+  </div>
+
+  <!-- Eyebrow -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:180px;width:900px;z-index:10;">
+    <div class="eyebrow">Verdict &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; Vercel Ship London</div>
+  </div>
+
+  <!-- Big title -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:238px;width:1500px;z-index:10;">
+    <div class="title-xl">A production agent is now<br>just <span class="accent-teal">a folder of files.</span></div>
+  </div>
+
+  <!-- Subtitle -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:520px;width:1360px;z-index:10;">
+    <div style="font-size:28px;line-height:1.45;color:var(--ink-dim);font-weight:400;">
+      Vercel&rsquo;s <span style="color:var(--ink);font-weight:600;">Eve</span> is <span style="color:var(--ink);font-weight:600;">&ldquo;Next.js for agents&rdquo;</span> &mdash;
+      Markdown for instructions and skills, TypeScript for tools, <span class="accent-teal">durable by default</span>.
+      <span class="mono" style="color:var(--ink);">eve build</span> compiles a directory into a deployed service.
+    </div>
+  </div>
+
+  <!-- Fact strip -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:760px;width:1680px;height:180px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;display:grid;grid-template-columns:repeat(5,1fr);"></div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:790px;width:300px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">License</div>
+    <div class="mono" style="font-size:36px;color:var(--teal);font-weight:600;margin-top:12px;">Apache&nbsp;2.0</div>
+    <div style="font-size:14px;color:var(--ink-mute);margin-top:6px;">Open source</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:486px;top:790px;width:300px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Status</div>
+    <div class="mono" style="font-size:36px;color:var(--amber);font-weight:600;margin-top:12px;">Public&nbsp;beta</div>
+    <div style="font-size:14px;color:var(--ink-mute);margin-top:6px;">APIs still moving</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:822px;top:790px;width:300px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Launched</div>
+    <div class="mono" style="font-size:36px;color:var(--ink);font-weight:600;margin-top:12px;">Jun&nbsp;2026</div>
+    <div style="font-size:14px;color:var(--ink-mute);margin-top:6px;">Vercel Ship London</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1158px;top:790px;width:340px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Repo</div>
+    <div class="mono" style="font-size:24px;color:var(--ink);font-weight:500;margin-top:16px;">github.com/vercel/eve</div>
+    <div style="font-size:14px;color:var(--ink-mute);margin-top:6px;">Public</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1534px;top:790px;width:260px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Stars</div>
+    <div class="mono" style="font-size:36px;color:var(--teal);font-weight:600;margin-top:12px;">~3.8k</div>
+    <div style="font-size:14px;color:var(--ink-mute);margin-top:6px;">Since launch</div>
+  </div>
+
+  <!-- Vertical dividers -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:456px;top:790px;width:1px;height:120px;background:var(--line);z-index:2;"></div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:792px;top:790px;width:1px;height:120px;background:var(--line);z-index:2;"></div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1128px;top:790px;width:1px;height:120px;background:var(--line);z-index:2;"></div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1504px;top:790px;width:1px;height:120px;background:var(--line);z-index:2;"></div>
+
+  <!-- HUD bottom -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>OPS BRIEF · CONFIDENTIAL</span>
+      <span class="hud-sep" style="margin:0 16px;">·</span>
+      <span>For technical leaders evaluating agent stacks</span>
+      <span class="right">Slide 01</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="02 The Shift">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Shift</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="02 The Shift">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">The Shift, Up Front</span>
+      <span class="hud-right">02 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">The shift, up front</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Three ideas collapse the <span class="accent-amber">build&#8209;vs&#8209;reliability</span> trade-off.</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:310px;width:1400px;z-index:10;">
+    <div style="font-size:22px;color:var(--ink-mute);line-height:1.5;">Filesystem&#8209;first ease meets production&#8209;grade rigor &mdash; without picking one.</div>
+  </div>
+
+  <!-- Three columns -->
+  <!-- 1 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:420px;width:540px;height:520px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:420px;width:540px;height:4px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:456px;width:200px;z-index:10;">
+    <div class="mono" style="font-size:64px;color:var(--teal);font-weight:700;line-height:1;">01</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:560px;width:460px;z-index:10;">
+    <div style="font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-0.01em;">The agent <span class="accent-teal">IS</span> a directory.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:700px;width:460px;z-index:10;">
+    <div style="font-size:19px;color:var(--ink-dim);line-height:1.55;">
+      Instructions, skills, tools, subagents and channels are just files at conventional paths.
+      <span class="mono" style="color:var(--ink);">agent/</span> &nbsp;IS&nbsp; the source of truth.
+    </div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:870px;width:460px;z-index:10;">
+    <div class="tag teal">FILE-SYSTEM · CONVENTION</div>
+  </div>
+
+  <!-- 2 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:690px;top:420px;width:540px;height:520px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:690px;top:420px;width:540px;height:4px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:730px;top:456px;width:200px;z-index:10;">
+    <div class="mono" style="font-size:64px;color:var(--teal);font-weight:700;line-height:1;">02</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:730px;top:560px;width:460px;z-index:10;">
+    <div style="font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-0.01em;">One <span class="mono" style="color:var(--teal);">eve&nbsp;build</span> wires it all.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:730px;top:700px;width:460px;z-index:10;">
+    <div style="font-size:19px;color:var(--ink-dim);line-height:1.55;">
+      Discovers files, validates types, compiles a single manifest of tools, skills and channels. No imports. No registration. No glue.
+    </div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:730px;top:870px;width:460px;z-index:10;">
+    <div class="tag teal">COMPILE · MANIFEST</div>
+  </div>
+
+  <!-- 3 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1260px;top:420px;width:540px;height:520px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1260px;top:420px;width:540px;height:4px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1300px;top:456px;width:200px;z-index:10;">
+    <div class="mono" style="font-size:64px;color:var(--teal);font-weight:700;line-height:1;">03</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1300px;top:560px;width:460px;z-index:10;">
+    <div style="font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-0.01em;">Production ships <span class="accent-teal">in the box.</span></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1300px;top:700px;width:460px;z-index:10;">
+    <div style="font-size:19px;color:var(--ink-dim);line-height:1.55;">
+      Durability. Sandbox. Human approvals. Evals as a deploy gate. One <span class="mono" style="color:var(--ink);">vercel&nbsp;deploy</span> &mdash; same directory, live over HTTP + Slack.
+    </div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1300px;top:870px;width:460px;z-index:10;">
+    <div class="tag teal">DURABLE · GATED · DEPLOYED</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>PATTERN &gt; PRODUCT · Directory-as-agent</span>
+      <span class="right">Slide 02</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="03 Old Trade-off">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Old Trade-off</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="03 Old Trade-off">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot" style="background:var(--amber);box-shadow:0 0 12px var(--amber);"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">The Old Trade-off</span>
+      <span class="hud-right">03 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow amber">Before Eve</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">You picked <span class="accent-amber">easy</span> or you picked <span class="accent-amber">production</span>.<br>You didn&rsquo;t get both.</div>
+  </div>
+
+  <!-- Two-column comparison -->
+  <!-- Left: filesystem-first -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:410px;width:820px;height:540px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(245,165,36,0.3);"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:440px;width:600px;z-index:10;">
+    <div class="tag amber">OPTION A · FILESYSTEM-FIRST</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:490px;width:760px;z-index:10;">
+    <div style="font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.01em;">Easy. <span style="color:var(--ink-mute);">Personal&#8209;scale.</span></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:590px;width:760px;z-index:10;">
+    <div style="font-size:20px;color:var(--ink-dim);line-height:1.5;">A folder of files. Add a Markdown file, get a capability. Great on a laptop.</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:700px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:14px;letter-spacing:0.16em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:16px;">What&rsquo;s missing</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;font-size:20px;color:var(--ink);">
+      <div>&#10005; &nbsp;Durability</div>
+      <div>&#10005; &nbsp;Sandbox</div>
+      <div>&#10005; &nbsp;Approvals</div>
+      <div>&#10005; &nbsp;Evals</div>
+      <div>&#10005; &nbsp;Deploy target</div>
+      <div>&#10005; &nbsp;Multi&#8209;channel</div>
+    </div>
+  </div>
+
+  <!-- Right: production-grade -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:410px;width:820px;height:540px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(245,165,36,0.3);"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:440px;width:600px;z-index:10;">
+    <div class="tag amber">OPTION B · PRODUCTION FRAMEWORK</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:490px;width:760px;z-index:10;">
+    <div style="font-size:40px;font-weight:800;line-height:1.1;letter-spacing:-0.01em;">Reliable. <span style="color:var(--ink-mute);">Heavy to wire.</span></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:590px;width:760px;z-index:10;">
+    <div style="font-size:20px;color:var(--ink-dim);line-height:1.5;">Real durability and controls &mdash; if you accept the vendor&rsquo;s runtime, SDKs and lock&#8209;in.</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:700px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:14px;letter-spacing:0.16em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:16px;">What you pay in</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;font-size:20px;color:var(--ink);">
+      <div>&bull; &nbsp;Registration boilerplate</div>
+      <div>&bull; &nbsp;Runtime lock&#8209;in</div>
+      <div>&bull; &nbsp;SDK sprawl</div>
+      <div>&bull; &nbsp;Ops config</div>
+      <div>&bull; &nbsp;Weeks of glue</div>
+      <div>&bull; &nbsp;Migration risk</div>
+    </div>
+  </div>
+
+  <!-- Verdict bar -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:970px;width:1680px;height:1px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:990px;width:1680px;z-index:10;">
+    <div style="font-size:22px;color:var(--ink);line-height:1.3;">
+      <span class="accent-teal" style="font-weight:700;">Eve&rsquo;s move:</span>&nbsp; keep the ease of the folder &mdash; put the production layer <em>in the box</em>. The trade-off is gone.
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>DIAGNOSIS · Why builders had to choose</span>
+      <span class="right">Slide 03</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="04 Directory">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Agent Is a Directory</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="04 Directory">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">The Agent Is a Directory</span>
+      <span class="hud-right">04 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">Model &nbsp;·&nbsp; Convention over configuration</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Each capability is <span class="accent-teal">a file at a known path.</span></div>
+  </div>
+
+  <!-- Left: file tree -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:640px;height:620px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:352px;width:600px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">agent/ &nbsp;&mdash;&nbsp; source of truth</div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:150px;top:390px;width:580px;height:1px;background:var(--line);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:410px;width:600px;z-index:10;">
+    <pre class="mono" style="font-size:19px;line-height:1.7;color:var(--ink);margin:0;">
+<span style="color:var(--teal);">agent/</span>
+├── <span style="color:var(--ink);">instructions.md</span>            <span style="color:var(--ink-mute);"># always-on prompt</span>
+├── <span style="color:var(--teal);">tools/</span>
+│   ├── <span style="color:var(--ink);">run_sql.ts</span>             <span style="color:var(--ink-mute);"># =&gt; tool "run_sql"</span>
+│   ├── <span style="color:var(--ink);">list_orders.ts</span>
+│   └── <span style="color:var(--ink);">post_to_slack.ts</span>
+├── <span style="color:var(--teal);">skills/</span>
+│   ├── <span style="color:var(--ink);">refund-policy.md</span>       <span style="color:var(--ink-mute);"># on-demand playbook</span>
+│   └── <span style="color:var(--ink);">sql-style-guide.md</span>
+├── <span style="color:var(--teal);">subagents/</span>
+│   └── <span style="color:var(--ink);">reviewer.ts</span>            <span style="color:var(--ink-mute);"># own context</span>
+└── <span style="color:var(--teal);">channels/</span>
+    ├── <span style="color:var(--ink);">http.ts</span>
+    ├── <span style="color:var(--ink);">slack.ts</span>
+    ├── <span style="color:var(--ink);">discord.ts</span>
+    └── <span style="color:var(--ink);">github.ts</span></pre>
+  </div>
+
+  <!-- Right: legend cards -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:330px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:330px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:352px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">instructions.md</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">Always&#8209;on system prompt</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">The agent&rsquo;s identity, rules and defaults &mdash; one Markdown file.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:462px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:462px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:484px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">tools/*.ts</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">One typed TypeScript function per file</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Filename becomes the tool name. <span class="mono" style="color:var(--ink);">run_sql.ts</span> &rArr; tool <span class="mono" style="color:var(--ink);">run_sql</span>. Nothing to register.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:594px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:594px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:616px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">skills/*.md</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">Markdown playbooks, loaded on demand</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Domain knowledge kept out of the base prompt &mdash; pulled in when it&rsquo;s needed.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:726px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:726px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:748px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">subagents/*.ts</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">Child agents with their own context</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Delegate scoped work &mdash; a reviewer, a planner &mdash; without polluting the parent&rsquo;s window.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:858px;width:1000px;height:92px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:858px;width:4px;height:92px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:880px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">channels/*.ts</div>
+    <div style="font-size:22px;font-weight:700;margin-top:6px;line-height:1.2;">Entry points: HTTP · Slack · Discord · GitHub</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>PATH = CAPABILITY · FILENAME = NAME</span>
+      <span class="right">Slide 04</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="05 One Build">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>One Build Wires It</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="05 One Build">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">One Build Wires It</span>
+      <span class="hud-right">05 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">Compile step</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg"><span class="mono accent-teal">eve&nbsp;build</span> discovers, validates, compiles &mdash; one manifest.</div>
+  </div>
+
+  <!-- Pipeline diagram -->
+  <!-- Input card -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:380px;width:480px;height:400px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:406px;width:420px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Input</div>
+    <div style="font-size:32px;font-weight:800;margin-top:14px;line-height:1.1;">The <span class="accent-teal">agent/</span> directory</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:520px;width:420px;z-index:10;">
+    <pre class="mono" style="font-size:16px;line-height:1.7;color:var(--ink-dim);margin:0;">
+<span style="color:var(--teal);">agent/</span>
+├─ instructions.md
+├─ tools/         <span style="color:var(--ink-mute);">(N files)</span>
+├─ skills/        <span style="color:var(--ink-mute);">(N files)</span>
+├─ subagents/     <span style="color:var(--ink-mute);">(N files)</span>
+└─ channels/      <span style="color:var(--ink-mute);">(N files)</span>
+    </pre>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:720px;width:420px;z-index:10;">
+    <div class="tag">FILES ON DISK</div>
+  </div>
+
+  <!-- Arrow / build step -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:640px;top:380px;width:640px;height:400px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(53,208,177,0.35);background:linear-gradient(180deg, rgba(53,208,177,0.06), rgba(53,208,177,0.02));"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:670px;top:406px;width:580px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">Step</div>
+    <div class="mono" style="font-size:44px;color:var(--teal);font-weight:700;margin-top:12px;line-height:1;">$ eve build</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:670px;top:520px;width:580px;z-index:10;">
+    <div style="font-size:20px;color:var(--ink);line-height:1.7;">
+      <div style="display:flex;gap:14px;align-items:baseline;"><span class="mono accent-teal">01</span><span><span style="font-weight:600;">Discover</span> &mdash; walk conventional paths</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:8px;"><span class="mono accent-teal">02</span><span><span style="font-weight:600;">Validate</span> &mdash; TypeScript types + schemas</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:8px;"><span class="mono accent-teal">03</span><span><span style="font-weight:600;">Compile</span> &mdash; emit one wired manifest</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:8px;"><span class="mono accent-teal">04</span><span><span style="font-weight:600;">Bind</span> &mdash; channels &rarr; tools &rarr; skills</span></div>
+    </div>
+  </div>
+
+  <!-- Output -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1320px;top:380px;width:480px;height:400px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1350px;top:406px;width:420px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Output</div>
+    <div style="font-size:32px;font-weight:800;margin-top:14px;line-height:1.1;">One <span class="accent-teal">manifest</span></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1350px;top:520px;width:420px;z-index:10;">
+    <pre class="mono" style="font-size:16px;line-height:1.6;color:var(--ink-dim);margin:0;">
+{
+  <span style="color:var(--teal);">"tools"</span>:    [ &hellip; ],
+  <span style="color:var(--teal);">"skills"</span>:   [ &hellip; ],
+  <span style="color:var(--teal);">"channels"</span>: [ &hellip; ],
+  <span style="color:var(--teal);">"subagents"</span>:[ &hellip; ]
+}
+    </pre>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1350px;top:720px;width:420px;z-index:10;">
+    <div class="tag teal">WIRED &amp; TYPED</div>
+  </div>
+
+  <!-- Arrows -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:600px;top:578px;width:44px;height:2px;background:var(--line-2);z-index:2;"></div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1280px;top:578px;width:44px;height:2px;background:var(--line-2);z-index:2;"></div>
+
+  <!-- Bottom rules panel -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:820px;width:1680px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:842px;width:1620px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Convention over configuration</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:16px;font-size:19px;color:var(--ink);">
+      <div><span class="accent-teal" style="font-weight:700;">File location</span> = capability</div>
+      <div><span class="accent-teal" style="font-weight:700;">Filename</span> = tool name</div>
+      <div><span class="accent-teal" style="font-weight:700;">No imports</span> to keep in sync</div>
+      <div><span class="accent-teal" style="font-weight:700;">No glue</span> to maintain</div>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>ZERO REGISTRATION · ZERO CEREMONY</span>
+      <span class="right">Slide 05</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="06 Production In Box">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Production In The Box</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="06 Production In Box">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">Production In The Box</span>
+      <span class="hud-right">06 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">Runtime · Deploy</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">The reliability layer <span class="accent-teal">ships with the framework.</span></div>
+  </div>
+
+  <!-- 5 feature cards in grid -->
+  <!-- Row 1 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:820px;height:280px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:4px;height:280px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:356px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">01 · Durable sessions</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:396px;width:760px;z-index:10;">
+    <div style="font-size:34px;font-weight:800;line-height:1.15;">Checkpointed workflow &mdash; survives crashes and redeploys.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:520px;width:760px;z-index:10;">
+    <div style="font-size:19px;color:var(--ink-dim);line-height:1.5;">Restarts resume <span class="accent-teal" style="font-weight:600;">exactly where they stopped</span>. Long-running agents stop being fragile.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:330px;width:820px;height:280px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:330px;width:4px;height:280px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:356px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">02 · Vercel Sandbox</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:396px;width:760px;z-index:10;">
+    <div style="font-size:34px;font-weight:800;line-height:1.15;">Agent&#8209;written code runs isolated &mdash; off your machine.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:520px;width:760px;z-index:10;">
+    <div style="font-size:19px;color:var(--ink-dim);line-height:1.5;">Untrusted code stays in a controlled runtime, not your laptop or a shared shell.</div>
+  </div>
+
+  <!-- Row 2 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:630px;width:540px;height:280px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:630px;width:4px;height:280px;background:var(--red);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:656px;width:480px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--red);text-transform:uppercase;">03 · Approvals</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:696px;width:480px;z-index:10;">
+    <div style="font-size:30px;font-weight:800;line-height:1.15;">Human-in-the-loop, native.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:800px;width:480px;z-index:10;">
+    <div style="font-size:18px;color:var(--ink-dim);line-height:1.5;">Risky tool calls pause and wait for a human <span style="color:var(--ink);">Allow</span>. Built in, not bolted on.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:690px;top:630px;width:540px;height:280px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:690px;top:630px;width:4px;height:280px;background:var(--red);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:730px;top:656px;width:480px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--red);text-transform:uppercase;">04 · Evals</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:730px;top:696px;width:480px;z-index:10;">
+    <div style="font-size:30px;font-weight:800;line-height:1.15;">Deploy gate, not an afterthought.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:730px;top:800px;width:480px;z-index:10;">
+    <div style="font-size:18px;color:var(--ink-dim);line-height:1.5;">Evals sit on the deploy path. Regressions stop the release before users see them.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1260px;top:630px;width:540px;height:280px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1260px;top:630px;width:4px;height:280px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1300px;top:656px;width:480px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">05 · One deploy</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1300px;top:696px;width:480px;z-index:10;">
+    <div style="font-size:30px;font-weight:800;line-height:1.15;"><span class="mono">vercel deploy</span> &mdash; live over HTTP &amp; Slack.</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1300px;top:830px;width:480px;z-index:10;">
+    <div style="font-size:18px;color:var(--ink-dim);line-height:1.5;">Same directory, prod.</div>
+  </div>
+
+  <!-- Bottom quote -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:940px;width:1680px;z-index:10;">
+    <div style="font-size:22px;color:var(--ink);line-height:1.3;text-align:center;">
+      <span class="accent-teal" style="font-weight:700;">Net:</span>&nbsp; the operational surface an internal team actually needs &mdash; delivered as defaults, not homework.
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>DURABLE · SANDBOXED · GATED · EVALUATED · DEPLOYED</span>
+      <span class="right">Slide 06</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="07 Plugin">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>You Don't Hand-Code It</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="07 Plugin">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">You Don&rsquo;t Hand-Code It</span>
+      <span class="hud-right">07 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">Author workflow &nbsp;·&nbsp; Coding agent as builder</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Scaffold, build, test, deploy &mdash; <span class="accent-teal">by prompting.</span></div>
+  </div>
+
+  <!-- Command block -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:1680px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;background:#0b1218;border-color:var(--line-2);"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:352px;width:1620px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">One command</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:390px;width:1620px;z-index:10;">
+    <div class="mono" style="font-size:36px;color:var(--teal);font-weight:600;">$&nbsp; npx&nbsp;plugins&nbsp;add&nbsp;vercel/vercel-plugin</div>
+  </div>
+
+  <!-- Four stat cells -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:500px;width:1680px;height:280px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+
+  <!-- Cell 1: 47+ skills -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:530px;width:400px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Knowledge</div>
+    <div class="mono" style="font-size:88px;color:var(--teal);font-weight:700;line-height:1;margin-top:14px;">47+</div>
+    <div style="font-size:22px;font-weight:700;margin-top:16px;line-height:1.2;">Skills</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Over a relational knowledge graph of Eve&rsquo;s APIs and patterns.</div>
+  </div>
+
+  <!-- Cell 2: 3 specialist agents -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:570px;top:530px;width:400px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Delegation</div>
+    <div class="mono" style="font-size:88px;color:var(--teal);font-weight:700;line-height:1;margin-top:14px;">3</div>
+    <div style="font-size:22px;font-weight:700;margin-top:16px;line-height:1.2;">Specialist agents</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Scoped sub&#8209;agents your coding assistant can hand work to.</div>
+  </div>
+
+  <!-- Cell 3: 5 slash commands -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:990px;top:530px;width:400px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Ergonomics</div>
+    <div class="mono" style="font-size:88px;color:var(--teal);font-weight:700;line-height:1;margin-top:14px;">5</div>
+    <div style="font-size:22px;font-weight:700;margin-top:16px;line-height:1.2;">Slash commands</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Shortcuts for the common scaffold&#8209;test&#8209;ship loop.</div>
+  </div>
+
+  <!-- Cell 4: realtime validation -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1410px;top:530px;width:360px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">Correctness</div>
+    <div class="mono" style="font-size:52px;color:var(--teal);font-weight:700;line-height:1;margin-top:14px;letter-spacing:-0.02em;">Real-time</div>
+    <div style="font-size:22px;font-weight:700;margin-top:16px;line-height:1.2;">Code validation</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Wrong shapes fail as you type &mdash; before you ship.</div>
+  </div>
+
+  <!-- dividers -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:540px;top:530px;width:1px;height:220px;background:var(--line);z-index:2;"></div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:960px;top:530px;width:1px;height:220px;background:var(--line);z-index:2;"></div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1380px;top:530px;width:1px;height:220px;background:var(--line);z-index:2;"></div>
+
+  <!-- Verdict card -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:820px;width:1680px;height:170px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(53,208,177,0.35);background:linear-gradient(180deg,rgba(53,208,177,0.06),rgba(53,208,177,0.02));"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:842px;width:1600px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">Verdict</div>
+    <div style="font-size:32px;font-weight:800;margin-top:14px;line-height:1.25;">
+      One plugin turns your coding agent into an <span class="accent-teal">Eve builder.</span> The framework isn&rsquo;t what you learn &mdash; it&rsquo;s what your assistant already knows.
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>PROMPT &gt; TYPE · Meta&#8209;tooling in the box</span>
+      <span class="right">Slide 07</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="08 Proof">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Proof: eve-analyst</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="08 Proof">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">Proof · The eve-analyst</span>
+      <span class="hud-right">08 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">Proof point &nbsp;·&nbsp; Built by prompt</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">A production&#8209;shaped data agent &mdash; <span class="accent-teal">built by prompting.</span></div>
+  </div>
+
+  <!-- Left: Big result -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:820px;height:430px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(53,208,177,0.35);background:linear-gradient(180deg,rgba(53,208,177,0.06),rgba(53,208,177,0.02));"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:360px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">Answer &nbsp;·&nbsp; run_sql(&hellip;)</div>
+    <div style="font-size:22px;color:var(--ink-dim);margin-top:14px;line-height:1.35;">Total all-time revenue<br><span style="font-size:14px;color:var(--ink-mute);letter-spacing:0.08em;text-transform:uppercase;">Net of refunds &nbsp;·&nbsp; Test accounts excluded &nbsp;·&nbsp; Paid/fulfilled only</span></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:500px;width:760px;z-index:10;">
+    <div class="mono accent-teal" style="font-size:104px;font-weight:800;line-height:1.05;letter-spacing:-0.03em;">$17,057.90</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:660px;width:760px;z-index:10;">
+    <div style="font-size:18px;color:var(--ink-dim);line-height:1.5;">Auditable: the agent showed the exact SQL it ran to get here.</div>
+  </div>
+
+  <!-- Right: warehouse table -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:330px;width:820px;height:430px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:360px;width:740px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Warehouse &mdash; row counts</div>
+  </div>
+  <table data-object="true" data-object-type="table" style="position:absolute;left:1020px;top:410px;width:740px;border-collapse:collapse;font-family:'JetBrains Mono',monospace;z-index:10;">
+    <thead>
+      <tr style="border-bottom:1px solid var(--line-2);">
+        <th style="text-align:left;padding:14px 8px;font-size:14px;color:var(--ink-mute);font-weight:500;letter-spacing:0.14em;text-transform:uppercase;">Table</th>
+        <th style="text-align:right;padding:14px 8px;font-size:14px;color:var(--ink-mute);font-weight:500;letter-spacing:0.14em;text-transform:uppercase;">Rows</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--line);"><td style="padding:16px 8px;font-size:22px;color:var(--ink);">customers</td><td style="padding:16px 8px;font-size:24px;color:var(--teal);text-align:right;font-weight:600;">14</td></tr>
+      <tr style="border-bottom:1px solid var(--line);"><td style="padding:16px 8px;font-size:22px;color:var(--ink);">products</td><td style="padding:16px 8px;font-size:24px;color:var(--teal);text-align:right;font-weight:600;">10</td></tr>
+      <tr style="border-bottom:1px solid var(--line);"><td style="padding:16px 8px;font-size:22px;color:var(--ink);">orders</td><td style="padding:16px 8px;font-size:24px;color:var(--teal);text-align:right;font-weight:600;">96</td></tr>
+      <tr><td style="padding:16px 8px;font-size:22px;color:var(--ink);">order_items</td><td style="padding:16px 8px;font-size:24px;color:var(--teal);text-align:right;font-weight:600;">194</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Bottom: three config cards -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:790px;width:540px;height:200px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:812px;width:480px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Model</div>
+    <div style="font-size:28px;font-weight:700;margin-top:14px;line-height:1.15;">Claude Sonnet 5</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;">Chosen per agent &mdash; not the framework.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:690px;top:790px;width:540px;height:200px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:720px;top:812px;width:480px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Tool</div>
+    <div style="font-size:26px;font-weight:700;margin-top:14px;line-height:1.15;"><span class="mono accent-teal">run_sql</span> is read-only</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;">Single <span class="mono">SELECT</span> only. No writes. Ever.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1260px;top:790px;width:540px;height:200px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1290px;top:812px;width:480px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">System prompt</div>
+    <div style="font-size:20px;font-weight:600;margin-top:14px;line-height:1.3;color:var(--ink);">&ldquo;Always show the SQL you ran so the answer is auditable.&rdquo;</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>PROOF · Small data, production shape</span>
+      <span class="right">Slide 08</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="09 Human Loop">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Human in the Loop</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="09 Human Loop">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot" style="background:var(--red);box-shadow:0 0 12px var(--red);"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">Human In The Loop</span>
+      <span class="hud-right">09 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow red">Gate &nbsp;·&nbsp; Trust boundary</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Full power &mdash; <span class="accent-red">gated exactly where it counts.</span></div>
+  </div>
+
+  <!-- Left: Slack mock -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:940px;height:620px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;background:#0b1218;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:940px;height:44px;background:#111a24;border-bottom:1px solid var(--line);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:140px;top:342px;width:900px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.16em;color:var(--ink-mute);text-transform:uppercase;">#analytics &nbsp;·&nbsp; eve&#8209;analyst · SLACK</div>
+  </div>
+
+  <!-- User message -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:400px;width:860px;z-index:10;">
+    <div style="font-size:15px;color:var(--ink-mute);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;">@dana &nbsp;·&nbsp; 10:42</div>
+    <div style="font-size:22px;color:var(--ink);margin-top:8px;line-height:1.4;">run SELECT * FROM order_items</div>
+  </div>
+
+  <!-- Agent alert bubble -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:160px;top:500px;width:860px;height:250px;z-index:2;">
+    <div style="width:100%;height:100%;background:rgba(255,93,93,0.06);border:1px solid rgba(255,93,93,0.4);border-radius:4px;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:160px;top:500px;width:4px;height:250px;background:var(--red);z-index:3;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:190px;top:520px;width:820px;z-index:10;">
+    <div style="font-size:15px;color:var(--red);font-family:'JetBrains Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;">&#9888; approval required</div>
+    <div style="font-size:20px;color:var(--ink);margin-top:10px;line-height:1.4;font-weight:600;">Full-table scan detected on <span class="mono accent-red">order_items</span> (194 rows)</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.5;font-family:'JetBrains Mono',monospace;">query: SELECT * FROM order_items;</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:6px;line-height:1.5;">Waiting for a human <span style="color:var(--ink);font-weight:600;">Allow</span> before running. Nothing has executed.</div>
+  </div>
+
+  <!-- Buttons -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:190px;top:686px;width:160px;height:52px;z-index:3;">
+    <div style="width:100%;height:100%;background:var(--teal);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;color:#062a24;font-weight:700;letter-spacing:0.1em;font-size:16px;">ALLOW</div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:366px;top:686px;width:160px;height:52px;z-index:3;">
+    <div style="width:100%;height:100%;background:transparent;border:1px solid var(--line-2);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;color:var(--ink-dim);font-weight:600;letter-spacing:0.1em;font-size:16px;">DENY</div>
+  </div>
+
+  <!-- pending indicator -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:790px;width:860px;z-index:10;">
+    <div style="font-size:14px;color:var(--ink-mute);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;">status: <span style="color:var(--amber);">PENDING</span> &nbsp;·&nbsp; workflow paused &nbsp;·&nbsp; durable checkpoint held</div>
+  </div>
+
+  <!-- Right: verdict column -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1090px;top:330px;width:710px;height:620px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1120px;top:360px;width:660px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">The trust boundary</div>
+    <div style="font-size:34px;font-weight:800;margin-top:16px;line-height:1.15;">The setup that lets an internal team <span class="accent-teal">trust an agent in production.</span></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1120px;top:520px;width:640px;height:1px;background:var(--line);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1120px;top:540px;width:640px;z-index:10;">
+    <div style="font-size:20px;color:var(--ink);line-height:1.55;">
+      <div style="display:flex;gap:14px;align-items:baseline;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>Risky tool calls pause automatically</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:14px;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>Approval happens in the channel &mdash; not a console</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:14px;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>Workflow resumes exactly where it paused</span></div>
+      <div style="display:flex;gap:14px;align-items:baseline;margin-top:14px;"><span class="accent-teal mono" style="font-weight:700;">&#10003;</span><span>The reviewer &mdash; and the decision &mdash; is logged</span></div>
+    </div>
+  </div>
+
+  <!-- red rule -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1120px;top:790px;width:640px;height:1px;background:var(--red);opacity:0.5;z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1120px;top:810px;width:640px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--red);text-transform:uppercase;">Discipline</div>
+    <div style="font-size:22px;color:var(--ink);line-height:1.4;margin-top:12px;font-weight:600;">Locking the agent down so it cannot act is safe &mdash; and useless.</div>
+    <div style="font-size:18px;color:var(--ink-dim);line-height:1.5;margin-top:10px;">Approvals let you keep the power on, and put a human on the trigger where it matters.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>APPROVAL AS FIRST&#8209;CLASS PRIMITIVE</span>
+      <span class="right">Slide 09</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="10 Landscape">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Where Eve Sits</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="10 Landscape">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">Where Eve Sits</span>
+      <span class="hud-right">10 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">Landscape &nbsp;·&nbsp; Filesystem-first bet</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">A <span class="accent-teal">filesystem&#8209;first bet</span> in a fast&#8209;filling field.</div>
+  </div>
+
+  <!-- Comparison table -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:1680px;height:490px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+
+  <table data-object="true" data-object-type="table" style="position:absolute;left:150px;top:352px;width:1620px;border-collapse:collapse;font-family:'Inter',sans-serif;z-index:10;">
+    <thead>
+      <tr style="border-bottom:1px solid var(--line-2);">
+        <th style="text-align:left;padding:18px 16px;font-size:13px;color:var(--ink-mute);font-weight:500;letter-spacing:0.18em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">Framework</th>
+        <th style="text-align:left;padding:18px 16px;font-size:13px;color:var(--ink-mute);font-weight:500;letter-spacing:0.18em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">Language</th>
+        <th style="text-align:left;padding:18px 16px;font-size:13px;color:var(--ink-mute);font-weight:500;letter-spacing:0.18em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">Runtime</th>
+        <th style="text-align:left;padding:18px 16px;font-size:13px;color:var(--ink-mute);font-weight:500;letter-spacing:0.18em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">Durability</th>
+        <th style="text-align:left;padding:18px 16px;font-size:13px;color:var(--ink-mute);font-weight:500;letter-spacing:0.18em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;">Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:rgba(53,208,177,0.05);border-bottom:1px solid var(--line);">
+        <td style="padding:22px 16px;font-size:26px;color:var(--teal);font-weight:800;">Eve <span style="font-size:14px;color:var(--ink-mute);font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;margin-left:8px;font-weight:500;">/ Vercel</span></td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink);font-family:'JetBrains Mono',monospace;">TypeScript</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--amber);font-family:'JetBrains Mono',monospace;">Vercel-only</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--teal);font-family:'JetBrains Mono',monospace;">Default</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink);">Deep Vercel integration</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:22px 16px;font-size:26px;color:var(--ink);font-weight:700;">Mastra</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);font-family:'JetBrains Mono',monospace;">TypeScript</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--teal);font-family:'JetBrains Mono',monospace;">Any host</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);font-family:'JetBrains Mono',monospace;">Add-on</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);">Platform&#8209;agnostic</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--line);">
+        <td style="padding:22px 16px;font-size:26px;color:var(--ink);font-weight:700;">LangGraph</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);font-family:'JetBrains Mono',monospace;">Python</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--teal);font-family:'JetBrains Mono',monospace;">Any host</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);font-family:'JetBrains Mono',monospace;">Configurable</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);">Most established</td>
+      </tr>
+      <tr>
+        <td style="padding:22px 16px;font-size:26px;color:var(--ink);font-weight:700;">Inngest AgentKit</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);font-family:'JetBrains Mono',monospace;">TypeScript</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--teal);font-family:'JetBrains Mono',monospace;">Any host</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--teal);font-family:'JetBrains Mono',monospace;">Default</td>
+        <td style="padding:22px 16px;font-size:20px;color:var(--ink-dim);">Durable workflows</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Verdict panels -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:850px;width:820px;height:140px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(245,165,36,0.35);"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:850px;width:4px;height:140px;background:var(--amber);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:872px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--amber);text-transform:uppercase;">The cost</div>
+    <div style="font-size:22px;color:var(--ink);line-height:1.4;margin-top:12px;font-weight:600;">Eve trades <span class="accent-amber">portability</span> for <span class="accent-teal">integration.</span></div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Vercel-only today. Rivals run anywhere.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:850px;width:820px;height:140px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(53,208,177,0.35);"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:850px;width:4px;height:140px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:872px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">The bet</div>
+    <div style="font-size:22px;color:var(--ink);line-height:1.4;margin-top:12px;font-weight:600;">The <span class="accent-teal">directory&#8209;as&#8209;agent</span> pattern is the bet &mdash; not necessarily Eve itself.</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Adopt the pattern; keep the vendor decision reversible.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>PATTERN OVER PRODUCT</span>
+      <span class="right">Slide 10</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="11 Fine Print">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Read The Fine Print</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="11 Fine Print">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">Read The Fine Print</span>
+      <span class="hud-right">11 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:1600px;z-index:10;">
+    <div class="eyebrow">Timing call</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Move now &mdash; or wait? <span class="accent-amber">Both cases are real.</span></div>
+  </div>
+
+  <!-- MOVE NOW column -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:820px;height:640px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(53,208,177,0.35);"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:820px;height:4px;background:var(--teal);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:360px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--teal);text-transform:uppercase;">Move now</div>
+    <div style="font-size:44px;font-weight:800;margin-top:14px;line-height:1.1;">The pattern will win.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:160px;top:500px;width:740px;height:1px;background:var(--line);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:530px;width:740px;z-index:10;">
+    <div style="font-size:22px;color:var(--ink);line-height:1.6;">
+      <div style="display:flex;gap:18px;align-items:baseline;">
+        <span class="mono accent-teal" style="font-weight:700;font-size:20px;">&#10003;</span>
+        <span><span style="font-weight:700;">Where production agents are heading.</span><br><span style="font-size:17px;color:var(--ink-dim);">Directory-as-agent is the direction of travel.</span></span>
+      </div>
+      <div style="display:flex;gap:18px;align-items:baseline;margin-top:28px;">
+        <span class="mono accent-teal" style="font-weight:700;font-size:20px;">&#10003;</span>
+        <span><span style="font-weight:700;">Reliability layer is genuinely in the box.</span><br><span style="font-size:17px;color:var(--ink-dim);">Durability, sandbox, approvals, evals &mdash; defaults, not homework.</span></span>
+      </div>
+      <div style="display:flex;gap:18px;align-items:baseline;margin-top:28px;">
+        <span class="mono accent-teal" style="font-weight:700;font-size:20px;">&#10003;</span>
+        <span><span style="font-weight:700;">One plugin makes it fast to try.</span><br><span style="font-size:17px;color:var(--ink-dim);">Prompt your coding agent into a working Eve app.</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAIT column -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:330px;width:820px;height:640px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(245,165,36,0.35);"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:330px;width:820px;height:4px;background:var(--amber);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:360px;width:760px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--amber);text-transform:uppercase;">Wait</div>
+    <div style="font-size:44px;font-weight:800;margin-top:14px;line-height:1.1;">Beta receipts to read.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:1020px;top:500px;width:740px;height:1px;background:var(--line);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:530px;width:740px;z-index:10;">
+    <div style="font-size:22px;color:var(--ink);line-height:1.6;">
+      <div style="display:flex;gap:18px;align-items:baseline;">
+        <span class="mono accent-amber" style="font-weight:700;font-size:20px;">!</span>
+        <span><span style="font-weight:700;">Vercel-only at launch.</span><br><span style="font-size:17px;color:var(--ink-dim);">No other runtime today &mdash; portability isn&rsquo;t on offer.</span></span>
+      </div>
+      <div style="display:flex;gap:18px;align-items:baseline;margin-top:28px;">
+        <span class="mono accent-amber" style="font-weight:700;font-size:20px;">!</span>
+        <span><span style="font-weight:700;">Public beta with moving APIs.</span><br><span style="font-size:17px;color:var(--ink-dim);">Expect churn between releases.</span></span>
+      </div>
+      <div style="display:flex;gap:18px;align-items:baseline;margin-top:28px;">
+        <span class="mono accent-amber" style="font-weight:700;font-size:20px;">!</span>
+        <span><span style="font-weight:700;">&ldquo;Scale&rdquo; is design intent, not a benchmark.</span><br><span style="font-size:17px;color:var(--ink-dim);">No published load or SLO numbers yet.</span></span>
+      </div>
+      <div style="display:flex;gap:18px;align-items:baseline;margin-top:28px;">
+        <span class="mono accent-amber" style="font-weight:700;font-size:20px;">!</span>
+        <span><span style="font-weight:700;">Launch coverage was vendor-framed.</span><br><span style="font-size:17px;color:var(--ink-dim);">Independent field reports are still thin.</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>NO HEDGING &mdash; JUST THE TWO LEDGERS</span>
+      <span class="right">Slide 11</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="12 The Move">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Move</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="12 The Move">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">The Move</span>
+      <span class="hud-right">12 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:1600px;z-index:10;">
+    <div class="eyebrow">Playbook</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Pilot the pattern on <span class="accent-teal">one bounded workflow.</span></div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:288px;width:1600px;z-index:10;">
+    <div style="font-size:22px;color:var(--ink-dim);line-height:1.5;">Clear owner. Slack surface. Rules encoded as skills. Risky calls gated by approvals and evals.</div>
+  </div>
+
+  <!-- 4 step cards -->
+  <!-- Step 1 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:390px;width:820px;height:270px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:390px;width:6px;height:270px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:416px;width:100px;z-index:10;">
+    <div class="mono" style="font-size:56px;color:var(--teal);font-weight:700;line-height:1;">01</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:280px;top:420px;width:640px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Pick</div>
+    <div style="font-size:28px;font-weight:800;margin-top:12px;line-height:1.15;">One bounded internal workflow.</div>
+    <div style="font-size:18px;color:var(--ink-dim);margin-top:12px;line-height:1.5;">Clear owner. Real users. Slack as the surface. Not a customer-facing agent &mdash; yet.</div>
+  </div>
+
+  <!-- Step 2 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:390px;width:820px;height:270px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:390px;width:6px;height:270px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:416px;width:100px;z-index:10;">
+    <div class="mono" style="font-size:56px;color:var(--teal);font-weight:700;line-height:1;">02</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1140px;top:420px;width:640px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Build</div>
+    <div style="font-size:28px;font-weight:800;margin-top:12px;line-height:1.15;">Instructions + typed tools + one skill.</div>
+    <div style="font-size:18px;color:var(--ink-dim);margin-top:12px;line-height:1.5;"><span class="mono" style="color:var(--ink);">instructions.md</span> &nbsp;+&nbsp; a few <span class="mono" style="color:var(--ink);">tools/*.ts</span> &nbsp;+&nbsp; one <span class="mono" style="color:var(--ink);">skills/*.md</span>. Let the plugin scaffold.</div>
+  </div>
+
+  <!-- Step 3 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:690px;width:820px;height:270px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:690px;width:6px;height:270px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:160px;top:716px;width:100px;z-index:10;">
+    <div class="mono" style="font-size:56px;color:var(--teal);font-weight:700;line-height:1;">03</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:280px;top:720px;width:640px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Encode</div>
+    <div style="font-size:28px;font-weight:800;margin-top:12px;line-height:1.15;">Rules that must stay consistent &rarr; Markdown.</div>
+    <div style="font-size:18px;color:var(--ink-dim);margin-top:12px;line-height:1.5;">Refund policy, SQL style, escalation path. One <span class="mono" style="color:var(--ink);">.md</span> per rule &mdash; readable, review-able, diffable.</div>
+  </div>
+
+  <!-- Step 4 -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:690px;width:820px;height:270px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-color:rgba(255,93,93,0.35);"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:690px;width:6px;height:270px;background:var(--red);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1020px;top:716px;width:100px;z-index:10;">
+    <div class="mono" style="font-size:56px;color:var(--red);font-weight:700;line-height:1;">04</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1140px;top:720px;width:640px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--red);text-transform:uppercase;">Gate &amp; widen</div>
+    <div style="font-size:28px;font-weight:800;margin-top:12px;line-height:1.15;">Approvals + eval suite <em>before</em> widening access.</div>
+    <div style="font-size:18px;color:var(--ink-dim);margin-top:12px;line-height:1.5;">Risky actions require a human click. An eval suite blocks regressions on deploy. Then open the door.</div>
+  </div>
+
+  <!-- Bottom takeaway -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:985px;width:1680px;z-index:10;">
+    <div style="font-size:22px;color:var(--ink);line-height:1.3;text-align:center;">
+      <span class="accent-teal" style="font-weight:700;">Ship a pilot in weeks, not a platform in quarters.</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>ONE OWNER · ONE SURFACE · ONE GATE</span>
+      <span class="right">Slide 12</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+<section class="slide" data-title="13 Sources">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sources</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="13 Sources">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">Sources</span>
+      <span class="hud-right">13 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:1600px;z-index:10;">
+    <div class="eyebrow dim">References</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Sources.</div>
+  </div>
+
+  <!-- Two columns of source cards -->
+  <!-- Left column -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:4px;height:130px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:352px;width:180px;z-index:10;">
+    <div class="mono" style="font-size:32px;color:var(--teal);font-weight:700;">01</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:230px;top:360px;width:680px;z-index:10;">
+    <div style="font-size:22px;font-weight:700;line-height:1.25;">Vercel &mdash; &ldquo;Introducing eve&rdquo;</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Launch blog and changelog &mdash; the framework announcement.</div>
+    <div class="mono" style="font-size:14px;color:var(--ink-mute);margin-top:8px;">vercel.com/blog</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:480px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:480px;width:4px;height:130px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:502px;width:180px;z-index:10;">
+    <div class="mono" style="font-size:32px;color:var(--teal);font-weight:700;">02</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:230px;top:510px;width:680px;z-index:10;">
+    <div style="font-size:22px;font-weight:700;line-height:1.25;">Vercel Docs &mdash; eve reference</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">API surface, conventions, deployment model.</div>
+    <div class="mono" style="font-size:14px;color:var(--ink-mute);margin-top:8px;">vercel.com/docs/eve</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:630px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:630px;width:4px;height:130px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:652px;width:180px;z-index:10;">
+    <div class="mono" style="font-size:32px;color:var(--teal);font-weight:700;">03</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:230px;top:660px;width:680px;z-index:10;">
+    <div style="font-size:22px;font-weight:700;line-height:1.25;">The New Stack &mdash; &ldquo;Vercel launches eve&rdquo;</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Independent write-up: agents as directories.</div>
+    <div class="mono" style="font-size:14px;color:var(--ink-mute);margin-top:8px;">thenewstack.io</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:780px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:780px;width:4px;height:130px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:802px;width:180px;z-index:10;">
+    <div class="mono" style="font-size:32px;color:var(--teal);font-weight:700;">04</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:230px;top:810px;width:680px;z-index:10;">
+    <div style="font-size:22px;font-weight:700;line-height:1.25;">Morningstar / BusinessWire &mdash; Vercel Ship</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Ship London 2026 announcement coverage.</div>
+    <div class="mono" style="font-size:14px;color:var(--ink-mute);margin-top:8px;">morningstar.com &nbsp;·&nbsp; businesswire.com</div>
+  </div>
+
+  <!-- Right column -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:330px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:330px;width:4px;height:130px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1010px;top:352px;width:180px;z-index:10;">
+    <div class="mono" style="font-size:32px;color:var(--teal);font-weight:700;">05</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1090px;top:360px;width:680px;z-index:10;">
+    <div style="font-size:22px;font-weight:700;line-height:1.25;">GitHub &mdash; vercel/eve</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Repo, releases, README &mdash; the primary source of truth.</div>
+    <div class="mono" style="font-size:14px;color:var(--ink-mute);margin-top:8px;">github.com/vercel/eve</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:480px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:480px;width:4px;height:130px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1010px;top:502px;width:180px;z-index:10;">
+    <div class="mono" style="font-size:32px;color:var(--teal);font-weight:700;">06</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1090px;top:510px;width:680px;z-index:10;">
+    <div style="font-size:22px;font-weight:700;line-height:1.25;">eve.dev &mdash; landing page</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Positioning, quickstart, screenshots.</div>
+    <div class="mono" style="font-size:14px;color:var(--ink-mute);margin-top:8px;">eve.dev</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:630px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:630px;width:4px;height:130px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1010px;top:652px;width:180px;z-index:10;">
+    <div class="mono" style="font-size:32px;color:var(--teal);font-weight:700;">07</div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1090px;top:660px;width:680px;z-index:10;">
+    <div style="font-size:22px;font-weight:700;line-height:1.25;">eve-analyst &mdash; product walkthrough</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:8px;line-height:1.4;">Reference agent shown in the launch; source of the $17,057.90 figure.</div>
+    <div class="mono" style="font-size:14px;color:var(--ink-mute);margin-top:8px;">vercel/eve &mdash; examples/eve-analyst</div>
+  </div>
+
+  <!-- Verification note -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:980px;top:780px;width:820px;height:130px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;border-style:dashed;border-color:var(--line-2);"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:1010px;top:802px;width:770px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.2em;color:var(--ink-mute);text-transform:uppercase;">Note</div>
+    <div style="font-size:16px;color:var(--ink-dim);margin-top:10px;line-height:1.45;">Figures reflect the brief provided for this deck; verify against live docs and the eve.dev landing before external use.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>END OF BRIEF · EVE &mdash; A PRODUCTION AGENT IS JUST A FOLDER OF FILES</span>
+      <span class="right">Slide 13</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</section>
+</div></div>
+<nav class="deck-nav"><button class="nav-btn" id="prevBtn">&#8592;</button>
+<div class="counter"><span id="curNum">01</span> / <span id="totNum">00</span></div>
+<button class="nav-btn" id="nextBtn">&#8594;</button></nav>
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var total=slides.length, cur=0;
+  var stage=document.getElementById('stage');
+  var curNum=document.getElementById('curNum'), totNum=document.getElementById('totNum');
+  var prevBtn=document.getElementById('prevBtn'), nextBtn=document.getElementById('nextBtn');
+  totNum.textContent=String(total).padStart(2,'0');
+  function fit(){stage.style.setProperty('--fit',
+    Math.min(window.innerWidth/1920, window.innerHeight/1080));}
+  window.addEventListener('resize',fit); fit();
+  function draw(){slides.forEach(function(s,i){s.classList.toggle('is-active',i===cur)});
+    curNum.textContent=String(cur+1).padStart(2,'0');
+    prevBtn.disabled=cur===0;nextBtn.disabled=cur===total-1;}
+  function go(i){cur=Math.max(0,Math.min(total-1,i));draw()}
+  nextBtn.onclick=function(){go(cur+1)};prevBtn.onclick=function(){go(cur-1)};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(cur+1)}
+    else if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
+  draw();
+
+  // Generic auto-fit. Two distinct source-deck defects, both of which print text
+  // on top of other text once the boxes are absolutely positioned:
+  //   (a) a box with an explicit height whose own copy overflows it;
+  //   (b) a box with NO declared height that auto-grows into the fixed-position
+  //       box beneath it (a two-line title landing on its subtitle).
+  // (b) is invisible to a scrollHeight test — clientHeight grows with the text —
+  // so it needs a real collision check. Shrink only the offending box; positions
+  // and content are untouched.
+  function boxesIn(slide){
+    return [].slice.call(slide.querySelectorAll('[data-object-type="textbox"],[data-object="true"]'))
+      .filter(function(el){
+        return getComputedStyle(el).position === 'absolute' && el.textContent.trim();
+      });
+  }
+  // Scale a box and every descendant that carries its own font-size, so the
+  // shrink works no matter which element the stylesheet sizes.
+  function scaleBox(el, factor){
+    var nodes = [el].concat([].slice.call(el.querySelectorAll('*')));
+    nodes.forEach(function(n){
+      if (n.__baseFs === undefined) n.__baseFs = parseFloat(getComputedStyle(n).fontSize) || 0;
+      if (n.__baseFs) n.style.fontSize = (n.__baseFs * factor) + 'px';
+    });
+  }
+  function hasDeclaredHeight(el){
+    return /(^|;)\s*height\s*:/.test(el.getAttribute('style') || '');
+  }
+  function autofit(){
+    var n = 0;
+    document.querySelectorAll('.slide').forEach(function(slide){
+      var boxes = boxesIn(slide);
+      boxes.forEach(function(el){
+        var factor = 1, guard = 0;
+        // (a) self-overflow, only meaningful when a height was declared
+        if (hasDeclaredHeight(el)) {
+          while (el.scrollHeight > el.clientHeight + 1 && factor > 0.68 && guard++ < 60) {
+            factor -= 0.02; scaleBox(el, factor);
+          }
+        } else {
+          // (b) collides with, OR comes within PAD of, a box positioned below it.
+          // PAD matters: PowerPoint's line metrics run slightly taller than the
+          // browser's, so a box that clears by 1px in HTML overlaps in the PPTX.
+          // Demanding real clearance absorbs that drift.
+          // Budget for ONE MORE wrapped line than the browser currently shows.
+          // The browser and PowerPoint disagree at the wrap boundary: a title
+          // that fits one line in Chrome routinely takes two in PowerPoint, and
+          // the extra line lands on whatever sits below. Testing the *actual*
+          // bottom therefore passes here and fails in the deliverable.
+          var PAD = 8;
+          var extraLine = function(){
+            var mx = 0;
+            [el].concat([].slice.call(el.querySelectorAll('*'))).forEach(function(n){
+              var f = parseFloat(getComputedStyle(n).fontSize) || 0;
+              if (n.textContent.trim() && f > mx) mx = f;
+            });
+            return mx * 1.3;
+          };
+          var hits = function(){
+            var ra = el.getBoundingClientRect();
+            var effBottom = ra.bottom + extraLine() + PAD;
+            return boxes.some(function(b){
+              if (b === el || el.contains(b) || b.contains(el)) return false;
+              var rb = b.getBoundingClientRect();
+              if (rb.top <= ra.top + 1) return false;      // only downward collisions
+              return (Math.min(effBottom, rb.bottom) - Math.max(ra.top, rb.top)) > 4 &&
+                     (Math.min(ra.right, rb.right) - Math.max(ra.left, rb.left)) > 4;
+            });
+          };
+          while (hits() && factor > 0.68 && guard++ < 60) { factor -= 0.02; scaleBox(el, factor); }
+        }
+        // Headroom. Satisfying the constraint in the browser is not enough: the
+        // export rebuilds each box from its captured bbox, and PowerPoint's
+        // metrics run marginally wider. A box that *just* fits one line here
+        // re-wraps to two there and lands on whatever sits below. One extra
+        // step buys ~3% horizontal slack, which is the difference between
+        // "fits in Chrome" and "fits in PowerPoint".
+        if (factor !== 1) { factor -= 0.03; scaleBox(el, factor); n++; }
+      });
+    });
+    return n;
+  }
+
+  // Measure only after webfonts settle, then publish the hook so the renderer
+  // can never screenshot a pre-fit frame.
+  var ready=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
+  ready.then(function(){
+    window.__deckAutofit=autofit();
+    window.__deck=DECK;
+  });
+
+  var DECK={total:total,
+    fitOne:function(){stage.style.setProperty('--fit',1);},
+    show:function(i){slides.forEach(function(s,k){s.classList.remove('is-active');
+      s.classList.toggle('render-static',k===i);});}};
+})();
+</script>
+</body>
+</html>

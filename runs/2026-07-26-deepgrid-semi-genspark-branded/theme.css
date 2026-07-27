@@ -1,0 +1,41 @@
+/* ============================================================
+   theme.css — BRAND IDENTITY (tokens only; swap to reskin)
+   "DeepGrid Semi — dark technical design system"
+   Palette, type roles and scale extracted verbatim from the
+   reference deck's own chrome.css. Change values here only —
+   never in the template — to restyle every slide.
+   ============================================================ */
+:root{
+  /* — Palette — */
+  --bg-0:#05090F;          /* deepest navy */
+  --bg-1:#0A1220;          /* midnight */
+  --bg-2:#0F1A2E;          /* panel */
+  --bg-3:#16243D;          /* elevated */
+  --line:#1E3253;          /* rule */
+  --line-soft:#172642;
+
+  --ink-0:#E8F1FF;         /* primary text */
+  --ink-1:#B7C7DE;         /* secondary */
+  --ink-2:#7A8CA6;         /* tertiary */
+  --ink-3:#4E617D;         /* muted */
+
+  --cyan:#22D3EE;          /* primary accent — our wedge */
+  --cyan-soft:#67E8F9;
+  --teal:#14B8A6;
+  --amber:#F59E0B;         /* caution / correction */
+  --amber-soft:#FCD34D;
+  --red:#EF4444;           /* anti / kill */
+  --green:#22C55E;         /* pass */
+  --violet:#8B5CF6;
+
+  /* — Type roles — */
+  --font-header:'Space Grotesk','IBM Plex Sans',sans-serif;
+  --font-body:'IBM Plex Sans',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+
+  /* — Page surface — */
+  --surface:linear-gradient(180deg,#05090F 0%,#0A1220 100%);
+  --surface-cover:
+    radial-gradient(1200px 700px at 78% 22%, rgba(34,211,238,0.10), transparent 60%),
+    linear-gradient(180deg,#05090F 0%,#0A1220 100%);
+}

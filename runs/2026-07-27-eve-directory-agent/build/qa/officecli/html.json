@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-27-eve-directory-agent/Eve-Production-Agent-draft.pptx",
+    "html",
+    "-o",
+    "runs/2026-07-27-eve-directory-agent/build/qa/officecli/Eve-Production-Agent-draft.html"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-27-eve-directory-agent/build/qa/officecli/Eve-Production-Agent-draft.html\n",
+  "stderr": ""
+}

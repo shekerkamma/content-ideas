@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Agent Is a Directory</title>
+<link rel="stylesheet" href="../assets/chrome.css">
+</head>
+<body>
+<div class="slide-container" data-screen-label="04 Directory">
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:0;">
+    <div class="grid-bg"></div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:0;width:1920px;height:56px;z-index:1;">
+    <div class="hud-top">
+      <span class="hud-dot"></span>
+      <span>EVE // OPS BRIEF</span>
+      <span class="hud-sep">/</span>
+      <span class="hud-title">The Agent Is a Directory</span>
+      <span class="hud-right">04 / 13</span>
+    </div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:120px;width:900px;z-index:10;">
+    <div class="eyebrow">Model &nbsp;·&nbsp; Convention over configuration</div>
+  </div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:120px;top:170px;width:1680px;z-index:10;">
+    <div class="title-lg">Each capability is <span class="accent-teal">a file at a known path.</span></div>
+  </div>
+
+  <!-- Left: file tree -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:120px;top:330px;width:640px;height:620px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:352px;width:600px;z-index:10;">
+    <div class="mono" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-mute);text-transform:uppercase;">agent/ &nbsp;&mdash;&nbsp; source of truth</div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:150px;top:390px;width:580px;height:1px;background:var(--line);z-index:2;"></div>
+
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:150px;top:410px;width:600px;z-index:10;">
+    <pre class="mono" style="font-size:19px;line-height:1.7;color:var(--ink);margin:0;">
+<span style="color:var(--teal);">agent/</span>
+├── <span style="color:var(--ink);">instructions.md</span>            <span style="color:var(--ink-mute);"># always-on prompt</span>
+├── <span style="color:var(--teal);">tools/</span>
+│   ├── <span style="color:var(--ink);">run_sql.ts</span>             <span style="color:var(--ink-mute);"># =&gt; tool "run_sql"</span>
+│   ├── <span style="color:var(--ink);">list_orders.ts</span>
+│   └── <span style="color:var(--ink);">post_to_slack.ts</span>
+├── <span style="color:var(--teal);">skills/</span>
+│   ├── <span style="color:var(--ink);">refund-policy.md</span>       <span style="color:var(--ink-mute);"># on-demand playbook</span>
+│   └── <span style="color:var(--ink);">sql-style-guide.md</span>
+├── <span style="color:var(--teal);">subagents/</span>
+│   └── <span style="color:var(--ink);">reviewer.ts</span>            <span style="color:var(--ink-mute);"># own context</span>
+└── <span style="color:var(--teal);">channels/</span>
+    ├── <span style="color:var(--ink);">http.ts</span>
+    ├── <span style="color:var(--ink);">slack.ts</span>
+    ├── <span style="color:var(--ink);">discord.ts</span>
+    └── <span style="color:var(--ink);">github.ts</span></pre>
+  </div>
+
+  <!-- Right: legend cards -->
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:330px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:330px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:352px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">instructions.md</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">Always&#8209;on system prompt</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">The agent&rsquo;s identity, rules and defaults &mdash; one Markdown file.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:462px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:462px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:484px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">tools/*.ts</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">One typed TypeScript function per file</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Filename becomes the tool name. <span class="mono" style="color:var(--ink);">run_sql.ts</span> &rArr; tool <span class="mono" style="color:var(--ink);">run_sql</span>. Nothing to register.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:594px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:594px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:616px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">skills/*.md</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">Markdown playbooks, loaded on demand</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Domain knowledge kept out of the base prompt &mdash; pulled in when it&rsquo;s needed.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:726px;width:1000px;height:118px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:726px;width:4px;height:118px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:748px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">subagents/*.ts</div>
+    <div style="font-size:22px;font-weight:700;margin-top:8px;line-height:1.2;">Child agents with their own context</div>
+    <div style="font-size:17px;color:var(--ink-dim);margin-top:6px;line-height:1.4;">Delegate scoped work &mdash; a reviewer, a planner &mdash; without polluting the parent&rsquo;s window.</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:858px;width:1000px;height:92px;z-index:1;">
+    <div class="card" style="width:100%;height:100%;"></div>
+  </div>
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:800px;top:858px;width:4px;height:92px;background:var(--teal);z-index:2;"></div>
+  <div data-object="true" data-object-type="textbox" style="position:absolute;left:830px;top:880px;width:940px;z-index:10;">
+    <div class="mono" style="font-size:15px;color:var(--teal);letter-spacing:0.08em;">channels/*.ts</div>
+    <div style="font-size:22px;font-weight:700;margin-top:6px;line-height:1.2;">Entry points: HTTP · Slack · Discord · GitHub</div>
+  </div>
+
+  <div data-object="true" data-object-type="shape" style="position:absolute;left:0;top:1032px;width:1920px;height:48px;z-index:1;">
+    <div class="hud-bottom">
+      <span>PATH = CAPABILITY · FILENAME = NAME</span>
+      <span class="right">Slide 04</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

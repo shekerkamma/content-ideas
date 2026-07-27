@@ -1,0 +1,119 @@
+/* Eve deck — Operations Console theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #0a0f14;
+  --bg-2: #0e1620;
+  --panel: #121b26;
+  --panel-2: #182432;
+  --line: #223247;
+  --line-2: #2c4058;
+  --ink: #e6edf3;
+  --ink-dim: #9db0c3;
+  --ink-mute: #64778c;
+  --teal: #35d0b1;
+  --teal-2: #14a58a;
+  --teal-ink: #062a24;
+  --amber: #f5a524;
+  --amber-2: #b47212;
+  --red: #ff5d5d;
+  --red-2: #b93a3a;
+  --grid: rgba(255,255,255,0.04);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01","cv11";
+}
+
+.mono, code, kbd, .num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-feature-settings: "zero","ss01"; }
+
+.slide-container {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 700px at 85% -10%, rgba(53,208,177,0.06), transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, rgba(245,165,36,0.05), transparent 60%),
+    linear-gradient(180deg, #0a1017 0%, #0a0f14 100%);
+}
+
+.grid-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+/* Chrome header/footer bar */
+.hud-top {
+  position: absolute; left: 0; top: 0; width: 1920px; height: 56px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(10,15,20,0.6);
+  display: flex; align-items: center; padding: 0 64px; gap: 24px;
+  font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.06em;
+  color: var(--ink-mute); text-transform: uppercase;
+}
+.hud-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 12px var(--teal); }
+.hud-sep { color: var(--ink-mute); opacity: 0.4; }
+.hud-title { color: var(--ink-dim); }
+.hud-right { margin-left: auto; color: var(--ink-mute); }
+
+.hud-bottom {
+  position: absolute; left: 0; bottom: 0; width: 1920px; height: 48px;
+  border-top: 1px solid var(--line);
+  background: rgba(10,15,20,0.5);
+  display: flex; align-items: center; padding: 0 64px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em;
+  color: var(--ink-mute); text-transform: uppercase;
+}
+.hud-bottom .right { margin-left: auto; }
+
+/* Reusable */
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--teal);
+}
+.eyebrow.amber { color: var(--amber); }
+.eyebrow.red { color: var(--red); }
+.eyebrow.dim { color: var(--ink-mute); }
+
+.title-xl { font-size: 88px; font-weight: 800; line-height: 0.98; letter-spacing: -0.02em; }
+.title-lg { font-size: 68px; font-weight: 800; line-height: 1.02; letter-spacing: -0.02em; }
+.title-md { font-size: 52px; font-weight: 800; line-height: 1.05; letter-spacing: -0.015em; }
+
+.accent-teal { color: var(--teal); }
+.accent-amber { color: var(--amber); }
+.accent-red { color: var(--red); }
+
+.rule { height: 1px; background: var(--line); }
+.rule-teal { height: 2px; background: linear-gradient(90deg, var(--teal), transparent); }
+
+.card {
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 2px;
+  color: var(--ink-dim); background: rgba(255,255,255,0.02);
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.tag.teal { color: var(--teal); border-color: rgba(53,208,177,0.4); background: rgba(53,208,177,0.08); }
+.tag.amber { color: var(--amber); border-color: rgba(245,165,36,0.4); background: rgba(245,165,36,0.08); }
+.tag.red { color: var(--red); border-color: rgba(255,93,93,0.4); background: rgba(255,93,93,0.08); }

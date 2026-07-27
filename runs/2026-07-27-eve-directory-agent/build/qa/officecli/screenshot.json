@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-27-eve-directory-agent/Eve-Production-Agent-draft.pptx",
+    "screenshot",
+    "-o",
+    "runs/2026-07-27-eve-directory-agent/build/qa/officecli/render/Eve-Production-Agent-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-27-eve-directory-agent/build/qa/officecli/render/Eve-Production-Agent-draft.png\n",
+  "stderr": "[pages] total=13\n"
+}

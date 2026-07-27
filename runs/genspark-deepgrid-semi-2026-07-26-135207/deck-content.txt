@@ -1,0 +1,252 @@
+New
+DeepGrid Semi executive investor presentation request
+Share
+Create a comprehensive, client-ready, executive investor/strategy presentation for "DeepGrid Semi" — an Indian fabless semiconductor startup building vertically integrated edge-AI silicon (custom ASICs) for autonomous/ADAS commercial vehicles in India and the GCC. Audience: Pre-Series A investors AND the founder's own GTM/ICP decision-making. Tone: rigorous, evidence-led, numbers-driven — this deck explicitly corrects several numbers from an earlier draft and is candid about open risks rather than hyping the story. Do not compress or drop sections — this is a deep, 35-40 slide deck combining an investor pitch with a full evidence-led go-to-market strategy. Use a dark, technical, semiconductor/chip-design visual identity: deep navy/midnight background, cyan/teal accents, clean sans-serif headers, real diagrams over stock art. Minimum slide count 35.
+
+SECTION 1 — COMPANY, PROBLEM, SOLUTION (slides 1-6): Cover slide headlining ₹55 Cr blended Pre-Series A ask (~$4.79M), 79.2% weighted score for primary ICP (Tactical Defense & Off-Highway/Port), 3-7x cost reduction vs imported ADAS, GTM decision status "Proceed with Conditions". Executive Summary: FPGA-validated 39.3 TOPS INT8 architecture works but FPGA boards cost ~₹35,000/unit, uneconomic at volume; custom 28nm ASIC cuts die cost to $3.876 (under $4) and board BOM to ~$30. CORRECTION callout: earlier materials cited ₹25 Cr ask; reconciled figure is ₹45 Cr equity CCPS + ₹10 Cr CGTMSE debt = ₹55 Cr blended. Core Problem slide: chain diagram Pure-Play AI Software → The Squeeze Zone (merchant silicon dependency drives BOM past $6,000) → high hardware costs restrict sales to developed-economy logistics networks only. Solution slide: DGrid Alpha combo-die — 3D Systolic Tensor Cube (64x512 MAC lattice, dual-issue at 600MHz = 39.3 TOPS INT8), batch dispatch firmware (200x efficiency), combo-die integration, ~$30 board BOM. Architecture slide: six chiplets — A100 (ADAS/AI, 39.3 TOPS), R100 (Radar DSP, 77GHz), T100 (Thermal/LiDAR DSP), D100 (Secure Enclave, lockstep RISC-V), S100 (SDV Telematics/AIS-140), H100 (Health/Bio-ADC drowsiness detection).
+
+SECTION 2 — ICP & GTM STRATEGY (slides 7-19) — THE HEART OF THE DECK, GIVE IT THE MOST DEPTH AND DO NOT COMPRESS: Pipeline overview slide: Stage 0-1 source intake + competitor benchmark (34 sourced claims classified fact/claim/inference/unknown) → Stage 2 ICP scoring (independent 10-dimension weighted scorecard, 5 segments) → Gate 1 mandatory user approval → Stage 3 validation design (fatal-assumptions test, 27-question buyer discovery guide, paid-pilot charter) → Stage 4 GTM system (positioning, pricing, channel, 13-week plan) → Stage 5 red team (found 2 real gaps). ICP Methodology slide: 5 core dimensions (Regulatory Compulsion, Integration/Cert Friction, Price Elasticity/BOM Limit, Sales Cycle, ODD Entropy) plus 5 more added by the pipeline (budget, competitive pressure, margin, repeatability, evidence strength).
+
+Weighted ICP Scorecard slide (horizontal bar chart, weights: problem 15%, budget 12%, urgency 15%, fit 12%, cert friction 10%, sales cycle 10%, competitive pressure 8%, margin 8%, repeatability 5%, evidence 5%): Tactical Defense & Off-Highway/Port 3.96/5 (79.2%) — Defense wins on evidence strength (real booked revenue vs zero signed Fleet customers), budget (cost-insensitive sovereign buyers), technical fit (ships today). 3PL/Dedicated Fleet Retrofit 3.40/5 (68.0%). AD0 Owner-Operator Direct 2.62/5 (52.4%). Automobile OEM/Tier-1 2.32/5 (46.4%). Commercial Motor Insurers 2.15/5 (43.0%, anti-ICP).
+
+ICP Option A (Primary) — Tactical Defense & Constrained Robotics: target sovereign UGVs/border surveillance/seaport AGVs; extremely insensitive to unit chip cost, prioritizes data sovereignty via D100 lockstep secure enclave; already generated ₹1 Cr in contract revenue BUT red-team flag — the exact nature of this revenue (commercial sale vs grant/subsidy) is unconfirmed and gates further Defense resourcing.
+
+ICP Option B (Secondary experiment) — Non-Discretionary Aftermarket Fleet Retrofit, 68.0%, the founder's own working-hypothesis favorite but still aspirational: medium/heavy trucks N2/N3, highly cost-sensitive, priced at ₹2-2.5 Lakh but ZERO signed customers — kill criterion: at least 1 of first 20 buyer interviews must convert to a paid pilot within 90 days or stays secondary.
+
+ICP Option C (Deferred) — OEM Factory Line-Fit Embedding, 46.4%: real long-term scale but worst cert-friction (1/5) and sales-cycle (1/5) scores of any segment; enter only via signed Tier-1 partnership.
+
+Deferred & Anti-ICP slide: OEM/Tier-1 deferred (46.4%); Commercial Motor Insurers anti-ICP (43.0%, lowest score, carries an unsupported insurance-premium-reduction claim, zero insurer-revenue rows in the model) — insurers may be an evidence partner, never a direct customer, until proven otherwise.
+
+ICP Selection Synthesis slide: Defense wins on evidence 5/5, budget 5/5, fit 5/5, but has the WORST repeatability score (2/5) — defense contracts are lumpy, don't scale into the ~88%-systems-revenue business the raise is built on. Synthesis: run Defense as resourced primary for 6 months (fastest way to generate the missing Fleet evidence) while Fleet runs in parallel as secondary experiment — the original pitch's own three-phase roadmap already sequenced Defense first, this confirms rather than invents that. Strongest counter-case: a defense-first motion risks the fundraising narrative built on a 5M+ truck market — this only holds as a sequenced two-track plan, never a flat pivot.
+
+Buyer Committee — Tactical Defense (table): Economic buyer = defense procurement/port authority (fears vendor lock-in); Technical buyer = systems integration engineer (fears undocumented failure modes); Champion = program manager, not yet identified; Blocker = security clearance/compliance office; End user = UGV/AGV operator. Minimum proof to advance: second signed contract or audited confirmation of the ₹1 Cr revenue.
+
+Buyer Committee — 3PL/Fleet (table): Economic buyer = fleet owner/operator (fears unproven ROI); Technical buyer = fleet maintenance/telematics manager; Champion = safety/compliance officer facing mandate deadline; Blocker = procurement or vehicle owner for attached fleets; End user = driver. Minimum proof to advance: one signed paid pilot from the first 20 discovery interviews.
+
+Positioning slide — two tracks: Defense positioning statement (sovereign data-security via D100 enclave) vs Fleet positioning statement (disruptive retrofit price, pending validation) — kill criteria stated for both.
+
+Five Claims to Stop Using table: "84% ASIC-stage gross margin" (unreconciled, implies 92-93%), any insurance-premium-reduction % (banned), "mandate-ready" for AD2 (unvalidated), any accident-reduction % (nothing measured), "5M+ truck TAM" as pipeline (forecast not demand).
+
+Pricing Logic slide: AD2's ₹2-2.5L is a roadmap figure not a validated price; the discipline is to output a data-collection plan (willingness-to-pay questions in the discovery guide) rather than manufacture false precision; Defense pricing is contract-negotiated.
+
+Channel Strategy table: Direct(Defense) recommended; Direct(Fleet) recommended for pilot; system integrator not yet (no partner identified); Indian defense primes considered only after 2+ Defense contracts.
+
+90-Day Execution Plan slide: Weeks 1-4 evidence gathering (revenue audit, 10 interviews, 3 named accounts); Weeks 5-9 conversion attempts (pilot sold, technical evaluation advances); Weeks 10-13 governance & day-90 re-scoring. Stop-doing list: no OEM GTM spend until Tier-1 partner signs, no insurer-facing sales motion, no unevidenced external claims, no AD0 resourcing pending evidence check.
+
+SECTION 3 — COMPETITIVE LANDSCAPE (slides 20-25): Strategic Playbooks slide — Aurora (heavy-OEM, long-haul Class-8, dual NVIDIA DRIVE Thor, $6,000+ BOM, Continental partnership), Kodiak Robotics (dual-use, highway freight + DoD defense contracts, Ambarella CV3-AD685), Gatik (constrained middle-mile routes, NVIDIA DRIVE AGX Orin, Isuzu box trucks, Walmart/Kroger), DeepWay (China domestic fleets, high-compute NPU + Baidu Apollo, "Xingtu" L4 electric trucks). Lesson: every credible playbook picks one lane; no incumbent runs all three at DeepGrid's ~$30 BOM. Global Semiconductor & Dependency Matrix table across all five companies (silicon partner, compute model, BOM cost) — DeepGrid is the only one with zero chip dependency at ~1/200th the BOM. Domestic Indian Semiconductor Wave slide — Netrasemi (A2000 SoC, TSMC 12nm, ₹125 Cr raised, mid-2027 launch), Mindgrove (RISC-V MCU, TSMC 28nm, Bosch MoU, $10.3M raised), Agnit Semiconductors (GaN devices, defense radar pilots, $7.47M raised) — India's wave is real but young, a year behind DeepGrid's already-revenue-generating position. Software-First Autonomy Competitors slide — Minus Zero, Swaayatt Robots, RoshAI — all hardware-agnostic, inherit merchant-silicon cost structure regardless of algorithm quality. Competitive Positioning Synthesis: DeepGrid is the only Indian startup with a vertically integrated, single-die ADAS combo-die at a disruptive price.
+
+SECTION 4 — GTM ROADMAP + REGULATORY (slides 26-30): Phase 1 (Months 0-6) Tactical & Off-Highway Wedge — direct FPGA field deployments, tactical defense positioning, ₹1 Cr non-dilutive revenue already generated (open question flagged). Phase 2 (Months 6-18) Regulatory Aftermarket Volume — close the ₹55 Cr blended raise, MeitY Design Linked Incentive, TSMC 28nm HPC+ MPW tape-out, launch retrofit kit at ₹2-2.5L (still unconverted). Phase 3 (Months 18-36) OEM & Tier-1 Integration — Tier-1 alliances (Uno Minda, Spark Minda, Bosch India), sovereign OEM line-fit wins, shift to recurring SaaS, sovereign data moat. Regulatory Mandate India slide — map AIS-184/186/187/188/162/189-190 to chiplets; CORRECTION: operative dates are 1 Oct 2027 (AEBS+ESC) and 1 Jan 2028 (all four functions), not the draft 2026 dates in earlier materials. Regulatory Mandate GCC slide — Saudi TGA/WASL mandate, S100 chiplet eliminates need for secondary tracker.
+
+SECTION 5 — FINANCIALS (slides 31-35): Hardware Unit Economics — die cost $3.876 at 1M chips (under $4, CORRECTION from earlier "~$3" claim), board BOM ~$30, 12.9x cost advantage vs Mobileye $50 ASP, retrofit kit cost build-up $200 total (ASIC $30 + radar $100 + cameras $50 + enclosure $20); do not repeat "84% gross margin", implies ~92-93% instead. Cost Curves & Break-Even — tape-out NRE $3.17M (full MPW phasing breakdown), break-even ~174,908 chips crossing FY2032; MARQUEE CORRECTION: retract the earlier "$8M NRE, 3,636-unit break-even" figure entirely, do not repeat it. 6-Year Revenue Trajectory bar chart (label as management projection, unaudited): FY27 ₹6 Cr, FY28 ₹41.17 Cr, FY29 ₹144.73 Cr, FY30 ₹351.35 Cr, FY31 ₹731.54 Cr, FY32 ₹1,387.95 Cr; gross margin 53%→88%; FY32 EBITDA ₹536.63 Cr (~39%); net income positive from FY2029. SaaS Monetization tiers — Base ₹10,000/yr, Advanced ₹15,000/yr, Premium ₹25,000/yr per vehicle; sovereign data moat. Capital Efficiency/Subsidies — P-DLI up to 50% reimbursement capped ₹15 Cr, Deployment Linked Incentive 4-6% of net sales capped ₹30 Cr, ChipIN Centre EDA support; sized against the ₹55 Cr blended raise, not ₹25 Cr.
+
+SECTION 6 — RISK, RED TEAM, DECISION, CLOSE (final slides, no false confidence): Red Team Findings slide — Gap #1: Indian defense primes never assessed as competitors (a startup vs an established security-cleared incumbent is a different competitive problem than vs Netrasemi/Minus Zero). Gap #2: nature of the ₹1 Cr revenue unconfirmed — if not a commercial sale, re-score Defense and Fleet as evidence-equal. Also: circular evidence risk in the scoring method, working-capital exposure (₹2.48 Cr raised to date vs ₹55 Cr ask, government payment cycles 90-180+ days). Final Decision slide — "Proceed With Conditions," NOT an unconditional go: five conditions in priority order (confirm ₹1 Cr revenue nature within 1 week; add Indian defense primes to competitive benchmark; model working-capital exposure to payment-cycle delay; keep every external document, including this deck, in sequenced-plan framing not a flat pivot narrative; treat day-90 checkpoint as a hard re-scoring gate). Closing slide "A Defensible, Evidence-Led Ask" — four pillars (eliminating the hardware squeeze zone; de-risked technical validation with one open question; non-discretionary mandate capture; capital-efficient engineering, evidence-gated) plus closing KPI row: ₹55 Cr ask, 79.2% primary ICP score, 5 conditions to proceed, FY2029 profitable from.
+
+GLOBAL RULES: every correction/caveat must appear on-slide, explicitly labeled, never a silent number swap. Never assert these banned figures as fact outside their own correction: ₹25 Cr ask, $8M NRE, 3,636-unit break-even, "<$3 die cost", 774x cost advantage, any insurance-premium-reduction %. Label management projections as projections, not observed data. Prioritize dense data-forward slides (tables, bar charts, scorecards, buyer-role matrices, timelines) over stock-photo decoration — this is a rigorous strategy document. Do not shorten Section 2, it is the deck's explicit primary focus.
+
+I'll build this comprehensive 35+ slide deck for DeepGrid Semi. Let me start by planning the structure and then execute in parallel batches. Given the depth required (especially Section 2), I'll create 37 slides total.
+
+Deep Thinking
+Total: 8 Tasks
+8 Tasks Remaining
+Set up deck folder, manifest with full playlist, and design system CSS
+Section 1: Cover, Exec Summary, Problem, Solution, Architecture (slides 1-6)
+Section 2: ICP & GTM Strategy — the heart of the deck (slides 7-19)
+Section 3: Competitive Landscape (slides 20-25)
+Section 4: GTM Roadmap + Regulatory (slides 26-30)
+Section 5: Financials (slides 31-35)
+Section 6: Risk, Red Team, Decision, Close (slides 36-37)
+Verify all slides with layout check + screenshots, iterate
+Write File
+Writing manifest with 37-slide playlist
+Write File
+Writing shared chrome CSS
+
+Noted — those are the placeholders I just registered; I'll fill them now. Let me build the deck in batches, starting with Section 1 and a chrome/frame helper.
+
+Write File
+Writing cover slide
+Write File
+Writing executive summary
+Write File
+Writing core problem slide
+Write File
+Writing solution slide
+Write File
+Writing architecture slide
+Write File
+Writing corrections ledger
+
+Section 1 is done. Now let me switch the preview to the new deck and continue with Section 2 (ICP & GTM — the heart of the deck).
+
+Updating your view
+Opening the DeepGrid Semi deck
+Write File
+Writing pipeline overview
+Write File
+Writing ICP methodology
+Write File
+Writing ICP scorecard
+Write File
+Writing ICP A - Defense slide
+
+Understood — those are the placeholders I'm filling in order. Continuing with slides 11-17 now.
+
+Write File
+Writing ICP B - Fleet slide
+Write File
+Writing ICP C - OEM slide
+Write File
+Writing deferred and anti-ICP
+Write File
+Writing ICP synthesis
+Write File
+Writing buyer committee Defense
+Write File
+Writing buyer committee Fleet
+Write File
+Writing positioning slide
+
+Acknowledged — those are the placeholders I'm still filling. Continuing with slides 18-25 (rest of Section 2 + Section 3 Competitive Landscape).
+
+Write File
+Writing claims to stop using
+Write File
+Writing pricing and channel
+Write File
+Writing 90-day execution plan
+Write File
+Writing competitor playbooks
+Write File
+Writing dependency matrix
+Write File
+Writing Indian semi wave
+Write File
+Writing software competitors
+Write File
+Writing competitive synthesis
+continue
+
+Let me verify current state and continue writing the remaining slides.
+
+Browse Files
+Checking which slides exist
+
+Continuing with slides 18-37. I have 17 slides done, 20 to go.
+
+Write File
+Writing claims to stop
+Write File
+Writing pricing and channel
+Write File
+Writing 90-day execution
+Write File
+Writing competitor playbooks
+Write File
+Writing dependency matrix
+Write File
+Writing Indian semi wave
+Write File
+Writing software competitors
+Write File
+Writing competitive synthesis
+
+Continuing with slides 26-37 (roadmap, regulatory, financials, risk, close).
+
+Write File
+Writing roadmap phase 1
+Write File
+Writing roadmap phase 2
+Write File
+Writing roadmap phase 3
+Write File
+Writing regulatory India
+Write File
+Writing regulatory GCC
+Write File
+Writing unit economics
+Write File
+Writing cost curves breakeven
+Write File
+Writing revenue trajectory
+Write File
+Writing SaaS monetization
+Write File
+Writing capital and subsidies
+Write File
+Writing red team risk
+Write File
+Writing decision and close
+continue
+
+Let me check what's already on disk and finish the remaining slides.
+
+Browse Files
+Checking current state
+
+I have 25 slides written; 12 remaining. Let me finish them now.
+
+Write File
+Writing roadmap phase 1
+Write File
+Writing roadmap phase 2
+Write File
+Writing roadmap phase 3
+Write File
+Writing regulatory India
+Write File
+Writing regulatory GCC
+Write File
+Writing unit economics
+Write File
+Writing cost curves breakeven
+Write File
+Writing revenue trajectory
+Write File
+Writing SaaS monetization
+Write File
+Writing capital subsidies
+Write File
+Writing red team risk
+Write File
+Writing decision close
+
+All 37 slides are now on disk. Let me verify layout and screenshots across the deck in batches, starting with the ICP heart-of-deck slides.
+
+Check slide layout
+Checking slides 1-20 layout
+Check slide layout
+Checking slides 21-37 layout
+
+Your credit balance is negative. This run was stopped. Please top up to continue. upgrade
+
+AI Slides
+You shouldn't need to pick AI →
+Ultra
+DeepGrid Semi — Pre-Series A Investor & GTM Strategy
+Present
+Export
+History
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Select
+Draw
+Edit
+Verify content
+Fix Layout
+Polish Content
+Outline
+Notes
+Verify
+1 / 37
+−
++
+24%
+No notes for this slide
+Add notes

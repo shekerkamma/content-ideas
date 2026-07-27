@@ -1,0 +1,16 @@
+{
+  "source": "genspark",
+  "url": "https://www.genspark.ai/agents?id=f8a6a997-3f7f-4e90-a538-c14c32aaeb39&deck=deepgrid-semi",
+  "captured_at": "2026-07-26T13:52:43.600Z",
+  "slide_count_estimated": 0,
+  "files": {
+    "html": "genspark-recovered.html",
+    "content": "genspark-content.txt",
+    "screenshot": "00-genspark-full.png"
+  },
+  "next_steps": [
+    "Review genspark-recovered.html and genspark-content.txt",
+    "Validate claims against DeepGrid canonical-numbers contract",
+    "Author deck.html using the genspark-branded-deck workflow"
+  ]
+}

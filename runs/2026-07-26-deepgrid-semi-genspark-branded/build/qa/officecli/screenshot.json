@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-26-deepgrid-semi-genspark-branded/DeepGrid-Semi-PreSeriesA-v2-draft.pptx",
+    "screenshot",
+    "-o",
+    "runs/2026-07-26-deepgrid-semi-genspark-branded/build/qa/officecli/render/DeepGrid-Semi-PreSeriesA-v2-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-26-deepgrid-semi-genspark-branded/build/qa/officecli/render/DeepGrid-Semi-PreSeriesA-v2-draft.png\n",
+  "stderr": "[pages] total=43\n"
+}
