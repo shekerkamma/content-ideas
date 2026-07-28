@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # design-qa-detect.sh — deterministic design-slop gate for HTML decks / UI.
-# Wraps Impeccable's detector (44 rules, no LLM, no API key). Adopted CLI-only;
+# Wraps a pinned Impeccable detector release (no LLM, no API key). Adopted CLI-only;
 # the Impeccable *skill* is NOT installed (it collides with refero-design).
 # See references/design-md-resources.md ("Design QA gate").
 #
@@ -36,4 +36,4 @@ if [ "$ver" -lt 24 ]; then
   exit 1
 fi
 
-exec npx -y impeccable@latest detect "$@"
+exec npx -y impeccable@3.4.0 detect "$@"

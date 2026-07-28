@@ -70,7 +70,11 @@ All files land in the run directory:
    - If `--out` provided: use it.
    - Else: `runs/YYYY-MM-DD-<slug>-marp/` relative to cwd.
 4. Create `run_dir`.
-5. Locate Marp binary — try in order:
+5. Resolve `PPTX_DESIGN_QUALITY_DIR` using `pptx-design-quality`'s Required artifacts
+   block, then initialize `deck-brief.md` and `deck-design.json`. Set
+   `deck.output_mode` to `image-per-slide`, tailor the context, and validate both files
+   before writing slides.
+6. Locate Marp binary — try in order:
    ```bash
    which marp 2>/dev/null \
      || ls ~/.local/node_modules/.bin/marp 2>/dev/null \
@@ -268,7 +272,7 @@ fallback in the delivery summary.
 
 ### Stage 2.5 — Design QA gate (deterministic, required for HTML)
 
-Before delivering, lint the exported HTML with the Impeccable detector — 44
+Before delivering, lint the exported HTML with the version-pinned Impeccable detector —
 deterministic slop rules, no LLM, no API key. Catches purple gradients, overused
 fonts (Inter/Roboto/Geist…), bounce easing, cramped padding, dark glows, low
 contrast.
@@ -276,7 +280,7 @@ contrast.
 ```bash
 GATE="${CONTENT_IDEAS_DIR:-$HOME/content-ideas}/scripts/design-qa-detect.sh"
 [ -x "$GATE" ] && "$GATE" <run_dir>/<slug>.html \
-  || npx -y impeccable@latest detect <run_dir>/<slug>.html   # fallback: ensure `nvm use 24` first
+  || npx -y impeccable@3.4.0 detect <run_dir>/<slug>.html   # fallback: ensure `nvm use 24` first
 # exit 0 = clean · exit 2 = anti-patterns found (printed) · exit 1 = blocked (Node<24)
 ```
 
@@ -289,6 +293,18 @@ GATE="${CONTENT_IDEAS_DIR:-$HOME/content-ideas}/scripts/design-qa-detect.sh"
 - If the gate exits 2, report the findings and fix the deck (or waive with reason)
   before marking it delivered. If it exits 1 (no Node 24), say the deck is
   **unreviewed for design QA** rather than presenting it as final.
+
+### Stage 2.6 — PPTX artifact gate
+
+When PPTX output was requested, lint the exported artifact from the repo root even though its slides are
+flattened. The `image-per-slide` context disables native-title and layout-repetition rules
+while retaining aspect-ratio, slide-boundary, image-resolution, and package checks:
+
+```bash
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_pptx.py" \
+  <run_dir>/<slug>.pptx --config <run_dir>/deck-design.json \
+  --json --out <run_dir>/qa/pptx-design-lint.json
+```
 
 ### Stage 3 — Deliver
 
@@ -344,11 +360,13 @@ Scaffolding & Templates
 ### Dependencies
 - `@marp-team/marp-cli` — installed automatically to `~/.local/node_modules/.bin/marp` on first run
 - Chrome/Chromium — required for pptx/pdf export only (HTML export works without it)
+- `pptx-design-quality` — required context, critique vocabulary, and PPTX artifact lint
 
 ### Relationships
 
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `pptx-design-quality` | Behavioral overlay | every deck; artifact lint when PPTX is exported | `<run>/deck-brief.md`, `<run>/deck-design.json`, `<run>/qa/pptx-design-lint.json` |
 | `branded-pptx-deck` | Alternative / Peer | use branded-pptx-deck when output must be a branded .pptx; use marp for markdown-source slides | `<run_dir>/<slug>.pptx` |
 | `content-research` | Sequential upstream | optional — content-research produces a synthesis .md that marp uses as `--file` input | `<topic>-research.md` or synthesis .md |
 | `research-to-deck` | Orchestrator | research-to-deck can invoke marp as its deck generation stage | `<slug>.md` + exports |

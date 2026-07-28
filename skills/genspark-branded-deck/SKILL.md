@@ -166,6 +166,9 @@ table and font handling: [`references/verbatim-recovery.md`](references/verbatim
    `genspark-multimodal-context.json`, and
    `genspark-content-validation.json`. Never invent metrics; confirm entity
    statuses.
+   Initialize and tailor `<run>/deck-brief.md` plus `<run>/deck-design.json` with
+   `pptx-design-quality`, setting `deck.output_mode` to `image-per-slide` or `hybrid`
+   for the selected route, then validate both files.
    **Read `references/archetypes.md`, `assets/deck.example.html` and
    `assets/deck.css` before writing a single slide.** The archetypes are a
    closed set and `deck.css` is the only class inventory that exists; inventing
@@ -204,6 +207,11 @@ table and font handling: [`references/verbatim-recovery.md`](references/verbatim
    Overlap hides at thumbnail size — measure it:
    `node scripts/check_layout_overflow.mjs --deck <deck.html> --min 20`. Fixed-height
    title boxes are the usual culprit: a two-line title prints over its subtitle.
+   Run the pinned HTML design gate before export. Prefer
+   `"${CONTENT_IDEAS_DIR:-$HOME/content-ideas}/scripts/design-qa-detect.sh" <deck.html>`;
+   when no checkout wrapper exists, run `npx -y impeccable@3.4.0 detect <deck.html>`.
+   Fix or explicitly waive every
+   Impeccable finding; never invoke an unpinned `@latest` fallback.
 
 7b. **Export-fidelity gate (hybrid path) — run after `render_hybrid.mjs`:**
    `node scripts/check_export_coverage.mjs --deck <deck.html> --pos build/pos`
@@ -218,7 +226,12 @@ table and font handling: [`references/verbatim-recovery.md`](references/verbatim
    - *editable (default when they want to edit in PowerPoint):*
      `node scripts/render_hybrid.mjs --deck <deck.html> --out build` then
      `python3 scripts/build_editable_pptx.py --src build --out build/<name>-editable-draft.pptx`
-9. **QA the final PPTX.** From the repo root, run
+9. **QA the final PPTX.** Resolve `PPTX_DESIGN_QUALITY_DIR` using that skill's Required
+   artifacts block, then run the native artifact gate:
+   `python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_pptx.py" <built.pptx>
+   --config <run>/deck-design.json --json
+   --out <run>/qa/pptx-design-lint.json`.
+   Then, from the repo root, run
    `python3 ../../scripts/officecli_qa.py <built.pptx> --out <run>/qa/officecli --required`.
    **`--required` is mandatory for anything client-facing:** without it the helper
    exits 0 and writes `Status: skipped` when OfficeCLI is absent, so a silent skip
@@ -238,7 +251,8 @@ table and font handling: [`references/verbatim-recovery.md`](references/verbatim
     prototype and pass the design spec plus recovered references through the
     Genspark-to-Vault native handoff contract.
 11. **Set status honestly.** `*-draft.pptx` before QA; rename to `*-reviewed.pptx`
-    only after the contact-sheet review + visible-text scan pass; `*-blocked.txt`
+    only after deck-context validation, the HTML detector, native PPTX lint,
+    contact-sheet review, and visible-text scan pass; `*-blocked.txt`
     if a required path (Chrome, render) is unavailable. Keep `render.mjs` +
     `deck.html` in the run folder so QA fixes are reproducible.
 12. **Deliver.** Copy the **reviewed** deck to `CLIENT_DELIVERY_DIR` (or, for this
@@ -427,6 +441,7 @@ Business Automation
 | python-pptx | `python3 -c "import pptx"` | both PPTX builders need it |
 | Pillow | `python3 -c "import PIL"` | `contact_sheet.py` needs it |
 | officecli | `which officecli` | final QA gate degrades to LibreOffice/PDF |
+| pptx-design-quality | validate deck context and run `lint_pptx.py` | reviewed status is blocked |
 | **The deck's fonts** | `scripts/install_fonts.sh --check --from <chrome.css\|deck.html>` | `scripts/install_fonts.sh --from <css>` |
 
 **Fonts are not optional on the hybrid path.** `render_hybrid.mjs` captures each
@@ -444,6 +459,7 @@ triplet, and `pptx-visual-spec`.
 
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `pptx-design-quality` | Behavioral overlay | every image, hybrid, or downstream native build | `<run>/deck-brief.md`, `<run>/deck-design.json`, `<run>/qa/pptx-design-lint.json` |
 | `content-research` | Sequential upstream | ingest sites/repos/docs first | `$CONTENT_HOME/research/*.md` |
 | `competitive-intel-sprint` | Sequential upstream | competitor teardown content | research output files |
 | `ai-strategy-researcher` / `ai-strategy-brief` | Sequential upstream | market/vertical analysis | strategy report / brief md |

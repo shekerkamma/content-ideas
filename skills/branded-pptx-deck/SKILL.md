@@ -57,9 +57,12 @@ yourself, validate explicitly.
    (JSON/markdown/outline). Decks are *generated from validated data*, not typed
    slide-by-slide. Never invent metrics; if a number isn't in the source, use a qualitative
    label and say so. Confirm entity statuses (is the company still operating? right batch?).
-2. **Decide the spine.** For executives: lead with the answer (BLUF), an executive-summary
-   one-pager, a storyboard of the argument, then proof, then the ask. Write **action
-   titles** (every title is a so-what assertion). Honor explicit slide-count minimums.
+2. **Initialize deck design context, then decide the spine.** Use
+   `pptx-design-quality` to create and tailor `<run>/deck-brief.md` plus
+   `<run>/deck-design.json`; validate both before authoring. For executives: lead with the
+   answer (BLUF), an executive-summary one-pager, a storyboard of the argument, then proof,
+   then the ask. Write **action titles** (every title is a so-what assertion). Honor
+   explicit slide-count minimums.
 3. **Write and validate the visual specification.** Read
    `skills/pptx-visual-spec/references/visual-sourcing-rules.md`, classify every meaningful
    visual region, write `<run>/visual-spec.json`, and validate it with
@@ -78,9 +81,14 @@ yourself, validate explicitly.
    `source`, `audit`, `validation`, `synthesis`, `Codex`, `Claude`, file paths, and raw
    timestamps before delivery.
 6. **Validate + preview.** `Deck.save()` auto-validates and raises on malformed XML.
+   Resolve `PPTX_DESIGN_QUALITY_DIR` using that skill's Required artifacts block, then
+   run the deterministic design gate and write its JSON evidence:
+   `python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_pptx.py" <out.pptx>
+   --config <run>/deck-design.json --json --out <run>/qa/pptx-design-lint.json`.
    Then run `python3 scripts/preview_pptx.py <out.pptx>` and actually *look* at the
-   contact sheets; fix any overflow before delivering. After that, run the shared
-   OfficeCLI QA gate from the repo root:
+   contact sheets; fix any overflow before delivering. Apply the
+   `critique → audit → polish` loop from `pptx-design-quality` until the lint and visual
+   review are clean. After that, run the shared OfficeCLI QA gate from the repo root:
    `python3 scripts/officecli_qa.py <out.pptx> --out <run>/qa/officecli`.
    When `officecli` is installed, use its HTML/PNG render as the preferred real
    render evidence. If OfficeCLI is skipped or fails, use PowerPoint, LibreOffice
@@ -132,6 +140,9 @@ run folder. This is the repeatable path:
 ```bash
 RUN=runs/<date>-<topic>-branded-pptx
 python3 "$RUN/build_deck.py"                         # writes *-draft.pptx
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_pptx.py" \
+  "$RUN/<name>-draft.pptx" --config "$RUN/deck-design.json" \
+  --json --out "$RUN/qa/pptx-design-lint.json"
 python3 skills/branded-pptx-deck/scripts/preview_pptx.py "$RUN/<name>-draft.pptx"
 python3 scripts/officecli_qa.py "$RUN/<name>-draft.pptx" --out "$RUN/qa/officecli"
 ```
@@ -147,7 +158,9 @@ python3 scripts/officecli_qa.py "$RUN/<name>-draft.pptx" --out "$RUN/qa/officecl
 ```
 
 Only rename/copy to `*-reviewed.pptx` after:
+- `deck-brief.md` and `deck-design.json` validation passed.
 - `Deck.save()` validation passed.
+- `pptx-design-lint.json` contains no unresolved findings.
 - `preview_pptx.py` contact sheets were inspected.
 - OfficeCLI QA is `passed`, or a documented equivalent real-render fallback was
   inspected.
@@ -188,6 +201,7 @@ Business Automation
 ### Dependencies
 - `pptxkit.py` — required; lives in `scripts/pptxkit.py` within this skill directory
 - `preview_pptx.py` — required for QA; lives in `scripts/preview_pptx.py`
+- `pptx-design-quality` — required deck-context, critique, and deterministic lint overlay
 - `officecli-qa` — optional preferred real-render QA; uses repo root
   `scripts/officecli_qa.py` when `officecli` is installed
 - `pptx-visual-spec` — mandatory visual-routing overlay and schema
@@ -196,6 +210,7 @@ Business Automation
 
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `pptx-design-quality` | Behavioral overlay | every deck build | `<run>/deck-brief.md`, `<run>/deck-design.json`, `<run>/qa/pptx-design-lint.json` |
 | `content-research` | Sequential upstream | when ingesting sites/repos/docs first | `$CONTENT_HOME/research/*.md` or summary files |
 | `competitive-intel-sprint` | Sequential upstream | when competitor content is needed | research output files |
 | `ai-strategy-researcher` | Sequential upstream | when market/vertical analysis needed | strategy report (Word doc or markdown) |

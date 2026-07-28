@@ -13,7 +13,9 @@ Codex subscription-backed image-generation path.
 
 Before rendering any slide deck:
 
-1. Read [references/visual-sourcing-rules.md](references/visual-sourcing-rules.md).
+1. Read the sibling `pptx-design-quality` skill, initialize and validate
+   `<run>/deck-brief.md` plus `<run>/deck-design.json`, then read
+   [references/visual-sourcing-rules.md](references/visual-sourcing-rules.md).
    For hosted presentation products, also read
    [references/external-capabilities.md](references/external-capabilities.md).
    For video-derived Genspark work, read the canonical
@@ -52,6 +54,8 @@ Every direct PPTX builder consumes:
 Business Automation
 
 ### Dependencies
+- `pptx-design-quality` — supplies per-deck design context, refinement vocabulary, and
+  deterministic native-PPTX linting.
 - `ai-graphics` — executes HTML/SVG screenshots and generated raster routes.
 - `image-generation-router` — selects built-in OpenAI first and routes explicit or
   fallback Gemini generation through CLIProxyAPI without silent model substitution.
@@ -59,6 +63,7 @@ Business Automation
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `pptx-design-quality` | Behavioral peer overlay | every deck build | `<run>/deck-brief.md`, `<run>/deck-design.json`, and lint report |
 | `vault-presales-pptx-pipeline` | Behavioral source | always | vault-grade extract/author rules incorporated here |
 | `branded-pptx-deck` | Behavioral overlay | direct native PPTX build | `<run>/visual-spec.json` |
 | `video-to-deck` | Behavioral overlay | video-derived PPTX | `<run>/visual-spec.json` |

@@ -97,6 +97,9 @@ visual already classified as `image-model`.
 Do not call a video deck `reviewed` unless every gate below has passed and the
 run contains the evidence artifacts.
 
+0. **Deck-context gate:** `pptx-design-quality` produced and validated
+   `<run>/deck-brief.md` plus `<run>/deck-design.json`. The brief records the audience,
+   decision, narrative promise, anti-references, evidence standard, and editability mode.
 1. **Story gate:** `ai-analyst` produced the upstream story spine when exposed.
    If it is unavailable, the run status must say `fallback`; do not silently
    treat fallback synthesis as equivalent.
@@ -125,7 +128,8 @@ run contains the evidence artifacts.
    `transcript`, `hyperframe`, `Excalidraw`, `YouTube`, `source`,
    `validation`, `synthesis`, `audit`, `Codex`, `Claude`, file paths, or
    timestamps.
-5. **Render gate:** PPTX XML validation passes and a real render pass confirms
+5. **Render gate:** PPTX XML validation and the deterministic
+   `pptx-design-quality` lint pass, then a real render pass confirms
    embedded diagrams appear, are readable, and are not cropped. Prefer the shared
    OfficeCLI QA gate:
    `python3 scripts/officecli_qa.py <deck.pptx> --out <run>/qa/officecli`.
@@ -221,6 +225,8 @@ Invoke the `/content-research` skill on the extracted content, enriched with dee
 ### Stage 2.5: Story Architect + Analyst Synthesis → Storyboard
 Before visualization or PPTX rendering, run a synthesis/storyboard step so the
 deck has a narrative spine instead of becoming a pile of recreated frames.
+After the story spine is resolved, initialize and tailor `deck-brief.md` plus
+`deck-design.json` with `pptx-design-quality`; validate both before Stage 3.
 
 Preferred path:
 - Use `story-architect` as the concrete upstream storyboard stage whenever it is
@@ -257,6 +263,8 @@ Output:
   `ai-analyst`-style fallback is used
 - Optional `<topic>-findings.json` when data-backed findings or chart inputs are
   available
+- `<run>/deck-brief.md`
+- `<run>/deck-design.json`
 
 **Pass forward:** storyboard, slide spine, evidence map, visual-spec inputs
 
@@ -444,6 +452,9 @@ Mandatory deck assembly:
 - Run branded PPTX validation and preview QA. Use `*-draft.pptx` until all
   delivery gates pass; use `*-reviewed.pptx` only after slide-by-slide
   validation and real render QA pass.
+- Run `pptx-design-quality` against the draft and store
+  `<run>/qa/pptx-design-lint.json`; fix or explicitly waive every finding before
+  reviewed promotion.
 - For decks with embedded visuals, run a real render QA pass, not only the
   lightweight `preview_pptx.py` placeholder render. Prefer
   `python3 scripts/officecli_qa.py <deck.pptx> --out <run>/qa/officecli`; if
@@ -486,6 +497,9 @@ Route-specific source package:
 <topic>-video-deck-draft.pptx       # mandatory branded PPTX output
 <topic>-video-deck-reviewed.pptx    # only after all delivery gates pass
 <topic>-slide-validation.md         # slide-by-slide content/design validation
+deck-brief.md                       # audience, decision, narrative and anti-references
+deck-design.json                    # deterministic deck-design and lint contract
+qa/pptx-design-lint.json            # native PPTX design-quality findings
 qa/officecli/qa-summary.md          # OfficeCLI QA status when available
 qa/officecli/render/                # OfficeCLI final-PPTX screenshots when available
 ```
@@ -522,11 +536,13 @@ Business Automation
 - `officecli-qa` — optional preferred final-PPTX render gate; uses repo root
   `scripts/officecli_qa.py` when `officecli` is installed
 - `pptx-visual-spec` — mandatory visual-routing overlay and shared schema
+- `pptx-design-quality` — mandatory deck-context, critique, and native-PPTX lint overlay
 
 ### Relationships
 
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `pptx-design-quality` | Behavioral overlay | every video-derived deck | `<run>/deck-brief.md`, `<run>/deck-design.json`, `<run>/qa/pptx-design-lint.json` |
 | `watch` | Sequential upstream | always — watch provides transcript and frames | structured summary + transcript |
 | `content-research` | Sequential upstream | always — enriches transcript with Exa research | `<topic>-research.md` |
 | `ai-analyst` | Sequential upstream | required when exposed before visualization/PPTX rendering | `<topic>-analyst-story-pack.md/json`, BLUF, evidence map, slide spine |
