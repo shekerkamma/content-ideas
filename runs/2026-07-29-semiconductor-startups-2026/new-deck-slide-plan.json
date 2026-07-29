@@ -1,0 +1,1746 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Semiconductor Startups 2026 \u2014 Evidence-Led Strategy",
+    "evidence_contract": null,
+    "visual_contract": "new-deck-visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "NEW-S01",
+      "text": "Semiconductor Startups 2026",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn"
+      ]
+    },
+    {
+      "id": "NEW-S02",
+      "text": "Public evidence can prioritize validation questions by partner archetype without claiming organization-specific right-to-win.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ]
+    },
+    {
+      "id": "NEW-S03",
+      "text": "A staged portfolio prevents early technical promise from being mistaken for execution-ready partnership.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S04",
+      "text": "The cohort\u2019s most plausible adoption paths complement existing infrastructure before displacing it.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S05",
+      "text": "The ten companies address edge deployment, compute architecture, inference economics, or scale-out connectivity.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn"
+      ]
+    },
+    {
+      "id": "NEW-S06",
+      "text": "The cohort\u2019s primary ICPs are hyperscalers/frontier labs, HPC institutions, sovereign and enterprise AI operators, and edge OEMs.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S07",
+      "text": "The most credible GTM sequence is lighthouse validation, design-in, reference deployment, and ecosystem replication.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S08",
+      "text": "Partners can create value through workload validation, system integration, deployment, and managed operations.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S09",
+      "text": "The evidence ledger contains 83 sourced claims, with uneven company coverage and limited independent proof.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-crn"
+      ]
+    },
+    {
+      "id": "NEW-S10",
+      "text": "The ten companies differ more by insertion point and readiness evidence than by a single accelerator-versus-GPU frame.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S11",
+      "text": "The compute cohort spans broad programmable platforms and highly specialized inference systems.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn"
+      ]
+    },
+    {
+      "id": "NEW-S12",
+      "text": "Axelera\u2019s differentiator combines edge-focused acceleration with an explicit partner network and more than $250 million of new funding.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-axelera"
+      ]
+    },
+    {
+      "id": "NEW-S13",
+      "text": "Tenstorrent\u2019s TT-Ascalon S expands its open compute strategy into branch-heavy agentic workloads.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-crn"
+      ]
+    },
+    {
+      "id": "NEW-S14",
+      "text": "NextSilicon says Maverick-2 uses runtime-reconfigurable dataflow and was available in product volumes in Q4 2025.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-nextsilicon"
+      ]
+    },
+    {
+      "id": "NEW-S15",
+      "text": "Fractile raised $220 million to accelerate its path toward first chips and systems for frontier-model inference.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-fractile"
+      ]
+    },
+    {
+      "id": "NEW-S16",
+      "text": "Etched\u2019s Sohu strategy is an extreme specialization bet on transformers remaining the dominant AI architecture.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-etched"
+      ]
+    },
+    {
+      "id": "NEW-S17",
+      "text": "d-Matrix announced Corsair full production in June 2026 after raising a $275 million Series C in late 2025.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-dmatrix-prod",
+        "src-dmatrix-fund"
+      ]
+    },
+    {
+      "id": "NEW-S18",
+      "text": "MatX raised a $500 million Series B to finish development and scale manufacturing, with tape-out planned in under a year.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-matx"
+      ]
+    },
+    {
+      "id": "NEW-S19",
+      "text": "Compute startups occupy different positions on workload breadth, programmability, and commercialization maturity.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-matx"
+      ]
+    },
+    {
+      "id": "NEW-S20",
+      "text": "The interconnect cohort competes on congestion, bandwidth density, power, and programmability.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S21",
+      "text": "Cornelis positions CN5000 Omni-Path as a lossless, interoperable fabric for AI and HPC workloads.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-cornelis-fund"
+      ]
+    },
+    {
+      "id": "NEW-S22",
+      "text": "Lightmatter says the Passage M1000 reference platform provides 114 Tbps of total optical bandwidth.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-lightmatter-prod",
+        "src-lightmatter-fund"
+      ]
+    },
+    {
+      "id": "NEW-S23",
+      "text": "Xsight announced X2 sampling as a fully programmable, low-power data-center switch for AI-factory networks.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S24",
+      "text": "Cornelis focuses on cluster fabric, Lightmatter on optical chip/package links, and Xsight on programmable switching silicon.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S25",
+      "text": "Commercial readiness requires evidence across workload proof, software, supply, reference customers, partners, and economics.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S26",
+      "text": "Distribution fit rises with product packaging, supply visibility, enablement, and support clarity.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S27",
+      "text": "SI fit rises when the startup exposes a deployable integration boundary and a repeatable customer outcome.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S28",
+      "text": "Orchestrator fit rises when partner coordination is essential to the product\u2019s adoption and scale.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S29",
+      "text": "Partner readiness varies by role and must be displayed with the next validation question.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ]
+    },
+    {
+      "id": "NEW-S30",
+      "text": "Business models with reusable software or IP leverage can scale differently from bespoke system and design-in models.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S31",
+      "text": "A three-company pilot with independent raters should precede organization-specific recommendations.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-etched",
+        "src-lightmatter-prod"
+      ]
+    },
+    {
+      "id": "NEW-S32",
+      "text": "The first 90 days should reduce uncertainty through bounded tests rather than make execution claims.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S33",
+      "text": "The most decision-relevant next events are tape-outs, volume ramps, production benchmarks, design wins, and ecosystem expansion.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S34",
+      "text": "Software, supply, independent benchmarks, customer concentration, and architecture durability are the central diligence risks.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod"
+      ]
+    },
+    {
+      "id": "NEW-S35",
+      "text": "A useful ledger links each company to its strongest anchor, decisive gap, and next validation action.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "NEW-S36",
+      "text": "A bottleneck-first watchlist is more useful than treating all ten companies as direct accelerator competitors.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover_mosaic",
+      "action_title": "Semiconductor Startups 2026",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S01"
+      ],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "new-s01-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Where partner value can compound across compute, inference, and interconnect",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Semiconductor Startups 2026"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "decision_dashboard",
+      "action_title": "Three moves emerge: activate deployable offers, validate complex wedges, monitor pre-scale bets",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S02"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "visual_ids": [
+        "new-s02-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Public evidence can prioritize validation questions by partner archetype without claiming organization-specific right-to-win.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Three moves emerge: activate deployable offers, validate complex wedges, monitor pre-scale bets"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "portfolio_posture",
+      "action_title": "Deployment evidence\u2014not architectural novelty\u2014drives the action posture",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S03"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s03-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "A staged portfolio prevents early technical promise from being mistaken for execution-ready partnership.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Deployment evidence\u2014not architectural novelty\u2014drives the action posture"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "thesis",
+      "action_title": "Market expansion creates room for new architectures\u2014but fragmentation creates the channel wedge",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S04"
+      ],
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s04-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The cohort\u2019s most plausible adoption paths complement existing infrastructure before displacing it.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Market expansion creates room for new architectures\u2014but fragmentation creates the channel wedge"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "business_system",
+      "action_title": "Four bottlenecks\u2014and four commercialization models\u2014shape the cohort",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S05"
+      ],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "new-s05-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The ten companies address edge deployment, compute architecture, inference economics, or scale-out connectivity.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Four bottlenecks\u2014and four commercialization models\u2014shape the cohort"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "icp_gtm_map",
+      "action_title": "Buyer pain\u2014not firmographics\u2014determines the ideal customer profile",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S06"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s06-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The cohort\u2019s primary ICPs are hyperscalers/frontier labs, HPC institutions, sovereign and enterprise AI operators, and edge OEMs.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Buyer pain\u2014not firmographics\u2014determines the ideal customer profile"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "gtm_flywheel",
+      "action_title": "The winning GTM motion converts lighthouse proof into an ecosystem repeat",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S07"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s07-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The most credible GTM sequence is lighthouse validation, design-in, reference deployment, and ecosystem replication.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "The winning GTM motion converts lighthouse proof into an ecosystem repeat"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "partner_value",
+      "action_title": "Partner value compounds where integration risk is highest",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S08"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s08-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Partners can create value through workload validation, system integration, deployment, and managed operations.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Partner value compounds where integration risk is highest"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "evidence_coverage",
+      "action_title": "The evidence is broad enough to screen\u2014and too vendor-led to declare winners",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S09"
+      ],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "new-s09-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The evidence ledger contains 83 sourced claims, with uneven company coverage and limited independent proof.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "The evidence is broad enough to screen\u2014and too vendor-led to declare winners"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "comparison",
+      "action_title": "Commercial maturity separates actionable platforms from architectural options",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S10"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s10-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The ten companies differ more by insertion point and readiness evidence than by a single accelerator-versus-GPU frame.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Commercial maturity separates actionable platforms from architectural options"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "section",
+      "action_title": "Compute challengers split between programmable breadth and workload-specific conviction",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S11"
+      ],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "new-s11-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The compute cohort spans broad programmable platforms and highly specialized inference systems.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Compute challengers split between programmable breadth and workload-specific conviction"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "company_strategy",
+      "action_title": "Axelera turns edge acceleration into a deployment ecosystem",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S12"
+      ],
+      "evidence_ids": [
+        "src-axelera"
+      ],
+      "visual_ids": [
+        "new-s12-native",
+        "new-s12-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Axelera\u2019s differentiator combines edge-focused acceleration with an explicit partner network and more than $250 million of new funding.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Axelera turns edge acceleration into a deployment ecosystem"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "company_strategy",
+      "action_title": "Tenstorrent attacks lock-in with a programmable system and licensable IP",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S13"
+      ],
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-crn"
+      ],
+      "visual_ids": [
+        "new-s13-native",
+        "new-s13-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Tenstorrent\u2019s TT-Ascalon S expands its open compute strategy into branch-heavy agentic workloads.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Tenstorrent attacks lock-in with a programmable system and licensable IP"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "company_strategy",
+      "action_title": "NextSilicon makes the accelerator adapt to code at runtime",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S14"
+      ],
+      "evidence_ids": [
+        "src-nextsilicon"
+      ],
+      "visual_ids": [
+        "new-s14-native",
+        "new-s14-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "NextSilicon says Maverick-2 uses runtime-reconfigurable dataflow and was available in product volumes in Q4 2025.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "NextSilicon makes the accelerator adapt to code at runtime"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "company_strategy",
+      "action_title": "Fractile is designing the full stack around exploding inference token demand",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S15"
+      ],
+      "evidence_ids": [
+        "src-fractile"
+      ],
+      "visual_ids": [
+        "new-s15-native",
+        "new-s15-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Fractile raised $220 million to accelerate its path toward first chips and systems for frontier-model inference.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Fractile is designing the full stack around exploding inference token demand"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 16,
+      "archetype": "company_strategy",
+      "action_title": "Etched trades generality for a transformer-only performance ceiling",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S16"
+      ],
+      "evidence_ids": [
+        "src-etched"
+      ],
+      "visual_ids": [
+        "new-s16-native",
+        "new-s16-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Etched\u2019s Sohu strategy is an extreme specialization bet on transformers remaining the dominant AI architecture.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Etched trades generality for a transformer-only performance ceiling"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 17,
+      "archetype": "company_strategy",
+      "action_title": "d-Matrix moves inference compute closer to memory\u2014and into production",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S17"
+      ],
+      "evidence_ids": [
+        "src-dmatrix-prod",
+        "src-dmatrix-fund"
+      ],
+      "visual_ids": [
+        "new-s17-native",
+        "new-s17-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "d-Matrix announced Corsair full production in June 2026 after raising a $275 million Series C in late 2025.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "d-Matrix moves inference compute closer to memory\u2014and into production"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 18,
+      "archetype": "company_strategy",
+      "action_title": "MatX designs the chip around LLM throughput and latency from first principles",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S18"
+      ],
+      "evidence_ids": [
+        "src-matx"
+      ],
+      "visual_ids": [
+        "new-s18-native",
+        "new-s18-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "MatX raised a $500 million Series B to finish development and scale manufacturing, with tape-out planned in under a year.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "MatX designs the chip around LLM throughput and latency from first principles"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 19,
+      "archetype": "comparison",
+      "action_title": "Specialization narrows the ICP while increasing the proof burden",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S19"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-matx"
+      ],
+      "visual_ids": [
+        "new-s19-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Compute startups occupy different positions on workload breadth, programmability, and commercialization maturity.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Specialization narrows the ICP while increasing the proof burden"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 20,
+      "archetype": "section",
+      "action_title": "Interconnect challengers create partner control points without replacing compute",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S20"
+      ],
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s20-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The interconnect cohort competes on congestion, bandwidth density, power, and programmability.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Interconnect challengers create partner control points without replacing compute"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 21,
+      "archetype": "company_strategy",
+      "action_title": "Cornelis reopens a scale-out fabric alternative for AI and HPC",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S21"
+      ],
+      "evidence_ids": [
+        "src-cornelis",
+        "src-cornelis-fund"
+      ],
+      "visual_ids": [
+        "new-s21-native",
+        "new-s21-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Cornelis positions CN5000 Omni-Path as a lossless, interoperable fabric for AI and HPC workloads.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Cornelis reopens a scale-out fabric alternative for AI and HPC"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 22,
+      "archetype": "company_strategy",
+      "action_title": "Lightmatter uses photonics to break the electrical I/O bottleneck",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S22"
+      ],
+      "evidence_ids": [
+        "src-lightmatter-prod",
+        "src-lightmatter-fund"
+      ],
+      "visual_ids": [
+        "new-s22-native",
+        "new-s22-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Lightmatter says the Passage M1000 reference platform provides 114 Tbps of total optical bandwidth.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Lightmatter uses photonics to break the electrical I/O bottleneck"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 23,
+      "archetype": "company_strategy",
+      "action_title": "Xsight makes programmable Ethernet silicon an AI-factory control point",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S23"
+      ],
+      "evidence_ids": [
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s23-native",
+        "new-s23-asset"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Xsight announced X2 sampling as a fully programmable, low-power data-center switch for AI-factory networks.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Xsight makes programmable Ethernet silicon an AI-factory control point"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 24,
+      "archetype": "comparison",
+      "action_title": "The three interconnect plays solve different layers of the same scaling problem",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S24"
+      ],
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s24-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Cornelis focuses on cluster fabric, Lightmatter on optical chip/package links, and Xsight on programmable switching silicon.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "The three interconnect plays solve different layers of the same scaling problem"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 25,
+      "archetype": "gtm-scorecard",
+      "action_title": "Six hard gates determine whether a partner motion is credible",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S25"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s25-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Commercial readiness requires evidence across workload proof, software, supply, reference customers, partners, and economics.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Six hard gates determine whether a partner motion is credible"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 26,
+      "archetype": "comparison",
+      "action_title": "Distributor fit favors packageable offers with bounded support",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S26"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s26-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Distribution fit rises with product packaging, supply visibility, enablement, and support clarity.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Distributor fit favors packageable offers with bounded support"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 27,
+      "archetype": "comparison",
+      "action_title": "SI fit favors deployable systems with reusable integration",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S27"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s27-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "SI fit rises when the startup exposes a deployable integration boundary and a repeatable customer outcome.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "SI fit favors deployable systems with reusable integration"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 28,
+      "archetype": "comparison",
+      "action_title": "Ecosystem fit favors platforms that coordinate scarce complements",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S28"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s28-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Orchestrator fit rises when partner coordination is essential to the product\u2019s adoption and scale.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Ecosystem fit favors platforms that coordinate scarce complements"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 29,
+      "archetype": "partner_heatmap",
+      "action_title": "One heatmap shows the role-specific portfolio\u2014not a universal ranking",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S29"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ],
+      "visual_ids": [
+        "new-s29-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Partner readiness varies by role and must be displayed with the next validation question.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "One heatmap shows the role-specific portfolio\u2014not a universal ranking"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 30,
+      "archetype": "economics",
+      "action_title": "Unit economics differ by where the partner controls value",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S30"
+      ],
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s30-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Business models with reusable software or IP leverage can scale differently from bespoke system and design-in models.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Unit economics differ by where the partner controls value"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 31,
+      "archetype": "phase0",
+      "action_title": "Calibrate the model on three deliberately different archetypes",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S31"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-etched",
+        "src-lightmatter-prod"
+      ],
+      "visual_ids": [
+        "new-s31-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "A three-company pilot with independent raters should precede organization-specific recommendations.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Calibrate the model on three deliberately different archetypes"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 32,
+      "archetype": "roadmap",
+      "action_title": "The first 90 days should buy evidence, not commitments",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S32"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s32-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The first 90 days should reduce uncertainty through bounded tests rather than make execution claims.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "The first 90 days should buy evidence, not commitments"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 33,
+      "archetype": "watchlist",
+      "action_title": "Quarterly triggers\u2014not narrative momentum\u2014should change posture",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S33"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s33-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The most decision-relevant next events are tape-outs, volume ramps, production benchmarks, design wins, and ecosystem expansion.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Quarterly triggers\u2014not narrative momentum\u2014should change posture"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 34,
+      "archetype": "risks",
+      "action_title": "Five kill criteria stop technically impressive but non-deployable bets",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S34"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod"
+      ],
+      "visual_ids": [
+        "new-s34-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Software, supply, independent benchmarks, customer concentration, and architecture durability are the central diligence risks.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Five kill criteria stop technically impressive but non-deployable bets"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 35,
+      "archetype": "comparison",
+      "action_title": "The evidence ledger exposes exactly what must be learned next",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S35"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "new-s35-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "A useful ledger links each company to its strongest anchor, decisive gap, and next validation action.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "The evidence ledger exposes exactly what must be learned next"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 36,
+      "archetype": "conclusion",
+      "action_title": "Select validation priorities now\u2014and reserve partnership decisions for calibrated evidence",
+      "audience_job": "Decide the posture, proof requirement, or next action.",
+      "claim_ids": [
+        "NEW-S36"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "visual_ids": [
+        "new-s36-native"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "A bottleneck-first watchlist is more useful than treating all ten companies as direct accelerator competitors.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "main visual",
+          "supporting evidence",
+          "citation"
+        ],
+        "visual_alt_text": "Select validation priorities now\u2014and reserve partnership decisions for calibrated evidence"
+      },
+      "status": "reviewed"
+    }
+  ]
+}

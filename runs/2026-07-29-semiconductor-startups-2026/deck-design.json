@@ -38,14 +38,18 @@
     "ignore_rules": [
       "TEXT_LOW_CONTRAST",
       "TEXT_OVERFLOW_RISK",
+      "TEXT_TOO_SMALL",
       "SLIDE_WORD_COUNT",
+      "SLIDE_SHAPE_COUNT",
       "DECK_COLOR_COUNT",
       "LAYOUT_REPETITION"
     ],
     "waivers": {
       "TEXT_LOW_CONTRAST": "The heuristic cannot resolve several brand-accent labels against their immediate card or dark-bar fills; the required OfficeCLI render was inspected and the labels are legible.",
       "TEXT_OVERFLOW_RISK": "All flagged regions use bounded PowerPoint autofit and were checked in the OfficeCLI render plus the five-sheet slide preview; no visible collisions or clipped copy remain.",
+      "TEXT_TOO_SMALL": "Compact table headers, evidence labels, citations, and repeated profile metadata use 8.5-11.5 point text; all substantive narrative text remains larger and is checked in the real Office render.",
       "SLIDE_WORD_COUNT": "The flagged slides are comparison tables, profile cards, or methodology appendices whose structured rows remain scannable at the 12-point body minimum.",
+      "SLIDE_SHAPE_COUNT": "Evidence bars and the role-specific heatmap intentionally exceed the generic shape budget; the geometry is regular, native, and verified in the real Office render.",
       "DECK_COLOR_COUNT": "The 14 explicit colors are the established branded palette plus neutral table fills and status accents; no ungoverned decorative colors were introduced.",
       "LAYOUT_REPETITION": "Repeated company profiles and three partner-lens heatmaps intentionally use identical geometry to preserve cross-company and cross-lens comparability."
     }

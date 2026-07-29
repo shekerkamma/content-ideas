@@ -11,6 +11,8 @@
 7. Require a validated visual specification before rendering PowerPoint.
 8. Promote a deck to `reviewed` only after editable-text, real-render, and OfficeCLI QA.
 9. Generate the final response from the delivery manifest, status, and sync check.
+10. When the request is a rework or redesign, prove material visible change against the
+    prior PPTX; a pipeline-only rebuild is not a redesigned deliverable.
 
 ## Stage Handoffs
 
@@ -20,7 +22,7 @@
 | AI Analyst | Story | Evidence ledger, metric definitions, data-quality report, scoring model, brief, and allowed numbers |
 | Story | Visual/build | BLUF, assertion-title spine, evidence map, promoted datapoints, content cuts, and traceability |
 | Visual/build | QA | Draft PPTX, builder source, visual spec, standalone HTML, visible text, and asset attribution |
-| QA | Delivery | Reviewed editable PPTX, browser-tested HTML, manifest, sync check, and explicit artifact status |
+| QA | Delivery | Reviewed editable PPTX, material-change report when applicable, browser-tested HTML, manifest, sync check, and explicit artifact status |
 
 ## Gate Waivers
 

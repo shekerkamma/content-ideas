@@ -1,0 +1,2856 @@
+{
+  "contract_version": "1.0",
+  "file": "runs/2026-07-29-semiconductor-startups-2026/client-package/semiconductor-startups-2026-evidence-led-strategy-draft.pptx",
+  "fast": false,
+  "status": "clean",
+  "counts": {
+    "error": 0,
+    "warning": 0,
+    "ignored": 406
+  },
+  "findings": [],
+  "ignored_findings": [
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 1,
+      "shape": "TextBox 4"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.25:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 3,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 3,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 3,
+      "shape": "TextBox 22"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 3,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 3,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.97:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.61:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 4,
+      "shape": "TextBox 18"
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "44 shapes exceed the configured maximum 42.",
+      "slide": 5,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.25:1 is below 4.5:1.",
+      "slide": 5,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 29"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 31"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 33"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 35"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 5,
+      "shape": "TextBox 35"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 37"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 39"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 41"
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "44 shapes exceed the configured maximum 42.",
+      "slide": 6,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 29"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 31"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 33"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 35"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 37"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 39"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.3pt text is below the 12pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 41"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.25:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 8,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 4.49:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 14"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 4.36:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 18"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "64 shapes exceed the configured maximum 42.",
+      "slide": 9,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.97:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.61:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.25:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 22"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 29"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 30"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 33"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 34"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 37"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 38"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 41"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 42"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 45"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 46"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 49"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 50"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 53"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 54"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 57"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 58"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.8pt text is below the 12pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 61"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "114 words exceed the configured maximum 100.",
+      "slide": 10,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 13,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 13,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 13,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 13,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 13,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 13,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 13,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 13,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 14,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 14,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 14,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 14,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 14,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 14,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 14,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 14,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 15,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 15,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 15,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 15,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 15,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 15,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 15,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 15,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 16,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 16,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 16,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 16,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 16,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 16,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 16,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 16,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 17,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 17,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 17,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 17,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 17,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 17,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 17,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 17,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 18,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 18,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 18,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 18,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 18,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 18,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 18,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 18,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 19,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 21,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 21,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 21,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 21,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 21,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 21,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 21,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 21,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 22,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 22,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 22,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 22,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 22,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 22,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 22,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 22,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 23,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 23,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 23,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 23,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 23,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 23,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.34:1 is below 4.5:1.",
+      "slide": 23,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 23,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 24,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 25,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 25,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 25,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 25,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 25,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 25,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 25,
+      "shape": "TextBox 28"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 26,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "128 words exceed the configured maximum 100.",
+      "slide": 26,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 27,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "126 words exceed the configured maximum 100.",
+      "slide": 27,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 28,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "128 words exceed the configured maximum 100.",
+      "slide": 28,
+      "shape": null
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "118 shapes exceed the configured maximum 42.",
+      "slide": 29,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 29,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.8pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.8pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.8pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.8pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.8pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 29"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 31"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 33"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 35"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 37"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 39"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 41"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 43"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 45"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 47"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 49"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 29,
+      "shape": "TextBox 49"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 51"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 53"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 55"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 57"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 59"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 29,
+      "shape": "TextBox 59"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 61"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 63"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 65"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 67"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 69"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 71"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 73"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 75"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 77"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 79"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 29,
+      "shape": "TextBox 79"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 81"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 29,
+      "shape": "TextBox 81"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 83"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 85"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 87"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 89"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 91"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 93"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 95"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 97"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 99"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 101"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 103"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 105"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 107"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 109"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 111"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 113"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "8.69pt text is below the 12pt minimum.",
+      "slide": 29,
+      "shape": "TextBox 115"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "116 words exceed the configured maximum 100.",
+      "slide": 29,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.25:1 is below 4.5:1.",
+      "slide": 30,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.25:1 is below 4.5:1.",
+      "slide": 31,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 31,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 31,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 12pt minimum.",
+      "slide": 31,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 31,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 31,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 31,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 12pt minimum.",
+      "slide": 31,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 31,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 31,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 12pt minimum.",
+      "slide": 31,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 32,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 32,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 32,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 4.36:1 is below 4.5:1.",
+      "slide": 32,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.25:1 is below 4.5:1.",
+      "slide": 33,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 33,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 18"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11.5pt text is below the 12pt minimum.",
+      "slide": 33,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 14"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 18"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.73:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 22"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 34,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.49:1 is below 4.5:1.",
+      "slide": 35,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "113 words exceed the configured maximum 100.",
+      "slide": 35,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 36,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 36,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 12pt minimum.",
+      "slide": 36,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 4.36:1 is below 4.5:1.",
+      "slide": 36,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "DECK_COLOR_COUNT",
+      "severity": "warning",
+      "message": "14 explicit colors exceed the configured maximum 10.",
+      "slide": null,
+      "shape": null
+    },
+    {
+      "rule_id": "LAYOUT_REPETITION",
+      "severity": "warning",
+      "message": "Slides 12-18 repeat the same layout 7 times; configured maximum is 2.",
+      "slide": 12,
+      "shape": null
+    },
+    {
+      "rule_id": "LAYOUT_REPETITION",
+      "severity": "warning",
+      "message": "Slides 21-23 repeat the same layout 3 times; configured maximum is 2.",
+      "slide": 21,
+      "shape": null
+    },
+    {
+      "rule_id": "LAYOUT_REPETITION",
+      "severity": "warning",
+      "message": "Slides 26-28 repeat the same layout 3 times; configured maximum is 2.",
+      "slide": 26,
+      "shape": null
+    }
+  ]
+}

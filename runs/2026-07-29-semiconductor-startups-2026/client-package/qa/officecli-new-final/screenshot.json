@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-29-semiconductor-startups-2026/client-package/semiconductor-startups-2026-evidence-led-strategy-draft.pptx",
+    "screenshot",
+    "-o",
+    "runs/2026-07-29-semiconductor-startups-2026/client-package/qa/officecli-new-final/render/semiconductor-startups-2026-evidence-led-strategy-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026/client-package/qa/officecli-new-final/render/semiconductor-startups-2026-evidence-led-strategy-draft.png\n",
+  "stderr": "[pages] total=36\n"
+}

@@ -91,7 +91,23 @@ invent or reinterpret evidence.
    `outputs/sync-check.md` and `client-package/delivery-manifest.json`. Copy to a
    `*-reviewed.pptx` only after all required gates pass.
 
-9. **Close the loop.**
+9. **Prove material change when a redesign was requested.**
+   A successful rebuild is not proof of a successful redesign. Compare the previous and
+   candidate PPTX with `scripts/compare_pptx.py`. When the user asked to rework, redesign,
+   improve, or create a new deck from an existing one, require visible slide-level change:
+
+   ```bash
+   python3 skills/evidence-led-competitor-pipeline/scripts/compare_pptx.py \
+     <previous.pptx> <candidate.pptx> \
+     --require-material \
+     --json-out <run>/client-package/qa/material-change.json
+   ```
+
+   Report slide-count change, same-position full-text matches, identical slide text found
+   anywhere, changed slide positions, and editable-text-shape counts. A deck that only
+   changes shared geometry, headers, metadata, or pipeline artifacts fails this gate.
+
+10. **Close the loop.**
    Record reusable corrections in `outputs/run-learnings.md`, update the skill when the
    correction generalizes, and write durable findings back to GBrain when available.
 
@@ -153,6 +169,7 @@ Stop promotion to `reviewed` when:
 - visible numbers are absent from `allowed-numbers.yaml`;
 - the story pack does not map slides to evidence, scores, or labeled interpretation;
 - the final deck is image-only or has zero editable text shapes;
+- a requested rework/redesign has no material visible slide-level change;
 - PPTX OfficeCLI/render QA is missing;
 - HTML is missing, broken, or out of sync with the deck;
 - the manifest or `status.json` disagrees with the actual files.

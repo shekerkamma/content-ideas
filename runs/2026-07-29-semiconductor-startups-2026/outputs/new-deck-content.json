@@ -1,0 +1,1684 @@
+{
+  "sources": [
+    {
+      "id": "src-crn",
+      "title": "CRN \u2014 The 10 Coolest Semiconductor Startups Of 2026 (So Far)",
+      "path": "https://www.crn.com/news/computing/2026/the-10-coolest-semiconductor-startups-of-2026-so-far",
+      "date": "2026-07-15",
+      "note": "Defines the ten-company cohort and reports selected funding context."
+    },
+    {
+      "id": "src-gartner",
+      "title": "Gartner \u2014 Semiconductor revenue to exceed $1.3 trillion in 2026",
+      "path": "https://www.gartner.com/en/newsroom/press-releases/2026-04-08-gartner-forecasts-worldwide-semiconductor-revenue-to-exceed-us-dollars-one-point-3-trillion-in-2026",
+      "date": "2026-04-08",
+      "note": "Market-size and growth context."
+    },
+    {
+      "id": "src-axelera",
+      "title": "Axelera AI \u2014 More than $250 million funding",
+      "path": "https://axelera.ai/news/axelera-ai-secures-more-than-250-million-funding-on-global-commercial-growth",
+      "date": "2026-02-24",
+      "note": "Funding, product scope, and Partner Accelerator Network."
+    },
+    {
+      "id": "src-tenstorrent",
+      "title": "Tenstorrent \u2014 TT-Ascalon S launch",
+      "path": "https://tenstorrent.com/newsroom/tenstorrent-sets-new-performance-records-launches-tt--ascalon-s",
+      "date": "2026-06-30",
+      "note": "RISC-V CPU IP, AI systems, and agentic-AI positioning."
+    },
+    {
+      "id": "src-nextsilicon",
+      "title": "NextSilicon \u2014 Maverick-2 product disclosure",
+      "path": "https://www.nextsilicon.com/insights/nextsilicon-breakthrough/",
+      "date": "2025-10-22",
+      "note": "Architecture, availability, funding, and vendor benchmark claims."
+    },
+    {
+      "id": "src-fractile",
+      "title": "Fractile \u2014 $220 million financing",
+      "path": "https://www.fractile.ai/news/fractile-raises-220m-to-build-the-next-generation-of-inference-hardware",
+      "date": "2026",
+      "note": "Funding and full-stack inference-hardware strategy."
+    },
+    {
+      "id": "src-etched",
+      "title": "Etched \u2014 Sohu transformer ASIC and progress",
+      "path": "https://www.etched.com/progress",
+      "date": "2026-07",
+      "note": "Current financing milestone and transformer-specialized platform."
+    },
+    {
+      "id": "src-dmatrix-prod",
+      "title": "d-Matrix \u2014 Corsair enters full production",
+      "path": "https://www.d-matrix.ai/announcements/d-matrix-corsair-ai-inference-platform-enters-full-production-to-meet-customer-demand/",
+      "date": "2026-06-09",
+      "note": "Production status and inference-system positioning."
+    },
+    {
+      "id": "src-dmatrix-fund",
+      "title": "d-Matrix \u2014 $275 million Series C",
+      "path": "https://www.d-matrix.ai/announcements/d-matrix-raises-275-million-to-power-the-age-of-ai-inference/",
+      "date": "2025-11-12",
+      "note": "Series C, valuation, total capital, and platform description."
+    },
+    {
+      "id": "src-cornelis",
+      "title": "Cornelis Networks \u2014 CN5000 Omni-Path platform",
+      "path": "https://www.cornelis.com/",
+      "date": "2026",
+      "note": "Commercial AI/HPC interconnect portfolio."
+    },
+    {
+      "id": "src-cornelis-fund",
+      "title": "Cornelis Networks \u2014 $29 million Series B",
+      "path": "https://www.cornelis.com/stories/cornelis-networks-announces-29m-series-b-funding-round",
+      "date": "2024",
+      "note": "Funding and product-roadmap context."
+    },
+    {
+      "id": "src-lightmatter-prod",
+      "title": "Lightmatter \u2014 Passage M1000 photonic superchip",
+      "path": "https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/",
+      "date": "2025",
+      "note": "114 Tbps reference platform and production partners."
+    },
+    {
+      "id": "src-lightmatter-fund",
+      "title": "Lightmatter \u2014 $400 million Series D",
+      "path": "https://lightmatter.co/press-release/lightmatter-raises-400m-series-d-quadruples-valuation-to-4-4b-as-photonics-leader-for-next-gen-ai-data-centers/",
+      "date": "2024-10-16",
+      "note": "$400 million Series D, $4.4 billion valuation, $850 million total."
+    },
+    {
+      "id": "src-matx",
+      "title": "MatX \u2014 MatX One and $500 million Series B",
+      "path": "https://matx.com/research/series_b",
+      "date": "2026-02-24",
+      "note": "Funding, tape-out plan, and LLM-specific architecture."
+    },
+    {
+      "id": "src-xsight",
+      "title": "Xsight Labs \u2014 X2 programmable Ethernet switches",
+      "path": "https://xsightlabs.com/newsroom/announcements/xsight-labs-announces-x2-programmable-sdn-ethernet-switches-for-hyperscale-and-edge-data-centers-optimized-for-the-ai-factory-era",
+      "date": "2025",
+      "note": "X2 availability, programmability, and AI-factory positioning."
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "layout": "cover_mosaic",
+      "kicker": "SEMICONDUCTOR STARTUP LANDSCAPE \u00b7 JULY 2026",
+      "title": "Semiconductor Startups 2026",
+      "subtitle": "Where partner value can compound across compute, inference, and interconnect",
+      "claim": null,
+      "kind": "interpretation",
+      "evidence": [
+        "src-crn"
+      ],
+      "citation": "Based on CRN\u2019s July 15, 2026 cohort; research updated through July 29, 2026.",
+      "strapline": "10 companies  \u00b7  4 infrastructure wedges  \u00b7  3 partner roles"
+    },
+    {
+      "id": 2,
+      "layout": "decision_dashboard",
+      "kicker": "EXECUTIVE SUMMARY",
+      "title": "Three moves emerge: activate deployable offers, validate complex wedges, monitor pre-scale bets",
+      "subtitle": "The decision is a portfolio of bounded actions\u2014not a universal winner ranking.",
+      "claim": "Public evidence can prioritize validation questions by partner archetype without claiming organization-specific right-to-win.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "citation": "CRN; Gartner; company announcements.",
+      "columns": [
+        {
+          "label": "ACT NOW",
+          "text": "Validate production-ready offers where software, supply, and deployment evidence are already visible."
+        },
+        {
+          "label": "VALIDATE NEXT",
+          "text": "Test technically compelling platforms whose partner motion depends on workload or ecosystem proof."
+        },
+        {
+          "label": "MONITOR",
+          "text": "Track pre-scale bets until tape-out, availability, and reference-customer evidence improve."
+        }
+      ],
+      "takeaway": "Scope: CRN\u2019s ten-company closed cohort; candidate archetype-readiness judgments, not an exhaustive market ranking."
+    },
+    {
+      "layout": "portfolio_posture",
+      "kicker": "PORTFOLIO ANSWER",
+      "title": "Deployment evidence\u2014not architectural novelty\u2014drives the action posture",
+      "subtitle": "Commercial stage and partner boundaries determine what can be tested now.",
+      "claim": "A staged portfolio prevents early technical promise from being mistaken for execution-ready partnership.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "Candidate public-evidence posture; requires Phase 0 calibration.",
+      "headers": [
+        "POSTURE",
+        "CANDIDATES",
+        "WHY",
+        "VALIDATE BEFORE CHANGE"
+      ],
+      "rows": [
+        [
+          "ACT NOW",
+          "Axelera AI \u00b7 d-Matrix \u00b7 Cornelis",
+          "Deployable offer + visible ecosystem",
+          "Partner economics and repeatability"
+        ],
+        [
+          "VALIDATE NEXT",
+          "Tenstorrent \u00b7 NextSilicon \u00b7 Lightmatter \u00b7 Xsight",
+          "Strong wedge; motion-specific gaps",
+          "Software, design-in, and operating proof"
+        ],
+        [
+          "MONITOR",
+          "Fractile \u00b7 Etched \u00b7 MatX",
+          "High potential; earlier commercialization",
+          "Tape-out, availability, references"
+        ]
+      ],
+      "id": 3
+    },
+    {
+      "id": 4,
+      "layout": "thesis",
+      "kicker": "WHY NOW",
+      "title": "Market expansion creates room for new architectures\u2014but fragmentation creates the channel wedge",
+      "subtitle": "The opportunity is to make heterogeneous infrastructure adoptable, supportable, and repeatable.",
+      "claim": "The cohort\u2019s most plausible adoption paths complement existing infrastructure before displacing it.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ],
+      "citation": "Tenstorrent; d-Matrix; Cornelis; Lightmatter; Xsight Labs.",
+      "arrows": [
+        {
+          "label": "LAND",
+          "text": "Solve one painful workload or link bottleneck"
+        },
+        {
+          "label": "INTEGRATE",
+          "text": "Coexist with GPUs, CPUs, fabrics, and cloud workflows"
+        },
+        {
+          "label": "EXPAND",
+          "text": "Broaden the system footprint after software and supply prove out"
+        }
+      ],
+      "takeaway": "This favors partners that can provide integration, validation, deployment, and customer access\u2014not just component resale."
+    },
+    {
+      "id": 5,
+      "layout": "business_system",
+      "kicker": "MARKET + BUSINESS MODEL",
+      "title": "Four bottlenecks\u2014and four commercialization models\u2014shape the cohort",
+      "subtitle": "Insertion point determines the buyer, sales clock, and partner value pool.",
+      "claim": "The ten companies address edge deployment, compute architecture, inference economics, or scale-out connectivity.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-crn"
+      ],
+      "citation": "CRN; company product pages.",
+      "lanes": [
+        {
+          "label": "EDGE DEPLOYMENT",
+          "companies": "Axelera AI",
+          "note": "Efficient inference + partner ecosystem"
+        },
+        {
+          "label": "ADAPTABLE COMPUTE",
+          "companies": "Tenstorrent \u00b7 NextSilicon",
+          "note": "RISC-V/IP and runtime-reconfigurable dataflow"
+        },
+        {
+          "label": "INFERENCE SPECIALISTS",
+          "companies": "Fractile \u00b7 Etched \u00b7 d-Matrix \u00b7 MatX",
+          "note": "Workload-specific latency, throughput, and memory"
+        },
+        {
+          "label": "INTERCONNECT",
+          "companies": "Cornelis \u00b7 Lightmatter \u00b7 Xsight",
+          "note": "Scale-out fabrics, photonics, and programmable Ethernet"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "layout": "icp_gtm_map",
+      "kicker": "ICP + BUYING TRIGGERS",
+      "title": "Buyer pain\u2014not firmographics\u2014determines the ideal customer profile",
+      "subtitle": "Each workload has a distinct proof threshold and route to production.",
+      "claim": "The cohort\u2019s primary ICPs are hyperscalers/frontier labs, HPC institutions, sovereign and enterprise AI operators, and edge OEMs.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "citation": "ICP synthesis from company-stated target workloads and deployment models.",
+      "icps": [
+        {
+          "label": "HYPERSCALERS + FRONTIER LABS",
+          "need": "Inference economics, bandwidth density, custom scale",
+          "companies": "d-Matrix \u00b7 Etched \u00b7 MatX \u00b7 Lightmatter \u00b7 Xsight"
+        },
+        {
+          "label": "HPC + RESEARCH",
+          "need": "Irregular workloads, predictable fabrics, energy efficiency",
+          "companies": "NextSilicon \u00b7 Cornelis \u00b7 Tenstorrent"
+        },
+        {
+          "label": "SOVEREIGN + ENTERPRISE AI",
+          "need": "Control, programmability, deployment support",
+          "companies": "Tenstorrent \u00b7 d-Matrix \u00b7 Axelera"
+        },
+        {
+          "label": "EDGE OEMs + SOLUTION BUILDERS",
+          "need": "Low power, compact form factor, fast integration",
+          "companies": "Axelera AI \u00b7 selected Tenstorrent systems"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "layout": "gtm_flywheel",
+      "kicker": "GO-TO-MARKET",
+      "title": "The winning GTM motion converts lighthouse proof into an ecosystem repeat",
+      "subtitle": "Benchmark credibility must become a reference offer, operating model, and replication channel.",
+      "claim": "The most credible GTM sequence is lighthouse validation, design-in, reference deployment, and ecosystem replication.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "citation": "GTM synthesis from company availability, partner, and deployment evidence.",
+      "motions": [
+        {
+          "n": "01",
+          "label": "LIGHTHOUSE",
+          "text": "Co-develop on a painful workload with a technically credible buyer."
+        },
+        {
+          "n": "02",
+          "label": "DESIGN-IN",
+          "text": "Secure software, board, package, network, and supply-chain integration."
+        },
+        {
+          "n": "03",
+          "label": "REFERENCE",
+          "text": "Publish repeatable architecture, benchmark method, and operating model."
+        },
+        {
+          "n": "04",
+          "label": "REPLICATE",
+          "text": "Scale through OEM, cloud, integrator, and software ecosystem partners."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "layout": "partner_value",
+      "kicker": "PARTNER VALUE",
+      "title": "Partner value compounds where integration risk is highest",
+      "subtitle": "The partner earns control by reducing risk across proof, packaging, deployment, and operations.",
+      "claim": "Partners can create value through workload validation, system integration, deployment, and managed operations.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "citation": "Implications derived from company go-to-market and product evidence.",
+      "plays": [
+        {
+          "label": "VALIDATE",
+          "text": "Benchmark target workloads with transparent methods and incumbent baselines."
+        },
+        {
+          "label": "INTEGRATE",
+          "text": "Package silicon with servers, networking, software, orchestration, and support."
+        },
+        {
+          "label": "DEPLOY",
+          "text": "Build repeatable reference architectures for edge, inference, HPC, and AI fabrics."
+        },
+        {
+          "label": "OPERATE",
+          "text": "Provide observability, lifecycle management, and workload migration services."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "layout": "evidence_coverage",
+      "kicker": "EVIDENCE QUALITY",
+      "title": "The evidence is broad enough to screen\u2014and too vendor-led to declare winners",
+      "subtitle": "Coverage supports directional portfolio choices; independent customer, benchmark, and economics proof remains sparse.",
+      "claim": "The evidence ledger contains 83 sourced claims, with uneven company coverage and limited independent proof.",
+      "kind": "fact",
+      "evidence": [
+        "src-crn"
+      ],
+      "citation": "Evidence ledger and data-quality report; retrieved through Jul. 29, 2026.",
+      "kpis": [
+        [
+          "83",
+          "SOURCED CLAIMS",
+          "Complete closed-cohort ledger"
+        ],
+        [
+          "16",
+          "NUMERIC ROWS",
+          "Funding, stage, and specifications"
+        ],
+        [
+          "30",
+          "HIGH CONFIDENCE",
+          "Specific attributable disclosures"
+        ],
+        [
+          "53",
+          "MEDIUM CONFIDENCE",
+          "Directional or vendor-led evidence"
+        ]
+      ],
+      "coverage": [
+        [
+          "Axelera AI",
+          13
+        ],
+        [
+          "Tenstorrent",
+          8
+        ],
+        [
+          "Cornelis",
+          7
+        ],
+        [
+          "NextSilicon",
+          5
+        ],
+        [
+          "Fractile",
+          5
+        ],
+        [
+          "Etched",
+          5
+        ],
+        [
+          "d-Matrix",
+          5
+        ],
+        [
+          "MatX",
+          5
+        ],
+        [
+          "Lightmatter",
+          5
+        ],
+        [
+          "Xsight Labs",
+          5
+        ]
+      ]
+    },
+    {
+      "layout": "comparison",
+      "kicker": "COMMERCIAL MATURITY",
+      "title": "Commercial maturity separates actionable platforms from architectural options",
+      "subtitle": "The cohort spans shipping systems, design-in components, samples, and pre-scale architectures.",
+      "claim": "The ten companies differ more by insertion point and readiness evidence than by a single accelerator-versus-GPU frame.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "CRN; official company product and financing announcements.",
+      "headers": [
+        "COMPANY",
+        "WEDGE",
+        "PUBLIC STAGE SIGNAL",
+        "LIKELY ENTRY MOTION"
+      ],
+      "rows": [
+        [
+          "Axelera AI",
+          "Edge deployment",
+          "Shipping platform",
+          "Partner-led ecosystem"
+        ],
+        [
+          "Tenstorrent",
+          "Open compute",
+          "Products + IP",
+          "Direct + licensing"
+        ],
+        [
+          "NextSilicon",
+          "Adaptive dataflow",
+          "Product-volume claim",
+          "HPC design-in"
+        ],
+        [
+          "Fractile",
+          "Frontier inference",
+          "Pre-scale",
+          "Lighthouse co-development"
+        ],
+        [
+          "Etched",
+          "Transformer ASIC",
+          "Pre-scale",
+          "Hyperscale design-in"
+        ],
+        [
+          "d-Matrix",
+          "In-memory inference",
+          "Full production",
+          "System validation"
+        ],
+        [
+          "MatX",
+          "LLM accelerator",
+          "Pre-tape-out",
+          "Frontier-lab co-design"
+        ],
+        [
+          "Cornelis",
+          "Cluster fabric",
+          "Commercial portfolio",
+          "HPC integration"
+        ],
+        [
+          "Lightmatter",
+          "Photonic I/O",
+          "Reference platform",
+          "Packaging ecosystem"
+        ],
+        [
+          "Xsight Labs",
+          "Ethernet silicon",
+          "Customer sampling",
+          "NOS/OEM design-in"
+        ]
+      ],
+      "id": 10
+    },
+    {
+      "id": 11,
+      "layout": "section",
+      "kicker": "SECTION 01 \u00b7 COMPUTE",
+      "title": "Compute challengers split between programmable breadth and workload-specific conviction",
+      "subtitle": "The partner question is whether software and supply can make the architecture deployable.",
+      "claim": "The compute cohort spans broad programmable platforms and highly specialized inference systems.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-crn"
+      ],
+      "citation": "CRN cohort taxonomy."
+    },
+    {
+      "id": 12,
+      "layout": "company_strategy",
+      "company": "AXELERA AI",
+      "title": "Axelera turns edge acceleration into a deployment ecosystem",
+      "subtitle": "Efficient AI hardware is paired with software, systems, and a partner-led route to production.",
+      "claim": "Axelera\u2019s differentiator combines edge-focused acceleration with an explicit partner network and more than $250 million of new funding.",
+      "kind": "fact",
+      "evidence": [
+        "src-axelera"
+      ],
+      "citation": "Axelera AI, Feb. 24, 2026.",
+      "profile": {
+        "WEDGE": "Purpose-built inference for computer vision and generative AI from edge systems toward data centers.",
+        "PROOF": "More than $250M raised in 2026; Metis platform shipping and broader manufacturing scale planned.",
+        "INSERTION": "Partner Accelerator Network links software vendors, model makers, integrators, and solution providers.",
+        "RISK": "Must translate funding and partner breadth into repeatable deployments and supply scale."
+      },
+      "tag": "EDGE + ECOSYSTEM",
+      "business_model": "Chip + edge platform",
+      "icp": "Edge OEMs and solution builders",
+      "gtm": "Partner-led deployment",
+      "partner_move": "Build a vertical reference offer",
+      "confidence": "HIGH / MEDIUM"
+    },
+    {
+      "id": 13,
+      "layout": "company_strategy",
+      "company": "TENSTORRENT",
+      "title": "Tenstorrent attacks lock-in with a programmable system and licensable IP",
+      "subtitle": "Its portfolio spans AI processors, Galaxy systems, Tensix cores, and high-performance RISC-V.",
+      "claim": "Tenstorrent\u2019s TT-Ascalon S expands its open compute strategy into branch-heavy agentic workloads.",
+      "kind": "fact",
+      "evidence": [
+        "src-tenstorrent",
+        "src-crn"
+      ],
+      "citation": "Tenstorrent, Jun. 30, 2026; CRN.",
+      "profile": {
+        "WEDGE": "Open, programmable AI compute plus RISC-V CPU IP rather than a closed accelerator-only product.",
+        "PROOF": "TT-Ascalon S launched in June 2026; CRN reports more than $1B raised and global operations.",
+        "INSERTION": "Sell systems, license CPU/AI cores, or deploy beside GPUs in sovereign and enterprise infrastructure.",
+        "RISK": "Software maturity and ecosystem adoption must keep pace with a broad hardware portfolio."
+      },
+      "tag": "OPEN COMPUTE",
+      "business_model": "Systems + licensable IP",
+      "icp": "Sovereign AI, enterprise, developers",
+      "gtm": "Direct systems + licensing",
+      "partner_move": "Choose the system or IP motion",
+      "confidence": "HIGH / MEDIUM"
+    },
+    {
+      "id": 14,
+      "layout": "company_strategy",
+      "company": "NEXTSILICON",
+      "title": "NextSilicon makes the accelerator adapt to code at runtime",
+      "subtitle": "Maverick-2 targets irregular HPC and AI workloads without forcing application rewrites.",
+      "claim": "NextSilicon says Maverick-2 uses runtime-reconfigurable dataflow and was available in product volumes in Q4 2025.",
+      "kind": "fact",
+      "evidence": [
+        "src-nextsilicon"
+      ],
+      "citation": "NextSilicon, Oct. 22, 2025. Performance figures are vendor claims.",
+      "profile": {
+        "WEDGE": "A software-learning Intelligent Compute Architecture dynamically configures dataflow hardware.",
+        "PROOF": "$303M reported funding; product-volume availability and partner deployments announced.",
+        "INSERTION": "Algorithmically complex HPC, AI, and vector workloads using existing C++, Python, or Fortran code.",
+        "RISK": "Bold performance-per-watt claims need broad independent workload validation."
+      },
+      "tag": "ADAPTIVE DATAFLOW",
+      "business_model": "Accelerator + design-in",
+      "icp": "HPC and research institutions",
+      "gtm": "Application-led design-in",
+      "partner_move": "Prove porting effort and supply",
+      "confidence": "HIGH / MEDIUM"
+    },
+    {
+      "id": 15,
+      "layout": "company_strategy",
+      "company": "FRACTILE",
+      "title": "Fractile is designing the full stack around exploding inference token demand",
+      "subtitle": "The UK startup argues that reasoning workloads require a new cost-versus-latency curve.",
+      "claim": "Fractile raised $220 million to accelerate its path toward first chips and systems for frontier-model inference.",
+      "kind": "fact",
+      "evidence": [
+        "src-fractile"
+      ],
+      "citation": "Fractile, 2026.",
+      "profile": {
+        "WEDGE": "Co-design from AI research and compiler behavior through microarchitecture and foundry process.",
+        "PROOF": "$220M financing led by Accel, Factorial Funds, and Founders Fund.",
+        "INSERTION": "High-token reasoning and frontier-model inference where latency and cost compound quickly.",
+        "RISK": "Pre-scale execution: tape-out, software readiness, manufacturing, and customer validation remain ahead."
+      },
+      "tag": "FRONTIER INFERENCE",
+      "business_model": "Chip + full-stack systems",
+      "icp": "Frontier labs and high-token inference",
+      "gtm": "Lighthouse co-development",
+      "partner_move": "Secure a benchmarkable workload",
+      "confidence": "HIGH / LOW"
+    },
+    {
+      "id": 16,
+      "layout": "company_strategy",
+      "company": "ETCHED",
+      "title": "Etched trades generality for a transformer-only performance ceiling",
+      "subtitle": "Sohu hardwires the dominant model architecture into chips, racks, and software.",
+      "claim": "Etched\u2019s Sohu strategy is an extreme specialization bet on transformers remaining the dominant AI architecture.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-etched"
+      ],
+      "citation": "Etched product and progress pages, accessed Jul. 29, 2026.",
+      "profile": {
+        "WEDGE": "A transformer ASIC designed for throughput and interactivity rather than broad model coverage.",
+        "PROOF": "Company progress page reports a $300M financing milestone at a $10.3B valuation.",
+        "INSERTION": "Large-scale inference systems where transformer workloads dominate utilization.",
+        "RISK": "Architectural concentration creates upside if transformers persist\u2014and exposure if model structures shift."
+      },
+      "tag": "TRANSFORMER ASIC",
+      "business_model": "Transformer ASIC + racks",
+      "icp": "Hyperscalers and frontier labs",
+      "gtm": "Strategic design-in",
+      "partner_move": "Test workload durability",
+      "confidence": "MEDIUM / LOW"
+    },
+    {
+      "id": 17,
+      "layout": "company_strategy",
+      "company": "D-MATRIX",
+      "title": "d-Matrix moves inference compute closer to memory\u2014and into production",
+      "subtitle": "Corsair integrates accelerators, networking, and software for latency-sensitive data-center inference.",
+      "claim": "d-Matrix announced Corsair full production in June 2026 after raising a $275 million Series C in late 2025.",
+      "kind": "fact",
+      "evidence": [
+        "src-dmatrix-prod",
+        "src-dmatrix-fund"
+      ],
+      "citation": "d-Matrix, Nov. 12, 2025 and Jun. 9, 2026.",
+      "profile": {
+        "WEDGE": "Digital in-memory compute reduces data movement for high-throughput, low-latency inference.",
+        "PROOF": "Corsair in full production; $450M total funding and a $2B valuation reported by the company.",
+        "INSERTION": "Hyperscalers, neoclouds, and frontier labs; can pair with GPUs for heterogeneous inference.",
+        "RISK": "Volume ramp, model coverage, and repeatable customer economics must prove beyond early priority accounts."
+      },
+      "tag": "IN-MEMORY INFERENCE",
+      "business_model": "Inference platform + software",
+      "icp": "Hyperscalers, neoclouds, enterprise AI",
+      "gtm": "System validation + replication",
+      "partner_move": "Validate TCO and support boundary",
+      "confidence": "HIGH / MEDIUM"
+    },
+    {
+      "id": 18,
+      "layout": "company_strategy",
+      "company": "MATX",
+      "title": "MatX designs the chip around LLM throughput and latency from first principles",
+      "subtitle": "MatX One combines SRAM-first latency with HBM support for long contexts.",
+      "claim": "MatX raised a $500 million Series B to finish development and scale manufacturing, with tape-out planned in under a year.",
+      "kind": "fact",
+      "evidence": [
+        "src-matx"
+      ],
+      "citation": "MatX, Feb. 24, 2026. Performance statements are vendor claims.",
+      "profile": {
+        "WEDGE": "An LLM-specific architecture balancing high throughput, low latency, and long-context memory.",
+        "PROOF": "$500M Series B led by Jane Street and Situational Awareness LP.",
+        "INSERTION": "Large-model training and inference where a narrow workload justifies custom silicon.",
+        "RISK": "Tape-out and manufacturing scale are still ahead; software and real-system benchmarks must follow."
+      },
+      "tag": "LLM-SPECIFIC",
+      "business_model": "LLM accelerator + systems",
+      "icp": "Frontier labs and model builders",
+      "gtm": "Co-design before scale",
+      "partner_move": "Wait for accessible silicon",
+      "confidence": "HIGH / LOW"
+    },
+    {
+      "id": 19,
+      "layout": "comparison",
+      "kicker": "COMPUTE COMPARISON",
+      "title": "Specialization narrows the ICP while increasing the proof burden",
+      "subtitle": "Broad platforms carry software complexity; narrow platforms carry workload-durability risk.",
+      "claim": "Compute startups occupy different positions on workload breadth, programmability, and commercialization maturity.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-matx"
+      ],
+      "citation": "Company announcements; maturity is an analytical assessment.",
+      "rows": [
+        [
+          "Axelera",
+          "Edge + inference",
+          "Platform + partners",
+          "Shipping / scaling"
+        ],
+        [
+          "Tenstorrent",
+          "Broad AI + CPU IP",
+          "Programmable + licensable",
+          "Commercial portfolio"
+        ],
+        [
+          "NextSilicon",
+          "HPC + irregular AI",
+          "Runtime-adaptive",
+          "Product volumes"
+        ],
+        [
+          "Fractile",
+          "Frontier inference",
+          "Full-stack specialist",
+          "Pre-scale"
+        ],
+        [
+          "Etched",
+          "Transformers",
+          "Fixed-function ASIC",
+          "Early systems"
+        ],
+        [
+          "d-Matrix",
+          "Data-center inference",
+          "In-memory + full stack",
+          "Full production"
+        ],
+        [
+          "MatX",
+          "LLM workloads",
+          "Purpose-built",
+          "Pre-tape-out"
+        ]
+      ],
+      "headers": [
+        "COMPANY",
+        "WORKLOAD SCOPE",
+        "DESIGN PHILOSOPHY",
+        "2026 STAGE"
+      ]
+    },
+    {
+      "id": 20,
+      "layout": "section",
+      "kicker": "SECTION 02 \u00b7 CONNECT",
+      "title": "Interconnect challengers create partner control points without replacing compute",
+      "subtitle": "Fabric, photonics, and programmable Ethernet enter at different layers of the AI system.",
+      "claim": "The interconnect cohort competes on congestion, bandwidth density, power, and programmability.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "citation": "Cornelis; Lightmatter; Xsight Labs."
+    },
+    {
+      "id": 21,
+      "layout": "company_strategy",
+      "company": "CORNELIS NETWORKS",
+      "title": "Cornelis reopens a scale-out fabric alternative for AI and HPC",
+      "subtitle": "CN5000 extends Omni-Path into modern training, inference, and technical-computing clusters.",
+      "claim": "Cornelis positions CN5000 Omni-Path as a lossless, interoperable fabric for AI and HPC workloads.",
+      "kind": "fact",
+      "evidence": [
+        "src-cornelis",
+        "src-cornelis-fund"
+      ],
+      "citation": "Cornelis Networks product page and Series B announcement.",
+      "profile": {
+        "WEDGE": "Purpose-built scale-out networking focused on predictable throughput and congestion control.",
+        "PROOF": "Commercial CN5000 portfolio; $29M Series B disclosed to fund product expansion.",
+        "INSERTION": "AI training, inference, and HPC clusters seeking an alternative fabric.",
+        "RISK": "Must win ecosystem support and operational trust against entrenched Ethernet and InfiniBand choices."
+      },
+      "tag": "SCALE-OUT FABRIC",
+      "business_model": "Fabric silicon + systems",
+      "icp": "HPC and AI-cluster operators",
+      "gtm": "Cluster integration",
+      "partner_move": "Package migration services",
+      "confidence": "HIGH / MEDIUM"
+    },
+    {
+      "id": 22,
+      "layout": "company_strategy",
+      "company": "LIGHTMATTER",
+      "title": "Lightmatter uses photonics to break the electrical I/O bottleneck",
+      "subtitle": "Passage integrates optical connectivity across large AI packages and rack-scale systems.",
+      "claim": "Lightmatter says the Passage M1000 reference platform provides 114 Tbps of total optical bandwidth.",
+      "kind": "fact",
+      "evidence": [
+        "src-lightmatter-prod",
+        "src-lightmatter-fund"
+      ],
+      "citation": "Lightmatter product and funding announcements. Bandwidth is a vendor specification.",
+      "profile": {
+        "WEDGE": "3D-stacked photonic interposers move data where electrical chip-edge I/O becomes limiting.",
+        "PROOF": "M1000 reference platform; $400M Series D and $850M total capital reported in 2024.",
+        "INSERTION": "Hyperscaler and accelerator designs requiring high-bandwidth, energy-efficient scale-up links.",
+        "RISK": "Packaging, manufacturing yield, standards, and partner integration determine time to volume."
+      },
+      "tag": "PHOTONIC I/O",
+      "business_model": "Photonic component + design-in",
+      "icp": "Hyperscalers, packaging ecosystems",
+      "gtm": "Long-cycle ecosystem design-in",
+      "partner_move": "Map the orchestrator control point",
+      "confidence": "HIGH / MEDIUM"
+    },
+    {
+      "id": 23,
+      "layout": "company_strategy",
+      "company": "XSIGHT LABS",
+      "title": "Xsight makes programmable Ethernet silicon an AI-factory control point",
+      "subtitle": "X2 targets hyperscale, edge, and private data centers with 100G SerDes and 800G fabric links.",
+      "claim": "Xsight announced X2 sampling as a fully programmable, low-power data-center switch for AI-factory networks.",
+      "kind": "fact",
+      "evidence": [
+        "src-xsight"
+      ],
+      "citation": "Xsight Labs X2 announcement.",
+      "profile": {
+        "WEDGE": "Programmable switching silicon with a documented hardware/software interface.",
+        "PROOF": "Second-generation X2 family sampling to customers; end-to-end connectivity roadmap.",
+        "INSERTION": "Hyperscale IaaS, AI fabrics, edge networks, and private data centers.",
+        "RISK": "Customer concentration, software tooling, and fast-moving Ethernet standards raise execution demands."
+      },
+      "tag": "PROGRAMMABLE ETHERNET",
+      "business_model": "Ethernet silicon + software",
+      "icp": "Hyperscalers, OEMs, network teams",
+      "gtm": "NOS/OEM design-in",
+      "partner_move": "Validate tooling and support",
+      "confidence": "HIGH / MEDIUM"
+    },
+    {
+      "id": 24,
+      "layout": "comparison",
+      "kicker": "INTERCONNECT COMPARISON",
+      "title": "The three interconnect plays solve different layers of the same scaling problem",
+      "subtitle": "Control shifts from cluster fabric to package-level I/O to programmable Ethernet.",
+      "claim": "Cornelis focuses on cluster fabric, Lightmatter on optical chip/package links, and Xsight on programmable switching silicon.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "citation": "Company product announcements.",
+      "headers": [
+        "COMPANY",
+        "PRIMARY LAYER",
+        "CORE PROMISE",
+        "ADOPTION DEPENDENCY"
+      ],
+      "rows": [
+        [
+          "Cornelis",
+          "Cluster fabric",
+          "Predictable lossless scale-out",
+          "Fabric ecosystem + operations"
+        ],
+        [
+          "Lightmatter",
+          "Package / scale-up I/O",
+          "Bandwidth density + energy efficiency",
+          "Packaging + design partners"
+        ],
+        [
+          "Xsight",
+          "Switch silicon",
+          "Programmability + lower-power Ethernet",
+          "NOS/tooling + hyperscaler adoption"
+        ]
+      ]
+    },
+    {
+      "id": 25,
+      "layout": "gtm-scorecard",
+      "kicker": "PARTNER ENTRY GATES",
+      "title": "Six hard gates determine whether a partner motion is credible",
+      "subtitle": "A strong architecture cannot compensate for missing product, support, or operating boundaries.",
+      "claim": "Commercial readiness requires evidence across workload proof, software, supply, reference customers, partners, and economics.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "citation": "Research-team diligence framework.",
+      "gates": [
+        [
+          "01",
+          "DISTRIBUTE",
+          "Packaged offer, supply visibility, support model"
+        ],
+        [
+          "02",
+          "INTEGRATE",
+          "APIs, software maturity, reference architecture"
+        ],
+        [
+          "03",
+          "CO-SELL",
+          "Named ICP, repeatable proof, commercial ownership"
+        ],
+        [
+          "04",
+          "DESIGN-IN",
+          "Roadmap alignment, qualification, capacity path"
+        ],
+        [
+          "05",
+          "VALIDATE",
+          "Transparent benchmark method and workload access"
+        ],
+        [
+          "06",
+          "OPERATE",
+          "Telemetry, lifecycle support, SLA accountability"
+        ]
+      ]
+    },
+    {
+      "layout": "comparison",
+      "kicker": "DISTRIBUTOR LENS",
+      "title": "Distributor fit favors packageable offers with bounded support",
+      "subtitle": "Qualitative labels are provisional public-evidence judgments; validate locally before partner selection.",
+      "claim": "Distribution fit rises with product packaging, supply visibility, enablement, and support clarity.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "Directional research judgment from public product, availability, and partner evidence.",
+      "headers": [
+        "COMPANY",
+        "CANDIDATE FIT",
+        "PUBLIC SIGNAL",
+        "NEXT VALIDATION"
+      ],
+      "rows": [
+        [
+          "Axelera AI",
+          "STRONG",
+          "Partner network + edge systems",
+          "Validate channel economics"
+        ],
+        [
+          "Tenstorrent",
+          "EMERGING",
+          "Systems and developer products",
+          "Clarify support ownership"
+        ],
+        [
+          "NextSilicon",
+          "VALIDATE",
+          "Product-volume claim",
+          "Confirm SKU + supply path"
+        ],
+        [
+          "Fractile",
+          "MONITOR",
+          "Pre-scale platform",
+          "Wait for product availability"
+        ],
+        [
+          "Etched",
+          "MONITOR",
+          "System ambition",
+          "Wait for production offer"
+        ],
+        [
+          "d-Matrix",
+          "EMERGING",
+          "Full-production platform",
+          "Test repeatable packaging"
+        ],
+        [
+          "MatX",
+          "MONITOR",
+          "Pre-tape-out",
+          "Track launch milestones"
+        ],
+        [
+          "Cornelis",
+          "STRONG",
+          "Commercial fabric portfolio",
+          "Validate geographic coverage"
+        ],
+        [
+          "Lightmatter",
+          "VALIDATE",
+          "Design-in component",
+          "Distributor role may be limited"
+        ],
+        [
+          "Xsight Labs",
+          "VALIDATE",
+          "Sampling switch silicon",
+          "Confirm OEM/NOS support"
+        ]
+      ],
+      "id": 26
+    },
+    {
+      "layout": "comparison",
+      "kicker": "SYSTEMS-INTEGRATOR LENS",
+      "title": "SI fit favors deployable systems with reusable integration",
+      "subtitle": "Systems integrators create value when reference architecture and operating accountability are both real.",
+      "claim": "SI fit rises when the startup exposes a deployable integration boundary and a repeatable customer outcome.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "Directional research judgment from public product and deployment evidence.",
+      "headers": [
+        "COMPANY",
+        "CANDIDATE FIT",
+        "PUBLIC SIGNAL",
+        "NEXT VALIDATION"
+      ],
+      "rows": [
+        [
+          "Axelera AI",
+          "STRONG",
+          "Edge solution ecosystem",
+          "Build vertical reference offer"
+        ],
+        [
+          "Tenstorrent",
+          "EMERGING",
+          "Broad programmable stack",
+          "Validate software operations"
+        ],
+        [
+          "NextSilicon",
+          "EMERGING",
+          "HPC application compatibility",
+          "Prove porting effort"
+        ],
+        [
+          "Fractile",
+          "VALIDATE",
+          "Full-stack thesis",
+          "Secure lighthouse workload"
+        ],
+        [
+          "Etched",
+          "VALIDATE",
+          "Rack-scale specialization",
+          "Test workload durability"
+        ],
+        [
+          "d-Matrix",
+          "STRONG",
+          "Production inference platform",
+          "Validate TCO + SLA"
+        ],
+        [
+          "MatX",
+          "MONITOR",
+          "Pre-scale architecture",
+          "Wait for accessible system"
+        ],
+        [
+          "Cornelis",
+          "STRONG",
+          "Cluster fabric integration",
+          "Package migration services"
+        ],
+        [
+          "Lightmatter",
+          "VALIDATE",
+          "Packaging-level insertion",
+          "Clarify SI control point"
+        ],
+        [
+          "Xsight Labs",
+          "EMERGING",
+          "Programmable Ethernet",
+          "Validate NOS/tooling"
+        ]
+      ],
+      "id": 27
+    },
+    {
+      "layout": "comparison",
+      "kicker": "ECOSYSTEM LENS",
+      "title": "Ecosystem fit favors platforms that coordinate scarce complements",
+      "subtitle": "The strongest orchestration candidates can align OEMs, software, cloud, packaging, or network partners.",
+      "claim": "Orchestrator fit rises when partner coordination is essential to the product\u2019s adoption and scale.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "Directional research judgment from public platform and partner evidence.",
+      "headers": [
+        "COMPANY",
+        "CANDIDATE FIT",
+        "PUBLIC SIGNAL",
+        "NEXT VALIDATION"
+      ],
+      "rows": [
+        [
+          "Axelera AI",
+          "STRONG",
+          "Explicit partner network",
+          "Measure partner-sourced pipeline"
+        ],
+        [
+          "Tenstorrent",
+          "STRONG",
+          "IP + systems + open stack",
+          "Test governance and overlap"
+        ],
+        [
+          "NextSilicon",
+          "EMERGING",
+          "Code compatibility",
+          "Expand software proof"
+        ],
+        [
+          "Fractile",
+          "VALIDATE",
+          "Full-stack co-design",
+          "Map foundry + system partners"
+        ],
+        [
+          "Etched",
+          "VALIDATE",
+          "Transformer-specific stack",
+          "Test model ecosystem risk"
+        ],
+        [
+          "d-Matrix",
+          "EMERGING",
+          "Heterogeneous inference",
+          "Map cloud/OEM replication"
+        ],
+        [
+          "MatX",
+          "VALIDATE",
+          "LLM-specific platform",
+          "Validate launch ecosystem"
+        ],
+        [
+          "Cornelis",
+          "EMERGING",
+          "Interoperable fabric",
+          "Test ecosystem breadth"
+        ],
+        [
+          "Lightmatter",
+          "STRONG",
+          "Packaging + foundry dependency",
+          "Coordinate design partners"
+        ],
+        [
+          "Xsight Labs",
+          "EMERGING",
+          "Programmable switch interface",
+          "Align NOS + OEM roadmap"
+        ]
+      ],
+      "id": 28
+    },
+    {
+      "id": 29,
+      "layout": "partner_heatmap",
+      "kicker": "ROLE-SPECIFIC PORTFOLIO",
+      "title": "One heatmap shows the role-specific portfolio\u2014not a universal ranking",
+      "subtitle": "The same company can merit a different next move for a distributor, SI, or ecosystem orchestrator.",
+      "claim": "Partner readiness varies by role and must be displayed with the next validation question.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-crn",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ],
+      "citation": "Public-evidence posture; candidate model, not calibrated organization-specific scoring.",
+      "rows": [
+        [
+          "Axelera AI",
+          "STRONG",
+          "STRONG",
+          "STRONG",
+          "Validate economics"
+        ],
+        [
+          "Tenstorrent",
+          "EMERGING",
+          "EMERGING",
+          "STRONG",
+          "Choose motion"
+        ],
+        [
+          "NextSilicon",
+          "VALIDATE",
+          "EMERGING",
+          "EMERGING",
+          "Prove porting"
+        ],
+        [
+          "Fractile",
+          "MONITOR",
+          "VALIDATE",
+          "VALIDATE",
+          "Secure lighthouse"
+        ],
+        [
+          "Etched",
+          "MONITOR",
+          "VALIDATE",
+          "VALIDATE",
+          "Test workload durability"
+        ],
+        [
+          "d-Matrix",
+          "EMERGING",
+          "STRONG",
+          "EMERGING",
+          "Validate TCO + SLA"
+        ],
+        [
+          "MatX",
+          "MONITOR",
+          "MONITOR",
+          "VALIDATE",
+          "Wait for silicon"
+        ],
+        [
+          "Cornelis",
+          "STRONG",
+          "STRONG",
+          "EMERGING",
+          "Package migration"
+        ],
+        [
+          "Lightmatter",
+          "VALIDATE",
+          "VALIDATE",
+          "STRONG",
+          "Map control point"
+        ],
+        [
+          "Xsight Labs",
+          "VALIDATE",
+          "EMERGING",
+          "EMERGING",
+          "Validate NOS/tooling"
+        ]
+      ]
+    },
+    {
+      "id": 30,
+      "layout": "economics",
+      "kicker": "DISTRIBUTOR ECONOMICS",
+      "title": "Unit economics differ by where the partner controls value",
+      "subtitle": "Inventory, design-in, software, and ecosystem motions create distinct margin and support exposure.",
+      "claim": "Business models with reusable software or IP leverage can scale differently from bespoke system and design-in models.",
+      "kind": "interpretation",
+      "evidence": [
+        "src-tenstorrent",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "citation": "Directional business-model assessment; no company financial forecasts implied.",
+      "models": [
+        {
+          "label": "SYSTEM SALE",
+          "value": "High initial value",
+          "risk": "Inventory, support, and supply exposure"
+        },
+        {
+          "label": "SILICON DESIGN-IN",
+          "value": "Sticky volume revenue",
+          "risk": "Long qualification and concentration"
+        },
+        {
+          "label": "IP LICENSE",
+          "value": "Asset-light leverage",
+          "risk": "Customer implementation and royalty timing"
+        },
+        {
+          "label": "SOFTWARE + SUPPORT",
+          "value": "Recurring control layer",
+          "risk": "Requires developer adoption and model coverage"
+        },
+        {
+          "label": "PARTNER ECOSYSTEM",
+          "value": "Distribution leverage",
+          "risk": "Enablement cost and channel conflict"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "layout": "phase0",
+      "kicker": "PHASE 0 CALIBRATION",
+      "title": "Calibrate the model on three deliberately different archetypes",
+      "subtitle": "Axelera AI, Etched, and Lightmatter test deployment, specialization, and ecosystem-design-in assumptions.",
+      "claim": "A three-company pilot with independent raters should precede organization-specific recommendations.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-axelera",
+        "src-etched",
+        "src-lightmatter-prod"
+      ],
+      "citation": "Phase 0 operating recommendation; public evidence defines hypotheses, not final selections.",
+      "pilots": [
+        [
+          "AXELERA AI",
+          "DEPLOYMENT ECOSYSTEM",
+          "Can partners replicate a vertical edge offer with bounded support?",
+          "Distributor + SI"
+        ],
+        [
+          "ETCHED",
+          "SPECIALIZATION BET",
+          "Does transformer-only advantage survive workload and roadmap scrutiny?",
+          "SI + lighthouse"
+        ],
+        [
+          "LIGHTMATTER",
+          "DESIGN-IN ECOSYSTEM",
+          "Who owns qualification, packaging coordination, and commercial pull?",
+          "Orchestrator"
+        ]
+      ]
+    },
+    {
+      "layout": "roadmap",
+      "kicker": "90-DAY ACTION PLAN",
+      "title": "The first 90 days should buy evidence, not commitments",
+      "subtitle": "Each stage resolves a specific uncertainty and ends in an explicit advance, redesign, or stop decision.",
+      "claim": "The first 90 days should reduce uncertainty through bounded tests rather than make execution claims.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "Recommended validation sequence; no named-partner commitment implied.",
+      "plays": [
+        {
+          "label": "0\u201330 DAYS \u00b7 SCREEN",
+          "text": "Confirm offer, stage, ICP, partner boundary, and evidence owner for six shortlisted motions."
+        },
+        {
+          "label": "31\u201360 DAYS \u00b7 TEST",
+          "text": "Run workload, integration, support, and commercial discovery with named hypotheses."
+        },
+        {
+          "label": "61\u201390 DAYS \u00b7 DECIDE",
+          "text": "Advance, redesign, or stop each motion based on proof-package completion."
+        },
+        {
+          "label": "OUTPUT",
+          "text": "One evidence ledger, one archetype decision, and one next-action brief per shortlisted company."
+        }
+      ],
+      "id": 32
+    },
+    {
+      "id": 33,
+      "layout": "watchlist",
+      "kicker": "12-MONTH WATCHLIST",
+      "title": "Quarterly triggers\u2014not narrative momentum\u2014should change posture",
+      "subtitle": "Commercial milestones are the control system for the portfolio.",
+      "claim": "The most decision-relevant next events are tape-outs, volume ramps, production benchmarks, design wins, and ecosystem expansion.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-axelera",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "Forward watchpoints inferred from publicly stated product stages.",
+      "watch": [
+        {
+          "stage": "PRE-SILICON / PRE-SCALE",
+          "companies": "Fractile \u00b7 MatX",
+          "event": "Tape-out, first silicon, compiler readiness"
+        },
+        {
+          "stage": "EARLY SYSTEMS / SAMPLES",
+          "companies": "Etched \u00b7 Lightmatter \u00b7 Xsight",
+          "event": "Customer qualification, production benchmarks, design wins"
+        },
+        {
+          "stage": "PRODUCT / VOLUME RAMP",
+          "companies": "Axelera \u00b7 NextSilicon \u00b7 d-Matrix",
+          "event": "Shipment growth, repeat deployments, supply execution"
+        },
+        {
+          "stage": "PORTFOLIO / ECOSYSTEM",
+          "companies": "Tenstorrent \u00b7 Cornelis",
+          "event": "Partner replication, software depth, installed-base expansion"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "layout": "risks",
+      "kicker": "WHAT TO WATCH",
+      "title": "Five kill criteria stop technically impressive but non-deployable bets",
+      "subtitle": "Software, silicon, proof, customers, and workload durability are non-negotiable gates.",
+      "claim": "Software, supply, independent benchmarks, customer concentration, and architecture durability are the central diligence risks.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod"
+      ],
+      "citation": "Research-team risk synthesis from public company evidence.",
+      "risks": [
+        [
+          "SOFTWARE",
+          "Compiler maturity, frameworks, model coverage, and developer experience"
+        ],
+        [
+          "SILICON",
+          "Tape-out, yield, packaging, memory availability, and manufacturing scale"
+        ],
+        [
+          "PROOF",
+          "Independent benchmarks, production workloads, and total-cost evidence"
+        ],
+        [
+          "CUSTOMERS",
+          "Design-win conversion, concentration, support burden, and renewal economics"
+        ],
+        [
+          "DURABILITY",
+          "Whether the targeted workload or interconnect standard remains strategically important"
+        ]
+      ]
+    },
+    {
+      "layout": "comparison",
+      "kicker": "EVIDENCE BUYING PLAN",
+      "title": "The evidence ledger exposes exactly what must be learned next",
+      "subtitle": "Every priority has a strongest anchor, a decisive gap, and a next question.",
+      "claim": "A useful ledger links each company to its strongest anchor, decisive gap, and next validation action.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "citation": "Illustrative public-evidence snapshot; not the authoritative scorecard.",
+      "headers": [
+        "COMPANY / GROUP",
+        "STRONGEST ANCHOR",
+        "DECISIVE GAP",
+        "NEXT QUESTION"
+      ],
+      "rows": [
+        [
+          "Axelera AI",
+          "Partner ecosystem + funding",
+          "Partner-sourced pipeline",
+          "Validate distributor/SI economics"
+        ],
+        [
+          "d-Matrix",
+          "Production platform",
+          "Independent TCO + references",
+          "Validate repeatable SI offer"
+        ],
+        [
+          "Cornelis",
+          "Commercial fabric",
+          "Channel coverage + migration proof",
+          "Package integration motion"
+        ],
+        [
+          "Tenstorrent",
+          "Broad products + IP",
+          "Support ownership + adoption",
+          "Choose licensing vs systems motion"
+        ],
+        [
+          "Lightmatter",
+          "Reference photonic platform",
+          "Qualification + design wins",
+          "Map orchestrator role"
+        ],
+        [
+          "Fractile / Etched / MatX",
+          "Capital + architecture thesis",
+          "Availability + customer proof",
+          "Monitor milestone triggers"
+        ]
+      ],
+      "id": 35
+    },
+    {
+      "id": 36,
+      "layout": "conclusion",
+      "kicker": "CONCLUSION",
+      "title": "Select validation priorities now\u2014and reserve partnership decisions for calibrated evidence",
+      "subtitle": "The portfolio is actionable when posture, confidence, and the next proof purchase travel together.",
+      "claim": "A bottleneck-first watchlist is more useful than treating all ten companies as direct accelerator competitors.",
+      "kind": "recommendation",
+      "evidence": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "citation": "Conclusion based on the CRN cohort and primary-source review.",
+      "moves": [
+        {
+          "label": "PUBLIC EVIDENCE",
+          "text": "Supports candidate archetype-readiness and focused questions."
+        },
+        {
+          "label": "PHASE 0",
+          "text": "Calibrates the rubric with independent raters and historical cases."
+        },
+        {
+          "label": "LOCAL PROFILE",
+          "text": "Required before named-partner fit or organization-specific right-to-win."
+        }
+      ],
+      "takeaway": "Use the cohort to choose what to test next\u2014not to declare a market winner."
+    }
+  ]
+}

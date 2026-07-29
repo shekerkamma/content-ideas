@@ -405,6 +405,62 @@ allowed_numbers:
       - "deck: slide 42"
       - "html: slide-42"
     status: allowed
+  - id: NUM-023
+    visible_value: "83"
+    meaning: "Total sourced claims in the evidence ledger, shown on the new evidence-quality slide"
+    target_or_competitor: "CRN cohort"
+    source_artifact: "outputs/data-quality-report.md"
+    claim_ids:
+      - "NEW-S09"
+    source_url: "local analytical artifact"
+    source_type: "analysis"
+    confidence: "high"
+    required_label: "evidence ledger"
+    allowed_locations:
+      - "deck: new slide 9"
+    status: allowed
+  - id: NUM-024
+    visible_value: "16"
+    meaning: "Numeric evidence rows in the evidence ledger"
+    target_or_competitor: "CRN cohort"
+    source_artifact: "outputs/data-quality-report.md"
+    claim_ids:
+      - "NEW-S09"
+    source_url: "local analytical artifact"
+    source_type: "analysis"
+    confidence: "high"
+    required_label: "evidence ledger"
+    allowed_locations:
+      - "deck: new slide 9"
+    status: allowed
+  - id: NUM-025
+    visible_value: "30"
+    meaning: "High-confidence evidence rows in the evidence ledger"
+    target_or_competitor: "CRN cohort"
+    source_artifact: "outputs/data-quality-report.md"
+    claim_ids:
+      - "NEW-S09"
+    source_url: "local analytical artifact"
+    source_type: "analysis"
+    confidence: "high"
+    required_label: "evidence ledger"
+    allowed_locations:
+      - "deck: new slide 9"
+    status: allowed
+  - id: NUM-026
+    visible_value: "53"
+    meaning: "Medium-confidence evidence rows in the evidence ledger"
+    target_or_competitor: "CRN cohort"
+    source_artifact: "outputs/data-quality-report.md"
+    claim_ids:
+      - "NEW-S09"
+    source_url: "local analytical artifact"
+    source_type: "analysis"
+    confidence: "high"
+    required_label: "evidence ledger"
+    allowed_locations:
+      - "deck: new slide 9"
+    status: allowed
 blocked_patterns:
   - pattern: "\\bTAM\\b|\\bSAM\\b|\\bSOM\\b|\\bCAGR\\b|\\bARR\\b"
     reason: "No unsupported market or financial precision"

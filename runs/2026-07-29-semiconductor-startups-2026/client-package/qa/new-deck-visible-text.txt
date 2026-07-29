@@ -1,0 +1,657 @@
+1	SEMICONDUCTOR STARTUP LANDSCAPE · JULY 2026
+1	Semiconductor Startups 2026
+1	Where partner value can compound across compute, inference, and interconnect
+1	10 companies  ·  4 infrastructure wedges  ·  3 partner roles
+1	AXELERA AI
+1	D-MATRIX
+1	LIGHTMATTER
+1	CORNELIS NETWORKS
+1	Based on CRN’s July 15, 2026 cohort; research updated through July 29, 2026.
+1	Semiconductor Startups 2026 · Evidence-Led Strategy
+1	1 / 36
+2	EXECUTIVE SUMMARY
+2	Three moves emerge: activate deployable offers, validate complex wedges, monitor pre-scale bets
+2	The decision is a portfolio of bounded actions—not a universal winner ranking.
+2	ACTIVATE
+2	Axelera AI · d-Matrix · Cornelis
+2	Package a bounded offer
+2	VALIDATE
+2	Tenstorrent · NextSilicon · Lightmatter · Xsight
+2	Buy missing workload and partner proof
+2	MONITOR
+2	Fractile · Etched · MatX
+2	Track silicon and commercialization triggers
+2	CRN; Gartner; company announcements.
+2	Semiconductor Startups 2026 · Evidence-Led Strategy
+2	2 / 36
+3	PORTFOLIO ANSWER
+3	Deployment evidence—not architectural novelty—drives the action posture
+3	Commercial stage and partner boundaries determine what can be tested now.
+3	ACT NOW
+3	Axelera AI · d-Matrix · Cornelis
+3	Deployable offer + visible ecosystem
+3	Partner economics and repeatability
+3	VALIDATE NEXT
+3	Tenstorrent · NextSilicon · Lightmatter · Xsight
+3	Strong wedge; motion-specific gaps
+3	Software, design-in, and operating proof
+3	MONITOR
+3	Fractile · Etched · MatX
+3	High potential; earlier commercialization
+3	Tape-out, availability, references
+3	POSTURE
+3	CANDIDATES
+3	WHY NOW
+3	PROOF BEFORE CHANGE
+3	Candidate public-evidence posture; requires Phase 0 calibration.
+3	Semiconductor Startups 2026 · Evidence-Led Strategy
+3	3 / 36
+4	WHY NOW
+4	Market expansion creates room for new architectures—but fragmentation creates the channel wedge
+4	The opportunity is to make heterogeneous infrastructure adoptable, supportable, and repeatable.
+4	LAND
+4	Solve one painful workload or link bottleneck
+4	→
+4	INTEGRATE
+4	Coexist with GPUs, CPUs, fabrics, and cloud workflows
+4	→
+4	EXPAND
+4	Broaden the system footprint after software and supply prove out
+4	This favors partners that can provide integration, validation, deployment, and customer access—not just component resale.
+4	Tenstorrent; d-Matrix; Cornelis; Lightmatter; Xsight Labs.
+4	Semiconductor Startups 2026 · Evidence-Led Strategy
+4	4 / 36
+5	MARKET + BUSINESS MODEL
+5	Four bottlenecks—and four commercialization models—shape the cohort
+5	Insertion point determines the buyer, sales clock, and partner value pool.
+5	BOTTLENECK
+5	BUSINESS MODEL
+5	PRIMARY ICP
+5	GTM MOTION
+5	EDGE DEPLOYMENT
+5	Chip + platform
+5	Edge OEM / solution builder
+5	Partner-led deployment
+5	ADAPTABLE COMPUTE
+5	Systems + IP / accelerator
+5	Sovereign AI / HPC
+5	Direct + design-in
+5	INFERENCE SPECIALISTS
+5	Chips + rack systems
+5	Frontier labs / neoclouds
+5	Lighthouse + co-design
+5	INTERCONNECT
+5	Components + systems
+5	Hyperscalers / clusters
+5	Long-cycle ecosystem design-in
+5	CRN; company product pages.
+5	Semiconductor Startups 2026 · Evidence-Led Strategy
+5	5 / 36
+6	ICP + BUYING TRIGGERS
+6	Buyer pain—not firmographics—determines the ideal customer profile
+6	Each workload has a distinct proof threshold and route to production.
+6	BUYER
+6	TRIGGER PAIN
+6	PROOF TO BUY
+6	PRIMARY MOTION
+6	HYPERSCALERS + LABS
+6	Token economics, density, custom scale
+6	Rack-scale proof + capacity
+6	Co-design / design-in
+6	HPC + RESEARCH
+6	Irregular workloads, fabric behavior
+6	Real applications + migration
+6	Early access / integration
+6	SOVEREIGN + ENTERPRISE
+6	Control, programmability, SLAs
+6	Named-model TCO + operations
+6	Reference platform / SI
+6	EDGE OEMs
+6	Power, thermals, form factor
+6	Time-to-production + SDK
+6	Module / distributor / ISV
+6	ICP synthesis from company-stated target workloads and deployment models.
+6	Semiconductor Startups 2026 · Evidence-Led Strategy
+6	6 / 36
+7	GO-TO-MARKET
+7	The winning GTM motion converts lighthouse proof into an ecosystem repeat
+7	Benchmark credibility must become a reference offer, operating model, and replication channel.
+7	01
+7	LIGHTHOUSE
+7	Prove one painful workload
+7	→
+7	02
+7	DESIGN-IN
+7	Integrate software, system, and supply
+7	→
+7	03
+7	REFERENCE
+7	Publish repeatable architecture and support
+7	→
+7	04
+7	REPLICATE
+7	Scale through OEM, cloud, SI, and ISV
+7	The flywheel only compounds when proof, support, and commercial ownership survive each handoff.
+7	GTM synthesis from company availability, partner, and deployment evidence.
+7	Semiconductor Startups 2026 · Evidence-Led Strategy
+7	7 / 36
+8	PARTNER VALUE
+8	Partner value compounds where integration risk is highest
+8	The partner earns control by reducing risk across proof, packaging, deployment, and operations.
+8	PROVE
+8	Workload benchmark
+8	REDUCES  TECHNICAL RISK
+8	PACKAGE
+8	System + software offer
+8	REDUCES  INTEGRATION RISK
+8	DEPLOY
+8	Reference architecture
+8	REDUCES  EXECUTION RISK
+8	OPERATE
+8	Support + lifecycle
+8	REDUCES  ADOPTION RISK
+8	The highest-leverage partner converts technical advantage into a repeatable production outcome.
+8	Implications derived from company go-to-market and product evidence.
+8	Semiconductor Startups 2026 · Evidence-Led Strategy
+8	8 / 36
+9	EVIDENCE QUALITY
+9	The evidence is broad enough to screen—and too vendor-led to declare winners
+9	Coverage supports directional portfolio choices; independent customer, benchmark, and economics proof remains sparse.
+9	83
+9	SOURCED CLAIMS
+9	Complete closed-cohort ledger
+9	16
+9	NUMERIC ROWS
+9	Funding, stage, and specifications
+9	30
+9	HIGH CONFIDENCE
+9	Specific attributable disclosures
+9	53
+9	MEDIUM CONFIDENCE
+9	Directional or vendor-led evidence
+9	Axelera AI
+9	13
+9	Tenstorrent
+9	8
+9	Cornelis
+9	7
+9	NextSilicon
+9	5
+9	Fractile
+9	5
+9	Etched
+9	5
+9	d-Matrix
+9	5
+9	MatX
+9	5
+9	Lightmatter
+9	5
+9	Xsight Labs
+9	5
+9	Evidence ledger and data-quality report; retrieved through Jul. 29, 2026.
+9	Semiconductor Startups 2026 · Evidence-Led Strategy
+9	9 / 36
+10	COMMERCIAL MATURITY
+10	Commercial maturity separates actionable platforms from architectural options
+10	The cohort spans shipping systems, design-in components, samples, and pre-scale architectures.
+10	CRN; official company product and financing announcements.
+10	Semiconductor Startups 2026 · Evidence-Led Strategy
+10	10 / 36
+11	SECTION 01 · COMPUTE
+11	Compute challengers split between programmable breadth and workload-specific conviction
+11	The partner question is whether software and supply can make the architecture deployable.
+11	CRN cohort taxonomy.
+11	Semiconductor Startups 2026 · Evidence-Led Strategy
+11	11 / 36
+12	AXELERA AI
+12	Axelera turns edge acceleration into a deployment ecosystem
+12	Efficient AI hardware is paired with software, systems, and a partner-led route to production.
+12	EDGE + ECOSYSTEM
+12	OFFICIAL SITE VISUAL  ·  AXELERA AI
+12	STRATEGIC WEDGE
+12	Purpose-built inference for computer vision and generative AI from edge systems toward data centers.
+12	BUSINESS MODEL
+12	Chip + edge platform
+12	PRIMARY ICP
+12	Edge OEMs and solution builders
+12	GTM MOTION
+12	Partner-led deployment
+12	PARTNER MOVE
+12	Build a vertical reference offer
+12	EVIDENCE / PARTNER
+12	HIGH / MEDIUM
+12	RISK GATE
+12	Repeat deployments + supply scale
+12	Axelera AI, Feb. 24, 2026.
+12	Semiconductor Startups 2026 · Evidence-Led Strategy
+12	12 / 36
+13	TENSTORRENT
+13	Tenstorrent attacks lock-in with a programmable system and licensable IP
+13	Its portfolio spans AI processors, Galaxy systems, Tensix cores, and high-performance RISC-V.
+13	OPEN COMPUTE
+13	OFFICIAL SITE VISUAL  ·  TENSTORRENT
+13	STRATEGIC WEDGE
+13	Open, programmable AI compute plus RISC-V CPU IP rather than a closed accelerator-only product.
+13	BUSINESS MODEL
+13	Systems + licensable IP
+13	PRIMARY ICP
+13	Sovereign AI, enterprise, developers
+13	GTM MOTION
+13	Direct systems + licensing
+13	PARTNER MOVE
+13	Choose the system or IP motion
+13	EVIDENCE / PARTNER
+13	HIGH / MEDIUM
+13	RISK GATE
+13	Software adoption + support ownership
+13	Tenstorrent, Jun. 30, 2026; CRN.
+13	Semiconductor Startups 2026 · Evidence-Led Strategy
+13	13 / 36
+14	NEXTSILICON
+14	NextSilicon makes the accelerator adapt to code at runtime
+14	Maverick-2 targets irregular HPC and AI workloads without forcing application rewrites.
+14	ADAPTIVE DATAFLOW
+14	OFFICIAL SITE VISUAL  ·  NEXTSILICON
+14	STRATEGIC WEDGE
+14	A software-learning Intelligent Compute Architecture dynamically configures dataflow hardware.
+14	BUSINESS MODEL
+14	Accelerator + design-in
+14	PRIMARY ICP
+14	HPC and research institutions
+14	GTM MOTION
+14	Application-led design-in
+14	PARTNER MOVE
+14	Prove porting effort and supply
+14	EVIDENCE / PARTNER
+14	HIGH / MEDIUM
+14	RISK GATE
+14	Independent workload validation
+14	NextSilicon, Oct. 22, 2025. Performance figures are vendor claims.
+14	Semiconductor Startups 2026 · Evidence-Led Strategy
+14	14 / 36
+15	FRACTILE
+15	Fractile is designing the full stack around exploding inference token demand
+15	The UK startup argues that reasoning workloads require a new cost-versus-latency curve.
+15	FRONTIER INFERENCE
+15	OFFICIAL SITE VISUAL  ·  FRACTILE
+15	STRATEGIC WEDGE
+15	Co-design from AI research and compiler behavior through microarchitecture and foundry process.
+15	BUSINESS MODEL
+15	Chip + full-stack systems
+15	PRIMARY ICP
+15	Frontier labs and high-token inference
+15	GTM MOTION
+15	Lighthouse co-development
+15	PARTNER MOVE
+15	Secure a benchmarkable workload
+15	EVIDENCE / PARTNER
+15	HIGH / LOW
+15	RISK GATE
+15	Tape-out + software readiness
+15	Fractile, 2026.
+15	Semiconductor Startups 2026 · Evidence-Led Strategy
+15	15 / 36
+16	ETCHED
+16	Etched trades generality for a transformer-only performance ceiling
+16	Sohu hardwires the dominant model architecture into chips, racks, and software.
+16	TRANSFORMER ASIC
+16	OFFICIAL SITE VISUAL  ·  ETCHED
+16	STRATEGIC WEDGE
+16	A transformer ASIC designed for throughput and interactivity rather than broad model coverage.
+16	BUSINESS MODEL
+16	Transformer ASIC + racks
+16	PRIMARY ICP
+16	Hyperscalers and frontier labs
+16	GTM MOTION
+16	Strategic design-in
+16	PARTNER MOVE
+16	Test workload durability
+16	EVIDENCE / PARTNER
+16	MEDIUM / LOW
+16	RISK GATE
+16	Model-architecture durability
+16	Etched product and progress pages, accessed Jul. 29, 2026.
+16	Semiconductor Startups 2026 · Evidence-Led Strategy
+16	16 / 36
+17	D-MATRIX
+17	d-Matrix moves inference compute closer to memory—and into production
+17	Corsair integrates accelerators, networking, and software for latency-sensitive data-center inference.
+17	IN-MEMORY INFERENCE
+17	OFFICIAL SITE VISUAL  ·  D-MATRIX
+17	STRATEGIC WEDGE
+17	Digital in-memory compute reduces data movement for high-throughput, low-latency inference.
+17	BUSINESS MODEL
+17	Inference platform + software
+17	PRIMARY ICP
+17	Hyperscalers, neoclouds, enterprise AI
+17	GTM MOTION
+17	System validation + replication
+17	PARTNER MOVE
+17	Validate TCO and support boundary
+17	EVIDENCE / PARTNER
+17	HIGH / MEDIUM
+17	RISK GATE
+17	Volume ramp + customer economics
+17	d-Matrix, Nov. 12, 2025 and Jun. 9, 2026.
+17	Semiconductor Startups 2026 · Evidence-Led Strategy
+17	17 / 36
+18	MATX
+18	MatX designs the chip around LLM throughput and latency from first principles
+18	MatX One combines SRAM-first latency with HBM support for long contexts.
+18	LLM-SPECIFIC
+18	OFFICIAL SITE VISUAL  ·  MATX
+18	STRATEGIC WEDGE
+18	An LLM-specific architecture balancing high throughput, low latency, and long-context memory.
+18	BUSINESS MODEL
+18	LLM accelerator + systems
+18	PRIMARY ICP
+18	Frontier labs and model builders
+18	GTM MOTION
+18	Co-design before scale
+18	PARTNER MOVE
+18	Wait for accessible silicon
+18	EVIDENCE / PARTNER
+18	HIGH / LOW
+18	RISK GATE
+18	Tape-out + real-system benchmarks
+18	MatX, Feb. 24, 2026. Performance statements are vendor claims.
+18	Semiconductor Startups 2026 · Evidence-Led Strategy
+18	18 / 36
+19	COMPUTE COMPARISON
+19	Specialization narrows the ICP while increasing the proof burden
+19	Broad platforms carry software complexity; narrow platforms carry workload-durability risk.
+19	Company announcements; maturity is an analytical assessment.
+19	Semiconductor Startups 2026 · Evidence-Led Strategy
+19	19 / 36
+20	SECTION 02 · CONNECT
+20	Interconnect challengers create partner control points without replacing compute
+20	Fabric, photonics, and programmable Ethernet enter at different layers of the AI system.
+20	Cornelis; Lightmatter; Xsight Labs.
+20	Semiconductor Startups 2026 · Evidence-Led Strategy
+20	20 / 36
+21	CORNELIS NETWORKS
+21	Cornelis reopens a scale-out fabric alternative for AI and HPC
+21	CN5000 extends Omni-Path into modern training, inference, and technical-computing clusters.
+21	SCALE-OUT FABRIC
+21	OFFICIAL SITE VISUAL  ·  CORNELIS NETWORKS
+21	STRATEGIC WEDGE
+21	Purpose-built scale-out networking focused on predictable throughput and congestion control.
+21	BUSINESS MODEL
+21	Fabric silicon + systems
+21	PRIMARY ICP
+21	HPC and AI-cluster operators
+21	GTM MOTION
+21	Cluster integration
+21	PARTNER MOVE
+21	Package migration services
+21	EVIDENCE / PARTNER
+21	HIGH / MEDIUM
+21	RISK GATE
+21	Channel coverage + migration proof
+21	Cornelis Networks product page and Series B announcement.
+21	Semiconductor Startups 2026 · Evidence-Led Strategy
+21	21 / 36
+22	LIGHTMATTER
+22	Lightmatter uses photonics to break the electrical I/O bottleneck
+22	Passage integrates optical connectivity across large AI packages and rack-scale systems.
+22	PHOTONIC I/O
+22	OFFICIAL SITE VISUAL  ·  LIGHTMATTER
+22	STRATEGIC WEDGE
+22	3D-stacked photonic interposers move data where electrical chip-edge I/O becomes limiting.
+22	BUSINESS MODEL
+22	Photonic component + design-in
+22	PRIMARY ICP
+22	Hyperscalers, packaging ecosystems
+22	GTM MOTION
+22	Long-cycle ecosystem design-in
+22	PARTNER MOVE
+22	Map the orchestrator control point
+22	EVIDENCE / PARTNER
+22	HIGH / MEDIUM
+22	RISK GATE
+22	Qualification + design wins
+22	Lightmatter product and funding announcements. Bandwidth is a vendor specification.
+22	Semiconductor Startups 2026 · Evidence-Led Strategy
+22	22 / 36
+23	XSIGHT LABS
+23	Xsight makes programmable Ethernet silicon an AI-factory control point
+23	X2 targets hyperscale, edge, and private data centers with 100G SerDes and 800G fabric links.
+23	PROGRAMMABLE ETHERNET
+23	OFFICIAL SITE VISUAL  ·  XSIGHT LABS
+23	STRATEGIC WEDGE
+23	Programmable switching silicon with a documented hardware/software interface.
+23	BUSINESS MODEL
+23	Ethernet silicon + software
+23	PRIMARY ICP
+23	Hyperscalers, OEMs, network teams
+23	GTM MOTION
+23	NOS/OEM design-in
+23	PARTNER MOVE
+23	Validate tooling and support
+23	EVIDENCE / PARTNER
+23	HIGH / MEDIUM
+23	RISK GATE
+23	NOS/OEM support maturity
+23	Xsight Labs X2 announcement.
+23	Semiconductor Startups 2026 · Evidence-Led Strategy
+23	23 / 36
+24	INTERCONNECT COMPARISON
+24	The three interconnect plays solve different layers of the same scaling problem
+24	Control shifts from cluster fabric to package-level I/O to programmable Ethernet.
+24	Company product announcements.
+24	Semiconductor Startups 2026 · Evidence-Led Strategy
+24	24 / 36
+25	PARTNER ENTRY GATES
+25	Six hard gates determine whether a partner motion is credible
+25	A strong architecture cannot compensate for missing product, support, or operating boundaries.
+25	01
+25	DISTRIBUTE
+25	Packaged offer, supply visibility, support model
+25	02
+25	INTEGRATE
+25	APIs, software maturity, reference architecture
+25	03
+25	CO-SELL
+25	Named ICP, repeatable proof, commercial ownership
+25	04
+25	DESIGN-IN
+25	Roadmap alignment, qualification, capacity path
+25	05
+25	VALIDATE
+25	Transparent benchmark method and workload access
+25	06
+25	OPERATE
+25	Telemetry, lifecycle support, SLA accountability
+25	Research-team diligence framework.
+25	Semiconductor Startups 2026 · Evidence-Led Strategy
+25	25 / 36
+26	DISTRIBUTOR LENS
+26	Distributor fit favors packageable offers with bounded support
+26	Qualitative labels are provisional public-evidence judgments; validate locally before partner selection.
+26	Directional research judgment from public product, availability, and partner evidence.
+26	Semiconductor Startups 2026 · Evidence-Led Strategy
+26	26 / 36
+27	SYSTEMS-INTEGRATOR LENS
+27	SI fit favors deployable systems with reusable integration
+27	Systems integrators create value when reference architecture and operating accountability are both real.
+27	Directional research judgment from public product and deployment evidence.
+27	Semiconductor Startups 2026 · Evidence-Led Strategy
+27	27 / 36
+28	ECOSYSTEM LENS
+28	Ecosystem fit favors platforms that coordinate scarce complements
+28	The strongest orchestration candidates can align OEMs, software, cloud, packaging, or network partners.
+28	Directional research judgment from public platform and partner evidence.
+28	Semiconductor Startups 2026 · Evidence-Led Strategy
+28	28 / 36
+29	ROLE-SPECIFIC PORTFOLIO
+29	One heatmap shows the role-specific portfolio—not a universal ranking
+29	The same company can merit a different next move for a distributor, SI, or ecosystem orchestrator.
+29	COMPANY
+29	DISTRIBUTOR
+29	SI
+29	ORCHESTRATOR
+29	NEXT VALIDATION
+29	Axelera AI
+29	STRONG
+29	STRONG
+29	STRONG
+29	Validate economics
+29	Tenstorrent
+29	EMERGING
+29	EMERGING
+29	STRONG
+29	Choose motion
+29	NextSilicon
+29	VALIDATE
+29	EMERGING
+29	EMERGING
+29	Prove porting
+29	Fractile
+29	MONITOR
+29	VALIDATE
+29	VALIDATE
+29	Secure lighthouse
+29	Etched
+29	MONITOR
+29	VALIDATE
+29	VALIDATE
+29	Test workload durability
+29	d-Matrix
+29	EMERGING
+29	STRONG
+29	EMERGING
+29	Validate TCO + SLA
+29	MatX
+29	MONITOR
+29	MONITOR
+29	VALIDATE
+29	Wait for silicon
+29	Cornelis
+29	STRONG
+29	STRONG
+29	EMERGING
+29	Package migration
+29	Lightmatter
+29	VALIDATE
+29	VALIDATE
+29	STRONG
+29	Map control point
+29	Xsight Labs
+29	VALIDATE
+29	EMERGING
+29	EMERGING
+29	Validate NOS/tooling
+29	Public-evidence posture; candidate model, not calibrated organization-specific scoring.
+29	Semiconductor Startups 2026 · Evidence-Led Strategy
+29	29 / 36
+30	DISTRIBUTOR ECONOMICS
+30	Unit economics differ by where the partner controls value
+30	Inventory, design-in, software, and ecosystem motions create distinct margin and support exposure.
+30	SYSTEM SALE
+30	High initial value
+30	Inventory, support, and supply exposure
+30	SILICON DESIGN-IN
+30	Sticky volume revenue
+30	Long qualification and concentration
+30	IP LICENSE
+30	Asset-light leverage
+30	Customer implementation and royalty timing
+30	SOFTWARE + SUPPORT
+30	Recurring control layer
+30	Requires developer adoption and model coverage
+30	PARTNER ECOSYSTEM
+30	Distribution leverage
+30	Enablement cost and channel conflict
+30	Directional business-model assessment; no company financial forecasts implied.
+30	Semiconductor Startups 2026 · Evidence-Led Strategy
+30	30 / 36
+31	PHASE 0 CALIBRATION
+31	Calibrate the model on three deliberately different archetypes
+31	Axelera AI, Etched, and Lightmatter test deployment, specialization, and ecosystem-design-in assumptions.
+31	AXELERA AI
+31	DEPLOYMENT ECOSYSTEM
+31	Can partners replicate a vertical edge offer with bounded support?
+31	PRIMARY LENS  ·  Distributor + SI
+31	ETCHED
+31	SPECIALIZATION BET
+31	Does transformer-only advantage survive workload and roadmap scrutiny?
+31	PRIMARY LENS  ·  SI + lighthouse
+31	LIGHTMATTER
+31	DESIGN-IN ECOSYSTEM
+31	Who owns qualification, packaging coordination, and commercial pull?
+31	PRIMARY LENS  ·  Orchestrator
+31	Phase 0 operating recommendation; public evidence defines hypotheses, not final selections.
+31	Semiconductor Startups 2026 · Evidence-Led Strategy
+31	31 / 36
+32	90-DAY ACTION PLAN
+32	The first 90 days should buy evidence, not commitments
+32	Each stage resolves a specific uncertainty and ends in an explicit advance, redesign, or stop decision.
+32	0–30 DAYS · SCREEN
+32	Confirm offer, stage, ICP, partner boundary, and evidence owner for six shortlisted motions.
+32	31–60 DAYS · TEST
+32	Run workload, integration, support, and commercial discovery with named hypotheses.
+32	61–90 DAYS · DECIDE
+32	Advance, redesign, or stop each motion based on proof-package completion.
+32	One evidence ledger, one archetype decision, and one next-action brief per shortlisted company.
+32	Recommended validation sequence; no named-partner commitment implied.
+32	Semiconductor Startups 2026 · Evidence-Led Strategy
+32	32 / 36
+33	12-MONTH WATCHLIST
+33	Quarterly triggers—not narrative momentum—should change posture
+33	Commercial milestones are the control system for the portfolio.
+33	PRE-SILICON / PRE-SCALE
+33	Fractile · MatX
+33	Tape-out, first silicon, compiler readiness
+33	EARLY SYSTEMS / SAMPLES
+33	Etched · Lightmatter · Xsight
+33	Customer qualification, production benchmarks, design wins
+33	PRODUCT / VOLUME RAMP
+33	Axelera · NextSilicon · d-Matrix
+33	Shipment growth, repeat deployments, supply execution
+33	PORTFOLIO / ECOSYSTEM
+33	Tenstorrent · Cornelis
+33	Partner replication, software depth, installed-base expansion
+33	Forward watchpoints inferred from publicly stated product stages.
+33	Semiconductor Startups 2026 · Evidence-Led Strategy
+33	33 / 36
+34	WHAT TO WATCH
+34	Five kill criteria stop technically impressive but non-deployable bets
+34	Software, silicon, proof, customers, and workload durability are non-negotiable gates.
+34	01
+34	SOFTWARE
+34	Compiler maturity, frameworks, model coverage, and developer experience
+34	02
+34	SILICON
+34	Tape-out, yield, packaging, memory availability, and manufacturing scale
+34	03
+34	PROOF
+34	Independent benchmarks, production workloads, and total-cost evidence
+34	04
+34	CUSTOMERS
+34	Design-win conversion, concentration, support burden, and renewal economics
+34	05
+34	DURABILITY
+34	Whether the targeted workload or interconnect standard remains strategically important
+34	Research-team risk synthesis from public company evidence.
+34	Semiconductor Startups 2026 · Evidence-Led Strategy
+34	34 / 36
+35	EVIDENCE BUYING PLAN
+35	The evidence ledger exposes exactly what must be learned next
+35	Every priority has a strongest anchor, a decisive gap, and a next question.
+35	Illustrative public-evidence snapshot; not the authoritative scorecard.
+35	Semiconductor Startups 2026 · Evidence-Led Strategy
+35	35 / 36
+36	CONCLUSION
+36	Select validation priorities now—and reserve partnership decisions for calibrated evidence
+36	The portfolio is actionable when posture, confidence, and the next proof purchase travel together.
+36	PUBLIC EVIDENCE
+36	Prioritizes what to test
+36	PHASE 0
+36	Calibrates the rubric
+36	LOCAL PROFILE
+36	Determines who to partner with
+36	Use the cohort to choose what to test next—not to declare a market winner.
+36	Conclusion based on the CRN cohort and primary-source review.
+36	Semiconductor Startups 2026 · Evidence-Led Strategy
+36	36 / 36

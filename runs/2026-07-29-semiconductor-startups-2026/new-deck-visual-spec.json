@@ -1,0 +1,1206 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "output_mode": "native",
+    "editability": "PowerPoint-native text, tables, charts, matrices, and diagrams; official product images remain editable picture shapes.",
+    "reference_deck": null
+  },
+  "visuals": [
+    {
+      "id": "new-s01-native",
+      "slide_ids": [
+        1
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s02-native",
+      "slide_ids": [
+        2
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s03-native",
+      "slide_ids": [
+        3
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s04-native",
+      "slide_ids": [
+        4
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s05-native",
+      "slide_ids": [
+        5
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s06-native",
+      "slide_ids": [
+        6
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s07-native",
+      "slide_ids": [
+        7
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s08-native",
+      "slide_ids": [
+        8
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s09-native",
+      "slide_ids": [
+        9
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s10-native",
+      "slide_ids": [
+        10
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s11-native",
+      "slide_ids": [
+        11
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s12-native",
+      "slide_ids": [
+        12
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-axelera"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s12-asset",
+      "slide_ids": [
+        12
+      ],
+      "purpose": "Official product visual for AXELERA AI.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://axelera.ai/news/axelera-ai-secures-more-than-250-million-funding-on-global-ai-demand"
+      },
+      "asset": "assets/company-sites/axelera-ai.webp",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s13-native",
+      "slide_ids": [
+        13
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-crn"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s13-asset",
+      "slide_ids": [
+        13
+      ],
+      "purpose": "Official product visual for TENSTORRENT.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://tenstorrent.com/vision/tenstorrent-announces-availability-of-tt-ascalon"
+      },
+      "asset": "assets/company-sites/tenstorrent-tt-ascalon.png",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s14-native",
+      "slide_ids": [
+        14
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-nextsilicon"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s14-asset",
+      "slide_ids": [
+        14
+      ],
+      "purpose": "Official product visual for NEXTSILICON.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://www.nextsilicon.com/press-releases/maverick-2-powers-hpc-ai-breakthroughs"
+      },
+      "asset": "assets/company-sites/nextsilicon-maverick-2.jpg",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s15-native",
+      "slide_ids": [
+        15
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-fractile"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s15-asset",
+      "slide_ids": [
+        15
+      ],
+      "purpose": "Official product visual for FRACTILE.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://www.fractile.ai/"
+      },
+      "asset": "assets/company-sites/fractile-thumbnail.jpg",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s16-native",
+      "slide_ids": [
+        16
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-etched"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s16-asset",
+      "slide_ids": [
+        16
+      ],
+      "purpose": "Official product visual for ETCHED.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://www.etched.com/"
+      },
+      "asset": "assets/company-sites/etched-sohu.png",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s17-native",
+      "slide_ids": [
+        17
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-dmatrix-prod",
+        "src-dmatrix-fund"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s17-asset",
+      "slide_ids": [
+        17
+      ],
+      "purpose": "Official product visual for D-MATRIX.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://www.d-matrix.ai/d-matrix-corsair-ai-inference-platform-enters-full-production/"
+      },
+      "asset": "assets/company-sites/d-matrix-corsair.jpg",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s18-native",
+      "slide_ids": [
+        18
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-matx"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s18-asset",
+      "slide_ids": [
+        18
+      ],
+      "purpose": "Official product visual for MATX.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://matx.com/"
+      },
+      "asset": "assets/company-sites/matx-cover.png",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s19-native",
+      "slide_ids": [
+        19
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-matx"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s20-native",
+      "slide_ids": [
+        20
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s21-native",
+      "slide_ids": [
+        21
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-cornelis-fund"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s21-asset",
+      "slide_ids": [
+        21
+      ],
+      "purpose": "Official product visual for CORNELIS NETWORKS.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://www.cornelisnetworks.com/stories/cornelis-cn5000-launches-rewiring-ai-and-hpc-networking-at-scale"
+      },
+      "asset": "assets/company-sites/cornelis-cn5000.png",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s22-native",
+      "slide_ids": [
+        22
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-lightmatter-prod",
+        "src-lightmatter-fund"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s22-asset",
+      "slide_ids": [
+        22
+      ],
+      "purpose": "Official product visual for LIGHTMATTER.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://lightmatter.co/blog/seeing-is-believing-a-technical-deep-dive-into-lightmatters-hardware/"
+      },
+      "asset": "assets/company-sites/lightmatter-hardware-proof.png",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s23-native",
+      "slide_ids": [
+        23
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s23-asset",
+      "slide_ids": [
+        23
+      ],
+      "purpose": "Official product visual for XSIGHT LABS.",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "The official company-site image identifies the real product or platform.",
+      "source": {
+        "path": "https://xsightlabs.com/switches/x2"
+      },
+      "asset": "assets/company-sites/xsight-site-icon.png",
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s24-native",
+      "slide_ids": [
+        24
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s25-native",
+      "slide_ids": [
+        25
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s26-native",
+      "slide_ids": [
+        26
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s27-native",
+      "slide_ids": [
+        27
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s28-native",
+      "slide_ids": [
+        28
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s29-native",
+      "slide_ids": [
+        29
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s30-native",
+      "slide_ids": [
+        30
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s31-native",
+      "slide_ids": [
+        31
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-etched",
+        "src-lightmatter-prod"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s32-native",
+      "slide_ids": [
+        32
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s33-native",
+      "slide_ids": [
+        33
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s34-native",
+      "slide_ids": [
+        34
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s35-native",
+      "slide_ids": [
+        35
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    },
+    {
+      "id": "new-s36-native",
+      "slide_ids": [
+        36
+      ],
+      "purpose": "Editable decision content, comparison, diagram, or table.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "Structured claims and comparisons remain editable PowerPoint objects.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true
+      }
+    }
+  ]
+}

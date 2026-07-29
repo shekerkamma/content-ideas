@@ -1,0 +1,42 @@
+{
+  "artifact_status": "reviewed",
+  "scope": "new PPTX deck; HTML explicitly out of scope for this deck-only rebuild",
+  "run_folder": "runs/2026-07-29-semiconductor-startups-2026",
+  "pptx": {
+    "draft_path": "client-package/semiconductor-startups-2026-evidence-led-strategy-draft.pptx",
+    "reviewed_path": "client-package/semiconductor-startups-2026-evidence-led-strategy-reviewed.pptx",
+    "slide_count": 36,
+    "editability": "native_powerpoint",
+    "editable_text_shape_count": 657,
+    "builder_path": "client-package/build_new_deck.py",
+    "content_path": "outputs/new-deck-content.json",
+    "qa_status": "passed",
+    "sha256": "8354c70281af543455db34ede383c23c73512b4d7f629122ec95de805ab3303b",
+    "officecli": {
+      "status": "passed",
+      "result_path": "client-package/qa/officecli-new-final",
+      "required": true
+    },
+    "design_lint": {
+      "status": "clean",
+      "result_path": "client-package/qa/new-deck-design-lint.json"
+    },
+    "material_change": {
+      "status": "passed",
+      "result_path": "client-package/qa/material-change.json",
+      "same_position_full_text_count": 0,
+      "identical_slide_text_anywhere_count": 0
+    }
+  },
+  "evidence": {
+    "ledger_path": "outputs/evidence-ledger.csv",
+    "allowed_numbers_path": "outputs/allowed-numbers.yaml",
+    "row_count": 83,
+    "traceability_path": "outputs/artifact-traceability-v2.md"
+  },
+  "visual_spec_path": "new-deck-visual-spec.json",
+  "slide_plan_path": "new-deck-slide-plan.json",
+  "sync_check_path": "outputs/new-deck-sync-check.md",
+  "critique_path": "outputs/new-deck-critique.md",
+  "updated_at": "2026-07-29T11:00:07.092731+00:00"
+}
