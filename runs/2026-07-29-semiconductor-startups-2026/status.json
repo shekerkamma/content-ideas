@@ -1,0 +1,39 @@
+{
+  "run_id": "2026-07-29-semiconductor-startups-2026",
+  "target": "CRN 2026 semiconductor startup cohort",
+  "artifact_status": "reviewed",
+  "current_stage": "complete",
+  "minimum_slide_count": 44,
+  "completed_gates": [
+    "prompt_fit",
+    "operating_prompt",
+    "gbrain_recall_documented",
+    "research_tool_discipline",
+    "evidence_ledger",
+    "metric_definitions",
+    "data_quality",
+    "scoring_model",
+    "story_architect",
+    "allowed_numbers",
+    "artifact_traceability",
+    "visual_spec",
+    "editable_pptx_qa",
+    "html_qa",
+    "sync_check",
+    "delivery_manifest"
+  ],
+  "blocked_gates": [],
+  "artifact_paths": {
+    "operating_prompt": "inputs/operating-prompt.yaml",
+    "evidence_ledger": "outputs/evidence-ledger.csv",
+    "allowed_numbers": "outputs/allowed-numbers.yaml",
+    "story_pack": "outputs/story-architect-pack.md",
+    "deck_source": "client-package/build_deck.py",
+    "reviewed_pptx": "client-package/semiconductor-channel-decision-deck-skillpipe-reviewed.pptx",
+    "html_local": "client-package/site/index.html",
+    "html_publish_source": "client-package/pages/semiconductor-startups-2026/index.html",
+    "manifest": "client-package/delivery-manifest.json"
+  },
+  "next_command": "Use the reviewed PPTX and local HTML; publish the staged HTML only when a public URL is explicitly requested.",
+  "updated_at": "2026-07-29T10:06:09.217935+00:00"
+}

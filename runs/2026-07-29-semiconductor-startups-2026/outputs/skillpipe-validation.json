@@ -1,0 +1,53 @@
+{
+  "contract_version": "1.0",
+  "run": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026",
+  "stage": "complete",
+  "passed": true,
+  "stage_reports": [
+    {
+      "stage": "frame",
+      "passed": true,
+      "missing": [],
+      "missing_globs": [],
+      "gate": "decision question, audience, cohort, timeframe, deliverables, and slide minimum are explicit"
+    },
+    {
+      "stage": "research",
+      "passed": true,
+      "missing": [],
+      "missing_globs": [],
+      "gate": "current primary sources and retrieval routes are recorded; generic search is fallback only"
+    },
+    {
+      "stage": "evidence",
+      "passed": true,
+      "missing": [],
+      "missing_globs": [],
+      "gate": "claims are rows, metrics precede scores, coverage and confidence are visible"
+    },
+    {
+      "stage": "story",
+      "passed": true,
+      "missing": [],
+      "missing_globs": [],
+      "gate": "BLUF, argument arc, slide spine, evidence map, datapoint promotion, and content cuts are locked"
+    },
+    {
+      "stage": "artifacts",
+      "passed": true,
+      "missing": [],
+      "missing_globs": [],
+      "gate": "branded editable PPTX and self-contained HTML are built from the locked story"
+    },
+    {
+      "stage": "qa",
+      "passed": true,
+      "missing": [],
+      "missing_globs": [],
+      "gate": "evidence, visible numbers, editability, render, OfficeCLI, HTML, sync, and manifest checks pass"
+    }
+  ],
+  "missing": [],
+  "missing_globs": [],
+  "checked_at": "2026-07-29T10:06:09.483495+00:00"
+}

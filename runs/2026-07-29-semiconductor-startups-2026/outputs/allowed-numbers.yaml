@@ -1,0 +1,419 @@
+allowed_numbers:
+  - id: NUM-001
+    visible_value: "$250"
+    meaning: "Visible value on slide 12: Axelera turns edge acceleration into a deployment ecosystem"
+    target_or_competitor: "AXELERA AI"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D12"
+      - "EV-C12-WEDGE"
+      - "EV-C12-PROOF"
+      - "EV-C12-INSERTION"
+      - "EV-C12-RISK"
+    source_url: "https://axelera.ai/news/axelera-ai-secures-more-than-250-million-funding-on-global-commercial-growth"
+    source_type: "press"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 12"
+      - "html: slide-12"
+    status: allowed
+  - id: NUM-002
+    visible_value: "$250M"
+    meaning: "Visible value on slide 12: Axelera turns edge acceleration into a deployment ecosystem"
+    target_or_competitor: "AXELERA AI"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D12"
+      - "EV-C12-WEDGE"
+      - "EV-C12-PROOF"
+      - "EV-C12-INSERTION"
+      - "EV-C12-RISK"
+    source_url: "https://axelera.ai/news/axelera-ai-secures-more-than-250-million-funding-on-global-commercial-growth"
+    source_type: "press"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 12"
+      - "html: slide-12"
+    status: allowed
+  - id: NUM-003
+    visible_value: "$1B"
+    meaning: "Visible value on slide 13: Tenstorrent attacks lock-in with a programmable system and licensable IP"
+    target_or_competitor: "TENSTORRENT"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D13"
+      - "EV-C13-WEDGE"
+      - "EV-C13-PROOF"
+      - "EV-C13-INSERTION"
+      - "EV-C13-RISK"
+    source_url: "https://tenstorrent.com/newsroom/tenstorrent-sets-new-performance-records-launches-tt--ascalon-s"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 13"
+      - "html: slide-13"
+    status: allowed
+  - id: NUM-004
+    visible_value: "$303M"
+    meaning: "Visible value on slide 14: NextSilicon makes the accelerator adapt to code at runtime"
+    target_or_competitor: "NEXTSILICON"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D14"
+      - "EV-C14-WEDGE"
+      - "EV-C14-PROOF"
+      - "EV-C14-INSERTION"
+      - "EV-C14-RISK"
+    source_url: "https://www.nextsilicon.com/insights/nextsilicon-breakthrough/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 14"
+      - "html: slide-14"
+    status: allowed
+  - id: NUM-005
+    visible_value: "$220"
+    meaning: "Visible value on slide 15: Fractile is designing the full stack around exploding inference token demand"
+    target_or_competitor: "FRACTILE"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D15"
+      - "EV-C15-WEDGE"
+      - "EV-C15-PROOF"
+      - "EV-C15-INSERTION"
+      - "EV-C15-RISK"
+    source_url: "https://www.fractile.ai/news/fractile-raises-220m-to-build-the-next-generation-of-inference-hardware"
+    source_type: "press"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 15"
+      - "html: slide-15"
+    status: allowed
+  - id: NUM-006
+    visible_value: "$220M"
+    meaning: "Visible value on slide 15: Fractile is designing the full stack around exploding inference token demand"
+    target_or_competitor: "FRACTILE"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D15"
+      - "EV-C15-WEDGE"
+      - "EV-C15-PROOF"
+      - "EV-C15-INSERTION"
+      - "EV-C15-RISK"
+    source_url: "https://www.fractile.ai/news/fractile-raises-220m-to-build-the-next-generation-of-inference-hardware"
+    source_type: "press"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 15"
+      - "html: slide-15"
+    status: allowed
+  - id: NUM-007
+    visible_value: "$300M"
+    meaning: "Visible value on slide 16: Etched trades generality for a transformer-only performance ceiling"
+    target_or_competitor: "ETCHED"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D16"
+      - "EV-C16-WEDGE"
+      - "EV-C16-PROOF"
+      - "EV-C16-INSERTION"
+      - "EV-C16-RISK"
+    source_url: "https://www.etched.com/progress"
+    source_type: "official"
+    confidence: "medium"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 16"
+      - "html: slide-16"
+    status: allowed
+  - id: NUM-008
+    visible_value: "$10.3B"
+    meaning: "Visible value on slide 16: Etched trades generality for a transformer-only performance ceiling"
+    target_or_competitor: "ETCHED"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D16"
+      - "EV-C16-WEDGE"
+      - "EV-C16-PROOF"
+      - "EV-C16-INSERTION"
+      - "EV-C16-RISK"
+    source_url: "https://www.etched.com/progress"
+    source_type: "official"
+    confidence: "medium"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 16"
+      - "html: slide-16"
+    status: allowed
+  - id: NUM-009
+    visible_value: "$275"
+    meaning: "Visible value on slide 17: d-Matrix moves inference compute closer to memory\u2014and into production"
+    target_or_competitor: "D-MATRIX"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D17"
+      - "EV-C17-WEDGE"
+      - "EV-C17-PROOF"
+      - "EV-C17-INSERTION"
+      - "EV-C17-RISK"
+    source_url: "https://www.d-matrix.ai/announcements/d-matrix-corsair-ai-inference-platform-enters-full-production-to-meet-customer-demand/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 17"
+      - "html: slide-17"
+    status: allowed
+  - id: NUM-010
+    visible_value: "$450M"
+    meaning: "Visible value on slide 17: d-Matrix moves inference compute closer to memory\u2014and into production"
+    target_or_competitor: "D-MATRIX"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D17"
+      - "EV-C17-WEDGE"
+      - "EV-C17-PROOF"
+      - "EV-C17-INSERTION"
+      - "EV-C17-RISK"
+    source_url: "https://www.d-matrix.ai/announcements/d-matrix-corsair-ai-inference-platform-enters-full-production-to-meet-customer-demand/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 17"
+      - "html: slide-17"
+    status: allowed
+  - id: NUM-011
+    visible_value: "$2B"
+    meaning: "Visible value on slide 17: d-Matrix moves inference compute closer to memory\u2014and into production"
+    target_or_competitor: "D-MATRIX"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D17"
+      - "EV-C17-WEDGE"
+      - "EV-C17-PROOF"
+      - "EV-C17-INSERTION"
+      - "EV-C17-RISK"
+    source_url: "https://www.d-matrix.ai/announcements/d-matrix-corsair-ai-inference-platform-enters-full-production-to-meet-customer-demand/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 17"
+      - "html: slide-17"
+    status: allowed
+  - id: NUM-012
+    visible_value: "$500"
+    meaning: "Visible value on slide 18: MatX designs the chip around LLM throughput and latency from first principles"
+    target_or_competitor: "MATX"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D18"
+      - "EV-C18-WEDGE"
+      - "EV-C18-PROOF"
+      - "EV-C18-INSERTION"
+      - "EV-C18-RISK"
+    source_url: "https://matx.com/research/series_b"
+    source_type: "press"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 18"
+      - "html: slide-18"
+    status: allowed
+  - id: NUM-013
+    visible_value: "$500M"
+    meaning: "Visible value on slide 18: MatX designs the chip around LLM throughput and latency from first principles"
+    target_or_competitor: "MATX"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D18"
+      - "EV-C18-WEDGE"
+      - "EV-C18-PROOF"
+      - "EV-C18-INSERTION"
+      - "EV-C18-RISK"
+    source_url: "https://matx.com/research/series_b"
+    source_type: "press"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 18"
+      - "html: slide-18"
+    status: allowed
+  - id: NUM-014
+    visible_value: "$29M"
+    meaning: "Visible value on slide 21: Cornelis reopens a scale-out fabric alternative for AI and HPC"
+    target_or_competitor: "CORNELIS NETWORKS"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D21"
+      - "EV-C21-WEDGE"
+      - "EV-C21-PROOF"
+      - "EV-C21-INSERTION"
+      - "EV-C21-RISK"
+    source_url: "https://www.cornelis.com/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 21"
+      - "html: slide-21"
+    status: allowed
+  - id: NUM-015
+    visible_value: "114Tbps"
+    meaning: "Visible value on slide 22: Lightmatter uses photonics to break the electrical I/O bottleneck"
+    target_or_competitor: "LIGHTMATTER"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D22"
+      - "EV-C22-WEDGE"
+      - "EV-C22-PROOF"
+      - "EV-C22-INSERTION"
+      - "EV-C22-RISK"
+    source_url: "https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 22"
+      - "html: slide-22"
+    status: allowed
+  - id: NUM-016
+    visible_value: "$400M"
+    meaning: "Visible value on slide 22: Lightmatter uses photonics to break the electrical I/O bottleneck"
+    target_or_competitor: "LIGHTMATTER"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D22"
+      - "EV-C22-WEDGE"
+      - "EV-C22-PROOF"
+      - "EV-C22-INSERTION"
+      - "EV-C22-RISK"
+    source_url: "https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 22"
+      - "html: slide-22"
+    status: allowed
+  - id: NUM-017
+    visible_value: "$850M"
+    meaning: "Visible value on slide 22: Lightmatter uses photonics to break the electrical I/O bottleneck"
+    target_or_competitor: "LIGHTMATTER"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D22"
+      - "EV-C22-WEDGE"
+      - "EV-C22-PROOF"
+      - "EV-C22-INSERTION"
+      - "EV-C22-RISK"
+    source_url: "https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 22"
+      - "html: slide-22"
+    status: allowed
+  - id: NUM-018
+    visible_value: "100G"
+    meaning: "Visible value on slide 23: Xsight makes programmable Ethernet silicon an AI-factory control point"
+    target_or_competitor: "XSIGHT LABS"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D23"
+      - "EV-C23-WEDGE"
+      - "EV-C23-PROOF"
+      - "EV-C23-INSERTION"
+      - "EV-C23-RISK"
+    source_url: "https://xsightlabs.com/newsroom/announcements/xsight-labs-announces-x2-programmable-sdn-ethernet-switches-for-hyperscale-and-edge-data-centers-optimized-for-the-ai-factory-era"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 23"
+      - "html: slide-23"
+    status: allowed
+  - id: NUM-019
+    visible_value: "800G"
+    meaning: "Visible value on slide 23: Xsight makes programmable Ethernet silicon an AI-factory control point"
+    target_or_competitor: "XSIGHT LABS"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D23"
+      - "EV-C23-WEDGE"
+      - "EV-C23-PROOF"
+      - "EV-C23-INSERTION"
+      - "EV-C23-RISK"
+    source_url: "https://xsightlabs.com/newsroom/announcements/xsight-labs-announces-x2-programmable-sdn-ethernet-switches-for-hyperscale-and-edge-data-centers-optimized-for-the-ai-factory-era"
+    source_type: "official"
+    confidence: "high"
+    required_label: "vendor-published"
+    allowed_locations:
+      - "deck: slide 23"
+      - "html: slide-23"
+    status: allowed
+  - id: NUM-020
+    visible_value: "20%"
+    meaning: "Visible value on slide 42: The rubric weights readiness evidence and applies hard gates before posture"
+    target_or_competitor: "CRN cohort"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D42"
+    source_url: "https://www.crn.com/news/computing/2026/the-10-coolest-semiconductor-startups-of-2026-so-far"
+    source_type: "press"
+    confidence: "medium"
+    required_label: "candidate / uncalibrated"
+    allowed_locations:
+      - "deck: slide 42"
+      - "html: slide-42"
+    status: allowed
+  - id: NUM-021
+    visible_value: "15%"
+    meaning: "Visible value on slide 42: The rubric weights readiness evidence and applies hard gates before posture"
+    target_or_competitor: "CRN cohort"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D42"
+    source_url: "https://www.crn.com/news/computing/2026/the-10-coolest-semiconductor-startups-of-2026-so-far"
+    source_type: "press"
+    confidence: "medium"
+    required_label: "candidate / uncalibrated"
+    allowed_locations:
+      - "deck: slide 42"
+      - "html: slide-42"
+    status: allowed
+  - id: NUM-022
+    visible_value: "10%"
+    meaning: "Visible value on slide 42: The rubric weights readiness evidence and applies hard gates before posture"
+    target_or_competitor: "CRN cohort"
+    source_artifact: "outputs/evidence-ledger.csv"
+    claim_ids:
+      - "EV-D42"
+    source_url: "https://www.crn.com/news/computing/2026/the-10-coolest-semiconductor-startups-of-2026-so-far"
+    source_type: "press"
+    confidence: "medium"
+    required_label: "candidate / uncalibrated"
+    allowed_locations:
+      - "deck: slide 42"
+      - "html: slide-42"
+    status: allowed
+blocked_patterns:
+  - pattern: "\\bTAM\\b|\\bSAM\\b|\\bSOM\\b|\\bCAGR\\b|\\bARR\\b"
+    reason: "No unsupported market or financial precision"
+  - pattern: "\\bROI\\b|\\bpayback\\b|\\bmarket share\\b"
+    reason: "No unsupported outcome or share claims"
+structural_numbers:
+  - "slide numbers and total slide count"
+  - "calendar dates and source dates"
+  - "company cohort count and partner-lens count"
+  - "product names such as CN5000, M1000, X2, and Maverick-2"
+  - "30/60/90-day roadmap labels and 12-month watchlist"
+  - "ordered framework labels such as 01-06"

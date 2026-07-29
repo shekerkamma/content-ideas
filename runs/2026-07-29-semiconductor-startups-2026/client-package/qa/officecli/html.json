@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-29-semiconductor-startups-2026/client-package/semiconductor-channel-decision-deck-skillpipe-draft.pptx",
+    "html",
+    "-o",
+    "runs/2026-07-29-semiconductor-startups-2026/client-package/qa/officecli/semiconductor-channel-decision-deck-skillpipe-draft.html"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026/client-package/qa/officecli/semiconductor-channel-decision-deck-skillpipe-draft.html\n",
+  "stderr": ""
+}

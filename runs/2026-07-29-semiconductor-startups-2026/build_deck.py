@@ -134,23 +134,23 @@ def add_header(d: Deck, slide, data: dict, *, title_w=None) -> None:
         slide,
         data["title"],
         d.M,
-        Inches(0.67),
-        title_w or d.CW,
         Inches(0.62),
-        size=27,
+        title_w or d.CW,
+        Inches(0.82),
+        size=24,
         color=d.b.NAVY,
         bold=True,
         shrink=True,
     )
-    d.rect(slide, d.M, Inches(1.35), Inches(1.25), Inches(0.045), d.b.TEAL)
+    d.rect(slide, d.M, Inches(1.45), Inches(1.25), Inches(0.045), d.b.TEAL)
     d.text(
         slide,
         data.get("subtitle", ""),
         d.M,
-        Inches(1.48),
+        Inches(1.58),
         d.CW,
-        Inches(0.36),
-        size=13.2,
+        Inches(0.30),
+        size=12.6,
         color=d.b.MUTED,
         shrink=True,
     )

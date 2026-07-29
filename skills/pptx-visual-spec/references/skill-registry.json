@@ -24,6 +24,7 @@
     {"name": "enterprise-ai-competitor-landscape", "tier": "orchestrator", "ownership": "repo", "source": ".agents/skills/enterprise-ai-competitor-landscape"},
     {"name": "competitor-analysis-pipeline", "tier": "orchestrator", "ownership": "repo", "source": "skills/competitor-analysis-pipeline"},
     {"name": "aianalyst-competitor-analysis", "tier": "orchestrator", "ownership": "repo", "source": "skills/aianalyst-competitor-analysis"},
+    {"name": "evidence-led-competitor-pipeline", "tier": "orchestrator", "ownership": "repo", "source": "skills/evidence-led-competitor-pipeline", "install_hosts": ["claude", "codex", "agents", "project-agents"], "note": "Formal compound skillpipe: current-web data taps feed AI Analyst evidence controls, then the competitor-analysis delivery workflow produces and validates editable PPTX plus self-contained HTML."},
     {"name": "pipeline-runner", "tier": "orchestrator", "ownership": "repo", "source": "skills/pipeline-runner"},
     {"name": "strategy-consulting", "tier": "orchestrator", "ownership": "repo", "source": "skills/strategy-consulting"},
     {"name": "pptx-toolkit", "tier": "pptx-modifier", "ownership": "repo", "source": "skills/pptx-toolkit"},

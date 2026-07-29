@@ -1,0 +1,33 @@
+objective: >
+  Rework the existing CRN 2026 semiconductor startup cohort into a decision-ready,
+  evidence-led channel and ecosystem screen with a reviewed editable PPTX and matching HTML.
+core_question: >
+  Which startup archetypes merit act-now validation, validate-next diligence, or monitoring,
+  and what evidence must change before a named partner recommendation is credible?
+target:
+  name: "CRN 2026 semiconductor startup cohort"
+  geography: "Global AI infrastructure and semiconductor ecosystem"
+  buyer_job: "Prioritize channel, systems-integration, and ecosystem validation"
+audience:
+  - "Channel and alliance leaders"
+  - "Systems-integrator and ecosystem strategists"
+  - "Corporate strategy and innovation teams"
+competitor_arenas:
+  - "edge deployment"
+  - "adaptable compute"
+  - "inference specialists"
+  - "interconnect"
+required_outputs:
+  - "evidence ledger, metrics, quality report, scoring model, and confidence labels"
+  - "44-or-more-slide editable branded PPTX"
+  - "self-contained HTML report"
+must_not_do:
+  - "Do not turn CRN's editorial cohort into a market-wide winner ranking."
+  - "Do not claim organization-specific partner fit without Phase 0 calibration."
+  - "Do not invent funding, performance, readiness, market size, or customer proof."
+evidence_standard: >
+  Prefer current official company disclosures and the CRN cohort source; label company
+  performance and funding statements as vendor-published and distinguish interpretation.
+final_answer_should_decide:
+  - "Which archetypes deserve action, validation, or monitoring"
+  - "Which proof gaps block stronger partner recommendations"

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "pptx": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026/client-package/semiconductor-channel-decision-deck-skillpipe-draft.pptx",
+  "slides": 44,
+  "editable_text_shapes": 573,
+  "titles_found": 44,
+  "html": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026/client-package/site/index.html",
+  "allowed_numbers": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026/outputs/allowed-numbers.yaml",
+  "allowed_number_entries": 22,
+  "blocked_visible_matches": [],
+  "story_sync": {
+    "validation portfolio": {
+      "deck": true,
+      "html": true
+    },
+    "heterogeneous infrastructure": {
+      "deck": true,
+      "html": true
+    },
+    "Four bottlenecks": {
+      "deck": true,
+      "html": true
+    },
+    "Phase 0": {
+      "deck": true,
+      "html": true
+    }
+  }
+}

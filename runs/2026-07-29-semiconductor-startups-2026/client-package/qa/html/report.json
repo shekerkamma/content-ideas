@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "htmlPath": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026/client-package/site/index.html",
+  "checks": {
+    "desktop": {
+      "h1": "The 10 Coolest Semiconductor Startups of 2026",
+      "sections": 45,
+      "navigationLinks": 7,
+      "missingTargets": [],
+      "passed": true
+    },
+    "mobile": {
+      "h1": "The 10 Coolest Semiconductor Startups of 2026",
+      "sections": 45,
+      "navigationLinks": 7,
+      "missingTargets": [],
+      "passed": true
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "checkedAt": "2026-07-29T10:01:14.835Z"
+}

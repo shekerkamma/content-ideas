@@ -1,0 +1,1527 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "The 10 Coolest Semiconductor Startups of 2026 (So Far)",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "claim-02",
+      "text": "The cohort divides into workload-specialized compute, adaptable/open compute, and interconnect infrastructure.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ]
+    },
+    {
+      "id": "claim-03",
+      "text": "Gartner forecasts worldwide semiconductor revenue above $1.3 trillion in 2026 and the highest growth rate in two decades.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-gartner"
+      ]
+    },
+    {
+      "id": "claim-04",
+      "text": "The ten companies address edge deployment, compute architecture, inference economics, or scale-out connectivity.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn"
+      ]
+    },
+    {
+      "id": "claim-05",
+      "text": "A consistent assessment separates technical wedge, commercial proof, insertion point, and execution risk.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn"
+      ]
+    },
+    {
+      "id": "claim-06",
+      "text": "Several cohort companies have raised nine-figure rounds, but commercialization stages remain uneven.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-dmatrix-fund",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-etched"
+      ]
+    },
+    {
+      "id": "claim-07",
+      "text": "The cohort\u2019s most plausible adoption paths complement existing infrastructure before displacing it.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-08",
+      "text": "The cohort monetizes through chips and systems, licensable IP, infrastructure components, or partner-enabled platforms.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-09",
+      "text": "The cohort\u2019s primary ICPs are hyperscalers/frontier labs, HPC institutions, sovereign and enterprise AI operators, and edge OEMs.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-10",
+      "text": "The most credible GTM sequence is lighthouse validation, design-in, reference deployment, and ecosystem replication.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-11",
+      "text": "The compute cohort spans broad programmable platforms and highly specialized inference systems.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn"
+      ]
+    },
+    {
+      "id": "claim-12",
+      "text": "Axelera\u2019s differentiator combines edge-focused acceleration with an explicit partner network and more than $250 million of new funding.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-axelera"
+      ]
+    },
+    {
+      "id": "claim-13",
+      "text": "Tenstorrent\u2019s TT-Ascalon S expands its open compute strategy into branch-heavy agentic workloads.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-crn"
+      ]
+    },
+    {
+      "id": "claim-14",
+      "text": "NextSilicon says Maverick-2 uses runtime-reconfigurable dataflow and was available in product volumes in Q4 2025.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-nextsilicon"
+      ]
+    },
+    {
+      "id": "claim-15",
+      "text": "Fractile raised $220 million to accelerate its path toward first chips and systems for frontier-model inference.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-fractile"
+      ]
+    },
+    {
+      "id": "claim-16",
+      "text": "Etched\u2019s Sohu strategy is an extreme specialization bet on transformers remaining the dominant AI architecture.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-etched"
+      ]
+    },
+    {
+      "id": "claim-17",
+      "text": "d-Matrix announced Corsair full production in June 2026 after raising a $275 million Series C in late 2025.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-dmatrix-prod",
+        "src-dmatrix-fund"
+      ]
+    },
+    {
+      "id": "claim-18",
+      "text": "MatX raised a $500 million Series B to finish development and scale manufacturing, with tape-out planned in under a year.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-matx"
+      ]
+    },
+    {
+      "id": "claim-19",
+      "text": "Compute startups occupy different positions on workload breadth, programmability, and commercialization maturity.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-matx"
+      ]
+    },
+    {
+      "id": "claim-20",
+      "text": "The interconnect cohort competes on congestion, bandwidth density, power, and programmability.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-21",
+      "text": "Cornelis positions CN5000 Omni-Path as a lossless, interoperable fabric for AI and HPC workloads.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-cornelis-fund"
+      ]
+    },
+    {
+      "id": "claim-22",
+      "text": "Lightmatter says the Passage M1000 reference platform provides 114 Tbps of total optical bandwidth.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-lightmatter-prod",
+        "src-lightmatter-fund"
+      ]
+    },
+    {
+      "id": "claim-23",
+      "text": "Xsight announced X2 sampling as a fully programmable, low-power data-center switch for AI-factory networks.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-24",
+      "text": "Cornelis focuses on cluster fabric, Lightmatter on optical chip/package links, and Xsight on programmable switching silicon.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-25",
+      "text": "More specialized architectures can promise stronger economics while carrying greater workload and execution concentration.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-26",
+      "text": "High-priority ICPs combine an acute bottleneck, measurable infrastructure spend, and authority over design or deployment.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-gartner",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-nextsilicon",
+        "src-axelera"
+      ]
+    },
+    {
+      "id": "claim-27",
+      "text": "Business models with reusable software or IP leverage can scale differently from bespoke system and design-in models.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-28",
+      "text": "GTM effectiveness improves when technical proof, commercial offer, and partner role are tailored to the buyer\u2019s deployment context.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ]
+    },
+    {
+      "id": "claim-29",
+      "text": "Commercial readiness requires evidence across workload proof, software, supply, reference customers, partners, and economics.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-30",
+      "text": "The most decision-relevant next events are tape-outs, volume ramps, production benchmarks, design wins, and ecosystem expansion.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-31",
+      "text": "Partners can create value through workload validation, system integration, deployment, and managed operations.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ]
+    },
+    {
+      "id": "claim-32",
+      "text": "Software, supply, independent benchmarks, customer concentration, and architecture durability are the central diligence risks.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod"
+      ]
+    },
+    {
+      "id": "claim-33",
+      "text": "A bottleneck-first watchlist is more useful than treating all ten companies as direct accelerator competitors.",
+      "kind": "recommendation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ]
+    },
+    {
+      "id": "claim-34",
+      "text": "The research used CRN\u2019s July 2026 list, Gartner market context, and official company announcements retrieved through Level 2 livecrawl.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "The 10 Coolest Semiconductor Startups of 2026",
+      "audience_job": "Understand the deck promise",
+      "claim_ids": [],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "visual-01"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Where specialized compute, memory-centric inference, and next-generation interconnects are creating new strategic options",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint cover explaining: The 10 Coolest Semiconductor Startups of 2026"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "executive",
+      "action_title": "The cohort is fragmenting the AI stack\u2014not mounting one generic GPU challenge",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-02"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "visual_ids": [
+        "visual-02"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The cohort divides into workload-specialized compute, adaptable/open compute, and interconnect infrastructure.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint executive explaining: The cohort is fragmenting the AI stack\u2014not mounting one generic GPU challenge"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "market",
+      "action_title": "A $1.3T semiconductor market gives new architectures room to find a wedge",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-03"
+      ],
+      "evidence_ids": [
+        "src-gartner"
+      ],
+      "visual_ids": [
+        "visual-03"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Gartner forecasts worldwide semiconductor revenue above $1.3 trillion in 2026 and the highest growth rate in two decades.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint market explaining: A $1.3T semiconductor market gives new architectures room to find a wedge"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "landscape",
+      "action_title": "The startups cluster around four bottlenecks across the AI system",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-04"
+      ],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "visual-04"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The ten companies address edge deployment, compute architecture, inference economics, or scale-out connectivity.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint landscape explaining: The startups cluster around four bottlenecks across the AI system"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "lens",
+      "action_title": "\u201cCoolest\u201d is a signal of strategic novelty\u2014not a risk-adjusted ranking",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-05"
+      ],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "visual-05"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "A consistent assessment separates technical wedge, commercial proof, insertion point, and execution risk.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint lens explaining: \u201cCoolest\u201d is a signal of strategic novelty\u2014not a risk-adjusted ranking"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "capital",
+      "action_title": "Capital is concentrating where silicon ambition meets a credible deployment path",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-06"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-dmatrix-fund",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-etched"
+      ],
+      "visual_ids": [
+        "visual-06"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Several cohort companies have raised nine-figure rounds, but commercialization stages remain uneven.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint capital explaining: Capital is concentrating where silicon ambition meets a credible deployment path"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "thesis",
+      "action_title": "The near-term opportunity is heterogeneous infrastructure, not wholesale replacement",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-07"
+      ],
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-07"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The cohort\u2019s most plausible adoption paths complement existing infrastructure before displacing it.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint thesis explaining: The near-term opportunity is heterogeneous infrastructure, not wholesale replacement"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "business-models",
+      "action_title": "Four commercialization models translate architecture into revenue",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-08"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-08"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The cohort monetizes through chips and systems, licensable IP, infrastructure components, or partner-enabled platforms.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint business-models explaining: Four commercialization models translate architecture into revenue"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "icp-map",
+      "action_title": "The addressable buyer is defined by workload pain\u2014not company size alone",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-09"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-09"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The cohort\u2019s primary ICPs are hyperscalers/frontier labs, HPC institutions, sovereign and enterprise AI operators, and edge OEMs.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint icp-map explaining: The addressable buyer is defined by workload pain\u2014not company size alone"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "gtm-motions",
+      "action_title": "Semiconductor GTM progresses from design influence to repeatable deployment",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-10"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The most credible GTM sequence is lighthouse validation, design-in, reference deployment, and ecosystem replication.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint gtm-motions explaining: Semiconductor GTM progresses from design influence to repeatable deployment"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "section",
+      "action_title": "Seven companies are redesigning where and how AI computation happens",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-11"
+      ],
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "visual_ids": [
+        "visual-11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The compute cohort spans broad programmable platforms and highly specialized inference systems.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint section explaining: Seven companies are redesigning where and how AI computation happens"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "company",
+      "action_title": "Axelera turns edge acceleration into a deployment ecosystem",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-12"
+      ],
+      "evidence_ids": [
+        "src-axelera"
+      ],
+      "visual_ids": [
+        "visual-12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Axelera\u2019s differentiator combines edge-focused acceleration with an explicit partner network and more than $250 million of new funding.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: Axelera turns edge acceleration into a deployment ecosystem"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "company",
+      "action_title": "Tenstorrent attacks lock-in with a programmable system and licensable IP",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-13"
+      ],
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-crn"
+      ],
+      "visual_ids": [
+        "visual-13"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Tenstorrent\u2019s TT-Ascalon S expands its open compute strategy into branch-heavy agentic workloads.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: Tenstorrent attacks lock-in with a programmable system and licensable IP"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "company",
+      "action_title": "NextSilicon makes the accelerator adapt to code at runtime",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-14"
+      ],
+      "evidence_ids": [
+        "src-nextsilicon"
+      ],
+      "visual_ids": [
+        "visual-14"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "NextSilicon says Maverick-2 uses runtime-reconfigurable dataflow and was available in product volumes in Q4 2025.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: NextSilicon makes the accelerator adapt to code at runtime"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "company",
+      "action_title": "Fractile is designing the full stack around exploding inference token demand",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-15"
+      ],
+      "evidence_ids": [
+        "src-fractile"
+      ],
+      "visual_ids": [
+        "visual-15"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Fractile raised $220 million to accelerate its path toward first chips and systems for frontier-model inference.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: Fractile is designing the full stack around exploding inference token demand"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 16,
+      "archetype": "company",
+      "action_title": "Etched trades generality for a transformer-only performance ceiling",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-16"
+      ],
+      "evidence_ids": [
+        "src-etched"
+      ],
+      "visual_ids": [
+        "visual-16"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Etched\u2019s Sohu strategy is an extreme specialization bet on transformers remaining the dominant AI architecture.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: Etched trades generality for a transformer-only performance ceiling"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 17,
+      "archetype": "company",
+      "action_title": "d-Matrix moves inference compute closer to memory\u2014and into production",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-17"
+      ],
+      "evidence_ids": [
+        "src-dmatrix-prod",
+        "src-dmatrix-fund"
+      ],
+      "visual_ids": [
+        "visual-17"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "d-Matrix announced Corsair full production in June 2026 after raising a $275 million Series C in late 2025.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: d-Matrix moves inference compute closer to memory\u2014and into production"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 18,
+      "archetype": "company",
+      "action_title": "MatX designs the chip around LLM throughput and latency from first principles",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-18"
+      ],
+      "evidence_ids": [
+        "src-matx"
+      ],
+      "visual_ids": [
+        "visual-18"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "MatX raised a $500 million Series B to finish development and scale manufacturing, with tape-out planned in under a year.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: MatX designs the chip around LLM throughput and latency from first principles"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 19,
+      "archetype": "comparison",
+      "action_title": "The compute challengers differentiate most clearly by breadth versus specialization",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-19"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-matx"
+      ],
+      "visual_ids": [
+        "visual-19"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Compute startups occupy different positions on workload breadth, programmability, and commercialization maturity.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint comparison explaining: The compute challengers differentiate most clearly by breadth versus specialization"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 20,
+      "archetype": "section",
+      "action_title": "Three companies treat data movement as the next AI scaling frontier",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-20"
+      ],
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-20"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The interconnect cohort competes on congestion, bandwidth density, power, and programmability.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint section explaining: Three companies treat data movement as the next AI scaling frontier"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 21,
+      "archetype": "company",
+      "action_title": "Cornelis reopens a scale-out fabric alternative for AI and HPC",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-21"
+      ],
+      "evidence_ids": [
+        "src-cornelis",
+        "src-cornelis-fund"
+      ],
+      "visual_ids": [
+        "visual-21"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Cornelis positions CN5000 Omni-Path as a lossless, interoperable fabric for AI and HPC workloads.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: Cornelis reopens a scale-out fabric alternative for AI and HPC"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 22,
+      "archetype": "company",
+      "action_title": "Lightmatter uses photonics to break the electrical I/O bottleneck",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-22"
+      ],
+      "evidence_ids": [
+        "src-lightmatter-prod",
+        "src-lightmatter-fund"
+      ],
+      "visual_ids": [
+        "visual-22"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Lightmatter says the Passage M1000 reference platform provides 114 Tbps of total optical bandwidth.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: Lightmatter uses photonics to break the electrical I/O bottleneck"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 23,
+      "archetype": "company",
+      "action_title": "Xsight makes programmable Ethernet silicon an AI-factory control point",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-23"
+      ],
+      "evidence_ids": [
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-23"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Xsight announced X2 sampling as a fully programmable, low-power data-center switch for AI-factory networks.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint company explaining: Xsight makes programmable Ethernet silicon an AI-factory control point"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 24,
+      "archetype": "comparison",
+      "action_title": "The three connectivity plays solve different layers of the same scaling problem",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-24"
+      ],
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-24"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Cornelis focuses on cluster fabric, Lightmatter on optical chip/package links, and Xsight on programmable switching silicon.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint comparison explaining: The three connectivity plays solve different layers of the same scaling problem"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 25,
+      "archetype": "matrix",
+      "action_title": "Commercial maturity and architectural specialization create different diligence paths",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-25"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-25"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "More specialized architectures can promise stronger economics while carrying greater workload and execution concentration.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint matrix explaining: Commercial maturity and architectural specialization create different diligence paths"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 26,
+      "archetype": "buyer-priority",
+      "action_title": "Prioritize buyers where pain, budget, and adoption authority coexist",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-26"
+      ],
+      "evidence_ids": [
+        "src-gartner",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-nextsilicon",
+        "src-axelera"
+      ],
+      "visual_ids": [
+        "visual-26"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "High-priority ICPs combine an acute bottleneck, measurable infrastructure spend, and authority over design or deployment.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint buyer-priority explaining: Prioritize buyers where pain, budget, and adoption authority coexist"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 27,
+      "archetype": "economics",
+      "action_title": "Revenue quality depends on where the startup captures recurring control",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-27"
+      ],
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-27"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Business models with reusable software or IP leverage can scale differently from bespoke system and design-in models.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint economics explaining: Revenue quality depends on where the startup captures recurring control"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 28,
+      "archetype": "engagement",
+      "action_title": "Each ICP needs a different proof package and commercial conversation",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-28"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ],
+      "visual_ids": [
+        "visual-28"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "GTM effectiveness improves when technical proof, commercial offer, and partner role are tailored to the buyer\u2019s deployment context.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint engagement explaining: Each ICP needs a different proof package and commercial conversation"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 29,
+      "archetype": "gtm-scorecard",
+      "action_title": "A six-gate scorecard tests whether technical interest can become repeatable revenue",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-29"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-29"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Commercial readiness requires evidence across workload proof, software, supply, reference customers, partners, and economics.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint gtm-scorecard explaining: A six-gate scorecard tests whether technical interest can become repeatable revenue"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 30,
+      "archetype": "watchlist",
+      "action_title": "The next proof points differ by commercialization stage",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-30"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-30"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The most decision-relevant next events are tape-outs, volume ramps, production benchmarks, design wins, and ecosystem expansion.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint watchlist explaining: The next proof points differ by commercialization stage"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 31,
+      "archetype": "implications",
+      "action_title": "The best channel opportunities sit around integration, validation, and workload access",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-31"
+      ],
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-31"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Partners can create value through workload validation, system integration, deployment, and managed operations.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint implications explaining: The best channel opportunities sit around integration, validation, and workload access"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 32,
+      "archetype": "risks",
+      "action_title": "Five execution gates will separate durable platforms from impressive silicon",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-32"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod"
+      ],
+      "visual_ids": [
+        "visual-32"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Software, supply, independent benchmarks, customer concentration, and architecture durability are the central diligence risks.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint risks explaining: Five execution gates will separate durable platforms from impressive silicon"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 33,
+      "archetype": "conclusion",
+      "action_title": "Track the bottleneck each startup removes\u2014and the ecosystem it must build next",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-33"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "visual_ids": [
+        "visual-33"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "A bottleneck-first watchlist is more useful than treating all ten companies as direct accelerator competitors.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint conclusion explaining: Track the bottleneck each startup removes\u2014and the ecosystem it must build next"
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 34,
+      "archetype": "methodology",
+      "action_title": "CRN selected the cohort; primary sources ground the company profiles",
+      "audience_job": "Use this evidence to compare the cohort and decide what to monitor",
+      "claim_ids": [
+        "claim-34"
+      ],
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "visual_ids": [
+        "visual-34"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The research used CRN\u2019s July 2026 list, Gartner market context, and official company announcements retrieved through Level 2 livecrawl.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "main visual",
+          "citation"
+        ],
+        "visual_alt_text": "Native PowerPoint methodology explaining: CRN selected the cohort; primary sources ground the company profiles"
+      },
+      "status": "planned"
+    }
+  ]
+}

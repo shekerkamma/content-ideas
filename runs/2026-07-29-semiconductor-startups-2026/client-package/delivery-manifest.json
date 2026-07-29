@@ -1,0 +1,60 @@
+{
+  "artifact_status": "reviewed",
+  "run_folder": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026",
+  "pptx": {
+    "draft_path": "client-package/semiconductor-channel-decision-deck-skillpipe-draft.pptx",
+    "reviewed_path": "client-package/semiconductor-channel-decision-deck-skillpipe-reviewed.pptx",
+    "slide_count": 44,
+    "editability": "native_powerpoint",
+    "editable_text_shape_count": 573,
+    "branded_deck_source_path": "client-package/build_deck.py",
+    "branded_deck_recreated": true,
+    "sha256": "9817668b52ee83409c0fb997e5ee38a7aa42cf8244f4c14241c9371610407e64",
+    "qa_status": "passed",
+    "design_lint_path": "client-package/qa/pptx-design-lint.json",
+    "officecli": {
+      "status": "passed",
+      "result_path": "client-package/qa/officecli",
+      "required": true
+    },
+    "contact_sheet_path": "client-package/qa/officecli/render/semiconductor-channel-decision-deck-skillpipe-draft.png"
+  },
+  "genspark": {
+    "used": false,
+    "project_url": null,
+    "hosted_editable_reference": false,
+    "evidence_clean_scan_status": "passed",
+    "unsupported_datapoints_removed": 0,
+    "hosted_source_sync_status": "not_applicable"
+  },
+  "html": {
+    "local_path": "client-package/site/index.html",
+    "publish_source_path": "client-package/pages/semiconductor-startups-2026/index.html",
+    "public_url": null,
+    "self_contained": true,
+    "public_url_verified": false,
+    "qa_status": "passed",
+    "qa_path": "client-package/qa/html/report.json",
+    "sha256": "a6e0f62c7a1f71419a92dbef0459ed6df59a4b87c6315075b56976d88e951db9"
+  },
+  "evidence": {
+    "ledger_path": "outputs/evidence-ledger.csv",
+    "allowed_numbers_path": "outputs/allowed-numbers.yaml",
+    "metric_definitions_path": "outputs/metric-definitions.md",
+    "data_quality_path": "outputs/data-quality-report.md",
+    "scoring_model_path": "outputs/scoring-model.md",
+    "row_count": 83,
+    "story_promoted_count": 83
+  },
+  "pipeline": {
+    "skill": "evidence-led-competitor-pipeline",
+    "contract": "skills/evidence-led-competitor-pipeline/references/skillpipe.json",
+    "printing_press_role": "upstream data tap",
+    "aianalyst_role": "evidence dataset, metrics, scoring, and confidence",
+    "competitor_pipeline_role": "story, PPTX, HTML, and QA delivery"
+  },
+  "sync_check_path": "outputs/sync-check.md",
+  "status_path": "status.json",
+  "published_commit": null,
+  "updated_at": "2026-07-29T10:06:09.217935+00:00"
+}
