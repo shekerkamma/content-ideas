@@ -21,16 +21,31 @@ Before rendering any slide deck:
    For video-derived Genspark work, read the canonical
    [Genspark video-to-deck contract](references/genspark-video-deck-contract.md).
 2. Classify every meaningful visual region, not merely every slide.
-3. Write `<run>/visual-spec.json` using
+3. For a rebuild, source presentation, or video-derived deck, use
+   `presentation-source-bundle` to write `<run>/presentation-evidence.json`, then tailor
+   `<run>/slide-plan.json` from `assets/slide-plan.template.json`. Greenfield decks with no
+   source artifact still require `slide-plan.json`, but set `deck.evidence_contract` to
+   `null` and validate the slide plan directly against `references/slide-plan-schema.json`.
+4. Write `<run>/visual-spec.json` using
    [references/visual-spec-schema.json](references/visual-spec-schema.json).
-4. Validate it before build and again before promoting the deck to `reviewed`:
+5. Validate it before build and again before promoting the deck to `reviewed`:
 
 ```bash
 python3 skills/pptx-visual-spec/scripts/validate_visual_spec.py \
   <run>/visual-spec.json
 ```
 
-5. Keep the final deck shell native unless the selected deck skill explicitly declares an
+   When a source evidence contract exists, also validate the semantic chain:
+
+```bash
+python3 skills/pptx-visual-spec/scripts/validate_presentation_contracts.py \
+  <run>/presentation-evidence.json \
+  <run>/slide-plan.json \
+  <run>/visual-spec.json \
+  --check-files
+```
+
+6. Keep the final deck shell native unless the selected deck skill explicitly declares an
    image-per-slide output. Even then, never send text or claims to an image model.
 
 ## Precedence
@@ -43,6 +58,10 @@ but may not weaken evidence fidelity, provenance, text safety, or generated-imag
 
 Every direct PPTX builder consumes:
 
+- `presentation-evidence.json` — source slides, deterministic text, transcript segments,
+  frames, checksums, and rights status for source-derived decks;
+- `slide-plan.json` — claims, evidence references, audience job, visual IDs, speaker notes,
+  and accessibility intent per slide;
 - `visual-spec.json` — routing and provenance per visual region;
 - source assets and editable authored sources referenced by the spec;
 - prompt files for generated assets;
@@ -63,6 +82,7 @@ Business Automation
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `presentation-source-bundle` | Sequential upstream | rebuild, source presentation, or video-derived deck | `<run>/presentation-evidence.json` |
 | `pptx-design-quality` | Behavioral peer overlay | every deck build | `<run>/deck-brief.md`, `<run>/deck-design.json`, and lint report |
 | `vault-presales-pptx-pipeline` | Behavioral source | always | vault-grade extract/author rules incorporated here |
 | `branded-pptx-deck` | Behavioral overlay | direct native PPTX build | `<run>/visual-spec.json` |

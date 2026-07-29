@@ -194,6 +194,23 @@ Also create `screen-states.json` and a human-readable hyperframe manifest before
   evidence or a thumbnail-style appendix.
 - If any meaningful hyperframe is skipped, state why in the manifest and final
   report.
+- Save the timestamped transcript as `<run>/transcript.txt` using one
+  `[MM:SS] text` segment per line.
+- Save a machine-readable `<run>/frames_manifest.md` with `File`, `Timestamp`, and
+  `Description` columns and paths relative to the run. Keep the richer
+  `<topic>-hyperframes.md` for classification and disposition; it does not replace the
+  machine manifest.
+
+Normalize the Stage 1 artifacts with `presentation-source-bundle`:
+
+```bash
+python3 skills/presentation-source-bundle/scripts/build_presentation_evidence.py \
+  --run <run> --title "<topic>"
+```
+
+This produces `<run>/presentation-evidence.json`, the durable source inventory for
+transcript segments, frames, source slides when present, checksums, and rights status. Do
+not infer slide-to-transcript or slide-to-frame alignment from ordering alone.
 
 Then create a `visual-spec.json` before rendering:
 - One record per meaningful hyperframe or grouped duplicate set.
@@ -206,6 +223,9 @@ Then create a `visual-spec.json` before rendering:
   placement, execution metadata, and QA as required by
   `skills/pptx-visual-spec/references/visual-spec-schema.json`.
 - Validate with `skills/pptx-visual-spec/scripts/validate_visual_spec.py`.
+- Validate the complete evidence → slide plan → visual chain with
+  `skills/pptx-visual-spec/scripts/validate_presentation_contracts.py`; an extract visual
+  without a valid evidence ID is a blocking defect.
 - Treat this spec as the source of truth for both reconstruction QA and final
   PPTX rendering.
 
@@ -265,6 +285,8 @@ Output:
   available
 - `<run>/deck-brief.md`
 - `<run>/deck-design.json`
+- `<run>/slide-plan.json` — one semantic plan record per intended slide, including claims,
+  evidence IDs, audience job, visual IDs, speaker notes, and accessibility intent
 
 **Pass forward:** storyboard, slide spine, evidence map, visual-spec inputs
 
@@ -480,9 +502,13 @@ Route-specific source package:
 <topic>-analyst-story-pack.md/json  # ai-analyst synthesis/story spine
 <topic>-grill-me-validation.md      # challenge/self-answer validation against transcript
 <topic>-transcript-excerpts.md      # timestamped evidence used by validation
+transcript.txt                      # complete timestamped Stage 1 transcript
+frames_manifest.md                 # machine-readable persistent frame inventory
 <topic>-findings.json               # optional analyst/strategy synthesis payload
 <topic>-hyperframes.md              # every frame classified and accounted for
 <topic>-screen-change-coverage.md   # every meaningful visual mapped or skipped with reason
+presentation-evidence.json          # normalized source slides, transcript, and frames
+slide-plan.json                     # per-slide semantic intent and evidence map
 <topic>-visual-spec.json            # source of truth for visual reconstruction
 <topic>-reconstruction.svg          # optional QA intermediate, not final deck asset
 <topic>-reconstruction.html         # optional QA intermediate, not final deck asset
@@ -527,6 +553,7 @@ Business Automation
 
 ### Dependencies
 - `watch` — required (Stage 1); downloads video and extracts transcript
+- `presentation-source-bundle` — required after Stage 1; normalizes source evidence
 - `content-research` — required (Stage 2); enriches with Exa + firecrawl
 - `ai-analyst` — required for Stage 2.5 synthesis when installed/exposed; produces story spine, BLUF, evidence map, and validation-ready claims
 - `excalidraw` — default visual route for conceptual/non-architecture diagrams
@@ -542,6 +569,7 @@ Business Automation
 
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `presentation-source-bundle` | Sequential upstream | after watch capture | `<run>/presentation-evidence.json` |
 | `pptx-design-quality` | Behavioral overlay | every video-derived deck | `<run>/deck-brief.md`, `<run>/deck-design.json`, `<run>/qa/pptx-design-lint.json` |
 | `watch` | Sequential upstream | always — watch provides transcript and frames | structured summary + transcript |
 | `content-research` | Sequential upstream | always — enriches transcript with Exa research | `<topic>-research.md` |

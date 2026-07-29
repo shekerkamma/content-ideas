@@ -39,6 +39,11 @@
           "enum": ["extract", "place-asset", "native", "author-html", "author-svg", "author-react", "image-model", "none"]
         },
         "reason": {"type": "string", "minLength": 1},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
         "source": {
           "type": ["object", "null"],
           "properties": {
@@ -108,6 +113,7 @@
           "then": {
             "properties": {
               "evidence_status": {"const": "exact-source-evidence"},
+              "source": {"type": "object"},
               "qa": {"properties": {"exact_fidelity": {"const": true}}, "required": ["exact_fidelity"]}
             },
             "required": ["source", "asset"]

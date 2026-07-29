@@ -46,6 +46,7 @@ SurfSense-fork/
 .venv-pptx-qa/
 .tmp/
 .browser-libs/
+.tools/
 runs/2026-06-15-accenture-style-claude-guide/
 skill-framework/
 tools/mcp_excalidraw/
@@ -54,6 +55,10 @@ runs/**/*.mp4
 runs/**/*.webm
 runs/**/*.m4a
 runs/**/*.wav
+runs/**/*-draft.pptx
+runs/**/assets/derived/
+runs/**/qa/**/pages/
+runs/**/qa/**/*.html
 
 # contains live LLM API keys — never commit
 surfsense/global_llm_config.yaml

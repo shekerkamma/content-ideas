@@ -129,6 +129,7 @@ Read `skills/image-generation-router/SKILL.md` before executing `image-model` re
 Every meaningful visual region records:
 
 - stable ID, slide IDs, purpose, artifact type, evidence status, route, and reason;
+- evidence IDs from `presentation-evidence.json` when the region is source-derived;
 - source locator or approved asset provenance when applicable;
 - asset and editable-source paths;
 - prompt and execution metadata for generated imagery;
@@ -137,6 +138,10 @@ Every meaningful visual region records:
   evidence separation, and provenance.
 
 Validate against `visual-spec-schema.json` before build and before `reviewed` promotion.
+For rebuilds, source presentations, and video-derived decks, also validate
+`presentation-evidence.json`, `slide-plan.json`, and `visual-spec.json` together with
+`scripts/validate_presentation_contracts.py`. An `extract` route without a resolvable
+evidence ID is a blocking defect.
 
 ## Reviewed Gate
 

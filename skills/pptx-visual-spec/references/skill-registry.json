@@ -14,6 +14,7 @@
     "gemini-config": {"env": "GEMINI_SKILLS_HOME", "windows_relative": ".gemini/config/skills", "copy_only": true}
   },
   "skills": [
+    {"name": "presentation-source-bundle", "tier": "evidence-normalizer", "ownership": "repo", "source": "skills/presentation-source-bundle", "install_hosts": ["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config"], "note": "Normalizes slide text, renders, transcripts, and frame manifests into presentation-evidence.json before semantic slide planning."},
     {"name": "pptx-design-quality", "tier": "behavioral-overlay", "ownership": "repo", "source": "skills/pptx-design-quality", "install_hosts": ["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config"], "note": "Required deck-context, critique vocabulary, and deterministic native-PPTX linting overlay for governed presentation builders."},
     {"name": "branded-pptx-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/branded-pptx-deck"},
     {"name": "genspark-branded-deck", "tier": "direct-builder", "ownership": "repo", "source": "skills/genspark-branded-deck", "install_hosts": ["claude", "codex", "agents", "project-agents", "antigravity", "gemini-config"], "upstream_skill": "genspark-slides", "handoff": "genspark-handoff.json", "contract_reference": "pptx-visual-spec/references/genspark-video-deck-contract.md", "note": "Required branded stage after hosted Genspark generation/recovery; routes native/client-ready output to branded-pptx-deck or vault-presales-pptx-pipeline."},

@@ -27,6 +27,8 @@ that makes PowerPoint show a **"repair"** prompt.
   issues, and renders the final `.pptx` to HTML/PNG when `officecli` is installed.
 - `reference/brand.md` — palette, the Canva-Pro template location, slide-pattern recipes,
   and delivery steps.
+- `reference/channel-decision-deck.md` — reusable closed-cohort channel/alliance decision
+  pattern with ICP, GTM, partner lenses, evidence postures, and reviewed-promotion rules.
 
 ## Upstream: chain skills for the content — do NOT hand-roll analysis
 
@@ -57,18 +59,25 @@ yourself, validate explicitly.
    (JSON/markdown/outline). Decks are *generated from validated data*, not typed
    slide-by-slide. Never invent metrics; if a number isn't in the source, use a qualitative
    label and say so. Confirm entity statuses (is the company still operating? right batch?).
+   For a source presentation, rebuild, or video-derived deck, run
+   `presentation-source-bundle` and keep `<run>/presentation-evidence.json` as the source
+   inventory.
 2. **Initialize deck design context, then decide the spine.** Use
    `pptx-design-quality` to create and tailor `<run>/deck-brief.md` plus
    `<run>/deck-design.json`; validate both before authoring. For executives: lead with the
    answer (BLUF), an executive-summary one-pager, a storyboard of the argument, then proof,
    then the ask. Write **action titles** (every title is a so-what assertion). Honor
-   explicit slide-count minimums.
+   explicit slide-count minimums. Tailor `<run>/slide-plan.json` from the shared
+   `pptx-visual-spec` template so every slide records its audience job, claims, evidence,
+   visuals, notes, and accessibility intent.
 3. **Write and validate the visual specification.** Read
    `skills/pptx-visual-spec/references/visual-sourcing-rules.md`, classify every meaningful
    visual region, write `<run>/visual-spec.json`, and validate it with
    `skills/pptx-visual-spec/scripts/validate_visual_spec.py`. Exact-state evidence is
    extracted; ordinary data and claims remain native; image models are text-free and
-   non-evidentiary.
+   non-evidentiary. When `presentation-evidence.json` exists, run
+   `validate_presentation_contracts.py` across the evidence, slide plan, and visual spec
+   before build and before reviewed promotion.
 4. **Build with `pptxkit`.** Write a builder script that imports `pptxkit` and composes
    slides. Keep brand/mechanics in the kit; keep content in your script. Use
    `shrink=True` on any text box whose length is data-driven.
@@ -183,6 +192,12 @@ use-case/realization, org-named), `build_yc_exec_deck.py` (executive: summary, f
 storyboard, decision scorecard, where-to-play, decision/ask). Read these for slide-pattern
 recipes (KPI grid, cards, comparison, scorecard, use-case realization, storyboard).
 
+For semiconductor, infrastructure, and other ecosystem-heavy landscapes where the output
+must guide channel or alliance validation, use
+[`reference/channel-decision-deck.md`](reference/channel-decision-deck.md). It separates
+public-evidence screening from named-partner recommendations and defines the reusable
+`context → companies → partner lenses → actions → governance` spine.
+
 ---
 
 ## Shared Visual Contract
@@ -210,6 +225,7 @@ Business Automation
 
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
+| `presentation-source-bundle` | Sequential upstream | source presentation, rebuild, or video input | `<run>/presentation-evidence.json` |
 | `pptx-design-quality` | Behavioral overlay | every deck build | `<run>/deck-brief.md`, `<run>/deck-design.json`, `<run>/qa/pptx-design-lint.json` |
 | `content-research` | Sequential upstream | when ingesting sites/repos/docs first | `$CONTENT_HOME/research/*.md` or summary files |
 | `competitive-intel-sprint` | Sequential upstream | when competitor content is needed | research output files |

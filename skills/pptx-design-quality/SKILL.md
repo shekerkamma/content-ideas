@@ -72,7 +72,9 @@ Stable native rule IDs and their meanings are listed in
 Apply these stages in order and loop back whenever a gate finds a defect:
 
 1. **Craft** — use the brief to define the narrative spine, visual hierarchy, slide
-   archetypes, and evidence plan before rendering.
+   archetypes, and evidence plan before rendering. Record per-slide semantic intent in
+   `slide-plan.json`; keep deck-wide typography and layout thresholds in
+   `deck-design.json`.
 2. **Build** — use the governed deck builder and `visual-spec.json`; keep claims, data,
    titles, and feasible diagrams editable.
 3. **Critique** — inspect the rendered slides for hierarchy, clarity, emotional register,
@@ -117,6 +119,13 @@ brand identity, or the approved narrative.
 True narrative judgment stays in `critique`. Do not treat a deterministic heuristic as proof
 that an action title has a meaningful “so what.”
 
+For repeated comparison systems—company profiles, partner-lens heatmaps, scorecards, or
+scenario tables—layout repetition may be an intentional analytical affordance. Keep the
+geometry consistent, vary the evidence rather than the chrome, and document any
+`LAYOUT_REPETITION` waiver only after the full contact sheet and real Office render confirm
+that the sequence remains legible. Likewise, evaluate `TEXT_TOO_SMALL` against substantive
+content separately from configured citations, asset captions, and pagination.
+
 ## Reviewed gate
 
 `*-reviewed.pptx` requires all of the following:
@@ -138,6 +147,7 @@ for the PowerPoint artifact.
 
 | Skill | Pattern | Handoff |
 |---|---|---|
+| `presentation-source-bundle` | Upstream evidence normalization | `<run>/presentation-evidence.json` |
 | `pptx-visual-spec` | Mandatory peer overlay | `<run>/visual-spec.json` |
 | `branded-pptx-deck` | Direct native builder | draft/reviewed `.pptx` |
 | `genspark-branded-deck` | HTML/hybrid/native builder | source HTML and `.pptx` |
