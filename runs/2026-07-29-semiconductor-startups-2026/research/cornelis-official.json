@@ -1,0 +1,152 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.hpcwire.com/off-the-wire/intel-omni-path-business-spun-out-as-cornelis-networks/",
+        "title": "Intel Omni-Path Business Spun Out as Cornelis Networks - HPCwire",
+        "description": "Sept. 30, 2020 – Cornelis Networks, Inc., a provider of purpose-built interconnects focused on high performance computing (HPC), high performance data analytics (HPDA), and artificial intelligence (AI), announced the first close today of its $20 million Series-A funding round, led by Downing ...",
+        "thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2020/09/Cornelis-networks_202x.jpg",
+        "original_thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2020/09/Cornelis-networks_202x.jpg",
+        "page_age": "2020-09-30T15:57:23",
+        "favicon_url": "https://you.com/favicon?domain=www.hpcwire.com&size=128",
+        "snippets": [
+          "Sept. 30, 2020 – Cornelis Networks, Inc., a provider of purpose-built interconnects focused on high performance computing (HPC), high performance data analytics (HPDA), and artificial intelligence (AI), announced the first close today of its $20 million Series-A funding round, led by Downing Ventures and joined by Intel Capital and Chestnut Street Ventures.",
+          "We see significant opportunities for Cornelis to not only play a meaningful role in Supercomputing, but to also play a central role in the growth of AI into the Cloud. We are proud to stand alongside Philip and the Cornelis Networks team as they start their journey as a spinout from Intel. With supercomputers being used to perform complex analyses of the current COVID-19 pandemic to understand disease and infection rates, it is a reminder how essential it is to continue developing HPC to be operating at the best of its capability.” ... Downing Ventures is an evergreen fund investing in seed to Series A companies, with the possibility of follow-on investments.",
+          "30, 2020 – Cornelis Networks, Inc., a provider of purpose-built interconnects focused on high performance computing (HPC), high performance data analytics (HPDA), and artificial intelligence (AI), announced the first close today of its $20 million Series-A funding round, led by Downing Ventures and joined by Intel Capital and Chestnut Street Ventures. Cornelis Networks is an independent company spun out from Intel’s Omni-Path Architecture Business.",
+          "Leading computing centers around the world, including Lawrence Livermore National Laboratory, part of US Department of Energy (DOE) National Nuclear Security Administration (NNSA), utilize Omni-Path to meet their high-performance networking needs. Bronis de Supinski, CTO of Livermore Computing, commented “Livermore has deployed multiple generations of HPC platforms based on the scalability and overall cost-performance of the company’s offerings. We look forward to working with Cornelis as they continue to build on their strong foundation of successful HPC solutions.”"
+        ]
+      },
+      {
+        "url": "https://www.hpcwire.com/2022/05/04/cornelis-networks-wins-18m-nnsa-award-to-advance-omni-path/",
+        "title": "Cornelis Networks Wins $18M NNSA Award to Advance Omni-Path - HPCwire",
+        "description": "Intel spinoff Cornelis Networks, custodian and developer of the Omni-Path networking portfolio, is now closer to reaching its next-gen networking roadmap targets thanks to an R&D contract with the Department of Energy’s National Nuclear Security Administration (NNSA).",
+        "thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2021/09/abstract-blue_shutterstock-630258290_800x.jpg",
+        "original_thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2021/09/abstract-blue_shutterstock-630258290_800x.jpg",
+        "page_age": "2022-05-09T16:12:08",
+        "favicon_url": "https://you.com/favicon?domain=www.hpcwire.com&size=128",
+        "snippets": [
+          "Intel spinoff Cornelis Networks, custodian and developer of the Omni-Path networking portfolio, is now closer to reaching its next-gen networking roadmap targets thanks to an R&D contract with the Department of Energy’s National Nuclear Security Administration (NNSA). The contract is valued at $18 million. The Next-Generation High Performance Computing Network (NG-HPCN) project brings together NNSA labs and Cornelis to design and productize next-generation interconnect technologies in support of NNSA’s scientific and engineering workloads and the high-performance computing space more broadly.",
+          "As with previous exascale-focused funding projects, the goal is for the co-design collaboration with Cornelis to have an impact beyond the DOE and NNSA missions. “We certainly expect that any of the benefits that come out of this will not only benefit the programs at the ASC program at our three laboratories, but [also] anyone doing large HPC simulations, as well as data analytics and various AI and machine learning spaces as well.",
+          "Tags: Advanced Simulation Computing, Cornelis Networks, DOE, Livermore, LLNL, National Nuclear Security Administration, NNSA, Omni-Path ... Cadence Design Systems has been delivering agentic AI capabilities with its semiconductor and system design... As investment in Physical AI accelerates, simulation is taking on a much larger role than... Scientists have relied on HPC facilities to help them process large volumes of data, execute...",
+          "A recent paper submitted to ArXiv by famed HPC scientist Satoshi Matsuoka, Director of the... WEKA has introduced two new AI infrastructure products: NeuralMesh 6, which the company calls its... The Department of Energy today announced plans to fund 278 projects as part of Genesis..."
+        ]
+      },
+      {
+        "url": "https://www.cornelis.com/stories/cornelis-networks-announces-29m-series-b-funding-round",
+        "title": "Cornelis Networks Announces $29M Series B Funding Round - The Future ...",
+        "description": "Welcome to the future of high performance fabrics. We build high performance fabrics for HPC, HPDA, and AI in various industries.",
+        "page_age": "2022-11-17T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelis.com&size=128",
+        "snippets": [
+          "Cornelis Networks, Inc., a leading provider of high-performance interconnects accelerating technical computing workloads in HPC, AI, and ML, today announced a $29M capitalization. The funding round was led by IAG Capital Partners, with additional investments from Adit Ventures, Foresight Group, Intel Capital, KittyHawk Ventures, Ridgeline Partners, and SQN Venture Partners. The company’s investments in product enhancements to date have resulted in significant capability and performance improvements for key customer environments, driving major wins with U.S.",
+          "Our customers will benefit from significant performance enhancements beginning this month with the release of our Omni-path Express software and continuing with the subsequent launch of our CN5000 400Gb fabric,\" said Cornelis Networks’ chief commercial officer, Matt Jacobs. Cornelis Networks is a technology leader delivering purpose-built, high-performance fabrics accelerating High Performance Computing, High Performance Data Analytics, and Artificial Intelligence workloads in the Cloud and in the Data Center. The company’s products enable scientific, academic, governmental, and commercial customers to solve some of the world’s toughest challenges by efficiently focusing the computational power of many processing devices at scale on a single problem, simultaneously improving both result accuracy and time-to-solution for their most complex application workloads.",
+          "\"HPC, AI & ML have very quickly become vital components of competitiveness to an increasing number of markets over the past decade. Investing in Cornelis is an opportunity for IAG to continue to build its targeted portfolio of critical infrastructure providers to these high growth markets,\" said Alonso Galván, Partner at IAG Capital Partners. \"We found in Cornelis a rare combination of a very experienced team and a strong product roadmap targeted at high-growth markets hungry for alternative solutions.\"",
+          "Further information from HPC Wire: https://www.hpcwire.com/off-the-wire/cornelis-networks-announces-29m-series-b-funding-round/"
+        ]
+      },
+      {
+        "url": "https://www.cornelis.com/",
+        "title": "Cornelis | Unlock AI & HPC Performance with Zero-Congestion Networking",
+        "description": "Discover the world's first lossless, zero-congestion network for AI and HPC. Cornelis accelerates performance and scalability where legacy networks fail.",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelis.com&size=128",
+        "snippets": [
+          "From faster AI training and ultra-responsive inference to the most predictable, high-throughput HPC simulations, Cornelis delivers results where legacy networks fall short. Built on the proven Omni-Path architecture, our solutions provide maximum performance, efficiency, scalability, resiliency and interoperability - empowering the next generation of AI and HPC infrastructure.",
+          "Push the boundaries of scientific discovery and engineering innovation with CN5000 Omni-Path-based HPC solutions.",
+          "From training large language models and powering agentic AI frameworks, to real-time fraud detection in finance and computer vision in autonomous systems - CN5000 Omni-Path AI solutions deliver the high-performance, lossless networking foundation that next-generation AI demands."
+        ]
+      },
+      {
+        "url": "https://www.crn.com/news/networking/2026/intel-almost-killed-off-omni-path-now-a-partner-says-the-tech-is-winning-against-nvidia",
+        "title": "Intel Almost Killed Off Omni-Path. Now A Partner Says The Tech ...",
+        "description": "After Intel nearly killed off the Omni-Path high-speed interconnect technology and spun it out into a new company called Cornelis Networks, one systems integrator said he’s starting to see traction for the alternative to Nvidia’s InfiniBand networking products.",
+        "thumbnail_url": "https://www.crn.com/news/networking/2026/media_1547bb00fe0cc257edeff6c362cea30761a071a58.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "original_thumbnail_url": "https://www.crn.com/news/networking/2026/media_1547bb00fe0cc257edeff6c362cea30761a071a58.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "page_age": "2026-05-18T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.crn.com&size=128",
+        "snippets": [
+          "Now, Daninger said, Nor-Tech is “selling a fair amount” of Cornelis’ Omni-Path products. “In the last year or so, we’ve been doing a good amount of business with them,” he said, declining to disclose how much his company has made selling Omni-Path. The executive noted that Omni-Path products can offer significant savings in upfront costs compared to Nvidia’s InfiniBand-based networking products. For instance, he said, a roughly $500,000 HPC cluster project he’s working on for an HVAC company is expected to save $30,000 to $40,000 in the overall purchase price by going with Omni-Path instead of a comparable InfiniBand option.",
+          "But after the end seemed nigh for Omni-Path, a new company called Cornelis Networks spun out of Intel in 2020 with possession of intellectual property, product inventory, support agreements and distribution agreements related to the technology. In exchange, Intel’s venture capital arm, Intel Capital, received a stake in the spin-off, and the two companies now work together as complementary vendors. With funding from Intel Capital and other investment firms, Cornelis revitalized the Omni-Path road map with an eye towards Ethernet compatibility, made a big sales hiring push, launched a new partner program and last year launched the first set of new products that the company said has better performance and price-performance than InfiniBand- or Ethernet-based offerings.",
+          "As Cornelis releases the second generation of Omni-Path products outside of Intel, Spelman thinks the steady cadence of product releases and improvements will encourage adoption by potential customers who have been cautious up until this point. “So the second generation offers us much broader market access, from my perspective, for that whole host of reasons,” she said. Mark Nossokoff, research director at HPC-focused research firm Hyperion Research, told CRN that while Cornelis has solid technology with adoption by several government labs as well as some academic institutions, he has not yet seen a lot of traction among commercial customers in HPC deployments yet.",
+          "Daninger said the savings can be even higher for smaller clusters because of how the networking fabric ends up representing a larger share of the overall cost. “We’ve seen [Omni-Path] be a factor of maybe up to 15 percent or something like that in savings,” he said. It helps that Cornelis is focused on small- to mid-sized clusters whereas Nvidia has made larger data centers a priority, according to Daninger."
+        ]
+      },
+      {
+        "url": "https://www.crn.com/news/components-peripherals/intel-spins-out-omni-path-interconnect-business-into-stand-alone-company",
+        "title": "Intel Spins Out Omni-Path Interconnect Business Into Stand-Alone ...",
+        "description": "Intel has spun out its Omni-Path Architecture high-speed interconnect business into a standalone company called Cornelis Networks, which has raised $20 million in funding.",
+        "thumbnail_url": "https://www.crn.com/news/components-peripherals/media_13e39479e1baff47ca79dbf0fbb12f282635338a8.jpeg?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "original_thumbnail_url": "https://www.crn.com/news/components-peripherals/media_13e39479e1baff47ca79dbf0fbb12f282635338a8.jpeg?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "page_age": "2020-09-30T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.crn.com&size=128",
+        "snippets": [
+          "Intel’s Omni-Path Architecture high-speed interconnect technology is getting a second life under a stand-alone company that has spun out from the chipmaker and raised $20 million in venture capital, giving partners once again an alternative to Mellanox’s InfiniBand that is now owned by Nvidia. The new company, Cornelis Networks, came out of stealth mode and announced its Series A funding round Wednesday, saying that the financing was led by Downing Ventures, a division of London-based investment firm Downing LLP that focuses on early stage startups.",
+          "“Intel believes Cornelis Networks will fill the current gap and expand the ecosystem of high-performance fabric solutions, offering an option to customers building clusters for HPC and AI based on Intel Xeon processors,” Trish Damkroger, vice president and general manager of Intel’s high-performance computing group, said in a statement.",
+          "With the funding round, Murphy said Cornelis has three main focuses: supporting the more than 500 end-user sites that currently use first-generation Omni-Path products; continuing to sell the first-generation products through channel partners and distributors; and developing next-generation products, which could take on a new brand name.",
+          "And I spent the bulk of my career working on it, and I could see that it still had very big potential,’ Phil Murphy, one of Omni-Path’s architects and CEO of Cornelis Networks, says of his plan to take on Nvidia’s Mellanox InfiniBand interconnect business."
+        ]
+      },
+      {
+        "url": "https://www.crn.com/slide-shows/components-peripherals/omni-path-spin-out-aims-to-help-hpc-partners-keep-nvidia-in-check",
+        "title": "Omni-Path Spin-Out Aims To Help HPC Partners Keep Nvidia In Check ...",
+        "description": "Phil Murphy, CEO of Intel Omni-Path spin-out Cornelis Networks, talks to CRN about helping high-performance computing partners combat Nvidia’s growing influence.",
+        "thumbnail_url": "https://www.crn.com/slide-shows/components-peripherals/media_1a10a66088992a829fe9a648aa2cd9983950bab9c.jpeg?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "original_thumbnail_url": "https://www.crn.com/slide-shows/components-peripherals/media_1a10a66088992a829fe9a648aa2cd9983950bab9c.jpeg?width=1200&#x26;format=pjpg&#x26;optimize=medium",
+        "page_age": "2020-10-02T16:40:07",
+        "favicon_url": "https://you.com/favicon?domain=www.crn.com&size=128",
+        "snippets": [
+          "Phil Murphy, CEO of the Intel spin-out, Cornelis Networks, believes the company’s Omni-Path Architecture interconnect technology can help serve as a check against the vertical integration and industry consolidation that is being pushed by Nvidia. The GPU juggernaut is increasingly pushing complete solutions like the DGX systems, he said, and could eventually own three important components in HPC — the GPU, the interconnect and the CPU — with its pending acquisition of Arm.",
+          "What follows is an edited transcript of CRN’s interview with Murphy, who talked about Omni-Path’s advantages over Nvidia’s Mellanox InfiniBand interconnect, the company’s ability to serve 100- and 200-gigabit needs, future product plans and how Cornelis wants to provide customers and partners more choice in the HPC market. Cornelis Networks is based in Wayne, Pennsylvania.",
+          "Cornelis came out of stealth mode Wednesday and announced that it had raised a $20 million Series A funding round led by Downing Ventures, with participation from Chestnut Street Ventures and Intel Capital, which gained a stake in the company in exchange for transferring Omni-Path Architecture’s intellectual property, product inventory and support agreements to Cornelis.",
+          "I was the vice president of engineering there from 2016 to 2012, and that‘s when Intel brought us in and then a little bit later bought a team from Cray and created Omni-Path. We’ve been out here in Philadelphia area the whole time. How did Cornelis Networks come to be?"
+        ]
+      },
+      {
+        "url": "https://www.crunchbase.com/organization/cornelis",
+        "title": "Cornelis - Crunchbase Company Profile & Funding",
+        "description": "Cornelis provides high-performance networking hardware and software for AI and high performance computing workloads.",
+        "thumbnail_url": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/e272c022f313478e9b336577c121cd05?ik-sanitizeSvg=true",
+        "original_thumbnail_url": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/e272c022f313478e9b336577c121cd05?ik-sanitizeSvg=true",
+        "favicon_url": "https://you.com/favicon?domain=www.crunchbase.com&size=128",
+        "snippets": [
+          "Cornelis provides high-performance networking hardware and software for artificial intelligence and high performance computing workloads. The company develops Omni-Path-based scale-out network solutions, including SuperNIC adapters, a portfolio of switches, and management software designed to improve throughput and latency for clustered compute · environments. Its CN5000 Omni-Path end-to-end network targets AI training, inference, and HPC simulations that require predictable, low-latency communication across large numbers of nodes.",
+          "These products are used by enterprises, government agencies, and research institutions to build and operate large-scale AI and HPC infrastructure. Cornelis supports interoperability with major CPUs, GPUs, accelerators, and software frameworks to fit into diverse datacenter architectures. ... CN5000 Omni-Path end-to-end network is a scale-out interconnect solution for AI and HPC clusters, combining SuperNICs, switches, and software."
+        ]
+      },
+      {
+        "url": "https://insidehpc.com/2020/09/omni-path-hpc-interconnect-reemerges-as-intel-spin-out-receives-20m-investment-round-from-intel-capital-and-others/",
+        "title": "Omni-Path HPC Interconnect Reemerges as Intel Spin-out with $20M ...",
+        "description": "Now Cornelis Networks has been formed and funded in hopes of realizing a return on the considerable investment in OPA technology, targeting organizations in 100-200Gbps HPC, AI and HPDA environments. Founded by former Intel interconnect veterans Philip A. Murphy Jr. (CEO), Vladimir K. Tamarkin and Gunnar K. Gunnarsson, Cornelis hopes to build on OPA’s 500 end-user site installed base, according to the start-up. Omni...",
+        "thumbnail_url": "https://insidehpc.com/wp-content/uploads/2020/09/Cornelis-Networks-0920.png",
+        "original_thumbnail_url": "https://insidehpc.com/wp-content/uploads/2020/09/Cornelis-Networks-0920.png",
+        "page_age": "2020-10-01T13:42:58",
+        "favicon_url": "https://you.com/favicon?domain=insidehpc.com&size=128",
+        "snippets": [
+          "Now Cornelis Networks has been formed and funded in hopes of realizing a return on the considerable investment in OPA technology, targeting organizations in 100-200Gbps HPC, AI and HPDA environments. Founded by former Intel interconnect veterans Philip A. Murphy Jr. (CEO), Vladimir K. Tamarkin and Gunnar K. Gunnarsson, Cornelis hopes to build on OPA’s 500 end-user site installed base, according to the start-up. Omni-Path customers include Lawrence Livermore National Laboratory, part of US Department of Energy’s National Nuclear Security Administration (NNSA).",
+          "Left for dead last year, Intel’s Omni-Path Architecture (OPA) high performance fabric may come back to life with a Series A $20 million venture round - Read more from Inside HPC & AI News.",
+          "Left for dead last year, Intel’s Omni-Path Architecture (OPA) high performance fabric may come back to life with a Series A $20 million venture round [...]",
+          "Filed Under: Business of HPC, Data Center, Enterprise HPC, Featured, Government, HPC Hardware, Network, News Tagged With: Cornelis Networks, high performance fabrics, Intel, Intel Omni Path, Omni Path, Weekly Newsletter Articles ... With today’s growing adoption in the AI data center of liquid cooling – essential for controlling AI cooling costs and energy usage – minimizing risk includes the use of high-quality connectors."
+        ]
+      },
+      {
+        "url": "https://www.asipartner.com/blog/2026/04/09/the-rise-of-cornelis-networks-unlocking-ai-hpc-performance-with-omni-path-and-ultra-ethernet/",
+        "title": "The Rise of Cornelis Networks – Unlocking AI/HPC Performance ...",
+        "description": "In the high-stakes world of High-Performance Computing (HPC) and AI, the network is often the unsung bottleneck. While CPUs and GPUs grab the headlines, the \"plumbing\" that connects them determines whether a cluster hums or stutters. During ASI’s recent Technology Summit, Cornelis ...",
+        "thumbnail_url": "https://www.asipartner.com/wp-content/uploads/2026/04/CornelisBlogImage-RiseCornelis-1200x630-1.jpg",
+        "original_thumbnail_url": "https://www.asipartner.com/wp-content/uploads/2026/04/CornelisBlogImage-RiseCornelis-1200x630-1.jpg",
+        "page_age": "2026-04-24T01:10:11",
+        "favicon_url": "https://you.com/favicon?domain=www.asipartner.com&size=128",
+        "snippets": [
+          "In the high-stakes world of High-Performance Computing (HPC) and AI, the network is often the unsung bottleneck. While CPUs and GPUs grab the headlines, the \"plumbing\" that connects them determines whether a cluster hums or stutters. During ASI’s recent Technology Summit, Cornelis Networks—detailed how they are outperforming traditional InfiniBand with Omni-Path and preparing for a future",
+          "In the high-stakes world of High-Performance Computing (HPC) and AI, the network is often the unsung bottleneck. While CPUs and GPUs grab the headlines, the “plumbing” that connects them determines whether a cluster hums or stutters. During ASI’s recent Technology Summit, Cornelis Networks—detailed how they are outperforming traditional InfiniBand with Omni-Path and preparing for a future with Ultra Ethernet.",
+          "Cornelis isn’t a new player; it’s a specialized team with a deep pedigree. By combining Intel’s Omni-Path technology with intellectual property from Q-Logic and Cray’s Aries interconnects, Cornelis has built a fabric designed from the ground up for one thing: maximizing application performance.",
+          "Cornelis is not just maintaining its current lead; it is evolving toward total ecosystem compatibility. CN6000 (Late 2026): This 800Gbps generation introduces dual-protocol capabilities. The NICs will support both Omni-Path (for performance) and standard Ethernet (for storage/compatibility) simultaneously."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "Cornelis Networks AI HPC official product Omni-Path funding",
+    "search_uuid": "b5afca1a-584c-458f-b78c-9f418fea581c",
+    "latency": 0.6856827735900879
+  }
+}

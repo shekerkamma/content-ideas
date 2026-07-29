@@ -1,0 +1,135 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.etched.com/",
+        "title": "Etched",
+        "description": "Co-designed chips, racks, and software to push the pareto frontier to best-in-class throughput and interactivity.",
+        "thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/9885cd08fc6fe49fff1d2b35a8f97447753ca9b0-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "original_thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/9885cd08fc6fe49fff1d2b35a8f97447753ca9b0-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "page_age": "2026-07-02T01:40:03",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "We co-design chips, racks, software, and manufacturing methods so frontier models can run with best-in-class throughput, latency, cost, and power efficiency for both prefill and decode workloads. Earlier this year our A0 silicon came back from TSMC N4P, and today we are busy validating our first rack-scale product with customers to fulfill $1B in demand.",
+          "CSM improves latency and avoids today's cost, reliability, yield, thermal, and compute tradeoffs of SRAM-only chips, 3D DRAM chips, or optics. We've made co-design decisions hand-in-hand with leading AI companies, cloud providers, and hyperscalers. We've tested racks in representative data center deployments, run terabytes of production traffic patterns through our simulator, and had dozens of engineers live overseas for months to co-design deeply with our supply-chain partners.",
+          "Distinguished Engineer at Broadcom & VP of Intel's Custom Silicon Group. Shipped 300 million chips across nine A0 products.",
+          "Our inference systems are built to push the entire pareto curve on frontier models, including many-trillion-parameter MoEs, long context, and agentic workloads. This required intense co-design, from new chips, packages, PCBs, cold plates, interconnects, and more."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/blog",
+        "title": "Etched | Blog",
+        "description": "In 2022, we made a bet that transformers would take over the world. We’ve spent the past two years building Sohu, the world’s first specialized chip (ASIC) for transformers (the “T” in ChatGPT).",
+        "page_age": "2024-10-31T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "Updates from the team working on Sohu, the world’s first transformer ASIC."
+        ]
+      },
+      {
+        "url": "https://etched.com/?amp=&amp=",
+        "title": "Etched | The World's First Transformer ASIC",
+        "description": "Transformers etched into silicon. By burning the transformer architecture into our chips, we're creating the world's most powerful servers for transformer inference.",
+        "thumbnail_url": "https://cdn.prod.website-files.com/6570a6bdf377183fb173431e/667a2f154773e13903f95efe_Share%20Image.jpg",
+        "original_thumbnail_url": "https://cdn.prod.website-files.com/6570a6bdf377183fb173431e/667a2f154773e13903f95efe_Share%20Image.jpg",
+        "favicon_url": "https://you.com/favicon?domain=etched.com&size=128",
+        "snippets": [
+          "Etched raises $120M to build Sohu – Learn more · Thank you! Your submission has been received! Oops! Something went wrong while submitting the form. Careers · Blog · By burning the transformer architecture into our chips, we can run AI models an order of magnitude faster and cheaper than GPUs."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/progress",
+        "title": "Progress | Etched",
+        "description": "We’re excited about bringing our first product to life, and we’re even more excited about what’s to come. If you’d like to work on thousand-chip scale-up domains, in-house SMT lines, and new RL environments for recursive kernel generation, you should join us in accelerating inference.",
+        "thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/4d35d623052e46142496cf6162fc547ca530b474-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "original_thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/4d35d623052e46142496cf6162fc547ca530b474-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "page_age": "2026-07-22T23:50:05",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "We co-design chips, racks, software, and manufacturing methods so frontier models can run with best-in-class throughput, latency, cost, and power efficiency for both prefill and decode workloads. Earlier this year our A0 silicon came back from TSMC N4P, and today we are busy validating our first rack-scale product with customers to fulfill $1B in demand.",
+          "CSM improves latency and avoids today’s cost, reliability, yield, thermal, and compute tradeoffs of SRAM-only chips, 3D DRAM chips, or optics. We’ve made co-design decisions hand-in-hand with leading AI companies, cloud providers, and hyperscalers. We’ve tested racks in representative data center deployments, run terabytes of production traffic patterns through our simulator, and had dozens of engineers live overseas for months to co-design deeply with our supply-chain partners.",
+          "We believe the world’s most powerful models require an entirely new form of computing. Frontier models deserve frontier inference clusters: co-designed chips, packages, PCBs, cold plates, interconnects, and more that push the entire pareto curve on the most demanding workloads.",
+          "Our inference systems are built to push the entire pareto curve on frontier models, including many-trillion-parameter MoEs, long context, and agentic workloads. This required intense co-design, from new chips, packages, PCBs, cold plates, interconnects, and more."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/join",
+        "title": "Join Us | Etched",
+        "description": "We’re solving the hardest problems in compute to unlock faster, more efficient inference for billions of people.",
+        "thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/c1948c3ba1a707240c0f85ead18496e5ea5e828c-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "original_thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/c1948c3ba1a707240c0f85ead18496e5ea5e828c-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "Distinguished Engineer at Broadcom & VP of Intel's Custom Silicon Group. Shipped 300 million chips across nine A0 products.",
+          "Building a legendary team is as important as our products.",
+          "VP of Production Led 0-1 production & supply chain ramps for 24 products including the original iPhone, MacBook Air, Pixel, and Chromebook."
+        ]
+      },
+      {
+        "url": "http://ww8.etched.com/",
+        "title": "Etched",
+        "description": "This site requires JavaScript and Cookies to be enabled. Please change your browser settings or upgrade your browser",
+        "favicon_url": "https://you.com/favicon?domain=ww8.etched.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://www.etched.com/patent-policy",
+        "title": "Patent Policy | Etched",
+        "description": "1. Virtual Patent Marking Notice · This page is provided pursuant to the virtual patent marking provisions of the America Invents Act, 35 U.S.C. § 287(a). The following Etched.ai, Inc. (“Etched”) products may be protected by one or more of the patents or patent applications listed below.",
+        "thumbnail_url": "https://www.etched.com/base_og.png",
+        "original_thumbnail_url": "https://www.etched.com/base_og.png",
+        "page_age": "2026-06-29T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "This page is provided pursuant to the virtual patent marking provisions of the America Invents Act, 35 U.S.C. § 287(a). The following Etched.ai, Inc. (“Etched”) products may be protected by one or more of the patents or patent applications listed below. This page may not be all-inclusive; other Etched products not listed here may also be protected by one or more patents.",
+          "The association of a product with a patent number on this page does not constitute a representation that the identified patent covers all features or aspects of the identified product, or that the identified patent is the only patent covering the identified product.",
+          "Products may be covered by additional patents not listed herein. The absence of a product or patent from this page does not constitute a waiver of any patent rights by Etched. Nothing on this page or in any Etched communication shall be construed as granting, by implication, estoppel, or otherwise, any license or right under any patent or patent application listed herein.",
+          "Etched’s policy is not to accept or consider unsolicited ideas, suggestions, materials, or proposals of any kind (“Unsolicited Submissions”). This policy exists to avoid potential misunderstandings or disputes regarding the origin of ideas, products, or features developed by Etched."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/supplier-terms-and-conditions",
+        "title": "Supplier Terms & Conditions | Etched",
+        "description": "Please read these Etched Purchase Order Terms and Conditions for Suppliers (the “PO T&Cs”) carefully because they govern your supply of products and services for Etched, Inc., a Delaware corporation (“Etched”). Regardless of how you deliver your products or services and regardless of ...",
+        "thumbnail_url": "https://www.etched.com/base_og.png",
+        "original_thumbnail_url": "https://www.etched.com/base_og.png",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "These Purchase Order Terms and Conditions and any attachments or addendums thereto (this “Agreement”) represents the exclusive agreement between Etched, Inc., a Delaware corporation (“Etched”) and the person or entity identified as supplier (“Supplier”) named in the applicable purchase order (the “Purchase Order”) with respect to the products and deliverables (collectively, “Products”) and/or services (“Services”) referenced herein, unless there is a separate executed agreement between Etched and Supplier which specifically supersedes and replaces this Agreement.",
+          "Etched will initiate payment ninety (90) days after receipt of a conforming invoice unless specified in the applicable Purchase Order or SOW. No invoice may be dated or submitted earlier than the delivery date for the Products and/or Services being invoiced unless mutually agreed in writing.",
+          "Payment will be in U.S. Dollars unless otherwise stated in the Purchase Order. Payment will not constitute acceptance of Products and/or Services or impair Etched’s right to inspections. Acceptance shall be when Etched deems the Products and/or Services to meet its specified criteria (“Acceptance”).",
+          "Etched is not required to pay any invoice submitted more than 180 days after Acceptance. Etched may reject Products and/or Services that do not meet the warranties or specifications set forth in this Agreement, the SOW and/or the Purchase Order. If requested by Etched, Supplier will correct and re-deliver any rejected Products and/or Services, under agreed upon deadlines, and subject to further Acceptance."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/terms-of-service",
+        "title": "Terms of Service | Etched",
+        "description": "These Terms of Service (these “Terms”) describe the terms and conditions by which you may access and/or use the website(s), including etched.com, and the related online and/or digital evaluation services (collectively, the “Service”) provided by Etched, Inc., a Delaware corporation ...",
+        "thumbnail_url": "https://www.etched.com/base_og.png",
+        "original_thumbnail_url": "https://www.etched.com/base_og.png",
+        "page_age": "2026-07-01T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "The Evaluation Service is provided for informational and evaluation purposes only. The evaluation environment may utilize pre-release hardware, prototype systems, development software, and/or limited configurations that do not represent final product specifications or commercial availability.",
+          "Any data, results, metrics, or observations obtained during an evaluation session (collectively, “Evaluation Results”) are preliminary, may not be representative of final product performance, and are subject to change without notice.",
+          "Without limiting the foregoing, you will not, without our prior written consent: (i) publish, disclose, or disseminate any Evaluation Results or any description thereof to any third party; (ii) use Evaluation Results for benchmarking, competitive analysis, or comparison with any third-party products or services; or (iii) make any public statements regarding the Evaluation Service or Evaluation Results.",
+          "For the avoidance of doubt, the restriction in Section 2.2(f) on benchmarking and competitive analysis does not prohibit your internal evaluation of Etched products during authorized evaluation sessions, but does prohibit the publication or external use of any resulting data."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/media-kit",
+        "title": "Branding & media kit | Etched",
+        "description": "The logomark and wordmark should always be displayed separately and not combined · Real photography assets of our hardware",
+        "thumbnail_url": "https://www.etched.com/base_og.png",
+        "original_thumbnail_url": "https://www.etched.com/base_og.png",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": []
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:etched.com Sohu chip product official",
+    "search_uuid": "143a5312-07f1-4cf0-acae-a8d24e550dcc",
+    "latency": 0.4399573802947998
+  }
+}

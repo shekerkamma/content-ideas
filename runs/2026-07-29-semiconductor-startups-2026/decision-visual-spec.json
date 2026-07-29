@@ -1,0 +1,1696 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "output_mode": "native",
+    "editability": "PPT-native editable diagrams, cards, tables, and citations",
+    "reference_deck": "~/.claude/templates/branded-template.pptx"
+  },
+  "visuals": [
+    {
+      "id": "decision-visual-01",
+      "slide_ids": [
+        1
+      ],
+      "purpose": "Communicate The 10 Coolest Semiconductor Startups of 2026 with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "not-applicable",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-02",
+      "slide_ids": [
+        2
+      ],
+      "purpose": "Communicate Public evidence supports a validation portfolio—not a named-partner recommendation with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-03",
+      "slide_ids": [
+        3
+      ],
+      "purpose": "Communicate The partner opportunity sits in heterogeneous infrastructure—not wholesale GPU replacement with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-04",
+      "slide_ids": [
+        4
+      ],
+      "purpose": "Communicate Adoption barriers create the partner value pool with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-05",
+      "slide_ids": [
+        5
+      ],
+      "purpose": "Communicate Four bottlenecks define the closed-cohort market map with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-06",
+      "slide_ids": [
+        6
+      ],
+      "purpose": "Communicate Four commercialization models translate architecture into revenue with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-07",
+      "slide_ids": [
+        7
+      ],
+      "purpose": "Communicate The addressable buyer is defined by workload pain—not company size alone with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-08",
+      "slide_ids": [
+        8
+      ],
+      "purpose": "Communicate Semiconductor GTM progresses from design influence to repeatable deployment with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-09",
+      "slide_ids": [
+        9
+      ],
+      "purpose": "Communicate Partners compound value from workload proof through lifecycle operations with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-cornelis",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-10",
+      "slide_ids": [
+        10
+      ],
+      "purpose": "Communicate The ten startups span four wedges and uneven commercialization stages with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-11",
+      "slide_ids": [
+        11
+      ],
+      "purpose": "Communicate Seven companies are redesigning where and how AI computation happens with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-12",
+      "slide_ids": [
+        12
+      ],
+      "purpose": "Show an official product visual for AXELERA AI",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-axelera"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "AXELERA AI",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/axelera-ai.webp",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-13",
+      "slide_ids": [
+        13
+      ],
+      "purpose": "Show an official product visual for TENSTORRENT",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-crn"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "TENSTORRENT",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/tenstorrent-tt-ascalon.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-14",
+      "slide_ids": [
+        14
+      ],
+      "purpose": "Show an official product visual for NEXTSILICON",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-nextsilicon"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "NEXTSILICON",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/nextsilicon-maverick-2.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-15",
+      "slide_ids": [
+        15
+      ],
+      "purpose": "Show an official product visual for FRACTILE",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-fractile"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "FRACTILE",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/fractile-thumbnail.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-16",
+      "slide_ids": [
+        16
+      ],
+      "purpose": "Show an official product visual for ETCHED",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-etched"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "ETCHED",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/etched-sohu.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-17",
+      "slide_ids": [
+        17
+      ],
+      "purpose": "Show an official product visual for D-MATRIX",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-dmatrix-prod",
+        "src-dmatrix-fund"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "D-MATRIX",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/d-matrix-corsair.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-18",
+      "slide_ids": [
+        18
+      ],
+      "purpose": "Show an official product visual for MATX",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-matx"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "MATX",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/matx-cover.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-19",
+      "slide_ids": [
+        19
+      ],
+      "purpose": "Communicate The compute challengers differentiate most clearly by breadth versus specialization with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-matx"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-20",
+      "slide_ids": [
+        20
+      ],
+      "purpose": "Communicate Three companies treat data movement as the next AI scaling frontier with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-21",
+      "slide_ids": [
+        21
+      ],
+      "purpose": "Show an official product visual for CORNELIS NETWORKS",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-cornelis-fund"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "CORNELIS NETWORKS",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/cornelis-cn5000.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-22",
+      "slide_ids": [
+        22
+      ],
+      "purpose": "Show an official product visual for LIGHTMATTER",
+      "artifact_type": "photograph",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-lightmatter-prod",
+        "src-lightmatter-fund"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "LIGHTMATTER",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/lightmatter-hardware-proof.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-23",
+      "slide_ids": [
+        23
+      ],
+      "purpose": "Show an official product visual for XSIGHT LABS",
+      "artifact_type": "brand-asset",
+      "evidence_status": "approved-asset",
+      "route": "place-asset",
+      "reason": "An official company-site visual supports the profile while all claims remain editable native objects.",
+      "evidence_ids": [
+        "src-xsight"
+      ],
+      "source": {
+        "path": "research/visual-assets.json",
+        "page": null,
+        "frame": "XSIGHT LABS",
+        "timestamp": null,
+        "crop": null
+      },
+      "asset": "assets/company-sites/xsight-site-icon.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1200,
+        "height": 1050,
+        "fit": "contain",
+        "background": "#FFFFFF"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-24",
+      "slide_ids": [
+        24
+      ],
+      "purpose": "Communicate The three connectivity plays solve different layers of the same scaling problem with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-25",
+      "slide_ids": [
+        25
+      ],
+      "purpose": "Communicate Six entry criteria determine which partner motion is credible with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-26",
+      "slide_ids": [
+        26
+      ],
+      "purpose": "Communicate Distributor readiness is strongest where offers are packageable and supportable with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-27",
+      "slide_ids": [
+        27
+      ],
+      "purpose": "Communicate SI readiness concentrates where integration complexity meets deployable product with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-28",
+      "slide_ids": [
+        28
+      ],
+      "purpose": "Communicate Ecosystem-orchestrator readiness follows leverage across multiple complements with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-29",
+      "slide_ids": [
+        29
+      ],
+      "purpose": "Communicate Product maturity and partner readiness are related—but not interchangeable with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-30",
+      "slide_ids": [
+        30
+      ],
+      "purpose": "Communicate Distributor economics require packageability, margin room, and bounded support with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-tenstorrent",
+        "src-axelera",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-31",
+      "slide_ids": [
+        31
+      ],
+      "purpose": "Communicate SI economics improve when reusable integration exceeds one-off engineering with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-32",
+      "slide_ids": [
+        32
+      ],
+      "purpose": "Communicate Ecosystem leverage comes from coordinating scarce complements with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-33",
+      "slide_ids": [
+        33
+      ],
+      "purpose": "Communicate The portfolio should separate action from validation and monitoring with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-34",
+      "slide_ids": [
+        34
+      ],
+      "purpose": "Communicate A 90-day plan should buy evidence—not commit the portfolio with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-35",
+      "slide_ids": [
+        35
+      ],
+      "purpose": "Communicate Quarterly activation triggers should change posture only when evidence changes with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-36",
+      "slide_ids": [
+        36
+      ],
+      "purpose": "Communicate Confidence—not false precision—should govern recommendation strength with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-37",
+      "slide_ids": [
+        37
+      ],
+      "purpose": "Communicate Each partner motion needs a different proof package with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-cornelis",
+        "src-lightmatter-prod"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-38",
+      "slide_ids": [
+        38
+      ],
+      "purpose": "Communicate Kill criteria protect the portfolio from impressive but non-deployable silicon with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-39",
+      "slide_ids": [
+        39
+      ],
+      "purpose": "Communicate Use the deck to select validation priorities—not to declare winners with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-40",
+      "slide_ids": [
+        40
+      ],
+      "purpose": "Communicate The method is a closed-cohort public-evidence screen with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-41",
+      "slide_ids": [
+        41
+      ],
+      "purpose": "Communicate Fifteen current sources anchor cohort, market, product, and financing claims with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-42",
+      "slide_ids": [
+        42
+      ],
+      "purpose": "Communicate The rubric weights readiness evidence and applies hard gates before posture with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-axelera",
+        "src-nextsilicon",
+        "src-dmatrix-prod",
+        "src-lightmatter-prod",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-43",
+      "slide_ids": [
+        43
+      ],
+      "purpose": "Communicate The evidence ledger makes every posture traceable to a gap and next question with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "decision-visual-44",
+      "slide_ids": [
+        44
+      ],
+      "purpose": "Communicate The interview protocol tests evidence, repeatability, and partner boundaries with editable structured content",
+      "artifact_type": "component",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The region communicates claims, comparisons, or structured data and must remain editable.",
+      "evidence_ids": [
+        "src-crn",
+        "src-gartner",
+        "src-axelera",
+        "src-tenstorrent",
+        "src-nextsilicon",
+        "src-fractile",
+        "src-etched",
+        "src-dmatrix-prod",
+        "src-dmatrix-fund",
+        "src-cornelis",
+        "src-cornelis-fund",
+        "src-lightmatter-prod",
+        "src-lightmatter-fund",
+        "src-matx",
+        "src-xsight"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    }
+  ]
+}

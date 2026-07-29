@@ -1,0 +1,135 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://xsightlabs.com/newsroom/announcements/xsight-labs-announces-x2-programmable-sdn-ethernet-switches-for-hyperscale-and-edge-data-centers-optimized-for-the-ai-factory-era",
+        "title": "Xsight Labs Announces X2 - Xsight Labs",
+        "description": "Xsight Labs, a fabless semiconductor ... Edge and private data center networks, today announced the availability of the X2, the second-generation X-Switch family of fully programmable SDN Ethernet switches....",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "Xsight Labs, a fabless semiconductor company delivering end-to-end connectivity solutions for next-generation AI Factory, Traditional hyperscale IaaS, Next Generation Edge and private data center networks, today announced the availability of the X2, the second-generation X-Switch family of fully programmable SDN Ethernet switches.",
+          "Xsight Labs unveils the X2 — a 5nm, 12.8 Tbps fully programmable SDN switch at 200W with 40% lower power and UEC support for AI and hyperscale networks.",
+          "“X2 supports a broad range of SKUs from 3.2Tbps at 140W to 12.8Tbps at 200W,” said Gal Malach, Co-Founder and CTO at Xsight Labs, “This provides hyperscale and enterprise cloud customers with an extensive portfolio of programmable, power-efficient and cost-effective switches for their 25G, 50G and 100G SerDes-based connectivity requirements.” · The X-Switch family delivers application-optimized switching for the 100G SerDes ecosystem. The X2 is a scalable, power-efficient, flexible solution supporting advanced features like congestion-aware routing, fast link recovery, and Ultra Ethernet Consortium (UEC) compliance to improve the overall efficiency of the network for AI workloads.",
+          "The X2 enables best-in-class network visibility empowering operators to troubleshoot network failures with little to no downtime, leading to CapEx/OpEx savings for cloud service providers and edge operators. ... X-IQ™ Engine: Ultra Ethernet Consortium (UEC)-ready programmable congestion measurement and signaling for dynamic load balancing"
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/products/",
+        "title": "X-series - Xsight Labs",
+        "description": "X-Series switch silicon delivers 3.2–12.8 Tbps with open XISA programmability, sub-700ns latency, and 40% lower power than incumbent solutions.",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "XISA gives you direct access to the switch's programmable engines. Build custom P4 compilers. Extend protocol support. Innovate without waiting for silicon updates. ... Xsight's X2 chip will form an integral part of the terabit routing needs of the next generation of Starlink satellites.”",
+          "The world's first Ethernet switch silicon with a fully open instruction set. Build custom network functions without hardware redesign. ... Data center networks evolve faster than fixed-function switches can adapt. AI workloads demand new congestion control algorithms. Security requires deeper inspection. Proprietary silicon forces costly refresh cycles just to add features. X-Series changes this equation. Drive continuous innovation through fully programmable, software-defined switching.",
+          "XISA gives you assembly-level access to programmable engines. No vendor lock-in. Reduce infrastructure sprawl with efficient, workload-optimized switching. 40% lower power consumption than incumbent 12.8T switches.",
+          "Traditional switches use fixed pipelines that force recirculation for complex operations. X-Switch executes instructions in parallel across programmable micro-engines, maintaining line rate without penalties."
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/xsight-labs-announces-x2-programmable-sdn-ethernet-switches-for-hyperscale-and-edge-data-centers-optimized-for-the-ai-factory-era/",
+        "title": "Xsight Labs Announces X2 Programmable SDN Ethernet Switches for ...",
+        "description": "Xsight Labs, a fabless semiconductor ... Edge and private data center networks, today announced the availability of the X2, the second-generation X-Switch family of fully programmable SDN Ethernet switches....",
+        "thumbnail_url": "https://xsightlabs.com/wp-content/uploads/2024/08/AdobeStock_738036415-1-scaled.jpeg",
+        "original_thumbnail_url": "https://xsightlabs.com/wp-content/uploads/2024/08/AdobeStock_738036415-1-scaled.jpeg",
+        "page_age": "2025-03-21T12:16:08",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "Xsight Labs, a fabless semiconductor company delivering end-to-end connectivity solutions for next-generation AI Factory, Traditional hyperscale IaaS, Next Generation Edge and private data center networks, today announced the availability of the X2, the second-generation X-Switch family of fully programmable SDN Ethernet switches.",
+          "Round endorses Xsight Labs’ vision for end-to-end cloud infrastructure",
+          "“X2 supports a broad range of SKUs from 3.2Tbps at 140W to 12.8Tbps at 200W,” said Gal Malach, Co-Founder and CTO at Xsight Labs, “This provides hyperscale and enterprise cloud customers with an extensive portfolio of programmable, power-efficient and cost-effective switches for their 25G, 50G and 100G SerDes-based connectivity requirements.” · The X-Switch family delivers application-optimized switching for the 100G SerDes ecosystem. The X2 is a scalable, power-efficient, flexible solution supporting advanced features like congestion-aware routing, fast link recovery, and Ultra Ethernet Consortium (UEC) compliance to improve the overall efficiency of the network for AI workloads.",
+          "The X2 enables best-in-class network visibility empowering operators to troubleshoot network failures with little to no downtime, leading to CapEx/OpEx savings for cloud service providers and edge operators. ... X-IQ™ Engine: Ultra Ethernet Consortium (UEC)-ready programmable congestion measurement and signaling for dynamic load balancing"
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/switches",
+        "title": "x-series switch silicon",
+        "description": "X-Series switch silicon delivers 3.2–12.8 Tbps with open XISA programmability, sub-700ns latency, and 40% lower power than incumbent solutions.",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "XISA gives you direct access to the switch's programmable engines. Build custom P4 compilers. Extend protocol support. Innovate without waiting for silicon updates. ... Xsight's X2 chip will form an integral part of the terabit routing needs of the next generation of Starlink satellites.”",
+          "The world's first Ethernet switch silicon with a fully open instruction set. Build custom network functions without hardware redesign. ... Data center networks evolve faster than fixed-function switches can adapt. AI workloads demand new congestion control algorithms. Security requires deeper inspection. Proprietary silicon forces costly refresh cycles just to add features. X-Series changes this equation. Drive continuous innovation through fully programmable, software-defined switching.",
+          "XISA gives you assembly-level access to programmable engines. No vendor lock-in. Reduce infrastructure sprawl with efficient, workload-optimized switching. 40% lower power consumption than incumbent 12.8T switches.",
+          "Traditional switches use fixed pipelines that force recirculation for complex operations. X-Switch executes instructions in parallel across programmable micro-engines, maintaining line rate without penalties."
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/switches/x2",
+        "title": "X2 - Xsight Labs",
+        "description": "Two 1RU reference systems built on the same X2 silicon, same SDK, same feature set. Pick the port configuration that fits your rack. Fully programmable SDN Ethernet switch designed to deliver ultra-low-power and low-latency connectivity",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "The X2 is Xsight's 12.8 Tbps, 5nm fully programmable SDN switch — delivering ultra-low latency and under 200W for AI, storage, and cloud deployments.",
+          "Fully programmable SDN Ethernet switch delivers ultra‑low‑power, low‑latency connectivity to scale AI, storage and compute clusters with zero trade‑offs.",
+          "XISA gives you assembly-level access to programmable engines. No vendor lock-in. Reduce infrastructure sprawl with efficient, workload-optimized switching. 40% lower power consumption than incumbent 12.8T switches. Sub-700ns latency. Evolve your network to deliver more performance from your existing investments. UEC-ready for emerging AI networking standards. Powering the world's most demanding infrastructure. Xsight's X2 chip will form an integral part of the terabit routing needs of the next generation of Starlink satellites.”",
+          "Unlike traditional match-action pipelines, X-Switch executes instructions across programmable micro-engines simultaneously, maintaining line rate without recirculation penalties. ... X2 integrates with industry-standard network operating systems and provides a complete development toolkit for custom implementations. ... Production-ready 1RU switch systems available directly."
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/wp-content/uploads/2025/03/WN-X-Switch-ISA-WP-Mar2025-1.pdf",
+        "title": "©2025 Wheeler’s Network Page 1 An Open Ethernet Switch ISA",
+        "description": "Long before the generative-AI boom, startup Xsight Labs developed its programmable X-Switch · architecture aimed at data-center Ethernet switching. It has since sampled two generations of switch · silicon, culminating in the X2, a 5nm 12.8Tbps chip (see Xsight Recharges the Cloud ToR).",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "As programmers gain · an understanding of the X-Switch architecture, they can transition to Python code to take full advantage · of the design's parallelism. Opening its ISA to the community will help incubate the architecture as · Xsight delivers the X2 and develops future switch chips.",
+          "Switch maximizes through parallel threads and asynchronous accelerators. As we detailed previously, Xsight supplies drivers, multiple APIs, and an instruction-accurate · simulator for the X2. The X-Switch assembler was, until recently, a company-internal tool.",
+          "The X-Switch architecture enables advanced application use cases, such as the fast link recovery shown · in Figure 3. In the X2, hardware detects a link failure and switches the associated port to loopback",
+          "As Figure 1 shows, X-Switch instantiations integrate a matrix of programmable data-path units (DPUs) surrounded by interface units (IFUs), the latter containing Ethernet MAC and SerDes blocks."
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/newsroom/announcements/xsight-labs-x2-switch-to-enable-next-generation-starlink-satellites-and-deliver-gigabit-connectivity",
+        "title": "Xsight Labs X2 Switch to Enable Next-Generation Starlink Satellites ...",
+        "description": "Xsight Labs, an innovator in high-performance connectivity silicon, today announced that Starlink, the world’s most advanced satellite constellation in low-Earth orbit, delivering broadband, will leverage the Xsight X2 Programmable Ethernet switch to serve as the high speed networking core ...",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "Xsight Labs, an innovator in high-performance connectivity silicon, today announced that Starlink, the world’s most advanced satellite constellation in low-Earth orbit, delivering broadband, will leverage the Xsight X2 Programmable Ethernet switch to serve as the high speed networking core for its next-generation Starlink V3 satellites.",
+          "Xsight’s X2 powers next‑gen Starlink V3 satellites with 12.8T switching, ultra‑low‑power performance, and fully programmable networking for orbital workloads.",
+          "The X2 delivers 12.8 Tbps of switching capacity using state of the art 100G SerDes and TSMC’s N5 process, providing a power-efficient, ultra-low-latency data path built for harsh environments. Its fully programmable architecture allows it to dynamically adapt to evolving orbital networking demands, ensuring optimal performance across a wide range of satellite workloads.",
+          "X2’s flexible, programmable architecture adapts seamlessly to diverse orbital and ground-based networking workloads"
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/wp-content/uploads/2024/09/X2-PB-Public.pdf",
+        "title": "PB-200-00 August 2024 Xsight Labs | 1 X2 PRODUCT BRIEF",
+        "description": "X2 PRODUCT BRIEF · X-Switch: Programmable Ethernet · Switches · HIGHLIGHTS · 12.8­Tbps full-duplex, non-blocking switching optimized for · data centers, cloud, and AI networks. 100 Gbps PAM4 LR SerDes supporting retimer-less designs. Application Optimized Switching architecture ...",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "X2 PRODUCT BRIEF · X-Switch: Programmable Ethernet · Switches · HIGHLIGHTS · 12.8­Tbps full-duplex, non-blocking switching optimized for · data centers, cloud, and AI networks. 100 Gbps PAM4 LR SerDes supporting retimer-less designs. Application Optimized Switching architecture powered by ·",
+          "The X2 is the second generation chipset in the X-Switch family of · programmable Ethernet switches. Supporting up to 12.8­Tbps · full-duplex · throughput, the devices · are · optimized · for · interconnecting AI/ML, storage and compute clusters in · data­centers."
+        ]
+      },
+      {
+        "url": "https://xsightlabs.com/newsroom/announcements/xsight-labs-transforms-ethernet-switch-market-with-unprecedented-open-architecture",
+        "title": "Xsight Labs Transforms Ethernet Switch Market - Xsight Labs",
+        "description": "The X2 12.8T fully programmable switch is available now and delivers transformative benefits, including reduced latency, lower power consumption, and decreased TCO. Complementing the X2 Switch, Xsight Labs also offers the E1, a 5nm 800G DPU designed for open, Linux-based SDN environments. By breaking away from proprietary norms, Xsight Labs is paving the way for a new era of openness, collaboration, and innovation in Ethernet ...",
+        "favicon_url": "https://you.com/favicon?domain=xsightlabs.com&size=128",
+        "snippets": [
+          "The X2 12.8T fully programmable switch is available now and delivers transformative benefits, including reduced latency, lower power consumption, and decreased TCO. Complementing the X2 Switch, Xsight Labs also offers the E1, a 5nm 800G DPU designed for open, Linux-based SDN environments. By breaking away from proprietary norms, Xsight Labs is paving the way for a new era of openness, collaboration, and innovation in Ethernet switching — rearchitecting the foundation of cloud and AI infrastructure.",
+          "Xsight Labs opens its X-Series switch Instruction Set Architecture (XISA) — an industry first enabling full switch programmability and ecosystem collaboration.",
+          "The X-Switch architecture represents a paradigm shift in Ethernet switch design, combining fine-grained programmability with unparalleled flexibility and efficiency.",
+          "This move aims to enhance network performance and development productivity by granting customers and partners full transparency into the behavior of switch chips – long regarded as “black boxes” that stifled innovation. “We at Oxide believe in programmable networking silicon but have been frustrated by vendors’ insistence on keeping their instruction set architectures secret,” said Bryan Cantrill, Co-Founder and CTO, Oxide Computer Company."
+        ]
+      },
+      {
+        "url": "https://staging.xsightlabs.com/x-series/",
+        "title": "X Series – Xsight Labs",
+        "description": "The X-Series flagship device offers ... to life. In summary, for the first time a truly programable ethernet switch is available WITH NO TRADITIONAL PERFORMANCE OR PROGRAMMING COMPLEXITY TRADE-OFFs. The X2 is in mass production and has been in general availability since November ...",
+        "thumbnail_url": "https://staging.xsightlabs.com/wp-content/uploads/2020/11/xsight-logo-150.png",
+        "original_thumbnail_url": "https://staging.xsightlabs.com/wp-content/uploads/2020/11/xsight-logo-150.png",
+        "page_age": "2025-10-10T17:07:56",
+        "favicon_url": "https://you.com/favicon?domain=staging.xsightlabs.com&size=128",
+        "snippets": [
+          "The X-Series flagship device offers unprecedented low latency (<500nsec), same small 256B minimum packet at line rate, a full shared memory (not sliced port-locked memory common in fixed function incumbent cloud fabric switches) and an open ISA that Xsight Labs has simply posted on GitHub allowing easy tool chain and programming eco system to organically spring to life. In summary, for the first time a truly programable ethernet switch is available WITH NO TRADITIONAL PERFORMANCE OR PROGRAMMING COMPLEXITY TRADE-OFFs. The X2 is in mass production and has been in general availability since November 2024.",
+          "X2 is the next-generation chipset in the X-Switch family of fully programmable Ethernet switches.",
+          "The X2 chipset is the second generation chipset in the X-Switch family of programmable Ethernet switches.",
+          "X2 Series Ethernet Switch X2 Series Ethernet Switch X2 Series Ethernet Switch SDN Programable with Open ISA SDN Programable with Open ISA SDN Programable with Open ISA 12.8T shared memory Ethernet Switch (UEC/UET) with >3K CPUs (Harvard architecture Load Store) True SDN programming model allowing parallelization and common programming model feel Open ISA (Github)"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:xsightlabs.com X2 programmable Ethernet switch official",
+    "search_uuid": "c2b2d0cc-11cf-43a9-9c8b-09809fe0eef5",
+    "latency": 0.5413100719451904
+  }
+}

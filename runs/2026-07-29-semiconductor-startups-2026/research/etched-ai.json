@@ -1,0 +1,182 @@
+{
+  "results": {
+    "news": [
+      {
+        "url": "https://www.moneycontrol.com/news/world/ai-chip-startup-etched-raises-120-million-to-expand-supply-12756557.html",
+        "title": "AI chip startup Etched raises $120 million to expand supply",
+        "description": "The round was led by Primary Venture Partners and Positive Sum Ventures, with participation from prominent angel investors, including Peter Thiel, Github Chief Executive Officer Thomas Dohmke and Balaji Srinivasan, former chief technology officer at Coinbase Inc., the company said Tuesday.",
+        "thumbnail_url": "https://images.moneycontrol.com/static-mcnews/2024/05/20240529122231_MixCollage-29-May-2024-05-50-PM-5002.jpg",
+        "page_age": "2024-06-26T07:48:35"
+      },
+      {
+        "url": "https://www.techradar.com/pro/transformers-would-take-over-the-world-little-known-ai-startup-bet-on-asics-and-claims-it-can-trounce-nvidias-flagship-gpu-the-b200-by-almost-10-times",
+        "title": "'Transformers would take over the world': Little-known AI startup bet on ASICs — and claims it can trounce Nvidia's flagship GPU, the B200, by almost 10 times",
+        "description": "Etched's Sohu chip is dedicated to transformers",
+        "thumbnail_url": "https://cdn.mos.cms.futurecdn.net/PgFguBfxjVEigmNKuo8KDf-1200-80.png",
+        "page_age": "2024-07-05T17:34:43"
+      },
+      {
+        "url": "https://analyticsindiamag.com/etched-takes-a-risky-bet-on-transformers-to-topple-nvidia/",
+        "title": "Etched Takes a Risky Bet on Transformers to Topple NVIDIA",
+        "description": "AI hardware company Etched has unveiled Sohu, the first specialised chip (ASIC) built exclusively for Transformer models.",
+        "thumbnail_url": "https://analyticsindiamag.com/wp-content/uploads/2024/06/Etched-Takes-a-Risky-Bet-on-Transformers-to-Topple-NVIDIA.jpg",
+        "page_age": "2024-06-27T09:05:11"
+      },
+      {
+        "url": "https://venturebeat.com/ai/etched-raises-120m-in-challenge-to-nvidia-in-ai-with-transformer-chips/",
+        "title": "Etched raises $120M in challenge to Nvidia in AI with transformer chips",
+        "description": "Etched announced that it has raised $120 million in a challenge to Nvidia in designing AI chips.",
+        "thumbnail_url": "https://venturebeat.com/wp-content/uploads/2024/06/etched.jpg?w=1024?w=1200&strip=all",
+        "page_age": "2024-06-25T18:59:38"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://techstartups.com/2026/07/23/etched-ai-chip-startup-founded-by-college-dropouts-raises-300m-at-10-3b-valuation-to-take-on-nvidia/",
+        "title": "Etched, AI chip startup founded by college dropouts, raises $300M ...",
+        "description": "For years, Nvidia has held an iron grip on the AI chip market, turning its GPUs into the default hardware for training and running large language models. That dominance has created a wave of startups trying to carve out a place in the market. Few have attracted as much attention as Etched.",
+        "thumbnail_url": "https://techstartups.com/wp-content/uploads/2026/07/AI-chip-startup-Etched-raises-300-million-at-10.3-billion-valuation.jpg",
+        "original_thumbnail_url": "https://techstartups.com/wp-content/uploads/2026/07/AI-chip-startup-Etched-raises-300-million-at-10.3-billion-valuation.jpg",
+        "page_age": "2026-07-23T16:45:31",
+        "favicon_url": "https://you.com/favicon?domain=techstartups.com&size=128",
+        "snippets": [
+          "Home » Artificial Intelligence Featured Startup Funding Startup Spotlight Startups Tech Startup News Tech Startups Technology News ... For years, Nvidia has held an iron grip on the AI chip market, turning its GPUs into the default hardware for training and running large language models. That dominance has created a wave of startups trying to carve out a place in the market. Few have attracted as much attention as Etched.",
+          "Etched has partnered with Taiwan Semiconductor Manufacturing Co. to fabricate Sohu, a process that demands significant capital before the first commercial chip reaches customers. Chief Executive Officer Gavin Uberti has previously said early funding was needed to cover the cost of taping out the chip at TSMC.",
+          "Founded in 2022 by Harvard dropouts Gavin Uberti and Chris Zhu, Etched has taken a different approach from many AI chip companies. Instead of building general-purpose GPUs, the startup is developing application-specific hardware built around transformer models, the neural network architecture that powers systems such as ChatGPT, Claude, Gemini, and many of today’s leading AI models. Its first processor, called Sohu, is built to accelerate AI inference, the stage where trained models generate responses for users.",
+          "The announcement arrives two years after Etched secured $120 million in funding to pursue an ambitious goal that many in the semiconductor industry have viewed as one of the hardest challenges in technology: building chips capable of competing with Nvidia in AI infrastructure."
+        ]
+      },
+      {
+        "url": "https://startupintros.com/orgs/etched-ai",
+        "title": "Etched.ai: Funding, Team & Investors | Startup Intros",
+        "description": "Etched.ai: AI semiconductor company designing custom ASICs for large language model inference, focused on transformer AI architecture.",
+        "thumbnail_url": "https://startupintros.com/api/public/assets/org_webp_logos/etched-ai.webp",
+        "original_thumbnail_url": "https://startupintros.com/api/public/assets/org_webp_logos/etched-ai.webp",
+        "page_age": "2026-07-13T08:16:48",
+        "favicon_url": "https://you.com/favicon?domain=startupintros.com&size=128",
+        "snippets": [
+          "Etched.ai has raised $625.0M in total across 3 funding rounds. Etched.ai is a semiconductor startup building specialized ASICs for AI inference, with its flagship product Sohu, the first chip purpose-built for transformer models that power large language models like ChatGPT, Claude, and Gemini.[2][3][5] It serves AI developers and enterprises running demanding inference workloads, such as real-time voice agents, content generation, and trillion-parameter models, solving the problem of GPU limitations in speed, cost, and power efficiency by delivering over 500,000 tokens per second on Llama-70B",
+          "Based in Cupertino, California, Etched.ai is a semiconductor startup that designs custom application-specific integrated circuits specifically optimized for artificial intelligence workloads. The company's flagship product, Sohu, is a specialized chip that embeds transformer models directly into hardware to process large language models with significantly greater speed and lower inference costs than general-purpose graphics processing units.",
+          "Etched rides the transformer dominance trend—architectures behind 90%+ of generative AI since Google's 2017 paper, fueling models from OpenAI's Sora to Stable Diffusion amid exploding inference demand.[2][5] Timing is ideal post-ChatGPT boom, as GPU shortages and Nvidia's pricing/power issues create openings for ASICs; market forces like hyperscaler needs for real-time AI (e.g., agents, video gen) favor specialists over generalists.[1][3][5] Etched influences the ecosystem by open-sourcing tools, enabling startups to run trillion-param models affordably, and pressuring incumbents—positioni",
+          "Etched was founded in 2022 by Harvard dropouts Gavin Uberti (ex-OctoML, ex-Xnor.ai), Chris Zhu, and Robert Wachen, who bonded over a school project exploring AI at scale and realized transformers would dominate future AI.[2][4][5] Convinced general-purpose GPUs couldn't keep pace, they dropped out to build specialized chips, starting from a dorm-room vision of outperforming Nvidia for inference on transformer architectures like those in ChatGPT and Stable Diffusion.[2][4] Early traction came via a $5.4 million seed round in March 2023 from angel investors, followed by the June 2024 Series A co"
+        ]
+      },
+      {
+        "url": "https://www.spheron.network/blog/etched-ai-sohu-vs-nvidia-transformer-asic-inference/",
+        "title": "Etched AI Sohu vs NVIDIA: Transformer ASIC vs General-Purpose GPU ...",
+        "description": "Etched AI is a chip startup founded in 2022, having raised roughly $800 million across four rounds, including a reported $500M round at a $5B valuation. Their first product is the Sohu chip, a transformer-only ASIC designed for autoregressive language model inference. The name and funding are real.",
+        "thumbnail_url": "https://www.spheron.network/blog/etched-ai-sohu-vs-nvidia-transformer-asic-inference.webp",
+        "original_thumbnail_url": "https://www.spheron.network/blog/etched-ai-sohu-vs-nvidia-transformer-asic-inference.webp",
+        "page_age": "2026-05-01T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.spheron.network&size=128",
+        "snippets": [
+          "Etched AI claims 500k tokens/sec on Llama 70B with an 8-chip Sohu server. Here is what transformer-only ASICs actually give up versus H100, B200, and the Groq 3 LPU.",
+          "Etched formally came out of stealth on June 30, 2026, and the announcement moved the story from \"interesting claim\" to \"funded, contracted roadmap.\" The concrete facts: working A0 silicon demonstrated, a rack-scale 8-chip Sohu inference system unveiled, roughly $800M raised across four rounds (including a reported $500M round at a $5B valuation), over $1B in signed customer contracts, and first racks scheduled to ship in summer 2026.",
+          "According to Etched's published materials and industry reporting, Sohu uses 144GB of HBM3E per chip with approximately 1.8x the memory bandwidth of an H100 SXM5. That gives Sohu more memory capacity than an H100 (80GB) at roughly 1.8x the H100's 3.35 TB/s bandwidth, using the same HBM architecture that GPUs use rather than replacing it with on-chip SRAM. The Groq 3 LPU takes a fundamentally different route: 500 MB of on-chip SRAM per chip achieves 150 TB/s bandwidth but with very limited context window capacity.",
+          "The Groq 3 LPU is being deployed in data centers as part of NVIDIA's DGX infrastructure strategy, with NVIDIA's supply chain and enterprise contracts behind it. Sohu is a startup chip, and while Etched has raised roughly $800 million and holds over $1B in signed contracts, it lacks the organizational infrastructure, supply chain, and enterprise support contracts that NVIDIA brings."
+        ]
+      },
+      {
+        "url": "https://www.techtimes.com/articles/319393/20260630/transformer-chip-startup-etched-exits-stealth-800m-raised-1b-contracts.htm",
+        "title": "Transformer Chip Startup Etched Exits Stealth: $800M Raised, $1B ...",
+        "description": "Etched Sohu chip startup exits stealth with $800M raised and $1B in signed orders. The transformer inference ASIC runs on TSMC N4P silicon and claims 20x throughput over Nvidia H100 GPUs using fixed-function attention circuits and a low-voltage design that sustains 80% peak FLOP utilization on",
+        "thumbnail_url": "https://d.techtimes.com/en/full/467170/aws.jpg",
+        "original_thumbnail_url": "https://d.techtimes.com/en/full/467170/aws.jpg",
+        "page_age": "2026-07-01T00:45:42",
+        "favicon_url": "https://you.com/favicon?domain=www.techtimes.com&size=128",
+        "snippets": [
+          "As of Tuesday's stealth exit, no third-party benchmark organization has published independent throughput measurements from physical Sohu hardware under production conditions. Etched has raised $800 million across multiple financing rounds. The latest, a $500 million round that closed in December 2025, set a $5 billion post-money valuation and was led by Stripes. It included a strategic investment from VentureTech Alliance — a fund with ties to Taiwan Semiconductor Manufacturing Company — alongside Peter Thiel, Jane Street, Hudson River Trading, Jump Trading, Two Sigma, Ribbit Capital, and additional firms.",
+          "Its chip, called Sohu, is designed for transformer inference — the ongoing process of running large language models against live queries — and is optimized for that workload at a level of architectural specificity that no GPU can match. The company says first racks ship this summer. What Etched is claiming is not incremental improvement. It is a claim that the dominant paradigm in AI inference hardware — general-purpose GPUs running CUDA — is structurally inefficient for the workload that now consumes the majority of AI compute spending, and that a purpose-built alternative can deliver an order of magnitude more throughput at lower cost and power.",
+          "What is the Etched Sohu chip, and how does it differ from a GPU? Sohu is an AI inference accelerator built around two proprietary architectural innovations: Low Voltage Inference, which runs the chip's math blocks at below-half the voltage of conventional AI chips to maximize FLOP density without thermal throttling; and Cluster Scale Memory, which creates a shared low-latency memory pool across chips to eliminate the bandwidth contention between weight reads and key-value cache reads that constrains GPU inference performance.",
+          "The architectural risk is real and worth stating plainly. Etched's chips are not the original Sohu design that could run only dense transformer models. The production architecture the company is shipping claims to handle mixture-of-experts models and long-context workloads."
+        ]
+      },
+      {
+        "url": "https://www.datacenterdynamics.com/en/news/etchedai-raises-500m-for-a-5bn-valuation-report/",
+        "title": "Etched.ai raises $500m for a $5bn valuation – report - DCD",
+        "description": "Round was led by Stripes and included participation from Peter Thiel",
+        "thumbnail_url": "https://media.datacenterdynamics.com/media/images/1719329385611.2e16d0ba.fill-1200x630.jpg",
+        "original_thumbnail_url": "https://media.datacenterdynamics.com/media/images/1719329385611.2e16d0ba.fill-1200x630.jpg",
+        "page_age": "2026-06-18T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.datacenterdynamics.com&size=128",
+        "snippets": [
+          "Etched has not yet announced the funding round. ... Founded in 2022 by Harvard University dropouts Gavin Uberti and Chris Zhu, the Cupertino-based company has developed an AI chip dubbed Sohu to train, deploy, and optimize transformer models – a type of neural network architecture that underpins large language models (LLMs) such as ChatGPT.",
+          "According to Etched, while its algorithm-specific ASIC chips won’t be able to run most traditional AI models, such as deep learning recommendation models (DLRMS) or recurrent neural networks (RNNs), Sohu will be more efficient than traditional GPUs as they execute only the specific transformer models they were designed to perform.",
+          "The company has also claimed that Sohu is an “order of magnitude faster and cheaper” than Nvidia’s upcoming Blackwell GPUs, with an eight-chip Sohu server serving more than 500,000 Llama 70B tokens per second. In a 2024 interview with TechCrunch, Etched’s CEO, Uberti, said that one Sohu server would replace 160 H100 GPUs.",
+          "AI chip startup Etched.ai has reportedly raised $500 million in a funding round that was led by investment firm Stripes and includes participation from existing investor, former PayPal CEO Peter Thiel."
+        ]
+      },
+      {
+        "url": "https://finance.yahoo.com/news/ai-chip-startup-etched-raises-160625909.html",
+        "title": "AI Chip Startup Etched Raises $500 Million in New Funding Round",
+        "description": "Stripes-led financing values Etched at $5 billion as it develops AI processors to compete with Nvidia.",
+        "thumbnail_url": "https://s.yimg.com/lo/mysterio/api/36DFF794DC5C5564FCF0855E8597C99B8E295917B27B91EEFED440275F041787/subgraphmysterio/resizefill_w1200_h1000;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fus.finance.gurufocus%2F586f6ed952ecc73da387441318521e82",
+        "original_thumbnail_url": "https://s.yimg.com/lo/mysterio/api/36DFF794DC5C5564FCF0855E8597C99B8E295917B27B91EEFED440275F041787/subgraphmysterio/resizefill_w1200_h1000;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fus.finance.gurufocus%2F586f6ed952ecc73da387441318521e82",
+        "page_age": "2026-01-14T16:06:25",
+        "favicon_url": "https://you.com/favicon?domain=finance.yahoo.com&size=128",
+        "snippets": [
+          "Following this raise, Etched has secured almost $1 billion in total funding, according to one of the people. The company has been developing an AI chip known as Sohu, aiming to take advantage of surging demand for computing power used to train and run artificial intelligence models.",
+          "Stripes-led investors have backed AI chip startup Etched with about $500 million in new funding, according to people familiar with the matter, as the company works to challenge Nvidia (NASDAQ:NVDA) in the rapidly expanding market for artificial intelligence processors.",
+          "The funding arrives as Nvidia continues to dominate the AI accelerator market, even as new startups attempt to carve out alternatives. Nvidia has said this month that demand for its products is still increasing and has projected more than half a trillion dollars in sales from data center operators by the end of 2026. Against that backdrop, Etched's growing capital base and backing from established investors could be seen as an early effort to compete in a market where demand is expanding, but competitive pressure remains intense."
+        ]
+      },
+      {
+        "url": "https://www.jonpeddie.com/news/welcome-to-the-club-etched/",
+        "title": "Welcome to the club, Etched – Jon Peddie Research",
+        "description": "In our 2026 AI Processors Market ... AI processor start-ups and a second tier raising $500 million to $999 million. Etched just joined that tier with a $500 million round led by Stripes and Peter Thiel, bringing total funding to $620 million and a $5 billion valuation. The company builds Sohu, a ...",
+        "thumbnail_url": "https://www.jonpeddie.com/wp-content/uploads/2026/01/etched.jpg",
+        "original_thumbnail_url": "https://www.jonpeddie.com/wp-content/uploads/2026/01/etched.jpg",
+        "page_age": "2026-01-16T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.jonpeddie.com&size=128",
+        "snippets": [
+          "In our 2026 AI Processors Market report, we identified billion-dollar AI processor start-ups and a second tier raising $500 million to $999 million. Etched just joined that tier with a $500 million round led by Stripes and Peter Thiel, bringing total funding to $620 million and a $5 billion valuation. The company builds Sohu, a transformer-only ASIC supported by TSMC and engineers from Broadcom and Cypress.",
+          "Etched argues that AI workloads now demand specialization rather than general-purpose architectures, and the market trend supports that shift. The team identifies infrastructure as the true limiter of AI scale, asserting that silicon capacity—not software—sets the ceiling for future model growth. Figure 1. Artist’s rendition of Etched Sohu chip.",
+          "Truly, $500 million is a lot of money, and Etched could use it to build out its stack, moving it from just a chip company to a total solutions company. Etched’s Sohu processor uses High Bandwidth Memory (HBM3E), putting it in competition with Nvidia for memory manufacturers’ production.",
+          "All told, over $28 billion has been invested in privately held AIP companies. Etched positions Sohu, its custom transformer-only NPU/ASIC, as the core of a specialized AI hardware strategy. The company partners with TSMC and recruits senior engineers from Broadcom and Cypress to build a hyper-efficient transformer engine."
+        ]
+      },
+      {
+        "url": "https://theaiworld.org/news/etcheds-500m-sohu-chip-takes-aim-at-nvidia",
+        "title": "Etched’s $500M Sohu Chip Takes Aim at Nvidia",
+        "description": "Etched, a young AI chip startup founded by Harvard dropouts, has raised $500 million at a $5 billion valuation to push its Sohu transformer-only ASIC into the data center mainstream. By promising up to 10x better performance and efficiency than Nvidia GPUs for large-model inference, Etched is testing whether extreme specialization can loosen Nvidia’s grip on AI infrastructure. Etched’s new $500 million funding ...",
+        "thumbnail_url": "https://blogs-posts.s3.ap-south-1.amazonaws.com/TCImages/1771659960303_pbxp06j.png",
+        "original_thumbnail_url": "https://blogs-posts.s3.ap-south-1.amazonaws.com/TCImages/1771659960303_pbxp06j.png",
+        "page_age": "2026-01-14T11:39:32",
+        "favicon_url": "https://you.com/favicon?domain=theaiworld.org&size=128",
+        "snippets": [
+          "Etched, a young AI chip startup founded by Harvard dropouts, has raised $500 million at a $5 billion valuation to push its Sohu transformer-only ASIC into the data center mainstream. By promising up to 10x better performance and efficiency than Nvidia GPUs for large-model inference, Etched is testing whether extreme specialization can loosen Nvidia’s grip on AI infrastructure. Etched’s new $500 million funding round marks one of the boldest recent attempts to chip away at Nvidia’s overwhelming lead in AI hardware, positioning the young startup as a high-risk, high-upside specialist in transformer inference.",
+          "By hardwiring its Sohu chip around transformer models and leaning on TSMC’s 4‑nanometer manufacturing, Etched is betting that extreme specialization, not general-purpose GPUs, will define the next phase of AI infrastructure. In January 2026, Etched, a San Jose–based startup founded just a couple of years ago by Harvard dropouts, closed a fresh $500 million round that lifts its total funding close to the $1 billion mark and values the company at roughly $5 billion.",
+          "Etched’s $500M raise powers Sohu, a 4nm transformer ASIC claiming 10x faster, cheaper AI inference than Nvidia for enterprise and cloud workloads.",
+          "While Etched’s funding pool looks small next to Nvidia, which is on track to generate hundreds of billions of dollars in annual revenue, the round places Etched firmly in unicorn territory and gives it the balance sheet to ramp design, software, and early customer relationships. Etched’s product strategy is intentionally narrow: its flagship chip, Sohu, is an application-specific integrated circuit engineered purely to run transformer models as efficiently as possible, rather than acting as a flexible GPU for many workloads."
+        ]
+      },
+      {
+        "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+        "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from ...",
+        "description": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
+        "thumbnail_url": "https://techcrunch.com/wp-content/uploads/2026/07/Etched-co-founder-COO-Robert-Wachen.jpg?resize=1200,1200",
+        "original_thumbnail_url": "https://techcrunch.com/wp-content/uploads/2026/07/Etched-co-founder-COO-Robert-Wachen.jpg?resize=1200,1200",
+        "page_age": "2026-07-23T23:50:05",
+        "favicon_url": "https://you.com/favicon?domain=techcrunch.com&size=128",
+        "snippets": [
+          "In fact, that’s how Etched landed its list of famous investors in the first place — by showing them private demos in its office. “Andrej Karpathy from Anthropic, Noam Brown from OpenAI, Geoffrey Hinton, as well as all the investors in the funding round — these are all people who actually tried the hardware and are very excited about it,” Wachen says.",
+          "Etched, the AI chip startup founded by three Harvard dropouts in 2022, has closed a $300 million Series C funding round at a $10.3 billion valuation, co-founder and COO Robert Wachen tells TechCrunch.",
+          "The company says this is the highest valuation ever for a Sequoia-led Series C. Last month, Etched announced that it had successfully manufactured its homegrown chips, that its first full systems were being tested by clients, and it had already booked $1 billion worth of orders.",
+          "Etched launched at a time when the idea of building a chip specifically for AI models based on transformer technology (the architecture behind most modern AI systems, including ChatGPT and Claude) was considered wild if not wacky."
+        ]
+      },
+      {
+        "url": "https://www.linkedin.com/posts/traded-venture-capital_cupertino-california-venturecapital-activity-7417299784262242304-Ub15",
+        "title": "Etched AI Chip Startup Raises $500M at $5B Valuation",
+        "description": "",
+        "favicon_url": "https://you.com/favicon?domain=www.linkedin.com&size=128",
+        "snippets": []
+      }
+    ]
+  },
+  "metadata": {
+    "query": "Etched Sohu official AI chip funding startup",
+    "search_uuid": "4ce0862f-b666-42ae-a04c-099e98f5ae21",
+    "latency": 0.5738410949707031
+  }
+}

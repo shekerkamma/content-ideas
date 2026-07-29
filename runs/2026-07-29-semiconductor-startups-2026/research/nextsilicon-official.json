@@ -1,0 +1,151 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.nextsilicon.com/maverick/",
+        "title": "NEXTSILICON - Maverick",
+        "description": "NextSilicon Maverick delivers out-of-the-box performance, runtime optimization, and a saving in energy and operational costs, for greener HPC.",
+        "thumbnail_url": "https://www.nextsilicon.com/maverick/assets/images/maverick/adaptability.jpg",
+        "original_thumbnail_url": "https://www.nextsilicon.com/maverick/assets/images/maverick/adaptability.jpg",
+        "favicon_url": "https://you.com/favicon?domain=www.nextsilicon.com&size=128",
+        "snippets": [
+          "Maverick-2 seamlessly adapts to today's HPC and AI/ML workloads, free of the rigid, high-latency designs and high-power consumption of its competitors. NextSilicon's novel architecture delivers exceptional out-of-the-box performance through the use of a revolutionary software-learning algorithm that dynamically optimizes hardware configurations at runtime, accelerating the path to discovery.",
+          "Maverick-2 sets a new standard for efficient computing with more than a 4x performance-per-watt advantage over traditional GPUs and more than 20x that of high-end CPUs, all while reducing the total cost of ownership by more than half.",
+          "By intelligently optimizing for power efficiency in real time, Maverick-2 enables sustainable innovation, making it the ideal choice for data centers and researchers striving to meet environmental and operational goals without compromising on performance.",
+          "Maverick-2 is exceptionally adaptable and ready to power your evolving HPC, AI, and other workloads. ... Subscribe to NextLetter for exclusive insights on our latest innovations, performance benchmarks, white papers, event highlights, and success stories."
+        ]
+      },
+      {
+        "url": "https://finance.yahoo.com/news/nextsilicon-maverick-2-powers-ai-120000206.html",
+        "title": "NextSilicon’s Maverick-2 Powers AI and HPC Breakthroughs with ...",
+        "description": "Maverick-2 is currently in the hands of leading partners and is available in product volumes now in Q4 2025. To learn more, visit us at booth #3824 during the SC25 Supercomputing Conference, held from November 16-21, 2025, in St. Louis. ... NextSilicon is revolutionizing the future of high-performance ...",
+        "thumbnail_url": "https://s.yimg.com/os/en/business-wire.com/1efe881b3c78872d112d9ef79c81dc3d",
+        "original_thumbnail_url": "https://s.yimg.com/os/en/business-wire.com/1efe881b3c78872d112d9ef79c81dc3d",
+        "page_age": "2025-10-22T12:00:00",
+        "favicon_url": "https://you.com/favicon?domain=finance.yahoo.com&size=128",
+        "snippets": [
+          "Maverick-2 is currently in the hands of leading partners and is available in product volumes now in Q4 2025. To learn more, visit us at booth #3824 during the SC25 Supercomputing Conference, held from November 16-21, 2025, in St. Louis. ... NextSilicon is revolutionizing the future of high-performance computing with its Intelligent Compute Architecture (ICA), which blends adaptive computing with self-optimizing software-hardware integration.",
+          "TEL AVIV, Israel & MINNEAPOLIS, October 22, 2025--NextSilicon’s Maverick-2 powers AI and HPC breakthroughs with up to 10x performance boost at less than half the power",
+          "TEL AVIV, Israel & MINNEAPOLIS, October 22, 2025--(BUSINESS WIRE)--NextSilicon, a leader in next-generation computing solutions for AI and high-performance computing (HPC), today disclosed architecture and performance details for Maverick-2, the next-generation processor enabling order-of-magnitude better compute for HPC and AI:",
+          "From HPC pioneers to AI innovators at the leading edge of scientific research, web search algorithms, social media analysis, and financial network modeling, Maverick-2 is seeing strong adoption while addressing today’s most demanding workloads with unmatched efficiency. ... \"Over the past three years, our collaboration with NextSilicon has focused on evaluating emerging architectures for next-generation HPC workloads critical to national security,\" said James H. Laros III, Senior Scientist and Vanguard program lead at Sandia National Laboratories. \"The out-of-the-box HPCG performance results are impressive, showing real promise for advancing our computational capabilities without the overhead of extensive code modifications."
+        ]
+      },
+      {
+        "url": "https://www.nextplatform.com/compute/2025/10/22/nextsilicon-takes-aim-at-cpus-and-gpus-with-maverick-2-dataflow-engine/1639749",
+        "title": "NextSilicon Takes Aim At CPUs And GPUs With “Maverick-2” Dataflow ...",
+        "description": "It has taken eight years and $303 million in seed and three rounds of venture funding, but NextSilicon is today delivering several incarnations of its",
+        "thumbnail_url": "https://www.nextplatform.com/view-resources/dachser2/public/nextplatform/favicons/apple-touch-icon.png",
+        "original_thumbnail_url": "https://www.nextplatform.com/view-resources/dachser2/public/nextplatform/favicons/apple-touch-icon.png",
+        "page_age": "2025-10-29T13:11:53",
+        "favicon_url": "https://you.com/favicon?domain=www.nextplatform.com&size=128",
+        "snippets": [
+          "It has taken eight years and $303 million in seed and three rounds of venture funding, but NextSilicon is today delivering several incarnations of its 64-bit dataflow engine, called Maverick-2, which was revealed this time last year when the company dropped out of stealth mode.",
+          "First up to deploy a production Maverick-2 system will very likely be Sandia National Laboratory, which assisted with development of the Maverick-1 proof of concept processor that launched in 2022. ... As we pointed out last year in our deep dive on the company last October, NextSilicon is interesting for a number of different reasons.",
+          "This spider graph helps illustrate some things about Maverick-2: The story this chart tells is that the dataflow processor created by NextSilicon has the compatibility, portability, programmability, and flexibility of the CPU, better power efficiency and throughput than a GPU, but abiut the single threaded performance of an FPGA.",
+          "The chart seems to suggest that Maverick-2 is getting peak bandwidth as measured bandwidth, but we do not believe this is possible. It could be close, but it can’t be perfect. In any event, in different notes, NextSilicon says it delivered 5.2 TB/sec, which implies it was on the dual-chip OAM module, which is 83.9 percent of peak and 1.86X better performance per watt than a GPU."
+        ]
+      },
+      {
+        "url": "https://www.nextsilicon.com/insights/nextsilicon-breakthrough/",
+        "title": "NEXTSILICON - Press Release: Maverick-2 Powers HPC & AI At Half ...",
+        "description": "“As AI and HPC workloads evolve, ... performance today. With its pioneering dataflow architecture already transforming computing, and Arbel showcasing our ability to engineer world-class, general-purpose silicon, we’re setting a bold new standard for what’s possible.\" Maverick-2 is currently in the hands of leading partners and is available in product volumes now ...",
+        "thumbnail_url": "https://www.nextsilicon.com/assets/images/insights/nextsilicon-breakthrough/preview.jpg",
+        "original_thumbnail_url": "https://www.nextsilicon.com/assets/images/insights/nextsilicon-breakthrough/preview.jpg",
+        "page_age": "2025-10-21T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.nextsilicon.com&size=128",
+        "snippets": [
+          "“As AI and HPC workloads evolve, Maverick-2’s intelligent, adaptive design ensures our customers' investments remain future-proof while delivering unparalleled performance today. With its pioneering dataflow architecture already transforming computing, and Arbel showcasing our ability to engineer world-class, general-purpose silicon, we’re setting a bold new standard for what’s possible.\" Maverick-2 is currently in the hands of leading partners and is available in product volumes now in Q4 2025.",
+          "MAVERICKRISC-VTECHABOUTINSIGHTSRESOURCESCAREERSFAQ ... TEL AVIV, Israel and MINNEAPOLIS – Oct. 22, 2025 - NextSilicon, a leader in next-generation computing solutions for AI and high-performance computing (HPC), today disclosed architecture and performance details for Maverick-2, the next-generation processor enabling order-of-magnitude better compute for HPC and AI:",
+          "Built on the Intelligent Compute Architecture, the dataflow-enabled hardware adapts to provide peak performance regardless of software branching or parallelism. In benchmarks released today, Maverick-2 achieves up to 10x performance over leading GPUs at 60% less power in algorithmically complex workloads.",
+          "Maverick-2's architecture allows everyone to bring their own unmodified code - CUDA, Fortran, etc, to run out-of-the-box with no specific optimizations necessary. Also, we're unveiling Arbel, an enterprise-grade high-performance RISC-V core built on TSMC that stands toe-to-toe with Intel and AMD in performance and power."
+        ]
+      },
+      {
+        "url": "https://www.forbes.com/sites/davealtavilla/2025/10/22/next-silicons-dataflow-chip-could-disrupt-the-processor-landscape/",
+        "title": "NextSilicon’s Dataflow Chip Could Disrupt The Processor Landscape",
+        "description": "NextSilicon Maverick-2 Performance Claims And Memory ConfigurationNextSilicon · Unlike most early-stage chip architectures, Maverick-2 isn’t just slideware. The chip is already deployed in systems such as Sandia National Laboratories’ Spectra supercomputer, where it’s undergoing production-...",
+        "thumbnail_url": "https://imageio.forbes.com/specials-images/imageserve/68f900d67b2e9733ab977e87/0x0.jpg?format=jpg&amp;height=600&amp;width=1200&amp;fit=bounds",
+        "original_thumbnail_url": "https://imageio.forbes.com/specials-images/imageserve/68f900d67b2e9733ab977e87/0x0.jpg?format=jpg&amp;height=600&amp;width=1200&amp;fit=bounds",
+        "page_age": "2025-10-29T02:41:20",
+        "favicon_url": "https://you.com/favicon?domain=www.forbes.com&size=128",
+        "snippets": [
+          "NextSilicon Maverick-2 Performance Claims And Memory ConfigurationNextSilicon · Unlike most early-stage chip architectures, Maverick-2 isn’t just slideware. The chip is already deployed in systems such as Sandia National Laboratories’ Spectra supercomputer, where it’s undergoing production-scale testing now.",
+          "NextSilicon claims its Maverick-2 can achieve up to 10X the performance of top GPUs while consuming up to 60 percent less power, all while running unmodified C++, Python, Fortran, or other framework code. Developers and software engineers are accustomed to months-long porting efforts for each new platform, but this is not the case with Next Silicon’s solution.",
+          "In the High Performance Conjugate Gradients benchmark, it delivers performance on par with top GPUs while using about half the power. In PageRank, a graph analytics test for web page authority ranking, it completed large (25 GB+) graphs that leading GPUs failed to finish. These figures were obtained in a company-controlled environment, which of course calls for independent, 3rd party validation. Sandia’s commitment to validating the Maverick-2 platform, however, suggests that NextSilicon’s solution is worthy of significant investment.",
+          "NextSilicon developed it for implementation in its Maverick-2 accelerator and it was so good they decided to market it separately as well. Called Arbel, and scaled-up a bit to stand on its own for even host CPU applications, Next Silicon claims its RISC-V core tests chip is potentially the highest-performing RISC-V CPU core design on the market."
+        ]
+      },
+      {
+        "url": "https://www.hpcwire.com/2025/10/22/nextsilicon-says-maverick-2-delivers-4x-performance-per-watt-vs-blackwell-gpu/",
+        "title": "NextSilicon Says Maverick-2 Delivers 4x Performance-Per-Watt Vs.",
+        "description": "NextSilicon today shared some internal benchmark results for its latest AI and HPC chip, the Maverick-2, and the claims are nothing if not bold. The company claims that its new chip, which is now shipping, can virtually rewire itself to adapt to changing workloads, thereby delivering 10x the ...",
+        "thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2025/10/Maverick-2-OAM-scaled-1.jpg",
+        "original_thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2025/10/Maverick-2-OAM-scaled-1.jpg",
+        "page_age": "2025-10-22T12:00:28",
+        "favicon_url": "https://you.com/favicon?domain=www.hpcwire.com&size=128",
+        "snippets": [
+          "NextSilicon today shared some internal benchmark results for its latest AI and HPC chip, the Maverick-2, and the claims are nothing if not bold. The company claims that its new chip, which is now shipping, can virtually rewire itself to adapt to changing workloads, thereby delivering 10x the computational performance of the latest Nvidia GPUs, […]",
+          "NextSilicon today shared some internal benchmark results for its latest AI and HPC chip, the Maverick-2, and the claims are nothing if not bold. The company claims that its new chip, which is now shipping, can virtually rewire itself to adapt to changing workloads, thereby delivering 10x the computational performance of the latest Nvidia GPUs, but while consuming just 60% of the electricity.",
+          "This approach gives the Maverick-2 the flexibility and performance often found in an ASIC, but without the long and expensive development timeline, according to NextSilicon. In terms of programmability, the Maverick-2 is compatible with Cuda, allowing the chip to function as a drop-in replacement for Nvidia GPUs, the company says.",
+          "NextSilicon shared some internal benchmark figures for Maverick-2. In terms of Giga Updates Per Second (GUPS), the Maverick-2 was able to deliver 32.6 GUPS at 460 watts, which it says is 22x faster than CPUs and nearly 6x faster than GPUs. Maverick-2 delivered 600 GFLOPS at 750 watts in the HPCG (High-Performance Conjugate Gradients) category, which it said is comparable to leading GPUs, at half the power."
+        ]
+      },
+      {
+        "url": "https://www.linkedin.com/posts/patgelsinger_nextsilicon-presents-maverick-2-activity-7386828872383680512-GkWi",
+        "title": "NextSilicon's Maverick-2: 10x GPU Performance, 60% Less ...",
+        "description": "",
+        "favicon_url": "https://you.com/favicon?domain=www.linkedin.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://www.datacenterdynamics.com/en/news/nextsilicon-unveils-its-maverick-2-intelligent-compute-accelerator/",
+        "title": "NextSilicon unveils its Maverick-2 Intelligent Compute Accelerator ...",
+        "description": "NextSilicon has unveiled what it claims is the world’s first Intelligent Compute Accelerator (ICA). Dubbed the Maverick-2 ICA, the Israeli startup said “the novel and original computing architecture” delivers more than 4x the performance-per-watt of traditional GPUs and 20x that of high-end ...",
+        "thumbnail_url": "https://media.datacenterdynamics.com/media/images/assets_resource-center_maverick-2.2e16d0ba.fill-1200x630.jpg",
+        "original_thumbnail_url": "https://media.datacenterdynamics.com/media/images/assets_resource-center_maverick-2.2e16d0ba.fill-1200x630.jpg",
+        "page_age": "2026-05-07T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.datacenterdynamics.com&size=128",
+        "snippets": [
+          "NextSilicon has unveiled what it claims is the world’s first Intelligent Compute Accelerator (ICA). Dubbed the Maverick-2 ICA, the Israeli startup said “the novel and original computing architecture” delivers more than 4x the performance-per-watt of traditional GPUs and 20x that of high-end CPUs, while simultaneously cutting power consumption and related costs in half.",
+          "According to the company, the offering targets high-performance computing artificial intelligence (HPC-AI) and “redefines accelerator architectures, moving beyond the limitations of traditional fixed GPU designs, which are based upon the eight-decade-old Von Neumann architecture.” · Designed to focus on workflows that run in HPC and AI environments, NextSilicon said the Maverick-2 ICA supports popular programming languages and requires no code or software stack changes to deploy.",
+          "Earlier this year, Sandia National Laboratories announced it had partnered with NextSilicon and Penguin Solutions to deliver an Advanced Architecture Prototype System as part of the National Nuclear Security Administrations (NNSA) platform strategy. The lab is planning to build a novel architecture for its Spectra supercomputer using Maverick-2 as part of its Vanguard-II program.",
+          "“Whether it’s the rapid evolution of AI models or more sophisticated scientific simulations, NextSilicon’s intelligent compute accelerator architecture is designed to push the boundaries of what’s possible,\" the company’s founder and CEO Elad Raz wrote in a blog post. “I am genuinely inspired by the breakthroughs Maverick-2 will help researchers achieve, unlocking discoveries that were once out of reach.”"
+        ]
+      },
+      {
+        "url": "https://www.datacenterdynamics.com/en/news/nextsilicon-claims-maverick-2-accelerator-outperforms-nvidia-and-intel-gpus-plans-new-risc-v-test-chip/",
+        "title": "NextSilicon claims Maverick-2 accelerator outperforms Nvidia GPUs, ...",
+        "description": "Company says total energy costs of Maverick-2 are less than half those of Nvidia HGX B200",
+        "thumbnail_url": "https://media.datacenterdynamics.com/media/images/Maverick2_X_board.2e16d0ba.fill-1200x630.jpg",
+        "original_thumbnail_url": "https://media.datacenterdynamics.com/media/images/Maverick2_X_board.2e16d0ba.fill-1200x630.jpg",
+        "page_age": "2026-05-07T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.datacenterdynamics.com&size=128",
+        "snippets": [
+          "Built to target high-performance computing artificial intelligence (HPC-AI) applications, when announced in October 2024, the Israeli firm claimed the Maverick-2 was the world’s first Intelligent Compute Accelerator (ICA) – a “novel and original computing architecture” that achieves increased performance whilst cutting power consumption and costs. ... NextSilicon has published benchmarks showing that, based on internal testing and publicly available power and performance information, the Maverick-2 delivers 4x the performance-per-watt compared to the Nvidia HGX B200 GPU for FP64, and more than 20x performance-per-watt than the Intel Xeon Sapphire Rapids CPU for FP64.",
+          "The company also claims that the total energy costs for Maverick-2, compared to Nvidia HGX B200, are less than half. In GUPS (Giga-Updates Per Second) testing benchmarks, NextSilicon’s ICA achieved 32.6 GUPS at 460 watts in AI inferencing scenarios, 22x faster than CPUs and almost 6x faster than GPUs; and was comparable to leading GPUs in HPCG (High-Performance Conjugate Gradients), achieving 600 gigaflops at 750 watts, while consuming half the power.",
+          "Chip startup NextSilicon has disclosed architecture and performance details for its Maverick-2 accelerator, and claims it can outperform GPUs from Nvidia and CPUs from Intel.",
+          "“As AI and HPC workloads evolve, Maverick-2’s intelligent, adaptive design ensures our customers' investments remain future-proof while delivering unparalleled performance today. With its pioneering dataflow architecture already transforming computing, and Arbel showcasing our ability to engineer world-class, general-purpose silicon, we’re setting a bold new standard for what’s possible,“ Raz said. No release date for Arbel has been disclosed, and NextSilicon said additional details on Arbel benchmarks will be released as progress is made beyond the test-chip phase."
+        ]
+      },
+      {
+        "url": "https://www.nextsilicon.com/insights/news_article_2/",
+        "title": "NEXTSILICON - Press Release: NextSilicon Unveils Maverick-2",
+        "description": "TEL AVIV, Israel and MINNEAPOLIS, MN- October 30, 2024 — NextSilicon, a pioneer in high-performance computing (HPC) innovation, today announced its emergence from stealth with the launch of Maverick-2, the industry’s first Intelligent Compute Accelerator (ICA).",
+        "thumbnail_url": "https://www.nextsilicon.com/assets/images/insights/article-2/article-2.jpg",
+        "original_thumbnail_url": "https://www.nextsilicon.com/assets/images/insights/article-2/article-2.jpg",
+        "favicon_url": "https://you.com/favicon?domain=www.nextsilicon.com&size=128",
+        "snippets": [
+          "This breakthrough technology is designed to deliver superior performance and efficiency for HPC, AI, and vector database applications. In addition to unveiling Maverick-2, NextSilicon showcases its robust financial positioning with $303 million in funding from prominent investors such as Amiti, Aleph, Liberty Technology VC, Playground Global, Standard Investments, StepStone, and Third Point Ventures.",
+          "This strong financial backing, combined with groundbreaking innovation, positions NextSilicon to reshape the future of high-performance computing with its revolutionary Intelligent Compute Accelerator (ICA) architecture. “Sandia National Laboratories is already using new Maverick-2 accelerators in anticipation of our deployment later this year of our new integrated system – named Spectra – which will be delivered in 2025,” said James H Laros III Distinguished Member of technical staff and Vanguard program lead.",
+          "Maverick-2 redefines accelerator architectures, moving beyond the limitations of traditional fixed GPU designs which are based upon the eight-decade-old Von Neumann architecture. It uses advanced telemetry and NextSilicon’s patented algorithms to dynamically tailor acceleration in real-time to the unique needs of an application. This adaptability can enable organizations to achieve over 4x the performance-per-watt of traditional GPUs and more than 20x that of high-end CPUs, while reducing operational costs by more than half.",
+          "The Maverick-2 ICA is designed to focus on the critical codes and workflows that run the majority of the time in HPC and AI environments. Its self-optimizing architecture delivers immediate, scalable performance improvements. This is achieved by creating software-defined processor cores tailored to the performance needs of each application and then executed on the accelerator hardware."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "NextSilicon Maverick-2 official product performance",
+    "search_uuid": "20318efc-966d-4f88-b28d-874ee6da1429",
+    "latency": 0.44942188262939453
+  }
+}

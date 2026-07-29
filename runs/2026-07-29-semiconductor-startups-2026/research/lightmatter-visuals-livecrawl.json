@@ -1,0 +1,137 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/",
+        "title": "Lightmatter Unveils Passage M1000 Photonic Superchip, World’s ...",
+        "description": "Mountain View, CA – March 31, 2025 – Lightmatter, the leader in photonic (super)computing, today announced Passage™ M1000, a groundbreaking 3D Photonic Superchip designed for next-generation XPUs and switches. The Passage™ M1000 enables a record-breaking 114 Tbps total optical bandwidth ...",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2025-07-21T17:14:06",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Mountain View, CA – March 31, 2025 – Lightmatter, the leader in photonic (super)computing, today announced Passage™ M1000, a groundbreaking 3D Photonic Superchip designed for next-generation XPUs and switches. The Passage™ M1000 enables a record-breaking 114 Tbps total optical bandwidth for the most demanding AI infrastructure applications.",
+          "Breakthrough 3D photonic interposer enables highest bandwidth and largest die complexes for next-gen AI infrastructure silicon designs Mountain View, CA – March 31, 2025 – Lightmatter…",
+          "Breakthrough 3D photonic interposer enables highest bandwidth and largest die complexes for next-gen AI infrastructure silicon designs Mountain View…",
+          "At more than 4,000 square millimeters, the M1000 reference platform is a multi-reticle active photonic interposer that enables the world’s largest die complexes in a 3D package, providing connectivity to thousands of GPUs in a single domain. In existing chip designs, interconnects for processors, memory, and I/O chiplets are bandwidth limited because electrical input/output (I/O) connections are restricted to the edges of these chips. The Passage M1000 overcomes this limitation by unleashing electro-optical I/O virtually anywhere on its surface for the die complex stacked on top."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/products/m1000/",
+        "title": "Passage M-Series Photonic Superchip - Lightmatter®",
+        "description": "The Passage™ M1000 3D Photonic Superchip reference platform demonstrates record-breaking 114 Tbps total bandwidth. A 4000 mm2 photonic interposer for massive die complexes.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "A 3D Photonics Reference Platform enabling 114 Tbps total bandwidth and a 4000 mm2 photonic interposer with the first ever built-in optical circuit switching."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/wp-content/uploads/2025/08/57-lightmatter_hotchips_2025_final.pdf",
+        "title": "1 Passage M1000 A 3D Photonic Interposer for AI Darius Bunandar",
+        "description": "Passage M1000 · A 3D photonic “superchip” platform · 10 · Passage M1000 · A 3D photonic “superchip” platform · 11 · Unprecedented performance and scale · Specifications · Up to 114 Tbps · Bandwidth (Tx + Rx) 1024 · # of SerDes · 4,000 mm2 · Silicon die Complex ·",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://lightmatter.co/",
+        "title": "Lightmatter® - The photonic (super)computer company.",
+        "description": "Explore the Passage M1000 Reference System, a groundbreaking platform built around the Passage M1000 3D Photonic Superchip.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2026-06-04T11:25:03",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Rethinking the limits of AI, Lightmatter merges photonics and computing to build a future where speed, efficiency, and intelligence converge.",
+          "Lightmatter has joined the NVIDIA NVLink Fusion ecosystem, bringing our photonic interconnects to the AI infrastructure powering the world’s most advanced models. Discover how our Co-Packaged Optics technology delivers the high bandwidth and energy efficiency hyperscalers need to build and scale next-generation AI data centers. ... Lightmatter takes you inside the manufacturing process of the Passage M1000 3D photonic interposer.",
+          "Lightmatter’s photonic chips form a complete interconnect platform. Passage® interconnects and Guide® light engines scale networking for AI supercomputers.",
+          "Complete photonics roadmap from NPO and OBO to 2D and 3D CPO and 3D Interposers. Edgeless I/O architecture enabling unlimited bandwidth scaling. Explore Passage →"
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/blog/seeing-is-believing-a-technical-deep-dive-into-lightmatters-hardware/",
+        "title": "Seeing is Believing: A Technical Deep Dive into Lightmatter’s ...",
+        "description": "At HOTC, Lightmatter’s founder and chief scientist, Darius Bunandar, presented our Passage M1000 3D photonic interposer and server platform. Capable of supporting large multi-chip packages, the M1000 is a “superchip” photonic platform built to eliminate the interconnect bottleneck.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2025/09/Copy-of-Temperature-ramp-plots.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2025/09/Copy-of-Temperature-ramp-plots.png",
+        "page_age": "2025-09-05T23:06:29",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "It’s been a busy summer at Lightmatter. For the last four months, we have been demonstrating our production-ready Passage™ 3D photonic interconnect hardware to the world’s largest hyperscalers and…",
+          "It’s been a busy summer at Lightmatter. For the last four months, we have been demonstrating our production-ready Passage™ 3D photonic interconnect hardware to…",
+          "This density is only possible because of Lightmatter’s advanced photonic engine design. By pairing our MRMs with an inductorless driver, we’ve created an incredibly compact transmitter and receiver pair, occupying approximately the area of a microbump (10x smaller than EAMs and 100,000x smaller than MZIs). The M1000 platform delivers state-of-the-art performance, with wide-open eye diagrams, achieving a TDECQ of less than 1 dB, well below the maximum 3.4 dB specified in IEEE 802.3.",
+          "Figure 3: Power Delivery and Thermal Load Testing. Our lab testing, which incorporates a 369 mm2 thermal test chip, has validated Passage M1000’s power density of 1.47W/mm2, while delivering >2.5A/mm2 through its TSVs."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/products/passage-m1000-evk/",
+        "title": "Passage M1000 EVK - 3D Photonic Interconnect for AI ...",
+        "description": "The M1000 is the world’s first 3D Photonic Superchip. The M1000 reference platform consists of a server with all components needed to operate the chip. An array of 32 I/O chiplets and two thermal load chips are 3D stacked in a chip-on-wafer process on the M1000 photonic interposer.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "M1000 is the world’s first photonic interposer—a 3D stack of advanced-node ASICs with hundreds of SerDes integrated on the Passage PIC. All of these ASICs escape their full bandwidth, even if they don’t have access to the package shoreline Chip-on-wafer packaging.",
+          "The Guide VLSP light engine supports the M1000 with 8-wavelength DWDM. Unprecedented optical power and reliability for massive scale. ... Integrated optical routing layer allows dynamic configuration of network topologies both inside the package and outside using solid-state photonics. Key capability enhancing the resiliency and deployment flexibility of the infrastructure. Passage M1000 technology enables unprecedented scale-up and scale-out connectivity, linking millions of accelerators across the datacenter with photonic bandwidth.",
+          "The M1000 evaluation kit demonstrates 3D photonic integration at scale, from chip-level innovation to rack-scale deployment. A 4,000 mm² photonic interposer with 256 fiber connections for high-density optical integration. Enabling serviceability and repair in the field. Passage M1000 EVK is deployed in our validation data center.",
+          "Connect with our sales team to discuss M1000 integration for your AI infrastructure roadmap."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/resource/passage-m1000-powering-the-next-1000x-in-ai-performance/",
+        "title": "Passage M1000: Powering the Next 1000x in AI Performance - ...",
+        "description": "Explore the Passage M1000 Reference System, a groundbreaking platform built around the Passage M1000 3D Photonic Superchip. Discover how this revolutionary photonic interconnect technology is changing…",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2025-08-18T19:00:06",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Explore the Passage M1000 Reference System, a groundbreaking platform built around the Passage M1000 3D Photonic Superchip. Discover how this revolutionary…"
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/products/passage/",
+        "title": "3D Photonics for AI Applications | Passage™",
+        "description": "3D photonic interconnect chips designed to accelerate AI training and inference with breakthrough performance and efficiency, powering the future of computing.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Passage M1000 EVK · Passage EVK100 · Passage EVK50 · Guide 1 EVK · Media · Press Releases · News · Blog · Knowledge Hub · Resources · Company · About · Vision · Events · Careers · Contact · Passage™ pushes the frontier of photonic link design and packaging technologies—delivering chips with record-breaking energy efficiency, bandwidth, and reliability.",
+          "A rack-level 3D photonic interposer reference platform delivering 114 Tbps across a 4,000 mm² footprint.",
+          "Lightmatter operates in its facilities state-of-the-art rack-scale validation platforms that incorporate our photonic interconnects."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/resource/lightmatter-interconnect-launch-event-at-ofc-2025/",
+        "title": "Lightmatter Unveils 3D Photonic Superchip & Co-Packaged Optics",
+        "description": "Lightmatter unveils the Passage M1000 3D photonic superchip and Passage L200 co-packaged optics at OFC 2025, transforming AI hardware acceleration. Learn more!",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2025-05-07T19:50:14",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Lightmatter Founder and CEO Nick Harris Unveils Passage L200 3D Co-Packaged Optics and Passage M1000 3D Photonic Superchip"
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/news/lightmatter-unveils-high-performance-photonic-superchip-claims-worlds-fastest-ai-interconnect/",
+        "title": "Lightmatter unveils high-performance photonic ‘superchip’, ...",
+        "description": "Passage™ M1000 · Passage™ L200 · Research · Envise™ · Idiom® · About us · People · Careers · Media · Press Releases · News · Resources · Events · Insights · Blog · Knowledge Hub · Contact Us · Tom's Hardware April 03, 2025 · This website uses cookies to improve user ...",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2025-04-03T21:33:47",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Passage™ M1000 · Passage™ L200 · Research · Envise™ · Idiom® · About us · People · Careers · Media · Press Releases · News · Resources · Events · Insights · Blog · Knowledge Hub · Contact Us · Tom's Hardware April 03, 2025 · This website uses cookies to improve user experience."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:lightmatter.co Passage M1000 photonic superchip official",
+    "search_uuid": "aeddda0b-a7f4-43fc-a300-f4e39ba083d5",
+    "latency": 0.646812915802002
+  }
+}

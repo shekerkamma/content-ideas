@@ -1,0 +1,13 @@
+{
+  "name": "issues",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-29-semiconductor-startups-2026/semiconductor-channel-decision-deck-public-evidence-draft.pptx",
+    "issues",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"count\": 0,\n    \"issues\": []\n  }\n}\n",
+  "stderr": ""
+}

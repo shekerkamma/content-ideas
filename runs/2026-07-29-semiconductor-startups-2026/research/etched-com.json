@@ -1,0 +1,113 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.etched.com/",
+        "title": "Etched",
+        "description": "Co-designed chips, racks, and software to push the pareto frontier to best-in-class throughput and interactivity.",
+        "thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/9885cd08fc6fe49fff1d2b35a8f97447753ca9b0-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "original_thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/9885cd08fc6fe49fff1d2b35a8f97447753ca9b0-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "page_age": "2026-07-02T01:40:03",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://etched.com/?amp=&amp=",
+        "title": "Etched | The World's First Transformer ASIC",
+        "description": "Transformers etched into silicon. By burning the transformer architecture into our chips, we're creating the world's most powerful servers for transformer inference.",
+        "thumbnail_url": "https://cdn.prod.website-files.com/6570a6bdf377183fb173431e/667a2f154773e13903f95efe_Share%20Image.jpg",
+        "original_thumbnail_url": "https://cdn.prod.website-files.com/6570a6bdf377183fb173431e/667a2f154773e13903f95efe_Share%20Image.jpg",
+        "favicon_url": "https://you.com/favicon?domain=etched.com&size=128",
+        "snippets": [
+          "Etched raises $120M to build Sohu – Learn more · Thank you! Your submission has been received! Oops! Something went wrong while submitting the form. Careers · Blog · By burning the transformer architecture into our chips, we can run AI models an order of magnitude faster and cheaper than GPUs."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/blog",
+        "title": "Etched | Blog",
+        "description": "Updates from the team working on Sohu, the world’s first transformer ASIC.",
+        "page_age": "2024-10-31T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "In 2022, we made a bet that transformers would take over the world. We’ve spent the past two years building Sohu, the world’s first specialized chip (ASIC) for transformers (the “T” in ChatGPT)."
+        ]
+      },
+      {
+        "url": "https://etched.com/blog-posts/oasis?amp=&amp=",
+        "title": "Etched | Oasis: an interactive, explorable world model",
+        "description": "We designed Oasis’ architecture to be highly optimized on Sohu, our upcoming Transformer ASIC. Oasis features a Diffusion Transformer backbone, a new Transformer-based autoencoder, and more.",
+        "thumbnail_url": "https://cdn.prod.website-files.com/6570a6bdf377183fb173433f/67239b0db84ddf064ff36cd6_thumb1.png",
+        "original_thumbnail_url": "https://cdn.prod.website-files.com/6570a6bdf377183fb173433f/67239b0db84ddf064ff36cd6_thumb1.png",
+        "favicon_url": "https://you.com/favicon?domain=etched.com&size=128",
+        "snippets": [
+          "With specialized chips like Sohu, we can run video models in high-definition, at playable frame-rates, and to many simultaneous users -- all requirements to unlock these new use cases at scale. ... We ran hundreds of architectural and data experiments to identify the best architecture for fast autoregressive interactive video generation. We chose a Transformer-based architecture (surprise), featuring a Transformer-based variational autoencoder, an accelerated axial, causal spatiotemporal attention mechanism, and new strategies to overcome long-sequence model divergence.",
+          "Video models run so poorly on GPUs because they are very compute-intensive. Each frame contains hundreds or thousands of tokens, which must be processed in parallel many times to fully de-noise the frame. This is exactly the problem Sohu was designed to solve.",
+          "Soon, AI models and products will be co-designed with custom chips. While we're early in our development of Sohu, we're excited to explore new research directions on products that become far faster, cheaper, and more feasible on Sohu.",
+          "If you’re interested in early access to Sohu, compute grants for inference and Sohu-related research, or research partnerships, please fill out the form here."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/join",
+        "title": "Join Us | Etched",
+        "description": "We’re solving the hardest problems in compute to unlock faster, more efficient inference for billions of people.",
+        "thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/c1948c3ba1a707240c0f85ead18496e5ea5e828c-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "original_thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/c1948c3ba1a707240c0f85ead18496e5ea5e828c-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": [
+          "VP of ASIC & Architecture Co-founded Auradine. NVIDIA H100/A100/V100 architecture team."
+        ]
+      },
+      {
+        "url": "https://www.etched.com/progress",
+        "title": "Progress | Etched",
+        "description": "We’ve raised $300M at a $10.3B valuation, led by Sequoia Capital alongside Andreessen Horowitz, Jane Street, Diffusion, Argo, and SK Hynix. We’re grateful for their support on our journey to Gigawatt-scale · Our mission is to run the world’s inference.",
+        "thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/4d35d623052e46142496cf6162fc547ca530b474-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "original_thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/4d35d623052e46142496cf6162fc547ca530b474-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "page_age": "2026-07-22T23:50:05",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://docs.etched.com/auth/signin?callbackUrl=/dashboard/methodology",
+        "title": "Sohu | Documentation",
+        "description": "Sign in to continue · Sohu preview docs · Sign in with GitHub · Or continue with · Sign in with Okta",
+        "favicon_url": "https://you.com/favicon?domain=docs.etched.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://etched.com/blog-posts/etched-is-making-the-biggest-bet-in-ai",
+        "title": "Etched is Making the Biggest Bet in AI - Etched",
+        "description": "Co-designed chips, racks, and software to push the pareto frontier to best-in-class throughput and interactivity.",
+        "thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/9885cd08fc6fe49fff1d2b35a8f97447753ca9b0-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "original_thumbnail_url": "https://cdn.sanity.io/images/rwbees58/production/9885cd08fc6fe49fff1d2b35a8f97447753ca9b0-1200x630.png?w=1200&amp;h=630&amp;fm=png&amp;fit=max&amp;auto=format",
+        "favicon_url": "https://you.com/favicon?domain=etched.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://www.etched.com/patent-policy",
+        "title": "Patent Policy | Etched",
+        "description": "1. Virtual Patent Marking Notice · This page is provided pursuant to the virtual patent marking provisions of the America Invents Act, 35 U.S.C. § 287(a). The following Etched.ai, Inc. (“Etched”) products may be protected by one or more of the patents or patent applications listed below.",
+        "thumbnail_url": "https://www.etched.com/base_og.png",
+        "original_thumbnail_url": "https://www.etched.com/base_og.png",
+        "page_age": "2026-06-29T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://www.etched.com/terms-of-service",
+        "title": "Terms of Service | Etched",
+        "description": "These Terms of Service (these “Terms”) describe the terms and conditions by which you may access and/or use the website(s), including etched.com, and the related online and/or digital evaluation services (collectively, the “Service”) provided by Etched, Inc., a Delaware corporation ...",
+        "thumbnail_url": "https://www.etched.com/base_og.png",
+        "original_thumbnail_url": "https://www.etched.com/base_og.png",
+        "page_age": "2026-07-01T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.etched.com&size=128",
+        "snippets": []
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:etched.com Sohu transformer ASIC funding",
+    "search_uuid": "63e3ac3a-f68e-4cd5-ab44-03fb77c19e9f",
+    "latency": 0.4844934940338135
+  }
+}

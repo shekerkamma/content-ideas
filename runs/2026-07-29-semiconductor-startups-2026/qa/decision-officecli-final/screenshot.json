@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/shekerk/.local/bin/officecli",
+    "view",
+    "runs/2026-07-29-semiconductor-startups-2026/semiconductor-channel-decision-deck-public-evidence-draft.pptx",
+    "screenshot",
+    "-o",
+    "runs/2026-07-29-semiconductor-startups-2026/qa/decision-officecli-final/render/semiconductor-channel-decision-deck-public-evidence-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "/home/shekerk/content-ideas/runs/2026-07-29-semiconductor-startups-2026/qa/decision-officecli-final/render/semiconductor-channel-decision-deck-public-evidence-draft.png\n",
+  "stderr": "[pages] total=44\n"
+}

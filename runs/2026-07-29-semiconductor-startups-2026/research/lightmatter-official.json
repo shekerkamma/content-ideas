@@ -1,0 +1,228 @@
+{
+  "results": {
+    "news": [
+      {
+        "url": "https://tech.yahoo.com/articles/lightmatter-unveils-high-performance-photonic-104846030.html",
+        "title": "Lightmatter unveils high-performance photonic 'superchip', claims world's fastest AI interconnect",
+        "description": "Lightmatter proposes to use photonic interconnect platform for ultra-high-performance multi-chiplet processors.",
+        "thumbnail_url": "https://s.yimg.com/ny/api/res/1.2/NOFqZY.fEaA6qo3Xr9uW9g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/toms_hardware_319/34cadf3d49665ff9339aef9d1c666cb9",
+        "page_age": "2025-04-02T10:48:46"
+      },
+      {
+        "url": "https://techcrunch.com/2024/10/16/lightmatters-400m-d-round-has-ai-hyperscalers-hyped-for-photonic-datacenters/",
+        "title": "Lightmatter's $400M round has AI hyperscalers hyped for photonic data centers | TechCrunch",
+        "description": "Photonic computing startup Lightmatter has raised $400 million to blow one of modern data centers' bottlenecks wide open. The company's optical",
+        "thumbnail_url": "https://techcrunch.com/wp-content/uploads/2024/10/lightmatter-exploded.jpg?resize=1200,633",
+        "page_age": "2024-10-16T13:01:00"
+      },
+      {
+        "url": "https://www.aol.com/news/lightmatter-shows-type-computer-chip-150645703.html",
+        "title": "Lightmatter shows new type of computer chip that could reduce AI energy use",
+        "description": "SAN FRANCISCO (Reuters) -Silicon Valley startup Lightmatter revealed on Wednesday it had developed a new type of computer chip that could both speed up artificial intelligence work and use less electricity in the process. Valued at $4.4 billion after raising $850 million in venture capital, Lightmatter is one of a number of companies seeking to use beams of light, rather than electronic signals, to move data around more quickly between computers. But Lightmatter also believes that it can use bea",
+        "thumbnail_url": "https://media.zenfs.com/en/aol_reuters_29/c7535e83e3b184e79ef785c9a28d1ba9",
+        "page_age": "2025-04-09T15:06:45"
+      },
+      {
+        "url": "https://www.channelnewsasia.com/business/photonic-startup-lightmatter-raises-400-million-amid-ai-datacenter-boom-eyes-ipo-next-4682791",
+        "title": "Photonic startup Lightmatter raises $400 million amid AI datacenter boom, eyes IPO next",
+        "description": "Lightmatter, a Mountain View, California-headquartered startup building photonic tech in datacenter networking chips, said on Wednesday it has raised $400 million in a Series D funding round at a valuation of $4.4 billion.New investor T. Rowe Price led the funding round, with participation from existing backe",
+        "thumbnail_url": "https://onecms-res.cloudinary.com/image/upload/s--BYNV11Ue--/f_auto,q_auto/c_fill,g_auto,h_676,w_1200/v1/mediacorp/one-cms/images/2021-06/business_1.png?itok=DWEtB5TV",
+        "page_age": "2024-10-16T13:14:49"
+      },
+      {
+        "url": "https://www.businessinsider.com/ai-boom-copper-light-photonics-lightmatter-nvidia-2026-6",
+        "title": "The AI boom is running into a copper problem",
+        "description": "As AI systems grow larger, photonics is emerging as a faster, more efficient alternative to copper connections.",
+        "thumbnail_url": "https://i.insider.com/6a208e792e5a80cfe05033a5?width=1200&format=jpeg",
+        "page_age": "2026-06-04T15:03:12"
+      },
+      {
+        "url": "https://www.forbes.com/video/b6459d8e-9200-4660-9f92-727d975f701a/",
+        "title": "Meet The Founder Betting On Light As The Future Of AI Chip Technology",
+        "description": "Nicholas Harris, CEO of Lightmatter, sits down with Forbes to discuss building AI chip technology relying on light rather than electrical signals. Harris discusses why the end of Moore's Law and the AI boom creates the perfect moment for photonics, enabling massive acceleration in AI model training and increased data center efficiency.",
+        "thumbnail_url": "https://img.connatix.com/b6459d8e-9200-4660-9f92-727d975f701a/6_th.jpg",
+        "page_age": "2025-12-10T17:15:37"
+      },
+      {
+        "url": "https://www.reuters.com/technology/artificial-intelligence/lightmatter-releases-new-photonics-technology-ai-chips-2025-04-01/",
+        "title": "Lightmatter releases new photonics technology for AI chips",
+        "description": "Lightmatter, a startup valued at $4.4 billion, on Monday released two pieces of technology aimed at speeding up the connections between artificial intelligence chips.",
+        "thumbnail_url": "https://www.reuters.com/resizer/v2/KC435V6ZUNMAVLMDLJD34LSIYM.jpg?auth=db703c6f2d85500c5c482431fbcc0fa27feb43968048a36b018f640b222d6ce8&height=1005&width=1920&quality=80&smart=true",
+        "page_age": "2025-04-01T03:32:17"
+      },
+      {
+        "url": "https://tech.yahoo.com/science/articles/data-center-buildout-spurs-laser-184835859.html",
+        "title": "Data center buildout spurs new laser development",
+        "description": "The massive scale of the AI buildout is making new kinds of hardware innovation feasible, like Lightmatter’s new laser.",
+        "thumbnail_url": "https://s.yimg.com/ny/api/res/1.2/AMYpZHpCw1tthJTG02tY0Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02OTQ-/https://media.zenfs.com/en/semafor_310/a89be0a1b39dae4da546c19c3e7491aa",
+        "page_age": "2026-01-28T18:48:35"
+      },
+      {
+        "url": "https://interestingengineering.com/innovation/us-firm-light-powered-computer",
+        "title": "US firm’s light-powered computer tackles energy-hungry AI problems",
+        "description": "Silicon Valley startup Lightmatter unveils a revolutionary computer chip using light to accelerate AI tasks and reduce energy consumption.",
+        "thumbnail_url": "https://cms.interestingengineering.com/wp-content/uploads/2025/04/lightmatter-chip.jpg",
+        "page_age": "2025-04-10T13:28:54"
+      },
+      {
+        "url": "https://seekingalpha.com/news/4165941-photonic-computing-startup-lightmatter-raises-400m-at-44b-valuation",
+        "title": "Photonic computing startup Lightmatter raises $400M at $4.4B valuation",
+        "description": "Lightmatter raises $400M in funding, valuing the photonic computing startup at $4.4B.",
+        "thumbnail_url": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1802514696/image_1802514696.jpg?io=getty-c-w750",
+        "page_age": "2024-10-16T16:08:30"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://www.hpcwire.com/2025/12/04/lightmatter-aims-to-leapfrog-i-o-limitations-with-3d-photonic-interconnect/",
+        "title": "Lightmatter Aims to Leapfrog I/O Limitations with 3D Photonic ...",
+        "description": "The faster you can move data between processors, the more work you can theoretically get done. This is what’s driving innovation in interconnects, for both scale-up as well as scale-out systems. One company that’s looking to leapfrog the class is Lightmatter, which is developing a new ...",
+        "thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2025/12/LightMatter_CPO_2.png",
+        "original_thumbnail_url": "https://www.hpcwire.com/wp-content/uploads/2025/12/LightMatter_CPO_2.png",
+        "page_age": "2025-12-05T00:35:06",
+        "favicon_url": "https://you.com/favicon?domain=www.hpcwire.com&size=128",
+        "snippets": [
+          "The faster you can move data between processors, the more work you can theoretically get done. This is what’s driving innovation in interconnects, for both scale-up as well as scale-out systems. One company that’s looking to leapfrog the class is Lightmatter, which is developing a new three-dimensional co-packaged optic (CPO) interconnect that promises big increases […]",
+          "Lightmatter is hoping to upend the traditional copper interconnects with new fiber optic interconnect. The company, which was founded in 2018 in Silicon Valley, earlier this year rolled out the Passage M1000 Photonic Superchip, its interconnect reference platform.",
+          "Klinger said Lightmatter is working with unnamed GPU or XPU makers to integrate its CPO technology directly onto their chips. He said the products would likely be announced in late 2027 and be commercially available in 2028. This 3D stacking approach allows chipmakers to deliver 32 terabits to 64 terabits of photonic bandwidth across an interconnect, Klinger said.",
+          "Lightmatter may not be the only photonics company innovating at the SerDes level. But if it’s $850 million in total funding and $4.4 billion valuation are indicative of anything, it’s that Lightmatter is a company to keep an eye on."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/products/passage/",
+        "title": "3D Photonics for AI Applications | Passage™",
+        "description": "3D photonic interconnect chips designed to accelerate AI training and inference with breakthrough performance and efficiency, powering the future of computing.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Lightmatter operates in its facilities state-of-the-art rack-scale validation platforms that incorporate our photonic interconnects. This allows us to rigorously test and validate the quality, reliability, and performance of our products at the scale and density demanded by next-generation AI datacenters. We’re delivering proven readiness, de-risking the deployment of cutting-edge optical interconnects for hyperscalers, bridging the gap between CPO innovation and mass deployment. Passage is available for early access partners.",
+          "Supports 32 to 64 Tbps of aggregate bandwidth through co-packaged optics, using 112G PAM4 signaling to enable dense and fast interconnects. ... Accelerate your optics integration roadmap. Delivers 12.8 Tbps of aggregate bandwidth and 4x pluggable density, enabling high-capacity deployments in compact systems. ... A rack-level 3D photonic interposer reference platform delivering 114 Tbps across a 4,000 mm² footprint.",
+          "Passage™ pushes the frontier of photonic link design and packaging technologies—delivering chips with record-breaking energy efficiency, bandwidth, and reliability.",
+          "Passage Solution: 3D vertical integration allows I/O placement across the entire die area."
+        ]
+      },
+      {
+        "url": "https://www.businesswire.com/news/home/20241016498931/en/Lightmatter-Raises-$400M-Series-D-Quadruples-Valuation-to-$4.4B-as-Photonics-Leader-for-Next-Gen-AI-Data-Centers",
+        "title": "Lightmatter Raises $400M Series D; Quadruples Valuation to $4.4B ...",
+        "description": "Lightmatter, the leader in photonic supercomputing, announced today it has raised a $400 million Series D, valuing the company at $4.4 billion and bringing t...",
+        "thumbnail_url": "https://mms.businesswire.com/media/20241016498931/en/2273413/22/LM_Logo_Black.jpg",
+        "original_thumbnail_url": "https://mms.businesswire.com/media/20241016498931/en/2273413/22/LM_Logo_Black.jpg",
+        "page_age": "2024-10-16T13:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.businesswire.com&size=128",
+        "snippets": [
+          "MOUNTAIN VIEW, Calif.--(BUSINESS WIRE)--Lightmatter, the leader in photonic supercomputing, announced today it has raised a $400 million Series D, valuing the company at $4.4 billion and bringing the total capital raised to date to $850 million. The round was led by new investors advised by T. Rowe Price Associates, Inc. with participation from existing investors, including Fidelity Management & Research Company and GV (Google Ventures). With this financing, Lightmatter will ready Passage™ for mass deployment in partner data centers, enabling the scaling required for sustained AI innovation.",
+          "These interconnects can’t keep pace with the growing need for high-bandwidth, low-latency data movement, which is crucial for scaling AI workloads. Lightmatter’s Passage technology addresses this challenge by leveraging 3D-stacked photonics chips to move data.",
+          "Kim brings more than 15 years of AI infrastructure product leadership from Google, AMD, and NVIDIA, and will lead Lightmatter's product strategy as the company scales its Passage™ photonic interconnect platform and Guide™ VLSP light engine from landmark industry firsts to volume deployment across the world's most advanced AI data...",
+          "“We’re not just advancing AI infrastructure—we’re reinventing it,” said Lightmatter co-founder and CEO Nick Harris. “With Passage, the world’s fastest photonic engine, we’re setting a new standard for performance and breaking through the barriers that limit AI computing. This funding accelerates our ability to scale, delivering the supercomputers of tomorrow today.” ... As frontier AI models expand and training clusters surpass 100,000 XPUs, traditional electronic interconnects are becoming a critical bottleneck."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/",
+        "title": "Lightmatter® - The photonic (super)computer company.",
+        "description": "Rethinking the limits of AI, Lightmatter merges photonics and computing to build a future where speed, efficiency, and intelligence converge.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2026-06-04T11:25:03",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Explore Passage → ... Very Large Scale Photonics technology. The universal light source designed for the entire photonics industry. Explore Guide → · Designed for frontier-scale training. Supports 32 to 64 Tbps of aggregate bandwidth through co-packaged optics, using 112G PAM4 signaling to enable dense and fast interconnects.",
+          "Lightmatter has joined the NVIDIA NVLink Fusion ecosystem, bringing our photonic interconnects to the AI infrastructure powering the world’s most advanced models. Discover how our Co-Packaged Optics technology delivers the high bandwidth and energy efficiency hyperscalers need to build and scale next-generation AI data centers. ... Lightmatter takes you inside the manufacturing process of the Passage M1000 3D photonic interposer.",
+          "InterConnect 2026 keynote: photonic interconnects, co-packaged optics, and the future of AI. Explore how next-generation networking technologies will enable larger AI systems, faster movement, and unprecedented scaling across AI training and inference. Explore the Passage M1000 Reference System, a groundbreaking platform built around the Passage M1000 3D Photonic Superchip.",
+          "Lightmatter’s photonic chips form a complete interconnect platform. Passage® interconnects and Guide® light engines scale networking for AI supercomputers."
+        ]
+      },
+      {
+        "url": "https://research.contrary.com/company/lightmatter",
+        "title": "Report: Lightmatter Business Breakdown & Founding Story | Contrary ...",
+        "description": "Similar to Lightmatter’s Passage, Ayar Labs offers its own interconnect technology which also uses photonics to communicate between chips. Recognizing the potential of Ayar Labs’ technology, NVIDIA invested in the company’s $155 million Series C funding round in May 2023, likely intending ...",
+        "thumbnail_url": "https://images.prismic.io/contrary-research/Z7ZnSZ7c43Q3f_Uc_Lightmatter_Cover.png?auto=format,compress",
+        "original_thumbnail_url": "https://images.prismic.io/contrary-research/Z7ZnSZ7c43Q3f_Uc_Lightmatter_Cover.png?auto=format,compress",
+        "page_age": "2025-02-20T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=research.contrary.com&size=128",
+        "snippets": [
+          "Similar to Lightmatter’s Passage, Ayar Labs offers its own interconnect technology which also uses photonics to communicate between chips. Recognizing the potential of Ayar Labs’ technology, NVIDIA invested in the company’s $155 million Series C funding round in May 2023, likely intending to incorporate its optical interconnects into its GPU racks to boost energy efficiency.",
+          "A report from Contrary Research. Discover Lightmatter's founding story, product, business model, and an in-depth analysis of the business.",
+          "Lightmatter is a company that develops specialized chips and chip communication technology, called interconnects, using photonics. By leveraging light for data processing and communication, Lightmatter aims to improve computational power while reducing energy consumption, particularly for AI workloads and data-intensive applications. Lightmatter’s CEO, Nicholas Harris, has stated that “over the next few years, all of the GPUs in the world that are designed for AI training and inference… are going to be built on Lightmatter’s Passage”, its photonic interconnect product to improve data center scale-out while reducing energy requirements otherwise impossible with conventional interconnect technologies.",
+          "Passage, an optical interconnect chip, enables ultra-high data rates between memory cores and servers to accelerate data communication within data centers. Envise, a photonic computing chip, executes deep learning computations using tiny optical components to reduce power consumption and increase processing speeds. ... Lightmatter's Passage is a silicon photonics interconnect system that uses light, instead of electrical signals, to transmit data between computing components."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/",
+        "title": "Lightmatter Unveils Passage M1000 Photonic Superchip, World’s ...",
+        "description": "Breakthrough 3D photonic interposer enables highest bandwidth and largest die complexes for next-gen AI infrastructure silicon designs Mountain View, CA – March 31, 2025 – Lightmatter…",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2025-07-21T17:14:06",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Breakthrough 3D photonic interposer enables highest bandwidth and largest die complexes for next-gen AI infrastructure silicon designs Mountain View…",
+          "The Passage™ M1000 enables a record-breaking 114 Tbps total optical bandwidth for the most demanding AI infrastructure applications. At more than 4,000 square millimeters, the M1000 reference platform is a multi-reticle active photonic interposer that enables the world’s largest die complexes in a 3D package, providing connectivity to thousands of GPUs in a single domain. In existing chip designs, interconnects for processors, memory, and I/O chiplets are bandwidth limited because electrical input/output (I/O) connections are restricted to the edges of these chips.",
+          "Lightmatter has worked closely with industry leaders, including GlobalFoundries (GF) and Amkor, to facilitate production readiness for customer designs based on the M1000 reference platform, while ensuring the highest standards of quality and performance. The Passage M1000 utilizes the GF Fotonix™ silicon photonics platform which offers seamless integration of photonic components with high-performance CMOS logic into a single die, creating a production-ready design that can scale effectively with AI demands.",
+          "“The insatiable demand for scale-up bandwidth is fueling interconnect innovation and momentum, with in-package optical integration at the forefront,” said Vlad Kozlov, founder and CEO, LightCounting. “Lightmatter’s unique 3D active photonic interposer presents a compelling advancement, with capabilities that surpass existing CPO solutions.” ... The Passage M1000 and Passage L200, also announced today, accelerate advances in AI by enabling larger and more capable AI models to be trained faster than ever before."
+        ]
+      },
+      {
+        "url": "https://www.summit-ventures.net/company/lightmatter/",
+        "title": "Lightmatter - Summit Ventures Partners",
+        "description": "Lightmatter develops photonic AI hardware that uses light to accelerate chip-to-chip communication—delivering massive gains in speed and energy efficiency for next-gen data centers through its silicon photonics-powered computing platform.",
+        "thumbnail_url": "https://www.summit-ventures.net/wp-content/uploads/2025/06/Lightmatter.webp",
+        "original_thumbnail_url": "https://www.summit-ventures.net/wp-content/uploads/2025/06/Lightmatter.webp",
+        "page_age": "2025-12-01T19:34:31",
+        "favicon_url": "https://you.com/favicon?domain=www.summit-ventures.net&size=128",
+        "snippets": [
+          "Lightmatter is a photonic computing company developing optical interconnects and accelerators for large-scale AI data centers. Its technology uses silicon photonics to move data between chips with much higher bandwidth and lower energy than traditional electronic interconnects, targeting the core bottlenecks in scaling frontier AI systems. The company’s Passage platform provides 3D-stacked photonic interposers and co-packaged optics for high-density chip-to-chip connectivity, while its Envise photonic processor performs matrix operations using light.",
+          "These resources support manufacturing partnerships, packaging collaborations, and the ramp of products such as Passage M1000 and Passage L200. For investors focused on AI infrastructure, Lightmatter represents an example of a photonics-based approach being developed in parallel with traditional semiconductor roadmaps. At the same time, Lightmatter is a deep-tech hardware business with long development cycles, integration dependencies, and significant capital requirements. Adoption depends on hyperscalers and large data center operators incorporating photonic interconnects and accelerators into their roadmaps and workflows.",
+          "Combination of photonic compute (Envise) and interconnect (Passage) provides a full-stack approach rather than a single-component solution. Backed by institutional investors and manufacturing partners that can support scaling into large deployments if demand materializes. ... Lightmatter’s business is tied to capital expenditure on AI data centers—specifically interconnect, packaging, and accelerator infrastructure.",
+          "The company’s core portfolio spans photonic interconnects, co-packaged optics, and photonic AI accelerators. Lightmatter’s Passage platform uses 3D-stacked silicon photonics to provide extremely high-bandwidth links between chips, including the Passage M1000 interposer, which delivers a reported 114 Tbps of total optical bandwidth for advanced AI infrastructure designs."
+        ]
+      },
+      {
+        "url": "https://www.datacenterdynamics.com/en/news/photonic-computing-company-lightmatter-achieves-44bn-valuation-from-400m-series-d-funding-round/",
+        "title": "Photonic computing company Lightmatter valued at $4.4bn in $400m ...",
+        "description": "The new valuation comes less than ... Series C funding round in December 2023. The Boston-based organization specializes in photonics-enabled technologies. By using light instead of electrical signals for computing, it means Lightmatter’s chips don’t experience the same heat or resistance as traditional chip architectures. The company currently offers two chips: Envise and Passage, the latter of which is an interconnect that takes ...",
+        "thumbnail_url": "https://media.datacenterdynamics.com/media/images/Lightmatter_Passage.2e16d0ba.fill-1200x630.jpg",
+        "original_thumbnail_url": "https://media.datacenterdynamics.com/media/images/Lightmatter_Passage.2e16d0ba.fill-1200x630.jpg",
+        "page_age": "2026-05-07T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.datacenterdynamics.com&size=128",
+        "snippets": [
+          "The new valuation comes less than a year after the company reached unicorn status, achieving a $1.2 billion valuation off the back of a $155 million extended Series C funding round in December 2023. The Boston-based organization specializes in photonics-enabled technologies. By using light instead of electrical signals for computing, it means Lightmatter’s chips don’t experience the same heat or resistance as traditional chip architectures. The company currently offers two chips: Envise and Passage, the latter of which is an interconnect that takes arrays of traditional processors and links them up using a programmable on-chip optical network.",
+          "Will use funds to support mass deployment of Passage chips",
+          "“We’re not just advancing AI infrastructure—we’re reinventing it,” said Lightmatter co-founder and CEO Nick Harris. “With Passage, the world’s fastest photonic engine, we’re setting a new standard for performance and breaking through the barriers that limit AI computing. This funding accelerates our ability to scale, delivering the supercomputers of tomorrow today.”",
+          "Photonic computing company Lightmatter has raised $400 million in a Series D funding round, giving the company a $4.4bn valuation and bringing the total amount raised by the company to $850m."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/press-releases/",
+        "title": "Press Releases - Lightmatter®",
+        "description": "Read Lightmatter’s press releases for key updates on technology advancements, product launches, and major achievements in 3D Photonics.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Products · Platform Overview · Interconnects · VLSP Light Engine · vClick dFAU · Passage Interconnects · Passage L200 · Passage L20 · Guide VLSP Light Engine · Guide 1 · Guide DR · Reference Systems · Passage M1000 EVK · Passage EVK100 · Passage EVK50 ·"
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/press-release/lightmatter-announces-passage-l200-the-fastest-co-packaged-optics-for-ai/",
+        "title": "Lightmatter Announces Passage L200, the Fastest Co-Packaged Optics ...",
+        "description": "Revolutionary 3D photonic interconnect solution eliminates bandwidth bottlenecks Mountain View, CA – March 31, 2025 – Lightmatter, the leader in photonic (super)computing, today announced Passage™…",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2025-04-01T01:04:10",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": [
+          "Revolutionary 3D photonic interconnect solution eliminates bandwidth bottlenecks Mountain View, CA – March 31, 2025 – Lightmatter, the leader in photonic…",
+          "Mountain View, CA – March 31, 2025 – Lightmatter, the leader in photonic (super)computing, today announced Passage™ L200, the world’s first 3D co-packaged optics (CPO) product. Designed to integrate with the latest XPU and switch silicon designs, Passage L200 unleashes unprecedented AI performance scaling by eliminating interconnect bandwidth bottlenecks.",
+          "Lightmatter offers two product SKUs: the L200 (32Tbps) and L200X (64Tbps) 3D CPO engines. These solutions build upon the company’s proven Passage technology platform, offering 16 WDM wavelengths per waveguide/fiber with the most advanced and fully integrated photonics control capabilities.",
+          "Continued advances in AI compute require fundamental changes in interconnect technology. Current connectivity solutions, including electrical, optical and conventional CPO, are bandwidth limited because their I/O interfaces are restricted to the “shoreline,” or edge of the chip. Passage L200 overcomes these constraints with the world’s first edgeless I/O, scaling bandwidth across the entire die area."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "Lightmatter Passage photonic interconnect official product funding",
+    "search_uuid": "746bf130-ef71-464c-84a4-0ee99920d975",
+    "latency": 0.5954642295837402
+  }
+}

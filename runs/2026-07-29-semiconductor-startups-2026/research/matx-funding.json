@@ -1,0 +1,146 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://pulse2.com/matx-500-million-series-b-raised-to-accelerate-matx-one-llm-chip-development/",
+        "title": "MatX: $500 Million Series B Raised To Accelerate MatX One LLM Chip ...",
+        "description": "MatX, an AI chip startup founded by former Google hardware engineers, announced that it has raised a $500 million Series B funding round to complete development and scale manufacturing of its next-generation processor, the MatX One. The funding, one of the largest early-stage raises in the ...",
+        "thumbnail_url": "https://cdn.pulse2.com/cdn/2026/02/MatX-Logo.jpeg",
+        "original_thumbnail_url": "https://cdn.pulse2.com/cdn/2026/02/MatX-Logo.jpeg",
+        "page_age": "2026-02-26T06:43:25",
+        "favicon_url": "https://you.com/favicon?domain=pulse2.com&size=128",
+        "snippets": [
+          "MatX, an AI chip startup founded by former Google hardware engineers, announced that it has raised a $500 million Series B funding round to complete development and scale manufacturing of its next-generation processor, the MatX One. The funding, one of the largest early-stage raises in the semiconductor industry, was led by Jane Street and Situational Awareness LP, with participation from Spark Capital, Triatomic Capital, Harpoon Ventures, and technology founders including Andrej Karpathy and Stripe co-founders Patrick and John Collison.",
+          "By Amit Chowdhry • Feb 26, 2026 · MatX: $500 Million Series B Raised To Accelerate MatX One LLM Chip Development ·",
+          "The MatX One chip is designed with a splittable systolic array architecture that the company says delivers higher throughput than any announced system while also achieving low latency through a hybrid SRAM-first design combined with high-bandwidth memory for long-context support.",
+          "The company said it was founded on the belief that the best LLM processor should be designed from first principles with a deep understanding of evolving model needs. MatX acknowledged that it deprioritized support for smaller models and ease of programming in order to focus squarely on maximizing performance for large-scale models."
+        ]
+      },
+      {
+        "url": "https://mlq.ai/news/matx-secures-500m-series-b-to-accelerate-ai-chip-development-against-nvidia/",
+        "title": "MatX Secures $500M Series B to Accelerate AI Chip Development Against ...",
+        "description": "AI chip startup MatX, founded by former Google TPU engineers Reiner Pope and Mike Gunter, announced a $500 million Series B funding round led by Jane Street and Situational Awareness, with participat…",
+        "thumbnail_url": "https://mlq.ai/media/news_images/matx-raise.png",
+        "original_thumbnail_url": "https://mlq.ai/media/news_images/matx-raise.png",
+        "page_age": "2026-02-25T14:57:56",
+        "favicon_url": "https://you.com/favicon?domain=mlq.ai&size=128",
+        "snippets": [
+          "AI chip startup MatX, founded by former Google TPU engineers Reiner Pope and Mike Gunter, announced a $500 million Series B funding round led by Jane Street an…",
+          "MatX, an AI chip startup founded by former Google hardware engineers Reiner Pope and Mike Gunter, announced a $500 million Series B funding round on February 24, 2026, positioning itself as a direct challenger to Nvidia's dominance in AI processor markets[1]. The round was led by investment firms Jane Street and Situational Awareness, signaling substantial investor confidence in alternative AI hardware solutions.",
+          "MatX plans to manufacture its chips through TSMC, the world's leading semiconductor foundry, with initial shipments scheduled for 2027[1]. This manufacturing partnership and timeline align with industry projections for next-generation AI hardware requirements as computational demands for large language models continue to escalate[1]. The $500 million funding injection provides the necessary capital to support the capital-intensive chip development and production process. MatX's funding announcement represents one of the largest Series B rounds in semiconductor history[1]. The broader AI chip sector demonstrated significant momentum, with AI chip startups collectively raising more than $1.1 billion in funding as of Tuesday, February 25, 2026, despite ongoing concerns about an AI bubble[2]. MatX received the lion's share of this capital among competing AI hardware startups[2].",
+          "The $500 million Series B represents a major escalation from MatX's previous Series A round of approximately $100 million led by Spark Capital[1]. Beyond the lead investors, the funding consortium includes Marvell Technology, NFDG, Spark Capital, and Stripe co-founders Patrick Collison and John Collison[1]. Situational Awareness, founded by former OpenAI researcher Leopold Aschenbrenner, brings particular credibility given its founder's deep expertise in AI computational requirements from the model development perspective[1]."
+        ]
+      },
+      {
+        "url": "https://matx.com/research/series_b",
+        "title": "MatX One and our Series B | MatX",
+        "description": "We’re building an LLM chip that delivers much higher throughput than any other chip while also achieving the lowest latency. We call it the MatX One · The MatX One chip is based on a splittable systolic array, which has the energy and area efficiency that large systolic arrays are famous ...",
+        "thumbnail_url": "https://matx.com/images/series-b-cover.png",
+        "original_thumbnail_url": "https://matx.com/images/series-b-cover.png",
+        "page_age": "2026-02-24T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=matx.com&size=128",
+        "snippets": [
+          "We’ve raised a $500M Series B to wrap up development and quickly scale manufacturing, with tapeout in under a year. The round was led by Jane Street, one of the most tech-savvy Wall Street firms, and Situational Awareness LP, whose founder Leopold Aschenbrenner wrote the definitive memo on AGI."
+        ]
+      },
+      {
+        "url": "https://www.datacenterdynamics.com/en/news/ai-chip-startup-matx-raises-500m-for-development-of-llm-training-chip/",
+        "title": "AI chip startup MatX raises $500m for development of LLM training ...",
+        "description": "Company founded by two ex-Googlers plans to start shipping MatX One chip next year",
+        "thumbnail_url": "https://media.datacenterdynamics.com/media/images/GettyImages-1621808036.2e16d0ba.fill-1200x630.jpg",
+        "original_thumbnail_url": "https://media.datacenterdynamics.com/media/images/GettyImages-1621808036.2e16d0ba.fill-1200x630.jpg",
+        "page_age": "2026-06-18T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.datacenterdynamics.com&size=128",
+        "snippets": [
+          "AI chip startup MatX has raised $500 million in a Series B funding round led by an investment fund founded by a former OpenAI researcher."
+        ]
+      },
+      {
+        "url": "https://www.bereaonline.com/blog/matx-nvidia-challenger-ai-chip-funding-2026/",
+        "title": "MatX Nvidia Challenger AI Chip Funding 2026 | $500M Series B",
+        "description": "MatX Nvidia challenger AI chip funding 2026—see how ex-Google engineers raised $500M to build a “10x” LLM processor and compete with Nvidia.",
+        "page_age": "2026-02-28T20:57:00",
+        "favicon_url": "https://you.com/favicon?domain=www.bereaonline.com&size=128",
+        "snippets": [
+          "BEREA, Ky. — MatX, a startup founded by two former Google TPU engineers, says it has raised a $500 million Series B to build a new processor aimed at training large language models (LLMs), positioning itself as a direct challenger to Nvidia’s dominance in AI hardware.",
+          "Its public materials explicitly prioritize large models and de-prioritize smaller or more general workloads—which is one of the only ways new chip companies can try to beat an incumbent that is forced to serve everyone. TechCrunch Report: Nvidia challenger AI chip startup MatX raises $500M",
+          "In a company post announcing the Series B, Pope said MatX is building what it calls the “MatX One,” an LLM-focused chip designed for high throughput and extremely low latency.",
+          "The company’s pitch is ambitious. MatX says its goal is to make processors “10 times better” at training LLMs than Nvidia’s GPUs—a claim that has been circulating widely because it is so stark and easy to repeat."
+        ]
+      },
+      {
+        "url": "https://www.itp.net/ai-automation/ai-chip-startup-matx-secures-500-million-to-challenge-nvidias-dominance",
+        "title": "AI Chip Startup MatX Secures $500 Million to Challenge Nvidia's ...",
+        "description": "MatX secures $500M in funding to rival Nvidia in AI chips, backed by leading investors and ex-Google engineers.. AI Chip Startup MatX Secures $500 Million to Challenge Nvidia's Dominance. Technology. AI & Automation.",
+        "thumbnail_url": "https://www.itp.net/cloud/2026/02/25/shutterstock_2682841035-scaled.jpg",
+        "original_thumbnail_url": "https://www.itp.net/cloud/2026/02/25/shutterstock_2682841035-scaled.jpg",
+        "page_age": "2026-02-25T06:36:38",
+        "favicon_url": "https://you.com/favicon?domain=www.itp.net&size=128",
+        "snippets": [
+          "by ITP Staff February 25, 2026February 25, 2026 · SHARE · FBTWLNMAILLN · MatX, an ambitious startup in the AI chip industry, recently secured $500 million in a Series B funding round. This injection of capital was led by Jane Street and Situational Awareness, a fund started by former OpenAI researcher Leopold Aschenbrenner.",
+          "MatX secures $500M in funding to rival Nvidia in AI chips, backed by leading investors and ex-Google engineers. ... MatX, an ambitious startup in the AI chip industry, recently secured $500 million in a Series B funding round.",
+          "MatX’s peer, Etched, which also raised $500 million, achieved a valuation of $5 billion, according to a Bloomberg report. The recent funding round arrives over a year after MatX’s $100 million Series A led by Spark Capital, which valued the startup at above $300 million.",
+          "Adding to the diverse pool of investors are Marvell Technology, NFDG, Spark Capital, and the Collison brothers of Stripe fame. Reiner Pope, MatX’s CEO, shared this development via LinkedIn, but refrained from disclosing the company’s latest valuation."
+        ]
+      },
+      {
+        "url": "https://incrypted.com/en/ai-chip-startup-matx-secures-500-million-to-take-on-nvidia/",
+        "title": "AI Chip Startup MatX Secures $500 Million to Take on Nvidia",
+        "description": "The Series B round was led by Jane Street and the Situational Awareness fund. MatX promises a chip that is 10 times more efficient than Nvidia GPUs for LLM training. Shipments of the MatX One proc…",
+        "thumbnail_url": "https://incrypted.com/wp-content/uploads/2023/07/ai3.jpg",
+        "original_thumbnail_url": "https://incrypted.com/wp-content/uploads/2023/07/ai3.jpg",
+        "page_age": "2026-02-25T12:53:51",
+        "favicon_url": "https://you.com/favicon?domain=incrypted.com&size=128",
+        "snippets": [
+          "US startup MatX, which develops chips for large language models (LLMs), announced it has raised $500 million in a Series B round. The company positions itself as a technology rival to Nvidia in the AI accelerator segment.",
+          "Incrypted Plus — звіт за травень 2026 року Become a member of Incrypted+ Advertise ... Поділитися в Telegram Поділитися в Twitter Копіювати посилання ... The Series B round was led by Jane Street and the Situational Awareness fund. MatX promises a chip that is 10 times more efficient than Nvidia GPUs for LLM training.",
+          "In its previous Series A round in 2024, the startup raised about $100 million at a valuation of more than $300 million. For comparison, in January 2026, rival Etched raised $500 million at a valuation of about $5 billion. Etched Startup Raises $500 Million to Compete With Nvidia in the AI Chip Market ... Amid rising demand for AI accelerators and a shortage of Nvidia GPUs, investor interest in alternative architectures is growing. MatX expects to complete product development within a year and scale up production.",
+          "Shipments of the MatX One processor are planned to begin in 2027 in partnership with TSMC. US startup MatX, which develops chips for large language models (LLMs), announced that it has raised $500 million in a Series B round."
+        ]
+      },
+      {
+        "url": "https://vcnewsdaily.com/matx/venture-capital-funding/mqvbxhkktb",
+        "title": "MatX Inks $500 Million in Series B Funding",
+        "description": "MOUNTAIN VIEW, CA, according to 'The Tech Buzz', MatX has raised $500 million in Series B funding, led by Jane Street and Situational Awareness.",
+        "thumbnail_url": "https://vcnewsdaily.com/images/vcnd-logo.png",
+        "original_thumbnail_url": "https://vcnewsdaily.com/images/vcnd-logo.png",
+        "page_age": "2026-03-02T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=vcnewsdaily.com&size=128",
+        "snippets": [
+          "2026-03-02 Tweet · MOUNTAIN VIEW, CA, according to 'The Tech Buzz', MatX has raised $500 million in Series B funding, led by Jane Street and Situational Awareness. >> Click here for more funding data on MatX · >> To export MatX funding data to PDF and Excel, click here ·",
+          "MatX has raised $500 million in Series B funding, led by Jane Street and Situational Awareness, a fund created by former Leopold Aschenbrenner."
+        ]
+      },
+      {
+        "url": "https://www.outsetcapital.com/blog/matx-series-b",
+        "title": "MatX Raises $500M Series B — Outset Capital",
+        "description": "Our portfolio company MatX raised a $500 million Series B led by Jane Street and Situational Awareness LP to scale manufacturing of their dedicated LLM inference chip.",
+        "thumbnail_url": "https://outsetcapital.com/blog/matx-series-b/opengraph-image/nyc-vcs?a6bb0fbe160a2868",
+        "original_thumbnail_url": "https://outsetcapital.com/blog/matx-series-b/opengraph-image/nyc-vcs?a6bb0fbe160a2868",
+        "page_age": "2026-02-24T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.outsetcapital.com&size=128",
+        "snippets": [
+          "Our portfolio company MatX has raised a $500 million Series B, led by Jane Street and Situational Awareness LP. The funding will go toward wrapping up development and scaling manufacturing of the MatX One, a dedicated LLM inference chip."
+        ]
+      },
+      {
+        "url": "https://techcrunch.com/2026/02/24/nvidia-challenger-ai-chip-startup-matx-raised-500m/",
+        "title": "Nvidia challenger AI chip startup MatX raised $500M | TechCrunch",
+        "description": "The startup was founded by former Google TPU engineers in 2023.",
+        "thumbnail_url": "https://techcrunch.com/wp-content/uploads/2024/09/chip-manufacturing-getty.jpg?w=1200",
+        "original_thumbnail_url": "https://techcrunch.com/wp-content/uploads/2024/09/chip-manufacturing-getty.jpg?w=1200",
+        "page_age": "2026-02-25T01:23:49",
+        "favicon_url": "https://you.com/favicon?domain=techcrunch.com&size=128",
+        "snippets": [
+          "MatX, a chip startup founded by two former Google hardware engineers, has raised a $500 million Series B led by Jane Street and Situational Awareness, an investment fund formed by former OpenAI researcher Leopold Aschenbrenner.",
+          "Although the company didn’t release its latest valuation, Etched, MatX’s closest competitor, raised a $500 million round at a $5 billion valuation, Bloomberg reported last month."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "MatX official Series B 500 million MatX One 2026",
+    "search_uuid": "72749ee1-262b-409e-960e-5c0f4b367126",
+    "latency": 0.6044449806213379
+  }
+}

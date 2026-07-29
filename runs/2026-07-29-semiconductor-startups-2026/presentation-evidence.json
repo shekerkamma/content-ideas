@@ -1,0 +1,133 @@
+{
+  "contract_version": "1.0",
+  "bundle": {
+    "id": "semiconductor-startups-2026",
+    "title": "The 10 Coolest Semiconductor Startups of 2026 (So Far)",
+    "root": "."
+  },
+  "sources": [
+    {
+      "id": "src-crn",
+      "kind": "document",
+      "path": "https://www.crn.com/news/computing/2026/the-10-coolest-semiconductor-startups-of-2026-so-far",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-gartner",
+      "kind": "document",
+      "path": "https://www.gartner.com/en/newsroom/press-releases/2026-04-08-gartner-forecasts-worldwide-semiconductor-revenue-to-exceed-us-dollars-one-point-3-trillion-in-2026",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-axelera",
+      "kind": "document",
+      "path": "https://axelera.ai/news/axelera-ai-secures-more-than-250-million-funding-on-global-commercial-growth",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-tenstorrent",
+      "kind": "document",
+      "path": "https://tenstorrent.com/newsroom/tenstorrent-sets-new-performance-records-launches-tt--ascalon-s",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-nextsilicon",
+      "kind": "document",
+      "path": "https://www.nextsilicon.com/insights/nextsilicon-breakthrough/",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-fractile",
+      "kind": "document",
+      "path": "https://www.fractile.ai/news/fractile-raises-220m-to-build-the-next-generation-of-inference-hardware",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-etched",
+      "kind": "document",
+      "path": "https://www.etched.com/progress",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-dmatrix-prod",
+      "kind": "document",
+      "path": "https://www.d-matrix.ai/announcements/d-matrix-corsair-ai-inference-platform-enters-full-production-to-meet-customer-demand/",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-dmatrix-fund",
+      "kind": "document",
+      "path": "https://www.d-matrix.ai/announcements/d-matrix-raises-275-million-to-power-the-age-of-ai-inference/",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-cornelis",
+      "kind": "document",
+      "path": "https://www.cornelis.com/",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-cornelis-fund",
+      "kind": "document",
+      "path": "https://www.cornelis.com/stories/cornelis-networks-announces-29m-series-b-funding-round",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-lightmatter-prod",
+      "kind": "document",
+      "path": "https://lightmatter.co/press-release/lightmatter-unveils-passage-m1000-photonic-superchip-worlds-fastest-ai-interconnect/",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-lightmatter-fund",
+      "kind": "document",
+      "path": "https://lightmatter.co/press-release/lightmatter-raises-400m-series-d-quadruples-valuation-to-4-4b-as-photonics-leader-for-next-gen-ai-data-centers/",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-matx",
+      "kind": "document",
+      "path": "https://matx.com/research/series_b",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "src-xsight",
+      "kind": "document",
+      "path": "https://xsightlabs.com/newsroom/announcements/xsight-labs-announces-x2-programmable-sdn-ethernet-switches-for-hyperscale-and-edge-data-centers-optimized-for-the-ai-factory-era",
+      "sha256": null,
+      "rights": "public web evidence; cite facts, do not reproduce artwork",
+      "normalized_from": null
+    }
+  ],
+  "slides": [],
+  "transcript_segments": [],
+  "frames": []
+}

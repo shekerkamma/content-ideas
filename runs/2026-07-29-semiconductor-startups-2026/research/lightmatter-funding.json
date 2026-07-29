@@ -1,0 +1,227 @@
+{
+  "results": {
+    "news": [
+      {
+        "url": "https://www.aol.com/news/photonic-startup-lightmatter-raises-400-131449997.html",
+        "title": "Photonic startup Lightmatter raises $400 million amid AI datacenter boom, eyes IPO next",
+        "description": "-Lightmatter, a Mountain View, California-headquartered startup building photonic tech in datacenter networking chips, said on Wednesday it has raised $400 million in a Series D funding round at a valuation of $4.4 billion. New investor T. Rowe Price led the funding round, with participation from existing backers including Fidelity and Alphabet's GV. Lightmatter said its fresh capital will be used to manufacture and deploy its photonic chips in partner data centers, as well as expanding its 200-",
+        "thumbnail_url": "https://media.zenfs.com/en/aol_reuters_29/7616aab0e92a305b5b65905f40173259",
+        "page_age": "2024-10-16T13:14:49"
+      },
+      {
+        "url": "https://seekingalpha.com/news/4165941-photonic-computing-startup-lightmatter-raises-400m-at-44b-valuation",
+        "title": "Photonic computing startup Lightmatter raises $400M at $4.4B valuation",
+        "description": "Lightmatter raises $400M in funding, valuing the photonic computing startup at $4.4B.",
+        "thumbnail_url": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1802514696/image_1802514696.jpg?io=getty-c-w750",
+        "page_age": "2024-10-16T16:08:30"
+      },
+      {
+        "url": "https://techcrunch.com/2024/10/16/lightmatters-400m-d-round-has-ai-hyperscalers-hyped-for-photonic-datacenters/",
+        "title": "Lightmatter's $400M round has AI hyperscalers hyped for photonic data centers | TechCrunch",
+        "description": "Photonic computing startup Lightmatter has raised $400 million to blow one of modern data centers' bottlenecks wide open. The company's optical",
+        "thumbnail_url": "https://techcrunch.com/wp-content/uploads/2024/10/lightmatter-exploded.jpg?resize=1200,633",
+        "page_age": "2024-10-16T13:01:00"
+      },
+      {
+        "url": "https://www.businessinsider.com/ai-boom-copper-light-photonics-lightmatter-nvidia-2026-6",
+        "title": "The AI boom is running into a copper problem",
+        "description": "As AI systems grow larger, photonics is emerging as a faster, more efficient alternative to copper connections.",
+        "thumbnail_url": "https://i.insider.com/6a208e792e5a80cfe05033a5?width=1200&format=jpeg",
+        "page_age": "2026-06-04T15:03:12"
+      },
+      {
+        "url": "https://tech.yahoo.com/science/articles/data-center-buildout-spurs-laser-184835859.html",
+        "title": "Data center buildout spurs new laser development",
+        "description": "The massive scale of the AI buildout is making new kinds of hardware innovation feasible, like Lightmatter’s new laser.",
+        "thumbnail_url": "https://s.yimg.com/ny/api/res/1.2/AMYpZHpCw1tthJTG02tY0Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02OTQ-/https://media.zenfs.com/en/semafor_310/a89be0a1b39dae4da546c19c3e7491aa",
+        "page_age": "2026-01-28T18:48:35"
+      },
+      {
+        "url": "https://qz.com/mistral-ai-models-lightmatter-funding-chips-1851676623",
+        "title": "Mistral's models, Lightmatter's big raise, and Soniox debuts Omnio: This week in new AI launches",
+        "description": "Plus, Xscape Photonics raised a $44 million Series A funding round",
+        "thumbnail_url": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/5f5d4f851dad257438a302f55ae2bc04.jpg",
+        "page_age": "2024-10-19T09:00:00"
+      },
+      {
+        "url": "https://www.aol.com/news/lightmatter-shows-type-computer-chip-150645703.html",
+        "title": "Lightmatter shows new type of computer chip that could reduce AI energy use",
+        "description": "SAN FRANCISCO (Reuters) -Silicon Valley startup Lightmatter revealed on Wednesday it had developed a new type of computer chip that could both speed up artificial intelligence work and use less electricity in the process. Valued at $4.4 billion after raising $850 million in venture capital, Lightmatter is one of a number of companies seeking to use beams of light, rather than electronic signals, to move data around more quickly between computers. But Lightmatter also believes that it can use bea",
+        "thumbnail_url": "https://media.zenfs.com/en/aol_reuters_29/c7535e83e3b184e79ef785c9a28d1ba9",
+        "page_age": "2025-04-09T15:06:45"
+      },
+      {
+        "url": "https://www.reuters.com/technology/artificial-intelligence/lightmatter-releases-new-photonics-technology-ai-chips-2025-04-01/",
+        "title": "Lightmatter releases new photonics technology for AI chips",
+        "description": "Lightmatter, a startup valued at $4.4 billion, on Monday released two pieces of technology aimed at speeding up the connections between artificial intelligence chips.",
+        "thumbnail_url": "https://www.reuters.com/resizer/v2/KC435V6ZUNMAVLMDLJD34LSIYM.jpg?auth=db703c6f2d85500c5c482431fbcc0fa27feb43968048a36b018f640b222d6ce8&height=1005&width=1920&quality=80&smart=true",
+        "page_age": "2025-04-01T03:32:17"
+      },
+      {
+        "url": "https://www.forbes.com/video/b6459d8e-9200-4660-9f92-727d975f701a/",
+        "title": "Meet The Founder Betting On Light As The Future Of AI Chip Technology",
+        "description": "Nicholas Harris, CEO of Lightmatter, sits down with Forbes to discuss building AI chip technology relying on light rather than electrical signals. Harris discusses why the end of Moore's Law and the AI boom creates the perfect moment for photonics, enabling massive acceleration in AI model training and increased data center efficiency.",
+        "thumbnail_url": "https://img.connatix.com/b6459d8e-9200-4660-9f92-727d975f701a/6_th.jpg",
+        "page_age": "2025-12-10T17:15:37"
+      },
+      {
+        "url": "https://interestingengineering.com/innovation/us-firm-light-powered-computer",
+        "title": "US firm’s light-powered computer tackles energy-hungry AI problems",
+        "description": "Silicon Valley startup Lightmatter unveils a revolutionary computer chip using light to accelerate AI tasks and reduce energy consumption.",
+        "thumbnail_url": "https://cms.interestingengineering.com/wp-content/uploads/2025/04/lightmatter-chip.jpg",
+        "page_age": "2025-04-10T13:28:54"
+      }
+    ],
+    "web": [
+      {
+        "url": "https://www.businesswire.com/news/home/20241016498931/en/Lightmatter-Raises-$400M-Series-D-Quadruples-Valuation-to-$4.4B-as-Photonics-Leader-for-Next-Gen-AI-Data-Centers",
+        "title": "Lightmatter Raises $400M Series D; Quadruples Valuation to $4.4B ...",
+        "description": "Lightmatter, the leader in photonic supercomputing, announced today it has raised a $400 million Series D, valuing the company at $4.4 billion and bringing t...",
+        "thumbnail_url": "https://mms.businesswire.com/media/20241016498931/en/2273413/22/LM_Logo_Black.jpg",
+        "original_thumbnail_url": "https://mms.businesswire.com/media/20241016498931/en/2273413/22/LM_Logo_Black.jpg",
+        "page_age": "2024-10-16T13:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.businesswire.com&size=128",
+        "snippets": [
+          "MOUNTAIN VIEW, Calif.--(BUSINESS WIRE)--Lightmatter, the leader in photonic supercomputing, announced today it has raised a $400 million Series D, valuing the company at $4.4 billion and bringing the total capital raised to date to $850 million. The round was led by new investors advised by T.",
+          "Rowe Price Associates, Inc. with participation from existing investors, including Fidelity Management & Research Company and GV (Google Ventures). With this financing, Lightmatter will ready Passage™ for mass deployment in partner data centers, enabling the scaling required for sustained AI innovation.",
+          "These interconnects can’t keep pace with the growing need for high-bandwidth, low-latency data movement, which is crucial for scaling AI workloads. Lightmatter’s Passage technology addresses this challenge by leveraging 3D-stacked photonics chips to move data.",
+          "Passage, the first photonic engine to deliver IO in 3D, frees XPU shoreline to support more memory, addressing another critical bottleneck for scaling AI performance. By transforming data movement across AI clusters, Lightmatter enables systems to scale efficiently, unlocking new levels of performance and preparing computing infrastructure for the demands of next-generation AI models."
+        ]
+      },
+      {
+        "url": "https://www.gunder.com/en/news-insights/client-news/lightmatter-announces-dollar400m-series-d-and-dollar44b-valuation",
+        "title": "Lightmatter Announces $400M Series D and $4.4B Valuation | Gunderson ...",
+        "description": "Gunderson Dettmer advises client Lightmatter, a leader in photonic supercomputing, in its $400 million Series D financing led by T. Rowe Price Associates, Inc.",
+        "thumbnail_url": "https://www.gunder.com/a/web/amdaK55krHPsmimPranwNt/9BVrxX/lightmatter-seriesd-gundersondettmer.jpg",
+        "original_thumbnail_url": "https://www.gunder.com/a/web/amdaK55krHPsmimPranwNt/9BVrxX/lightmatter-seriesd-gundersondettmer.jpg",
+        "page_age": "2024-10-16T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.gunder.com&size=128",
+        "snippets": [
+          "Gunderson Dettmer represented client Lightmatter, a leader in photonic supercomputing, in its $400 million Series D financing led by T. Rowe Price Associates, Inc. This new capital values the company at $4.4 billion and brings the total capital raised to date to $850 million.",
+          "In the announcement of the transaction, Lightmatter co-founder and CEO Nick Harris said, “We’re not just advancing AI infrastructure—we’re reinventing it. With Passage, the world’s fastest photonic engine, we’re setting a new standard for performance and breaking through the barriers that limit AI computing.",
+          "Leading the revolution in AI data center infrastructure, Lightmatter enables the next giant leap in human progress with its products including the world's first 3D-stacked photonics engine, Passage.",
+          "Companies Lightmatter T."
+        ]
+      },
+      {
+        "url": "https://lightmatter.co/press-release/lightmatter-raises-400m-series-d-quadruples-valuation-to-4-4b-as-photonics-leader-for-next-gen-ai-data-centers/",
+        "title": "Lightmatter Raises $400M Series D; Quadruples Valuation to $4.4B ...",
+        "description": "Passage EVK50 · Guide 1 EVK · Media · Press Releases · News · Blog · Knowledge Hub · Resources · Company · About · Vision · Events · Careers · Contact · Press Release October 16, 2024 · Download PDF · This website uses cookies to improve user experience.",
+        "thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "original_thumbnail_url": "https://lightmatter.co/wp-content/uploads/2021/02/cropped-logo-lm.png",
+        "page_age": "2025-04-01T00:31:06",
+        "favicon_url": "https://you.com/favicon?domain=lightmatter.co&size=128",
+        "snippets": []
+      },
+      {
+        "url": "https://www.datacenterdynamics.com/en/news/photonic-computing-company-lightmatter-achieves-44bn-valuation-from-400m-series-d-funding-round/",
+        "title": "Photonic computing company Lightmatter valued at $4.4bn in $400m ...",
+        "description": "Will use funds to support mass deployment of Passage chips",
+        "thumbnail_url": "https://media.datacenterdynamics.com/media/images/Lightmatter_Passage.2e16d0ba.fill-1200x630.jpg",
+        "original_thumbnail_url": "https://media.datacenterdynamics.com/media/images/Lightmatter_Passage.2e16d0ba.fill-1200x630.jpg",
+        "page_age": "2026-05-07T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.datacenterdynamics.com&size=128",
+        "snippets": [
+          "“We’re not just advancing AI infrastructure—we’re reinventing it,” said Lightmatter co-founder and CEO Nick Harris. “With Passage, the world’s fastest photonic engine, we’re setting a new standard for performance and breaking through the barriers that limit AI computing. This funding accelerates our ability to scale, delivering the supercomputers of tomorrow today.” · As of late 2024, Lightmatter employs approximately 190 workers across three continents.",
+          "The Boston-based organization specializes in photonics-enabled technologies. By using light instead of electrical signals for computing, it means Lightmatter’s chips don’t experience the same heat or resistance as traditional chip architectures.",
+          "The company currently offers two chips: Envise and Passage, the latter of which is an interconnect that takes arrays of traditional processors and links them up using a programmable on-chip optical network. In a statement, Lightmatter said this latest funding round will allow it to ready its Passage chips for mass deployment in partner data centers.",
+          "Photonic computing company Lightmatter has raised $400 million in a Series D funding round, giving the company a $4.4bn valuation and bringing the total amount raised by the company to $850m."
+        ]
+      },
+      {
+        "url": "https://optics.org/news/15/10/36",
+        "title": "Google backs Lightmatter again in $400M fundraising | optics.org",
+        "description": "Series D venture round intended to support mass deployment of 'world's fastest photonic engine' · 22 October 2024 Business News",
+        "thumbnail_url": "https://optics.org/Images/Global/Footer/logo_optics_org_dark.svg",
+        "original_thumbnail_url": "https://optics.org/Images/Global/Footer/logo_optics_org_dark.svg",
+        "page_age": "2024-10-22T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=optics.org&size=128",
+        "snippets": [
+          "Lightmatter, the Boston-headquartered startup developing computing hardware based around tiny Mach-Zehnder interferometers, says it has raised another $400 million in a series D round of venture funding led by new investors.",
+          "Silicon Valley connections Lightmatter says that the new equity round effectively values it at $4.4 billion, and will enable the commercial roll-out of its \"Passage\" technology, described as a photonic supercomputer.",
+          "With traditional electronic interconnects identified as a critical bottleneck for scaling AI computational workloads, Lightmatter's Passage technology promises to address the challenge in a fundamentally different way, by using 3D-stacked photonic chips to move data.",
+          "Tony Wang, portfolio manager of the advisory group T. Rowe Price Science & Technology Fund, added: \"Lightmatter has the technology, leadership, and team to bring the industry the future of computing through photonics."
+        ]
+      },
+      {
+        "url": "https://salestools.io/en/report/lightmatter-400-million-series-d-october-2024",
+        "title": "Lightmatter Raises $400 Million in Series D - October 2024",
+        "description": "Lightmatter announced $400 Million in Series D funding at a $4.4 Billion valuation. Lightmatter raised $400 million in Series D to scale production of photonic chips that use light instead of electricity for AI computing, dramatically...",
+        "thumbnail_url": "https://salestools.io/images/funding/lightmatter-400-million-series-d-october-2024.jpg",
+        "original_thumbnail_url": "https://salestools.io/images/funding/lightmatter-400-million-series-d-october-2024.jpg",
+        "page_age": "2025-10-26T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=salestools.io&size=128",
+        "snippets": [
+          "Lightmatter secured $400 Million in Series D funding at $4.4 Billion valuation. Led by T. Rowe Price. Full details on investors, use of funds, and market opportunity.",
+          "Scaling production of Passage photonic interconnect chips, developing next-generation optical computing platforms, and expanding partnerships with AI infrastructure companies. ... Lightmatter sells photonic chips and interconnects to data center operators and AI companies, enabling faster, more energy-efficient AI training and inference.",
+          "The Semiconductor / Photonics market continues to experience rapid growth, with increasing demand from enterprises and consumers. Lightmatter is well-positioned to capitalize on this opportunity with its differentiated technology and strong investor backing. This significant funding round demonstrates strong investor confidence in Lightmatter's vision and execution.",
+          "Investors and industry analysts will be closely watching Lightmatter as it executes on its ambitious growth plans and works to deliver value to customers and shareholders. T. Rowe Price: Global asset management firm ... This funding announcement was verified through official press releases, SEC filings, and credible news sources including Crunchbase, TechCrunch, and Bloomberg."
+        ]
+      },
+      {
+        "url": "https://www.summit-ventures.net/company/lightmatter/",
+        "title": "Lightmatter - Summit Ventures Partners",
+        "description": "Lightmatter develops photonic AI hardware that uses light to accelerate chip-to-chip communication—delivering massive gains in speed and energy efficiency for next-gen data centers through its silicon photonics-powered computing platform.",
+        "thumbnail_url": "https://www.summit-ventures.net/wp-content/uploads/2025/06/Lightmatter.webp",
+        "original_thumbnail_url": "https://www.summit-ventures.net/wp-content/uploads/2025/06/Lightmatter.webp",
+        "page_age": "2025-12-01T19:34:31",
+        "favicon_url": "https://you.com/favicon?domain=www.summit-ventures.net&size=128",
+        "snippets": [
+          "The company’s Passage platform provides 3D-stacked photonic interposers and co-packaged optics for high-density chip-to-chip connectivity, while its Envise photonic processor performs matrix operations using light. With a $4.4 billion valuation and roughly $850 million raised as of late 2024, Lightmatter is positioning itself as a foundational supplier for next-generation AI infrastructure.",
+          "Its Envise photonic processor is intended to offload matrix operations using light while electronic components handle control and memory, targeting better performance-per-watt than conventional accelerators. Lightmatter works with foundry and packaging partners such as GlobalFoundries and ASE to make these systems deployable in production data centers. In October 2024, Lightmatter raised a $400 million Series D round led by T.",
+          "$400M Series D closed in October 2024, led by T. Rowe Price, valuing Lightmatter at approximately $4.4B post-money.",
+          "Latest Round: $400M Series D led by T. Rowe Price (Oct 2024)"
+        ]
+      },
+      {
+        "url": "https://sacra.com/c/lightmatter/",
+        "title": "Lightmatter valuation, funding & news | Sacra",
+        "description": "Hardware and software stack for photonic AI accelerators and data center interconnects",
+        "thumbnail_url": "https://images.prismic.io/sacra/Z6y3h5bqstJ9-h-c_lightmatter_logo.jpeg?auto=format,compress",
+        "original_thumbnail_url": "https://images.prismic.io/sacra/Z6y3h5bqstJ9-h-c_lightmatter_logo.jpeg?auto=format,compress",
+        "favicon_url": "https://you.com/favicon?domain=sacra.com&size=128",
+        "snippets": [
+          "Lightmatter reached a $4.4 billion valuation in October 2024 following a $400 million Series D round led by T.",
+          "Customer concentration and deployment timing: The company's high valuation and capital raise are predicated on securing and executing large deals with major cloud/AI providers in 2025.",
+          "Lightmatter's go-to-market strategy focuses on securing large deals with major cloud and AI data center operators, rather than pursuing smaller end-users. This approach allows them to achieve meaningful scale through fewer, higher-value partnerships.",
+          "Luminous Computing, having raised $105M in Series A funding, is developing photonic AI accelerator chips similar to Lightmatter's Envise product. However, Luminous remains at an earlier stage with less mature technology and smaller funding base."
+        ]
+      },
+      {
+        "url": "https://www.reuters.com/technology/photonic-startup-lightmatter-raises-400-million-amid-ai-datacenter-boom-eyes-ipo-2024-10-16/",
+        "title": "Photonic startup Lightmatter raises $400 million amid AI datacenter ...",
+        "description": "Lightmatter, a Mountain View, California-headquartered startup building photonic tech in datacenter networking chips, said on Wednesday it has raised $400 million in a Series D funding round at a valuation of $4.4 billion.",
+        "thumbnail_url": "https://www.reuters.com/resizer/v2/BGDCNZX44FK4LA574O6UUBCXPA.jpg?auth=8353068bfda2aefa1e1bbbcc76e4155a9f0c3afaf5eabe779b3b3a96458cf575&amp;height=1005&amp;width=1920&amp;quality=80&amp;smart=true",
+        "original_thumbnail_url": "https://www.reuters.com/resizer/v2/BGDCNZX44FK4LA574O6UUBCXPA.jpg?auth=8353068bfda2aefa1e1bbbcc76e4155a9f0c3afaf5eabe779b3b3a96458cf575&amp;height=1005&amp;width=1920&amp;quality=80&amp;smart=true",
+        "page_age": "2024-10-16T14:01:17",
+        "favicon_url": "https://you.com/favicon?domain=www.reuters.com&size=128",
+        "snippets": [
+          "Oct 16 - Lightmatter, a Mountain View, California-headquartered startup building photonic tech in datacenter networking chips, said on Wednesday it has raised $400 million in a Series D funding round at a valuation of $4.4 billion.",
+          "It competes with other companies working on photonics technology, as well as major chipmakers who might have their own internal efforts to develop such tech. Investors in Lightmatter say the startup could benefit from working with players across the industry.",
+          "Lightmatter raises $400 mln in Series D funding led by T.",
+          "Lightmatter said its fresh capital will be used to manufacture and deploy its photonic chips in partner data centers, as well as expanding its 200-person team across the U.S."
+        ]
+      },
+      {
+        "url": "https://tracxn.com/d/companies/lightmatter/__UzjACTIII619AffSL1FYPgASKG7oNo0LdOcRvQnFRl8/funding-and-investors",
+        "title": "Lightmatter - 2026 Funding Rounds & List of Investors - Tracxn",
+        "description": "Explore Lightmatter's funding history with round-wise details, lead investors, post-money valuations, and complete investor list.",
+        "thumbnail_url": "https://cdn.tracxn.com/images/seo/social/companies/lightmatter-funding-and-investors-1764178079188.webp",
+        "original_thumbnail_url": "https://cdn.tracxn.com/images/seo/social/companies/lightmatter-funding-and-investors-1764178079188.webp",
+        "page_age": "2026-07-18T09:36:59",
+        "favicon_url": "https://you.com/favicon?domain=tracxn.com&size=128",
+        "snippets": [
+          "Lightmatter has raised a total funding of $850M over 9 rounds from 15 investors. Investors include Fidelity Investments, Aliya and 13 others. Their latest funding round was of $400M on Oct 11, 2024 .",
+          "Lightmatter has raised a total of $850M over 9 funding rounds: 3 Early-Stage, 4 Late-Stage and 2 Grant (prize money) rounds. Lightmatter's largest funding round so far was a Series D round for $400M in Oct 2024.",
+          "T. Rowe Price, located in Baltimore (United States), made their first investment in Lightmatter on Oct 11, 2024 in its Series D round.",
+          "Lightmatter's largest funding round was a Series D round held on Oct 11, 2024 for $400M."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "Lightmatter official funding Series D total raised Passage 2024 2025",
+    "search_uuid": "4bda8d0f-65ae-4cb4-b427-12a77de91532",
+    "latency": 0.567394495010376
+  }
+}

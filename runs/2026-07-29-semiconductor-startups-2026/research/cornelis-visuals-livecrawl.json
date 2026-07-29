@@ -1,0 +1,134 @@
+{
+  "results": {
+    "web": [
+      {
+        "url": "https://www.cornelisnetworks.com/pdf-archive/2023/11/CN5000_Family_Product_Brief_A00337.pdf",
+        "title": "1 CORNELIS™ CN5000 OMNI-PATH™ PRODUCT FAMILY PRODUCT BRIEF",
+        "description": "The Cornelis CN5000 product family proudly includes the Host Fabric Interface, Edge Switch, and Director Class Switch options to · offer you a greater breadth of architectural choices for your networking environment.",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "All information provided here is subject to change without notice. Contact your Cornelis Networks representative to obtain the latest Cornelis Networks product specifications and",
+          "roadmaps. The products described may contain design defects or errors known as errata which may cause the product to deviate from published specifications."
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/",
+        "title": "Cornelis | Unlock AI & HPC Performance with Zero-Congestion Networking",
+        "description": "Built on the proven Omni-Path architecture, our solutions provide maximum performance, efficiency, scalability, resiliency and interoperability - empowering the next generation of AI and HPC infrastructure. >2X Higher Message Rates 35% Lower Latency 30% Higher Application Performance · >30% Higher HPC Performance >2X Higher Bandwidth on AI Sync Messages 500K+ Endpoint Scale ... Message Rate, Latency, and HPC claims based on CN5000 ...",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "Built on the proven Omni-Path architecture, our solutions provide maximum performance, efficiency, scalability, resiliency and interoperability - empowering the next generation of AI and HPC infrastructure. >2X Higher Message Rates 35% Lower Latency 30% Higher Application Performance · >30% Higher HPC Performance >2X Higher Bandwidth on AI Sync Messages 500K+ Endpoint Scale ... Message Rate, Latency, and HPC claims based on CN5000 relative to NDR 400G AI Collectives Performance claim based on internal simulations vs 400G Ethernet",
+          "Discover the world's first lossless, zero-congestion network for AI and HPC. Cornelis accelerates performance and scalability where legacy networks fail.",
+          "From training large language models and powering agentic AI frameworks, to real-time fraud detection in finance and computer vision in autonomous systems - CN5000 Omni-Path AI solutions deliver the high-performance, lossless networking foundation that next-generation AI demands.",
+          "From advancing climate modeling and seismic analysis, to accelerating simulation and design in aerospace and automotive, and enabling complex genomic research in life sciences, CN5000 Omni-Path solutions power breakthrough results—faster, smarter, and at scale."
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/products/",
+        "title": "CN5000 Omni-Path® | Scalable, Zero-Congestion Networking for AI & HPC",
+        "description": "View all products to configure your CN5000 Omni-Path® cluster",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "Learn more about CN5000 · Your browser does not support the video tag. All Products · SuperNICs · Switches · Director Class Switches · Cables · Software · SuperNICs · Learn More · Download Specs · Switches · Learn More · Download Specs · Director Class Switches ·"
+        ]
+      },
+      {
+        "url": "https://cornelisnetworks.com/wp-content/uploads/2023/11/CN5000_Family_Product_Brief_A00337.pdf",
+        "title": "1 CORNELIS™ CN5000 OMNI-PATH™ PRODUCT FAMILY PRODUCT BRIEF",
+        "description": "The Cornelis CN5000 product family proudly includes the Host Fabric Interface, Edge Switch, and Director Class Switch options to · offer you a greater breadth of architectural choices for your networking environment.",
+        "favicon_url": "https://you.com/favicon?domain=cornelisnetworks.com&size=128",
+        "snippets": [
+          "All information provided here is subject to change without notice. Contact your Cornelis Networks representative to obtain the latest Cornelis Networks product specifications and",
+          "roadmaps. The products described may contain design defects or errors known as errata which may cause the product to deviate from published specifications."
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/site/documents/products/cn5000_switch_pb_a00922_v1.0.pdf",
+        "title": "CORNELIS® CN5000 OMNI-PATH® SWITCH The world’s highest-performance",
+        "description": "The CN5000 ... HPC clusters. ... AC Power: 30.80 lb. (13.97 kg) DC Power: 30.40 lb. (13.79 kg) AC Power: 34.80 lb. (15.79 kg) DC Power: 34.40 lb. (15.60 kg) ... CSA 22.2.No. 62368-1 ... Other names and brands may be claimed as the property of others. All information provided here is subject to change without notice. Contact your Cornelis Networks representative to · obtain the latest Cornelis Networks product ...",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "The CN5000 ... HPC clusters. ... AC Power: 30.80 lb. (13.97 kg) DC Power: 30.40 lb. (13.79 kg) AC Power: 34.80 lb. (15.79 kg) DC Power: 34.40 lb. (15.60 kg) ... CSA 22.2.No. 62368-1 ... Other names and brands may be claimed as the property of others. All information provided here is subject to change without notice. Contact your Cornelis Networks representative to · obtain the latest Cornelis Networks product specifications and roadmaps.",
+          "The Cornelis CN5000 Omni-Path product family includes the Switch, Director Class Switch, and SuperNIC; cables;"
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/stories/accelerating-ansys-fluent-cfd-simulations-with-cornelis-cn5000",
+        "title": "Accelerating Ansys Fluent® CFD Simulations with Cornelis® CN5000 ...",
+        "description": "Welcome to the future of high performance fabrics. We build high performance fabrics for HPC, HPDA, and AI in various industries.",
+        "page_age": "2025-11-14T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "The CN5000 Fabric is engineered to eliminate communication bottlenecks, enabling customers to scale accelerated infrastructure with unmatched predictability, efficiency, and performance. Built on the Omni-Path Architecture and delivered with our open-source OPX Software stack (OFI/libfabric), the 400 Gbps CN5000 Fabric provides lossless, congestion-free transport with ultra-low latency, exceptional message rate, and scalable performance to hundreds of thousands of endpoints—purpose built for tightly coupled workloads like computational fluid dynamics (CFD).",
+          "The sections that follow outline the networking characteristics that govern Fluent performance and present methodology, results, and guidance for deploying CN5000 for AMD EPYC-based Fluent workloads. Scaling out performance is founded on the architectural strengths of CN5000, presenting superior empirical network performance—message rate, latency, and congestion behavior—that underpins its application-level benefits.",
+          "The CN5000 Fabric, rooted in Omni-Path Architecture, delivers a 2.5X increase in MPI message rate, 35% lower latency, and a lossless, congestion-free fabric design—parameters essential for tightly-coupled CPU-based Fluent workloads.",
+          "CN5000's architecture sustains far higher messaging throughput with consistently low latency, restoring linear scaling on CPU clusters."
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/stories/cornelis-cn5000-launches-rewiring-ai-and-hpc-networking-at-scale",
+        "title": "Cornelis CN5000 Launches: Rewiring AI and HPC Networking at Scale ...",
+        "description": "Whether it's shortening LLM training ... CN5000 is optimized for real-world throughput and scalability – not just theoretical peak speeds. Cornelis isn’t stopping at 400G. The company outlined plans for future products: CN6000 (800G) will blend Omni-Path with RoCE-enabled Ethernet. CN7000 (1.6T) aims to redefine ultra-scale performance by integrating Ultra Ethernet Consortium standards with Cornelis’ core architecture...",
+        "thumbnail_url": "https://cdn.prod.website-files.com/66620f51fea4bdc8706c4491/683f2d65779d9728586c5cc7_Cornelisimage.png",
+        "original_thumbnail_url": "https://cdn.prod.website-files.com/66620f51fea4bdc8706c4491/683f2d65779d9728586c5cc7_Cornelisimage.png",
+        "page_age": "2025-06-03T00:00:00",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "Whether it's shortening LLM training cycles or accelerating weather modeling, CN5000 is optimized for real-world throughput and scalability – not just theoretical peak speeds. Cornelis isn’t stopping at 400G. The company outlined plans for future products: CN6000 (800G) will blend Omni-Path with RoCE-enabled Ethernet. CN7000 (1.6T) aims to redefine ultra-scale performance by integrating Ultra Ethernet Consortium standards with Cornelis’ core architecture.",
+          "Cornelis debuts CN5000, a 400G scale-out network built to shatter AI and HPC bottlenecks with lossless architecture, linear scalability, and vendor-neutral interoperability.",
+          "Cornelis Networks today announced the launch of its CN5000 family – a high-performance, scale-out networking solution engineered to meet the rising demands of AI and high-performance computing (HPC). Built on the company’s proprietary Omni-Path® architecture, CN5000 delivers a bold promise: up to 30% higher HPC application performance, double the message rate of current solutions, and six times faster collective communication for AI workloads.",
+          "The CN5000 is the clearest signal yet that the future of AI and HPC networking isn’t just about one vendor. With this delivery Cornelis has placed a spotlight on the dusty technologies being tapped today for AI and HPC clusters and provided an alternative that removes architectural friction and frees up GPUs that are sitting around in idle."
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/stories/cornelis-launches-cn5000-ai-and-hpc-scale-out-network",
+        "title": "Cornelis Launches CN5000: AI and HPC Scale-out Network | Inside ...",
+        "description": "This fully integrated, end-to-end solution delivers maximum performance, scalable eOiciency, and seamless deployment across diverse workloads. CN5000 Product Family · Powered by the Omni-Path architecture, CN5000 delivers lossless and congestion-free data transmission with credit-based flow ...",
+        "thumbnail_url": "https://insidehpc.com/wp-content/uploads/2025/06/cornelis-logo-2-1-0625.png",
+        "original_thumbnail_url": "https://insidehpc.com/wp-content/uploads/2025/06/cornelis-logo-2-1-0625.png",
+        "page_age": "2025-06-03T18:05:24",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "This fully integrated, end-to-end solution delivers maximum performance, scalable eOiciency, and seamless deployment across diverse workloads. CN5000 Product Family · Powered by the Omni-Path architecture, CN5000 delivers lossless and congestion-free data transmission with credit-based flow control and dynamic fine-grained adaptive routing.",
+          "Wayne, PA June 03, 2025 – Cornelis Networks, an independent provider of high-performance networking solutions, today launched the CN5000 family, which the - Read more from Inside HPC & AI News.",
+          "Wayne, PA June 03, 2025 – Cornelis Networks, an independent provider of high-performance networking solutions, today launched the CN5000 family, which the [...]",
+          "CN5000 enables AI and HPC applications to achieve faster and more predictable job completion times, and greater computational eOiciency by minimizing congestion events and maintaining highest throughput under load. For HPC workloads, CN5000 outperforms InfiniBand NDR with 2X higher message rates1, 35 percent lower latency1 and up to 30 percent faster simulation times2 driven by its advanced, congestion-free architecture."
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/stories/cornelis-launches-cn5000-leading-ai-hpc-scale-out-network",
+        "title": "Cornelis Launches CN5000: Leading AI & HPC Scale-Out Network",
+        "description": "Outperforms alternative networks with 30% higher HPC application performance, 2X greater message rates & 6X faster AI collective communication",
+        "thumbnail_url": "https://itdigest.com/wp-content/uploads/2025/06/Cornelis-Launches-CN5000-Industry-Leading-AI-and-HPC-Scale-Out-Network.webp",
+        "original_thumbnail_url": "https://itdigest.com/wp-content/uploads/2025/06/Cornelis-Launches-CN5000-Industry-Leading-AI-and-HPC-Scale-Out-Network.webp",
+        "page_age": "2025-06-04T10:55:33",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "CN5000 enables AI and HPC applications to achieve faster and more predictable job completion times, and greater computational efficiency by minimizing congestion events and maintaining highest throughput under load. For HPC workloads, CN5000 outperforms InfiniBand NDR with 2X higher message rates, 35% lower latency1 and up to 30% faster simulation times driven by its advanced, congestion-free architecture.",
+          "For AI applications, CN5000 delivers 6X faster collective communication3 compared to RoCE, driven by Omni-Path’s lossless architecture.",
+          "Cornelis Networks, a leading independent provider of intelligent, high-performance networking solutions, launched the CN5000 family, the industry’s highest-performing end-to-end networking solution purpose-built to maximize AI and HPC performance, supporting deployments with up to 500,000 endpoints.",
+          "Engineered to address compute underutilization and scaling challenges, CN5000 delivers the industry’s most advanced lossless data transfer and congestion avoidance capabilities—enhancing infrastructure performance and efficiency across AI and HPC environments."
+        ]
+      },
+      {
+        "url": "https://www.cornelisnetworks.com/stories/cornelis-cn5000-400gbps-omni-path-launched-with-ultraethernet-roadmap",
+        "title": "Cornelis CN5000 400Gbps Omni-Path Launched with UltraEthernet Roadmap",
+        "description": "The new Cornelis CN5000 series is a 400Gbps Omni-Path alternative to NVIDIA's networking, and the company also has a roadmap to UltraEthernet",
+        "thumbnail_url": "https://www.servethehome.com/wp-content/uploads/2025/06/Cornelis-CN5000-400G-Director-Class-Switch-Liqud-and-Air-Cooled.jpg",
+        "original_thumbnail_url": "https://www.servethehome.com/wp-content/uploads/2025/06/Cornelis-CN5000-400G-Director-Class-Switch-Liqud-and-Air-Cooled.jpg",
+        "page_age": "2025-06-03T16:48:04",
+        "favicon_url": "https://you.com/favicon?domain=www.cornelisnetworks.com&size=128",
+        "snippets": [
+          "Cornelis CN5000 400G Director Class Switch Liqud And Air Cooled · Cornelis says that the new class of devices are better suited to newer workloads. ... The lossless and zero congestion architecture is a big update from the 100G Omni-Path OPA100 generation.",
+          "Cornelis Networks, the company that has taken over Intel Omni-Path when Intel divested the technology, now has a new 400Gbps generation. The Cornelis CN5000 brings 400Gbps Omni-Path technology to the AI and HPC markets. At the same time, the company shared a vision for the future with the adoption of UltraEthernet for next-generations of products.",
+          "Cornelis has an opportunity with the new CN5000 series to provide the lower-cost alternative to NVIDIA’s InfiniBand. At the same time, the 2027 CN7000 has us very excited."
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "query": "site:cornelisnetworks.com CN5000 product architecture official",
+    "search_uuid": "99d7c1c3-dd90-421b-8764-dca7135cd324",
+    "latency": 0.5682520866394043
+  }
+}
