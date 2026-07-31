@@ -178,7 +178,8 @@ bash scripts/sync-codex-skills.sh
 
 ## GBrain (MCP server — persistent memory layer)
 
-GBrain is wired as an MCP server (`gbrain serve`) for this project.
+GBrain is wired as an MCP server for this project, reachable over HTTP (not
+stdio) at `http://127.0.0.1:3131/mcp` with a per-agent bearer token.
 It provides persistent knowledge-graph memory across sessions.
 
 ### Location & config
@@ -186,10 +187,31 @@ It provides persistent knowledge-graph memory across sessions.
 - Brain: `~/.gbrain/brain.pglite` (local embedded Postgres, zero DB cost)
 - Engine: PGLite
 - Search mode: `conservative` (cheapest tier)
-- Embeddings: `google:gemini-embedding-001` (Gemini free tier — 1,500 req/day)
-- Chat/synthesis: `google:gemini-3.5-flash` (Gemini free tier)
+- Embeddings: `google:gemini-embedding-001`, 768 dims (requires
+  `GOOGLE_GENERATIVE_AI_API_KEY` — get one at
+  `https://aistudio.google.com/apikey`; this is a different credential from
+  the Gemini CLI's OAuth-personal login and cannot be substituted for it)
+- Chat/synthesis: `google:gemini-2.0-flash-exp` (chat), `google:gemini-2.0-flash`
+  (query expansion)
 - Cost: **$0.00/month** on free tier
-- Skills: 50 loaded
+
+### Running it — systemd user service, not an ad hoc background process
+- Server process: `~/.config/systemd/user/gbrain.service` runs
+  `gbrain serve --http --port 3131` with `Restart=on-failure`.
+- `systemctl --user enable gbrain.service` is set, and
+  `loginctl enable-linger sheke` is enabled, so the service survives both a
+  closed terminal and a full logout — it starts on WSL boot, not just on
+  login.
+- To check it: `systemctl --user status gbrain.service` /
+  `curl http://127.0.0.1:3131/health`.
+- `gbrain reinit-pglite` (or any full reinit) wipes the auth-tokens table —
+  every connected host's bearer token goes invalid at once and needs
+  `gbrain auth create <name>` + `gbrain connect ... --install --force` again
+  per host.
+- MCP registration is **project-scoped per working directory**, not global —
+  `gbrain connect --install` only updates the entry for whatever directory
+  you ran it from. Re-run it from `content-ideas` specifically after any
+  token rotation, or other projects silently keep the stale token.
 
 ### When to use GBrain vs local files
 - **GBrain pages**: prospects, people, companies, recurring research topics,
