@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
-export LD_LIBRARY_PATH="$HOME/content-ideas/.browser-libs:/snap/bruno/113/usr/lib/x86_64-linux-gnu:/snap/gnome-3-28-1804/198/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+CHROME_BIN=$(find "$HOME/.cache/ms-playwright" -maxdepth 3 -path '*/chrome-linux64/chrome' -type f 2>/dev/null | sort -V | tail -1)
 
-exec "$HOME/snap/codex/64/.agent-browser/browsers/chrome-149.0.7827.115/chrome" "$@"
+if [ -z "$CHROME_BIN" ]; then
+  echo "No Playwright-managed Chrome found under ~/.cache/ms-playwright. Run: npx playwright install chromium" >&2
+  exit 1
+fi
+
+exec "$CHROME_BIN" "$@"
