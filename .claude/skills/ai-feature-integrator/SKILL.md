@@ -107,7 +107,11 @@ Monthly active users:   [ask if not provided]
 Monthly cost = (input_tokens × $3/1M + output_tokens × $15/1M) × calls × users
 ```
 
-(Adjust for model: Haiku = 10× cheaper, Opus = 5× more expensive than Sonnet 4.6)
+Verify current prices in the official provider documentation before finalizing
+the estimate. As of July 2026, first-party global Claude API base rates are
+Sonnet 4.6 `$3/$15`, Haiku 4.5 `$1/$5`, and Opus 4.6 `$5/$25` per million
+input/output tokens. Account for provider, regional, caching, batch, and
+long-context modifiers when they apply.
 
 Define hard limits:
 - **Per-user daily cap:** [N] calls/day — return 429 after
@@ -173,6 +177,7 @@ None required. Standalone — can run from a feature description alone.
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
 | `plaid` | Sequential upstream (optional) | when feature comes from a PLAID PRD or roadmap | `docs/prd.md` or `docs/product-roadmap.md` |
+| `founders-build-stack` | Sequential upstream (optional) | Tier 4 integration work | `COMPANY.md` and `docs/architecture.md` |
 | `claude-code-director` | Sequential downstream | feature spec from this skill feeds into the director's PLAN.md for implementation | `ai-workflows/integration-design.md` |
 
 ### Runtime Preamble
@@ -191,4 +196,6 @@ At invocation, surface this if relevant:
 - **Never surface raw API errors to users:** Every failure mode in the failure table must have a user-facing message that does not mention the API, the model name, or the HTTP status code.
 - **Cost math must use actual token estimates:** Do not use vague cost descriptions. Show the math: input tokens × price + output tokens × price × calls × users = monthly cost. Name the month the hard stop kicks in.
 - **Smoke test must be runnable by a non-engineer:** If verifying success requires reading logs or inspecting a database directly, it is not a smoke test. Rewrite it as 5 observable steps (what the user clicks, what they see).
-- **Model pricing anchor:** Sonnet 4.6 is the default at $3/1M input + $15/1M output. Haiku is ~10× cheaper for volume use cases. Opus is ~5× more expensive for accuracy-critical cases. Always state which model is used in cost math.
+- **Model pricing changes:** Verify the official provider price before doing
+  cost math. Record the model, provider, pricing date, input/output rates, and
+  any regional, caching, or batch modifiers used.

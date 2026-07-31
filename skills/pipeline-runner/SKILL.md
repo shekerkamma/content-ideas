@@ -5,9 +5,9 @@ description: >
   Run a selected use case from signal to strategy and deal prep. Reads the
   latest feed, lets the user choose a use case, and chains the downstream
   research, scoring, brief, deck, and pre-sales stages.
+allowed-tools: Bash, Read, Write, AskUserQuestion
 argument-hint: "[use case number, name, or 'list']"
 user-invocable: true
-allowed-tools: Bash, Read, Write, AskUserQuestion
 ---
 
 # pipeline-runner
@@ -22,6 +22,29 @@ Each stage produces a deliverable and gates the next — a PASS verdict at Stage
 
 The pipeline consumes existing skills as-is via their slash commands. No
 business logic lives here — this is pure orchestration.
+
+---
+
+## Dependency preflight
+
+Before starting research, check whether each downstream capability is available
+as a loaded skill, connected tool, or repo-local equivalent:
+
+| Capability | Required? | Fallback |
+|---|---|---|
+| `last30days` | No | Skip and mark the signal stage unavailable |
+| GBrain recall/write-back | No | Continue without durable recall and say so in status |
+| `content-research` | Yes | Use current-research tools and save a local research brief |
+| `vertical-scorer` | Yes | Stop before scoring if neither the skill nor its rubric is available |
+| `ai-strategy-brief` | Yes | Stop before briefing if its output contract is unavailable |
+| `branded-pptx-deck` / pptxkit | Required for deck stage | Mark the deck blocked; never substitute an unbranded deck |
+| `research-to-strategy` | No | Skip the optional full-strategy stage |
+| `presales-deal-prep` | No | Skip deal prep and preserve prospect context in the run log |
+
+Report missing capabilities once, before the first external call. Continue
+through safe fallbacks and optional skips. If a required stage has no documented
+fallback, stop there with completed artifacts intact instead of reporting the
+whole pipeline as successful.
 
 ---
 
@@ -55,7 +78,8 @@ Once selected, confirm:
 
 ## Stage 0.5: Last 30 Days Signal (real-time engagement)
 
-Invoke `/last30days "{verticalName}"`.
+Invoke `/last30days "{verticalName}"` when available. Otherwise mark this
+optional stage unavailable and continue to GBrain Recall.
 
 This runs before GBrain Recall and before any source gathering. It pulls real-time engagement signals from Reddit, X/Twitter, YouTube, TikTok, Hacker News, Polymarket, and GitHub — ranked by actual upvotes, likes, and prediction-market money, not editorial curation. Output is a synthesized research brief in conversation context.
 

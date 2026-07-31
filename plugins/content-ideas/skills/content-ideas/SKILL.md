@@ -5,9 +5,9 @@ description: >
   Build a For You feed from tracked competitors and turn it into content ideas.
   Use for competitor research, trend discovery, and post or video brief
   generation. First run walks through setup.
+allowed-tools: Bash, Read, Write, AskUserQuestion
 argument-hint: "[topic filter]"
 user-invocable: true
-allowed-tools: Bash, Read, Write, AskUserQuestion
 metadata:
   requires:
     env:
@@ -532,8 +532,6 @@ default browser**. Still hand the user the `http://localhost:<port>` URL the
 command prints, so they can reopen it if the tab closes. (Pass `--no-browser` to
 suppress the auto-open; the URL is printed either way.) The command runs in the
 foreground until the user stops it with Ctrl+C, so run it in the background if
-you need to keep working.
-
 In a headless/no-display environment, write a self-contained file instead and
 point the user at it (the page lets them download their reactions):
 
@@ -548,6 +546,11 @@ of standout posts) and the page location.
 ---
 
 ## Step 7: Offer next steps
+
+Before presenting slash-command handoffs, check which downstream skills are
+available in the current host. Show unavailable handoffs as "not installed"
+rather than inviting a command that cannot run. The `pipeline-runner` handoff is
+valid only after its dependency preflight succeeds.
 
 The user reacts to the feed in the browser; their reactions save to
 `research/{today}/feedback.json` on their own — automatically in server mode,

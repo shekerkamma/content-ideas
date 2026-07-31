@@ -1,20 +1,23 @@
 ---
 name: ikigai
 description: >
-  Run an Ikigai Pro solo-founder analysis for any person given their LinkedIn
-  profile (PDF, URL, or extracted text). Produces a structured report covering
+  Use when the user asks for "ikigai analysis", "solo founder analysis",
+  "career positioning", or founder positioning from a LinkedIn profile (PDF,
+  URL, or extracted text). Use `ikigai-gamma-slidedeck` instead when slides are
+  required in the same run. Produces a structured report covering
   the four ikigai columns, niche positioning, validation score, competitive
   landscape, offer architecture, income math, and a 7-day launch plan.
   Validated on Shravan Siramdas (Jun 2026). Run for any new person.
-triggers:
-  - ikigai
-  - ikigai analysis
-  - solo founder analysis
-  - career positioning
-  - linkedin profile
-  - founder positioning
-version: "1.0"
-validated_on: "runs/2026-06-13-shravan-ikigai-genspark"
+metadata:
+  triggers:
+    - ikigai
+    - ikigai analysis
+    - solo founder analysis
+    - career positioning
+    - linkedin profile
+    - founder positioning
+  version: "1.0"
+  validated_on: "runs/2026-06-13-shravan-ikigai-genspark"
 ---
 
 # Ikigai Skill
@@ -244,3 +247,28 @@ If profile is missing or unreadable:
   - Gamma MCP path (primary): generates Gamma presentation, returns gammaUrl
   - pptxkit fallback path: generates `build_deck.py` + validated .pptx + Desktop copy
   - See `.agents/skills/ikigai-gamma-slidedeck/SKILL.md`
+
+## Skill Relationships
+
+### Category
+Data & Analysis
+
+### Dependencies
+- None for the written report.
+
+### Relationships
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `ikigai-gamma-slidedeck` | Sequential downstream | user wants report plus slides | `runs/.../<name>-ikigai-report.md` |
+| `gcc-roadmap` | Sequential downstream | BD/company-first delivery roadmap requested | company capabilities and offer tiers in the report |
+| `openhands-niche-agency` | Sequential downstream | analysis supports an agency operator/niche | operator and niche positioning |
+
+### Runtime Preamble
+State the profile source, whether the framing is individual-first or
+company-first, and whether the optional deck pipeline is available.
+
+## Gotchas
+
+- Never invent profile achievements or unsupported market proof.
+- Stop for clarification when the profile is too sparse to support the four columns.
+- Keep company capabilities and personal advisory offers separate in BD roles.

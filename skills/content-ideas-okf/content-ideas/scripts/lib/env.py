@@ -5,12 +5,17 @@ The persistent base dir (brand/ + research/) is resolved by `content_home()`.
 """
 
 import os
+import pwd
 from pathlib import Path
 
 ENV_PATH = Path.home() / ".config" / "content" / ".env"
 KEY_NAME = "SCRAPECREATORS_API_KEY"
 CONTENT_HOME_VAR = "CONTENT_HOME"
-DEFAULT_CONTENT_HOME = Path.home() / "Documents" / "Content"
+
+
+def real_home():
+    """Return the user's real home directory, not a sandboxed HOME override."""
+    return Path(pwd.getpwuid(os.getuid()).pw_dir)
 
 
 def content_home():
@@ -23,7 +28,7 @@ def content_home():
     regardless of where the terminal happens to be.
     """
     override = os.environ.get(CONTENT_HOME_VAR, "").strip()
-    return Path(override).expanduser() if override else DEFAULT_CONTENT_HOME
+    return Path(override).expanduser() if override else real_home() / "Documents" / "Content"
 
 
 def load_api_key(env_path=ENV_PATH):

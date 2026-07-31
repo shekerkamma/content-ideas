@@ -2,16 +2,12 @@
 name: content-ideas
 version: "2.2.0"
 description: >
-  Your For You page for content creators. Scrapes tracked competitors across
-  social media platforms, scores what's performing, and turns it into actionable, differentiated content ideas backed
-  by real engagement data. Use this whenever the user wants competitor/creator
-  research, a content feed or "for you" page, trending-topic ideas in their
-  niche, to see what's working on social, to track what creators are posting,
-  or to generate video/post briefs from what's performing — even if they don't
-  say "find ideas." First run walks through setup.
+  Build a For You feed from tracked competitors and turn it into content ideas.
+  Use for competitor research, trend discovery, and post or video brief
+  generation. First run walks through setup.
+allowed-tools: Bash, Read, Write, AskUserQuestion
 argument-hint: "[topic filter]"
 user-invocable: true
-allowed-tools: Bash, Read, Write, AskUserQuestion
 metadata:
   requires:
     env:
@@ -216,12 +212,83 @@ the reactions stay in `feedback.json` for whenever it is. (The current run's
 reactions are ingested by the *next* run, the same way — there's no end-of-run
 distillation step.)
 
-### 1b. Recall taste and load brand context
+### 1b. Recall taste, load brand context, and detect mode
 
 Read whatever brand context exists (all optional — degrade gracefully):
 - `brand/profile.md` — niche, pillars, search terms, content goal, audience
 - `brand/tracked-accounts/*.md` — tracked creators per platform
 - `brand/my-content.md` — the user's own content performance + audience requests
+
+**Detect strategy mode.** Read the `## Content Goal` section of
+`brand/profile.md`. If the goal mentions **strategy**, **pre-sales**,
+**consulting**, **pipeline building**, **deal prep**, or **enterprise** (as
+opposed to audience growth, followers, content creation), set an internal flag:
+`mode = "strategy"`. This controls what Step 5 produces — use cases instead of
+(or alongside) content ideas. When in strategy mode, Step 5c generates use
+cases and Step 7 offers pipeline next steps via `/pipeline-runner`.
+
+**OpenHands source of truth for implementation details.** When strategy mode is
+active and the use case involves agent orchestration, coding automation, MCP
+integration, skills, sub-agents, or the source material explicitly references
+OpenHands, verify the implementation stack against:
+- `https://github.com/OpenHands/OpenHands`
+- `https://docs.openhands.dev/`
+
+Use those sources for coding snippets, framework choices, skills/microagents,
+deployment patterns, CLI/headless workflows, and MCP/server integration details.
+Do not invent OpenHands capabilities from analogy or generic agent-tooling lore.
+
+**GBrain when available.** If `gbrain` is exposed as an MCP server in the host,
+use it by default for cross-session memory and retrieval before repeating
+strategy-mode research from scratch. Use it as the durable knowledge layer for
+recurring companies, people, prospects, verticals, themes, named accounts, and
+prior research findings. Read from it first when the current topic may overlap
+with prior work, and write durable findings back after the run when they are
+likely to matter again. Treat GBrain retrieval as embedding-backed semantic
+retrieval by default, not just keyword lookup. Prefer semantic recall first;
+use synthesis only when the task needs merged interpretation rather than simple
+recall.
+
+Treat this as an explicit chain step, not just a preference note:
+- `GBrain Recall` before fresh strategy-mode discovery or downstream handoff
+- `GBrain Write-back` after the run when the findings should become reusable
+  memory for later `/pipeline-runner`, `/vertical-scorer`, or `/ai-strategy-brief`
+
+When a run uses GBrain successfully, note that in the run status or stage
+summary so the chain is auditable.
+
+GBrain is not the system of record for pipeline deliverables. `feed-data.json`,
+briefs, strategy docs, deck builders, and client-facing artifacts must still be
+written to the local run folder and repo files.
+
+**Research plugins when available.** In Codex Desktop or another host that
+exposes stronger research plugins such as `exa`, prefer those plugins during
+Stage 1 discovery to find better official product pages, docs, GitHub repos,
+competitive signals, and current operator proof points faster than generic
+search alone.
+
+In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
+an MCP-connected research server or a local CLI/API wrapper for tools such as
+Exa when available. Treat that as the terminal analogue to desktop plugin
+access.
+
+Concrete terminal patterns to prefer when available:
+- Exa MCP over remote/HTTP MCP
+- a local Exa API wrapper that calls `https://api.exa.ai/search`
+
+Codex Desktop plugin access is a discovery advantage, not an exception to the
+rest of this workflow. The same local artifact-generation, branded-deck, QA,
+repo-rule, and source-verification requirements still apply.
+
+Plugin-assisted research improves source discovery, but it does **not** replace:
+- local file generation
+- branded PPTX build and QA
+- repo-specific workflow rules
+- verifying that final cited sources are primary and current
+
+Host-specific paths must stay portable. Prefer environment-driven paths over
+machine-specific absolute paths for branded templates, delivery directories,
+second-brain exports, and vault locations.
 
 **Recall the user's content taste from your memory.** This skill stores an
 evolving taste profile in your project memory (the auto-memory you maintain). Before generating ideas, recall what you know about what this
@@ -397,12 +464,59 @@ building this tab:
   out ("this fits a pattern you keep coming back to"). Conversely, deprioritize
   anything that matches a recorded "doesn't land" signal.
 
+### 5c. Extract use cases (strategy mode only)
+
+**Skip this step unless `mode = "strategy"` was set in Step 1b.** When the
+user's Content Goal is strategy/pre-sales/pipeline-focused, the primary output
+is not content briefs — it's **use case hypotheses** that chain into downstream
+strategy and pre-sales skills.
+
+Scan all posts from Step 4 (especially outliers and high-relevance ones) and
+the patterns identified. Cluster them by **industry vertical + AI capability**
+(e.g., "healthcare + on-prem LLM", "manufacturing + predictive maintenance",
+"e-commerce + AI customer support"). For each cluster with corroborating
+signals, build a **use case realization** — the structured format defined in
+`FILE-SCHEMAS.md` that maps directly to the branded PPTX slide layout:
+
+1. **Kicker + Title** — category label (`USE CASE {N}  ·  {CATEGORY}`) and a
+   short noun-phrase title. Categories: `HORIZONTAL OPS`, `REVENUE`,
+   `KNOWLEDGE WORK`, `ENGINEERING`, `PLATFORM`, `VERTICAL`, `TRUST`,
+   `PROFESSIONAL`.
+2. **Challenge** — exactly 3 bullets: the pain points this use case addresses.
+3. **Solution** — exactly 3 bullets: how AI addresses each challenge.
+4. **How it works** — exactly 3 numbered steps: trigger → process → outcome.
+5. **Stats** — exactly 3 metric tuples: `[number/metric, label]` (e.g.,
+   `["100%", "data on-prem"]`).
+6. **Solution stack** — exactly 4 layers: `EXPERIENCE`, `ORCHESTRATION`,
+   `CONTEXT`, `ACTUATION` — each with a one-line detail.
+7. **Systems + Users** — which systems the solution touches (3–5) and the
+   buyer/user personas.
+8. **Organizations** — 2–4 organizations already delivering this or suggested
+   prospects. Each is `[name, one-line description]` — these also feed
+   `/presales-deal-prep`.
+9. **Signal provenance** — link the supporting posts/comments with `signalType`
+   (`demand` / `thesis` / `gap` / `trend` / `competitive_move`) and a one-line
+   evidence extract.
+10. **Downstream pass-throughs** — `verticalName` (exact input for
+    `/vertical-scorer`), `sourceUrls` (for `/research-to-strategy`),
+    `confidence` (`high` / `medium` / `exploratory`).
+
+If OpenHands is relevant to the use case, prefer verified stack entries such as
+OpenHands SDK agents, skills/repository agents, MCP transports, CLI/headless
+execution, and self-hosted deployment modes rather than generic labels like
+"agent orchestrator" or "custom runtime".
+
+Generate 3–7 use cases, ranked by signal density and confidence. Write them
+into `feed-data.json` under the `useCases` key (see `FILE-SCHEMAS.md` for the
+full schema). The Ideas tab is still generated (it may be useful for thought
+leadership content), but `useCases` is the primary strategy output.
+
 ---
 
 ## Step 6: Write and open the feed
 
 Write the feed data to `$CONTENT_HOME/research/{today}/feed-data.json` — a JSON object with
-keys `meta`, `posts`, `ideas` (see `FILE-SCHEMAS.md`).
+keys `meta`, `posts`, `ideas`, and (in strategy mode) `useCases` (see `FILE-SCHEMAS.md`).
 Do **not** write HTML yourself; the generator embeds this JSON into the
 template.
 
@@ -418,8 +532,6 @@ default browser**. Still hand the user the `http://localhost:<port>` URL the
 command prints, so they can reopen it if the tab closes. (Pass `--no-browser` to
 suppress the auto-open; the URL is printed either way.) The command runs in the
 foreground until the user stops it with Ctrl+C, so run it in the background if
-you need to keep working.
-
 In a headless/no-display environment, write a self-contained file instead and
 point the user at it (the page lets them download their reactions):
 
@@ -435,6 +547,11 @@ of standout posts) and the page location.
 
 ## Step 7: Offer next steps
 
+Before presenting slash-command handoffs, check which downstream skills are
+available in the current host. Show unavailable handoffs as "not installed"
+rather than inviting a command that cannot run. The `pipeline-runner` handoff is
+valid only after its dependency preflight succeeds.
+
 The user reacts to the feed in the browser; their reactions save to
 `research/{today}/feedback.json` on their own — automatically in server mode,
 or via the page's download button in static mode. There's no "done" signal and
@@ -443,8 +560,55 @@ and the **next** run folds them into taste memory at Step 1a. This keeps the
 workflow simple and, crucially, captures reactions the user makes after this
 conversation has ended.
 
-Offer to: dig deeper on any idea, add/remove tracked accounts, or rerun with a
-different topic focus.
+**Content mode (default):** Offer to: dig deeper on any idea, add/remove
+tracked accounts, or rerun with a different topic focus.
+
+**Strategy mode:** Present the use cases as a numbered list with confidence
+levels and signal counts:
+
+> **Use cases surfaced from today's feed:**
+> 1. On-premise LLM for healthcare (HIGH, 4 signals)
+> 2. AI customer support for DTC brands (MEDIUM, 2 signals)
+> 3. ...
+>
+> Pick a number to run the strategy pipeline (`/pipeline-runner`), or:
+> - `/content-research {urls}` — deep-dive research on this use case topic
+> - `/vertical-scorer "{verticalName}"` — score just this vertical
+> - `/ai-strategy-brief "{verticalName}"` — generate a 1-page executive memo
+> - `/branded-pptx-deck` — generate use case realization slides
+> - `/research-to-strategy "{verticalName}" {urls}` — full research + council + deck
+> - `/presales-deal-prep "{company}"` — prep for a specific prospect
+>
+> Or: add/remove tracked accounts, rerun with a different topic focus.
+
+The user picks a use case and a downstream skill to chain into. `/pipeline-runner`
+runs the full 6-stage sequence:
+
+1. **Content Research** — ingest sources into second-brain + Obsidian + knowledge graph
+2. **Vertical Scorer** — GO/WAIT/PASS gate (25+/35 = GO)
+3. **Strategy Brief** — 1-page executive decision memo (.docx)
+4. **PPTX Deck** — branded use case realization slides (.pptx)
+5. **Research-to-Strategy** — full 30-page research + council + deck (optional)
+6. **Deal Prep** — prospect-specific pre-sales materials (optional, per prospect)
+
+For any client-facing PPTX generated downstream, the deck must use the branded
+PowerPoint template/workflow (`/branded-pptx-deck` / `pptxkit`, backed by
+`BRANDED_PPTX_TEMPLATE`, falling back to
+`~/.claude/templates/branded-template.pptx` when unset).
+Do not fall back to an unbranded blank `.pptx` just to complete the pipeline.
+Also require structured content on every slide; the PPTX stage is not complete
+if it only contains headings and loose bullets without the branded content
+patterns (use-case realization, scorecards, cards, roadmap, or comparison
+structures as appropriate).
+Treat PPTX QA as part of the deliverable: the deck is not final until overlap,
+overflow, and slide-collision issues have been checked and fixed. If branded
+preview tooling is unavailable, say that visual QA could not be completed.
+Use explicit deck status (`draft`, `reviewed`, `blocked`) and matching filename
+suffixes, and keep the branded builder script with the run artifacts so the deck
+can be regenerated and QA fixes can be reproduced. Only copy `reviewed` decks
+to a delivery destination resolved from `CLIENT_DELIVERY_DIR`.
+
+Individual skills can also be invoked directly for a faster, narrower output.
 
 ---
 

@@ -8,10 +8,12 @@ import re
 import sys
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parents[4]
 SKILL_DIRS = [
-    Path.home() / ".claude" / "skills",
-    Path.home() / "content-ideas" / ".claude" / "skills",
-    Path.home() / "content-ideas" / "skills",
+    REPO_ROOT / ".claude" / "skills",
+    REPO_ROOT / ".agents" / "skills",
+    REPO_ROOT / "skills",
+    REPO_ROOT / "plugins" / "content-ideas" / "skills",
 ]
 
 VALID_CATEGORIES = {
@@ -55,6 +57,8 @@ def find_skill_files():
         if not base.exists():
             continue
         for skill_md in base.rglob("SKILL.md"):
+            if not skill_md.is_file():
+                continue
             real = skill_md.resolve()
             if real in seen_real_paths:
                 continue

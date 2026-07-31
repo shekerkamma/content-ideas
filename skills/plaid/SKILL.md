@@ -1,9 +1,9 @@
 ---
 name: plaid
 description: Use when someone says "PLAID", "plaid idea", "help me find an idea", "product idea", "plaid validate", "validate my idea", "pressure-test", "is this idea good", "find fatal flaws", "plan a product", "define my vision", "generate a PRD", "product strategy", "plaid design", "design from image", "create design.md", "plaid launch", "go-to-market", "launch plan", "GTM strategy", "plaid build", "build the app", "start building", or "execute the roadmap". Product Led AI Development — full pipeline from idea to launched product.
-category: Business Automation
 license: MIT
 metadata:
+  category: Business Automation
   author: plaid-dev
   version: "2.0"
   compatibility: Requires file system access to write docs/ directory.
@@ -91,6 +91,7 @@ Business Automation
 | `grill-me` | Sequential upstream | when idea/strategy was brainstormed in a prior session | `brainstorms/{date}-{slug}.md` → pre-fills vision intake |
 | `ai-strategy-researcher` | Sequential upstream | when market research was done before planning | research brief → pre-fills Plan vision intake |
 | `vertical-scorer` | Sequential upstream | when idea came from a vertical scoring exercise | scorer output → pre-fills idea context |
+| `saas-replacement-auditor` | Sequential upstream | replacement candidate becomes a product build target | `docs/saas-audit.md` |
 | `claude-code-director` | Sequential downstream | after Plan completes, for structured build execution | `vision.json`, `docs/prd.md`, `docs/product-roadmap.md` |
 | `plan-ceo-review` | Sequential downstream | after Plan completes, for executive review | `docs/prd.md`, `docs/product-vision.md` |
 | `plan-eng-review` | Sequential downstream | after Plan completes, for engineering review | `docs/prd.md` |

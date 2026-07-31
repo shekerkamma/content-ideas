@@ -1,8 +1,9 @@
 ---
 name: karpathy-guidelines
-description: Use when writing, reviewing, or refactoring any code to enforce: surface assumptions before coding, minimum code that solves the problem, surgical edits that touch only what's required, and verifiable success criteria. Always-on behavioral overlay during implementation work. Triggers on "karpathy", "apply karpathy", "coding guardrails", or any coding task in projects where this skill is loaded.
-category: Code Quality & Review
+description: "Use when writing, reviewing, or refactoring any code to enforce: surface assumptions before coding, minimum code that solves the problem, surgical edits that touch only what's required, and verifiable success criteria. Always-on behavioral overlay during implementation work. Triggers on \"karpathy\", \"apply karpathy\", \"coding guardrails\", or any coding task in projects where this skill is loaded."
 license: MIT
+metadata:
+  category: Code Quality & Review
 ---
 
 # Karpathy Guidelines
@@ -81,8 +82,8 @@ None — standalone behavioral overlay. No file inputs or outputs.
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
 | `claude-code-director` | Behavioral overlay | always-on during any implementation phase | — (modifies HOW coding runs, not what is produced) |
-| `plaid` (Build phase) | Behavioral overlay | always-on when executing `docs/product-roadmap.md` tasks | — |
-| `code-review` / `ce-code-review` | Domain cluster | sibling in the code quality domain; code-review assesses output, karpathy-guidelines governs process | — |
+| `plaid` | Behavioral overlay | always-on during its Build phase | `docs/product-roadmap.md` |
+| `code-review` | Domain cluster | review assesses output; karpathy-guidelines governs process | — |
 | `simplify` | Domain cluster | sibling; simplify cleans up after implementation, karpathy-guidelines prevents overcomplication during it | — |
 
 ### Runtime Preamble

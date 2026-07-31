@@ -20,6 +20,18 @@ HTML renderer.
 - `commands/content-ideas.md` — Claude Code slash command
 - `hooks/hooks.json` — SessionStart setup preflight (one-line hint, silent when ready)
 
+### Skill source and porting contract
+
+- Treat `skills/content-ideas/`, `skills/pipeline-runner/`, and
+  `skills/second-brain/` as canonical shared sources.
+- Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
+- Keep `skills/content-ideas-okf/content-ideas/` synchronized with the canonical
+  `content-ideas` implementation until that compatibility package is retired.
+- Keep Claude-only UI fields as enhancements; repeat critical safety and
+  fallback behavior in skill bodies for Codex and OpenHands.
+- Before shipping skill changes, run the plugin contract, the three
+  `skill-builder` audit scripts, and the full pytest suite.
+
 ## Shared Product-Build Skills
 - `skills/plaid/SKILL.md` — Product Led AI Development: idea, validation,
   planning, `docs/design.md`, launch, and roadmap execution.
