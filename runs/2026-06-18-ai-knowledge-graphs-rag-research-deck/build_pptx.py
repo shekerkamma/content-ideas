@@ -408,6 +408,6 @@ for chip_text in ["github.com/VectifyAI/OpenKB", "PageIndex — vectorless retri
 folio(s, 10)
 
 # ─────────────────────────────────────────────────────────────────────────────
-out = "/home/shekerk/content-ideas/runs/2026-06-18-ai-knowledge-graphs-rag-research-deck/ai-knowledge-graphs-rag-deck.pptx"
+out = "/home/sheke/content-ideas/runs/2026-06-18-ai-knowledge-graphs-rag-research-deck/ai-knowledge-graphs-rag-deck.pptx"
 prs.save(out)
 print(f"Saved: {out}")

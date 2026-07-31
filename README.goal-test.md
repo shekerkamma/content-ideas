@@ -58,7 +58,7 @@ Stop if required credentials or missing product/design decisions prevent meaning
 Runtime note:
 
 - A live `claude` binary is not available in this shell, so the Claude validation here is config-level and prompt-level only.
-- Claude-side skill resolution is still set up through `/home/shekerk/.claude/skills/plaid/SKILL.md` and `/home/shekerk/content-ideas/.claude/settings.json`.
+- Claude-side skill resolution is still set up through `/home/sheke/.claude/skills/plaid/SKILL.md` and `/home/sheke/content-ideas/.claude/settings.json`.
 
 ## Notes
 

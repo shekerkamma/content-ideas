@@ -104,7 +104,7 @@ section), full bodies only for candidates matching the next phase:
 
 When installed globally, resolve helper skill paths in this order: repo-local
 `skills/<name>/` → `~/.claude/skills/<name>/` → `~/.codex/skills/<name>/` →
-`/home/shekerk/content-ideas/skills/<name>/`. If a helper path is missing,
+`$HOME/content-ideas/skills/<name>/`. If a helper path is missing,
 record it and use the next location.
 
 ## Step 3: Build the Skill Chain

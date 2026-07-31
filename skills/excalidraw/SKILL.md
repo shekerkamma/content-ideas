@@ -81,7 +81,7 @@ This repo has a local Excalidraw MCP server at
 `tools/mcp_excalidraw`. The Codex MCP entry is named `excalidraw` and points to:
 
 ```bash
-node /home/shekerk/content-ideas/tools/mcp_excalidraw/dist/index.js
+node "$HOME/content-ideas/tools/mcp_excalidraw/dist/index.js"
 ```
 
 The live canvas HTTP/WebSocket server is managed by a user systemd service:

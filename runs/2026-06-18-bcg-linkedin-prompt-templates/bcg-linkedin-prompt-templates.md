@@ -1,7 +1,7 @@
 # The Consultant's Guide to Claude — 21 BCG-Style LinkedIn Post Prompt Templates
 
 > Source: Anthropic × BCG · "21 BCG-Style Skills to Push Claude Opus to Its Limits"
-> Skills repo: `/home/shekerk/.claude/skills/strategy-consulting/`
+> Skills repo: `/home/sheke/.claude/skills/strategy-consulting/`
 > Format: Each entry = ready-to-publish LinkedIn post + the exact Claude prompt that powers it.
 
 ---
@@ -1068,5 +1068,5 @@ Step 6 — Communicate:
 ---
 
 *Generated: 2026-06-18 | Source: Anthropic × BCG "Consultant's Guide to Claude"*
-*Skills repo: `/home/shekerk/.claude/skills/strategy-consulting/`*
+*Skills repo: `/home/sheke/.claude/skills/strategy-consulting/`*
 *Format: LinkedIn post + Claude prompt per skill | Total: 21 skills + 1 OS chain*

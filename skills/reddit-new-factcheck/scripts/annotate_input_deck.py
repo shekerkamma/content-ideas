@@ -32,7 +32,7 @@ COLORS = {
     "blue": RGBColor(56, 189, 248),
 }
 
-BRANDED_TEMPLATE = Path(os.environ.get("BRANDED_PPTX_TEMPLATE") or "/home/shekerk/.claude/templates/branded-template.pptx")
+BRANDED_TEMPLATE = Path(os.environ.get("BRANDED_PPTX_TEMPLATE") or os.path.expanduser("~/.claude/templates/branded-template.pptx"))
 
 
 def load_json(path: Path) -> dict[str, Any]:
