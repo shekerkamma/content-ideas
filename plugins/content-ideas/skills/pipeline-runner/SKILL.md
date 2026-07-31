@@ -5,7 +5,7 @@ description: >
   Run a selected use case from signal to strategy and deal prep. Reads the
   latest feed, lets the user choose a use case, and chains the downstream
   research, scoring, brief, deck, and pre-sales stages.
-allowed-tools: Bash, Read, Write, AskUserQuestion
+allowed-tools: Bash, Read, Write
 argument-hint: "[use case number, name, or 'list']"
 user-invocable: true
 ---
@@ -78,7 +78,9 @@ Once selected, confirm:
 
 ## Stage 0.5: Last 30 Days Signal (real-time engagement)
 
-Invoke `/last30days "{verticalName}"` when available. Otherwise mark this
+Invoke the `last30days` skill with `"{verticalName}"` when it is available.
+Hosts that support slash commands may use `/last30days "{verticalName}"`.
+Otherwise mark this
 optional stage unavailable and continue to GBrain Recall.
 
 This runs before GBrain Recall and before any source gathering. It pulls real-time engagement signals from Reddit, X/Twitter, YouTube, TikTok, Hacker News, Polymarket, and GitHub — ranked by actual upvotes, likes, and prediction-market money, not editorial curation. Output is a synthesized research brief in conversation context.
@@ -223,7 +225,10 @@ PIPELINE: {title}
 
 ## Stage 2: Vertical Scorer (GO/WAIT/PASS gate)
 
-Invoke `/vertical-scorer "{verticalName}"`.
+Invoke the `vertical-scorer` skill with `"{verticalName}"` when it is available.
+Hosts that support slash commands may use `/vertical-scorer "{verticalName}"`.
+If the skill is unavailable, mark this stage blocked, preserve completed
+artifacts, and tell the user which dependency is missing.
 
 The scorer now benefits from the research gathered in Stage 1 — source URLs
 and second-brain notes provide grounded evidence for each scoring dimension.
@@ -253,7 +258,10 @@ PIPELINE: {title}
 
 ## Stage 3: AI Strategy Brief
 
-Invoke `/ai-strategy-brief "{verticalName}"`.
+Invoke the `ai-strategy-brief` skill with `"{verticalName}"` when it is
+available. Hosts that support slash commands may use
+`/ai-strategy-brief "{verticalName}"`. If the skill is unavailable, mark this
+and dependent stages blocked without inventing a substitute deliverable.
 
 Pass the hypothesis, source URLs, and second-brain note paths as additional
 context so the brief is grounded in the research from Stage 1, not just
@@ -279,8 +287,10 @@ PIPELINE: {title}
 
 ## Stage 4: Branded PPTX Deck
 
-Invoke `/branded-pptx-deck` to generate a multi-slide presentation from the
-use case data. The deck uses `pptxkit` from the branded-pptx-deck skill and
+Invoke the `branded-pptx-deck` skill to generate a multi-slide presentation
+from the use case data. Hosts that support slash commands may use
+`/branded-pptx-deck`. If the skill is unavailable, mark the deck stage blocked.
+The deck uses `pptxkit` from the branded-pptx-deck skill and
 follows the Canva-adapted use case realization layout.
 
 This is a hard requirement for client-facing output. Always use the branded

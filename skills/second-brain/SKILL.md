@@ -33,6 +33,9 @@ Read `references/simplebrain-pattern.md` before making structural changes.
 bash "<skill-dir>/scripts/bootstrap_second_brain.sh" "<target-path>"
 ```
 
+Resolve `<skill-dir>` from the directory containing the loaded `SKILL.md`.
+Do not run the placeholder literally.
+
 3. Ensure the core layout exists:
    - `raw/`
    - `wiki/`

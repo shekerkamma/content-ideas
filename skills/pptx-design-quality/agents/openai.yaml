@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPTX Design Quality"
+  short_description: "Context, critique, and deterministic PPTX QA"
+  default_prompt: "Use $pptx-design-quality to prepare, lint, and review this PowerPoint deck."

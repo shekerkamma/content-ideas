@@ -1,0 +1,4 @@
+interface:
+  display_name: "Genspark Branded Deck"
+  short_description: "Brand recovered Genspark decks as PPTX"
+  default_prompt: "Use $genspark-branded-deck as the branded stage after $genspark-slides, rebuild the recovered content in owned HTML/CSS, and route fully native or client-ready output to the structural PPTX pipeline."

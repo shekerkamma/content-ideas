@@ -22,8 +22,9 @@ HTML renderer.
 
 ### Skill source and porting contract
 
-- Treat `skills/content-ideas/`, `skills/pipeline-runner/`, and
-  `skills/second-brain/` as canonical shared sources.
+- Treat `skills/content-ideas/`, `skills/pipeline-runner/`,
+  `skills/second-brain/`, `skills/plaid/`, and
+  `skills/karpathy-guidelines/` as canonical shared sources.
 - Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
 - Keep `skills/content-ideas-okf/content-ideas/` synchronized with the canonical
   `content-ideas` implementation until that compatibility package is retired.
@@ -46,8 +47,10 @@ HTML renderer.
   "stop vibe coding", "apply the director framework"
 
 Claude Code project settings are in `.claude/settings.json` and point at these
-repo-local skill files. Codex discovers them through `.codex-plugin/plugin.json`
-because the plugin exposes `"skills": "./skills/"`.
+repo-local skill files. Codex discovers the packaged copies after installing
+the repo marketplace plugin, whose `.codex-plugin/plugin.json` exposes
+`"skills": "./skills/"`. `AGENTS.md` remains the repo-level fallback before
+plugin installation.
 
 For long-running app builds, use PLAID as the product source of truth and
 Codex/Claude `/goal` as the execution loop:

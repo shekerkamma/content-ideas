@@ -1,0 +1,12 @@
+{
+  "contract_version": "1.0",
+  "bundle": {
+    "id": "presentation-bundle",
+    "title": "Presentation title",
+    "root": "."
+  },
+  "sources": [],
+  "slides": [],
+  "transcript_segments": [],
+  "frames": []
+}

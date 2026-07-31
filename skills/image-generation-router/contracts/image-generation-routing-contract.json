@@ -1,0 +1,65 @@
+{
+  "contract_version": "1.0",
+  "policy": {
+    "default_execution_path": "built-in-image_gen",
+    "explicit_provider_request_wins": true,
+    "silent_provider_fallback_allowed": false,
+    "silent_model_substitution_allowed": false,
+    "max_model_generations_per_deliverable": 2
+  },
+  "providers": {
+    "built-in-image_gen": {
+      "provider": "openai",
+      "availability_source": "successful-host-tool-call",
+      "authentication": "signed-in-host-subscription"
+    },
+    "cliproxyapi-gemini": {
+      "provider": "gemini",
+      "base_url_default": "http://127.0.0.1:8317",
+      "discovery_endpoint": "/v1/models",
+      "generation_endpoint": "/v1/chat/completions",
+      "availability_source": "authenticated-live-catalog",
+      "image_model_match": "image",
+      "preferred_models": ["gemini-3.1-flash-image"],
+      "authentication": "local-client-key-plus-provider-oauth",
+      "discovery_command": "python3 skills/image-generation-router/scripts/generate_gemini.py --list-models",
+      "readiness_command": "python3 skills/image-generation-router/scripts/generate_gemini.py --probe"
+    }
+  },
+  "fallback": {
+    "from": "built-in-image_gen",
+    "to": "cliproxyapi-gemini",
+    "required_conditions": [
+      "built-in-route-unavailable",
+      "failure-disclosed-to-user",
+      "live-image-model-present"
+    ]
+  },
+  "secrets": {
+    "must_never_log": ["CLIPROXYAPI_KEY", "config-api-key", "provider-oauth-token"]
+  },
+  "provenance": {
+    "required": true,
+    "required_fields": [
+      "execution_path",
+      "provider",
+      "requested_model",
+      "resolved_model",
+      "auth_mode",
+      "prompt_sha256",
+      "output_path",
+      "source_media_type",
+      "output_media_type",
+      "generated_at"
+    ]
+  },
+  "consumer_contract": {
+    "deck_image_model_is_text_free": true,
+    "generated_assets_are_evidence": false,
+    "project_assets_must_be_persisted_outside_tmp": true,
+    "required_repo_consumers": [
+      "skills/pptx-visual-spec/SKILL.md",
+      "skills/pptx-visual-spec/references/visual-sourcing-rules.md"
+    ]
+  }
+}

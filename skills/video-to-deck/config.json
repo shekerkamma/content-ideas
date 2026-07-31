@@ -1,0 +1,6 @@
+{
+  "theme": "enterprise-consulting",
+  "include_notebooklm": true,
+  "auto_open": true,
+  "output_dir": "."
+}

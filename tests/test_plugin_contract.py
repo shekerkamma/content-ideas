@@ -10,6 +10,13 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 SKILL = REPO / "skills" / "content-ideas"
 PIPELINE_SKILL = REPO / "skills" / "pipeline-runner"
+PACKAGED_SKILLS = (
+    "content-ideas",
+    "pipeline-runner",
+    "second-brain",
+    "plaid",
+    "karpathy-guidelines",
+)
 
 
 def _json(rel):
@@ -128,6 +135,50 @@ class CrossHostPackagingTests(unittest.TestCase):
         self.assertEqual("./skills/", manifest["skills"])
         self.assertTrue((SKILL / "SKILL.md").is_file())
         self.assertTrue((SKILL / "scripts" / "scrape.py").is_file())
+
+    def test_repo_marketplace_packages_every_shared_skill(self):
+        marketplace = _json(".agents/plugins/marketplace.json")
+        plugin_rel = marketplace["plugins"][0]["source"]["path"]
+        self.assertTrue(plugin_rel.startswith("./"))
+        plugin = REPO / plugin_rel
+        manifest = json.loads(
+            (plugin / ".codex-plugin" / "plugin.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual("./skills/", manifest["skills"])
+
+        for name in PACKAGED_SKILLS:
+            canonical = REPO / "skills" / name
+            packaged = plugin / "skills" / name
+            self.assertTrue((packaged / "SKILL.md").is_file(), f"missing packaged {name}")
+            canonical_files = {
+                path.relative_to(canonical)
+                for path in canonical.rglob("*")
+                if path.is_file() and "__pycache__" not in path.parts
+            }
+            packaged_files = {
+                path.relative_to(packaged)
+                for path in packaged.rglob("*")
+                if path.is_file() and "__pycache__" not in path.parts
+            }
+            self.assertEqual(canonical_files, packaged_files, f"file drift in {name}")
+            for rel in canonical_files:
+                self.assertEqual(
+                    (canonical / rel).read_bytes(),
+                    (packaged / rel).read_bytes(),
+                    f"content drift in {name}/{rel}",
+                )
+
+    def test_plaid_uses_skill_relative_validator(self):
+        plaid = (REPO / "skills" / "plaid" / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn('"<skill-dir>/scripts/validate-vision.js"', plaid)
+        self.assertNotIn("node scripts/validate-vision.js --migrate", plaid)
+
+    def test_cross_host_interaction_fallbacks_are_documented(self):
+        content = (SKILL / "SKILL.md").read_text(encoding="utf-8")
+        pipeline = (PIPELINE_SKILL / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn("otherwise ask the", content)
+        self.assertIn("normal chat", content)
+        self.assertIn("If the skill is unavailable", pipeline)
 
     def test_versions_match_across_manifests(self):
         version = _pyproject_version()
