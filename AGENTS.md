@@ -2,6 +2,60 @@ OpenHands implementation source of truth for strategy/pipeline builds:
 - https://github.com/OpenHands/OpenHands
 - https://docs.openhands.dev/
 
+Filesystem search and integrity rule:
+- Do not limit searches to the current working directory when investigating
+  missing, restored, corrupted, duplicated, or unavailable files and skills.
+- Discover and search every relevant repository and installation root before
+  drawing a conclusion. At minimum, check:
+  - the full current repository, including hidden and ignored paths
+  - repo-local `skills/`, `.claude/`, `.agents/`, and `plugins/` trees
+  - user-level skill installations such as `~/.claude/skills/` and
+    `~/.codex/skills/`
+  - external or adjacent repositories referenced by repo instructions,
+    symlinks, plugin manifests, or skill catalogs
+- Resolve `~` and report the exact roots actually searched. Do not infer that
+  restoring `/home/sheke/content-ideas` also restored an external installation
+  such as `/home/sheke/.claude/skills/gstack`.
+- For corruption claims, validate rather than relying on filenames or a prior
+  report: inspect text/source files for invalid NUL bytes or parse failures,
+  run Git integrity/status checks where applicable, and run the narrowest
+  available validator or test. Exclude expected binary formats and Git object
+  data from text-corruption counts.
+- State the verified scope and evidence behind any file count. If permissions
+  prevent checking a relevant external root, report the conclusion as partial
+  instead of claiming the whole installation is healthy or corrupted.
+
+Skill recovery, research, and porting contract:
+- Keep portable skill sources in repo-local `skills/<skill>/`. Treat
+  `~/.claude/skills/` and `~/.codex/skills/` as host installations, not the
+  canonical or only recovery source.
+- For `docx`, `pdf`, `improve`, and `storm-research`, the canonical portable
+  copies are `skills/docx/`, `skills/pdf/`, `skills/improve/`, and
+  `skills/storm-research/`. Preserve the complete skill directory, including
+  licenses, references, templates, schemas, and scripts; exclude generated
+  `__pycache__/` directories and `*.pyc` files.
+- Separate detection from sourcing. Detect local corruption with byte-level,
+  parse, Git, and skill-specific validation. Use web research, Exa, You.com,
+  or Livecrawl Level 2 to locate authoritative recovery sources only; a web
+  search cannot inspect or prove the integrity of a local filesystem.
+- Prefer recovery sources in this order: a verified byte-identical local
+  archive or known-good repo copy, the skill's authoritative upstream Git
+  repository, then a freshly reconstructed file backed by documented evidence.
+  Never replace a customized skill wholesale with a merely related upstream
+  skill without validating that its interface and workflow match.
+- Before replacement, stage and validate the candidate; retain a timestamped,
+  recoverable backup of the installed directory; replace only the named skill;
+  then compare installed files to the staged candidate and rerun validators.
+- Research credentials are host-level secrets. Never copy API keys into this
+  repository, a project `.env`, skill source, generated report, test fixture,
+  commit, or chat output. On this WSL host, terminal research wrappers may read
+  the Windows Hermes Desktop configuration through `/mnt/c` at runtime.
+- Livecrawl Level 2 means search discovery followed by fresh-page extraction.
+  Verify both stages and report their actual backend/status. Do not claim Level
+  2 succeeded when only search results were returned or cached content was used.
+- See `docs/skill-recovery-porting-contract.md` for the operational procedure
+  and verification commands.
+
 GBrain knowledge rule:
 - If `gbrain` is available as an MCP server in Claude Code, Codex, or another
   host, use it by default for cross-session memory and retrieval before

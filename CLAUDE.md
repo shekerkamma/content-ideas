@@ -25,6 +25,10 @@ HTML renderer.
 - Treat `skills/content-ideas/`, `skills/pipeline-runner/`,
   `skills/second-brain/`, `skills/plaid/`, and
   `skills/karpathy-guidelines/` as canonical shared sources.
+- Treat `skills/docx/`, `skills/pdf/`, `skills/improve/`, and
+  `skills/storm-research/` as canonical shared recovery sources for those
+  skills. They must remain portable across Claude Code and Codex and must not
+  contain generated Python bytecode or host credentials.
 - Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
 - Keep `skills/content-ideas-okf/content-ideas/` synchronized with the canonical
   `content-ideas` implementation until that compatibility package is retired.
@@ -80,6 +84,9 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
 # same skill set as Claude Code (idempotent, safe to re-run after installing
 # new skills on either host)
 bash scripts/sync-codex-skills.sh
+
+# validate the portable recovery skills and their integrity manifest
+bash scripts/verify-recovery-skills.sh
 ```
 
 ## Rules
