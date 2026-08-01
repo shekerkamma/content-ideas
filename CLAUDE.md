@@ -43,6 +43,29 @@ HTML renderer.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
   coding, keep solutions minimal, edit surgically, and verify success criteria.
 
+## Presentation system
+
+- `skills/present/SKILL.md` is the single public router for presentation work.
+- Keep output engines distinct: native PPTX uses `branded-pptx-deck`, controlled
+  existing-PPTX edits use `pptx-toolkit`, HTML uses `presentation`, hosted Genspark uses
+  `genspark-slides` plus `genspark-branded-deck`, and Markdown slides use `marp`.
+- Keep template profiles and slide archetypes inside `pptx-design-quality`; do not create
+  another top-level presentation skill for each template, layout, critic, or adapter.
+- Keep acquisition utilities inside `presentation-source-bundle`; web/PDF/OneDrive intake
+  is evidence normalization, not a presentation renderer.
+- When a reference deck exists, draft `template-profile.json` and `slide-plan.json` from it
+  instead of hand-authoring from the blank template: `pptx-design-quality/scripts/
+  derive_template_profile.py` (brand colors, fonts, geometry) and `pptx-visual-spec/
+  scripts/draft_slide_plan.py` (per-slide archetype and evidence links). Both write a
+  distinctly named draft only — never the canonical contract file — and still require
+  tailoring plus the normal validators before build. Adapted from analyzing
+  `pamelafox/presentation-skills`'s ingestion skills against this repo's contract-owning
+  skills, not ported 1:1; see `skills/pptx-design-quality/references/template-derivation.md`.
+- For an evidence-derived deck, run `pptx-design-quality/scripts/check_claim_evidence.py`
+  as a fast mechanical pre-pass (unsourced-number scan against cited evidence) before the
+  richer `video-to-deck` Grill-Me or Genspark factual-integrity review; it does not replace
+  either.
+
 ## Claude Code Director Skill
 - `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):
   Plan First → Manage Context → Verify The Work → Build The System. Generates

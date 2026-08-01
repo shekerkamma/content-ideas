@@ -47,6 +47,8 @@ Before building, create these files in the run directory:
 - `deck-brief.md` — audience, decision, narrative promise, voice, anti-references,
   evidence/editability requirements, and success criteria.
 - `deck-design.json` — deterministic typography, color, layout, and lint thresholds.
+- `template-profile.json` — the selected template's brand, geometry, typography,
+  composition rules, and approved slide archetypes.
 
 Initialize them without overwriting existing files:
 
@@ -55,17 +57,41 @@ python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/init_deck_context.py" \
   --run <run-dir> --title "<deck title>"
 ```
 
+### Deriving a draft from a reference deck (optional)
+
+When rebuilding from a reference presentation, draft `template-profile.json` from it
+instead of hand-authoring from a blank template:
+
+```bash
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/derive_template_profile.py" \
+  --run <run-dir> \
+  --evidence <run-dir>/presentation-evidence.json \
+  --pptx <reference.pptx>
+```
+
+Either `--evidence` (from `presentation-source-bundle`) or `--pptx` works alone; supply
+both for the most complete draft. The script writes `<run-dir>/draft-template-profile.json`
+only — it never overwrites `template-profile.json`. Review the derivation notes it prints,
+tailor the draft, then `cp` it over `template-profile.json` before validating. See
+[`references/template-derivation.md`](references/template-derivation.md) for exactly what
+each field's heuristic does and does not cover.
+
 Tailor both files, then validate:
 
 ```bash
 python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/validate_deck_context.py" \
   <run-dir>/deck-brief.md <run-dir>/deck-design.json
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/validate_template_profile.py" \
+  <run-dir>/template-profile.json
 ```
 
 The JSON contract is defined in
 [`references/deck-design-schema.json`](references/deck-design-schema.json).
 Stable native rule IDs and their meanings are listed in
 [`references/rules.md`](references/rules.md).
+The reusable client-ready archetype catalog is
+[`references/slide-archetypes.json`](references/slide-archetypes.json). Use its IDs in
+`slide-plan.json`; extend the catalog instead of creating another presentation skill.
 
 ## Build loop
 
@@ -97,6 +123,24 @@ python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_pptx.py" \
 Exit `0` means no unresolved findings, `2` means design findings were detected, and
 `1` means the lint run itself failed. `--fast` skips higher-cost image-resolution and
 contrast checks for inner-loop builds.
+
+For an evidence-derived deck (`slide-plan.json`'s `deck.evidence_contract` is non-null),
+also run the mechanical claim-vs-evidence check before Office render QA:
+
+```bash
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/check_claim_evidence.py" \
+  <run-dir>/presentation-evidence.json \
+  <run-dir>/slide-plan.json \
+  --config <run-dir>/deck-design.json
+```
+
+This is a fast, deterministic pre-pass — regex number matching against cited evidence
+text, not semantic claim verification. It generalizes `video-to-deck`'s Grill-Me
+transcript check and the Genspark factual-integrity checklist so any evidence-derived
+deck gets a mechanical scan, not only video- or Genspark-sourced ones; it does not
+replace either richer procedure. No-ops (exit `0`) for a greenfield deck with no
+evidence contract. Waive a finding the same way as a lint finding: add the rule ID to
+`qa.ignore_rules` and a reason to `qa.waivers` in `deck-design.json`.
 
 ## Shared refinement vocabulary
 
@@ -135,6 +179,9 @@ content separately from configured citations, asset captions, and pagination.
 - the native deck builder's structural validation passed;
 - `lint_pptx.py` has no error-severity findings, with warnings resolved or explicitly
   waived in `deck-design.json`;
+- when `slide-plan.json`'s `deck.evidence_contract` is non-null, `check_claim_evidence.py`
+  has no unresolved `UNSOURCED_NUMBER` findings, with any waivers recorded in
+  `deck-design.json`;
 - the real Office render was inspected;
 - slide-by-slide Critique and Polish were completed;
 - delivery status and editability are stated honestly.
@@ -158,6 +205,7 @@ for the PowerPoint artifact.
 
 - `python-pptx` — required by `lint_pptx.py`.
 - `jsonschema` — required by `validate_deck_context.py`.
+- `Pillow` — required by `derive_template_profile.py` for brand color sampling.
 - Version floors are declared in [`requirements.txt`](requirements.txt) for fresh hosts.
 - The selected builder and Office render tooling remain responsible for their own
   dependencies; this overlay does not install packages at runtime.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Present"
+  short_description: "Route presentation work to the right engine"
+  default_prompt: "Use $present to create or improve a client-ready presentation."

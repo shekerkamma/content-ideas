@@ -295,6 +295,12 @@ Before the final PPTX build, run a skeptical validation pass against the
 transcript and any research artifacts. This is mandatory for client-facing video
 decks.
 
+If `slide-plan.json` has claims with `evidence_ids`, run
+`pptx-design-quality`'s `check_claim_evidence.py` first as a fast mechanical
+pre-pass (regex number matching against cited evidence text) — it catches
+unsourced numbers cheaply before the richer semantic Grill-Me pass below, which
+it does not replace.
+
 Preferred path:
 - Use `grill-me` when it is installed/exposed.
 - Challenge each slide-level claim against the transcript: "Is this directly

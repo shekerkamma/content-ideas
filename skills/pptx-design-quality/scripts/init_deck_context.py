@@ -22,6 +22,7 @@ def main() -> int:
     run_dir.mkdir(parents=True, exist_ok=True)
     brief_path = run_dir / "deck-brief.md"
     design_path = run_dir / "deck-design.json"
+    template_profile_path = run_dir / "template-profile.json"
 
     created: list[Path] = []
     if not brief_path.exists():
@@ -42,9 +43,16 @@ def main() -> int:
         )
         created.append(design_path)
 
+    if not template_profile_path.exists():
+        template_profile_path.write_text(
+            (ASSETS_DIR / "template-profile.template.json").read_text(encoding="utf-8"),
+            encoding="utf-8",
+        )
+        created.append(template_profile_path)
+
     for path in created:
         print(f"created: {path}")
-    for path in (brief_path, design_path):
+    for path in (brief_path, design_path, template_profile_path):
         if path not in created:
             print(f"kept existing: {path}")
     return 0

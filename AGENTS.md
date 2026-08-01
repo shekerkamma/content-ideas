@@ -132,6 +132,18 @@ Client-facing PPTX rule:
 - Copy reviewed decks only to a delivery destination resolved from
   `CLIENT_DELIVERY_DIR` when one is configured for the host
 
+Presentation consolidation rule:
+- Route presentation requests through repo-local `skills/present/`; do not add a new
+  top-level presentation skill when an existing engine or support stage covers the job.
+- Use `branded-pptx-deck` for native client-ready PPTX, `pptx-toolkit` for controlled
+  existing-PPTX edits, `presentation` for HTML, `genspark-slides` plus
+  `genspark-branded-deck` for hosted Genspark work, and `marp` for Markdown slides.
+- For material builds, require `deck-brief.md`, `deck-design.json`,
+  `template-profile.json`, `slide-plan.json`, and `visual-spec.json`; source-derived work
+  also requires `presentation-evidence.json`.
+- Keep template profiles and reusable slide archetypes in `pptx-design-quality`. Keep
+  acquisition and normalization adapters in `presentation-source-bundle`.
+
 Cross-host product-build skills:
 - Use repo-local skills from `skills/` for both Codex and Claude Code.
 - Use `skills/plaid/SKILL.md` when the user says `PLAID`, `plaid build`,

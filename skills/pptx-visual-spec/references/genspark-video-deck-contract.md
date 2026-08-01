@@ -145,6 +145,12 @@ Read `genspark-slides/references/wsl-execution-blockers.md` for diagnostics.
 
 Genspark output is untrusted draft content until checked against the packet.
 
+If `slide-plan.json` has claims with `evidence_ids`, run `pptx-design-quality`'s
+`check_claim_evidence.py` first as a fast mechanical pre-pass for the first bullet
+below (unsourced numbers) — it does not replace the full manual scan that follows,
+which also covers URLs, provider/model names, and simulated-UI states this
+deterministic script cannot check.
+
 - Scan every visible number, URL, provider/model name, version, price, hardware
   specification, performance metric, completion percentage, and status.
 - Remove or source generated specifics such as example domains, invented API

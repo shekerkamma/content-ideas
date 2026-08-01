@@ -62,6 +62,8 @@ Every direct PPTX builder consumes:
   frames, checksums, and rights status for source-derived decks;
 - `slide-plan.json` — claims, evidence references, audience job, visual IDs, speaker notes,
   and accessibility intent per slide;
+- `template-profile.json` — selected brand, geometry, composition rules, and approved
+  archetypes from `pptx-design-quality`;
 - `visual-spec.json` — routing and provenance per visual region;
 - source assets and editable authored sources referenced by the spec;
 - prompt files for generated assets;

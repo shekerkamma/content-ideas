@@ -63,8 +63,15 @@ yourself, validate explicitly.
    `presentation-source-bundle` and keep `<run>/presentation-evidence.json` as the source
    inventory.
 2. **Initialize deck design context, then decide the spine.** Use
-   `pptx-design-quality` to create and tailor `<run>/deck-brief.md` plus
-   `<run>/deck-design.json`; validate both before authoring. For executives: lead with the
+   `pptx-design-quality` to create and tailor `<run>/deck-brief.md`,
+   `<run>/deck-design.json`, and `<run>/template-profile.json`; validate all three before
+   authoring. When `<run>/presentation-evidence.json` exists (a rebuild or reference-deck
+   redesign), derive drafts from it before hand-authoring: run
+   `pptx-design-quality/scripts/derive_template_profile.py` for `template-profile.json` and
+   `pptx-visual-spec/scripts/draft_slide_plan.py` for `slide-plan.json`, review and tailor
+   each draft, then validate — both scripts write a distinctly named draft file, never the
+   canonical contract, so tailoring and validation stay mandatory either way. Select slide
+   archetypes from that skill's catalog. For executives: lead with the
    answer (BLUF), an executive-summary one-pager, a storyboard of the argument, then proof,
    then the ask. Write **action titles** (every title is a so-what assertion). Honor
    explicit slide-count minimums. Tailor `<run>/slide-plan.json` from the shared
@@ -167,7 +174,7 @@ python3 scripts/officecli_qa.py "$RUN/<name>-draft.pptx" --out "$RUN/qa/officecl
 ```
 
 Only rename/copy to `*-reviewed.pptx` after:
-- `deck-brief.md` and `deck-design.json` validation passed.
+- `deck-brief.md`, `deck-design.json`, and `template-profile.json` validation passed.
 - `Deck.save()` validation passed.
 - `pptx-design-lint.json` contains no unresolved findings.
 - `preview_pptx.py` contact sheets were inspected.

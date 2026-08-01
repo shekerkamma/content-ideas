@@ -29,6 +29,44 @@ The filenames match the Pamela Fox presentation-skill pipeline and are also usab
 repo's `watch`, `video-to-deck`, PDF, and Office render workflows. Missing optional inputs
 produce empty arrays or null fields; the builder never invents alignments.
 
+When those cached artifacts do not yet exist, use the bundled intake adapters:
+
+```bash
+python3 scripts/fetch_slides.py <url> <run-dir>
+python3 scripts/convert_slides_to_images.py <run-dir>/slides.pdf <run-dir>/slide_images
+python3 scripts/extract_slide_text.py <run-dir>/slides.pdf <run-dir>/slide_ascii.md <run-dir>/slide_images
+python3 scripts/thumbnail_of_pptx.py <onedrive-url> <run-dir>/thumbnail.png
+python3 scripts/extract_transcript.py <youtube-url> <run-dir>/transcript.txt
+```
+
+The adapters are derived from Pamela Fox's MIT-licensed `presentation-skills` project; see
+`references/upstream-presentation-skills.md`. They acquire and normalize evidence only.
+They do not select a design, create a template, or render the final client deck.
+
+## Outline slides (agent procedure)
+
+`outline.txt` has no upstream script — the source project's `outline-slides` skill is a
+vision-LLM procedure, not a deterministic parser, and every script in this skill stays a
+pure parser/wrapper. Produce it directly:
+
+1. For each `slide_images/slide_N.png`, read the matching `## Slide N` section of
+   `slide_ascii.md` (if present) as ground truth for that slide's visible text.
+2. Look at the image and write one plain-English sentence summarizing the slide, using the
+   extracted text as the primary source and the image for visual context (diagrams,
+   screenshots, embedded demos).
+3. Write the summaries to `<run-dir>/outline.txt`, one per line, in the exact format
+   `build_presentation_evidence.py`'s `OUTLINE_LINE` pattern expects:
+
+```text
+1. Title slide introducing the presentation on <topic>
+2. Agenda slide listing the main sections to be covered
+3. Diagram showing the architecture of <system>
+```
+
+For presentations over 50 slides, work through them in batches of 50. A malformed line
+(missing the `N. ` prefix) is silently dropped by the builder — proofread the file before
+running `build_presentation_evidence.py`.
+
 ## Build
 
 ```bash
@@ -60,12 +98,26 @@ The builder:
 
 ## Plan and visual handoff
 
-Copy and tailor the shared slide-plan template:
+Greenfield deck with no source evidence: copy and tailor the shared slide-plan template:
 
 ```bash
 cp skills/pptx-visual-spec/assets/slide-plan.template.json \
   <run-dir>/slide-plan.json
 ```
+
+Reference-deck rebuild: draft `slide-plan.json` from `presentation-evidence.json` instead
+of starting from the blank template:
+
+```bash
+python3 skills/pptx-visual-spec/scripts/draft_slide_plan.py \
+  <run-dir>/presentation-evidence.json
+cp <run-dir>/slide-plan.draft.json <run-dir>/slide-plan.json
+```
+
+The draft carries one `evidence_ids` link per slide and a `TODO:` placeholder
+`action_title` for any slide `outline.txt` didn't summarize; it never writes `claims[]`
+content — narrative and factual judgment stay with a human or agent. Tailor the draft
+before continuing.
 
 Create `visual-spec.json` through `pptx-visual-spec`, then validate the full chain:
 
