@@ -25,6 +25,7 @@ domain-workflows/**/out/
 # Secrets (credentials normally live in ~/.config/content/.env, never the repo)
 .env
 .env.*
+.claude/settings.local.json
 
 # Runtime / dev artifacts
 scrape_err.log
