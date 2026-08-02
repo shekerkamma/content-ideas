@@ -1,6 +1,6 @@
 [project]
 name = "content-ideas"
-version = "2.2.0"
+version = "2.3.0"
 description = "content-ideas skill — competitor scraping + For You feed generation"
 readme = "README.md"
 requires-python = ">=3.10"

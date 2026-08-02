@@ -1,6 +1,6 @@
 ---
 name: content-ideas
-version: "2.2.0"
+version: "2.3.0"
 description: >
   Build a For You feed from tracked competitors and turn it into content ideas.
   Use for competitor research, trend discovery, and post or video brief
