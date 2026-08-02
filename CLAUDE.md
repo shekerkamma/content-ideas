@@ -20,11 +20,73 @@ HTML renderer.
 - `commands/content-ideas.md` — Claude Code slash command
 - `hooks/hooks.json` — SessionStart setup preflight (one-line hint, silent when ready)
 
+### Skill source and porting contract
+
+- Treat `skills/content-ideas/`, `skills/pipeline-runner/`,
+  `skills/second-brain/`, `skills/plaid/`, and
+  `skills/karpathy-guidelines/` as canonical shared sources.
+- Treat `skills/docx/`, `skills/pdf/`, `skills/improve/`, and
+  `skills/storm-research/` as canonical shared recovery sources for those
+  skills. They must remain portable across Claude Code and Codex and must not
+  contain generated Python bytecode or host credentials.
+- Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
+- Keep Claude-only UI fields as enhancements; repeat critical safety and
+  fallback behavior in skill bodies for Codex and OpenHands.
+- Before shipping skill changes, run the plugin contract, the three
+  `skill-builder` audit scripts, and the full pytest suite.
+
+## Channel-to-KB skills (ported from coleam00/cole-medin-knowledge-base)
+
+Three peer skills that turn any YouTube channel into an OKF (Open Knowledge
+Format) knowledge base / Karpathy-style LLM wiki, differing only in how they
+fetch transcripts:
+- `skills/channel-to-kb/SKILL.md` — pytubefix + youtube_transcript_api, free,
+  no API key, can be IP-blocked on cloud hosts.
+- `skills/channel-to-kb-ytdlp/SKILL.md` — yt-dlp, free, no API key, most
+  reliable against YouTube changes. Recommended default.
+- `skills/channel-to-kb-supadata/SKILL.md` — Supadata managed API, paid
+  (`SUPADATA_API_KEY`), no IP-blocking risk.
+
+Each skill bundles its own copy of the shared OKF toolkit under
+`assets/okf-template/` (`SCHEMA.md`, `lint.py`, `scripts/build_indexes.py`)
+and `references/pipeline-guide.md` — these four files must stay
+byte-identical across all three skill directories (mirrors the
+`plugins/content-ideas/skills/` byte-identical convention above). Output
+bundles scaffold under `$CONTENT_HOME/knowledge-bases/<channel-slug>/`, never
+the cwd. If upstream (`coleam00/cole-medin-knowledge-base`) changes its
+`SCHEMA.md`, `lint.py`, `scripts/build_indexes.py`, or
+`.claude/references/pipeline-guide.md`, re-port them into all three skills'
+`assets/okf-template/` and `references/` and re-verify the scaffold lints
+clean on an empty bundle before shipping.
+
 ## Shared Product-Build Skills
 - `skills/plaid/SKILL.md` — Product Led AI Development: idea, validation,
   planning, `docs/design.md`, launch, and roadmap execution.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
   coding, keep solutions minimal, edit surgically, and verify success criteria.
+
+## Presentation system
+
+- `skills/present/SKILL.md` is the single public router for presentation work.
+- Keep output engines distinct: native PPTX uses `branded-pptx-deck`, controlled
+  existing-PPTX edits use `pptx-toolkit`, HTML uses `presentation`, hosted Genspark uses
+  `genspark-slides` plus `genspark-branded-deck`, and Markdown slides use `marp`.
+- Keep template profiles and slide archetypes inside `pptx-design-quality`; do not create
+  another top-level presentation skill for each template, layout, critic, or adapter.
+- Keep acquisition utilities inside `presentation-source-bundle`; web/PDF/OneDrive intake
+  is evidence normalization, not a presentation renderer.
+- When a reference deck exists, draft `template-profile.json` and `slide-plan.json` from it
+  instead of hand-authoring from the blank template: `pptx-design-quality/scripts/
+  derive_template_profile.py` (brand colors, fonts, geometry) and `pptx-visual-spec/
+  scripts/draft_slide_plan.py` (per-slide archetype and evidence links). Both write a
+  distinctly named draft only — never the canonical contract file — and still require
+  tailoring plus the normal validators before build. Adapted from analyzing
+  `pamelafox/presentation-skills`'s ingestion skills against this repo's contract-owning
+  skills, not ported 1:1; see `skills/pptx-design-quality/references/template-derivation.md`.
+- For an evidence-derived deck, run `pptx-design-quality/scripts/check_claim_evidence.py`
+  as a fast mechanical pre-pass (unsourced-number scan against cited evidence) before the
+  richer `video-to-deck` Grill-Me or Genspark factual-integrity review; it does not replace
+  either.
 
 ## Claude Code Director Skill
 - `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):
@@ -34,8 +96,10 @@ HTML renderer.
   "stop vibe coding", "apply the director framework"
 
 Claude Code project settings are in `.claude/settings.json` and point at these
-repo-local skill files. Codex discovers them through `.codex-plugin/plugin.json`
-because the plugin exposes `"skills": "./skills/"`.
+repo-local skill files. Codex discovers the packaged copies after installing
+the repo marketplace plugin, whose `.codex-plugin/plugin.json` exposes
+`"skills": "./skills/"`. `AGENTS.md` remains the repo-level fallback before
+plugin installation.
 
 For long-running app builds, use PLAID as the product source of truth and
 Codex/Claude `/goal` as the execution loop:
@@ -60,6 +124,14 @@ python3 -m pytest -q
 # exercise the scraper / feed generator directly against a checkout
 python3 skills/content-ideas/scripts/scrape.py --help
 python3 skills/content-ideas/scripts/generate_feed.py --help
+
+# mirror every ~/.claude/skills entry into ~/.codex/skills so Codex sees the
+# same skill set as Claude Code (idempotent, safe to re-run after installing
+# new skills on either host)
+bash scripts/sync-codex-skills.sh
+
+# validate the portable recovery skills and their integrity manifest
+bash scripts/verify-recovery-skills.sh
 ```
 
 ## Rules
@@ -158,7 +230,8 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
 
 ## GBrain (MCP server — persistent memory layer)
 
-GBrain is wired as an MCP server (`gbrain serve`) for this project.
+GBrain is wired as an MCP server for this project, reachable over HTTP (not
+stdio) at `http://127.0.0.1:3131/mcp` with a per-agent bearer token.
 It provides persistent knowledge-graph memory across sessions.
 
 ### Location & config
@@ -166,10 +239,31 @@ It provides persistent knowledge-graph memory across sessions.
 - Brain: `~/.gbrain/brain.pglite` (local embedded Postgres, zero DB cost)
 - Engine: PGLite
 - Search mode: `conservative` (cheapest tier)
-- Embeddings: `google:gemini-embedding-001` (Gemini free tier — 1,500 req/day)
-- Chat/synthesis: `google:gemini-3.5-flash` (Gemini free tier)
+- Embeddings: `google:gemini-embedding-001`, 768 dims (requires
+  `GOOGLE_GENERATIVE_AI_API_KEY` — get one at
+  `https://aistudio.google.com/apikey`; this is a different credential from
+  the Gemini CLI's OAuth-personal login and cannot be substituted for it)
+- Chat/synthesis: `google:gemini-2.0-flash-exp` (chat), `google:gemini-2.0-flash`
+  (query expansion)
 - Cost: **$0.00/month** on free tier
-- Skills: 50 loaded
+
+### Running it — systemd user service, not an ad hoc background process
+- Server process: `~/.config/systemd/user/gbrain.service` runs
+  `gbrain serve --http --port 3131` with `Restart=on-failure`.
+- `systemctl --user enable gbrain.service` is set, and
+  `loginctl enable-linger sheke` is enabled, so the service survives both a
+  closed terminal and a full logout — it starts on WSL boot, not just on
+  login.
+- To check it: `systemctl --user status gbrain.service` /
+  `curl http://127.0.0.1:3131/health`.
+- `gbrain reinit-pglite` (or any full reinit) wipes the auth-tokens table —
+  every connected host's bearer token goes invalid at once and needs
+  `gbrain auth create <name>` + `gbrain connect ... --install --force` again
+  per host.
+- MCP registration is **project-scoped per working directory**, not global —
+  `gbrain connect --install` only updates the entry for whatever directory
+  you ran it from. Re-run it from `content-ideas` specifically after any
+  token rotation, or other projects silently keep the stale token.
 
 ### When to use GBrain vs local files
 - **GBrain pages**: prospects, people, companies, recurring research topics,

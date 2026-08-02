@@ -1,0 +1,30 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Presentation title",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "State the audience promise",
+      "audience_job": "Understand the outcome of the presentation",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": ["title"],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "contract_version": "1.0",
+  "name": "evidence-led-competitor-pipeline",
+  "principle": "data taps acquire evidence; AI Analyst governs claims and scoring; competitor-analysis delivery builds and validates client artifacts",
+  "stages": [
+    {
+      "id": "frame",
+      "owners": ["evidence-led-competitor-pipeline", "aianalyst-competitor-analysis"],
+      "requires_any": [],
+      "produces": ["status.json", "inputs/operating-prompt.yaml"],
+      "gate": "decision question, audience, cohort, timeframe, deliverables, and slide minimum are explicit"
+    },
+    {
+      "id": "research",
+      "owners": ["gbrain", "you-com-search", "pp-firecrawl"],
+      "requires_any": ["research", "working", "outputs/search-log.md"],
+      "produces": ["outputs/search-log.md"],
+      "gate": "current primary sources and retrieval routes are recorded; generic search is fallback only"
+    },
+    {
+      "id": "evidence",
+      "owners": ["aianalyst-competitor-analysis"],
+      "requires_all": [
+        "outputs/evidence-ledger.csv",
+        "outputs/evidence-ledger.md",
+        "outputs/metric-definitions.md",
+        "outputs/data-quality-report.md",
+        "outputs/scoring-model.md",
+        "outputs/allowed-numbers.yaml"
+      ],
+      "produces": ["outputs/competitor-brief.md"],
+      "gate": "claims are rows, metrics precede scores, coverage and confidence are visible"
+    },
+    {
+      "id": "story",
+      "owners": ["story-architect", "competitor-analysis-pipeline", "gstack-review"],
+      "requires_all": [
+        "outputs/competitor-brief.md",
+        "outputs/story-architect-pack.md",
+        "outputs/storyboard-qa.md",
+        "outputs/artifact-traceability.md"
+      ],
+      "produces": ["visual-spec.json"],
+      "gate": "BLUF, argument arc, slide spine, evidence map, datapoint promotion, and content cuts are locked"
+    },
+    {
+      "id": "artifacts",
+      "owners": ["competitor-analysis-pipeline", "branded-pptx-deck", "genspark-branded-deck"],
+      "requires_glob": [
+        "client-package/**/*-draft.pptx",
+        "client-package/site/index.html"
+      ],
+      "requires_all": ["visual-spec.json"],
+      "produces": ["client-package/delivery-manifest.json"],
+      "gate": "branded editable PPTX and self-contained HTML are built from the locked story"
+    },
+    {
+      "id": "qa",
+      "owners": ["evidence-led-competitor-pipeline", "officecli", "playwright"],
+      "requires_all": [
+        "outputs/sync-check.md",
+        "outputs/run-learnings.md",
+        "client-package/delivery-manifest.json"
+      ],
+      "requires_glob": [
+        "client-package/**/*-reviewed.pptx",
+        "client-package/qa/officecli/qa-summary.md"
+      ],
+      "gate": "evidence, visible numbers, editability, render, OfficeCLI, HTML, sync, and manifest checks pass"
+    }
+  ],
+  "complete_requires": [
+    "status.json",
+    "inputs/operating-prompt.yaml",
+    "outputs/search-log.md",
+    "outputs/evidence-ledger.csv",
+    "outputs/evidence-ledger.md",
+    "outputs/metric-definitions.md",
+    "outputs/data-quality-report.md",
+    "outputs/scoring-model.md",
+    "outputs/competitor-brief.md",
+    "outputs/story-architect-pack.md",
+    "outputs/storyboard-qa.md",
+    "outputs/artifact-traceability.md",
+    "outputs/allowed-numbers.yaml",
+    "visual-spec.json",
+    "client-package/site/index.html",
+    "outputs/sync-check.md",
+    "outputs/run-learnings.md",
+    "client-package/delivery-manifest.json"
+  ],
+  "complete_globs": [
+    "client-package/**/*-reviewed.pptx",
+    "client-package/qa/officecli/qa-summary.md"
+  ]
+}

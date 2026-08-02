@@ -7,7 +7,7 @@ Firm-agnostic: set FIRM_NAME and FIRM_EMAIL to rebrand for any consulting firm.
 import os, sys
 from pathlib import Path
 
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, "/home/sheke/.claude/skills/branded-pptx-deck/scripts")
 from pptxkit import Deck, PP_ALIGN, MSO_ANCHOR, Inches, Pt
 
 RUN_DIR = Path(__file__).parent

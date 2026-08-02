@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build MagicPath vs agent harness pre-sales adoption deck."""
 import sys
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, "/home/sheke/.claude/skills/branded-pptx-deck/scripts")
 from pptxkit import Deck, Inches, PP_ALIGN, MSO_ANCHOR
 
 TOTAL = 24

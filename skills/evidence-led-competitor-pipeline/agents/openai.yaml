@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence-Led Competitor Pipeline"
+  short_description: "Evidence to reviewed PPTX and HTML pipeline"
+  default_prompt: "Use $evidence-led-competitor-pipeline to turn current competitor evidence into a traceable, client-ready PPTX and HTML package."

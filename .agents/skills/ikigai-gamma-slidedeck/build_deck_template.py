@@ -59,8 +59,9 @@ Usage after substitution:
   python3 build_deck.py
 """
 
+import os
 import sys
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, os.path.expanduser("~/.claude/skills/branded-pptx-deck/scripts"))
 from pptxkit import Brand, Deck, PP_ALIGN, MSO_ANCHOR, Inches, Pt, RGBColor
 
 # ── CONFIGURATION (substitute these) ─────────────────────────────────────────

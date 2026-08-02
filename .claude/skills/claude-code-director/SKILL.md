@@ -1,6 +1,11 @@
 ---
 name: claude-code-director
-description: Use when starting any Claude Code task, automation, or build — apply the Director Framework (Plan First, Manage Context, Verify The Work, Build The System). Encodes the Cole Medin methodology. Trigger phrases: "director mode", "apply the director framework", "plan this properly", "stop vibe coding", "how should I approach this build", "set up a PLAN.md".
+description: >-
+  Use when starting any Claude Code task, automation, or build to apply the
+  Director Framework (Plan First, Manage Context, Verify The Work, Build The
+  System). Trigger phrases include "director mode", "apply the director
+  framework", "plan this properly", "stop vibe coding", "how should I approach
+  this build", and "set up a PLAN.md".
 argument-hint: [task or project description]
 disable-model-invocation: true
 ---

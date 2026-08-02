@@ -1,21 +1,23 @@
 ---
 name: ikigai-gamma-slidedeck
 description: >
-  Compound pipeline: LinkedIn profile (PDF / URL / text) → Ikigai Pro Report
-  → Gamma slide deck (via Gamma MCP) with branded-pptx-deck fallback.
+  Use when the user asks for an "ikigai slide deck", "LinkedIn to slides", or
+  a combined LinkedIn profile → Ikigai Pro report → presentation pipeline.
+  Uses Gamma when available with a branded-pptx-deck fallback.
   One command, fully automated. Reusable for any person.
   Primary path: Gamma MCP (gammaUrl returned).
-  Fallback path: pptxkit build_deck.py (validated .pptx copied to Desktop).
-triggers:
-  - ikigai-gamma-slidedeck
-  - ikigai slide deck
-  - linkedin ikigai slides
-  - linkedin to slides
-  - ikigai deck
-version: "1.2"
-validated_on:
-  - "runs/2026-06-13-shravan-ikigai-genspark (individual-first framing)"
-  - "runs/2026-06-16-srikumar-ikigai (BD/company-first framing, 26 slides, pptxkit path)"
+  Fallback path: branded pptxkit build_deck.py with validated local delivery.
+metadata:
+  triggers:
+    - ikigai-gamma-slidedeck
+    - ikigai slide deck
+    - linkedin ikigai slides
+    - linkedin to slides
+    - ikigai deck
+  version: "1.2"
+  validated_on:
+    - "runs/2026-06-13-shravan-ikigai-genspark (individual-first framing)"
+    - "runs/2026-06-16-srikumar-ikigai (BD/company-first framing, 26 slides, pptxkit path)"
 ---
 
 # ikigai-gamma-slidedeck
@@ -46,7 +48,7 @@ All artifacts land in `runs/YYYY-MM-DD-<name>-ikigai/`:
 | `build_deck.py` | Parameterized pptxkit builder (always generated — enables offline rebuild) |
 | `<name>-ikigai-deck-draft.pptx` | pptxkit-built deck (fallback path, or always if Gamma unavailable) |
 | `_preview/contact_*.png` | QA contact sheets (pptxkit path only) |
-| `run-log.md` | Run log with delivery status, deck URL or Desktop path, deck structure |
+| `run-log.md` | Run log with delivery status, deck URL or configured delivery path, deck structure |
 
 Gamma path additionally returns a `gammaUrl` shared with the user.
 
@@ -66,14 +68,14 @@ Profile Source
       │         └── gammaUrl → user
       │
       └──► [Stage 2B] pptxkit Deck       fallback (terminal host / Gamma unavailable)
-                └── .pptx + preview → Desktop copy
+                └── .pptx + preview → run folder / configured delivery directory
       │
       ▼
 [Stage 3] GCC Roadmap Deck (OPTIONAL)  ← BD/company-first mode only
       │    If user confirms, invoke gcc-roadmap skill:
       │    → reads ikigai report for company/platform/tier data
       │    → generates 17-slide time × capability roadmap deck
-      │    → validates + QA previews + delivers to Desktop
+      │    → validates + QA previews + delivers to the configured destination
       │
       ▼
 [Stage 4] Run Log + Delivery
@@ -215,10 +217,8 @@ For solo founder / individual roles, replace company slides with:
 
 ### Step 2 — Run the builder
 
-```bash
-cd /home/shekerk/content-ideas
-python3 runs/YYYY-MM-DD-<name>-ikigai/build_deck.py
-```
+Run `python3 runs/YYYY-MM-DD-<name>-ikigai/build_deck.py` from the repository
+root.
 
 Verify: output line must say `[validated]` — pptxkit's built-in XML check.
 If it fails, fix the script and rerun.
@@ -227,7 +227,7 @@ If it fails, fix the script and rerun.
 
 ```python
 import sys; from pathlib import Path
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, "<resolved-branded-pptx-deck-dir>/scripts")
 import preview_pptx
 preview_pptx.render(
     "runs/YYYY-MM-DD-<name>-ikigai/<name>-ikigai-deck-draft.pptx",
@@ -243,14 +243,12 @@ Read all contact sheets. Check:
 
 Fix any issues in `build_deck.py`, rerun, re-preview.
 
-### Step 4 — Deliver to Desktop
+### Step 4 — Deliver
 
-```bash
-cp runs/YYYY-MM-DD-<name>-ikigai/<name>-ikigai-deck-draft.pptx \
-   /mnt/c/Users/sheke/OneDrive/Desktop/<name>-ikigai-deck-draft.pptx
-```
-
-If file is locked (PowerPoint open): write to a new name with `-v2` suffix.
+Keep the deck and reproducible builder in the run folder. After visual QA,
+rename the deck with a `-reviewed.pptx` suffix. If `$CLIENT_DELIVERY_DIR` is
+configured, copy that reviewed file there. Otherwise report the run-folder path
+and do not invent a Desktop destination.
 
 ---
 
@@ -278,7 +276,8 @@ If the user confirms:
    ```
 
 3. The skill will generate `<name>-gcc-roadmap-deck-draft.pptx` in the same
-   run folder (or a new run folder if chaining) and copy to Desktop.
+   run folder (or a new run folder if chaining), then copy it to
+   `$CLIENT_DELIVERY_DIR` only when configured.
 
 4. Update `run-log.md` to record both decks and their delivery status.
 
@@ -307,7 +306,7 @@ Status: `<gamma-generated | reviewed | draft>`
 
 ### pptxkit path (if used)
 - PPTX: <name>-ikigai-deck-draft.pptx
-- Desktop: C:\Users\sheke\OneDrive\Desktop\<filename>.pptx
+- Delivery: <CLIENT_DELIVERY_DIR path, or "run folder only">
 - Builder: build_deck.py
 - Preview: _preview/contact_*.png
 
@@ -323,7 +322,7 @@ Status: `<gamma-generated | reviewed | draft>`
 ## Stage 3 — GCC Roadmap
 <generated | skipped — <reason>>
 - PPTX: <name>-gcc-roadmap-deck-draft.pptx (if generated)
-- Desktop: C:\Users\sheke\OneDrive\Desktop\<filename>.pptx (if generated)
+- Delivery: <CLIENT_DELIVERY_DIR path, or "run folder only"> (if generated)
 ```
 
 ---
@@ -356,7 +355,7 @@ Use personal offer tiers, personal case studies, personal proof points.
 ## Success Criteria
 
 - All 7 ikigai stages completed; report file exists
-- Deck delivered via Gamma URL (primary) or Desktop .pptx (fallback)
+- Deck delivered via Gamma URL (primary) or reviewed local `.pptx` (fallback)
 - `run-log.md` updated with delivery status
 - `build_deck.py` present in the run folder regardless of which path was taken
   (enables offline rebuild / client-specific modification at any time)
@@ -366,12 +365,38 @@ Use personal offer tiers, personal case studies, personal proof points.
 
 ## Resources
 
-- Ikigai analysis skill: `~/.claude/skills/ikigai/SKILL.md`
-- Gamma outline template: `~/.claude/skills/ikigai-gamma-slidedeck/gamma-outline.md`
-- pptxkit fallback template: `~/.claude/skills/ikigai-gamma-slidedeck/build_deck_template.py`
-- Stage 3 gcc-roadmap skill: `~/.claude/skills/gcc-roadmap/SKILL.md`
+- Ikigai analysis skill: sibling `ikigai` skill
+- Gamma outline template: `gamma-outline.md` beside this file
+- pptxkit fallback template: `build_deck_template.py` beside this file
+- Stage 3 gcc-roadmap skill: sibling `gcc-roadmap` skill
 - Validated BD run (ikigai deck): `~/content-ideas/runs/2026-06-16-srikumar-ikigai/` (26 slides, pptxkit path)
 - Validated BD run (roadmap deck): `~/content-ideas/runs/2026-06-16-gcc-implementation-roadmap/` (17 slides)
 - Validated founder run: `~/content-ideas/runs/2026-06-13-shravan-ikigai-genspark/`
-- pptxkit API: `~/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
-- Brand palette: `~/.claude/skills/branded-pptx-deck/reference/brand.md`
+- pptxkit API and brand palette: resolve the installed
+  `branded-pptx-deck` skill; block branded output if unavailable
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+- `ikigai` — required upstream analysis.
+- Gamma or `branded-pptx-deck` — at least one presentation path must be available.
+
+### Relationships
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `ikigai` | Sequential upstream | every run | `runs/.../<name>-ikigai-report.md` |
+| `gcc-roadmap` | Sequential downstream | optional BD/company-first Stage 3 | company capabilities, tiers, and proof points |
+| `branded-pptx-deck` | Fallback | Gamma unavailable or local PPTX requested | reviewed `.pptx`, builder, and previews |
+
+### Runtime Preamble
+State which presentation path is available, the framing mode, and whether the
+result can be reviewed or must be marked draft/blocked.
+
+## Gotchas
+
+- Never start the deck before the full ikigai report is complete.
+- Never call a local PPTX reviewed without inspecting the rendered previews.
+- Never invent a Desktop delivery path; use `$CLIENT_DELIVERY_DIR` when configured.

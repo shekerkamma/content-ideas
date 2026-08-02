@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.skills/pptx-visual-spec/presentation-evidence-schema.json",
+  "title": "Presentation source evidence bundle",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "bundle",
+    "sources",
+    "slides",
+    "transcript_segments",
+    "frames"
+  ],
+  "properties": {
+    "contract_version": {"const": "1.0"},
+    "bundle": {
+      "type": "object",
+      "required": ["id", "title", "root"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "root": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/source"}
+    },
+    "slides": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/slide"}
+    },
+    "transcript_segments": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/transcriptSegment"}
+    },
+    "frames": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/frame"}
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["id", "kind", "path", "sha256", "rights"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {
+          "enum": [
+            "pptx",
+            "pdf",
+            "revealjs",
+            "video",
+            "transcript",
+            "slide-image",
+            "document",
+            "other"
+          ]
+        },
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "rights": {"type": "string", "minLength": 1},
+        "normalized_from": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "slide": {
+      "type": "object",
+      "required": [
+        "id",
+        "page",
+        "source_id",
+        "image",
+        "image_sha256",
+        "extracted_text",
+        "summary",
+        "links",
+        "transcript_segment_ids",
+        "frame_ids"
+      ],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "page": {"type": "integer", "minimum": 1},
+        "source_id": {"type": "string", "minLength": 1},
+        "image": {"type": ["string", "null"]},
+        "image_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "extracted_text": {"type": ["string", "null"]},
+        "summary": {"type": ["string", "null"]},
+        "links": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "transcript_segment_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "frame_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "transcriptSegment": {
+      "type": "object",
+      "required": ["id", "start_seconds", "end_seconds", "text", "source_id"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "start_seconds": {"type": "number", "minimum": 0},
+        "end_seconds": {"type": ["number", "null"], "minimum": 0},
+        "text": {"type": "string", "minLength": 1},
+        "source_id": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "frame": {
+      "type": "object",
+      "required": [
+        "id",
+        "timestamp_seconds",
+        "path",
+        "sha256",
+        "description",
+        "duplicate_of",
+        "screen_class",
+        "face_quality",
+        "source_id"
+      ],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "timestamp_seconds": {"type": "number", "minimum": 0},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "description": {"type": ["string", "null"]},
+        "duplicate_of": {"type": ["string", "null"]},
+        "screen_class": {
+          "enum": [
+            "diagram",
+            "text-slide",
+            "demo-screen",
+            "terminal-result",
+            "collaboration-screen",
+            "talking-head",
+            "duplicate",
+            "unclassified"
+          ]
+        },
+        "face_quality": {
+          "type": ["object", "null"],
+          "properties": {
+            "mouth": {"enum": ["open", "closed", "unknown"]},
+            "eyes": {"enum": ["open", "closed", "unknown"]},
+            "orientation": {"enum": ["camera", "away", "unknown"]}
+          },
+          "required": ["mouth", "eyes", "orientation"],
+          "additionalProperties": false
+        },
+        "source_id": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,13 +1,13 @@
 ---
 name: content-ideas
-version: "2.2.0"
+version: "2.3.0"
 description: >
   Build a For You feed from tracked competitors and turn it into content ideas.
   Use for competitor research, trend discovery, and post or video brief
   generation. First run walks through setup.
+allowed-tools: Bash, Read, Write
 argument-hint: "[topic filter]"
 user-invocable: true
-allowed-tools: Bash, Read, Write, AskUserQuestion
 metadata:
   requires:
     env:
@@ -98,8 +98,9 @@ the rest the skill bootstraps for you and you can refine any time. Nothing to
 install; one ScrapeCreators API key covers all four platforms — X, Instagram,
 TikTok, and YouTube (including transcripts).
 
-Show this as a normal message, then call `AskUserQuestion` (don't repeat the
-welcome inside the modal):
+Show this as a normal message. If the host exposes an interactive question
+tool, use it (don't repeat the welcome inside the modal); otherwise ask the
+same concise question in chat and wait for the answer:
 
 > I turn your social presence into a daily For You feed: I build a profile from
 > your own channels, track the competitors you pick, and surface what's
@@ -107,13 +108,14 @@ welcome inside the modal):
 > ScrapeCreators API key (one key covers all four platforms; 100 free calls, no
 > card).
 
-`AskUserQuestion` — "Add your ScrapeCreators API key?"
+Ask: "Add your ScrapeCreators API key?"
 - Open scrapecreators.com to grab a free key
 - I'll paste a key now
 - Skip for now
 
-If they pick "Open scrapecreators.com", run `open https://scrapecreators.com`,
-then ask them to paste the key. When the user pastes a key, write
+If they pick "Open scrapecreators.com", use the host's browser-opening tool
+when available. Otherwise provide `https://scrapecreators.com` as a clickable
+link. Then ask them to paste the key. When the user pastes a key, write
 `~/.config/content/.env` (create dirs; append, don't clobber other keys):
 
 ```
@@ -134,7 +136,8 @@ This is what personalizes everything: ideas get framed against *your* niche,
 pillars, and goal, and checked against what you've already posted. Build it from
 the user's own presence rather than a long questionnaire.
 
-Ask for their own channels (`AskUserQuestion`: "Set up your profile now?" →
+Ask for their own channels (interactive question tool when available, otherwise
+normal chat: "Set up your profile now?" →
 **I'll share my handles** / **Skip — I'll add it later**). When they share
 handles — free-form across any platforms (`@me` on X, a YouTube channel, a
 TikTok, etc.) — normalize them into the `{platform: [handle]}` shape and scrape
@@ -156,7 +159,8 @@ From the returned posts (plus comments/transcripts), draft the profile:
 - **Target Platforms / Research Channels** — the platforms they're active on.
 - **Search Terms** — concrete keywords from their top topics.
 
-Two things you can't scrape — **ask** (`AskUserQuestion`), then fold the answers in:
+Two things you can't scrape — **ask** using the host's interactive question
+tool when available, or normal chat otherwise, then fold the answers in:
 - **Content Goal** — why they post (lead gen / awareness / growth / thought
   leadership / selling…), where they drive traffic, and what they're promoting.
 - **Pillar confirmation** — show the 3–5 pillars you inferred and let them
@@ -175,8 +179,9 @@ on.
 
 ### 0d. Track competitors
 
-Ask who they want to track (`AskUserQuestion`: list them now / skip and use an
-example). If they list handles, create `brand/tracked-accounts/{platform}.md`
+Ask who they want to track (interactive question tool when available, otherwise
+normal chat: list them now / skip and use an example). If they list handles,
+create `brand/tracked-accounts/{platform}.md`
 files per the schema in the plugin's `FILE-SCHEMAS.md`. If they skip, run a
 small example so they see the shape, and tell them they can add real
 competitors later.
@@ -532,8 +537,6 @@ default browser**. Still hand the user the `http://localhost:<port>` URL the
 command prints, so they can reopen it if the tab closes. (Pass `--no-browser` to
 suppress the auto-open; the URL is printed either way.) The command runs in the
 foreground until the user stops it with Ctrl+C, so run it in the background if
-you need to keep working.
-
 In a headless/no-display environment, write a self-contained file instead and
 point the user at it (the page lets them download their reactions):
 
@@ -548,6 +551,11 @@ of standout posts) and the page location.
 ---
 
 ## Step 7: Offer next steps
+
+Before presenting slash-command handoffs, check which downstream skills are
+available in the current host. Show unavailable handoffs as "not installed"
+rather than inviting a command that cannot run. The `pipeline-runner` handoff is
+valid only after its dependency preflight succeeds.
 
 The user reacts to the feed in the browser; their reactions save to
 `research/{today}/feedback.json` on their own — automatically in server mode,

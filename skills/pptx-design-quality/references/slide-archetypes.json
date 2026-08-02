@@ -1,0 +1,17 @@
+{
+  "contract_version": "1.0",
+  "archetypes": [
+    {"id": "cover", "audience_job": "Understand the promise and context", "required_regions": ["title"], "optional_regions": ["subtitle", "context", "brand"], "max_words": 28, "visual_modes": ["native", "extract", "author-raster", "image-model"]},
+    {"id": "executive-summary", "audience_job": "Grasp the answer, evidence, and decision on one page", "required_regions": ["action-title", "answer", "evidence", "decision"], "optional_regions": ["risks"], "max_words": 110, "visual_modes": ["native", "author-raster"]},
+    {"id": "section-divider", "audience_job": "Reset context between argument sections", "required_regions": ["section-title"], "optional_regions": ["section-promise"], "max_words": 24, "visual_modes": ["native", "image-model"]},
+    {"id": "big-number", "audience_job": "Retain one material metric and implication", "required_regions": ["metric", "implication"], "optional_regions": ["comparison", "citation"], "max_words": 42, "visual_modes": ["native"]},
+    {"id": "three-card-argument", "audience_job": "Compare three parallel claims or workstreams", "required_regions": ["action-title", "card-1", "card-2", "card-3"], "optional_regions": ["implication"], "max_words": 90, "visual_modes": ["native", "author-raster"]},
+    {"id": "comparison", "audience_job": "Understand a consequential contrast", "required_regions": ["action-title", "left", "right"], "optional_regions": ["decision"], "max_words": 100, "visual_modes": ["native", "extract"]},
+    {"id": "decision-scorecard", "audience_job": "Choose between options using explicit criteria", "required_regions": ["action-title", "options", "criteria", "recommendation"], "optional_regions": ["sensitivity"], "max_words": 120, "visual_modes": ["native"]},
+    {"id": "roadmap", "audience_job": "Understand sequence, ownership, and outcomes", "required_regions": ["action-title", "phases", "outcomes"], "optional_regions": ["owners", "gates"], "max_words": 110, "visual_modes": ["native", "author-raster"]},
+    {"id": "operating-model", "audience_job": "Understand roles, flows, and governance", "required_regions": ["action-title", "actors", "flow", "governance"], "optional_regions": ["systems"], "max_words": 115, "visual_modes": ["native", "author-raster"]},
+    {"id": "use-case-realization", "audience_job": "See how a use case becomes an executable solution", "required_regions": ["challenge", "solution", "how-it-works", "value", "stack", "users"], "optional_regions": ["systems", "organizations", "risks"], "max_words": 145, "visual_modes": ["native", "author-raster", "extract"]},
+    {"id": "risk-mitigation", "audience_job": "Understand material risks and mitigations", "required_regions": ["action-title", "risks", "mitigations"], "optional_regions": ["owners", "signals"], "max_words": 105, "visual_modes": ["native"]},
+    {"id": "recommendation-ask", "audience_job": "Know the recommendation, commitment, and next move", "required_regions": ["recommendation", "rationale", "ask", "next-step"], "optional_regions": ["decision-date"], "max_words": 75, "visual_modes": ["native"]}
+  ]
+}

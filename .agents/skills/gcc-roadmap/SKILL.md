@@ -1,21 +1,23 @@
 ---
 name: gcc-roadmap
 description: >
-  Generate a GCC Implementation Roadmap slide deck (17 slides) from an ikigai
-  report or any company + BD-person context. Shows the full delivery journey:
+  Use when the user asks for a "GCC implementation roadmap", "delivery
+  roadmap", or roadmap deck from an ikigai report or company + BD-person
+  context. Generates a 17-slide delivery journey:
   time-phased (Sprint → Transformation → Partnership) × capability-layered
   (Modernize → Activate → Innovate). Designed as Stage 3 of the
   ikigai-gamma-slidedeck pipeline, or standalone for any AI company selling
   to GCCs in India.
-triggers:
-  - gcc-roadmap
-  - gcc implementation roadmap
-  - implementation roadmap
-  - delivery roadmap
-  - roadmap deck
-version: "1.0"
-validated_on: "runs/2026-06-16-gcc-implementation-roadmap (FPT Software, 17 slides)"
-chained_from: "ikigai-gamma-slidedeck (Stage 3 — BD/company-first mode only)"
+metadata:
+  triggers:
+    - gcc-roadmap
+    - gcc implementation roadmap
+    - implementation roadmap
+    - delivery roadmap
+    - roadmap deck
+  version: "1.0"
+  validated_on: "runs/2026-06-16-gcc-implementation-roadmap (FPT Software, 17 slides)"
+  chained_from: "ikigai-gamma-slidedeck (Stage 3 — BD/company-first mode only)"
 ---
 
 # gcc-roadmap
@@ -51,7 +53,7 @@ If chaining from `ikigai-gamma-slidedeck`, all inputs are already available in
 - `build_roadmap_deck.py` — parameterized builder (always generate)
 - `<name>-gcc-roadmap-deck-draft.pptx` — 17-slide validated deck
 - `_preview/contact_*.png` — QA contact sheets
-- Desktop copy at `/mnt/c/Users/sheke/OneDrive/Desktop/<name>-gcc-roadmap.pptx`
+- Optional reviewed copy under `$CLIENT_DELIVERY_DIR` when configured
 
 ---
 
@@ -85,7 +87,8 @@ The validated FPT mapping (reference):
 
 ### Step 3 — Generate build_roadmap_deck.py
 
-Use `~/.claude/skills/gcc-roadmap/build_deck_template.py` as the base.
+Resolve this skill's directory, then use its adjacent
+`build_deck_template.py` as the base.
 Substitute all `{{VAR}}` placeholders with extracted values.
 
 Key substitutions:
@@ -115,20 +118,20 @@ Must print `[validated]`. Then run preview:
 
 ```python
 import sys; from pathlib import Path
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, "<resolved-branded-pptx-deck-dir>/scripts")
 import preview_pptx
 preview_pptx.render("<pptx_path>", Path("<preview_dir>"))
 ```
 
 Read all contact sheets. Fix any overflow before delivering.
+If the branded builder or preview tooling cannot be resolved, mark the deck
+`blocked` or `draft` as appropriate; never present it as reviewed.
 
 ### Step 5 — Deliver
 
-```bash
-cp <pptx_path> /mnt/c/Users/sheke/OneDrive/Desktop/<name>-gcc-roadmap.pptx
-```
-
-If file locked: write to a new name with `-v2` suffix.
+If `$CLIENT_DELIVERY_DIR` is configured, copy the reviewed deck there. Otherwise
+leave it in the run folder and report that no external delivery destination was
+configured. Never invent a machine-specific Desktop path.
 
 ---
 
@@ -169,7 +172,7 @@ If file locked: write to a new name with `-v2` suffix.
 - Invent platform capabilities not evidenced in the ikigai report or company website
 - Skip the pptxkit `validate_pptx()` check
 - Skip the preview QA step — the matrix slide (slide 4) is the most overflow-prone
-- Deliver without a Desktop copy
+- Label an unpreviewed deck as reviewed
 
 ## Success Criteria
 
@@ -177,12 +180,40 @@ If file locked: write to a new name with `-v2` suffix.
 - All contact sheets reviewed, no red overflow
 - Slide 4 (matrix) readable at normal zoom — if text is too small, reduce to 8pt minimum
 - Platform-to-layer mapping is accurate to the company's actual stack
-- Desktop .pptx delivered
+- Reviewed deck remains in the run folder and is copied to
+  `$CLIENT_DELIVERY_DIR` only when configured
 
 ## Resources
 
 - Validated FPT run: `~/content-ideas/runs/2026-06-16-gcc-implementation-roadmap/`
 - build_deck.py reference: `~/content-ideas/runs/2026-06-16-gcc-implementation-roadmap/build_deck.py`
-- build_deck_template.py: `~/.claude/skills/gcc-roadmap/build_deck_template.py`
-- pptxkit API: `~/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
-- Chained from: `~/.claude/skills/ikigai-gamma-slidedeck/SKILL.md` (Stage 3)
+- build_deck_template.py: `build_deck_template.py` beside this file
+- pptxkit API: resolve the installed `branded-pptx-deck` skill; block branded
+  output if it is unavailable
+- Chained from: sibling `ikigai-gamma-slidedeck` skill (Stage 3)
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+- `branded-pptx-deck` or compatible pptxkit workflow — required for branded output and QA
+
+### Relationships
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `ikigai` | Sequential upstream | standalone report is the source | `runs/.../<name>-ikigai-report.md` |
+| `ikigai-gamma-slidedeck` | Sequential upstream | BD/company-first chained run | `runs/.../<name>-ikigai-report.md` |
+| `branded-pptx-deck` | Orchestrator dependency | every PPTX build | reviewed `.pptx` and preview contact sheets |
+
+### Runtime Preamble
+State whether this is standalone or chained from an ikigai report, whether the
+branded builder is available, and where reviewed output will be delivered.
+
+## Gotchas
+
+- Never invent company platforms or proof points; trace them to supplied evidence.
+- Never label a deck reviewed until validation and visual QA both pass.
+- Never copy output to a machine-specific Desktop path; use
+  `$CLIENT_DELIVERY_DIR` only when configured.

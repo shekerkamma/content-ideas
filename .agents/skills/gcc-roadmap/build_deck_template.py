@@ -3,8 +3,9 @@
 Substitute ALL {{VAR}} sections at the top before running.
 Generate from ikigai report data or standalone company context.
 """
+import os
 import sys
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, os.path.expanduser("~/.claude/skills/branded-pptx-deck/scripts"))
 from pptxkit import Brand, Deck, PP_ALIGN, MSO_ANCHOR, Inches, Pt, RGBColor
 
 # ══════════════════════════════════════════════════════════════════════════════

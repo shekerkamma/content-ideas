@@ -1,29 +1,31 @@
 ---
 name: openhands-niche-agency
 description: >
-  Full business-model kit for the "Done-For-You AI Engineering Team" micro-agency
-  model. Takes a niche (real estate, dental, law, etc.) and produces: validated
+  Use when the user asks for an "OpenHands agency", "AI engineering team for
+  real estate", "SMB AI agency", or a done-for-you AI engineering business
+  model. Takes a niche and produces: validated
   vertical score, top 5 use cases, pricing tiers, tech stack blueprint, AGENTS.md
   template, landing page copy, and 7-day first-client plan. Monetization focus —
   designed to generate $2k–$5k/mo per client running OpenHands + subagents + MCPs.
-triggers:
-  - openhands-niche-agency
-  - done-for-you AI engineering
-  - ai engineering team for
-  - smb ai agency
-  - openhands agency
-version: "1.0"
-validated_on: "runs/2026-06-16-openhands-smb-use-cases (8 verticals scored, 25 use cases, 3 RE pitches)"
-chained_from: "standalone — or chain output into ikigai-gamma-slidedeck for personal BD positioning"
+metadata:
+  triggers:
+    - openhands-niche-agency
+    - done-for-you AI engineering
+    - ai engineering team for
+    - smb ai agency
+    - openhands agency
+  version: "1.0"
+  validated_on: "runs/2026-06-16-openhands-smb-use-cases (8 verticals scored, 25 use cases, 3 RE pitches)"
+  chained_from: "standalone — or chain output into ikigai-gamma-slidedeck for personal BD positioning"
 ---
 
 # openhands-niche-agency
 
-Builds a complete "Done-For-You AI Engineering Team" business-model kit for any
-SMB niche. One person can run this. Two-person team scales to $50k/mo.
+Builds a complete "Done-For-You AI Engineering Team" business-model kit for an
+SMB niche. Validate staffing, capacity, pricing, and margin for each run.
 
-**The model in one line:** Self-host OpenHands + specialist subagents + 14k+ MCP
-servers → sell as a managed AI engineering team to SMBs at $2k–$5k/month.
+**The model in one line:** Self-host OpenHands + specialist subagents + verified
+MCP integrations → sell as a managed AI engineering team to SMBs.
 
 ## When To Use
 
@@ -171,10 +173,10 @@ One-time setup fee: $500 (covers configuration, onboarding call, AGENTS.md deplo
 
 ### Why This Price Point Works
 
-- $2,500/mo vs $15,000/mo dev shop → 6× cheaper
-- $2,500/mo vs $25,000/mo junior developer (all-in) → 10× cheaper
-- No hiring risk, no sick days, no handoff friction, works 24/7
-- Client breaks even the moment one use case saves or generates $2,500
+Compare the proposed price with current, sourced alternatives in the target
+market. Show the client's break-even calculation from verified workflow volume,
+labor cost, revenue impact, and operating cost. Do not reuse benchmark numbers
+from another niche or date.
 
 ### Objection Handling
 
@@ -195,13 +197,12 @@ Generate `tech-stack.md` with:
 ### OpenHands Setup
 
 ```
-VPS Spec: $20/mo DigitalOcean Droplet (4 vCPU / 8GB RAM / 80GB SSD)
-OS: Ubuntu 22.04
-Docker: yes (OpenHands runs in Docker)
-Setup time: 1 afternoon with Claude Code
-Maintenance: ~2 hours/week (monitoring, exception handling)
-Cost: $20/mo VPS + ~$50-100/mo API costs (Claude/GPT per task) = ~$100-150/mo
-Margin on $2,500/mo client: ~$2,300+/mo per client
+Deployment: derive from the current OpenHands documentation
+Compute: size from measured workflow concurrency and sandbox requirements
+Setup time: estimate after validating the selected deployment path
+Maintenance: estimate from the actual workflows and support SLA
+Cost: calculate current hosting, model, storage, monitoring, and support costs
+Margin: calculate from verified costs and the selected client price
 ```
 
 ### Subagents (per niche)
@@ -225,7 +226,8 @@ legal-researcher       → case research, document review summary
 
 ### MCP Server Stack (per niche)
 
-For each niche, select 6-8 MCP servers from the 14k+ available:
+For each niche, select 6-8 MCP servers whose availability, ownership,
+authentication, and maintenance status have been verified:
 
 | Category | Server | When to Use |
 |---|---|---|
@@ -245,50 +247,9 @@ For each niche, select 6-8 MCP servers from the 14k+ available:
 Generate a niche-specific `AGENTS.md` file. This is what OpenHands reads to understand
 the agent's role, capabilities, and constraints. It is the operational heart of the product.
 
-```markdown
-# AI Engineering Team — [NICHE]
-## Role
-You are a specialized AI engineering team for [niche] businesses. Your job is to
-build, maintain, and operate custom software workflows that replace manual, repetitive
-tasks — so the [niche] owner can focus on [core value of the niche, e.g. "closing deals",
-"treating patients", "practicing law"].
-
-## Capabilities
-- Read and edit code in this repository
-- Run tests and validate outputs before delivering
-- Open pull requests for review
-- Connect to MCP servers: [list the 6-8 servers for this niche]
-- Process documents: [specific doc types for the niche]
-- Communicate via [email/SMS/Slack] when workflows complete or exceptions occur
-
-## Active Workflows
-[List the use cases from Stage 2 — one section per use case]
-
-### [Use Case 1 Name]
-- Trigger: [what starts this workflow]
-- Input: [what the agent reads/receives]
-- Process: [step-by-step what the agent does]
-- Output: [what gets delivered to the client or their clients]
-- Exception: [when to pause and notify the human supervisor]
-
-## Constraints
-- Never take irreversible actions without human confirmation
-  (e.g., don't send mass emails, don't delete records, don't charge cards)
-- Flag any PHI / PII and apply [niche-specific] compliance rules
-- All outputs go to staging for review before going live — unless the operator
-  explicitly enables autopilot for a specific workflow
-- Log every action to [Notion/Postgres/Google Sheet] for the weekly review
-
-## Escalation Protocol
-If any workflow encounters an unexpected state, stop and notify the supervisor via
-[Slack/email/SMS] with: workflow name, step where it stopped, and the data it was
-processing. Do not retry without explicit confirmation.
-
-## Quality Standard
-Before marking any task complete: verify the output matches the expected format,
-check that all required fields are populated, and confirm the downstream system
-received the data. If verification fails, log the failure and escalate.
-```
+Read [references/agents-template.md](references/agents-template.md), customize
+every bracketed field from the verified use cases and controls, and save the
+result as the run's `AGENTS.md`.
 
 ---
 
@@ -506,6 +467,32 @@ Use `branded-pptx-deck` skill with this structure:
   - `re-triplet-pitch/` — 3 detailed real estate client pitches (reference pattern)
   - `playbook.md` — original skill chain map
 - OpenHands docs: `https://docs.openhands.dev/`
-- OpenHands repo: `https://github.com/All-Hands-AI/OpenHands`
-- pptxkit: `~/.claude/skills/branded-pptx-deck/scripts/pptxkit.py`
-- Branded deck: `~/.claude/skills/branded-pptx-deck/SKILL.md`
+- OpenHands repo: `https://github.com/OpenHands/OpenHands`
+- pptxkit and branded deck workflow: resolve the installed
+  `branded-pptx-deck` skill; mark deck output blocked if it is unavailable
+
+## Skill Relationships
+
+### Category
+Business Automation
+
+### Dependencies
+- Current OpenHands repository and documentation for implementation claims.
+
+### Relationships
+| Skill | Pattern | Condition | Handoff Artifact |
+|---|---|---|---|
+| `vertical-scorer` | Sequential upstream | uncached niche | `vertical-score.md` |
+| `ikigai` | Sequential upstream | operator positioning is available | operator/company context |
+| `branded-pptx-deck` | Sequential downstream | optional pitch deck | reviewed `.pptx` |
+| `founders-build-stack` | Alternative / Peer | founder is building a SaaS rather than an agency | — |
+
+### Runtime Preamble
+State the niche, which prior evidence was found, which dependencies are
+available, and which cost or implementation claims still require verification.
+
+## Gotchas
+
+- Verify OpenHands implementation details against the current official repo and docs.
+- Treat all price, cost, margin, and market-size figures as dated assumptions requiring sources.
+- Do not deploy healthcare, legal, financial, or personal-data workflows without domain-specific controls and human review.

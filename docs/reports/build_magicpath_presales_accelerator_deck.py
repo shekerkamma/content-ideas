@@ -5,7 +5,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, "/home/sheke/.claude/skills/branded-pptx-deck/scripts")
 from pptxkit import Deck, Inches, PP_ALIGN, MSO_ANCHOR
 from PIL import Image, ImageDraw, ImageFont
 
@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 TOTAL = 18
 OUT = "docs/reports/magicpath-presales-demo-accelerator-reviewed.pptx"
 ASSET_DIR = Path("docs/reports/magicpath_presales_assets")
-FFMPEG = "/home/shekerk/snap/codex/64/.dotnet/tools/ffmpeg"
+FFMPEG = "/home/sheke/snap/codex/64/.dotnet/tools/ffmpeg"
 
 d = Deck(footer="MagicPath Pre-Sales Demo Accelerator | June 2026")
 b = d.b

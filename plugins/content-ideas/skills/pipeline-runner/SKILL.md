@@ -1,13 +1,13 @@
 ---
 name: pipeline-runner
-version: "1.1.0"
+version: "1.2.0"
 description: >
   Run a selected use case from signal to strategy and deal prep. Reads the
   latest feed, lets the user choose a use case, and chains the downstream
   research, scoring, brief, deck, and pre-sales stages.
+allowed-tools: Bash, Read, Write
 argument-hint: "[use case number, name, or 'list']"
 user-invocable: true
-allowed-tools: Bash, Read, Write, AskUserQuestion
 ---
 
 # pipeline-runner
@@ -15,13 +15,36 @@ allowed-tools: Bash, Read, Write, AskUserQuestion
 Chains a use case hypothesis from `/content-ideas` through the AI strategy and
 pre-sales pipeline. The full chain is:
 
-`GBrain Recall → content-research → vertical-scorer → ai-strategy-brief → branded-pptx-deck → research-to-strategy → presales-deal-prep → GBrain Write-back`
+`last30days → GBrain Recall → content-research → vertical-scorer → ai-strategy-brief → branded-pptx-deck → research-to-strategy → presales-deal-prep → GBrain Write-back`
 
 Each stage produces a deliverable and gates the next — a PASS verdict at Stage
 2 stops the pipeline early, saving time.
 
 The pipeline consumes existing skills as-is via their slash commands. No
 business logic lives here — this is pure orchestration.
+
+---
+
+## Dependency preflight
+
+Before starting research, check whether each downstream capability is available
+as a loaded skill, connected tool, or repo-local equivalent:
+
+| Capability | Required? | Fallback |
+|---|---|---|
+| `last30days` | No | Skip and mark the signal stage unavailable |
+| GBrain recall/write-back | No | Continue without durable recall and say so in status |
+| `content-research` | Yes | Use current-research tools and save a local research brief |
+| `vertical-scorer` | Yes | Stop before scoring if neither the skill nor its rubric is available |
+| `ai-strategy-brief` | Yes | Stop before briefing if its output contract is unavailable |
+| `branded-pptx-deck` / pptxkit | Required for deck stage | Mark the deck blocked; never substitute an unbranded deck |
+| `research-to-strategy` | No | Skip the optional full-strategy stage |
+| `presales-deal-prep` | No | Skip deal prep and preserve prospect context in the run log |
+
+Report missing capabilities once, before the first external call. Continue
+through safe fallbacks and optional skips. If a required stage has no documented
+fallback, stop there with completed artifacts intact instead of reporting the
+whole pipeline as successful.
 
 ---
 
@@ -50,6 +73,46 @@ Once selected, confirm:
 > **Suggested prospects:** {orgs joined}
 >
 > Proceed? / Pick a different one / Add a prospect
+
+---
+
+## Stage 0.5: Last 30 Days Signal (real-time engagement)
+
+Invoke the `last30days` skill with `"{verticalName}"` when it is available.
+Hosts that support slash commands may use `/last30days "{verticalName}"`.
+Otherwise mark this
+optional stage unavailable and continue to GBrain Recall.
+
+This runs before GBrain Recall and before any source gathering. It pulls real-time engagement signals from Reddit, X/Twitter, YouTube, TikTok, Hacker News, Polymarket, and GitHub — ranked by actual upvotes, likes, and prediction-market money, not editorial curation. Output is a synthesized research brief in conversation context.
+
+Pass the use case `title` or `verticalName` as the query (e.g., `AI agent orchestration for ERP` or `on-premise LLM compliance`). For named-entity topics (product names, company names, person names), the skill generates its own query plan internally.
+
+After the skill completes, extract for downstream use:
+- **Active communities**: which subreddits, X handles, and YouTube channels are most active on this topic
+- **Engagement spikes**: posts or threads with unusually high score (signals timing and framing)
+- **Polymarket odds**: if any prediction markets exist on this vertical, record the odds and payout dates
+- **Competing products or vendors** surfaced in discussions
+- **Practitioner language**: the actual words practitioners use (not vendor copy) — use this to improve Stage 1 source queries and Stage 3 brief framing
+
+These signals feed Stage 1 source selection directly: prefer sources that match the active communities and high-engagement threads found here, and supplement the standard architecture/market/compliance search with specific subreddits, repos, or channels the skill surfaced.
+
+If `SCRAPECREATORS_API_KEY` is not set, the skill runs in degraded mode (web + HN only, no Reddit/X/YouTube API). Still useful — proceed.
+
+Print status:
+
+```
+PIPELINE: {title}
+═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals — Reddit/HN/X/Polymarket/YouTube
+  ◻ GBrain Recall     (pending)
+  ◻ Content Research  (pending)
+  ◻ Vertical Score    (pending)
+  ◻ Strategy Brief    (pending)
+  ◻ PPTX Deck         (pending)
+  ◻ Full Strategy     (pending)
+  ◻ Deal Prep         (pending)
+  ◻ GBrain Write-back (pending)
+```
 
 ---
 
@@ -147,6 +210,7 @@ Print status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals — Reddit/HN/X/Polymarket/YouTube
   ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources → second-brain + feed-data updated
   ◻ Vertical Score    (pending)
@@ -161,7 +225,10 @@ PIPELINE: {title}
 
 ## Stage 2: Vertical Scorer (GO/WAIT/PASS gate)
 
-Invoke `/vertical-scorer "{verticalName}"`.
+Invoke the `vertical-scorer` skill with `"{verticalName}"` when it is available.
+Hosts that support slash commands may use `/vertical-scorer "{verticalName}"`.
+If the skill is unavailable, mark this stage blocked, preserve completed
+artifacts, and tell the user which dependency is missing.
 
 The scorer now benefits from the research gathered in Stage 1 — source URLs
 and second-brain notes provide grounded evidence for each scoring dimension.
@@ -177,6 +244,8 @@ Print status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ◻ Strategy Brief    (pending)
@@ -189,7 +258,10 @@ PIPELINE: {title}
 
 ## Stage 3: AI Strategy Brief
 
-Invoke `/ai-strategy-brief "{verticalName}"`.
+Invoke the `ai-strategy-brief` skill with `"{verticalName}"` when it is
+available. Hosts that support slash commands may use
+`/ai-strategy-brief "{verticalName}"`. If the skill is unavailable, mark this
+and dependent stages blocked without inventing a substitute deliverable.
 
 Pass the hypothesis, source URLs, and second-brain note paths as additional
 context so the brief is grounded in the research from Stage 1, not just
@@ -201,6 +273,8 @@ When the brief is produced, update status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ✓ Strategy Brief    {filename}.docx
@@ -213,8 +287,10 @@ PIPELINE: {title}
 
 ## Stage 4: Branded PPTX Deck
 
-Invoke `/branded-pptx-deck` to generate a multi-slide presentation from the
-use case data. The deck uses `pptxkit` from the branded-pptx-deck skill and
+Invoke the `branded-pptx-deck` skill to generate a multi-slide presentation
+from the use case data. Hosts that support slash commands may use
+`/branded-pptx-deck`. If the skill is unavailable, mark the deck stage blocked.
+The deck uses `pptxkit` from the branded-pptx-deck skill and
 follows the Canva-adapted use case realization layout.
 
 This is a hard requirement for client-facing output. Always use the branded
@@ -287,6 +363,8 @@ Update status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ✓ Strategy Brief    {filename}.docx
@@ -325,6 +403,8 @@ Update final status:
 ```
 PIPELINE: {title}
 ═══════════════════════════════════════
+  ✓ Last 30 Days      {N} signals
+  ✓ GBrain Recall     semantic retrieval seeded Stage 1
   ✓ Content Research  {count} sources
   ✓ Vertical Score    {score}/35 — {verdict}
   ✓ Strategy Brief    {filename}.docx
@@ -337,10 +417,15 @@ PIPELINE: {title}
 
 ## Notes
 
-- **No downstream skills are modified.** This skill invokes `/content-research`,
-  `/vertical-scorer`, `/ai-strategy-brief`, `/branded-pptx-deck`,
-  `/research-to-strategy`, and `/presales-deal-prep` exactly as a human would —
-  by their slash commands with string arguments.
+- **No downstream skills are modified.** This skill invokes `/last30days`,
+  `/content-research`, `/vertical-scorer`, `/ai-strategy-brief`,
+  `/branded-pptx-deck`, `/research-to-strategy`, and `/presales-deal-prep`
+  exactly as a human would — by their slash commands with string arguments.
+- **Last 30 Days is the signal layer.** Stage 0.5 runs first and surfaces what
+  practitioners are actually saying — the subreddits, X threads, YouTube channels,
+  and prediction markets with real money on the topic. It shapes Stage 1 source
+  selection and Stage 3 brief framing with practitioner language before any
+  formal research begins.
 - **Content research is the foundation.** Stage 1 grounds every subsequent stage
   in real data — the scorer uses researched evidence, the brief cites specific
   numbers, the deck renders verified facts, and deal prep references actual

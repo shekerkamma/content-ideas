@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """FPT Software — GCC Implementation Roadmap deck builder. 17 slides."""
 import sys
-sys.path.insert(0, "/home/shekerk/.claude/skills/branded-pptx-deck/scripts")
+sys.path.insert(0, "/home/sheke/.claude/skills/branded-pptx-deck/scripts")
 from pptxkit import Brand, Deck, PP_ALIGN, MSO_ANCHOR, Inches, Pt, RGBColor
 
-OUT   = "/home/shekerk/content-ideas/runs/2026-06-16-gcc-implementation-roadmap/gcc-roadmap-deck-draft.pptx"
+OUT   = "/home/sheke/content-ideas/runs/2026-06-16-gcc-implementation-roadmap/gcc-roadmap-deck-draft.pptx"
 TOTAL = 17
 FOOTER = "FPT Software · GCC Implementation Roadmap · Jun 2026"
 

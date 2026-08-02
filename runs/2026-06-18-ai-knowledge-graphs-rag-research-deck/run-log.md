@@ -2,7 +2,7 @@
 date: 2026-06-18
 topic: AI Knowledge Graphs vs Traditional RAG: The Case for Compilation-Based Retrieval
 style: neon (Aurora Glass)
-kb: /home/shekerk/test-kb
+kb: /home/sheke/test-kb
 
 ## Stage results
 - Stage 1 Research:  ✓ ai-knowledge-graphs-rag-research.md (~750 words, 6 sources)
@@ -32,5 +32,5 @@ kb: /home/shekerk/test-kb
 
 ## Notes
 - KB patch required for Gemini compatibility: LITELLM_DROP_PARAMS=True + _cached_text() provider guard
-  (patched in /home/shekerk/OpenKB, pushed to shekerkamma/OpenKB)
+  (patched in /home/sheke/OpenKB, pushed to shekerkamma/OpenKB)
 - OKF v0.1 conformance: all wiki pages now emit title/tags/timestamp frontmatter

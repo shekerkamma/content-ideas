@@ -1,0 +1,41 @@
+/* ============================================================
+   theme.css — BRAND IDENTITY (swap this one file to reskin)
+   Theme: "Operations Console" (dark, instrument-panel)
+   Every token below is consumed by deck.css. Change values
+   here — never touch deck.css — to restyle every slide.
+   ============================================================ */
+:root{
+  /* — grounds & neutrals (picked, not defaulted: slate biased toward teal) — */
+  --ground:#0a0e13;
+  --panel:#111a23;
+  --panel-2:#16222e;
+  --line:rgba(255,255,255,0.09);
+  --line-strong:rgba(255,255,255,0.16);
+
+  /* — ink — */
+  --ink:#e8eef4;
+  --muted:#93a1af;
+  --faint:#61707d;
+
+  /* — semantic accents (the whole argument is colour-coded) — */
+  --accent-a:#f2a541;          /* AMBER  — the competitor / their strength */
+  --accent-a-dim:rgba(242,165,65,0.12);
+  --accent-b:#2ad4bf;          /* TEAL   — our wedge / what has to be true */
+  --accent-b-dim:rgba(42,212,191,0.11);
+  --alert:#ff6363;             /* RED    — kill-criteria / risk */
+  --alert-dim:rgba(255,99,99,0.12);
+
+  /* — atmosphere (page-level glow); set to `none` for a flat theme — */
+  --atmosphere:
+    radial-gradient(1200px 700px at 78% -8%, rgba(242,165,65,0.06), transparent 60%),
+    radial-gradient(1100px 800px at 12% 110%, rgba(42,212,191,0.07), transparent 55%);
+
+  /* — type roles — */
+  --font-display:"SF Pro Display","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-mono:"SF Mono","JetBrains Mono","Cascadia Code",ui-monospace,"Roboto Mono",Menlo,Consolas,monospace;
+
+  /* — display weight / tracking knobs — */
+  --display-weight:680;
+  --display-tracking:-0.02em;
+}
