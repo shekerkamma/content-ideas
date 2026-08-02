@@ -4,7 +4,7 @@
 |---|---|---|
 | `DECK_NO_SLIDES` | error | Presentation contains no slides |
 | `DECK_ASPECT_RATIO` | error | Slide dimensions do not match the declared output ratio |
-| `SLIDE_EMPTY` | error | A slide contains no visible or editable objects |
+| `SLIDE_EMPTY` | error | A slide contains no visible or editable objects (a picture set as the slide background fill counts as content — e.g. Marp's `image-per-slide` export) |
 | `SHAPE_OUT_OF_BOUNDS` | error | A shape extends beyond the slide canvas |
 | `TEXT_BOX_OVERLAP` | error | Two non-empty text boxes overlap materially |
 | `SLIDE_MISSING_TITLE` | warning | No title-like text appears in the upper slide region |

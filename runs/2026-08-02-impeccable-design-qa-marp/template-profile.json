@@ -1,0 +1,39 @@
+{
+  "contract_version": "1.0",
+  "template": {
+    "id": "client-executive",
+    "source": null,
+    "aspect_ratio": "16:9",
+    "output_mode": "native"
+  },
+  "brand": {
+    "colors": {"ink": "#172033", "page": "#FFFFFF", "accent": "#0A84FF"},
+    "heading_font": "Aptos Display",
+    "body_font": "Aptos",
+    "logo_policy": "Use only supplied approved marks in the configured safe zone",
+    "image_treatment": "Use purposeful crops with consistent edge treatment",
+    "icon_style": "Use one restrained line-icon family"
+  },
+  "geometry": {
+    "safe_margin_inches": 0.5,
+    "title_zone_inches": 1.1,
+    "footer_zone_inches": 0.35,
+    "grid_columns": 12,
+    "gutter_inches": 0.16
+  },
+  "typography": {
+    "title_pt": 30,
+    "body_pt": 16,
+    "caption_pt": 9,
+    "metric_pt": 34,
+    "max_font_families": 2
+  },
+  "composition": {
+    "density": "executive-medium",
+    "corner_radius": 0.08,
+    "shadow_policy": "Use only when it communicates foreground hierarchy",
+    "accent_policy": "Use one primary accent for decisions and emphasis",
+    "whitespace_policy": "Preserve clear separation between message, evidence, and implication"
+  },
+  "archetypes": ["cover", "executive-summary", "section-divider", "three-card-argument", "comparison", "decision-scorecard", "roadmap", "operating-model", "use-case-realization", "recommendation-ask"]
+}

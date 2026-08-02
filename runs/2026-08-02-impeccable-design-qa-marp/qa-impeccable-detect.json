@@ -1,0 +1,13 @@
+[
+  {
+    "antipattern": "em-dash-overuse",
+    "name": "Em-dash overuse",
+    "description": "Em-dash saturation in body copy is an AI cadence tell. Advisory only: humans use em-dashes legitimately, so this fires only on saturation — at least 8 em-dashes (— or --) at a density near one per 500 characters of body text — never on a long article that uses a few. Prefer commas, colons, periods, or parentheses.",
+    "severity": "warning",
+    "category": "slop",
+    "file": "/home/sheke/content-ideas/runs/2026-08-02-impeccable-design-qa-marp/impeccable-design-qa-gate.html",
+    "line": 0,
+    "snippet": "16 em-dashes in body text",
+    "advisory": true
+  }
+]

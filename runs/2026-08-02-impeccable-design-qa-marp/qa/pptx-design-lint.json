@@ -1,0 +1,13 @@
+{
+  "contract_version": "1.0",
+  "file": "/home/sheke/content-ideas/runs/2026-08-02-impeccable-design-qa-marp/impeccable-design-qa-gate.pptx",
+  "fast": false,
+  "status": "clean",
+  "counts": {
+    "error": 0,
+    "warning": 0,
+    "ignored": 0
+  },
+  "findings": [],
+  "ignored_findings": []
+}

@@ -784,7 +784,12 @@ def lint_presentation(
         background = _slide_background_rgb(slide)
 
         shapes = list(_iter_shapes(slide.shapes))
-        if not shapes:
+        has_background_picture = False
+        try:
+            has_background_picture = slide.background.fill.type == MSO_FILL_TYPE.PICTURE
+        except (AttributeError, ValueError):
+            pass
+        if not shapes and not has_background_picture:
             findings.append(
                 Finding(
                     "SLIDE_EMPTY",
