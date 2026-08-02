@@ -16,6 +16,10 @@ metadata:
   category: Content Research
   version: "1.0"
   source: https://github.com/coleam00/cole-medin-knowledge-base
+  requires:
+    bins:
+      - python3
+      - uv
 ---
 
 # Build an OKF Knowledge Base from a YouTube Channel (yt-dlp)
@@ -107,13 +111,13 @@ across sessions.
 ## Step 3: Build indexes
 
 ```bash
-python "<output-dir>/scripts/build_indexes.py"
+python3 "<output-dir>/scripts/build_indexes.py"
 ```
 
 ## Step 4: Validate OKF conformance
 
 ```bash
-python "<output-dir>/lint.py"
+python3 "<output-dir>/lint.py"
 ```
 
 This enforces the OKF contract: every `.md` has `type` frontmatter (E1),

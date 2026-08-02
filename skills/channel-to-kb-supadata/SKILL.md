@@ -20,6 +20,9 @@ metadata:
   requires:
     env:
       - SUPADATA_API_KEY
+    bins:
+      - python3
+      - uv
 ---
 
 # Build an OKF Knowledge Base from a YouTube Channel (Supadata)
@@ -123,13 +126,13 @@ across sessions.
 ## Step 3: Build indexes
 
 ```bash
-python "<output-dir>/scripts/build_indexes.py"
+python3 "<output-dir>/scripts/build_indexes.py"
 ```
 
 ## Step 4: Validate OKF conformance
 
 ```bash
-python "<output-dir>/lint.py"
+python3 "<output-dir>/lint.py"
 ```
 
 This enforces the OKF contract: every `.md` has `type` frontmatter (E1),
