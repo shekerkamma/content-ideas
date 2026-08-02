@@ -139,6 +139,29 @@ bash scripts/verify-recovery-skills.sh
 - `skills/content-ideas/scripts/lib/__init__.py` is a bare package marker — no eager imports.
 - Persistent state lives under `$CONTENT_HOME` (default `~/Documents/Content`), never the cwd.
 - Credentials live in `~/.config/content/.env` (`SCRAPECREATORS_API_KEY`, `SETUP_COMPLETE`).
+- API keys used by this project's skills follow a two-layer pattern, because
+  Claude Code and Codex have no shared secrets mechanism:
+  - **`.claude/settings.local.json`'s `env` block** — Claude-Code-specific.
+    Injected directly into every session for this project regardless of how
+    the session was launched; works even in non-interactive Bash tool calls,
+    which don't source `~/.bashrc`. Gitignored (`.gitignore` has the
+    `.claude/settings.local.json` pattern) — never the committed
+    `.claude/settings.json`.
+  - **`~/.bashrc` `export`** — the cross-host baseline. Codex reads secrets
+    from its own process environment directly (e.g. `bearer_token_env_var`
+    in `~/.codex/config.toml` for the gbrain MCP server); it has no
+    settings.local.json equivalent, so this layer is what Codex — and any
+    interactively-launched Claude Code session — actually relies on.
+  - Write to both layers together; neither replaces the other. Never put a
+    real key in `~/.config/content/.env`'s tracked convention notes, a
+    commit, or any file under version control.
+  - Currently configured this way: `SUPADATA_API_KEY`, `GBRAIN_REMOTE_TOKEN`,
+    `OPENAI_API_KEY`, `EXA_API_KEY`, `GOOGLE_GENERATIVE_AI_API_KEY`,
+    `GROQ_API_KEY`. When hunting for an already-configured key before asking
+    the user for a new one, check beyond this repo and beyond WSL paths —
+    Windows-side app configs (e.g. `/mnt/c/Users/<user>/AppData/Local/hermes/.env`,
+    `/mnt/c/Users/<user>/.config/watch/.env`) have held real values that their
+    WSL-side namesakes didn't.
 - If `gbrain` is available as an MCP server, use it by default for cross-session
   memory and retrieval before repeating strategy or pipeline research from
   scratch.
