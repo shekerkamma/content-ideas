@@ -280,7 +280,7 @@ contrast.
 ```bash
 GATE="${CONTENT_IDEAS_DIR:-$HOME/content-ideas}/scripts/design-qa-detect.sh"
 [ -x "$GATE" ] && "$GATE" <run_dir>/<slug>.html \
-  || npx -y impeccable@3.4.0 detect <run_dir>/<slug>.html   # fallback: ensure `nvm use 24` first
+  || npx -y impeccable@3.5.0 detect <run_dir>/<slug>.html   # fallback: ensure `nvm use 24` first
 # exit 0 = clean · exit 2 = anti-patterns found (printed) · exit 1 = blocked (Node<24)
 ```
 

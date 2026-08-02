@@ -209,7 +209,7 @@ table and font handling: [`references/verbatim-recovery.md`](references/verbatim
    title boxes are the usual culprit: a two-line title prints over its subtitle.
    Run the pinned HTML design gate before export. Prefer
    `"${CONTENT_IDEAS_DIR:-$HOME/content-ideas}/scripts/design-qa-detect.sh" <deck.html>`;
-   when no checkout wrapper exists, run `npx -y impeccable@3.4.0 detect <deck.html>`.
+   when no checkout wrapper exists, run `npx -y impeccable@3.5.0 detect <deck.html>`.
    Fix or explicitly waive every
    Impeccable finding; never invoke an unpinned `@latest` fallback.
 
