@@ -168,4 +168,22 @@ Cross-host product-build skills:
   requests to PLAID Build and complete roadmap tasks in order. Mark tasks done
   only after implementation and verification.
 
+Channel-to-KB skills:
+- Use repo-local `skills/channel-to-kb-ytdlp/SKILL.md` (recommended default,
+  free, no API key, most reliable against YouTube changes),
+  `skills/channel-to-kb/SKILL.md` (free, no API key, can be IP-blocked on
+  cloud hosts), or `skills/channel-to-kb-supadata/SKILL.md` (paid managed
+  API via `SUPADATA_API_KEY`, no IP-blocking risk) when the user wants to
+  turn a YouTube channel into an OKF (Open Knowledge Format) knowledge base
+  or Karpathy-style LLM wiki — same on Codex and Claude Code.
+- Each skill scaffolds its bundle under
+  `$CONTENT_HOME/knowledge-bases/<channel-slug>/`, never the cwd, and ships
+  its own copy of the shared OKF toolkit (`assets/okf-template/`,
+  `references/pipeline-guide.md`). `uv run <skill-dir>/scripts/fetch_transcripts.py`
+  installs each script's PEP 723 dependencies in an isolated environment —
+  requires `uv` on PATH on whichever host runs it.
+- Ported from `coleam00/cole-medin-knowledge-base`; see the "Channel-to-KB
+  skills" section in `CLAUDE.md` for the re-sync procedure if upstream
+  changes its shared OKF toolkit files.
+
 @CLAUDE.md
