@@ -297,6 +297,52 @@ angle. "30-second talking-head with the stat as the opening hook, save CTA" is.
 
 ---
 
+## Video-Sourced Claims: Multi-Model Pressure Test
+
+When a competitor or creator video makes a technical or performance claim
+("this is free", "this matches Opus", "this is safe") that the eventual brief
+would repeat or react to, don't take the claim at face value — pressure-test
+it before it becomes the angle.
+
+### Process
+
+1. **Extract both streams, not just the transcript.** Use the `watch` skill
+   to pull the timestamped transcript *and* read the extracted frames. Creators
+   often narrate an optimistic summary while an on-screen doc, benchmark chart,
+   or terminal log shows the caveat (rate limits, entitlement errors, cherry-picked
+   comparisons) that never makes it into speech. The gap between what's said
+   and what's shown is frequently the real story.
+2. **Identify the load-bearing claims** — the 2-4 statements the video's whole
+   pitch depends on (e.g., "free", "safe", "as good as the paid option").
+3. **Run contested, decision-relevant claims through `llm-council`.** Frame the
+   question around what's actually at stake for the user (credibility if wrong,
+   missed timing if skipped) — not "is this true," but "should we build a brief
+   on this claim." The council's peer-review step catches overstatement no
+   single pass would flag (e.g., an advisor waving away a reliability caveat to
+   chase the bigger narrative).
+4. **Land the angle on the gap, not the claim.** If the source's own evidence
+   contradicts its headline, that contradiction — not the original trick — is
+   the differentiated angle (see Contrarian Perspective above). "Here's the
+   hack" is a repackage. "Here's what the source's own footage disproves while
+   pitching it" is a differentiator.
+
+### Save the Research, Not Just the Chat Answer
+
+Video-sourced research is a session-scoped deliverable — save it under
+`$CONTENT_HOME/research/<slug>/`, not only in chat:
+
+| File | Contents |
+|------|----------|
+| `transcript.txt` | Cleaned, deduplicated transcript (strip caption-tag noise) |
+| `frame-notes.md` | What the frames showed that the narration didn't — timestamped |
+| `council-verdict.md` | The `llm-council` framed question, chairman synthesis, and blind spots peer review caught |
+
+This makes the pressure-test reusable for the brief, for a follow-up video, or
+for a future session revisiting the same creator/claim — a chat answer alone
+disappears with the conversation.
+
+---
+
 ## Brief Generation
 
 A video brief is the bridge between "this is an interesting piece of content"
