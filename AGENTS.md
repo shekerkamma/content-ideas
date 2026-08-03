@@ -186,4 +186,20 @@ Channel-to-KB skills:
   skills" section in `CLAUDE.md` for the re-sync procedure if upstream
   changes its shared OKF toolkit files.
 
+Local AI-gateway proxy diagnostics:
+- Windows-side AI-gateway/router tools (free-claude-code, OmniRoute,
+  cli-proxy-api, Hermes Agent) are common places to find already-configured
+  provider keys and model routing before assuming one is broken or asking
+  for new credentials. See the API-key section in `CLAUDE.md` for exact
+  paths and known gotchas per tool.
+- Never trust a provider/model catalog listing as proof a model ID is
+  routable. Confirm with a real completion call and cross-check the tool's
+  own request log for the provider/status that actually served it — an
+  "auto" router can silently pick a different provider than the one you
+  intended to test.
+- PowerShell or native `.exe` processes launched from a WSL Bash shell
+  inherit the WSL cwd, which Windows renders as a `\\wsl.localhost\...` UNC
+  path. Pass an explicit Windows working directory or absolute config path
+  instead of relying on the invoked process's own relative-path resolution.
+
 @CLAUDE.md
