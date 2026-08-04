@@ -1,0 +1,13 @@
+# Dataset Manifest Template
+# Copy this directory and rename it for each dataset you connect.
+name: ""
+description: ""
+connection:
+  type: ""  # duckdb, postgres, bigquery, snowflake
+  path: ""  # For DuckDB: path to .duckdb file
+  # For warehouses, add: host, port, database, schema
+local_data:
+  path: ""  # Path to CSV/parquet files (fallback)
+  duckdb: ""  # Path to local DuckDB file (fallback)
+created: ""
+last_used: ""

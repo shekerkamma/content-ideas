@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --ink:#0f0f0f; --paper:#ede6e6;
+    --rust:#8a3f2e; --rust-dim:#b06a52;
+    --agent:#3d4a2e; --agent-bg:rgba(61,74,46,.08);
+    --hiring:#5c5450; --hiring-bg:rgba(92,84,80,.06);
+    --card:rgba(255,255,255,.55); --line:rgba(15,15,15,.14);
+  }
+  body{ width:1200px; height:1900px;
+        background:linear-gradient(155deg,#d4cbc9 0%,#c3b6b6 32%,#b3a0a2 62%,#a3898c 100%);
+        font-family:'Segoe UI','DejaVu Sans',Arial,sans-serif; color:var(--ink);
+        padding:36px 40px; display:flex; flex-direction:column; gap:20px; }
+  .frame{ position:relative; }
+  .bracket{ position:absolute; width:18px; height:18px; border:2px solid var(--ink); }
+  .bracket.tl{ top:-8px; left:-8px; border-right:none; border-bottom:none; }
+  .bracket.tr{ top:-8px; right:-8px; border-left:none; border-bottom:none; }
+  .bracket.bl{ bottom:-8px; left:-8px; border-right:none; border-top:none; }
+  .bracket.br{ bottom:-8px; right:-8px; border-left:none; border-top:none; }
+
+  /* header */
+  .hdr{ text-align:center; padding:26px 30px; position:relative; }
+  .hdr .kicker{ font-size:12px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--rust); margin-bottom:16px; }
+  .hdr h1{ font-size:46px; font-weight:800; letter-spacing:-1px; line-height:1.08; }
+  .hdr h1 .accent-mark{ color:var(--rust); }
+  .hdr .sub{ font-size:15.5px; color:#3a3230; margin-top:14px; max-width:640px; margin-left:auto; margin-right:auto; }
+
+  /* card grid */
+  .grid{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(3,1fr); gap:18px; flex:1; }
+  .card{ background:var(--card); backdrop-filter:blur(2px); border:1px solid var(--line); border-radius:2px;
+         padding:26px 30px; display:flex; flex-direction:column; justify-content:center; gap:10px; position:relative; }
+  .card .idx{ position:absolute; top:20px; right:26px; font-size:64px; font-weight:800; color:var(--ink); opacity:.08; line-height:1; }
+  .card-top{ display:flex; align-items:baseline; gap:14px; }
+  .card-top .n{ font-size:15px; font-weight:700; color:var(--rust); font-variant-numeric:tabular-nums; }
+  .card h3{ font-size:25px; font-weight:800; letter-spacing:-.3px; }
+  .card p{ font-size:15.5px; color:#3a3230; line-height:1.48; max-width:92%; }
+  .stat-row{ display:flex; align-items:baseline; gap:10px; margin-top:6px; padding-top:14px; border-top:1px solid var(--line); }
+  .stat-num{ font-size:38px; font-weight:800; color:var(--ink); letter-spacing:-1px; }
+  .stat-lbl{ font-size:12.5px; color:#4a423f; text-transform:uppercase; letter-spacing:.08em; }
+
+  /* comparison strip */
+  .cmp{ background:rgba(255,255,255,.4); border:1px solid var(--line); padding:22px 26px; position:relative; }
+  .cmp .kicker{ text-align:center; display:block; font-size:12px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:var(--rust); margin-bottom:16px; }
+  .cmp-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .cmp-col{ padding:14px 18px 16px; }
+  .cmp-col.hiring{ background:var(--hiring-bg); border-left:3px solid var(--hiring); }
+  .cmp-col.agent{ background:var(--agent-bg); border-left:3px solid var(--agent); }
+  .cmp-col .ch{ font-size:15px; font-weight:800; margin-bottom:10px; }
+  .cmp-col.hiring .ch{ color:var(--hiring); }
+  .cmp-col.agent .ch{ color:var(--agent); }
+  .cmp-row{ display:flex; justify-content:space-between; font-size:13px; padding:6px 0; border-top:1px solid rgba(0,0,0,.08); }
+  .cmp-row:first-of-type{ border-top:none; }
+  .cmp-row .lbl{ color:#4a423f; }
+  .cmp-row .val{ font-weight:700; }
+  .cmp-col.hiring .val{ color:var(--hiring); }
+  .cmp-col.agent .val{ color:var(--agent); }
+
+  /* footer */
+  .ftr{ background:var(--ink); padding:24px 32px; display:flex; align-items:center; justify-content:space-between; position:relative; }
+  .ftr .line{ font-size:19px; font-weight:800; color:#f2ece9; letter-spacing:-.3px; }
+  .chip{ background:var(--rust); color:#fff; font-size:11px; font-weight:700; letter-spacing:.1em;
+         padding:8px 14px; text-transform:uppercase; flex-shrink:0; }
+</style>
+</head>
+<body>
+
+  <div class="hdr frame">
+    <div class="bracket tl"></div><div class="bracket tr"></div>
+    <div class="bracket bl"></div><div class="bracket br"></div>
+    <div class="kicker">Before You Post That Job Listing</div>
+    <h1>6 AI Agent Patterns Every SMB Should Know<span class="accent-mark">.</span></h1>
+    <div class="sub">Before you hire a dev team, know what an agent can already do.</div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="idx">01</div>
+      <div class="card-top"><span class="n">01</span></div>
+      <h3>Research Agent</h3>
+      <p>Scans competitors and market data before you brief a human.</p>
+      <div class="stat-row"><span class="stat-num">70%</span><span class="stat-lbl">less research time</span></div>
+    </div>
+    <div class="card">
+      <div class="idx">02</div>
+      <div class="card-top"><span class="n">02</span></div>
+      <h3>Support Agent</h3>
+      <p>Triages and answers routine tickets around the clock.</p>
+      <div class="stat-row"><span class="stat-num">60%</span><span class="stat-lbl">tickets handled solo</span></div>
+    </div>
+    <div class="card">
+      <div class="idx">03</div>
+      <div class="card-top"><span class="n">03</span></div>
+      <h3>Ops Agent</h3>
+      <p>Watches workflows and restarts what breaks, automatically.</p>
+      <div class="stat-row"><span class="stat-num">&lt;5 min</span><span class="stat-lbl">to catch an issue</span></div>
+    </div>
+    <div class="card">
+      <div class="idx">04</div>
+      <div class="card-top"><span class="n">04</span></div>
+      <h3>Content Agent</h3>
+      <p>Drafts posts and briefs straight from your own data.</p>
+      <div class="stat-row"><span class="stat-num">10x</span><span class="stat-lbl">faster first drafts</span></div>
+    </div>
+    <div class="card">
+      <div class="idx">05</div>
+      <div class="card-top"><span class="n">05</span></div>
+      <h3>Finance Agent</h3>
+      <p>Reconciles invoices and flags spend that looks off.</p>
+      <div class="stat-row"><span class="stat-num">8 hrs</span><span class="stat-lbl">saved every month</span></div>
+    </div>
+    <div class="card">
+      <div class="idx">06</div>
+      <div class="card-top"><span class="n">06</span></div>
+      <h3>Onboarding Agent</h3>
+      <p>Walks new customers through setup and answers FAQs.</p>
+      <div class="stat-row"><span class="stat-num">50%</span><span class="stat-lbl">faster time-to-value</span></div>
+    </div>
+  </div>
+
+  <div class="cmp frame">
+    <div class="bracket tl"></div><div class="bracket tr"></div>
+    <div class="bracket bl"></div><div class="bracket br"></div>
+    <div class="kicker">The Real Comparison</div>
+    <div class="cmp-grid">
+      <div class="cmp-col hiring">
+        <div class="ch">Traditional Hiring</div>
+        <div class="cmp-row"><span class="lbl">Cost</span><span class="val">$80K+/year</span></div>
+        <div class="cmp-row"><span class="lbl">Time to start</span><span class="val">4–8 weeks</span></div>
+        <div class="cmp-row"><span class="lbl">Availability</span><span class="val">40 hrs/week</span></div>
+        <div class="cmp-row"><span class="lbl">Improves by</span><span class="val">Training, over months</span></div>
+      </div>
+      <div class="cmp-col agent">
+        <div class="ch">AI Agent Team</div>
+        <div class="cmp-row"><span class="lbl">Cost</span><span class="val">$200–500/month</span></div>
+        <div class="cmp-row"><span class="lbl">Time to start</span><span class="val">Live in days</span></div>
+        <div class="cmp-row"><span class="lbl">Availability</span><span class="val">24/7</span></div>
+        <div class="cmp-row"><span class="lbl">Improves by</span><span class="val">Every task, immediately</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr frame">
+    <div class="bracket tl"></div><div class="bracket tr"></div>
+    <div class="bracket bl"></div><div class="bracket br"></div>
+    <div class="line">Start with one agent. Prove the ROI. Then scale.</div>
+    <div class="chip">6 Patterns · 1 Decision</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1600px; height: 1000px; background: #f5ecdc; overflow: hidden; }
+  svg { display: block; }
+  .title   { font: bold 46px Georgia, 'Times New Roman', serif; fill: #17130c; }
+  .caption { font: italic 21px Georgia, serif; fill: #3a3020; }
+  .node-h  { font: bold 36px Georgia, serif; fill: #17130c; }
+  .node-sub{ font: italic 25px Georgia, serif; fill: #17130c; }
+  .node-sm { font: 18px Georgia, serif; fill: #2a2318; }
+  .acc-h   { font: bold 40px Georgia, serif; fill: #fdf7ec; }
+  .acc-sub { font: italic 26px Georgia, serif; fill: #fdf7ec; }
+  .acc-sm  { font: 17px Georgia, serif; fill: #fbf3e2; }
+  .lbl     { font: italic 20px Georgia, serif; fill: #8a5a24; }
+  .lbl-dk  { font: italic 20px Georgia, serif; fill: #4a3a22; }
+  .w-h     { font: bold 27px Georgia, serif; fill: #17130c; }
+  .w-sub   { font: italic 20px Georgia, serif; fill: #17130c; }
+</style>
+</head>
+<body>
+<svg width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b3833f"/>
+    </marker>
+    <marker id="arr-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9a8a72"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="800" y="78" text-anchor="middle">Meta LOOP with Fable 5, GPT-5.6 and Gemini 3.5 Flash</text>
+
+  <!-- captions above boxes -->
+  <text class="caption" x="650" y="168" text-anchor="middle">Chief Operator (GPT 5.6)</text>
+  <text class="caption" x="1320" y="140" text-anchor="middle">Board Advisor (Fable 5)</text>
+  <text class="caption" x="1320" y="168" text-anchor="middle">(On-demand consulted critic &#8211; not in hot path)</text>
+
+  <!-- main hot path annotation + self-loop -->
+  <text class="lbl-dk" x="120" y="255">Main hot path:</text>
+  <text class="lbl-dk" x="120" y="285">Plan &#8594; Delegate &#8594;</text>
+  <text class="lbl-dk" x="120" y="315">Verify &#8594; Synthesize</text>
+  <path d="M 430 240 C 350 200, 330 330, 428 330" fill="none" stroke="#9a8a72" stroke-width="3" marker-end="url(#arr-grey)"/>
+
+  <!-- Orchestrator -->
+  <rect x="430" y="190" width="440" height="230" rx="16" fill="#fbf6ea" stroke="#17130c" stroke-width="3"/>
+  <text class="node-h" x="650" y="262" text-anchor="middle">Orchestrator</text>
+  <text class="node-sub" x="650" y="304" text-anchor="middle">GPT 5.6</text>
+  <text class="node-sm" x="650" y="352" text-anchor="middle">Main Plan, Delegate Subtasks,</text>
+  <text class="node-sm" x="650" y="380" text-anchor="middle">Verify, Synthesize, Escalate</text>
+
+  <!-- Advisor (accent) -->
+  <rect x="1120" y="190" width="400" height="230" rx="16" fill="#b5793a" stroke="#6f4416" stroke-width="4" stroke-dasharray="14 9"/>
+  <text class="acc-h" x="1320" y="262" text-anchor="middle">Advisor</text>
+  <text class="acc-sub" x="1320" y="302" text-anchor="middle">Fable 5</text>
+  <text class="acc-sm" x="1320" y="348" text-anchor="middle">Strategy, Decomposition Critique,</text>
+  <text class="acc-sm" x="1320" y="374" text-anchor="middle">Risk Spotting, Taste</text>
+
+  <!-- consultation arrows: solid out, dashed return -->
+  <line x1="878" y1="265" x2="1108" y2="265" stroke="#b3833f" stroke-width="3.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="993" y="228" text-anchor="middle">Strategic &amp; Critique</text>
+  <text class="lbl" x="993" y="252" text-anchor="middle">Consultation</text>
+  <line x1="1108" y1="352" x2="878" y2="352" stroke="#9a8a72" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arr-grey)"/>
+
+  <text class="lbl" x="1320" y="470" text-anchor="middle">premium &#8220;taste and judgment&#8221; loop</text>
+
+  <!-- fan labels -->
+  <text class="lbl-dk" x="255" y="545" text-anchor="middle">Delegated</text>
+  <text class="lbl-dk" x="255" y="572" text-anchor="middle">subtasks</text>
+  <text class="lbl-dk" x="620" y="610" text-anchor="middle">Labor Layer: Parallel cheap execution subtasks</text>
+  <text class="lbl-dk" x="1030" y="545" text-anchor="middle">Results for</text>
+  <text class="lbl-dk" x="1030" y="572" text-anchor="middle">verification</text>
+  <text class="lbl-dk" x="1235" y="610" text-anchor="start">Team (Gemini Flash)</text>
+
+  <!-- bidirectional fan: down (delegate) + up (results) per worker -->
+  <line x1="530" y1="428" x2="212" y2="638" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="248" y1="638" x2="576" y2="428" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="610" y1="428" x2="582" y2="638" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="618" y1="638" x2="652" y2="428" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="694" y1="428" x2="942" y2="638" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="978" y1="638" x2="736" y2="428" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="778" y1="428" x2="1312" y2="638" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="1348" y1="638" x2="820" y2="428" stroke="#b3833f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- Workers -->
+  <rect x="90"   y="650" width="280" height="140" rx="14" fill="#fbf6ea" stroke="#17130c" stroke-width="3"/>
+  <rect x="460"  y="650" width="280" height="140" rx="14" fill="#fbf6ea" stroke="#17130c" stroke-width="3"/>
+  <rect x="820"  y="650" width="280" height="140" rx="14" fill="#fbf6ea" stroke="#17130c" stroke-width="3"/>
+  <rect x="1190" y="650" width="280" height="140" rx="14" fill="#fbf6ea" stroke="#17130c" stroke-width="3"/>
+  <text class="w-h" x="230"  y="710" text-anchor="middle">Worker A</text>
+  <text class="w-h" x="600"  y="710" text-anchor="middle">Worker B</text>
+  <text class="w-h" x="960"  y="710" text-anchor="middle">Worker C</text>
+  <text class="w-h" x="1330" y="710" text-anchor="middle">Worker D</text>
+  <text class="w-sub" x="230"  y="752" text-anchor="middle">Gemini 3.5 Flash</text>
+  <text class="w-sub" x="600"  y="752" text-anchor="middle">Gemini 3.5 Flash</text>
+  <text class="w-sub" x="960"  y="752" text-anchor="middle">Gemini 3.5 Flash</text>
+  <text class="w-sub" x="1330" y="752" text-anchor="middle">Gemini 3.5 Flash</text>
+
+  <text class="lbl" x="1330" y="850" text-anchor="middle">cheap parallel labor</text>
+</svg>
+</body>
+</html>

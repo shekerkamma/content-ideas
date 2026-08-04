@@ -40,9 +40,11 @@ For any material deck build or redesign:
    `presentation-evidence.json` exists, draft it first with `draft_slide_plan.py` instead
    of starting from the blank template.
 5. Use `pptx-visual-spec` to create and validate `visual-spec.json`.
-6. Build with the selected engine.
-7. Run that engine's structural validation, design lint, real-render QA, and visual review.
-8. Label the result `draft`, `reviewed`, or `blocked`; never promote without evidence.
+6. For multi-skill builds, read `references/visible-skill-application-contract.md`, write
+   `skill-application-manifest.json`, and validate it before construction and promotion.
+7. Build with the selected engine.
+8. Run that engine's structural validation, design lint, real-render QA, and visual review.
+9. Label the result `draft`, `reviewed`, or `blocked`; never promote without evidence.
 
 ## Routing rules
 
@@ -67,6 +69,7 @@ deck-design.json
 template-profile.json
 slide-plan.json
 visual-spec.json
+skill-application-manifest.json  # multi-skill builds
 builder source
 draft/reviewed presentation
 qa/

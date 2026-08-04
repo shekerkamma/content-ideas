@@ -1,0 +1,6 @@
+- **dashboard-dark/linear** — dark SaaS product UI, sidebar nav + issue detail + AI panel, tight type scale · source: https://linear.app · 2800px captured (full page was 10898px) · 2026-07-13
+- **landing-hero/stripe** — clean fintech marketing hero, gradient mesh, precise grid · source: https://stripe.com · 1600px captured (full page was 14614px) · 2026-07-13
+- **pricing/notion** — light-mode pricing tiers, clean cards, subtle shadows · source: https://www.notion.com/pricing · 2200px captured (full page was 7449px) · 2026-07-13
+- **creative-bold/longbow** — Awwwards honorable mention: automotive brand, bold typography, cinematic hero, minimalist footer · source: https://db-longbow.webflow.io/ · 2200px captured (full page was 16512px) · 2026-07-13
+- **components-pricing/ravenhealth** — Awwwards-tagged pricing element; healthcare SaaS, tiered plan cards · source: https://ravenhealth.com/pricing/ · 2400px captured (full page was 3027px) · 2026-07-13
+- **creative-bold/kriss-ai** — Awwwards SOTD 7.45; restrained 2-color palette (#D1CACC greige, #0F0F0F near-black), AI healthcare product, storytelling/interaction-heavy · source: https://kriss.ai/ · 900px captured (full page was 900px) · 2026-07-13

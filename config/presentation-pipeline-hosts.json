@@ -1,0 +1,30 @@
+{
+  "contract_version": "1.0",
+  "canonical_root": "/home/sheke/content-ideas/skills",
+  "hosts": {
+    "claude-code": "/home/sheke/.claude/skills",
+    "hermes-windows": "/mnt/c/Users/sheke/AppData/Local/hermes/skills",
+    "antigravity-windows": "/mnt/c/Users/sheke/.agent/skills"
+  },
+  "skills": [
+    "present",
+    "watch",
+    "presentation-source-bundle",
+    "ai-analyst",
+    "story-architect",
+    "presentation-content-writer",
+    "impeccable",
+    "explainer-graphic",
+    "ai-graphics",
+    "branded-pptx-deck",
+    "pptx-toolkit",
+    "pptx-design-quality",
+    "officecli"
+  ],
+  "windows_runtime": {
+    "officecli": "/mnt/c/Users/sheke/AppData/Local/OfficeCLI/officecli.exe",
+    "libreoffice": "/mnt/c/Program Files/LibreOffice/program/soffice.exe",
+    "python": "/mnt/c/Users/sheke/AppData/Local/Programs/Python/Python312/python.exe",
+    "uv": "/mnt/c/Users/sheke/AppData/Local/hermes/bin/uv.exe"
+  }
+}

@@ -143,6 +143,11 @@ Presentation consolidation rule:
   also requires `presentation-evidence.json`.
 - Keep template profiles and reusable slide archetypes in `pptx-design-quality`. Keep
   acquisition and normalization adapters in `presentation-source-bundle`.
+- For Claude Code, Windows Hermes, and Antigravity IDE hosting, treat repo-local `skills/` as canonical and run
+  `bash scripts/sync-presentation-pipeline-hosts.sh`; follow
+  `docs/presentation-pipeline-cross-host-contract.md`. Verify Hermes from WSL with the explicit
+  `HERMES_HOME=/mnt/c/Users/sheke/AppData/Local/hermes` path rather than auditing the WSL user's
+  default Hermes profile by mistake.
 
 Cross-host product-build skills:
 - Use repo-local skills from `skills/` for both Codex and Claude Code.

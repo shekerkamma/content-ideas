@@ -142,6 +142,11 @@ python3 skills/content-ideas/scripts/generate_feed.py --help
 # new skills on either host)
 bash scripts/sync-codex-skills.sh
 
+# synchronize the governed presentation pipeline to Claude Code and the
+# Windows Hermes Desktop profile mounted into WSL; differing host copies are
+# backed up before replacement
+bash scripts/sync-presentation-pipeline-hosts.sh
+
 # validate the portable recovery skills and their integrity manifest
 bash scripts/verify-recovery-skills.sh
 ```

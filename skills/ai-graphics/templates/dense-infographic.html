@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --navy:#152457; --navy2:#0e1a45; --blue:#2457e6; --purple:#6d3fd4; --purple2:#7c4fe0;
+    --lav:#efeafb; --lav2:#e2d9f6; --grey:#f2f4f7; --grey2:#e9ecf1; --ink:#101a3c;
+    --body:#3b4763; --teal:#12b1c5; --orange:#f2960c; --green:#43a955; --cblue:#2e6de0;
+  }
+  body{ width:1200px; height:1800px; background:#fff;
+        font-family:'Segoe UI','DejaVu Sans',Arial,sans-serif; color:var(--ink);
+        padding:26px 30px 0; display:flex; flex-direction:column; gap:14px;
+        justify-content:space-between; }
+  .hub{ height:330px !important; }
+  .way{ padding-top:22px !important; padding-bottom:20px !important; }
+  .cards{ padding-top:30px !important; padding-bottom:22px !important; }
+  .muted{ color:var(--body); }
+  svg{ display:block; }
+
+  /* ---------- header ---------- */
+  .hdr{ display:flex; gap:24px; align-items:flex-start; }
+  .hdr h1{ font-size:37px; line-height:1.08; letter-spacing:-0.5px; }
+  .hdr .tag{ color:var(--blue); font-size:16.5px; font-weight:600; margin:9px 0 8px; }
+  .hdr p{ font-size:13px; line-height:1.45; max-width:640px; }
+  .quote{ background:var(--lav); border-radius:14px; padding:16px 18px; width:400px;
+          flex-shrink:0; display:flex; gap:14px; align-items:center; }
+  .quote .qm{ color:var(--purple); font-size:30px; font-family:Georgia,serif; line-height:0.5; }
+  .quote .qt{ font-size:14px; font-style:italic; font-weight:600; line-height:1.35; }
+  .quote .attr{ font-size:11.5px; margin-top:7px; font-style:normal; font-weight:600; }
+  .quote .attr span{ display:block; font-weight:400; color:var(--body); }
+  .avatar{ width:74px; height:74px; border-radius:50%; background:var(--purple);
+           color:#fff; font-size:26px; font-weight:700; display:flex; align-items:center;
+           justify-content:center; flex-shrink:0; border:3px solid #fff; box-shadow:0 0 0 2px var(--lav2); }
+
+  /* ---------- old way / new way ---------- */
+  .ways{ position:relative; display:flex; gap:64px; }
+  .way{ flex:1; border-radius:14px; padding:16px 16px 14px; }
+  .way.old{ background:var(--grey); }
+  .way.new{ background:var(--lav); }
+  .way h2{ text-align:center; font-size:16px; letter-spacing:0.5px; }
+  .way.new h2{ color:var(--purple); }
+  .way .sub{ text-align:center; font-size:12.5px; font-weight:600; margin:2px 0 14px; }
+  .steps{ display:flex; align-items:flex-start; justify-content:center; gap:4px; }
+  .step{ width:96px; text-align:center; }
+  .step .disc{ width:52px; height:52px; border-radius:50%; margin:0 auto 8px;
+               display:flex; align-items:center; justify-content:center; }
+  .old .disc{ background:var(--navy); }
+  .new .disc{ background:var(--purple2); }
+  .step .lbl{ font-size:11.5px; font-weight:700; line-height:1.25; }
+  .chev{ color:#9aa4bd; font-size:15px; font-weight:700; margin-top:20px; }
+  .way .note{ margin-top:13px; border-radius:9px; padding:9px 12px; font-size:11.5px; line-height:1.4; color:var(--body); }
+  .old .note{ background:var(--grey2); }
+  .new .note{ background:var(--lav2); }
+  .ai-badge{ position:absolute; left:50%; top:88px; transform:translateX(-50%);
+             width:84px; height:84px; border-radius:50%; background:var(--navy);
+             color:#fff; font-size:26px; font-weight:800; display:flex; align-items:center;
+             justify-content:center; border:4px solid #fff; outline:3px dotted #a9b4d6; }
+
+  /* ---------- engineering stack ---------- */
+  .stack{ border:2px solid var(--navy); border-radius:14px; overflow:hidden; }
+  .stack .band{ background:var(--navy); color:#fff; text-align:center; padding:10px 0 11px; }
+  .stack .band h2{ font-size:17px; letter-spacing:0.6px; }
+  .stack .band div{ font-size:12.5px; color:#c4cdea; margin-top:1px; }
+  .cards{ display:flex; align-items:stretch; gap:0; padding:24px 14px 16px; }
+  .card{ flex:1; border:2px solid; border-radius:12px; padding:26px 10px 12px;
+         position:relative; text-align:center; background:#fff; }
+  .card .num{ position:absolute; top:-16px; left:50%; transform:translateX(-50%);
+              width:32px; height:32px; border-radius:50%; color:#fff; font-weight:800;
+              font-size:15px; display:flex; align-items:center; justify-content:center; }
+  .card .cic{ margin:0 auto 8px; }
+  .card h3{ font-size:13px; margin-bottom:7px; }
+  .card .desc{ font-size:10.8px; line-height:1.4; color:var(--body); min-height:74px; }
+  .card .out{ border-top:1.5px solid #e3e7f0; padding-top:7px; margin-top:4px; }
+  .card .out .ol{ font-size:11px; font-weight:800; }
+  .card .out .ot{ font-size:10.6px; color:var(--body); line-height:1.35; margin-top:2px; }
+  .cchev{ align-self:center; color:#9aa4bd; font-size:16px; font-weight:800; padding:0 4px; }
+  .c1{ border-color:var(--teal); }  .c1 .num{ background:var(--teal); }  .c1 .ol{ color:var(--cblue); }
+  .c2{ border-color:var(--cblue); } .c2 .num{ background:var(--cblue); } .c2 .ol{ color:var(--cblue); }
+  .c3{ border-color:var(--purple2);}.c3 .num{ background:var(--purple2);}.c3 .ol{ color:var(--orange); }
+  .c4{ border-color:var(--orange); }.c4 .num{ background:var(--orange); }.c4 .ol{ color:var(--orange); }
+  .c5{ border-color:var(--green); } .c5 .num{ background:var(--green); } .c5 .ol{ color:var(--green); }
+
+  /* ---------- key shift ---------- */
+  .shift{ background:var(--navy2); color:#fff; border-radius:12px; padding:16px 22px;
+          display:flex; align-items:center; gap:18px; }
+  .shift .txt{ flex:1; font-size:13.5px; line-height:1.45; }
+  .shift .txt b{ display:block; font-size:14.5px; margin-bottom:2px; }
+  .shift svg{ flex-shrink:0; }
+
+  /* ---------- multi-agent + focus ---------- */
+  .duo{ display:flex; gap:18px; }
+  .ma{ flex:1.08; background:var(--grey); border-radius:14px; padding:16px 14px 12px; }
+  .ma h2{ text-align:center; font-size:14.5px; letter-spacing:0.4px; }
+  .ma .sub{ text-align:center; font-size:11.3px; color:var(--body); line-height:1.4; margin:5px auto 8px; max-width:430px; }
+  .hub{ position:relative; height:300px; }
+  .hub .center{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+                width:132px; height:132px; border-radius:50%; background:var(--navy2); color:#fff;
+                display:flex; flex-direction:column; align-items:center; justify-content:center;
+                text-align:center; font-size:11px; font-weight:700; gap:5px; padding:10px;
+                outline:3px dotted #b7c0da; outline-offset:5px; }
+  .agent{ position:absolute; width:170px; display:flex; gap:9px; align-items:center; }
+  .agent .adisc{ width:44px; height:44px; border-radius:50%; background:#dff4f6;
+                 border:2px solid var(--teal); display:flex; align-items:center;
+                 justify-content:center; flex-shrink:0; }
+  .agent .an{ font-size:11.3px; font-weight:800; }
+  .agent .ad{ font-size:10.2px; color:var(--body); line-height:1.3; }
+  .agent.right{ flex-direction:row-reverse; text-align:right; }
+  .ma .note{ background:var(--grey2); border-radius:9px; padding:8px 12px; font-size:11.3px;
+             color:var(--body); text-align:center; margin-top:6px; }
+  .focus{ flex:1; border:1.5px solid #d6dcea; border-radius:14px; padding:16px 18px; }
+  .focus h2{ font-size:14.5px; letter-spacing:0.4px; margin-bottom:12px; }
+  .fitem{ display:flex; gap:12px; align-items:flex-start; padding:7.5px 0; border-bottom:1px solid #edf0f6; }
+  .fitem:last-child{ border-bottom:none; }
+  .fitem .fic{ flex-shrink:0; margin-top:1px; }
+  .fitem .fn{ font-size:12.3px; font-weight:800; }
+  .fitem .fd{ font-size:11px; color:var(--body); line-height:1.35; margin-top:1px; }
+
+  /* ---------- takeaways ---------- */
+  .takes{ border:1.5px solid #d6dcea; border-radius:14px; padding:14px 16px; display:flex; gap:14px; align-items:center; }
+  .takes .kt{ font-size:14px; font-weight:800; width:88px; flex-shrink:0; line-height:1.3; }
+  .take{ flex:1; text-align:center; padding:0 8px; border-left:1px solid #e6eaf2; }
+  .take .tic{ margin:0 auto 6px; }
+  .take .tn{ font-size:12px; font-weight:800; }
+  .take .td{ font-size:10.4px; color:var(--body); line-height:1.35; margin-top:2px; }
+
+  /* ---------- footer ---------- */
+  .ftr{ background:var(--navy2); color:#fff; border-radius:12px 12px 0 0; padding:15px 22px;
+        display:flex; align-items:center; gap:16px; }
+  .ftr .ft{ flex:1; font-size:13.5px; line-height:1.45; }
+  .ftr .cc{ display:flex; gap:9px; align-items:center; background:#1d2f6b; border-radius:9px;
+            padding:8px 14px; font-weight:800; font-size:13.5px; }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div>
+      <h1>Claude Code and the New<br>Era of AI-Native Development</h1>
+      <div class="tag">Design for the model six months from now, not the one you have today.</div>
+      <p class="muted">In a conversation with Boris Cherny, creator of Claude Code, we get a glimpse of the future
+      of software engineering&#8212;where developers orchestrate intelligence, not just write code.</p>
+    </div>
+    <div class="quote">
+      <div>
+        <div style="display:flex; gap:8px;"><div class="qm">&#8220;</div>
+        <div class="qt">There is no part of Claude Code that was around six months ago.&#8221;</div></div>
+        <div class="attr">&#8211; Boris Cherny <span>Creator of Claude Code</span></div>
+      </div>
+      <div class="avatar">BC</div>
+    </div>
+  </div>
+
+  <!-- OLD WAY / NEW WAY -->
+  <div class="ways">
+    <div class="way old">
+      <h2>THE OLD WAY</h2><div class="sub">Coding was the bottleneck</div>
+      <div class="steps">
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6z" fill="#fff"/><path d="M9 11h7M9 14h7M9 17h5" stroke="#152457" stroke-width="1.6"/></svg></div><div class="lbl">Requirements</div></div>
+        <div class="chev">&#8250;</div>
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div><div class="lbl">Write Code</div></div>
+        <div class="chev">&#8250;</div>
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><ellipse cx="12" cy="14" rx="6" ry="7" fill="#fff"/><path d="M12 7V4M6 10L3 8M18 10l3-2M6 16H3M18 16h3M7 21l2-2M17 21l-2-2" stroke="#fff" stroke-width="1.8"/><path d="M12 9v9" stroke="#152457" stroke-width="1.4"/></svg></div><div class="lbl">Test &amp; Debug</div></div>
+        <div class="chev">&#8250;</div>
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 2c4 3 5 8 3 13l-3 3-3-3C7 10 8 5 12 2z" fill="#fff"/><path d="M8 16l-3 5 5-2M16 16l3 5-5-2" fill="#fff"/><circle cx="12" cy="9" r="1.8" fill="#152457"/></svg></div><div class="lbl">Deploy &amp; Maintain</div></div>
+      </div>
+      <div class="note">Developers spent most of their time on manual implementation.
+      Value was measured by lines of code and output.</div>
+    </div>
+
+    <div class="ai-badge">AI</div>
+
+    <div class="way new">
+      <h2>THE NEW WAY</h2><div class="sub">Intelligence is the multiplier</div>
+      <div class="steps">
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="#fff" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="1.6" fill="#fff"/><path d="M12 4V1M20 12h3" stroke="#fff" stroke-width="1.8"/></svg></div><div class="lbl">Define Intent</div></div>
+        <div class="chev">&#8250;</div>
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 21c1-5 4-7 8-7s7 2 8 7z" fill="#fff"/></svg></div><div class="lbl">Orchestrate<br>AI Agents</div></div>
+        <div class="chev">&#8250;</div>
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="#fff"/><path d="M8 9l2 2 4-4M8 15h8" stroke="#7c4fe0" stroke-width="1.8" fill="none"/></svg></div><div class="lbl">Review &amp;<br>Validate</div></div>
+        <div class="chev">&#8250;</div>
+        <div class="step"><div class="disc"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 20V10M10 20V6M16 20v-8M21 20H3" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M15 5l4-2 1 4" stroke="#fff" stroke-width="1.8" fill="none"/></svg></div><div class="lbl">Deliver<br>Impact</div></div>
+      </div>
+      <div class="note">Developers focus on clarity, direction, and outcomes.
+      AI agents handle execution at scale.</div>
+    </div>
+  </div>
+
+  <!-- ENGINEERING STACK -->
+  <div class="stack">
+    <div class="band"><h2>THE NEW ENGINEERING STACK</h2><div>From Intent to Impact</div></div>
+    <div class="cards">
+      <div class="card c1"><div class="num">1</div>
+        <svg class="cic" width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#12b1c5" stroke-width="1.8" fill="none"/><path d="M4 21c1-5 4-7 8-7s7 2 8 7" stroke="#12b1c5" stroke-width="1.8" fill="none"/></svg>
+        <h3>Business Intent</h3>
+        <div class="desc">Understand the problem, user needs, and business objectives.</div>
+        <div class="out"><div class="ol">Output</div><div class="ot">Clear goals and success criteria</div></div>
+      </div>
+      <div class="cchev">&#8250;</div>
+      <div class="card c2"><div class="num">2</div>
+        <svg class="cic" width="34" height="34" viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6z" stroke="#2e6de0" stroke-width="1.8" fill="none"/><path d="M9 11h7M9 14h7M9 17h5" stroke="#2e6de0" stroke-width="1.6"/></svg>
+        <h3>Specification</h3>
+        <div class="desc">Translate intent into detailed requirements, designs, and constraints for AI agents.</div>
+        <div class="out"><div class="ol">Output</div><div class="ot">Precise spec, interfaces, and acceptance criteria</div></div>
+      </div>
+      <div class="cchev">&#8250;</div>
+      <div class="card c3"><div class="num">3</div>
+        <svg class="cic" width="34" height="34" viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3" stroke="#7c4fe0" stroke-width="1.8" fill="none"/><circle cx="9.5" cy="13" r="1.4" fill="#7c4fe0"/><circle cx="14.5" cy="13" r="1.4" fill="#7c4fe0"/><path d="M9.5 16.5h5M12 8V5M12 5a1.5 1.5 0 10-.01 0" stroke="#7c4fe0" stroke-width="1.5" fill="none"/></svg>
+        <h3>AI Agent Execution</h3>
+        <div class="desc">Specialized agents plan, code, test, and iterate in parallel.</div>
+        <div class="out"><div class="ol">Output</div><div class="ot">Working code, tests, docs, and artifacts</div></div>
+      </div>
+      <div class="cchev">&#8250;</div>
+      <div class="card c4"><div class="num">4</div>
+        <svg class="cic" width="34" height="34" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" stroke="#f2960c" stroke-width="1.9" fill="none"/><path d="M15 15l6 6" stroke="#f2960c" stroke-width="2.1" stroke-linecap="round"/></svg>
+        <h3>Human Review</h3>
+        <div class="desc">Engineers validate for correctness, quality, security, and alignment with intent.</div>
+        <div class="out"><div class="ol">Output</div><div class="ot">Approved changes and feedback loop</div></div>
+      </div>
+      <div class="cchev">&#8250;</div>
+      <div class="card c5"><div class="num">5</div>
+        <svg class="cic" width="34" height="34" viewBox="0 0 24 24"><path d="M12 2c4 3 5 8 3 13l-3 3-3-3C7 10 8 5 12 2z" stroke="#43a955" stroke-width="1.8" fill="none"/><circle cx="12" cy="9" r="1.7" fill="#43a955"/><path d="M8 16l-3 5 5-2M16 16l3 5-5-2" stroke="#43a955" stroke-width="1.6" fill="none"/></svg>
+        <h3>Delivery &amp; Learning</h3>
+        <div class="desc">Ship to production, measure impact, and feed learnings back into the system.</div>
+        <div class="out"><div class="ol">Output</div><div class="ot">Value delivered and continuous improvement</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY SHIFT -->
+  <div class="shift">
+    <svg width="42" height="42" viewBox="0 0 24 24"><path d="M12 2a7 7 0 014 12.7c-.8.6-1 1.3-1 2.3h-6c0-1-.2-1.7-1-2.3A7 7 0 0112 2z" stroke="#fff" stroke-width="1.6" fill="none"/><path d="M10 20h4M10.5 22h3" stroke="#fff" stroke-width="1.6"/></svg>
+    <div class="txt"><b>Key Shift:</b>
+      Implementation becomes abundant. Clarity, judgment, and orchestration
+      become the new differentiators.</div>
+    <svg width="150" height="64" viewBox="0 0 150 64">
+      <circle cx="22" cy="26" r="9" stroke="#fff" stroke-width="1.8" fill="none"/>
+      <path d="M8 52c2-9 7-12 14-12s12 3 14 12" stroke="#fff" stroke-width="1.8" fill="none"/>
+      <path d="M44 18L86 8M44 32h42M44 46l42 10" stroke="#9aa8d8" stroke-width="1.6" stroke-dasharray="5 4"/>
+      <g stroke="#fff" stroke-width="1.5" fill="none">
+        <rect x="92" y="1"  width="20" height="14" rx="3"/><circle cx="98" cy="8"  r="1.3" fill="#fff"/><circle cx="106" cy="8"  r="1.3" fill="#fff"/>
+        <rect x="92" y="25" width="20" height="14" rx="3"/><circle cx="98" cy="32" r="1.3" fill="#fff"/><circle cx="106" cy="32" r="1.3" fill="#fff"/>
+        <rect x="92" y="49" width="20" height="14" rx="3"/><circle cx="98" cy="56" r="1.3" fill="#fff"/><circle cx="106" cy="56" r="1.3" fill="#fff"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- MULTI-AGENT + FOCUS -->
+  <div class="duo">
+    <div class="ma">
+      <h2>THE RISE OF MULTI-AGENT DEVELOPMENT</h2>
+      <div class="sub">Complex software is built by teams of specialized AI agents working
+      together&#8212;supervised by human engineers.</div>
+      <div class="hub">
+        <svg style="position:absolute; inset:0;" width="100%" height="100%" viewBox="0 0 520 300">
+          <g stroke="#9fb6c9" stroke-width="1.6" stroke-dasharray="4 4">
+            <line x1="196" y1="70"  x2="238" y2="122"/><line x1="324" y1="70"  x2="282" y2="122"/>
+            <line x1="180" y1="150" x2="194" y2="150"/><line x1="340" y1="150" x2="326" y2="150"/>
+            <line x1="196" y1="230" x2="238" y2="178"/><line x1="324" y1="230" x2="282" y2="178"/>
+          </g>
+        </svg>
+        <div class="center"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>Orchestrated by Developer</div>
+        <div class="agent"       style="left:6px;  top:38px;"><div><div class="an">Research Agent</div><div class="ad">Analyzes context and gathers insights</div></div><div class="adisc"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4" fill="#12b1c5"/><path d="M5 20c1-4.5 3.6-6 7-6s6 1.5 7 6z" fill="#12b1c5"/></svg></div></div>
+        <div class="agent right" style="right:6px; top:38px;"><div><div class="an">Architecture Agent</div><div class="ad">Evaluates design, scalability, and trade-offs</div></div><div class="adisc"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="4" y="12" width="6" height="8" fill="#12b1c5"/><rect x="10" y="7" width="6" height="13" fill="#12b1c5"/><rect x="16" y="3" width="5" height="17" fill="#12b1c5"/></svg></div></div>
+        <div class="agent"       style="left:6px;  top:124px;"><div><div class="an">Testing Agent</div><div class="ad">Creates tests and validates quality</div></div><div class="adisc"><svg width="22" height="22" viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="5.4" ry="6.6" fill="#12b1c5"/><path d="M12 6V3M6 9L4 7M18 9l2-2M6 15H3M18 15h3" stroke="#12b1c5" stroke-width="1.6"/></svg></div></div>
+        <div class="agent right" style="right:6px; top:124px;"><div><div class="an">Implementation Agent</div><div class="ad">Writes code and implements features</div></div><div class="adisc"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" stroke="#12b1c5" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div></div>
+        <div class="agent"       style="left:6px;  top:212px;"><div><div class="an">Security Agent</div><div class="ad">Reviews for vulnerabilities</div></div><div class="adisc"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z" fill="#12b1c5"/><path d="M8.5 12l2.4 2.4 4.6-4.8" stroke="#fff" stroke-width="1.8" fill="none"/></svg></div></div>
+        <div class="agent right" style="right:6px; top:212px;"><div><div class="an">Ops Agent</div><div class="ad">Monitors, deploys, and ensures reliability</div></div><div class="adisc"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="#12b1c5"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3" stroke="#12b1c5" stroke-width="1.8"/></svg></div></div>
+      </div>
+      <div class="note">Work happens in parallel. Velocity scales with intelligence, not headcount.</div>
+    </div>
+
+    <div class="focus">
+      <h2>WHAT DEVELOPERS SHOULD FOCUS ON NEXT</h2>
+      <div class="fitem"><svg class="fic" width="26" height="26" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" stroke="#2e6de0" stroke-width="1.7" fill="none"/><circle cx="12" cy="12" r="3.5" stroke="#2e6de0" stroke-width="1.7" fill="none"/><path d="M12 3.5V1M12 23v-2.5M3.5 12H1M23 12h-2.5" stroke="#2e6de0" stroke-width="1.7"/></svg>
+        <div><div class="fn">Systems Thinking</div><div class="fd">Understand how systems, users, and business goals connect.</div></div></div>
+      <div class="fitem"><svg class="fic" width="26" height="26" viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6z" stroke="#2e6de0" stroke-width="1.7" fill="none"/><path d="M9 10l2 2 4-4M9 16h7" stroke="#2e6de0" stroke-width="1.6" fill="none"/></svg>
+        <div><div class="fn">Spec-Driven Development</div><div class="fd">Write precise specs that AI agents can execute effectively.</div></div></div>
+      <div class="fitem"><svg class="fic" width="26" height="26" viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z" stroke="#2e6de0" stroke-width="1.7" fill="none"/><path d="M12 12l9-5M12 12L3 7M12 12v10" stroke="#2e6de0" stroke-width="1.4"/></svg>
+        <div><div class="fn">Product &amp; Domain Expertise</div><div class="fd">Deepen understanding of real problems and user outcomes.</div></div></div>
+      <div class="fitem"><svg class="fic" width="26" height="26" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6" stroke="#2e6de0" stroke-width="1.6" fill="none"/><circle cx="18" cy="6" r="2.6" stroke="#2e6de0" stroke-width="1.6" fill="none"/><circle cx="12" cy="17" r="2.6" stroke="#2e6de0" stroke-width="1.6" fill="none"/><path d="M8 8l3 6M16 8l-3 6M8.5 6h7" stroke="#2e6de0" stroke-width="1.4"/></svg>
+        <div><div class="fn">AI &amp; Agent Orchestration</div><div class="fd">Design workflows and coordinate specialized agents.</div></div></div>
+      <div class="fitem"><svg class="fic" width="26" height="26" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z" stroke="#2e6de0" stroke-width="1.7" fill="none"/><path d="M8.5 12l2.4 2.4 4.6-4.8" stroke="#2e6de0" stroke-width="1.7" fill="none"/></svg>
+        <div><div class="fn">Validation &amp; Governance</div><div class="fd">Ensure quality, security, reliability, and ethical use.</div></div></div>
+      <div class="fitem"><svg class="fic" width="26" height="26" viewBox="0 0 24 24"><path d="M12 5c-2-1.8-5-2-8-1v15c3-1 6-.8 8 1 2-1.8 5-2 8-1V4c-3-1-6-.8-8 1z" stroke="#2e6de0" stroke-width="1.7" fill="none"/><path d="M12 5v15" stroke="#2e6de0" stroke-width="1.4"/></svg>
+        <div><div class="fn">Continuous Learning</div><div class="fd">Assume today's best practices will be outdated in months.</div></div></div>
+    </div>
+  </div>
+
+  <!-- KEY TAKEAWAYS -->
+  <div class="takes">
+    <div class="kt">KEY<br>TAKEAWAYS</div>
+    <div class="take"><svg class="tic" width="26" height="26" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#152457" stroke-width="1.7" fill="none"/><path d="M3 9h18M8 3v4M16 3v4M7 13h3M7 17h3M14 13h3M14 17h3" stroke="#152457" stroke-width="1.5"/></svg>
+      <div class="tn">Build for the future</div><div class="td">Design for the model six months from now.</div></div>
+    <div class="take"><svg class="tic" width="26" height="26" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" stroke="#152457" stroke-width="1.7" fill="none"/><circle cx="12" cy="12" r="3" stroke="#152457" stroke-width="1.7" fill="none"/></svg>
+      <div class="tn">Observe users</div><div class="td">The best features come from latent demand.</div></div>
+    <div class="take"><svg class="tic" width="26" height="26" viewBox="0 0 24 24"><path d="M20 8A8 8 0 106 18" stroke="#152457" stroke-width="1.8" fill="none"/><path d="M20 3v5h-5M4 21v-5h5" stroke="#152457" stroke-width="1.8" fill="none"/></svg>
+      <div class="tn">Embrace change</div><div class="td">Architectures and workflows must evolve continuously.</div></div>
+    <div class="take"><svg class="tic" width="26" height="26" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" stroke="#152457" stroke-width="1.6" fill="none"/><circle cx="17" cy="9" r="2.5" stroke="#152457" stroke-width="1.6" fill="none"/><path d="M2 20c.8-4 3-5.5 6-5.5s5.2 1.5 6 5.5M13.5 19c.6-2.8 2-4 3.8-4 1.7 0 3 1.2 3.7 4" stroke="#152457" stroke-width="1.6" fill="none"/></svg>
+      <div class="tn">Leverage agents</div><div class="td">Multi-agent teams are the next productivity frontier.</div></div>
+    <div class="take"><svg class="tic" width="26" height="26" viewBox="0 0 24 24"><path d="M4 20v-6M10 20V9M16 20v-4M21 20H3" stroke="#152457" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M14 6l4-3 2 4" stroke="#152457" stroke-width="1.6" fill="none"/></svg>
+      <div class="tn">Focus on impact</div><div class="td">Your value is in outcomes, not keystrokes.</div></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ftr">
+    <svg width="34" height="34" viewBox="0 0 24 24"><path d="M7 3h10v5a5 5 0 01-10 0zM7 5H3c0 4 2 5.5 4 6M17 5h4c0 4-2 5.5-4 6M10 13h4l1 5H9zM7 20h10" stroke="#fff" stroke-width="1.6" fill="none"/></svg>
+    <div class="ft">The future developer doesn&#8217;t just write code. They define intent, orchestrate intelligence,
+    and deliver impact at unprecedented speed.</div>
+    <div class="cc"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="3" stroke="#fff" stroke-width="1.7" fill="none"/><path d="M6 9l4 3-4 3M12 15h6" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg>Claude<br>Code</div>
+  </div>
+
+</body>
+</html>
