@@ -24,6 +24,10 @@
 # - Idempotent: entries that already exist under ~/.codex/skills are left
 #   untouched (this is how Codex's own MCP-managed session-handoff skill
 #   survives a re-run).
+# - Full repository installs such as gstack get a lightweight Codex wrapper.
+#   Its SKILL.md already resolves runtime assets through ~/.claude/skills/gstack,
+#   while linking the entire checkout makes Codex recursively scan node_modules
+#   and can delay MCP startup long enough for it to be interrupted.
 set -uo pipefail
 
 CLAUDE_SKILLS="$HOME/.claude/skills"
@@ -43,7 +47,7 @@ cd "$CLAUDE_SKILLS"
 for e in *; do
   # dotfiles/dirs (.system, etc.) and non-skill top-level files (voice.md)
   case "$e" in
-    .*) continue ;;
+    .*|*.corrupt-backup-*|*.incomplete-backup-*) continue ;;
   esac
 
   if [ -L "$e" ]; then
@@ -54,7 +58,10 @@ for e in *; do
     continue
   fi
 
-  if [ ! -f "$e/SKILL.md" ]; then
+  # Codex requires YAML frontmatter. A readable path alone is insufficient:
+  # damaged all-NUL files previously entered the mirror and emitted loader
+  # errors on every startup.
+  if [ ! -f "$e/SKILL.md" ] || [ "$(head -c 3 "$e/SKILL.md" 2>/dev/null)" != "---" ]; then
     skipped_no_skill=$((skipped_no_skill + 1))
     continue
   fi
@@ -62,6 +69,14 @@ for e in *; do
   dest="$CODEX_SKILLS/$e"
   if [ -e "$dest" ] || [ -L "$dest" ]; then
     skipped_existing=$((skipped_existing + 1))
+    continue
+  fi
+
+  if [ "$e" = "gstack" ]; then
+    mkdir -p "$dest"
+    ln -s ../../../.claude/skills/gstack/SKILL.md "$dest/SKILL.md"
+    created=$((created + 1))
+    echo "linked   $e (lightweight wrapper)"
     continue
   fi
 
