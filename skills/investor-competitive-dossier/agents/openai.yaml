@@ -1,0 +1,4 @@
+interface:
+  display_name: "Investor Competitive Dossier"
+  short_description: "Build evidence-led investor competitor decks"
+  default_prompt: "Use $investor-competitive-dossier to turn this company cohort or market source into a deeply researched investor dossier and branded PowerPoint."
