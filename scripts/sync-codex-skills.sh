@@ -28,6 +28,9 @@
 #   Its SKILL.md already resolves runtime assets through ~/.claude/skills/gstack,
 #   while linking the entire checkout makes Codex recursively scan node_modules
 #   and can delay MCP startup long enough for it to be interrupted.
+# - Skills whose canonical source is on /mnt/c are copied into Codex's WSL-side
+#   installation. Recursively scanning Windows-mounted symlinks blocks session
+#   creation and can prevent MCP startup from completing before the UI deadline.
 set -uo pipefail
 
 CLAUDE_SKILLS="$HOME/.claude/skills"
@@ -79,6 +82,16 @@ for e in *; do
     echo "linked   $e (lightweight wrapper)"
     continue
   fi
+
+  resolved=$(readlink -f "$e" 2>/dev/null || true)
+  case "$resolved" in
+    /mnt/c/*)
+      cp -aL "$e" "$dest"
+      created=$((created + 1))
+      echo "copied   $e (WSL-local mirror)"
+      continue
+      ;;
+  esac
 
   ln -s "$target" "$dest"
   if [ -f "$dest/SKILL.md" ]; then
