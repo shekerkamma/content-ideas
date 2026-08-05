@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Client Acquisition Function"
+  short_description: "Build reliable acquisition automation in stages"
+  default_prompt: "Use $build-client-acquisition-function to assess my client acquisition workflow and build its next reliable automation level."
