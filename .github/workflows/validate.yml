@@ -17,5 +17,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run tests (stdlib only — no install needed)
+      - name: Install test dependencies
+        run: pip install pytest
+
+      - name: Run tests
         run: python3 -m unittest discover -s tests -p "test_*.py" -v
