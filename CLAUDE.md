@@ -65,6 +65,19 @@ clean on an empty bundle before shipping.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
   coding, keep solutions minimal, edit surgically, and verify success criteria.
 
+## Business Analysis Skills
+- `skills/build-client-acquisition-function/SKILL.md` — systematise client
+  acquisition: prospecting, outbound, lead qualification, proposal generation,
+  and follow-up on a ten-level maturity ladder. Mechanical gate checks:
+  `scripts/check_levels.py` (enforces no-skip rule), `scripts/check_blockers.py`
+  (verifies BLOCKED markers have a source search behind them). Run workspace
+  seeded by `scripts/init_run.py`.
+- `skills/financial-model-review/SKILL.md` — extract, integrity-gate, and
+  pressure-test a spreadsheet financial or business model; produces an
+  evidence-graded analysis report behind a blocking arithmetic check. Scripts:
+  `extract_workbook.py`, `sheets_to_csv.py`, `check_model_integrity.py`.
+  Chains `ai-analyst` and `strategy-consulting` for analysis and business case.
+
 ## Presentation system
 
 - `skills/present/SKILL.md` is the single public router for presentation work.
@@ -149,6 +162,10 @@ bash scripts/sync-presentation-pipeline-hosts.sh
 
 # validate the portable recovery skills and their integrity manifest
 bash scripts/verify-recovery-skills.sh
+
+# restore WSL Windows-interop (.exe from WSL) — needed when LibreOffice
+# render_pptx.sh fails with "Exec format error" or "MZ...: not found"
+sudo bash scripts/fix-wsl-interop.sh
 ```
 
 ## Rules
@@ -279,20 +296,25 @@ bash scripts/verify-recovery-skills.sh
 - PPTX QA is a delivery gate, not an optional polish step. Before delivering any
   client-facing deck:
   1. the branded builder must save successfully with validation enabled
-  2. slide text must be checked for overlap, overflow, and collisions
-  3. if `preview_pptx.py` is available, its contact sheets must be reviewed
-  4. if preview tooling is unavailable, say the deck is unreviewed for visual QA
+  2. run `branded-pptx-deck/scripts/qa_geometry.py` for mechanical layout checks
+     (overflow, collision, off-slide shapes, missing footers) — no renderer needed
+  3. slide text must be checked for overlap, overflow, and collisions
+  4. render contact sheets via `preview_pptx.py` (matplotlib) or
+     `branded-pptx-deck/scripts/render_pptx.sh` (LibreOffice + poppler;
+     requires WSL interop — run `scripts/fix-wsl-interop.sh` if `.exe` fails)
+  5. if no renderer is available, say the deck is unreviewed for visual QA
      and do not present it as final
-  5. if overlap is observed, fix the deck before delivery
-  6. use a delivery status explicitly: `draft`, `reviewed`, or `blocked`
-  7. use filename suffixes that match that status: `*-draft.pptx`,
+  6. if overlap is observed, fix the deck before delivery
+  7. use a delivery status explicitly: `draft`, `reviewed`, or `blocked`
+  8. use filename suffixes that match that status: `*-draft.pptx`,
      `*-reviewed.pptx`, `*-blocked.txt` or equivalent
-  8. keep the branded deck builder script in the run folder so QA fixes are
+  9. keep the branded deck builder script in the run folder so QA fixes are
      reproducible
-  9. the reviewed deck must be the one copied to the user-facing delivery path
-     resolved from `CLIENT_DELIVERY_DIR`
-  10. minimum visual QA checklist:
-      - no red overflow boxes in `preview_pptx.py`
+  10. the reviewed deck must be the one copied to the user-facing delivery path
+      resolved from `CLIENT_DELIVERY_DIR`
+  11. minimum visual QA checklist:
+      - no red overflow boxes in `preview_pptx.py` / `render_pptx.sh` output
+      - no opaque shapes over charts or text (`qa_geometry.py`)
       - no title/subtitle collisions
       - no clipped text in stat bars, callout strips, or side panels
       - footer/page number present on each slide
