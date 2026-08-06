@@ -1,0 +1,76 @@
+{
+  "slides": [
+    {
+      "slide": 1,
+      "notes": "Open with the decision. This is not a review of whether the demonstration looks attractive. It is a request to test whether a structured design-decision workflow reduces expensive wrong-direction cycles without creating new control failures.\n\nTransition: Separate what was demonstrated from what still must be proven."
+    },
+    {
+      "slide": 2,
+      "notes": "This slide is the meeting in miniature. Executives should be able to understand the evidence boundary and approve or reject the pilot without needing a feature tour.\n\nTransition: The business problem begins before visual refinement: generic defaults defer the hardest decision."
+    },
+    {
+      "slide": 3,
+      "notes": "The number of available styles is not the value proposition. The value lies in sequencing divergence and convergence so that teams make the large decision before investing in implementation detail.\n\nTransition: The Worlds interface makes that macro decision observable."
+    },
+    {
+      "slide": 4,
+      "notes": "Treat the screenshot as evidence of interaction state, not as the slide\u2019s argument. The management implication is to name a direction owner and record why the selected world fits the audience and task.\n\nTransition: Visible choice still needs gates or it becomes drift."
+    },
+    {
+      "slide": 5,
+      "notes": "The workflow becomes governable when each exploration stage can explicitly return upstream. A gate without an owner is merely a pause; a gate without an exit criterion is subjective delay.\n\nTransition: This governance burden is the cost of a higher creative ceiling."
+    },
+    {
+      "slide": 6,
+      "notes": "This is the strongest counterargument. A powerful general system should not be the default for every task; its flexibility is valuable only when the organization can govern directional choice.\n\nTransition: Work should therefore be routed by the radius of change, not personal tool preference."
+    },
+    {
+      "slide": 7,
+      "notes": "This rule prevents a common failure: using faster local iteration to rationalize a fundamentally weak visual grammar.\n\nTransition: Live Mode is valuable precisely because its scope is bounded."
+    },
+    {
+      "slide": 8,
+      "notes": "Use Live when the decision can be stated at component level and the accepted macro direction remains valid. Escalate structural changes instead of accumulating local exceptions.\n\nTransition: When visual grammar itself is wrong, local iteration must give way to a reset."
+    },
+    {
+      "slide": 9,
+      "notes": "References are not decoration. They are a controlled reset mechanism and therefore need provenance, usage boundaries, and an explicit statement of what design grammar is being borrowed.\n\nTransition: The workflow now reveals which decisions must remain human-owned."
+    },
+    {
+      "slide": 10,
+      "notes": "This allocation is the operating model. It avoids the false choice between manual design and autonomous generation by assigning machines the reversible work and humans the consequential decisions.\n\nTransition: Accepted decisions then become useful only when they constrain future work responsibly."
+    },
+    {
+      "slide": 11,
+      "notes": "Organizational memory is more valuable than any single generated page. Treat the design record as governed policy with authorship, version history, rationale, and expiration\u2014not as permanent truth.\n\nTransition: A fresh-context checker can challenge that memory, but cannot certify the result alone."
+    },
+    {
+      "slide": 12,
+      "notes": "Position the finish reviewer as a challenge control. Its independence is useful, but the source provides no measured evidence that it catches every defect or predicts user value.\n\nTransition: That boundary places the demonstrated workflow at a specific maturity level."
+    },
+    {
+      "slide": 13,
+      "notes": "This prevents the deck from converting feature sophistication into outcome certainty. Levels four and five are hypotheses to test, not benefits to claim.\n\nTransition: Readiness should therefore be assessed before the pilot is allowed to broaden."
+    },
+    {
+      "slide": 14,
+      "notes": "The gates are intentionally unscored until the client assesses them. Presenting invented green status would defeat the governance standard this deck recommends.\n\nTransition: Once readiness is acceptable, success criteria must be locked before execution."
+    },
+    {
+      "slide": 15,
+      "notes": "Lock metrics before the first pilot output is seen. Otherwise the demonstration can redefine success around whichever result looks strongest.\n\nTransition: A matched-task design isolates workflow value from novelty and operator enthusiasm."
+    },
+    {
+      "slide": 16,
+      "notes": "The primary endpoint is major direction resets before acceptance. Secondary measures cover elapsed time, quality, defects, provenance exceptions, and cost.\n\nTransition: The experiment still needs a control for every known failure boundary."
+    },
+    {
+      "slide": 17,
+      "notes": "Governance is part of the product decision, not a compliance appendix. A pilot that omits controls cannot answer whether the workflow is safe to scale.\n\nTransition: The decision can now be reduced to one bounded authorization and three actions."
+    },
+    {
+      "slide": 18,
+      "notes": "Close on the decision requested. The next meeting should review pilot design and readiness, not another showcase output."
+    }
+  ]
+}

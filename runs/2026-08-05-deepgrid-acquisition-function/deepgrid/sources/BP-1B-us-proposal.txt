@@ -1,0 +1,1083 @@
+DEEPGRID SEMI · A PROPOSAL, NOT A PITCH · BP-1B · AUGUST
+2026
+
+
+
+
+The United States: What I’m
+Proposing We Build Together
+From: Aravind Prasad G, Founder & CEO, Deepgrid Semi Pvt Ltd
+To: Shravan Siramdas · investor, and the person I want running our international business
+T-Hub Phase 2, Hyderabad · aravind@deepgridsemi.com · +91 74163 19944
+Companion document: BP-1A — the India plan, which is the one already funded
+
+
+
+  S TRICTLY CONFIDENTIAL — FOR SHRAVAN SIRAMDAS
+    Shravan,
+
+    You have offered to come in as an investor, and separately you have said you would
+    like to come in as a co-founder and bring your experience taking businesses
+    international. I want to take the second offer more seriously than the first, because I
+    think it is worth more to this company than the cheque — and because it deserves a
+    real answer rather than an enthusiastic one.
+
+    So I have written you a document about America specifically, kept apart from our
+    India plan. I did that deliberately. Our India story is genuinely strong, and if I had
+    merged the two you would have found the Indian tailwind quietly carrying the
+    American argument. You would have discovered that yourself in month four, and
+    you would have been right to be annoyed about it.
+
+    What follows is what I actually believe, including the parts that make our US
+    position look smaller than a founder normally admits in writing. Where a number is
+    from our own material I have said so; where it is from outside research I have cited
+    it. Everything I have not verified is marked as an assumption. I would rather you
+    enter this knowing exactly what is unproven than have you find out after you
+    have put your name on it.
+
+    There is one thing I want to say plainly at the start. I take delivery — the silicon, the
+    certification, the engineering. I am proposing that you take the market, starting
+    with America. That is not me handing you the hard part while I keep the interesting
+    one. In this company, market access is the scarcer of the two.
+
+
+
+
+1 What I’m proposing, in one page
+
+Before the analysis, the proposal itself, so you can read everything after this knowing where it
+lands:
+
+ WHAT               MY PROPOSAL
+
+
+ Your role          Co-founder, international. You own US and global go-to-market: positioning, channel,
+                    partnerships, pricing proposals. I own delivery: silicon, RTL, certification, tapeout.
+ WHAT                MY PROPOSAL
+
+
+ Your investment     Unchanged from what we discussed — $1M at ₹112 Cr pre-money, in two tranches, with the
+                     side letter.
+
+ Your US upside      Founder equity in the American company, earned in tranches against named commercial
+                     gates, with the first tranche vesting at signing. The Indian parent holds majority and the IP; you
+                     hold real founder shares in the entity you build. Full structure, guardrails and the dilution
+                     question in §8.
+
+ What I am NOT       America. The ₹45 Cr round funds India: the tapeout and AIS certification. No US spend draws
+ asking you to       on it.
+ fund
+
+ What I am asking    Three conversations I cannot get on my own, and the judgement to tell me when I am wrong
+ you for             about this market. Details in §10.
+
+ What this           Forecast US revenue. There is no US line in our financial plan and I am not going to invent one
+ document does       before you and I have had a real partner conversation.
+ not do
+
+
+
+
+   The one-sentence version. I think America is a real opportunity for us, I think it is a
+   licensing and stack business rather than the box business we run in India, and I think it is
+   worth roughly nothing without someone who can open doors I cannot — which is the entire
+   reason I am writing to you rather than putting a US slide in the India deck.
+
+
+
+
+2 Why I did not simply extend the India plan
+
+Our India thesis rests on three things: a compliance mandate that creates demand by law, a
+price advantage of roughly three times against imported kits, and a sovereignty rule that
+excludes foreign silicon from government fleets. It is a good thesis. I have stress-tested it
+hard, and I believe it.
+
+None of those three exists in the United States. I went through it line by line, and each row
+below kills a specific argument I might otherwise have been tempted to carry across:
+
+ WHAT WE RELY ON IN INDIA           INDIA                 UNITED STATES                              DOES IT TRAVEL?
+
+
+ Demand driver                      GSR 184(E)            Insurance and litigation                   No
+                                    compliance            economics       SOURCED
+
+                                    mandate
+ WHAT WE RELY ON IN INDIA      INDIA              UNITED STATES                            DOES IT TRAVEL?
+
+
+ Regulatory instrument         live since April   AEB rule still only a supplemental       No
+                               2026               proposed rule, and factory-fit at that
+                                                      SOURCED
+
+
+ Price umbrella                ₹6.5–15L imports   incumbents already at $27–60 per         No
+                               vs our ₹2.3L       vehicle per month      SOURCED
+
+
+ Sovereignty advantage         Atmanirbhar        no equivalent — though China/            Inverted
+                               excludes foreign   Russia restrictions help a non-China
+                               silicon            supplier     SOURCED
+
+
+ Smart mirror as a mirror      a permitted        FMVSS 111 still requires mirrors;        No
+ replacement                   product            camera systems only under research
+                                                      SOURCED
+
+
+ An open retrofit channel      fragmented, no     owned by Samsara, Lytx, Motive,          No
+                               incumbent          Netradyne, SmartWitness
+                                                      SOURCED
+
+
+ Private-land driverless       our Phase-3        same logic, and commercially             Yes
+                               margin engine      proven by Outrider      SOURCED
+
+
+ Cost-down silicon             the whole moat     still real — but sold to a platform,     Partly
+                                                  not to a fleet
+
+
+
+
+   What that table forced me to accept. In India we sell a finished kit to a fleet against a
+   deadline. In America the product, the buyer and the trigger all fail at once. The only honest
+   posture left is to sell the layer nobody else localises — our silicon, our IP and our model
+   — into companies that already own the American fleet relationship, plus yard autonomy
+   where no federal vehicle standard applies at all. That is a smaller and less glamorous claim
+   than our India plan makes. I would rather hand you a smaller claim that survives contact.
+
+
+
+
+3 What the American market actually looks like
+
+The opportunity is large and the buying trigger is money rather than law. American fleets do
+not buy safety hardware because a regulator compels them; they buy it because a single
+verdict can exceed the equity value of the business. You will know this world better than I do
+— these are the numbers I have been working from:
+ US MARKET FACT                                  VALUE             AS OF                                   EVIDENCE
+
+
+ Class 8 trucks in operation (the retrofit       3.91M             2026                                        SOURCED
+
+ base)
+
+ New Class 8 retail sales, forecast              224,800           2026, +5.7% YoY                             SOURCED
+                                                 units
+
+
+ North American Class 8 production,              274,111           2026, +9% YoY                               SOURCED
+
+ forecast                                        units
+
+
+ US trucking industry revenue                    $906B             2024, 76.9% of freight                      SOURCED
+
+
+ Driver shortage                                 60,000–           now; ~160,000 by 2031 (ATA)                 SOURCED
+                                                 80,000
+
+
+ Median trucking nuclear verdict                 $51M              2024                                        SOURCED
+
+
+ Growth in $10M+ verdicts                        +235%             2009–2023                                   SOURCED
+
+
+ Commercial auto liability cost growth           10.1%/yr          since 2016                                  SOURCED
+
+
+ Insurer discount for safety tech +              15–20%            2026, major carriers                        SOURCED
+
+ training
+
+ Yard / shuttle autonomy market                  $64B global       52.7% CAGR to 2030 (ABI                     SOURCED
+
+                                                                   Research)
+
+
+
+
+The three rulemakings that decide our timing
+
+I want you to have these dates precisely, because they are the difference between a US plan
+and a US hope:
+
+ RULEMAKING             WHERE IT STANDS, AUGUST 2026                           WHAT IT MEANS FOR US
+
+
+ Heavy-vehicle          Supplemental proposed rule expected July               A future factory-fit requirement on new
+ AEB (NHTSA /           2026; pending about three years; NHTSA’s false-        Class 7–8, proposed 2027 and medium-
+ FMCSA)                 activation engineering analysis open since Oct         duty 2028. That is an OEM and Tier-1
+                        2025      SOURCED                                      opportunity, not a retrofit market.
+
+ FMVSS 111 /            NHTSA still researching, responding to petitions       Our smart mirror cannot be sold as a
+ camera monitor         including one from Daimler Trucks North                mirror replacement in America. It
+ systems                America; no final rule     SOURCED                     becomes a supplementary sensor pod
+                                                                               alongside retained mirrors, which is a
+                                                                               different product and a different pitch.
+ RULEMAKING            WHERE IT STANDS, AUGUST 2026                             WHAT IT MEANS FOR US
+
+
+ California            Finalised 28 April 2026. Vehicles over 10,001 lb         The largest freight state is open. The
+ heavy-duty AV         permitted through staged permits; 500,000 test           mileage bar also tells us plainly that long-
+ rules                 miles per phase; safety case filed with the DMV          haul autonomy is not a business for a
+                           SOURCED                                              company our size.
+
+ Commerce              Software prohibitions live 17 March 2026 for             This one is in our favour. India is not a
+ connected-            China/Russia nexus; hardware from MY2030 or              restricted country, so we are a compliant
+ vehicle rule          1 Jan 2029; passenger vehicles first, a truck rule       non-China alternative at exactly the
+                       signalled       SOURCED                                  moment American OEMs are being pushed
+                                                                                to find one.
+
+
+
+
+     Why now, and why the window is real. Insurance economics are already forcing safety
+     hardware onto American trucks faster than any regulator is. The AEB rule will convert that
+     into factory-fit demand around 2027–2028. And the connected-vehicle rule is actively
+     pushing OEMs to find non-Chinese silicon in that same window. That intersection is our
+     entry, and it is open for roughly as long as our India certification window is — which is why
+     I would rather start the American conversations now, cheaply, than later at scale.
+
+
+
+
+4 Where I think we can win — and what I will not
+pretend
+
+Three routes survive §2. Two more I am naming and rejecting, because a plan that does not
+say what it refuses is not a plan:
+
+
+ #       ROUTE                     WHO BUYS            WHY IT SURVIVES                                             IN TIME
+
+
+ V2      Yard and private-         ports,              No FMVSS applies, no AV permit, no supply-                  First
+         land autonomy             intermodal,         longevity commitment. Outrider has already proven
+                                   plants, 3PL         customers buy this as a subscription in a $64B
+                                   yards               market      SOURCED
+
+
+ V3      Supplementary             fleets, through a   Blind-spot and side detection without touching              Second
+         sensor pod                platform partner    FMVSS 111; rides a partner’s existing install base
+
+ V1      Silicon, IP and           platform            They own the fleet relationship and the certification       Last —
+         module supply             vendors, Tier-1s,   burden; we own a cost floor they cannot match, and          see below
+                                   truck OEMs          the connected-vehicle rule makes a non-China
+                                                       supplier structurally attractive    SOURCED
+ #      ROUTE                   WHO BUYS        WHY IT SURVIVES                                       IN TIME
+
+
+ X1     Long-haul               —               I am rejecting this. Aurora, Kodiak and Waabi are     never, in
+        driverless                              years and hundreds of millions ahead (§6), and        this plan
+        autonomy                                California alone wants 500,000 test miles per phase
+
+ X2     Direct fleet retrofit   —               I am rejecting this too. Samsara, Lytx, Motive and    never, in
+        sales                                   Netradyne own that channel at $27–60 per vehicle      this plan
+                                                per month with software bundled in     SOURCED
+
+
+
+
+The gate on V1 that I only learned by asking properly
+
+
+     This is the most useful thing in the document, and it is not flattering to us. American
+     automotive buyers now expect guaranteed part availability measured in decades —
+     STMicroelectronics extended its automotive MCU longevity programme to 20 years,
+     guaranteeing supply to at least 2038        SOURCED     , and Tier-1 supply increasingly involves
+     multi-year volume or take-or-pay commitments           SOURCED     . Functional safety at ASIL-D
+     additionally requires single-point-fault coverage above 99% under a managed process with
+     independent assessment         SOURCED   — a programme, not a certificate you buy late.
+
+
+
+Read plainly: a five-person fabless company with one shuttle tapeout cannot sign a
+fifteen-year longevity commitment or a credible second-source plan. Not price, not
+performance, not our AI — that is what would end a Tier-1 conversation about selling them a
+chip today. V1 becomes real when a foundry or a Tier-1 stands behind the supply promise, or
+when we license the IP instead of selling the part. Which turns out to be the strategically
+interesting answer, and it leads directly into the next section.
+
+
+
+
+5 What we would actually sell them
+
+When I say “component supplier,” I do not mean our India kit taken apart and sold as pieces.
+Our kit’s value is integration, and breaking an assembly into parts is a worse business than
+selling the assembly. What travels to America is narrower and deeper: the layers where we
+own the intellectual property.
+
+It is also worth being explicit about what we do not make, because those are exactly the things
+people assume a “full-stack” company sells:
+ NOT OURS TO SELL      WHOSE IT IS       WHY I WILL NOT SELL IT
+
+
+ Drive-by-wire /       Jiyu              ASIL-D chassis-by-wire with redundant braking, already shipping to
+ brake-by-wire         Technology, our   30+ OEMs. We integrate against it and certify a latency budget into
+                       partner           it. Reselling it earns us no margin and builds us no moat.
+
+ Steer-by-wire         Jiyu and          Same reasoning. Actuation is a partner domain by design.
+                       incumbent
+                       Tier-1s
+
+ Chassis, e-axles,     Brogen EV, our    A commodity by 2026, and not a semiconductor business.
+ trailers              partner
+
+ Cameras and image     sensor and        Bought-in parts inside our pod. We do not fabricate image sensors and
+ sensors               module vendors    I will not let a deck imply we do.
+
+ 77 GHz radar module   radar Tier-1s     Our radar work is a front-end chip needing SiGe BiCMOS, not a
+                                         finished module       PLAN    . An FPGA cannot prototype a 77 GHz
+                                         front end, so it is proven on silicon or not at all. That makes it a
+                                         2028+ item, not a US entry product.
+
+ LiDAR                 —                 Not in our stack. Our perception thesis is camera plus radar, no HD
+                                         maps.
+
+
+
+What we do own falls into six sellable things. The column I would draw your attention to is
+the fourth one:
+The six things we can actually sell
+
+ SKU   WHAT IT IS                           WHAT WE OWN                 QUALIFICATION BURDEN                  LONGEVITY GATE?      WHO BUYS IT
+
+
+ S1    IP block licence — RTL as soft       RTL + 15 patents filed      ISO 26262 ASIL-ready IP package       None                 Tier-1s, SoC
+       IP: the DGFP4 tile, INT4                  PLAN                   and documentation. No silicon                              vendors, autonomy
+       attention/GEMM engine, safety                                    qualification                                              companies
+       island, TSN gateway; six designs
+       already tapeout-ready
+
+ S2    Perception model licence — D-        Model, weights, toolchain   None. It is software                  None                 Platforms,
+       Drive / YOLO-family INT4                  MEASURED                                                                          autonomy
+       network plus our quantisation                                                                                               companies, yard
+       toolchain                                                                                                                   operators
+
+ S3    Compute module — DGS001-             Board design, BSP,          Board-level. Materially easier than   Softer               Platform vendors,
+       class M.2 / system-on-module:        drivers     MEASURED        a die                                                      yard OEMs,
+       our die or FPGA plus memory, I/                                                                                             integrators
+       O and BSP
+
+ S4    Packaged SoC — SoC2, 28 nm,          The die     PLAN            AEC-Q100 + IATF 16949 + ISO           Yes — 15–20 years.   Tier-1s, truck
+       39.3 TOPS INT8, ₹1,750                                           26262 + PPAP                          The blocker          OEMs
+       packaged part
+
+ S5    Sensor pod                           Integration and             FMVSS 111 limits it to                Partial              Fleets, through a
+       subsystem — 3×8MP GMSL2              compute only; cameras,      supplementary use      SOURCED                             platform partner
+       cameras + 4D 77 GHz radar +          radar and thermal bought
+       thermal + DMS + in-cab compute       in
+
+ S6    Yard autonomy stack —                The stack    PLAN           No FMVSS, no AV permit on             None                 Ports, plants,
+       compute + perception model +                                     private land                                               intermodal, 3PL
+       safety island + remote-supervision                                                                                          yards
+       tooling
+   Why that fourth column changes the plan. S1, S2 and S6 carry no longevity gate and no
+   automotive silicon qualification at all — nobody demands a fifteen-year supply
+   commitment on a soft-IP licence, a software model, or a private-land stack. S4, the packaged
+   chip, is the biggest prize and the one thing we genuinely cannot sell into automotive yet. So
+   the ladder is S2 and S6 first, S1 and S3 next, S4 last, and the honest conclusion is that our
+   first American revenue is far more likely to be a licence than a part.
+
+
+
+I want to flag what that implies about the job, because it affects whether this partnership is the
+right fit rather than just an attractive one. Selling soft IP or a perception model to a Tier-1 is a
+long-cycle, technical, relationship-led enterprise sale — much closer to licensing than to
+distribution. If that is the kind of selling you have done, this works. If your strength is channel
+and volume distribution, then S6 — yard autonomy — is where you should start, and we
+should both know that going in.
+
+
+
+
+6 What it costs to play in this category
+
+I would rather show you this than have you discover it. These are the ten companies Tracxn
+ranks as closest peers in autonomous trucking, with disclosed private funding:
+
+
+ COMPANY               FOUNDED     HQ                TOTAL FUNDING       LEAD INVESTORS
+
+
+ Pony.ai               2016        Fremont, US       $1.19B              Toyota Motor, HongShan +33
+
+ Waabi                 2021        Toronto, Canada   $1.03B              Khosla Ventures, Uber +26
+
+ PlusAI                2016        San Francisco,    $720M               HSG, FountainVest +17
+                                   US
+
+ Aurora                2017        Mountain View,    $693M               Hyundai, Greylock +15
+                                   US
+
+ Einride               2016        Stockholm,        $652M               Temasek, Norrsken VC +35
+                                   Sweden
+
+ TuSimple              2015        San Diego, US     $648M               Sina +23
+
+ Oxa                   2014        Oxford, UK        $246M               BP Ventures, ZF +22
+
+ Kodiak Robotics       2018        Palo Alto, US     $165M               Aliya, BMW i Ventures +14
+ COMPANY                       FOUNDED      HQ                    TOTAL FUNDING         LEAD INVESTORS
+
+
+ Gatik                         2017         Mountain View,        $152M                 Innovation Endeavors, Avin
+                                            US                                          Hub +23
+
+ Changsha Intelligent          2017         Changsha, China       $121M                 Xinding Capital, Sanze VC
+ Driving                                                                                +12
+
+ Source: Tracxn competitor ranking for Kodiak Robotics, retrieved Aug 2026   SOURCED   . Private funding only; Aurora and
+ Kodiak are both now public.
+
+
+
+Those ten have raised roughly $5.6 billion between them. We are raising ₹45 Cr, about
+$5.4 million. The ratio is around a thousand to one. I am not showing you this to be dramatic
+— I am showing you because it is the entire reason I am proposing we enter as a supplier and
+a licensor rather than as a competitor. No version of this round competes in that category, and
+any plan that implies otherwise is one you should not put your name to.
+   COMPETITIVE DIAGRAM           Capital Raised in Autonomous Trucking                                                                                         why DeepGrid enters as a supplier, not a rival
+
+
+
+
+                               Pony.ai Fremont, US                                                                                                                                      $1.19B
+
+
+                                Waabi Toronto, Canada                                                                                                                   $1.03B
+
+
+                               PlusAI San Francisco, US                                                                                    $720M
+
+
+                               Aurora Mountain View, US                                                                                $693M
+
+
+                               Einride Stockholm, Sweden                                                                           $652M
+
+
+                             TuSimple San Diego, US                                                                               $648M
+
+
+                                  Oxa Oxford, UK                                     $246M
+
+
+                     Kodiak Robotics Palo Alto, US                          $165M
+
+
+                                 Gatik Mountain View, US                   $152M
+
+
+          Changsha Intelligent Driving Changsha, China                 $121M
+
+
+
+                                                           DeepGrid: ₹45 Cr (~$5.4M) — a 4-pixel bar on this scale
+                                                           Combined disclosed private funding of the ten peers above: ~$5.6B. Ratio to this round: ~1,000:1.
+
+
+
+                                                                                                                                                                                                        FIG 7
+
+
+
+Fig. 7 — Capital raised in autonomous trucking. Disclosed private funding of the ten companies Tracxn ranks as closest peers (Aug 2026)
+   SOURCED      . Teal bars are the three companies whose business models are compared in Fig. 3. Excludes post-IPO capital: Aurora and Kodiak are
+both public. The point is not that DeepGrid is under-funded — it is that no amount of this round competes in this category, so the plan must not try to.
+7 The competitive set, and the posture I propose
+for each
+
+There are two distinct competitive groups in America, and I think our correct relationship
+differs for each. Confusing them produces a plan that competes with everyone and partners
+with no one:
+
+ COMPANY          WHAT THEY ARE          WHERE THEY STAND IN 2026                 MY PROPOSED POSTURE
+
+
+ Aurora           Long-haul              5.3M cumulative miles to April 2026;     Do not compete
+                  driverless; licenses   about 440,000 driverless miles by end
+                  the Driver             June; 10 Sun Belt routes; second-
+                                         generation trucks July 2026; Roush
+                                         targeting 1,000 trucks a year; one
+                                         customer ordering 500      SOURCED
+
+
+ Kodiak           Driverless             Public via Ares Acquisition Corp II,     Do not compete — but their
+ (Kodiak AI)      technology plus        Sept 2025; 30 power units; driverless    Bosch deal is the exact
+                  owned operations       frac-sand for Atlas Energy; long-haul    template for our V1
+                                         driverless targeted 2H 2026; partnered
+                                         with Bosch to scale hardware
+                                            SOURCED
+
+
+ Waabi            Autonomous             Raised $1B; investors include            Do not compete
+                  trucking,              NVIDIA’s NVentures, Volvo Group VC,
+                  simulation-first       Porsche SE      SOURCED
+
+
+ Gatik            Owns and operates      Asset-heavy operator                     Not our lane
+                  a middle-mile fleet
+
+ Outrider         Yard autonomy as       $62M raised; driverless rollout 2026;    Proof that V2 works —
+                  a subscription         taking 2026–27 orders; enterprise        compete or supply
+                                         support launched       SOURCED
+
+
+ Samsara, Lytx,   Fleet safety           The five vendors dominating the 2026     Partner. Do not fight. V1
+ Motive,          platforms — they       US fleet camera market      SOURCED      and V3 both route through
+ Netradyne,       own the retrofit                                                them
+ SmartWitness     channel
+
+
+
+If you take one datapoint from this table, take the Kodiak–Bosch arrangement. An American
+autonomy company chose to partner with a component supplier to scale its hardware.
+That is the seat I am asking you to help us apply for — and it exists partly because of the
+connected-vehicle rule, not only because of our cost.
+
+
+
+
+8 The structure: investor in India, founder in
+America
+
+Let me state your proposal as I now understand it, because it is cleaner than the version I had
+been arguing with myself about:
+
+
+ #    WHAT YOU PROPOSED                                               MY ANSWER
+
+
+ 1    You invest in the Indian company today — $1M for ~7.7% at       Agreed. Terms as already discussed, side
+      ₹112 Cr pre-money                                               letter included
+
+ 2    You come in as a founder in the American company                Agreed, with the guardrails below
+
+ 3    Your American equity is earned against performance as we        Agreed, and it was going to be my proposal
+      go, not granted at signing                                      too
+
+ 4    We then raise a $25M follow-on in the US to compete             Agreed — this is §10, with one caveat about
+      properly                                                        the word “compete”
+
+
+
+So we are aligned on the shape. What I want to write down are the four things that have to be
+true for this structure to survive diligence in 2028 rather than need surgery. Three of them
+protect you as much as me; one of them is mine and I am not going to move on it.
+
+
+The structure at inception
+
+A Delaware entity, majority-owned by Deepgrid Semi, with you as founder holding earned
+equity. Illustratively — and these percentages are a starting point for negotiation, not a
+position     ASSUMPTION      :
+
+
+ HOLDER                   AT INCEPTION                            NOTES
+
+
+ Deepgrid Semi            majority                                Funded as an ODI. Holds the exclusive US
+ (Indian parent)                                                  licence; the IP itself stays in India
+
+ You, as co-founder       meaningful minority, earned             Real founder equity, not phantom — vesting
+                          in tranches                             against the gates below
+ HOLDER                         AT INCEPTION                                 NOTES
+
+
+ US employee pool               reserved                                     For the American hires you will need
+
+ Later: the $25M                dilutes everyone pro-rata                    Including me, including the parent
+ round
+
+
+
+
+The four guardrails
+
+ #       GUARDRAIL                    WHY IT PROTECTS YOU                           WHY IT PROTECTS THE COMPANY
+
+
+ 1       The Indian parent            It is what makes your shares                  Our ₹204 Cr investors keep the upside of
+         holds majority and           fundable. An institutional lead in            the market they backed us to reach
+         control of the US            2028 needs one clear owner of the
+         entity                       technology behind the entity it is
+                                      buying into
+
+ 2       The IP stays with the        You are selling something with a real         One asset, one owner. This is the guardrail
+         Indian parent. The US        owner standing behind it, not a shell         I will not move on — every other term is
+         entity holds an              with borrowed rights                          negotiable
+         exclusive, territory- and
+         field-of-use-limited
+         licence
+
+ 3       Your equity is earned        You will be able to point at delivered        It makes a generous grant defensible on
+         in tranches against          outcomes rather than explain a                the cap table instead of looking like a gift
+         named commercial             founder title to every future investor
+         gates, with standard
+         leaver and reverse-
+         vesting provisions
+
+ 4       ODI filed properly,          It is your shares that are at risk if the     A FEMA contravention discovered during
+         and your FEMA                structure is later found non-                 2028 diligence is a repriced or dead round
+         residency established        compliant
+         before we paper
+         anything
+
+
+
+
+What “earned” would actually mean
+
+I would rather agree the tranches now, in writing, than have a conversation in month nine
+about whether something counted. My proposal is that your equity vests in four roughly equal
+parts against the gates already in §9 and §10:
+ TRANCHE          VESTS ON                                                                          ROUGHLY WHEN
+
+
+ T-A              Signing — you join, the entity is formed, US0 begins                              on execution
+
+ T-B              US1 — one signed technical evaluation with a platform vendor or Tier-1            months 3–9
+
+ T-C              US3 — one live US yard reference, or a first smaller-OEM evaluation               months 9–18
+
+ T-D              The $25M round closes — the outcome that makes all of this real                   2028
+
+
+
+Note what tranche A does: you hold founder equity from day one, not after a probation.
+The gates govern the rest. I think that is the right balance between your point that you are a
+founder rather than an employee, and my point that a title should be earned where the work is
+invisible.
+
+
+The dilution question, since it is the one you should press me on
+
+Your percentage will fall when we raise $25M. Mine falls too, and so does the parent’s. The
+honest framing is that your return comes from the entity being worth something, not from
+the percentage being large — a meaningful minority of a company that raised $25M on real
+American traction is worth many multiples of a large slice of a 2026 shell that no investor will
+price. That is the whole argument, and it is also why I keep insisting on one clean cap table:
+the 2028 round is exactly what a fragmented structure would make expensive or
+impossible.
+
+Two protections I would offer against that dilution without hesitation: pro-rata rights so you
+can defend your position in the round, and a written commitment that your unvested
+tranches are adjusted rather than crushed if the round is larger or earlier than planned
+   ASSUMPTION     .
+
+
+What Indian law constrains
+
+Not a free design space, and I would rather we both know this before counsel tells us:
+
+ CONSTRAINT                                                  WHAT IT MEANS HERE
+
+
+ FEMA / ODI: where an Indian resident has control of a       The parent’s majority holding in the US entity is a
+ foreign entity it constitutes overseas direct investment,   reportable ODI. We structure and file it properly at
+ reportable through the AD bank on Form ODI Part I /         inception, not retrospectively.
+ Form FC — even where no cash is remitted
+     SOURCED
+ CONSTRAINT                                                 WHAT IT MEANS HERE
+
+
+ Resident-individual restriction: a FEMA-resident           Your FEMA residency status determines what you can
+ individual generally cannot acquire control in a foreign   hold, and we need it established first. It is also a reason
+ entity that itself has an Indian subsidiary or step-down   the US entity should sit under the Indian parent rather than
+ subsidiary     SOURCED                                     above it    ASSUMPTION      .
+
+ Flip timing: the gradual-migration route is what is        If the 2028 lead wants a Delaware topco, that route stays
+ normally recommended early, because it avoids ODI          open — provided we have kept one clean cap table until
+ share-swap complexity and does not crystallise capital     then.
+ gains     SOURCED
+
+
+
+
+   The one caveat on the word “compete.” $25M does not compete with the companies in §7
+   — they have raised about $5.6B between them. What $25M does is fund qualification, a US
+   presence, longevity backing and working capital so that we can win the segments we
+   chose in §4 and §10: smaller and vocational OEMs, terminal tractors and yards, module and
+   licence supply. That is a fight we can win. Head-on long-haul autonomy is not, at any round
+   size we will realistically raise, and I would rather we say that to a US investor before they
+   say it to us.
+
+
+
+
+   Where I have landed. Yes to investor in India today. Yes to founder in America. Yes to
+   earned equity, generously sized, with tranche A vesting at signing. Yes to the $25M follow-
+   on. The two things I am asking you to accept in exchange are that the Indian parent keeps
+   majority and control of the US entity, and the IP stays with the parent under an
+   exclusive licence. If you can live with those two, I think we have a deal and the rest is
+   counsel and percentages.
+
+
+
+
+9 How I would sequence it, and the risks I’d
+rather you hear from me
+
+Sequenced so nothing expensive happens before something cheap has been proven. No stage
+below draws on the ₹45 Cr round:
+ STAGE                  MONTHS FROM SIGNING         WHAT WE WOULD HAVE                               WHAT IT COSTS
+
+
+ US0 — Access           0–3                         A target list of platform vendors and            travel only
+                                                    Tier-1s, warm introductions, one non-
+                                                    binding technical conversation
+
+ US1 —                  3–9                         One signed technical evaluation with a           engineering time
+ Validation                                         platform or Tier-1 — this is also your
+                                                    side-letter enterprise/ISV milestone
+
+ US2 —                  6–12                        A written quote and timeline for AEC-            study cost only
+ Qualification                                      Q100 / IATF 16949 / ISO 26262 — the
+ scoping                                            real cost of playing, priced instead of
+                                                    guessed
+
+ US3 — Yard             9–18                        One US private-land yard pilot, where no         partner-funded or a
+ reference                                          FMVSS or AV permit applies                       separate SPV
+
+ US4 — Entity           18+                         US entity, Declaration-of-Conformity             gated on Series A,
+ and first                                          readiness, first supply or licence               not this round
+ agreement                                          agreement
+
+
+
+And the risks. I have put the two I find most uncomfortable at the top:
+
+
+ #      RISK                  CLASS   WHY IT BITES                              WHAT I PROPOSE WE DO
+
+
+ U7     US product            high    I have been quoting that $51M             US counsel before any US revenue;
+        liability                     median verdict as a sales argument.       product-liability cover as a priced cost
+                                      It is also our exposure: a perception     line, not an afterthought; limitation-of-
+                                      component sits inside the liability       liability and indemnity caps in every
+                                      chain of an 80,000 lb vehicle in the      agreement; our bit-exact deterministic
+                                      most litigious trucking market in the     replay as the forensic defence.
+                                      world      ASSUMPTION     . The tail
+                                      risk exceeds this entire round.
+
+ U1     Automotive            high    AEC-Q100, IATF 16949 and ISO              US2 exists purely to price this before
+        qualification                 26262 all precede any Tier-1              we commit. V2 needs none of it and
+        is unfunded                   design-in, and none is funded in the      can produce our first US reference
+                                      ₹45 Cr      ASSUMPTION      .             without it.
+
+ U2     No US entity,         high    A five-person Hyderabad company           This is the whole reason the lane needs
+        team or track                 has no US legal presence, no              you rather than a hire. US4 gates entity
+        record                        automotive references, no local           spend to Series A.
+                                      support.
+
+ U3     Channel               high    V1 and V3 both run through                Run V1 and V2 in parallel so no single
+        dependence                    partners who can drop us, second-         partner is load-bearing. Our cost floor
+                                      source us, or build it themselves.        is the reason to keep us.
+ #       RISK           CLASS      WHY IT BITES                          WHAT I PROPOSE WE DO
+
+
+ U8      FEMA / ODI     medium     Control of a foreign entity from      Structure per option A in §8; file
+         structuring               India is reportable ODI even with     properly; keep a later flip available.
+                                   no cash moved        SOURCED    .
+
+ U4      The truck      medium     Commerce has signalled a separate     Counsel before US4. Declaration-of-
+         connected-                rule for trucks and buses; a broad    Conformity readiness as a named
+         vehicle rule              foreign-nexus reading could sweep     deliverable.
+         lands badly               in non-China suppliers too
+                                      SOURCED      .
+
+ U5      The AEB rule   medium     Already about three years pending     Insurance-driven demand does not
+         slips again               with an open false-activation         depend on the rule. V2 depends on
+                                   analysis    SOURCED      .            neither.
+
+ U6      India          high       My attention and scarce engineering   A hard rule I am imposing on myself:
+         execution                 time pulled toward a market with no   no India engineer is assigned to US
+         suffers                   near-term revenue.                    work before AIS certification closes.
+
+
+
+
+     The honest bottom line. There is a real market here, a real buying trigger, and a real
+     structural opening for a non-Chinese silicon and IP supplier. There is also no US revenue I
+     am willing to forecast, no qualification budget in this round, and no American presence
+     today. What I am proposing is that we buy an option on America with your network rather
+     than with the company’s capital — and that you and I judge it on whether US1 and US2
+     close on time, not on the size of the American market.
+
+
+
+
+10 The 2028 round — and the asset that unlocks it
+
+You made a point in conversation that I think is the strongest strategic idea either of us has put
+on the table, and it deserves to be in this document rather than left in a phone call. Your
+argument, as I understood it: once Indian trucks are actually running with our ADAS, that
+fleet becomes the reference that opens America — and it is the smaller US OEMs, not
+the majors, who will want to try it. Their interest is what makes a US round raisable,
+and we should raise roughly $25M in America in 2028 to convert that interest into a
+business.
+I agree with it, I think it is better than anything I had written, and it fixes the one real hole in
+this document: everything up to §9 ends at “gated on Series A” with no American capital plan
+at all. So here is that plan, with the parts I would push back on marked as such.
+
+
+Why the reference asset changes our position
+
+Today I walk into an American conversation with measured silicon and a good story. In 2028,
+if India goes the way BP-1A says it should, I walk in with something categorically different
+— a deployed fleet, field-failure data from a punishing duty cycle, and manufacturing
+maturity somebody else has already paid to prove. No amount of pitching substitutes for that,
+and it is the one asset the companies in §7 cannot simply buy with funding.
+
+But I want to be precise about what it proves, because overselling this is how the document
+would lose its credibility:
+
+ THE INDIA FLEET PROVES                                            IT DOES NOT PROVE
+
+
+ Reliability at a hostile duty cycle — heat, vibration, dust,      US regulatory compliance. AIS certification is not
+ voltage transients, tamper resistance over real months            FMVSS, and the test protocols differ
+
+ Manufacturing and field maturity — that we can build,             US highway perception validation. Indian road data
+ install, support and service at volume                            does not validate American interstate conditions
+
+ Unit economics at real volume — our cost floor                    Automotive qualification. AEC-Q100 / IATF 16949 /
+ demonstrated rather than modelled                                 ISO 26262 still have to be done and paid for (§9, U1)
+
+ That the model works on messy roads — arguably harder             Anything about longevity. A deployed fleet is not a
+ than US highways                                                  15-year supply guarantee (§4)
+
+
+
+
+Why smaller OEMs, and which ones
+
+Your instinct to skip the majors is the part I most agree with. Daimler, Paccar and Volvo have
+entrenched Tier-1 relationships, multi-year qualification programmes and no particular reason
+to take our call in 2028. The smaller and vocational American OEMs are a genuinely different
+buyer:
+
+ WHY THEY ARE REACHABLE                                   EVIDENCE
+
+
+ They face the same AEB requirement with no in-           the rule targets new Class 7–8 from 2027 and medium-duty
+ house ADAS capability and no Tier-1 leverage             2028     SOURCED
+
+
+ ADAS is already arriving in vocational, so the           Mack has scheduled a comprehensive ADAS suite for a new
+ segment will be actively shopping                        vocational platform with late-2027 builds       SOURCED
+ WHY THEY ARE REACHABLE                              EVIDENCE
+
+
+ They are structurally underserved by incumbents     structural    ASSUMPTION
+
+ because their volumes are small
+
+ Several build terminal tractors and spotter         Autocar builds severe-duty vocational trucks and terminal
+ trucks — the exact vehicle our yard stack runs on   tractors     SOURCED    ; Battle Motors builds refuse,
+                                                     infrastructure and a non-CDL Class 6       SOURCED
+
+
+
+
+   The convergence I had missed until I looked at the target list properly. A maker like
+   Autocar builds both severe-duty vocational trucks and terminal tractors                     SOURCED   . That
+   means the same OEM is simultaneously an ADAS customer and a yard-autonomy
+   platform partner — our S3 module and our S6 stack sold to one buyer, on one relationship,
+   through one integration. Every other route in §4 needs a different partner for each product.
+   This one does not, which makes the smaller-OEM segment our best single target rather than
+   merely the easiest one.
+
+
+
+Your point also forces a correction on my own SKU logic. In §5 I argued the licence SKUs
+come first because they dodge the longevity gate. That holds for Tier-1s and autonomy
+companies, who have their own engineering teams. Smaller OEMs are the opposite: they
+lack integration capacity, so they want a more complete product, not bare RTL. For this
+buyer the order is S3 (compute module), S5 (sensor pod) and S6 (yard stack), with S1
+becoming what we license to the majors later. That is a real change to the plan, and it came
+from your framing rather than mine.
+
+
+The round itself
+
+On the number and the timing: I think 2028 is right, and I would treat $25M as the correct
+order of magnitude rather than a figure either of us should defend yet                      ASSUMPTION        .
+
+ WHAT THE ROUND WOULD FUND                            WHY IT CANNOT BE FUNDED EARLIER
+
+
+ Automotive qualification — AEC-Q100, IATF            The unfunded gate in §9 (U1), and the thing that converts us
+ 16949, ISO 26262, PPAP                               from a licensor into a supplier
+
+ US entity, local field-applications and support      No American OEM designs in a part with no local support —
+ presence                                             and premature before there is a design-in to support
+
+ Inventory and working capital for module supply      Only meaningful once an OEM has committed volume
+
+ A longevity and second-source posture — foundry      Needs capital and a foundry relationship we will not have
+ commitments behind a 15-year promise                 before the 28 nm part is in production
+Why 2028 rather than sooner or later: the AEB factory-fit requirement bites on new Class 7–8
+from 2027 and medium-duty in 2028                     SOURCED      ; vocational ADAS platforms are being built
+for late 2027         SOURCED     ; California’s heavy-duty framework opened in April 2026
+     SOURCED   ; and our India reference will by then be mature rather than anecdotal. Those four
+line up exactly once.
+
+
+     And this is where your equity question answers itself. A $25M US-led round in 2028 is
+     precisely the trigger event I described in §8: the moment a Delaware topco becomes the
+     right structure, and the round that prices your founder equity in the American company at a
+     valuation set by an American lead investor rather than by me, and the final vesting tranche in
+     §8. A meaningful minority of a company that raised $25M on real traction is worth
+     many multiples of a large slice of a 2026 shell nobody will price. It is also why I care so
+     much about not fragmenting the cap table now — a fragmented structure is exactly what
+     would make the 2028 round expensive or impossible.
+
+
+
+
+What has to be true by then
+
+So that we are both measuring the same things. If these are not true, we should not raise:
+
+
+ #      PRECONDITION BY 2028                                                                  OWNER
+
+
+ 1      Indian fleets running our ADAS at real volume, with published field-reliability and   Me (BP-1A)
+        day-30 uptime data
+
+ 2      28 nm silicon in production, not merely first silicon                                 Me
+
+ 3      At least one US yard reference live (US3, §9)                                         You
+
+ 4      Two or more smaller-OEM technical evaluations open, ideally one with a terminal-      You
+        tractor maker
+
+ 5      A written, priced qualification plan, so the round funds a known cost rather than a   Both
+        guess (US2)
+
+ 6      A defensible answer on longevity and second source                                    Me, with a foundry
+                                                                                              partner
+
+ 7      Clean structure: one cap table, ODI filings in order, flip executable (§8)            Both, counsel-led
+
+
+
+The caveat I would rather state myself than have a US investor state for me: every element of
+this section is a plan, not a commitment. The India deployment has to actually happen first
+— it is the load-bearing assumption underneath the entire American case, and it lives in
+BP-1A rather than here. If India slips, 2028 slips with it, and the right response is to say so
+rather than to raise anyway.
+
+
+
+
+11 What I’m asking you for
+
+Not capital for America. Three things I cannot get on my own:
+
+
+ #       WHAT I AM ASKING                                WHY IT HAS TO BE YOU
+
+
+ 1       One platform or Tier-1 technical                I can build the part. I cannot get the first meeting, and a cold
+         conversation — Samsara, Motive,                 approach from an unknown Indian fabless company does not
+         Netradyne class, or a truck Tier-1              convert.
+
+ 2       One American yard operator — a port,            This is our fastest credible US reference and it needs no
+         plant, intermodal or 3PL yard willing to run    certification. It is also the deal I understand least well
+         a pilot                                         commercially.
+
+ 3       Your judgement, used against me                 You have taken businesses international and I have not. If your
+                                                         read is that the licensing route is wrong, or the sequence is
+                                                         wrong, I want that in month one, not month ten.
+
+
+
+And what you get from me: the delivery half done properly and on record. First silicon, AIS
+certification, and a company where the numbers in front of an investor are labelled by how
+they were obtained. That is the part I can promise, and it is the part that makes your half
+sellable.
+
+
+What happens next
+
+ STEP                                                                     WHEN                        WHO
+
+
+ You read this and BP-1A and tell me where you think I am wrong           this week                   You
+
+ We agree the pool size, the three gates, and the vesting schedule        within two                  Both
+                                                                          weeks
+
+
+ Counsel drafts: subsidiary, incentive pool, side letter, conversion      weeks 2–4                   Counsel, board-
+ right                                                                                                approved
+
+ Signing, T1, and US0 begins                                              week 4–5                    Both
+
+ First review of US0/US1 against the gates                                month 3                     Both, with the board
+One last thing. I have written this the way I would want it written if I were the one being
+asked — with the weaknesses in the same font as the strengths. If the American opportunity
+here still looks worth your time after reading the uncomfortable sections, then I think we
+should build it together. If it does not, I would rather know that now, and I would still want
+you as an investor.
+
+
+— Aravind
+
+
+
+
+S Sources
+
+Every        SOURCED      claim in this document traces to one of the following, retrieved 4 August
+2026. Figures drawn from DeepGrid’s own engineering and investor material are labelled
+      PLAN   or     ASSUMPTION       accordingly.
+
+Heavy-vehicle AEB rulemaking — Sidley, DOT 2026 Regulatory Agenda: environmentalhealt
+hsafetybrief.sidley.com · Land Line, AEB rulemaking to resume: landline.media · Fleet
+Equipment, FMCSA 2026 proposed safety regulations: fleetequipmentmag.com · original
+NPRM: govinfo.gov
+FMVSS 111 / camera monitor systems — Federal Register, FMVSS No. 111 Rear Visibility: f
+ederalregister.gov · Federal Register, Drivers’ Use of Camera-Based Rear Visibility Systems
+(May 2025): federalregister.gov · Trucking Info: truckinginfo.com
+California heavy-duty AV rules — California DMV: dmv.ca.gov · Covington: cov.com
+Connected-vehicle supply-chain rule — DLA Piper, Connected vehicles rule takes effect: dl
+apiper.com · Covington: cov.com · Arnold & Porter: arnoldporter.com
+Class 8 market size and forecasts — ACT Research, 2026 Class 8 forecast: actresearch.net
+· Lytx, Trucking statistics (3.91M Class 8 in operation): lytx.com · ATA economics data: trucking.
+org
+Nuclear verdicts, insurance and driver shortage — FleetOwner, How nuclear verdicts are
+driving up fleet insurance costs: fleetowner.com · FreightWaves, Which ADAS features insurers
+actually credit: freightwaves.com · Trucking statistics 2026: truckinsuredhq.com
+Competitors — Aurora Q1 FY2026 shareholder letter (SEC 8-K): sec.gov · Aurora, Triples
+driverless network to 10 routes: ir.aurora.tech · Trucking Dive, Kodiak–Bosch: truckingdive.com
+· Kodiak, Best of 2025: kodiak.ai · Robot Report, Waabi raises $1B: therobotreport.com ·
+Forbes, Outrider raises $62M: forbes.com · Outrider enterprise support: outrider.ai
+Automotive qualification, longevity and functional safety — STMicroelectronics, 20-year
+availability for automotive MCUs: newsroom.st.com · Infineon product longevity programme: inf
+ineon.com · Microchip product longevity: microchip.com · Synopsys, ASIL-D ISO 26262
+compliance for automotive SoCs: synopsys.com · Ansys, Understanding ISO 26262 for
+semiconductors: ansys.com · EE Times, Managing semiconductor obsolescence: eetimes.com
+Entity structure, FEMA / ODI and flips — Treelife, Flip structure for Indian startups: treelife.in
+· Treelife, FEMA ODI rules for Indian startups investing abroad: treelife.in · Treelife, Delaware
+entity setup: treelife.in · Inkle, FEMA residency for Indian founders incorporating in the US: inkle
+.ai
+US retrofit channel pricing — Samsara pricing breakdown: airpinpoint.com · Dash Cam
+Insight vendor comparison: dashcaminsight.com
+
+
+
+
+Deepgrid Semi Pvt Ltd · BP-1B · Aug 2026 · Prepared for Shravan Siramdas · companion to BP-1A (India). Every US
+datapoint carries a source retrieved 4 August 2026 and is labelled sourced; nothing here is carried across from the India
+financial model. Evidence labels: measured / contracted / plan / assumption / sourced / external. Structure, valuation and
+equity terms are subject to board, placement-agent, valuer and counsel confirmation.
+

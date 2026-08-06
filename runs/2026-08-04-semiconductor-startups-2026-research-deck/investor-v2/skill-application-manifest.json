@@ -1,0 +1,21 @@
+{
+  "slide_count":12,
+  "stages":[
+    {"skill":"competitive-intel-sprint","status":"applied","proper_layer":"content strategy","outputs":["investor-analysis.md"],"impact":"Reframed ten companies into core, growth, option, and moonshot investor roles using a ten-dimension scorecard."},
+    {"skill":"ai-analyst","status":"applied","proper_layer":"analysis","outputs":["investor-analysis.md"],"impact":"Defined the scoring method, ranked the field, and separated facts from analyst judgment."},
+    {"skill":"story-architect","status":"applied","proper_layer":"narrative","outputs":["slide-plan.json"],"impact":"Built a thesis-to-ranking-to-portfolio-to-kill-criteria argument."},
+    {"skill":"presentation-content-writer","status":"applied","proper_layer":"visible slide copy","outputs":["slide-plan.json","build_investor_deck.py"],"impact":"Rewrote every action title and visible slide structure around an investor decision."},
+    {"skill":"explainer-graphic","status":"applied","proper_layer":"visual explanation","outputs":["build_investor_deck.py"],"impact":"Used a toll-roads-versus-rockets analogy for horizontal infrastructure versus specialist compute."},
+    {"skill":"impeccable","status":"applied","proper_layer":"direction and visual system","outputs":["build_investor_deck.py"],"impact":"Selected a provocative technical-editorial direction with stronger pacing and semantic color."},
+    {"skill":"branded-pptx-deck","status":"applied","proper_layer":"native PPTX construction","outputs":["build_investor_deck.py","semiconductor-startups-2026-investor-deck-draft.pptx"],"impact":"Produced a branded editable PowerPoint using the governed template package."},
+    {"skill":"officecli","status":"applied","proper_layer":"real-render QA","outputs":[],"impact":"Validated the package and inspected a real rendered contact sheet with zero issues."},
+    {"skill":"watch","status":"not-applicable","proper_layer":"source acquisition","outputs":[],"impact":"No source video was supplied."},
+    {"skill":"presentation-source-bundle","status":"not-applicable","proper_layer":"source normalization","outputs":[],"impact":"The verified web-research evidence contract was reused."},
+    {"skill":"ai-graphics","status":"not-applicable","proper_layer":"authored raster graphics","outputs":[],"impact":"All structured visuals remained native and editable."},
+    {"skill":"pptx-toolkit","status":"not-applicable","proper_layer":"existing-PPTX edits","outputs":[],"impact":"This was a new native build."}
+  ],
+  "content":{"visible_slide_count":12,"notes_slide_count":0},
+  "direction":{"candidate_count":3,"representative_slide_count":3,"selected":"Provocative technical editorial","material_differences":["Investor hierarchy replaces article summary","Dark-light pacing replaces repetitive white cards","Scoring bars and proof staircase replace generic bullets","Toll-roads-versus-rockets gives the deck a memorable investment frame","Coral is reserved for binary risk and teal for compounding infrastructure"]},
+  "visual_system":{"archetype_count":7,"slides_covered":12,"editable_sources":["build_investor_deck.py"],"source_evidence_slides":[]},
+  "qa":{"contracts_valid":true,"lint_clean":true,"officecli_zero_issues":true,"real_render_reviewed":true,"independent_review_passed":false}
+}

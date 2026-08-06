@@ -1,0 +1,18 @@
+{
+  "slides": [
+    {"slide": 1, "notes": "Open with the decision: authorize a governed pilot, not broad adoption. The walkthrough demonstrates choice architecture, not measured business impact."},
+    {"slide": 2, "notes": "Separate observed mechanisms from the proposed decision. The three mechanisms justify testing, while every outcome claim remains unproven."},
+    {"slide": 3, "notes": "The cost problem is directional debt. Fast generation has limited value when teams correct macro direction only after implementation begins."},
+    {"slide": 4, "notes": "Use the interface state as proof of visible macro choice. Require a named owner and recorded rationale before variants are built."},
+    {"slide": 5, "notes": "The feature count is incidental. Divergence produces value only when commitment gates stop rerolls and move the work forward."},
+    {"slide": 6, "notes": "A narrow workflow can be the better choice. Generality raises differentiation and operator variance at the same time."},
+    {"slide": 7, "notes": "Route by change altitude. Live is for bounded detail; terminal work changes structure; references reopen direction."},
+    {"slide": 8, "notes": "Live Mode is valuable after direction is accepted. Do not use faster local iteration to rationalize weak visual grammar."},
+    {"slide": 9, "notes": "A reference is a controlled reset mechanism, not decoration. Record provenance and the grammar being borrowed."},
+    {"slide": 10, "notes": "Allocate reversible work to the system and irreversible judgment to accountable people: truth, direction, trade-offs, and release. Release requires an independent fresh-context human check; system detection is support, not adjudication."},
+    {"slide": 11, "notes": "The design record can reduce reinvention, but it must be versioned and explicitly resettable so stale taste does not become policy."},
+    {"slide": 12, "notes": "Do not translate workflow sophistication into outcome certainty. Productivity, usability, quality, and commercial effects remain pilot hypotheses."},
+    {"slide": 13, "notes": "Hold inputs and operator profiles constant and blind downstream reviewers. Count major direction resets before acceptance as the primary endpoint."},
+    {"slide": 14, "notes": "Close on three actions: name the owner, select the bounded task, and lock the scorecard before any showcase output is reviewed."}
+  ]
+}

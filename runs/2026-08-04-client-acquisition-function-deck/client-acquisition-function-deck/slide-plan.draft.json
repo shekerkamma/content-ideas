@@ -1,0 +1,609 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "DeepGrid Semi Investor Briefing visual reference",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "section-divider",
+      "action_title": "PRE-SERIES A INVESTOR BRIEFING Commercializing Vertically Integrated Edge-AI Silicon for Non-Discretionary Autonomy Mandates Bypassing Western merchant silicon to deliver compliant commercial vehicle safety at a 3x to 7x",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-1"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "section-divider",
+      "action_title": "EXECUTIVE SUMMARY Bridging the Valley of Death — FPGA Prototype to Custom ASIC DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 02 The technical reality DeepGrid has validated its custom 39.3 TOPS INT8 edge-AI",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-2"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "section-divider",
+      "action_title": "THE CORE PROBLEM The Hardware Squeeze Zone Traps Every Pure-Play AI Stack DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 03 Pure-Play AI Software Advanced AV/ADAS perception algorithms, no owned silicon The S",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-3"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "section-divider",
+      "action_title": "THE SOLUTION The Custom DGrid Alpha Combo-Die Architecture DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 04 3D Systolic Tensor Cube A 64×512 MAC lattice, dual-issue (×2) at 600MHz — verified to deliver 39.3",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-4"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "section-divider",
+      "action_title": "THE ARCHITECTURE DeepGrid's Six-Chiplet Integration Consolidating every mandatory ADAS feature onto single-die silicon DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 05 A100 — ADAS / AI Processor 39.3 TOPS IN",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-5"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "section-divider",
+      "action_title": "ICP FRAMEWORK The 5-Dimensional Diagnostic for Early-Stage Silicon A common failure mode: targeting broad segments without scoring buying behavior DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 06 1 · Regulat",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-6"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "section-divider",
+      "action_title": "ICP FRAMEWORK Scoring the Three Segments to Minimize Cash-Burn DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 07 DIMENSION A · TACTICAL DEFENSE B · AFTERMARKET FLEET C · OEM LINE-FIT Primary platforms UGVs, P",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-7"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "section-divider",
+      "action_title": "ICP OPTION A Tactical Defense & Constrained Robotics The low-friction, immediate FPGA validation wedge DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 08 Target & pain point Sovereign UGVs, border surveillance",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-8"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "section-divider",
+      "action_title": "ICP OPTION B Non-Discretionary Aftermarket Fleet Retrofit The high-volume, mandate-driven volume engine DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 09 Target & pain point Medium and heavy goods trucks (N2/",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-9"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "section-divider",
+      "action_title": "ICP OPTION C OEM Factory Line-Fit Embedding The long-term platform-locking GTM — the future scale engine DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 10 Target & pain point Domestic Indian and emerging GCC",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-10"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "section-divider",
+      "action_title": "COMPETITIVE LANDSCAPE Strategic Playbooks of Freight Autonomy Giants Real fleets, four different bets on where autonomy pays first DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 11 Aurora — the heavy-OEM play",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-11"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "section-divider",
+      "action_title": "COMPETITIVE LANDSCAPE Global Semiconductor & Dependency Matrix DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 12 METRIC AURORA KODIAK GATIK DEEPWAY DEEPGRID SEMI Primary markets US Highway US & Defense US & C",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-12"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "section-divider",
+      "action_title": "COMPETITIVE LANDSCAPE Mapping the Domestic Semiconductor Wave As supplied in DeepGrid research materials — not independently re-verified in this pass DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 13 Netrasem",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-13"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "section-divider",
+      "action_title": "COMPETITIVE LANDSCAPE Mapping Software-First Autonomy Competitors As supplied in DeepGrid research materials — not independently re-verified in this pass DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 14 Minu",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-14"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "section-divider",
+      "action_title": "COMPETITIVE POSITIONING How Vertical Integration Beats Software-Only and Microcontroller Rivals DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 15 Software-first competitors are squeezed Minus Zero, Swaayatt,",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-15"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 16,
+      "archetype": "section-divider",
+      "action_title": "GTM ROADMAP · PHASE 1 The Tactical & Off-Highway Wedge Months 0–6 — FPGA deployments and immediate cash flow DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 16 PHASE 1 Tactical Wedge Months 0–6 PHASE 2 Afterma",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-16"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 17,
+      "archetype": "section-divider",
+      "action_title": "GTM ROADMAP · PHASE 2 Regulatory Aftermarket Volume Months 6–18 — launching the custom 28nm ASIC in the aftermarket sector DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 17 PHASE 1 Tactical Wedge Months 0–6 P",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-17"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 18,
+      "archetype": "section-divider",
+      "action_title": "GTM ROADMAP · PHASE 3 OEM & Tier-1 Integration Months 18–36 — scalable Tier-1 partnerships and factory line-fit DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 18 PHASE 1 Tactical Wedge Months 0–6 PHASE 2 Afte",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-18"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 19,
+      "archetype": "section-divider",
+      "action_title": "REGULATORY MANDATE The Non-Discretionary Compliance Engine in India Mapping mandatory MoRTH and AIS deadlines to DeepGrid chiplets DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 19 MANDATE CORE ADAS APPLICATI",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-19"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 20,
+      "archetype": "section-divider",
+      "action_title": "REGULATORY MANDATE GCC Regional Compliance Engine — Saudi TGA & WASL Natively meeting SASO and WASL fleet-tracking requirements DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 20 The Saudi WASL mandate & penal",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-20"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 21,
+      "archetype": "section-divider",
+      "action_title": "FINANCIAL MODEL Hardware Unit Economics High production yields and low manufacturing cost on TSMC 28nm DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 21 $3.876 DIE COST AT 1M CHIPS <$4 · Muse/GSME quote, 28nm",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-21"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 22,
+      "archetype": "section-divider",
+      "action_title": "FINANCIAL MODEL Cost Curves & Tape-Out Break-Even Surgical application of NRE capital DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 22 $3.17M TAPE-OUT NRE MPW phasing: A100+R100 MPW, full-die MPW, backend→GD",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-22"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 23,
+      "archetype": "section-divider",
+      "action_title": "FINANCIAL MODEL 6-Year Revenue & Margin Trajectory Management projection, unaudited — model output, not observed data DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 23 ₹6 Cr FY27 ₹41.2 Cr FY28 ₹144.7 Cr FY29",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-23"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 24,
+      "archetype": "section-divider",
+      "action_title": "MONETIZATION Recurring Software Monetization — SaaS & the Sovereign Data Moat Turning low-cost hardware into long-term subscription revenue DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 24 Base Compliance Ti",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-24"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 25,
+      "archetype": "section-divider",
+      "action_title": "CAPITAL EFFICIENCY Leveraging Sovereign Subsidies Maximizing India Semiconductor Mission outlays to reduce capital burn DEEPGRID SEMI · PRE-SERIES A INVESTOR BRIEFING · JULY 2026 25 Product Design Linked Incentive (P-DLI",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-25"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 26,
+      "archetype": "section-divider",
+      "action_title": "THE CLOSE The Defensible Pre-Series A Investment Thesis Pillar 1 — eliminating the hardware squeeze zone Owning the chip, sensor interfaces, and software secures high hardware margins plus high-margin recurring SaaS reve",
+      "audience_job": "Reset context between argument sections",
+      "claim_ids": [],
+      "evidence_ids": [
+        "source-slide-26"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": null,
+        "narrative": null,
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    }
+  ]
+}

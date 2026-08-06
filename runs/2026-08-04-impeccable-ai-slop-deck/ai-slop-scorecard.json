@@ -1,0 +1,16 @@
+{
+  "contract_version": "1.0",
+  "deck": "impeccable-ai-slop-deck",
+  "status": "draft_pending_real_office_render",
+  "checks": [
+    {"id": "generic_saas_composition", "result": "pass", "evidence": "No dashboard or feature-card grid"},
+    {"id": "default_font_feel", "result": "pass", "evidence": "Large editorial hierarchy with restrained supporting text"},
+    {"id": "purple_blue_gradients", "result": "pass", "evidence": "Flat branded navy, teal, coral, cream, and white only"},
+    {"id": "nested_cards", "result": "pass", "evidence": "Panels are used only for comparison or annotation"},
+    {"id": "pill_and_icon_tiles", "result": "pass", "evidence": "No pill clusters or decorative icon tiles"},
+    {"id": "weak_hierarchy", "result": "pass", "evidence": "One action title and one dominant visual per slide"},
+    {"id": "synthetic_evidence", "result": "pass", "evidence": "All screenshots are authentic frames from the supplied video"},
+    {"id": "repetitive_geometry", "result": "pass", "evidence": "Evidence, matrix, comparison, process, and manifesto archetypes alternate"},
+    {"id": "uncommitted_world", "result": "pass", "evidence": "Design systems under inspection is documented in impeccable-direction.md"}
+  ]
+}

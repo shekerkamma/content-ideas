@@ -1,0 +1,31 @@
+numbers:
+  - claim: NVIDIA FY2026 revenue
+    value: "$215.9B"
+    source: https://www.sec.gov/Archives/edgar/data/1045810/000104581026000036/nvda-20260512.htm
+  - claim: MLPerf Inference 5.1 participating organizations
+    value: "27"
+    source: https://mlcommons.org/2025/09/mlperf-inference-v5-1-results/
+  - claim: Tenstorrent Series D
+    value: "$693M; $2.0B pre-money"
+    source: https://tenstorrent.com/newsroom/tenstorrent-closes-693m-of-series-d-funding-led-by-samsung-securities-and-afw-partners
+  - claim: Lightmatter Series D and valuation
+    value: "$400M; $4.4B valuation; $850M cumulative"
+    source: https://lightmatter.co/press-release/lightmatter-raises-400m-series-d-quadruples-valuation-to-4-4b-as-photonics-leader-for-next-gen-ai-data-centers/
+  - claim: Etched July 2026 financing
+    value: "$300M; $10.3B valuation; roughly $925M publicly itemized funding"
+    source: https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/
+  - claim: Etched customer contracts
+    value: "over $1B, company-reported"
+    source: https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/
+  - claim: Fractile Series B
+    value: "$220M"
+    source: https://www.fractile.ai/news/fractile-raises-220m-to-build-the-next-generation-of-inference-hardware
+  - claim: Lightmatter optical result
+    value: "1.6 Tbps per fiber, company demonstration"
+    source: https://lightmatter.co/press-release/lightmatter-achieves-record-1-6-tbps-per-fiber-to-accelerate-ai-optical-interconnect/
+  - claim: Xsight X2 port configuration
+    value: "16x800G or 32x400G"
+    source: https://xsightlabs.com/switches/x2
+  - claim: Etched facilities
+    value: "80,000 sq ft; 10 MW; 400 employees, company-reported"
+    source: https://www.globenewswire.com/news-release/2026/07/23/3332366/0/en/Etched-raises-300M-at-a-10-3B-Valuation-to-Scale-Production-of-Frontier-Scale-Inference-Hardware.html

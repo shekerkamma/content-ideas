@@ -1,0 +1,1277 @@
+{
+  "contract_version": "1.0",
+  "bundle": {
+    "id": "why-graph-engineering-will-10x-your-claude-codex",
+    "title": "Why Graph Engineering will 10x your Claude/Codex",
+    "root": "."
+  },
+  "sources": [
+    {
+      "id": "source-01",
+      "kind": "video",
+      "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+      "sha256": null,
+      "rights": "third-party video evidence, attributed; presenter-authored slides extracted as evidence, not owned artwork",
+      "normalized_from": null
+    },
+    {
+      "id": "source-transcript",
+      "kind": "transcript",
+      "path": "transcript.txt",
+      "sha256": "87cce9349fda79d39f22ae815b8e2690bd4e76ad9fffd88df15391f7a54a4b39",
+      "rights": "third-party video evidence, attributed; presenter-authored slides extracted as evidence, not owned artwork",
+      "normalized_from": "source-01"
+    }
+  ],
+  "slides": [],
+  "transcript_segments": [
+    {
+      "id": "transcript-0001",
+      "start_seconds": 0,
+      "end_seconds": 11,
+      "text": "I came on here to talk about a term I keep seeing going viral on Twitter. It's graph engineering. You've seen it. I've seen it, too. And I'll be honest, the first time I saw it, my reaction was,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0002",
+      "start_seconds": 11,
+      "end_seconds": 25,
+      "text": "\"Okay, is this a real thing, or did we just invent another phrase to make everyone feel behind?\" Because AI has this funny habit where every few weeks, there's this new term that goes viral.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0003",
+      "start_seconds": 25,
+      "end_seconds": 36,
+      "text": "Prompt engineering, context engineering, agent engineering, vibe coding, uh loop engineering, and now graph engineering. Some of these phrases are hype. Some of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0004",
+      "start_seconds": 36,
+      "end_seconds": 48,
+      "text": "them are actually useful. And graph engineering is one of the useful ones, because it gives you a much better way to think about how AI actually gets done. So, in this episode, I'm going to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0005",
+      "start_seconds": 48,
+      "end_seconds": 61,
+      "text": "explain graph engineering in plain English. By the end of this episode, I want you to be able to take one AI workflow you already run, like customer research, port triage, content",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0006",
+      "start_seconds": 61,
+      "end_seconds": 72,
+      "text": "production, or startup idea validation, and turn it into a simple map of steps, checks, handoffs, loops, and human approvals. So, we're going to talk about all that and how you can do it. It's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0007",
+      "start_seconds": 72,
+      "end_seconds": 86,
+      "text": "going to be clearly explained. So, let's get into it. &gt;&gt; [music] &gt;&gt; The simplest way to think about graph",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0008",
+      "start_seconds": 86,
+      "end_seconds": 98,
+      "text": "engineering is like this. Prompt engineering is how you ask the AI for a better question, and context engineering is how you give AI better",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0009",
+      "start_seconds": 98,
+      "end_seconds": 111,
+      "text": "information. But graph engineering is how you design the work around the AI, so the whole thing stops living inside inside one messy, giant AI chat.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0010",
+      "start_seconds": 111,
+      "end_seconds": 123,
+      "text": "I'll give you an example. Imagine you're researching a new new idea. The normal way most people use AI is they open up a chat and they say, \"Should I build this idea?\"",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0011",
+      "start_seconds": 123,
+      "end_seconds": 135,
+      "text": "The model will give you a confident answer. It probably sounds pretty smart. It might give you the market size, a few competitors, maybe a go-to-market plan, and you feel like you did the research.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0012",
+      "start_seconds": 135,
+      "end_seconds": 147,
+      "text": "But if you actually slow down, you realize something a little uncomfortable happened. One model in one pass decided what mattered, researched the market,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0013",
+      "start_seconds": 147,
+      "end_seconds": 159,
+      "text": "interpreted the evidence, wrote the recommendation, and graded it in its own confidence. That's a lot of trust to put into one blob of text. In some",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0014",
+      "start_seconds": 159,
+      "end_seconds": 174,
+      "text": "cases, you might spend years of your life based on this one question that you asked, and you might be working on the wrong thing. The graph version looks a lot different. So, a planner first breaks the question",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0015",
+      "start_seconds": 174,
+      "end_seconds": 186,
+      "text": "into angles. One research One researcher looks at the customer, another looks at competitors, another looks at distribution, another looks at pricing, another looks at risks. Then a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0016",
+      "start_seconds": 186,
+      "end_seconds": 199,
+      "text": "skeptic will try to kill the weak findings. Then a merger turns the surviving evidence into a one-page recommendation. And then you approve the decision before you act on it. The",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0017",
+      "start_seconds": 199,
+      "end_seconds": 212,
+      "text": "output might still be this written report, but the work behind it is just designed so much better. And that at its core is graph engineering. You're taking a messy AI task and turning it into a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0018",
+      "start_seconds": 212,
+      "end_seconds": 222,
+      "text": "workflow that you can actually manage. Now, let's define the basic vocabulary without making this feel like a computer science lecture. By the way, I remember",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0019",
+      "start_seconds": 222,
+      "end_seconds": 233,
+      "text": "learning about One of my first classes in university was graph theory and and and so it's a real throwback for me. I will explain it to you in the clearest way possible. When",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0020",
+      "start_seconds": 233,
+      "end_seconds": 246,
+      "text": "people say graph, they basically mean jobs connected by arrows. Each job is a step in the workflow. The arrows show what happens next. And the shared notes",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0021",
+      "start_seconds": 246,
+      "end_seconds": 258,
+      "text": "moving through the workflow are the state, which is just a fancy way of saying what does the system know so far? So, that sounds technical for about 5 seconds and then you realize that's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0022",
+      "start_seconds": 258,
+      "end_seconds": 270,
+      "text": "actually how work gets done in the real world in in in reality. You know, think about customer support. When a customer writes in, the work is rarely just answer the ticket. First,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0023",
+      "start_seconds": 270,
+      "end_seconds": 283,
+      "text": "you need to understand what kind of issue it is. Then you need to check the customer's account history. Maybe you need to search for the docs for the right policy. Then you draft a response. Then you decide whether this is risky",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0024",
+      "start_seconds": 283,
+      "end_seconds": 294,
+      "text": "enough that a human should review it before going out. When you draw those steps out and connect them in an order, they actually depend on each other and that is a graph.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0025",
+      "start_seconds": 294,
+      "end_seconds": 310,
+      "text": "Take content for example. If I'm making a YouTube episode, the work isn't just write a script. A good episode might start with research, a thesis, examples, a hook, maybe a script,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0026",
+      "start_seconds": 310,
+      "end_seconds": 321,
+      "text": "then title ideas, then thumbnail uh directions, then I you know, an Excalidraw, and then a final pass where I ask, \"Does this sound like a human being or does this sound like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0027",
+      "start_seconds": 321,
+      "end_seconds": 332,
+      "text": "someone trapped inside a SaaS onboarding flow?\" Some of those steps have to happen in order. Some of those steps have have to happen in order. You probably want the thesis",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0028",
+      "start_seconds": 332,
+      "end_seconds": 344,
+      "text": "before the script. You probably want the script before the Excalidraw. But other pieces can happen at the same time. One re- One researcher can look for examples while another looks for",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0029",
+      "start_seconds": 344,
+      "end_seconds": 355,
+      "text": "counterarguments. One could study the audience angle, while another looks for practical workflows. Then, those outputs merge back into the script. And that's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0030",
+      "start_seconds": 355,
+      "end_seconds": 366,
+      "text": "where the graph starts paying because most people use AI in a straight line because chat makes everything kind of feel sequential. You ask for research, then",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0031",
+      "start_seconds": 366,
+      "end_seconds": 379,
+      "text": "you ask for summary, then you ask for a draft, and then you ask for edits, then you ask for titles. That works for really simple things, but when the work has multiple pieces, the straight-line chat starts to get slow",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0032",
+      "start_seconds": 379,
+      "end_seconds": 392,
+      "text": "and fuzzy and actually hard to trust. What's cool about a graph is it lets you design the work more like a small team. One part plans, a few work in parallel,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0033",
+      "start_seconds": 392,
+      "end_seconds": 405,
+      "text": "another checks the work, another merges it, and then the human approves the final step. And once that clicks in your head, uh it just gets a lot less mysterious because there's two different",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0034",
+      "start_seconds": 405,
+      "end_seconds": 418,
+      "text": "things people mean when they say graph in AI. And this is actually where a lot of the confusion comes from. The first is what's called a knowledge graph. A knowledge graph helps AI reason over",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0035",
+      "start_seconds": 418,
+      "end_seconds": 429,
+      "text": "relationships over things. For example, this customer works at this company, this company uses this product, this product connects to this tool, this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0036",
+      "start_seconds": 429,
+      "end_seconds": 442,
+      "text": "support issue relates to this feature, and this feature is owned by this team. Knowledge graphs help because AI reason across relationships in messy data. This",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0037",
+      "start_seconds": 442,
+      "end_seconds": 454,
+      "text": "matters because normal rag often retrieve chunks of text that looks similar to the question, but it can struggle when the answer actually requires connecting different people",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0038",
+      "start_seconds": 454,
+      "end_seconds": 464,
+      "text": "across companies and topics and claims and events. You know, there's tools like you might have heard of Microsoft graph rag, because sometimes you just need AI to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0039",
+      "start_seconds": 464,
+      "end_seconds": 476,
+      "text": "understand relationships inside a body of knowledge, not just to retrieve the nearest paragraph. That is one version of graph engineering. The second version",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0040",
+      "start_seconds": 476,
+      "end_seconds": 489,
+      "text": "is what's called an agent graph. An agent graph is about how work moves. So, a planner hands work to researchers, the researchers work in parallel, a skeptic checks the findings, a synthesizer might",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0041",
+      "start_seconds": 489,
+      "end_seconds": 500,
+      "text": "merge the parts, and a human will, you know, approve the final answer. This episode is mostly about agent graphs, actually, because that is the version you can start using today as a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0042",
+      "start_seconds": 500,
+      "end_seconds": 512,
+      "text": "founder, as a creator, as an operator, as a small team. So, I figured I'd do an episode focusing on that. Um the easiest way to remember the difference, though, is is kind of like this. Knowledge",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0043",
+      "start_seconds": 512,
+      "end_seconds": 524,
+      "text": "graphs help AI understand how information connects, whereas agent graphs help AI understand how work should move. And eventually,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0044",
+      "start_seconds": 524,
+      "end_seconds": 535,
+      "text": "the truth is the best systems use both. The AI will understand relationships inside your business, and it will also know how to move through the right steps.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0045",
+      "start_seconds": 535,
+      "end_seconds": 548,
+      "text": "Um but how can we make this tactical? When should you use graph engineering? Well, use it when the work has multiple steps, multiple sources, maybe multiple paths, checks, risk, or approvals.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0046",
+      "start_seconds": 548,
+      "end_seconds": 560,
+      "text": "Honestly, if you're asking AI to brainstorm 10 names for a new project, you probably don't need a graph. If you're asking AI to summarize a short email, you probably don't need a graph.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0047",
+      "start_seconds": 560,
+      "end_seconds": 571,
+      "text": "But if you're using AI to do deep research, create a go-to-market plan, triage support tickets, review code, prepare for sales calls, synthesize",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0048",
+      "start_seconds": 571,
+      "end_seconds": 584,
+      "text": "customer feedback, or produce recurring content workflow, that's when graph thinking actually starts to matter a lot. And the rule is pretty simple. Use a graph when the work has multiple",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0049",
+      "start_seconds": 584,
+      "end_seconds": 594,
+      "text": "steps, some steps can happen at the same time, and the final output needs checking before it matters. A diamond starts with one question, splits into",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0050",
+      "start_seconds": 594,
+      "end_seconds": 607,
+      "text": "multiple parallel paths, checks the work, and then merges everything into back into one answer. So, here's a here's the startup idea version. Let's say the question is, \"Should I launch an",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0051",
+      "start_seconds": 607,
+      "end_seconds": 619,
+      "text": "AI bookkeeping product for Shopify merchants?\" The messy chat version is one big question and one big answer. The graph version starts with a planner.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0052",
+      "start_seconds": 619,
+      "end_seconds": 630,
+      "text": "So, the planner would say something like, \"To answer this well, we need to understand the customer pain, the competitive landscape, the go-to-market wedge, the pricing pressure, and the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0053",
+      "start_seconds": 630,
+      "end_seconds": 641,
+      "text": "risks.\" And then the work splits. You have one researcher who studies Shopify merchants and tries to understand the bookkeeping pain. Are they using",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0054",
+      "start_seconds": 641,
+      "end_seconds": 653,
+      "text": "QuickBooks? Are they using spreadsheets? Are they hiring bookkeepers? Are they annoyed at tax time? Are they looking for automation or do they just want someone to clean up the mess once a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0055",
+      "start_seconds": 653,
+      "end_seconds": 664,
+      "text": "month? You'll have another researcher who's studying competitors. Are there already Shopify bookkeeping tools? Are there accounting firms building this manually? Are App Store",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0056",
+      "start_seconds": 664,
+      "end_seconds": 675,
+      "text": "products solving this at all? Are freelancers on Upwork or Fiverr doing the work in a way that software could partially replace? Maybe you have another researcher who's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0057",
+      "start_seconds": 675,
+      "end_seconds": 686,
+      "text": "studying the distribution. Where do Shopify merchants actually hang out? What newsletters do they read? What agencies already have trust with them? What Shopify app categories do they",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0058",
+      "start_seconds": 686,
+      "end_seconds": 699,
+      "text": "search? What search terms reveal buying intent? Those three jobs can happen at the same time because they don't depend on each other. Then comes the skeptic.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0059",
+      "start_seconds": 699,
+      "end_seconds": 712,
+      "text": "The skeptic asks, what claims are actually supported? Which evidence is stale because you're going to have data that is just old. Which competitor is being ignored? Where are we confusing pain with willingness to pay? Where did",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0060",
+      "start_seconds": 712,
+      "end_seconds": 725,
+      "text": "the AI sound confident without proving anything? And this step matters more than people think. A lot of AI research fails because the same model that writes",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0061",
+      "start_seconds": 725,
+      "end_seconds": 737,
+      "text": "the answer also grades the answer. That is like asking someone to write their own performance review and then being shocked when they describe",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0062",
+      "start_seconds": 737,
+      "end_seconds": 750,
+      "text": "themselves as a vision- a visionary. Come on. In a good graph, checking is its own job. Then comes the merge. The merge step takes the surviving evidence",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0063",
+      "start_seconds": 750,
+      "end_seconds": 763,
+      "text": "and turns it into a recommendation. Should we pursue this? Should we pause it? Should we kill it? What is the wedge? Who's the first customer? What should we test this week? And what",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0064",
+      "start_seconds": 763,
+      "end_seconds": 775,
+      "text": "evidence would actually change our mind? And finally, you have the human gate. That's where you decide what to do next. You might decide to record a landing page teardown of a Shopify merchants.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0065",
+      "start_seconds": 775,
+      "end_seconds": 786,
+      "text": "You might decide to interview 10 Shopify uh agency owners. You might decide to build a tiny calculator that estimates bookkeeping cleanup costs. Or hey, you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0066",
+      "start_seconds": 786,
+      "end_seconds": 799,
+      "text": "might decide the idea is way too crowded and you just want to move on. But that is the point. Graph engineering does not magically make the decision for you. It gives you a better way to produce the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0067",
+      "start_seconds": 799,
+      "end_seconds": 810,
+      "text": "evidence you use to make the decision. Now, this is where I think people get too fancy too quickly. I would start way simpler than you see",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0068",
+      "start_seconds": 810,
+      "end_seconds": 822,
+      "text": "on on Twitter people using LangGraph, you see people using AutoGen, or some custom agent framework on day one. For your first graph, you can actually run it manually behind the scenes. I don't",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0069",
+      "start_seconds": 822,
+      "end_seconds": 834,
+      "text": "know why more people don't do this. I could show you exactly how to do it, but that just might be boring. The important thing is the structure. Give each job its own lane. One lane does customer",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0070",
+      "start_seconds": 834,
+      "end_seconds": 847,
+      "text": "research, another lane does competitor research, another lane does distribution research. Then the checker lane attacks the evidence, then the merge lane turns the surviving evidence into a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0071",
+      "start_seconds": 847,
+      "end_seconds": 859,
+      "text": "recommendation. That is already graph engineering. It's like level one of graph engineering. Yes, it's slower than a fully automated system, but it's way easier to understand. And if the manual",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0072",
+      "start_seconds": 859,
+      "end_seconds": 870,
+      "text": "version doesn't produce way better work, automating it, honestly, will just produce mediocre work way faster. The first rep is to draw the graph",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0073",
+      "start_seconds": 870,
+      "end_seconds": 881,
+      "text": "before you automate the graph. For me, I would do this with a blank Excalidraw or TLDraw a TLDraw board. I would write the final outcome at the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0074",
+      "start_seconds": 881,
+      "end_seconds": 894,
+      "text": "top. Then I would draw the jobs, planner, customer researcher, competitor researcher, distribution researcher, skeptic, merge, human",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0075",
+      "start_seconds": 894,
+      "end_seconds": 905,
+      "text": "approval. Then I would draw the arrows. The planner feeds the three researchers. The researchers feed the skeptic. The skeptic feeds the merge.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0076",
+      "start_seconds": 905,
+      "end_seconds": 917,
+      "text": "The merge feeds the human decision. And that's enough. Now, once that works three times manually, then I would think about all the tools. The beginner version is a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0077",
+      "start_seconds": 917,
+      "end_seconds": 929,
+      "text": "manual run with with separate lanes. But the intermediate version is Claude code, code acts, or repo where each step writes files. The planner writes",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0078",
+      "start_seconds": 929,
+      "end_seconds": 940,
+      "text": "plan.md, the researcher writes customer.md, competitors.md, and distribution.md, and the skeptic writes review.md. The",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0079",
+      "start_seconds": 940,
+      "end_seconds": 952,
+      "text": "merge step writes recommendation.md. What's cool about that is it leaves a paper trail and that's that's really nice. You can see what happened. You can compare versions and you can actually",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0080",
+      "start_seconds": 952,
+      "end_seconds": 966,
+      "text": "and you can actually reuse the structure next week or a few weeks later. Now, the advanced version is when you do use something like LangGraph, AutoGen Graph Flow, n8n, make.com, or",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0081",
+      "start_seconds": 966,
+      "end_seconds": 976,
+      "text": "your own small scripts to actually orchestrate the graph. So, LangGraph is actually really useful when you want state checkpoints, persistence, human-in-the-loop",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0082",
+      "start_seconds": 976,
+      "end_seconds": 989,
+      "text": "approvals, and more reliable control over how an agent workflow runs. Then you have something like AutoGen Graph Flow, and that's useful when you want directed workflow with sequential",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0083",
+      "start_seconds": 989,
+      "end_seconds": 1001,
+      "text": "steps, parallel steps, conditional branches, and loops. Tools like n8n, make.com are are useful when the graph touches everyday business",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0084",
+      "start_seconds": 1001,
+      "end_seconds": 1011,
+      "text": "systems like Slack, email, airtable, or your CRM. But again, the tool is not the point. Uh the tool should come after the workflow.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0085",
+      "start_seconds": 1011,
+      "end_seconds": 1022,
+      "text": "If you automate a workflow you do not understand, you get a mess. If you understand the workflow first, automation then becomes super obvious, and I can do a graph engineering",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0086",
+      "start_seconds": 1022,
+      "end_seconds": 1033,
+      "text": "advanced tutorial if people are interested uh using things like LangGraph LangGraph or Claude code. Uh but for the purpose of this episode, I think we just want to get to level one",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0087",
+      "start_seconds": 1033,
+      "end_seconds": 1044,
+      "text": "and level two. Okay, so you now hopefully understand what graph engineering is at a high level. But, how can you actually integrate this into",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0088",
+      "start_seconds": 1044,
+      "end_seconds": 1057,
+      "text": "your startup, into your business to start making more money, or creating better products, or just generating a lot of value. Uh the one that comes to mind uh first",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0089",
+      "start_seconds": 1057,
+      "end_seconds": 1068,
+      "text": "is customer support. So, a simple support graph might start by classifying the issue. Is it billing? Is it product confusing? Maybe it's a bug, or cancellation risk,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0090",
+      "start_seconds": 1068,
+      "end_seconds": 1080,
+      "text": "or maybe it's something else. Then the graph checks account context. So, is it a new customer? Are they high value? Have they written in before? Are",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0091",
+      "start_seconds": 1080,
+      "end_seconds": 1090,
+      "text": "they frustrated? Then it searches the docs, or internal policies. You might have like a whole wiki for your company, maybe a notion board, maybe it goes and explores that.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0092",
+      "start_seconds": 1090,
+      "end_seconds": 1102,
+      "text": "Then it drafts a reply. Then a checker reviews the reply for accuracy, tone, and risk. Then a human approves anything involving refunds, account changes,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0093",
+      "start_seconds": 1102,
+      "end_seconds": 1113,
+      "text": "angry customers, legal risk, or promises that a company just might regret later. And that's the graph. And it's better than saying AI answered the support",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0094",
+      "start_seconds": 1113,
+      "end_seconds": 1125,
+      "text": "ticket, because the support ticket is not the real workflow. The real workflow is understanding, and researching, and drafting, and checking, and approving. It's probably starting to click now.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0095",
+      "start_seconds": 1125,
+      "end_seconds": 1136,
+      "text": "Content Content creation is just another uh example that comes top of mind. A content graph might start with research, then it creates a thesis, then it finds",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0096",
+      "start_seconds": 1136,
+      "end_seconds": 1147,
+      "text": "examples, then it writes a hook, then it drafts a script, then a checker asks whether the examples are specific, whether the pacing works, whether the hook earns attention based on what's,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0097",
+      "start_seconds": 1147,
+      "end_seconds": 1158,
+      "text": "you know, formats that are working, and whether the writing sounds like a person something like the person actually would say. Then the graph can branch into title ideas, thumbnail concepts,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0098",
+      "start_seconds": 1158,
+      "end_seconds": 1169,
+      "text": "captions, B-roll, things like that. And that's also closer to how a content lead, a real content lead that you would hire to help you create content, would actually",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0099",
+      "start_seconds": 1169,
+      "end_seconds": 1180,
+      "text": "do. Another great example is coding. A coding graph might start with a plan, then one agent edits the code, another reviews the diff, another runs tests,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0100",
+      "start_seconds": 1180,
+      "end_seconds": 1191,
+      "text": "another checks the UI in a browser, another looks for edge cases, and then you have a human being actually approving the final pull request. And that's basically where all these AI",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0101",
+      "start_seconds": 1191,
+      "end_seconds": 1202,
+      "text": "coding tools are going. The model writing the code is only one part of the workflow, and there's leverage in all the planning and testing and reviewing and inspecting and deciding what is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0102",
+      "start_seconds": 1202,
+      "end_seconds": 1215,
+      "text": "actually safe to ship. And that's actually an important point. Like a big reason why graph engineering matters is it makes quality less dependent on summer someone remembering a perfect",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0103",
+      "start_seconds": 1215,
+      "end_seconds": 1229,
+      "text": "prompt to ask their LLM. It makes reviews way more consistent. It makes delegation in general way cleaner. It makes approval way more explicit. It gives you a place to add tools and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0104",
+      "start_seconds": 1229,
+      "end_seconds": 1239,
+      "text": "memory and checks and permissions over time, and it turns AI work from just like chat into this operating system. And that that really does feel like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0105",
+      "start_seconds": 1239,
+      "end_seconds": 1252,
+      "text": "you're living in the future once you get to that place. Now there is one mistake that I want to warn against, which is more agents don't automatically mean better output. Sometimes actually more",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0106",
+      "start_seconds": 1252,
+      "end_seconds": 1263,
+      "text": "agents mean more noise. Sometimes it means five AI workers confidently repeating the same wrong idea. Sometimes it means the system",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0107",
+      "start_seconds": 1263,
+      "end_seconds": 1274,
+      "text": "spends more time coordinating than thinking. So the goal is not to make the biggest graph possible. I've seen people on X, you know, go viral with these big big graphs, but that's not the goal. The",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0108",
+      "start_seconds": 1274,
+      "end_seconds": 1287,
+      "text": "goal is actually to make the smallest graph that improves the quality of work. And that's a really important distinction because a good graph should remove fake waiting and it should separate workers from checkers. And",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0109",
+      "start_seconds": 1287,
+      "end_seconds": 1300,
+      "text": "really it should be human approval where mistakes are expensive. And it should stop when the answer is good enough. Shouldn't need to continue. And it should leave behind the useful state,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0110",
+      "start_seconds": 1300,
+      "end_seconds": 1313,
+      "text": "the meeting notes, the evidence, the drafts, the sources, and the decision so that you can use it later. And the And that By the way, the last point is underrated because the real compounding value of gra- graph engineering isn't",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0111",
+      "start_seconds": 1313,
+      "end_seconds": 1325,
+      "text": "just that one task gets better. It's that your work starts producing memory. What do I mean by that? I mean that every customer research graph creates better customer notes. Every content",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0112",
+      "start_seconds": 1325,
+      "end_seconds": 1336,
+      "text": "graph creates better examples and audience insights. Every support graph creates better product feedback. And that's where the context becomes the moat because the graph produces the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0113",
+      "start_seconds": 1336,
+      "end_seconds": 1346,
+      "text": "work, but it also produces the memory that makes the next graph smarter. So, it becomes this like asset for you. So, if you want to get into graph engineering and you're like, \"How do I",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0114",
+      "start_seconds": 1346,
+      "end_seconds": 1357,
+      "text": "start?\" Here's Here's a way to think about it. Um I would pick one workflow I already run with AI every week. Maybe it's researching ideas or preparing podcast",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0115",
+      "start_seconds": 1357,
+      "end_seconds": 1370,
+      "text": "episodes, uh reviewing landing pages, analyzing customer feedback. Then I would write the final output in one sentence. For example, I want a one-page recommendation on whether this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0116",
+      "start_seconds": 1370,
+      "end_seconds": 1382,
+      "text": "startup idea is worth testing. And then I would list the jobs a great human would do. They would clarify the question. They would research the customers. They would",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0117",
+      "start_seconds": 1382,
+      "end_seconds": 1394,
+      "text": "research competitors. They would look for distribution. They would look for risks. They would check the evidence. They would make the recommendation. And then I would draw arrows where the work",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0118",
+      "start_seconds": 1394,
+      "end_seconds": 1406,
+      "text": "actually depends on another step. So, what do I mean by that? Customer customer research and competitor research could happen at the same time. The skeptic needs the research before it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0119",
+      "start_seconds": 1406,
+      "end_seconds": 1419,
+      "text": "can check it. And the final recommendation needs the skeptic pass before it can merge the evidence. Then I would add one human gate before the expensive decision. If the output is a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0120",
+      "start_seconds": 1419,
+      "end_seconds": 1430,
+      "text": "private memo, maybe the human gate is light. If the output is a customer email, a public post, code deploys, a refund, or anything touching production",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0121",
+      "start_seconds": 1430,
+      "end_seconds": 1440,
+      "text": "data, you got to have a human gate that's stricter. Then I would run it manually once. This is the whole first rep that we want to get good at. You",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0122",
+      "start_seconds": 1440,
+      "end_seconds": 1451,
+      "text": "don't have to create this giant automation project. Just create the jobs and the arrows. And after you do this once, you start seeing AI work differently.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0123",
+      "start_seconds": 1451,
+      "end_seconds": 1462,
+      "text": "Cuz you're not thinking about like, \"Okay, I need to do the most perfect prompt ever. What What is that What is the perfect prompt for this task I'm trying to do?\" You start thinking about, \"Okay, what's the most perfect workflow",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0124",
+      "start_seconds": 1462,
+      "end_seconds": 1473,
+      "text": "for this?\" And then uh you start designing a path that produces that answer. And that's why I think graph engineering in general is a a concept",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0125",
+      "start_seconds": 1473,
+      "end_seconds": 1486,
+      "text": "that is worth paying uh attention to. It's really like the next logical step after prompting. And I think the people who get the most out of AI will be the people who know how to break down work",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0126",
+      "start_seconds": 1486,
+      "end_seconds": 1497,
+      "text": "into the right pieces, give each piece the right context, check the output, and keep the human in the right place. So, now that, you know, we're towards the end of the episode, here's what I would",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0127",
+      "start_seconds": 1497,
+      "end_seconds": 1508,
+      "text": "do to try to learn this. I would pick one workflow you already run, draw those jobs and arrows, delete the fake waiting, run the independent jobs in parallel, add a skeptic, merge the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0128",
+      "start_seconds": 1508,
+      "end_seconds": 1520,
+      "text": "survivors, approve the final step yourself, and there you have it. That'll be your first graph. And once you have one graph that works, you're not just prompting AI anymore, you're managing AI work. It's sort of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0129",
+      "start_seconds": 1520,
+      "end_seconds": 1532,
+      "text": "this like next level in uh being an agent manager and and really just like stepping yourself into this new world uh deep into this new world",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0130",
+      "start_seconds": 1532,
+      "end_seconds": 1542,
+      "text": "where uh you're getting the most out of AI to build out your dreams, to take ideas and put them out there, and getting, you know, something I just think a lot about now is just like how do I get the most",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0131",
+      "start_seconds": 1542,
+      "end_seconds": 1555,
+      "text": "out of these platforms? Um and graph engineering is just a concept that helps you think about that. So, there you have it, folks. Uh graph engineering clearly explained.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0132",
+      "start_seconds": 1555,
+      "end_seconds": 1566,
+      "text": "Um hope that it got your creative juices flowing. Hope it's been helpful. Um My name's Greg Eisenberg. I'm the host of the Startup Ideas podcast. For more,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0133",
+      "start_seconds": 1566,
+      "end_seconds": 1579,
+      "text": "uh you know, like, comment, and subscribe. Follow on on uh Spotify and Apple. And uh you know, I feel grateful that you're here. Um that I I'm able to teach you,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0134",
+      "start_seconds": 1579,
+      "end_seconds": null,
+      "text": "give you these concepts. Um and I just can't wait to see what you build. I'm rooting for you. Have a creative day, and I'll see you next time.",
+      "source_id": "source-transcript"
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-0001",
+      "timestamp_seconds": 0,
+      "path": "frames/frame_0001.jpg",
+      "sha256": "76e0d3999e4b764eb31937ef3a0878791501921e4b91a07c0fba298d407d4245",
+      "description": "Talking-head intro",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0002",
+      "timestamp_seconds": 3,
+      "path": "frames/frame_0002.jpg",
+      "sha256": "203daf8834244d98cd091db7ed1fe8eac0fe0db2501b2d25c65038d0b1cddedd",
+      "description": "Blank transition frame",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0003",
+      "timestamp_seconds": 6,
+      "path": "frames/frame_0003.jpg",
+      "sha256": "f949fd1470fb6fc54de97ea93b380936fbabaf24bf1afac980d9675eba79036b",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0004",
+      "timestamp_seconds": 19,
+      "path": "frames/frame_0004.jpg",
+      "sha256": "c965499383985a1584babab3c58d9bca0df0f36566517105308a9c71205a4792",
+      "description": "Blue-gradient transition frame",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0005",
+      "timestamp_seconds": 41,
+      "path": "frames/frame_0005.jpg",
+      "sha256": "9d29e0022a140db48db1fb6354887c407fb4df896f47d2039ca40a22698dec4b",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0006",
+      "timestamp_seconds": 59,
+      "path": "frames/frame_0006.jpg",
+      "sha256": "9da9744607d893a214d02082b7473bcca041241cf4b06f78e3fb2e65921a7a0f",
+      "description": "Green-gradient transition frame",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0007",
+      "timestamp_seconds": 65,
+      "path": "frames/frame_0007.jpg",
+      "sha256": "eaa07d2e220f5a927885a38526efc8da65d2da9ff1fd4ae3ccc7d0c031972f56",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0008",
+      "timestamp_seconds": 79,
+      "path": "frames/frame_0008.jpg",
+      "sha256": "d686f13a5944b6801efcf78894058172ee49f5a72b938eaa6b5de9d91491fdc5",
+      "description": "Podcast intro bumper (decorative animation)",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0009",
+      "timestamp_seconds": 80,
+      "path": "frames/frame_0009.jpg",
+      "sha256": "70b490c5d604a741c7bb007c96f27e4b01c3322e5635041e968c3aca411089a4",
+      "description": "Podcast intro bumper (presenter framed)",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0010",
+      "timestamp_seconds": 89,
+      "path": "frames/frame_0010.jpg",
+      "sha256": "93a5b319366ffab4995fb5bcd420f2f16c4a78e682d623c052f837d3259028c9",
+      "description": "Slide: Three Ways to Get Work Out of AI (Prompt / Context / Graph Engineering)",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0011",
+      "timestamp_seconds": 111,
+      "path": "frames/frame_0011.jpg",
+      "sha256": "401a015f090d900a021afbe75372486d4d2449c461ef128ce1579b50cb2ebcd1",
+      "description": "Slide: The Before / After (Old Way vs Graph Way)",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0012",
+      "timestamp_seconds": 153,
+      "path": "frames/frame_0012.jpg",
+      "sha256": "c05ba6411b6a8e0461d521dc449afc91a7cdc8bb1f9781a37c489d19bf6b1d66",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0013",
+      "timestamp_seconds": 170,
+      "path": "frames/frame_0013.jpg",
+      "sha256": "f810408e6754442fab107759cf40771664aed288caff97978f9080ff672d8c64",
+      "description": "Slide: One Chat vs One Graph",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0014",
+      "timestamp_seconds": 222,
+      "path": "frames/frame_0014.jpg",
+      "sha256": "a9c84ef7f4d838e21fa6902b02bff7e4bf181e241973b686532d7fa70f192bd5",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0015",
+      "timestamp_seconds": 233,
+      "path": "frames/frame_0015.jpg",
+      "sha256": "967e4492620d5922a6e29a7afccfbe27ce62098d0f87eb80619e0e8d78b8f2cb",
+      "description": "Slide: The Vocabulary \u2014 Jobs, Arrows, State",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0016",
+      "timestamp_seconds": 399,
+      "path": "frames/frame_0016.jpg",
+      "sha256": "de8265393479fce0c35f8241e3f60735d70aa49c976d7b74c385efcc32e512fb",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0017",
+      "timestamp_seconds": 410,
+      "path": "frames/frame_0017.jpg",
+      "sha256": "ef42021f69d0b9bfd022b8856c0f403f257e6f25deeee6eb4a3358e78fc13a4b",
+      "description": "Slide: Two Things People Conflate \u2014 Knowledge Graph vs Agent Graph",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0018",
+      "timestamp_seconds": 523,
+      "path": "frames/frame_0018.jpg",
+      "sha256": "922e28c51129fd811dce9cb9a90a88eb42cdd9ff21e732fe8e5c4c8ac56fcdc8",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0019",
+      "timestamp_seconds": 537,
+      "path": "frames/frame_0019.jpg",
+      "sha256": "605ff9d71c66ff27e9d43ee6155d784a94da8576e81fbc42977026ed1f46acef",
+      "description": "Slide: The Qualifying Test \u2014 When a Graph Earns Its Place",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0020",
+      "timestamp_seconds": 601,
+      "path": "frames/frame_0020.jpg",
+      "sha256": "dde9fb874c581372891dd98ca80c06876555364a4b497647cee4092af0c2d259",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0021",
+      "timestamp_seconds": 617,
+      "path": "frames/frame_0021.jpg",
+      "sha256": "028cfc6403d593d39b428cbb0d99468ddb297167c7a26a3fec7f9599683dd5a9",
+      "description": "Slide: The Worked Example \u2014 Should We Build AI Bookkeeping for Shopify?",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0022",
+      "timestamp_seconds": 803,
+      "path": "frames/frame_0022.jpg",
+      "sha256": "e9fd576a8f828c782f7147e699760651a65d9e5e97f7ca9652e2330017cf2408",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0023",
+      "timestamp_seconds": 817,
+      "path": "frames/frame_0023.jpg",
+      "sha256": "d43e2299f9a19b65348af93c7b5cb21d5209bf83c9ef3d4b6670360b95e99deb",
+      "description": "Slide: The Diamond Pattern",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0024",
+      "timestamp_seconds": 910,
+      "path": "frames/frame_0024.jpg",
+      "sha256": "4dfbd2ea31430952d1acee2260eed8b233d16fd13d74497c2cff8929e3c04c8e",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0025",
+      "timestamp_seconds": 916,
+      "path": "frames/frame_0025.jpg",
+      "sha256": "f6472b5f28957bb4bf4d2ef895f9c4df733e87f0366f47d5f27a98f3afd095ae",
+      "description": "Slide: The On-Ramp \u2014 Three Levels of Implementation",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0026",
+      "timestamp_seconds": 1034,
+      "path": "frames/frame_0026.jpg",
+      "sha256": "c9bc92fa1f40ea4e5cc8587fe624517be6c9d6b9aac1410191df0c651875310b",
+      "description": "Talking-head",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0027",
+      "timestamp_seconds": 1058,
+      "path": "frames/frame_0027.jpg",
+      "sha256": "f99895377d6b9cda56ca55eb2a34676d06a365688d5b4a77f56183d3fc42ba80",
+      "description": "Slide: Ready-Made Pipelines \u2014 Three Graphs You Can Steal",
+      "duplicate_of": null,
+      "screen_class": "text-slide",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0028",
+      "timestamp_seconds": 1493,
+      "path": "frames/frame_0028.jpg",
+      "sha256": "3c1695c14415d4e9452782a9c4ea3a2e7941cdf05e2bb1f1945abe8d08807e2f",
+      "description": "Talking-head (closing)",
+      "duplicate_of": null,
+      "screen_class": "unclassified",
+      "face_quality": null,
+      "source_id": "source-01"
+    }
+  ]
+}

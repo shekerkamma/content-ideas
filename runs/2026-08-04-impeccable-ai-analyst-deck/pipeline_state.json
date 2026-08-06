@@ -1,0 +1,20 @@
+{
+  "pipeline": "content-ideas:ai-analyst/run-analysis",
+  "level": "L5",
+  "question": "What operating model does Impeccable 4.0 introduce, where does it create value, what failure modes and trade-offs does it introduce, and what should a client adopt?",
+  "data_path": ["transcript.txt", "transcript-map.json"],
+  "plan": "full_presentation_adapted_for_qualitative_evidence",
+  "status": "completed",
+  "phases": {
+    "framing": {"status": "completed", "roles": ["question-framing", "hypothesis", "source-tieout"]},
+    "investigation": {"status": "completed", "roles": ["descriptive-analytics", "root-cause-investigator", "validation", "opportunity-sizer"]},
+    "storytelling": {"status": "completed", "roles": ["story-architect", "narrative-coherence-reviewer"]},
+    "deck_delivery": {"status": "completed", "roles": ["storytelling", "deck-creator", "visual-design-critic", "close-the-loop"]}
+  },
+  "degradation": {
+    "bundled_agent_files_missing": true,
+    "details": "The portable registry references agents/*.md files that are absent from the installed portable copy. Fresh isolated analyst roles preserved the DAG functions.",
+    "quantitative_chart_stage": "not_applicable; the source contains no quantitative outcome data. Native causal models, matrices, maturity model, and pilot scorecard were used instead."
+  },
+  "source_limit": "One favorable presenter-led walkthrough; supports workflow analysis but not measured productivity, quality, usability, or business-impact claims."
+}

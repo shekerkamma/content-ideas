@@ -1,0 +1,586 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "output_mode": "hybrid",
+    "editability": "Fifteen native analytical slides plus native interpretation on three exact source-frame proof slides.",
+    "reference_deck": null
+  },
+  "visuals": [
+    {
+      "id": "visual-01",
+      "slide_ids": [
+        1
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-02",
+      "slide_ids": [
+        2
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-03",
+      "slide_ids": [
+        3
+      ],
+      "purpose": "Explain the divergence-to-commitment mechanism as a reusable signature graphic.",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "author-html",
+      "reason": "The explainer requires a reusable deterministic layout while keeping every glyph code-rendered.",
+      "evidence_ids": [
+        "transcript-changes"
+      ],
+      "source": null,
+      "asset": "assets/choice-gates.png",
+      "editable_source": "assets/choice-gates.html",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-04",
+      "slide_ids": [
+        4
+      ],
+      "purpose": "Prove the exact interface state behind the analytical claim.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; analytical interpretation remains native.",
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-worlds",
+        "timestamp": "100",
+        "crop": null
+      },
+      "asset": "assets/worlds.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F2EDE3"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-05",
+      "slide_ids": [
+        5
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-worlds"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-06",
+      "slide_ids": [
+        6
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-07",
+      "slide_ids": [
+        7
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-references"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-08",
+      "slide_ids": [
+        8
+      ],
+      "purpose": "Prove the exact interface state behind the analytical claim.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; analytical interpretation remains native.",
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-live",
+        "timestamp": "577",
+        "crop": null
+      },
+      "asset": "assets/live-comparison.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F2EDE3"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-09",
+      "slide_ids": [
+        9
+      ],
+      "purpose": "Prove the exact interface state behind the analytical claim.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; analytical interpretation remains native.",
+      "evidence_ids": [
+        "transcript-references",
+        "frame-reference"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-reference",
+        "timestamp": "769",
+        "crop": null
+      },
+      "asset": "assets/references.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F2EDE3"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-10",
+      "slide_ids": [
+        10
+      ],
+      "purpose": "Clarify human and system responsibility allocation in one signature matrix.",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "author-html",
+      "reason": "The dense allocation matrix is rendered deterministically and ships with editable HTML source.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": "assets/judgment-allocation.png",
+      "editable_source": "assets/judgment-allocation.html",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-11",
+      "slide_ids": [
+        11
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-memory"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-12",
+      "slide_ids": [
+        12
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-13",
+      "slide_ids": [
+        13
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-14",
+      "slide_ids": [
+        14
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-15",
+      "slide_ids": [
+        15
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-16",
+      "slide_ids": [
+        16
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-17",
+      "slide_ids": [
+        17
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-18",
+      "slide_ids": [
+        18
+      ],
+      "purpose": "Explain the causal or decision model as editable PowerPoint structure.",
+      "artifact_type": "diagram",
+      "evidence_status": "underlying-information",
+      "route": "native",
+      "reason": "The analytical claim is clearer as a native causal model, matrix, maturity model, or scorecard.",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "source": null,
+      "asset": null,
+      "editable_source": "build_client_ready_deck.py",
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": null
+      }
+    }
+  ]
+}

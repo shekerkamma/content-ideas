@@ -1,0 +1,79 @@
+{
+  "artifact": "DeepGrid Semi \u2014 Client Acquisition Strategy v2",
+  "generated": "2026-08-05T05:09:54",
+  "run_root": "runs/2026-08-05-deepgrid-client-acquisition-investor-competitive-dossier",
+  "audience": "Commercial lead \u2014 client acquisition",
+  "status": "reviewed",
+  "slides": 21,
+  "deliverables": {
+    "deck_pptx": {
+      "path": "DeepGrid-client-acquisition-v2-reviewed.pptx",
+      "sha256": "fd5ff87ecd7edf549f7b8e0849aa70f80543faca16def9acbc3b6c10f7d8c350",
+      "kb": 1142.0
+    },
+    "deck_pdf": {
+      "path": "DeepGrid-client-acquisition-v2-reviewed.pdf",
+      "sha256": "4b9462a8dac40f28af30ac2b346da7bd09197035491a984d2dae246a9ed7029b",
+      "kb": 738.9
+    },
+    "html_twin": {
+      "path": "client-package/site/index.html",
+      "sha256": "99054727976910511d2cb27d1edccc768b0bfeb4fe084951456da11d9bf12c3e",
+      "kb": 2040.6
+    },
+    "builder": {
+      "path": "build_deck_v2.py",
+      "sha256": "80cb4660e96030cae013c597e2f6cc4862a8388e93824f8d004dc1adbd060281",
+      "kb": 52.9
+    }
+  },
+  "evidence": {
+    "search_backends": [
+      "GBrain (recall \u2014 empty for target)",
+      "You.com Level 2 (verified live)",
+      "Exa /contents"
+    ],
+    "level2_totals": {
+      "queries": 6,
+      "discovery": 30,
+      "extractions": 26
+    },
+    "evidence_ledger": "outputs/evidence-ledger.csv (14 claims)",
+    "citation_verification": "outputs/citation-verification.md \u2014 1 CONTRADICTED, 3 PARTIAL, 2 CONFIRMED",
+    "storm_lenses": [
+      "practitioner",
+      "skeptic",
+      "economist",
+      "historian",
+      "academic"
+    ],
+    "contradiction_map": "working/storm/contradiction-map.md (14 entries)"
+  },
+  "qa": {
+    "pptx_structural_validation": "PASS",
+    "geometry_qa": "PASS \u2014 410 text frames, 0 overflow/collision/off-canvas, footers on all 21",
+    "contact_sheet_review": "PASS \u2014 all 21 rendered via LibreOffice and reviewed",
+    "sync_check": "outputs/sync-check.md \u2014 5/5 PASS",
+    "html_self_contained": "PASS \u2014 0 external resource references"
+  },
+  "provenance": {
+    "sources": [
+      "BP-1A India plan (40pp)",
+      "BP-1B US proposal (25pp)",
+      "July 2026 Pre-Series A deck (37 slides) \u2014 corrected basis",
+      "June 2026 IM (33pp) \u2014 SUPERSEDED, repeats 6 of 9 retired claims"
+    ],
+    "numbers_basis": "July 2026 Corrections Ledger + BP-1A, further corrected by this run",
+    "regulatory_basis": "G.S.R. 834(E) 11-Nov-2025 + 862(E), verified against gazette"
+  },
+  "supersedes": {
+    "artifact": "DeepGrid-client-acquisition-draft.pptx (v1, 22 slides)",
+    "reason": "Central timing claim contradicted by citation verification; 39.3 TOPS and transformer-VLA claims disproved",
+    "retained_as": "build_deck_v1_prestorm.py.bak"
+  },
+  "caveats": [
+    "Exit/market sizing not modelled \u2014 out of scope for a client-acquisition brief",
+    "Netrasemi maturity rests partly on company declaration; independent reporting describes engineering samples",
+    "AIS-140 precedent analysis is pattern-based, not a computed base rate"
+  ]
+}

@@ -1,0 +1,720 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Impeccable 4.0 \u2014 Client Adoption Decision",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "claim-01",
+      "text": "AI design's bottleneck is judgment allocation",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-problem"
+      ]
+    },
+    {
+      "id": "claim-02",
+      "text": "Plausible defaults push expensive correction downstream",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-problem"
+      ]
+    },
+    {
+      "id": "claim-03",
+      "text": "More choice improves taste only when it is structured",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-changes"
+      ]
+    },
+    {
+      "id": "claim-04",
+      "text": "Impeccable externalizes the macro taste decision",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ]
+    },
+    {
+      "id": "claim-05",
+      "text": "Four commitment gates prevent exploration from becoming drift",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-worlds"
+      ]
+    },
+    {
+      "id": "claim-06",
+      "text": "Generality raises the ceiling\u2014and shifts risk to the operator",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ]
+    },
+    {
+      "id": "claim-07",
+      "text": "Change altitude determines the correct interface",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-references"
+      ]
+    },
+    {
+      "id": "claim-08",
+      "text": "Live Mode compresses the local judgment loop",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ]
+    },
+    {
+      "id": "claim-09",
+      "text": "When the direction is wrong, local polish compounds sunk cost",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-references",
+        "frame-reference"
+      ]
+    },
+    {
+      "id": "claim-10",
+      "text": "Human judgment belongs at four high-leverage moments",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-11",
+      "text": "Taste scales only when decisions become organizational memory",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-memory"
+      ]
+    },
+    {
+      "id": "claim-12",
+      "text": "Fresh-context review is a challenge control\u2014not proof of quality",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ]
+    },
+    {
+      "id": "claim-13",
+      "text": "The demo reaches Level 2\u2014and shows pieces of Level 3",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-14",
+      "text": "Adoption should advance only when four readiness gates are green",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-15",
+      "text": "Success is fewer wrong-direction cycles\u2014without quality regressions",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-16",
+      "text": "A fair pilot isolates workflow value from operator enthusiasm",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-17",
+      "text": "The operating model needs controls at every failure boundary",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-18",
+      "text": "Adopt the decision architecture\u2014then earn the right to scale",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "AI design's bottleneck is judgment allocation",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-01"
+      ],
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "visual_ids": [
+        "visual-01"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "AI design's bottleneck is judgment allocation",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "AI design's bottleneck is judgment allocation"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "analytical-native",
+      "action_title": "Plausible defaults push expensive correction downstream",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-02"
+      ],
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "visual_ids": [
+        "visual-02"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Plausible defaults push expensive correction downstream",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Plausible defaults push expensive correction downstream"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "analytical-native",
+      "action_title": "More choice improves taste only when it is structured",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-03"
+      ],
+      "evidence_ids": [
+        "transcript-changes"
+      ],
+      "visual_ids": [
+        "visual-03"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "More choice improves taste only when it is structured",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "More choice improves taste only when it is structured"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "evidence-proof",
+      "action_title": "Impeccable externalizes the macro taste decision",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-04"
+      ],
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ],
+      "visual_ids": [
+        "visual-04"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Impeccable externalizes the macro taste decision",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Impeccable externalizes the macro taste decision"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "analytical-native",
+      "action_title": "Four commitment gates prevent exploration from becoming drift",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-05"
+      ],
+      "evidence_ids": [
+        "transcript-worlds"
+      ],
+      "visual_ids": [
+        "visual-05"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Four commitment gates prevent exploration from becoming drift",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Four commitment gates prevent exploration from becoming drift"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "analytical-native",
+      "action_title": "Generality raises the ceiling\u2014and shifts risk to the operator",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-06"
+      ],
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "visual_ids": [
+        "visual-06"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Generality raises the ceiling\u2014and shifts risk to the operator",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Generality raises the ceiling\u2014and shifts risk to the operator"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "analytical-native",
+      "action_title": "Change altitude determines the correct interface",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-07"
+      ],
+      "evidence_ids": [
+        "transcript-references"
+      ],
+      "visual_ids": [
+        "visual-07"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Change altitude determines the correct interface",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Change altitude determines the correct interface"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "evidence-proof",
+      "action_title": "Live Mode compresses the local judgment loop",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-08"
+      ],
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ],
+      "visual_ids": [
+        "visual-08"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Live Mode compresses the local judgment loop",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Live Mode compresses the local judgment loop"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "evidence-proof",
+      "action_title": "When the direction is wrong, local polish compounds sunk cost",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-09"
+      ],
+      "evidence_ids": [
+        "transcript-references",
+        "frame-reference"
+      ],
+      "visual_ids": [
+        "visual-09"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "When the direction is wrong, local polish compounds sunk cost",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "When the direction is wrong, local polish compounds sunk cost"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "analytical-native",
+      "action_title": "Human judgment belongs at four high-leverage moments",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-10"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Human judgment belongs at four high-leverage moments",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Human judgment belongs at four high-leverage moments"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "analytical-native",
+      "action_title": "Taste scales only when decisions become organizational memory",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-11"
+      ],
+      "evidence_ids": [
+        "transcript-memory"
+      ],
+      "visual_ids": [
+        "visual-11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Taste scales only when decisions become organizational memory",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Taste scales only when decisions become organizational memory"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "analytical-native",
+      "action_title": "Fresh-context review is a challenge control\u2014not proof of quality",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-12"
+      ],
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "visual_ids": [
+        "visual-12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Fresh-context review is a challenge control\u2014not proof of quality",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Fresh-context review is a challenge control\u2014not proof of quality"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "analytical-native",
+      "action_title": "The demo reaches Level 2\u2014and shows pieces of Level 3",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-13"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-13"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "The demo reaches Level 2\u2014and shows pieces of Level 3",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "The demo reaches Level 2\u2014and shows pieces of Level 3"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "analytical-native",
+      "action_title": "Adoption should advance only when four readiness gates are green",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-14"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-14"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Adoption should advance only when four readiness gates are green",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Adoption should advance only when four readiness gates are green"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "analytical-native",
+      "action_title": "Success is fewer wrong-direction cycles\u2014without quality regressions",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-15"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-15"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Success is fewer wrong-direction cycles\u2014without quality regressions",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Success is fewer wrong-direction cycles\u2014without quality regressions"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 16,
+      "archetype": "analytical-native",
+      "action_title": "A fair pilot isolates workflow value from operator enthusiasm",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-16"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-16"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "A fair pilot isolates workflow value from operator enthusiasm",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "A fair pilot isolates workflow value from operator enthusiasm"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 17,
+      "archetype": "analytical-native",
+      "action_title": "The operating model needs controls at every failure boundary",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-17"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-17"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "The operating model needs controls at every failure boundary",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "The operating model needs controls at every failure boundary"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 18,
+      "archetype": "analytical-native",
+      "action_title": "Adopt the decision architecture\u2014then earn the right to scale",
+      "audience_job": "Understand the decision implication and evidence strength.",
+      "claim_ids": [
+        "claim-18"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-18"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Adopt the decision architecture\u2014then earn the right to scale",
+        "demo_fallback": "Use the native analytical model and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Adopt the decision architecture\u2014then earn the right to scale"
+      },
+      "status": "reviewed"
+    }
+  ]
+}

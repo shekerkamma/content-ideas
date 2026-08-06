@@ -1,0 +1,9 @@
+{
+  "contract_version":"1.0",
+  "bundle":{"id":"semiconductor-startups-2026","title":"Semiconductor Startups 2026","root":"."},
+  "sources":[
+    {"id":"e-crn","kind":"document","path":"https://www.crn.com/news/computing/2026/the-10-coolest-semiconductor-startups-of-2026-so-far","sha256":null,"rights":"Public web article; factual paraphrase and link attribution.","normalized_from":null},
+    {"id":"e-research","kind":"document","path":"../semiconductor-startups-2026-research.md","sha256":null,"rights":"Locally authored research synthesis with linked primary sources.","normalized_from":"e-crn"}
+  ],
+  "slides":[],"transcript_segments":[],"frames":[]
+}

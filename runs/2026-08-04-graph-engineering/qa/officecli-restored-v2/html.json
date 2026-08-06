@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "view",
+    "/home/sheke/content-ideas/runs/2026-08-04-graph-engineering/graph-engineering-video-deck-reviewed.pptx",
+    "html",
+    "-o",
+    "/home/sheke/content-ideas/runs/2026-08-04-graph-engineering/qa/officecli-restored-v2/graph-engineering-video-deck-reviewed.html"
+  ],
+  "returncode": 0,
+  "stdout": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\sheke\\content-ideas\\runs\\2026-08-04-graph-engineering\\qa\\officecli-restored-v2\\graph-engineering-video-deck-reviewed.html\n",
+  "stderr": ""
+}

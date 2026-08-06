@@ -1,0 +1,13 @@
+{
+  "name": "issues",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "view",
+    "/tmp/tmp.VJPyQzsFyB/impeccable-4-story-architect-client-deck-reviewed.pptx",
+    "issues",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"count\": 1,\n    \"issues\": [\n      {\n        \"id\": \"O1\",\n        \"type\": 0,\n        \"severity\": 1,\n        \"path\": \"/slide[12]/shape[@id=8]\",\n        \"message\": \"text overflow: 4 lines at 19.0pt need 122pt, usable 104pt. suggest.height=4.35cm\"\n      }\n    ]\n  }\n}\n",
+  "stderr": ""
+}

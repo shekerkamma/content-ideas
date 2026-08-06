@@ -1,0 +1,380 @@
+{
+  "contract_version": "1.0",
+  "mode": "reconstruction",
+  "items": [
+    {
+      "id": "reconstruction-01",
+      "state_ids": [
+        "01-intro"
+      ],
+      "timestamp_seconds": 13,
+      "transcript_window": [
+        "transcript context around 13 seconds"
+      ],
+      "visible_title": "Impeccable 4.0 introduction",
+      "visual_summary": "Impeccable 4.0 introduction",
+      "context_summary": "Impeccable 4.0 is introduced as a design-control system.",
+      "assets": [
+        "assets/01-intro.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        2
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-02",
+      "state_ids": [
+        "02-taste"
+      ],
+      "timestamp_seconds": 43,
+      "transcript_window": [
+        "transcript context around 43 seconds"
+      ],
+      "visible_title": "Avoid generic AI design",
+      "visual_summary": "Avoid generic AI design",
+      "context_summary": "The opening problem is sameness: generic visual defaults instead of deliberate taste.",
+      "assets": [
+        "assets/02-taste.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        3
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-03",
+      "state_ids": [
+        "03-live"
+      ],
+      "timestamp_seconds": 76,
+      "transcript_window": [
+        "transcript context around 76 seconds"
+      ],
+      "visible_title": "Live mode",
+      "visual_summary": "Live mode",
+      "context_summary": "Live mode is presented as the release's largest workflow change.",
+      "assets": [
+        "assets/03-live.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        4
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-04",
+      "state_ids": [
+        "04-worlds"
+      ],
+      "timestamp_seconds": 100,
+      "transcript_window": [
+        "transcript context around 100 seconds"
+      ],
+      "visible_title": "Visual worlds",
+      "visual_summary": "Visual worlds",
+      "context_summary": "A world supplies a coherent visual grammar before composition begins.",
+      "assets": [
+        "assets/04-worlds.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        5
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-05",
+      "state_ids": [
+        "05-options"
+      ],
+      "timestamp_seconds": 134,
+      "transcript_window": [
+        "transcript context around 134 seconds"
+      ],
+      "visible_title": "Context-specific options",
+      "visual_summary": "Context-specific options",
+      "context_summary": "The interface proposes directions that respond to the current project.",
+      "assets": [
+        "assets/05-options.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        6
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-06",
+      "state_ids": [
+        "06-commands"
+      ],
+      "timestamp_seconds": 193,
+      "transcript_window": [
+        "transcript context around 193 seconds"
+      ],
+      "visible_title": "One skill and its commands",
+      "visual_summary": "One skill and its commands",
+      "context_summary": "A single installed skill exposes a family of design and review commands.",
+      "assets": [
+        "assets/06-commands.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        7
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-07",
+      "state_ids": [
+        "07-detect"
+      ],
+      "timestamp_seconds": 234,
+      "transcript_window": [
+        "transcript context around 234 seconds"
+      ],
+      "visible_title": "Anti-pattern detection",
+      "visual_summary": "Anti-pattern detection",
+      "context_summary": "Detection makes recurring generic patterns visible and actionable.",
+      "assets": [
+        "assets/07-detect.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        8
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-08",
+      "state_ids": [
+        "08-install"
+      ],
+      "timestamp_seconds": 267,
+      "transcript_window": [
+        "transcript context around 267 seconds"
+      ],
+      "visible_title": "Installation",
+      "visual_summary": "Installation",
+      "context_summary": "The demonstrated setup is a single package-install command.",
+      "assets": [
+        "assets/08-install.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        9
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-09",
+      "state_ids": [
+        "09-brief"
+      ],
+      "timestamp_seconds": 332,
+      "transcript_window": [
+        "transcript context around 332 seconds"
+      ],
+      "visible_title": "Website brief",
+      "visual_summary": "Website brief",
+      "context_summary": "The example begins with purpose and content, not decoration.",
+      "assets": [
+        "assets/09-brief.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        10
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-10",
+      "state_ids": [
+        "10-variations"
+      ],
+      "timestamp_seconds": 425,
+      "transcript_window": [
+        "transcript context around 425 seconds"
+      ],
+      "visible_title": "Visual variations",
+      "visual_summary": "Visual variations",
+      "context_summary": "Multiple directions are generated so the user can select visually.",
+      "assets": [
+        "assets/10-variations.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        11
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-11",
+      "state_ids": [
+        "11-result"
+      ],
+      "timestamp_seconds": 526,
+      "transcript_window": [
+        "transcript context around 526 seconds"
+      ],
+      "visible_title": "First finished result",
+      "visual_summary": "First finished result",
+      "context_summary": "The first complete page establishes a usable baseline rather than a final answer.",
+      "assets": [
+        "assets/11-result.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        12
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-12",
+      "state_ids": [
+        "12-live-compare"
+      ],
+      "timestamp_seconds": 577,
+      "transcript_window": [
+        "transcript context around 577 seconds"
+      ],
+      "visible_title": "Live comparison",
+      "visual_summary": "Live comparison",
+      "context_summary": "Side-by-side inspection turns iteration into a selection loop.",
+      "assets": [
+        "assets/12-live-compare.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        13
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-13",
+      "state_ids": [
+        "13-bolder"
+      ],
+      "timestamp_seconds": 629,
+      "transcript_window": [
+        "transcript context around 629 seconds"
+      ],
+      "visible_title": "Bolder alternatives",
+      "visual_summary": "Bolder alternatives",
+      "context_summary": "The next pass deliberately pushes range instead of polishing one default.",
+      "assets": [
+        "assets/13-bolder.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        14
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-14",
+      "state_ids": [
+        "14-detect-ui"
+      ],
+      "timestamp_seconds": 660,
+      "transcript_window": [
+        "transcript context around 660 seconds"
+      ],
+      "visible_title": "Detector results",
+      "visual_summary": "Detector results",
+      "context_summary": "The detector identifies concrete anti-patterns in the working design.",
+      "assets": [
+        "assets/14-detect-ui.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        15
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-15",
+      "state_ids": [
+        "15-design-md"
+      ],
+      "timestamp_seconds": 675,
+      "transcript_window": [
+        "transcript context around 675 seconds"
+      ],
+      "visible_title": "Design system record",
+      "visual_summary": "Design system record",
+      "context_summary": "Design decisions are captured so the direction remains coherent across iterations.",
+      "assets": [
+        "assets/15-design-md.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        16
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-16",
+      "state_ids": [
+        "16-reference"
+      ],
+      "timestamp_seconds": 769,
+      "transcript_window": [
+        "transcript context around 769 seconds"
+      ],
+      "visible_title": "Inspiration library",
+      "visual_summary": "Inspiration library",
+      "context_summary": "External references provide visual specificity that prose cannot fully encode.",
+      "assets": [
+        "assets/16-reference.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        17
+      ],
+      "disposition": "placed",
+      "reason": null
+    },
+    {
+      "id": "reconstruction-17",
+      "state_ids": [
+        "17-reference-result"
+      ],
+      "timestamp_seconds": 803,
+      "transcript_window": [
+        "transcript context around 803 seconds"
+      ],
+      "visible_title": "Reference-led result",
+      "visual_summary": "Reference-led result",
+      "context_summary": "The reference is translated into a distinct implementation rather than copied literally.",
+      "assets": [
+        "assets/17-reference-result.jpg"
+      ],
+      "route": "extract",
+      "slide_ids": [
+        18
+      ],
+      "disposition": "placed",
+      "reason": null
+    }
+  ]
+}

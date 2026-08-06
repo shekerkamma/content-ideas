@@ -1,0 +1,15 @@
+{
+  "source": "watch pipeline capture for RVeCbPg0liw",
+  "recovered_states": 17,
+  "selected_exact_state_assets": [
+    {"path": "assets/worlds.jpg", "role": "macro direction selection proof"},
+    {"path": "assets/live-comparison.jpg", "role": "local comparison-loop proof"},
+    {"path": "assets/references.jpg", "role": "reference-reset proof"}
+  ],
+  "remaining_states": {
+    "disposition": "retained in the evidence inventory but not placed in the final deck",
+    "reason": "their underlying information is communicated more clearly through native diagrams; adding them would create a screenshot sequence"
+  },
+  "generated_assets": [],
+  "authenticity_policy": "No source state was replaced with generated imagery."
+}

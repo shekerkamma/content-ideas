@@ -1,0 +1,378 @@
+[
+  {
+    "frame": "watch/frames/frame_0001.jpg",
+    "timestamp": "00:00",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0002.jpg",
+    "timestamp": "00:21",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0003.jpg",
+    "timestamp": "00:41",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0004.jpg",
+    "timestamp": "01:00",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0005.jpg",
+    "timestamp": "01:20",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0006.jpg",
+    "timestamp": "01:26",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0007.jpg",
+    "timestamp": "01:32",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0008.jpg",
+    "timestamp": "01:39",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0009.jpg",
+    "timestamp": "01:46",
+    "classification": "demonstration frame",
+    "description": "Impeccable visual-world library",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0010.jpg",
+    "timestamp": "01:53",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0011.jpg",
+    "timestamp": "02:10",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0012.jpg",
+    "timestamp": "03:08",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0013.jpg",
+    "timestamp": "03:25",
+    "classification": "demonstration frame",
+    "description": "Impeccable command and documentation interface",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0014.jpg",
+    "timestamp": "04:07",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0015.jpg",
+    "timestamp": "04:26",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0016.jpg",
+    "timestamp": "04:46",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0017.jpg",
+    "timestamp": "05:24",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0018.jpg",
+    "timestamp": "05:52",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0019.jpg",
+    "timestamp": "06:18",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0020.jpg",
+    "timestamp": "06:32",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0021.jpg",
+    "timestamp": "06:44",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0022.jpg",
+    "timestamp": "06:55",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0023.jpg",
+    "timestamp": "07:07",
+    "classification": "demonstration frame",
+    "description": "Side-by-side visual variation review",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0024.jpg",
+    "timestamp": "07:31",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0025.jpg",
+    "timestamp": "08:02",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0026.jpg",
+    "timestamp": "08:22",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0027.jpg",
+    "timestamp": "08:42",
+    "classification": "demonstration frame",
+    "description": "Completed demonstration website",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0028.jpg",
+    "timestamp": "08:56",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0029.jpg",
+    "timestamp": "09:10",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0030.jpg",
+    "timestamp": "09:24",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0031.jpg",
+    "timestamp": "09:36",
+    "classification": "demonstration frame",
+    "description": "Live visual comparison interface",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0032.jpg",
+    "timestamp": "09:46",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0033.jpg",
+    "timestamp": "10:01",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0034.jpg",
+    "timestamp": "10:20",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0035.jpg",
+    "timestamp": "10:37",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0036.jpg",
+    "timestamp": "10:48",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0037.jpg",
+    "timestamp": "10:59",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0038.jpg",
+    "timestamp": "11:15",
+    "classification": "demonstration frame",
+    "description": "DESIGN.md and design-system capture",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0039.jpg",
+    "timestamp": "11:35",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0040.jpg",
+    "timestamp": "11:52",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0041.jpg",
+    "timestamp": "12:10",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0042.jpg",
+    "timestamp": "12:30",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0043.jpg",
+    "timestamp": "12:49",
+    "classification": "demonstration frame",
+    "description": "External inspiration library",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0044.jpg",
+    "timestamp": "13:01",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0045.jpg",
+    "timestamp": "13:12",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0046.jpg",
+    "timestamp": "13:23",
+    "classification": "demonstration frame",
+    "description": "Reference-led redesign result",
+    "disposition": "selected",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  },
+  {
+    "frame": "watch/frames/frame_0047.jpg",
+    "timestamp": "15:10",
+    "classification": "demonstration frame",
+    "description": "Context frame from the demonstration",
+    "disposition": "context-only",
+    "source": "https://www.youtube.com/watch?v=RVeCbPg0liw"
+  }
+]

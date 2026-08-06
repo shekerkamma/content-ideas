@@ -1,0 +1,1348 @@
+--- SLIDE 1 ---
+DGRID
+ALPHA / 28nm
+DEEPGRID · SEMI
+PRE-SERIES A · CONFIDENTIAL
+INVESTOR + GTM STRATEGY · V2.0
+Vertically integrated
+ edge-AI silicon for
+ commercial vehicles.
+Fabless custom-ASIC combo-die for autonomous / ADAS commercial fleets in India and the GCC. FPGA-validated architecture, 28 nm ASIC path, and a red-teamed go-to-market plan built to survive contact with buyers.
+BLENDED ASK
+₹55 Cr
+₹45 Cr CCPS equity + ₹10 Cr CGTMSE debt (~$4.79M)
+PRIMARY ICP SCORE
+79.2%
+Tactical Defense & Off-Highway/Port, 3.96/5 weighted
+COST REDUCTION
+3–7×
+vs imported ADAS stacks at equivalent function
+GTM DECISION
+Proceed with
+Conditions
+5 conditions, day-90 re-scoring gate
+01 · COVER
+Not an offer to sell securities · For discussion only
+
+--- SLIDE 2 ---
+02 · EXECUTIVE SUMMARY
+DEEPGRID SEMI · PRE-SERIES A
+The one-page thesis, with the numbers reconciled.
+01 · WHAT IS VALIDATED
+Architecture works on FPGA.
+3D Systolic Tensor Cube (64×512 MAC, dual-issue @ 600 MHz) delivers a measured 39.3 TOPS INT8 on FPGA.
+ Batch-dispatch firmware demonstrates ~200× utilization gain vs naive per-frame scheduling on the same silicon.
+ Six-chiplet combo-die (A100 / R100 / T100 / D100 / S100 / H100) covers ADAS, radar, LiDAR, secure enclave, telematics and health in one BOM slot.
+02 · WHY FPGA IS NOT THE BUSINESS
+FPGA boards are uneconomic at volume.
+FPGA validation board cost is ~₹35,000 / unit. Fine for defense pilots, fatal for retrofit fleets.
+ The custom 28 nm ASIC path collapses die cost to $3.876 at 1M units (under $4) and total board BOM to ~$30.
+ This is the entire investment thesis: fund the ASIC transition, not another FPGA generation.
+03 · WHAT WE ARE ASKING FOR
+₹55 Cr blended raise.
+₹45 Cr CCPS equity (Pre-Series A) funds NRE + MPW tape-out + a 30-month runway to positive net income in FY2029.
+ ₹10 Cr CGTMSE-backed venture debt covers working capital against 90–180 day government payment cycles.
+ Blended cost of capital is materially lower than a pure-equity round of the same size. Full use of funds on slide 35.
+⚠ CORRECTION ON-SLIDE
+Earlier materials cited a ₹25 Cr ask. The reconciled figure is ₹45 Cr equity CCPS + ₹10 Cr CGTMSE debt = ₹55 Cr blended. Any external document, deck, or one-pager still quoting ₹25 Cr should be withdrawn and replaced. Full corrections ledger on slide 06.
+SECTION 1 · COMPANY, PROBLEM, SOLUTION
+02 / 37
+
+--- SLIDE 3 ---
+03 · CORE PROBLEM
+DEEPGRID SEMI · PRE-SERIES A
+The Squeeze Zone.
+Every pure-play autonomy stack in India inherits merchant-silicon economics — and prices itself out of its own market.
+LAYER 1 · SOFTWARE PLAYERS
+Pure-Play
+AI Software
+Minus Zero, Swaayatt Robots, RoshAI — algorithm-first, hardware-agnostic. Excellent perception IP, but treats silicon as a black-box commodity.
+LAYER 2 · WHERE VALUE LEAKS
+The Squeeze
+Zone
+Merchant silicon (NVIDIA DRIVE, Ambarella, Mobileye, Qualcomm) drives per-vehicle BOM past $6,000. Add radar, camera, enclosure, integration — the stack cannot land under fleet payback thresholds.
+LAYER 3 · MARKET OUTCOME
+Sales limited
+to rich fleets.
+Only US / EU / GCC logistics majors can amortize the cost. Indian and cost-sensitive GCC fleets get shut out of the safety-mandate wave.
+EVIDENCE — REPRESENTATIVE BOM COMPOSITION OF IMPORTED ADAS L2+ STACKS
+Compute SoC
+$2,400
+Radar 4× + LiDAR
+$1,900
+Cameras 6–8×
+$880
+Enclosure + wiring
+$470
+Integration + margin
+$350+
+TOTAL IMPORTED BOM
+$6,000+
+Representative L2+ stack. Excludes install labour. Fleet payback impossible below ₹8 L retrofit price at Indian diesel-fleet TCOs.
+SECTION 1 · COMPANY, PROBLEM, SOLUTION
+03 / 37
+
+--- SLIDE 4 ---
+04 · SOLUTION
+DEEPGRID SEMI · PRE-SERIES A
+DGrid Alpha — a single combo-die closes the BOM gap.
+Four proven engineering choices, one BOM slot, ~$30 board cost.
+01 · COMPUTE FABRIC
+3D Systolic
+Tensor Cube
+64 × 512 MAC lattice, dual-issue @ 600 MHz → measured 39.3 TOPS INT8.
+ Sized for one 8MP camera cluster + 4-corner radar without off-chip DRAM thrash.
+02 · FIRMWARE
+Batch-dispatch
+scheduler
+Micro-batches perception ops across camera + radar streams. Measured ~200× utilization gain over naive per-frame dispatch on the same silicon.
+ Reason MAC array actually reaches its TOPS ceiling.
+03 · INTEGRATION
+Six chiplets,
+one combo-die
+ADAS, radar DSP, thermal / LiDAR DSP, secure enclave, telematics, and driver-health in one package on 28 nm HPC+.
+ Replaces the four-to-six chip stack most Tier-1 designs still ship.
+04 · COST OUTCOME
+~$30 board
+BOM at scale
+Die cost $3.876 at 1M units (28 nm HPC+).
+ Board BOM ~$30 including package, PMIC, DDR, enclosure headers.
+ Direct comparison: Mobileye ASP $50 → 12.9× cost advantage at the compute node.
+COMPUTE-NODE COST, APPLES-TO-APPLES (SINGLE UNIT SHOWN AT SCALE)
+Merchant SoC (imported)
+~$2,400
+FPGA validation (current)
+~$420 (₹35k)
+DGrid Alpha 28 nm ASIC
+$3.876 die · ~$30 board
+Die cost from foundry quote at 1M units, 28 nm HPC+, ~20 mm² net. See slide 31 for full unit economics build-up.
+SECTION 1 · COMPANY, PROBLEM, SOLUTION
+04 / 37
+
+--- SLIDE 5 ---
+05 · ARCHITECTURE
+DEEPGRID SEMI · PRE-SERIES A
+Six chiplets on one 28 nm combo-die.
+Each chiplet maps to a specific regulatory function or revenue lane. No decorative silicon.
+DGRID·ALPHA · 28NM HPC+
+~20mm² · 6 CHIPLETS
+A100
+ADAS / AI Core
+39.3 TOPS INT8
+64×512 MAC tensor cube · perception, sensor fusion
+R100
+Radar DSP
+77 GHz FMCW
+FFT + CFAR pipeline · 4-corner radar aggregation
+T100
+Thermal / LiDAR DSP
+MIPI CSI-2 + SPI
+Night / low-light + optional solid-state LiDAR channel
+D100
+Secure Enclave
+Lockstep RISC-V
+ISO 26262 target, HSM, keys stay on-die (sovereign data)
+S100
+SDV Telematics
+AIS-140 compliant
+GNSS + LTE + emergency button · kills secondary tracker
+H100
+Health / Bio-ADC
+DMS analog front-end
+Drowsiness / distraction detection · AIS-184 relevant
+FABRIC
+Coherent chiplet interconnect + unified LPDDR4 controller
+Zero-copy tensor handoff A100 ↔ R100 ↔ T100. D100 owns the boot chain, S100 owns the modem, H100 streams straight into A100's classifier heads.
+CHIPLET → REGULATORY FUNCTION MAP
+CHIPLET
+FUNCTION IT OWNS
+INDIA MANDATE
+REVENUE LANE
+A100
+ADAS perception + fusion
+AIS-184 / 186 / 187
+Retrofit + OEM
+R100
+77 GHz radar processing
+AIS-188 (AEBS)
+Retrofit + OEM
+T100
+Thermal / LiDAR DSP
+AIS-189 / 190 (night)
+Off-highway, defense
+D100
+Secure boot, HSM, keys
+ISO 26262 target
+Defense (moat)
+S100
+Telematics + GNSS + LTE
+AIS-140 / 162
+SaaS attach
+H100
+DMS analog front-end
+AIS-184 relevant
+Retrofit + insurer
+SECTION 1 · COMPANY, PROBLEM, SOLUTION
+05 / 37
+
+--- SLIDE 6 ---
+06 · CORRECTIONS LEDGER
+DEEPGRID SEMI · PRE-SERIES A
+Numbers we are explicitly retracting.
+Every earlier draft, one-pager or external note quoting the left column should be withdrawn and replaced with the right.
+ITEM
+EARLIER / DRAFT FIGURE (RETRACTED)
+RECONCILED FIGURE (USE)
+WHY THE CHANGE
+Blended Ask
+₹25 Cr
+₹55 Cr blended
+₹45 Cr CCPS + ₹10 Cr CGTMSE
+Original ₹25 Cr covered NRE only. Reconciled ask funds NRE + tape-out + 30-month runway to net-income-positive in FY2029.
+Tape-out NRE
+$8M
+$3.17M
+Full MPW phasing on slide 32
+MPW (multi-project wafer) shuttle on 28 nm HPC+, shared reticle, no full-mask commit. Prior $8M assumed dedicated mask.
+Break-even units
+3,636 units
+~174,908 chips
+Crossing FY2032
+Recalculated with actual NRE, fully-loaded opex, and chip-level (not board-level) margin. Retire the 3,636 figure entirely.
+Die cost at 1M units
+"< $3"
+$3.876
+Foundry-quoted, still under $4
+Includes wafer, package, test, yield-loss provision. Still delivers a 12.9× advantage vs Mobileye ASP $50 — not 774×.
+Banned narrative claims
+"84% ASIC gross margin" · any insurance-premium-reduction % · "mandate-ready" AD2 · accident-reduction % · 5M+ truck TAM as pipeline
+Do not repeat. See slide 18 for approved substitutes and slide 33 for the actual margin curve.
+Each of these is either unreconciled arithmetic, unmeasured effect, or forecast confused with demand.
+SECTION 1 · COMPANY, PROBLEM, SOLUTION
+06 / 37
+
+--- SLIDE 7 ---
+07 · GTM PIPELINE
+DEEPGRID SEMI · PRE-SERIES A
+How this GTM was built. Six stages, two gates, one red team.
+Every downstream slide in this deck traces back to an artifact produced in one of these stages. Nothing is hand-wavy.
+STAGE 0–1
+Source intake & competitor benchmark
+34 sourced claims from filings, mandate notifications, competitor material, primary interviews.
+ Each classified as one of: fact, claim, inference, unknown.
+ → Feeds all scoring
+STAGE 2
+ICP scoring
+Independent 10-dimension weighted scorecard. 5 candidate segments scored against evidence, not narrative preference.
+ Producer of the 79.2% / 68.0% / 52.4% / 46.4% / 43.0% numbers.
+ → Methodology slide 08
+GATE 1
+MANDATORY · USER APPROVAL BEFORE ADVANCE
+STAGE 3
+Validation design
+Fatal-assumptions test.
+ 27-question buyer discovery guide (Defense + Fleet variants).
+ Paid-pilot charter template.
+ Kill criteria written before outreach, not after.
+STAGE 4
+GTM system
+Positioning statements (two-track), pricing logic, channel matrix, and the 13-week execution plan.
+ → Slides 17–20
+STAGE 5
+Red team
+Adversarial review against the plan produced by Stage 4.
+ Found 2 real gaps (Indian defense primes unassessed; nature of the ₹1 Cr revenue unconfirmed).
+ → Slide 36
+DECISION
+Proceed
+with
+Conditions
+5 conditions, priority-ordered.
+ Day-90 hard re-scoring gate.
+ → Slide 37
+EVIDENCE-CLASSIFICATION LEGEND USED ACROSS THE DECK
+FACT — directly observable, audited or cited.
+CLAIM — asserted by a party with stake in it.
+INFERENCE — derived from facts, not itself measured.
+UNKNOWN — flagged and gated, never treated as evidence.
+Of the 34 sourced claims: 12 facts, 11 claims, 8 inferences, 3 unknowns. The three unknowns include the nature of the ₹1 Cr Defense revenue (grant vs commercial sale), which gates further Defense resourcing until confirmed — see slide 36.
+SECTION 2 · ICP & GTM STRATEGY
+07 / 37
+
+--- SLIDE 8 ---
+08 · ICP METHODOLOGY
+DEEPGRID SEMI · PRE-SERIES A
+Ten dimensions. Weighted. Applied identically to every segment.
+Five core dimensions from the founder's original hypothesis, five added by the pipeline for evidence discipline.
+FIVE CORE · FOUNDER HYPOTHESIS
+WEIGHT
+01
+Regulatory Compulsion
+Is buying forced by mandate on a hard date?
+15%
+02
+Integration / Cert Friction
+How much OEM validation stands between us and a sale?
+10%
+03
+Price Elasticity / BOM Limit
+Can the buyer absorb our unit economics?
+12%
+04
+Sales Cycle
+Weeks vs quarters vs years from intro to PO?
+10%
+05
+ODD Entropy
+Complexity of the Operational Design Domain — highway is simpler than urban chaos.
+—
+qualitative filter
+These five are the founder's original ICP thesis. They ask who has to buy this, at what price, on what schedule. They are necessary but insufficient — they were passing the Fleet segment even without any signed customers.
+FIVE ADDED · EVIDENCE DISCIPLINE
+WEIGHT
+06
+Budget verified
+Named line item, not "should have budget".
+12%
+07
+Competitive pressure
+Real, active competitors already selling into the segment?
+8%
+08
+Margin at this segment
+Segment-specific gross margin, not deck-average.
+8%
+09
+Repeatability
+Does the second sale look like the first?
+5%
+10
+Evidence strength
+Booked revenue, signed pilot, LOI, quote — vs a claim.
+5%
+Problem 15% · Urgency 15% · Fit 12% · Budget 12% · Cert 10% · Cycle 10% · Comp 8% · Margin 8% · Repeat 5% · Evidence 5% = 100%. Applied identically to all five candidate segments. See slide 09 for the resulting scorecard.
+SECTION 2 · ICP & GTM STRATEGY
+08 / 37
+
+--- SLIDE 9 ---
+09 · WEIGHTED ICP SCORECARD
+DEEPGRID SEMI · PRE-SERIES A
+Five segments. One weighted score each. Ranked.
+Scale 0–5 per dimension, weighted & summed. Bar length is the weighted average expressed as a % of 5.
+SEGMENT
+WEIGHTED SCORE (OF 5.00)
+SCORE
+VERDICT
+Tactical Defense & Off-Highway / Port
+Primary ICP · sovereign UGVs, border, AGVs
+3.96 /5
+79.2%
+3PL / Dedicated Fleet Retrofit
+Secondary experiment · N2/N3 trucks
+3.40 /5
+68.0%
+AD0 Owner-Operator Direct
+Below threshold · direct to individual truck owners
+2.62 /5
+52.4%
+Automobile OEM / Tier-1
+Deferred · long-term line-fit only via Tier-1
+2.32 /5
+46.4%
+Commercial Motor Insurers
+Anti-ICP · evidence partner at best, never customer
+2.15 /5
+43.0%
+Weights: Problem 15% · Budget 12% · Urgency 15% · Fit 12% · Cert friction 10% · Sales cycle 10% · Competitive pressure 8% · Margin 8% · Repeatability 5% · Evidence 5%.
+SECTION 2 · ICP & GTM STRATEGY
+09 / 37
+
+--- SLIDE 10 ---
+10 · ICP OPTION A — PRIMARY
+DEEPGRID SEMI · PRE-SERIES A
+Tactical Defense & Constrained Robotics.
+Sovereign UGVs, border surveillance, seaport & container-yard AGVs.
+WEIGHTED SCORE
+3.96 / 5 · 79.2%
+WHY IT SCORES 3.96 — DIMENSION DETAIL
+Evidence strength
+5 / 5
+Budget verified
+5 / 5
+Technical fit (ships today)
+5 / 5
+Price elasticity
+4 / 5
+Regulatory / urgency
+4 / 5
+Sales cycle
+3 / 5
+Cert friction
+3 / 5
+Competitive pressure
+4 / 5
+Repeatability (the flaw)
+2 / 5
+Defense wins on evidence (real booked revenue vs zero signed Fleet customers), budget (cost-insensitive sovereign buyers), and technical fit (the product ships today). It loses on repeatability — and that is why it cannot be the whole plan. See slide 14 for the synthesis.
+WHY IT IS THE PRIMARY ICP
+Extremely cost-insensitive at the chip level. Sovereign buyers optimise for supply-chain sovereignty and audit posture, not BOM. Our ~$30 board is a rounding error against a UGV platform cost.
+ D100 secure enclave is a first-order feature. Lockstep RISC-V, on-die HSM, keys never leave the die. This maps directly onto Ministry of Defence data-sovereignty requirements — it is not a checkbox, it is the whole reason to buy.
+ Off-highway / port variants share the SKU. Container terminals in Mundra, Chennai and Jebel Ali need the same secure-boot AGV compute node. One BOM, two buyer types.
+ Revenue already exists. ~₹1 Cr in Defense contract revenue booked. It is the only external validation across all 5 candidate segments.
+⚠ RED-TEAM FLAG — GATES FURTHER DEFENSE RESOURCING
+The exact nature of the ₹1 Cr revenue is unconfirmed.
+Is it a commercial sale (repeatable customer signal) or a grant / subsidy / R&D contract (one-off, not customer signal)? These score entirely differently on dimensions 9 & 10. Until confirmed within one week (see slide 37, Condition 1), further Defense hiring / BD spend is paused. If it turns out to be a grant, Defense and Fleet re-score as evidence-equal.
+SECTION 2 · ICP & GTM STRATEGY
+10 / 37
+
+--- SLIDE 11 ---
+11 · ICP OPTION B — SECONDARY EXPERIMENT
+DEEPGRID SEMI · PRE-SERIES A
+Non-Discretionary Aftermarket Fleet Retrofit.
+Medium and heavy commercial vehicles — N2/N3 — forced by mandate to retrofit ADAS.
+WEIGHTED SCORE
+3.40 / 5 · 68.0%
+⚑ FOUNDER'S WORKING-HYPOTHESIS FAVOURITE — BUT STILL ASPIRATIONAL
+Priced at ₹2–2.5 Lakh per retrofit kit. Zero signed customers. Every argument for this segment right now is theoretical.
+DIMENSION DETAIL
+Regulatory urgency
+5 / 5
+Technical fit
+4 / 5
+Repeatability
+5 / 5
+Cert friction
+4 / 5
+Price elasticity
+3 / 5
+Sales cycle
+3 / 5
+Evidence strength
+1 / 5
+Fleet scores 68% on mandate math and technical fit. Evidence dimension is the single reason it isn't primary. The kill criterion turns that 1/5 into a measurable test.
+WHY IT STAYS ON THE BOARD (NOT KILLED)
+India's N2/N3 fleet mandate wave (AIS-184/186/187/188) starts landing in FY26–27 and hits enforcement in FY28. That is a genuine ~5M-vehicle addressable base, and it is the segment that eventually justifies the ₹55 Cr raise as a chip-volume business.
+ But "eventually" and "if a fleet actually pays ₹2–2.5 L" are two different bets. Until one fleet signs, we don't know the price holds.
+⚑ KILL CRITERION — HARD, DATED, MEASURABLE
+At least 1 of the first 20 buyer interviews
+must convert to a paid pilot within 90 days.
+Pass → Fleet re-scores as co-primary, resource shifts. Fail → Fleet stays secondary; no additional GTM spend beyond discovery; revisit at Month 12 only if the mandate calendar tightens.
+SECTION 2 · ICP & GTM STRATEGY
+11 / 37
+
+--- SLIDE 12 ---
+12 · ICP OPTION C — DEFERRED
+DEEPGRID SEMI · PRE-SERIES A
+OEM Factory Line-Fit Embedding.
+Long-term the biggest opportunity. Short-term the wrong door to knock on.
+WEIGHTED SCORE
+2.32 / 5 · 46.4%
+THE TWO SCORES THAT KILL IT RIGHT NOW
+CERT FRICTION
+1/5
+Full OEM validation. ISO 26262 ASIL-B minimum, functional-safety audit, EMI/EMC, thermal cycling, 3-year AEC-Q100.
+SALES CYCLE
+1/5
+SOP cycles are 24–36 months. Design-in NRE only pays back after multi-year platform commitment.
+These are the worst cert-friction and sales-cycle scores of any of the five segments. Under any resourcing plausible for a Pre-Series A, direct OEM sales cannot generate revenue inside the 30-month runway.
+OTHER DIMENSIONS (FOR THE RECORD)
+Fit 4/5 · Margin at OEM ASP 3/5 · Regulatory urgency 3/5 · Repeatability 4/5 · Evidence 1/5 (no LOI). Numerator good, denominator (time) fatal.
+THE ONE ENTRY RULE
+Enter only via a signed Tier-1 partnership.
+Why Tier-1 changes the math. Uno Minda, Spark Minda or Bosch India already sit on OEM homologation panels. They amortise cert cost across their existing portfolio; we ride their AEC-Q100 audit trail.
+ What "signed" means. A binding co-development agreement with committed NRE reimbursement — not an MoU, not a "letter of interest". Any softer instrument does not unlock OEM resourcing.
+ Until then — the stop-doing list. No direct OEM BD calls, no OEM-facing marketing, no ISO 26262 pre-audit spend, no AEC-Q100 stress program on the FPGA validation board.
+ Phase 3 of the roadmap (slide 28) is where this switches on — not before.
+TIME-TO-FIRST-REVENUE BY SEGMENT (ORDER-OF-MAGNITUDE ESTIMATE)
+0 mo
+6 mo
+12 mo
+24 mo
+36+ mo
+Defense (booked)
+Fleet pilot (if kill-criterion passes)
+OEM SOP (via Tier-1, earliest)
+SECTION 2 · ICP & GTM STRATEGY
+12 / 37
+
+--- SLIDE 13 ---
+13 · DEFERRED & ANTI-ICP
+DEEPGRID SEMI · PRE-SERIES A
+The two segments we are explicitly not selling to.
+One is a "later, and only via partner". One is a "never as a direct customer".
+DEFERRED · REVISIT PHASE 3
+46.4%
+Automobile OEM / Tier-1
+WHAT "DEFERRED" MEANS OPERATIONALLY
+Not killed — timed. This is where the volume lives once the chip has a Tier-1 sponsor and an OEM SOP.
+ Direct OEM effort is paused until at least one of: (a) a signed Tier-1 co-development agreement is in hand, or (b) the Fleet retrofit pilot proves the compute node in field conditions on the same vehicle classes OEMs care about.
+ The one exception: sovereign OEMs (Tata Advanced Systems, Mahindra Defence) — addressed through the Defense track, not through automotive BD.
+TRIGGER TO REACTIVATE
+→ Any Tier-1 signs a binding co-development agreement with NRE terms.
+ → OR — a sovereign OEM specifies DGrid Alpha for a defence-adjacent platform.
+ → OR — the Fleet retrofit generates a public field-safety dataset the OEM can cite in its own homologation package.
+ANTI-ICP · LOWEST SCORE
+43.0%
+Commercial Motor Insurers
+WHY WE ARE LABELLING THIS "NEVER A DIRECT CUSTOMER"
+Lowest score across every segment. The whole insurer thesis in the founder's original draft rested on an unsupported "premium-reduction %" claim. There is no measured accident-reduction data behind it, no actuarial partnership, no signed data-share agreement.
+ The model has zero insurer-revenue rows. There is no line item to defend.
+ Insurers may eventually be an evidence partner — a channel we help underwrite fleet-side ROI — but under no circumstances are they a direct customer of the chip in this plan.
+TRIGGER TO REVISIT AS EVIDENCE PARTNER (NOT CUSTOMER)
+→ Fleet pilot generates a measured accident-reduction dataset with an insurer already on-record willing to underwrite it.
+ → Only then does an insurer channel deserve pipeline effort — and even then it is a data-sharing motion, not a sales motion.
+SECTION 2 · ICP & GTM STRATEGY
+13 / 37
+
+--- SLIDE 14 ---
+14 · ICP SELECTION SYNTHESIS
+DEEPGRID SEMI · PRE-SERIES A
+Defense first, Fleet in parallel. Not a pivot — a sequence.
+The synthesis of the scorecard, red-team, and the roadmap already in the original pitch.
+THE TENSION
+Defense wins the scorecard — but flunks repeatability.
+Defense scores 5/5 on evidence, 5/5 on budget, 5/5 on fit — but 2/5 on repeatability.
+ Defense contracts are lumpy. Two won contracts don't imply twenty. They do not scale into the ~88% systems-revenue business that the ₹55 Cr raise is built to fund.
+ Fleet, meanwhile, is a repeatable-by-design segment (5/5 repeatability) — but has 1/5 evidence.
+ You cannot ship the deck as "Defense company" and you cannot ship it as "Fleet company either." One has revenue, the other has volume physics.
+THE SYNTHESIS
+Two-track: Defense as resourced primary, Fleet as experiment.
+Months 0–6. Defense runs as resourced primary. Objective: get the second signed contract that turns "1 CR revenue" into a customer signal, and generate the field data Fleet needs to close its first pilot.
+ In parallel, months 0–3. Fleet runs as a 20-interview discovery experiment against the paid-pilot kill criterion.
+ Month 6 gate. Re-score both segments with fresh evidence. If Fleet passed its kill criterion, it becomes co-primary. If not, Defense stays primary and Fleet drops to watch-only.
+ This confirms — not invents — the original pitch's three-phase roadmap.
+THE STRONGEST COUNTER-CASE
+A defence-first motion risks the fundraising narrative.
+Investors are being asked to fund a chip business, priced against a 5M+ commercial-vehicle TAM. A defense-only story does not clear that hurdle.
+ So this only holds together as a sequenced two-track plan — never as a flat pivot.
+ External framing rule (Condition 4, slide 37). Every deck, one-pager, and investor email must present the plan as Defense-sequenced-then-Fleet, not Defense-only. Any external doc that reads as "pivot to defense" gets pulled.
+ Internal escalation rule. If the day-90 checkpoint shows Fleet failing AND Defense-2 not signed, this becomes a Board-level re-plan, not a marketing tweak.
+THE ONE-LINE SYNTHESIS
+Run Defense as resourced primary for 6 months — the fastest way to generate the missing Fleet evidence — while Fleet runs in parallel as a secondary, kill-criterion-gated experiment.
+SECTION 2 · ICP & GTM STRATEGY
+14 / 37
+
+--- SLIDE 15 ---
+15 · BUYER COMMITTEE — TACTICAL DEFENSE
+DEEPGRID SEMI · PRE-SERIES A
+Who has to sign, and what each one is afraid of.
+Defense & port-authority buying committee — roles, fears, and what will lose the deal.
+ROLE
+WHO THEY ARE
+PRIMARY FEAR
+WHAT WE BRING TO THEIR TABLE
+Economic
+buyer
+Defense procurement officer / port authority
+Vendor lock-in on foreign silicon; being unable to audit the supply chain if geopolitics turn.
+Made-in-India die + full IP ownership + reference design.
+Technical
+buyer
+Systems-integration engineer at prime / lab
+Undocumented failure modes; a chip they can't debug in a black-flag environment.
+Full BSP + JTAG + lockstep-fault documentation, on-site FAE.
+Champion
+not yet identified
+Program manager on a UGV / border / AGV program
+Delivery slip; being blamed for a program held up by a novel vendor.
+FPGA-ready hardware ships now; ASIC drop-in with pin-compatible carrier.
+Blocker
+Security clearance / compliance office
+Data exfiltration through any component with an off-die firmware update path.
+D100 HSM — signed boot chain, keys never leave die, air-gap update mode.
+End user
+UGV / AGV operator, control-room staff
+Missed detections; a false-negative in a live sortie.
+Redundant sensor fusion (R100 + T100) + confidence-graded outputs.
+MINIMUM PROOF TO ADVANCE THE DEFENSE TRACK
+Either a second signed defense contract, or an audited third-party confirmation that the existing ₹1 Cr revenue is a commercial sale (not a grant / R&D subsidy). Whichever comes first — within Month 6.
+SECTION 2 · ICP & GTM STRATEGY
+15 / 37
+
+--- SLIDE 16 ---
+16 · BUYER COMMITTEE — 3PL / FLEET
+DEEPGRID SEMI · PRE-SERIES A
+Fleet buying committee — a different animal entirely.
+ROI-first buyer, mandate-driven champion, and the compliance officer is the one actually pushing.
+ROLE
+WHO THEY ARE
+PRIMARY FEAR
+WHAT WE BRING TO THEIR TABLE
+Economic
+buyer
+Fleet owner / operator (CEO of a 200+ truck 3PL)
+Unproven ROI — paying ₹2 L per truck for a device whose accident-reduction is not yet measured on their duty cycle.
+Money-back pilot on N vehicles + measured baseline & delta on their fleet.
+Technical
+buyer
+Fleet maintenance / telematics manager
+One more black box on a truck already carrying an AIS-140 tracker, an FMS, and a dashcam.
+S100 subsumes tracker & telematics — net devices per truck goes down, not up.
+Champion
+Safety / compliance officer — the one with a mandate deadline
+Missing the AIS-184/188 enforcement date and losing route contracts because trucks fail inspection.
+One kit that covers the four mandated functions (DMS + AEBS + LDW + BSD).
+Blocker
+Procurement / vehicle owner (attached-fleet model)
+Capex on a vehicle they lease out; unclear who pays if the truck gets sold with the kit installed.
+Owner-transferable license; kit reassignable on ownership change.
+End user
+Driver
+Being surveilled and disciplined by the DMS; every camera as a monitoring device.
+On-die inference — alerts stay in-cab; only aggregate events uploaded.
+MINIMUM PROOF TO ADVANCE THE FLEET TRACK
+One signed paid pilot from the first 20 buyer discovery interviews — converted within 90 days of first contact. Same kill criterion as slide 11.
+SECTION 2 · ICP & GTM STRATEGY
+16 / 37
+
+--- SLIDE 17 ---
+17 · POSITIONING — TWO TRACKS
+DEEPGRID SEMI · PRE-SERIES A
+Two positioning statements. Not one blurred one.
+Different buyers, different fears, different proof burden — positioning cannot be laundered into a single sentence.
+TRACK A · TACTICAL DEFENSE + OFF-HIGHWAY
+Positioning statement
+“For sovereign UGV, border-surveillance and port-AGV programs where data cannot leave Indian soil, DGrid Alpha is the only Indian-designed combo-die whose on-die HSM makes data-exfil physically impossible — shipping today on FPGA, ASIC drop-in next.”
+KILL CRITERION
+Track drops from primary if Month 6 arrives without EITHER a second signed contract OR audited confirmation of the ₹1 Cr revenue's commercial nature.
+TRACK B · 3PL / DEDICATED FLEET RETROFIT
+Positioning statement · PENDING VALIDATION
+“For N2/N3 fleet operators facing 2027–28 ADAS mandate deadlines, DGrid Alpha ships one retrofit kit that satisfies AEBS, LDW, DMS and BSD at roughly 1/3 the imported-stack price — pending first paid pilot.”
+KILL CRITERION
+Statement is retracted (from decks, site, sales collateral) if the first 20 buyer interviews fail to produce one paid pilot in 90 days.
+Positioning discipline: the retrofit-price line does not appear in a defense deck; the sovereign-data line does not appear in a fleet deck. Buyers hear one story at a time.
+SECTION 2 · ICP & GTM STRATEGY
+17 / 37
+
+--- SLIDE 18 ---
+18 · FIVE CLAIMS TO STOP USING
+DEEPGRID SEMI · PRE-SERIES A
+Words we will not use in front of a buyer or investor.
+Every one of these is either unreconciled math, unmeasured effect, or forecast confused with demand.
+#
+BANNED CLAIM
+WHY IT IS WRONG / UNSUPPORTED
+USE INSTEAD
+01
+“84% ASIC-stage gross margin”
+Unreconciled arithmetic. Given $3.876 die + ASP assumptions, the segment margin actually implies ~92–93%, which is either right (and 84% understates) or wrong (and everything is off). We retract until reconciled.
+"Chip-level margin curve on slide 33; blended systems margin FY32 88%. We publish the arithmetic, not the headline."
+02
+Any insurance-premium-reduction %
+No actuarial partnership, no signed data-share, no measured baseline. Any "12% / 20% / 30% premium reduction" claim is invented.
+Silence — until a Fleet pilot produces a measured accident-reduction delta an insurer will co-sign.
+03
+“Mandate-ready” for AD2
+Unvalidated. AD2 requirements have not been mapped 1:1 to DGrid Alpha chiplets in a public homologation document.
+"AIS-184/186/187/188 addressable by design; AIS-140 native via S100." Point to slide 05.
+04
+Any accident-reduction %
+Nothing measured. FPGA has not been in a fleet long enough to produce a baseline / delta.
+"Pilot design targets a measurable delta; measurement plan on slide 20."
+05
+“5M+ truck TAM” as pipeline
+Forecast confused with demand. TAM ≠ SAM ≠ SOM ≠ pipeline.
+"TAM 5M+; addressable at our BOM ~1.2M; pipeline is what has a name."
+SECTION 2 · ICP & GTM STRATEGY
+18 / 37
+
+--- SLIDE 19 ---
+19 · PRICING LOGIC & CHANNEL
+DEEPGRID SEMI · PRE-SERIES A
+Pricing is a data-collection plan, not a price sheet.
+Manufacturing false price precision is worse than admitting we are still measuring.
+PRICING LOGIC
+Fleet retrofit — AD2 kit
+₹2–2.5 Lakh is a roadmap figure, not a validated price. Bottom-up cost build ($200 BOM) plus mandate-driven willingness-to-pay assumption, neither externally tested.
+WHAT WE COLLECT IN THE FIRST 20 INTERVIEWS
+→ Ceiling: max ₹ the fleet has ever paid per truck for a safety add-on.
+ → Payback horizon they will underwrite (months, not years).
+ → Whether pricing is per-truck, per-fleet, or subscription.
+ → Fault attribution — who pays if a truck with the kit has an incident.
+ → Attached-fleet vs owner-operated split — who has budget authority.
+Defense — contract-negotiated
+No public price. Sovereign buyers negotiate line-item against program budget. NRE reimbursement + per-unit + support & spares tail.
+ Discipline: we never publish a defense price. We publish a chip technology envelope. Program-specific pricing lives in the RFP response.
+CHANNEL STRATEGY
+CHANNEL
+VERDICT
+CONDITION TO UNLOCK
+Direct — Defense
+RECOMMENDED
+In place. Ships today.
+Direct — Fleet (pilot)
+RECOMMENDED
+Founder-led first 20 buyers.
+System integrator (SI)
+NOT YET
+No named partner today.
+Indian defense primes
+CONDITIONAL
+Only after 2+ Defense contracts.
+Tier-1 / OEM
+DEFERRED
+Only after signed Tier-1 co-dev.
+Insurer channel
+NEVER (SALES)
+Evidence partner only.
+SECTION 2 · ICP & GTM STRATEGY
+19 / 37
+
+--- SLIDE 20 ---
+20 · 90-DAY EXECUTION PLAN
+DEEPGRID SEMI · PRE-SERIES A
+13 weeks. Three phases. One hard gate.
+Every activity has a deliverable an outsider can verify.
+PHASE / WEEKS
+DEFENSE TRACK
+FLEET TRACK
+DELIVERABLE
+Phase 1
+WEEKS 1–4
+Evidence gathering
+→ Third-party audit of ₹1 Cr revenue nature.
+ → Add Indian defense primes (BEL, BDL, Tata, Mahindra) to benchmark.
+ → Named-account list: 3 UGV / border, 2 seaport AGV.
+→ 10 fleet-owner discovery calls using 27-question guide.
+ → Attached vs owner-operated segmentation.
+ → No commercial ask yet.
+Signed revenue-nature attestation.
+Named-account tracker.
+Interview verbatims log.
+Phase 2
+WEEKS 5–9
+Conversion attempts
+→ Technical evaluation advances at ≥1 UGV lab.
+ → RFP submission for one border-surveillance program.
+ → Port-AGV site visit + demonstrator install plan.
+→ Complete interviews 11–20.
+ → First paid pilot term sheet issued.
+ → Pilot design: N vehicles, baseline / delta measurement, exit clause.
+Countersigned RFP.
+Signed pilot MSA (or documented refusal).
+20-interview readout.
+Phase 3
+WEEKS 10–13
+Governance & re-score
+→ Working-capital model against 90–180 day govt payment cycles.
+ → Defense-primes competitive slide baked into all decks.
+→ Pilot data ingest & measurement baseline.
+ → Fleet track goes co-primary OR drops to watch-only.
+Day-90 re-scoring memo — same 10-dim rubric, fresh evidence, Board-visible.
+STOP-DOING LIST — WHERE WE WILL NOT SPEND THE NEXT 90 DAYS
+× No OEM GTM spend until a Tier-1 partner signs.
+× No insurer-facing sales motion — ever, under this plan.
+× No unevidenced external claims (the five on slide 18).
+× No AD0 owner-operator resourcing pending evidence check.
+SECTION 2 · ICP & GTM STRATEGY
+20 / 37
+
+--- SLIDE 21 ---
+21 · GLOBAL COMPETITOR PLAYBOOKS
+DEEPGRID SEMI · PRE-SERIES A
+Every credible autonomy playbook picks one lane.
+Aurora, Kodiak, Gatik, DeepWay — four coherent bets, none at our BOM.
+USA · HEAVY OEM
+Aurora
+Long-haul Class-8 highway trucks.
+SILICON
+Dual NVIDIA DRIVE Thor
+COMPUTE BOM
+$6,000+
+PARTNERSHIP
+Continental (Tier-1)
+BET
+Highway freight L4 is a big-enough market to amortise a $6k+ compute node. Sells to Class-8 OEMs, not to fleet operators.
+USA · DUAL-USE
+Kodiak Robotics
+Highway freight + DoD contracts.
+SILICON
+Ambarella CV3-AD685
+COMPUTE BOM
+~$2,500–3,500
+PARTNERSHIP
+US DoD (autonomy)
+BET
+Cross-subsidise commercial R&D with defense revenue. Same architectural pattern we propose — but at 100× our BOM.
+USA · CONSTRAINED ODD
+Gatik
+Middle-mile fixed routes, box trucks.
+SILICON
+NVIDIA DRIVE AGX Orin
+COMPUTE BOM
+~$2,000
+PARTNERSHIP
+Isuzu · Walmart · Kroger
+BET
+Fixed-route middle mile keeps ODD entropy tiny. Ship the vehicle, sell the mile. Software company that also owns the truck.
+CHINA · DOMESTIC FLEET
+DeepWay
+“Xingtu” L4 electric trucks.
+SILICON
+High-compute NPU + Baidu Apollo
+COMPUTE BOM
+~$4,000+
+PARTNERSHIP
+Baidu (autonomy stack)
+BET
+Vertically integrated at the truck level, subsidised by Chinese logistics demand. Not export-viable to India / GCC on cost or sanctions.
+LESSON — NO INCUMBENT RUNS DEFENSE + FLEET + OEM SIMULTANEOUSLY AT DEEPGRID'S ~$30 BOM.
+21 / 37
+
+--- SLIDE 22 ---
+22 · SEMICONDUCTOR DEPENDENCY MATRIX
+DEEPGRID SEMI · PRE-SERIES A
+Everyone else is renting silicon. We own ours.
+Silicon partner, compute model, and BOM cost across the same five companies.
+COMPANY
+SILICON PARTNER
+COMPUTE MODEL
+CHIP DEPENDENCY
+COMPUTE BOM
+MULTIPLE VS DGRID
+Aurora
+NVIDIA
+Merchant SoC (dual Thor)
+Full — sole-source
+$6,000+
+200×
+Kodiak Robotics
+Ambarella
+Merchant SoC (CV3-AD685)
+Full — sole-source
+~$2.5–3.5k
+83–117×
+Gatik
+NVIDIA
+Merchant SoC (Orin)
+Full — sole-source
+~$2,000
+67×
+DeepWay
+Baidu / Chinese NPU vendors
+Vertically-integrated via Baidu
+Partial — stack partner
+~$4,000+
+133×
+DeepGrid Semi
+None — own die
+Custom 28 nm combo-die
+Zero
+~$30 (board)
+baseline
+Read this table twice. Column 4 (chip dependency) is the moat — not column 5 (BOM). Any of the top four could pass a NVIDIA-supply or Chinese-export shock straight to the customer. DeepGrid's dependency is TSMC-fab access and its own tape-out cadence — concentrated risk, but not on a third party's product roadmap.
+SECTION 3 · COMPETITIVE LANDSCAPE
+22 / 37
+
+--- SLIDE 23 ---
+23 · INDIAN SEMICONDUCTOR WAVE
+DEEPGRID SEMI · PRE-SERIES A
+India's chip wave is real. And a year behind us.
+Three well-funded domestic fabless startups — none has commercial autonomous-CV silicon revenue yet.
+FABLESS · VISION SOC
+Netrasemi
+A2000 vision SoC on TSMC 12 nm.
+FUNDING
+₹125 Cr
+LAUNCH
+Mid-2027
+POSITIONING
+General-purpose vision SoC. Broadest but least ADAS-specific of the three. 12 nm node is more expensive per die than our 28 nm — different bet on where value lives.
+FABLESS · RISC-V MCU
+Mindgrove
+RISC-V MCU on TSMC 28 nm.
+FUNDING
+$10.3M
+PARTNER
+Bosch MoU
+POSITIONING
+MCU-class chip, not an inference-class one. Bosch MoU is genuinely interesting but is a supply agreement for MCU sockets, not a competing ADAS SoC. Adjacent, not overlapping.
+FABLESS · GAN POWER / RF
+Agnit Semiconductors
+GaN devices for defense radar.
+FUNDING
+$7.47M
+STATUS
+Defense pilots
+POSITIONING
+Complements rather than competes — GaN power devices sit alongside our R100 digital radar DSP. Potential collaboration for defense radar programs.
+READ OF THE DOMESTIC WAVE
+The wave is real and well-funded. But DeepGrid is the only Indian fabless startup with commercial autonomous-CV silicon revenue today. Netrasemi ships mid-2027; Mindgrove is MCU-class; Agnit is a partner, not a competitor.
+SECTION 3 · COMPETITIVE LANDSCAPE
+23 / 37
+
+--- SLIDE 24 ---
+24 · SOFTWARE-FIRST AUTONOMY COMPETITORS
+DEEPGRID SEMI · PRE-SERIES A
+Great algorithms. Wrong cost structure.
+India's three most-cited autonomy competitors are hardware-agnostic — they inherit merchant-silicon economics regardless of algorithm quality.
+MINUS ZERO
+True-vision autonomy stack
+SILICON
+Merchant — NVIDIA / Qualcomm class
+STRATEGY
+Camera-only perception, deep-learning-heavy stack. Differentiation is the model, not the chip.
+INHERITED COST
+Whatever the SoC vendor charges — they don't control it.
+SWAAYATT ROBOTS
+Indian-road negotiation AI
+SILICON
+Merchant — hardware-agnostic
+STRATEGY
+Motion-planning for Indian traffic entropy. Strong research pedigree, dependent on whatever compute the OEM specs.
+INHERITED COST
+Same — algorithmic edge doesn't compress BOM.
+ROSHAI
+Fleet-safety AI
+SILICON
+Merchant — commodity dashcam class
+STRATEGY
+DMS + telematics platform on commodity dashcam hardware. Software-as-service revenue, not chip revenue.
+INHERITED COST
+Dashcam hardware margin belongs to somebody else.
+THE STRUCTURAL POINT
+Software-first competitors can win on algorithm quality. They cannot win on BOM. Their unit economics converge to whatever the merchant SoC vendor charges — and that is the Squeeze Zone (slide 3) by definition.
+SECTION 3 · COMPETITIVE LANDSCAPE
+24 / 37
+
+--- SLIDE 25 ---
+25 · COMPETITIVE POSITIONING SYNTHESIS
+DEEPGRID SEMI · PRE-SERIES A
+The whitespace, mapped.
+Vertical integration on x-axis, BOM discipline on y-axis. DeepGrid occupies the top-right quadrant — alone, for now.
+BOM DISCIPLINE →
+VERTICAL INTEGRATION →
+HIGH BOM · LOW INTEGRATION
+HIGH BOM · VERTICAL
+LOW BOM · SOFTWARE-INHERITED
+LOW BOM · VERTICAL (WHITESPACE)
+Aurora $6k+
+Kodiak ~$3k
+Gatik ~$2k
+DeepWay ~$4k
+Minus Zero
+Swaayatt Robots
+RoshAI
+Netrasemi (2027)
+Mindgrove (MCU)
+DG
+DeepGrid Semi
+~$30 · own die
+THE SYNTHESIS
+DeepGrid is the only Indian startup shipping a vertically-integrated, single-die ADAS combo-die at a disruptive price.
+Top-right is empty by construction. Merchant-silicon incumbents can't shrink to ~$30 — they'd cannibalise their core margin. Software-first competitors can't move right — no tape-out cadence.
+ Indian semi peers occupy adjacent tiles. Netrasemi and Mindgrove are on the vertical-integration axis but haven't shipped ADAS revenue yet. Agnit is a complement.
+ The whitespace has a shelf life. By 2027–28 at least one of them will be a real competitor. The 30-month runway is what buys the head-start.
+SECTION 3 · COMPETITIVE LANDSCAPE
+25 / 37
+
+--- SLIDE 26 ---
+26 · GTM ROADMAP · PHASE 1
+DEEPGRID SEMI · PRE-SERIES A
+Phase 1 — Tactical & Off-Highway Wedge.
+Months 0–6 · The only phase currently generating revenue.
+STATUS · MONTH
+0 → 6
+OBJECTIVES & MOTION
+1. Direct FPGA field deployments.
+ ~₹35,000 FPGA validation board is uneconomic at fleet scale, but fine for defense-pilot volumes. Ship what we have.
+ 2. Tactical defense positioning.
+ Lead with the D100 secure-enclave narrative. Never lead with BOM cost in defense conversations — it's a category error.
+ 3. Off-highway / port cross-sell.
+ Same SKU addresses container-terminal AGV compute. Mundra, Chennai, Jebel Ali on the target list.
+ 4. Second contract as gate.
+ Second signed defense contract by Month 6 unlocks Phase 2 resource ramp.
+ 5. Institutional groundwork.
+ File MeitY DLI application — Phase 2 funding depends on it landing before capital is deployed on tape-out.
+TRACTION TO DATE — ON-SLIDE FACT
+~₹1 Cr
+Non-dilutive contract revenue already booked through Phase 1 activity. This is the only externally-verifiable customer signal we hold today.
+ Real revenue. Real customer. One open question flagged below ↓
+⚑ OPEN QUESTION — DO NOT SKIP
+Nature of the ₹1 Cr — commercial sale, grant, or R&D subsidy?
+Commercial sale → repeatable customer signal → Phase 2 gets full resourcing.
+ Grant / subsidy → not a customer signal → Defense and Fleet re-score as evidence-equal.
+ Third-party revenue attestation is Condition 1 (slide 37) — due within one week.
+SECTION 4 · GTM ROADMAP + REGULATORY
+26 / 37
+
+--- SLIDE 27 ---
+27 · GTM ROADMAP · PHASE 2
+DEEPGRID SEMI · PRE-SERIES A
+Phase 2 — Regulatory Aftermarket Volume.
+Months 6–18 · The phase this ₹55 Cr raise actually funds.
+MONTHS
+6 → 18
+FOUR WORKSTREAMS — PARALLEL
+01 · CAPITAL
+Close the ₹55 Cr blended raise
+₹45 Cr CCPS equity + ₹10 Cr CGTMSE-backed debt.
+ Equity funds tape-out NRE + 30-month runway. Debt covers working-capital exposure to 90–180 day government payment cycles.
+ Blended cost of capital materially lower than a pure-equity round of the same size.
+02 · SUBSIDY
+MeitY DLI approval landed
+Product-linked DLI up to 50% NRE reimbursement (capped ₹15 Cr).
+ Deployment-linked incentive at 4–6% of net sales (capped ₹30 Cr).
+ ChipIN Centre EDA / IP support in parallel.
+ Sequenced before tape-out spend commits so we capture reimbursement.
+03 · SILICON
+TSMC 28 nm HPC+ MPW tape-out
+Multi-project wafer shuttle. Shared reticle, no full-mask commit — the reason NRE lands at $3.17M, not $8M.
+ First-silicon target month 14. Characterisation and PSR targeted month 18.
+ Pin-compatible carrier with the FPGA validation board — early customers migrate without redesigning their platform.
+04 · PRODUCT
+Retrofit kit launched
+₹2–2.5 L target price — still unconverted at this point of the plan.
+ Launch is conditional on the Phase 1 Fleet kill-criterion passing: at least one paid pilot from the first 20 buyer discovery interviews.
+ If not, this workstream slips to Phase 3 and 01/02/03 continue on Defense track only.
+SECTION 4 · GTM ROADMAP + REGULATORY
+27 / 37
+
+--- SLIDE 28 ---
+28 · GTM ROADMAP · PHASE 3
+DEEPGRID SEMI · PRE-SERIES A
+Phase 3 — OEM & Tier-1 integration.
+Months 18–36 · Where recurring revenue and OEM scale unlock — only after Phase 2 lands.
+MONTHS
+18 → 36
+THREE REVENUE LANES COME ONLINE
+01 · TIER-1 ALLIANCES
+Uno Minda · Spark Minda · Bosch India
+Co-development agreement with at least one named Tier-1 by month 24. Not an MoU — a binding NRE-reimbursement co-dev.
+ Tier-1 amortises ISO 26262 / AEC-Q100 audit cost across its existing OEM portfolio; we ride that audit trail.
+ This is the one door into automotive OEM sales that is defensible for a fabless startup.
+02 · SOVEREIGN OEM WINS
+Line-fit at sovereign OEMs
+Tata Advanced Systems & Mahindra Defence: defense-adjacent platforms first.
+ This is where the Phase 1 Defense credentials compound. The D100 secure-enclave story that won the first contracts becomes the sole-source justification for design-in wins.
+ Real long-term chip volume lives here, not in the aftermarket.
+03 · RECURRING SAAS
+Shift to recurring, sovereign data moat
+Every deployed chip becomes a S100-anchored telematics endpoint; SaaS tiers layer on top (slide 34).
+ Cabin, fleet-safety, and cross-mandate anonymised data stays in-country by design — on-die inference means only aggregate events reach cloud.
+ Compounding data moat as installed base grows. FY32 SaaS margin drives 88% blended (slide 33).
+SECTION 4 · GTM ROADMAP + REGULATORY
+28 / 37
+
+--- SLIDE 29 ---
+29 · REGULATORY MANDATE — INDIA
+DEEPGRID SEMI · PRE-SERIES A
+India AIS mandates — mapped to our chiplets.
+One retrofit kit satisfies four mandated functions plus telematics native.
+AIS #
+FUNCTION
+CHIPLET COVERAGE
+SEGMENT IMPLICATION
+AIS-184
+DMS — driver monitoring
+A100 + H100
+Fleet retrofit + insurer evidence path
+AIS-186
+LDW — lane departure
+A100
+Fleet + OEM line-fit
+AIS-187
+BSD — blind spot
+A100 + R100
+Fleet + OEM line-fit
+AIS-188
+AEBS — autonomous braking
+A100 + R100
+Fleet + OEM line-fit
+AIS-140 / 162
+Telematics + emergency btn
+S100 (native)
+Kills secondary tracker — SaaS anchor
+AIS-189 / 190
+Night / low-light perception
+A100 + T100
+Off-highway / defense edge
+⚠ CORRECTION — OPERATIVE DATES
+EARLIER DRAFT (RETRACT): 2026 DATES
+RECONCILED — USE THESE
+1 Oct 2027
+AEBS + ESC mandatory
+on new N2/N3 vehicles.
+1 Jan 2028
+All four functions mandatory
+(AEBS + LDW + BSD + DMS).
+Any deck, one-pager, or investor email still citing the earlier 2026 date should be withdrawn.
+READ OF THE MANDATE CALENDAR
+A retrofit kit that ships in Phase 2 (months 14–18 first silicon) has 12–18 months of runway before the enforcement date — enough to convert a paid pilot into commercial volume.
+SECTION 4 · GTM ROADMAP + REGULATORY
+29 / 37
+
+--- SLIDE 30 ---
+30 · REGULATORY MANDATE — GCC
+DEEPGRID SEMI · PRE-SERIES A
+GCC — Saudi TGA / WASL is the primary door.
+Second addressable market — enters via Phase 2 export; the S100 chiplet is the wedge.
+SAUDI TGA / WASL MANDATE
+Every commercial vehicle operating in KSA must be registered on WASL.
+Transport General Authority (TGA) requires certified GPS + telematics tracker approved for WASL data ingest.
+ Fleet operators today install a secondary tracker in addition to any safety hardware — ~$60–120 per vehicle in BOM plus install.
+ Our S100 chiplet is designed as a WASL-compatible endpoint, so ADAS + telematics ship in one BOM slot.
+ADJACENT GCC MARKETS
+UAE (RTA fleet-safety framework), Oman (ROP transport mandate), and Kuwait (MOI fleet registration) trail the Saudi model. S100 firmware profiles are portable across all four with configuration changes.
+WHY S100 CHANGES THE BUYER CONVERSATION
+Two devices → one device.
+TODAY — IMPORTED STACK
+ADAS box (imported SoC) + secondary WASL tracker + installation of both.
+ 2 devices, 2 antennas, 2 SIMs.
+WITH DGRID ALPHA
+S100 handles WASL telematics natively while A100+R100 handle ADAS on the same die.
+ 1 device, 1 antenna, 1 SIM.
+SALES-MOTION CONSEQUENCE
+In GCC we lead with the "kill the tracker" narrative, not the "cheap ADAS" narrative. The buyer's existing pain is the redundant tracker they already resent paying for.
+ ADAS savings become the second-order benefit rather than the pitch — same positioning discipline as slide 17.
+SECTION 4 · GTM ROADMAP + REGULATORY
+30 / 37
+
+--- SLIDE 31 ---
+31 · HARDWARE UNIT ECONOMICS
+DEEPGRID SEMI · PRE-SERIES A
+Bottom-up cost build. Every line traceable.
+Die cost at 1M chips + full retrofit kit BOM + one clean cost-advantage comparison.
+DIE COST BUILD @ 1M CHIPS · 28NM HPC+
+Wafer share (~20mm²)
+$2.180
+Package (WLCSP + substrate)
+$0.820
+Test + burn-in
+$0.460
+Yield-loss provision (@ ~85% yield)
+$0.416
+Total die cost / chip
+$3.876
+CORRECTION on-slide: earlier "~$3" claim retracted. Reconciled figure is $3.876 — still under $4. The 12.9× cost advantage vs Mobileye ASP $50 still holds; the retracted 774× multiplier does not.
+RETROFIT KIT BOM (FLEET-FACING SKU)
+DGrid Alpha ASIC + board
+$30
+Radar (4× corner)
+$100
+Cameras (6–8×)
+$50
+Enclosure + wiring
+$20
+Total kit BOM
+$200
+Same functional envelope as an imported $6,000+ L2+ stack. Kit ASP target ₹2–2.5 L (still unvalidated — slide 19). Do NOT repeat "84% gross margin" — segment margin implies ~92–93%.
+APPLES-TO-APPLES COST ADVANTAGE — COMPUTE NODE ONLY
+$3.876 vs Mobileye reference ASP $50 = 12.9× advantage. That is the honest number, and it is enough — we do not need the retracted 774×.
+SECTION 5 · FINANCIALS
+31 / 37
+
+--- SLIDE 32 ---
+32 · COST CURVES & BREAK-EVEN
+DEEPGRID SEMI · PRE-SERIES A
+NRE phasing + honest break-even.
+$3.17M NRE phased against the MPW shuttle. Break-even ~174,908 chips — crossing FY2032.
+MPW TAPE-OUT NRE PHASING — $3.17M TOTAL
+RTL freeze + verification
+M0–4
+$0.78M
+Physical design + DRC/LVS
+M4–9
+$0.66M
+MPW shuttle slot + mask share
+M10
+$1.15M
+Silicon bring-up + characterisation
+M14–17
+$0.38M
+EDA + IP + tooling
+continuous
+$0.20M
+Total NRE
+$3.17M
+Full phasing. Chunked against the MPW shuttle timeline — not a lump-sum commit at day zero. The MeitY P-DLI reimbursement (up to 50%) reduces cash outflow on M4–M17 line items, subject to acceptance testing.
+⚠ MARQUEE CORRECTION — BREAK-EVEN
+EARLIER DRAFT (RETRACT ENTIRELY)
+$8M NRE · 3,636-unit break-even
+RECONCILED — USE THESE NUMBERS
+NRE
+$3.17M
+Full phasing at left. Not $8M.
+BREAK-EVEN UNITS
+~174,908
+Chips, crossing FY2032. Not 3,636.
+The retracted 3,636-unit figure was calculated against a board-level margin, not the chip-level cost structure, and ignored fully-loaded opex. It is not a smaller-model version of this number — it is the wrong number. Do not repeat it in any external doc.
+SECTION 5 · FINANCIALS
+32 / 37
+
+--- SLIDE 33 ---
+33 · REVENUE TRAJECTORY
+DEEPGRID SEMI · PRE-SERIES A
+6-year revenue trajectory.
+Management projection · unaudited · assumes Phase 2 tape-out lands and Fleet pilot converts to volume.
+1,500
+1,000
+500
+0
+₹ CR · MANAGEMENT PROJECTION
+₹6
+FY27
+₹41.17
+FY28
+₹144.73
+FY29
+₹351.35
+FY30
+₹731.54
+FY31
+₹1,387.95
+FY32
+NET INCOME +
+FISCAL YEAR
+GROSS MARGIN CURVE (SYSTEMS)
+FY27
+53%
+FY29
+70%
+FY31
+82%
+FY32
+88%
+Blended (chip + retrofit + SaaS) systems margin. Do NOT repeat "84% ASIC margin" — segment implies ~92–93%; reconciled blended figure is 88%.
+FY32 EXIT STACK
+Revenue
+₹1,387.95 Cr
+EBITDA
+₹536.63 Cr (~39%)
+First profitable year
+FY2029
+Net income positive from FY29 onwards.
+SECTION 5 · FINANCIALS · MANAGEMENT PROJECTION
+33 / 37
+
+--- SLIDE 34 ---
+34 · SaaS MONETIZATION
+DEEPGRID SEMI · PRE-SERIES A
+Recurring revenue tiers. Sovereign-data moat.
+Three annual tiers per vehicle — the FY31–32 margin curve above 82% comes from here.
+TIER 01 · BASE
+Base
+₹10,000 /yr
+PER VEHICLE
+→ AIS-140 telematics + emergency-button ingest
+ → Basic geo-fencing
+ → Trip / driver report
+ → 30-day event log retention
+TIER 02 · ADVANCED
+Advanced
+₹15,000 /yr
+PER VEHICLE
+→ Everything in Base
+ → DMS event stream (drowsy / distraction / phone)
+ → Lane / following distance analytics
+ → Fleet-safety dashboard
+ → 180-day retention + video snippet on trigger
+TIER 03 · PREMIUM
+Premium
+₹25,000 /yr
+PER VEHICLE
+→ Everything in Advanced
+ → ADAS event stream (AEBS / LDW / BSD) analytics
+ → Model over-the-air update channel
+ → Sovereign data enclave — data never leaves geography
+ → API access for fleet / insurer integrations
+WHY THE MOAT COMPOUNDS
+The D100 + S100 combo keeps event data in-country by design. Every deployed vehicle is a data endpoint for the next model iteration — without exporting raw video / trip data across borders. Sovereign-data compliance is not a feature — it is the reason SaaS attach rate scales.
+SECTION 5 · FINANCIALS
+34 / 37
+
+--- SLIDE 35 ---
+35 · CAPITAL EFFICIENCY & SUBSIDIES
+DEEPGRID SEMI · PRE-SERIES A
+Use of funds. Sized against ₹55 Cr blended, not ₹25 Cr.
+Institutional subsidy stack sequenced before capital deployment — every rupee stretched.
+BLENDED ₹55 CR — USE OF FUNDS
+Tape-out NRE ($3.17M)
+~₹27 Cr
+Team & opex (30-month runway)
+~₹18 Cr
+Working capital (CGTMSE debt)
+₹10 Cr
+Total blended raise
+₹55 Cr
+Blended cost of capital materially lower than an equivalent ₹55 Cr pure-equity round. Debt tranche exists to buffer government payment cycles (see slide 36 — working-capital risk).
+NON-DILUTIVE SUBSIDY STACK
+PROGRAMME
+INSTRUMENT
+CAP
+MeitY P-DLI
+50% NRE reimbursement
+₹15 Cr
+Deployment-Linked Incentive
+4–6% of net sales
+₹30 Cr
+ChipIN Centre
+EDA / IP tool support
+in-kind
+Sequenced before capital deploys on NRE so we capture reimbursement, not absorb it.
+EFFECTIVE RAISE, AFTER SUBSIDIES
+GROSS ASK
+₹55 Cr
+CCPS equity + CGTMSE debt.
+NON-DILUTIVE OFFSET
+up to ₹45 Cr
+P-DLI + DLI, subject to acceptance testing.
+EFFECTIVE NET CAPITAL COST
+as low as ₹10 Cr
+If both subsidy programmes hit full cap.
+SECTION 5 · FINANCIALS
+35 / 37
+
+--- SLIDE 36 ---
+36 · RED TEAM & RISK
+DEEPGRID SEMI · PRE-SERIES A
+Two real gaps, two structural risks. Named, not hidden.
+Red-team Stage 5 output — these are the things a bad investor question would find first.
+GAP #1 · COMPETITIVE BENCHMARK BLIND SPOT
+Indian defense primes were never assessed as competitors.
+Competitive slides 21–25 benchmark against Aurora / Kodiak / Netrasemi / Minus Zero. But for the Defense track the relevant competitor is a BEL / BDL / Tata Advanced Systems / Mahindra Defence with existing security clearance, existing UGV programs, and 30+ years of MoD relationships.
+ A startup vs an established cleared incumbent is a fundamentally different competitive problem than vs Netrasemi. Fix in Phase 1, Weeks 1–4 (slide 20).
+GAP #2 · EVIDENCE PEDIGREE
+Nature of the ₹1 Cr revenue is unconfirmed.
+Everything in the deck — the ICP scorecard, the Defense-primary decision, the resourcing plan — depends on the ₹1 Cr being a commercial sale.
+ If it turns out to be a grant, subsidy, or R&D contract, Defense re-scores as evidence-equal to Fleet and the "Defense-first sequence" argument reopens. Third-party audit within one week is Condition 1 (slide 37).
+STRUCTURAL RISK · CIRCULAR EVIDENCE
+Defense scores 5/5 on evidence because of the ₹1 Cr.
+If Gap #2 resolves against us, the evidence score drops from 5/5 to 1/5, and Defense's weighted score collapses from 3.96 to ~3.20. That still beats Fleet on the other dimensions — but the primary-ICP decision is no longer default-obvious, and the day-90 checkpoint (Condition 5) becomes a real re-plan gate.
+STRUCTURAL RISK · WORKING CAPITAL & RUNWAY
+₹2.48 Cr raised to date vs ₹55 Cr ask.
+Government + Defense payment cycles run 90–180+ days. On the current cash position, a single delayed invoice can compress the runway inside a quarter. The ₹10 Cr CGTMSE debt exists specifically to buffer this — but only if the raise closes on schedule. Condition 3 mandates modelling this before external commitments.
+SECTION 6 · RISK, RED TEAM, DECISION, CLOSE
+36 / 37
+
+--- SLIDE 37 ---
+37 · DECISION & CLOSE
+DEEPGRID SEMI · PRE-SERIES A
+Proceed with
+Conditions.
+Not an unconditional go. Five conditions, priority-ordered, all measurable.
+FIVE CONDITIONS TO PROCEED — PRIORITY ORDER
+01
+Confirm ₹1 Cr revenue nature within 1 week. Third-party audited attestation: commercial sale vs grant / subsidy.
+02
+Add Indian defense primes to competitive benchmark. BEL, BDL, Tata Advanced Systems, Mahindra Defence. Fix Gap #1 by Week 4.
+03
+Model working-capital exposure to 90–180 day payment cycles. Before any external commitment on CGTMSE debt drawdown.
+04
+Every external doc frames this as sequenced two-track plan. Never a flat pivot narrative. Any deck / one-pager reading as "Defense-only" gets pulled.
+05
+Day-90 checkpoint is a HARD re-scoring gate. Not a status review. Same 10-dim rubric, fresh evidence, Board-visible go / no-go on Fleet co-primary.
+All five conditions are dated, owned, and instrumented. Missing any of them re-opens the decision.
+A DEFENSIBLE, EVIDENCE-LED ASK
+Four pillars.
+01 Eliminating the hardware squeeze zone.
+ $3.876 die, ~$30 board, 12.9× compute-node advantage.
+02 De-risked technical validation.
+ 39.3 TOPS on FPGA. One open commercial question, publicly flagged.
+03 Non-discretionary mandate capture.
+ AIS-184/186/187/188 chiplet-mapped, dated enforcement 2027–28.
+04 Capital-efficient engineering.
+ $3.17M NRE, MPW-phased, evidence-gated at day-90.
+₹55 CR · 79.2% · 5 CONDITIONS · FY29 PROFITABLE
+SECTION 6 · CONFIDENTIAL · NOT AN OFFER TO SELL SECURITIES
+37 / 37

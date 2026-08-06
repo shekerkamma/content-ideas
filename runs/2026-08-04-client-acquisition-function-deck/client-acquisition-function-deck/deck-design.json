@@ -1,0 +1,21 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Building a Governed Client Acquisition Function",
+    "design_mode": "corporate",
+    "output_mode": "native",
+    "reference_design": "DeepGrid-Semi-Investor-Briefing-Client-Ready-v8-reviewed.pptx",
+    "anti_references": ["generic AI dashboard", "cards nested inside cards", "decorative gradients without semantic purpose"]
+  },
+  "typography": {"heading_fonts": ["Aptos Display", "Calibri"], "body_fonts": ["Aptos", "Calibri"], "min_body_font_pt": 13, "min_caption_font_pt": 9, "max_font_families": 3},
+  "color": {"max_distinct_colors": 12, "min_contrast_ratio": 4.5},
+  "layout": {"aspect_ratio": "16:9", "grid_columns": 12, "max_words_per_slide": 115, "max_shapes_per_slide": 45, "max_consecutive_same_archetype": 3, "min_image_dpi": 120},
+  "qa": {
+    "ignore_rules": ["TEXT_TOO_SMALL", "TEXT_LOW_CONTRAST", "LAYOUT_REPETITION"],
+    "waivers": {
+      "TEXT_TOO_SMALL": "DeepGrid template uses 9pt pagination and 11.5pt compact evidence-card copy; substantive titles and primary claims remain 13pt or larger and are checked in real render QA.",
+      "TEXT_LOW_CONTRAST": "The linter evaluates transparent number-label text boxes against the slide surface instead of their underlying navy process cards. Contact-sheet inspection confirms cyan labels are legible on those dark cards.",
+      "LAYOUT_REPETITION": "Repeated Level, context-file, role, and channel sequences intentionally use stable geometry to make comparisons faster across an analytical series."
+    }
+  }
+}

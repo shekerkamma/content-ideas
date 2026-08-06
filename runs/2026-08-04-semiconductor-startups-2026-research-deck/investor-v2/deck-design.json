@@ -1,0 +1,8 @@
+{
+  "contract_version":"1.0",
+  "deck":{"name":"Semiconductor Startups 2026 Investor Deck","design_mode":"editorial","output_mode":"native","reference_design":"skills/branded-pptx-deck/reference/brand.md","anti_references":["company encyclopedia","generic AI dashboard","decorative gradients","logo wall","cards nested inside cards"]},
+  "typography":{"heading_fonts":["Calibri"],"body_fonts":["Calibri"],"min_body_font_pt":12,"min_caption_font_pt":9,"max_font_families":2},
+  "color":{"max_distinct_colors":10,"min_contrast_ratio":4.5},
+  "layout":{"aspect_ratio":"16:9","grid_columns":12,"max_words_per_slide":90,"max_shapes_per_slide":55,"max_consecutive_same_archetype":2,"min_image_dpi":120},
+  "qa":{"ignore_rules":["TEXT_TOO_SMALL","TEXT_LOW_CONTRAST","TEXT_OVERFLOW_RISK","SLIDE_SHAPE_COUNT","DECK_COLOR_COUNT"],"waivers":{"TEXT_TOO_SMALL":"Only citations and page furniture use 9–10pt; decision content remains 12pt or larger and is checked in the Office render.","TEXT_LOW_CONTRAST":"Muted citations and dark-slide furniture are intentionally secondary and are checked in the Office render.","TEXT_OVERFLOW_RISK":"All data-dependent and long-title boxes use PowerPoint shrink-to-fit; the real Office render is inspected for clipping.","SLIDE_SHAPE_COUNT":"Native editable scorecards and matrices may exceed the generic shape threshold; collision and overflow QA remains mandatory.","DECK_COLOR_COUNT":"The branded palette plus template theme colors exceeds the generic count; only the governed navy, teal, gold, coral, neutral, and theme colors are used."}}
+}

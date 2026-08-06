@@ -1,0 +1,707 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "output_mode": "hybrid",
+    "editability": "Editable titles, annotations, layout, and shapes; source video frames remain raster evidence.",
+    "reference_deck": null
+  },
+  "visuals": [
+    {
+      "id": "visual-01",
+      "slide_ids": [
+        1
+      ],
+      "purpose": "Exact source proof for \u201cImpeccable 4.0\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0001"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0001",
+        "timestamp": "13",
+        "crop": null
+      },
+      "asset": "assets/01-intro.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-02",
+      "slide_ids": [
+        3
+      ],
+      "purpose": "Exact source proof for \u201cThe problem is sameness\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0002"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0002",
+        "timestamp": "43",
+        "crop": null
+      },
+      "asset": "assets/02-taste.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-03",
+      "slide_ids": [
+        4
+      ],
+      "purpose": "Exact source proof for \u201cLive Mode changes the interaction\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0003"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0003",
+        "timestamp": "76",
+        "crop": null
+      },
+      "asset": "assets/03-live.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-04",
+      "slide_ids": [
+        5
+      ],
+      "purpose": "Exact source proof for \u201cWorlds supply a complete visual grammar\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0004"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0004",
+        "timestamp": "100",
+        "crop": null
+      },
+      "asset": "assets/04-worlds.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-05",
+      "slide_ids": [
+        6
+      ],
+      "purpose": "Exact source proof for \u201cOptions respond to the project\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0005"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0005",
+        "timestamp": "134",
+        "crop": null
+      },
+      "asset": "assets/05-options.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-06",
+      "slide_ids": [
+        7
+      ],
+      "purpose": "Exact source proof for \u201cOne skill exposes a design workflow\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0006"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0006",
+        "timestamp": "193",
+        "crop": null
+      },
+      "asset": "assets/06-commands.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-07",
+      "slide_ids": [
+        8
+      ],
+      "purpose": "Exact source proof for \u201cAnti-patterns become detectable\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0007"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0007",
+        "timestamp": "234",
+        "crop": null
+      },
+      "asset": "assets/07-patterns.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-08",
+      "slide_ids": [
+        9
+      ],
+      "purpose": "Exact source proof for \u201cInstallation is deliberately lightweight\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0008"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0008",
+        "timestamp": "267",
+        "crop": null
+      },
+      "asset": "assets/08-install.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-09",
+      "slide_ids": [
+        10
+      ],
+      "purpose": "Exact source proof for \u201cThe example begins with purpose\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0009"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0009",
+        "timestamp": "332",
+        "crop": null
+      },
+      "asset": "assets/09-brief.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-10",
+      "slide_ids": [
+        11
+      ],
+      "purpose": "Exact source proof for \u201cCompare directions before committing\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0010"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0010",
+        "timestamp": "425",
+        "crop": null
+      },
+      "asset": "assets/10-variations.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-11",
+      "slide_ids": [
+        12
+      ],
+      "purpose": "Exact source proof for \u201cThe first result is a baseline\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0011"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0011",
+        "timestamp": "526",
+        "crop": null
+      },
+      "asset": "assets/11-baseline.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-12",
+      "slide_ids": [
+        13
+      ],
+      "purpose": "Exact source proof for \u201cLive comparison creates a selection loop\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0012"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0012",
+        "timestamp": "577",
+        "crop": null
+      },
+      "asset": "assets/12-comparison.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-13",
+      "slide_ids": [
+        14
+      ],
+      "purpose": "Exact source proof for \u201cThe next pass deliberately increases range\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0013"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0013",
+        "timestamp": "629",
+        "crop": null
+      },
+      "asset": "assets/13-bolder.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-14",
+      "slide_ids": [
+        15
+      ],
+      "purpose": "Exact source proof for \u201cDetection turns taste into action\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0014"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0014",
+        "timestamp": "660",
+        "crop": null
+      },
+      "asset": "assets/14-detector.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-15",
+      "slide_ids": [
+        16
+      ],
+      "purpose": "Exact source proof for \u201cThe chosen world becomes a design record\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0015"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0015",
+        "timestamp": "675",
+        "crop": null
+      },
+      "asset": "assets/15-design-record.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-16",
+      "slide_ids": [
+        17
+      ],
+      "purpose": "Exact source proof for \u201cOutside references add specificity\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0016"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0016",
+        "timestamp": "769",
+        "crop": null
+      },
+      "asset": "assets/16-references.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "visual-17",
+      "slide_ids": [
+        18
+      ],
+      "purpose": "Exact source proof for \u201cReference becomes interpretation\u2014not imitation\u201d.",
+      "artifact_type": "ui",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "The interface state is evidence; preserve the captured frame exactly and add editable interpretation around it.",
+      "evidence_ids": [
+        "frame-0017"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+        "page": null,
+        "frame": "frame-0017",
+        "timestamp": "803",
+        "crop": null
+      },
+      "asset": "assets/17-reference-result.jpg",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 1920,
+        "height": 1080,
+        "fit": "contain",
+        "background": "#F1ECE2"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": false,
+        "exact_fidelity": true
+      }
+    }
+  ]
+}

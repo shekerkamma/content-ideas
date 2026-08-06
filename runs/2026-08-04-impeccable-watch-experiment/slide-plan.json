@@ -1,0 +1,722 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Impeccable 4.0 \u2014 Visual Workflow",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "claim-01",
+      "text": "Design with range, taste, and control",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0001"
+      ]
+    },
+    {
+      "id": "claim-02",
+      "text": "Impeccable is a loop, not a style button",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-03",
+      "text": "The problem is sameness",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0002"
+      ]
+    },
+    {
+      "id": "claim-04",
+      "text": "Live Mode changes the interaction",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0003"
+      ]
+    },
+    {
+      "id": "claim-05",
+      "text": "Worlds supply a complete visual grammar",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0004"
+      ]
+    },
+    {
+      "id": "claim-06",
+      "text": "Options respond to the project",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0005"
+      ]
+    },
+    {
+      "id": "claim-07",
+      "text": "One skill exposes a design workflow",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0006"
+      ]
+    },
+    {
+      "id": "claim-08",
+      "text": "Anti-patterns become detectable",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0007"
+      ]
+    },
+    {
+      "id": "claim-09",
+      "text": "Installation is deliberately lightweight",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0008"
+      ]
+    },
+    {
+      "id": "claim-10",
+      "text": "The example begins with purpose",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0009"
+      ]
+    },
+    {
+      "id": "claim-11",
+      "text": "Compare directions before committing",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0010"
+      ]
+    },
+    {
+      "id": "claim-12",
+      "text": "The first result is a baseline",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0011"
+      ]
+    },
+    {
+      "id": "claim-13",
+      "text": "Live comparison creates a selection loop",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0012"
+      ]
+    },
+    {
+      "id": "claim-14",
+      "text": "The next pass deliberately increases range",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0013"
+      ]
+    },
+    {
+      "id": "claim-15",
+      "text": "Detection turns taste into action",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0014"
+      ]
+    },
+    {
+      "id": "claim-16",
+      "text": "The chosen world becomes a design record",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0015"
+      ]
+    },
+    {
+      "id": "claim-17",
+      "text": "Outside references add specificity",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0016"
+      ]
+    },
+    {
+      "id": "claim-18",
+      "text": "Reference becomes interpretation\u2014not imitation",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0017"
+      ]
+    },
+    {
+      "id": "claim-19",
+      "text": "The template improved how the assets are seen",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": []
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "Design with range, taste, and control",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-01"
+      ],
+      "evidence_ids": [
+        "frame-0001"
+      ],
+      "visual_ids": [
+        "visual-01"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Design with range, taste, and control",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Design with range, taste, and control"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "evidence-proof",
+      "action_title": "Impeccable is a loop, not a style button",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-02"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Impeccable is a loop, not a style button",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Impeccable is a loop, not a style button"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "evidence-proof",
+      "action_title": "The problem is sameness",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-03"
+      ],
+      "evidence_ids": [
+        "frame-0002"
+      ],
+      "visual_ids": [
+        "visual-02"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The problem is sameness",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "The problem is sameness"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "evidence-proof",
+      "action_title": "Live Mode changes the interaction",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-04"
+      ],
+      "evidence_ids": [
+        "frame-0003"
+      ],
+      "visual_ids": [
+        "visual-03"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Live Mode changes the interaction",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Live Mode changes the interaction"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "evidence-proof",
+      "action_title": "Worlds supply a complete visual grammar",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-05"
+      ],
+      "evidence_ids": [
+        "frame-0004"
+      ],
+      "visual_ids": [
+        "visual-04"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Worlds supply a complete visual grammar",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Worlds supply a complete visual grammar"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "evidence-proof",
+      "action_title": "Options respond to the project",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-06"
+      ],
+      "evidence_ids": [
+        "frame-0005"
+      ],
+      "visual_ids": [
+        "visual-05"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Options respond to the project",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Options respond to the project"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "evidence-proof",
+      "action_title": "One skill exposes a design workflow",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-07"
+      ],
+      "evidence_ids": [
+        "frame-0006"
+      ],
+      "visual_ids": [
+        "visual-06"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "One skill exposes a design workflow",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "One skill exposes a design workflow"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "evidence-proof",
+      "action_title": "Anti-patterns become detectable",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-08"
+      ],
+      "evidence_ids": [
+        "frame-0007"
+      ],
+      "visual_ids": [
+        "visual-07"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Anti-patterns become detectable",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Anti-patterns become detectable"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "evidence-proof",
+      "action_title": "Installation is deliberately lightweight",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-09"
+      ],
+      "evidence_ids": [
+        "frame-0008"
+      ],
+      "visual_ids": [
+        "visual-08"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Installation is deliberately lightweight",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Installation is deliberately lightweight"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "evidence-proof",
+      "action_title": "The example begins with purpose",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-10"
+      ],
+      "evidence_ids": [
+        "frame-0009"
+      ],
+      "visual_ids": [
+        "visual-09"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The example begins with purpose",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "The example begins with purpose"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "evidence-proof",
+      "action_title": "Compare directions before committing",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-11"
+      ],
+      "evidence_ids": [
+        "frame-0010"
+      ],
+      "visual_ids": [
+        "visual-10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Compare directions before committing",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Compare directions before committing"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "evidence-proof",
+      "action_title": "The first result is a baseline",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-12"
+      ],
+      "evidence_ids": [
+        "frame-0011"
+      ],
+      "visual_ids": [
+        "visual-11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The first result is a baseline",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "The first result is a baseline"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "evidence-proof",
+      "action_title": "Live comparison creates a selection loop",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-13"
+      ],
+      "evidence_ids": [
+        "frame-0012"
+      ],
+      "visual_ids": [
+        "visual-12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Live comparison creates a selection loop",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Live comparison creates a selection loop"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "evidence-proof",
+      "action_title": "The next pass deliberately increases range",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-14"
+      ],
+      "evidence_ids": [
+        "frame-0013"
+      ],
+      "visual_ids": [
+        "visual-13"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The next pass deliberately increases range",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "The next pass deliberately increases range"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "evidence-proof",
+      "action_title": "Detection turns taste into action",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-15"
+      ],
+      "evidence_ids": [
+        "frame-0014"
+      ],
+      "visual_ids": [
+        "visual-14"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Detection turns taste into action",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Detection turns taste into action"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 16,
+      "archetype": "evidence-proof",
+      "action_title": "The chosen world becomes a design record",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-16"
+      ],
+      "evidence_ids": [
+        "frame-0015"
+      ],
+      "visual_ids": [
+        "visual-15"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The chosen world becomes a design record",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "The chosen world becomes a design record"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 17,
+      "archetype": "evidence-proof",
+      "action_title": "Outside references add specificity",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-17"
+      ],
+      "evidence_ids": [
+        "frame-0016"
+      ],
+      "visual_ids": [
+        "visual-16"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Outside references add specificity",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Outside references add specificity"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 18,
+      "archetype": "evidence-proof",
+      "action_title": "Reference becomes interpretation\u2014not imitation",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-18"
+      ],
+      "evidence_ids": [
+        "frame-0017"
+      ],
+      "visual_ids": [
+        "visual-17"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Reference becomes interpretation\u2014not imitation",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "Reference becomes interpretation\u2014not imitation"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 19,
+      "archetype": "decision",
+      "action_title": "The template improved how the assets are seen",
+      "audience_job": "Understand the visual workflow and the evidence behind the design decision.",
+      "claim_ids": [
+        "claim-19"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "The template improved how the assets are seen",
+        "demo_fallback": "Use the embedded source proof."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "interpretation"
+        ],
+        "visual_alt_text": "The template improved how the assets are seen"
+      },
+      "status": "reviewed"
+    }
+  ]
+}

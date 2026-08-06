@@ -1,0 +1,720 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Impeccable 4.0 \u2014 Client Adoption Decision",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "claim-01",
+      "text": "Pilot the decision architecture\u2014not the promise of autonomous taste",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-problem"
+      ]
+    },
+    {
+      "id": "claim-02",
+      "text": "The case for a pilot rests on three demonstrated mechanisms\u2014and three unproven outcomes",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-03",
+      "text": "More choice improves taste only when it is structured",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-changes"
+      ]
+    },
+    {
+      "id": "claim-04",
+      "text": "Worlds turns make it better into a visible macro decision",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ]
+    },
+    {
+      "id": "claim-05",
+      "text": "Four commitment gates prevent exploration from becoming drift",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-worlds"
+      ]
+    },
+    {
+      "id": "claim-06",
+      "text": "Generality raises the ceiling\u2014and shifts risk to the operator",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ]
+    },
+    {
+      "id": "claim-07",
+      "text": "Change altitude determines the correct interface",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-references"
+      ]
+    },
+    {
+      "id": "claim-08",
+      "text": "Live Mode shortens local comparison after direction is chosen",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ]
+    },
+    {
+      "id": "claim-09",
+      "text": "A wrong visual grammar requires a reference reset\u2014not more polish",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-references",
+        "frame-reference"
+      ]
+    },
+    {
+      "id": "claim-10",
+      "text": "Human judgment belongs at four high-leverage moments",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-11",
+      "text": "Taste scales only when decisions become organizational memory",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-memory"
+      ]
+    },
+    {
+      "id": "claim-12",
+      "text": "Fresh-context review is a challenge control\u2014not proof of quality",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ]
+    },
+    {
+      "id": "claim-13",
+      "text": "The demo reaches Level 2\u2014and shows pieces of Level 3",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-14",
+      "text": "Four readiness gates define when adoption may advance",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-15",
+      "text": "Success is fewer wrong-direction cycles\u2014without quality regressions",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-16",
+      "text": "A fair pilot isolates workflow value from operator enthusiasm",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-17",
+      "text": "The operating model needs controls at every failure boundary",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-18",
+      "text": "Adopt the decision architecture\u2014then earn the right to scale",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "Pilot the decision architecture\u2014not the promise of autonomous taste",
+      "audience_job": "Understand the recommendation and the evidence boundary.",
+      "claim_ids": [
+        "claim-01"
+      ],
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "visual_ids": [
+        "visual-01"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Judge Impeccable as a governed operating-model change, not an autonomous designer.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Pilot the decision architecture\u2014not the promise of autonomous taste"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "executive-summary",
+      "action_title": "The case for a pilot rests on three demonstrated mechanisms\u2014and three unproven outcomes",
+      "audience_job": "Grasp the demonstrated case, unproven outcomes, and decision on one page.",
+      "claim_ids": [
+        "claim-02"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-02"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "The evidence supports a pilot; it does not support claims of speed, quality, or business lift.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "The case for a pilot rests on three demonstrated mechanisms\u2014and three unproven outcomes"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "analytical-native",
+      "action_title": "More choice improves taste only when it is structured",
+      "audience_job": "Understand why a plausible first draft can increase downstream rework.",
+      "claim_ids": [
+        "claim-03"
+      ],
+      "evidence_ids": [
+        "transcript-changes"
+      ],
+      "visual_ids": [
+        "visual-03"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Optimize the timing of directional judgment before optimizing first-draft speed.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "More choice improves taste only when it is structured"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "evidence-proof",
+      "action_title": "Worlds turns make it better into a visible macro decision",
+      "audience_job": "See how the Pathfinder demonstration makes macro direction selectable.",
+      "claim_ids": [
+        "claim-04"
+      ],
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ],
+      "visual_ids": [
+        "visual-04"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Name who owns the macro visual choice and record the rationale before variants are built.",
+        "demo_fallback": "Explain the setup, observed finding, implication, and action from the evidence contract."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Worlds turns make it better into a visible macro decision"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "analytical-native",
+      "action_title": "Four commitment gates prevent exploration from becoming drift",
+      "audience_job": "Understand the owners and exit criteria that turn options into value.",
+      "claim_ids": [
+        "claim-05"
+      ],
+      "evidence_ids": [
+        "transcript-worlds"
+      ],
+      "visual_ids": [
+        "visual-05"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Cap exploration and require explicit yes-or-return-upstream decisions.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Four commitment gates prevent exploration from becoming drift"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "analytical-native",
+      "action_title": "Generality raises the ceiling\u2014and shifts risk to the operator",
+      "audience_job": "Recognize where a narrower conventional workflow remains preferable.",
+      "claim_ids": [
+        "claim-06"
+      ],
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "visual_ids": [
+        "visual-06"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Do not deploy a general tool where the team lacks evidence, taste ownership, or review capacity.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Generality raises the ceiling\u2014and shifts risk to the operator"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "analytical-native",
+      "action_title": "Change altitude determines the correct interface",
+      "audience_job": "Route local, structural, and directional changes to the correct interface.",
+      "claim_ids": [
+        "claim-07"
+      ],
+      "evidence_ids": [
+        "transcript-references"
+      ],
+      "visual_ids": [
+        "visual-07"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Use Live for detail, terminal for structure, and references for a direction reset.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Change altitude determines the correct interface"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "evidence-proof",
+      "action_title": "Live Mode shortens local comparison after direction is chosen",
+      "audience_job": "See how the Find the why comparison supports bounded local judgment.",
+      "claim_ids": [
+        "claim-08"
+      ],
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ],
+      "visual_ids": [
+        "visual-08"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Local comparison is valuable only after the visual grammar is accepted.",
+        "demo_fallback": "Explain the setup, observed finding, implication, and action from the evidence contract."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Live Mode shortens local comparison after direction is chosen"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "evidence-proof",
+      "action_title": "A wrong visual grammar requires a reference reset\u2014not more polish",
+      "audience_job": "Know when to stop polishing and reopen the visual grammar.",
+      "claim_ids": [
+        "claim-09"
+      ],
+      "evidence_ids": [
+        "transcript-references",
+        "frame-reference"
+      ],
+      "visual_ids": [
+        "visual-09"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Reference-led resets require provenance controls and a return to macro review.",
+        "demo_fallback": "Explain the setup, observed finding, implication, and action from the evidence contract."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "A wrong visual grammar requires a reference reset\u2014not more polish"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "analytical-native",
+      "action_title": "Human judgment belongs at four high-leverage moments",
+      "audience_job": "Assign human accountability and system support across irreversible decisions.",
+      "claim_ids": [
+        "claim-10"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Humans retain responsibility for truth, direction, trade-offs, and release.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Human judgment belongs at four high-leverage moments"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "analytical-native",
+      "action_title": "Taste scales only when decisions become organizational memory",
+      "audience_job": "Understand how accepted choices become reusable constraints without becoming permanent defaults.",
+      "claim_ids": [
+        "claim-11"
+      ],
+      "evidence_ids": [
+        "transcript-memory"
+      ],
+      "visual_ids": [
+        "visual-11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Version the design record and permit explicit resets to prevent stale taste from hardening.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Taste scales only when decisions become organizational memory"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "analytical-native",
+      "action_title": "Fresh-context review is a challenge control\u2014not proof of quality",
+      "audience_job": "Separate fresh-context challenge from objective technical and user QA.",
+      "claim_ids": [
+        "claim-12"
+      ],
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "visual_ids": [
+        "visual-12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "A second reviewer challenges context-induced drift but cannot certify accessibility or outcomes.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Fresh-context review is a challenge control\u2014not proof of quality"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "analytical-native",
+      "action_title": "The demo reaches Level 2\u2014and shows pieces of Level 3",
+      "audience_job": "Distinguish demonstrated workflow maturity from unproven outcomes.",
+      "claim_ids": [
+        "claim-13"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-13"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Treat all outcome benefits as hypotheses until a controlled comparison measures them.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "The demo reaches Level 2\u2014and shows pieces of Level 3"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "analytical-native",
+      "action_title": "Four readiness gates define when adoption may advance",
+      "audience_job": "Assess whether the organization is ready to run even a bounded pilot.",
+      "claim_ids": [
+        "claim-14"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-14"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Unknown readiness is a reason to narrow or stop, not to assume green.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Four readiness gates define when adoption may advance"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "analytical-native",
+      "action_title": "Success is fewer wrong-direction cycles\u2014without quality regressions",
+      "audience_job": "Agree how success and guardrails will be measured before work begins.",
+      "claim_ids": [
+        "claim-15"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-15"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Lock the scorecard now so showcase quality cannot redefine success later.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Success is fewer wrong-direction cycles\u2014without quality regressions"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 16,
+      "archetype": "analytical-native",
+      "action_title": "A fair pilot isolates workflow value from operator enthusiasm",
+      "audience_job": "Understand the matched-task comparison required for a fair evaluation.",
+      "claim_ids": [
+        "claim-16"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-16"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Hold inputs constant, stratify operator skill, and blind downstream review.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "A fair pilot isolates workflow value from operator enthusiasm"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 17,
+      "archetype": "analytical-native",
+      "action_title": "The operating model needs controls at every failure boundary",
+      "audience_job": "Connect each material failure mode to a named operating control.",
+      "claim_ids": [
+        "claim-17"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-17"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Governance is part of adoption economics, not a post-launch appendix.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "The operating model needs controls at every failure boundary"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 18,
+      "archetype": "analytical-native",
+      "action_title": "Adopt the decision architecture\u2014then earn the right to scale",
+      "audience_job": "Authorize the next three actions without implying enterprise rollout.",
+      "claim_ids": [
+        "claim-18"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-18"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Authorize pilot design, then name the owner, task, and scorecard.",
+        "demo_fallback": "Use the native decision model and its stated evidence boundary."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "analytical visual",
+          "implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Adopt the decision architecture\u2014then earn the right to scale"
+      },
+      "status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "skills": ["research-to-deck", "content-research", "you-com-search", "openkb", "openkb-deck-neon", "openkb-html-critic", "present"],
+  "render_engine": "openkb-deck-neon",
+  "qa": ["OpenKB deck validator", "HTML parser", "Playwright Chromium overflow and console check", "manual cover and closing visual review"]
+}

@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "name": "build-client-acquisition-function",
+      "application": "Content architecture, maturity gates, roles, controls, and compounding loop"
+    },
+    {
+      "name": "present",
+      "application": "Governed presentation routing"
+    },
+    {
+      "name": "presentation-source-bundle",
+      "application": "Reference-deck evidence contract"
+    },
+    {
+      "name": "pptx-design-quality",
+      "application": "Design intent and QA gates"
+    },
+    {
+      "name": "pptx-visual-spec",
+      "application": "Native visual routing"
+    },
+    {
+      "name": "branded-pptx-deck",
+      "application": "Native editable PPTX construction"
+    }
+  ]
+}

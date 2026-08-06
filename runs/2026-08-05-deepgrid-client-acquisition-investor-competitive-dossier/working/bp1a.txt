@@ -1,0 +1,1700 @@
+DEEPGRID SEMI · BUSINESS PLAN · BP-1A · INDIA · AUGUST 2026
+
+
+
+
+Autonomous Trucking in India:
+Go-to-Market Strategy &
+Business Model
+Deepgrid Semi Pvt Ltd · CIN U62099TS2024PTC183631 · T-Hub Phase 2, Hyderabad ·
+aravind@deepgridsemi.com
+Aravind Prasad G · Founder & CEO
+Companion document: BP-1B — United States Market Entry
+
+
+
+    S TRICTLY CONFIDENTIAL — INVESTOR / BOARD CIRCULATION ONLY
+
+
+
+
+    ₹2.3L                    5M+                     ₹914 Cr                 ₹1.01 Cr
+    Kit price vs ₹6.5–15L    N2/N3 trucks mandated   FY32 ADAS revenue, of   Defence revenue
+    imports                                          ₹1,388 Cr total         contracted
+
+
+
+
+CONTENTS
+
+
+0     How to read this document 2
+1     Executive summary 3
+2     Market and why now 4
+3     Customer and use cases 5
+4     Product ladder 7
+5     Business model and unit economics 10
+6     Go-to-market and channel 13
+7     Competition and moat 23
+8     Financial plan FY27–FY32 25
+9     Funding and milestones 29
+10     Risks and mitigations 34
+11     KPIs and what we will not do 37
+S     Sources 39
+A     Appendix — figure pack 39
+
+
+
+
+0 How to read this document
+
+This plan separates four kinds of statement and labels them everywhere they appear, so a
+diligence read never has to guess which claims are load-bearing.
+
+    CLASS             MEANING                                       EXAMPLE IN THIS DOCUMENT
+
+
+      MEASURED        Board/silicon-timed fact, from DeepGrid's     40 fps YOLOv11n on Artix-7; 0.947 sim-to-
+                      own hardware                                  silicon
+
+      CONTRACTED      Signed, invoiced revenue                      ₹1.01 Cr GeM defence contracts
+
+      PLAN            Company projection or stated target, not      ₹2.50L kit ASP; FY32 ADAS ₹914 Cr; 38.7%
+                      yet measured                                  EBITDA
+
+      ASSUMPTION      Arithmetic or inference not directly stated   72% ASIC-phase kit GM; ~49,000 FY32 kits
+                      in source material
+
+      EXTERNAL        General industry knowledge, not               Aurora / Gatik / Kodiak business-model
+                      DeepGrid's own material                       sketches, §6
+
+
+
+A number with no label is a plain fact — a date, an entity name, a contract number. Every
+diagram in this document is illustrative: a shape drawn against a stated or assumed target, not
+measured data, and says so on its face.
+1 Executive summary
+
+   Revision note. This version incorporates a second adversarial review focused on
+   distribution. Net effect: the addressable market is narrowed to the organised segment (§3)
+   because 75–80% of Indian operators own fewer than five trucks        SOURCED    ; a channel
+   architecture and a stripped compliance SKU are added (§6); the low-end competitor at
+   ₹4,500–11,000 is named in §7; ASP erosion is flagged against the flat-price assumption in
+   §8; and two risks (11, 12) are added. The FY32 trajectory is unchanged as a target, but it
+   now depends explicitly on OEM line-fit and channel rather than on direct sales into the 5M
+   base.
+
+
+
+This is the India plan, and it is the funded one. A companion document, BP-1B, covers
+United States market entry — a different buyer, a different trigger and a different product
+posture, owned by an incoming co-founder and carrying no revenue forecast. Nothing in this
+document depends on that one.
+
+This document contains two plans, not one. Part A is India: funded, dated, and driven by a
+compliance mandate. Part B is the United States: a different buyer, a different trigger and a
+different product posture, owned by an incoming co-founder and deliberately carrying no
+revenue forecast until a first partner conversation closes. Part C is what they share — one
+raise, one tapeout, one risk register.
+
+
+   Revision note. This version incorporates a five-perspective adversarial review (practitioner,
+   academic, skeptic, economist, historian). Net effect: OEM/Tier-1 line-fit is demoted from a
+   committed 9–18-month milestone to opportunistic upside (§6); government/defence and
+   insurer-co-funded retrofit are promoted to the primary near-term revenue engine because
+   neither depends on the certification, tapeout, or an OEM relationship DeepGrid does not yet
+   have; a field-support cost reserve (§5) and a tenth risk — incumbent fast-follow by Bosch/
+   Continental, who already manufacture in India (§7, §10) — have been added. The fast-case
+   financial trajectory in §8 is unchanged as a target; it should not be read as the funded base
+   case.
+    Executive summary. DeepGrid Semi sells the certification stamp, not the autonomy
+    dream. MoRTH GSR 184(E), live April 2026, mandates certified ADAS on every
+    new N2/N3 commercial truck sold in India — a regulatory demand floor across a
+    5M+ truck base. The AD2 kit prices at ₹2.3L (₹2–2.5L band)            PLAN    against
+    imports at ₹6.5L (Mobileye EyeQ6) to ₹15L (Nvidia Orin) — a ~2.8–6.5× gap
+         ASSUMPTION ARITHMETIC     . Owning the compute (28nm die, packaged part ₹1,750
+         PLAN   ) lets us hold that price while gross margin expands from 45% (FPGA
+    phase, FY27) to ~72% in the ASIC phase.
+
+    Three stacked motions run on one hardware platform: (1) fleet retrofit kits now —
+    no regulatory gate, revenue from day one; (2) OEM/Tier-1 line-fit for the mandate
+    channel — the volume engine, entered after AIS-162/188 certification; (3) private-
+    land driverless at ports, mines and plant yards — sold as per-vehicle-per-month
+    software at 90%+ gross margin. The first retrofit customers are plant operators with
+    private yards: one logo carries the kit sale, the data flywheel, and the future
+    driverless contract.
+
+    Primary planning numbers, from the working model (Business Plan v2.2): ADAS
+    segment revenue ₹914 Cr at FY32 inside a company total of ₹1,388 Cr, with
+    EBITDA breakeven in FY2028. Traction today: ₹1.01 Cr defence revenue
+         CONTRACTED        ; AD0-class perception proven on FPGA (40 fps YOLOv11n
+         MEASURED     ).
+
+
+
+
+2 India: market and why now
+
+The mandate is the market. GSR 184(E) makes ADAS a compliance requirement rather
+than a discretionary safety upgrade. Regulation, not persuasion, generates the demand:
+
+
+ MARKET FACT                               VALUE               EVIDENCE
+
+
+ Mandated N2/N3 truck base                 5M+                    PLAN    — a base, not annual sales
+
+ ADAS penetration across Indian vehicles   <5%                    PLAN
+
+ today
+
+ Road deaths per year, India               1.68 lakh              PLAN
+ MARKET FACT                              VALUE                      EVIDENCE
+
+
+ — of which ADAS-addressable              60%+                          PLAN
+
+
+ Kits required to hit the FY32 plan       ~49,000                       ASSUMPTION      arithmetic
+
+ — as a share of the mandated base        <1%                           ASSUMPTION      — no heroic share
+                                                                     required
+
+ Annual N2/N3 sales volume                not in source              share-of-annual-sales cannot be computed
+                                          material
+
+
+
+Why now:
+
+  • OEM design-in awards triggered by the mandate are assumed decided over the next 12–24
+   months        WINDOW LENGTH NOT IN GROUNDING      .
+
+  • Atmanirbhar and defence procurement rules exclude foreign silicon from government
+   fleets.
+
+  • The 28nm ASIC tapes out ~Q1–mid 2027                 PLAN   , collapsing compute COGS ₹65K →
+   ₹1,750        PLAN; RECONCILED IN §5   exactly as line-fit volume arrives.
+
+Honest distinction. The mandate covers new truck sales only — OEM fitment, not fleet
+retrofits. Retrofit is our self-funded bridge to the mandate channel, not the mandate itself.
+
+
+   A live mandate with no certified supplier. Mandate in force since April 2026, <5%
+   penetration, our certification a path not a held cert (§10 risk 1), imports not yet AIS-certified
+       ASSUMPTION, §7     : these cannot all hold under full enforcement while new trucks keep
+   selling. The only consistent reading is that enforcement is transitional or phased today
+       NOT IN GROUNDING      . Consequence: near-term mandate demand is design-in, not shipped-
+   kit, demand — hence FY27–28 revenue rests on retrofit and government lines, and hence the
+   window: the first supplier certified at Indian prices takes the design-ins before enforcement
+   bites.
+
+
+
+
+3 India: Customer and use cases
+
+Customer 1 — light-fleet (5t) retrofit operators (now → 9 months, Phase 1). Buyer: the
+fleet owner or GM-Operations owning the safety/insurance P&L — one signer, no committee.
+Use case: Smart Mirror Tower pod (3×8MP GMSL2 cameras + 4D 77GHz radar + thermal +
+DMS + in-cab compute), installed in hours, driver in seat. Accounts run as 90-day pilots with
+operational acceptance criteria, converting to multi-year contracts with data-rights clauses.
+
+
+The market structure this plan has to survive
+
+An adversarial review of this document found that the buyer described above is real but
+describes a minority of the Indian market. The structure of Indian trucking is the single most
+important fact about our distribution problem, and it was previously absent from this plan:
+
+
+ MARKET-STRUCTURE FACT                                                VALUE    EVIDENCE
+
+
+ Trucks on Indian roads                                               12.5M       SOURCED
+
+
+ Truck operators                                                      3.5M        SOURCED
+
+
+ Operators owning fewer than five trucks                              75–80%      SOURCED
+
+
+ Share of India’s freight moved by sub-five-truck operators           85%         SOURCED
+
+
+ Implied kits per month to hit the FY32 plan                          4,000    arithmetic on §8   ASSUMPTION
+
+
+
+
+   What this does to the buyer definition above. “One signer, no committee” is accurate for
+   an organised fleet and misleading as a description of the market. Most Indian trucks belong
+   to operators with fewer than five vehicles, which means the 5M+ mandated base is not a
+   base we can sell into directly at any realistic cost of acquisition. Two consequences this
+   plan now adopts: our addressable segment is the organised market, defined below; and
+   everything beyond it must be reached through a channel (§6), not a sales force.
+
+
+
+
+The addressable segment, defined narrowly on purpose
+
+ SEGMENT                    WHY IT IS ADDRESSABLE                              DOES THE ₹2.3L PRICE HOLD?
+
+
+ OEM / Tier-1 line-fit      one commercial relationship covers thousands of    Yes — this is the volume engine
+                            vehicles
+
+ Large organised            a real safety and insurance P&L, a single          Yes
+ fleets (50+ trucks)        decision-maker, capacity to run a pilot
+
+ Government / PSU /         procurement excludes foreign silicon; we           Yes, at a modest premium
+ defence fleets             already have a GeM record
+
+ Plant and yard             own private land, own the vehicles, and become     Yes
+ operators                  the Phase-3 customer
+ SEGMENT                    WHY IT IS ADDRESSABLE                                 DOES THE ₹2.3L PRICE HOLD?
+
+
+ 3PL and freight            aggregate thousands of small operators into one       Partly — they will negotiate hard
+ aggregators                contract
+
+ Sub-five-truck owner-      Not addressable directly. ~3.5M operators, no         No — needs a channel and a cheaper
+ operators direct           purchasing process, hard price anchor                 SKU (§6)
+
+
+
+Customer 2 — government/PSU/defence fleets. Same kit; foreign silicon excluded (§2), so
+competition is Indian-only — none holds an AIS-validated chipset (company claim, §7). GeM
+defence contracts (₹1.01 Cr            CONTRACTED      : ₹23.01L delivered, ₹78.39L L1 under execution)
+establish procurement credibility. A modest premium to the ₹2.3L commercial price is
+sustainable here         ASSUMPTION    .
+
+
+ DEFENCE CONTRACT                                            VALUE            STATUS
+
+
+ GeM GEMC-511687794620175 · Robot Training                   ₹23.01L          delivered    CONTRACTED
+
+ Assistant
+
+ GeM RA GEM/2026/R/672471 · Robotics Assistant               ₹78.39L          L1, under execution     CONTRACTED
+
+
+ Total defence engagement                                    ₹1.01            contracted; sits in Deepgrid Datacentre
+                                                             Cr               (§9)
+
+
+
+Customer 3 — OEM/Tier-1 line-fit (9 → 18 months, Phase 2). OEM program management
+under mandate deadline pressure; the certified kit as line-fit compliance component at a
+fraction of the cheapest import (§1).
+
+Customer 4 — private-land driverless sites (Phase 3). The Phase-1 retrofit buyer is the
+Phase-3 driverless customer — the one-logo ladder.
+
+
+
+
+4 India: Product ladder
+ 1. DGS001 FPGA module (bridge, shipping): 100-unit pipeline across the three plant-
+   operator logos         PLAN PIPELINE, NOT CONTRACTED        ; funds data collection pre-ASIC.
+
+ 2. Smart Mirror Tower retrofit kit (revenue now): sensor pod + in-cab compute at ₹2.3L
+       PLAN    ; AD0-class perception honestly scoped — 40 fps YOLOv11n, 24.25 ms attention
+   head, 0.947 sim-to-silicon              MEASURED   .
+3. Certified AD2 line-fit kit (the mandate product): same architecture, AIS-162/188 certified
+     PLAN — A PATH, NOT YET HELD   , sold to OEM/Tier-1 at the same price.
+
+4. ASIC swap-in (~Q1–mid 2027            PLAN   ): compute module replaced by owned 28nm
+  silicon — margin flip at held price; upgrade-in-place, no vendor change ever.
+
+5. Software attach + Phase-3 driverless: T100 AI licensing, fleet DaaS, DMS-compliance
+  reporting, insurer/UBI integration       ASSUMPTION ON PRICING   ; then private-land driverless
+  (L2+ supervised on Brogen 18t with Jiyu drive-by-wire, then geofenced-yard driverless)
+  as per-vehicle-per-month contracts.
+  BUSINESS MODEL DIAGRAM                          The Deployment Ladder                                                                                                    kit sale → mandate product → recurring layer
+
+
+
+    PHASE 1 · NOW → 9 MO                                              PHASE 2 · 9 → 18 MO                                                           PHASE 3 · 18 MO +
+    5t retrofit — revenue day one                                     OEM line-fit — the mandate product                                            Software + driverless — margin layer
+
+                     DGS001 FPGA bridge                                                        AIS-162/188 certified kit                                                      Software attach
+                   100-unit pipeline · 3 plant logos                                    same architecture, same ₹2.3L price                                          DaaS · DMS compliance · insurer feed
+
+
+                    Smart Mirror retrofit kit                                           ASIC swap-in · ~Q1–mid 2027                                                      Private-land driverless
+                       ₹2.3L ASP · 45% kit GM                                              compute COGS ₹65K → ₹1,750                                                ports, mines, yards · PVPM contracts
+
+
+                Buyer: fleet owner / GM-Ops                                               Buyer: OEM program mgmt                                                    Buyer: same yard-owning logo
+                      one signer, no committee                                          deadline pressure, not price shopping                                          one logo travels the whole ladder
+
+
+                  NO REGULATORY GATE                                                     CERT IS A PATH, NOT HELD                                                        90%+ GROSS MARGIN
+
+            self-funded bridge to the mandate channel                                  relationship-gated: treated as upside,                                        gated on a private-land legal opinion
+                     funds the data flywheel                                                   not a dated milestone                                                    before any revenue is booked
+
+
+
+
+         GTM TELEMETRY
+
+
+                kit price vs imports                2.8–6.5×          kit gross margin                  72%                     kits shipped / yr        ~49,000                       mandated base covered               <1%
+                                                                                                        target                                              target
+
+
+
+
+              DGrid / EyeQ6 / Bosch / QC / Orin                      FPGA phase → ASIC phase                                       FY27 → FY32                                           49,000 kits of a 5M+ truck base
+
+
+
+
+                               9 MONTHS                                                               18 MONTHS                                                                   18 MONTHS +
+
+                                                                 one platform, three buyers: the kit is sold once and upgraded in place
+                                                                                                                                                                                                                            FIG 1
+
+
+
+Fig. 1 — The deployment ladder. Three phases on one hardware platform: FPGA retrofit revenue funds data collection; certification converts the same
+kit into the mandate product; the ASIC swap and software/Phase-3 attach are the recurring margin layer. All four mini-panels are illustrative, drawn to the
+FY figures in §5/§8, not independently measured.
+5 India: Business model and unit economics
+
+Every figure below is per single kit. The question is not whether the kit is cheap — it is which
+cost line moves at tapeout, and by how much.
+
+
+ PER-KIT LINE        FPGA PHASE (FY27)      ASIC PHASE (POST-TAPEOUT)        EVIDENCE
+
+
+ Average selling     ₹2.30L                 ₹2.30L (held)                       PLAN
+
+ price
+
+ Compute module /    ₹65,000                ₹1,750                              PLAN
+
+ owned die
+
+ Sensors, pod and    ₹62,000                ₹62,000                             ASSUMPTION
+
+ installation                                                                residual
+
+ Total COGS          ~₹1.27L                ~₹64,000                            ASSUMPTION
+
+                                                                             arithmetic
+
+ Gross profit per    ~₹1.04L                ~₹1.65L                             ASSUMPTION
+
+ kit                                                                         arithmetic
+
+ Kit gross margin    45%                    72%                                 PLAN      /
+                                                                                ASSUMPTION
+
+
+ Warranty reserve    3–5% of ASP            3–5% of ASP                         ASSUMPTION
+
+ (inside COGS)
+
+ Service & support   5–8% of ASP/yr         5–8% of ASP/yr                      ASSUMPTION
+
+ reserve (inside
+ COGS)
+
+ Blended GM incl.    —                      88% aspiration only                 PLAN
+
+ software attach
+
+
+
+The company’s 88% figure holds only as a blended portfolio margin, or as the compute-
+module line viewed in isolation. This plan uses 72% at the kit level in every downstream
+calculation (§8).
+   UNIT ECONOMICS DIAGRAM                    The Kit Cost Bridge, FPGA → ASIC                                                                                same ₹2.3L price, same architecture, different COGS floor
+
+
+  (a) Where the ₹2.30L goes
+
+    FPGA PHASE · FY27                                                  ASIC PHASE · POST-TAPEOUT                                                          BLENDED · PLAN ASPIRATION
+    ₹2.30L ASP                                           45%           ₹2.30L ASP                                              72%                        88% is not a kit number
+                                                                                        Compute COGS ₹1,750
+                                                                                                                                                                             Kit-level reality is 72%
+                   Compute COGS ₹65,000                                                 Sensors + install ~₹62,000                                                    the compute swap alone cannot reach 88%
+
+
+                   Sensors + install ~₹62,000                                                                                                                               88% holds only blended
+                                                                                                                                                                       with recurring software revenue mixed in
+
+                                                                                        Gross profit ~₹1.65L
+                   Gross profit ~₹1.04L                                                                                                                                  or as the compute line alone
+                                                                                                                                                                       viewed in isolation from sensors + install
+
+
+
+
+  (b) What each phase actually changes
+                    compute COGS                ₹1,750               kit gross margin              72%                        gross profit / kit             ₹1.65L                         price to customer           held
+         ₹65,000                                                                                   target                                        ₹1.65L
+
+                                                                                                                     ₹1.04L
+
+
+                                   ₹1,750
+
+              FPGA module → owned ASIC die                          FPGA → ASIC → blended                                     at a held ₹2.30L price                                         no increase at any phase
+
+
+
+
+    ARITHMETIC CHECK
+    Source material quotes both “<$3–4/die at volume” and “₹1,750” for the same 28 nm part — a ~5× spread. Read as bare die vs. packaged and tested part.
+    This plan uses the conservative ₹1,750 in every margin calculation above.
+
+                                                                                                                                                                                                                         FIG 2
+
+
+
+Fig. 2 — The kit cost bridge. Same ASP, same architecture — the compute line alone moves gross margin from 45% to 72% at tapeout. The company’s
+88% figure is a blended or compute-line-only aspiration, not the reconciled kit-level number this plan uses for FY27–FY32 (§8).
+Silicon cost, reconciled
+
+Source material quotes two different numbers for the same 28 nm part. Both are carried here
+rather than silently picking one:
+
+
+ QUOTED FIGURE                     VALUE             READING                             USED IN THIS PLAN?
+
+
+ “<$3–4 per die at volume”         ≈₹250–333         bare, unpackaged die                No — too optimistic to underwrite
+
+ “₹1,750”                          ₹1,750            packaged and tested part            Yes — all margin math above
+
+ Implied FX rate                   ₹83.3 / $         from ₹45 Cr ↔ $5.4M (§9)                ASSUMPTION
+
+
+ Spread between the two            5×                unexplained in source material      flagged for diligence
+
+
+
+
+Break-even and price-floor sensitivity
+
+ DRIVER                                     VALUE                       CONSEQUENCE
+
+
+ Gross profit per kit, FPGA phase           ₹1.04L                      the unit that must cover opex
+
+ Assumed team opex                          ₹4–6 Cr/yr                          ASSUMPTION   — not in source material
+
+ Kits per year to cover opex                400–600                     the real break-even volume
+
+ FY27 planned kits                          130                         FY27 is loss-making by design, round-funded
+
+ Import price that ends the moat            ₹2.50L                      below this it is a knife-fight   ASSUMPTION
+
+
+ Cost of one quarter of cert delay          1 design-in cycle           moves to an incumbent (§10)
+
+
+
+
+Recurring lines — all unproven until piloted
+
+ RECURRING LINE                      PRICING BASIS                          TARGET GM        LOAD-BEARING RISK
+
+
+ Base safety tier                    per vehicle per year                   90%+             commodity substitution
+
+ DMS-compliance reporting            per vehicle per year                   90%+             audit-ready reports are the
+                                                                                             defence
+
+ Insurer / UBI data feed             revenue share                          90%+             needs a signed insurer partner
+                                                                                             (§6)
+
+ Phase-3 driverless                  per-vehicle-per-month or per-          —                remote-supervision ratio
+                                     move
+ RECURRING LINE              PRICING BASIS                         TARGET GM      LOAD-BEARING RISK
+
+
+ Connectivity budget (COGS   on-device inference; uplink           <1 GB/mo       patchy highway connectivity
+ rule)                       events only
+
+ ARPU downside case          Indian telematics commodity           ₹3–5k/yr       compresses the line 5–10×
+                             band
+
+ Phase-3 margin cliff        supervision worse than 1:2            negative       contracts carry repricing
+                                                                                  ratchets
+
+
+
+Phase-3 pricing is set against the customer’s fully-loaded three-shift manned cost, never cost-
+plus, with availability SLAs, minimum-move commitments and a site-onboarding charge
+covering deployment. All of it is        ASSUMPTION        until the first site runs.
+
+Working capital. Partner hardware (Brogen, Jiyu) passes through at zero markup; OEM
+receivables and kit inventory are the largest unmodeled cash consumers                       ASSUMPTION   , to be
+sized before the OEM channel scales.
+
+
+   Field-support cost — previously missing from this model. India's AIS-140 GPS-tracking
+   mandate (2018–19) saw a large share of installed devices tampered with or disconnected
+   within a year once installers treated compliance as a one-time checkbox rather than an
+   ongoing service relationship      EXTERNAL REFERENCE         . Day-30 uptime, not day-1 install cost,
+   is what a fleet owner actually renews against. This plan adds an explicit service/support
+   reserve of ~5–8% of ASP per year           ASSUMPTION, NOT IN GROUNDING         — nuisance-alert
+   tuning per route and driver, tamper monitoring, and a field-repair SLA — inside the FPGA-
+   phase 45% and ASIC-phase 72% GM figures above; it is not a separate margin cut, but it is
+   real cash opex that the 90%+ software-GM claim (§5 above) has not previously accounted
+   for and should not be assumed to inherit automatically.
+
+
+
+
+6 India: Go-to-market and channel
+
+Sequence: retrofit → government → OEM line-fit → Phase-3 software.
+
+First (now): 5t retrofit. The Shravan-T1-funded 2-truck, 90-day Smart Mirror demo program
+   PLAN   is the proof asset; the 100-unit DGS001 pipeline (§4) bridges cash. Every contract
+carries a data-rights clause (edge-case harvest, model-improvement license) — the data moat
+is real only if contractually secured.
+Second: government/PSU/defence (§3 Customer 2); the GeM record             CONTRACTED     opens
+doors.
+
+Third — the mandate channel, reframed as upside, not a committed date. OEM/Tier-1
+design-in is relationship-gated: comparable regulation-created hardware markets (EU
+tachograph, eCall) show mandate volume normally flows to whichever supplier already has
+OEM relationships and homologation experience, not the cheapest new entrant — those
+incumbents typically absorbed aftermarket share within ~18 months once line-fit normalized
+  EXTERNAL REFERENCE   . This plan therefore pursues OEM/Tier-1 engagement opportunistically
+from month one (a) AIS-162/188 certification (T2-funded, §9)       PLAN   , (b) retrofit field-
+hours and Indian-road data as validation, (c) the T2 milestone clock (§9) — but does not treat
+a signed design-in as a required, dated event the way §8's revenue trajectory implicitly
+assumes. The pitch leads with capability, not price: owning perception + compute + model on
+Jiyu's <100 ms ASIL-D EHB lets us certify a single photon-to-brake latency number no
+mix-and-match integration can produce — but that pitch needs an actual OEM contact, which
+this plan does not yet have (§10 risk 10).
+
+Phase-3 expansion: yard-owning retrofit logos convert to driverless pilots under the same
+single-signer structure — acceptance criteria as moves/day and incidents — then multi-year
+PVPM contracts; a reusable site playbook cheapens each successive deployment.
+
+Channel economics, promoted from footnote to primary near-term engine. Government/
+defence (§3 Customer 2) and insurer-co-funded retrofit are the two revenue lines that do not
+depend on the AIS-certification clock, the ASIC-tapeout clock, or an OEM relationship
+DeepGrid does not yet have — they should therefore carry FY27–FY28 revenue, not the
+OEM channel above. Insurer co-funding works like fleet UBI/telematics programs elsewhere:
+an insurer subsidizes part of the kit cost against a premium discount priced off the ADAS
+telemetry stream, cutting effective retrofit CAC    ASSUMPTION   and giving DeepGrid a second
+paying customer for the same install. Brogen and Jiyu need a perception supplier and don't
+build one — no channel conflict.
+   Fast case vs. slow case. The plan as financially modeled (§8) is a fast case: certification,
+   tapeout and first OEM engagement all land inside 12–18 months. Comparable mandate-
+   driven hardware markets have historically taken 3–5 years to move from mandate
+   announcement to stable incumbent share       EXTERNAL REFERENCE    . In the slow case, FY27–
+   FY29 revenue rests almost entirely on government/defence and insurer-co-funded retrofit
+   (this section) while certification and OEM engagement continue in the background with no
+   committed date — the fast case is upside, not the base the company should be funded
+   against.
+
+
+
+The three phases are the spine of this plan, so they are set out as a matrix rather than described
+in prose. Read Figure 8 as the answer to four questions per phase: who we sell to, through
+whom, at what price, and what has to be true before the next phase opens.
+  GO-TO-MARKET DIAGRAM       The Motion, Phase by Phase                                                            who we sell to, through whom, at what price, and what unlocks the next phase
+
+
+
+                                                    PHASE 1                                            PHASE 2                                                   PHASE 3
+                                                 Now → 9 months                                      9 → 18 months                                              18 months +
+
+                                            Large organised fleets (50+                            OEM / Tier-1 line-fit                                  Existing yard-owning logos
+  TARGET SEGMENT                              trucks); plant and yard                          programmes; heavy fleets on                                       from Phase 1
+                                                     operators                                           DBW
+
+
+                                          Fleet owner or GM-Operations —                    OEM programme management under                               Plant / port operations head,
+  BUYER                                             one signer                                      mandate pressure                                         same single signer
+
+
+                                               Direct for large fleets;                          Direct to OEM, with AIS                                    Direct, on the Phase-1
+  CHANNEL                                   service chains and 3PLs for                          certification as the ticket                                     relationship
+                                                       the rest
+
+
+                                             Smart Mirror retrofit kit +                         Certified AD2 line-fit kit;                           Yard autonomy stack + software
+  PRODUCT SKU                                stripped compliance SKU                                  ASIC swap-in                                                attach
+
+
+
+                                           ₹2.3L kit; stripped SKU priced                      ₹2.3L held — margin flips at                               Per-vehicle-per-month; site
+  PRICE POINT                                         to channel                                         tapeout                                               onboarding fee
+
+
+
+                                             90-day pilot → multi-year                          12–24 month design-in —                                    90-day / 6-month pilot →
+  SALES CYCLE                                        contract                                      relationship-gated                                          multi-year PVPM
+
+
+
+                                            Day-30 uptime and validated                         AIS-162/188 certification +                              Legal opinion on private land
+  PROOF REQUIRED                                alerts on a real fleet                              retrofit field hours                                       + zero incidents
+
+
+
+                                           One-time hardware, 45% GM                          One-time hardware at volume,                              Recurring software, 90%+ GM
+  REVENUE TYPE                                                                                         ~72% GM
+
+
+
+
+  GATE TO NEXT PHASE
+                                            AIS-162/188 certification                     ASIC in production + a signed OEM                            Series A, priced on delivery
+                                            the single most important date                       the margin flip made real                                        ₹204 Cr+
+
+
+
+                                              one platform, one customer relationship — the kit is sold once and upgraded in place
+
+
+                                                                                                                                                                                          FIG 8
+
+
+
+Fig. 8 — The go-to-market motion, phase by phase. Each column is a phase; each row is a decision that differs between them. The gate row is the
+important one — the phases are sequential because each is unlocked by a specific, dateable event, not because time passes. Sales-cycle and price
+figures are      PLAN   or   ASSUMPTION      per §5.
+The same three phases as a commitment table
+
+What we are actually committing to in each phase, and what would tell us a phase has failed:
+
+
+ PHASE     WHAT WE COMMIT TO DELIVER                     REVENUE      HOW WE WOULD KNOW IT FAILED
+
+
+ 1         Kits on real trucks in organised fleets and   one-time     Pilots that do not convert to multi-year
+           plant yards; a validated day-30 uptime        hardware,    contracts, or day-30 uptime we are
+           number; data-rights clauses in every          45% GM       unwilling to publish
+           contract; AIS certification programme
+           running
+
+ 2         AIS-162/188 certification held, not           one-time     Certification slips past month 18, or
+           claimed; ASIC in production; at least one     hardware,    design-ins go to an incumbent Tier-1
+           OEM or Tier-1 evaluation converted            ~72% GM      (§10 risk 2)
+
+ 3         A legal opinion on private-land operation;    recurring,   Supervision ratio worse than 1:2, or any
+           one yard running; per-vehicle-per-month       90%+ GM      incident (§10 risk 7)
+           contracts with availability SLAs
+
+
+
+
+How a kit physically reaches a truck
+
+The channel analysis above answers who sells; Figure 9 answers who fits, who pays, who
+takes margin, and what returns to us. The dashed line is the part that compounds — and the
+part that only exists if the contract secures it.
+  CHANNEL DIAGRAM                How a Kit Reaches a Truck — and What Comes Back                                                                                    the retrofit flywheel, and who takes margin on the way
+
+
+
+
+                                                   CHANNEL — PICK PER SEGMENT
+                                         OEM dealer / service network
+                                         bays, technicians, customer                          dealer margin
+          DEEPGRID                                                                                                       INSTALLER BAY                          TRUCK IN SERVICE                        UPGRADE
+                                         NBFC / CV financier                                                                                                                                               L2+ then
+      kit, compute, model                decides fitment on financed trucks            fee or EMI margin
+                                                                                                                              fit + calibrate                       alerts, DMS, uptime
+                                                                                                                                                                                                        yard autonomy
+      warranty + support                                                                                                     installs in hours                      day-30 renewal test
+                                         Insurer                                                                                                                                                         in place — no
+          we own the IP                  claims reduction is their product                   premium share                  owns the bay =                              fleet pays                      vendor change
+                                                                                                                           owns the customer
+                                         3PL / freight aggregator
+                                         aggregates small operators                          volume pricing
+
+                                         Tyre / service chain
+                                         national footprint of bays                          installation fee
+
+                                                                                     EDGE-CASE DATA — contractual, per §6
+
+
+
+    THE FLYWHEEL — WHY EACH TURN IS CHEAPER THAN THE LAST
+
+           Sell the mirror                                    Own the miles                                           Model improves                                         Upgrade in place
+      1    on trucks that exist today                    2    every kit streams edge cases                       3    accuracy compounds                                 4   same compute, no swap
+                                                     the data moat is only real where the contract secures it — every retrofit agreement carries a data-rights clause
+
+
+
+
+                                                                                                                                                                                                                     FIG 9
+
+
+
+Fig. 9 — How a kit reaches a truck, and what comes back. Left to right is the physical and commercial path; the dashed return path is the edge-case
+data that improves the model and is the basis of the moat in §7. Margin taken at each step is                                               ASSUMPTION            until channel terms are agreed. The red
+annotation is the uncomfortable one: whoever owns the installation bay owns the customer relationship, which is why data rights have to be contractual
+rather than assumed.
+Channel architecture — who actually reaches 4,000 kits a month
+
+This plan previously had no distribution or installation mechanism, which is the most
+common way an Indian hardware business fails. We are not going to build a national direct
+sales force or a workshop network, so the channel is the strategy:
+
+ CHANNEL          WHY THEY CARRY US                   WHAT THEY TAKE         WHAT WE MUST GIVE THEM
+
+
+ OEM dealer       they already have the bays, the     dealer margin          a fitment-ready kit and training
+ and service      technicians and the customer            ASSUMPTION
+
+ networks
+
+ NBFCs and        they decide what gets fitted on a   a fee or bundled EMI   a residual-value and claims
+ CV financiers    financed truck, and a safer truck   margin                 argument
+                  is a better loan                        ASSUMPTION
+
+
+ Insurers         a claims-reduction argument is      premium share or co-   telemetry, and evidence that
+                  their product, not just ours        funded pilots          claims fall
+                                                          ASSUMPTION
+
+
+ 3PLs and         they aggregate small operators      volume pricing         fleet-level dashboards and
+ freight          into a single contract                                     compliance reporting
+ aggregators
+
+ Tyre /           national footprint of bays          installation fee       a kit installable in hours by a
+ lubricant /      already visited by every truck                             trained technician
+ service chains
+
+ Direct           only for large organised fleets,    —                      a pilot and an SLA
+                  PSU/defence and yard operators
+
+
+
+
+   The installation and service question, stated as an open cost. Every kit needs fitting,
+   calibration and support for years. We do not own a single workshop bay, and at 4,000 kits a
+   month we would need hundreds. Whoever owns the bay owns the customer relationship
+   — so channel selection is also a decision about how much of the customer we keep. This
+   plan’s position: accept partner-owned installation to reach scale, but keep the data rights
+   contractually (§6 above) so the model improves even where the relationship is shared. The
+   cost of installer training and a spares/repair network is not yet modelled           ASSUMPTION      and
+   belongs in the Series-A model alongside working capital (§5).
+A second SKU for the fragmented base
+
+The organised segment in §3 does not get us to 49,000 kits a year on its own, and the
+fragmented base will not pay ₹2.3L. The honest options are three, and this plan commits to
+the third:
+
+ OPTION                                                     VERDICT
+
+
+ Sell the ₹2.3L kit to everyone                             Rejected. The price does not survive contact with a
+                                                            sub-five-truck operator
+
+ Ignore the fragmented base entirely                        Viable, but caps us at the organised segment and makes
+                                                            the FY32 number depend almost entirely on OEM line-
+                                                            fit
+
+ A stripped compliance SKU — fewer sensors, our             Adopted as a design target      PLAN   . Price point to
+ compute, priced against the box a small operator already   be set from channel feedback, not from our cost-plus
+ knows, sold only through the channels above                      ASSUMPTION
+
+
+
+
+Beyond the kit: the owned-fleet rental option
+
+Every channel above sells the box or licenses the brain — DeepGrid never touches the truck's
+ownership. That is one of three business models global autonomous trucking has already
+proven out, and the other two both involve owning or operating the vehicle:
+   EXTERNAL REFERENCE        Aurora Innovation licenses the "Aurora Driver" compute-and-software
+stack to OEMs and carriers per mile — asset-light, closest to DeepGrid's current model; Gatik
+owns or leases and directly operates a fleet of box trucks running fixed, repeatable middle-
+mile retail routes — asset-heavy, selling delivery capacity, not a component; Kodiak Robotics
+blends highway driver-out technology licensing with government/off-road contracts and some
+owned-fleet operation — a hybrid. These are widely reported industry structures, not figures
+from DeepGrid's own materials, and are not independently verified in this pass.
+  BUSINESS MODEL DIAGRAM                            Owning the Asset: Three Models, One Choice                                                                              license the brain, own the fleet, or both
+
+
+
+    ASSET-LIGHT                                               HYBRID                                                 ASSET-HEAVY                                      PROPOSED
+
+                     Aurora                                                  Kodiak                                                    Gatik                                   DeepGrid Fleet
+            license the driver · per mile                              licence + operate · both                              own the fleet · per delivery                    rent the vehicle · per month
+
+      Sells the autonomy stack to OEMs and                     Highway driver-out technology                          Owns or leases and operates the                  Buy or lease the truck (Brogen
+      carriers                                                 licensing                                              trucks                                           chassis)
+      No fleet on the balance sheet                            Plus some owned-fleet operation                        Fixed, repeatable middle-mile routes             Retrofit with the DeepGrid kit at
+                                                                                                                                                                       cost
+      Revenue scales with miles, not                           Plus government / off-road contracts                   Sells logistics capacity, not a
+      vehicles                                                                                                        component                                        Rent the whole vehicle, bundled
+
+
+
+
+       PROVES: software margins survive                         PROVES: diversification is possible                    PROVES: the route economics close                   UNPROVEN: post-Series-A only
+
+
+
+
+    WHY DEEPGRID FLEET STAYS OUTSIDE THE FUNDED PLAN
+    A five-person team funding one tapeout cannot also carry fleet balance-sheet risk: financing, residual value and idle-asset burn are risks a component sale never carries.
+    Recommendation: a separate post-Series-A SPV with a dedicated NBFC / leasing partner, decoupled from the ₹45 Cr silicon-and-certification raise.
+    Pilot 2–5 trucks at an existing retrofit customer’s private yard, where no driver-out legal gate applies and utilization is contractually pre-committed before any capex.
+
+  FLEET UNIT ECONOMICS (ILLUSTRATIVE — ASSUMPTION, NOT A COMMITTED PLAN)
+
+                   truck + kit capex                ₹20–32L                  monthly rental              ₹1.6–2.2L                     debt : equity         ~80:20          utilization — the whole game       ≥85%
+                                                                                                                                                                                                                target
+
+
+
+
+                base truck + kit at internal cost                       market rate + ADAS/SLA premium                               NBFC, 4–5 yr, ~11–13%                         idle truck = negative cash
+
+                                                                                                                                                                                                                  FIG 3
+
+
+
+Fig. 3 — Owning the asset. Three externally-referenced industry models against the proposed DeepGrid Fleet expansion. Economics for the proposed
+column are in the table below; every figure there is an assumption, not a committed plan.
+The proposal: DeepGrid buys or leases a 5t/22t truck (potentially the Brogen chassis from
+the partner relationship in §6), retrofits it with the DeepGrid kit at internal cost, and rents the
+completed vehicle — hardware, autonomy and software bundled — to shippers or fleet
+operators on a monthly or per-km basis, functionally a Gatik-style move layered onto the
+existing kit. Illustrative unit economics, none of it in the grounding material — every
+figure below is      ASSUMPTION   , order-of-magnitude only, for a Series-A-stage board
+conversation, not a committed plan:
+
+
+ LINE ITEM       ILLUSTRATIVE VALUE            NOTE
+
+
+ Truck + kit     ₹20–32L                       base 5t/22t truck ₹18–30L + DeepGrid kit at cost
+ capex, all-in                                       ASSUMPTION
+
+
+ Financing       ~80:20 debt:equity            NBFC/CV-leasing partner, 4–5 yr tenure, ~11–13%
+ structure                                           ASSUMPTION, INDIAN CV-FINANCE MARKET NORMS
+
+
+ Monthly         ₹1.6–2.2L                     market fleet-rental rate + premium for ADAS/uptime SLA
+ rental, with                                        ASSUMPTION
+
+ driver
+
+ Monthly         EMI + driver +                driver cost drops out only where driver-out is legal (private land,
+ opex            maintenance + insurance       §2)      ASSUMPTION
+                 + connectivity
+
+
+ Central risk    utilization                   an idle truck is negative cash every month — unlike a one-time
+                                               kit sale, this line never stops needing management
+                                                     ASSUMPTION
+
+
+
+
+   Why this stays outside the funded plan. §11's covenant is "no owned or operated vehicle
+   fleets" for exactly the execution-fit reason the judge panel weighted most heavily against
+   asset-heavy archetypes: a 5-person team funding one tapeout cannot also carry fleet balance-
+   sheet risk. Correction against the model: Business Plan v2.2 already books AD3
+   Autonomous TaaS from FY2028 (₹3.3 Cr rising to ₹66 Cr on 100 vehicles by FY32), so
+   fleet rental is inside the plan, not outside it. What this section still recommends is that it be
+   financed through a separate vehicle rather than off the core raise — a separate SPV with
+   a dedicated NBFC/leasing partner, decoupled from the ₹45 Cr silicon-and-certification raise
+   (§9) — piloted first with 2–5 trucks at an existing retrofit logo's private yard (§3 Customer
+   4), where no driver-out legal gate applies and utilization is contractually pre-committed
+   before the first rupee of capex is spent. It is upside optionality, not a revision to the core
+   plan's asset-light DNA.
+7 India: Competition and moat
+
+  VENDOR / KIT                     PRICE                 INDIA-NATIVE            AIS-CERTIFIED (INDIA)
+
+
+  DeepGrid AD2                     ₹2.0–2.5L             Yes                     Path, not held
+
+  Mobileye EyeQ6                   ₹6.5L                 No                      Not yet     ASSUMPTION
+
+
+  Continental / Bosch              ₹10.0L                No                      Not yet     ASSUMPTION
+
+
+  Qualcomm SA8295                  ₹12.5L                No                      Not yet     ASSUMPTION
+
+
+  Nvidia Orin                      ₹15.0L                No                      Not yet     ASSUMPTION
+
+
+
+
+Prices per company deck       PLAN   , not independently benchmarked; the deck's "3–7×"
+framing overstates both endpoints — this plan uses ~2.8–6.5×.
+
+
+
+
+The competitor this table was missing
+
+The comparison above is against imported premium kits, and it flatters us. The device that
+actually wins Indian mandate volume is at the other end of the market, and leaving it out
+would be the single easiest thing for an investor to catch:
+
+
+  THE LOW-END REALITY                 PRICE                        WHY IT MATTERS
+
+
+  AIS-140 VLTD / GPS devices in       ₹4,500–11,000                This is the price anchor an Indian fleet buyer
+  market today                              SOURCED                already carries for a mandated box
+
+  “AIS-compliant” camera + basic      ₹15,000–40,000               Good enough to satisfy an inspector where
+  ADAS boxes                                ASSUMPTION             enforcement is transitional (§2)
+
+  DeepGrid AD2 kit                    ₹2.3L                        Roughly 20× the anchor, and 5–15× the cheap
+                                                                   ADAS box
+
+  Where the value migrated in that    —                            From hardware to platform and SaaS stickiness
+  market                                                                SOURCED     — the same migration we should
+                                                                   expect here
+   The uncomfortable reading, kept in deliberately. Against imports we are three times
+   cheaper. Against the device that actually wins mandated volume in India we are twenty
+   times more expensive. Both statements are true, and a serious investor will find the second
+   one. Our answer has to be that we are not selling into the same job: a ₹5,000 box satisfies an
+   inspector, while our kit is what an OEM can put on a production line and a fleet can build a
+   safety case on. That answer only holds if (a) enforcement eventually becomes real, (b) we
+   win OEM line-fit, and (c) we field a stripped SKU for the segment that only wants
+   compliance (§6). If none of those three lands, the low end takes the mandate and we are
+   left with the organised segment alone.
+
+
+
+Moat, in order of durability:
+
+ 1. Structural price floor: owned silicon at <$3–4/bare die (₹1,750 packaged, §5) makes the
+   ₹2.3L price ours to hold; importers cannot follow down without destroying their own
+   margin stack.
+
+ 2. Certification + sovereignty: claimed only-indigenous AIS-validated chipset, AIS-004
+   native, 15 patents filed; foreign silicon excluded from government/defence fleets (§2).
+   Certification is a path, not held — the killer risk, §10.
+
+ 3. Data moat that compounds — narrower than it sounds. D-Drive trained on Indian
+   roads (cattle, autos, unmarked lanes, fog, no HD maps); the retrofit flywheel — sell the
+   mirror, own the miles, upgrade in place — widens the gap with every kit (contractual per
+   §6). Honest caveat: Continental and Bosch both already manufacture in India with
+   decades of India-specific automotive-electronics experience         EXTERNAL REFERENCE    —
+   "foreign silicon can't localize" does not hold for these two named competitors the way it
+   holds for a pure importer with no India footprint; the defensible claim is narrower: they
+   have not yet built an India-trained perception model at this price point, not that they
+   structurally cannot.
+
+ 4. The photon-to-brake artifact (§6): one certifiable end-to-end latency number no bolt-
+   together integration can reproduce.
+
+The real clock on this moat       ASSUMPTION   : because Bosch and Continental already have
+India manufacturing and AIS relationships, the window in which DeepGrid is the only India-
+priced, India-trained option is open only until one of them decides this niche is worth a
+product line — plausibly a matter of quarters, not the 12–24 months this plan's timeline
+implicitly assumes. See risk 10, §10.
+8 Financial plan FY27–FY32
+
+   This section was rebuilt against the working financial model (Business Plan v2.2), and
+   the numbers changed. The earlier version of this plan used a ₹1,128 Cr FY32 figure taken
+   from the June 2026 Information Memorandum and treated the ₹1,388 Cr four-line figure as
+   unplanned upside. That was backwards: ₹1,387.95 Cr is the model’s bottom-up build, and
+   ₹1,128 Cr is the older deck number. Every figure below now traces to the model, and the
+   ADAS trajectory is shown separately from the lines that are not ADAS.
+
+
+
+
+The ADAS business on its own
+
+This plan is about trucking, so the trajectory that matters is the ADAS segment rather than the
+company total. ADAS here means on-road truck ADAS, the smart mirror, fleet rental, and
+private-land yard and port autonomy — the three phases in Figure 8:
+
+
+ FY       ADAS REVENUE       COMPANY TOTAL        ADAS SHARE       PHASE
+
+
+ FY27     ₹2.55 Cr           ₹6.00 Cr             43%              FPGA kits, pilots
+
+ FY28     ₹24.96 Cr          ₹41.17 Cr            61%              Retrofit scaling; cert programme
+
+ FY29     ₹94.36 Cr          ₹145 Cr              65%              ASIC kits; line-fit ramping
+
+ FY30     ₹239 Cr            ₹351 Cr              68%              Line-fit accelerating
+
+ FY31     ₹487 Cr            ₹732 Cr              67%              Line-fit at volume + attach
+
+ FY32     ₹914 Cr            ₹1,388 Cr            66%              At scale + Phase-3 recurring
+
+
+
+The ADAS segment reaches ₹914 Cr at FY32, which is 66% of the company. That is the
+number this document is accountable for. Quoting ₹1,388 Cr in a trucking plan would be
+claiming credit for robotics, defence and merchant silicon revenue that has nothing to do with
+the mandate.
+   FINANCIAL DIAGRAM          ADAS Revenue vs Company Total, FY27–FY32                                                                                                         ₹ Cr · Business Plan v2.2
+
+
+
+
+                                                                                                                                                                        1388
+
+
+
+
+                                                                                                                                                      732
+                                                                                                                                                                         914
+
+
+                                                                                                                                                      487
+                                                                                                                       351
+
+                                                                                                                      239
+                                                                                        145
+
+                                                                                       94.4
+                                                         41.2
+
+                           6.0                          25.0
+                          2.5
+
+                          FY27                          FY28                           FY29                           FY30                            FY31              FY32
+                       43% ADAS                       61% ADAS                       65% ADAS                       68% ADAS                       67% ADAS            66% ADAS
+                ADAS segment — what this plan is accountable for                                   Company total incl. robotics, defence, silicon, sensors, software
+
+
+            ADAS reaches ₹914 Cr at FY32 — 66% of the company. Bars on a sqrt scale so early years stay legible.
+
+
+
+
+                                                                                                                                                                                                   FIG 4
+
+
+
+Fig. 4 — ADAS revenue vs company total, FY27–FY32. Teal is the ADAS segment this plan is accountable for; grey is the company total including
+robotics, defence, merchant silicon, sensor modules and software. Rebuilt from Business Plan v2.2 — the previous version of this figure showed a single
+₹1,128 Cr trajectory that conflated the two.
+What sits inside the ADAS number
+
+ ADAS PRODUCT LINE              FY27        FY32          UNITS FY32    ASP          COMMERCIAL MODEL
+
+
+ AD2 Truck ADAS kit             ₹2.50       ₹450 Cr       18,000        ₹2.50L       product sale
+ (compute + SW + sensors)       Cr
+
+
+ AD0 Smart Mirror (360)         ₹0.05       ₹270 Cr       54,000        ₹0.50L       product sale
+                                Cr
+
+
+ AD4 Heavy Transport AGV        —           ₹105 Cr       30            ₹3.50        product sale, private
+ >5T                                                                    Cr           land
+
+ AD3 Autonomous TaaS (fleet     —           ₹66 Cr        100           ₹0.66        rental / TaaS, from
+ rental)                                                                Cr/yr        FY28
+
+ AD4 Seaport AGV                —           ₹22.65        50            ₹0.45        product sale, private
+                                            Cr                          Cr           land
+
+ ADAS total                     ₹2.55       ₹913.65       —             —            —
+                                Cr          Cr
+
+
+
+
+   Two corrections worth stating plainly. First, the truck-kit volume is 18,000 units at FY32,
+   not the ~49,000 this plan previously implied — the old figure came from dividing total
+   company revenue by kit ASP, which wrongly attributed robotics and silicon revenue to kits.
+   18,000 kits is 0.36% of the mandated base, which makes the plan more credible, not less.
+   Second, the model prices the kit at ₹2.50L held flat across all six years, not ₹2.3L — so
+   the ASP-erosion exposure flagged below is a real assumption in the model, not a
+   hypothetical.
+
+
+
+
+The lines that are not ADAS
+
+These share the tapeout and the platform, not the go-to-market. They are listed here so the
+ADAS number above can be read cleanly, and because each is a separate commercial motion
+with its own buyer:
+
+
+ INDEPENDENT LINE                                                  FY27          FY32        SHARE FY32
+
+
+ Silicon & compute — three dies (DGrid, S100 SDV, R100 radar) +    ₹0.00         ₹165 Cr     11.9%
+ A100 compute boxes                                                Cr
+ INDEPENDENT LINE                                                        FY27     FY32      SHARE FY32
+
+
+ Robotics — indoor autonomy, AMR, agricultural, airport, utility,        ₹1.57    ₹158 Cr   11.3%
+ delivery, general L4 AUGV                                               Cr
+
+
+ Defence — Defence AUGV, D-HUMR, D100 drone SoC kit                      ₹1.50    ₹68 Cr    4.9%
+                                                                         Cr
+
+
+ Software — DGrid AI licence (SaaS)                                      ₹0.00    ₹50 Cr    3.6%
+                                                                         Cr
+
+
+ Sensors — 4D radar pod, thermal camera, H100 DMS as standalone          ₹0.38    ₹34 Cr    2.4%
+ modules                                                                 Cr
+
+
+ Non-ADAS subtotal                                                       ₹3.45    ₹474 Cr   34.2%
+                                                                         Cr
+
+
+ Company total                                                           ₹6.00    ₹1388     100%
+                                                                         Cr       Cr
+
+
+
+The strategic claim behind this table is the one from the platform thesis: one 28 nm tapeout
+serves all six lines. That is why overheads are shared and why segment-level EBITDA would
+be an arbitrary allocation rather than a measurement — so profitability is reported at company
+level below, not per segment.
+
+
+Company profitability — the model has the whole series
+
+An earlier version of this section said intermediate-year EBITDA and the breakeven year were
+“unknown, not invented.” That was wrong: the model carries both, and they are stronger than
+the placeholder was:
+
+
+ METRIC              FY27             FY28            FY29          FY30         FY31        FY32
+
+
+ Revenue             ₹6.00 Cr         ₹41.17          ₹145 Cr       ₹351 Cr      ₹732 Cr     ₹1,388 Cr
+                                      Cr
+
+
+ Gross margin        53.4%            73.8%           79.2%         82.4%        85.4%       88.4%
+
+
+ EBITDA              ₹-1.80           ₹2.59 Cr        ₹29.73        ₹96.49       ₹240.91     ₹536.63
+                     Cr                               Cr            Cr           Cr          Cr
+
+
+ EBITDA              -30.0%           6.3%            20.5%         27.5%        32.9%       38.7%
+ margin
+
+ Net income          ₹-2.29           ₹-0.67          ₹19.85        ₹66.82       ₹169.43     ₹381.37
+                     Cr               Cr              Cr            Cr           Cr          Cr
+   Three things this changes. EBITDA breakeven is FY2028 at +₹2.59 Cr, and net income
+   turns positive in FY2029 at +₹19.85 Cr — the plan reaches profitability one year after the
+   raise, not at some unstated future point. Gross margin runs 53.4% → 88.4%, so the 88%
+   figure is the model’s planned blended margin rather than an aspiration, though it remains a
+   blend and not a kit-level number (§5). And FY32 EBITDA margin is 38.7%, not the 43%
+   quoted in the June 2026 Information Memorandum — the lower figure is the one to use.
+
+
+
+
+   The assumption the model rests on, unchanged from the earlier warning. Every ASP in
+   the Revenue Master is held flat from FY27 to FY32 — the truck kit at ₹2.50L, the smart
+   mirror at ₹0.50L, the dies at their launch prices. Indian mandate-created hardware markets
+   have historically eroded ASP faster than COGS (§7). A Series-A model needs an erosion
+   case: at 8–12% annual ASP decline from FY29             ASSUMPTION     the FY32 ADAS line
+   would fall materially below ₹914 Cr even with volumes held. That sensitivity is the
+   single most valuable thing to add to v2.2 before this goes to an institutional investor.
+
+
+
+
+9 Funding and milestones
+
+Round terms as a table, because the two prices in this round are the first thing a diligence
+reader checks:
+
+
+ SOURCE / USE                     AMOUNT              NOTE
+
+
+ Sources                                              —
+
+ Pre-Series A equity              ₹45 Cr ($4.79M)     18.07% of the company; funds the tapeout    PLAN
+
+
+ CGTMSE-backed term loan          ₹10 Cr ($1.06M)     collateral-free MSME debt, non-dilutive; funds working
+                                                      capital   PLAN
+
+
+ Total sources                    ₹55 Cr ($5.85M)     at ₹94/USD per the model
+
+ Uses                                                 —
+
+ SoC2 tapeout NRE + IP            ₹29.80 Cr           54.2% of the total — phased MPW blocks → full die
+                                  ($3.17M)            → dedicated mask
+
+ Engineering (chip + firmware +   ₹9.02 Cr            core platform R&D
+ defence)
+ SOURCE / USE                        AMOUNT                NOTE
+
+
+ AIS-162/188 certification +         ₹4.51 Cr              mandate compliance and pilots
+ FPGA pilot
+
+ Working capital / BD / inventory    ₹11.66 Cr             field units and the L4+ stack
+
+ Total uses                          ₹54.99 Cr             sources and uses balance
+
+
+
+
+   Corrections to the previous version of this table. The tapeout is ₹29.80 Cr / $3.17M, not
+   the ₹20 Cr / $2.42M carried from the older deck — it is the single largest use of funds at
+   54% of the raise. The raise is ₹55 Cr, not ₹45 Cr: a ₹10 Cr CGTMSE-backed loan funds
+   working capital and was previously missing from this plan entirely. And the exchange rate is
+   ₹94/USD, which makes ₹45 Cr equal $4.79M rather than the “$5.4M” previously stated.
+   Sources and uses now balance at ₹55 Cr, so the earlier “closes only at the low end, zero
+   buffer” conclusion no longer applies — though it is worth noting that ₹10 Cr of the ₹55 Cr
+   is debt that has to be serviced.
+
+
+
+The tranches are not the round: the production tapeout is funded from the ₹45 Cr, not from
+the carve-out. Uses of funds:
+
+
+ USE OF FUNDS                       ESTIMATE     NOTE
+
+
+ 28nm tapeout NRE ($2.42M)          ≈₹20 Cr      ~45% of round      PLAN NRE          FX   — the single capital gate
+
+ AIS-162/188 certification          ₹5–8 Cr         NOT IN GROUNDING
+
+
+ Retrofit pilot fleet + first       ₹3–5 Cr         ASSUMPTION
+
+ Phase-3 site
+
+ ~24 months opex (₹4–6 Cr/yr)       ₹8–12 Cr        ASSUMPTION
+
+
+ Sum                                ₹36–45       closes only at low-to-mid end, zero buffer at top
+                                    Cr              ASSUMPTION ARITHMETIC
+   TIMELINE DIAGRAM                Funding Tranches Against Milestones                                                                                             months from Tranche-1 signing · every date is a plan target
+
+
+
+            Investment · $1M                                                                            Milestone review · 2-of-3                                  ASIC first silicon
+             single tranche, one valuation                                                                    conversion ratio flexes
+
+                   Mo 0                      Mo 3                  Mo 6                  Mo 9                          Mo 12                  Mo 15                    Mo 18                    Mo 21                      Mo 24
+  CONVERSION
+                                                                                       fleet deal                MoU + OEM eval
+
+
+  CERTIFICATION                                                                                                                         AIS-162/188 window                 the single most important date in this plan
+
+
+
+  SILICON                                                         28 nm tapeout NRE ≈₹20 Cr — the single capital gate
+
+
+
+  REVENUE                                                                     defence + insurer-co-funded retrofit — independent of both clocks above
+
+
+                                                                                                                                                                                Phase-3 pilot — legal opinion first
+
+
+    RUNWAY ARITHMETIC
+     28 nm tapeout NRE                              AIS certification                               Pilot fleet + first site                          ~24 months opex                                      Sum vs ₹45 Cr round
+     ≈₹20 Cr                                        ₹5–8 Cr                                         ₹3–5 Cr                                           ₹8–12 Cr                                                      ₹36–45 Cr
+     ~45% of the round                              assumption                                      assumption                                        ₹4–6 Cr/yr                                               zero buffer at the top
+
+
+
+
+                                                                                                                                                                                                                                  FIG 5
+
+
+
+Fig. 5 — Funding tranches against milestones. T1 already funded the demo program; T2 is gated on 2-of-3 conversions (fleet deal, enterprise MoU,
+OEM evaluation) by month 12, with clawback if fewer land. AIS certification and ASIC silicon are the two dates the rest of the plan depends on.
+Runway ~24–30 months: one slip absorbable on the OEM-evaluation milestone or the
+tapeout, not both. Series A — "priced on delivery" of the milestones below                              PLAN    — must
+close on certification-plus-OEM-evaluation evidence, not line-fit revenue, before the §5
+working-capital gap bites.
+
+Team. Founder/CEO Aravind Prasad G (20+ yrs; Evolgence IT 2004–17, Deepgrid
+Datacentre 2018–; Stanford SDRM) carries the procurement record behind the contracted
+defence revenue; CTO Ayaz Khan (DGrid Alpha SoC architect, 15-patent architecture; M.Sc.
+Physics, IIT Gandhinagar) owns the silicon; Prashant Sadanand leads marketing — ~5 people
+  PLAN    . Advisors Venkat Simhadri (ex-CEO MosChip) and Jangi Reddy N (SmartSoC,
+spec→GDS-II) have shipped Indian silicon; Dr. M.V. Kartikeyan (IIT Tirupati), Prof. C.
+Krishna Mohan (IIT Hyderabad) and the T-Hub/IIT-H TiHAN ecosystem sit behind them. Cap
+table pre-round: founders 96.6%, angels 3.4% — clean. The round scales to 10 RTL→GDS
+engineers for 18 months. Named gap: no automotive-OEM BD hire yet — gated to the first
+OEM evaluation            ASSUMPTION       .
+
+
+Why the $1M comes in one tranche, not two
+
+The earlier design split the strategic entry into two $500K tranches, with the second released
+on milestones. We have changed that: the full $1M is taken in a single allotment at ₹112
+Cr, and the milestones move from gating the money to gating the equity. The reason is not
+preference — it is that the two-tranche structure is very likely unexecutable by the time the
+second tranche falls due.
+
+ WHY A SECOND TRANCHE LATER FAILS                                     CONSEQUENCE
+
+
+ Fair value will have risen. The whole point of this round is         A ₹112 Cr price 9–12 months later is no longer a
+ first silicon and AIS certification; the plan itself expects value   discount to a ₹204 Cr round — it is a much deeper
+ moving toward the ₹272.04 Cr DCF as delivery lands                   discount to a much higher number, and it has to be
+                                                                      defended to the board, the valuer, the placement
+                                                                      agent and every future investor
+
+ FEMA Rule 21 (NDI Rules 2019) prohibits issuing to a non-            If the investor is non-resident and fresh fair value
+ resident below certified fair value, with penalties up to 3× the     exceeds ₹11,101 per share, Tranche 2 cannot
+ transaction value       SOURCED                                      lawfully be issued at that price at all — the
+                                                                      window closes by operation of law, not by
+                                                                      negotiation
+
+ The valuation certificate must be proximate — allotment              A second tranche needs a fresh valuation at the
+ within 90 days of the certificate, and AD banks in practice          then-current value. There is no mechanism to carry
+ expect no more than about six months          SOURCED                today’s price forward
+ WHY A SECOND TRANCHE LATER FAILS                                    CONSEQUENCE
+
+
+ Clawback against a non-resident is messy. Share buyback or          The clawback we were relying on as the
+ transfer at a pre-agreed price runs into FEMA transfer-pricing      enforcement lever is the weakest part of the old
+ constraints                                                         structure, not the strongest
+
+
+
+
+   What replaces the tranche gate. The instrument is CCPS with a milestone-linked
+   conversion ratio. The investor funds $1M now and is fully invested; how many equity
+   shares the CCPS converts into flexes with the agreed growth milestones. CCPS expressly
+   support performance-linked milestones and valuation-linked conversion ratios                          SOURCED     ,
+   and because the money is received at a single certified price, the FEMA problem above
+   never arises. Economically it delivers what the clawback was meant to deliver — fewer
+   shares on conversion is the same thing as a higher effective entry price — but it is
+   executable, which the clawback may not be.
+
+
+
+Two things we accept in exchange, and should say plainly rather than discover later: the
+company gives up the discipline of withheld cash, and a conversion-ratio adjustment is
+contested at conversion rather than settled by simply not wiring money                              ASSUMPTION   . In
+return we get the capital in full at the only price at which this entry is lawfully and defensibly
+available — now — and the certification and tapeout programme is funded without a gap in
+the middle of it.
+
+Milestones — now expressed as conversion-ratio triggers rather than cash gates:
+
+
+ MILESTONE                     DEADLINE                      CONSEQUENCE IF MISSED
+
+
+ Fleet deal signed             month 9                       counts toward the 2-of-3 conversion test
+
+ Enterprise / ISV MoU          month 12                      counts toward the 2-of-3 conversion test
+
+ OEM evaluation entered        month 12                      counts toward the 2-of-3 conversion test
+
+ Fewer than 2 of 3 by          month 12                      conversion ratio adjusts: fewer equity shares, higher
+ month 12                                                    effective entry price
+
+ AIS-162/188                   months 12–18                  the design-in window closes (§2, §10)      ASSUMPTION
+
+ certification
+
+ ASIC first silicon            Q1–mid 2027                   the 45%→72% margin flip is delayed         PLAN
+
+
+ Private-land legal            before any pilot              no Phase-3 revenue may be booked (§11)
+ opinion                       revenue
+Entity hygiene. The only contracted revenue (₹1.01 Cr defence) sits in Deepgrid Datacentre
+Pvt Ltd and flows to Deepgrid Semi via an inter-company execution agreement; IP on the
+delivered contract is MCEME-owned (Clause 27); none of it is trucking/ADAS revenue.
+Disclosed upfront to every investor and OEM; restructured before Series A.
+
+
+
+
+10 Risks and mitigations
+
+India risks are below; US-specific risks (U1–U6) are held with their own market in B7 rather
+than mixed in here.
+   RISK DIAGRAM             Likelihood × Impact Map                                                            10 named risks · qualitative board judgment, not a scored model
+
+
+
+
+                                                                                KILL ZONE
+                                                                                                 THE TEN RISKS
+
+                                                                                     1            1    Certification claimed, not held                             KILLER
+
+
+                                                                                                  10   Incumbent fast-follow (Bosch/Continental India)             KILLER
+                                                                      2
+                                                                                                  2    Mandate–channel mismatch
+                                                                              10
+
+                                                              3                                   3    AD2 claim outruns the silicon
+
+                                                                                                  7    Phase-3 incident liability
+                              9
+                                                                                                  4    Enforcement stays diluted
+     IMPACT →
+
+
+
+
+                                                                  7
+                                                                                                  6    Field reliability at Indian duty cycle
+                                                  4
+
+                                                                                                  8    ARPU collapse to telematics band
+                                  5
+                                                                                                  5    Entity / traction discounting
+
+                                                                                                  9    Asset-heavy expansion (if pursued)
+                                                      6
+
+                                       8
+                                                                                                  WHAT THE MAP SAYS
+                                                                                                  Two risks sit in the kill zone, and both are clocks, not
+                                                                                                  capabilities: whether we certify before an incumbent
+                                                                                                  decides this niche is worth a product line.
+
+                low / low
+
+
+                                               LIKELIHOOD →
+
+                                                                                                                                                                            FIG 6
+
+
+
+Fig. 6 — Risk map. Positions are a qualitative judgment call for board discussion, not a scored methodology — 1 = certification not held (killer); 2 =
+mandate–channel mismatch; 3 = AD2 claim outruns silicon; 4 = enforcement dilution; 5 = entity/traction discounting; 6 = field reliability; 7 = Phase-3
+incident liability; 8 = ARPU collapse; 9 = asset-heavy expansion (if pursued); 10 = incumbent fast-follow and enforcement-capacity risk, added on five-
+perspective review — placed alongside risk 1 as a second high-likelihood, high-impact point. Full text below.
+    1 · KILLER — certification is claimed, not held. AIS-162/188 is a path                         PLAN    ; if
+    Bosch, Continental or Mobileye certify first          ASSUMPTION       , the moat collapses to price
+    alone against OEM-connected incumbents. Mitigation: cert is the #1 use of T2 funds; the
+    government/defence channel (§2) is the hedge; every slip is priced per §5.
+
+
+
+#       RISK                CLASS    WHY IT BITES                                 MITIGATION
+
+
+2       Mandate–            high     The mandate protects OEM line-fit, not       Retrofit revenue and field data de-
+        channel                      our retrofit wedge; a five-person team       risk the design-in pitch; photon-to-
+        mismatch                     with no signed OEM may watch                 brake differentiates beyond price;
+                                     mandate volume go to incumbent               the T2 clock forces engagement
+                                     Tier-1s.                                     now.
+
+3       AD2 claim           high     Today’s proof is AD0-class perception        Sell FPGA-phase kits scoped
+        outruns the                  on FPGA; full AD2 needs the SoC2             honestly; Phase-3 is tapeout-
+        silicon                      ASIC behind one binary ₹20 Cr                decoupled. 28 nm feasibility
+                                     tapeout.                                     signed off, six RTL designs
+                                                                                  tapeout-ready, 130 nm test die
+                                                                                  already fabbed          PLAN    .
+
+7       Phase-3             high     One incident can kill a contract and the     Geofenced pedestrian segregation,
+        incident                     credibility of the entire segment.           staged speed envelopes, bit-exact
+        liability                                                                 forensic replay, liability insurance
+                                                                                  as a priced COGS line.
+
+4       Enforcement         medium   If GSR 184(E) enforcement remains            Retrofit, government and Phase-3
+        stays diluted                transitional, mandated volume never          lines are all mandate-independent
+                                     materialises — already partly realised       by construction.
+                                     (§2).
+
+6       Field reliability   medium   Vibration, heat, dust, voltage transients.   Warranty and service reserve
+        at Indian duty               AIS-140 saw large-scale tamper and           inside COGS (§5); per-fleet failure
+        cycle                        disconnect within a year                     tracking; DMS tamper SOPs and
+                                         EXTERNAL     .                           contract terms.
+
+8       ARPU collapse       medium   Software ARPU gravitates to the ₹3–          Compliance reporting and insurer
+        to telematics                5k/yr commodity band, compressing            integration — the two things a
+        band                         the recurring line 5–10×.                    dashcam cannot sell; sensitivity
+                                                                                  carried in §5.
+
+5       Entity / traction   low      The only contracted revenue sits in a        Plain disclosure upfront (§9);
+        discounting                  different legal entity from the one          restructured before Series A.
+                                     raising.
+ #       RISK             CLASS     WHY IT BITES                                MITIGATION
+
+
+ 9       Asset-heavy      low       DeepGrid Fleet converts a                   Ring-fenced post-Series-A SPV
+         expansion, if              semiconductor margin profile into a         with an NBFC partner; never
+         pursued                    utilization-sensitive fleet-operator one.   funded from this raise; pre-
+                                                                                committed utilization (§6).
+
+ 11      Fragmented       high      About 75–80% of Indian operators            Channel architecture in §6 —
+         base and no                own fewer than five trucks and ~3.5M        OEM dealers, NBFCs, insurers,
+         channel                    operators move most of the freight          3PLs, service chains; addressable
+                                        SOURCED     . The FY32 plan needs       segment narrowed in §3; installer-
+                                    ~4,000 kits a month, and we own no          training and spares cost added to
+                                    installation or service network.            the Series-A model.
+
+ 12      ASP erosion      high      AIS-140 devices sell at ₹4,500–11,000       Compete on the OEM line-fit job
+         and the low-               today into an extremely price-sensitive     rather than the inspector job (§7);
+         end competitor             base, with value migrating to platform      field a stripped compliance SKU
+                                    SaaS     SOURCED      . Our ₹2.3L is        through channel (§6); attach the
+                                    ~20× that anchor, and transitional          recurring software line early; carry
+                                    enforcement rewards cheap                   an ASP-erosion case in the Series-
+                                    compliance.                                 A model (§8).
+
+
+
+
+     10 · NEW — incumbent fast-follow and enforcement-capacity risk. Continental and
+     Bosch already manufacture in India with existing AIS relationships (§7); the window in
+     which DeepGrid is the only India-priced, India-trained option closes the moment either
+     decides this niche is worth a product line — plausibly within a few quarters, not the 12–24
+     months this plan's timeline assumes       ASSUMPTION      . Separately, "enforcement is
+     transitional" (§2) is itself an assumption: Indian vehicle-safety mandate enforcement has
+     historically tracked inspection-infrastructure capacity (ARAI/ICAT testing-agency
+     throughput) as much as policy intent, and neither this plan nor its sources model that
+     capacity directly    NOT IN GROUNDING   . Mitigation: treat OEM design-in as upside, not a
+     dated milestone (§6); fund FY27–FY29 primarily from government/defence and insurer-co-
+     funded retrofit, which do not depend on either clock; revisit competitive intelligence on
+     Bosch/Continental's India ADAS roadmap each quarter as a standing board item.
+
+
+
+
+11 KPIs and what we will not do
+
+The operating dashboard. Every line is either already instrumented or must be before the
+metric is quoted externally:
+KPI                                         TARGET                    CADENCE
+
+
+Kits shipped                                per plan (§8)             monthly
+
+Kit gross margin by phase                   45% → ~72%                monthly
+
+Certification milestone vs plan             months 12–18              monthly — the #1 board metric
+
+OEM evaluations entered                     1 within 12 months        quarterly
+
+Retrofit fleet deals signed                 1 within 9 months         monthly
+
+Per-vehicle CAC / payback / LTV-CAC         set at first fleet deal   quarterly
+
+Day-30 field uptime                         set at first pilot        monthly — the renewal driver (§5)
+
+Data-rights coverage of installed base      100% of new contracts     quarterly
+
+Software ARPU vs commodity floor            above ₹3–5k/yr            quarterly
+
+Phase-3 supervision ratio                   better than 1:2           per site, monthly
+
+Phase-3 incidents                           zero                      per site, continuous
+
+Cash runway vs tapeout date                 ≥6 months buffer          monthly
+
+Incumbent intel (Bosch / Continental        standing item             quarterly (§10 risk 10)
+India)
+
+Kits installed per active channel partner   set at first channel      monthly — the distribution metric
+                                            deal                      (§6)
+
+Trained installers certified                to be set                 monthly
+
+Realised ASP vs ₹2.3L plan                  ≥90% of plan              quarterly — the erosion tripwire
+                                                                      (§8)
+
+
+
+
+  What we will NOT do before Series A — the focus covenant: no public-road driverless; no
+  merchant silicon sales; no non-trucking verticals. A 5-person team funds exactly one tapeout
+  and one vehicle program. We do not own or operate vehicle fleets from this raise, do not
+  take vehicle-level integration as a business line, and do not book Phase-3 or DeepGrid Fleet
+  (§6) revenue before, respectively, the private-land legal opinion exists or a dedicated fleet-
+  financing SPV is closed — both stay explicitly outside this plan's capital until each is
+  separately funded.
+S Sources for externally-referenced claims
+
+Most figures in this plan come from DeepGrid’s own engineering and investor material and
+are labelled           PLAN   or     ASSUMPTION      . The claims labelled            SOURCED          are third-party and
+trace to the following, retrieved 4 August 2026:
+
+FEMA pricing and CCPS structuring — Harchandani, FEMA FDI pricing rules: Rule 21
+compliance: harchandani.in · Sapient, RBI FEMA valuation rules 2026: sapientservices.com ·
+Beacon Filing, FEMA share issuance pricing rules: beaconfiling.com · Cyril Amarchand
+Mangaldas, CCPS: an important instrument for startups and M&A structuring: corporate.cyrila
+marchandblogs.com · EquityList, Guide to CCPS: equitylist.co
+Indian trucking market structure — Redseer, Unlocking growth in India’s fragmented trucking
+sector: redseer.com · Stellaris, How organising small truck operators will reduce India’s logistics
+cost: stellarisvp.com · Logistics Insider, Why supporting small truck operators is key: logisticsin
+sider.in · AITD, Study on trucking operations in India: aitd.net.in
+AIS-140 device pricing and market commoditisation — Fleetx, AIS 140 GPS device price in
+India (2026): blog.fleetx.ai · Fleetx, What is AIS-140: blog.fleetx.io · MarqStats, India telematics
+and fleet safety systems market: marqstats.com · IMARC, India commercial telematics market: i
+marcgroup.com
+
+
+
+
+A Appendix — figure pack
+
+Every diagram in this document collected in one place, for a diligence reader who wants the
+visuals without the prose. All are illustrative shapes drawn against stated or assumed targets
+(§0), not independently measured, except where a figure's own caption marks a component as
+      MEASURED     .
+
+  FIG.     TITLE                                           SECTION               TYPE
+
+
+  1        The Deployment Ladder                           §4 Product            3-phase business model diagram + 4 mini-
+                                                           ladder                panels
+
+  2        The Kit Cost Bridge, FPGA → ASIC                §5 Unit               Cost-bridge / waterfall diagram
+                                                           economics
+
+  3        Owning the Asset: Three Models, One             §6 Go-to-market       4-column business model comparison
+           Choice
+
+  4        Revenue Trajectory, FY27–FY32                   §8 Financial plan     Bar chart
+
+  5        Funding Tranches Against Milestones             §9 Funding            Timeline diagram
+  FIG.      TITLE                                       SECTION               TYPE
+
+
+  6         Likelihood × Impact Map                     §10 Risks             Risk matrix
+
+
+
+
+Deepgrid Semi Pvt Ltd · BP-1A (India) · Aug 2026 · Companion: BP-1B (United States). Sources: RapidRound investor
+deck, Shravan Siramdas strategic-entry proposal, IIT Madras Incubation deck, Project Pushpaka GTM deck (all Aug 2026).
+Converged via a 25-iteration autoresearch critique/revise/score loop over four competing business-model archetypes, then
+stress-tested against a five-perspective adversarial review. Evidence labels: measured / contracted / plan / assumption /
+external.
+

@@ -1,0 +1,113 @@
+{
+  "contract_version": "1.0",
+  "deck": "impeccable-decision-flight-recorder-reviewed.pptx",
+  "slide_count": 14,
+  "stages": [
+    {
+      "skill": "watch",
+      "status": "applied",
+      "proper_layer": "source evidence acquisition and scene mapping",
+      "outputs": ["transcript.txt", "transcript-map.json", "visual-context-map.json"],
+      "impact": "All claims, quoted language, and selected source screens trace to the video transcript and scene map."
+    },
+    {
+      "skill": "presentation-source-bundle",
+      "status": "applied",
+      "proper_layer": "normalized evidence contract",
+      "outputs": ["presentation-evidence.json", "asset-inventory.json"],
+      "impact": "Claims, sources, and authentic visual assets are normalized before slide construction."
+    },
+    {
+      "skill": "ai-analyst",
+      "status": "applied",
+      "proper_layer": "decision analysis",
+      "outputs": ["story-pack.md"],
+      "impact": "The deck distinguishes demonstrated mechanisms from hypotheses and converts them into bounded pilot criteria."
+    },
+    {
+      "skill": "story-architect",
+      "status": "applied",
+      "proper_layer": "argument architecture",
+      "outputs": ["story-pack.md", "slide-plan.json"],
+      "impact": "A fourteen-slide arc moves from thesis through proof, interpretation, pilot design, and authorization."
+    },
+    {
+      "skill": "presentation-content-writer",
+      "status": "applied",
+      "proper_layer": "visible executive copy",
+      "outputs": ["slide-content.md", "native-notes-spec.json"],
+      "impact": "All fourteen slides carry visible claims, interpretation, and decision relevance; notes extend rather than replace slide content."
+    },
+    {
+      "skill": "impeccable",
+      "status": "applied",
+      "proper_layer": "direction selection and craft system",
+      "outputs": ["direction-treatment-decision.md", "visual-system-spec.md", "PRODUCT.md", "DESIGN.md"],
+      "impact": "Seven candidate directions were compared and candidate seven became a visibly distinct Decision Flight Recorder world."
+    },
+    {
+      "skill": "explainer-graphic",
+      "status": "applied",
+      "proper_layer": "explanation grammar",
+      "outputs": ["visual-system-spec.md", "visual-spec.json"],
+      "impact": "State tracks, decision boards, split-field contrasts, and bounded loops make abstract adoption logic inspectable."
+    },
+    {
+      "skill": "ai-graphics",
+      "status": "applied",
+      "proper_layer": "visual execution routing",
+      "outputs": ["build_deck.py", "visual-system-spec.md"],
+      "impact": "The visual specification deliberately routes structured graphics to editable native PowerPoint geometry and reserves raster imagery for authentic evidence."
+    },
+    {
+      "skill": "branded-pptx-deck",
+      "status": "applied",
+      "proper_layer": "branded native PowerPoint construction",
+      "outputs": ["build_deck.py", "impeccable-decision-flight-recorder-draft.pptx", "template-profile.json"],
+      "impact": "The governed branded template, typography, palette roles, and reusable slide archetypes are encoded in reproducible builder source."
+    },
+    {
+      "skill": "pptx-toolkit",
+      "status": "applied",
+      "proper_layer": "controlled existing-PPTX notes mutation",
+      "outputs": ["native-notes-spec.json", "impeccable-decision-flight-recorder-notes-v3-draft.pptx"],
+      "impact": "Fourteen native speaker notes were added without rebuilding or flattening the presentation."
+    },
+    {
+      "skill": "officecli",
+      "status": "applied",
+      "proper_layer": "structural scan, real rendering, and packaging QA",
+      "outputs": ["qa/officecli-v3/qa-summary.md", "qa/officecli-v3/render/impeccable-decision-flight-recorder-notes-v3-draft.png", "qa/pptx-design-lint-v3.json", "qa/lint-suppression-rationale.md"],
+      "impact": "The final notes-bearing deck has zero reported issues, a clean design lint, and a manually inspected real PowerPoint render."
+    }
+  ],
+  "content": {
+    "visible_slide_count": 14,
+    "notes_slide_count": 14
+  },
+  "direction": {
+    "candidate_count": 7,
+    "representative_slide_count": 3,
+    "selected": "Decision Flight Recorder",
+    "material_differences": [
+      "Dark operational canvas replaces proof-paper framing.",
+      "Signal tracks and numbered states replace generic cards.",
+      "Authentic screens behave as instrument readouts rather than decorative screenshots.",
+      "Oversized verdicts make the decision explicit on every pivotal slide.",
+      "Cyan, lime, violet, and coral carry stable semantic roles across the deck."
+    ]
+  },
+  "visual_system": {
+    "archetype_count": 6,
+    "slides_covered": 14,
+    "source_evidence_slides": [4, 8, 9],
+    "editable_sources": ["build_deck.py", "visual-system-spec.md", "visual-spec.json"]
+  },
+  "qa": {
+    "contracts_valid": true,
+    "lint_clean": true,
+    "officecli_zero_issues": true,
+    "real_render_reviewed": true,
+    "independent_review_passed": true
+  }
+}

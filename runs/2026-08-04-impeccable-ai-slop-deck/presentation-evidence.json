@@ -1,0 +1,3930 @@
+{
+  "contract_version": "1.0",
+  "bundle": {
+    "id": "can-impeccable-take-the-ai-slop-out-of-slides",
+    "title": "Can Impeccable Take the AI Slop Out of Slides?",
+    "root": "."
+  },
+  "sources": [
+    {
+      "id": "source-01",
+      "kind": "video",
+      "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+      "sha256": null,
+      "rights": "unknown; verify before client delivery",
+      "normalized_from": null
+    },
+    {
+      "id": "source-02",
+      "kind": "video",
+      "path": "video.mp4",
+      "sha256": "5912a26def0aa35c0a7fb8d5ce33c4082f7c1eee93c4b255184bbedde34ad0fc",
+      "rights": "unknown; verify before client delivery",
+      "normalized_from": null
+    },
+    {
+      "id": "source-transcript",
+      "kind": "transcript",
+      "path": "transcript.txt",
+      "sha256": "2d7e9c4fb03e102a24b72b4891d7d8a24e7299a02ea5a4f5c51431f2a88f293c",
+      "rights": "unknown; verify before client delivery",
+      "normalized_from": "source-01"
+    }
+  ],
+  "slides": [],
+  "transcript_segments": [
+    {
+      "id": "transcript-0001",
+      "start_seconds": 2,
+      "end_seconds": 4,
+      "text": "There are a million in one skills and plugins that claim to solve Claude's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0002",
+      "start_seconds": 4,
+      "end_seconds": 6,
+      "text": "plugins that claim to solve Claude's front-end design problem. But as someone",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0003",
+      "start_seconds": 6,
+      "end_seconds": 8,
+      "text": "front-end design problem. But as someone who has tested literally hundreds of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0004",
+      "start_seconds": 8,
+      "end_seconds": 10,
+      "text": "who has tested literally hundreds of them, there is one that stands above the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0005",
+      "start_seconds": 10,
+      "end_seconds": 13,
+      "text": "them, there is one that stands above the rest and it just got a huge upgrade.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0006",
+      "start_seconds": 13,
+      "end_seconds": 15,
+      "text": "rest and it just got a huge upgrade. Now, I'm talking about Impeccable 4.0",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0007",
+      "start_seconds": 15,
+      "end_seconds": 17,
+      "text": "Now, I'm talking about Impeccable 4.0 and it is the king of giving Claude Code",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0008",
+      "start_seconds": 17,
+      "end_seconds": 19,
+      "text": "and it is the king of giving Claude Code the power to create front-end designs",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0009",
+      "start_seconds": 19,
+      "end_seconds": 22,
+      "text": "the power to create front-end designs and web designs that actually look good",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0010",
+      "start_seconds": 22,
+      "end_seconds": 24,
+      "text": "and web designs that actually look good and give you control while you do it.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0011",
+      "start_seconds": 24,
+      "end_seconds": 25,
+      "text": "and give you control while you do it. So, in this video, I'm going to break",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0012",
+      "start_seconds": 25,
+      "end_seconds": 27,
+      "text": "So, in this video, I'm going to break down what this tool is, how it works,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0013",
+      "start_seconds": 27,
+      "end_seconds": 29,
+      "text": "down what this tool is, how it works, and how you can get the most out of this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0014",
+      "start_seconds": 29,
+      "end_seconds": 31,
+      "text": "and how you can get the most out of this thing, so you can start building",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0015",
+      "start_seconds": 31,
+      "end_seconds": 33,
+      "text": "thing, so you can start building front-end designs you actually like.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0016",
+      "start_seconds": 33,
+      "end_seconds": 35,
+      "text": "front-end designs you actually like. Now, in my last design related video, we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0017",
+      "start_seconds": 35,
+      "end_seconds": 37,
+      "text": "Now, in my last design related video, we touched on impeccable a little bit, but",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0018",
+      "start_seconds": 37,
+      "end_seconds": 39,
+      "text": "touched on impeccable a little bit, but that was in the greater scheme of how to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0019",
+      "start_seconds": 39,
+      "end_seconds": 41,
+      "text": "that was in the greater scheme of how to essentially inject taste into your web",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0020",
+      "start_seconds": 41,
+      "end_seconds": 43,
+      "text": "essentially inject taste into your web design process so we can get away from",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0021",
+      "start_seconds": 43,
+      "end_seconds": 45,
+      "text": "design process so we can get away from generic AI slop outputs. If you haven't",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0022",
+      "start_seconds": 45,
+      "end_seconds": 47,
+      "text": "generic AI slop outputs. If you haven't watched that video, I highly suggest you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0023",
+      "start_seconds": 47,
+      "end_seconds": 49,
+      "text": "watched that video, I highly suggest you do because I'm not going to repeat all",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0024",
+      "start_seconds": 49,
+      "end_seconds": 51,
+      "text": "do because I'm not going to repeat all the baseline things you need to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0025",
+      "start_seconds": 51,
+      "end_seconds": 53,
+      "text": "the baseline things you need to understand when it comes to injecting",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0026",
+      "start_seconds": 53,
+      "end_seconds": 55,
+      "text": "understand when it comes to injecting your taste and sort of avoiding AI slop",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0027",
+      "start_seconds": 55,
+      "end_seconds": 58,
+      "text": "your taste and sort of avoiding AI slop from a design process and instead we're",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0028",
+      "start_seconds": 58,
+      "end_seconds": 60,
+      "text": "from a design process and instead we're going to be deep diving impeccable as a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0029",
+      "start_seconds": 60,
+      "end_seconds": 62,
+      "text": "going to be deep diving impeccable as a specific tool. Now, there will be some",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0030",
+      "start_seconds": 62,
+      "end_seconds": 64,
+      "text": "specific tool. Now, there will be some overlap, but it helps to have that",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0031",
+      "start_seconds": 64,
+      "end_seconds": 65,
+      "text": "overlap, but it helps to have that background coming into this. Now, before",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0032",
+      "start_seconds": 65,
+      "end_seconds": 67,
+      "text": "background coming into this. Now, before we do a full deep dive on the tool",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0033",
+      "start_seconds": 67,
+      "end_seconds": 68,
+      "text": "we do a full deep dive on the tool itself, let's talk about some of the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0034",
+      "start_seconds": 68,
+      "end_seconds": 70,
+      "text": "itself, let's talk about some of the changes because chances are there's a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0035",
+      "start_seconds": 70,
+      "end_seconds": 71,
+      "text": "changes because chances are there's a lot of you out there who used this tool",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0036",
+      "start_seconds": 71,
+      "end_seconds": 73,
+      "text": "lot of you out there who used this tool a few months ago and are now wondering,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0037",
+      "start_seconds": 73,
+      "end_seconds": 75,
+      "text": "a few months ago and are now wondering, okay, it's 4.0. actually changed here.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0038",
+      "start_seconds": 75,
+      "end_seconds": 76,
+      "text": "okay, it's 4.0. actually changed here. Now, the biggest change over the last",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0039",
+      "start_seconds": 76,
+      "end_seconds": 78,
+      "text": "Now, the biggest change over the last few months is live mode. Now, this was",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0040",
+      "start_seconds": 78,
+      "end_seconds": 80,
+      "text": "few months is live mode. Now, this was something that was sort of in the alpha",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0041",
+      "start_seconds": 80,
+      "end_seconds": 81,
+      "text": "something that was sort of in the alpha when they're in their 2.0 range, and now",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0042",
+      "start_seconds": 81,
+      "end_seconds": 83,
+      "text": "when they're in their 2.0 range, and now it's gotten a lot more fleshed out. It's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0043",
+      "start_seconds": 83,
+      "end_seconds": 85,
+      "text": "it's gotten a lot more fleshed out. It's much smoother. It's much snappier, and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0044",
+      "start_seconds": 85,
+      "end_seconds": 87,
+      "text": "much smoother. It's much snappier, and allows us again to get outside of the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0045",
+      "start_seconds": 87,
+      "end_seconds": 89,
+      "text": "allows us again to get outside of the terminal and start iterating visually,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0046",
+      "start_seconds": 89,
+      "end_seconds": 91,
+      "text": "terminal and start iterating visually, which makes the design process so much",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0047",
+      "start_seconds": 91,
+      "end_seconds": 94,
+      "text": "which makes the design process so much more simple. The other big change is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0048",
+      "start_seconds": 94,
+      "end_seconds": 97,
+      "text": "more simple. The other big change is worlds. They talk about adding 177 high",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0049",
+      "start_seconds": 97,
+      "end_seconds": 100,
+      "text": "worlds. They talk about adding 177 high rated worlds into this skill. Now, what",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0050",
+      "start_seconds": 100,
+      "end_seconds": 101,
+      "text": "rated worlds into this skill. Now, what the heck does that mean? Well, that",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0051",
+      "start_seconds": 101,
+      "end_seconds": 103,
+      "text": "the heck does that mean? Well, that means they've essentially created",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0052",
+      "start_seconds": 103,
+      "end_seconds": 106,
+      "text": "means they've essentially created 177 different design templates,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0053",
+      "start_seconds": 106,
+      "end_seconds": 108,
+      "text": "177 different design templates, different aesthetics that you can use",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0054",
+      "start_seconds": 108,
+      "end_seconds": 109,
+      "text": "different aesthetics that you can use when you're trying to create your",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0055",
+      "start_seconds": 109,
+      "end_seconds": 112,
+      "text": "when you're trying to create your website from scratch. So, kind of like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0056",
+      "start_seconds": 112,
+      "end_seconds": 114,
+      "text": "website from scratch. So, kind of like what we did manually in the last video,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0057",
+      "start_seconds": 114,
+      "end_seconds": 117,
+      "text": "what we did manually in the last video, Impeccable is going to show you a the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0058",
+      "start_seconds": 117,
+      "end_seconds": 119,
+      "text": "Impeccable is going to show you a the first sort of design idea it has, and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0059",
+      "start_seconds": 119,
+      "end_seconds": 120,
+      "text": "first sort of design idea it has, and then it's going to give you a few other",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0060",
+      "start_seconds": 120,
+      "end_seconds": 123,
+      "text": "then it's going to give you a few other options that are wildly different. Now,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0061",
+      "start_seconds": 123,
+      "end_seconds": 124,
+      "text": "options that are wildly different. Now, they have a whole article about how they",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0062",
+      "start_seconds": 124,
+      "end_seconds": 126,
+      "text": "they have a whole article about how they essentially created this to make sure it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0063",
+      "start_seconds": 126,
+      "end_seconds": 128,
+      "text": "essentially created this to make sure it isn't just like slob trash every single",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0064",
+      "start_seconds": 128,
+      "end_seconds": 130,
+      "text": "isn't just like slob trash every single time. I'm not going to dive that into",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0065",
+      "start_seconds": 130,
+      "end_seconds": 131,
+      "text": "time. I'm not going to dive that into here because it's going to be like a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0066",
+      "start_seconds": 131,
+      "end_seconds": 134,
+      "text": "here because it's going to be like a 15-minute discussion. But what it gives",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0067",
+      "start_seconds": 134,
+      "end_seconds": 136,
+      "text": "15-minute discussion. But what it gives us is options and options that we can",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0068",
+      "start_seconds": 136,
+      "end_seconds": 138,
+      "text": "us is options and options that we can see visually. And when we hook up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0069",
+      "start_seconds": 138,
+      "end_seconds": 139,
+      "text": "see visually. And when we hook up something like the Higsfield MCP to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0070",
+      "start_seconds": 139,
+      "end_seconds": 141,
+      "text": "something like the Higsfield MCP to this, we can actually see what it would",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0071",
+      "start_seconds": 141,
+      "end_seconds": 143,
+      "text": "this, we can actually see what it would look like with our specific website. And",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0072",
+      "start_seconds": 143,
+      "end_seconds": 144,
+      "text": "look like with our specific website. And you'll see that later. That way, it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0073",
+      "start_seconds": 144,
+      "end_seconds": 146,
+      "text": "you'll see that later. That way, it isn't just like a generic template.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0074",
+      "start_seconds": 146,
+      "end_seconds": 147,
+      "text": "isn't just like a generic template. You'd see like what your thing would",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0075",
+      "start_seconds": 147,
+      "end_seconds": 149,
+      "text": "You'd see like what your thing would look like in these different sort of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0076",
+      "start_seconds": 149,
+      "end_seconds": 152,
+      "text": "look like in these different sort of visual themes. And those two things, the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0077",
+      "start_seconds": 152,
+      "end_seconds": 154,
+      "text": "visual themes. And those two things, the live mode in the world are the biggest",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0078",
+      "start_seconds": 154,
+      "end_seconds": 156,
+      "text": "live mode in the world are the biggest differences over the last few months.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0079",
+      "start_seconds": 156,
+      "end_seconds": 157,
+      "text": "differences over the last few months. And I don't think they're small things",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0080",
+      "start_seconds": 157,
+      "end_seconds": 159,
+      "text": "And I don't think they're small things because they're all about iteration and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0081",
+      "start_seconds": 159,
+      "end_seconds": 161,
+      "text": "because they're all about iteration and giving us options throughout the design",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0082",
+      "start_seconds": 161,
+      "end_seconds": 163,
+      "text": "giving us options throughout the design process. Now, let's do a quick rundown",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0083",
+      "start_seconds": 163,
+      "end_seconds": 165,
+      "text": "process. Now, let's do a quick rundown of Impeccable itself because there's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0084",
+      "start_seconds": 165,
+      "end_seconds": 166,
+      "text": "of Impeccable itself because there's probably some of you who've never even",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0085",
+      "start_seconds": 166,
+      "end_seconds": 168,
+      "text": "probably some of you who've never even used this app. So, what the heck are we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0086",
+      "start_seconds": 168,
+      "end_seconds": 169,
+      "text": "used this app. So, what the heck are we even talking about here? Well,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0087",
+      "start_seconds": 169,
+      "end_seconds": 171,
+      "text": "even talking about here? Well, Impeccable is a free open- source skill.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0088",
+      "start_seconds": 171,
+      "end_seconds": 173,
+      "text": "Impeccable is a free open- source skill. It's got about 50,000 stars on GitHub.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0089",
+      "start_seconds": 173,
+      "end_seconds": 175,
+      "text": "It's got about 50,000 stars on GitHub. GitHub themselves actually integrated it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0090",
+      "start_seconds": 175,
+      "end_seconds": 177,
+      "text": "GitHub themselves actually integrated it into their own AI tool because they",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0091",
+      "start_seconds": 177,
+      "end_seconds": 178,
+      "text": "into their own AI tool because they liked it so much. And the thesis of the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0092",
+      "start_seconds": 178,
+      "end_seconds": 181,
+      "text": "liked it so much. And the thesis of the skill is we want to identify AI slot",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0093",
+      "start_seconds": 181,
+      "end_seconds": 183,
+      "text": "skill is we want to identify AI slot patterns. They consider like 40",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0094",
+      "start_seconds": 183,
+      "end_seconds": 184,
+      "text": "patterns. They consider like 40 different things to be AI slot. things",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0095",
+      "start_seconds": 184,
+      "end_seconds": 186,
+      "text": "different things to be AI slot. things like purple gradients, blue gradients,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0096",
+      "start_seconds": 186,
+      "end_seconds": 187,
+      "text": "like purple gradients, blue gradients, that sort of thing. And instead, we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0097",
+      "start_seconds": 187,
+      "end_seconds": 190,
+      "text": "that sort of thing. And instead, we replace those with essentially better",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0098",
+      "start_seconds": 190,
+      "end_seconds": 193,
+      "text": "replace those with essentially better design, so to speak. Impeccable itself",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0099",
+      "start_seconds": 193,
+      "end_seconds": 195,
+      "text": "design, so to speak. Impeccable itself is one skill, but includes 23 different",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0100",
+      "start_seconds": 195,
+      "end_seconds": 197,
+      "text": "is one skill, but includes 23 different commands that hit different parts of the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0101",
+      "start_seconds": 197,
+      "end_seconds": 199,
+      "text": "commands that hit different parts of the design continuum. This includes things",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0102",
+      "start_seconds": 199,
+      "end_seconds": 201,
+      "text": "design continuum. This includes things like shape, polish, making it choir,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0103",
+      "start_seconds": 201,
+      "end_seconds": 203,
+      "text": "like shape, polish, making it choir, animating things, things for onboarding,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0104",
+      "start_seconds": 203,
+      "end_seconds": 205,
+      "text": "animating things, things for onboarding, coloring, type set, on and on and on.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0105",
+      "start_seconds": 205,
+      "end_seconds": 206,
+      "text": "coloring, type set, on and on and on. Now, while each of those things does",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0106",
+      "start_seconds": 206,
+      "end_seconds": 207,
+      "text": "Now, while each of those things does something slightly different, the point",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0107",
+      "start_seconds": 207,
+      "end_seconds": 209,
+      "text": "something slightly different, the point is this, and you can see this over here",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0108",
+      "start_seconds": 209,
+      "end_seconds": 211,
+      "text": "is this, and you can see this over here on the right. Claude gives us something",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0109",
+      "start_seconds": 211,
+      "end_seconds": 212,
+      "text": "on the right. Claude gives us something that's kind of generic, kind of boring.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0110",
+      "start_seconds": 212,
+      "end_seconds": 214,
+      "text": "that's kind of generic, kind of boring. and we automatically know it's AI.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0111",
+      "start_seconds": 214,
+      "end_seconds": 216,
+      "text": "and we automatically know it's AI. Impeccable gives us something that is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0112",
+      "start_seconds": 216,
+      "end_seconds": 218,
+      "text": "Impeccable gives us something that is cleaner, less generic, and overall",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0113",
+      "start_seconds": 218,
+      "end_seconds": 221,
+      "text": "cleaner, less generic, and overall better for the user. As for those 23",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0114",
+      "start_seconds": 221,
+      "end_seconds": 222,
+      "text": "better for the user. As for those 23 different commands, well, if we go to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0115",
+      "start_seconds": 222,
+      "end_seconds": 223,
+      "text": "different commands, well, if we go to the website itself, which is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0116",
+      "start_seconds": 223,
+      "end_seconds": 225,
+      "text": "the website itself, which is impeccable.style, you can see all of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0117",
+      "start_seconds": 225,
+      "end_seconds": 228,
+      "text": "impeccable.style, you can see all of them in action. So, you know, we have",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0118",
+      "start_seconds": 228,
+      "end_seconds": 230,
+      "text": "them in action. So, you know, we have clawed code version here, impeccable",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0119",
+      "start_seconds": 230,
+      "end_seconds": 231,
+      "text": "clawed code version here, impeccable version here. You can see that for each",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0120",
+      "start_seconds": 231,
+      "end_seconds": 233,
+      "text": "version here. You can see that for each and every one to get sort of visual idea",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0121",
+      "start_seconds": 233,
+      "end_seconds": 234,
+      "text": "and every one to get sort of visual idea of what these things actually do. The",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0122",
+      "start_seconds": 234,
+      "end_seconds": 236,
+      "text": "of what these things actually do. The documentation on the website goes pretty",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0123",
+      "start_seconds": 236,
+      "end_seconds": 238,
+      "text": "documentation on the website goes pretty deep and I actually misspoke earlier in",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0124",
+      "start_seconds": 238,
+      "end_seconds": 240,
+      "text": "deep and I actually misspoke earlier in terms of AI slop. There's actually 64",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0125",
+      "start_seconds": 240,
+      "end_seconds": 242,
+      "text": "terms of AI slop. There's actually 64 different patterns that they say expose",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0126",
+      "start_seconds": 242,
+      "end_seconds": 245,
+      "text": "different patterns that they say expose AI defaults and production defects. And",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0127",
+      "start_seconds": 245,
+      "end_seconds": 246,
+      "text": "AI defaults and production defects. And you can see how this has changed over",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0128",
+      "start_seconds": 246,
+      "end_seconds": 248,
+      "text": "you can see how this has changed over the years. Like we all remember this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0129",
+      "start_seconds": 248,
+      "end_seconds": 250,
+      "text": "the years. Like we all remember this like the early days of chat GPT, right?",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0130",
+      "start_seconds": 250,
+      "end_seconds": 253,
+      "text": "like the early days of chat GPT, right? And now you know AI slop looks something",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0131",
+      "start_seconds": 253,
+      "end_seconds": 255,
+      "text": "And now you know AI slop looks something a little bit more like this still. These",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0132",
+      "start_seconds": 255,
+      "end_seconds": 256,
+      "text": "a little bit more like this still. These are things we want to move away from. So",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0133",
+      "start_seconds": 256,
+      "end_seconds": 258,
+      "text": "are things we want to move away from. So that's impeccable in a nutshell.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0134",
+      "start_seconds": 258,
+      "end_seconds": 259,
+      "text": "that's impeccable in a nutshell. Identify slob and then gives us better",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0135",
+      "start_seconds": 259,
+      "end_seconds": 261,
+      "text": "Identify slob and then gives us better options that allow us to iterate and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0136",
+      "start_seconds": 261,
+      "end_seconds": 263,
+      "text": "options that allow us to iterate and even iterate visually with their live",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0137",
+      "start_seconds": 263,
+      "end_seconds": 265,
+      "text": "even iterate visually with their live tool. Now to actually use this thing,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0138",
+      "start_seconds": 265,
+      "end_seconds": 267,
+      "text": "tool. Now to actually use this thing, it's pretty simple to install. is just",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0139",
+      "start_seconds": 267,
+      "end_seconds": 269,
+      "text": "it's pretty simple to install. is just going to be npx impeccable install. Now,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0140",
+      "start_seconds": 269,
+      "end_seconds": 271,
+      "text": "going to be npx impeccable install. Now, if that is too confusing, you can also",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0141",
+      "start_seconds": 271,
+      "end_seconds": 273,
+      "text": "if that is too confusing, you can also go to the impeccable impeccable GitHub",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0142",
+      "start_seconds": 273,
+      "end_seconds": 275,
+      "text": "go to the impeccable impeccable GitHub page. You can copy this URL, paste it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0143",
+      "start_seconds": 275,
+      "end_seconds": 277,
+      "text": "page. You can copy this URL, paste it into cloud code and say, \"Hey, can you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0144",
+      "start_seconds": 277,
+      "end_seconds": 279,
+      "text": "into cloud code and say, \"Hey, can you go ahead and install impeccable for me?\"",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0145",
+      "start_seconds": 279,
+      "end_seconds": 280,
+      "text": "go ahead and install impeccable for me?\" Now, once you install impeccable, the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0146",
+      "start_seconds": 280,
+      "end_seconds": 281,
+      "text": "Now, once you install impeccable, the other thing you're going to want to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0147",
+      "start_seconds": 281,
+      "end_seconds": 282,
+      "text": "other thing you're going to want to install, like I talked about earlier, is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0148",
+      "start_seconds": 282,
+      "end_seconds": 285,
+      "text": "install, like I talked about earlier, is the Higsfield MCP, which Impeccable is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0149",
+      "start_seconds": 285,
+      "end_seconds": 286,
+      "text": "the Higsfield MCP, which Impeccable is going to be able to call on when it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0150",
+      "start_seconds": 286,
+      "end_seconds": 288,
+      "text": "going to be able to call on when it builds that worlds feature for us, or",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0151",
+      "start_seconds": 288,
+      "end_seconds": 290,
+      "text": "builds that worlds feature for us, or essentially shows us all the different",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0152",
+      "start_seconds": 290,
+      "end_seconds": 291,
+      "text": "essentially shows us all the different aesthetic styles for our website. Now,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0153",
+      "start_seconds": 291,
+      "end_seconds": 293,
+      "text": "aesthetic styles for our website. Now, to get the Higsfield MCP set up, which",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0154",
+      "start_seconds": 293,
+      "end_seconds": 295,
+      "text": "to get the Higsfield MCP set up, which again is an aggregator for essentially",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0155",
+      "start_seconds": 295,
+      "end_seconds": 297,
+      "text": "again is an aggregator for essentially every AI image of video generator out",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0156",
+      "start_seconds": 297,
+      "end_seconds": 299,
+      "text": "every AI image of video generator out there, you'll just go to higsfield.ai,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0157",
+      "start_seconds": 299,
+      "end_seconds": 301,
+      "text": "there, you'll just go to higsfield.ai, go up here to the top where it says MCP",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0158",
+      "start_seconds": 301,
+      "end_seconds": 305,
+      "text": "go up here to the top where it says MCP and CLI. Head here to clawed code and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0159",
+      "start_seconds": 305,
+      "end_seconds": 307,
+      "text": "and CLI. Head here to clawed code and you can just copy this prompt right here",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0160",
+      "start_seconds": 307,
+      "end_seconds": 308,
+      "text": "you can just copy this prompt right here and it will walk you through the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0161",
+      "start_seconds": 308,
+      "end_seconds": 310,
+      "text": "and it will walk you through the authentication process. After that, the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0162",
+      "start_seconds": 310,
+      "end_seconds": 313,
+      "text": "authentication process. After that, the first step we are going to do is simply",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0163",
+      "start_seconds": 313,
+      "end_seconds": 316,
+      "text": "first step we are going to do is simply run impeccable in it. And in this case,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0164",
+      "start_seconds": 316,
+      "end_seconds": 317,
+      "text": "run impeccable in it. And in this case, I've opened up a new folder and I've",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0165",
+      "start_seconds": 317,
+      "end_seconds": 319,
+      "text": "I've opened up a new folder and I've just called it impecc. You can create",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0166",
+      "start_seconds": 319,
+      "end_seconds": 321,
+      "text": "just called it impecc. You can create whatever folder or directory you want,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0167",
+      "start_seconds": 321,
+      "end_seconds": 324,
+      "text": "whatever folder or directory you want, but for/impeckable in it. And once you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0168",
+      "start_seconds": 324,
+      "end_seconds": 325,
+      "text": "but for/impeckable in it. And once you do that, it's going to begin asking",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0169",
+      "start_seconds": 325,
+      "end_seconds": 327,
+      "text": "do that, it's going to begin asking questions about what it is you're trying",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0170",
+      "start_seconds": 327,
+      "end_seconds": 329,
+      "text": "questions about what it is you're trying to build. So, I'm going to say I'm",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0171",
+      "start_seconds": 329,
+      "end_seconds": 331,
+      "text": "to build. So, I'm going to say I'm building a real landing page. Then we'll",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0172",
+      "start_seconds": 331,
+      "end_seconds": 333,
+      "text": "building a real landing page. Then we'll ask what stack this project should use.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0173",
+      "start_seconds": 333,
+      "end_seconds": 334,
+      "text": "ask what stack this project should use. If you don't know, you can just have it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0174",
+      "start_seconds": 334,
+      "end_seconds": 335,
+      "text": "If you don't know, you can just have it say you're a call. And that's what we'll",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0175",
+      "start_seconds": 335,
+      "end_seconds": 337,
+      "text": "say you're a call. And that's what we'll do for today. And then it's going to ask",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0176",
+      "start_seconds": 337,
+      "end_seconds": 339,
+      "text": "do for today. And then it's going to ask about evidence essentially like what do",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0177",
+      "start_seconds": 339,
+      "end_seconds": 341,
+      "text": "about evidence essentially like what do you want to be on this website? If you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0178",
+      "start_seconds": 341,
+      "end_seconds": 342,
+      "text": "you want to be on this website? If you have screenshots you can provide, if you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0179",
+      "start_seconds": 342,
+      "end_seconds": 343,
+      "text": "have screenshots you can provide, if you have actual numbers, that's great. If",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0180",
+      "start_seconds": 343,
+      "end_seconds": 345,
+      "text": "have actual numbers, that's great. If you don't have anything else, you can",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0181",
+      "start_seconds": 345,
+      "end_seconds": 347,
+      "text": "you don't have anything else, you can essentially tell it to make it all up.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0182",
+      "start_seconds": 347,
+      "end_seconds": 349,
+      "text": "essentially tell it to make it all up. So I just told it to create fake data",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0183",
+      "start_seconds": 349,
+      "end_seconds": 351,
+      "text": "So I just told it to create fake data for now and we can see what it comes",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0184",
+      "start_seconds": 351,
+      "end_seconds": 352,
+      "text": "for now and we can see what it comes back with and we can always edit it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0185",
+      "start_seconds": 352,
+      "end_seconds": 353,
+      "text": "back with and we can always edit it later. So after we answered those",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0186",
+      "start_seconds": 353,
+      "end_seconds": 355,
+      "text": "later. So after we answered those questions, impeccable then called on the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0187",
+      "start_seconds": 355,
+      "end_seconds": 358,
+      "text": "questions, impeccable then called on the Higsfield MCP to create those different",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0188",
+      "start_seconds": 358,
+      "end_seconds": 360,
+      "text": "Higsfield MCP to create those different worlds. Essentially those different",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0189",
+      "start_seconds": 360,
+      "end_seconds": 363,
+      "text": "worlds. Essentially those different design aesthetics for our web page and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0190",
+      "start_seconds": 363,
+      "end_seconds": 364,
+      "text": "design aesthetics for our web page and it's asking us which one we want to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0191",
+      "start_seconds": 364,
+      "end_seconds": 365,
+      "text": "it's asking us which one we want to choose. What it does is it brings it up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0192",
+      "start_seconds": 365,
+      "end_seconds": 367,
+      "text": "choose. What it does is it brings it up in local host so you can actually see",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0193",
+      "start_seconds": 367,
+      "end_seconds": 370,
+      "text": "in local host so you can actually see it. So it looks something like this. So",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0194",
+      "start_seconds": 370,
+      "end_seconds": 372,
+      "text": "it. So it looks something like this. So this was the first one that it came up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0195",
+      "start_seconds": 372,
+      "end_seconds": 374,
+      "text": "this was the first one that it came up with. This is essentially be the hero",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0196",
+      "start_seconds": 374,
+      "end_seconds": 376,
+      "text": "with. This is essentially be the hero section for Pathfinder. And then we see",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0197",
+      "start_seconds": 376,
+      "end_seconds": 378,
+      "text": "section for Pathfinder. And then we see all these other options. Again, this is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0198",
+      "start_seconds": 378,
+      "end_seconds": 379,
+      "text": "all these other options. Again, this is very reminiscent to what we did in the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0199",
+      "start_seconds": 379,
+      "end_seconds": 381,
+      "text": "very reminiscent to what we did in the last video. We're like, \"Hey, come up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0200",
+      "start_seconds": 381,
+      "end_seconds": 382,
+      "text": "last video. We're like, \"Hey, come up with the different options for us so we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0201",
+      "start_seconds": 382,
+      "end_seconds": 384,
+      "text": "with the different options for us so we can actually see it.\" So, we have this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0202",
+      "start_seconds": 384,
+      "end_seconds": 386,
+      "text": "can actually see it.\" So, we have this one, we have this one. And again, this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0203",
+      "start_seconds": 386,
+      "end_seconds": 388,
+      "text": "one, we have this one. And again, this is just like kind of like a highle",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0204",
+      "start_seconds": 388,
+      "end_seconds": 391,
+      "text": "is just like kind of like a highle sketch of what it would look like and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0205",
+      "start_seconds": 391,
+      "end_seconds": 393,
+      "text": "sketch of what it would look like and where you want to go. We have the option",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0206",
+      "start_seconds": 393,
+      "end_seconds": 395,
+      "text": "where you want to go. We have the option if we don't like these, we can reroll it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0207",
+      "start_seconds": 395,
+      "end_seconds": 397,
+      "text": "if we don't like these, we can reroll it down here on the right. We also can give",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0208",
+      "start_seconds": 397,
+      "end_seconds": 398,
+      "text": "down here on the right. We also can give it an optional steer. So, we could say",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0209",
+      "start_seconds": 398,
+      "end_seconds": 400,
+      "text": "it an optional steer. So, we could say like, \"Hey, I kind of like number three,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0210",
+      "start_seconds": 400,
+      "end_seconds": 402,
+      "text": "like, \"Hey, I kind of like number three, but let's do some more variations of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0211",
+      "start_seconds": 402,
+      "end_seconds": 404,
+      "text": "but let's do some more variations of that.\" add or something to that effect.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0212",
+      "start_seconds": 404,
+      "end_seconds": 406,
+      "text": "that.\" add or something to that effect. In this case, what we're doing of these,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0213",
+      "start_seconds": 406,
+      "end_seconds": 408,
+      "text": "In this case, what we're doing of these, I kind of like the first one it came up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0214",
+      "start_seconds": 408,
+      "end_seconds": 409,
+      "text": "I kind of like the first one it came up with. So, I'm just going to say build",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0215",
+      "start_seconds": 409,
+      "end_seconds": 412,
+      "text": "with. So, I'm just going to say build this. So, I just click this and that's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0216",
+      "start_seconds": 412,
+      "end_seconds": 413,
+      "text": "this. So, I just click this and that's going to get sent back to the terminal.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0217",
+      "start_seconds": 413,
+      "end_seconds": 414,
+      "text": "going to get sent back to the terminal. And so now, it's going to start building",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0218",
+      "start_seconds": 414,
+      "end_seconds": 416,
+      "text": "And so now, it's going to start building out the prototype of that landing page",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0219",
+      "start_seconds": 416,
+      "end_seconds": 418,
+      "text": "out the prototype of that landing page in that style we chose. And as part of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0220",
+      "start_seconds": 418,
+      "end_seconds": 420,
+      "text": "in that style we chose. And as part of that build process, it's then going to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0221",
+      "start_seconds": 420,
+      "end_seconds": 422,
+      "text": "that build process, it's then going to show us multiple variations of that",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0222",
+      "start_seconds": 422,
+      "end_seconds": 425,
+      "text": "show us multiple variations of that specific style. So, we have at the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0223",
+      "start_seconds": 425,
+      "end_seconds": 426,
+      "text": "specific style. So, we have at the beginning a bunch of different styles.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0224",
+      "start_seconds": 426,
+      "end_seconds": 427,
+      "text": "beginning a bunch of different styles. We choose one style and now we have",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0225",
+      "start_seconds": 427,
+      "end_seconds": 430,
+      "text": "We choose one style and now we have variations of that style. So it gives us",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0226",
+      "start_seconds": 430,
+      "end_seconds": 433,
+      "text": "variations of that style. So it gives us the constellation option. It gives us",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0227",
+      "start_seconds": 433,
+      "end_seconds": 436,
+      "text": "the constellation option. It gives us sort of the dossier split and then sort",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0228",
+      "start_seconds": 436,
+      "end_seconds": 438,
+      "text": "sort of the dossier split and then sort of the find the Y. Again, just like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0229",
+      "start_seconds": 438,
+      "end_seconds": 440,
+      "text": "of the find the Y. Again, just like before, if we want to give it an",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0230",
+      "start_seconds": 440,
+      "end_seconds": 441,
+      "text": "before, if we want to give it an optional steer, I have sort of a prompt",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0231",
+      "start_seconds": 441,
+      "end_seconds": 443,
+      "text": "optional steer, I have sort of a prompt window down here that I can point it to.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0232",
+      "start_seconds": 443,
+      "end_seconds": 447,
+      "text": "window down here that I can point it to. But for this, I kind of like um I think",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0233",
+      "start_seconds": 447,
+      "end_seconds": 448,
+      "text": "But for this, I kind of like um I think what we'll do is we'll go with number",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0234",
+      "start_seconds": 448,
+      "end_seconds": 450,
+      "text": "what we'll do is we'll go with number three and we'll say build this. You can",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0235",
+      "start_seconds": 450,
+      "end_seconds": 451,
+      "text": "three and we'll say build this. You can see here in the terminal, it got passed.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0236",
+      "start_seconds": 451,
+      "end_seconds": 453,
+      "text": "see here in the terminal, it got passed. It says timeline approved. Recording the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0237",
+      "start_seconds": 453,
+      "end_seconds": 455,
+      "text": "It says timeline approved. Recording the approval in the surface brief, then",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0238",
+      "start_seconds": 455,
+      "end_seconds": 457,
+      "text": "approval in the surface brief, then loading the craft floor and building.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0239",
+      "start_seconds": 457,
+      "end_seconds": 458,
+      "text": "loading the craft floor and building. And this is what I like about",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0240",
+      "start_seconds": 458,
+      "end_seconds": 459,
+      "text": "And this is what I like about impeccable, the fact that it's very",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0241",
+      "start_seconds": 459,
+      "end_seconds": 461,
+      "text": "impeccable, the fact that it's very visual in terms of how we make the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0242",
+      "start_seconds": 461,
+      "end_seconds": 462,
+      "text": "visual in terms of how we make the decisions. And at every step of the way,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0243",
+      "start_seconds": 462,
+      "end_seconds": 464,
+      "text": "decisions. And at every step of the way, we have the option to steer it. It's not",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0244",
+      "start_seconds": 464,
+      "end_seconds": 466,
+      "text": "we have the option to steer it. It's not an extremely prescriptive skill. And",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0245",
+      "start_seconds": 466,
+      "end_seconds": 468,
+      "text": "an extremely prescriptive skill. And you've seen those where it's like, okay,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0246",
+      "start_seconds": 468,
+      "end_seconds": 470,
+      "text": "you've seen those where it's like, okay, here's random skill from random GitHub",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0247",
+      "start_seconds": 470,
+      "end_seconds": 472,
+      "text": "here's random skill from random GitHub repo. The website it makes is really",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0248",
+      "start_seconds": 472,
+      "end_seconds": 474,
+      "text": "repo. The website it makes is really cool looking, but that's like the only",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0249",
+      "start_seconds": 474,
+      "end_seconds": 476,
+      "text": "cool looking, but that's like the only type of website it can create. It's kind",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0250",
+      "start_seconds": 476,
+      "end_seconds": 477,
+      "text": "type of website it can create. It's kind of like a one-trick pony. Things like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0251",
+      "start_seconds": 477,
+      "end_seconds": 481,
+      "text": "of like a one-trick pony. Things like Impeccable are very general, which means",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0252",
+      "start_seconds": 481,
+      "end_seconds": 483,
+      "text": "Impeccable are very general, which means I think it has a lower floor. like these",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0253",
+      "start_seconds": 483,
+      "end_seconds": 485,
+      "text": "I think it has a lower floor. like these very sort of onetrick pony skills will",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0254",
+      "start_seconds": 485,
+      "end_seconds": 487,
+      "text": "very sort of onetrick pony skills will always give you a pretty cool website",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0255",
+      "start_seconds": 487,
+      "end_seconds": 489,
+      "text": "always give you a pretty cool website but it's just that kind impeccable a lot",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0256",
+      "start_seconds": 489,
+      "end_seconds": 493,
+      "text": "but it's just that kind impeccable a lot more room for error on your part but we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0257",
+      "start_seconds": 493,
+      "end_seconds": 494,
+      "text": "more room for error on your part but we can make it much more customized and in",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0258",
+      "start_seconds": 494,
+      "end_seconds": 496,
+      "text": "can make it much more customized and in the end if we actually work on it I",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0259",
+      "start_seconds": 496,
+      "end_seconds": 497,
+      "text": "the end if we actually work on it I think you end up getting a better",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0260",
+      "start_seconds": 497,
+      "end_seconds": 499,
+      "text": "think you end up getting a better product so Impeccable actually finished",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0261",
+      "start_seconds": 499,
+      "end_seconds": 501,
+      "text": "product so Impeccable actually finished creating the website and what it does at",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0262",
+      "start_seconds": 501,
+      "end_seconds": 502,
+      "text": "creating the website and what it does at the end of the first iteration is it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0263",
+      "start_seconds": 502,
+      "end_seconds": 504,
+      "text": "the end of the first iteration is it launches a sub agent called the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0264",
+      "start_seconds": 504,
+      "end_seconds": 507,
+      "text": "launches a sub agent called the impeccable finish reviewer so it's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0265",
+      "start_seconds": 507,
+      "end_seconds": 508,
+      "text": "impeccable finish reviewer so it's essentially checking everything to make",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0266",
+      "start_seconds": 508,
+      "end_seconds": 511,
+      "text": "essentially checking everything to make sure in the process of building this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0267",
+      "start_seconds": 511,
+      "end_seconds": 513,
+      "text": "sure in the process of building this thing we didn't actually, you know, sort",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0268",
+      "start_seconds": 513,
+      "end_seconds": 515,
+      "text": "thing we didn't actually, you know, sort of trip over ourselves and add some",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0269",
+      "start_seconds": 515,
+      "end_seconds": 517,
+      "text": "of trip over ourselves and add some quote unquote AI slot pattern. So, it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0270",
+      "start_seconds": 517,
+      "end_seconds": 518,
+      "text": "quote unquote AI slot pattern. So, it does an additional run through with a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0271",
+      "start_seconds": 518,
+      "end_seconds": 520,
+      "text": "does an additional run through with a separate sub agent that it's fresh",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0272",
+      "start_seconds": 520,
+      "end_seconds": 522,
+      "text": "separate sub agent that it's fresh context window. So, it's supposed to be",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0273",
+      "start_seconds": 522,
+      "end_seconds": 523,
+      "text": "context window. So, it's supposed to be a second set of eyes to make sure what",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0274",
+      "start_seconds": 523,
+      "end_seconds": 525,
+      "text": "a second set of eyes to make sure what we set out to build is what we actually",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0275",
+      "start_seconds": 525,
+      "end_seconds": 527,
+      "text": "we set out to build is what we actually build. So, here's the website it built",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0276",
+      "start_seconds": 527,
+      "end_seconds": 530,
+      "text": "build. So, here's the website it built us. And remember, we gave impeccable",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0277",
+      "start_seconds": 530,
+      "end_seconds": 531,
+      "text": "us. And remember, we gave impeccable very little information. I just said,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0278",
+      "start_seconds": 531,
+      "end_seconds": 532,
+      "text": "very little information. I just said, \"Hey, I want it to be Pathfinder.\" I",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0279",
+      "start_seconds": 532,
+      "end_seconds": 534,
+      "text": "\"Hey, I want it to be Pathfinder.\" I gave it no reference images. I really",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0280",
+      "start_seconds": 534,
+      "end_seconds": 536,
+      "text": "gave it no reference images. I really even didn't even give it a CTA. I just",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0281",
+      "start_seconds": 536,
+      "end_seconds": 538,
+      "text": "even didn't even give it a CTA. I just said, \"This is a fake AI analytics",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0282",
+      "start_seconds": 538,
+      "end_seconds": 540,
+      "text": "said, \"This is a fake AI analytics company. Create some information for",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0283",
+      "start_seconds": 540,
+      "end_seconds": 543,
+      "text": "company. Create some information for it.\" And this is what we got. And if you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0284",
+      "start_seconds": 543,
+      "end_seconds": 544,
+      "text": "it.\" And this is what we got. And if you compare this to what we would have got",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0285",
+      "start_seconds": 544,
+      "end_seconds": 545,
+      "text": "compare this to what we would have got with the same sort of prompt if we just",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0286",
+      "start_seconds": 545,
+      "end_seconds": 547,
+      "text": "with the same sort of prompt if we just use like the front end design skill, the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0287",
+      "start_seconds": 547,
+      "end_seconds": 550,
+      "text": "use like the front end design skill, the outputs are wildly different. Mainly,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0288",
+      "start_seconds": 550,
+      "end_seconds": 551,
+      "text": "outputs are wildly different. Mainly, this isn't the kind of generic output",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0289",
+      "start_seconds": 551,
+      "end_seconds": 555,
+      "text": "this isn't the kind of generic output you would see. Now, is this great? Is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0290",
+      "start_seconds": 555,
+      "end_seconds": 556,
+      "text": "you would see. Now, is this great? Is this exactly what we want on a oneshot?",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0291",
+      "start_seconds": 556,
+      "end_seconds": 558,
+      "text": "this exactly what we want on a oneshot? Probably not. But I think when we do any",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0292",
+      "start_seconds": 558,
+      "end_seconds": 560,
+      "text": "Probably not. But I think when we do any sort of creative work with AI and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0293",
+      "start_seconds": 560,
+      "end_seconds": 561,
+      "text": "sort of creative work with AI and Claude, I think you really have to get",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0294",
+      "start_seconds": 561,
+      "end_seconds": 563,
+      "text": "Claude, I think you really have to get away from the idea of like this must be",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0295",
+      "start_seconds": 563,
+      "end_seconds": 565,
+      "text": "away from the idea of like this must be a oneshot thing. It always is an",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0296",
+      "start_seconds": 565,
+      "end_seconds": 567,
+      "text": "a oneshot thing. It always is an iterative process, which is why the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0297",
+      "start_seconds": 567,
+      "end_seconds": 569,
+      "text": "iterative process, which is why the impeccable live feature is so nice. So",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0298",
+      "start_seconds": 569,
+      "end_seconds": 571,
+      "text": "impeccable live feature is so nice. So to use the impeccable live feature,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0299",
+      "start_seconds": 571,
+      "end_seconds": 573,
+      "text": "to use the impeccable live feature, we're just going to do impeccable",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0300",
+      "start_seconds": 573,
+      "end_seconds": 575,
+      "text": "we're just going to do impeccable forward slash and then do live and it's",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0301",
+      "start_seconds": 575,
+      "end_seconds": 577,
+      "text": "forward slash and then do live and it's going to bring it up for us. Now once we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0302",
+      "start_seconds": 577,
+      "end_seconds": 578,
+      "text": "going to bring it up for us. Now once we do that, it'll bring the website back up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0303",
+      "start_seconds": 578,
+      "end_seconds": 580,
+      "text": "do that, it'll bring the website back up and we'll have this little bar down",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0304",
+      "start_seconds": 580,
+      "end_seconds": 581,
+      "text": "and we'll have this little bar down here. Now what you're going to want to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0305",
+      "start_seconds": 581,
+      "end_seconds": 584,
+      "text": "here. Now what you're going to want to use mostly is the pick element thing",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0306",
+      "start_seconds": 584,
+      "end_seconds": 585,
+      "text": "use mostly is the pick element thing which we see right down here. So you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0307",
+      "start_seconds": 585,
+      "end_seconds": 587,
+      "text": "which we see right down here. So you know I have insert but I can click pick",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0308",
+      "start_seconds": 587,
+      "end_seconds": 589,
+      "text": "know I have insert but I can click pick and I can see all the different",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0309",
+      "start_seconds": 589,
+      "end_seconds": 590,
+      "text": "and I can see all the different components. So let's say I want to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0310",
+      "start_seconds": 590,
+      "end_seconds": 592,
+      "text": "components. So let's say I want to adjust this. I click on it and I have a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0311",
+      "start_seconds": 592,
+      "end_seconds": 595,
+      "text": "adjust this. I click on it and I have a prompt window. Now I can add anything I",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0312",
+      "start_seconds": 595,
+      "end_seconds": 596,
+      "text": "prompt window. Now I can add anything I want here and I can see how many",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0313",
+      "start_seconds": 596,
+      "end_seconds": 598,
+      "text": "want here and I can see how many variations I want. You can have one",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0314",
+      "start_seconds": 598,
+      "end_seconds": 600,
+      "text": "variations I want. You can have one variation, two variations all the way up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0315",
+      "start_seconds": 600,
+      "end_seconds": 602,
+      "text": "variation, two variations all the way up to four. You can also do a microphone.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0316",
+      "start_seconds": 602,
+      "end_seconds": 604,
+      "text": "to four. You can also do a microphone. You can also choose exactly what it is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0317",
+      "start_seconds": 604,
+      "end_seconds": 605,
+      "text": "You can also choose exactly what it is you want to do. So let's say if I wanted",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0318",
+      "start_seconds": 605,
+      "end_seconds": 607,
+      "text": "you want to do. So let's say if I wanted to make it bolder or quieter or do",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0319",
+      "start_seconds": 607,
+      "end_seconds": 610,
+      "text": "to make it bolder or quieter or do polish or type set those specific sort",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0320",
+      "start_seconds": 610,
+      "end_seconds": 612,
+      "text": "polish or type set those specific sort of domains, we can specify that as well.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0321",
+      "start_seconds": 612,
+      "end_seconds": 614,
+      "text": "of domains, we can specify that as well. Now remember these are all related to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0322",
+      "start_seconds": 614,
+      "end_seconds": 616,
+      "text": "Now remember these are all related to like the impeccable commands. And if I",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0323",
+      "start_seconds": 616,
+      "end_seconds": 618,
+      "text": "like the impeccable commands. And if I go back to the impeccable website, I can",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0324",
+      "start_seconds": 618,
+      "end_seconds": 621,
+      "text": "go back to the impeccable website, I can see them all here, right? You know, uh",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0325",
+      "start_seconds": 621,
+      "end_seconds": 623,
+      "text": "see them all here, right? You know, uh quieter, overdrive, characterize, you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0326",
+      "start_seconds": 623,
+      "end_seconds": 625,
+      "text": "quieter, overdrive, characterize, you know, all these sort of things. Okay, so",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0327",
+      "start_seconds": 625,
+      "end_seconds": 626,
+      "text": "know, all these sort of things. Okay, so if you're like, uh, what exactly is it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0328",
+      "start_seconds": 626,
+      "end_seconds": 628,
+      "text": "if you're like, uh, what exactly is it asking me? What does this do? Just check",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0329",
+      "start_seconds": 628,
+      "end_seconds": 629,
+      "text": "asking me? What does this do? Just check here. So, let's say I just wanted to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0330",
+      "start_seconds": 629,
+      "end_seconds": 631,
+      "text": "here. So, let's say I just wanted to make this bolder, right? Uh, I just want",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0331",
+      "start_seconds": 631,
+      "end_seconds": 633,
+      "text": "make this bolder, right? Uh, I just want to make a bolder. I don't even have to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0332",
+      "start_seconds": 633,
+      "end_seconds": 634,
+      "text": "to make a bolder. I don't even have to give it a prompt, and I want three",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0333",
+      "start_seconds": 634,
+      "end_seconds": 636,
+      "text": "give it a prompt, and I want three different variations. I'm just going to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0334",
+      "start_seconds": 636,
+      "end_seconds": 638,
+      "text": "different variations. I'm just going to click that, hit enter, and it's going to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0335",
+      "start_seconds": 638,
+      "end_seconds": 640,
+      "text": "click that, hit enter, and it's going to start generating the variants. And if",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0336",
+      "start_seconds": 640,
+      "end_seconds": 641,
+      "text": "start generating the variants. And if you hop back into the terminal, you will",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0337",
+      "start_seconds": 641,
+      "end_seconds": 644,
+      "text": "you hop back into the terminal, you will see that command sent there because the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0338",
+      "start_seconds": 644,
+      "end_seconds": 646,
+      "text": "see that command sent there because the session you're in is always going to be",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0339",
+      "start_seconds": 646,
+      "end_seconds": 648,
+      "text": "session you're in is always going to be pulling for live mode events. Now, while",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0340",
+      "start_seconds": 648,
+      "end_seconds": 649,
+      "text": "pulling for live mode events. Now, while that's working, let's talk about what",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0341",
+      "start_seconds": 649,
+      "end_seconds": 651,
+      "text": "that's working, let's talk about what else is going on in here. So, we have",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0342",
+      "start_seconds": 651,
+      "end_seconds": 654,
+      "text": "else is going on in here. So, we have the detect button that will detect",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0343",
+      "start_seconds": 654,
+      "end_seconds": 655,
+      "text": "the detect button that will detect essentially any of those AI slop",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0344",
+      "start_seconds": 655,
+      "end_seconds": 657,
+      "text": "essentially any of those AI slop antiatterns. If you're doing this from",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0345",
+      "start_seconds": 657,
+      "end_seconds": 658,
+      "text": "antiatterns. If you're doing this from scratch, I kind of already did that in",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0346",
+      "start_seconds": 658,
+      "end_seconds": 660,
+      "text": "scratch, I kind of already did that in the creation process. This is more for",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0347",
+      "start_seconds": 660,
+      "end_seconds": 662,
+      "text": "the creation process. This is more for if you're using Impeccable Live on a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0348",
+      "start_seconds": 662,
+      "end_seconds": 664,
+      "text": "if you're using Impeccable Live on a website you've already generated. We",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0349",
+      "start_seconds": 664,
+      "end_seconds": 667,
+      "text": "website you've already generated. We have the design MD. I'll move this over",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0350",
+      "start_seconds": 667,
+      "end_seconds": 669,
+      "text": "have the design MD. I'll move this over a little bit. And this is our entire",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0351",
+      "start_seconds": 669,
+      "end_seconds": 671,
+      "text": "a little bit. And this is our entire design file. All of our colors,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0352",
+      "start_seconds": 671,
+      "end_seconds": 673,
+      "text": "design file. All of our colors, components, what we're doing for our",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0353",
+      "start_seconds": 673,
+      "end_seconds": 676,
+      "text": "components, what we're doing for our buttons. Again, very similar to uh",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0354",
+      "start_seconds": 676,
+      "end_seconds": 677,
+      "text": "buttons. Again, very similar to uh Google Stitch and also what you see",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0355",
+      "start_seconds": 677,
+      "end_seconds": 679,
+      "text": "Google Stitch and also what you see these days inside of Flaw Design. We can",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0356",
+      "start_seconds": 679,
+      "end_seconds": 682,
+      "text": "these days inside of Flaw Design. We can also see the actual raw file if we want",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0357",
+      "start_seconds": 682,
+      "end_seconds": 683,
+      "text": "also see the actual raw file if we want that as well. We also have the ability",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0358",
+      "start_seconds": 683,
+      "end_seconds": 685,
+      "text": "that as well. We also have the ability to insert things. And we have a prompt",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0359",
+      "start_seconds": 685,
+      "end_seconds": 687,
+      "text": "to insert things. And we have a prompt window here as well, which is you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0360",
+      "start_seconds": 687,
+      "end_seconds": 688,
+      "text": "window here as well, which is you steering the page. So, this is pretty",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0361",
+      "start_seconds": 688,
+      "end_seconds": 690,
+      "text": "steering the page. So, this is pretty much exactly the same as if you had the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0362",
+      "start_seconds": 690,
+      "end_seconds": 691,
+      "text": "much exactly the same as if you had the terminal up and you're saying, \"Hey,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0363",
+      "start_seconds": 691,
+      "end_seconds": 693,
+      "text": "terminal up and you're saying, \"Hey, let's do X, Y, and Z a little bit",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0364",
+      "start_seconds": 693,
+      "end_seconds": 694,
+      "text": "let's do X, Y, and Z a little bit differently versus trying to pick a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0365",
+      "start_seconds": 694,
+      "end_seconds": 696,
+      "text": "differently versus trying to pick a specific component and doing sort of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0366",
+      "start_seconds": 696,
+      "end_seconds": 697,
+      "text": "specific component and doing sort of these three variants that I just showed",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0367",
+      "start_seconds": 697,
+      "end_seconds": 699,
+      "text": "these three variants that I just showed you.\" And speaking of those three",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0368",
+      "start_seconds": 699,
+      "end_seconds": 700,
+      "text": "you.\" And speaking of those three variants, here's what it gave us when we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0369",
+      "start_seconds": 700,
+      "end_seconds": 703,
+      "text": "variants, here's what it gave us when we told it to make it bolder. So, this is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0370",
+      "start_seconds": 703,
+      "end_seconds": 705,
+      "text": "told it to make it bolder. So, this is variation one.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0371",
+      "start_seconds": 705,
+      "end_seconds": 707,
+      "text": "variation one. Variation two, we kind of added just",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0372",
+      "start_seconds": 707,
+      "end_seconds": 709,
+      "text": "Variation two, we kind of added just like the red line. And then we have",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0373",
+      "start_seconds": 709,
+      "end_seconds": 711,
+      "text": "like the red line. And then we have variation three. But we have the ability",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0374",
+      "start_seconds": 711,
+      "end_seconds": 713,
+      "text": "variation three. But we have the ability to tune these things as well. So I can",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0375",
+      "start_seconds": 713,
+      "end_seconds": 716,
+      "text": "to tune these things as well. So I can kind of mess with the tilt. Do I want",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0376",
+      "start_seconds": 716,
+      "end_seconds": 718,
+      "text": "kind of mess with the tilt. Do I want the stamp border on and off? So not only",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0377",
+      "start_seconds": 718,
+      "end_seconds": 721,
+      "text": "the stamp border on and off? So not only do I have three variations, I have",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0378",
+      "start_seconds": 721,
+      "end_seconds": 724,
+      "text": "do I have three variations, I have variations of each variation, which I",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0379",
+      "start_seconds": 724,
+      "end_seconds": 725,
+      "text": "variations of each variation, which I honestly love versus having to prompt",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0380",
+      "start_seconds": 725,
+      "end_seconds": 727,
+      "text": "honestly love versus having to prompt Claude Code to create some sort of like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0381",
+      "start_seconds": 727,
+      "end_seconds": 729,
+      "text": "Claude Code to create some sort of like micro tweak section on its own. And once",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0382",
+      "start_seconds": 729,
+      "end_seconds": 731,
+      "text": "micro tweak section on its own. And once you like it, all you have to do is hit",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0383",
+      "start_seconds": 731,
+      "end_seconds": 732,
+      "text": "you like it, all you have to do is hit accept. And again, what is that going to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0384",
+      "start_seconds": 732,
+      "end_seconds": 733,
+      "text": "accept. And again, what is that going to do? It's just going to send that",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0385",
+      "start_seconds": 733,
+      "end_seconds": 735,
+      "text": "do? It's just going to send that information back to the terminal. Now,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0386",
+      "start_seconds": 735,
+      "end_seconds": 737,
+      "text": "information back to the terminal. Now, at this point, all that is left is to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0387",
+      "start_seconds": 737,
+      "end_seconds": 740,
+      "text": "at this point, all that is left is to iterate, iterate, iterate. Now, we don't",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0388",
+      "start_seconds": 740,
+      "end_seconds": 741,
+      "text": "iterate, iterate, iterate. Now, we don't have to do everything inside of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0389",
+      "start_seconds": 741,
+      "end_seconds": 743,
+      "text": "have to do everything inside of Impeccable Live, even though that's what",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0390",
+      "start_seconds": 743,
+      "end_seconds": 744,
+      "text": "Impeccable Live, even though that's what I've been showcasing. The use case for",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0391",
+      "start_seconds": 744,
+      "end_seconds": 746,
+      "text": "I've been showcasing. The use case for Impeccable Live is what you have seen,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0392",
+      "start_seconds": 746,
+      "end_seconds": 748,
+      "text": "Impeccable Live is what you have seen, which is for micro adjustments and",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0393",
+      "start_seconds": 748,
+      "end_seconds": 751,
+      "text": "which is for micro adjustments and variations in specific components. If we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0394",
+      "start_seconds": 751,
+      "end_seconds": 752,
+      "text": "variations in specific components. If we want to think big picture, we want big",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0395",
+      "start_seconds": 752,
+      "end_seconds": 755,
+      "text": "want to think big picture, we want big big layout changes or just completely go",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0396",
+      "start_seconds": 755,
+      "end_seconds": 756,
+      "text": "big layout changes or just completely go in another direction, we're going to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0397",
+      "start_seconds": 756,
+      "end_seconds": 758,
+      "text": "in another direction, we're going to want to use the terminal for that. So,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0398",
+      "start_seconds": 758,
+      "end_seconds": 759,
+      "text": "want to use the terminal for that. So, if that's the case, let's say I didn't",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0399",
+      "start_seconds": 759,
+      "end_seconds": 761,
+      "text": "if that's the case, let's say I didn't like this design at all. I was like,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0400",
+      "start_seconds": 761,
+      "end_seconds": 762,
+      "text": "like this design at all. I was like, hey, like we did the variations, turns",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0401",
+      "start_seconds": 762,
+      "end_seconds": 764,
+      "text": "hey, like we did the variations, turns out this just isn't what I like. Well,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0402",
+      "start_seconds": 764,
+      "end_seconds": 766,
+      "text": "out this just isn't what I like. Well, let's just do what we would normally do",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0403",
+      "start_seconds": 766,
+      "end_seconds": 767,
+      "text": "let's just do what we would normally do inside of a design process and feed it",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0404",
+      "start_seconds": 767,
+      "end_seconds": 769,
+      "text": "inside of a design process and feed it some different references. So, this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0405",
+      "start_seconds": 769,
+      "end_seconds": 771,
+      "text": "some different references. So, this right here is sort of my inspiration",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0406",
+      "start_seconds": 771,
+      "end_seconds": 773,
+      "text": "right here is sort of my inspiration library of all these different sort of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0407",
+      "start_seconds": 773,
+      "end_seconds": 775,
+      "text": "library of all these different sort of hero pages and designs that I've liked",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0408",
+      "start_seconds": 775,
+      "end_seconds": 778,
+      "text": "hero pages and designs that I've liked and I've seen across the web. So, if I",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0409",
+      "start_seconds": 778,
+      "end_seconds": 781,
+      "text": "and I've seen across the web. So, if I wanted to now have a new variation that",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0410",
+      "start_seconds": 781,
+      "end_seconds": 782,
+      "text": "wanted to now have a new variation that looks something like this, well, what",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0411",
+      "start_seconds": 782,
+      "end_seconds": 783,
+      "text": "looks something like this, well, what I'm going to do is I'm just going to",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0412",
+      "start_seconds": 783,
+      "end_seconds": 786,
+      "text": "I'm going to do is I'm just going to point Claude code at this library or",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0413",
+      "start_seconds": 786,
+      "end_seconds": 787,
+      "text": "point Claude code at this library or drop in the screenshot and say, hey,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0414",
+      "start_seconds": 787,
+      "end_seconds": 789,
+      "text": "drop in the screenshot and say, hey, let's try a new variation, something",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0415",
+      "start_seconds": 789,
+      "end_seconds": 790,
+      "text": "let's try a new variation, something that looks like this. So, let's say we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0416",
+      "start_seconds": 790,
+      "end_seconds": 794,
+      "text": "that looks like this. So, let's say we instead wanted to go with like this ASC2",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0417",
+      "start_seconds": 794,
+      "end_seconds": 796,
+      "text": "instead wanted to go with like this ASC2 sort of like web section, this like kind",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0418",
+      "start_seconds": 796,
+      "end_seconds": 798,
+      "text": "sort of like web section, this like kind of vibe we're going for. So I can just",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0419",
+      "start_seconds": 798,
+      "end_seconds": 800,
+      "text": "of vibe we're going for. So I can just copy this image. I'm going to paste this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0420",
+      "start_seconds": 800,
+      "end_seconds": 801,
+      "text": "copy this image. I'm going to paste this in. Now I'm just going to give it a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0421",
+      "start_seconds": 801,
+      "end_seconds": 804,
+      "text": "in. Now I'm just going to give it a prompt like so. So take a look at this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0422",
+      "start_seconds": 804,
+      "end_seconds": 807,
+      "text": "prompt like so. So take a look at this reference image I gave you. This is also",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0423",
+      "start_seconds": 807,
+      "end_seconds": 809,
+      "text": "reference image I gave you. This is also inside of my taste vault. This is",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0424",
+      "start_seconds": 809,
+      "end_seconds": 812,
+      "text": "inside of my taste vault. This is currently running on the 4610",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0425",
+      "start_seconds": 812,
+      "end_seconds": 814,
+      "text": "currently running on the 4610 local host port. I kind of want to go in",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0426",
+      "start_seconds": 814,
+      "end_seconds": 818,
+      "text": "local host port. I kind of want to go in a new direction with sort of the landing",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0427",
+      "start_seconds": 818,
+      "end_seconds": 819,
+      "text": "a new direction with sort of the landing page we've created. I want to go with",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0428",
+      "start_seconds": 819,
+      "end_seconds": 823,
+      "text": "page we've created. I want to go with this like ASC2 type style. Remember we",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0429",
+      "start_seconds": 823,
+      "end_seconds": 824,
+      "text": "this like ASC2 type style. Remember we still have access to the Higfield MCP.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0430",
+      "start_seconds": 824,
+      "end_seconds": 826,
+      "text": "still have access to the Higfield MCP. So if we need to create assets for the",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0431",
+      "start_seconds": 826,
+      "end_seconds": 828,
+      "text": "So if we need to create assets for the background hero page, we can do that as",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0432",
+      "start_seconds": 828,
+      "end_seconds": 830,
+      "text": "background hero page, we can do that as well. But go ahead and create a",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0433",
+      "start_seconds": 830,
+      "end_seconds": 831,
+      "text": "well. But go ahead and create a variation like that. And so again, this",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0434",
+      "start_seconds": 831,
+      "end_seconds": 833,
+      "text": "variation like that. And so again, this is a huge sweeping change. Not something",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0435",
+      "start_seconds": 833,
+      "end_seconds": 835,
+      "text": "is a huge sweeping change. Not something we would necessarily use the live thing",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0436",
+      "start_seconds": 835,
+      "end_seconds": 837,
+      "text": "we would necessarily use the live thing for. And here's the second version of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0437",
+      "start_seconds": 837,
+      "end_seconds": 838,
+      "text": "for. And here's the second version of our website. Again, a huge departure",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0438",
+      "start_seconds": 838,
+      "end_seconds": 840,
+      "text": "our website. Again, a huge departure from what we saw before. Definitely has",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0439",
+      "start_seconds": 840,
+      "end_seconds": 842,
+      "text": "from what we saw before. Definitely has an ASC2 theme based on our reference,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0440",
+      "start_seconds": 842,
+      "end_seconds": 845,
+      "text": "an ASC2 theme based on our reference, but this is still an impeccable based",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0441",
+      "start_seconds": 845,
+      "end_seconds": 846,
+      "text": "but this is still an impeccable based product. It ran the impeccable reviewer,",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0442",
+      "start_seconds": 846,
+      "end_seconds": 848,
+      "text": "product. It ran the impeccable reviewer, made sure there wasn't slop, and so",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0443",
+      "start_seconds": 848,
+      "end_seconds": 849,
+      "text": "made sure there wasn't slop, and so we're able to kind of get the best of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0444",
+      "start_seconds": 849,
+      "end_seconds": 851,
+      "text": "we're able to kind of get the best of both worlds in this case. And just like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0445",
+      "start_seconds": 851,
+      "end_seconds": 853,
+      "text": "both worlds in this case. And just like you saw before, we could again bring up",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0446",
+      "start_seconds": 853,
+      "end_seconds": 855,
+      "text": "you saw before, we could again bring up impeccable live. We could start doing",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0447",
+      "start_seconds": 855,
+      "end_seconds": 856,
+      "text": "impeccable live. We could start doing things. I think something that would",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0448",
+      "start_seconds": 856,
+      "end_seconds": 858,
+      "text": "things. I think something that would look cool is if we ran essentially like",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0449",
+      "start_seconds": 858,
+      "end_seconds": 860,
+      "text": "look cool is if we ran essentially like the animate um thing on each one of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0450",
+      "start_seconds": 860,
+      "end_seconds": 862,
+      "text": "the animate um thing on each one of these sections to give it a little bit",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0451",
+      "start_seconds": 862,
+      "end_seconds": 864,
+      "text": "these sections to give it a little bit little bit of movement so it isn't so",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0452",
+      "start_seconds": 864,
+      "end_seconds": 866,
+      "text": "little bit of movement so it isn't so static. But this is kind of how you want",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0453",
+      "start_seconds": 866,
+      "end_seconds": 868,
+      "text": "static. But this is kind of how you want to approach it. Big picture, the lion",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0454",
+      "start_seconds": 868,
+      "end_seconds": 871,
+      "text": "to approach it. Big picture, the lion claw code, small picture, really start",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0455",
+      "start_seconds": 871,
+      "end_seconds": 873,
+      "text": "claw code, small picture, really start knocking out stuff with impeccable. And",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0456",
+      "start_seconds": 873,
+      "end_seconds": 875,
+      "text": "knocking out stuff with impeccable. And actually, now that I look at this, there",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0457",
+      "start_seconds": 875,
+      "end_seconds": 876,
+      "text": "actually, now that I look at this, there is some motion and some of the numbers",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0458",
+      "start_seconds": 876,
+      "end_seconds": 878,
+      "text": "is some motion and some of the numbers coming in and out on this hero if you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0459",
+      "start_seconds": 878,
+      "end_seconds": 880,
+      "text": "coming in and out on this hero if you look closely. So, that's where I'm going",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0460",
+      "start_seconds": 880,
+      "end_seconds": 882,
+      "text": "look closely. So, that's where I'm going to leave you guys for today. Impeccable",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0461",
+      "start_seconds": 882,
+      "end_seconds": 884,
+      "text": "to leave you guys for today. Impeccable is a great tool in your toolbox for any",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0462",
+      "start_seconds": 884,
+      "end_seconds": 886,
+      "text": "is a great tool in your toolbox for any sort of front-end design work, and as",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0463",
+      "start_seconds": 886,
+      "end_seconds": 888,
+      "text": "sort of front-end design work, and as you saw, you can actually get pretty far",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0464",
+      "start_seconds": 888,
+      "end_seconds": 890,
+      "text": "you saw, you can actually get pretty far if you stay 100% within the impeccable",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0465",
+      "start_seconds": 890,
+      "end_seconds": 892,
+      "text": "if you stay 100% within the impeccable ecosystem. I think the best use case for",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0466",
+      "start_seconds": 892,
+      "end_seconds": 895,
+      "text": "ecosystem. I think the best use case for it is a more, you know, sort of",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0467",
+      "start_seconds": 895,
+      "end_seconds": 897,
+      "text": "it is a more, you know, sort of wide-ranging design approach that brings",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0468",
+      "start_seconds": 897,
+      "end_seconds": 899,
+      "text": "wide-ranging design approach that brings in outside sources like references that",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0469",
+      "start_seconds": 899,
+      "end_seconds": 901,
+      "text": "in outside sources like references that we saw at the end. And that whole sort",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0470",
+      "start_seconds": 901,
+      "end_seconds": 903,
+      "text": "we saw at the end. And that whole sort of workflow is what I detailed, you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0471",
+      "start_seconds": 903,
+      "end_seconds": 905,
+      "text": "of workflow is what I detailed, you know, step by step in my last video",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0472",
+      "start_seconds": 905,
+      "end_seconds": 908,
+      "text": "know, step by step in my last video about how to sort of defeat AI slop. But",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0473",
+      "start_seconds": 908,
+      "end_seconds": 910,
+      "text": "about how to sort of defeat AI slop. But I think it was nice to sort of do a deep",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0474",
+      "start_seconds": 910,
+      "end_seconds": 911,
+      "text": "I think it was nice to sort of do a deep dive on what I think is the best front",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0475",
+      "start_seconds": 911,
+      "end_seconds": 913,
+      "text": "dive on what I think is the best front end design skill in the game right now.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0476",
+      "start_seconds": 913,
+      "end_seconds": 915,
+      "text": "end design skill in the game right now. So, as always, let me know what you",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0477",
+      "start_seconds": 915,
+      "end_seconds": 917,
+      "text": "So, as always, let me know what you thought. Make sure to check out Chase AI",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0478",
+      "start_seconds": 917,
+      "end_seconds": 918,
+      "text": "thought. Make sure to check out Chase AI Plus if you want to get your hands on my",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0479",
+      "start_seconds": 918,
+      "end_seconds": 920,
+      "text": "Plus if you want to get your hands on my Claude Code Masterass. It's actually",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0480",
+      "start_seconds": 920,
+      "end_seconds": 922,
+      "text": "Claude Code Masterass. It's actually going to have a huge update coming out",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0481",
+      "start_seconds": 922,
+      "end_seconds": 924,
+      "text": "going to have a huge update coming out this week, which is exciting. And other",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-0482",
+      "start_seconds": 924,
+      "end_seconds": null,
+      "text": "this week, which is exciting. And other than that, I'll see you",
+      "source_id": "source-transcript"
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-0001",
+      "timestamp_seconds": 0,
+      "path": "watch/frames/frame_0001.jpg",
+      "sha256": "8619545f1afcd7e39ecd621f241996601eb6d61c08d67d03014b524026229219",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0002",
+      "timestamp_seconds": 21,
+      "path": "watch/frames/frame_0002.jpg",
+      "sha256": "211420d9087d9303bb8405debd1ad7ad8f563ad842b6f979d0f9d8671b9d3ff9",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0003",
+      "timestamp_seconds": 41,
+      "path": "watch/frames/frame_0003.jpg",
+      "sha256": "46002eb670ab61e59a209061b4154e9062a8000328e10195d518aadbf3206299",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0004",
+      "timestamp_seconds": 60,
+      "path": "watch/frames/frame_0004.jpg",
+      "sha256": "ee9ab7af91ef45d1fbd1f27c281829a0725d460d546883d2085237044b9a25e7",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0005",
+      "timestamp_seconds": 80,
+      "path": "watch/frames/frame_0005.jpg",
+      "sha256": "a03205ad85160659387b4d7687ea6782a0dd9c6e1e872bcd0308dfcf72262ca2",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0006",
+      "timestamp_seconds": 86,
+      "path": "watch/frames/frame_0006.jpg",
+      "sha256": "5862cfc93bb0bd1b4561f230cdd33f9e2bb7cf364e49914bebe41573073a237a",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0007",
+      "timestamp_seconds": 92,
+      "path": "watch/frames/frame_0007.jpg",
+      "sha256": "5cec6063a547160ffbf3b120abd59e10ea97231e8c4e8863454c583d666a5516",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0008",
+      "timestamp_seconds": 99,
+      "path": "watch/frames/frame_0008.jpg",
+      "sha256": "df53ab7a59f79c9fab260998d490f114b942b8a589669e239985c040dbc526b4",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0009",
+      "timestamp_seconds": 106,
+      "path": "watch/frames/frame_0009.jpg",
+      "sha256": "7c7c6a64a84dcda64877b540d9a7f61f91004c93b4c02e4b701448a371e5a6da",
+      "description": "demonstration frame | Impeccable visual-world library | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0010",
+      "timestamp_seconds": 113,
+      "path": "watch/frames/frame_0010.jpg",
+      "sha256": "b122b98f140a29869497844747593efd164b15541f81180a520f3860eb49c49c",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0011",
+      "timestamp_seconds": 130,
+      "path": "watch/frames/frame_0011.jpg",
+      "sha256": "842ba531cb96b4eca5a46759930b937d673cd11a2c30be8b92f298e638db4519",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0012",
+      "timestamp_seconds": 188,
+      "path": "watch/frames/frame_0012.jpg",
+      "sha256": "685a17bcb464f3e7fedb5cc893297f410b2921fa3450bf9d5da65dfab9f4125f",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0013",
+      "timestamp_seconds": 205,
+      "path": "watch/frames/frame_0013.jpg",
+      "sha256": "cf1ece901f148fcd5cf64bdb64f5d8e9db5c294179d2819ad56605ec180210e0",
+      "description": "demonstration frame | Impeccable command and documentation interface | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0014",
+      "timestamp_seconds": 247,
+      "path": "watch/frames/frame_0014.jpg",
+      "sha256": "fbec15b6816635674cff3610acdac6026dbb9ebdeb6aaeaf3c56fb3392ae8b0c",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0015",
+      "timestamp_seconds": 266,
+      "path": "watch/frames/frame_0015.jpg",
+      "sha256": "bb2b58475cbd9b9422dc0e2691de77450934da438655fe48be9f882caefa2865",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0016",
+      "timestamp_seconds": 286,
+      "path": "watch/frames/frame_0016.jpg",
+      "sha256": "3baaf73d93933da85eaae719f302958ab68a59ebd111a3f3999afaa951e652ed",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0017",
+      "timestamp_seconds": 324,
+      "path": "watch/frames/frame_0017.jpg",
+      "sha256": "fb78d85106549ab9b0dd783c4d2293736a6e0c2bd4a1de2ad8ba4d5304bb5d04",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0018",
+      "timestamp_seconds": 352,
+      "path": "watch/frames/frame_0018.jpg",
+      "sha256": "bb371d4b60d0eb9114e8c0c0d479a86df4d75d391f2dbdbb77ef04873dea6442",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0019",
+      "timestamp_seconds": 378,
+      "path": "watch/frames/frame_0019.jpg",
+      "sha256": "4cbcb822a9ad1c024438927affd95ce79d371ad5d66ce89870b491095c79b936",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0020",
+      "timestamp_seconds": 392,
+      "path": "watch/frames/frame_0020.jpg",
+      "sha256": "c9d2380b5660fe34a5483609a235db63bef848b31992af92a3ec76e3054c3ba3",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0021",
+      "timestamp_seconds": 404,
+      "path": "watch/frames/frame_0021.jpg",
+      "sha256": "46f42d8f8a441149323233e4b59b0ff3a3e33ba085bbdf9af2d3a20267605b9f",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0022",
+      "timestamp_seconds": 415,
+      "path": "watch/frames/frame_0022.jpg",
+      "sha256": "8068cc18d8a58714b09c8a687a5ec1ef31135d1ee50a3248082248dcb3347b6e",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0023",
+      "timestamp_seconds": 427,
+      "path": "watch/frames/frame_0023.jpg",
+      "sha256": "48484cab7452d2b2eaf1515034e167d471a552c3d38faaea42681bb386876dce",
+      "description": "demonstration frame | Side-by-side visual variation review | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0024",
+      "timestamp_seconds": 451,
+      "path": "watch/frames/frame_0024.jpg",
+      "sha256": "f2caee0335dfd673cdb919799a45609a9c0dff813598023ad4aeff971e8eb42a",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0025",
+      "timestamp_seconds": 482,
+      "path": "watch/frames/frame_0025.jpg",
+      "sha256": "e3421e0f345c6364da6d5582b2dde2fa6242fe2c38bf472e52d5290f942fd726",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0026",
+      "timestamp_seconds": 502,
+      "path": "watch/frames/frame_0026.jpg",
+      "sha256": "ed19ed44d0b334e1d9f11bf6232137eb411f08897162ca95879e7d309aa6e5f7",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0027",
+      "timestamp_seconds": 522,
+      "path": "watch/frames/frame_0027.jpg",
+      "sha256": "73176412265bd68c05867da8cd53ab70e2dbd78e59a809d4ae24a6ed0fac069a",
+      "description": "demonstration frame | Completed demonstration website | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0028",
+      "timestamp_seconds": 536,
+      "path": "watch/frames/frame_0028.jpg",
+      "sha256": "cdbc88b73b23075c0e49254026927178a5b45cd37f36f8a24bc019b1a375fccc",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0029",
+      "timestamp_seconds": 550,
+      "path": "watch/frames/frame_0029.jpg",
+      "sha256": "b7934c36e9a44a13e319f6cca14ef6fd57566ba2994f1fb0f611c064620fdd72",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0030",
+      "timestamp_seconds": 564,
+      "path": "watch/frames/frame_0030.jpg",
+      "sha256": "6a2e8243cf9377c565fff3f262846ee57f060820f6adc640d0a08e794bb773c3",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0031",
+      "timestamp_seconds": 576,
+      "path": "watch/frames/frame_0031.jpg",
+      "sha256": "f5b15365fad28296b9a67e4923b162f0903c6d971e5b4e6341a3df2ca1abe42e",
+      "description": "demonstration frame | Live visual comparison interface | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0032",
+      "timestamp_seconds": 586,
+      "path": "watch/frames/frame_0032.jpg",
+      "sha256": "558a8d262da96e2fbdd3c27d19a5cadb7b24e7f36048d4e7ede7b1c077b296fc",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0033",
+      "timestamp_seconds": 601,
+      "path": "watch/frames/frame_0033.jpg",
+      "sha256": "0731081a9ba4c4939c0d6b4964e7ed2221862000fee33858db8e65fd4abb16d0",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0034",
+      "timestamp_seconds": 620,
+      "path": "watch/frames/frame_0034.jpg",
+      "sha256": "9d5c2fb6c775fa65be0aa5813535a2d3662844e9682ac949108ebb860d8abeca",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0035",
+      "timestamp_seconds": 637,
+      "path": "watch/frames/frame_0035.jpg",
+      "sha256": "3d439c3fdb6b067b4dfc68648b43794d9383a8751de347d96066a107187503e1",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0036",
+      "timestamp_seconds": 648,
+      "path": "watch/frames/frame_0036.jpg",
+      "sha256": "791f185001001473847aeb3c72a536986272083a78d900284e882df0666edf53",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0037",
+      "timestamp_seconds": 659,
+      "path": "watch/frames/frame_0037.jpg",
+      "sha256": "2ec32143d861cddf755834dfdb112d5bc19230632e5cdc38d94abd17814893c5",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0038",
+      "timestamp_seconds": 675,
+      "path": "watch/frames/frame_0038.jpg",
+      "sha256": "e1d7eebbeb452b9db0b8fc5505d0499f695f4864b88166f52bdffc806dc9719b",
+      "description": "demonstration frame | DESIGN.md and design-system capture | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0039",
+      "timestamp_seconds": 695,
+      "path": "watch/frames/frame_0039.jpg",
+      "sha256": "c2ad339bec6d4523b438cc094fb321af684ce31bc6bb596b17d73d8196727126",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0040",
+      "timestamp_seconds": 712,
+      "path": "watch/frames/frame_0040.jpg",
+      "sha256": "e4051c030901c741334b6adeb0f0073f1abc86396d578a4de98b2242d94e5326",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0041",
+      "timestamp_seconds": 730,
+      "path": "watch/frames/frame_0041.jpg",
+      "sha256": "e08e3d02a8262e526ea046161616822a9c400e7a8168037905d33ff04a82f654",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0042",
+      "timestamp_seconds": 750,
+      "path": "watch/frames/frame_0042.jpg",
+      "sha256": "f948dc62e52a22863219a465225775da64ea270bc895c64efe277510746767d9",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0043",
+      "timestamp_seconds": 769,
+      "path": "watch/frames/frame_0043.jpg",
+      "sha256": "ce0df65aa5d9c333ef680cb7f3c06ced140a97197dc72b088710d1bc385cf38d",
+      "description": "demonstration frame | External inspiration library | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0044",
+      "timestamp_seconds": 781,
+      "path": "watch/frames/frame_0044.jpg",
+      "sha256": "80f79a1b34388512b9e54374f50a2725be26a40f3e51462211d730ee231a3383",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0045",
+      "timestamp_seconds": 792,
+      "path": "watch/frames/frame_0045.jpg",
+      "sha256": "f4ec5d292985d800b1dae4bed8d4aa3c9b4af5a7daf157de8391804b2b928d71",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0046",
+      "timestamp_seconds": 803,
+      "path": "watch/frames/frame_0046.jpg",
+      "sha256": "55231d62ec67a667520b94020df62cc51bf4bc74384199344173dc4dd39be12b",
+      "description": "demonstration frame | Reference-led redesign result | selected",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    },
+    {
+      "id": "frame-0047",
+      "timestamp_seconds": 910,
+      "path": "watch/frames/frame_0047.jpg",
+      "sha256": "6e4ef3e199bb226b84441d907b27fc6be7436dbc17b79c2c90277fe96b36c8cb",
+      "description": "demonstration frame | Context frame from the demonstration | context-only",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-01"
+    }
+  ]
+}

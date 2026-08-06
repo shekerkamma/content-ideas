@@ -1,0 +1,41 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Designing AI Workflows That Can Be Trusted: The Graph Engineering Pattern",
+    "design_mode": "corporate",
+    "output_mode": "native",
+    "reference_design": "DESIGN.md",
+    "anti_references": [
+      "hype/trend deck riding a buzzword",
+      "single-vendor framework sales pitch",
+      "full-bleed screenshot dump of source video slides"
+    ]
+  },
+  "typography": {
+    "heading_fonts": [
+      "Calibri"
+    ],
+    "body_fonts": [
+      "Calibri"
+    ],
+    "min_body_font_pt": 14,
+    "min_caption_font_pt": 9,
+    "max_font_families": 3
+  },
+  "color": {
+    "max_distinct_colors": 10,
+    "min_contrast_ratio": 4.5
+  },
+  "layout": {
+    "aspect_ratio": "16:9",
+    "grid_columns": 12,
+    "max_words_per_slide": 80,
+    "max_shapes_per_slide": 36,
+    "max_consecutive_same_archetype": 2,
+    "min_image_dpi": 120
+  },
+  "qa": {
+    "ignore_rules": [],
+    "waivers": {}
+  }
+}

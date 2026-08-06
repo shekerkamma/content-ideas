@@ -1,0 +1,742 @@
+{
+  "contract_version": "1.0",
+  "file": "runs/2026-08-04-impeccable-decision-flight-recorder-v5/impeccable-decision-flight-recorder-notes-v2-draft.pptx",
+  "fast": false,
+  "status": "clean",
+  "counts": {
+    "error": 0,
+    "warning": 0,
+    "ignored": 104
+  },
+  "findings": [],
+  "ignored_findings": [
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 1,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 2,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 11pt minimum.",
+      "slide": 2,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 11pt minimum.",
+      "slide": 2,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 11pt minimum.",
+      "slide": 2,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 2,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 3,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.40:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 3,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 14"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 18"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 3,
+      "shape": "TextBox 22"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 4,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 4,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 80 DPI is below 120 DPI.",
+      "slide": 4,
+      "shape": "Picture 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 11pt minimum.",
+      "slide": 4,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 4,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 4,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 5,
+      "shape": "TextBox 30"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.40:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.64:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 6,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 11pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 8,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 78 DPI is below 120 DPI.",
+      "slide": 8,
+      "shape": "Picture 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 9,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 77 DPI is below 120 DPI.",
+      "slide": 9,
+      "shape": "Picture 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 11pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 9,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.40:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.95:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.95:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 19"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.95:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 26"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 30"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 30"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 33"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.95:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 33"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 11,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 11,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 11,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 11,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 11,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 11,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 11,
+      "shape": "TextBox 28"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 11,
+      "shape": "TextBox 29"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 11,
+      "shape": "TextBox 30"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 11,
+      "shape": "TextBox 31"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.40:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 12,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.00:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.02:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.40:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 1.40:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.92:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.92:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 18"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.85:1 is below 4.5:1.",
+      "slide": 12,
+      "shape": "TextBox 28"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 12,
+      "shape": "TextBox 29"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 2"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 13,
+      "shape": "TextBox 3"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 13,
+      "shape": "TextBox 18"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 11pt minimum.",
+      "slide": 13,
+      "shape": "TextBox 23"
+    },
+    {
+      "rule_id": "TEXT_OVERFLOW_RISK",
+      "severity": "warning",
+      "message": "Text density likely exceeds the available box height.",
+      "slide": 14,
+      "shape": "TextBox 4"
+    },
+    {
+      "rule_id": "DECK_COLOR_COUNT",
+      "severity": "warning",
+      "message": "14 explicit colors exceed the configured maximum 10.",
+      "slide": null,
+      "shape": null
+    }
+  ]
+}

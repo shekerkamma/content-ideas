@@ -1,0 +1,134 @@
+{
+  "contract_version": "1.0",
+  "bundle": {
+    "id": "impeccable-transcript-led",
+    "title": "Impeccable 4.0 \u2014 Taste as an Operating System",
+    "root": "."
+  },
+  "sources": [
+    {
+      "id": "source-video",
+      "kind": "video",
+      "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+      "sha256": null,
+      "rights": "Source excerpts supplied for analysis; verify reuse rights before external distribution.",
+      "normalized_from": null
+    },
+    {
+      "id": "source-transcript",
+      "kind": "transcript",
+      "path": "transcript.txt",
+      "sha256": "2d7e9c4fb03e102a24b72b4891d7d8a24e7299a02ea5a4f5c51431f2a88f293c",
+      "rights": "Source transcript supplied for analysis; verify reuse rights before external distribution.",
+      "normalized_from": "source-video"
+    }
+  ],
+  "slides": [],
+  "transcript_segments": [
+    {
+      "id": "transcript-problem",
+      "start_seconds": 2,
+      "end_seconds": 75,
+      "text": "AI design tools promise quality but converge on generic outputs; the goal is taste plus control.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-changes",
+      "start_seconds": 76,
+      "end_seconds": 161,
+      "text": "Version 4.0's biggest changes are Live Mode and Worlds.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-system",
+      "start_seconds": 163,
+      "end_seconds": 263,
+      "text": "Impeccable combines pattern detection with a command set for changing distinct parts of the design.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-setup",
+      "start_seconds": 265,
+      "end_seconds": 353,
+      "text": "The workflow starts with installation, initialization, questions, and evidence.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-worlds",
+      "start_seconds": 353,
+      "end_seconds": 452,
+      "text": "Direction selection happens twice: choose a world, then choose a variation within it.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-tradeoff",
+      "start_seconds": 453,
+      "end_seconds": 567,
+      "text": "Generality creates a lower floor and a higher ceiling; strong results require iteration.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-live",
+      "start_seconds": 569,
+      "end_seconds": 737,
+      "text": "Live Mode owns component-scale iteration.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-memory",
+      "start_seconds": 664,
+      "end_seconds": 737,
+      "text": "The design record preserves colors, components, and control decisions.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-references",
+      "start_seconds": 740,
+      "end_seconds": 880,
+      "text": "Outside references are the escape hatch for a wrong big-picture direction.",
+      "source_id": "source-transcript"
+    },
+    {
+      "id": "transcript-conclusion",
+      "start_seconds": 880,
+      "end_seconds": 913,
+      "text": "Impeccable works best inside a wider design process that includes outside references and repeated judgment.",
+      "source_id": "source-transcript"
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-worlds",
+      "timestamp_seconds": 100,
+      "path": "assets/worlds.jpg",
+      "sha256": "d9d23f3e9b168c50edfacfd8c28647a24d708e3e38cd81b06137966d7bbb91b7",
+      "description": "World selection interface shown in the demonstration.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-live",
+      "timestamp_seconds": 577,
+      "path": "assets/live-comparison.jpg",
+      "sha256": "ae195ff744dcf19663e4b60abb8d4af6d9556307ad3bd89b11fa7334c94e46b8",
+      "description": "Live comparison state shown in the demonstration.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-references",
+      "timestamp_seconds": 769,
+      "path": "assets/references.jpg",
+      "sha256": "1ead02d5f63f5a40099c896454bacd66ed808f569f3e7aa332b9474820a90e56",
+      "description": "Reference library shown before a macro direction change.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    }
+  ]
+}

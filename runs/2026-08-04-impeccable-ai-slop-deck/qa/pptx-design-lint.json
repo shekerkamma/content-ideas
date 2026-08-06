@@ -1,0 +1,616 @@
+{
+  "contract_version": "1.0",
+  "file": "runs/2026-08-04-impeccable-ai-slop-deck/impeccable-ai-slop-deck-draft.pptx",
+  "fast": false,
+  "status": "clean",
+  "counts": {
+    "error": 0,
+    "warning": 0,
+    "ignored": 86
+  },
+  "findings": [],
+  "ignored_findings": [
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 1,
+      "shape": "TextBox 8"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "12pt text is below the 14pt minimum.",
+      "slide": 2,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "12pt text is below the 14pt minimum.",
+      "slide": 2,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "12pt text is below the 14pt minimum.",
+      "slide": 2,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 111 DPI is below 120 DPI.",
+      "slide": 3,
+      "shape": "Picture 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 14pt minimum.",
+      "slide": 3,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 14pt minimum.",
+      "slide": 3,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 111 DPI is below 120 DPI.",
+      "slide": 4,
+      "shape": "Picture 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 14pt minimum.",
+      "slide": 4,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 14pt minimum.",
+      "slide": 4,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 111 DPI is below 120 DPI.",
+      "slide": 5,
+      "shape": "Picture 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 14pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 5,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 14pt minimum.",
+      "slide": 5,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 111 DPI is below 120 DPI.",
+      "slide": 6,
+      "shape": "Picture 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 14pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 14pt minimum.",
+      "slide": 6,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 11"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 16"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "TextBox 24"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 7,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "53 shapes exceed the configured maximum 36.",
+      "slide": 8,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 7"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 12"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 15"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 20"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 22"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 22"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 25"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 27"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 30"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 30"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 32"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 32"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 35"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 35"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 37"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 37"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 40"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 40"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 42"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 42"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "10pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 45"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 45"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 8,
+      "shape": "TextBox 47"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 47"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "TextBox 51"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "12pt text is below the 14pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "12pt text is below the 14pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 9"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "12pt text is below the 14pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 13"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "12pt text is below the 14pt minimum.",
+      "slide": 9,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.59:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 17"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "TextBox 21"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 111 DPI is below 120 DPI.",
+      "slide": 10,
+      "shape": "Picture 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 14pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 14pt minimum.",
+      "slide": 10,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 111 DPI is below 120 DPI.",
+      "slide": 11,
+      "shape": "Picture 5"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "11pt text is below the 14pt minimum.",
+      "slide": 11,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.12:1 is below 4.5:1.",
+      "slide": 11,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "9pt text is below the 14pt minimum.",
+      "slide": 11,
+      "shape": "TextBox 10"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 12,
+      "shape": "TextBox 3"
+    }
+  ]
+}

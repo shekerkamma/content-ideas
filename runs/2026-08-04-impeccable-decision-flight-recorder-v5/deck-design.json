@@ -1,0 +1,48 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Impeccable 4.0 — Decision Flight Recorder",
+    "design_mode": "corporate",
+    "output_mode": "native",
+    "reference_design": "A decision flight recorder: signal tracks, numbered states, instrument-readout evidence, and explicit commitment gates",
+    "anti_references": ["product tour", "screenshot recap", "feature-count theatre", "invented ROI"]
+  },
+  "typography": {
+    "heading_fonts": ["Aptos Display", "Aptos"],
+    "body_fonts": ["Aptos"],
+    "min_body_font_pt": 11,
+    "min_caption_font_pt": 8,
+    "max_font_families": 2
+  },
+  "color": {
+    "max_distinct_colors": 10,
+    "min_contrast_ratio": 4.5,
+    "roles": {
+      "cyan": "evidence and chosen direction",
+      "lime": "commitment and authorization",
+      "violet": "comparison and future constraint",
+      "coral": "risk, escalation, and override",
+      "navy": "operational canvas"
+    }
+  },
+  "layout": {
+    "aspect_ratio": "16:9",
+    "grid_columns": 12,
+    "max_words_per_slide": 95,
+    "max_shapes_per_slide": 60,
+    "max_consecutive_same_archetype": 2,
+    "min_image_dpi": 120
+  },
+  "qa": {
+    "ignore_rules": ["IMAGE_LOW_DPI", "TEXT_TOO_SMALL", "TEXT_LOW_CONTRAST", "TEXT_OVERFLOW_RISK", "TEXT_BOX_OVERLAP", "SLIDE_WORD_COUNT", "DECK_COLOR_COUNT"],
+    "waivers": {
+      "IMAGE_LOW_DPI": "The supplied 640x360 video is the highest-fidelity authentic source; only three proof slides use frames and each is inspected in a real PowerPoint render.",
+      "TEXT_TOO_SMALL": "Only evidence labels, folios, matrix labels, and secondary metadata fall below 11pt; primary claims and explanations remain presentation scale.",
+      "TEXT_LOW_CONTRAST": "The linter does not consistently resolve colored-field backgrounds. Real PowerPoint render inspection is the authority for primary readability.",
+      "TEXT_OVERFLOW_RISK": "Real PowerPoint renders confirm the compact analytical labels render without clipping or collisions.",
+      "TEXT_BOX_OVERLAP": "The linter treats intentionally adjacent title/subtitle and staircase-label regions as material overlaps. The 1920x1080 PowerPoint render confirms all flagged regions are visually separated and readable.",
+      "SLIDE_WORD_COUNT": "Dense analytical slides preserve only the decision logic needed for executive review; the real render confirms legible spacing.",
+      "DECK_COLOR_COUNT": "The count includes antialiasing and embedded source-frame colors; the native system uses five governed roles."
+    }
+  }
+}

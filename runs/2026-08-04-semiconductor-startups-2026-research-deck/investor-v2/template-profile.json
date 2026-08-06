@@ -1,0 +1,9 @@
+{
+  "contract_version":"1.0",
+  "template":{"id":"branded-pptx-deck-repo-template","source":"skills/branded-pptx-deck/resources/template.pptx","aspect_ratio":"16:9","output_mode":"native"},
+  "brand":{"colors":{"navy":"#0A1628","teal":"#00C9A7","gold":"#FFB800","coral":"#E05A6B","page":"#FFFFFF"},"heading_font":"Calibri","body_font":"Calibri","logo_policy":"No logo supplied; preserve the branded palette and safe zones.","image_treatment":"No imagery; structured evidence is rendered as native editable objects.","icon_style":"No icons; restrained geometric marks only."},
+  "geometry":{"safe_margin_inches":0.6,"title_zone_inches":1.2,"footer_zone_inches":0.35,"grid_columns":12,"gutter_inches":0.16},
+  "typography":{"title_pt":30,"body_pt":15,"caption_pt":9,"metric_pt":34,"max_font_families":2},
+  "composition":{"density":"executive-medium","corner_radius":0.03,"shadow_policy":"No shadows unless foreground hierarchy requires one.","accent_policy":"Teal for structure, gold for metrics, coral for risk.","whitespace_policy":"Separate claim, evidence, and implication with explicit zones."},
+  "archetypes":["cover","executive-summary","big-number","three-card-argument","comparison","operating-model","decision-scorecard","risk-mitigation","recommendation-ask"]
+}

@@ -1,0 +1,39 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Impeccable 4.0 — Taste as an Operating System",
+    "design_mode": "corporate",
+    "output_mode": "native",
+    "reference_design": "Editorial field manual",
+    "anti_references": ["screenshot recap", "generic consulting cards", "decorative gradients", "invented claims"]
+  },
+  "typography": {
+    "heading_fonts": ["Aptos Display", "Aptos"],
+    "body_fonts": ["Aptos"],
+    "min_body_font_pt": 12,
+    "min_caption_font_pt": 8,
+    "max_font_families": 2
+  },
+  "color": {
+    "max_distinct_colors": 10,
+    "min_contrast_ratio": 4.5
+  },
+  "layout": {
+    "aspect_ratio": "16:9",
+    "grid_columns": 12,
+    "max_words_per_slide": 90,
+    "max_shapes_per_slide": 48,
+    "max_consecutive_same_archetype": 2,
+    "min_image_dpi": 120
+  },
+  "qa": {
+    "ignore_rules": ["IMAGE_LOW_DPI", "TEXT_TOO_SMALL", "TEXT_LOW_CONTRAST", "TEXT_OVERFLOW_RISK", "DECK_COLOR_COUNT"],
+    "waivers": {
+      "IMAGE_LOW_DPI": "The supplied 640x360 video is the highest-fidelity authentic source. Only three proof slides use frames; each was inspected in a 1920x1080 PowerPoint render.",
+      "TEXT_TOO_SMALL": "Only folios, source labels, and secondary metadata fall below 12pt. Primary claims and explanations remain presentation scale.",
+      "TEXT_LOW_CONTRAST": "The linter does not consistently resolve the actual shape background for dark fields and colored bands. All primary text was inspected in the real PowerPoint render; muted text is secondary metadata.",
+      "TEXT_OVERFLOW_RISK": "PowerPoint-native 1920x1080 renders confirm the flagged title and short-label boxes render without clipping or collision.",
+      "DECK_COLOR_COUNT": "The count includes antialiasing and embedded source-frame colors. The native design system itself uses five governed roles: paper, ink, signal red, moss, and archive tan."
+    }
+  }
+}

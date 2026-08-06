@@ -1,0 +1,400 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "output_mode": "hybrid",
+    "editability": "hybrid editable \u2014 native titles/callouts/captions/footers on every slide, plus source-backed PNG evidence (webcam-masked extracts) on slides 4-12",
+    "reference_deck": null
+  },
+  "visuals": [
+    {
+      "id": "v-frame-0010",
+      "slide_ids": [
+        4
+      ],
+      "purpose": "Show the presenter's own three-way comparison of prompt/context/graph engineering as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide from the source video is a demonstrable document state; extracted, not redrawn, per pptx-visual-spec gate.",
+      "evidence_ids": [
+        "frame-0010"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0010",
+        "timestamp": "01:29",
+        "crop": null
+      },
+      "asset": "extracted/frame_0010-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0011",
+      "slide_ids": [
+        2
+      ],
+      "purpose": "Show the presenter's before/after framing as exact-source evidence for the executive summary",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0011"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0011",
+        "timestamp": "01:51",
+        "crop": null
+      },
+      "asset": "extracted/frame_0011-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0013",
+      "slide_ids": [
+        6
+      ],
+      "purpose": "Show the presenter's one-chat-vs-one-graph comparison as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0013"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0013",
+        "timestamp": "02:50",
+        "crop": null
+      },
+      "asset": "extracted/frame_0013-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0015",
+      "slide_ids": [
+        5
+      ],
+      "purpose": "Show the presenter's jobs/arrows/state vocabulary slide as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0015"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0015",
+        "timestamp": "03:53",
+        "crop": null
+      },
+      "asset": "extracted/frame_0015-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0017",
+      "slide_ids": [
+        7
+      ],
+      "purpose": "Show the presenter's knowledge-graph-vs-agent-graph slide as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0017"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0017",
+        "timestamp": "06:50",
+        "crop": null
+      },
+      "asset": "extracted/frame_0017-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0019",
+      "slide_ids": [
+        8
+      ],
+      "purpose": "Show the presenter's six-condition qualifying test as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0019"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0019",
+        "timestamp": "08:57",
+        "crop": null
+      },
+      "asset": "extracted/frame_0019-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0021",
+      "slide_ids": [
+        9
+      ],
+      "purpose": "Show the presenter's worked Shopify example as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0021"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0021",
+        "timestamp": "10:17",
+        "crop": null
+      },
+      "asset": "extracted/frame_0021-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0023",
+      "slide_ids": [
+        10
+      ],
+      "purpose": "Show the presenter's Diamond Pattern diagram as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0023"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0023",
+        "timestamp": "13:37",
+        "crop": null
+      },
+      "asset": "extracted/frame_0023-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0025",
+      "slide_ids": [
+        12
+      ],
+      "purpose": "Show the presenter's three-level implementation ladder as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0025"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0025",
+        "timestamp": "15:16",
+        "crop": null
+      },
+      "asset": "extracted/frame_0025-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    },
+    {
+      "id": "v-frame-0027",
+      "slide_ids": [
+        11
+      ],
+      "purpose": "Show the presenter's three ready-made pipelines slide as exact-source evidence",
+      "artifact_type": "diagram",
+      "evidence_status": "exact-source-evidence",
+      "route": "extract",
+      "reason": "Screen-shared slide is a demonstrable document state; extracted, not redrawn.",
+      "evidence_ids": [
+        "frame-0027"
+      ],
+      "source": {
+        "path": "https://www.youtube.com/watch?v=JWhICz1QR8M",
+        "page": null,
+        "frame": "frame-0027",
+        "timestamp": "17:38",
+        "crop": null
+      },
+      "asset": "extracted/frame_0027-masked.png",
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": {
+        "width": 640,
+        "height": 360,
+        "fit": "contain",
+        "background": "#f7f7f9"
+      },
+      "qa": {
+        "visual_checked": true,
+        "legible": true,
+        "not_cropped": true,
+        "background_matched": true,
+        "provenance_recorded": true,
+        "exact_fidelity": true
+      }
+    }
+  ]
+}

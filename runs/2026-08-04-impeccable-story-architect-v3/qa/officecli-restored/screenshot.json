@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "view",
+    "/tmp/tmp.VJPyQzsFyB/impeccable-4-story-architect-client-deck-reviewed.pptx",
+    "screenshot",
+    "-o",
+    "/home/sheke/content-ideas/runs/2026-08-04-impeccable-story-architect-v3/qa/officecli-restored/render/impeccable-4-story-architect-client-deck-reviewed.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\sheke\\content-ideas\\runs\\2026-08-04-impeccable-story-architect-v3\\qa\\officecli-restored\\render\\impeccable-4-story-architect-client-deck-reviewed.png\n",
+  "stderr": "[pages] total=18\n"
+}

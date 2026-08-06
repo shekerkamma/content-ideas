@@ -1,0 +1,168 @@
+{
+  "contract_version": "1.0",
+  "file": "runs/2026-08-04-impeccable-reconstruction/impeccable-4-video-reconstruction-draft.pptx",
+  "fast": false,
+  "status": "findings",
+  "counts": {
+    "error": 0,
+    "warning": 22,
+    "ignored": 0
+  },
+  "findings": [
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 48 DPI is below 120 DPI.",
+      "slide": 1,
+      "shape": "Picture 2"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 1,
+      "shape": "TextBox 4"
+    },
+    {
+      "rule_id": "TEXT_TOO_SMALL",
+      "severity": "warning",
+      "message": "13pt text is below the 14pt minimum.",
+      "slide": 1,
+      "shape": "TextBox 6"
+    },
+    {
+      "rule_id": "SLIDE_MISSING_TITLE",
+      "severity": "warning",
+      "message": "No title-like text was found in the upper slide region.",
+      "slide": 1,
+      "shape": null
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 2,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 3,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 4,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 5,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 6,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 7,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 8,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 9,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 10,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 11,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 12,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 13,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 14,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 15,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 16,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 17,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "IMAGE_LOW_DPI",
+      "severity": "warning",
+      "message": "Effective resolution 73 DPI is below 120 DPI.",
+      "slide": 18,
+      "shape": "Picture 4"
+    },
+    {
+      "rule_id": "LAYOUT_REPETITION",
+      "severity": "warning",
+      "message": "Slides 2-18 repeat the same layout 17 times; configured maximum is 2.",
+      "slide": 2,
+      "shape": null
+    }
+  ],
+  "ignored_findings": []
+}

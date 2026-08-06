@@ -1,0 +1,2562 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Building a Governed Client Acquisition Function",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "claim-01",
+      "text": "Build a Revenue System That Learns Before It Automates",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-02",
+      "text": "The next acquisition advantage is operational reliability\u2014not more outreach volume",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-03",
+      "text": "Five moves turn scattered prompts into a dependable acquisition function",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-04",
+      "text": "Most acquisition automation scales inconsistency",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-05",
+      "text": "Prompt libraries create activity without creating operating leverage",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-06",
+      "text": "The bottleneck is not copy generation; it is coordinated judgment",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-07",
+      "text": "Bad automation creates negative operating leverage",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-08",
+      "text": "A reliable function compounds five assets across every cycle",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-09",
+      "text": "\u2018Always on\u2019 is Level 9; most teams begin with unverified Level-1 fragments",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-10",
+      "text": "Ten levels prevent premature autonomy",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-11",
+      "text": "Stabilize one narrow task before building a workflow",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-12",
+      "text": "Make intermediate reasoning inspectable and restartable",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-13",
+      "text": "Consistency comes from shared context\u2014not longer instructions",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-14",
+      "text": "Package the repeatable method as an invocable capability",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-15",
+      "text": "Convert analysis into a finished artifact\u2014not another chat response",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-16",
+      "text": "Observe systems before writing to them",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-17",
+      "text": "Give one bounded role ownership of one outcome",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-18",
+      "text": "Separate discovery, persuasion, progression, and control",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-19",
+      "text": "Scheduling is earned through watched reliability",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-20",
+      "text": "A function coordinates states, owners, economics, and learning",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-21",
+      "text": "Six files make every acquisition decision context-aware",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-22",
+      "text": "The offer file defines the commercial promise and its boundaries",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-23",
+      "text": "The ICP file identifies situations\u2014not just firmographics",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-24",
+      "text": "Voice is a decision system, not a list of adjectives",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-25",
+      "text": "Every commercial claim needs an evidence object",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-26",
+      "text": "Objections are diagnostic signals\u2014not rebuttal prompts",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-27",
+      "text": "The process file defines the operating system",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-28",
+      "text": "Commercial memory must change when reality changes",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-29",
+      "text": "The system advances opportunities through explicit states",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-30",
+      "text": "One intake coordinates research, drafting, approval, and progression",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-31",
+      "text": "A stable subject identity prevents duplicated and misdirected work",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-32",
+      "text": "Score the situation, not the logo",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-33",
+      "text": "Events create timing; themes create relevance",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-34",
+      "text": "Research must answer a commercial decision",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-35",
+      "text": "Personalization earns attention by compressing relevance",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-36",
+      "text": "A sequence should increase information\u2014not repeat the same ask",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-37",
+      "text": "Qualification protects delivery capacity and seller attention",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-38",
+      "text": "A proposal is the output of accumulated decisions",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-39",
+      "text": "Specialization raises quality and makes control visible",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-40",
+      "text": "Scout finds and verifies candidates\u2014but never contacts them",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-41",
+      "text": "Writer turns verified evidence into channel-ready drafts",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-42",
+      "text": "Closer prepares progression options without making commitments",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-43",
+      "text": "Auditor protects evidence, policy, reputation, and learning",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-44",
+      "text": "Agents cooperate through explicit artifacts\u2014not hidden chat state",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-45",
+      "text": "Separation of duties prevents silent risk accumulation",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-46",
+      "text": "One operating system can serve several channels",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-47",
+      "text": "LinkedIn works when relevance is visible before the pitch",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-48",
+      "text": "Email earns attention through specificity and low cognitive load",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-49",
+      "text": "Partner acquisition needs mutual economics\u2014not generic outreach",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-50",
+      "text": "Referrals become systematic when the ask is concrete",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-51",
+      "text": "Content should create diagnostic conversations",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-52",
+      "text": "The fastest safe system knows exactly when to stop",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-53",
+      "text": "External consequence determines the approval threshold",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-54",
+      "text": "Low confidence should create a question\u2014not a confident message",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-55",
+      "text": "Retries must not create duplicate commercial action",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-56",
+      "text": "A system is only \u2018always on\u2019 when its behavior is observable",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-57",
+      "text": "Measure decision quality before message volume",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-58",
+      "text": "Revenue is lagging; operating quality predicts whether it can scale",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-59",
+      "text": "Reviewer behavior is the fastest signal of system quality",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-60",
+      "text": "Use conversion rates to locate the decision bottleneck",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-61",
+      "text": "Automation should release scarce judgment\u2014not create review debt",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-62",
+      "text": "Change one variable at a time and retain the control",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-63",
+      "text": "Every week should leave the system smarter than it began",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-64",
+      "text": "Move from prompt fragments to a governed pilot",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-65",
+      "text": "Prove one task and establish the commercial memory layer",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-66",
+      "text": "Package the method and produce finished deliverables",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-67",
+      "text": "Connect safely and pilot bounded specialist roles",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-68",
+      "text": "A small accountable team beats an unowned automation program",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-69",
+      "text": "The main risks are commercial and operational\u2014not model novelty",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-70",
+      "text": "Buy commodity execution; own commercial judgment and memory",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-71",
+      "text": "A level advances only when proof is complete",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-72",
+      "text": "Do not fund \u2018autonomy\u2019; fund the next proven capability",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-73",
+      "text": "Approve a staged pilot with one task, one owner, and one gate",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-74",
+      "text": "The first two hours should produce decisions and artifacts",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "claim-75",
+      "text": "Build the function in the order trust is earned",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": []
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "Build a Revenue System That Learns Before It Automates",
+      "audience_job": "From inconsistent prompts to a governed, always-on operating function",
+      "claim_ids": [
+        "claim-01"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-01"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "From inconsistent prompts to a governed, always-on operating function",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cover layout supporting: Build a Revenue System That Learns Before It Automates"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "three-card-argument",
+      "action_title": "The next acquisition advantage is operational reliability\u2014not more outreach volume",
+      "audience_job": "Approve a 90-day staged build that earns automation one gate at a time",
+      "claim_ids": [
+        "claim-02"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-02"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Approve a 90-day staged build that earns automation one gate at a time",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable summary layout supporting: The next acquisition advantage is operational reliability\u2014not more outreach volume"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "three-card-argument",
+      "action_title": "Five moves turn scattered prompts into a dependable acquisition function",
+      "audience_job": "The whole deck in one decision sequence",
+      "claim_ids": [
+        "claim-03"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-03"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The whole deck in one decision sequence",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable story layout supporting: Five moves turn scattered prompts into a dependable acquisition function"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "three-card-argument",
+      "action_title": "Most acquisition automation scales inconsistency",
+      "audience_job": "Volume multiplies weak targeting, unsupported personalization, and hidden judgment",
+      "claim_ids": [
+        "claim-04"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-04"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Volume multiplies weak targeting, unsupported personalization, and hidden judgment",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: Most acquisition automation scales inconsistency"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "three-card-argument",
+      "action_title": "Prompt libraries create activity without creating operating leverage",
+      "audience_job": "A prompt is useful\u2014but it is not a process, control system, or learning loop",
+      "claim_ids": [
+        "claim-05"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-05"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "A prompt is useful\u2014but it is not a process, control system, or learning loop",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Prompt libraries create activity without creating operating leverage"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "three-card-argument",
+      "action_title": "The bottleneck is not copy generation; it is coordinated judgment",
+      "audience_job": "Every acquisition stage depends on decisions that must become explicit",
+      "claim_ids": [
+        "claim-06"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-06"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Every acquisition stage depends on decisions that must become explicit",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable compare layout supporting: The bottleneck is not copy generation; it is coordinated judgment"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "three-card-argument",
+      "action_title": "Bad automation creates negative operating leverage",
+      "audience_job": "Cheap generation can make expensive mistakes arrive faster",
+      "claim_ids": [
+        "claim-07"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-07"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Cheap generation can make expensive mistakes arrive faster",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Bad automation creates negative operating leverage"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "three-card-argument",
+      "action_title": "A reliable function compounds five assets across every cycle",
+      "audience_job": "Prompts are only the first asset",
+      "claim_ids": [
+        "claim-08"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-08"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Prompts are only the first asset",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable flow layout supporting: A reliable function compounds five assets across every cycle"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "three-card-argument",
+      "action_title": "\u2018Always on\u2019 is Level 9; most teams begin with unverified Level-1 fragments",
+      "audience_job": "Name the current level from evidence\u2014not aspiration",
+      "claim_ids": [
+        "claim-09"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-09"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Name the current level from evidence\u2014not aspiration",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable score layout supporting: \u2018Always on\u2019 is Level 9; most teams begin with unverified Level-1 fragments"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "three-card-argument",
+      "action_title": "Ten levels prevent premature autonomy",
+      "audience_job": "Each level removes one calendar task and earns the right to build the next",
+      "claim_ids": [
+        "claim-10"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Each level removes one calendar task and earns the right to build the next",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: Ten levels prevent premature autonomy"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "three-card-argument",
+      "action_title": "Stabilize one narrow task before building a workflow",
+      "audience_job": "Gate: at least 8 of 10 representative cases need no substantive edit",
+      "claim_ids": [
+        "claim-11"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: at least 8 of 10 representative cases need no substantive edit",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Stabilize one narrow task before building a workflow"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "three-card-argument",
+      "action_title": "Make intermediate reasoning inspectable and restartable",
+      "audience_job": "Gate: ordered stages, named artifacts, and a human checkpoint",
+      "claim_ids": [
+        "claim-12"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: ordered stages, named artifacts, and a human checkpoint",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Make intermediate reasoning inspectable and restartable"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "three-card-argument",
+      "action_title": "Consistency comes from shared context\u2014not longer instructions",
+      "audience_job": "Gate: six current files produce consistent work in a fresh session",
+      "claim_ids": [
+        "claim-13"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-13"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: six current files produce consistent work in a fresh session",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Consistency comes from shared context\u2014not longer instructions"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "three-card-argument",
+      "action_title": "Package the repeatable method as an invocable capability",
+      "audience_job": "Gate: explicit and implicit invocation both satisfy the output contract",
+      "claim_ids": [
+        "claim-14"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-14"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: explicit and implicit invocation both satisfy the output contract",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Package the repeatable method as an invocable capability"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "three-card-argument",
+      "action_title": "Convert analysis into a finished artifact\u2014not another chat response",
+      "audience_job": "Gate: structured output in under 10 minutes with format and content checks",
+      "claim_ids": [
+        "claim-15"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-15"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: structured output in under 10 minutes with format and content checks",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Convert analysis into a finished artifact\u2014not another chat response"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 16,
+      "archetype": "three-card-argument",
+      "action_title": "Observe systems before writing to them",
+      "audience_job": "Gate: one read-only week, then one bounded draft-only write with rollback",
+      "claim_ids": [
+        "claim-16"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-16"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: one read-only week, then one bounded draft-only write with rollback",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Observe systems before writing to them"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 17,
+      "archetype": "three-card-argument",
+      "action_title": "Give one bounded role ownership of one outcome",
+      "audience_job": "Gate: junior-team-member quality with explicit stop conditions",
+      "claim_ids": [
+        "claim-17"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-17"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: junior-team-member quality with explicit stop conditions",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Give one bounded role ownership of one outcome"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 18,
+      "archetype": "three-card-argument",
+      "action_title": "Separate discovery, persuasion, progression, and control",
+      "audience_job": "Gate: fixed file handoffs and an enforceable Auditor veto",
+      "claim_ids": [
+        "claim-18"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-18"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: fixed file handoffs and an enforceable Auditor veto",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Separate discovery, persuasion, progression, and control"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 19,
+      "archetype": "three-card-argument",
+      "action_title": "Scheduling is earned through watched reliability",
+      "audience_job": "Gate: five watched runs and two stable weeks",
+      "claim_ids": [
+        "claim-19"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-19"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: five watched runs and two stable weeks",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: Scheduling is earned through watched reliability"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 20,
+      "archetype": "three-card-argument",
+      "action_title": "A function coordinates states, owners, economics, and learning",
+      "audience_job": "Gate: governed state machine plus a 20% traffic pilot for two weeks",
+      "claim_ids": [
+        "claim-20"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-20"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Gate: governed state machine plus a 20% traffic pilot for two weeks",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable gate layout supporting: A function coordinates states, owners, economics, and learning"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 21,
+      "archetype": "three-card-argument",
+      "action_title": "Six files make every acquisition decision context-aware",
+      "audience_job": "This is the durable commercial memory behind prompts, agents, and channels",
+      "claim_ids": [
+        "claim-21"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-21"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "This is the durable commercial memory behind prompts, agents, and channels",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: Six files make every acquisition decision context-aware"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 22,
+      "archetype": "three-card-argument",
+      "action_title": "The offer file defines the commercial promise and its boundaries",
+      "audience_job": "Prevent attractive copy from outrunning delivery reality",
+      "claim_ids": [
+        "claim-22"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-22"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Prevent attractive copy from outrunning delivery reality",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: The offer file defines the commercial promise and its boundaries"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 23,
+      "archetype": "three-card-argument",
+      "action_title": "The ICP file identifies situations\u2014not just firmographics",
+      "audience_job": "Buying triggers and disqualifiers sharpen attention",
+      "claim_ids": [
+        "claim-23"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-23"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Buying triggers and disqualifiers sharpen attention",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: The ICP file identifies situations\u2014not just firmographics"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 24,
+      "archetype": "three-card-argument",
+      "action_title": "Voice is a decision system, not a list of adjectives",
+      "audience_job": "Examples and banned patterns make tone testable",
+      "claim_ids": [
+        "claim-24"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-24"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Examples and banned patterns make tone testable",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Voice is a decision system, not a list of adjectives"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 25,
+      "archetype": "three-card-argument",
+      "action_title": "Every commercial claim needs an evidence object",
+      "audience_job": "Confidence rises when proof includes limitations",
+      "claim_ids": [
+        "claim-25"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-25"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Confidence rises when proof includes limitations",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Every commercial claim needs an evidence object"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 26,
+      "archetype": "three-card-argument",
+      "action_title": "Objections are diagnostic signals\u2014not rebuttal prompts",
+      "audience_job": "Separate the stated concern from the underlying decision risk",
+      "claim_ids": [
+        "claim-26"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-26"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Separate the stated concern from the underlying decision risk",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Objections are diagnostic signals\u2014not rebuttal prompts"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 27,
+      "archetype": "three-card-argument",
+      "action_title": "The process file defines the operating system",
+      "audience_job": "States and exit criteria replace heroic memory",
+      "claim_ids": [
+        "claim-27"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-27"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "States and exit criteria replace heroic memory",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: The process file defines the operating system"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 28,
+      "archetype": "three-card-argument",
+      "action_title": "Commercial memory must change when reality changes",
+      "audience_job": "Every accepted edit becomes a candidate rule update",
+      "claim_ids": [
+        "claim-28"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-28"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Every accepted edit becomes a candidate rule update",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable flow layout supporting: Commercial memory must change when reality changes"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 29,
+      "archetype": "three-card-argument",
+      "action_title": "The system advances opportunities through explicit states",
+      "audience_job": "A state exists only when its entry evidence and exit decision are recorded",
+      "claim_ids": [
+        "claim-29"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-29"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "A state exists only when its entry evidence and exit decision are recorded",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: The system advances opportunities through explicit states"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 30,
+      "archetype": "three-card-argument",
+      "action_title": "One intake coordinates research, drafting, approval, and progression",
+      "audience_job": "External action remains a human-controlled transition",
+      "claim_ids": [
+        "claim-30"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-30"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "External action remains a human-controlled transition",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable flow layout supporting: One intake coordinates research, drafting, approval, and progression"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 31,
+      "archetype": "three-card-argument",
+      "action_title": "A stable subject identity prevents duplicated and misdirected work",
+      "audience_job": "The intake record is the anchor for every downstream artifact",
+      "claim_ids": [
+        "claim-31"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-31"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The intake record is the anchor for every downstream artifact",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: A stable subject identity prevents duplicated and misdirected work"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 32,
+      "archetype": "three-card-argument",
+      "action_title": "Score the situation, not the logo",
+      "audience_job": "A good account without a buying trigger is not a priority",
+      "claim_ids": [
+        "claim-32"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-32"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "A good account without a buying trigger is not a priority",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable score layout supporting: Score the situation, not the logo"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 33,
+      "archetype": "three-card-argument",
+      "action_title": "Events create timing; themes create relevance",
+      "audience_job": "Use observable change to justify attention",
+      "claim_ids": [
+        "claim-33"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-33"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use observable change to justify attention",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable compare layout supporting: Events create timing; themes create relevance"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 34,
+      "archetype": "three-card-argument",
+      "action_title": "Research must answer a commercial decision",
+      "audience_job": "Collection without a decision question becomes trivia",
+      "claim_ids": [
+        "claim-34"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-34"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Collection without a decision question becomes trivia",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Research must answer a commercial decision"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 35,
+      "archetype": "three-card-argument",
+      "action_title": "Personalization earns attention by compressing relevance",
+      "audience_job": "The first message should prove understanding, not explain the whole offer",
+      "claim_ids": [
+        "claim-35"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-35"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The first message should prove understanding, not explain the whole offer",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Personalization earns attention by compressing relevance"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 36,
+      "archetype": "three-card-argument",
+      "action_title": "A sequence should increase information\u2014not repeat the same ask",
+      "audience_job": "Each touch has a different job",
+      "claim_ids": [
+        "claim-36"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-36"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Each touch has a different job",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable compare layout supporting: A sequence should increase information\u2014not repeat the same ask"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 37,
+      "archetype": "three-card-argument",
+      "action_title": "Qualification protects delivery capacity and seller attention",
+      "audience_job": "Advance only when value, access, and timing are real",
+      "claim_ids": [
+        "claim-37"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-37"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Advance only when value, access, and timing are real",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Qualification protects delivery capacity and seller attention"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 38,
+      "archetype": "three-card-argument",
+      "action_title": "A proposal is the output of accumulated decisions",
+      "audience_job": "Do not use a document to discover basic scope",
+      "claim_ids": [
+        "claim-38"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-38"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Do not use a document to discover basic scope",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable flow layout supporting: A proposal is the output of accumulated decisions"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 39,
+      "archetype": "three-card-argument",
+      "action_title": "Specialization raises quality and makes control visible",
+      "audience_job": "Each role owns one decision surface and communicates through files",
+      "claim_ids": [
+        "claim-39"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-39"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Each role owns one decision surface and communicates through files",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: Specialization raises quality and makes control visible"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 40,
+      "archetype": "three-card-argument",
+      "action_title": "Scout finds and verifies candidates\u2014but never contacts them",
+      "audience_job": "Discovery quality is measured by accepted opportunities, not list size",
+      "claim_ids": [
+        "claim-40"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-40"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Discovery quality is measured by accepted opportunities, not list size",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Scout finds and verifies candidates\u2014but never contacts them"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 41,
+      "archetype": "three-card-argument",
+      "action_title": "Writer turns verified evidence into channel-ready drafts",
+      "audience_job": "Writer cannot invent proof, change the offer, or send",
+      "claim_ids": [
+        "claim-41"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-41"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Writer cannot invent proof, change the offer, or send",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Writer turns verified evidence into channel-ready drafts"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 42,
+      "archetype": "three-card-argument",
+      "action_title": "Closer prepares progression options without making commitments",
+      "audience_job": "Commercial judgment stays bounded by approved terms",
+      "claim_ids": [
+        "claim-42"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-42"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Commercial judgment stays bounded by approved terms",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Closer prepares progression options without making commitments"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 43,
+      "archetype": "three-card-argument",
+      "action_title": "Auditor protects evidence, policy, reputation, and learning",
+      "audience_job": "The veto is a feature\u2014not an inconvenience",
+      "claim_ids": [
+        "claim-43"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-43"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The veto is a feature\u2014not an inconvenience",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Auditor protects evidence, policy, reputation, and learning"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 44,
+      "archetype": "three-card-argument",
+      "action_title": "Agents cooperate through explicit artifacts\u2014not hidden chat state",
+      "audience_job": "Every handoff is replayable and attributable",
+      "claim_ids": [
+        "claim-44"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-44"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Every handoff is replayable and attributable",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable flow layout supporting: Agents cooperate through explicit artifacts\u2014not hidden chat state"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 45,
+      "archetype": "three-card-argument",
+      "action_title": "Separation of duties prevents silent risk accumulation",
+      "audience_job": "No role can discover, persuade, approve, and send alone",
+      "claim_ids": [
+        "claim-45"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-45"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "No role can discover, persuade, approve, and send alone",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable compare layout supporting: Separation of duties prevents silent risk accumulation"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 46,
+      "archetype": "three-card-argument",
+      "action_title": "One operating system can serve several channels",
+      "audience_job": "Channel mechanics vary; evidence, approval, and learning remain shared",
+      "claim_ids": [
+        "claim-46"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-46"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Channel mechanics vary; evidence, approval, and learning remain shared",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: One operating system can serve several channels"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 47,
+      "archetype": "three-card-argument",
+      "action_title": "LinkedIn works when relevance is visible before the pitch",
+      "audience_job": "Protect relationship capital with restrained volume",
+      "claim_ids": [
+        "claim-47"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-47"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Protect relationship capital with restrained volume",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: LinkedIn works when relevance is visible before the pitch"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 48,
+      "archetype": "three-card-argument",
+      "action_title": "Email earns attention through specificity and low cognitive load",
+      "audience_job": "Optimize for qualified replies, not opens",
+      "claim_ids": [
+        "claim-48"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-48"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Optimize for qualified replies, not opens",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Email earns attention through specificity and low cognitive load"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 49,
+      "archetype": "three-card-argument",
+      "action_title": "Partner acquisition needs mutual economics\u2014not generic outreach",
+      "audience_job": "The unit of analysis is the joint value proposition",
+      "claim_ids": [
+        "claim-49"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-49"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The unit of analysis is the joint value proposition",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Partner acquisition needs mutual economics\u2014not generic outreach"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 50,
+      "archetype": "three-card-argument",
+      "action_title": "Referrals become systematic when the ask is concrete",
+      "audience_job": "Make it easy to identify and introduce the right person",
+      "claim_ids": [
+        "claim-50"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-50"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Make it easy to identify and introduce the right person",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Referrals become systematic when the ask is concrete"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 51,
+      "archetype": "three-card-argument",
+      "action_title": "Content should create diagnostic conversations",
+      "audience_job": "The acquisition system turns repeated buyer questions into useful assets",
+      "claim_ids": [
+        "claim-51"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-51"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The acquisition system turns repeated buyer questions into useful assets",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Content should create diagnostic conversations"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 52,
+      "archetype": "three-card-argument",
+      "action_title": "The fastest safe system knows exactly when to stop",
+      "audience_job": "Control design is part of conversion quality\u2014not a compliance appendix",
+      "claim_ids": [
+        "claim-52"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-52"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Control design is part of conversion quality\u2014not a compliance appendix",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: The fastest safe system knows exactly when to stop"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 53,
+      "archetype": "three-card-argument",
+      "action_title": "External consequence determines the approval threshold",
+      "audience_job": "Research and drafting can run; commitments cannot",
+      "claim_ids": [
+        "claim-53"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-53"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Research and drafting can run; commitments cannot",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable score layout supporting: External consequence determines the approval threshold"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 54,
+      "archetype": "three-card-argument",
+      "action_title": "Low confidence should create a question\u2014not a confident message",
+      "audience_job": "Stopping early protects brand and training data",
+      "claim_ids": [
+        "claim-54"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-54"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Stopping early protects brand and training data",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Low confidence should create a question\u2014not a confident message"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 55,
+      "archetype": "three-card-argument",
+      "action_title": "Retries must not create duplicate commercial action",
+      "audience_job": "Every stage needs idempotency and rollback",
+      "claim_ids": [
+        "claim-55"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-55"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Every stage needs idempotency and rollback",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Retries must not create duplicate commercial action"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 56,
+      "archetype": "three-card-argument",
+      "action_title": "A system is only \u2018always on\u2019 when its behavior is observable",
+      "audience_job": "Logs must explain what happened and why",
+      "claim_ids": [
+        "claim-56"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-56"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Logs must explain what happened and why",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: A system is only \u2018always on\u2019 when its behavior is observable"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 57,
+      "archetype": "three-card-argument",
+      "action_title": "Measure decision quality before message volume",
+      "audience_job": "The learning system improves when leading and lagging indicators connect",
+      "claim_ids": [
+        "claim-57"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-57"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The learning system improves when leading and lagging indicators connect",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: Measure decision quality before message volume"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 58,
+      "archetype": "three-card-argument",
+      "action_title": "Revenue is lagging; operating quality predicts whether it can scale",
+      "audience_job": "Track the complete path from attention to economics",
+      "claim_ids": [
+        "claim-58"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-58"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Track the complete path from attention to economics",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable score layout supporting: Revenue is lagging; operating quality predicts whether it can scale"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 59,
+      "archetype": "three-card-argument",
+      "action_title": "Reviewer behavior is the fastest signal of system quality",
+      "audience_job": "Edits reveal missing context and weak rules",
+      "claim_ids": [
+        "claim-59"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-59"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Edits reveal missing context and weak rules",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Reviewer behavior is the fastest signal of system quality"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 60,
+      "archetype": "three-card-argument",
+      "action_title": "Use conversion rates to locate the decision bottleneck",
+      "audience_job": "A low reply rate and a low qualification rate imply different fixes",
+      "claim_ids": [
+        "claim-60"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-60"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "A low reply rate and a low qualification rate imply different fixes",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Use conversion rates to locate the decision bottleneck"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 61,
+      "archetype": "three-card-argument",
+      "action_title": "Automation should release scarce judgment\u2014not create review debt",
+      "audience_job": "Measure human effort per accepted outcome",
+      "claim_ids": [
+        "claim-61"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-61"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Measure human effort per accepted outcome",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Automation should release scarce judgment\u2014not create review debt"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 62,
+      "archetype": "three-card-argument",
+      "action_title": "Change one variable at a time and retain the control",
+      "audience_job": "Learning requires comparability",
+      "claim_ids": [
+        "claim-62"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-62"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Learning requires comparability",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: Change one variable at a time and retain the control"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 63,
+      "archetype": "three-card-argument",
+      "action_title": "Every week should leave the system smarter than it began",
+      "audience_job": "Accepted learning updates rules; anecdotes do not",
+      "claim_ids": [
+        "claim-63"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-63"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Accepted learning updates rules; anecdotes do not",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable flow layout supporting: Every week should leave the system smarter than it began"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 64,
+      "archetype": "three-card-argument",
+      "action_title": "Move from prompt fragments to a governed pilot",
+      "audience_job": "The roadmap prioritizes reliability, context, and watched operation",
+      "claim_ids": [
+        "claim-64"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-64"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The roadmap prioritizes reliability, context, and watched operation",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: Move from prompt fragments to a governed pilot"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 65,
+      "archetype": "roadmap",
+      "action_title": "Prove one task and establish the commercial memory layer",
+      "audience_job": "Target: Levels 1\u20133",
+      "claim_ids": [
+        "claim-65"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-65"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Target: Levels 1\u20133",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable roadmap layout supporting: Prove one task and establish the commercial memory layer"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 66,
+      "archetype": "roadmap",
+      "action_title": "Package the method and produce finished deliverables",
+      "audience_job": "Target: Levels 4\u20135",
+      "claim_ids": [
+        "claim-66"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-66"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Target: Levels 4\u20135",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable roadmap layout supporting: Package the method and produce finished deliverables"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 67,
+      "archetype": "roadmap",
+      "action_title": "Connect safely and pilot bounded specialist roles",
+      "audience_job": "Target: Levels 6\u20138 only if gates pass",
+      "claim_ids": [
+        "claim-67"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-67"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Target: Levels 6\u20138 only if gates pass",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable roadmap layout supporting: Connect safely and pilot bounded specialist roles"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 68,
+      "archetype": "three-card-argument",
+      "action_title": "A small accountable team beats an unowned automation program",
+      "audience_job": "Name owners before selecting tools",
+      "claim_ids": [
+        "claim-68"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-68"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Name owners before selecting tools",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable score layout supporting: A small accountable team beats an unowned automation program"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 69,
+      "archetype": "three-card-argument",
+      "action_title": "The main risks are commercial and operational\u2014not model novelty",
+      "audience_job": "Design mitigations into the workflow",
+      "claim_ids": [
+        "claim-69"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-69"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Design mitigations into the workflow",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: The main risks are commercial and operational\u2014not model novelty"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 70,
+      "archetype": "three-card-argument",
+      "action_title": "Buy commodity execution; own commercial judgment and memory",
+      "audience_job": "Differentiation lives in context, decisions, and learning",
+      "claim_ids": [
+        "claim-70"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-70"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Differentiation lives in context, decisions, and learning",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable compare layout supporting: Buy commodity execution; own commercial judgment and memory"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 71,
+      "archetype": "three-card-argument",
+      "action_title": "A level advances only when proof is complete",
+      "audience_job": "Green status requires quality, control, and repeatability together",
+      "claim_ids": [
+        "claim-71"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-71"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Green status requires quality, control, and repeatability together",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable score layout supporting: A level advances only when proof is complete"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 72,
+      "archetype": "three-card-argument",
+      "action_title": "Do not fund \u2018autonomy\u2019; fund the next proven capability",
+      "audience_job": "The roadmap can begin immediately without granting unsafe authority",
+      "claim_ids": [
+        "claim-72"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-72"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "The roadmap can begin immediately without granting unsafe authority",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable divider layout supporting: Do not fund \u2018autonomy\u2019; fund the next proven capability"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 73,
+      "archetype": "three-card-argument",
+      "action_title": "Approve a staged pilot with one task, one owner, and one gate",
+      "audience_job": "Success is a reliable acquisition capability\u2014not an impressive demo",
+      "claim_ids": [
+        "claim-73"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-73"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Success is a reliable acquisition capability\u2014not an impressive demo",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable summary layout supporting: Approve a staged pilot with one task, one owner, and one gate"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 74,
+      "archetype": "three-card-argument",
+      "action_title": "The first two hours should produce decisions and artifacts",
+      "audience_job": "Avoid starting with a tool tour",
+      "claim_ids": [
+        "claim-74"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-74"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Avoid starting with a tool tour",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable cards layout supporting: The first two hours should produce decisions and artifacts"
+      },
+      "status": "built"
+    },
+    {
+      "slide_id": 75,
+      "archetype": "three-card-argument",
+      "action_title": "Build the function in the order trust is earned",
+      "audience_job": "Research and draft automatically. Approve consequence deliberately. Compound every learning.",
+      "claim_ids": [
+        "claim-75"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "visual-75"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Research and draft automatically. Approve consequence deliberately. Compound every learning.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "visual_alt_text": "Native editable close layout supporting: Build the function in the order trust is earned"
+      },
+      "status": "built"
+    }
+  ]
+}

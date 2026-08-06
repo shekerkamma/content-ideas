@@ -1,0 +1,16 @@
+{
+  "name": "screenshot",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "view",
+    "/home/sheke/content-ideas/runs/2026-08-04-impeccable-decision-flight-recorder-v5/impeccable-decision-flight-recorder-notes-v2-draft.pptx",
+    "screenshot",
+    "-o",
+    "/home/sheke/content-ideas/runs/2026-08-04-impeccable-decision-flight-recorder-v5/qa/officecli-v2/render/impeccable-decision-flight-recorder-notes-v2-draft.png",
+    "--grid",
+    "4"
+  ],
+  "returncode": 0,
+  "stdout": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\sheke\\content-ideas\\runs\\2026-08-04-impeccable-decision-flight-recorder-v5\\qa\\officecli-v2\\render\\impeccable-decision-flight-recorder-notes-v2-draft.png\n",
+  "stderr": "[pages] total=14\n"
+}

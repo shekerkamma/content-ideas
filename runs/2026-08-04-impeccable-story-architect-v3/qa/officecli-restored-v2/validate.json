@@ -1,0 +1,12 @@
+{
+  "name": "validate",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "validate",
+    "/tmp/tmp.UMkztYP3nJ/impeccable.pptx",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": \"Validation passed: no errors found.\",\n  \"message\": \"Validation passed: no errors found.\"\n}\n",
+  "stderr": ""
+}

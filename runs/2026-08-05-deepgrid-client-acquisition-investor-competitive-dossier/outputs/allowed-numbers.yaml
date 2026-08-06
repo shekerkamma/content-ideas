@@ -1,0 +1,50 @@
+# Every visible number in the deck must appear here. July-corrected basis.
+mandate:
+  gsr_notified: "March 2025"
+  new_models_deadline: "April 2026"
+  existing_models_deadline: "October 2026"
+  further_systems_through: "January 2028"
+  standards: "AIS-162 / 184 / 186 / 187 / 188"
+product:
+  process: "TSMC 28nm HPC+"
+  tops_int8: 39.3
+  pcores: 64
+  die_mm2: 57.1
+  frame_budget_ms: 8.6
+  frame_window_ms: 33.3
+  headroom_pct: 74
+economics:
+  die_cost_usd: 3.876          # July Corrections Ledger; retracts "<$3"
+  board_bom_usd: 30
+  kit_price_inr_lakh: "2.0-2.5"
+  kit_gross_margin_pct: 72     # BP-1A s5 kit level
+  blended_gm_fy32_pct: 88      # portfolio blend only
+  breakeven_chips: 174908
+  opex_cr_per_year: "4-6"
+  kits_to_cover_opex: "400-600"
+raise:
+  total_cr: 55
+  equity_ccps_cr: 45
+  cgtmse_debt_cr: 10
+  tapeout_nre_usd_m: 3.17
+revenue_fy32:
+  company_cr: 1388
+  systems_cr: 1229
+  silicon_cr: 75
+  sensors_cr: 33
+  sentience_cr: 50
+competitors:
+  ais140_device_inr: "4,500-11,000"
+  compliance_adas_box_inr: "15,000-40,000"
+  mobileye_inr_lakh: "5-8"
+  continental_inr_lakh: "8-12"
+  qualcomm_inr_lakh: "10-15"
+  nvidia_orin_inr_lakh: "12-18"
+  cheaper_multiple: "2.8-6.5x"
+netrasemi:
+  series_a_cr: 107
+  a2000_production_ready: "May 2026"
+  oem_trials: 3
+  a4000_target: "Q2 2027"
+roshai:
+  raise_cr: 22

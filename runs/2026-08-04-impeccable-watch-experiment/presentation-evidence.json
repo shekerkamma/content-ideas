@@ -1,0 +1,209 @@
+{
+  "contract_version": "1.0",
+  "bundle": {
+    "id": "impeccable-watch-client-deck",
+    "title": "Impeccable 4.0 \u2014 Visual Workflow",
+    "root": "."
+  },
+  "sources": [
+    {
+      "id": "source-video",
+      "kind": "video",
+      "path": "https://www.youtube.com/watch?v=RVeCbPg0liw",
+      "sha256": null,
+      "rights": "Source-frame excerpts used for analysis and visual demonstration; client must verify reuse rights.",
+      "normalized_from": null
+    }
+  ],
+  "slides": [],
+  "transcript_segments": [],
+  "frames": [
+    {
+      "id": "frame-0001",
+      "timestamp_seconds": 13,
+      "path": "assets/01-intro.jpg",
+      "sha256": "49ce2e74769ae978958f2536be596e91d4148d0eec6ce242a4bd57e725880374",
+      "description": "Impeccable 4.0. A design-control system for moving beyond generic defaults.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0002",
+      "timestamp_seconds": 43,
+      "path": "assets/02-taste.jpg",
+      "sha256": "2a650a6e59d2aff74d191faa6aa31e027de9fec1e778c0e16d3fb845bbbc5fe8",
+      "description": "The problem is sameness. Taste has to enter the workflow before the first composition becomes the default.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0003",
+      "timestamp_seconds": 76,
+      "path": "assets/03-live.jpg",
+      "sha256": "64431b2eb6c9f966055af302c724e8c5769d40c620b0c1b4266fb336a2208272",
+      "description": "Live Mode changes the interaction. Visual direction becomes something you inspect and choose\u2014not merely describe.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0004",
+      "timestamp_seconds": 100,
+      "path": "assets/04-worlds.jpg",
+      "sha256": "d9d23f3e9b168c50edfacfd8c28647a24d708e3e38cd81b06137966d7bbb91b7",
+      "description": "Worlds supply a complete visual grammar. A world constrains composition, typography, material, rhythm, and interaction together.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0005",
+      "timestamp_seconds": 134,
+      "path": "assets/05-options.jpg",
+      "sha256": "b75437ada0846217df105e6ea13683e16106b7991be2d2848c1373458e2214c0",
+      "description": "Options respond to the project. The system proposes directions grounded in the current surface instead of a generic style menu.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0006",
+      "timestamp_seconds": 193,
+      "path": "assets/06-commands.jpg",
+      "sha256": "a40e4d18ba0f119da029d960738973d8d9b0f5b2251fd0ebe19140b3f2a94d55",
+      "description": "One skill exposes a design workflow. Commands separate shaping, detection, refinement, documentation, and finish review.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0007",
+      "timestamp_seconds": 234,
+      "path": "assets/07-patterns.jpg",
+      "sha256": "20c5dd7cc85ae9c3f44f9e2c834755e7b2667300dddb9864f9b336c650fdd276",
+      "description": "Anti-patterns become detectable. Recurring machine-made defaults can be named, located, and removed deliberately.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0008",
+      "timestamp_seconds": 267,
+      "path": "assets/08-install.jpg",
+      "sha256": "66a053c982ad79e8013271383861aa2f6b2469d6ab4e90d6590a07957ac312f1",
+      "description": "Installation is deliberately lightweight. The design system enters the existing workflow through one package command.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0009",
+      "timestamp_seconds": 332,
+      "path": "assets/09-brief.jpg",
+      "sha256": "92bd35f0af8bf554c06b3e6b6dc3a218d7c27597a07d6ce38fb01cb22e6c1281",
+      "description": "The example begins with purpose. The demonstration starts from the site's reason to exist before choosing its appearance.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0010",
+      "timestamp_seconds": 425,
+      "path": "assets/10-variations.jpg",
+      "sha256": "3b89b2ce41001684499687f2c2674969e2b9358b1ff522add657907223568587",
+      "description": "Compare directions before committing. Multiple treatments expose range and make the design decision visual.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0011",
+      "timestamp_seconds": 526,
+      "path": "assets/11-baseline.jpg",
+      "sha256": "bbeb7a3494ea0767fe14c5fff69a9fbfca0b432272d96f4a060b87587a2713b8",
+      "description": "The first result is a baseline. A complete first pass creates something concrete to inspect\u2014not an excuse to stop iterating.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0012",
+      "timestamp_seconds": 577,
+      "path": "assets/12-comparison.jpg",
+      "sha256": "ae195ff744dcf19663e4b60abb8d4af6d9556307ad3bd89b11fa7334c94e46b8",
+      "description": "Live comparison creates a selection loop. Side-by-side alternatives make differences in hierarchy and character immediately visible.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0013",
+      "timestamp_seconds": 629,
+      "path": "assets/13-bolder.jpg",
+      "sha256": "3c219ea65b25019685c3a83b5d9915b0dbf272ab37b32c93bb07307a7cc444be",
+      "description": "The next pass deliberately increases range. The workflow pushes beyond cautious polish to test a materially stronger direction.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0014",
+      "timestamp_seconds": 660,
+      "path": "assets/14-detector.jpg",
+      "sha256": "23e1014a7e759dcd1dc03b2696064e4166a03436707b0bbf1816f05b1fe0ed10",
+      "description": "Detection turns taste into action. The working design is checked against explicit visual anti-patterns.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0015",
+      "timestamp_seconds": 675,
+      "path": "assets/15-design-record.jpg",
+      "sha256": "30d6b10bfda2155e0f69983dd579770d1546307f2ebc62246d2e5a27d52660d8",
+      "description": "The chosen world becomes a design record. Documented decisions keep later iterations coherent instead of rediscovering taste each time.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0016",
+      "timestamp_seconds": 769,
+      "path": "assets/16-references.jpg",
+      "sha256": "1ead02d5f63f5a40099c896454bacd66ed808f569f3e7aa332b9474820a90e56",
+      "description": "Outside references add specificity. Real visual references communicate proportion and texture that prose cannot fully encode.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    },
+    {
+      "id": "frame-0017",
+      "timestamp_seconds": 803,
+      "path": "assets/17-reference-result.jpg",
+      "sha256": "669d2a7c6663e9d9a4a7f0602450f0bbb0920705d5e2a8cdce7cdcc4f856dc9c",
+      "description": "Reference becomes interpretation\u2014not imitation. The final pass translates the reference grammar into a distinct working result.",
+      "duplicate_of": null,
+      "screen_class": "demo-screen",
+      "face_quality": null,
+      "source_id": "source-video"
+    }
+  ]
+}

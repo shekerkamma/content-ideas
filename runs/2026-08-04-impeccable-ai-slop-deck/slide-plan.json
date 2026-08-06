@@ -1,0 +1,382 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Can Impeccable Take the AI Slop Out of Slides?",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Impeccable reduces recognizable AI defaults only when used as a design workflow, not a one-shot styling prompt.",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0021"
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "Visual worlds and live comparison expand the option set before a direction is chosen.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0039",
+        "transcript-0040"
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "External references and a finish-review pass improve specificity and consistency.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0394",
+        "transcript-0422"
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "The method does not repair weak evidence, vague narrative, or missing delivery QA.",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "Can Impeccable take the AI slop out of slides?",
+      "audience_job": "Frame the decision",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v1"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Frame the decision",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "Can Impeccable take the AI slop out of slides?"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "executive-summary",
+      "action_title": "Yes\u2014but only as a workflow, not a magic style button",
+      "audience_job": "Get the answer",
+      "claim_ids": [
+        "c1",
+        "c4"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v2"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Get the answer",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "Yes\u2014but only as a workflow, not a magic style button"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "evidence",
+      "action_title": "The demonstration attacks the right failure: sameness",
+      "audience_job": "See the problem",
+      "claim_ids": [
+        "c1"
+      ],
+      "evidence_ids": [
+        "transcript-0021"
+      ],
+      "visual_ids": [
+        "v3"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "See the problem",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "The demonstration attacks the right failure: sameness"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "comparison",
+      "action_title": "A committed world breaks the default-design monoculture",
+      "audience_job": "Understand the mechanism",
+      "claim_ids": [
+        "c2"
+      ],
+      "evidence_ids": [
+        "transcript-0039"
+      ],
+      "visual_ids": [
+        "v4"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Understand the mechanism",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "A committed world breaks the default-design monoculture"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "evidence",
+      "action_title": "Live comparison turns prompting into visual selection",
+      "audience_job": "See the mechanism",
+      "claim_ids": [
+        "c2"
+      ],
+      "evidence_ids": [
+        "transcript-0040"
+      ],
+      "visual_ids": [
+        "v5"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "See the mechanism",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "Live comparison turns prompting into visual selection"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "evidence",
+      "action_title": "Outside references add specificity the model cannot guess",
+      "audience_job": "See why references matter",
+      "claim_ids": [
+        "c3"
+      ],
+      "evidence_ids": [
+        "transcript-0394"
+      ],
+      "visual_ids": [
+        "v6"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "See why references matter",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "Outside references add specificity the model cannot guess"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "process",
+      "action_title": "The anti-slop loop has five deliberate gates",
+      "audience_job": "Learn the operating model",
+      "claim_ids": [
+        "c1",
+        "c3"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v7"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Learn the operating model",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "The anti-slop loop has five deliberate gates"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "scorecard",
+      "action_title": "Slop is detectable when the review criteria are explicit",
+      "audience_job": "Adopt the scorecard",
+      "claim_ids": [
+        "c1"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v8"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Adopt the scorecard",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "Slop is detectable when the review criteria are explicit"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "guardrails",
+      "action_title": "Four failures remain outside Impeccable's reach",
+      "audience_job": "Understand limits",
+      "claim_ids": [
+        "c4"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v9"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Understand limits",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "Four failures remain outside Impeccable's reach"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "evidence",
+      "action_title": "A design record makes the chosen world reusable",
+      "audience_job": "See the durable output",
+      "claim_ids": [
+        "c3"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "See the durable output",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "A design record makes the chosen world reusable"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "before-after",
+      "action_title": "The improvement is range plus control\u2014not decoration",
+      "audience_job": "See the result",
+      "claim_ids": [
+        "c1",
+        "c2"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "See the result",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "The improvement is range plus control\u2014not decoration"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "recommendation",
+      "action_title": "Make visual-world selection a standard deck stage",
+      "audience_job": "Act",
+      "claim_ids": [
+        "c1",
+        "c4"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [
+        "v12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Act",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action title",
+          "primary visual",
+          "decision statement"
+        ],
+        "visual_alt_text": "Make visual-world selection a standard deck stage"
+      },
+      "status": "reviewed"
+    }
+  ]
+}

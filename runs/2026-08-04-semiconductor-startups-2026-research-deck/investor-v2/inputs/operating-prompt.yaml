@@ -1,0 +1,16 @@
+decision_question: Which CRN 2026 semiconductor startups merit core diligence, execution diligence, or milestone-only attention, and what evidence changes that posture?
+audience: Institutional and venture investors
+cohort: Lightmatter, Cornelis Networks, Xsight Labs, Tenstorrent, d-Matrix, Axelera AI, NextSilicon, Etched, MatX, Fractile
+timeframe: Evidence current through 2026-08-04
+deliverable: Native branded investor PowerPoint dossier
+minimum_slides: 24
+success_criteria:
+  - real competitor arenas, including incumbents and adjacent startups
+  - claim-level evidence ledger and defined comparison metrics
+  - qualitative teardown of every cohort company
+  - bull, bear, scenario, valuation, diligence and kill-criteria sections
+  - Microsoft Office validation and visible material change from prior deck
+constraints:
+  - no unsupported composite ranking
+  - company benchmarks labeled as vendor claims
+  - financing is not treated as operating proof

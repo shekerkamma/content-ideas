@@ -1,0 +1,13 @@
+{
+  "name": "issues",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "view",
+    "/home/sheke/content-ideas/runs/2026-08-04-impeccable-decision-flight-recorder-v5/impeccable-decision-flight-recorder-draft.pptx",
+    "issues",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": {\n    \"count\": 0,\n    \"issues\": []\n  }\n}\n",
+  "stderr": ""
+}

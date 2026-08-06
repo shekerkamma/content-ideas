@@ -1,0 +1,157 @@
+Information Memorandum
+
+June 2026
+                                                                                   STRICTLY CONFIDENTIAL · FOR AUTHORISED RECIPIENTS ONLY
+
+
+
+
+India's First Full-Stack
+ADAS Company —                                                           ₹1,128 Cr                                                               15
+Built on Its Own
+                                                                            Revenue FY2032E                                   Provisional Patent Applications
+
+
+
+
+Transformer Silicon
+Full Stack ADAS Kit · TSMC 28nm · ₹1Cr Defence Revenue
+
+
+  PRE-SERIES A    ·   CAPITAL RAISE
+
+
+
+  Instrument:
+
+  Raise Target:
+                                     Equity / Compulsorily Convertible
+
+                                     USD $4.0 – 5.0 Million
+                                                                         6 Chiplets                                         5M+ Trucks
+                                                                         One Tapeout · Six Markets                              MoRTH GSR 184(E) Mandate
+
+
+
+
+                                                                                        T-Hub Phase 2 · Knowledge City · Hyderabad · June 2026
+3. THE SOLUTION
+
+
+Full-Stack ADAS Platform
+
+
+                                                                                                 One chip. One box. Full ADAS.
+                                                                                                Transformers baked into silicon,
+                                                                                                         not glued on.
+                                                                                                       Why This Product Wins?
+
+
+
+         DGrid Alpha Chipset                              D-Drive AI Model                                                      Full System Kit
+
+      28nm TSMC · 39.3 TOPS INT8                E2E transformer VLA loop                                                  AIS-162/188 cert (NATRAX)
+
+      3D tensor cube architecture            No HD maps — Indian roads                                                    Drive-by-wire CAN actuator
+
+ ✓     Integer-first · ASIL-D path          Carla-validated · ONNX ready                                                    M.2 plug-in form factor
+
+       64 PCOREs · 600 MHz ALU                         AD1 – AD4 variants
+                                                                                01
+                                                                                                                     ✓    ₹2–2.5L mandate-ready kit
+
+ ✓     <$3 die · ~$30 board BOM                              Why Now?
+                                            Trained on India-specific data                                               Ships Q3 2026 · Embedded IoT
+
+
+                                     One chip · One box · Full ADAS — chip, AI model, and kit on a single platform
+3A.PRODUCT ARCHITECTURE — THE MOAT
+
+
+6 Cameras. One Chip. 8.6ms of 33.3ms Budget.
+64 × 512 MACs × 600MHz × 2 ops ÷ 10¹² = 39.3 TOPS INT8 · 74% headroom · PrimeSoC: FEASIBLE
+
+
+                                                                                     PARAMETER                       VALUE
+
+                                                                                     Process                         TSMC 28nm HPC+
+   Flat broadcast vs 8×8×8 cube cascade.
+   A flat 8×8 matrix unit (SoC1.2) needs 8 cycles to                                 Architecture                    Single die ~57.1 mm²
+   consume K. The 8×8×8 cube (SoC2) consumes K in
+   one cycle by stacking 8 multiply layers — same                                    Total MACs                      32,768 (64 × 512)
+   answer, different geometry. Each PCORE feeds
+   from a local register file (648 MAC inputs), so                                   Clock                           600 MHz
+   weights stay resident and the array never stalls
+   waiting on memory.                                                                Peak INT8                       39.3 TOPS
+
+   K=1 → K=8 SEQUENCE:                                                               LPDDR5 bandwidth                102.4 GB/s
+   K=2 → 9.8T · K=4 → 19.7T · K=6 → 29.5T · K=8 →
+   39.3T ✓                                                                           AD2 frame budget                8.6ms / 33.3ms (74% free)
+
+                                                                                     NRE                             $2.42M one-time
+
+                                                                                                DERIVATION: 64 × 512 × 600M × 2 ÷ 10¹² = 39.3 TOPS INT8
+                                                                                                        · PrimeSoC March 2026: FEASIBLE ✓
+
+                                                 Deepgrid Semi Pvt Ltd · CIN: U62099TS2024PTC183631 · CONFIDENTIAL
+4. GO-TO-MARKET — PRICING COMPARISON
+
+
+Market & Pricing — 3 to 7× Cheaper Than Every Import
+India-first pricing built for mass adoption — same AIS certification · Built in India · Ships Q3 2026
+
+
+MARKET OPPORTUNITY                                                                                  IMPORTED ALTERNATIVES
+
+
+                                                                                                         Mobileye EyeQ
+   Global ADAS market by 2027                              $83.98B                                       Camera-only · no radar fusion
+                                                                                                                                                    ₹5–8L
+
+                                                                                                         Continental ARS
+                                                                                                                                                    ₹8–12L
+   India SAM (5M+ trucks mandated)                   ₹85,000 Cr                                          Radar stack only · no AI chipset
+
+
+
+                                                                                                         Nvidia Orin
+                                                                                                                                                   ₹12–18L
+                                               ₹4,50,000 Cr
+                                                                                                         GPU · not AIS certified in India
+   Retrofit market (9Cr vehicles)
+
+                                                                                                         Qualcomm SA8295
+                                                                                                         No indigenous supply or cert path
+                                                                                                                                                   ₹10–15L
+   DGrid addressable (mandate wave)                     ₹8,500 Cr
+                                                                                                         DGrid Full Kit (AD2)
+                                                                                                         AIS-188 · indigenous · mandate-ready
+                                                                                                                                                   ₹2–2.5L
+
+
+
+                                        3–7× cheaper than every import · Same AIS certification · Built in India · Mandate-ready · Ships Q3 2026
+11. THE CHIP ECONOMICS
+
+
+Cost Clarity — Three Numbers VCs Always Confuse
+NRE (one-time design cost) vs per-chip cost vs board BOM — these are three completely different numbers.
+
+
+
+
+          ~$3M                                                                   <$4                                                                      ~$30
+                  NRE Cost                            →                                Die Cost                                    →                          Board BOM
+            (one-time, paid once)                                                     (at 1M chips)                                                           (what we sell)
+
+     28nm tape-out: Muse/GSMC MPW. Our                             At mass production of 1 million chips, our                                    Die ($3) + carrier board + connectors +
+     total upfront design cost. Nvidia spends                         die cost is <$4. From Muse/GSMC                                          packaging = ~$30 full board BOM. At ₹2.5L
+        $100M+ on NRE — we spend $2M                                quotation — verifiable. TSMC 28nm at                                       ADAS kit price, gross margin reaches 84%
+    because our architecture is purpose-built,                     95% yield, mature node. Our fundamental                                                    at ASIC scale.
+               not general-purpose.                                             cost advantage.
+
+
+
+
+                                     At 100 units (FPGA, 2026): cost $600, sell $800 → 38% GM · At 10,000 units (ASIC, 2027+): cost $30, sell $200 → 84% GM
+

@@ -1,0 +1,12 @@
+{
+  "name": "validate",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "validate",
+    "/home/sheke/content-ideas/runs/2026-08-04-impeccable-complete-pipeline-v4/impeccable-4-complete-pipeline-notes-draft.pptx",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": \"Validation passed: no errors found.\",\n  \"message\": \"Validation passed: no errors found.\"\n}\n",
+  "stderr": ""
+}

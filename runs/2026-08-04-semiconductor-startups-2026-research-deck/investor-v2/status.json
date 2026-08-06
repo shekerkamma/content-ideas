@@ -1,0 +1,21 @@
+{
+  "run_id": "investor-v2",
+  "target": "CRN 2026 semiconductor startup cohort — institutional investor competitive diligence",
+  "artifact_status": "draft",
+  "current_stage": "qa",
+  "minimum_slide_count": 24,
+  "completed_gates": ["frame", "research", "evidence", "story", "native-pptx", "material-change", "officecli"],
+  "blocked_gates": ["self-contained-html-not-requested"],
+  "artifact_paths": {
+    "operating_prompt": "inputs/operating-prompt.yaml",
+    "evidence_ledger": "outputs/evidence-ledger.csv",
+    "allowed_numbers": "outputs/allowed-numbers.yaml",
+    "story_pack": "outputs/story-architect-pack.md",
+    "draft_pptx": "semiconductor-startups-2026-investor-dossier-draft.pptx",
+    "reviewed_pptx": null,
+    "html_local": "client-package/site/index.html",
+    "manifest": "client-package/delivery-manifest.json"
+  },
+  "next_command": "Build self-contained HTML only if full pipeline reviewed promotion is requested",
+  "updated_at": "2026-08-04T14:27:00+00:00"
+}

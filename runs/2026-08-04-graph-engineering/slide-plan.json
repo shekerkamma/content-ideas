@@ -1,0 +1,610 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Designing AI Workflows That Can Be Trusted: The Graph Engineering Pattern",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "graph-engineering-visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "c01",
+      "text": "The default way most people use AI for a multi-step decision is one model, one pass: it researches, judges its own evidence, and hands back a confident answer with no way to check the work.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0010",
+        "transcript-0011",
+        "transcript-0012",
+        "transcript-0013"
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "The graph version of the same question splits work across a planner, parallel researchers, a skeptic, a merger, and a human approval step before anyone acts.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0014",
+        "transcript-0015",
+        "transcript-0016",
+        "transcript-0017",
+        "transcript-0018",
+        "frame-0011"
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "The video frames graph engineering as the third rung after prompt engineering and context engineering.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0008",
+        "transcript-0009",
+        "frame-0010"
+      ]
+    },
+    {
+      "id": "c03b",
+      "text": "Industry reporting from the same week describes a 4-6 layer stack (prompt, context, harness, loop, graph engineering), not a clean three-step progression, and multiple practitioners call the graph-engineering framing a rebrand of existing orchestration concepts rather than a genuinely new discipline.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": []
+    },
+    {
+      "id": "c03c",
+      "text": "The term \"graph engineering\" went viral on X on July 18, 2026, produced three competing definitions within 48 hours, and was attached to a widely shared claim about a Stanford/Anthropic study that was later confirmed fabricated.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": []
+    },
+    {
+      "id": "c04",
+      "text": "A graph is jobs connected by arrows, with state as the shared record of what the system knows so far.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0020",
+        "transcript-0021",
+        "frame-0015"
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "One chat and one graph can produce the same report format; the difference is whether a planner, parallel researchers, a skeptic, and a merge step did the work behind it, or one model did it all in a single pass.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0030",
+        "transcript-0031",
+        "transcript-0032",
+        "transcript-0033",
+        "frame-0013"
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "A knowledge graph maps how information connects; an agent graph maps how work should move, split, be checked, and be merged before a human approves it.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0035",
+        "transcript-0036",
+        "transcript-0040",
+        "transcript-0041",
+        "frame-0017"
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "A graph earns its place only under six conditions: multiple steps, multiple sources, parallel paths, checks, real risk, and required approvals. None of these true means a graph is overhead.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "frame-0019"
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "In the worked \"should we build AI bookkeeping for Shopify\" example, a planner splits the question into customer, competitor, and distribution research run in parallel; a skeptic attacks the findings; a merge step turns survivors into a one-page recommendation; and a human picks the next move.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0060",
+        "transcript-0061",
+        "transcript-0062",
+        "transcript-0063",
+        "transcript-0064",
+        "frame-0021"
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "The Diamond Pattern (planner fans out to parallel researchers, a skeptic checks findings, then merge plus human approval) is presented as the first graph most people should learn.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0067",
+        "frame-0023"
+      ]
+    },
+    {
+      "id": "c10",
+      "text": "Support, content, and code workflows can each be run as a ready-made pipeline, and all three share one structural rule: the checker is never the same role as the writer.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0089",
+        "transcript-0092",
+        "transcript-0095",
+        "transcript-0096",
+        "transcript-0099",
+        "transcript-0100",
+        "frame-0027"
+      ]
+    },
+    {
+      "id": "c11",
+      "text": "Implementation should start manual (whiteboard jobs and arrows), move to file trails (each step writes its own file), and only then reach for real orchestration tooling such as LangGraph, AutoGen, or n8n.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0068",
+        "transcript-0073",
+        "transcript-0074",
+        "transcript-0078",
+        "transcript-0081",
+        "transcript-0083",
+        "frame-0025"
+      ]
+    },
+    {
+      "id": "c12",
+      "text": "LangGraph and AutoGen's GraphFlow are real, actively maintained frameworks whose stateful multi-agent orchestration (StateGraph/DiGraphBuilder, conditional edges, human-approval interrupts) matches the video's jobs/arrows/state vocabulary and Diamond Pattern almost exactly.",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c13",
+      "text": "n8n and Make.com are positioned as the no-code/light-code tier below custom orchestration frameworks, but Make's per-operation billing model makes looping AI-agent behavior expensive fast, and most 2026 guidance recommends a hybrid pattern rather than a strict three-tier ladder.",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": []
+    },
+    {
+      "id": "c14",
+      "text": "The recommended first action is to pick one workflow already in use, draw its jobs and arrows, remove unnecessary sequential waiting, run it once by hand, and only then decide whether to automate it.",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-0074",
+        "transcript-0075",
+        "transcript-0076"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "Designing AI workflows that can be trusted",
+      "audience_job": "Understand the promise and scope",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 20,
+        "narrative": "Set up: this is about the mechanics of structuring multi-step AI work, not the trend label.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "subtitle"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "executive-summary",
+      "action_title": "One model, one pass, no way to check the work \u2014 that's the real risk",
+      "audience_job": "Grasp the answer, evidence, and decision on one page",
+      "claim_ids": [
+        "c01",
+        "c02"
+      ],
+      "evidence_ids": [
+        "transcript-0010",
+        "transcript-0011",
+        "transcript-0017",
+        "frame-0011"
+      ],
+      "visual_ids": [
+        "v-frame-0011"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "BLUF: structure multi-step AI work as jobs, arrows, and shared state once it has real stakes.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "answer",
+          "evidence",
+          "decision"
+        ],
+        "visual_alt_text": "Before/after comparison: old way asks AI once and gets a confident essay; graph way splits into planner, parallel researchers, skeptic, merger, human decision."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "big-number",
+      "action_title": "The vocabulary is having a very contested moment",
+      "audience_job": "Retain one material caveat before adopting new AI vocabulary",
+      "claim_ids": [
+        "c03c",
+        "c03b"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 30,
+        "narrative": "48 hours, 3 competing definitions, 1 fabricated study. Adopt the mechanics, not the hype cycle.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "metric",
+          "implication",
+          "citation"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "three-card-argument",
+      "action_title": "Graph engineering is one active framing for workflow design, not a settled progression",
+      "audience_job": "Compare three parallel ways people are trying to get more out of AI",
+      "claim_ids": [
+        "c03"
+      ],
+      "evidence_ids": [
+        "transcript-0008",
+        "transcript-0009",
+        "frame-0010"
+      ],
+      "visual_ids": [
+        "v-frame-0010"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Prompt = wording. Context = information. Graph = how the work itself is designed. Caption softened per grill-me: presented as one active framing, not an agreed sequence.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "card-1",
+          "card-2",
+          "card-3"
+        ],
+        "visual_alt_text": "Three cards: Prompt Engineering (the wording), Context Engineering (the inputs), Graph Engineering (the workflow)."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "operating-model",
+      "action_title": "The vocabulary: jobs, arrows, and one shared record",
+      "audience_job": "Learn the three building blocks before seeing them applied",
+      "claim_ids": [
+        "c04"
+      ],
+      "evidence_ids": [
+        "transcript-0020",
+        "transcript-0021",
+        "frame-0015"
+      ],
+      "visual_ids": [
+        "v-frame-0015"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Job = one step. Arrow = what has to happen before what. State = the shared record.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "flow",
+          "definitions"
+        ],
+        "visual_alt_text": "Job A to Job B to Job C flow above a shared State record, with definition cards for Jobs, Arrows, State, Sequential, and Parallel."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "comparison",
+      "action_title": "Same question, same report format \u2014 different shape of work behind it",
+      "audience_job": "Understand the consequential contrast between one chat and one graph",
+      "claim_ids": [
+        "c05"
+      ],
+      "evidence_ids": [
+        "transcript-0031",
+        "transcript-0032",
+        "transcript-0033",
+        "frame-0013"
+      ],
+      "visual_ids": [
+        "v-frame-0013"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "One model, one pass, no sources you can check vs planner + researchers + skeptic + merge.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "left",
+          "right"
+        ],
+        "visual_alt_text": "One Chat vs One Graph comparison: single model in one pass versus planner, three parallel researchers, a skeptic, and a merge step."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "comparison",
+      "action_title": "Don't confuse a knowledge graph with an agent graph",
+      "audience_job": "Understand a distinction that changes what tool to reach for",
+      "claim_ids": [
+        "c06"
+      ],
+      "evidence_ids": [
+        "transcript-0035",
+        "transcript-0040",
+        "frame-0017"
+      ],
+      "visual_ids": [
+        "v-frame-0017"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 30,
+        "narrative": "This deck is about agent graphs \u2014 how work moves \u2014 not knowledge graphs.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "left",
+          "right"
+        ],
+        "visual_alt_text": "Knowledge Graph (how information connects) vs Agent Graph (how work should move) comparison table."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "decision-scorecard",
+      "action_title": "The qualifying test: when a graph earns its place",
+      "audience_job": "Score a candidate workflow against six conditions before building anything",
+      "claim_ids": [
+        "c07"
+      ],
+      "evidence_ids": [
+        "frame-0019"
+      ],
+      "visual_ids": [
+        "v-frame-0019"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 35,
+        "narrative": "Multiple steps, multiple sources, parallel paths, checks, risk, approvals. None true = just write a better prompt.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "conditions",
+          "verdict"
+        ],
+        "visual_alt_text": "Six qualifying conditions for reserving a graph: multiple steps, multiple sources, parallel paths, checks, risk, approvals."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "use-case-realization",
+      "action_title": "Worked example: should we build AI bookkeeping for Shopify?",
+      "audience_job": "See the pattern applied to one real decision end to end",
+      "claim_ids": [
+        "c08"
+      ],
+      "evidence_ids": [
+        "transcript-0060",
+        "transcript-0063",
+        "transcript-0064",
+        "frame-0021"
+      ],
+      "visual_ids": [
+        "v-frame-0021"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 50,
+        "narrative": "Plan splits into 3 parallel research lanes, skeptic attacks the evidence, merge produces a one-page recommendation, human picks the next move.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "challenge",
+          "steps",
+          "outcome"
+        ],
+        "visual_alt_text": "Five-step graph: plan, parallel research (customer, competitors, distribution), skeptic, merge, human gate."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "operating-model",
+      "action_title": "The pattern underneath: the Diamond",
+      "audience_job": "Generalize the worked example into a reusable shape",
+      "claim_ids": [
+        "c09"
+      ],
+      "evidence_ids": [
+        "transcript-0067",
+        "frame-0023"
+      ],
+      "visual_ids": [
+        "v-frame-0023"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 30,
+        "narrative": "The first graph most people should learn: planner fans out, skeptic checks, merge plus human approve.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "diagram"
+        ],
+        "visual_alt_text": "Diamond-shaped flow: planner at top fanning out to three parallel researchers, converging on a skeptic, then merge and human approval."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "three-card-argument",
+      "action_title": "Three ready-made pipelines you can steal",
+      "audience_job": "Map the pattern onto support, content, and code work",
+      "claim_ids": [
+        "c10"
+      ],
+      "evidence_ids": [
+        "transcript-0089",
+        "transcript-0095",
+        "transcript-0099",
+        "frame-0027"
+      ],
+      "visual_ids": [
+        "v-frame-0027"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Every one of them has a checker that isn't the writer.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "card-1",
+          "card-2",
+          "card-3"
+        ],
+        "visual_alt_text": "Three pipeline rows: Support, Content, and Code, each ending in a checker step distinct from the work step."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "roadmap",
+      "action_title": "Three levels of implementation \u2014 start manual",
+      "audience_job": "Sequence adoption instead of jumping straight to tooling",
+      "claim_ids": [
+        "c11"
+      ],
+      "evidence_ids": [
+        "transcript-0073",
+        "transcript-0074",
+        "transcript-0078",
+        "frame-0025"
+      ],
+      "visual_ids": [
+        "v-frame-0025"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Manual whiteboard lanes, then file trails, then real orchestration. Earn the tooling.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "level-1",
+          "level-2",
+          "level-3"
+        ],
+        "visual_alt_text": "Three levels: manual lanes (no code), file trails (light code), orchestrated (real tooling: LangGraph, AutoGen GraphFlow, n8n, Make)."
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "comparison",
+      "action_title": "Where the named tools actually fit",
+      "audience_job": "Match a tool tier to team capability before picking a platform",
+      "claim_ids": [
+        "c12",
+        "c13"
+      ],
+      "evidence_ids": [
+        "transcript-0068",
+        "transcript-0081",
+        "transcript-0083"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "LangGraph/AutoGen for stateful multi-agent logic; n8n/Make for the plumbing around it; most teams should start below all of them.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "table"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "recommendation-ask",
+      "action_title": "Next move: draw one graph this week",
+      "audience_job": "Leave with a specific, low-cost next action",
+      "claim_ids": [
+        "c14"
+      ],
+      "evidence_ids": [
+        "transcript-0074",
+        "transcript-0075",
+        "transcript-0076"
+      ],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 25,
+        "narrative": "Pick one workflow you already run, draw jobs and arrows, delete fake waiting, run it once by hand.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "action-title",
+          "ask"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "reviewed"
+    }
+  ]
+}

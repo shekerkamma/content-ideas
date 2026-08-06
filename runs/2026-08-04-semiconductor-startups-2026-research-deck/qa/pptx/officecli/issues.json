@@ -1,0 +1,13 @@
+{
+  "name": "issues",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "view",
+    "/home/sheke/content-ideas/runs/2026-08-04-semiconductor-startups-2026-research-deck/semiconductor-startups-2026-decision-deck-draft.pptx",
+    "issues",
+    "--json"
+  ],
+  "returncode": 126,
+  "stdout": "",
+  "stderr": "/home/sheke/.local/bin/officecli: 2: exec: /mnt/c/Users/sheke/AppData/Local/OfficeCLI/officecli.exe: Exec format error\n"
+}

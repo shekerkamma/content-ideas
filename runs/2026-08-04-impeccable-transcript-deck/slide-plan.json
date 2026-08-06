@@ -1,0 +1,588 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Impeccable 4.0 \u2014 Taste as an Operating System",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "claim-01",
+      "text": "Taste becomes an operating system",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-problem"
+      ]
+    },
+    {
+      "id": "claim-02",
+      "text": "Impeccable changes the decision system\u2014not just the styling",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-problem"
+      ]
+    },
+    {
+      "id": "claim-03",
+      "text": "The failure mode is convergence",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-problem"
+      ]
+    },
+    {
+      "id": "claim-04",
+      "text": "Version 4.0 adds two decisive control surfaces",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-changes"
+      ]
+    },
+    {
+      "id": "claim-05",
+      "text": "Worlds make direction selection concrete",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ]
+    },
+    {
+      "id": "claim-06",
+      "text": "Direction selection happens twice",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-worlds"
+      ]
+    },
+    {
+      "id": "claim-07",
+      "text": "Generality trades a higher ceiling for a lower floor",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ]
+    },
+    {
+      "id": "claim-08",
+      "text": "One-shot generation is the wrong mental model",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ]
+    },
+    {
+      "id": "claim-09",
+      "text": "Live Mode turns local changes into visual decisions",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ]
+    },
+    {
+      "id": "claim-10",
+      "text": "Use the right interface for the altitude of change",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-references"
+      ]
+    },
+    {
+      "id": "claim-11",
+      "text": "Taste becomes durable through memory and independent review",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-memory"
+      ]
+    },
+    {
+      "id": "claim-12",
+      "text": "References are the escape hatch for a wrong direction",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-references",
+        "frame-references"
+      ]
+    },
+    {
+      "id": "claim-13",
+      "text": "A practical operating model for teams",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-14",
+      "text": "What Impeccable does not solve",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-15",
+      "text": "Impeccable gives taste somewhere to operate",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "Taste becomes an operating system",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-01"
+      ],
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "visual_ids": [
+        "visual-01"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Taste becomes an operating system",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Taste becomes an operating system"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "native-synthesis",
+      "action_title": "Impeccable changes the decision system\u2014not just the styling",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-02"
+      ],
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "visual_ids": [
+        "visual-02"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Impeccable changes the decision system\u2014not just the styling",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Impeccable changes the decision system\u2014not just the styling"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "native-synthesis",
+      "action_title": "The failure mode is convergence",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-03"
+      ],
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "visual_ids": [
+        "visual-03"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "The failure mode is convergence",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "The failure mode is convergence"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "native-synthesis",
+      "action_title": "Version 4.0 adds two decisive control surfaces",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-04"
+      ],
+      "evidence_ids": [
+        "transcript-changes"
+      ],
+      "visual_ids": [
+        "visual-04"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Version 4.0 adds two decisive control surfaces",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Version 4.0 adds two decisive control surfaces"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "evidence-proof",
+      "action_title": "Worlds make direction selection concrete",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-05"
+      ],
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ],
+      "visual_ids": [
+        "visual-05"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Worlds make direction selection concrete",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Worlds make direction selection concrete"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "native-synthesis",
+      "action_title": "Direction selection happens twice",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-06"
+      ],
+      "evidence_ids": [
+        "transcript-worlds"
+      ],
+      "visual_ids": [
+        "visual-06"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Direction selection happens twice",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Direction selection happens twice"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "native-synthesis",
+      "action_title": "Generality trades a higher ceiling for a lower floor",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-07"
+      ],
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "visual_ids": [
+        "visual-07"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Generality trades a higher ceiling for a lower floor",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Generality trades a higher ceiling for a lower floor"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "native-synthesis",
+      "action_title": "One-shot generation is the wrong mental model",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-08"
+      ],
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "visual_ids": [
+        "visual-08"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "One-shot generation is the wrong mental model",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "One-shot generation is the wrong mental model"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "evidence-proof",
+      "action_title": "Live Mode turns local changes into visual decisions",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-09"
+      ],
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ],
+      "visual_ids": [
+        "visual-09"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Live Mode turns local changes into visual decisions",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Live Mode turns local changes into visual decisions"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "native-synthesis",
+      "action_title": "Use the right interface for the altitude of change",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-10"
+      ],
+      "evidence_ids": [
+        "transcript-references"
+      ],
+      "visual_ids": [
+        "visual-10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Use the right interface for the altitude of change",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Use the right interface for the altitude of change"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "native-synthesis",
+      "action_title": "Taste becomes durable through memory and independent review",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-11"
+      ],
+      "evidence_ids": [
+        "transcript-memory"
+      ],
+      "visual_ids": [
+        "visual-11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Taste becomes durable through memory and independent review",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Taste becomes durable through memory and independent review"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "evidence-proof",
+      "action_title": "References are the escape hatch for a wrong direction",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-12"
+      ],
+      "evidence_ids": [
+        "transcript-references",
+        "frame-references"
+      ],
+      "visual_ids": [
+        "visual-12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "References are the escape hatch for a wrong direction",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "References are the escape hatch for a wrong direction"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "native-synthesis",
+      "action_title": "A practical operating model for teams",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-13"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-13"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "A practical operating model for teams",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "A practical operating model for teams"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "native-synthesis",
+      "action_title": "What Impeccable does not solve",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-14"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-14"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "What Impeccable does not solve",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "What Impeccable does not solve"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 15,
+      "archetype": "native-synthesis",
+      "action_title": "Impeccable gives taste somewhere to operate",
+      "audience_job": "Understand the source argument and its practical implication.",
+      "claim_ids": [
+        "claim-15"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-15"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 40,
+        "narrative": "Impeccable gives taste somewhere to operate",
+        "demo_fallback": "Use the native diagram and source-linked evidence."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "visual",
+          "supporting explanation"
+        ],
+        "visual_alt_text": "Impeccable gives taste somewhere to operate"
+      },
+      "status": "reviewed"
+    }
+  ]
+}

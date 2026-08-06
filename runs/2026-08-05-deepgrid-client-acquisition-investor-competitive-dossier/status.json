@@ -1,0 +1,47 @@
+{
+  "run": "2026-08-05-deepgrid-client-acquisition-investor-competitive-dossier",
+  "target": "DeepGrid Semi",
+  "audience": "Commercial lead \u2014 client acquisition",
+  "deliverable": "DeepGrid-client-acquisition-v2-draft.pptx",
+  "slides": 21,
+  "delivery_status": "reviewed",
+  "stages": {
+    "recall": "GBrain queried \u2014 NO prior DeepGrid pages; recorded as empty recall",
+    "acquisition": "You.com Level 2 VERIFIED LIVE \u2014 25 discovery, 22 fresh extractions, 304,574 chars across 5 queries",
+    "evidence": "14-claim ledger; 9 CONFIRMED independent, 3 company-claimed, 2 company-corrected",
+    "storm_lenses": "COMPLETE \u2014 5 independent lenses persisted in working/storm/lenses/",
+    "citation_verification": "COMPLETE \u2014 outputs/citation-verification.md; 1 CONTRADICTED, 3 PARTIAL, 2 CONFIRMED",
+    "arenas": "done \u2014 imports, low-end compliance substitute, Indian semi peers, software-first, global BOM reference",
+    "story": "outputs/story-architect-pack.md",
+    "build": "native branded PPTX, 1 native chart, 6 harvested product photos",
+    "qa": "structural validation PASS; geometry PASS; contact sheets rendered and reviewed",
+    "gbrain_writeback": "pending"
+  },
+  "promotion_gate_open": null,
+  "banned_claims_enforced": true,
+  "blocked_reason": null,
+  "contradictions_found": 14,
+  "rebuild": {
+    "reason": "Citation verification CONTRADICTED v1's central claim (mandate dates); academic lens disproved the 39.3 TOPS 'measured' and transformer-VLA claims",
+    "v1_retained_as": "build_deck_v1_prestorm.py.bak (superseded, do not use)",
+    "changes": [
+      "Demand clock rebuilt on G.S.R. 834(E): AEBS 1 Jan 2027 new / 1 Oct 2027 all; LDWS+ 1 Oct 2027 / 1 Jan 2028",
+      "New slide 3: nine claims to retire before anyone sells",
+      "New slide: AIS-140 precedent - value migrates to the recurring compliance layer",
+      "Margin slide: 72% kit only; 88% blended shown arithmetically impossible (needs 120% on non-kit)",
+      "Cost slide: 2.3x loaded, not 12.9x; moat restated as cannibalisation immunity",
+      "Proof kit corrected: Rs 23.01L delivered, different entity, MCEME IP; power/thermal gap added",
+      "Sell-by-function pricing: AEBS + DMS carry price, warnings ride free",
+      "Track A kill criterion revised to named programme + SI partner by Month 3",
+      "Track B re-scoped to design partners against the 2027 rule, not a 2026 deadline",
+      "Channel: do not recruit dealers pre-tapeout; insurer subsidy sized at 20-30%",
+      "Netrasemi corrected in both directions (ahead on timing, behind their own headline)"
+    ]
+  },
+  "qa": "structural validation PASS; geometry PASS (410 text frames); all 21 slides rendered and reviewed",
+  "client_package": {
+    "html_twin": "client-package/site/index.html",
+    "sync_check": "outputs/sync-check.md (5/5 PASS)",
+    "manifest": "client-package/delivery-manifest.json"
+  }
+}

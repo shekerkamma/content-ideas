@@ -1,0 +1,564 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Impeccable Decision Flight Recorder",
+    "evidence_contract": "presentation-evidence.json",
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "claim-01",
+      "text": "Pilot the decision system\u2014not autonomous taste",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-problem"
+      ]
+    },
+    {
+      "id": "claim-02",
+      "text": "Three demonstrated mechanisms justify one controlled test",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-03",
+      "text": "A generic first draft moves the expensive decision downstream",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-changes"
+      ]
+    },
+    {
+      "id": "claim-04",
+      "text": "Worlds turns make it better into a visible macro decision",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ]
+    },
+    {
+      "id": "claim-05",
+      "text": "Value comes from commitment\u2014not from an endless menu",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-worlds"
+      ]
+    },
+    {
+      "id": "claim-06",
+      "text": "A higher creative ceiling shifts more risk to the operator",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ]
+    },
+    {
+      "id": "claim-07",
+      "text": "Change radius\u2014not tool preference\u2014should route the work",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-references"
+      ]
+    },
+    {
+      "id": "claim-08",
+      "text": "Live Mode compresses a bounded compare\u2013tune\u2013accept loop",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ]
+    },
+    {
+      "id": "claim-09",
+      "text": "A wrong visual grammar requires a reference reset\u2014not more polish",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": [
+        "transcript-references",
+        "frame-reference"
+      ]
+    },
+    {
+      "id": "claim-10",
+      "text": "Humans own four irreversible decisions",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-11",
+      "text": "Accepted decisions matter only when they constrain the next cycle",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-memory"
+      ]
+    },
+    {
+      "id": "claim-12",
+      "text": "The demo shows structured convergence\u2014not measured optimization",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-13",
+      "text": "A matched-task test isolates workflow value from operator enthusiasm",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    },
+    {
+      "id": "claim-14",
+      "text": "Earn the right to scale",
+      "kind": "interpretation",
+      "confidence": "medium",
+      "evidence_ids": [
+        "transcript-conclusion"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "Pilot the decision system\u2014not autonomous taste",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-01"
+      ],
+      "evidence_ids": [
+        "transcript-problem"
+      ],
+      "visual_ids": [
+        "visual-01"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Pilot the decision system\u2014not autonomous taste"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "analytical-native",
+      "action_title": "Three demonstrated mechanisms justify one controlled test",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-02"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-02"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Three demonstrated mechanisms justify one controlled test"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "analytical-native",
+      "action_title": "A generic first draft moves the expensive decision downstream",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-03"
+      ],
+      "evidence_ids": [
+        "transcript-changes"
+      ],
+      "visual_ids": [
+        "visual-03"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "A generic first draft moves the expensive decision downstream"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "evidence-proof",
+      "action_title": "Worlds turns make it better into a visible macro decision",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-04"
+      ],
+      "evidence_ids": [
+        "transcript-worlds",
+        "frame-worlds"
+      ],
+      "visual_ids": [
+        "visual-04"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Worlds turns make it better into a visible macro decision"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "analytical-native",
+      "action_title": "Value comes from commitment\u2014not from an endless menu",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-05"
+      ],
+      "evidence_ids": [
+        "transcript-worlds"
+      ],
+      "visual_ids": [
+        "visual-05"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Value comes from commitment\u2014not from an endless menu"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "analytical-native",
+      "action_title": "A higher creative ceiling shifts more risk to the operator",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-06"
+      ],
+      "evidence_ids": [
+        "transcript-tradeoff"
+      ],
+      "visual_ids": [
+        "visual-06"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "A higher creative ceiling shifts more risk to the operator"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "analytical-native",
+      "action_title": "Change radius\u2014not tool preference\u2014should route the work",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-07"
+      ],
+      "evidence_ids": [
+        "transcript-references"
+      ],
+      "visual_ids": [
+        "visual-07"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Change radius\u2014not tool preference\u2014should route the work"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "evidence-proof",
+      "action_title": "Live Mode compresses a bounded compare\u2013tune\u2013accept loop",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-08"
+      ],
+      "evidence_ids": [
+        "transcript-live",
+        "frame-live"
+      ],
+      "visual_ids": [
+        "visual-08"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Live Mode compresses a bounded compare\u2013tune\u2013accept loop"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "evidence-proof",
+      "action_title": "A wrong visual grammar requires a reference reset\u2014not more polish",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-09"
+      ],
+      "evidence_ids": [
+        "transcript-references",
+        "frame-reference"
+      ],
+      "visual_ids": [
+        "visual-09"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "A wrong visual grammar requires a reference reset\u2014not more polish"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "analytical-native",
+      "action_title": "Humans own four irreversible decisions",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-10"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-10"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Humans own four irreversible decisions"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 11,
+      "archetype": "analytical-native",
+      "action_title": "Accepted decisions matter only when they constrain the next cycle",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-11"
+      ],
+      "evidence_ids": [
+        "transcript-memory"
+      ],
+      "visual_ids": [
+        "visual-11"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Accepted decisions matter only when they constrain the next cycle"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 12,
+      "archetype": "analytical-native",
+      "action_title": "The demo shows structured convergence\u2014not measured optimization",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-12"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-12"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "The demo shows structured convergence\u2014not measured optimization"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 13,
+      "archetype": "analytical-native",
+      "action_title": "A matched-task test isolates workflow value from operator enthusiasm",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-13"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-13"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "A matched-task test isolates workflow value from operator enthusiasm"
+      },
+      "status": "reviewed"
+    },
+    {
+      "slide_id": 14,
+      "archetype": "cover",
+      "action_title": "Earn the right to scale",
+      "audience_job": "Understand the decision, mechanism, evidence boundary, and next action.",
+      "claim_ids": [
+        "claim-14"
+      ],
+      "evidence_ids": [
+        "transcript-conclusion"
+      ],
+      "visual_ids": [
+        "visual-14"
+      ],
+      "speaker_notes": {
+        "talk_time_seconds": 45,
+        "narrative": "Use the visible decision structure and preserve its evidence boundary.",
+        "demo_fallback": "Explain the observed state and management implication."
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "primary visual",
+          "decision implication",
+          "evidence label"
+        ],
+        "visual_alt_text": "Earn the right to scale"
+      },
+      "status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+target: DeepGrid Semi Pvt Ltd (CIN U62099TS2024PTC183631)
+audience: Commercial / sales executive driving client acquisition
+decision: Which clients to pursue, in what order, with what positioning and what proof
+cohort:
+  india_adas_arena: [Mobileye EyeQ, Bosch, Continental ARS, Qualcomm SA8295, Nvidia Orin]
+  low_end_substitute: [AIS-140 VLTD/GPS devices, "AIS-compliant" camera+ADAS boxes]
+  indian_semi_peers: [Netrasemi, Mindgrove, Agnit]
+  software_first_autonomy: [Minus Zero, Swaayatt Robots, RoshAI]
+  global_bom_reference: [Aurora, Kodiak, Gatik, DeepWay]
+timeframe: FY2027-FY2032; competitive reality as of Aug 2026
+deliverable: Client-acquisition strategy deck (native branded PPTX) + evidence ledger
+evidence_threshold: Roadmap / Silicon / Validation / Production; no state inferred from funding or logos
+numbers_basis: >
+  July 2026 Pre-Series A corrected basis (Corrections Ledger sl.6) and BP-1A.
+  June 2026 IM is superseded and repeats banned claims.
+banned_claims_enforced:
+  - "84% ASIC gross margin"
+  - any insurance-premium-reduction percentage
+  - "mandate-ready" for AD2
+  - any accident-reduction percentage
+  - "5M+ truck TAM" used as pipeline
+sources:
+  - DeepGrid_Semi_-Aravind.pdf (June 2026 IM, 33pp) - SUPERSEDED, used for product/architecture only
+  - DeepGrid-Semi-PreSeriesA-final.pptx (July 2026, 37 slides) - corrected basis, ICP, two-track positioning
+  - DeepGrid_BP1A_India_AutonomousTrucking_Plan (4).pdf (40pp)
+  - DeepGrid_BP1B_USA_Proposal_Shravan (4).pdf (25pp)

@@ -1,0 +1,15 @@
+id,claim,evidence_state,source_type,source,verdict
+E-01,"GSR 184(E) notified March 2025; mandates AIS-162/184/186/187/188 for M2/M3/N2/N3",Production,independent,electraytech.com regulatory landscape 2026,CONFIRMED
+E-02,"Mandate is phased: new models Apr 2026; existing production models Oct 2026; further systems through Jan 2028",Production,independent,novushitech.com ADAS school-bus guide,CONFIRMED
+E-03,"Netrasemi A2000 declared production-ready May 2026; 3 OEM trials live (surveillance + automotive)",Validation,independent,niftytrader.in chip-startup timeline,CONFIRMED
+E-04,"Netrasemi raised Rs 107 Cr Series A Jul 2025 led by Zoho and Unicorn India Ventures",Production,independent,niftytrader.in; Grokipedia,CONFIRMED
+E-05,"Netrasemi A2000 is an edge-AI SoC for video analytics; automotive is one of several target sectors (IoT, healthcare, surveillance)",Silicon,independent,netrasemi.com; Grokipedia,CONFIRMED
+E-06,"Netrasemi A4000 edge-AI server chip targets fabrication readiness Q2 2027",Roadmap,independent,niftytrader.in,CONFIRMED
+E-07,"RoshAI raised Rs 22 Cr for autonomous vehicles in industrial use",Validation,independent,software-first-india captures,CONFIRMED
+E-08,"Mahindra selected Mobileye for ADAS across six future models",Production,independent,incumbent-india capture,CONFIRMED
+E-09,"DeepGrid holds Rs 1 Cr defence revenue; GeM record",Validation,company,BP-1A / IM,COMPANY-CLAIMED
+E-10,"DGrid Alpha: TSMC 28nm, 39.3 TOPS INT8, 64 PCOREs, ~57.1 mm2 die",Silicon,company,IM p.5 / BP-1A,COMPANY-CLAIMED
+E-11,"Die cost Rs/$3.876 foundry-quoted at 1M units (retracts earlier '<$3')",Silicon,company,July deck Corrections Ledger sl.6,COMPANY-CORRECTED
+E-12,"Kit gross margin 72% at ASIC phase; 88% only as blended portfolio; 84% board-only figure retracted",Roadmap,company,BP-1A s5 + July deck sl.6/18,COMPANY-CORRECTED
+E-13,"AIS certification is a path, not held",Roadmap,company,BP-1A s10 risk 1,COMPANY-CLAIMED
+E-14,"AIS-140 GPS devices retail Rs 4500-11000 in India",Production,independent,low-end-pricing captures,CONFIRMED

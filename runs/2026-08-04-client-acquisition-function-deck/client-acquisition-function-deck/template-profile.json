@@ -1,0 +1,9 @@
+{
+  "contract_version": "1.0",
+  "template": {"id": "deepgrid-client-ready-v8-reference", "source": "/mnt/c/Users/sheke/OneDrive/Desktop/DeepGrid-Semi-Investor-Briefing-Client-Ready-v8-reviewed.pptx", "aspect_ratio": "16:9", "output_mode": "native"},
+  "brand": {"colors": {"ink": "#1E293B", "page": "#F8FAFC", "accent": "#00B4D8"}, "heading_font": "Aptos Display", "body_font": "Aptos", "logo_policy": "No logo supplied; retain a restrained text identity", "image_treatment": "Use no decorative imagery; native diagrams carry meaning", "icon_style": "Minimal geometric marks only"},
+  "geometry": {"safe_margin_inches": 0.6, "title_zone_inches": 1.15, "footer_zone_inches": 0.35, "grid_columns": 12, "gutter_inches": 0.16},
+  "typography": {"title_pt": 30, "body_pt": 15, "caption_pt": 9, "metric_pt": 36, "max_font_families": 2},
+  "composition": {"density": "executive-medium", "corner_radius": 0.08, "shadow_policy": "No decorative shadows", "accent_policy": "Cyan marks systems; teal marks passed gates; amber marks decisions and risk", "whitespace_policy": "Separate argument, mechanism, and implication"},
+  "archetypes": ["cover", "executive-summary", "section-divider", "three-card-argument", "comparison", "decision-scorecard", "roadmap", "operating-model", "use-case-realization", "recommendation-ask"]
+}

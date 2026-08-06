@@ -1,0 +1,12 @@
+{
+  "name": "validate",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "validate",
+    "/home/sheke/content-ideas/runs/2026-08-04-impeccable-decision-flight-recorder-v5/impeccable-decision-flight-recorder-notes-draft.pptx",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"success\": true,\n  \"data\": \"Validation passed: no errors found.\",\n  \"message\": \"Validation passed: no errors found.\"\n}\n",
+  "stderr": ""
+}

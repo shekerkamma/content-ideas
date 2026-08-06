@@ -1,0 +1,846 @@
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Claude For Client Acquisition
+              The 10 levels of automation, and how to unlock each
+              one.
+              Most people use Claude like a vending machine. Ask, get, leave. Then they wonder why
+              nothing in their business actually changed.
+              Getting clients is a machine with parts: find people, pick the good ones, talk to them,
+              book them, close them, onboard them. Each part can be automated. But you can’t
+              automate part 6 if part 1 is still a mess in your head.
+              So this is a ladder. Level 1 is one prompt. Level 10 is your whole acquisition function
+              running while you sleep. Every level below has the actual build steps, not vibes.
+
+
+              Read this first (30 seconds)
+              Rule 1 — Don’t skip levels. Level 7 built on a broken Level 3 is just a faster mess.
+              Rule 2 — Automate what you’ve done by hand 10 times. If you’ve never written a
+              cold email that worked, you can’t teach a machine to write one. You’ll just scale bad.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87   1/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Rule 3 — Every level should kill a task you currently do. If it doesn’t remove work
+              from your calendar, it’s a toy. Delete it.
+              Rule 4 — Write the rule down once. Every level up is just moving knowledge out of
+              your head and into a file Claude can read. That’s the whole game.
+
+              The ladder at a glance
+
+                  Level                  Name                              What it does                         Build time
+                  1                      The Saved Prompt                  One task, done well, every time      20 min
+                  2                      The Chain                         Several prompts in a row, one job    1 hour
+                  3                      The Brain                         Claude knows your offer, ICP and     2 hours
+                                                                           voice
+                  4                      The Skill                         A job packaged so it runs            2 hours
+                                                                           identically forever
+                  5                      The Deliverable Machine           Finished files, not drafts           3 hours
+                  6                      The Connection                    Claude touches your real inbox,      1 hour
+                                                                           calendar, CRM
+                  7                      The Agent                         You give a goal, it does the whole   Half a day
+                                                                           job
+                  8                      The Team                          Specialist agents handing work to    1-2 days
+                                                                           each other
+                  9                      Always On                         It runs without you pressing         1 day
+                                                                           anything
+                  10                     The Function                      The entire acquisition engine,       2-4 weeks
+                                                                           humans on exceptions only
+
+
+
+
+              What each level covers in your acquisition process
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87                        2/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                   Stage                             Handled from
+                   Lead sourcing                     Level 2
+                   Lead research + scoring           Level 4
+                   Outreach writing                  Level 1-3
+                   Inbox replies + objections        Level 6
+                   Booking + call prep               Level 6-7
+                   Proposals + pricing               Level 5
+                   Follow-up sequences               Level 9
+                   Onboarding                        Level 5, 9
+                   Pipeline reporting                Level 9
+                   The whole loop                    Level 10
+
+
+
+
+              Level 1 — The Saved Prompt
+              Explained like you’re 2 years old: you write one really good instruction, save it, and
+              use it forever instead of retyping it badly every time.
+              What you get: one repeated task stops eating your day.
+              Build time: 20 minutes.
+              Most people’s prompts are bad because they’re vague. “Write a cold email for my
+              agency.” That gets you cold email soup. A good prompt has four parts and nothing
+              else.
+
+              Build it
+                  1. Pick your most repeated writing task. Follow-up emails, DM replies, call recaps.
+                     Pick the one you do most, not the one that sounds coolest.
+                  2. Do it manually one more time. Keep the version you’d actually send. That’s your
+                     gold standard.
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87   3/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                  3. Write the prompt using the four-part structure below.
+                  4. Test it three times with three different real inputs.
+                  5. Compare against your gold standard. Fix the prompt, not the output. If you’re
+                     editing the output every time, the prompt is wrong.
+                  6. Save it somewhere you’ll find it in 10 seconds.
+
+              The four-part structure
+
+                    ROLE You write follow-up emails for [your company], a [what you do] for [wh
+                    o you serve]. INPUT Here are my notes from the call: [paste raw notes] OUTP
+                    UT One email. Under 120 words. Subject line included. Structure: one line o
+                    n what they said, one line on the exact problem, one line on what we'd do,
+                    one clear next step with a date. RULES - Plain English. No "I wanted to rea
+                    ch out" or "circle back". - No compliments about their company. - One ask o
+                    nly. - Write like a person who has done this 400 times, because I have.
+
+
+
+
+              Done when: you can paste raw input, hit enter, and send the result with zero edits 8
+              times out of 10.
+              Move up when: you notice the task actually has multiple steps and you keep
+              prompting three times in a row to finish it.
+
+
+              Level 2 — The Chain
+              Explained like you’re 2 years old: one job, but four instructions in a row, where each
+              answer becomes the next question’s food.
+              What you get: jobs that used to take an afternoon take 15 minutes.
+              Build time: 1 hour.
+              A cold outreach round isn’t one task. It’s: find who, work out what they care about,
+              pick an angle, write it, then write the follow-ups. Trying to do that in one prompt gives
+              you generic mush because Claude has to guess at every step at once.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87     4/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Build it
+                  1. Write down the job as steps on paper. Literally number them. If you can’t, you
+                     don’t understand the job yet.
+                  2. Turn each step into its own prompt using the Level 1 structure.
+                  3. Add one line at the end of each prompt: what the output must look like so the next
+                     step can use it.
+                  4. Run them in a single chat, in order, one message at a time.
+                  5. Add a checkpoint. After step 2, you read it and approve or correct before moving
+                     on. This is where quality comes from.
+
+              Copy-paste chain: cold outreach round
+
+                    STEP 1 — TARGET Here are 10 companies I'm considering: [list] For each, tel
+                    l me: what they sell, who buys it, and one visible sign they might have the
+                    problem I solve ([your problem]). Format as a table. If there's no visible
+                    sign, say "none" — don't invent one.
+
+
+
+
+                    STEP 2 — ANGLE Take the 4 with the strongest signal. For each, give me: - t
+                    he specific pain, in their words not mine - the cost of that pain in money
+                    or time - the one sentence that would make them reply Do not write emails y
+                    et.
+
+
+
+
+                    STEP 3 — WRITE Write the first email for each of the 4. Under 90 words. Ope
+                    n with the specific signal you found. No flattery. Ask for a 15-minute call
+                    next week, propose two times.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87     5/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                    STEP 4 — FOLLOW-UPS For each, write 3 follow-ups: day 3, day 7, day 14. Eac
+                    h one adds new information or a different angle. None of them say "just bum
+                    ping this" or "following up". The day 14 one gives them a clean way to say
+                    no.
+
+
+
+
+              Done when: you run all four steps and send without rewriting from scratch.
+              Move up when: you’re sick of re-explaining who you are and what you sell at the top
+              of every single chain.
+
+
+              Level 3 — The Brain
+              Explained like you’re 2 years old: you stop telling Claude about your business every
+              time, because you wrote it down once and it can read it.
+              What you get: everything sounds like you, targets the right people, and prices
+              correctly, by default.
+              Build time: 2 hours. This one is the single highest-leverage thing on this list.
+              This is a Claude Project. It’s a workspace with permanent instructions and files
+              attached. Every chat inside it starts already knowing your business.
+              Most people’s Claude output sounds generic because Claude has nothing to work
+              from. Fix the input, fix everything above it.
+
+              Build it
+                  1. In Claude, create a new Project. Call it Client Acquisition.
+                  2. Write the project instructions (template below).
+                  3. Upload the six files. Yes, six. This is the part people skip and then complain about
+                     output quality.
+                  4. Test it: open a fresh chat inside the project and say “write a cold email to a [type of
+                     prospect]” with no other context. If it sounds like you, the brain works. If not, your
+                     files are too thin.
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87          6/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              The six files (write these once)
+                  •    01-offer.md — What you sell. What it costs. What’s included. What’s not. What
+                    the client has to do. Typical result and typical timeline. Be specific with numbers.
+                  • 02-icp.md — Who buys. Company size, role, industry, budget. And the
+                    disqualifiers: who wastes your time and why. Disqualifiers matter more than the
+                    qualifiers.
+                  • 03-voice.md — Three emails and three posts you actually wrote and were happy
+                    with. Plus a banned-words list. Add every phrase that makes you cringe.
+                  • 04-proof.md — Case studies, numbers, names you’re allowed to use,
+                    before/after. Anything Claude can pull as evidence.
+                  • 05-objections.md — The 10 things prospects say to avoid buying, and your actual
+                    best response to each. Take these from real conversations, not your imagination.
+                  • 06-process.md — What happens from first contact to signed. Every step, who
+                    does it, how long it takes.
+
+              Project instructions template
+
+                      You work on client acquisition for [company]. Read the project files before
+                      answering anything about offer, pricing, targeting or positioning. Never in
+                      vent a claim, number or case study that isn't in 04-proof.md. Voice: match
+                      03-voice.md. Short sentences. No corporate filler. Never use the banned wor
+                      ds list. When I give you a lead, always check them against 02-icp.md first
+                      and tell me if they're a bad fit before writing anything. I would rather lo
+                      se a lead than waste a week. If you don't have enough information to do the
+                      job well, ask me one question. Don't guess and don't pad.
+
+
+
+
+              Done when: a cold chat in the project produces something you’d send with light edits.
+              Move up when: you’re copy-pasting the same instructions into different chats, or you
+              want the same job done identically by someone else on your team.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87      7/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Level 4 — The Skill
+              Explained like you’re 2 years old: a skill is a folder you hand Claude that says “when
+              this kind of job comes up, here’s exactly how we do it here.” It picks it up on its own.
+              What you get: a job runs the same way every time, whoever runs it, wherever they run
+              it.
+              Build time: 2 hours for your first one, 20 minutes after that.
+              A prompt is something you remember to use. A skill is something Claude reaches for
+              automatically when the task matches. That’s the difference, and it’s a big one.
+              A skill is a folder with a SKILL.md file in it. Plain markdown. You can add templates,
+              checklists and scripts alongside it. Claude only loads it when it’s relevant, so you can
+              have loads of them without slowing anything down.
+              Available on paid plans. In Claude, add them in settings. In Claude Code, drop the
+              folder in ~/.claude/skills/ for personal or .claude/skills/ for a project.
+
+              Build it
+                  1. Pick a job you’ve now run 10+ times at Level 2 or 3. Lead research is the best first
+                     one for acquisition.
+                  2. Ask Claude to use the skill-creator skill. It interviews you and builds the folder. Or
+                     write the file yourself using the template below.
+                  3. Write the description line carefully. This is the only bit Claude reads when
+                     deciding whether to use the skill. Vague description, skill never fires.
+                  4. Add your templates and checklists into the same folder.
+                  5. Upload it, then test by describing the task in normal language without naming the
+                     skill. If it doesn’t trigger, your description is too vague.
+
+              Copy-paste: lead-research/SKILL.md
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87         8/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                  --- name: lead-research description: Research and score a prospect company
+                  before outreach or a sales call. Use when given a company name, website or
+                  LinkedIn URL and asked to qualify, score, research, or prepare for a prospe
+                  ct. --- # Lead Research ## What this does Turns a company name into a go /
+                  no-go decision and an outreach angle. ## Steps 1.Find: what they sell, who
+                  to, roughly how big, and who the decision maker for [your service] would b
+                  e. 2.Look for the four buying signals: -hiring for a role that overlaps wit
+                  h what we do -recent funding, launch, merger or expansion -public complaint
+                  or visible gap in the area we fix -leadership change in the last 6 months
+                  3.Score 1-10 using scoring.md. Show the reasoning in one line. 4.Check agai
+                  nst the disqualifiers. Any hit means score 0, stop, say why. 5.Output the b
+                  rief below. Nothing else. ## Output **Company:** **What they do:** (one lin
+                  e) **Decision maker:** (name and title, or "unknown") **Score:** X/10 — bec
+                  ause [reason] **Signal:** the single strongest reason to contact them now *
+                  *Angle:** one sentence that would earn a reply **Risk:** the reason this co
+                  uld be a waste of time ## Rules -Never invent a name, number or signal. Wri
+                  te "not found". -If the score is under 6, say "skip" and stop. Do not write
+                  an angle. -One brief per company. No summaries, no preamble, no closing rem
+                  arks.
+
+
+
+
+              Add a scoring.md in the same folder with your actual scoring rules. Make it brutal. A
+              scoring system that gives everyone a 7 is decoration.
+              Done when: you paste a URL, say “check this lead”, and get the brief without naming
+              the skill.
+              Move up when: you want the output to be an actual file you can send, not text in a
+              chat.
+
+
+              Level 5 — The Deliverable Machine
+              Explained like you’re 2 years old: instead of Claude writing words you then copy into
+              a document, it makes the finished document.
+              What you get: proposals, audits, pricing sheets and onboarding packs produced in
+              minutes, in your format.
+              Build time: 3 hours.
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87   9/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              This is where speed starts closing deals. Sending a proper proposal two hours after
+              the call instead of four days later wins business on its own. Nothing to do with the
+              proposal being clever.
+              Claude has built-in skills for Word, Excel, PowerPoint and PDF. You add the rules and
+              the template on top.
+
+              Build it
+                  1. Take your best real proposal. The one that closed. That’s your template.
+                  2. Strip it to structure: sections, headings, what goes where, what stays fixed, what
+                     changes per client.
+                  3. Save it in a skill folder as template.md alongside the SKILL.md .
+                  4. Write the skill so the input is your raw call notes and the output is the finished file.
+                  5. Test it with notes from three past deals. Compare against what you actually sent.
+
+              Copy-paste: proposal-builder/SKILL.md
+
+                    --- name: proposal-builder description: Turn raw discovery call notes into
+                    a finished client proposal document. Use when given call notes, a discovery
+                    summary, or asked to write, build or draft a proposal, quote, or scope of w
+                    ork. --- # Proposal Builder ## Input Raw call notes. Messy is fine. ## Step
+                    s 1.Pull out: their problem in their own words, what it's costing them, wha
+                    t they've already tried, who signs, and their timeline. 2.If any of those f
+                    ive are missing, list what's missing and ask me before writing. Do not fill
+                    gaps with assumptions. 3.Build the document from template.md. 4.Price using
+                    pricing rules in the project files. Never freelance a number. 5.Save as .do
+                    cx named: Proposal-[Company]-[YYYY-MM-DD].docx ## Non-negotiables -Their wo
+                    rds for the problem. Not mine, not polished. -The cost of doing nothing app
+                    ears before the price. -One recommended option, two alternatives max. Three
+                    plans confuse people. -Scope has a "not included" section. Every time. -Nex
+                    t step has a date and a name attached. -No section longer than 150 words.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87           10/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Other deliverables worth building at this level: onboarding pack, client kickoff
+              agenda, monthly report, audit document you give away as a lead magnet, pricing
+              calculator spreadsheet.
+              Done when: notes in, sendable file out, under 10 minutes including your review.
+              Move up when: you’re still the one manually pasting in the notes, the leads and the
+              context.
+
+
+              Level 6 — The Connection
+              Explained like you’re 2 years old: Claude stops being a blank page and gets to look at
+              your actual inbox, calendar and files. And do things in them.
+              What you get: no more copy-pasting. Claude works off real data.
+              Build time: 1 hour.
+              Connectors plug Claude into Gmail, Calendar, Drive, Slack, Notion, HubSpot and so
+              on. It only ever gets the access you already have — if you can’t see a file, neither can it.
+              This is the level where the copy-paste tax disappears, and also the first level with
+              actual risk. Read the guardrails.
+
+              Build it
+                  1. Go to settings and connect three, no more: email, calendar, and wherever your
+                     leads live (CRM, Notion, Airtable, a spreadsheet).
+                  2. Set the permission mode. Start on manual approval so you see every action before
+                     it happens. Move to auto once you trust a specific job. Never use skip-all for
+                     anything that sends messages as you.
+                  3. Run read-only jobs for a week before you let it write anything. Build trust with your
+                     own eyes.
+                  4. Then turn on one write action. Drafts only. Not sends.
+
+              Prompts that pay for themselves immediately
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87        11/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                    Go through my inbox from the last 3 days. Find every message that is a pote
+                    ntial client or a reply to outreach. Ignore newsletters, invoices and inter
+                    nal stuff. For each one: who they are, what they want, how hot they are (ho
+                    t / warm / dead), and what the next action is. Sort hottest first. Anything
+                    that's been sitting more than 24 hours without a reply, flag it at the top
+                    in bold.
+
+
+
+
+                    I have a call with [Company] at [time]. Before it: - pull our full email hi
+                    story with them - check the calendar for anything we've had before - check
+                    my files for anything about them - use the lead-research skill on their com
+                    pany Give me a one-page brief: what they want, what we've said already, wha
+                    t they'll object to, and the three questions I need answered on this call t
+                    o write a proposal.
+
+
+
+
+                    Draft replies to every warm lead in my inbox. Use the project voice. Draft
+                    only — do not send anything. Put them in my drafts folder and give me a lis
+                    t of what you wrote so I can review before sending.
+
+
+
+
+              Guardrails (not optional)
+                  • Draft, never send, until a job has been right 20 times in a row.
+                  • Nothing touches money, contracts, or public posts without your eyes.
+                  • Nothing writes to your CRM until you’ve watched it write correctly to a test record.
+                  • Check what it did at the end of every day for the first two weeks.
+              Done when: your morning triage is a 5-minute read instead of a 45-minute slog.
+              Move up when: you’re still babysitting each step. You want to hand over the whole job
+              and walk away.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87      12/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Level 7 — The Agent
+              Explained like you’re 2 years old: you describe the finished job, not the steps. It works
+              out the steps, does them, and comes back when it’s done.
+              What you get: whole chunks of work done while you’re doing something else.
+              Build time: half a day for your first proper brief.
+              This is Cowork — Claude’s agentic mode. Point it at a folder and your connectors,
+              describe the outcome, and it plans and executes multi-step work over time. You can
+              watch, steer mid-task, or leave. Available on paid plans.
+              The failure here is always the same: bad brief. An agent given a fuzzy goal will
+              confidently do the wrong job for 40 minutes.
+
+              Build it
+                  1. Make a folder it can access. Structure it like this:
+
+
+                    /client-acquisition /inputs ← lead lists, notes, transcripts /outputs ← fin
+                    ished work /reference ← your six brain files from Level 3 /logs ← what it d
+                    id, every run
+
+
+
+
+                  1. Load your Level 4 and 5 skills. The agent will use them as its hands.
+                  2. Write the brief using the six-block template. Every block. The stop conditions are
+                     the important bit.
+                  3. Run it on manual approval the first three times. Watch what it does.
+                  4. Read the log. Fix the brief where it went wrong, not the output.
+
+              The six-block agent brief
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87     13/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                  GOAL Take the 50 companies in /inputs/leads.csv and give me 15 outreach-rea
+                  dy prospects with drafted first emails by end of day. INPUTS /inputs/leads.
+                  csv /reference/ (offer, ICP, voice, proof) The lead-research skill STEPS 1.
+                  Research each company using the lead-research skill. 2. Score all 50. Kill
+                  anything under 7. 3. Take the top 15 by score. 4. Find the decision maker a
+                  nd their email if it's publicly available. 5. Write a first email for each
+                  using the project voice. 6. Write two follow-ups for each. 7. Put everythin
+                  g in /outputs/outreach-[today's date].xlsx, one row per prospect, with colu
+                  mns for score, signal, angle, email, follow-ups. OUTPUT One spreadsheet. Pl
+                  us a short summary in chat: how many passed, how many failed, and the most
+                  common reason for failure. GUARDRAILS - Never invent contact details. Blank
+                  is fine, wrong is not. - Never invent a buying signal. "None found" is a re
+                  al answer. - Draft only. Send nothing. - If fewer than 15 score above 7, gi
+                  ve me fewer. Do not lower the bar to hit the number. STOP AND ASK ME IF - m
+                  ore than half the list fails the ICP check - you can't access a file or con
+                  nector - you're unsure about pricing or a claim about our results
+
+
+
+
+              That last block is what separates an agent that helps from an agent that produces 50
+              confident lies.
+              Done when: you send the brief, walk away for an hour, and come back to work you’d
+              have accepted from a junior hire.
+              Move up when: one agent is doing too many different jobs and the quality is sliding
+              on all of them.
+
+
+              Level 8 — The Team
+              Explained like you’re 2 years old: instead of one helper doing everything badly, you
+              get four helpers who are each good at one thing and pass work to each other.
+              What you get: quality stops dropping as volume goes up.
+              Build time: 1-2 days.
+              Same reason you don’t hire one person to do sales, delivery and accounts. Specialists
+              beat generalists, and a narrow brief beats a broad one every time.
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87   14/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Cowork can coordinate multiple sub-agents working at once on complex tasks. In
+              Claude Code you define them as subagents. Either way, the design work is yours.
+
+              The four-agent acquisition team
+
+                   Agent                 Job                                             Never does
+                   Scout                 Finds and scores leads. Nothing                 Writes copy
+                                         else.
+                   Writer                Turns a scored lead into outreach               Decides who to contact
+                                         and proposals.
+                   Closer                Handles replies, objections,                    Cold outreach
+                                         booking, call prep.
+                   Auditor               Checks everything before it                     Creates anything
+                                         reaches a human or a client.
+
+
+              The Auditor is the one everyone skips. Don’t. It’s the only thing standing between you
+              and a fabricated case study landing in a prospect’s inbox.
+
+              Build it
+                  1. Write each agent as its own skill with a hard scope. Include a “you do not do this”
+                     section in every one.
+                  2. Define the handoff artifact between each pair. This is the actual design work. Scout
+                     hands Writer a scored brief file. Writer hands Auditor a draft file. Auditor hands
+                     you an approved file. Files are the handoff, not chat.
+                  3. Give each stage a folder: /scored , /drafted , /approved , /rejected .
+                  4. Write the Auditor’s checklist as a hard pass/fail list, not a vibe check.
+                  5. Run one job end to end. Watch every handoff. Fix the artifact format where things
+                     get lost.
+
+              Copy-paste: Auditor checklist
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87             15/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                    Fail the item and send it back with a reason if ANY of these are true: -Con
+                    tains a number, client name or result not found in /reference/proof -Contai
+                    ns a claim about the prospect not found in the research brief -Contains any
+                    banned word from the voice file -The ask is unclear or there's more than on
+                    e ask -Over the word limit for its type -Price differs from the pricing rul
+                    es -Anything reads as filler: "I wanted to reach out", "circle back", "hope
+                    this finds you well", "in today's landscape" Output: PASS or FAIL + the spe
+                    cific line that failed. Nothing else. Do not fix it yourself. Send it back
+                    to the Writer.
+
+
+
+
+              Done when: work moves through all four stages and the only thing you do is approve
+              at the end.
+              Move up when: the whole thing works but you’re still the one starting it every
+              morning.
+
+
+              Level 9 — Always On
+              Explained like you’re 2 years old: you stop pressing go. It wakes up on its own and
+              does the job.
+              What you get: your pipeline moves on days you don’t work.
+              Build time: 1 day.
+              Scheduled tasks in Cowork run on a cadence you set, on Anthropic’s infrastructure, so
+              they fire even with your laptop shut. Each one runs as its own session with access to
+              your connectors and skills. Paid plans.
+              The catch: a scheduled task can’t ask you a clarifying question. Anything vague, it
+              guesses. A prompt that works in conversation often fails on a schedule for exactly this
+              reason.
+
+              Build it
+                  1. Pick a job that’s been running clean at Level 7 or 8 for two weeks. Not a new one.
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87     16/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                  2. Rewrite the prompt to be schedule-safe (rules below).
+                  3. Set the cadence.
+                  4. Watch the first five runs like a hawk. Log what it did.
+                  5. Only then add the next one.
+
+              Schedule-safe prompt rules
+                  • Name the exact input source. Not “my leads” but “the file at /inputs/leads.csv”.
+                  • Name the exact output destination and filename format.
+                  • Define what “no work today” looks like, so it doesn’t invent work. This one bites
+                    people constantly.
+                  • Define what to do on failure. Usually: stop, write to the log, flag me.
+                  • No open questions. If the prompt could be answered two ways, it will pick the
+                    wrong one.
+
+              The five schedules worth building
+
+                    DAILY 07:00 — Pipeline brief Check inbox, calendar and CRM. Give me: new le
+                    ads since yesterday, replies waiting on me, calls today with a one-line pre
+                    p for each, and anything that's gone quiet for 5+ days. If there's nothing
+                    in a section, write "nothing" — do not pad it.
+
+
+
+
+                    DAILY 08:00 — Follow-up sweep Find every outreach thread with no reply wher
+                    e the last message was sent 3, 7 or 14 days ago. Draft the next message in
+                    sequence using the voice files. Put them in drafts. Never send. List what y
+                    ou drafted.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87   17/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                  WEEKLY MON 06:00 — Lead pull Run the Scout agent against my target list. Sc
+                  ore everything. Add rows scoring 7+ to /inputs/leads.csv. Skip anything alr
+                  eady in the file. If fewer than 10 pass, say so — don't lower the bar.
+
+
+
+
+                  WEEKLY FRI 16:00 — Pipeline report Numbers for the week: leads added, outre
+                  ach sent, replies, calls booked, proposals out, deals closed. Compare to la
+                  st week. Tell me the single biggest drop-off point and one thing to change
+                  next week.
+
+
+
+
+                  WEEKLY SUN 18:00 — Onboarding check For every client signed in the last 14
+                  days: has the kickoff happened, has the intake come back, is anything overd
+                  ue. List what's stuck and who's blocking it.
+
+
+
+
+              Done when: you open Claude in the morning and the work is already sitting there.
+              Move up when: you have five or six of these running and they don’t know about each
+              other.
+
+
+              Level 10 — The Function
+              Explained like you’re 2 years old: all the little machines get wired into one big
+              machine. It runs the whole job of getting clients. You only step in when something’s
+              weird.
+              What you get: client acquisition stops being something you do and becomes
+              something your business does.
+              Build time: 2-4 weeks, on top of everything above. There is no shortcut into this level.
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87    18/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Level 9 is separate machines. Level 10 is a system: one shared source of truth, one path
+              a lead travels, defined handoffs, defined human checkpoints, and a feedback loop that
+              improves it.
+              You are not removed from this. You’re moved to where you’re actually worth
+              something: the calls, the judgement calls, and the exceptions.
+
+              The five pieces
+              1. One source of truth. A single folder or database every agent reads and writes. Every
+              lead is one record. Every record has a state: new → researched → contacted → replied
+              → booked → proposed → won / lost / dead . If two agents disagree about what state a
+              lead is in, your system is broken. This is the foundation. Get it wrong and nothing
+              above it works.
+              2. One intake path. Every lead enters the same way regardless of source — referral,
+              inbound, cold, event. Same record shape, same first step. Multiple intake paths is the
+              number one reason these systems collapse.
+              3. Agents on stages, not tasks. Each stage of the pipeline has one agent that owns it,
+              and one artifact it produces to move a lead to the next stage.
+              4. Human checkpoints, written down. Decide in advance where a person must touch
+              the work. Suggested minimum: anything sent to a client, any price, any contract, any
+              lead scoring above 9, anything the Auditor failed twice.
+              5. A feedback loop. Weekly, an auditor agent reads the logs and reports: where leads
+              died, which emails got replies, which scoring rules were wrong, what humans had to
+              fix. You change one rule per week based on it. One. Change five and you’ll never know
+              which one worked.
+
+              Build it
+                  1. Map the current reality. Every step from stranger to onboarded client, as it
+                     actually happens, including the ugly manual bits. Time each step.
+                  2. Pick the state model. Write the list of states. Get this right before anything else.
+                  3. Define the artifact per stage. Research brief. Outreach thread. Call brief. Proposal.
+                     Onboarding pack. Each one is a file with a fixed shape.
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87        19/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                  4. Assign an agent per stage. Reuse your Level 8 team. Add Onboarder.
+                  5. Wire the triggers. State change fires the next agent. Time-based schedules handle
+                     sweeps and reports.
+                  6. Write the exception rules. What stops the machine and calls you. Be generous
+                     with these at first, then loosen them as trust builds.
+                  7. Build the control doc. One page: every agent, every schedule, every checkpoint,
+                     who owns what, and how to switch it all off. You will need the off switch. Everyone
+                     does.
+                  8. Run it at 20% volume for two weeks. Then 50%. Then full. Anyone who goes
+                     straight to full volume gets to explain 200 bad emails.
+
+              The weekly audit prompt
+
+                    Read this week's logs across the whole acquisition system. Tell me: 1. Wher
+                    e leads died, at which stage, and how many 2. Which outreach angles got rep
+                    lies and which got silence 3. Every time a human had to fix agent output, a
+                    nd what was wrong 4. Which scoring rules produced leads that went nowhere
+                    5. The single change that would improve results most next week Be blunt. Do
+                    n't tell me what's working unless it changes what I should do. I'm looking
+                    for the broken part, not a summary.
+
+
+
+
+              Done when: you take a week off and the pipeline still has leads in it when you get back.
+
+
+              Where people actually get stuck
+              Jumping to Level 7 on day one. An agent amplifies whatever process you feed it. No
+              process, no amplification, just noise.
+              Skipping Level 3. This is the big one. Every level above it borrows from those six files.
+              Thin files, thin everything.
+              No Auditor. You will eventually send a prospect a fabricated statistic. Then you’ll build
+              an Auditor. Build it now instead.
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87      20/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+              Automating a broken offer. If your offer doesn’t sell when you pitch it, automation
+              gets you rejected faster and at scale. Fix the offer first.
+              Never deleting anything. Half your automations won’t earn their keep. Kill them. A
+              system with six things that work beats one with twenty you don’t trust.
+              Trusting output you haven’t checked 20 times. Trust is earned per job, not per tool.
+
+
+              Your first 30 days
+                    Day 1-2: Build 3 saved prompts (Level 1)
+                    Day 3-5: Build the cold outreach chain (Level 2)
+                    Day 6-10: Write the six brain files and set up the Project (Level 3)
+                    Day 11-14: Build the lead-research skill (Level 4)
+                    Day 15-18: Build the proposal skill (Level 5)
+                    Day 19-21: Connect email, calendar and CRM. Read-only week (Level 6)
+                    Day 22-26: Write your first agent brief and run it three times (Level 7)
+                    Day 27-30: Schedule the daily pipeline brief and follow-up sweep (Level 9)
+              Levels 8 and 10 come after this, once the parts underneath are boring and reliable.
+              Boring is the goal.
+
+
+              Plain English glossary
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87   21/22
+8/4/26, 9:04 PM                                                         Claude For Client Acquisition
+
+
+
+
+                  Term                   What it actually means
+                  Prompt                 The instruction you type
+                  Chain                  Several prompts in a row, one job
+
+
+
+
+https://conscious-bone-261.notion.site/Claude-For-Client-Acquisition-3afcb192d11e80fab724e810cba6de87   22/22
+

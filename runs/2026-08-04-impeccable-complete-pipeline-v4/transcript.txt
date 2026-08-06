@@ -1,0 +1,482 @@
+[00:02] There are a million in one skills and plugins that claim to solve Claude's
+[00:04] plugins that claim to solve Claude's front-end design problem. But as someone
+[00:06] front-end design problem. But as someone who has tested literally hundreds of
+[00:08] who has tested literally hundreds of them, there is one that stands above the
+[00:10] them, there is one that stands above the rest and it just got a huge upgrade.
+[00:13] rest and it just got a huge upgrade. Now, I'm talking about Impeccable 4.0
+[00:15] Now, I'm talking about Impeccable 4.0 and it is the king of giving Claude Code
+[00:17] and it is the king of giving Claude Code the power to create front-end designs
+[00:19] the power to create front-end designs and web designs that actually look good
+[00:22] and web designs that actually look good and give you control while you do it.
+[00:24] and give you control while you do it. So, in this video, I'm going to break
+[00:25] So, in this video, I'm going to break down what this tool is, how it works,
+[00:27] down what this tool is, how it works, and how you can get the most out of this
+[00:29] and how you can get the most out of this thing, so you can start building
+[00:31] thing, so you can start building front-end designs you actually like.
+[00:33] front-end designs you actually like. Now, in my last design related video, we
+[00:35] Now, in my last design related video, we touched on impeccable a little bit, but
+[00:37] touched on impeccable a little bit, but that was in the greater scheme of how to
+[00:39] that was in the greater scheme of how to essentially inject taste into your web
+[00:41] essentially inject taste into your web design process so we can get away from
+[00:43] design process so we can get away from generic AI slop outputs. If you haven't
+[00:45] generic AI slop outputs. If you haven't watched that video, I highly suggest you
+[00:47] watched that video, I highly suggest you do because I'm not going to repeat all
+[00:49] do because I'm not going to repeat all the baseline things you need to
+[00:51] the baseline things you need to understand when it comes to injecting
+[00:53] understand when it comes to injecting your taste and sort of avoiding AI slop
+[00:55] your taste and sort of avoiding AI slop from a design process and instead we're
+[00:58] from a design process and instead we're going to be deep diving impeccable as a
+[01:00] going to be deep diving impeccable as a specific tool. Now, there will be some
+[01:02] specific tool. Now, there will be some overlap, but it helps to have that
+[01:04] overlap, but it helps to have that background coming into this. Now, before
+[01:05] background coming into this. Now, before we do a full deep dive on the tool
+[01:07] we do a full deep dive on the tool itself, let's talk about some of the
+[01:08] itself, let's talk about some of the changes because chances are there's a
+[01:10] changes because chances are there's a lot of you out there who used this tool
+[01:11] lot of you out there who used this tool a few months ago and are now wondering,
+[01:13] a few months ago and are now wondering, okay, it's 4.0. actually changed here.
+[01:15] okay, it's 4.0. actually changed here. Now, the biggest change over the last
+[01:16] Now, the biggest change over the last few months is live mode. Now, this was
+[01:18] few months is live mode. Now, this was something that was sort of in the alpha
+[01:20] something that was sort of in the alpha when they're in their 2.0 range, and now
+[01:21] when they're in their 2.0 range, and now it's gotten a lot more fleshed out. It's
+[01:23] it's gotten a lot more fleshed out. It's much smoother. It's much snappier, and
+[01:25] much smoother. It's much snappier, and allows us again to get outside of the
+[01:27] allows us again to get outside of the terminal and start iterating visually,
+[01:29] terminal and start iterating visually, which makes the design process so much
+[01:31] which makes the design process so much more simple. The other big change is
+[01:34] more simple. The other big change is worlds. They talk about adding 177 high
+[01:37] worlds. They talk about adding 177 high rated worlds into this skill. Now, what
+[01:40] rated worlds into this skill. Now, what the heck does that mean? Well, that
+[01:41] the heck does that mean? Well, that means they've essentially created
+[01:43] means they've essentially created 177 different design templates,
+[01:46] 177 different design templates, different aesthetics that you can use
+[01:48] different aesthetics that you can use when you're trying to create your
+[01:49] when you're trying to create your website from scratch. So, kind of like
+[01:52] website from scratch. So, kind of like what we did manually in the last video,
+[01:54] what we did manually in the last video, Impeccable is going to show you a the
+[01:57] Impeccable is going to show you a the first sort of design idea it has, and
+[01:59] first sort of design idea it has, and then it's going to give you a few other
+[02:00] then it's going to give you a few other options that are wildly different. Now,
+[02:03] options that are wildly different. Now, they have a whole article about how they
+[02:04] they have a whole article about how they essentially created this to make sure it
+[02:06] essentially created this to make sure it isn't just like slob trash every single
+[02:08] isn't just like slob trash every single time. I'm not going to dive that into
+[02:10] time. I'm not going to dive that into here because it's going to be like a
+[02:11] here because it's going to be like a 15-minute discussion. But what it gives
+[02:14] 15-minute discussion. But what it gives us is options and options that we can
+[02:16] us is options and options that we can see visually. And when we hook up
+[02:18] see visually. And when we hook up something like the Higsfield MCP to
+[02:19] something like the Higsfield MCP to this, we can actually see what it would
+[02:21] this, we can actually see what it would look like with our specific website. And
+[02:23] look like with our specific website. And you'll see that later. That way, it
+[02:24] you'll see that later. That way, it isn't just like a generic template.
+[02:26] isn't just like a generic template. You'd see like what your thing would
+[02:27] You'd see like what your thing would look like in these different sort of
+[02:29] look like in these different sort of visual themes. And those two things, the
+[02:32] visual themes. And those two things, the live mode in the world are the biggest
+[02:34] live mode in the world are the biggest differences over the last few months.
+[02:36] differences over the last few months. And I don't think they're small things
+[02:37] And I don't think they're small things because they're all about iteration and
+[02:39] because they're all about iteration and giving us options throughout the design
+[02:41] giving us options throughout the design process. Now, let's do a quick rundown
+[02:43] process. Now, let's do a quick rundown of Impeccable itself because there's
+[02:45] of Impeccable itself because there's probably some of you who've never even
+[02:46] probably some of you who've never even used this app. So, what the heck are we
+[02:48] used this app. So, what the heck are we even talking about here? Well,
+[02:49] even talking about here? Well, Impeccable is a free open- source skill.
+[02:51] Impeccable is a free open- source skill. It's got about 50,000 stars on GitHub.
+[02:53] It's got about 50,000 stars on GitHub. GitHub themselves actually integrated it
+[02:55] GitHub themselves actually integrated it into their own AI tool because they
+[02:57] into their own AI tool because they liked it so much. And the thesis of the
+[02:58] liked it so much. And the thesis of the skill is we want to identify AI slot
+[03:01] skill is we want to identify AI slot patterns. They consider like 40
+[03:03] patterns. They consider like 40 different things to be AI slot. things
+[03:04] different things to be AI slot. things like purple gradients, blue gradients,
+[03:06] like purple gradients, blue gradients, that sort of thing. And instead, we
+[03:07] that sort of thing. And instead, we replace those with essentially better
+[03:10] replace those with essentially better design, so to speak. Impeccable itself
+[03:13] design, so to speak. Impeccable itself is one skill, but includes 23 different
+[03:15] is one skill, but includes 23 different commands that hit different parts of the
+[03:17] commands that hit different parts of the design continuum. This includes things
+[03:19] design continuum. This includes things like shape, polish, making it choir,
+[03:21] like shape, polish, making it choir, animating things, things for onboarding,
+[03:23] animating things, things for onboarding, coloring, type set, on and on and on.
+[03:25] coloring, type set, on and on and on. Now, while each of those things does
+[03:26] Now, while each of those things does something slightly different, the point
+[03:27] something slightly different, the point is this, and you can see this over here
+[03:29] is this, and you can see this over here on the right. Claude gives us something
+[03:31] on the right. Claude gives us something that's kind of generic, kind of boring.
+[03:32] that's kind of generic, kind of boring. and we automatically know it's AI.
+[03:34] and we automatically know it's AI. Impeccable gives us something that is
+[03:36] Impeccable gives us something that is cleaner, less generic, and overall
+[03:38] cleaner, less generic, and overall better for the user. As for those 23
+[03:41] better for the user. As for those 23 different commands, well, if we go to
+[03:42] different commands, well, if we go to the website itself, which is
+[03:43] the website itself, which is impeccable.style, you can see all of
+[03:45] impeccable.style, you can see all of them in action. So, you know, we have
+[03:48] them in action. So, you know, we have clawed code version here, impeccable
+[03:50] clawed code version here, impeccable version here. You can see that for each
+[03:51] version here. You can see that for each and every one to get sort of visual idea
+[03:53] and every one to get sort of visual idea of what these things actually do. The
+[03:54] of what these things actually do. The documentation on the website goes pretty
+[03:56] documentation on the website goes pretty deep and I actually misspoke earlier in
+[03:58] deep and I actually misspoke earlier in terms of AI slop. There's actually 64
+[04:00] terms of AI slop. There's actually 64 different patterns that they say expose
+[04:02] different patterns that they say expose AI defaults and production defects. And
+[04:05] AI defaults and production defects. And you can see how this has changed over
+[04:06] you can see how this has changed over the years. Like we all remember this
+[04:08] the years. Like we all remember this like the early days of chat GPT, right?
+[04:10] like the early days of chat GPT, right? And now you know AI slop looks something
+[04:13] And now you know AI slop looks something a little bit more like this still. These
+[04:15] a little bit more like this still. These are things we want to move away from. So
+[04:16] are things we want to move away from. So that's impeccable in a nutshell.
+[04:18] that's impeccable in a nutshell. Identify slob and then gives us better
+[04:19] Identify slob and then gives us better options that allow us to iterate and
+[04:21] options that allow us to iterate and even iterate visually with their live
+[04:23] even iterate visually with their live tool. Now to actually use this thing,
+[04:25] tool. Now to actually use this thing, it's pretty simple to install. is just
+[04:27] it's pretty simple to install. is just going to be npx impeccable install. Now,
+[04:29] going to be npx impeccable install. Now, if that is too confusing, you can also
+[04:31] if that is too confusing, you can also go to the impeccable impeccable GitHub
+[04:33] go to the impeccable impeccable GitHub page. You can copy this URL, paste it
+[04:35] page. You can copy this URL, paste it into cloud code and say, "Hey, can you
+[04:37] into cloud code and say, "Hey, can you go ahead and install impeccable for me?"
+[04:39] go ahead and install impeccable for me?" Now, once you install impeccable, the
+[04:40] Now, once you install impeccable, the other thing you're going to want to
+[04:41] other thing you're going to want to install, like I talked about earlier, is
+[04:42] install, like I talked about earlier, is the Higsfield MCP, which Impeccable is
+[04:45] the Higsfield MCP, which Impeccable is going to be able to call on when it
+[04:46] going to be able to call on when it builds that worlds feature for us, or
+[04:48] builds that worlds feature for us, or essentially shows us all the different
+[04:50] essentially shows us all the different aesthetic styles for our website. Now,
+[04:51] aesthetic styles for our website. Now, to get the Higsfield MCP set up, which
+[04:53] to get the Higsfield MCP set up, which again is an aggregator for essentially
+[04:55] again is an aggregator for essentially every AI image of video generator out
+[04:57] every AI image of video generator out there, you'll just go to higsfield.ai,
+[04:59] there, you'll just go to higsfield.ai, go up here to the top where it says MCP
+[05:01] go up here to the top where it says MCP and CLI. Head here to clawed code and
+[05:05] and CLI. Head here to clawed code and you can just copy this prompt right here
+[05:07] you can just copy this prompt right here and it will walk you through the
+[05:08] and it will walk you through the authentication process. After that, the
+[05:10] authentication process. After that, the first step we are going to do is simply
+[05:13] first step we are going to do is simply run impeccable in it. And in this case,
+[05:16] run impeccable in it. And in this case, I've opened up a new folder and I've
+[05:17] I've opened up a new folder and I've just called it impecc. You can create
+[05:19] just called it impecc. You can create whatever folder or directory you want,
+[05:21] whatever folder or directory you want, but for/impeckable in it. And once you
+[05:24] but for/impeckable in it. And once you do that, it's going to begin asking
+[05:25] do that, it's going to begin asking questions about what it is you're trying
+[05:27] questions about what it is you're trying to build. So, I'm going to say I'm
+[05:29] to build. So, I'm going to say I'm building a real landing page. Then we'll
+[05:31] building a real landing page. Then we'll ask what stack this project should use.
+[05:33] ask what stack this project should use. If you don't know, you can just have it
+[05:34] If you don't know, you can just have it say you're a call. And that's what we'll
+[05:35] say you're a call. And that's what we'll do for today. And then it's going to ask
+[05:37] do for today. And then it's going to ask about evidence essentially like what do
+[05:39] about evidence essentially like what do you want to be on this website? If you
+[05:41] you want to be on this website? If you have screenshots you can provide, if you
+[05:42] have screenshots you can provide, if you have actual numbers, that's great. If
+[05:43] have actual numbers, that's great. If you don't have anything else, you can
+[05:45] you don't have anything else, you can essentially tell it to make it all up.
+[05:47] essentially tell it to make it all up. So I just told it to create fake data
+[05:49] So I just told it to create fake data for now and we can see what it comes
+[05:51] for now and we can see what it comes back with and we can always edit it
+[05:52] back with and we can always edit it later. So after we answered those
+[05:53] later. So after we answered those questions, impeccable then called on the
+[05:55] questions, impeccable then called on the Higsfield MCP to create those different
+[05:58] Higsfield MCP to create those different worlds. Essentially those different
+[06:00] worlds. Essentially those different design aesthetics for our web page and
+[06:03] design aesthetics for our web page and it's asking us which one we want to
+[06:04] it's asking us which one we want to choose. What it does is it brings it up
+[06:05] choose. What it does is it brings it up in local host so you can actually see
+[06:07] in local host so you can actually see it. So it looks something like this. So
+[06:10] it. So it looks something like this. So this was the first one that it came up
+[06:12] this was the first one that it came up with. This is essentially be the hero
+[06:14] with. This is essentially be the hero section for Pathfinder. And then we see
+[06:16] section for Pathfinder. And then we see all these other options. Again, this is
+[06:18] all these other options. Again, this is very reminiscent to what we did in the
+[06:19] very reminiscent to what we did in the last video. We're like, "Hey, come up
+[06:21] last video. We're like, "Hey, come up with the different options for us so we
+[06:22] with the different options for us so we can actually see it." So, we have this
+[06:24] can actually see it." So, we have this one, we have this one. And again, this
+[06:26] one, we have this one. And again, this is just like kind of like a highle
+[06:28] is just like kind of like a highle sketch of what it would look like and
+[06:31] sketch of what it would look like and where you want to go. We have the option
+[06:33] where you want to go. We have the option if we don't like these, we can reroll it
+[06:35] if we don't like these, we can reroll it down here on the right. We also can give
+[06:37] down here on the right. We also can give it an optional steer. So, we could say
+[06:38] it an optional steer. So, we could say like, "Hey, I kind of like number three,
+[06:40] like, "Hey, I kind of like number three, but let's do some more variations of
+[06:42] but let's do some more variations of that." add or something to that effect.
+[06:44] that." add or something to that effect. In this case, what we're doing of these,
+[06:46] In this case, what we're doing of these, I kind of like the first one it came up
+[06:48] I kind of like the first one it came up with. So, I'm just going to say build
+[06:49] with. So, I'm just going to say build this. So, I just click this and that's
+[06:52] this. So, I just click this and that's going to get sent back to the terminal.
+[06:53] going to get sent back to the terminal. And so now, it's going to start building
+[06:54] And so now, it's going to start building out the prototype of that landing page
+[06:56] out the prototype of that landing page in that style we chose. And as part of
+[06:58] in that style we chose. And as part of that build process, it's then going to
+[07:00] that build process, it's then going to show us multiple variations of that
+[07:02] show us multiple variations of that specific style. So, we have at the
+[07:05] specific style. So, we have at the beginning a bunch of different styles.
+[07:06] beginning a bunch of different styles. We choose one style and now we have
+[07:07] We choose one style and now we have variations of that style. So it gives us
+[07:10] variations of that style. So it gives us the constellation option. It gives us
+[07:13] the constellation option. It gives us sort of the dossier split and then sort
+[07:16] sort of the dossier split and then sort of the find the Y. Again, just like
+[07:18] of the find the Y. Again, just like before, if we want to give it an
+[07:20] before, if we want to give it an optional steer, I have sort of a prompt
+[07:21] optional steer, I have sort of a prompt window down here that I can point it to.
+[07:23] window down here that I can point it to. But for this, I kind of like um I think
+[07:27] But for this, I kind of like um I think what we'll do is we'll go with number
+[07:28] what we'll do is we'll go with number three and we'll say build this. You can
+[07:30] three and we'll say build this. You can see here in the terminal, it got passed.
+[07:31] see here in the terminal, it got passed. It says timeline approved. Recording the
+[07:33] It says timeline approved. Recording the approval in the surface brief, then
+[07:35] approval in the surface brief, then loading the craft floor and building.
+[07:37] loading the craft floor and building. And this is what I like about
+[07:38] And this is what I like about impeccable, the fact that it's very
+[07:39] impeccable, the fact that it's very visual in terms of how we make the
+[07:41] visual in terms of how we make the decisions. And at every step of the way,
+[07:42] decisions. And at every step of the way, we have the option to steer it. It's not
+[07:44] we have the option to steer it. It's not an extremely prescriptive skill. And
+[07:46] an extremely prescriptive skill. And you've seen those where it's like, okay,
+[07:48] you've seen those where it's like, okay, here's random skill from random GitHub
+[07:50] here's random skill from random GitHub repo. The website it makes is really
+[07:52] repo. The website it makes is really cool looking, but that's like the only
+[07:54] cool looking, but that's like the only type of website it can create. It's kind
+[07:56] type of website it can create. It's kind of like a one-trick pony. Things like
+[07:57] of like a one-trick pony. Things like Impeccable are very general, which means
+[08:01] Impeccable are very general, which means I think it has a lower floor. like these
+[08:03] I think it has a lower floor. like these very sort of onetrick pony skills will
+[08:05] very sort of onetrick pony skills will always give you a pretty cool website
+[08:07] always give you a pretty cool website but it's just that kind impeccable a lot
+[08:09] but it's just that kind impeccable a lot more room for error on your part but we
+[08:13] more room for error on your part but we can make it much more customized and in
+[08:14] can make it much more customized and in the end if we actually work on it I
+[08:16] the end if we actually work on it I think you end up getting a better
+[08:17] think you end up getting a better product so Impeccable actually finished
+[08:19] product so Impeccable actually finished creating the website and what it does at
+[08:21] creating the website and what it does at the end of the first iteration is it
+[08:22] the end of the first iteration is it launches a sub agent called the
+[08:24] launches a sub agent called the impeccable finish reviewer so it's
+[08:27] impeccable finish reviewer so it's essentially checking everything to make
+[08:28] essentially checking everything to make sure in the process of building this
+[08:31] sure in the process of building this thing we didn't actually, you know, sort
+[08:33] thing we didn't actually, you know, sort of trip over ourselves and add some
+[08:35] of trip over ourselves and add some quote unquote AI slot pattern. So, it
+[08:37] quote unquote AI slot pattern. So, it does an additional run through with a
+[08:38] does an additional run through with a separate sub agent that it's fresh
+[08:40] separate sub agent that it's fresh context window. So, it's supposed to be
+[08:42] context window. So, it's supposed to be a second set of eyes to make sure what
+[08:43] a second set of eyes to make sure what we set out to build is what we actually
+[08:45] we set out to build is what we actually build. So, here's the website it built
+[08:47] build. So, here's the website it built us. And remember, we gave impeccable
+[08:50] us. And remember, we gave impeccable very little information. I just said,
+[08:51] very little information. I just said, "Hey, I want it to be Pathfinder." I
+[08:52] "Hey, I want it to be Pathfinder." I gave it no reference images. I really
+[08:54] gave it no reference images. I really even didn't even give it a CTA. I just
+[08:56] even didn't even give it a CTA. I just said, "This is a fake AI analytics
+[08:58] said, "This is a fake AI analytics company. Create some information for
+[09:00] company. Create some information for it." And this is what we got. And if you
+[09:03] it." And this is what we got. And if you compare this to what we would have got
+[09:04] compare this to what we would have got with the same sort of prompt if we just
+[09:05] with the same sort of prompt if we just use like the front end design skill, the
+[09:07] use like the front end design skill, the outputs are wildly different. Mainly,
+[09:10] outputs are wildly different. Mainly, this isn't the kind of generic output
+[09:11] this isn't the kind of generic output you would see. Now, is this great? Is
+[09:15] you would see. Now, is this great? Is this exactly what we want on a oneshot?
+[09:16] this exactly what we want on a oneshot? Probably not. But I think when we do any
+[09:18] Probably not. But I think when we do any sort of creative work with AI and
+[09:20] sort of creative work with AI and Claude, I think you really have to get
+[09:21] Claude, I think you really have to get away from the idea of like this must be
+[09:23] away from the idea of like this must be a oneshot thing. It always is an
+[09:25] a oneshot thing. It always is an iterative process, which is why the
+[09:27] iterative process, which is why the impeccable live feature is so nice. So
+[09:29] impeccable live feature is so nice. So to use the impeccable live feature,
+[09:31] to use the impeccable live feature, we're just going to do impeccable
+[09:33] we're just going to do impeccable forward slash and then do live and it's
+[09:35] forward slash and then do live and it's going to bring it up for us. Now once we
+[09:37] going to bring it up for us. Now once we do that, it'll bring the website back up
+[09:38] do that, it'll bring the website back up and we'll have this little bar down
+[09:40] and we'll have this little bar down here. Now what you're going to want to
+[09:41] here. Now what you're going to want to use mostly is the pick element thing
+[09:44] use mostly is the pick element thing which we see right down here. So you
+[09:45] which we see right down here. So you know I have insert but I can click pick
+[09:47] know I have insert but I can click pick and I can see all the different
+[09:49] and I can see all the different components. So let's say I want to
+[09:50] components. So let's say I want to adjust this. I click on it and I have a
+[09:52] adjust this. I click on it and I have a prompt window. Now I can add anything I
+[09:55] prompt window. Now I can add anything I want here and I can see how many
+[09:56] want here and I can see how many variations I want. You can have one
+[09:58] variations I want. You can have one variation, two variations all the way up
+[10:00] variation, two variations all the way up to four. You can also do a microphone.
+[10:02] to four. You can also do a microphone. You can also choose exactly what it is
+[10:04] You can also choose exactly what it is you want to do. So let's say if I wanted
+[10:05] you want to do. So let's say if I wanted to make it bolder or quieter or do
+[10:07] to make it bolder or quieter or do polish or type set those specific sort
+[10:10] polish or type set those specific sort of domains, we can specify that as well.
+[10:12] of domains, we can specify that as well. Now remember these are all related to
+[10:14] Now remember these are all related to like the impeccable commands. And if I
+[10:16] like the impeccable commands. And if I go back to the impeccable website, I can
+[10:18] go back to the impeccable website, I can see them all here, right? You know, uh
+[10:21] see them all here, right? You know, uh quieter, overdrive, characterize, you
+[10:23] quieter, overdrive, characterize, you know, all these sort of things. Okay, so
+[10:25] know, all these sort of things. Okay, so if you're like, uh, what exactly is it
+[10:26] if you're like, uh, what exactly is it asking me? What does this do? Just check
+[10:28] asking me? What does this do? Just check here. So, let's say I just wanted to
+[10:29] here. So, let's say I just wanted to make this bolder, right? Uh, I just want
+[10:31] make this bolder, right? Uh, I just want to make a bolder. I don't even have to
+[10:33] to make a bolder. I don't even have to give it a prompt, and I want three
+[10:34] give it a prompt, and I want three different variations. I'm just going to
+[10:36] different variations. I'm just going to click that, hit enter, and it's going to
+[10:38] click that, hit enter, and it's going to start generating the variants. And if
+[10:40] start generating the variants. And if you hop back into the terminal, you will
+[10:41] you hop back into the terminal, you will see that command sent there because the
+[10:44] see that command sent there because the session you're in is always going to be
+[10:46] session you're in is always going to be pulling for live mode events. Now, while
+[10:48] pulling for live mode events. Now, while that's working, let's talk about what
+[10:49] that's working, let's talk about what else is going on in here. So, we have
+[10:51] else is going on in here. So, we have the detect button that will detect
+[10:54] the detect button that will detect essentially any of those AI slop
+[10:55] essentially any of those AI slop antiatterns. If you're doing this from
+[10:57] antiatterns. If you're doing this from scratch, I kind of already did that in
+[10:58] scratch, I kind of already did that in the creation process. This is more for
+[11:00] the creation process. This is more for if you're using Impeccable Live on a
+[11:02] if you're using Impeccable Live on a website you've already generated. We
+[11:04] website you've already generated. We have the design MD. I'll move this over
+[11:07] have the design MD. I'll move this over a little bit. And this is our entire
+[11:09] a little bit. And this is our entire design file. All of our colors,
+[11:11] design file. All of our colors, components, what we're doing for our
+[11:13] components, what we're doing for our buttons. Again, very similar to uh
+[11:16] buttons. Again, very similar to uh Google Stitch and also what you see
+[11:17] Google Stitch and also what you see these days inside of Flaw Design. We can
+[11:19] these days inside of Flaw Design. We can also see the actual raw file if we want
+[11:22] also see the actual raw file if we want that as well. We also have the ability
+[11:23] that as well. We also have the ability to insert things. And we have a prompt
+[11:25] to insert things. And we have a prompt window here as well, which is you
+[11:27] window here as well, which is you steering the page. So, this is pretty
+[11:28] steering the page. So, this is pretty much exactly the same as if you had the
+[11:30] much exactly the same as if you had the terminal up and you're saying, "Hey,
+[11:31] terminal up and you're saying, "Hey, let's do X, Y, and Z a little bit
+[11:33] let's do X, Y, and Z a little bit differently versus trying to pick a
+[11:34] differently versus trying to pick a specific component and doing sort of
+[11:36] specific component and doing sort of these three variants that I just showed
+[11:37] these three variants that I just showed you." And speaking of those three
+[11:39] you." And speaking of those three variants, here's what it gave us when we
+[11:40] variants, here's what it gave us when we told it to make it bolder. So, this is
+[11:43] told it to make it bolder. So, this is variation one.
+[11:45] variation one. Variation two, we kind of added just
+[11:47] Variation two, we kind of added just like the red line. And then we have
+[11:49] like the red line. And then we have variation three. But we have the ability
+[11:51] variation three. But we have the ability to tune these things as well. So I can
+[11:53] to tune these things as well. So I can kind of mess with the tilt. Do I want
+[11:56] kind of mess with the tilt. Do I want the stamp border on and off? So not only
+[11:58] the stamp border on and off? So not only do I have three variations, I have
+[12:01] do I have three variations, I have variations of each variation, which I
+[12:04] variations of each variation, which I honestly love versus having to prompt
+[12:05] honestly love versus having to prompt Claude Code to create some sort of like
+[12:07] Claude Code to create some sort of like micro tweak section on its own. And once
+[12:09] micro tweak section on its own. And once you like it, all you have to do is hit
+[12:11] you like it, all you have to do is hit accept. And again, what is that going to
+[12:12] accept. And again, what is that going to do? It's just going to send that
+[12:13] do? It's just going to send that information back to the terminal. Now,
+[12:15] information back to the terminal. Now, at this point, all that is left is to
+[12:17] at this point, all that is left is to iterate, iterate, iterate. Now, we don't
+[12:20] iterate, iterate, iterate. Now, we don't have to do everything inside of
+[12:21] have to do everything inside of Impeccable Live, even though that's what
+[12:23] Impeccable Live, even though that's what I've been showcasing. The use case for
+[12:24] I've been showcasing. The use case for Impeccable Live is what you have seen,
+[12:26] Impeccable Live is what you have seen, which is for micro adjustments and
+[12:28] which is for micro adjustments and variations in specific components. If we
+[12:31] variations in specific components. If we want to think big picture, we want big
+[12:32] want to think big picture, we want big big layout changes or just completely go
+[12:35] big layout changes or just completely go in another direction, we're going to
+[12:36] in another direction, we're going to want to use the terminal for that. So,
+[12:38] want to use the terminal for that. So, if that's the case, let's say I didn't
+[12:39] if that's the case, let's say I didn't like this design at all. I was like,
+[12:41] like this design at all. I was like, hey, like we did the variations, turns
+[12:42] hey, like we did the variations, turns out this just isn't what I like. Well,
+[12:44] out this just isn't what I like. Well, let's just do what we would normally do
+[12:46] let's just do what we would normally do inside of a design process and feed it
+[12:47] inside of a design process and feed it some different references. So, this
+[12:49] some different references. So, this right here is sort of my inspiration
+[12:51] right here is sort of my inspiration library of all these different sort of
+[12:53] library of all these different sort of hero pages and designs that I've liked
+[12:55] hero pages and designs that I've liked and I've seen across the web. So, if I
+[12:58] and I've seen across the web. So, if I wanted to now have a new variation that
+[13:01] wanted to now have a new variation that looks something like this, well, what
+[13:02] looks something like this, well, what I'm going to do is I'm just going to
+[13:03] I'm going to do is I'm just going to point Claude code at this library or
+[13:06] point Claude code at this library or drop in the screenshot and say, hey,
+[13:07] drop in the screenshot and say, hey, let's try a new variation, something
+[13:09] let's try a new variation, something that looks like this. So, let's say we
+[13:10] that looks like this. So, let's say we instead wanted to go with like this ASC2
+[13:14] instead wanted to go with like this ASC2 sort of like web section, this like kind
+[13:16] sort of like web section, this like kind of vibe we're going for. So I can just
+[13:18] of vibe we're going for. So I can just copy this image. I'm going to paste this
+[13:20] copy this image. I'm going to paste this in. Now I'm just going to give it a
+[13:21] in. Now I'm just going to give it a prompt like so. So take a look at this
+[13:24] prompt like so. So take a look at this reference image I gave you. This is also
+[13:27] reference image I gave you. This is also inside of my taste vault. This is
+[13:29] inside of my taste vault. This is currently running on the 4610
+[13:32] currently running on the 4610 local host port. I kind of want to go in
+[13:34] local host port. I kind of want to go in a new direction with sort of the landing
+[13:38] a new direction with sort of the landing page we've created. I want to go with
+[13:39] page we've created. I want to go with this like ASC2 type style. Remember we
+[13:43] this like ASC2 type style. Remember we still have access to the Higfield MCP.
+[13:44] still have access to the Higfield MCP. So if we need to create assets for the
+[13:46] So if we need to create assets for the background hero page, we can do that as
+[13:48] background hero page, we can do that as well. But go ahead and create a
+[13:50] well. But go ahead and create a variation like that. And so again, this
+[13:51] variation like that. And so again, this is a huge sweeping change. Not something
+[13:53] is a huge sweeping change. Not something we would necessarily use the live thing
+[13:55] we would necessarily use the live thing for. And here's the second version of
+[13:57] for. And here's the second version of our website. Again, a huge departure
+[13:58] our website. Again, a huge departure from what we saw before. Definitely has
+[14:00] from what we saw before. Definitely has an ASC2 theme based on our reference,
+[14:02] an ASC2 theme based on our reference, but this is still an impeccable based
+[14:05] but this is still an impeccable based product. It ran the impeccable reviewer,
+[14:06] product. It ran the impeccable reviewer, made sure there wasn't slop, and so
+[14:08] made sure there wasn't slop, and so we're able to kind of get the best of
+[14:09] we're able to kind of get the best of both worlds in this case. And just like
+[14:11] both worlds in this case. And just like you saw before, we could again bring up
+[14:13] you saw before, we could again bring up impeccable live. We could start doing
+[14:15] impeccable live. We could start doing things. I think something that would
+[14:16] things. I think something that would look cool is if we ran essentially like
+[14:18] look cool is if we ran essentially like the animate um thing on each one of
+[14:20] the animate um thing on each one of these sections to give it a little bit
+[14:22] these sections to give it a little bit little bit of movement so it isn't so
+[14:24] little bit of movement so it isn't so static. But this is kind of how you want
+[14:26] static. But this is kind of how you want to approach it. Big picture, the lion
+[14:28] to approach it. Big picture, the lion claw code, small picture, really start
+[14:31] claw code, small picture, really start knocking out stuff with impeccable. And
+[14:33] knocking out stuff with impeccable. And actually, now that I look at this, there
+[14:35] actually, now that I look at this, there is some motion and some of the numbers
+[14:36] is some motion and some of the numbers coming in and out on this hero if you
+[14:38] coming in and out on this hero if you look closely. So, that's where I'm going
+[14:40] look closely. So, that's where I'm going to leave you guys for today. Impeccable
+[14:42] to leave you guys for today. Impeccable is a great tool in your toolbox for any
+[14:44] is a great tool in your toolbox for any sort of front-end design work, and as
+[14:46] sort of front-end design work, and as you saw, you can actually get pretty far
+[14:48] you saw, you can actually get pretty far if you stay 100% within the impeccable
+[14:50] if you stay 100% within the impeccable ecosystem. I think the best use case for
+[14:52] ecosystem. I think the best use case for it is a more, you know, sort of
+[14:55] it is a more, you know, sort of wide-ranging design approach that brings
+[14:57] wide-ranging design approach that brings in outside sources like references that
+[14:59] in outside sources like references that we saw at the end. And that whole sort
+[15:01] we saw at the end. And that whole sort of workflow is what I detailed, you
+[15:03] of workflow is what I detailed, you know, step by step in my last video
+[15:05] know, step by step in my last video about how to sort of defeat AI slop. But
+[15:08] about how to sort of defeat AI slop. But I think it was nice to sort of do a deep
+[15:10] I think it was nice to sort of do a deep dive on what I think is the best front
+[15:11] dive on what I think is the best front end design skill in the game right now.
+[15:13] end design skill in the game right now. So, as always, let me know what you
+[15:15] So, as always, let me know what you thought. Make sure to check out Chase AI
+[15:17] thought. Make sure to check out Chase AI Plus if you want to get your hands on my
+[15:18] Plus if you want to get your hands on my Claude Code Masterass. It's actually
+[15:20] Claude Code Masterass. It's actually going to have a huge update coming out
+[15:22] going to have a huge update coming out this week, which is exciting. And other
+[15:24] this week, which is exciting. And other than that, I'll see you

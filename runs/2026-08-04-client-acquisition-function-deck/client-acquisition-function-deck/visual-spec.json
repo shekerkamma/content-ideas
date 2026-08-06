@@ -1,0 +1,2110 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "output_mode": "native",
+    "editability": "PPT-native editable diagrams",
+    "reference_deck": "slides.pptx"
+  },
+  "visuals": [
+    {
+      "id": "visual-01",
+      "slide_ids": [
+        1
+      ],
+      "purpose": "From inconsistent prompts to a governed, always-on operating function",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-02",
+      "slide_ids": [
+        2
+      ],
+      "purpose": "Approve a 90-day staged build that earns automation one gate at a time",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-03",
+      "slide_ids": [
+        3
+      ],
+      "purpose": "The whole deck in one decision sequence",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-04",
+      "slide_ids": [
+        4
+      ],
+      "purpose": "Volume multiplies weak targeting, unsupported personalization, and hidden judgment",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-05",
+      "slide_ids": [
+        5
+      ],
+      "purpose": "A prompt is useful\u2014but it is not a process, control system, or learning loop",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-06",
+      "slide_ids": [
+        6
+      ],
+      "purpose": "Every acquisition stage depends on decisions that must become explicit",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-07",
+      "slide_ids": [
+        7
+      ],
+      "purpose": "Cheap generation can make expensive mistakes arrive faster",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-08",
+      "slide_ids": [
+        8
+      ],
+      "purpose": "Prompts are only the first asset",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-09",
+      "slide_ids": [
+        9
+      ],
+      "purpose": "Name the current level from evidence\u2014not aspiration",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-10",
+      "slide_ids": [
+        10
+      ],
+      "purpose": "Each level removes one calendar task and earns the right to build the next",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-11",
+      "slide_ids": [
+        11
+      ],
+      "purpose": "Gate: at least 8 of 10 representative cases need no substantive edit",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-12",
+      "slide_ids": [
+        12
+      ],
+      "purpose": "Gate: ordered stages, named artifacts, and a human checkpoint",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-13",
+      "slide_ids": [
+        13
+      ],
+      "purpose": "Gate: six current files produce consistent work in a fresh session",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-14",
+      "slide_ids": [
+        14
+      ],
+      "purpose": "Gate: explicit and implicit invocation both satisfy the output contract",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-15",
+      "slide_ids": [
+        15
+      ],
+      "purpose": "Gate: structured output in under 10 minutes with format and content checks",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-16",
+      "slide_ids": [
+        16
+      ],
+      "purpose": "Gate: one read-only week, then one bounded draft-only write with rollback",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-17",
+      "slide_ids": [
+        17
+      ],
+      "purpose": "Gate: junior-team-member quality with explicit stop conditions",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-18",
+      "slide_ids": [
+        18
+      ],
+      "purpose": "Gate: fixed file handoffs and an enforceable Auditor veto",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-19",
+      "slide_ids": [
+        19
+      ],
+      "purpose": "Gate: five watched runs and two stable weeks",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-20",
+      "slide_ids": [
+        20
+      ],
+      "purpose": "Gate: governed state machine plus a 20% traffic pilot for two weeks",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-21",
+      "slide_ids": [
+        21
+      ],
+      "purpose": "This is the durable commercial memory behind prompts, agents, and channels",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-22",
+      "slide_ids": [
+        22
+      ],
+      "purpose": "Prevent attractive copy from outrunning delivery reality",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-23",
+      "slide_ids": [
+        23
+      ],
+      "purpose": "Buying triggers and disqualifiers sharpen attention",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-24",
+      "slide_ids": [
+        24
+      ],
+      "purpose": "Examples and banned patterns make tone testable",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-25",
+      "slide_ids": [
+        25
+      ],
+      "purpose": "Confidence rises when proof includes limitations",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-26",
+      "slide_ids": [
+        26
+      ],
+      "purpose": "Separate the stated concern from the underlying decision risk",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-27",
+      "slide_ids": [
+        27
+      ],
+      "purpose": "States and exit criteria replace heroic memory",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-28",
+      "slide_ids": [
+        28
+      ],
+      "purpose": "Every accepted edit becomes a candidate rule update",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-29",
+      "slide_ids": [
+        29
+      ],
+      "purpose": "A state exists only when its entry evidence and exit decision are recorded",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-30",
+      "slide_ids": [
+        30
+      ],
+      "purpose": "External action remains a human-controlled transition",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-31",
+      "slide_ids": [
+        31
+      ],
+      "purpose": "The intake record is the anchor for every downstream artifact",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-32",
+      "slide_ids": [
+        32
+      ],
+      "purpose": "A good account without a buying trigger is not a priority",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-33",
+      "slide_ids": [
+        33
+      ],
+      "purpose": "Use observable change to justify attention",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-34",
+      "slide_ids": [
+        34
+      ],
+      "purpose": "Collection without a decision question becomes trivia",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-35",
+      "slide_ids": [
+        35
+      ],
+      "purpose": "The first message should prove understanding, not explain the whole offer",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-36",
+      "slide_ids": [
+        36
+      ],
+      "purpose": "Each touch has a different job",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-37",
+      "slide_ids": [
+        37
+      ],
+      "purpose": "Advance only when value, access, and timing are real",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-38",
+      "slide_ids": [
+        38
+      ],
+      "purpose": "Do not use a document to discover basic scope",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-39",
+      "slide_ids": [
+        39
+      ],
+      "purpose": "Each role owns one decision surface and communicates through files",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-40",
+      "slide_ids": [
+        40
+      ],
+      "purpose": "Discovery quality is measured by accepted opportunities, not list size",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-41",
+      "slide_ids": [
+        41
+      ],
+      "purpose": "Writer cannot invent proof, change the offer, or send",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-42",
+      "slide_ids": [
+        42
+      ],
+      "purpose": "Commercial judgment stays bounded by approved terms",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-43",
+      "slide_ids": [
+        43
+      ],
+      "purpose": "The veto is a feature\u2014not an inconvenience",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-44",
+      "slide_ids": [
+        44
+      ],
+      "purpose": "Every handoff is replayable and attributable",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-45",
+      "slide_ids": [
+        45
+      ],
+      "purpose": "No role can discover, persuade, approve, and send alone",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-46",
+      "slide_ids": [
+        46
+      ],
+      "purpose": "Channel mechanics vary; evidence, approval, and learning remain shared",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-47",
+      "slide_ids": [
+        47
+      ],
+      "purpose": "Protect relationship capital with restrained volume",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-48",
+      "slide_ids": [
+        48
+      ],
+      "purpose": "Optimize for qualified replies, not opens",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-49",
+      "slide_ids": [
+        49
+      ],
+      "purpose": "The unit of analysis is the joint value proposition",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-50",
+      "slide_ids": [
+        50
+      ],
+      "purpose": "Make it easy to identify and introduce the right person",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-51",
+      "slide_ids": [
+        51
+      ],
+      "purpose": "The acquisition system turns repeated buyer questions into useful assets",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-52",
+      "slide_ids": [
+        52
+      ],
+      "purpose": "Control design is part of conversion quality\u2014not a compliance appendix",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-53",
+      "slide_ids": [
+        53
+      ],
+      "purpose": "Research and drafting can run; commitments cannot",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-54",
+      "slide_ids": [
+        54
+      ],
+      "purpose": "Stopping early protects brand and training data",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-55",
+      "slide_ids": [
+        55
+      ],
+      "purpose": "Every stage needs idempotency and rollback",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-56",
+      "slide_ids": [
+        56
+      ],
+      "purpose": "Logs must explain what happened and why",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-57",
+      "slide_ids": [
+        57
+      ],
+      "purpose": "The learning system improves when leading and lagging indicators connect",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-58",
+      "slide_ids": [
+        58
+      ],
+      "purpose": "Track the complete path from attention to economics",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-59",
+      "slide_ids": [
+        59
+      ],
+      "purpose": "Edits reveal missing context and weak rules",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-60",
+      "slide_ids": [
+        60
+      ],
+      "purpose": "A low reply rate and a low qualification rate imply different fixes",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-61",
+      "slide_ids": [
+        61
+      ],
+      "purpose": "Measure human effort per accepted outcome",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-62",
+      "slide_ids": [
+        62
+      ],
+      "purpose": "Learning requires comparability",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-63",
+      "slide_ids": [
+        63
+      ],
+      "purpose": "Accepted learning updates rules; anecdotes do not",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-64",
+      "slide_ids": [
+        64
+      ],
+      "purpose": "The roadmap prioritizes reliability, context, and watched operation",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-65",
+      "slide_ids": [
+        65
+      ],
+      "purpose": "Target: Levels 1\u20133",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-66",
+      "slide_ids": [
+        66
+      ],
+      "purpose": "Target: Levels 4\u20135",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-67",
+      "slide_ids": [
+        67
+      ],
+      "purpose": "Target: Levels 6\u20138 only if gates pass",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-68",
+      "slide_ids": [
+        68
+      ],
+      "purpose": "Name owners before selecting tools",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-69",
+      "slide_ids": [
+        69
+      ],
+      "purpose": "Design mitigations into the workflow",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-70",
+      "slide_ids": [
+        70
+      ],
+      "purpose": "Differentiation lives in context, decisions, and learning",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-71",
+      "slide_ids": [
+        71
+      ],
+      "purpose": "Green status requires quality, control, and repeatability together",
+      "artifact_type": "diagram",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-72",
+      "slide_ids": [
+        72
+      ],
+      "purpose": "The roadmap can begin immediately without granting unsafe authority",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-73",
+      "slide_ids": [
+        73
+      ],
+      "purpose": "Success is a reliable acquisition capability\u2014not an impressive demo",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-74",
+      "slide_ids": [
+        74
+      ],
+      "purpose": "Avoid starting with a tool tour",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    },
+    {
+      "id": "visual-75",
+      "slide_ids": [
+        75
+      ],
+      "purpose": "Research and draft automatically. Approve consequence deliberately. Compound every learning.",
+      "artifact_type": "component",
+      "evidence_status": "authored",
+      "route": "native",
+      "reason": "Structured business meaning is clearest and editable as native PowerPoint objects.",
+      "evidence_ids": [],
+      "source": null,
+      "asset": null,
+      "editable_source": null,
+      "prompt_file": null,
+      "execution": null,
+      "placement": null,
+      "qa": {
+        "visual_checked": false,
+        "legible": false,
+        "not_cropped": false,
+        "background_matched": null,
+        "provenance_recorded": true,
+        "text_free": null,
+        "not_evidence": null,
+        "exact_fidelity": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "weights": {
+    "asset_prominence": 1.2,
+    "crop_and_focus": 1.2,
+    "context_binding": 1.2,
+    "hierarchy": 1.1,
+    "legibility": 1.3,
+    "visual_distinctiveness": 1.0,
+    "source_fidelity": 1.5,
+    "cross_slide_coherence": 1.0,
+    "editability": 1.0,
+    "asset_authenticity": 1.5
+  },
+  "treatments": [
+    {
+      "name": "baseline",
+      "scores": {
+        "asset_prominence": {"score": 4, "reason": "Screens are large but share attention with a generic context band.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "crop_and_focus": {"score": 3, "reason": "Presenter masking creates neutral blocks that are not integrated with the composition.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "context_binding": {"score": 3, "reason": "Context is accurate but placed in the same detached bottom band on every slide.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "hierarchy": {"score": 3, "reason": "Title, image, and band are clear but mechanically repeated.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "legibility": {"score": 3, "reason": "Source labels are usable but the screenshot scale is smaller than the improved full-proof treatment.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "visual_distinctiveness": {"score": 2, "reason": "The branded shell is competent but generic and highly repetitive.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "source_fidelity": {"score": 5, "reason": "All visual states remain authentic extracts.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "cross_slide_coherence": {"score": 3, "reason": "The sequence is coherent but has no authored pacing beyond repetition.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "editability": {"score": 4, "reason": "Titles and context are editable; exact screens appropriately remain raster evidence.", "slides": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "asset_authenticity": {"score": 5, "reason": "No synthetic replacement assets are used.", "slides": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]}
+      }
+    },
+    {
+      "name": "impeccable-conservation-proof",
+      "scores": {
+        "asset_prominence": {"score": 5, "reason": "Screens dominate the proof field across all three reconstruction archetypes.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "crop_and_focus": {"score": 4, "reason": "Annotations and proof mattes replace the presenter-obscured region and direct attention to the working screen.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "context_binding": {"score": 5, "reason": "Context sits on the obscured region or in a dedicated proof margin attached to its screen.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "hierarchy": {"score": 5, "reason": "One title, one proof, and one contextual annotation create deliberate priority.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "legibility": {"score": 4, "reason": "PowerPoint's 1920x1080 render confirms the larger product screens and annotations remain readable.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "visual_distinctiveness": {"score": 5, "reason": "The conservation-proof system is specific to recovered visual evidence and avoids generic slide furniture.", "slides": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]},
+        "source_fidelity": {"score": 5, "reason": "The same authentic screens, labels, sequence, and product states are preserved.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "cross_slide_coherence": {"score": 5, "reason": "Full proof, marginal proof, and annotated proof alternate within one material system.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]},
+        "editability": {"score": 4, "reason": "Titles, sequence, annotations, benchmark, and metadata remain editable while source screens remain evidence.", "slides": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]},
+        "asset_authenticity": {"score": 5, "reason": "No generated imagery or invented product evidence is used.", "slides": [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]}
+      }
+    }
+  ]
+}

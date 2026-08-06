@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "command": [
+    "/home/sheke/.local/bin/officecli",
+    "view",
+    "/tmp/tmp.UMkztYP3nJ/impeccable.pptx",
+    "html",
+    "-o",
+    "/home/sheke/content-ideas/runs/2026-08-04-impeccable-story-architect-v3/qa/officecli-restored-v2/impeccable.html"
+  ],
+  "returncode": 0,
+  "stdout": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\sheke\\content-ideas\\runs\\2026-08-04-impeccable-story-architect-v3\\qa\\officecli-restored-v2\\impeccable.html\n",
+  "stderr": ""
+}
