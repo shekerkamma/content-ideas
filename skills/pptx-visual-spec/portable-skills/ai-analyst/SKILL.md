@@ -1,7 +1,6 @@
 ---
 name: ai-analyst
 description: "AI-powered product analytics: ask a business question in plain English, get validated findings, publication-quality charts, and a slide deck. USE THIS for ANY data question, analytical request, metric inquiry, or visualization request. Triggers on: analyze, chart, metrics, trends, churn, revenue, conversion, retention, segments, cohorts, funnels, KPIs, forecast, or any quantitative question."
-argument-hint: "[business question — e.g., 'Which channel has the highest churn and why?']"
 allowed-tools:
   - Bash(*)
   - Read

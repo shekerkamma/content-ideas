@@ -41,7 +41,7 @@ AUDITED_SKILLS = {
     "health", "checkpoint", "00-account-briefing", "ai-strategy-council",
     "analytics-to-comms", "affiliate-workflow",
     "difficult-conversation-prep",
-    "skill-builder",
+    "skill-builder", "financial-model-review", "build-client-acquisition-function",
 }
 
 

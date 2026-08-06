@@ -46,7 +46,7 @@ AUDITED_SKILLS = {
     "session-handoff", "tool-humanizer", "cheat", "guard", "careful",
     "health", "checkpoint", "00-account-briefing", "ai-strategy-council",
     "analytics-to-comms", "affiliate-workflow",
-    "skill-builder",
+    "skill-builder", "financial-model-review", "build-client-acquisition-function",
 }
 
 def find_skill_files():

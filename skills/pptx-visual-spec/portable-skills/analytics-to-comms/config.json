@@ -1,0 +1,6 @@
+{
+  "slack_channel": null,
+  "audience": "executive",
+  "visual_style": "both",
+  "auto_post_to_slack": false
+}

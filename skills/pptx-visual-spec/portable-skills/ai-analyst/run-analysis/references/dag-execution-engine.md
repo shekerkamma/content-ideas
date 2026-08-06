@@ -2,7 +2,10 @@
 
 ## Overview
 
-The pipeline runs on a DAG (directed acyclic graph) derived from `agents/registry.yaml`. Instead of hardcoded steps, the engine resolves execution order from agent dependencies. This enables:
+The pipeline runs on a DAG (directed acyclic graph) derived from
+`run-analysis/references/agent-registry.yaml`. Agent file paths in the registry
+are resolved relative to the `ai-analyst` skill root. Instead of hardcoded
+steps, the engine resolves execution order from agent dependencies. This enables:
 - **Automatic parallelization** — agents with no dependencies can run in parallel
 - **Resilience** — failing agents don't block independent agents
 - **Flexibility** — execution plans prune the DAG without breaking dependencies
@@ -37,7 +40,11 @@ After cleanup completes (or is skipped if no stale state found), proceed to Phas
 
 Before any execution, validate the registry:
 
-1. **Read registry:** Parse `agents/registry.yaml`. Extract each agent's `name`, `file`, `pipeline_step`, `depends_on`, `depends_on_any`, `critical`, `inputs`, `outputs`, `knowledge_context`.
+```bash
+python3 run-analysis/scripts/validate_agent_registry.py
+```
+
+1. **Read registry:** Parse `run-analysis/references/agent-registry.yaml`. Extract each agent's `name`, `file`, `pipeline_step`, `depends_on`, `depends_on_any`, `critical`, `inputs`, `outputs`, `knowledge_context`.
 
 2. **File existence check:** For each agent, verify the file at `agent.file` exists on disk. If any file is missing, HALT with: `"Agent file not found: {path}"`
 

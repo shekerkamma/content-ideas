@@ -39,8 +39,12 @@ feedback.json
 # OS
 .DS_Store
 node_modules
+.gstack/
 
 # Office lock files (created when a .pptx/.docx/.xlsx is opened from Windows)
 ~$*.pptx
 ~$*.docx
 ~$*.xlsx
+
+# Large downloaded media in run folders (re-downloadable, not source)
+runs/**/*.mp4

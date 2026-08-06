@@ -11,6 +11,13 @@ You are orchestrating a complete analytical pipeline. This is the heavyweight sk
 
 Before anything else:
 
+Run the package preflight from the `ai-analyst` skill root. Do not execute the
+DAG if it fails:
+
+```bash
+python3 run-analysis/scripts/validate_agent_registry.py
+```
+
 ```python
 import os, yaml
 
@@ -58,7 +65,9 @@ If arguments are missing, ask the user.
 
 ## Step 3: Execute the DAG
 
-Read `agents/registry.yaml` to get the full dependency graph. Execute tier by tier:
+Read `run-analysis/references/agent-registry.yaml` to get the full dependency
+graph. Resolve each `file` path relative to the `ai-analyst` skill root and
+execute tier by tier:
 
 ### Phase 1: Framing (Agents: question-framing, hypothesis)
 - Read each agent's .md file from `agents/` directory
