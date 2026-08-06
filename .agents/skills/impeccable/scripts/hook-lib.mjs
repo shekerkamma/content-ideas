@@ -1171,7 +1171,12 @@ export function resolveHarness(env = {}, event = null) {
   const explicit = env?.IMPECCABLE_HOOK_HARNESS;
   if (explicit === 'cursor') return 'cursor';
   if (explicit === 'github') return 'github';
-  if (explicit === 'claude' || explicit === 'codex') return 'claude';
+  if (explicit === 'codex') return 'codex';
+  if (explicit === 'claude') return 'claude';
+  // Codex adds turn_id to lifecycle events and exports CODEX_THREAD_ID. Use
+  // both so an already-running session that loaded an older manifest still
+  // selects the Codex output contract after this script is repaired.
+  if (typeof event?.turn_id === 'string' || typeof env?.CODEX_THREAD_ID === 'string') return 'codex';
   // GitHub Copilot's postToolUse event uses camelCase `toolName`/`toolArgs` and
   // has no `tool_name`/`tool_input`. That shape is the discriminator.
   if (event && typeof event === 'object'
@@ -1333,6 +1338,51 @@ function isInsideProject(filePath, projectCwd) {
   } catch {
     return false;
   }
+}
+
+// Resolve a path to its canonical (symlink-free) form. When the path does
+// not exist yet — the before-edit hook gates proposed Writes — canonicalize
+// the nearest existing ancestor and re-append the remainder, so a new file
+// under a symlinked root still compares equal to its canonical project.
+// Memoized: the hook runs as a fresh process per tool event, so the cache
+// amounts to once-per-event work — the scan loops re-check the same project
+// root for every target file. The cap only matters to long-lived importers
+// like the test runner.
+const canonicalPathCache = new Map();
+const CANONICAL_PATH_CACHE_MAX = 1024;
+
+function canonicalPath(p) {
+  const resolved = path.resolve(p);
+  if (canonicalPathCache.has(resolved)) return canonicalPathCache.get(resolved);
+  let canonical = resolved;
+  let dir = resolved;
+  const tail = [];
+  while (true) {
+    try {
+      canonical = tail.length ? path.join(fs.realpathSync(dir), ...tail) : fs.realpathSync(dir);
+      break;
+    } catch { /* keep climbing */ }
+    const parent = path.dirname(dir);
+    if (parent === dir) break;
+    tail.unshift(path.basename(dir));
+    dir = parent;
+  }
+  if (canonicalPathCache.size >= CANONICAL_PATH_CACHE_MAX) canonicalPathCache.clear();
+  canonicalPathCache.set(resolved, canonical);
+  return canonical;
+}
+
+// Containment gate shared by the before-edit hook and both scan passes. A
+// session routinely touches files that belong to no project or to a
+// different one — harness scratchpad dirs under the system temp root,
+// sibling checkouts, one-off throwaway HTML — and findings against those are
+// judged with THIS project's config and DESIGN.md palette, which is never
+// right. Skip them (audit reason: outside-project). Paths are canonicalized
+// first so a symlinked root (macOS /tmp -> /private/tmp) doesn't split the
+// comparison.
+export function isScanTargetInsideProject(filePath, projectCwd) {
+  if (!filePath || !projectCwd) return false;
+  return isInsideProject(canonicalPath(filePath), canonicalPath(projectCwd));
 }
 
 export function parseStaticStyleImports(content, fromFile, projectCwd) {
@@ -1693,6 +1743,10 @@ export async function runHook({ stdinJson, env = {}, cwd = process.cwd(), now = 
         lastSkip = 'file-missing';
         continue;
       }
+      if (!isScanTargetInsideProject(filePath, projectCwd)) {
+        lastSkip = 'outside-project';
+        continue;
+      }
 
       const maxFileBytes = config.limits?.maxFileBytes ?? DEFAULT_CONFIG.limits.maxFileBytes;
       if (maxFileBytes > 0) {
@@ -2023,6 +2077,10 @@ export async function runStopHook({ stdinJson, env = {}, cwd = process.cwd(), no
       const relForMatch = relativize(filePath, projectCwd);
       if (matchesAnyGlob(relForMatch, config.ignoreFiles) || matchesAnyGlob(filePath, config.ignoreFiles)) continue;
       if (!fs.existsSync(filePath)) continue;
+      // Caches written before this gate existed can still hold out-of-project
+      // paths, so the Stop pass re-checks containment rather than trusting
+      // the per-edit pass to have filtered them.
+      if (!isScanTargetInsideProject(filePath, projectCwd)) continue;
 
       scanned += 1;
       let content = '';
@@ -2093,6 +2151,12 @@ export function payload(text, eventName = 'PostToolUse', harness = 'claude') {
   // `additionalContext` string (alongside an optional `modifiedResult`).
   if (harness === 'github') {
     return JSON.stringify({ additionalContext: text });
+  }
+  // Codex Stop only accepts the continuation decision shape. A Claude-style
+  // hookSpecificOutput envelope is valid for PostToolUse but is rejected for
+  // Stop as "invalid stop hook JSON output".
+  if (harness === 'codex' && eventName === 'Stop') {
+    return JSON.stringify({ decision: 'block', reason: text });
   }
   return JSON.stringify({
     hookSpecificOutput: { hookEventName: eventName, additionalContext: text },

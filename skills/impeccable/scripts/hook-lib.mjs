@@ -1171,7 +1171,12 @@ export function resolveHarness(env = {}, event = null) {
   const explicit = env?.IMPECCABLE_HOOK_HARNESS;
   if (explicit === 'cursor') return 'cursor';
   if (explicit === 'github') return 'github';
-  if (explicit === 'claude' || explicit === 'codex') return 'claude';
+  if (explicit === 'codex') return 'codex';
+  if (explicit === 'claude') return 'claude';
+  // Codex adds turn_id to lifecycle events and exports CODEX_THREAD_ID. Use
+  // both so an already-running session that loaded an older manifest still
+  // selects the Codex output contract after this script is repaired.
+  if (typeof event?.turn_id === 'string' || typeof env?.CODEX_THREAD_ID === 'string') return 'codex';
   // GitHub Copilot's postToolUse event uses camelCase `toolName`/`toolArgs` and
   // has no `tool_name`/`tool_input`. That shape is the discriminator.
   if (event && typeof event === 'object'
@@ -2093,6 +2098,12 @@ export function payload(text, eventName = 'PostToolUse', harness = 'claude') {
   // `additionalContext` string (alongside an optional `modifiedResult`).
   if (harness === 'github') {
     return JSON.stringify({ additionalContext: text });
+  }
+  // Codex Stop only accepts the continuation decision shape. A Claude-style
+  // hookSpecificOutput envelope is valid for PostToolUse but is rejected for
+  // Stop as "invalid stop hook JSON output".
+  if (harness === 'codex' && eventName === 'Stop') {
+    return JSON.stringify({ decision: 'block', reason: text });
   }
   return JSON.stringify({
     hookSpecificOutput: { hookEventName: eventName, additionalContext: text },
