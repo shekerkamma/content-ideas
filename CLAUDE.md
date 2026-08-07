@@ -149,6 +149,14 @@ bash scripts/sync-presentation-pipeline-hosts.sh
 
 # validate the portable recovery skills and their integrity manifest
 bash scripts/verify-recovery-skills.sh
+
+# install the claude-code-cli provider into a Hermes tree so Hermes spends the
+# Claude subscription instead of API credits. Idempotent; re-run after every
+# Hermes upgrade (upgrades overwrite the core files it patches). --dry-run
+# previews; anchors it cannot resolve are reported as [!!] and skipped.
+python3 scripts/hermes-claude-code-cli/install_claude_code_cli_provider.py ~/hermes-agent
+python3 scripts/hermes-claude-code-cli/install_claude_code_cli_provider.py \
+  "/mnt/c/Users/$USER/AppData/Local/hermes/hermes-agent"
 ```
 
 ## Rules
@@ -214,6 +222,28 @@ bash scripts/verify-recovery-skills.sh
     a noisy `git status` in its `hermes-agent` checkout (e.g. from a botched
     update stash/restore) does not by itself threaten them — Hermes tracks
     skill customizations separately from raw git diff state.
+    - **Two independent installs, each with its own tree, config, and version.**
+      Hermes CLI lives in WSL (`~/hermes-agent` + `~/.hermes/`); Hermes Desktop
+      is a separate Windows install (`.../AppData/Local/hermes/hermes-agent` +
+      that directory as its Hermes home). They drift in version — check both
+      before concluding a feature is absent, and apply host changes to both.
+      Desktop's venv is `hermes-agent/venv/`, not `.venv/`.
+    - **Neither built-in Anthropic path spends a plain Claude subscription.**
+      An API key bills credits; a subscription OAuth token against
+      `api.anthropic.com` is billed to the *extra usage* bucket and returns
+      `HTTP 400: You're out of extra usage` when that balance is empty. Hermes'
+      own provider card admits this ("Anthropic OAuth: Required Extra Usage
+      Credits to Use Subscription"). Use the `claude-code-cli` provider from
+      `scripts/hermes-claude-code-cli/` instead — it shells out to `claude -p`,
+      which authenticates as the subscription. Contrast `openai-codex`, which
+      works on a bare ChatGPT subscription because OpenAI permits third-party
+      clients on its Codex endpoint; Anthropic does not.
+    - A provider entry in Hermes' `auth.json` proves nothing on its own — it is
+      just metadata. A provider only works when a `ProviderConfig`, a runtime
+      resolution branch, and a client dispatch site all exist in the tree.
+      Without the `runtime_provider.py` branch a configured provider silently
+      falls through to OpenRouter and 400s with `<model> is not a valid model
+      ID`, which reads as a model bug rather than a routing one.
 - PowerShell or native `.exe` processes launched from a WSL Bash shell
   inherit the WSL cwd, which Windows renders as a `\\wsl.localhost\<distro>\...`
   UNC path — cmd.exe refuses it outright, and some native exes silently
