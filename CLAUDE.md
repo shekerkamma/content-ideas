@@ -14,11 +14,36 @@ HTML renderer.
 - `skills/content-ideas/references/content-strategy.md` — idea-generation guidance
 
 ## Cross-host packaging
+- `plugin.json` (root) — Agent Plugins 1.0.0 manifest, the vendor-neutral install
 - `.claude-plugin/plugin.json` + `marketplace.json` — Claude Code install
 - `.codex-plugin/plugin.json` (`"skills": "./skills/"`) — Codex install
 - `AGENTS.md` → `@CLAUDE.md` — Codex / generic-agent entry point
 - `commands/content-ideas.md` — Claude Code slash command
 - `hooks/hooks.json` — SessionStart setup preflight (one-line hint, silent when ready)
+
+### Agent Plugins 1.0.0 conformance
+
+The root `plugin.json` targets the vendor-neutral spec
+(`https://agent-plugins.org/specification`) so any conformant client — not just
+Claude Code and Codex — can install this repo. Its schema is **closed**:
+`$schema` and `name` are the only required keys, and every other top-level key
+must be one the spec defines (`version`, `description`, `author`, `homepage`,
+`repository`, `license`, `keywords`, `extensions`). Adding a convenience field
+there breaks validation, so:
+
+- Client-specific data may live **only** under `extensions`, keyed by a
+  reverse-domain namespace the client controls. No client has published one
+  yet — the spec documents only the `com.example.client` placeholder and
+  maintains no registry — so the Codex `interface` block stays in
+  `.codex-plugin/plugin.json`, which is where Codex actually reads it. Do not
+  invent a namespace to move it early.
+- Components are discovered from fixed locations: skills from `skills/`, MCP
+  servers from `mcp.json`. This repo ships no MCP server of its own, and a
+  missing `mcp.json` is explicitly non-fatal — do not add a stub.
+- `tests/test_plugin_contract.py` enforces the closed key set, the `$schema`
+  constant, the name pattern, and version parity with the host manifests.
+- Validate after any edit:
+  `uvx check-jsonschema --schemafile <the 1.0.0 plugin schema> plugin.json`
 
 ### Skill source and porting contract
 
@@ -305,8 +330,9 @@ bash scripts/verify-recovery-skills.sh
   integration, CLI/headless workflows, deployment models, and solution-stack
   technology choices. Prefer verified OpenHands primitives over invented
   orchestration details.
-- Version is tracked in `pyproject.toml`, `.claude-plugin/plugin.json`,
-  `.claude-plugin/marketplace.json`, `.codex-plugin/plugin.json`, and the
+- Version is tracked in `pyproject.toml`, `plugin.json`,
+  `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`,
+  `.codex-plugin/plugin.json`, and the
   `version:` field of `SKILL.md` — keep them identical. `tests/test_plugin_contract.py` enforces this.
 
 ## GBrain (MCP server — persistent memory layer)
