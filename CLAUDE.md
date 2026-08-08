@@ -35,6 +35,12 @@ HTML renderer.
   contain no repair logic of their own. The executable lives at
   `scripts/audit_skill_corruption.py` (stdlib only) and generalizes the
   four-skill NUL check in `scripts/verify-recovery-skills.sh` to every skill tree.
+- Treat `skills/skill-hygiene/` as the canonical library-maintenance router: it sequences
+  `skill-doctor` (intact) → `skills-analyst` (earned) → `writing-for-agents` (lean) →
+  `skill-builder` (rewrite). The gate order is load-bearing — `skills-analyst` reads a
+  zero-filled `SKILL.md` as DELETE/ARCHIVE, so repair must precede classification. It is
+  user-invoked (`disable-model-invocation: true`) and therefore costs no context load.
+  Its host wrappers must stay byte-identical and carry no sweep logic.
 - Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
 - Keep Claude-only UI fields as enhancements; repeat critical safety and
   fallback behavior in skill bodies for Codex and OpenHands.
