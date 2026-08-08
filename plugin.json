@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "content-ideas",
+  "version": "2.3.0",
+  "description": "Track competitors, spot what is performing, and turn it into content ideas.",
+  "author": {
+    "name": "Bradley Bonanno"
+  },
+  "homepage": "https://github.com/shekerkamma/content-ideas",
+  "repository": "https://github.com/shekerkamma/content-ideas.git",
+  "license": "MIT",
+  "keywords": [
+    "content",
+    "creators",
+    "competitors",
+    "social-media",
+    "x",
+    "instagram",
+    "tiktok",
+    "youtube",
+    "trends",
+    "ideas",
+    "for-you"
+  ]
+}

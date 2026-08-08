@@ -185,10 +185,50 @@ class CrossHostPackagingTests(unittest.TestCase):
         self.assertEqual(version, _skill_version())
         self.assertEqual(version, _json(".codex-plugin/plugin.json")["version"])
         self.assertEqual(version, _json(".claude-plugin/plugin.json")["version"])
+        self.assertEqual(version, _json("plugin.json")["version"])
 
         plugins = _json(".claude-plugin/marketplace.json").get("plugins") or []
         self.assertEqual(1, len(plugins))
         self.assertEqual(version, plugins[0]["version"])
+
+    def test_root_manifest_conforms_to_agent_plugins_1_0_0(self):
+        # Agent Plugins 1.0.0 uses a closed schema: $schema and name are
+        # required, every other key must be one the spec defines, and
+        # client-specific data may only live under `extensions`. The Codex
+        # `interface` block therefore stays in .codex-plugin/plugin.json --
+        # no reverse-domain namespace is registered for any client yet.
+        manifest = _json("plugin.json")
+        self.assertEqual(
+            "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+            manifest["$schema"],
+        )
+        self.assertEqual("content-ideas", manifest["name"])
+        self.assertRegex(manifest["name"], r"^(?!.*(?:--|\.\.))[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$")
+        allowed = {
+            "$schema",
+            "name",
+            "version",
+            "description",
+            "author",
+            "homepage",
+            "repository",
+            "license",
+            "keywords",
+            "extensions",
+        }
+        self.assertEqual(set(), set(manifest) - allowed)
+        self.assertEqual({"name"}, set(manifest["author"]) - {"email", "url"})
+
+    def test_spec_component_locations_exist(self):
+        # Clients discover skills from skills/ and MCP servers from mcp.json.
+        # This repo ships no MCP server of its own; a missing mcp.json is
+        # explicitly non-fatal per the spec, so only skills/ is required.
+        self.assertTrue((REPO / "skills").is_dir())
+        for name in PACKAGED_SKILLS:
+            self.assertTrue(
+                (REPO / "skills" / name / "SKILL.md").is_file(),
+                f"skills/{name}/SKILL.md missing",
+            )
 
     def test_agents_md_delegates_to_claude_md(self):
         # Codex reads AGENTS.md; it should re-use the single CLAUDE.md guidance.
