@@ -1,26 +1,28 @@
 ---
 name: reddit-new-factcheck
 description: Use when someone wants to fact-check a research document, deck, PDF, pasted text, Google Doc text, or selected browser text against Reddit evidence and update the original deck with fact-check annotations.
-argument-hint: "[document path or text] [optional Reddit thread URLs/json]"
-permissions:
-  env:
-    - SCRAPECREATORS_API_KEY
-    - EXA_API_KEY
-  network:
-    - https://www.reddit.com
-    - https://api.scrapecreators.com
-    - https://api.exa.ai
-  file_read:
-    - runs/
-    - /tmp/
-  file_write:
-    - runs/
-    - /tmp/
-  shell:
-    allowed_scripts:
-      - scripts/prepare_factcheck.py
-      - scripts/annotate_input_deck.py
-      - scripts/old_reddit_evidence.py
+metadata:
+  legacy-frontmatter:
+    argument-hint: '[document path or text] [optional Reddit thread URLs/json]'
+    permissions:
+      env:
+      - SCRAPECREATORS_API_KEY
+      - EXA_API_KEY
+      network:
+      - https://www.reddit.com
+      - https://api.scrapecreators.com
+      - https://api.exa.ai
+      file_read:
+      - runs/
+      - /tmp/
+      file_write:
+      - runs/
+      - /tmp/
+      shell:
+        allowed_scripts:
+        - scripts/prepare_factcheck.py
+        - scripts/annotate_input_deck.py
+        - scripts/old_reddit_evidence.py
 ---
 
 # reddit-new-factcheck

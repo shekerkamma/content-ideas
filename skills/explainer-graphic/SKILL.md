@@ -1,11 +1,13 @@
 ---
 name: explainer-graphic
 description: Create visual infographics using real-world analogies
-triggers:
-  - explainer graphic
-  - make an infographic
-  - explain this visually
-  - create a graphic
+metadata:
+  legacy-frontmatter:
+    triggers:
+    - explainer graphic
+    - make an infographic
+    - explain this visually
+    - create a graphic
 ---
 
 # Explainer Graphic

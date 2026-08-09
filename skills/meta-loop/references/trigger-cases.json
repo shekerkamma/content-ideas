@@ -1,0 +1,18 @@
+{
+  "skill": "meta-loop",
+  "cases": [
+    {"id": "explicit-council", "prompt": "Run multi-model analysis with Claude Opus aggregating independent Codex workers.", "should_trigger": true},
+    {"id": "fanout-research", "prompt": "Fan this competitor audit out to Codex workers and have Opus reconcile and verify it.", "should_trigger": true},
+    {"id": "parallel-architecture", "prompt": "Use a model team to independently design auth, billing, and notifications, then return a verified ledger.", "should_trigger": true},
+    {"id": "x-research-script", "prompt": "Research these X posts and linked media, preserve claim provenance, verify them, and turn the evidence into a reviewable video script.", "should_trigger": true},
+    {"id": "full-stack-hosted-game", "prompt": "Design and verify a hosted AI game across gameplay, auth/data/secrets, and deployment tracks.", "should_trigger": true},
+    {"id": "security-suite", "prompt": "Independently threat-model, validate attack paths, and review tested remediations for my authorized codebase.", "should_trigger": true},
+    {"id": "single-bug", "prompt": "Fix one parser bug and run its unit test.", "should_trigger": false},
+    {"id": "model-advice", "prompt": "Which model should I use?", "should_trigger": false},
+    {"id": "ci-parallelism", "prompt": "Make pytest run in parallel in CI.", "should_trigger": false},
+    {"id": "pet-image", "prompt": "Make a desktop pet from these cat photos.", "should_trigger": false},
+    {"id": "voice-normalization", "prompt": "Turn this background voice rant into one actionable coding task.", "should_trigger": false},
+    {"id": "thread-tool-list", "prompt": "List the tools available for managing this Codex thread.", "should_trigger": false},
+    {"id": "flight-rebooking", "prompt": "Rebook my flight after the schedule changed.", "should_trigger": false, "expected_route": "escalate-for-approval"}
+  ]
+}

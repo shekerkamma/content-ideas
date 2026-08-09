@@ -1,6 +1,6 @@
 ---
 name: aianalyst-competitor-analysis
-description: "Use when the user wants competitor analysis run as an AI Analyst evidence-dataset workflow: competitive landscape, benchmarking, battlecards, market map, positioning analysis, consulting-firm comparisons, KPI/evidence-led differentiation, or client-ready PPTX/HTML outputs where sourced web evidence, internal datasets, metrics, confidence scoring, and AI Analyst dataset conventions must be used together."
+description: 'Use when the user wants competitor analysis run as an AI Analyst evidence-dataset workflow: competitive landscape, benchmarking, battlecards, market map, positioning analysis, consulting-firm comparisons, KPI/evidence-led differentiation, or client-ready PPTX/HTML outputs where sourced web evidence, internal datasets, metrics, confidence scoring, and AI Analyst dataset conventions must be used together.'
 ---
 
 # AI Analyst Competitor Analysis

@@ -5,7 +5,7 @@ license: MIT
 metadata:
   category: Business Automation
   author: plaid-dev
-  version: "2.0"
+  version: '2.0'
   compatibility: Requires file system access to write docs/ directory.
 ---
 

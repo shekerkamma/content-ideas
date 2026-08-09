@@ -1,27 +1,23 @@
 ---
 name: ai-graphics
-description: >-
-  Use when someone wants a raster graphic, infographic, flyer, diagram, social card,
-  visual insight, reference recreation, or design-token brief. Design-first: render
-  structured or text-bearing graphics as deterministic HTML/SVG and route only eligible
-  organic imagery to a host-native image tool or an explicitly selected provider adapter.
-  For PPTX/deck work this skill is an execution dependency of pptx-visual-spec, not the
-  deck builder.
-argument-hint: "<what the graphic is about> [platform] [style]"
-permissions:
-  network:
-    - http://localhost:20128
-    - http://127.0.0.1:8317
-  file_read:
-    - ~/cliproxyapi/config.yaml
-  file_write:
-    - /mnt/c/Users/sheke/Pictures/
-    - /mnt/c/Users/sheke/AppData/Local/Temp/
-  shell:
-    allowed_scripts:
-      - scripts/omniroute_image.py
-      - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini.py
-      - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini_img2img.py
+description: 'Use when someone wants a raster graphic, infographic, flyer, diagram, social card, visual insight, reference recreation, or design-token brief. Design-first: render structured or text-bearing graphics as deterministic HTML/SVG and route only eligible organic imagery to a host-native image tool or an explicitly selected provider adapter. For PPTX/deck work this skill is an execution dependency of pptx-visual-spec, not the deck builder.'
+metadata:
+  legacy-frontmatter:
+    argument-hint: <what the graphic is about> [platform] [style]
+    permissions:
+      network:
+      - http://localhost:20128
+      - http://127.0.0.1:8317
+      file_read:
+      - ~/cliproxyapi/config.yaml
+      file_write:
+      - /mnt/c/Users/sheke/Pictures/
+      - /mnt/c/Users/sheke/AppData/Local/Temp/
+      shell:
+        allowed_scripts:
+        - scripts/omniroute_image.py
+        - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini.py
+        - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini_img2img.py
 ---
 
 # ai-graphics — Design-First Raster Execution

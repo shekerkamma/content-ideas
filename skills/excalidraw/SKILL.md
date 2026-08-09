@@ -1,16 +1,25 @@
 ---
 name: excalidraw
-description: "Create editable Excalidraw diagrams as portable .excalidraw JSON files without requiring a live MCP canvas. Use for conceptual models, flowcharts, process maps, framework visuals, and video-frame-to-editable-diagram recreation. If live Excalidraw MCP tools are available, they may be used for screenshot iteration, but JSON-file generation is the default Codex-compatible path."
-version: 1.0.0
-author: Hermes Agent
+description: Create editable Excalidraw diagrams as portable .excalidraw JSON files without requiring a live MCP canvas. Use for conceptual models, flowcharts, process maps, framework visuals, and video-frame-to-editable-diagram recreation. If live Excalidraw MCP tools are available, they may be used for screenshot iteration, but JSON-file generation is the default Codex-compatible path.
 license: MIT
-dependencies: []
-platforms: [linux, macos, windows]
 metadata:
   hermes:
-    tags: [Excalidraw, Diagrams, Flowcharts, Architecture, Visualization, JSON]
+    tags:
+    - Excalidraw
+    - Diagrams
+    - Flowcharts
+    - Architecture
+    - Visualization
+    - JSON
     related_skills: []
-
+  legacy-frontmatter:
+    version: 1.0.0
+    author: Hermes Agent
+    dependencies: []
+    platforms:
+    - linux
+    - macos
+    - windows
 ---
 
 # Excalidraw Diagram Skill

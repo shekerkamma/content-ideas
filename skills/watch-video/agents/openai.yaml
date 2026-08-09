@@ -1,0 +1,4 @@
+interface:
+  display_name: "Watch Video"
+  short_description: "Run Claude watch video analysis upstream"
+  default_prompt: "Use $watch-video to analyze this YouTube video into a timestamped markdown report and frame set."

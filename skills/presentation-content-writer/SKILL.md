@@ -1,15 +1,17 @@
 ---
 name: presentation-content-writer
 description: Generate slide content from a topic or outline. Transforms ideas, bullet points, or rough notes into structured slide content with titles, key points, and examples. Use when the user wants to create new slides from scratch or flesh out an outline.
-argument-hint: "[topic or outline — e.g., 'AI adoption challenges in enterprise', '5 slides on microservices']"
 allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Glob
-  - Grep
-  - WebSearch(*)
-  - WebFetch(*)
+- Read
+- Write
+- Edit
+- Glob
+- Grep
+- WebSearch(*)
+- WebFetch(*)
+metadata:
+  legacy-frontmatter:
+    argument-hint: '[topic or outline — e.g., ''AI adoption challenges in enterprise'', ''5 slides on microservices'']'
 ---
 
 # Presentation Content Writer Skill

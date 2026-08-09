@@ -1,26 +1,17 @@
 ---
 name: channel-to-kb
-description: >
-  Use when the user wants to turn an entire YouTube channel into an OKF (Open
-  Knowledge Format) knowledge base / Karpathy-style LLM wiki with zero API
-  keys — phrases like "build a knowledge base from this channel", "turn this
-  channel into a wiki", "/channel-to-kb @handle". Uses pytubefix (channel
-  enumeration) + youtube_transcript_api (in-memory transcripts): free, no
-  API key, fastest to set up, but transcript fetching can be blocked on
-  cloud IPs — run from a local machine for best results. Peer of
-  channel-to-kb-ytdlp (yt-dlp, also free, more reliable against YouTube
-  changes) and channel-to-kb-supadata (paid managed API, no IP-blocking
-  risk). Ported from coleam00/cole-medin-knowledge-base.
+description: 'Use when the user wants to turn an entire YouTube channel into an OKF (Open Knowledge Format) knowledge base / Karpathy-style LLM wiki with zero API keys — phrases like "build a knowledge base from this channel", "turn this channel into a wiki", "/channel-to-kb @handle". Uses pytubefix (channel enumeration) + youtube_transcript_api (in-memory transcripts): free, no API key, fastest to set up, but transcript fetching can be blocked on cloud IPs — run from a local machine for best results. Peer of channel-to-kb-ytdlp (yt-dlp, also free, more reliable against YouTube changes) and channel-to-kb-supadata (paid managed API, no IP-blocking risk). Ported from coleam00/cole-medin-knowledge-base.'
 license: MIT
-argument-hint: "<@ChannelHandle or channel-URL>"
 metadata:
   category: Content Research
-  version: "1.0"
+  version: '1.0'
   source: https://github.com/coleam00/cole-medin-knowledge-base
   requires:
     bins:
-      - python3
-      - uv
+    - python3
+    - uv
+  legacy-frontmatter:
+    argument-hint: <@ChannelHandle or channel-URL>
 ---
 
 # Build an OKF Knowledge Base from a YouTube Channel (Free)

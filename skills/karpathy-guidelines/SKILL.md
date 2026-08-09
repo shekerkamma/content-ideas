@@ -1,6 +1,6 @@
 ---
 name: karpathy-guidelines
-description: "Use when writing, reviewing, or refactoring any code to enforce: surface assumptions before coding, minimum code that solves the problem, surgical edits that touch only what's required, and verifiable success criteria. Always-on behavioral overlay during implementation work. Triggers on \"karpathy\", \"apply karpathy\", \"coding guardrails\", or any coding task in projects where this skill is loaded."
+description: 'Use when writing, reviewing, or refactoring any code to enforce: surface assumptions before coding, minimum code that solves the problem, surgical edits that touch only what''s required, and verifiable success criteria. Always-on behavioral overlay during implementation work. Triggers on "karpathy", "apply karpathy", "coding guardrails", or any coding task in projects where this skill is loaded.'
 license: MIT
 metadata:
   category: Code Quality & Review

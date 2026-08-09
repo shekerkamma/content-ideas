@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.skills/pptx-visual-spec/visual-spec-schema.json",
+  "title": "Shared PPTX visual specification",
+  "type": "object",
+  "required": ["contract_version", "deck", "visuals"],
+  "properties": {
+    "contract_version": {"const": "1.0"},
+    "deck": {
+      "type": "object",
+      "required": ["output_mode", "editability"],
+      "properties": {
+        "output_mode": {"enum": ["native", "hybrid", "image-per-slide"]},
+        "editability": {"type": "string", "minLength": 1},
+        "reference_deck": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "visuals": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/visual"}
+    }
+  },
+  "$defs": {
+    "visual": {
+      "type": "object",
+      "required": ["id", "slide_ids", "purpose", "artifact_type", "evidence_status", "route", "reason", "qa"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "slide_ids": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 1}},
+        "purpose": {"type": "string", "minLength": 1},
+        "artifact_type": {
+          "enum": ["ui", "document-figure", "data", "chart", "diagram", "photograph", "brand-asset", "illustration", "texture", "component", "other"]
+        },
+        "evidence_status": {
+          "enum": ["exact-source-evidence", "approved-asset", "underlying-information", "authored", "generated-illustrative", "not-applicable"]
+        },
+        "route": {
+          "enum": ["extract", "place-asset", "native", "author-html", "author-svg", "author-react", "image-model", "none"]
+        },
+        "reason": {"type": "string", "minLength": 1},
+        "source": {
+          "type": ["object", "null"],
+          "properties": {
+            "path": {"type": "string", "minLength": 1},
+            "page": {"type": ["integer", "null"], "minimum": 1},
+            "frame": {"type": ["string", "null"]},
+            "timestamp": {"type": ["string", "null"]},
+            "crop": {
+              "type": ["object", "null"],
+              "properties": {
+                "x": {"type": "number"}, "y": {"type": "number"},
+                "width": {"type": "number", "exclusiveMinimum": 0},
+                "height": {"type": "number", "exclusiveMinimum": 0}
+              },
+              "required": ["x", "y", "width", "height"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["path"],
+          "additionalProperties": false
+        },
+        "asset": {"type": ["string", "null"]},
+        "editable_source": {"type": ["string", "null"]},
+        "prompt_file": {"type": ["string", "null"]},
+        "execution": {
+          "type": ["object", "null"],
+          "properties": {
+            "path": {"enum": ["codex-built-in-image_gen", "claude-code-codex-bridge", "omniroute-provider", "not-applicable"]},
+            "auth_mode": {"type": ["string", "null"]},
+            "orchestration_model": {"type": ["string", "null"]},
+            "requested_engine": {"type": ["string", "null"]},
+            "resolved_engine": {"type": ["string", "null"]}
+          },
+          "required": ["path", "auth_mode", "orchestration_model", "requested_engine", "resolved_engine"],
+          "additionalProperties": false
+        },
+        "placement": {
+          "type": ["object", "null"],
+          "properties": {
+            "width": {"type": "integer", "minimum": 1},
+            "height": {"type": "integer", "minimum": 1},
+            "fit": {"enum": ["contain", "cover"]},
+            "background": {"type": ["string", "null"]}
+          },
+          "required": ["width", "height", "fit", "background"],
+          "additionalProperties": false
+        },
+        "qa": {
+          "type": "object",
+          "required": ["visual_checked", "legible", "not_cropped", "background_matched", "provenance_recorded"],
+          "properties": {
+            "visual_checked": {"type": "boolean"},
+            "legible": {"type": "boolean"},
+            "not_cropped": {"type": "boolean"},
+            "background_matched": {"type": ["boolean", "null"]},
+            "provenance_recorded": {"type": "boolean"},
+            "text_free": {"type": ["boolean", "null"]},
+            "not_evidence": {"type": ["boolean", "null"]},
+            "exact_fidelity": {"type": ["boolean", "null"]}
+          },
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"route": {"const": "extract"}}},
+          "then": {
+            "properties": {
+              "evidence_status": {"const": "exact-source-evidence"},
+              "qa": {"properties": {"exact_fidelity": {"const": true}}, "required": ["exact_fidelity"]}
+            },
+            "required": ["source", "asset"]
+          }
+        },
+        {
+          "if": {"properties": {"route": {"const": "place-asset"}}},
+          "then": {
+            "properties": {"evidence_status": {"const": "approved-asset"}},
+            "required": ["source", "asset"]
+          }
+        },
+        {
+          "if": {"properties": {"route": {"enum": ["author-html", "author-svg", "author-react"]}}},
+          "then": {
+            "properties": {"evidence_status": {"const": "authored"}},
+            "required": ["editable_source", "asset"]
+          }
+        },
+        {
+          "if": {"properties": {"route": {"const": "image-model"}}},
+          "then": {
+            "properties": {
+              "evidence_status": {"const": "generated-illustrative"},
+              "qa": {
+                "properties": {"text_free": {"const": true}, "not_evidence": {"const": true}},
+                "required": ["text_free", "not_evidence"]
+              }
+            },
+            "required": ["asset", "prompt_file", "execution", "placement"]
+          }
+        }
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
+
