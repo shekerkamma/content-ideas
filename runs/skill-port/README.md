@@ -65,6 +65,14 @@ paths were removed from the active portable copies.
 - `frontmatter-normalization.tsv` — normalization actions
 - `portability-findings.tsv` — remaining host-specific references
 
+Codex Cloud verification task:
+https://chatgpt.com/codex/tasks/task_e_6a7802272da08327be228e1fcbbb61fd
+
+Cloud result: commit `7f3d6024a77ee5232707e81bb6ac54bf77311ac9`
+was checked out; all 314 immediate skill bundles had valid YAML frontmatter and
+the requested representative resources; forbidden runtime/secret artifacts
+were absent. Verdict: `CLOUD_SKILL_PORT=PASS`.
+
 ## Integrity caveat
 
 `git fsck --no-dangling` was clean for the current repository and the external
