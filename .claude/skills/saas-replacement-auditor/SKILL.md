@@ -170,6 +170,16 @@ At invocation, surface this if relevant:
 
 ---
 
+## Judgment rules
+
+Editable policy for how REPLACE candidates are researched and costed. Tune these here — do not hardcode them into the step formulas.
+
+- **Never pick the open-source replacement by GitHub stars, download counts, or social popularity alone.** Stars are a bookmark count that only increases: they record that people liked something once, not that it fits this stack. Rank on fit to the user's stack and constraints, then on maintenance signals with an exact date.
+- **When sizing a build against an existing project, split what you see in two: what the user actually needs, and what exists only because that project got big.** A mature OSS tool's plugin system, multi-tenancy, and i18n reflect its user base, not the user's requirement. Estimating build hours against the whole thing inflates the REPLACE cost and kills candidates that should pass.
+- **Cost every KEEP and NEGOTIATE vendor at three points, not one:** current usage, the first day real users arrive, and at 10× that. "Free to start" is not "cheap to operate." A tool sitting inside a free tier today is a REPLACE candidate the month it crosses the seat or event cap — flag the cap and the crossing point, not just today's invoice.
+
+---
+
 ## Gotchas
 
 - **Never force 3 REPLACE candidates:** If fewer than 3 tools pass the build cost math, use the best CONSOLIDATE or NEGOTIATE action as the third slot. Forcing REPLACE on a tool that doesn't break even in 36 months destroys the audit's credibility.

@@ -24,16 +24,56 @@ HTML renderer.
 
 - Treat `skills/content-ideas/`, `skills/pipeline-runner/`,
   `skills/second-brain/`, `skills/plaid/`, and
-  `skills/karpathy-guidelines/` as canonical shared sources.
+  `skills/karpathy-guidelines/`, and `skills/meta-loop/` as canonical shared sources.
 - Treat `skills/docx/`, `skills/pdf/`, `skills/improve/`, and
   `skills/storm-research/` as canonical shared recovery sources for those
   skills. They must remain portable across Claude Code and Codex and must not
   contain generated Python bytecode or host credentials.
 - Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
+- `skills/meta-loop/` runs Claude Code Opus as the sole aggregator and isolated
+  Codex CLI models as workers; keep its host installations synchronized with
+  the canonical repo copy and never place credentials in worker briefs.
 - Keep Claude-only UI fields as enhancements; repeat critical safety and
   fallback behavior in skill bodies for Codex and OpenHands.
 - Before shipping skill changes, run the plugin contract, the three
   `skill-builder` audit scripts, and the full pytest suite.
+
+### Evidence-ranking rules for research-bearing skills
+
+Any skill that recommends a tool, vendor, library, stack, or comparable
+project carries an editable `## Judgment rules` section stating these three.
+Keep the policy on the page and tunable — never hardcode it into step
+instructions. Currently applied in `skills/plaid/SKILL.md` and
+`.claude/skills/saas-replacement-auditor/SKILL.md`; extend to
+`ai-head-of-engineering-build-vs-buy-auditor`, `ai-head-of-engineering-stack-picker`,
+and `investor-competitive-dossier` when they are next touched.
+
+- **Popularity is not fit.** Never rank options by GitHub stars, download
+  counts, or social popularity alone. Stars are a bookmark count that only
+  increases: they record that people liked something once, not that it fits
+  this problem. Rank on fit to stated constraints, then on maintenance
+  signals carrying an exact date. This is the same failure the
+  `last30days` skill deliberately inverts — that skill treats stars as a
+  trend signal on purpose, and is the one documented exception.
+- **Split every comparable in two: what transfers, and what exists only
+  because that project got big.** A mature project's plugin system,
+  multi-tenancy, or infrastructure reflects its team size, scale, and
+  deployment history — not ours. Copying the second half imports complexity
+  without the reasons for it, and sizing a build against it inflates cost
+  estimates until sound candidates fail. State which half each
+  recommendation rests on.
+- **Cost every vendor at three points, not one:** during build with zero
+  users, the first day real users arrive, and at 10x that. "Free to start"
+  is not "cheap to operate." A per-seat or per-active-user price invisible
+  in month one is a roadmap constraint by month six; a tool inside a free
+  tier today becomes a replacement candidate the month it crosses the cap.
+  Name the cap and the crossing point, not just today's invoice.
+
+Adapted from `AaravKashyap12/advise-project-approach` (MIT) rather than
+installed — this repo already owns that workflow four times over in `plaid`,
+`saas-replacement-auditor`, `ai-head-of-engineering-build-vs-buy-auditor`,
+and `deep-research`, and that skill does external research without honoring
+the global Research Tool Order.
 
 ## Channel-to-KB skills (ported from coleam00/cole-medin-knowledge-base)
 
