@@ -1,5 +1,5 @@
 ---
-name: pp-fireflies
+name: fireflies
 description: 'Every Fireflies meeting feature, plus offline search, cross-meeting intelligence, and a local database no other tool... Trigger phrases: `find stale action items from meetings`, `search my meeting transcripts for`, `who talked most in recent meetings`, `sync fireflies meetings`, `use fireflies-pp-cli`, `run fireflies`, `what did we discuss with`.'
 license: Apache-2.0
 allowed-tools: Read Bash

@@ -1,5 +1,5 @@
 ---
-name: pp-substack
+name: substack
 description: 'Run your Substack growth loop from the command line — publish, schedule, engage, and measure with cross-table... Trigger phrases: `post a substack note`, `schedule a week of substack notes`, `find substack swap partners`, `which of my notes drove subs`, `what''s my engagement reciprocity`, `voice-match a substack note`, `best time to post on substack`, `use substack`, `run substack`.'
 license: Apache-2.0
 allowed-tools: Read Bash

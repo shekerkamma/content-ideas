@@ -20,6 +20,9 @@ metadata:
 
 ## When to invoke this skill
 
+
+Canonical router for the gstack suite. Prefer this over the deprecated
+`gstack-command` duplicate.
 Sends any gstack request to the right skill
 (planning, review, QA, shipping, debugging, docs, security, design). For browser/QA
 and dogfooding it points you at /browse. Use when you invoke gstack without a specific

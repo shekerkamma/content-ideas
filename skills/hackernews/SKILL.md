@@ -1,6 +1,12 @@
 ---
-name: pp-hackernews
-description: 'Hacker News from your terminal — with a local SQLite store, snapshot history, and agent-native output no other HN tool has. Trigger phrases: `check hacker news`, `search hn`, `what is hn saying about`, `diff the hn front page`, `pulse on hn`, `look up hn user`, `hn who is hiring`, `hn top stories`, `use hackernews`, `run hackernews`.'
+name: hackernews
+description: >-
+  Vendored Printing Press source checkout for the Hacker News CLI — carries
+  the Go module, cmd/ and internal/ trees, and build manifests, which
+  `pp-hackernews` does not. Prefer `pp-hackernews` for routing and
+  day-to-day queries: it is the current generated skill with up-to-date
+  install instructions. Reach here only to build or inspect the CLI from
+  source.
 license: Apache-2.0
 allowed-tools: Read Bash
 metadata:

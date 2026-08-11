@@ -1,5 +1,5 @@
 ---
-name: pp-podscan
+name: podscan
 description: 'Search 51M+ podcast episodes and 4.4M+ podcasts via Podscan — full transcripts, AI-extracted entities, mentions, and brand-safety analysis. Trigger phrases: `search podcast transcripts`, `find podcasts mentioning`, `who''s talked about [topic] on podcasts`, `use podscan`.'
 license: Apache-2.0
 allowed-tools: Read Bash

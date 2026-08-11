@@ -1,5 +1,5 @@
 ---
-name: pp-notion
+name: notion
 description: 'Notion CLI — manage pages and blocks, sync workspace to local SQLite, detect stale pages, and track changes. Trigger phrases: `find stale notion pages`, `sync notion to local`, `use notion-pp-cli`, `run notion`, `export notion page`.'
 license: Apache-2.0
 allowed-tools: Read Bash

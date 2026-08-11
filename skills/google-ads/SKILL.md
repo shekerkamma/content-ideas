@@ -1,5 +1,5 @@
 ---
-name: pp-google-ads
+name: google-ads
 description: 'Google Ads API for account discovery, GAQL reporting, campaigns, budgets, assets, conversions, audiences, planning, and billing operations. Trigger phrases: `pull a Google Ads report`, `GAQL query`, `check campaign performance`, `use google-ads`.'
 allowed-tools: Read Bash
 metadata:

@@ -1,5 +1,5 @@
 ---
-name: pp-cal-com
+name: cal-com
 description: 'Every Cal.com feature, plus offline agendas, composed booking flows, and analytics no other Cal.com tool ships. Trigger phrases: `book a meeting on cal.com`, `what''s on my calendar today`, `find an open slot`, `reschedule my next booking`, `audit my cal.com webhooks`, `use cal-com`, `run cal-com-pp-cli`.'
 license: Apache-2.0
 allowed-tools: Read Bash

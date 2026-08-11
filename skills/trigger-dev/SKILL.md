@@ -1,5 +1,5 @@
 ---
-name: pp-trigger-dev
+name: trigger-dev
 description: 'Every Trigger.dev management endpoint, plus offline FTS over runs, span-cost rollups, and zombie-schedule detection no other tool gives you. Trigger phrases: `trigger.dev failed runs`, `trigger.dev cost rollup`, `trigger.dev schedule health`, `audit trigger.dev env vars`, `watch trigger.dev failures`, `use trigger-dev`, `run trigger-dev`.'
 license: Apache-2.0
 allowed-tools: Read Bash

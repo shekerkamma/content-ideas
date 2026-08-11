@@ -461,7 +461,7 @@ Install the focused skill — it auto-installs the CLI on first invocation:
 npx skills add mvanhorn/printing-press-library/cli-skills/pp-scrape-creators -g
 ```
 
-Then invoke `/pp-scrape-creators <query>` in Claude Code. The skill is the most efficient path — Claude Code drives the CLI directly without an MCP server in the middle.
+Then invoke `/scrape-creators <query>` in Claude Code. The skill is the most efficient path — Claude Code drives the CLI directly without an MCP server in the middle.
 
 <details>
 <summary>Use as an MCP server in Claude Code (advanced)</summary>

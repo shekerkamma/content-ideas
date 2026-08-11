@@ -1,5 +1,5 @@
 ---
-name: pp-slack
+name: slack
 description: 'Slack workspace CLI for the terminal. Send messages, search channels and DMs, list conversations, get user/bot/emoji info, analyze channel health, find stale threads, and sync the workspace locally for fast offline queries. Two auth surfaces coexist: SLACK_BOT_TOKEN (xoxb-, for workspace-wide read + post) and SLACK_USER_TOKEN (xoxp-, for user-scoped actions like DM history or search). Use when the user asks to send a Slack message, search Slack, check channel activity, summarize a digest, find who''s on a team, find stale threads, analyze channel health, list users / emoji / reminders / pinned items, or wants offline-capable Slack queries.'
 license: Apache-2.0
 allowed-tools: Read Bash

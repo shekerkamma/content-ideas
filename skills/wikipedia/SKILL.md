@@ -1,5 +1,5 @@
 ---
-name: pp-wikipedia
+name: wikipedia
 description: Printing Press CLI for Wikipedia. Wikipedia REST API. Get article summaries, search, browse related topics, and access on-this-day events. No...
 license: Apache-2.0
 allowed-tools: Read Bash

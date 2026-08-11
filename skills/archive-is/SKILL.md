@@ -1,5 +1,5 @@
 ---
-name: pp-archive-is
+name: archive-is
 description: Use this skill whenever the user wants to archive a URL, bypass a paywall, look up an existing archive, view a cached version of a webpage, pull article text from archive.today or the Wayback Machine, or batch-archive a list of URLs. archive.today + Wayback Machine CLI with lookup-before-submit, automatic fallback when one backend is down, and agent-friendly output. No API key required. Triggers on phrasings like 'archive this article', 'bypass the paywall on this link', 'grab the cached text', 'save this url to archive.today', 'check if this was already archived', 'bulk archive these 20 URLs'.
 license: Apache-2.0
 allowed-tools: Read Bash

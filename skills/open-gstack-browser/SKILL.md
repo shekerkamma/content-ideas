@@ -19,6 +19,9 @@ metadata:
 
 ## When to invoke this skill
 
+
+Canonical skill for launching GStack Browser. Prefer this over the
+deprecated `connect-chrome` duplicate.
 Opens a visible browser window where you can watch every action in real time.
 The sidebar shows a live activity feed and chat. Anti-bot stealth built in.
 Use when asked to "open gstack browser", "launch browser", "connect chrome",

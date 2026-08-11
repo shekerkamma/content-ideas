@@ -174,7 +174,7 @@ Install the focused skill — it auto-installs the CLI on first invocation:
 npx skills add mvanhorn/printing-press-library/cli-skills/pp-podscan -g
 ```
 
-Then invoke `/pp-podscan <query>` in Claude Code. The skill is the most efficient path — Claude Code drives the CLI directly without an MCP server in the middle.
+Then invoke `/podscan <query>` in Claude Code. The skill is the most efficient path — Claude Code drives the CLI directly without an MCP server in the middle.
 
 <details>
 <summary>Use as an MCP server in Claude Code (advanced)</summary>

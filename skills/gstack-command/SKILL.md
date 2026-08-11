@@ -1,6 +1,10 @@
 ---
-name: gstack
-description: Router for the gstack skill suite. (gstack)
+name: gstack-command
+description: >-
+  Deprecated duplicate of the `gstack` router — byte-identical content, kept
+  only so existing `/gstack-command` invocations still resolve. Prefer
+  `gstack`, which is the canonical router for the gstack skill suite. Do not
+  route new work here. (gstack)
 allowed-tools:
 - Bash
 - Read
@@ -10,9 +14,7 @@ metadata:
     preamble-tier: 1
     version: 1.2.0
     triggers:
-    - gstack
-    - which gstack skill
-    - route this with gstack
+    - gstack-command
 ---
 <!-- AUTO-GENERATED from SKILL.md.tmpl — do not edit directly -->
 <!-- Regenerate: bun run gen:skill-docs -->
@@ -20,6 +22,10 @@ metadata:
 
 ## When to invoke this skill
 
+
+**Deprecated duplicate.** This is a byte-identical copy of the `gstack`
+router, kept only so existing `/gstack-command` invocations still resolve.
+Route to `gstack` instead. Nothing should select this skill on intent.
 Sends any gstack request to the right skill
 (planning, review, QA, shipping, debugging, docs, security, design). For browser/QA
 and dogfooding it points you at /browse. Use when you invoke gstack without a specific
@@ -81,7 +87,7 @@ _QUESTION_TUNING=$(~/.claude/skills/gstack/bin/gstack-config get question_tuning
 echo "QUESTION_TUNING: $_QUESTION_TUNING"
 mkdir -p ~/.gstack/analytics
 if [ "$_TEL" != "off" ]; then
-echo '{"skill":"gstack","ts":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","repo":"'$(_repo=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)" 2>/dev/null | tr -cd 'a-zA-Z0-9._-'); echo "${_repo:-unknown}")'"}'  >> ~/.gstack/analytics/skill-usage.jsonl 2>/dev/null || true
+echo '{"skill":"gstack-command","ts":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","repo":"'$(_repo=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)" 2>/dev/null | tr -cd 'a-zA-Z0-9._-'); echo "${_repo:-unknown}")'"}'  >> ~/.gstack/analytics/skill-usage.jsonl 2>/dev/null || true
 fi
 for _PF in $(find ~/.gstack/analytics -maxdepth 1 -name '.pending-*' 2>/dev/null); do
   if [ -f "$_PF" ]; then
@@ -103,7 +109,7 @@ if [ -f "$_LEARN_FILE" ]; then
 else
   echo "LEARNINGS: 0"
 fi
-~/.claude/skills/gstack/bin/gstack-timeline-log '{"skill":"gstack","event":"started","branch":"'"$_BRANCH"'","session":"'"$_SESSION_ID"'"}' 2>/dev/null &
+~/.claude/skills/gstack/bin/gstack-timeline-log '{"skill":"gstack-command","event":"started","branch":"'"$_BRANCH"'","session":"'"$_SESSION_ID"'"}' 2>/dev/null &
 _HAS_ROUTING="no"
 if [ -f CLAUDE.md ] && grep -q "## Skill routing" CLAUDE.md 2>/dev/null; then
   _HAS_ROUTING="yes"

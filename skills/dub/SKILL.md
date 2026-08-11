@@ -1,5 +1,5 @@
 ---
-name: pp-dub
+name: dub
 description: 'Every Dub feature, plus offline search, agent-native output, and a local SQLite store no other Dub tool has. Trigger phrases: `shorten a link with Dub`, `audit my Dub links`, `find dormant Dub links`, `review Dub bounty submissions`, `Dub partner leaderboard`, `use dub-pp-cli`, `run dub-pp-cli`.'
 license: Apache-2.0
 allowed-tools: Read Bash
