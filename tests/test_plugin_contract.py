@@ -16,6 +16,7 @@ PACKAGED_SKILLS = (
     "second-brain",
     "plaid",
     "karpathy-guidelines",
+    "graph-engineering",
 )
 
 
@@ -24,8 +25,16 @@ def _json(rel):
 
 
 def _skill_version():
+    """Read the skill version out of SKILL.md frontmatter.
+
+    Commit 7f3d602 normalized every skills/*/SKILL.md for Claude Code's skill
+    frontmatter spec, which only permits a fixed set of top-level keys. Keys
+    outside that set — version, argument-hint, user-invocable — moved under
+    metadata.legacy-frontmatter. Accept either location so the contract holds
+    across both layouts, and tolerate quoted or bare YAML scalars.
+    """
     fm = (SKILL / "SKILL.md").read_text(encoding="utf-8").split("\n---\n", 1)[0]
-    match = re.search(r'(?m)^version:\s*"([^"]+)"\s*$', fm)
+    match = re.search(r'(?m)^\s*version:\s*"?([^"\s]+)"?\s*$', fm)
     assert match, "SKILL.md version frontmatter not found"
     return match.group(1)
 
@@ -73,8 +82,10 @@ class FrontmatterTests(unittest.TestCase):
         self.assertRegex(fm, r"(?m)^description:")
 
     def test_user_invocable(self):
+        # May sit at the top level or under metadata.legacy-frontmatter — see
+        # _skill_version() for why the key moved.
         fm = self.text.split("\n---\n", 1)[0]
-        self.assertRegex(fm, r"(?m)^user-invocable:\s*true\s*$")
+        self.assertRegex(fm, r"(?m)^\s*user-invocable:\s*true\s*$")
 
     def test_taste_uses_memory_not_learnings_file(self):
         # Taste was migrated from brand/learnings.md to auto-memory.

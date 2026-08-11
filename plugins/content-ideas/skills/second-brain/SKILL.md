@@ -1,10 +1,6 @@
 ---
 name: second-brain
-description: >
-  Use when someone says "build my second brain", "set up a knowledge base", "add to my wiki",
-  "compile my notes", or wants to bootstrap and maintain a markdown-first repo following the
-  raw/ → wiki/ → archive/ OpenKB-style pattern. Orchestrates content-research note intake,
-  wiki compilation, and optional graphify export.
+description: Use when someone says "build my second brain", "set up a knowledge base", "add to my wiki", "compile my notes", or wants to bootstrap and maintain a markdown-first repo following the raw/ → wiki/ → archive/ OpenKB-style pattern. Orchestrates content-research note intake, wiki compilation, and optional graphify export.
 ---
 
 # Second Brain
