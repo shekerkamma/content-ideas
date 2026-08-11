@@ -23,8 +23,9 @@ HTML renderer.
 ### Skill source and porting contract
 
 - Treat `skills/content-ideas/`, `skills/pipeline-runner/`,
-  `skills/second-brain/`, `skills/plaid/`, and
-  `skills/karpathy-guidelines/`, and `skills/meta-loop/` as canonical shared sources.
+  `skills/second-brain/`, `skills/plaid/`,
+  `skills/karpathy-guidelines/`, `skills/meta-loop/`, and
+  `skills/graph-engineering/` as canonical shared sources.
 - Treat `skills/docx/`, `skills/pdf/`, `skills/improve/`, and
   `skills/storm-research/` as canonical shared recovery sources for those
   skills. They must remain portable across Claude Code and Codex and must not
@@ -43,7 +44,8 @@ HTML renderer.
 Any skill that recommends a tool, vendor, library, stack, or comparable
 project carries an editable `## Judgment rules` section stating these three.
 Keep the policy on the page and tunable — never hardcode it into step
-instructions. Currently applied in `skills/plaid/SKILL.md` and
+instructions. Currently applied in `skills/plaid/SKILL.md`,
+`skills/graph-engineering/SKILL.md`, and
 `.claude/skills/saas-replacement-auditor/SKILL.md`; extend to
 `ai-head-of-engineering-build-vs-buy-auditor`, `ai-head-of-engineering-stack-picker`,
 and `investor-competitive-dossier` when they are next touched.
@@ -100,6 +102,14 @@ the cwd. If upstream (`coleam00/cole-medin-knowledge-base`) changes its
 clean on an empty bundle before shipping.
 
 ## Shared Product-Build Skills
+- `skills/graph-engineering/SKILL.md` — builder/critic contract loop: state on
+  disk, an adversarial auditor subagent with no write access, a frozen
+  negotiated contract, and a real verification command. Scripts scaffold and
+  gate the loop (`init_loop.py`, `check_contract.py`, `verify_state.py`,
+  `collate_traces.py`). Distinct from `meta-loop` (multi-model council) and
+  `goal-loop-orchestrator` (skill-chain planner). Two invariants are
+  load-bearing and must survive any edit: the critic never receives the
+  builder's transcript or reasoning, and the critic never gets write tools.
 - `skills/plaid/SKILL.md` — Product Led AI Development: idea, validation,
   planning, `docs/design.md`, launch, and roadmap execution.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
@@ -189,7 +199,49 @@ bash scripts/sync-presentation-pipeline-hosts.sh
 
 # validate the portable recovery skills and their integrity manifest
 bash scripts/verify-recovery-skills.sh
+
+# repo-wide skill integrity gate (all six skill trees, 450 SKILL.md files)
+python3 scripts/check_skills.py
+python3 scripts/check_skills.py --rule crosstree   # one rule in isolation
 ```
+
+## Skill integrity gate
+
+`scripts/check_skills.py` is the deterministic gate over every skill tree in
+the repo — `skills/`, `.claude/skills/`, `.agents/skills/`, `.github/skills/`,
+`plugins/content-ideas/skills/`, and `portable-skills/`. It is enforced by
+`tests/test_skill_integrity.py`, so it runs with the normal pytest suite.
+
+| Rule | What it protects |
+|---|---|
+| `frontmatter` | every SKILL.md has a closed YAML block |
+| `name` | `name:` equals its directory name |
+| `dupes` | no invocation name declared by two directories |
+| `routing` | no two skills share a `description:`, `triggers:`, or `## When to invoke` — fuzzy-matched, because exact equality fell to a trailing period |
+| `desc` | routing is *reachable*: a 40+ char description, or a `## When to invoke`, or `triggers:` |
+| `crosstree` | no skill's body differs across trees unless registered in `scripts/cross-tree-variants.json` |
+| `mirror` | packaged mirrors are byte-identical **and tracked in git** |
+| `bytecode` | no committed `__pycache__`/`.pyc` |
+
+**Do not relax `desc` back into a minimum-length rule.** gstack's catalog trim
+deliberately shortens Claude-host descriptions and moves routing prose into the
+body plus `proactive-suggestions.json`. A short description is that
+optimization working; enforcing length re-inflates the always-loaded catalog
+this repo is trying to shrink.
+
+**`scripts/cross-tree-variants.json` is evidence-gated, not a waiver list.**
+Every entry needs a non-empty `reason` and `evidence` and must name each tree it
+covers; the rule validates all three, so an entry cannot silently waive more
+than it claims. Two entries carry an `open_question` rather than pretending
+resolution — leave those unresolved rather than closing them with a guess.
+
+**When a rule goes from red to green, ask what moved.** Every rule in that file
+carries a revision note recording what it measured wrongly first. Four audit
+rounds found the same failure repeatedly: a check that goes green because the
+thing it measures moved is worse than no check, because it now certifies the
+defect. The full discipline is written up in
+`skills/graph-engineering/SKILL.md` under "Verification discipline" — read it
+before adding or editing a rule.
 
 ## Rules
 - Runtime stays dependency-free: stdlib only (`urllib`, `json`, ...). No pip installs at runtime.
@@ -348,6 +400,16 @@ bash scripts/verify-recovery-skills.sh
 - Version is tracked in `pyproject.toml`, `.claude-plugin/plugin.json`,
   `.claude-plugin/marketplace.json`, `.codex-plugin/plugin.json`, and the
   `version:` field of `SKILL.md` — keep them identical. `tests/test_plugin_contract.py` enforces this.
+- `SKILL.md` frontmatter only carries the keys Claude Code's skill spec
+  permits at the top level. Commit `7f3d602` moved everything else —
+  `version`, `argument-hint`, `user-invocable` — under
+  `metadata.legacy-frontmatter:`. That is the current canonical layout; do not
+  "restore" those keys to the top level. The contract test accepts either
+  position, so a normalizer pass over `skills/` does not break it — but that
+  commit changed 199 files under `skills/` and none under `plugins/`, which
+  is exactly the drift the byte-identity check exists to catch. **Any
+  frontmatter normalization must run over `plugins/content-ideas/skills/` in
+  the same commit.**
 
 ## GBrain (MCP server — persistent memory layer)
 
