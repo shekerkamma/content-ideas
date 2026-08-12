@@ -30,7 +30,16 @@ HTML renderer.
   `skills/storm-research/` as canonical shared recovery sources for those
   skills. They must remain portable across Claude Code and Codex and must not
   contain generated Python bytecode or host credentials.
-- Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
+- Keep matching copies under `plugins/content-ideas/skills/` byte-identical
+  **and tracked in git, on both sides**. This applies to the canonical shared
+  sources in the first bullet only — the recovery sources are checked by
+  `scripts/verify-recovery-skills.sh` and are deliberately not mirrored. The
+  mirror is the copy the plugin installs, so an untracked mirror ships nothing
+  while byte-identity (compared on disk) still reports green; that is exactly
+  how `meta-loop` sat unmirrored-in-history for three months. The enforced list
+  is `MIRRORED` in `scripts/check_skills.py`, and
+  `tests/test_skill_integrity.py::MirrorRuleTests` fails if it drifts from the
+  first bullet — so add a skill to both places or neither.
 - `skills/meta-loop/` runs Claude Code Opus as the sole aggregator and isolated
   Codex CLI models as workers; keep its host installations synchronized with
   the canonical repo copy and never place credentials in worker briefs.

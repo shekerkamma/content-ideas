@@ -37,6 +37,12 @@ MIRROR = REPO / "plugins" / "content-ideas" / "skills"
 MIRRORED = (
     "content-ideas", "pipeline-runner", "second-brain",
     "plaid", "karpathy-guidelines", "graph-engineering",
+    # meta-loop was named in CLAUDE.md's porting contract but omitted here, so
+    # its mirror was policed by nothing at all. Keep this tuple and that
+    # contract in sync; a skill documented as mirrored but absent from this
+    # list is worse than one that was never claimed, because the docs promise a
+    # guarantee no rule provides.
+    "meta-loop",
 )
 
 MIN_DESC = 40
@@ -150,20 +156,39 @@ def rule_desc() -> list[str]:
 
 
 def rule_mirror() -> list[str]:
+    """Packaged mirrors are byte-identical to canonical AND tracked in git.
+
+    Revision note (second): the tracked-in-git half only ever asked about the
+    *canonical* side. `skills/<name>/` tracked meant pass, whatever state the
+    mirror was in — so `plugins/content-ideas/skills/meta-loop/` sat on disk
+    with zero tracked files and the rule stayed green. Byte-identity is
+    compared on disk, which means a mirror existing only in one developer's
+    working directory satisfied every check while shipping nothing. The mirror
+    is the copy the plugin actually installs, so it is the side that most needs
+    to be in history. Both sides are now checked independently.
+    """
     import subprocess
     tracked = subprocess.run(["git", "ls-files", "--", "skills/", "plugins/"],
                              cwd=str(REPO), capture_output=True, text=True, check=False)
     tracked_set = set(tracked.stdout.splitlines()) if tracked.returncode == 0 else None
+
+    mirror_prefix = MIRROR.relative_to(REPO).as_posix()
 
     fails = []
     for name in MIRRORED:
         canonical, packaged = SKILLS / name, MIRROR / name
         # --rule bytecode asks git what ships; this one did not, so it passed on
         # a skill absent from history. Both rules now agree on what "ships" means.
-        if tracked_set is not None and not any(
-                p.startswith(f"skills/{name}/") for p in tracked_set):
-            fails.append(f"{name}: mirrored but untracked in git — it cannot ship "
-                         f"and the mirror guarantee is unverifiable in history")
+        if tracked_set is not None:
+            for label, prefix in (
+                ("canonical", f"skills/{name}/"),
+                ("packaged mirror", f"{mirror_prefix}/{name}/"),
+            ):
+                if not any(p.startswith(prefix) for p in tracked_set):
+                    fails.append(
+                        f"{name}: {label} ({prefix}) is untracked in git — it cannot "
+                        f"ship and the mirror guarantee is unverifiable in history"
+                    )
         if not packaged.is_dir():
             fails.append(f"{name}: no packaged mirror at {packaged}")
             continue
