@@ -114,6 +114,48 @@ clean on an empty bundle before shipping.
   planning, `docs/design.md`, launch, and roadmap execution.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
   coding, keep solutions minimal, edit surgically, and verify success criteria.
+- `skills/video-to-skill/SKILL.md` — derive a runnable skill from a public video
+  URL that demonstrates a workflow. The Claude Code analogue of Cowork's
+  record-a-skill, with the input swapped: a published video instead of your own
+  screen recording. Scripts scaffold, capture, and gate
+  (`init_skill.py`, `hyperframes.py`, `check_derived_skill.py`); enforced by
+  `tests/test_video_to_skill.py`. Peer of `video-to-deck` (same input, deck
+  output) and `skill-builder` (same output, written-spec input). Lives in
+  `skills/` only — like `video-to-deck`, it is not one of the seven canonical
+  skills mirrored into `plugins/content-ideas/skills/`, and `.codex-plugin`'s
+  `"skills": "./skills/"` already exposes it to Codex.
+
+### Deriving from video: three findings that are silent when wrong
+
+These cost a full re-derivation each. They generalize past this skill to any
+frame-based work, including `video-to-deck` and `watch` itself.
+
+- **`watch`'s default download can be 360p and nothing errors.** Under
+  YouTube's SABR restriction yt-dlp may only offer format 18 (640x360), at
+  which terminal text and code diffs are unreadable — and raising
+  `--resolution` merely upscales blur at 4x the token cost. Check
+  `frames.get_metadata()["width"]` before reading frames; recover the format
+  ladder with `--extractor-args "youtube:player_client=default,mweb,web_embedded"`.
+- **`--detail token-burner` is not dense on screencasts.** It is uncapped but
+  still gates on `SCENE_THRESHOLD = 0.20`, tuned for filmed video with cuts. A
+  screencast changes one pane while chrome, editor, and webcam hold still.
+  Measured on a 61-minute tutorial: 86 frames with a **7m10s** blind spot,
+  versus 470 frames with a 39s worst gap at threshold 0.10 plus gap fill. The
+  threshold is a module constant with no CLI flag, which is why
+  `hyperframes.py` exists. Note `video-to-deck` references a
+  `--detail scene-complete` mode that **does not exist** in the installed
+  `watch`; `hyperframes.py` is the working equivalent.
+- **Auto-captions are unreliable for anything typed.** They rendered
+  `/overview` as "slashoverview" and omitted seven commands entirely. Read
+  every command, path, flag, and filename off a frame.
+
+**A derived skill is a hypothesis until executed.** `check_derived_skill.py`
+fails without an execution record in `## Verification`; `NOT EXECUTED` plus
+`--allow-unexecuted` downgrades it to a warning that stays in the file. This
+rule was added after execution falsified four claims in a skill that had already
+passed every other gate — including the demonstrator's own narration about which
+command cuts the git branch. Ranking when sources disagree: **execution, then
+on-screen text, then narration.**
 
 ## Presentation system
 
