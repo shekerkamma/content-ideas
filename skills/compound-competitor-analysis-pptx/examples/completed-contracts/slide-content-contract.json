@@ -1,0 +1,22 @@
+{
+  "example_status": "synthetic_not_evidence",
+  "slide_id": "S07",
+  "archetype": "competitor-threat-profile",
+  "analytical_question": "Where can Asterion displace NovaGrid within the next 12 months?",
+  "action_title": "Asterion threatens retrofit fleets now, but lacks the certification path to win OEM platforms",
+  "executive_answer": "Treat Asterion as a channel-or-contain decision in aftermarket while preserving certification-led differentiation in OEM pursuits.",
+  "evidence_blocks": [
+    {"id": "E-014", "status": "verified_fact", "claim": "Asterion has field deployments in retrofit fleets."},
+    {"id": "E-021", "status": "attributed_claim", "claim": "Asterion states its module is production-ready."},
+    {"id": "G-006", "status": "insufficient_evidence", "claim": "No primary evidence of full OEM homologation was found."}
+  ],
+  "logic": {"type": "segment_comparison", "mechanism": "Field access drives near-term retrofit advantage; homologation gates constrain OEM conversion."},
+  "counterargument": "Asterion could close the certification gap through a Tier-1 partnership.",
+  "falsifier": "Verified OEM nomination or homologation filing moves OEM threat from medium to high.",
+  "implication": "Open a bounded module-supply discussion while accelerating the certification evidence package.",
+  "decision": "Partner-test in retrofit; defend in OEM.",
+  "owner": "Head of Business Development",
+  "trigger": "Technical exchange completed and homologation status verified within 30 days.",
+  "review_control_ids": ["GRILL-S07-01", "META-S07-01"],
+  "speaker_notes": "All names and evidence IDs are synthetic. In a live deck, include full citations and qualification language."
+}

@@ -1,5 +1,10 @@
 # Prompt templates
 
+Before using these templates, apply the source-derived four-part envelope in
+[`accenture-guide-content-envelope.md`](accenture-guide-content-envelope.md): **When to use →
+Workflow → Key prompt → Output includes**. The envelope bounds the analytical job; the templates
+below specialize the requested artifact.
+
 ## Content-envelope prompt
 
 ```text

@@ -1,0 +1,22 @@
+{
+  "example_status": "synthetic_design_reference",
+  "slide_id": "S07",
+  "archetype": "competitor-threat-profile",
+  "canvas": "16:9",
+  "grid": {"columns": 12, "margins_in": 0.55, "gutter_in": 0.16},
+  "regions": [
+    {"id": "R1", "role": "action_title", "grid": "c1-c12/r1", "height_pct": 14},
+    {"id": "R2", "role": "threat_by_segment", "grid": "c1-c4/r2-r5", "height_pct": 58},
+    {"id": "R3", "role": "evidence_mechanism", "grid": "c5-c9/r2-r5", "height_pct": 58},
+    {"id": "R4", "role": "decision_falsifier", "grid": "c10-c12/r2-r5", "height_pct": 58},
+    {"id": "R5", "role": "implication_owner_trigger", "grid": "c1-c12/r6", "height_pct": 16}
+  ],
+  "focal_point": "Segment threat bars with OEM constraint highlighted",
+  "reading_flow": "title → segment threats → causal evidence → decision/falsifier → owner/trigger",
+  "encoding": {"high": "red", "medium": "amber", "bounded": "teal", "unknown": "gray-hatched"},
+  "density": {"visible_words_max": 145, "body_font_min_pt": 12, "sources_font_min_pt": 8},
+  "hierarchy": "One dominant comparison; one decision rail; no equal-weight card wall.",
+  "prohibited_patterns": ["four symmetric prose cards", "decorative icons", "unencoded traffic lights", "citation URLs in body"],
+  "visual_provenance": "native PowerPoint shapes and text; no generated evidence imagery",
+  "accessibility": {"reading_order": ["R1", "R2", "R3", "R4", "R5"], "alt_text_intent": "Summarize segment threat and the certification constraint."}
+}

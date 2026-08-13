@@ -57,6 +57,11 @@ skill-application contract in `skills/present/references/visible-skill-applicati
   content or design envelopes.
 - Read [completeness-gates.md](references/completeness-gates.md) before evidence lock and again before
   reviewed promotion.
+- Read [example-library.md](references/example-library.md) before drafting prompts or selecting slide
+  archetypes. Copy and tailor an example; never treat example claims or numbers as evidence.
+- Read [accenture-guide-content-envelope.md](references/accenture-guide-content-envelope.md) before
+  writing batch prompts or slide content envelopes. It distills the supplied 24-slide prompt guide
+  into a portable competitor-analysis contract.
 
 ## Non-negotiable artifacts
 
@@ -93,6 +98,18 @@ control IDs they implement.
 For long decks, initialize `assets/contracts/authoring-batch-manifest.template.json`. Author content
 envelopes in bounded batches of no more than four slides, then consolidate and validate globally.
 Never ask one prompt to write an entire deep-research deck.
+
+Use `examples/prompts/sample-prompts.md` for invocation patterns,
+`examples/completed-contracts/` for filled contract syntax, and
+`examples/review-control-traces/` for the required Grill-Me → Meta LOOP → visible-change chain.
+Use `assets/slide-archetypes/archetype-catalog.json` to select a governed composition and inspect
+`assets/slide-archetypes/final-design-examples.html` for the intended visual outcome. Examples are
+synthetic design references, not branded client deliverables or reusable evidence.
+
+The user-supplied guide is preserved byte-for-byte at
+`assets/reference-decks/accenture-style-claude-guide-draft.pptx`. Use it as a prompt-envelope and
+composition reference only. Do not present it as the client template and do not copy its visible
+claims into a deliverable.
 
 ## Build rules
 
@@ -160,6 +177,13 @@ Run the bundled validator:
 ```bash
 python3 skills/compound-competitor-analysis-pptx/scripts/validate_run.py \
   <run-dir> --competitor --reviewed
+```
+
+Validate the bundled example library after changing prompts, contracts, or archetypes:
+
+```bash
+python3 skills/compound-competitor-analysis-pptx/scripts/validate_examples.py \
+  skills/compound-competitor-analysis-pptx
 ```
 
 Run OfficeCLI QA:
