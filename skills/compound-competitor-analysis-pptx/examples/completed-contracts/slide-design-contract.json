@@ -1,7 +1,7 @@
 {
   "example_status": "synthetic_design_reference",
   "slide_id": "S07",
-  "archetype": "competitor-threat-profile",
+  "archetype": "heatmap",
   "canvas": "16:9",
   "grid": {"columns": 12, "margins_in": 0.55, "gutter_in": 0.16},
   "regions": [

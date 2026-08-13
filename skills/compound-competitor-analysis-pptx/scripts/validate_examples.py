@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 import sys
 
+from pptx import Presentation
+
 
 def fail(message: str) -> None:
     raise SystemExit(message)
@@ -27,8 +29,8 @@ def main() -> int:
         root / "examples/review-control-traces/grill-to-meta-loop.json",
         root / "examples/golden-path/README.md",
         root / "assets/slide-archetypes/archetype-catalog.json",
-        root / "assets/slide-archetypes/final-design-examples.html",
-        root / "assets/slide-archetypes/final-design-examples.png",
+        root / "assets/slide-archetypes/deepgrid-v14-native-archetypes-draft.pptx",
+        root / "assets/slide-archetypes/qa/officecli-final/issues.json",
         root / "assets/reference-decks/accenture-style-claude-guide-draft.pptx",
         root / "references/accenture-guide-content-envelope.md",
         root / "examples/reference-source/presentation-evidence.json",
@@ -43,8 +45,8 @@ def main() -> int:
     trace = load(required[3])
     catalog = load(required[5])
     archetypes = {item["id"] for item in catalog.get("archetypes", [])}
-    if len(archetypes) < 8:
-        fail("archetype catalog must contain at least eight unique examples")
+    if len(archetypes) != 9:
+        fail("v14 archetype catalog must contain exactly nine unique design families")
     if content.get("archetype") not in archetypes or design.get("archetype") not in archetypes:
         fail("completed contracts must reference a catalog archetype")
     if content.get("slide_id") != design.get("slide_id") or content.get("slide_id") != trace.get("slide_id"):
@@ -53,13 +55,14 @@ def main() -> int:
     expected = {trace["grill_finding"]["control_id"], trace["meta_loop_disposition"]["control_id"]}
     if not expected.issubset(controls):
         fail("completed content contract must cite Grill-Me and Meta LOOP controls")
-    html = required[6].read_text(encoding="utf-8")
-    if html.count('class="slide"') != len(archetypes):
-        fail("final design HTML slide count must match archetype count")
-    if "synthetic" not in html.lower():
-        fail("final design examples must disclose synthetic status")
-    if required[7].stat().st_size < 100_000:
-        fail("rendered final-design reference is unexpectedly small")
+    prs = Presentation(required[6])
+    if len(prs.slides) != len(archetypes):
+        fail("native v14 design reference slide count must match archetype count")
+    if any(len(slide.shapes) < 10 for slide in prs.slides):
+        fail("native v14 archetypes must remain editable multi-object compositions")
+    issues = load(required[7])
+    if ((issues.get("data") or {}).get("count")) != 0:
+        fail("native v14 archetype deck has unresolved OfficeCLI issues")
     expected_hash = "961d4685f42c29709bb9582e10de2486c78c92cd82fe4596a3942d8317ccfd02"
     actual_hash = hashlib.sha256(required[8].read_bytes()).hexdigest()
     if actual_hash != expected_hash:

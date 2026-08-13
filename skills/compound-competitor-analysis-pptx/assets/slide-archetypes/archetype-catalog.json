@@ -1,14 +1,17 @@
 {
-  "contract_version": "1.0",
-  "status": "synthetic_design_reference",
+  "contract_version": "2.0",
+  "status": "synthetic_content_v14_native_design",
+  "design_authority": "deepgrid-v14-native-archetypes-draft.pptx",
+  "source_reference": "C:/Users/sheke/OneDrive/Desktop/DeepGrid-India-ADAS-Competitive-Strategy-v14-DesignContract-reviewed.pptx",
   "archetypes": [
-    {"id": "executive-answer", "question": "What should leadership believe and do?", "dominant_exhibit": "three-part answer cascade", "regions": ["BLUF", "proof", "decisions"], "max_words": 120, "avoid": "agenda-like summary"},
-    {"id": "market-landscape", "question": "How is the field structured around buyer control points?", "dominant_exhibit": "segmented landscape map", "regions": ["market structure", "named players", "implication"], "max_words": 135, "avoid": "logo cemetery"},
-    {"id": "competitor-threat-profile", "question": "Where and why can this competitor win?", "dominant_exhibit": "segment threat profile", "regions": ["threat by segment", "mechanism/evidence", "decision/falsifier"], "max_words": 145, "avoid": "company fact sheet"},
-    {"id": "buyer-control-comparison", "question": "Who wins on the criteria the buyer actually prices?", "dominant_exhibit": "weighted comparison matrix", "regions": ["criteria", "comparative evidence", "buyer implication"], "max_words": 150, "avoid": "unweighted feature checklist"},
-    {"id": "messaging-collision", "question": "Whose claim survives the buyer's counterargument?", "dominant_exhibit": "persona-by-claim collision table", "regions": ["persona", "our claim", "counterclaim", "winner/response"], "max_words": 160, "avoid": "generic battlecard"},
-    {"id": "white-space-mechanism", "question": "What advantage remains structurally difficult to copy?", "dominant_exhibit": "causal moat chain", "regions": ["asset", "mechanism", "buyer value", "copy barrier"], "max_words": 125, "avoid": "unsupported moat labels"},
-    {"id": "countermove-portfolio", "question": "Which moves change the competitive position fastest?", "dominant_exhibit": "impact-versus-control portfolio", "regions": ["move map", "sequencing", "owners/triggers"], "max_words": 145, "avoid": "flat recommendation list"},
-    {"id": "evidence-appendix", "question": "What is proven, claimed, inferred, or still unknown?", "dominant_exhibit": "claim-status ledger", "regions": ["claim", "status", "source/date", "gap/next verification"], "max_words": 175, "avoid": "raw URL dump"}
+    {"id": "cover", "question": "What should leadership believe and do?", "dominant_exhibit": "decision-logic panel", "max_words": 115},
+    {"id": "ladder", "question": "What is proven and what remains unverified?", "dominant_exhibit": "evidence ladder plus bounded verdict", "max_words": 145},
+    {"id": "table", "question": "Which decisions follow from each evidence class?", "dominant_exhibit": "analytical decision table", "max_words": 165},
+    {"id": "funnel", "question": "How must claims narrow as accountability rises?", "dominant_exhibit": "qualification funnel", "max_words": 125},
+    {"id": "matrix", "question": "Who wins on buyer-priced control points?", "dominant_exhibit": "four-field comparison matrix", "max_words": 145},
+    {"id": "heatmap", "question": "Where does threat change by buying arena?", "dominant_exhibit": "threat-by-arena heatmap", "max_words": 155},
+    {"id": "mechanism", "question": "What converts evidence into buyer value?", "dominant_exhibit": "four-step causal mechanism", "max_words": 135},
+    {"id": "timeline", "question": "Which sequence creates reversible learning?", "dominant_exhibit": "event timeline with early signals", "max_words": 140},
+    {"id": "waterfall", "question": "What evidence unlocks further commitment?", "dominant_exhibit": "directional evidence bridge", "max_words": 125}
   ]
 }

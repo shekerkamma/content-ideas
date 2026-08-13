@@ -11,8 +11,8 @@ Use examples to constrain output shape without importing synthetic facts into a 
 | Write a slide envelope | `examples/completed-contracts/` | evidence IDs, status, falsifier, implication, owner, trigger |
 | Integrate review | `examples/review-control-traces/grill-to-meta-loop.json` | atomic control IDs and rendered-region traceability |
 | Select a layout | `assets/slide-archetypes/archetype-catalog.json` | analytical relationship, density, hierarchy, visual provenance |
-| Inspect intended finish | `assets/slide-archetypes/final-design-examples.html` | apply the client template profile; do not copy the neutral example skin |
-| Review all archetypes at a glance | `assets/slide-archetypes/final-design-examples.png` | inspect hierarchy, density, and comparative consistency before authoring |
+| Inspect intended finish | `assets/slide-archetypes/deepgrid-v14-native-archetypes-draft.pptx` | use its master/theme, analytical field, decision rail, and native editable composition |
+| Rebuild the example | `scripts/build_v14_archetype_template.py` | pass the reviewed v14 deck; never rebuild from an ad hoc blank presentation |
 | Audit the chain | `examples/golden-path/README.md` | reproduce every artifact in the current run directory |
 
 The byte-identical supplied reference deck is stored at
@@ -26,6 +26,7 @@ hash-linked to the reference asset.
 - Treat every company, number, date, source ID, and score in the examples as synthetic.
 - Copy structure, field completeness, parallel grammar, and visual logic—not the example wording.
 - Select an archetype because it encodes the required relationship. Never rotate layouts merely for variety.
+- When the DeepGrid v14 deck is in scope, treat it as the design authority. Do not introduce a parallel neutral template.
 - Keep the client template authoritative for typography, palette, footer, motif, and spacing.
 - Reject a prompt that asks one model call to author more than four deep-research slide envelopes.
 - Validate examples with `scripts/validate_examples.py` after any edit.

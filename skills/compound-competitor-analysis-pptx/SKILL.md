@@ -62,6 +62,9 @@ skill-application contract in `skills/present/references/visible-skill-applicati
 - Read [accenture-guide-content-envelope.md](references/accenture-guide-content-envelope.md) before
   writing batch prompts or slide content envelopes. It distills the supplied 24-slide prompt guide
   into a portable competitor-analysis contract.
+- Read [v14-native-archetype-contract.md](references/v14-native-archetype-contract.md) before
+  selecting or rebuilding DeepGrid competitor slide layouts. The v14 native deck is the design
+  authority when it is supplied or named.
 
 ## Non-negotiable artifacts
 
@@ -103,8 +106,10 @@ Use `examples/prompts/sample-prompts.md` for invocation patterns,
 `examples/completed-contracts/` for filled contract syntax, and
 `examples/review-control-traces/` for the required Grill-Me → Meta LOOP → visible-change chain.
 Use `assets/slide-archetypes/archetype-catalog.json` to select a governed composition and inspect
-`assets/slide-archetypes/final-design-examples.html` for the intended visual outcome. Examples are
-synthetic design references, not branded client deliverables or reusable evidence.
+`assets/slide-archetypes/deepgrid-v14-native-archetypes-draft.pptx` for the intended visual outcome.
+The native example preserves the reviewed DeepGrid v14 master/theme and nine editable design
+families while replacing client claims with synthetic content. It is the design authority; do not
+create an independent neutral template when v14 is in scope.
 
 The user-supplied guide is preserved byte-for-byte at
 `assets/reference-decks/accenture-style-claude-guide-draft.pptx`. Use it as a prompt-envelope and
