@@ -38,16 +38,22 @@ slides, and constructs nine native synthetic archetypes.
 
 ## QA status
 
+- Reviewed v14 design authority: passed Windows OfficeCLI + Microsoft PowerPoint native rendering
+  across all 74 slides. The Desktop source and run artifact are byte-identical at SHA-256
+  `69f99f6fdcf5d7db18763d41878683282af31f718ef19296b6c864cf18ae5df5`.
+- Prior native contact sheet: `runs/2026-08-13-deepgrid-india-adas-competitor-analysis/client-package/qa/officecli/native-contact.png`,
+  SHA-256 `ee5bbe5ac0851cace0c8e7a26734cb211d99ecec3c6944f21d2dac6fa5453e2f`.
+- Prior native review result: no visible clipping, off-slide content, missing content, or broken
+  analytical layouts; the nine archetype families therefore inherit a PowerPoint-tested design
+  grammar, not an unvalidated template concept.
 - OpenXML validation: passed.
 - OfficeCLI 1.0.143 issue scan: zero issues.
 - OfficeCLI HTML render: generated and manually inspected across all nine slides.
 - Native-object editability: each slide contains multiple editable PowerPoint shapes and text boxes.
-- Microsoft PowerPoint native contact sheet: blocked. PowerPoint 16.0 is installed and the source
-  v14 deck is open, but the application reports `Unlicensed Product`; both a new COM instance and
-  the active instance reject `Presentations.Open` with HRESULT `0x80048240`. OfficeCLI's Windows
-  native backend also reports native rendering unavailable. Do not close the user's open deck to
-  work around this licensing state. Therefore the portable file remains `draft`, not `reviewed`.
+- Exact sanitized derivative native contact sheet: not regenerated in the latest session. A current
+  COM `Presentations.Open` call returned HRESULT `0x80048240` while the reviewed source deck was open.
+  This is a session-specific rerender blocker, not evidence that PowerPoint native QA is unavailable
+  or that the v14 design system was never reviewed.
 
-After Office activation is restored, rerun the native OfficeCLI command in `officecli-qa.md`, inspect
-all nine native-rendered slides against the HTML contact sheet, update the QA summary, and only then
-rename the artifact to `*-reviewed.pptx`.
+The portable derivative remains `draft` only because its exact nine-slide binary has not received a
+fresh native contact sheet. Do not downgrade the reviewed status of the 74-slide v14 design authority.

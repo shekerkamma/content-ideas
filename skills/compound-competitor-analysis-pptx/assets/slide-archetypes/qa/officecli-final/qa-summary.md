@@ -10,13 +10,19 @@
 - HTML contact sheet: contact-html.png
 - Native PowerPoint contact sheet: not produced
 
-## Native PowerPoint blocker
+## Native PowerPoint evidence
 
-- PowerPoint 16.0 is installed, but the active application reports `Unlicensed Product`.
-- New and active-session COM automation both reject `Presentations.Open` with HRESULT `0x80048240`.
-- Windows OfficeCLI reports `--render native requires Windows with Microsoft PowerPoint installed`.
-- The user's open v14 source deck was not closed or modified.
-- Promotion remains blocked until Office activation is restored and all nine slides pass native-render inspection.
+- The byte-identical 74-slide v14 source/design authority already passed Windows OfficeCLI plus
+  Microsoft PowerPoint native rendering across slides 1–74.
+- Its inspected native contact sheet is retained at
+  `runs/2026-08-13-deepgrid-india-adas-competitor-analysis/client-package/qa/officecli/native-contact.png`
+  with SHA-256 `ee5bbe5ac0851cace0c8e7a26734cb211d99ecec3c6944f21d2dac6fa5453e2f`.
+- The prior review found no clipping, off-slide content, missing content, or broken analytical layouts.
+- A later attempt to rerender the exact sanitized nine-slide derivative returned HRESULT `0x80048240`
+  while the reviewed source deck was open. This is recorded as a derivative-session limitation, not
+  as absence of prior native PowerPoint QA.
+- The derivative remains `draft` pending an exact-binary native rerender; the v14 design authority
+  remains `reviewed`.
 
 ## Required human review
 
