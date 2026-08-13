@@ -10,6 +10,14 @@
 - HTML contact sheet: contact-html.png
 - Native PowerPoint contact sheet: not produced
 
+## Native PowerPoint blocker
+
+- PowerPoint 16.0 is installed, but the active application reports `Unlicensed Product`.
+- New and active-session COM automation both reject `Presentations.Open` with HRESULT `0x80048240`.
+- Windows OfficeCLI reports `--render native requires Windows with Microsoft PowerPoint installed`.
+- The user's open v14 source deck was not closed or modified.
+- Promotion remains blocked until Office activation is restored and all nine slides pass native-render inspection.
+
 ## Required human review
 
 - Inspect every slide in the contact sheets.

@@ -42,5 +42,12 @@ slides, and constructs nine native synthetic archetypes.
 - OfficeCLI 1.0.143 issue scan: zero issues.
 - OfficeCLI HTML render: generated and manually inspected across all nine slides.
 - Native-object editability: each slide contains multiple editable PowerPoint shapes and text boxes.
-- Microsoft PowerPoint native contact sheet: not produced by the current Windows OfficeCLI runtime;
-  therefore the portable file remains `draft`, not `reviewed`.
+- Microsoft PowerPoint native contact sheet: blocked. PowerPoint 16.0 is installed and the source
+  v14 deck is open, but the application reports `Unlicensed Product`; both a new COM instance and
+  the active instance reject `Presentations.Open` with HRESULT `0x80048240`. OfficeCLI's Windows
+  native backend also reports native rendering unavailable. Do not close the user's open deck to
+  work around this licensing state. Therefore the portable file remains `draft`, not `reviewed`.
+
+After Office activation is restored, rerun the native OfficeCLI command in `officecli-qa.md`, inspect
+all nine native-rendered slides against the HTML contact sheet, update the QA summary, and only then
+rename the artifact to `*-reviewed.pptx`.
