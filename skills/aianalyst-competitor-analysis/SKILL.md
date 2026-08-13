@@ -179,6 +179,7 @@ Final response must include:
 | `ai-analyst/run-analysis` concepts | embedded analysis method | metric definitions, data quality report, scoring model |
 | `grill-me` | review gate | structure/content/scoring critique |
 | `story-architect` | mandatory narrative pipeline | BLUF, audience decision, tension, argument arc, slide spine, evidence map, content cuts, rebuild instructions |
+| `compound-competitor-analysis-pptx` | sequential downstream orchestration | converts validated evidence/story artifacts into per-slide content and design contracts, native PPTX, and OfficeCLI-reviewed delivery |
 | `genspark-slides` | upstream hosted slide generation/reference | Genspark project/viewer, recovered slide HTML, rendered references, QA notes |
 | `genspark-branded-deck` | downstream final PPTX recreation | branded `deck.html`, `theme.css`, `deck.css`, contact-sheet QA, hybrid-editable `*-reviewed.pptx`; image exports only as draft/reference |
 | `branded-pptx-deck` | alternate downstream PPTX rebuild | fully native/re-layoutable `*-reviewed.pptx` when explicitly required |

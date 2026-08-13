@@ -1,0 +1,24 @@
+{
+  "contract_version": "1.0",
+  "source_grill_ledger": "grill-ledger.json",
+  "worker_ledger": [],
+  "aggregator_disposition": "CONDITIONAL",
+  "core_sequence": [],
+  "appendix_sequence": [],
+  "slides": [
+    {
+      "slide_id": 1,
+      "control_ids": ["G-001"],
+      "authoritative_disposition": "rewrite",
+      "story_role": "",
+      "content_rewrite": "",
+      "design_rewrite": "",
+      "evidence_ids": [],
+      "counterargument_required": true,
+      "acceptance_tests": [],
+      "worker_verdict": "PASS",
+      "aggregator_note": ""
+    }
+  ],
+  "unresolved_blockers": []
+}

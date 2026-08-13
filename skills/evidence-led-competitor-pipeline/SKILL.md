@@ -156,6 +156,7 @@ evidence.
 | `aianalyst-competitor-analysis` | sequential core | evidence dataset and analytical controls |
 | `competitor-analysis-pipeline` | sequential core | story, branded PPTX, HTML, publishing and QA |
 | `pptx-visual-spec` | mandatory overlay | validated `visual-spec.json` |
+| `compound-competitor-analysis-pptx` | sequential downstream orchestration | per-slide content/design contracts, native Accenture-style strategy deck, OfficeCLI reviewed gate |
 | `branded-pptx-deck` or `genspark-branded-deck` | downstream builder | editable reviewed PPTX |
 | `github-pages-publisher` | optional downstream | verified public HTML URL |
 

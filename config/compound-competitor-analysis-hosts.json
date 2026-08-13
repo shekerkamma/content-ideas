@@ -1,5 +1,5 @@
 {
-  "contract_version": "1.1",
+  "contract_version": "1.0",
   "canonical_root": "/home/sheke/content-ideas/skills",
   "hosts": {
     "claude-code": "/home/sheke/.claude/skills",
@@ -7,32 +7,18 @@
     "antigravity-windows": "/mnt/c/Users/sheke/.agent/skills"
   },
   "skills": [
-    "present",
-    "watch",
-    "presentation-source-bundle",
     "evidence-led-competitor-pipeline",
     "competitor-analysis-pipeline",
     "aianalyst-competitor-analysis",
     "compound-competitor-analysis-pptx",
-    "ai-analyst",
-    "story-architect",
     "grill-me",
     "meta-loop",
     "llm-council",
-    "presentation-content-writer",
-    "impeccable",
-    "explainer-graphic",
-    "ai-graphics",
-    "branded-pptx-deck",
-    "pptx-toolkit",
-    "pptx-design-quality",
-    "pptx-visual-spec",
-    "officecli"
+    "pptx-visual-spec"
   ],
+  "requires_bundle": "config/presentation-pipeline-hosts.json",
   "windows_runtime": {
     "officecli": "/mnt/c/Users/sheke/AppData/Local/OfficeCLI/officecli.exe",
-    "libreoffice": "/mnt/c/Program Files/LibreOffice/program/soffice.exe",
-    "python": "/mnt/c/Users/sheke/AppData/Local/Programs/Python/Python312/python.exe",
-    "uv": "/mnt/c/Users/sheke/AppData/Local/hermes/bin/uv.exe"
+    "python": "/mnt/c/Users/sheke/AppData/Local/Programs/Python/Python312/python.exe"
   }
 }

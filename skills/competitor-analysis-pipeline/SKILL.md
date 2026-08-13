@@ -135,6 +135,7 @@ Skills that must be installed for this skill to work:
 | `storm-research` | Parallel / Complement | deeper multi-perspective research is useful | `outputs/storm-brief.md` |
 | `grill-me` | Amplifier | always before final client-facing artifacts | `outputs/story-structure-review.md` |
 | `story-architect` | Amplifier | always for deck/page storyline | `outputs/story-architect-pack.md` |
+| `compound-competitor-analysis-pptx` | Sequential downstream orchestration | evidence/story gates passed and an Accenture-style native strategy PPTX is required | slide content/design contracts, editable PPTX, OfficeCLI reviewed evidence |
 | `branded-pptx-deck` | Sequential downstream | PPTX requested | `client-package/*-reviewed.pptx` |
 | `data-analytics:publish-artifact-to-sites` | Alternative / Peer | Data Analytics artifact hosting is required instead of static HTML | hosted artifact URL |
 | GStack strategy/design review skills | Behavioral overlay | optional high-stakes review of strategy and layout | `outputs/gstack-review-notes.md` |

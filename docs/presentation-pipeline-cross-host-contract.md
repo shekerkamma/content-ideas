@@ -14,9 +14,29 @@ the repository first and then synchronized.
 
 ## Governed bundle
 
-The client-presentation bundle consists of `present`, `watch`, `presentation-source-bundle`,
-`ai-analyst`, `story-architect`, `presentation-content-writer`, `impeccable`, `explainer-graphic`,
-`ai-graphics`, `branded-pptx-deck`, `pptx-toolkit`, `pptx-design-quality`, and `officecli`.
+The client-presentation bundle consists of:
+
+- routing and source control: `present`, `watch`, and `presentation-source-bundle`;
+- compound competitor analysis: `evidence-led-competitor-pipeline`,
+  `competitor-analysis-pipeline`, `aianalyst-competitor-analysis`, and
+  `compound-competitor-analysis-pptx`;
+- analysis and review controls: `ai-analyst`, `story-architect`, `grill-me`, `meta-loop`, and
+  `llm-council`;
+- content and visual production: `presentation-content-writer`, `impeccable`,
+  `explainer-graphic`, and `ai-graphics`; and
+- native PPTX construction and QA: `branded-pptx-deck`, `pptx-toolkit`,
+  `pptx-design-quality`, `pptx-visual-spec`, and `officecli`.
+
+The compound competitor-analysis capability is portable only when the complete chain is present:
+evidence-led orchestration → analytical evidence product → competitor client package → bounded
+slide contracts and review-control integration → native build and Office QA. Installing only the
+final PPTX skill is an incomplete port.
+
+The specialized competitor-analysis overlay is machine-readable in
+`config/compound-competitor-analysis-hosts.json`. It carries the competitor orchestrators,
+Grill-Me → Meta LOOP → optional LLM Council review controls, and per-slide visual-contract layer.
+It requires the generic presentation bundle above for source normalization, Story Architect,
+native construction, and Office QA.
 
 `video-to-deck` is intentionally excluded. Video intake must route through `watch`; presentation
 construction must route through `present` and its selected native engine.
@@ -27,6 +47,13 @@ Run:
 
 ```bash
 bash scripts/sync-presentation-pipeline-hosts.sh
+```
+
+When the generic presentation bundle is already installed and only the compound competitor
+capability changed, run the scoped overlay installer:
+
+```bash
+bash scripts/sync-compound-competitor-analysis-hosts.sh
 ```
 
 The installer:
@@ -78,4 +105,11 @@ Run the complete parity, integrity, runtime-path, and Hermes discovery gate with
 
 ```bash
 python3 scripts/verify-presentation-pipeline-hosts.py
+```
+
+Verify the compound overlay independently with:
+
+```bash
+python3 scripts/verify-presentation-pipeline-hosts.py \
+  --manifest config/compound-competitor-analysis-hosts.json
 ```
