@@ -522,6 +522,33 @@ gbrain put <slug>            # write/update a page (embedding cost)
 gbrain list --type <T>       # list pages (free)
 ```
 
+## DeepSeek Harness (dsh) model providers
+
+`dsh` is installed globally (`npm i -g @deepseek-ai/dsh`) with profiles under
+`~/.dsh/profiles/{headless,web}/`. Contract:
+`docs/dsh-multi-model-provider-contract.md`. Secrets-free config example:
+`docs/dsh-cordis-patch.example.yml`.
+
+- **A catalog entry is not a routable model.** Confirm every model with a real
+  `chat/completions` call *and* an end-to-end `dsh` run before configuring it.
+  OmniRoute lists 29 DeepSeek models and 28 fail; its Cursor routes return
+  HTTP 200 with zero output tokens in 4 ms, so status-code checks certify them
+  as healthy.
+- **Port from `~/.hermes/config.yaml` rather than rebuilding auth.** Its
+  `custom_providers` of `type: openai_compatible` map 1:1 onto dsh's
+  `api: openai-completions`. The same provider can work there and 403 in
+  OmniRoute — a failure in one host's copy is not evidence the provider is down.
+- **zenmux is prepaid per-token, not a subscription** (`claude-opus-5` is
+  $25/M output) and exposes no balance endpoint. For Claude at zero cost use
+  the `claude-code-cli` route.
+- `scripts/claude_code_bridge.py` reproduces Hermes' `cli://claude-code`
+  `external_process` provider for dsh: an OpenAI-compatible shim that spawns
+  `claude -p`, storing no credential. It never emits `tool_calls`, so that
+  route bypasses dsh's own tools, permissions, sandbox, and trajectory — a
+  passing smoke test is indistinguishable from a real tool-calling model.
+- Windows-side gateways (OmniRoute 20128, CLIProxyAPI 8317) are **not** on
+  `127.0.0.1` from WSL — use the default-gateway IP, which changes on reboot.
+
 ## Reference repos (cloned locally)
 
 - `~/awesome-llm-apps/generative_ui_agents/` — 7 Generative UI agent demos
