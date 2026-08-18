@@ -4,8 +4,12 @@ import importlib.util
 from pathlib import Path
 
 import pytest
-from pptx import Presentation
-from pptx.util import Inches, Pt
+pytest.importorskip("pptx.util")
+pptx = pytest.importorskip(
+    "pptx", reason="python-pptx is an opt-in skill dependency (see the skill's requirements.txt)"
+)
+Presentation = pptx.Presentation
+Inches, Pt = pptx.util.Inches, pptx.util.Pt
 
 
 MODULE_PATH = Path(__file__).parents[1] / "scripts" / "pptx_toolkit.py"

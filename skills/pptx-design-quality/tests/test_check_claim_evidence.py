@@ -6,6 +6,13 @@ import sys
 from pathlib import Path
 
 
+import pytest
+
+pytest.importorskip(
+    "jsonschema",
+    reason="jsonschema is an opt-in skill dependency (see this skill's requirements.txt); the validator scripts under test import it",
+)
+
 SKILL_DIR = Path(__file__).resolve().parents[1]
 SCRIPT = SKILL_DIR / "scripts/check_claim_evidence.py"
 

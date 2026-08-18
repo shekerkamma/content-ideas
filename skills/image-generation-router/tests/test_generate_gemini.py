@@ -6,7 +6,12 @@ import tempfile
 import unittest
 from unittest import mock
 
-from jsonschema import Draft202012Validator
+import pytest
+
+jsonschema = pytest.importorskip(
+    "jsonschema", reason="jsonschema is an opt-in skill dependency (see the skill's requirements.txt)"
+)
+Draft202012Validator = jsonschema.Draft202012Validator
 
 
 MODULE_PATH = Path(__file__).parents[1] / "scripts" / "generate_gemini.py"
