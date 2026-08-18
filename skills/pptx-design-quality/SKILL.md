@@ -124,6 +124,54 @@ Exit `0` means no unresolved findings, `2` means design findings were detected, 
 `1` means the lint run itself failed. `--fast` skips higher-cost image-resolution and
 contrast checks for inner-loop builds.
 
+When `deck-design.json` declares a `motion` block, also run the motion linter. Static
+contact sheets and Office render QA both inspect resting frames, so neither can see a
+transition or a build at all:
+
+```bash
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_motion.py" \
+  <run-dir>/<deck>-draft.pptx \
+  --config <run-dir>/deck-design.json \
+  --json --out <run-dir>/qa/pptx-motion-lint.json
+```
+
+Same exit codes as `lint_pptx.py`. It reads transition and timing XML straight out of
+the package rather than calling `officecli`, so the check stays independent of the tool
+that authored the motion. Decks with no `motion` block exit `0` and report nothing.
+
+Author motion with `officecli` (`transition` and `animation` elements — see the
+`officecli` skill). **`officecli` only persists writes to Windows-side paths.** Given a
+WSL path it prints `Updated ...` and leaves the file byte-identical, so run it against
+`C:\...` and verify with `lint_motion.py` before trusting any motion edit.
+
+A motion contract is a claim about what the deck does when it plays, and no
+resting-frame check can confirm it. On Windows with PowerPoint available, render the
+motion and review it:
+
+```bash
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/motion_contact_sheet.py" \
+  <run-dir>/<deck>-draft.pptx --out-dir <run-dir>/qa/motion --json
+```
+
+It drives PowerPoint's own `CreateVideo`, samples the result, and tiles it into
+`motion-contact-sheet.png`. Exit `0` means a sheet was produced, `3` means blocked,
+`1` means bad input. Run `--preflight-only` first to check the environment, and
+`--from-video <mp4>` to rebuild the sheet without re-exporting.
+
+Two failure modes it reports rather than dying obscurely:
+
+- **PowerPoint is a single-instance COM server.** Automation attaches to whatever
+  instance is already running, so one degraded window — long-running, or titled
+  "(Unlicensed Product)" — makes every call fail with `0x80048240` while a freshly
+  launched instance works. Preflight names the running instances; close PowerPoint
+  and retry before concluding automation is unavailable.
+- **PowerPoint cannot open a WSL path.** Decks under WSL are staged to a
+  Windows-side temp directory, and paths are resolved to absolute first — a
+  relative path is resolved against PowerPoint's own cwd and fails as `E_FAIL`.
+
+Where PowerPoint is unavailable, say the deck's motion is unreviewed and label it
+`blocked`; a passing `lint_motion.py` verifies the contract, not the playback.
+
 For an evidence-derived deck (`slide-plan.json`'s `deck.evidence_contract` is non-null),
 also run the mechanical claim-vs-evidence check before Office render QA:
 

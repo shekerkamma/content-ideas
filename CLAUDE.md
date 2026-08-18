@@ -192,6 +192,52 @@ on-screen text, then narration.**
   Node >= 24) that `marp` and `genspark-branded-deck` run against authored HTML before
   PPTX export; bump the pin there and in this file together when upgrading.
 
+### Animated slides: motion is invisible to every resting-frame gate
+
+`lint_pptx.py`, `preview_pptx.py` contact sheets, and OfficeCLI render QA all inspect
+resting frames, so none of them can see a transition or a build. Two gates in
+`pptx-design-quality` cover that blind spot, and both are opt-in: a `deck-design.json`
+with no `motion` block is unaffected.
+
+- `scripts/lint_motion.py` — contract gate. Reads transition and `<p:timing>` XML
+  straight out of the package, deliberately **not** via `officecli`, so the check is
+  independent of the tool that authored the motion. Stdlib only.
+- `scripts/motion_contact_sheet.py` — render gate. Drives PowerPoint's own
+  `CreateVideo`, samples the result, and tiles it. `--from-video` rebuilds the sheet
+  without re-exporting; `--preflight-only` checks the environment.
+- `MOTION_EXIT_BREAKS_REST_STATE` is an error, not a warning, and is therefore not
+  waivable. Content that exits is absent from the resting frame, so it is missing from
+  PDF export, contact sheets, and render QA. **Design animated slides so the final
+  resting state is the complete slide** — that is what keeps motion compatible with the
+  existing delivery gate instead of weakening it. Allow exits deliberately via
+  `motion.allowed_effect_classes`, never by waiver.
+
+### Authoring motion: four silent failures, each costing a full debug cycle
+
+- **`officecli` only persists writes to Windows-side paths.** Given a WSL path it prints
+  `Updated /slide[1]: transition=morph`, `close` reports `Resident closed`, and its own
+  `query` reads the change back — while the file on disk stays **byte-identical md5**. A
+  control property (`name=`) fails the same way, so it is every write, not transitions.
+  Run it against `C:\...` and verify with `lint_motion.py`, never with `officecli get`:
+  its reads see the resident's memory, not the artifact.
+- **PowerPoint is a single-instance COM server.** `New-Object -ComObject
+  PowerPoint.Application` attaches to whatever instance is already running. One degraded
+  window — long-running, or titled "(Unlicensed Product)" — makes every call fail with
+  `0x80048240`, and a WMI licence table will happily corroborate the wrong conclusion.
+  Close PowerPoint and retry against a fresh instance before blaming activation.
+- **PowerPoint cannot open a WSL path, and a relative path is worse than a wrong one.**
+  `wslpath -w` maps a relative path to a relative Windows path, which PowerPoint resolves
+  against its own cwd — under WSL a `\\wsl.localhost\...` UNC path — failing as an opaque
+  `E_FAIL`. Resolve to absolute first; stage WSL-hosted decks into a Windows temp dir.
+- **`SlideShowSettings.Run()` fails from a minimized window** with the same
+  `0x80048240`, which reads as a permissions problem and is not. Maximize and foreground
+  first, or skip COM entirely and launch `POWERPNT.EXE /S <deck>`.
+
+**Morph matches objects across slides by shape name.** Give the shapes that should travel
+stable names on every slide; rename one and morph silently degrades to a fade. Verify a
+morph by measuring intermediate positions in the rendered MP4 — positions that exist on no
+slide are the tween, and that measurement is the only proof that is not eyeballing.
+
 ## Claude Code Director Skill
 - `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):
   Plan First → Manage Context → Verify The Work → Build The System. Generates
@@ -246,6 +292,14 @@ bash scripts/verify-recovery-skills.sh
 python3 scripts/check_skills.py
 python3 scripts/check_skills.py --rule crosstree   # one rule in isolation
 ```
+
+`testpaths` in `pyproject.toml` is `["tests", "skills/*/tests"]`. The glob is
+load-bearing: it collects skill-local suites that previously never ran, while
+excluding `skills/skill-builder/scripts/test_*.py` — those match `test_*.py`, contain
+zero test functions, and scan `~/.claude/skills` at import time. Do not widen it to
+`.claude/skills`; four skill-builder basenames collide across the two trees. Tests
+needing a skill's opt-in dependency guard with `pytest.importorskip`, including ones
+that only shell out to a dependency-using script via `sys.executable`.
 
 ## Skill integrity gate
 
