@@ -602,6 +602,29 @@ gbrain list --type <T>       # list pages (free)
   passing smoke test is indistinguishable from a real tool-calling model.
 - Windows-side gateways (OmniRoute 20128, CLIProxyAPI 8317) are **not** on
   `127.0.0.1` from WSL — use the default-gateway IP, which changes on reboot.
+- **`~/.dsh/settings.yaml` silently beats every `--patch` overlay.** When its
+  `agent-default-model` block is present, `dsh --patch ~/.dsh/patches/<x>.yml`
+  is ignored with no warning, which disables all the documented escape hatches
+  at once. **`--dump-config` cannot detect this** — it composes the profile tree
+  without the user settings layer that wins at runtime, so it shows the overlay
+  correctly applied while the run goes elsewhere. Prove a model switch by
+  pointing an overlay at a bogus model id and confirming the run *fails*; to
+  actually switch, edit `settings.yaml`.
+- **dsh resolves credentials from `~/.dsh/.credentials.yaml`, not only the
+  environment.** A run succeeds with the key unset in the shell. So the
+  two-layer pattern above (bashrc + `settings.local.json`) does not by itself
+  reach dsh — add the key to `.credentials.yaml` (mode 600) as well, and never
+  treat an env-only check as proof a route is unconfigured.
+- **A dead default model looks like a broken dsh.** `oc/deepseek-v4-flash-free`
+  now returns `401 Free promotion has ended`; while it was pinned in
+  `settings.yaml`, every run failed at boot regardless of the route requested.
+  Check the default before debugging the provider.
+- The `nvidia` route (`integrate.api.nvidia.com/v1`, `NVIDIA_NIM_API_KEY`) is
+  NVIDIA's free credit pool, direct rather than via OpenRouter. 20 of its 103
+  catalog models are verified routable — see the contract doc for the list and
+  for the exclusions. Four excluded models **hang past 180 s with no status
+  code**, which a generous timeout reads as pending rather than broken; that is
+  the failure mode to design checks against here.
 
 ## Reference repos (cloned locally)
 
