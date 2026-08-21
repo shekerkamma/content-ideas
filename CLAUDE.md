@@ -615,10 +615,22 @@ gbrain list --type <T>       # list pages (free)
   two-layer pattern above (bashrc + `settings.local.json`) does not by itself
   reach dsh — add the key to `.credentials.yaml` (mode 600) as well, and never
   treat an env-only check as proof a route is unconfigured.
-- **A dead default model looks like a broken dsh.** `oc/deepseek-v4-flash-free`
-  now returns `401 Free promotion has ended`; while it was pinned in
-  `settings.yaml`, every run failed at boot regardless of the route requested.
-  Check the default before debugging the provider.
+- **A dead default model looks like a broken dsh.** While
+  `oc/deepseek-v4-flash-free` was pinned in `settings.yaml`, every run failed at
+  boot regardless of the route requested. Check the default before debugging the
+  provider. That model is now **gone from both routes it ever had**: opencode
+  returns `401 Free promotion has ended … subscribe to OpenCode Go` (the
+  credential is fine — `oc/big-pickle` works on the same key), and zenmux no
+  longer lists the `-free` id at all, its successor `deepseek/deepseek-v4-flash`
+  being $0.66/M. This is a **discontinued promotion, not exhausted credits**: a
+  top-up does not fix it. Routing an agent onto another provider to work around
+  a model is evidence it is unavailable, not evidence it works.
+- **NVIDIA's NIM free tier is intermittently flaky, per-model and transient** —
+  a model can go 3/3 and then 1/3 with `404`s minutes later, and dsh can return
+  `PI_AI_ERROR: Service temporarily overloaded` on a route that works on retry.
+  Re-run before concluding a model is dead. This does not soften the
+  catalog-is-not-proof rule, which governs first configuration; it governs
+  *re-testing something already verified*.
 - The `nvidia` route (`integrate.api.nvidia.com/v1`, `NVIDIA_NIM_API_KEY`) is
   NVIDIA's free credit pool, direct rather than via OpenRouter. 20 of its 103
   catalog models are verified routable — see the contract doc for the list and

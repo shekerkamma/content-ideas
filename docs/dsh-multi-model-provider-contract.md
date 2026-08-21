@@ -42,7 +42,7 @@ read from its `/v1/models` `pricings` field on 2026-08-17:
 
 | Model | Completion |
 |---|---|
-| `deepseek/deepseek-v4-flash-free` | **0** (prompt 0 too — genuinely free) |
+| ~~`deepseek/deepseek-v4-flash-free`~~ | **retired** — see below |
 | `openai/gpt-5.6-luna` | $1.20 → $1.80 |
 | `deepseek/deepseek-v4-pro` | $1.98 → $3.96 |
 | `google/gemini-3.7-flash` | $3.75 |
@@ -89,6 +89,14 @@ and **silent hangs past 180 s** (reproduced twice) from
 status code ever arrives, so any check with a generous timeout reads as pending
 rather than broken.
 
+**The NIM free tier is intermittently flaky, per-model and transient.** Measured
+2026-08-21 at 3 calls each: Ultra 550B and Nano 30B 3/3, but
+`nemotron-3-super-120b-a12b` 1/3 with two `404`s minutes after passing 3/3, and
+one dsh run failed with `PI_AI_ERROR: Service temporarily overloaded` that
+succeeded on retry 3/3. Treat a single failure on this provider as noise and
+re-run before concluding a model is dead — the opposite of the standing
+catalog-is-not-proof rule, which governs *first* configuration.
+
 `contextWindow` is set only where this repo had already recorded it for the same
 underlying model via its OpenRouter `:free` twin, and omitted elsewhere rather
 than guessed — NVIDIA's `/v1/models` does not expose context length.
@@ -110,11 +118,25 @@ settings layer that beats it at runtime. To actually switch models, edit
 
 ### The previous default model is dead
 
-`settings.yaml` pinned `omniroute` / `oc/deepseek-v4-flash-free`, which now
-returns `401 Free promotion has ended for DeepSeek V4 Flash Free ... subscribe
-to OpenCode Go`. Every dsh run failed at boot regardless of route. The default
-is now `nvidia` / `nvidia/nemotron-3-ultra-550b-a55b`; the prior file is kept as
+`settings.yaml` pinned `omniroute` / `oc/deepseek-v4-flash-free`. Every dsh run
+failed at boot regardless of route. The default is now `nvidia` /
+`nvidia/nemotron-3-ultra-550b-a55b`; the prior file is kept as
 `~/.dsh/settings.yaml.bak.<timestamp>`.
+
+**`deepseek-v4-flash-free` is gone from both routes it ever had** (re-verified
+2026-08-21, directly against each upstream rather than through dsh):
+
+- **opencode / OmniRoute** — `401 Free promotion has ended for DeepSeek V4 Flash
+  Free … subscribe to OpenCode Go`. The credential is fine: `oc/big-pickle` on
+  the same provider and key returns 200 with real content in the same minute.
+- **zenmux** — the `-free` model id no longer exists (`404 invalid_model`). Its
+  successor `deepseek/deepseek-v4-flash` is **$0.66/M completion, not free**,
+  and returns `402` on a zero balance anyway.
+
+Note the failure is a **discontinued free promotion, not exhausted credits** —
+the two call for different fixes. Topping up credit does not restore it; only an
+OpenCode Go subscription would. Routing an agent onto a different provider to
+work around it is evidence the model is unavailable, not evidence it works.
 
 
 ## The Claude Code CLI bridge
