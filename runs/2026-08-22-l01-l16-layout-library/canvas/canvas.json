@@ -1,0 +1,143 @@
+{
+  "artboards": [
+    {
+      "file": "Cover.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "L01 Cover"
+    },
+    {
+      "file": "Executive-Summary.dc.html",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "L02 Executive Summary"
+    },
+    {
+      "file": "Three-Card-Argument.dc.html",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "L03 Three Card Argument"
+    },
+    {
+      "file": "L04-Process-Chain.dc.html",
+      "x": 4200,
+      "y": 0,
+      "w": 1280,
+      "h": 720,
+      "title": "L04 L04 Process Chain"
+    },
+    {
+      "file": "L05-Pillars.dc.html",
+      "x": 0,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "L05 L05 Pillars"
+    },
+    {
+      "file": "Big-Number.dc.html",
+      "x": 1400,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "L06 Big Number"
+    },
+    {
+      "file": "Operating-Model.dc.html",
+      "x": 2800,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "L07 Operating Model"
+    },
+    {
+      "file": "L08-Deep-Dive.dc.html",
+      "x": 4200,
+      "y": 880,
+      "w": 1280,
+      "h": 720,
+      "title": "L08 L08 Deep Dive"
+    },
+    {
+      "file": "Decision-Scorecard.dc.html",
+      "x": 0,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "L09 Decision Scorecard"
+    },
+    {
+      "file": "Comparison.dc.html",
+      "x": 1400,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "L10 Comparison"
+    },
+    {
+      "file": "Roadmap.dc.html",
+      "x": 2800,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "L11 Roadmap"
+    },
+    {
+      "file": "L12-Financial-Evidence.dc.html",
+      "x": 4200,
+      "y": 1760,
+      "w": 1280,
+      "h": 720,
+      "title": "L12 L12 Financial Evidence"
+    },
+    {
+      "file": "L13-Cost-Clarity.dc.html",
+      "x": 0,
+      "y": 2640,
+      "w": 1280,
+      "h": 720,
+      "title": "L13 L13 Cost Clarity"
+    },
+    {
+      "file": "Recommendation-Ask.dc.html",
+      "x": 1400,
+      "y": 2640,
+      "w": 1280,
+      "h": 720,
+      "title": "L14 Recommendation Ask"
+    },
+    {
+      "file": "L15-Governance.dc.html",
+      "x": 2800,
+      "y": 2640,
+      "w": 1280,
+      "h": 720,
+      "title": "L15 L15 Governance"
+    },
+    {
+      "file": "Risk-Mitigation.dc.html",
+      "x": 4200,
+      "y": 2640,
+      "w": 1280,
+      "h": 720,
+      "title": "L16 Risk Mitigation"
+    },
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": -920,
+      "w": 1280,
+      "h": 720,
+      "title": "Main (reference artboard = L03)"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

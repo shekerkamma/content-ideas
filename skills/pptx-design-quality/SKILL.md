@@ -57,24 +57,43 @@ python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/init_deck_context.py" \
   --run <run-dir> --title "<deck title>"
 ```
 
-### Deriving a draft from a reference deck (optional)
+### Deriving a draft from a reference deck or a design canvas (optional)
 
-When rebuilding from a reference presentation, draft `template-profile.json` from it
-instead of hand-authoring from a blank template:
+When rebuilding from a reference presentation — or from a `/design` canvas drawn for
+this deck — draft `template-profile.json` from it instead of hand-authoring from a
+blank template:
 
 ```bash
 python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/derive_template_profile.py" \
   --run <run-dir> \
   --evidence <run-dir>/presentation-evidence.json \
-  --pptx <reference.pptx>
+  --pptx <reference.pptx> \
+  --canvas <canvas-dir>
 ```
 
-Either `--evidence` (from `presentation-source-bundle`) or `--pptx` works alone; supply
-both for the most complete draft. The script writes `<run-dir>/draft-template-profile.json`
-only — it never overwrites `template-profile.json`. Review the derivation notes it prints,
-tailor the draft, then `cp` it over `template-profile.json` before validating. See
+Any one of `--evidence` (from `presentation-source-bundle`), `--pptx`, or `--canvas`
+works alone; supply more for a more complete draft. The script writes
+`<run-dir>/draft-template-profile.json` only — it never overwrites
+`template-profile.json`. Review the derivation notes it prints, tailor the draft, then
+`cp` it over `template-profile.json` before validating. See
 [`references/template-derivation.md`](references/template-derivation.md) for exactly what
 each field's heuristic does and does not cover.
+
+**`--canvas` takes the `/design` working tree** — the directory holding `canvas.json`
+and the `*.dc.html` artboards. It is the only input that derives `geometry.grid_columns`,
+`geometry.gutter_inches`, and `composition.corner_radius`, because a canvas declares its
+grid and radii where a rendered deck only implies them. It is stdlib-only (no
+`python-pptx`, no Pillow), and when combined with `--pptx` it wins every field it
+derives — a canvas is the design you intend, a reference deck is the design you have.
+
+Two things to hold onto:
+
+- **The px scale is derived, not assumed.** The reference artboard's frame width in
+  `canvas.json` fixes `pt = px * (slide_width_inches / frame_width_px) * 72`. At a
+  1280x720 artboard that is 0.75pt/px; at 1920x1080 it is 0.5. Reading a canvas at a
+  fixed 0.75 would inflate every size by a third on any other frame.
+- **A canvas sets geometry, type, and brand — never evidence.** Claims and numbers stay
+  with `presentation-evidence.json` and `check_claim_evidence.py`.
 
 Tailor both files, then validate:
 
@@ -253,7 +272,8 @@ for the PowerPoint artifact.
 
 - `python-pptx` — required by `lint_pptx.py`.
 - `jsonschema` — required by `validate_deck_context.py`.
-- `Pillow` — required by `derive_template_profile.py` for brand color sampling.
+- `Pillow` — required by `derive_template_profile.py` for brand color sampling from
+  `--evidence` slide images. Not needed for `--pptx` or `--canvas`.
 - Version floors are declared in [`requirements.txt`](requirements.txt) for fresh hosts.
 - The selected builder and Office render tooling remain responsible for their own
   dependencies; this overlay does not install packages at runtime.

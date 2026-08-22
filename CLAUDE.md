@@ -148,6 +148,15 @@ frame-based work, including `video-to-deck` and `watch` itself.
 - **Auto-captions are unreliable for anything typed.** They rendered
   `/overview` as "slashoverview" and omitted seven commands entirely. Read
   every command, path, flag, and filename off a frame.
+- **`--detail transcript` is not an analysis of a screencast — it is a
+  transcript of someone talking over one.** A deck built from captions alone
+  reads as thin because it is: measured on a 12-minute `/design` walkthrough,
+  the captions carried roughly a sixth of the substance. The narration is
+  deixis without referents ("this right here", "you'll see this panel") while
+  the screen holds the file names, line counts, version ids, hex values and
+  debug readouts. Twelve targeted 1080p frames beat 212 caption segments.
+  Use `transcript` to *find* the moments, then re-run for frames at them —
+  never as the only pass when the deliverable is about what a tool does.
 
 **A derived skill is a hypothesis until executed.** `check_derived_skill.py`
 fails without an execution record in `## Verification`; `NOT EXECUTED` plus
@@ -163,6 +172,14 @@ on-screen text, then narration.**
 - Keep output engines distinct: native PPTX uses `branded-pptx-deck`, controlled
   existing-PPTX edits use `pptx-toolkit`, HTML uses `presentation`, hosted Genspark uses
   `genspark-slides` plus `genspark-branded-deck`, and Markdown slides use `marp`.
+- **A client-ready deck is built with `vault-presales-pptx-pipeline` and
+  artifact-tool presentation JSX — not with `pptxkit`/python-pptx.** `pptxkit`
+  is the correct builder for `branded-pptx-deck` and it validates cleanly, so a
+  hand-rolled deck looks finished and passes every structural gate while
+  missing the method entirely. Three decks were built the wrong way in one
+  session before the routing was followed; the tell is hand-written layout
+  helpers instead of `deck-kit.mjs`'s `card`/`kpi`/`table`/`chain`/`rail`, and
+  fixed card heights instead of `'auto'`.
 - Keep template profiles and slide archetypes inside `pptx-design-quality`; do not create
   another top-level presentation skill for each template, layout, critic, or adapter.
 - Keep acquisition utilities inside `presentation-source-bundle`; web/PDF/OneDrive intake
@@ -175,6 +192,27 @@ on-screen text, then narration.**
   tailoring plus the normal validators before build. Adapted from analyzing
   `pamelafox/presentation-skills`'s ingestion skills against this repo's contract-owning
   skills, not ported 1:1; see `skills/pptx-design-quality/references/template-derivation.md`.
+- `/design` (Claude Code's built-in design-canvas skill) feeds that same seam and stops
+  there: `derive_template_profile.py --canvas <canvas-dir>` reads a canvas working tree
+  (`canvas.json` plus `*.dc.html`) into a draft profile. It is the only input that derives
+  `geometry.grid_columns`, `geometry.gutter_inches`, and `composition.corner_radius`,
+  which the `.pptx` and evidence inputs document as underivable. Three rules keep it in
+  its lane:
+  - **A canvas is a design-contract input, never an output engine.** It emits `.dc.html`
+    plus a hosted artifact, and its PDF export rasterizes each artboard to one page, so
+    it can no more deliver a client deck than `genspark-branded-deck` can. Client-facing
+    PPTX still comes from `BRANDED_PPTX_TEMPLATE` / `branded-pptx-deck`. Do not add
+    `/design` to the `present` router.
+  - **Never let a canvas source evidence.** Geometry, type, and brand only; claims and
+    numbers stay with `presentation-evidence.json` and `check_claim_evidence.py`. A
+    profile derived from a canvas you drew is already a measurement of your own intent.
+  - **The px scale is derived from the artboard frame, never hardcoded.** A canvas is
+    authored in CSS px and a slide renders on a fixed-inch stage, so
+    `pt = px * (slide_width_inches / frame_width_px) * 72`. That is 0.75pt/px at a
+    1280x720 artboard — the vault pipeline's own stage (`deck-kit.mjs`:
+    `setViewportSize(1280, 720)` = 13.333 x 7.5in) — and 0.5 at 1920x1080. Hardcoding
+    0.75 is the same misread that the points-vs-pixels rule already exists to prevent;
+    `tests/test_derive_from_canvas.py` pins both frame widths so it cannot creep back.
 - For an evidence-derived deck, run `pptx-design-quality/scripts/check_claim_evidence.py`
   as a fast mechanical pre-pass (unsourced-number scan against cited evidence) before the
   richer `video-to-deck` Grill-Me or Genspark factual-integrity review; it does not replace
@@ -191,6 +229,55 @@ on-screen text, then narration.**
   `scripts/design-qa-detect.sh` is the pinned wrapper (`impeccable@3.5.0`, requires
   Node >= 24) that `marp` and `genspark-branded-deck` run against authored HTML before
   PPTX export; bump the pin there and in this file together when upgrading.
+
+### `deck-kit.mjs` reads the design system's points as pixels
+
+The Client-Ready PPTX Design System is written in **points**; artifact-tool works in
+**pixels** at 1px = 0.75pt. `assets/deck-kit.mjs` in `vault-presales-pptx-pipeline`
+sets its type in pixels but uses the spec's point numbers as those pixel values:
+
+| Role | Spec pt | Spec px | Kit px | Actually renders |
+|---|---|---|---|---|
+| Slide title | 24–30 | 32–40 | 30 | **22.5pt** |
+| Body | 12–14 | 16–19 | 13 | **9.75pt** |
+| Card heading | 12–16 | 16–21 | 15 | **11.25pt** |
+| Kicker | 8–10 | 11–13 | 10 | **7.5pt** |
+| Footer | 7–8 | 9–11 | 9 | **6.75pt** |
+
+Every role lands under floor, so **every deck built from the kit renders about a
+quarter too small** — which reads as bland and thin no matter how good the words are.
+This is the exact trap the kit's own build reference documents.
+
+`runs/2026-08-22-design-video-brief/kit-spec.mjs` is a working correction: it keeps the
+kit's geometry and primitives and re-cuts `header`/`footer`/`card`/`kpi`/`table`/`chain`/
+`rail` at `PX(pt) = pt / 0.75`. Effect on `lint_pptx.py` for the same deck:
+`TEXT_TOO_SMALL` 33 → 0, `SLIDE_MISSING_TITLE` 8 → 1 (the linter needs ≥24pt to
+recognise a title at all), total warnings 70 → 29.
+
+**The fix belongs upstream** in the vault canonical
+(`hyundai-ai-vault/.agents/skills/vault-presales-pptx-pipeline/assets/deck-kit.mjs`),
+which is outside this repo and symlinked into four host roots — changing it moves every
+future deck, so it needs a deliberate decision rather than a drive-by edit. Until then,
+import `kit-spec.mjs` alongside the kit.
+
+### `lint_pptx.py` cannot see a box too short for one line
+
+`lint_pptx.py` and `preview_pptx.py` disagree on overflow, and the linter is the weaker
+of the two:
+
+```
+lint:    available_lines = max(1, int(height / line_height))
+preview: overflow = total_h > h + 0.03
+```
+
+That `max(1, …)` floors the available height at one line, so a box with room for **zero**
+lines scores as having room for one. Four shapes needing 0.22in in a 0.11in box passed
+lint clean and were plainly broken on the render.
+`runs/2026-08-22-design-video-brief/overflow_scan.py` replicates the preview rule
+headlessly so the gap is findable without reading images. Run both gates; a clean
+`lint_pptx.py` is not evidence that text fits. Adopting the preview comparison inside
+`lint_pptx.py` would newly flag existing decks, so it is a gate-semantics decision, not a
+bug fix.
 
 ### Animated slides: motion is invisible to every resting-frame gate
 

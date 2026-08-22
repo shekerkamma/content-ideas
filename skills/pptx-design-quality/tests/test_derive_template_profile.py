@@ -62,7 +62,7 @@ def test_missing_inputs_errors_cleanly(tmp_path: Path) -> None:
     result = run_deriver(["--run", str(tmp_path)])
 
     assert result.returncode == 2
-    assert "at least one of --evidence or --pptx is required" in result.stderr
+    assert "at least one of --evidence, --pptx or --canvas is required" in result.stderr
 
 
 def test_derive_from_evidence_only_produces_valid_draft(tmp_path: Path) -> None:
