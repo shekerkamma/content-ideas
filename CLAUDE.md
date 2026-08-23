@@ -325,6 +325,34 @@ stable names on every slide; rename one and morph silently degrades to a fade. V
 morph by measuring intermediate positions in the rendered MP4 — positions that exist on no
 slide are the tween, and that measurement is the only proof that is not eyeballing.
 
+### `codex exec` hangs on an inherited stdin
+
+`codex exec` reads stdin when it is not a TTY. A bridge that passes its prompt as
+**argv** never writes to or closes that stream, so the call blocks for the entire
+timeout and returns **no output and no error** — indistinguishable from a slow model.
+Measured 2026-08-23, same command and model, only stdin varying:
+
+| stdin | Result |
+|---|---|
+| inherited (open pipe) | **hangs** — timed out at 86.5s |
+| `subprocess.DEVNULL` | completes in 8.7s, rc=0 |
+
+The tell is how the prompt is delivered. Bridges that pipe it in — `meta-loop`,
+`codex-worker-loop`, `impeccable`, `scripts/codex_cli_bridge.py` — append `-` and
+call `communicate(brief)`, which closes stdin as a side effect and is safe by
+construction. The two that pass the prompt as argv are exactly the two that forgot
+stdin existed: `skills/video-to-deck/scripts/generate_with_codex_cli.py` and
+`ai-graphics`'s `codex_image.py`. Both now pass `stdin=subprocess.DEVNULL`. Audit any
+new codex bridge on that axis before its first long-running use.
+
+**Codex model ids: test the exact id, never the family name.** `gpt-5.6-sol` works on
+ChatGPT-subscription auth including built-in `image_gen`; bare `gpt-5.6` returns
+`400 not supported when using Codex with a ChatGPT account`. A bogus id returns the
+same 400, which is what makes `-m` a validated flag and a passing run real evidence.
+`ai-graphics` previously generalised the bare-`gpt-5.6` failure into "gpt-5.6 does not
+exist upstream"; that note was believed and cost a full detour into paid image
+providers before the live catalog was checked.
+
 ## Claude Code Director Skill
 - `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):
   Plan First → Manage Context → Verify The Work → Build The System. Generates
