@@ -45,7 +45,7 @@ Any skill that recommends a tool, vendor, library, stack, or comparable
 project carries an editable `## Judgment rules` section stating these three.
 Keep the policy on the page and tunable — never hardcode it into step
 instructions. Currently applied in `skills/plaid/SKILL.md`,
-`skills/graph-engineering/SKILL.md`, and
+`skills/graph-engineering/SKILL.md`, `skills/design-tokens/SKILL.md`, and
 `.claude/skills/saas-replacement-auditor/SKILL.md`; extend to
 `ai-head-of-engineering-build-vs-buy-auditor`, `ai-head-of-engineering-stack-picker`,
 and `investor-competitive-dossier` when they are next touched.
@@ -353,6 +353,64 @@ same 400, which is what makes `-m` a validated flag and a passing run real evide
 exist upstream"; that note was believed and cost a full detour into paid image
 providers before the live catalog was checked.
 
+## Design tokens and WCAG render gates
+
+`skills/design-tokens/` is the token contract and the only place in this repo that
+measures a rendered page against named WCAG 2.2 criteria. Two commands, two
+different claims, and they are not interchangeable:
+
+- `scripts/check.sh` — stdlib Python, no browser. The token JSON parses, aliases
+  resolve, the six required contrast pairs pass in light *and* dark, every
+  `var(--x)` resolves to the theme, and no component hardcodes a hex or px. A
+  clean run says nothing about how anything renders.
+- `scripts/run_gates.sh <page.html>` — opens the page in Chromium and runs ten
+  gates (1.4.3, 1.4.10, 1.4.11, 2.1.1, 2.1.2, 2.3.3, 2.4.3, 2.5.8, axe-core
+  A/AA, RTL). Exit **0** clean, **1** blocked, **2** findings.
+
+Adapted from `plugin87/ux-ui-agent-skills` v2.5.2 (MIT) rather than installed —
+its 17 skills collide with `design-review` and `prototype` and land on a surface
+already held by `impeccable`, `refero-design`, `frontend-ui-engineering`, and
+`design-html`, and its `CLAUDE.md`/`.claude/rules/` layer wants to own the host
+repo's instruction surface (`validate_instruction_surface.py` enforces a 320-line
+budget). Full accounting in `skills/design-tokens/references/provenance.md`. The
+138-system reference corpus went to `skills/refero-design/references/design-systems/`,
+where reference corpora belong.
+
+### A gate that skips is not a gate that passes
+
+Every render gate upstream opened with
+`catch { console.log('… — SKIPPED'); process.exit(0); }`. Upstream CI installs
+Chromium in a dedicated job so it never bites there; **`npm test` upstream
+contains no render gate at all**, so running the suite locally reports green over
+a page nothing opened. Three changes make that impossible here, and
+`tests/test_design_tokens.py` asserts all three statically so they cannot creep
+back:
+
+- A missing Playwright, browser, target, or axe-core is `BLOCKED` on stderr with
+  exit 1, and `run_gates.sh` calls the page UNMEASURED. No `process.exit(0)` may
+  appear before the browser opens.
+- Exit 1 means blocked and only blocked; findings are exit 2 (matching
+  `scripts/design-qa-detect.sh`).
+- axe-core loads from the local install only. Upstream's CDN fallback lets one
+  gate's rule set differ between two runs.
+
+`assets/fixtures/broken/` is the negative control — six of nine gates fire on it
+by construction, each defect commented against its criterion. A clean run on a
+clean fixture is not evidence the gates work; that fixture is.
+
+**`verify_keyboard.mjs` had to be fixed before it could be trusted.** Its
+collection loop read `if (!vis(el) || !operable(el) || !tabbable(el)) continue;`
+— so a `role="button"` div with no `tabindex`, the plainest WCAG 2.1.1 failure
+and the one its own "Fix A" text describes, was filtered out of the population
+rather than reported. It measured "of the controls already reachable, do they
+answer Enter/Space". Now emits `[A0 not-in-tab-order]`.
+
+**`DESIGN_TOKENS_CHROMIUM`** covers the Playwright-build mismatch this machine
+has (installed Playwright expects build 1228; the cache holds 1208 and 1234):
+`auto` picks the newest cached build and prints which one served the run,
+`<path>` pins one and checks it exists first — `executablePath` is accepted
+without verification, so a path that is set is not a path that resolves.
+
 ## Claude Code Director Skill
 - `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):
   Plan First → Manage Context → Verify The Work → Build The System. Generates
@@ -406,6 +464,14 @@ bash scripts/verify-recovery-skills.sh
 # repo-wide skill integrity gate (all six skill trees, 450 SKILL.md files)
 python3 scripts/check_skills.py
 python3 scripts/check_skills.py --rule crosstree   # one rule in isolation
+
+# design-token contract (stdlib Python, no browser, works on Codex)
+bash skills/design-tokens/scripts/check.sh
+
+# WCAG 2.2 render gates over a page: 0 clean, 1 blocked, 2 findings.
+# Needs `npm i -D playwright axe-core` + a Chromium build; DESIGN_TOKENS_CHROMIUM=auto
+# uses a cached build when Playwright's expected one is missing.
+DESIGN_TOKENS_CHROMIUM=auto bash skills/design-tokens/scripts/run_gates.sh <page.html>
 ```
 
 `testpaths` in `pyproject.toml` is `["tests", "skills/*/tests"]`. The glob is

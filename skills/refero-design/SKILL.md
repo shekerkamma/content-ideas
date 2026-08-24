@@ -485,6 +485,32 @@ when relevant; do not load every file by default.
 - Copywriting and persuasion: [references/copywriting.md](references/copywriting.md)
 - Anti-AI-slop checks: [references/anti-ai-slop.md](references/anti-ai-slop.md)
 
+### Offline reference corpus: 138 named design systems
+
+When the Refero MCP tools are unavailable, `references/design-systems/<name>/DESIGN.md`
+is the reference layer that keeps the research-first rule enforceable instead of
+aspirational. 138 systems, 25,747 lines, each an observed teardown rather than a
+description: Linear's `#08090a` canvas, Inter at weight 510, -1.584px tracking at 72px,
+borders at `rgba(255,255,255,0.05)`. Named brands (stripe, vercel, notion, linear-app,
+supabase, spotify, figma, apple), design languages (material, shadcn, neobrutalism,
+glassmorphism, skeumorphism), and moods (editorial, luxury, brutalism, dithered).
+
+Use it the same way as a live reference lock: pick one primary, name it in the decision
+ledger, and preserve its strongest traits rather than averaging them. Two cautions —
+
+- **These are teardowns of other people's brands.** Take the system (colour roles, scale
+  jumps, weight and tracking logic, border and elevation language); never lift the brand
+  itself into client work.
+- **A corpus you can grep is not research you have done.** It replaces the *lookup*, not
+  the synthesis step or the reference lock.
+
+`references/interop-protocol.md` and `references/crosswalk.md` map token roles to and from
+Material 3, Apple HIG, Fluent, Carbon, shadcn/ui, and Radix when a project must build on
+one of them. For the token contract itself and its validators, use `design-tokens`.
+
+Ported from [`plugin87/ux-ui-agent-skills`](https://github.com/plugin87/ux-ui-agent-skills)
+v2.5.2 (MIT); see `skills/design-tokens/references/provenance.md`.
+
 Core craft rules:
 
 - Define tokens before implementation: type scale, colors, spacing, radius, shadows.
