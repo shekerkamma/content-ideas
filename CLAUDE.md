@@ -125,6 +125,46 @@ clean on an empty bundle before shipping.
   skills mirrored into `plugins/content-ideas/skills/`, and `.codex-plugin`'s
   `"skills": "./skills/"` already exposes it to Codex.
 
+### `claudex-loop` is installed, not vendored — and three repo rules bind it
+
+`chaseai-yt/claudex-loop` (MIT) is installed as a user-scope plugin, not adapted
+into a skill tree: `/claudex-loop:claudex-loop`, `:codex-review`, `:codex-build`.
+Installing rather than forking is deliberate, and the reasoning inverts the
+`design-tokens` and `advise-project-approach` precedents above. It ships 3 skills
+and **zero** agents, hooks, or MCP servers, so it makes no claim on this repo's
+instruction surface — the disqualifier that forced adaptation for
+`ux-ui-agent-skills`. And its load-bearing half is codex CLI invocation mechanics,
+whose failure mode is silent *and* a security failure (see the resume/sandbox
+finding above) and whose flag surface moves between CLI releases. That is the
+worst possible thing to vendor; upstream is the right owner and the marketplace
+auto-updates.
+
+What it adds that this repo does not already own is a **persistent adversarial
+session**: Codex resumes one thread across rounds, so it attacks its own accepted
+fixes. Route by critic identity, not by shape — `codex-worker-loop` also runs
+Claude-plans/Codex-builds, but its critic is a second Opus instance (same vendor,
+same family); `graph-engineering` scaffolds a harness for a repeated job and its
+critic guarantee is strictly stronger (never sees the builder's transcript, never
+gets write tools); `meta-loop` is a council, not a two-model argument.
+
+The skill carries no `## Source / Tool Order` and no `## Judgment rules`, so three
+repo-global rules govern it unchanged and must be honored by whoever runs it:
+
+- **Research Tool Order applies to Phase 0 without exception.** Its research gate
+  reaches for WebSearch and a deep-research workflow; GBrain recall comes first,
+  then Exa, then Firecrawl, and WebSearch is never the first move.
+- **Phase 0 greenfield recon recommends a stack**, which puts it squarely inside
+  the evidence-ranking rules above: popularity is not fit, split every comparable
+  into what transfers versus what exists only because that project got big, and
+  cost every vendor at three points.
+- **Its `deep` tier hardcodes `model: 'opus'`** on every research `agent()` call.
+  Defensible as a downgrade from Fable for search-and-summarize work, but it is a
+  model policy baked into steps rather than stated on the page and tunable — treat
+  a change to it as a policy decision, not a drive-by edit.
+
+`PLAN.md` and `PLAN-REVIEW-LOG.md` are written deliverables, so `voice.md` applies
+to both.
+
 ### Deriving from video: three findings that are silent when wrong
 
 These cost a full re-derivation each. They generalize past this skill to any
@@ -352,6 +392,32 @@ same 400, which is what makes `-m` a validated flag and a passing run real evide
 `ai-graphics` previously generalised the bare-`gpt-5.6` failure into "gpt-5.6 does not
 exist upstream"; that note was believed and cost a full detour into paid image
 providers before the live catalog was checked.
+
+### `codex exec resume` inherits `danger-full-access` and has no `-s` to stop it
+
+`~/.codex/config.toml` on this machine sets top-level `approval_policy = "never"`
+and `sandbox_mode = "danger-full-access"`. `codex exec` accepts `-s read-only`;
+**`codex exec resume` does not accept `-s` at all** (codex-cli 0.148.0 — its
+options are `-c`, `-m`, `-i`, `--json`, `-o`, `--last`, `--all`,
+`--enable/--disable`, `--ephemeral`, `--strict-config`, `--skip-git-repo-check`,
+`--ignore-rules`, `--ignore-user-config`, `--dangerously-bypass-*`). So a resumed
+"read-only review" session silently inherits write access unless the call carries
+`-c sandbox_mode="read-only"`.
+
+Measured 2026-08-25 in a throwaway git repo, one thread, only the flag varying:
+
+| call | result |
+|---|---|
+| `codex exec -s read-only` | `VERDICT: BLOCKED`, nothing written |
+| `codex exec resume <tid> -c sandbox_mode="read-only"` | `VERDICT: BLOCKED`, nothing written |
+| `codex exec resume <tid>` (no flag) | **`VERDICT: WROTE`** — file created on disk |
+
+Omitting the flag does not degrade to a stricter default; it hands a critic that
+is supposed to be reading your repo the ability to edit it. Every resume in a
+review loop must carry it, and the no-flag negative control above is the only
+thing that proves the flag is live — a passing read-only round on its own is
+equally consistent with the flag doing nothing. Audit any codex bridge on this
+axis alongside the stdin axis above.
 
 ## Design tokens and WCAG render gates
 
