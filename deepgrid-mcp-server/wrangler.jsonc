@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "deepgrid-market-intelligence-mcp",
+  "compatibility_date": "2026-08-27",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "main": "src/server.ts",
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/mcp", "/authorize", "/oauth/*", "/.well-known/*", "/brief/*", "/health"]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "59825d5a9a464ac28512806b07a0fdcc"
+    },
+    {
+      "binding": "DEEPGRID_DATA",
+      "id": "cf68686db6e24f1a84a9567588dd9a0b"
+    }
+  ],
+  "triggers": {
+    "crons": ["17 3 * * *"]
+  }
+}
