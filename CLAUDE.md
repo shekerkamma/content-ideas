@@ -39,6 +39,34 @@ HTML renderer.
 - Before shipping skill changes, run the plugin contract, the three
   `skill-builder` audit scripts, and the full pytest suite.
 
+### `.agents/skills/` is the one tree all three hosts already read
+
+Reaching Claude Code, Codex, and DeepSeek Harness does not need a third
+packaging format. DSH's `@deepseek-ai/dsh-skill-filesystem` resolves five roots
+in rank order, and **rank 200 is `<projectRoot>/.agents/skills`** — a tree this
+repo already maintains. Measured 2026-08-25 by driving the provider directly
+against this checkout; it returned 61 skills with descriptions parsed.
+
+So a cross-host skill is `skills/<name>/` plus a byte-identical copy in
+`.agents/skills/<name>/`, which `check_skills.py --rule crosstree` already
+enforces. Four constraints come from DSH and bind the canonical copy too:
+
+- **Single-level bundles only.** `<name>/SKILL.md` or a flat `<name>.md`.
+  Nested `**/SKILL.md` discovery is deliberately excluded, so a skill cannot
+  hide sub-skills in subdirectories.
+- **`name` must be kebab-case and `description` must be top-level.** Both are
+  required; DSH parses frontmatter as open YAML with the `yaml` package.
+- **`disable-model-invocation` / `user-invocable` fail closed.** A camel-case
+  spelling or a non-boolean value **drops the entire skill** from discovery with
+  a warning — it does not fall back to permissive. This is why commit
+  `7f3d602`'s move of `user-invocable` under `metadata.legacy-frontmatter:` is
+  safe: DSH treats `metadata` as an opaque object and defaults to permitting.
+- **Project root is the nearest ancestor containing `.git`.** A skill tree
+  outside the repo is invisible to the project-scoped roots.
+
+`~/.dsh/skills` (rank 400) and `~/.agents/skills` (rank 500) are the user-scope
+equivalents for skills that should follow the machine rather than the repo.
+
 ### Evidence-ranking rules for research-bearing skills
 
 Any skill that recommends a tool, vendor, library, stack, or comparable
@@ -477,6 +505,49 @@ has (installed Playwright expects build 1228; the cache holds 1208 and 1234):
 `<path>` pins one and checks it exists first — `executablePath` is accepted
 without verification, so a path that is set is not a path that resolves.
 
+## Local PDF service (Stirling PDF)
+
+A self-hosted PDF operations service on `http://localhost:8090` — merge, split,
+OCR, redact, compress, convert — for any skill that must not ship a client
+document to a third-party web tool. 259 REST endpoints behind 60 UI tools.
+Runbook, licensing boundary, and host quirks: `docs/stirling-pdf-local-service.md`.
+
+Lives at `~/apps/stirling-pdf/` (machine-local service, not a repo artifact);
+`./stirling {up|down|logs|status|update|open}` and `smoke_test.py` sit beside it.
+Three facts bind anyone wiring a skill to it:
+
+- **Set the multipart part's `Content-Type` explicitly.** `/api/v1/convert/pdf/word`
+  rejects `application/octet-stream` with a bare HTTP 400, a zero-byte body, and
+  nothing in the server log; it wants `application/pdf`. `curl -F` guesses the
+  right type from the extension, so the same request succeeds from a shell and
+  fails from a hand-rolled client — which reads as a flaky endpoint and is not.
+- **The OpenAPI spec is `/v1/api-docs`, not `/v3/api-docs`.** The SPA serves
+  `index.html` for unknown paths, so a wrong path returns **200 HTML** rather
+  than a 404. Check `content_type`, never the status code alone.
+- **It is open-core, and the split is not where you would guess.** All 60 PDF
+  tools are the MIT half; the proprietary half is auth, policy, audit, billing,
+  clustering, and their MCP server, under a licence barring production and
+  client-facing use. Local single-user operation never reaches it; reselling or
+  hosting for an organization does.
+
+### An OCR test that returned 200, a valid PDF, and real text — and proved nothing
+
+The first OCR check here passed twice over for the wrong reasons: it sent an
+`ocrType` outside the endpoint's enum (200, silently another mode), and it ran
+against a PDF that **already had a text layer**, so extraction recovered text
+that predated OCR. The rewritten test builds the negative control first —
+render to PNG, rebuild as an image-only PDF, **assert zero extractable
+characters**, then OCR and assert text returns. 0 chars before, 334 after,
+28/40 known words matched.
+
+The same round found the mirror failure: **four of the suite's first-run
+failures were wrong assertions, not defects** — `pdfinfo` column padding broke a
+substring match, `pdfinfo` on an encrypted file prints no `Encrypted:` line to
+parse at all, and a watermark drawn with a subsetted font carrying no
+`ToUnicode` map is invisible to text extraction while being plainly there on the
+render. Both directions are the same rule this repo already runs on: a gate
+whose own assertion was never tested reports a hypothesis, not a result.
+
 ## Claude Code Director Skill
 - `.claude/skills/claude-code-director/SKILL.md` — Director Framework (Cole Medin):
   Plan First → Manage Context → Verify The Work → Build The System. Generates
@@ -508,7 +579,11 @@ Keep that block in sync if directory names change.
 ## Commands
 ```bash
 # run the test suite (stdlib + pytest, no network)
-python3 -m pytest -q
+# pytest is the repo's ONE declared dev dependency ([dependency-groups] dev),
+# so it lives in .venv, not on system python. /usr/bin/python3 is Debian
+# PEP 668 externally-managed with no pip — do not try to install into it.
+# `uv run` syncs the dev group against uv.lock and works without activation.
+uv run --frozen pytest -q
 
 # exercise the scraper / feed generator directly against a checkout
 python3 skills/content-ideas/scripts/scrape.py --help
