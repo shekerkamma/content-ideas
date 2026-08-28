@@ -71,10 +71,39 @@ const approvalSubmit = await fetch(`${baseUrl}/authorize`, {
   redirect: "manual"
 });
 assert(approvalSubmit.status === 302, `Approval failed: ${approvalSubmit.status}`);
+const setCookie = approvalSubmit.headers.get("set-cookie") ?? "";
+assert(setCookie.includes("deepgrid_trusted_browser="), "Trusted-browser cookie missing.");
+assert(setCookie.includes("HttpOnly"), "Trusted-browser cookie must be HttpOnly.");
+assert(setCookie.includes("Secure"), "Trusted-browser cookie must be Secure.");
+assert(setCookie.includes("SameSite=Lax"), "Trusted-browser cookie must use SameSite=Lax.");
+const trustCookie = setCookie.split(";", 1)[0];
 const callback = new URL(approvalSubmit.headers.get("location"));
 assert(callback.searchParams.get("state") === state, "OAuth state mismatch.");
 const code = callback.searchParams.get("code");
 assert(code, "OAuth authorization code missing.");
+
+const rememberedVerifier = base64url(crypto.randomBytes(48));
+const rememberedChallenge = base64url(
+  crypto.createHash("sha256").update(rememberedVerifier).digest()
+);
+const rememberedState = base64url(crypto.randomBytes(24));
+const rememberedAuthorizeUrl = new URL(authorizeUrl);
+rememberedAuthorizeUrl.searchParams.set("code_challenge", rememberedChallenge);
+rememberedAuthorizeUrl.searchParams.set("state", rememberedState);
+const rememberedApproval = await fetch(rememberedAuthorizeUrl, {
+  headers: { Cookie: trustCookie },
+  redirect: "manual"
+});
+assert(rememberedApproval.status === 302, "Trusted browser was not auto-approved.");
+const rememberedCallback = new URL(rememberedApproval.headers.get("location"));
+assert(
+  rememberedCallback.searchParams.get("state") === rememberedState,
+  "Trusted-browser OAuth state mismatch."
+);
+assert(
+  rememberedCallback.searchParams.get("code"),
+  "Trusted-browser authorization code missing."
+);
 
 const tokenResponse = await fetch(`${baseUrl}/oauth/token`, {
   method: "POST",
@@ -147,6 +176,7 @@ console.log(
       health: "ok",
       cors: "ok",
       oauth: "ok",
+      trustedBrowser: "ok",
       tools: names,
       monitor: "ok",
       refresh: {

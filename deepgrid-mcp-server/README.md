@@ -17,6 +17,7 @@ Authenticated remote MCP server for the DeepGrid India ADAS competitor dossier.
 
 - OAuth 2.1 dynamic client registration and authorization-code flow with PKCE.
 - A shared owner password protects the authorization page. The password is stored as a Cloudflare Worker secret.
+- Successful approval sets a signed, HttpOnly, Secure, SameSite=Lax browser cookie for 30 days. Later OAuth connections auto-approve without exposing or resubmitting the password.
 - Browser access is limited by CORS to the GitHub Pages origin and local development origins.
 - Refresh accepts competitor identifiers, not arbitrary URLs. Source URLs are fixed in `src/sources.ts`.
 - Access tokens live in the website tab's `sessionStorage`, not persistent browser storage.
@@ -49,7 +50,7 @@ SHARED_PASSWORD='...' npm run smoke -- \
   https://deepgrid-market-intelligence-mcp.shekerkamma.workers.dev
 ```
 
-The smoke test checks health, CORS, OAuth/PKCE, tool discovery, a read-only monitor call, one allowlisted refresh, and an expiring brief round trip.
+The smoke test checks health, CORS, OAuth/PKCE, trusted-browser auto-approval, tool discovery, a read-only monitor call, one allowlisted refresh, and an expiring brief round trip.
 
 ## Source map
 
