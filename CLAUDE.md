@@ -431,6 +431,43 @@ with no `motion` block is unaffected.
   existing delivery gate instead of weakening it. Allow exits deliberately via
   `motion.allowed_effect_classes`, never by waiver.
 
+### Planning motion: derive it from the deck's own geometry
+
+`officecli query <deck> shape --json` returns every shape in the package with a
+**stable `@id` path** plus resolved geometry, in one call (3,259 shapes on an
+81-slide deck). That is enough to plan a whole build order without python-pptx,
+without tagging anything at build time, and without the plan going stale when
+the deck is rebuilt. `pptx-design-quality/scripts/plan_motion.py` and
+`apply_motion.py` are the pair: geometry in, `officecli batch` commands out.
+
+**One perceived step per BAND, not per column.** Cluster shapes into bands by
+`y`, then into columns by horizontal overlap. Inside a band every shape is
+`withPrevious` and the left-to-right stagger comes from `delay` (~110 ms per
+column), never from `trigger`. A four-card row is then one click and one
+motion; a seven-column signal chain runs across 770 ms as a single step. Both
+wrong answers cost a cycle: a trigger per column blows the step budget on every
+content slide, and collapsing bands to fix the count destroys exactly the
+left-to-right motion that was the point.
+
+**`max_build_steps_per_slide` counts nodes, not steps.** `lint_motion.py`'s
+`_build_steps` appends one entry per `cTn` carrying a `presetClass` — one entry
+per animated *shape*. On a dense deck the two readings differ by an order of
+magnitude: 487 perceived steps against 2,602 nodes, with the densest slide at
+5 steps and 120 nodes. So the cap is a node ceiling; set it as one, record the
+reason **in the config file**, and keep the real click budget upstream in the
+planner. Raising a cap because a gate went red, without saying which quantity
+it now measures, is how a gate stops measuring anything.
+
+### A text box sized to its own estimator still overflows
+
+A card helper that computed its height as `TH(text, w-52)` while placing the
+text box at width `w-72` under-measured every string near a wrap boundary: 23
+shapes overflowed on a deck whose build-time layout guard reported clean,
+because the guard and the box were asking different questions. Measure at the
+**box's** width, then pad for the ~0.1in side insets PPTX adds and the
+estimator does not model. Same class as the `defRPr` trap above: two gates
+agreeing means nothing when both inherit the same wrong number.
+
 ### Authoring motion: four silent failures, each costing a full debug cycle
 
 - **`officecli` only persists writes to Windows-side paths.** Given a WSL path it prints
