@@ -347,6 +347,70 @@ headlessly so the gap is findable without reading images. Run both gates; a clea
 `lint_pptx.py` would newly flag existing decks, so it is a gate-semantics decision, not a
 bug fix.
 
+### Both text gates measure artifact-tool decks at 14pt, because the size is not on the run
+
+`lint_pptx.py` and `preview_pptx.py` both resolve a paragraph's size with
+`para.runs[0].font.size` and fall back to **14pt** when it is `None`. artifact-tool
+writes the size to the paragraph's `a:defRPr` and emits `<a:r>` with no `<a:rPr>`, so
+that fallback fires on **every** paragraph — measured 941/941 on a 30-slide deck. The
+consequence runs both ways: 9.75pt labels are over-measured (phantom overflow) and a
+44pt cover headline is under-measured (real overflow missed).
+
+The visible symptom is a contact sheet covered in red overflow boxes on a deck that is
+actually clean. On one build the raw count was **164 "overflowing" shapes; resolving
+`defRPr` first brought it to 24**, and those 24 were real.
+
+`skills/pptx-design-quality/scripts/overflow_scan.py` and `preview_pptx_fixed.py`
+are the corrected copies — same wrap width, same 1.18 line
+stacking, same 0.03in tolerance, only the size resolution changed. Use them for any
+artifact-tool deck. Do **not** read red boxes off the stock `preview_pptx.py` for these
+decks; it is rendering the whole deck at one font size.
+
+Related: `lint_pptx.py`'s `TEXT_TOO_SMALL` enforces a flat 14pt floor, but the design
+system specifies body 12–14pt, table/chart labels 9–11pt, kicker 8–10pt and footer
+7–8pt. A deck that is correct against the contract fires hundreds of these. Waive the
+rule with a documented reason; do not inflate the type to satisfy a linter that is
+stricter than the spec it enforces.
+
+### Text hidden behind a later opaque shape — the defect class no gate owned
+
+Draw order matters: a card or table band drawn *after* a footer, page number, or chart
+axis label covers it completely. The slide is not overlapping by any text-vs-text test
+and it is inside the canvas, so `SHAPE_OUT_OF_BOUNDS` and `TEXT_BOX_OVERLAP` both pass.
+**OfficeCLI catches it** (`Text "02" is hidden behind overlapping shape …`) and was the
+only gate that did.
+
+Building the check is where the lesson is. The first version gated its occluder scan on
+finding `spPr/solidFill/srgbClr`, that XPath matched nothing, and it reported **0
+occlusions on a deck where OfficeCLI reported 15** — a gate that goes green because it
+measured nothing. Treat any no-text drawn shape as an occluder rather than trying to
+prove it has a fill. Fixed, it reported exactly 15 and agreed with OfficeCLI.
+`skills/pptx-design-quality/scripts/verify_deck.py` carries all three checks (bounds,
+text collision, occlusion) plus background-aware WCAG contrast. Set
+`DECK_DARK_SLIDES=1,6,12` so it resolves contrast against dark backgrounds correctly.
+
+### Two header defects that the kit produces silently
+
+- **A long title drops below the design system's 24pt floor.** `kit-spec.mjs`'s
+  `header()` steps the size down when a title exceeds ~60 characters, landing at
+  21.75pt — under the 24–30pt spec, and under the size `lint_pptx.py` needs to
+  recognise a title at all (which is why 13 slides reported `SLIDE_MISSING_TITLE`).
+  Titles must fit one line at full size: **~52 characters at 1160px**.
+- **A subtitle over ~105 characters wraps into the rule beneath it.** The band between
+  the subtitle at y=106 and the rule at y=146 holds one line at 12.75pt.
+
+Both are assertable at build time. Add the checks to the builder rather than catching
+them on a contact sheet: have `hdr()` push to a `VIOLATIONS` list, alongside a
+measured-flow layout guard that fails the build when any block runs past the footer.
+
+### Measured flow beats hand-typed y coordinates
+
+The 66 layout errors in that build had one cause: lower-half blocks placed at a
+hand-typed `y` while their cards were `'auto'` height. The fix is a `flow(startY, tag,
+limit)` helper that stacks blocks by measured height and records a violation when the
+running `y` passes the footer or a declared ceiling. Card copy then has to earn its
+space, which is the correct pressure. Do not chase these one at a time on renders.
+
 ### Animated slides: motion is invisible to every resting-frame gate
 
 `lint_pptx.py`, `preview_pptx.py` contact sheets, and OfficeCLI render QA all inspect
@@ -959,6 +1023,98 @@ gbrain list --type <T>       # list pages (free)
   for the exclusions. Four excluded models **hang past 180 s with no status
   code**, which a generous timeout reads as pending rather than broken; that is
   the failure mode to design checks against here.
+
+## Google Vids: a real automation lane, reachable over CDP
+
+Vids has no API and no MCP connector, but it is fully drivable in a browser and the
+whole Slides-to-narrated-video path works. Verified end to end on 2026-08-29: a 30-slide
+deck became an 8:55 1080p MP4 with per-scene AI voiceover and captions.
+
+The route is **Slides → "Turn into video"**, not the Vids home page. Open the deck in
+Google Slides (a `.pptx` in Office-compatibility mode is fine — no conversion needed),
+open the **Transform** side panel, and click **Turn into video**. Vids creates one scene
+per slide, writes narration from the slide content, and adds a licensed music bed. It
+does **not** read speaker notes aloud, so source-cell provenance in notes is safe.
+
+### Standing it up
+
+```bash
+CHROME=~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome   # NOT chrome-linux
+"$CHROME" --remote-debugging-port=9222 --user-data-dir=~/.cache/vids-automation-profile \
+  --no-first-run --no-default-browser-check https://vids.google.com &
+```
+
+Then `chromium.connectOverCDP('http://127.0.0.1:9222')`. WSLg provides `DISPLAY=:0`, so
+the window is visible and **the user completes 2FA themselves** — never handle the
+credential. Tick "Don't ask again on this device" and the profile stays authenticated.
+
+- **`agent-browser` on this machine is a broken symlink** into a deleted
+  `hermes-agent/node_modules`. One dead path is not a dead lane; Playwright + CDP works.
+- **A Google survey iframe steals every click.** Remove `#google-hats-survey` before each
+  interaction or clicks time out against "iframe intercepts pointer events".
+- Uploading to Drive: the Drive MCP needs base64 through context (211k tokens for a
+  167KB deck — over the read limit), so use the browser. Drive builds its file input on
+  demand, and clicking the menu item is intercepted; the **Alt+C then U** shortcut with
+  `page.waitForEvent('filechooser')` works.
+
+### Five Vids behaviours that cost a cycle each
+
+- **The voice reverts to the default on page reload.** Select the voice and click
+  "Update all voiceovers" in one uninterrupted session. A reload between the two silently
+  applies the old voice, and the panel label lies about which is active.
+- **"Update all voiceovers" opens a "Replace all existing voiceovers?" confirm dialog.**
+  An unconfirmed click looks like a completed regeneration. Scenes carry a "Voiceover
+  outdated" badge until it actually runs; that badge count is the honest progress signal.
+- **The narration editor is an `about:blank` iframe holding one editable node**, Docs
+  style. `[contenteditable=true]` does **not** match it — probe for *any*
+  `[contenteditable]`, or enumerate `page.frames()`. Clicking the paragraph focuses the
+  iframe; Ctrl+A then `keyboard.type` replaces the text. Click the paragraph **body**,
+  not the "Scene n / 30" header — a click on the header turns Ctrl+A and typing into
+  scene navigation, which reads exactly like data loss and is not.
+- **Scene 1's timeline `aria-label` is "Scene 1 of 2"**, every other scene is "of 30".
+  Match `^Scene 1 of ` or navigate by the panel header, which is authoritative.
+- **Removing the music track barely changes the file size.** AAC compresses silence to
+  almost nothing and the 1080p video dominates: 20,801,557 → 20,801,564 bytes, a 7-byte
+  delta that looks exactly like a cached re-render. Prove it on the audio instead —
+  measure the noise floor in 100ms windows. With music, 0.1% of windows sit below −50dB;
+  without, 33.3% are at digital silence (−240dB).
+
+Working scripts live in
+`runs/2026-08-29-deepgrid-financial-model-deck-rebuild/video/vids/`:
+`replace_all.mjs` (bulk narration replacement, 30/30 verified), `verify_all.mjs`
+(read-back verification against the source script), `final2.mjs` (voice + regenerate
+with the confirm dialog), `upload3.mjs` (Drive upload), `dogo.mjs` (MP4 export).
+
+### The playwright MCP needs Node 20+, and its own metadata hides that
+
+`@playwright/mcp` declares `engines: {node: ">=18"}`, which is stale — Playwright's
+runtime rejects anything under 20 (`You are running Node.js 18.19.1. Playwright requires
+Node.js 20 or higher.`). npm installs it happily, so the server starts and dies, and the
+host reports only `CONNECTION_CLOSED`. This machine's default `node` is `/usr/bin/node`
+v18, so the MCP fails at every session start while `npx @playwright/mcp` works fine from
+an nvm shell. Fix is to pin the command in `~/.claude.json`:
+
+```json
+"playwright": {
+  "command": "/home/sheke/.nvm/versions/node/v24.18.1/bin/npx",
+  "args": ["-y", "@playwright/mcp@latest"],
+  "env": { "PATH": "/home/sheke/.nvm/versions/node/v24.18.1/bin:/usr/local/bin:/usr/bin:/bin" }
+}
+```
+
+A failed MCP connection is worth reproducing by hand before calling it transient — the
+error that explains it never reaches the host.
+
+### Two commands that report success without doing anything
+
+- **`Browser.setDownloadBehavior` silently no-ops on an externally launched browser.**
+  Downloads land in the browser's own default directory. Search for the file rather than
+  trusting the configured path.
+- **`rm -f` exits 0 when its argument matches nothing.** With an em-dash or other
+  non-ASCII in the filename, a quoting slip means "removed" prints while the file stays.
+  Verify with a listing, never the exit code. The same self-match hazard applies to
+  `pkill -f <pattern>` run from a shell whose own command line contains the pattern — it
+  kills the calling shell (exit 144). Match on `ps -eo pid,args | awk` instead.
 
 ## Reference repos (cloned locally)
 
