@@ -1122,6 +1122,53 @@ credential. Tick "Don't ask again on this device" and the profile stays authenti
   demand, and clicking the menu item is intercepted; the **Alt+C then U** shortcut with
   `page.waitForEvent('filechooser')` works.
 
+### Vids caps a Slides import at 45 slides, behind a dialog that looks like a hang
+
+"Turn into video" on an 85-slide deck produced a Vids doc that sat at **one
+scene and 00:00.0 for ten minutes**. It was not importing. A modal was waiting:
+*Select slides — 45 out of 85 selected*, with a Next button. 45 is the ceiling;
+the rest are silently dropped. Screenshot the page before concluding an import
+is slow — scene count and duration both read exactly like a hang while a dialog
+holds the flow.
+
+For a longer deck, split it, run the lane twice, and concatenate: both exports
+come out 1920x1080 h264 / aac 44.1k stereo, so `ffmpeg -f concat -c copy` joins
+them without re-encoding. Split on a section divider so each part opens on
+context.
+
+Two more traps in the same flow:
+
+- **"Update all voiceovers" exists only on the All scenes tab.** On Current
+  scene the button is the singular "Update voiceover", which regenerates one and
+  looks like it did everything. Switch tabs first, then click, then confirm the
+  *Replace all existing voiceovers?* dialog. The voice survives the tab switch.
+- **A stale Drive tab makes the upload shortcut silently dead.** Alt+C then U
+  fires no `filechooser` event at all on a Drive tab left over from an earlier
+  step. Open a fresh tab per upload, press Escape first (a native chooser from a
+  failed run blocks every shortcut), and click the grid to give it focus.
+
+### Two scripting traps that read as broken automation
+
+- **Never round-trip a RegExp through `.source` into `page.evaluate`.** Built in
+  a heredoc, `'Scene (\\d+) / '` reached the page as `Scene (\\d+)`, matching a
+  literal backslash, so the probe returned null forever and every navigation
+  failed instantly. That reads as a dead panel, and it is not. Build the regex
+  *inside* evaluate and pass only plain values.
+- **`x.innerText` is undefined on SVG-backed buttons**, so a bare `.trim()` in a
+  `querySelectorAll` scan throws mid-sweep and takes the whole probe with it.
+  Guard with `(x.innerText||'')`.
+
+### Proving a music bed is gone: count digital silence, not loudness
+
+A narration-only export still has a high median RMS, so a loudness threshold
+proves nothing and a "% below -50 dB" cutoff picks up ordinary speech gaps. The
+discriminator is **true digital silence**: a bed fills every gap, so with music
+essentially no window sits at -inf, while the measured narration-only export had
+1,156 such windows and 19.6% below -50 dB against a with-music baseline of 0.1%.
+Check for the existence of silent windows; do not pick an arbitrary percentage
+threshold, which is what made a clean export first read as "music likely
+present".
+
 ### Five Vids behaviours that cost a cycle each
 
 - **The voice reverts to the default on page reload.** Select the voice and click
