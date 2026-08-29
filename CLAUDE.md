@@ -1158,16 +1158,56 @@ Two more traps in the same flow:
   `querySelectorAll` scan throws mid-sweep and takes the whole probe with it.
   Guard with `(x.innerText||'')`.
 
+### Vids' "background music" may not be music, so never match on the provider
+
+On one of two videos generated the same way, Vids seated **"John F. Kennedy
+Inaugural Speech, January 20, 1961 (Provided by Youtube)"** in the background
+lane instead of a Shutterstock bed — a full 12-minute speech playing under the
+narration. The removal step searched for `Provided by Shutterstock|background
+music`, matched nothing, and reported **"music before: false"**, so a
+contaminated export shipped as verified-clean.
+
+Identify the bed **structurally**, never by provider or by the word "music": a
+timeline element whose `aria-label` contains `starting in scene` but is *not*
+`- <VoiceName> starting in scene` (the per-scene voiceover). That test found the
+track on the first pass and confirmed the other video genuinely had none.
+
+**Read the exported caption track — it is the cheapest ground truth available.**
+Vids muxes a `mov_text` stream generated from the actual audio, so
+`ffmpeg -map 0:s:0 out.srt` shows what really plays. Contamination is obvious
+there: 1,158 cues before, 318 after, with the stray speech interleaved line by
+line against the narration.
+
+Two ways this was misdiagnosed before it was fixed, both worth avoiding:
+
+- **A narrow phrase grep understated the damage 26x.** Searching the captions
+  for oath wording (`kennedy|solemnly|swear|...`) returned 10 cues spanning 28
+  seconds, so it read as a blip confined to scene 1. The speech continues in
+  words that share no vocabulary with the oath ("Vice President Johnson", "a
+  long twilight struggle"), and it ran the entire 12:32. Sample the captions at
+  intervals and *read* them; do not trust a keyword set drawn from the first
+  thing you noticed.
+- **Caption text cannot verify narration wording.** Captions are ASR output, so
+  "₹270 Cr" comes back as "270 crore" and a verbatim match fails on correct
+  audio — it scored a known-good Part A at 24/45. Use the editor read-back for
+  script fidelity, and the captions only for detecting foreign audio.
+
 ### Proving a music bed is gone: count digital silence, not loudness
 
 A narration-only export still has a high median RMS, so a loudness threshold
 proves nothing and a "% below -50 dB" cutoff picks up ordinary speech gaps. The
-discriminator is **true digital silence**: a bed fills every gap, so with music
-essentially no window sits at -inf, while the measured narration-only export had
-1,156 such windows and 19.6% below -50 dB against a with-music baseline of 0.1%.
-Check for the existence of silent windows; do not pick an arbitrary percentage
-threshold, which is what made a clean export first read as "music likely
-present".
+discriminator is **true digital silence**: a *music* bed fills every gap, so with
+music essentially no window sits at -inf, while the measured narration-only
+export had 1,156 such windows and 19.6% below -50 dB against a with-music
+baseline of 0.1%. Check for the existence of silent windows; do not pick an
+arbitrary percentage threshold, which is what made a clean export first read as
+"music likely present".
+
+**But this test only rules out a continuous bed.** A speech clip has its own
+pauses, so it leaves silent windows and passes — the contaminated export above
+scored as clean on exactly this measure. Silence counting is a check on *music*,
+never a check that the audio contains only what you intended. For that, read the
+caption stream.
 
 ### Five Vids behaviours that cost a cycle each
 
