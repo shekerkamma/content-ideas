@@ -458,6 +458,34 @@ reason **in the config file**, and keep the real click budget upstream in the
 planner. Raising a cap because a gate went red, without saying which quantity
 it now measures, is how a gate stops measuring anything.
 
+### Embedding a live HTML demo in a deck: the seat is declared, not guessed
+
+A browser-based simulator can ship inside a client `.pptx` as a playable clip.
+`officecli add <deck> /slide[N] --type media` takes `src`, `poster`, geometry,
+`autoPlay`, `loop` and `trim`, so the deck stays native and the demo travels
+with it. `pptx-design-quality/scripts/capture_html_sim.mjs` records the page,
+`attach_media.py` places the clip.
+
+- **Have the builder write the seat.** It emits `<deck>-video-seats.json` naming
+  the rect it left empty behind each frame; `attach_media.py` fills it and
+  `plan_motion.py` *excludes* it. An embedded clip has no build, so anything
+  animating underneath wipes in behind something already on screen. One file,
+  two readers, and the clip lands inside its frame rather than near it.
+- **Order is media, then motion.** The motion plan comes from a shape query, so
+  it has to see the final slide.
+- **Click through the DOM.** These consoles paint confidentiality watermarks and
+  intro panels that intercept pointer events, so `page.click()` times out on a
+  button that is perfectly clickable from script. Use
+  `page.evaluate(s => document.querySelector(s).click())` — same failure as the
+  Google survey iframe in the Vids lane.
+- **Re-encode to H.264 + a silent AAC track.** Playwright records VP8 in WebM,
+  which PowerPoint accepts and then renders as a black rectangle.
+- **Video parts land at top-level `media/mediadata*.mp4`, not `ppt/media/`.** A
+  check filtering on `'/media/' in name` reported **0 mp4s on a deck holding
+  four**; the file having grown 0.55 MB → 20.8 MB is what said the check was
+  wrong rather than the deck. Verify by listing the largest parts, not by
+  matching a path you assumed.
+
 ### A text box sized to its own estimator still overflows
 
 A card helper that computed its height as `TH(text, w-52)` while placing the

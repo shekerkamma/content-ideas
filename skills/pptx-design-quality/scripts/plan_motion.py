@@ -59,6 +59,30 @@ def load(path: str):
     return per
 
 
+def seat_filter(shapes, seats):
+    """Drop shapes that a video will cover.
+
+    An embedded clip is present from the first frame -- officecli media carries
+    no build -- so anything animating underneath it would wipe in behind
+    something already on screen. Its frame must rest with the slide.
+    """
+    if not seats:
+        return shapes
+    out = []
+    for s in shapes:
+        area = max(1.0, s['w'] * s['h'])
+        covered = False
+        for st in seats:
+            ix = max(0, min(s['x'] + s['w'], st['x'] + st['w']) - max(s['x'], st['x']))
+            iy = max(0, min(s['y'] + s['h'], st['y'] + st['h']) - max(s['y'], st['y']))
+            if ix * iy / area > 0.5:
+                covered = True
+                break
+        if not covered:
+            out.append(s)
+    return out
+
+
 def bands_of(shapes):
     """Group a slide's body shapes into bands (rows), each split into columns."""
     body = [s for s in shapes
@@ -94,14 +118,14 @@ def bands_of(shapes):
     return out
 
 
-def plan_slide(shapes, dark: bool):
+def plan_slide(shapes, dark: bool, seats=()):
     """One perceived build step per band.
 
     Inside a band the columns are staggered by delay rather than by trigger, so
     a four-card row fills left-to-right as ONE step -- the marching fill the
     product simulators use -- instead of costing four clicks.
     """
-    groups = bands_of(shapes)
+    groups = bands_of(seat_filter(shapes, seats))
     if not groups:
         return []
 
@@ -131,12 +155,18 @@ def plan_slide(shapes, dark: bool):
     return steps
 
 
-def main(shapes_json: str, out: str, dark_csv: str):
+def main(shapes_json: str, out: str, dark_csv: str, seats_json: str = ''):
     dark = {int(x) for x in dark_csv.split(',') if x.strip()}
+    seats = collections.defaultdict(list)
+    if seats_json:
+        for st in json.load(open(seats_json))['seats']:
+            # A clip covers its frame too, so exclude against the frame rect.
+            f = st.get('frame', st)
+            seats[st['slide']].append(f)
     per = load(shapes_json)
     plan = []
     for n in sorted(per):
-        steps = plan_slide(per[n], n in dark)
+        steps = plan_slide(per[n], n in dark, seats.get(n, ()))
         plan.append(dict(
             slide=n,
             transition='fade',
@@ -151,4 +181,6 @@ def main(shapes_json: str, out: str, dark_csv: str):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else '')
+    main(sys.argv[1], sys.argv[2],
+         sys.argv[3] if len(sys.argv) > 3 else '',
+         sys.argv[4] if len(sys.argv) > 4 else '')
