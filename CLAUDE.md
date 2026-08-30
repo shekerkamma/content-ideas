@@ -1168,6 +1168,33 @@ credential. Tick "Don't ask again on this device" and the profile stays authenti
   demand, and clicking the menu item is intercepted; the **Alt+C then U** shortcut with
   `page.waitForEvent('filechooser')` works.
 
+### Vids flattens an embedded PPTX clip; composite it back in afterwards
+
+"Turn into video" imports the deck as still slides. A `.pptx` that carries
+embedded media loses it: the F slides arrive as their poster frame, so the
+demonstrator sits motionless for its whole scene while the narration describes
+what it is doing. Vids also has no way to say "use the deck's narration, not
+this clip's audio", because the clip is not there at all.
+
+Fix it in post on the exported MP4 rather than fighting the import:
+
+- **Take the scene windows from the exported caption stream**, not from the
+  editor. Each narration block's first cue marks its scene start, and the next
+  block's first cue marks the end. That is derived from the artifact, survives
+  a re-export, and needs no browser session.
+- **The seat maps by a flat scale factor.** A 1280x720 slide stage renders to
+  1920x1080, so a seat at (48,168,800,450) becomes (72,252,1200,675). Verify by
+  drawing the rect on a real frame before encoding — one crop check costs
+  seconds and catches a letterbox or crop assumption.
+- **`overlay=...:enable='between(t,start,end)'` with `-c:a copy`** puts the live
+  clip in the seat and leaves the voiceover bit-for-bit untouched. Confirm with
+  an audio-stream MD5 before and after; the clips must contribute video only.
+- **Prove motion against the static original, not against a threshold.** Mean
+  absolute difference between two frames of the seat region ran 0.00-0.34 on the
+  untouched export and 3.9-35.8 on the composited one. Two of the four sims
+  change slowly enough that their absolute delta alone reads as ambiguous; the
+  control is what makes it a measurement.
+
 ### Vids caps a Slides import at 45 slides, behind a dialog that looks like a hang
 
 "Turn into video" on an 85-slide deck produced a Vids doc that sat at **one
