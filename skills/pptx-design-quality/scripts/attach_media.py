@@ -30,7 +30,10 @@ def build(seats_json: str, media_dir_win: str, out_path: str,
             # clip that fires on slide entry fights the build animation.
             "autoPlay": "false",
             "loop": "false",
-            "volume": "0",
+            # Audible by default. A muted default hides the far more common
+            # defect -- a clip captured with no audio track at all -- behind a
+            # setting, so the deck looks intentionally silent when it is broken.
+            "volume": str(st.get("volume", 80)),
         }
         if poster:
             props["poster"] = f"{media_dir_win}\\{st['video']}-poster.png"

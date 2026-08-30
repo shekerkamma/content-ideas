@@ -1,6 +1,15 @@
 import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
 import { existsSync } from 'node:fs';
 
+// AUDIO: Playwright's recordVideo captures VIDEO ONLY -- the .webm it writes has
+// no audio stream at all. A page that beeps, speaks or plays a tone records
+// silent, and muxing an anullsrc track afterwards makes that look deliberate.
+// To capture a page's audio, record the PulseAudio *monitor* source alongside
+// (on WSLg: `-f pulse -i RDPSink.monitor`; the default `RDPSource` is the
+// MICROPHONE and will hand you room noise that reads as success).
+// Web Audio also needs a TRUSTED gesture: page.mouse.click() dispatches
+// pointerdown through CDP and unlocks it; an in-page el.click() does not.
+
 const SRC  = process.argv[2];
 const OUT  = process.argv[3];
 const PLAN = JSON.parse(process.argv[4]);   // [[selector|null, holdMs, label], ...]

@@ -458,6 +458,52 @@ reason **in the config file**, and keep the real click budget upstream in the
 planner. Raising a cap because a gate went red, without saying which quantity
 it now measures, is how a gate stops measuring anything.
 
+### Narrating an embedded clip, and why the sim's own audio is rarely enough
+
+`recordVideo` in Playwright captures **video only** — the `.webm` has no audio
+stream at all. Muxing an `anullsrc` track afterwards then makes a silent capture
+look deliberate, and a `volume: 0` default hides it completely. Author narration
+and mux it in instead; the page's own audio is a bonus, not the plan.
+
+- **Gemini TTS is the free good-quality route here.** `gemini-3.1-flash-tts-preview`
+  (also `gemini-2.5-flash-preview-tts`) on the AI Studio key returns 24 kHz mono
+  PCM in `inlineData`; wrap it as WAV. Voice `Charon` matches an informative,
+  low-pitch register. Send the text alone — a style instruction in the prompt
+  risks being vocalised.
+- **A ChatGPT subscription cannot drive OpenAI TTS.** `/v1/audio/speech` bills
+  against API credits only, and Codex CLI — the one route that does use
+  subscription auth — exposes no audio surface at all (`image_gen` only).
+- **Windows SAPI is the offline fallback**: `System.Speech.Synthesis` via
+  PowerShell, voices "Microsoft David/Zira Desktop", free and deterministic,
+  but a dated concatenative voice.
+- Size the narration to the clip and hold the last frame
+  (`tpad=stop_mode=clone`) when it runs a little long, rather than cutting the
+  writing to fit.
+
+### Capturing a page's own audio on WSLg
+
+- **Record `RDPSink.monitor`, never `default`.** The default source is
+  `RDPSource` — the *microphone*. It records room noise, which measures as
+  healthy signal (peak 2,818 with nothing playing) and reads as success.
+  `ffmpeg -sources pulse` lists both.
+- **Chromium needs `--enable-speech-dispatcher` for `speechSynthesis`.** Without
+  it, `speak()` is silently inert. Proven with a three-way control: flag+speak
+  produced peak 32,768, flag without speak produced 0, speak without flag
+  produced 0.
+- **`speechSynthesis.getVoices()` returning 0 does not mean speech is
+  unavailable.** With the flag set it still reported an empty list while
+  speaking perfectly. Test by speaking and measuring, never by counting voices.
+- **Web Audio needs a TRUSTED gesture.** `page.mouse.click()` goes through CDP
+  Input and unlocks it; an in-page `el.click()` does not, so a capture driven
+  entirely by scripted clicks records silence. This is the cost of the DOM-click
+  workaround used to get past overlays — pay it once with a real click first.
+- **`x11grab` is useless under WSLg** — it returns pure black, because the
+  compositor never puts window content on the X root. Use Playwright video plus
+  a separate monitor recording, and align them with an explicit marker: flash a
+  white full-screen div and fire a 1 kHz beep in the same tick, then mux at the
+  measured flash-to-beep offset. Measured 5.21 s here, and verified afterwards
+  at 0.00 s drift.
+
 ### Embedding a live HTML demo in a deck: the seat is declared, not guessed
 
 A browser-based simulator can ship inside a client `.pptx` as a playable clip.
