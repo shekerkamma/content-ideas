@@ -39,3 +39,17 @@ media/**/*.webm
 sims/*.mp4
 qa/**/*.png
 video/**/*.png
+
+# --- 99/104-slide embedded rebuild (Aug 31) ---
+# Decks: rebuildable from inspect99/deck99.pptx via build99/*.py; delivered via Drive.
+build99/*.pptx
+vids104/*.pptx
+# The Google Slides export and the six clips pulled from Drive are both
+# re-fetchable from the source presentation; they are not sources of truth here.
+inspect99/deck99.pptx
+inspect99/clips/
+# Vids renders and composites for the 104-slide cut.
+video/export104/
+# QA contact sheets and per-slide renders (the JSON/MD reports are kept).
+qa/officecli9*/**.png
+qa/preview104/

@@ -1,6 +1,6 @@
 import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
 const ID = process.argv[2];
-const DL = '/home/sheke/content-ideas/runs/2026-08-29-deepgrid-financial-model-deck-rebuild/video/export90';
+const DL = '/home/sheke/content-ideas/runs/2026-08-29-deepgrid-financial-model-deck-rebuild/video/export104';
 const OUT= '/tmp/claude-1000/-home-sheke-content-ideas/68302287-f1a5-41fe-8500-4181db882526/scratchpad';
 const kill = p => p.evaluate(() => document.querySelector('#google-hats-survey')?.remove()).catch(()=>{});
 const b = await chromium.connectOverCDP('http://127.0.0.1:9222');

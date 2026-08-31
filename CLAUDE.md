@@ -1222,6 +1222,55 @@ a reload**, so a walk that assumes it starts at scene 1 silently reads the wrong
 slide. Captions are the fallback and can be partial (one 45-scene export
 produced 31 cues covering 2:52-9:36 while the audio was complete throughout).
 
+### Google Slides cannot embed video — the deliverable decides the format
+
+Insert > Video offers YouTube, URL and Drive: all **links**. A Slides deck whose
+"embedded demonstrations" are really hyperlinked poster images exports to
+**1.5 MB with zero mp4 parts and `TargetMode="External"` rels** — the viewer must
+be online, signed in, and click out. Only native PPTX embeds. So "embedded, no
+external links" is a format decision, not a preference: export the Slides deck,
+then rewrite each video `<p:pic>` to carry `<a:videoFile r:link>` plus
+`p14:media r:embed` against a `/media/mediadataN.mp4` part, keeping the existing
+poster as the `blipFill`. Worked example: `runs/2026-08-29-.../build99/embed99.py`.
+
+**A blank poster makes a video slide look empty**, and file size will not find
+it: one Google export carried a 240x240 RGBA PNG with every channel uniformly 0
+(799 bytes) as a slide's poster, so PowerPoint had nothing to draw a play button
+over. **Test posters on pixel variance, not bytes** — a large uniform image
+passes a size check. `ImageStat.Stat(img.convert('L')).stddev` near zero is the
+tell.
+
+### Rebuild-by-default: measure the editability contract before re-authoring
+
+`vault-presales-pptx-pipeline` rebuilds by default on "client-ready", and the
+rule exists — in its own words — "to guarantee the editability contract: native
+objects, and no flattened slides". That is a **measurable** property, so measure
+it before re-authoring someone's deck: count `<p:sp>`, `<p:pic>`, and slides
+carrying a picture with <=1 live text box. A Google-Slides-authored deck measured
+**4,185 native shapes / 2,399 live text boxes / 0 flattened slides**, against the
+skill's own reference client-ready build at 690 / 442 / 0. Rebuilding would have
+re-authored the client's design to reach compliance it already had. Run the
+pipeline's *gates* in that case, and say which call was made and why.
+
+### Assert on every structural string replace
+
+A `.replace('<p:nvPr/></p:nvPicPr>', ...)` used to convert a picture into a video
+was a **silent no-op** — an earlier pass had already populated that node — so five
+new slides inherited the template's `r:embed` id while their rels declared a
+different one. OpenXML validation failed on a deck already named `-reviewed`.
+Every replace that carries structure must assert the pattern was found; a
+no-op replace is indistinguishable from success.
+
+### A pixel-diff threshold is the wrong test for a moving scene
+
+Verifying a composited seat by mean absolute difference against its source clip
+returns ~1 for static UI panels and **20+ for a fast 3D scene**, because a
+fraction-of-a-second frame offset moves a large object across many pixels. An
+absolute threshold flags the correct clip as wrong. The tests that hold are
+comparative: the correct offset must be the **minimum** across a sweep of
+offsets, and a deliberately wrong clip must score far higher (measured 20.32 vs
+105.70). Confirm ambiguous cases by looking at the two frames.
+
 ### A same-name Drive upload blocks on a dialog the uploader never sees
 
 Uploading a file whose name already exists raises *"already exists in this
@@ -1231,6 +1280,12 @@ closing the page reports success and uploads nothing. Choosing *Replace existing
 file* keeps the same file id, so previously shared links stay valid. Poll for the
 dialog and report its text rather than sleeping;
 `runs/2026-08-29-.../video/vids/upload_deck2.mjs` is the corrected driver.
+
+**And target the tab by its dialog, not by position.** With several Drive tabs
+open, "the last Drive tab" read a stale *1 upload complete* toast on a different
+tab and reported success while the tab actually holding the dialog sat untouched
+— caught only because Drive's reported file size had not changed. Find the tab
+whose dialog text matches, and verify the replace by re-reading `fileSize`.
 
 ### Vids caps a Slides import at 45 slides, behind a dialog that looks like a hang
 
