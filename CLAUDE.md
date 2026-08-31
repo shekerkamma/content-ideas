@@ -1195,6 +1195,43 @@ Fix it in post on the exported MP4 rather than fighting the import:
   change slowly enough that their absolute delta alone reads as ambiguous; the
   control is what makes it a measurement.
 
+### Vids: three silent failures that survive a green-looking run
+
+Measured across an 88- and a 90-slide rebuild, Aug 30-31.
+
+- **"Update all voiceovers" DOES re-time every scene — wait before measuring.**
+  Changing the voice and confirming *Replace all existing voiceovers?* re-fits
+  the scene durations to the new audio: one part went 09:56.7 -> 13:41.6, and
+  the narration rate fell from **192 wpm to 152 wpm**. Read the total too soon
+  and it still shows the old duration, which reads as "voice does not affect
+  pace" — a wrong conclusion this repo reached once and acted on. Re-read the
+  playhead after the outdated badges clear, not before.
+- **An export can serve a stale render.** A part exported *after* a voice change
+  downloaded in seconds at the pre-change duration (563.99 s while the editor
+  read 11:55.5 = 715.4 s). It looks like a fast success. **Always compare the
+  downloaded file's duration against the editor's readout before using it**; a
+  fast download is the tell, because a real render is slow.
+- **Speaking rate is the pacing metric, not span.** `words / caption-span`
+  conflates rate with dead air. Compute `words / sum(cue durations)`: the good
+  render was 151.9 wpm with 4.3% silence, the bad one 192.0 wpm with 1.3%.
+
+Scene start times for compositing come from the editor's timeline labels
+(`... starting in scene N at X seconds with duration Y`), read by walking the
+Voiceover panel's scene arrows — the panel **persists its selected scene across
+a reload**, so a walk that assumes it starts at scene 1 silently reads the wrong
+slide. Captions are the fallback and can be partial (one 45-scene export
+produced 31 cues covering 2:52-9:36 while the audio was complete throughout).
+
+### A same-name Drive upload blocks on a dialog the uploader never sees
+
+Uploading a file whose name already exists raises *"already exists in this
+location. Do you want to replace the existing file with a new version?"* and
+**waits**. A driver that hands the file to the input and then blind-waits before
+closing the page reports success and uploads nothing. Choosing *Replace existing
+file* keeps the same file id, so previously shared links stay valid. Poll for the
+dialog and report its text rather than sleeping;
+`runs/2026-08-29-.../video/vids/upload_deck2.mjs` is the corrected driver.
+
 ### Vids caps a Slides import at 45 slides, behind a dialog that looks like a hang
 
 "Turn into video" on an 85-slide deck produced a Vids doc that sat at **one

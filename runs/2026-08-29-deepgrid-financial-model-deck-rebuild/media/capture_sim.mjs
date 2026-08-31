@@ -1,33 +1,13 @@
 import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
 import { existsSync } from 'node:fs';
 
-// AUDIO: Playwright's recordVideo captures VIDEO ONLY -- the .webm it writes has
-// no audio stream at all. A page that beeps, speaks or plays a tone records
-// silent, and muxing an anullsrc track afterwards makes that look deliberate.
-// To capture a page's audio, record the PulseAudio *monitor* source alongside
-// (on WSLg: `-f pulse -i RDPSink.monitor`; the default `RDPSource` is the
-// MICROPHONE and will hand you room noise that reads as success).
-// Web Audio also needs a TRUSTED gesture: page.mouse.click() dispatches
-// pointerdown through CDP and unlocks it; an in-page el.click() does not.
-
 const SRC  = process.argv[2];
 const OUT  = process.argv[3];
 const PLAN = JSON.parse(process.argv[4]);   // [[selector|null, holdMs, label], ...]
 
-// Do NOT hardcode build numbers: Playwright's expected build moves with every
-// upgrade and a stale list makes this exit BLOCKED on a machine that has a
-// perfectly good browser. Scan the cache and take the newest build present.
-import { readdirSync } from 'node:fs';
-const ROOT = '/home/sheke/.cache/ms-playwright';
-const EXEC = (() => {
-  let builds = [];
-  try {
-    builds = readdirSync(ROOT)
-      .filter(d => /^chromium-\d+$/.test(d))
-      .sort((a, b) => Number(b.split('-')[1]) - Number(a.split('-')[1]));
-  } catch { return undefined; }
-  return builds.map(b => `${ROOT}/${b}/chrome-linux64/chrome`).find(existsSync);
-})();
+const EXEC = ['chromium-1234', 'chromium-1208']
+  .map(b => `/home/sheke/.cache/ms-playwright/${b}/chrome-linux64/chrome`)
+  .find(existsSync);
 if (!EXEC) { console.error('BLOCKED: no cached chromium build'); process.exit(1); }
 
 const W = 1600, H = 900;

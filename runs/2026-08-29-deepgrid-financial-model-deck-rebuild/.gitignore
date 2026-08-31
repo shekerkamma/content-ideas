@@ -1,0 +1,41 @@
+# Regenerable render artifacts — rebuild with:
+#   node build/export_png.mjs <deck>.pptx        -> video/frames/
+#   python qa/preview_pptx_fixed.py <deck>.pptx  -> build/docs/reports/_preview/
+build/docs/
+video/frames/
+video/export/
+# Browser-automation debug screenshots (12MB); the .mjs drivers beside them are kept.
+video/vids/*.png
+# Draft deck: only the reviewed artifact is the deliverable.
+build/*-draft.pptx
+build/*.inspect.ndjson
+
+# --- 88/90-slide rebuild (Aug 30-31) ---
+# Rendered video: every export is regenerable from the decks via the Vids lane,
+# and the delivered cuts live in Drive. Keep the drivers, not the output.
+video/export85/
+video/export88/
+video/export90/
+video/*.mp4
+# Decks: PartA/PartB are Vids-cap splits, rebuildable by build90a/b.py; the
+# merged reviewed deck is rebuildable by merge90.py and is delivered via Drive.
+build88/
+build90/
+build/*.pptx
+build/*.mp4
+# Simulator capture: .webm recordings and their re-encodes. The .html sources
+# and the capture drivers are kept; the captures are not.
+sims/cap-*/
+sims/*.webm
+# Narrated clip media (embedded into the decks; regenerable via narrate_clips.py)
+media/*.mp4
+media/*.wav
+media/narration/gemini/
+media/narrated*/
+media/clips-*/
+# Raw Playwright captures per sim (regenerable from refs/*.html + the drivers)
+media/*/page@*.webm
+media/**/*.webm
+sims/*.mp4
+qa/**/*.png
+video/**/*.png

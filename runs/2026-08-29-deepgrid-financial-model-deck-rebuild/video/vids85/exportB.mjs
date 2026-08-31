@@ -1,0 +1,26 @@
+import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
+import { kill } from '../vids/lib.mjs';
+const ID = '1RqX9_46Id1fGCqQpBno_4fPAFvK6jxcoQbzVLf6_1jo';
+const out = '/home/sheke/content-ideas/runs/2026-08-29-deepgrid-financial-model-deck-rebuild/video/vids85';
+const DL  = '/home/sheke/content-ideas/runs/2026-08-29-deepgrid-financial-model-deck-rebuild/video/export85';
+const b = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx = b.contexts()[0];
+const page = ctx.pages().find(p => p.url().includes(ID));
+await page.bringToFront();
+const cdp = await ctx.newCDPSession(page);
+await cdp.send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath: DL, eventsEnabled: true }).catch(()=>{});
+cdp.on('Browser.downloadProgress', e => console.log('  progress:', e.state, e.receivedBytes || ''));
+cdp.on('Browser.downloadWillBegin', e => console.log('  will begin:', e.suggestedFilename));
+
+await page.keyboard.press('Escape'); await page.waitForTimeout(700); await kill(page);
+await page.locator('#docs-file-menu').click({ timeout: 15000 });
+await page.waitForTimeout(1600);
+await page.getByRole('menuitem', { name: /^Download/ }).first().hover({ timeout: 10000 });
+await page.waitForTimeout(1800);
+await page.getByRole('menuitem', { name: /MP4 video/i }).first().click({ timeout: 12000 });
+console.log('clicked: MP4 video (.mp4)');
+await page.waitForTimeout(8000); await kill(page);
+await page.screenshot({ path: out + '/exportB-started.png' });
+const t = await page.evaluate(() => document.body.innerText);
+console.log('dialog text:', t.split('\n').filter(l => /prepar|export|download|render|ready|%|minute/i.test(l) && l.length < 70).slice(0,5).join(' | '));
+await b.close();

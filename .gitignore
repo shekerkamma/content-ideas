@@ -44,3 +44,12 @@ node_modules
 ~$*.pptx
 ~$*.docx
 ~$*.xlsx
+
+# Run-folder QA renders and raw search payloads are reproducible from the
+# builders and the research scripts; commit the contracts, notes and the
+# reviewed deck instead (see runs/*/v7-native/BOUND-DECK-NOTES.md).
+runs/**/qa/renders*/
+runs/**/qa/*.png
+runs/**/research/raw/
+runs/**/*-draft.pptx
+runs/**/*.pptx.inspect.ndjson

@@ -1,0 +1,43 @@
+{
+  "canvas": { "width_px": 1280, "height_px": 720, "inches": [13.333, 7.5] },
+  "type_scale_pt": {
+    "cover_headline": 44.25, "slide_title": 27.75, "body": 12.75,
+    "card_heading": 15.0, "kicker": 9.75, "table_cell": 11.25,
+    "table_header": 9.75, "footer": 8.25, "kpi_number": 38.25
+  },
+  "type_scale_note": "Authored in points and converted at 1px = 0.75pt. deck-kit.mjs uses the design system's POINT numbers as PIXEL values, which renders every role about a quarter too small; kit-spec.mjs re-cuts the scale and is imported instead.",
+  "palette": {
+    "midnight": "#0A1628", "slate": "#1E293B", "white": "#FFFFFF",
+    "cyan_fill": "#00B4D8", "cyan_text": "#00758F", "teal_text": "#0A6E70",
+    "pale_blue_fill": "#8DB4D4", "pale_blue_text": "#3D6E96",
+    "green": "#12855B", "gray": "#6B7280",
+    "surface": "#F8FAFC", "cool": "#F4F8FE", "line": "#E2E8F0"
+  },
+  "palette_note": "#00B4D8 is 2.46:1 on white — compliant as a fill or rule, non-compliant as type. Text roles use the darker twins: #00758F (5.33:1), #0A6E70 (6.04:1), #3D6E96 (5.02:1). On midnight the bright cyan is used instead (7.36:1).",
+  "qa": {
+    "gates": [
+      "pptx-toolkit validate",
+      "officecli_qa.py --required",
+      "qa/overflow_scan_fixed.py",
+      "qa/verify_deck.py",
+      "banned-term scan over visible text"
+    ],
+    "ignore_rules": [
+      {
+        "rule": "TEXT_TOO_SMALL",
+        "reason": "lint_pptx.py enforces a flat 14pt floor. The Client-Ready PPTX Design System specifies body 12-14pt, table/chart labels 9-11pt, kicker 8-10pt and footer 7-8pt. Every role in this deck sits inside the design system's range; the linter is stricter than the contract it is meant to enforce.",
+        "evidence": "client-ready-pptx-design-system.md, Typography table"
+      },
+      {
+        "rule": "SLIDE_MISSING_TITLE",
+        "reason": "Fires only on the four chapter dividers, whose title sits mid-slide by design. Not applicable to a section divider.",
+        "evidence": "slides 6, 12, 18, 27"
+      },
+      {
+        "rule": "TEXT_OVERFLOW_RISK",
+        "reason": "lint and preview_pptx.py both read para.runs[0].font.size, which is None for all 941 paragraphs because artifact-tool writes size to a:defRPr. Both therefore measure every box at the 14pt fallback. qa/overflow_scan_fixed.py resolves defRPr first and reports 0.",
+        "evidence": "qa/overflow_scan_fixed.py; 941/941 paragraphs carry size only on defRPr"
+      }
+    ]
+  }
+}
