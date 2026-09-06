@@ -1,0 +1,4 @@
+# Clip narration — the data-movement simulator
+
+**problem** · 51.9 s · A100 compute box 4ch PCIe, slide 43
+Two runs of the same workload, separated only by how memory is reached. On the left, the arrangement as it stands today: eight processing cores behind a single data engine. That engine fetches one descriptor at a time, so seven cores wait while one is fed. Watch the utilisation column on the left — it never clears twelve percent, and most of the cores sit at almost nothing for the whole run. On the right, the same silicon. The same multiply-accumulate count, the same twenty-eight nanometre process, the same clock. The only change is that every core now owns its own load engine and pulls from banked static memory in parallel. All eight climb to around fifty-nine percent and hold there. Nothing has been added but the path to memory. The frame that costs four hundred and seventy milliseconds today lands in about eighty-five.

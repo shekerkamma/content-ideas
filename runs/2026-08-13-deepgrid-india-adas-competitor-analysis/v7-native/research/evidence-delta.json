@@ -1,0 +1,103 @@
+{
+ "contract_version": "delta-1.0",
+ "generated": "2026-08-14",
+ "method": "You.com livecrawl + Exa against the nine evidence gaps the dossier itself names; Firecrawl capture of every primary artifact returned. 162 results, 114 dated, 7/7 primary captures.",
+ "deltas": [
+  {
+   "id": "D1",
+   "entity": "Aptiv × STRADVISION",
+   "affects_slides": [9, 29, 31, 30, 62, 45, 46, 32, 63, 2, 14],
+   "was": "STRADVISION is treated as an independent perception-layer comparator; Aptiv Gen 6 is treated as a whole-stack rival.",
+   "now": "Aptiv's Gen 6 smart camera features STRADVISION's AI-based vision technology. The two are not separate rivals — one is embedded inside the other.",
+   "status": "verified fact",
+   "source": "Aptiv PLC press release, 6 January 2026, aptiv.com newsroom",
+   "capture": "research/primary/aptiv-gen6-india.png",
+   "so_what": "The thesis is proven by a rival: a Tier-2 perception layer inside an accountable integrator's platform is exactly the position DeepGrid is bidding for, and STRADVISION already holds it in the winning stack. DeepGrid's competition is not Aptiv — it is the incumbent perception layer inside Aptiv.",
+   "rating_move": "raise STRADVISION from comparator to occupant of the target position"
+  },
+  {
+   "id": "D2",
+   "entity": "ZF",
+   "affects_slides": [26, 28, 27, 61],
+   "was": "Structural AEBS strength; programme specifics still need corroboration.",
+   "now": "ZF Commercial Vehicle Control Systems India secured an ADAS business nomination from a leading Indian E-Mobility CV OEM: 16 features including AEBS, BSIS, DDAWS, LDWS, MOIS across 13.5m coaches, 55-ton trucks and 7/9/12m buses; validated over 300,000 km on Indian roads; ARAI certified; compliant with GSR 184e.",
+   "status": "verified fact",
+   "source": "ZF CVCS India press note, 3 December 2025, zf.com",
+   "capture": "research/primary/zf-india-nomination.md",
+   "so_what": "The India CV nomination is no longer an inference. ZF holds a certified, road-validated, regulation-compliant suite with a named OEM category — the control-point argument is now evidenced rather than asserted.",
+   "rating_move": "ZF N2/N3 OEM threat: corroborated, hold at HIGH"
+  },
+  {
+   "id": "D3",
+   "entity": "STRADVISION",
+   "affects_slides": [45, 46, 32, 63],
+   "was": "Credible perception-layer comparator; India CV specifics not established.",
+   "now": "A global commercial vehicle OEM selected SVNet for deployment across its India vehicle lineup, targeting fleet-scale ADAS in India's CV segment, on low-cost resource-constrained hardware.",
+   "status": "verified fact",
+   "source": "STRADVISION via PR Newswire, 16 April 2026",
+   "capture": "research/primary/stradvision-india-cv.png",
+   "so_what": "The falsifier the dossier set for STRADVISION has fired. 'Global scale is not India CV proof' was the right test, and STRADVISION has now passed it — including on the constrained-compute ground DeepGrid claims as its own differentiator.",
+   "rating_move": "STRADVISION India CV: insufficient evidence -> verified fact"
+  },
+  {
+   "id": "D4",
+   "entity": "drivebuddyAI",
+   "affects_slides": [23, 25, 24, 60],
+   "was": "~$2.5m initial revenue across 3,000 heavy trucks; deployment quality unproven.",
+   "now": "A further $5.3m agreement to equip 3,600 electric buses and trucks in India, spanning public transport, seaport logistics, mining and industrial transport. Roadzen investor materials confirm the original $2.5m / 3,000-truck award.",
+   "status": "verified fact",
+   "source": "Roadzen Inc. via GlobeNewswire, 23 June 2026; Roadzen investor relations, 29 April 2026",
+   "capture": "research/primary/drivebuddyai-expansion.png",
+   "so_what": "drivebuddyAI has more than doubled its committed fleet in two months and crossed from trucks into buses and mining — the arena the dossier nominates as DeepGrid's fastest proof route. The fleet-aftermarket window is closing faster than the dossier assumes.",
+   "rating_move": "drivebuddyAI fleet threat: raise; mining is now contested"
+  },
+  {
+   "id": "D5",
+   "entity": "Regulatory",
+   "affects_slides": [6, 5, 12],
+   "was": "Rebase the regulatory plan to notified 2027-28 dates; correct April-2026 claims.",
+   "now": "The operative instrument is GSR 184e, cited by ZF as the regulation its India suite complies with, and by Aptiv as '2027 regulations' for trucks and buses. Draft AIS-162 covers AEBS for M2/M3/N2/N3; AIS 184 is cited in fleet-side announcements.",
+   "status": "attributed claim",
+   "source": "ZF CVCS India press note (GSR 184e); Aptiv press release (2027); MoRTH draft AIS-162",
+   "capture": "research/primary/india-adas-dates.png",
+   "so_what": "The correction holds and now has a name to cite. Naming GSR 184e in client-facing material is defensible; naming an April-2026 mandate is not. The gazette notification itself remains uncaptured.",
+   "rating_move": "regulatory correction: corroborated, gazette still outstanding"
+  },
+  {
+   "id": "D6",
+   "entity": "Gahan",
+   "affects_slides": [20, 22, 21, 36, 59],
+   "was": "No corroborated fact yet proves Gahan leads; independent profiling needed.",
+   "now": "Two engines, livecrawl enabled, 18 results: zero primary sources on Gahan Technologies. No company release, no OEM milestone, no qualification artifact.",
+   "status": "insufficient evidence",
+   "source": "You.com livecrawl + Exa, 14 August 2026 — measured absence, not an unrun search",
+   "capture": null,
+   "so_what": "The gap is now a measured absence rather than an unchecked assumption. Gahan was ranked the highest-priority diligence target on the strength of claims that leave no public trace; that ranking should fall until a primary artifact exists.",
+   "rating_move": "Gahan diligence priority: lower, pending any primary artifact"
+  },
+  {
+   "id": "D7",
+   "entity": "Sterling x MINIEYE",
+   "affects_slides": [47, 48, 33, 64],
+   "was": "Exchange-filed January 2026 partnership; no named Indian OEM nomination, SOP, deployment or homologation.",
+   "now": "Confirmed across four independent outlets on 19 January 2026. MINIEYE is Hong Kong-listed and China-based; Sterling Tools handles application engineering and perception tuning for Indian road conditions. Still no named OEM nomination or SOP.",
+   "status": "attributed claim",
+   "source": "The Hindu BusinessLine, Business Upturn, Newsfile, Globe and Mail, 19 January 2026",
+   "capture": "research/primary/sterling-minieye-filing.png",
+   "so_what": "The partnership is real and the division of labour is now explicit — which makes it a direct template for DeepGrid's own attach-and-prove move, and a China-sourced perception layer competing for the same slot.",
+   "rating_move": "hold; the falsifier (named OEM nomination) still stands unfired"
+  },
+  {
+   "id": "D8",
+   "entity": "bitsensing / Netrasemi",
+   "affects_slides": [49, 50, 65, 66, 51, 52, 67, 68],
+   "was": "bitsensing $25m Series B attributed; Netrasemi adjacent compute, not a direct ADAS competitor.",
+   "now": "bitsensing's $25m Series B is confirmed on its own newsroom, with an NXP radar partnership. Netrasemi's A2000 edge-AI SoC is production-ready with automotive trials under way and a mid-2027 commercial target.",
+   "status": "attributed claim",
+   "source": "bitsensing newsroom; Economic Times, 28 May 2026",
+   "capture": null,
+   "so_what": "Both hold. Netrasemi's mid-2027 target coincides with the GSR 184e window, so 'adjacent' has an expiry date — the coexistence test should be re-run before mid-2027 rather than treated as settled.",
+   "rating_move": "hold both; add a dated re-test on Netrasemi"
+  }
+ ]
+}

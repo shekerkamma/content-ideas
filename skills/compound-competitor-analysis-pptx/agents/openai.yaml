@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compound Competitor Analysis PPTX"
+  short_description: "Research-to-reviewed competitor strategy decks"
+  default_prompt: "Run the compound competitor-analysis pipeline from sourced evidence through Grill-Me, Meta LOOP, bounded slide contracts, native editable PowerPoint, and OfficeCLI QA."

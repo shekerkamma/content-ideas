@@ -5,7 +5,7 @@ license: MIT
 metadata:
   category: Business Automation
   author: plaid-dev
-  version: "2.0"
+  version: '2.0'
   compatibility: Requires file system access to write docs/ directory.
 ---
 
@@ -106,6 +106,16 @@ Business Automation
 
 ### Runtime Preamble
 At invocation, check whether an upstream brainstorm or strategy file exists before asking intake questions. If `brainstorms/` contains a recent file matching the topic, say: "Found `brainstorms/{file}` — I'll pre-fill the intake from that. Confirm or correct anything that's changed."
+
+---
+
+## Judgment rules
+
+Editable policy for how Validate and Plan weigh outside evidence. Tune these here — do not hardcode them into step instructions.
+
+- **Never rank comparables by GitHub stars, download counts, or social popularity alone.** Stars are a bookmark count that only increases: they record that people liked something once, not that it fits this product. Rank on fit to the founder's constraints, then on maintenance signals with an exact date.
+- **For every comparable project, split findings in two: what transfers, and what exists only because that project got big.** A mature project's infrastructure reflects its team size, scale, and deployment history — not the founder's. Copying the second half imports complexity without the reasons for it. Say which half each recommendation comes from.
+- **Cost every vendor at three points, not one:** during build with zero users, the first day real users arrive, and at 10× that. "Free to start" is not "cheap to operate." A per-seat or per-active-user price that is invisible in month one is a roadmap constraint by month six — surface it in `docs/prd.md`, not after launch.
 
 ---
 

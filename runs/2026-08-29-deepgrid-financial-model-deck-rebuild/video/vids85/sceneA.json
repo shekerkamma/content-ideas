@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+browserType.connectOverCDP: connect ECONNREFUSED 127.0.0.1:9222
+Call log:
+[2m  - <ws preparing> retrieving websocket url from http://127.0.0.1:9222[22m
+
+    at /home/sheke/content-ideas/runs/2026-08-29-deepgrid-financial-model-deck-rebuild/video/vids85/scenetimes.mjs:4:24
+    at async node:internal/modules/esm/loader:643:26 {
+  log: [
+    '  - <ws preparing> retrieving websocket url from http://127.0.0.1:9222'
+  ],
+  name: 'Error'
+}
+
+Node.js v24.18.1

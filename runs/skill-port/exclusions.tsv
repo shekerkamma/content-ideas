@@ -1,0 +1,32 @@
+skill	type	path
+presales-deal-prep	broken-symlink	/home/sheke/.claude/skills/presales-deal-prep -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/presales-deal-prep
+presentation	broken-symlink	/home/sheke/.claude/skills/presentation -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/presentation
+marp	broken-symlink	/home/sheke/.claude/skills/marp -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/marp
+ai-transformation	broken-symlink	/home/sheke/.claude/skills/ai-transformation -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/ai-transformation
+architecture-presentation	broken-symlink	/home/sheke/.claude/skills/architecture-presentation -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/architecture-presentation
+officecli	broken-symlink	/home/sheke/.claude/skills/officecli -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/officecli
+solution-delivery	broken-symlink	/home/sheke/.claude/skills/solution-delivery -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/solution-delivery
+ai-analyst	broken-symlink	/home/sheke/.claude/skills/ai-analyst -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/ai-analyst
+research-to-strategy	broken-symlink	/home/sheke/.claude/skills/research-to-strategy -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/research-to-strategy
+competitive-intel-sprint	broken-symlink	/home/sheke/.claude/skills/competitive-intel-sprint -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/competitive-intel-sprint
+architecture-to-everything	broken-symlink	/home/sheke/.claude/skills/architecture-to-everything -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/architecture-to-everything
+genspark-slides	broken-symlink	/home/sheke/.claude/skills/genspark-slides -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/genspark-slides
+research-to-deck	broken-symlink	/home/sheke/.claude/skills/research-to-deck -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/research-to-deck
+analytics-to-comms	broken-symlink	/home/sheke/.claude/skills/analytics-to-comms -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/analytics-to-comms
+agentic-wedge-visibility	broken-symlink	/home/sheke/.claude/skills/agentic-wedge-visibility -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/agentic-wedge-visibility
+presales-deal-prep	broken-symlink	/home/sheke/.codex/skills/presales-deal-prep -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/presales-deal-prep
+presentation	broken-symlink	/home/sheke/.codex/skills/presentation -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/presentation
+marp	broken-symlink	/home/sheke/.codex/skills/marp -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/marp
+ai-transformation	broken-symlink	/home/sheke/.codex/skills/ai-transformation -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/ai-transformation
+architecture-presentation	broken-symlink	/home/sheke/.codex/skills/architecture-presentation -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/architecture-presentation
+officecli	broken-symlink	/home/sheke/.codex/skills/officecli -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/officecli
+solution-delivery	broken-symlink	/home/sheke/.codex/skills/solution-delivery -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/solution-delivery
+ai-analyst	broken-symlink	/home/sheke/.codex/skills/ai-analyst -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/ai-analyst
+research-to-strategy	broken-symlink	/home/sheke/.codex/skills/research-to-strategy -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/research-to-strategy
+competitive-intel-sprint	broken-symlink	/home/sheke/.codex/skills/competitive-intel-sprint -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/competitive-intel-sprint
+architecture-to-everything	broken-symlink	/home/sheke/.codex/skills/architecture-to-everything -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/architecture-to-everything
+genspark-slides	broken-symlink	/home/sheke/.codex/skills/genspark-slides -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/genspark-slides
+research-to-deck	broken-symlink	/home/sheke/.codex/skills/research-to-deck -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/research-to-deck
+analytics-to-comms	broken-symlink	/home/sheke/.codex/skills/analytics-to-comms -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/analytics-to-comms
+agentic-wedge-visibility	broken-symlink	/home/sheke/.codex/skills/agentic-wedge-visibility -> ../../content-ideas/skills/pptx-visual-spec/portable-skills/agentic-wedge-visibility
+social-media-team	secret-env	/home/sheke/.codex/skills/social-media-team/.env

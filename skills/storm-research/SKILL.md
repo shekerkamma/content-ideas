@@ -1,16 +1,18 @@
 ---
 name: storm-research
 description: Use when someone asks to run Storm Research, use the STORM method, run a STORM briefing/report on a topic, or wants a multi-perspective, citation-verified HTML research briefing. Runs five expert lenses (practitioner, academic, skeptic, economist, historian), builds a contradiction map, synthesizes a template-driven HTML report, then performs adversarial review and primary-source citation verification.
-argument-hint: "[topic to research]"
-user-invocable: true
 allowed-tools: Bash, Read, Task, WebSearch, WebFetch, AskUserQuestion
-permissions:
-  network:
-    - https://*
-  file_read:
-    - skills/storm-research/
-  file_write:
-    - storm-reports/
+metadata:
+  legacy-frontmatter:
+    argument-hint: '[topic to research]'
+    user-invocable: true
+    permissions:
+      network:
+      - https://*
+      file_read:
+      - skills/storm-research/
+      file_write:
+      - storm-reports/
 ---
 
 # Storm Research

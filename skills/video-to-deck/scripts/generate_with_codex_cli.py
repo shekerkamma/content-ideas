@@ -70,7 +70,13 @@ Hard requirements:
         "-C", str(workdir), "-s", "workspace-write", "-m", args.model,
         instruction,
     ]
-    completed = subprocess.run(cmd, text=True, capture_output=True, timeout=args.timeout)
+    # `codex exec` reads stdin when it is not a TTY. The instruction is passed as argv
+    # here, so an inherited stdin is never written to or closed and the call hangs for
+    # the full timeout producing no output and no error. DEVNULL gives it immediate EOF.
+    completed = subprocess.run(
+        cmd, text=True, capture_output=True, timeout=args.timeout,
+        stdin=subprocess.DEVNULL,
+    )
     if completed.returncode != 0:
         raise SystemExit(
             "codex image-generation bridge failed\n"

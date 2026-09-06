@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "data": {
+    "slides": 104,
+    "totalShapes": 4185,
+    "textBoxes": 4185,
+    "pictures": 11,
+    "charts": 0,
+    "oleObjects": 0,
+    "words": 11340,
+    "slidesWithoutTitle": 104,
+    "picturesWithoutAlt": 4,
+    "fontUsage": {
+      "Arial": 2159,
+      "Georgia": 244
+    }
+  }
+}

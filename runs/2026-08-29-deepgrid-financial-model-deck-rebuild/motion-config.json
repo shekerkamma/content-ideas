@@ -1,0 +1,20 @@
+{
+  "_note": [
+    "max_build_steps_per_slide is counted by lint_motion.py as one entry per",
+    "effect NODE (_build_steps walks every cTn with a presetClass), not per",
+    "perceived build step. A four-card row that fills left-to-right is one",
+    "step to an audience but four to sixteen nodes here, so the number below",
+    "is a node ceiling, not a click budget. The click budget is 8 and is",
+    "enforced upstream by motion/plan_motion.py (MAX_STEPS), which emits one",
+    "step per band and staggers the columns inside it with delay instead of",
+    "trigger. Raised from 8 to 128 on 2026-08-29 for that reason; the densest",
+    "slide (the 15-SKU portfolio map) carries 120 nodes across 5 steps."
+  ],
+  "motion": {
+    "allowed_transitions": ["fade", "morph"],
+    "allowed_effect_classes": ["entrance", "emphasis"],
+    "max_transition_ms": 600,
+    "max_build_steps_per_slide": 128,
+    "require_transition": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "_comment": "Skills that legitimately differ across repo trees. Anything NOT listed here whose body differs across trees fails --rule crosstree. Each entry needs a reason AND evidence, both non-empty, and must list every tree it covers \u2014 the rule validates all three, so an entry cannot silently waive more than it claims. Every quoted line below was verified against the file at the time of writing.",
+  "ai-analyst/run-analysis": {
+    "trees": [
+      "skills",
+      "portable"
+    ],
+    "reason": "portable-skills/ is a vendored archive, not a loaded harness tree. Commit 8587639 moved it out of the scanned skills/ tree precisely so it stops consuming skill budget, and no manifest references it.",
+    "evidence": "Commit 8587639 'fix: move vendored portable-skills out of the scanned skills/ tree'. grep for 'portable-skills' in .claude/settings.json, .codex-plugin/plugin.json and .claude-plugin/plugin.json returns nothing.",
+    "open_question": "The archived copy is missing the `python3 run-analysis/scripts/validate_agent_registry.py` preflight gate that skills/ requires before executing the DAG, and points at a different registry path. Harmless while unloaded; it would be a real defect if portable-skills/ were ever put back on a load path."
+  },
+  "ikigai": {
+    "trees": [
+      "skills",
+      ".agents"
+    ],
+    "reason": "Per-tree structural convention, not staleness. The .agents copy carries `### Category`, a `Relationships` table, and a Constraints block that the skills/ copy has never had; the skills/ copy carries a Narrative Frame section the .agents copy has never had. The divergence is bidirectional, so neither is a superset and neither can be synced over the other without destroying content.",
+    "evidence": "The Category/Relationships structure is a .agents tree convention shared by exactly the four skills .claude/settings.json loads from that tree: gcc-roadmap, ikigai-gamma-slidedeck, ikigai, openhands-niche-agency. .agents/skills/ikigai/SKILL.md carries a relationship row for `openhands-niche-agency` that exists in no other copy.",
+    "open_question": "A genuine merge (Narrative Frame into .agents, Relationships into skills/) is possible but is a content decision for the owner, not a mechanical sync."
+  },
+  "impeccable": {
+    "trees": [
+      "skills",
+      ".claude",
+      ".agents",
+      ".github"
+    ],
+    "reason": "One copy per detected harness, installed by `npx impeccable skills install`. The bodies differ only in each harness's own script path and sigil.",
+    "evidence": "CLAUDE.md: 'one copy per detected harness, installed via npx impeccable skills install'. Verified: .claude vs .agents differs on 8 lines, all of the form 'node .claude/skills/impeccable/scripts/context.mjs' vs 'node .agents/skills/impeccable/scripts/context.mjs'; .claude vs .github differs on 4, all path-only."
+  },
+  "investor-competitive-dossier": {
+    "trees": [
+      "skills",
+      ".claude",
+      ".agents"
+    ],
+    "reason": "The .claude and .agents copies are deliberate routers, not stale forks. They carry no workflow logic and point at skills/ as the implementation.",
+    "evidence": ".claude/skills/investor-competitive-dossier/SKILL.md: 'Treat `skills/investor-competitive-dossier/` as the source of truth; do not add workflow logic to this wrapper.' Both wrapper copies are ~542 bytes against 9065 bytes canonical."
+  },
+  "openhands-niche-agency": {
+    "trees": [
+      "skills",
+      ".agents"
+    ],
+    "reason": "Same .agents structural convention as ikigai, plus divergent prose. The only substantive claim difference verified is that the '14k+ MCP servers' figure appears in skills/ and not in .agents. The .agents copy is the one .claude/settings.json loads.",
+    "evidence": ".claude/settings.json loads .agents/skills/openhands-niche-agency/SKILL.md. Verified by grep: '14k+ MCP' appears at skills/openhands-niche-agency/SKILL.md:22 and nowhere in the .agents copy.",
+    "correction": "An earlier version of this entry claimed the .agents copy also removed '$2k-$5k/month' and '$50k/mo' and replaced them with 'verified MCP integrations'. That was wrong on all three counts: $2k-$5k/mo survives at .agents/skills/openhands-niche-agency/SKILL.md:9, $50k/mo at :438, and the phrase 'verified MCP integrations' exists in neither file. Corrected after audit."
+  }
+}

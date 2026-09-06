@@ -1,0 +1,11 @@
+import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
+import { kill } from '../vids/lib.mjs';
+const VID='1KUDU8gjS5Lu8FX08a4PdclPdubwx1YeFWII2XEQilLA';
+const b = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const page = b.contexts()[0].pages().find(p=>p.url().includes(VID));
+await page.bringToFront(); await page.waitForTimeout(2500); await kill(page);
+const t = await page.evaluate(()=>document.body.innerText.replace(/\n+/g,' | '));
+console.log('scene-ish:', (t.match(/Scene[^|]{0,24}/g)||[]).slice(0,6).join(' ;; '));
+console.log('voiceover-ish:', /AI voiceover/.test(t), '| Current scene:', /Current scene/.test(t));
+await page.screenshot({path: process.argv[2]||'shot.png'});
+await b.close();

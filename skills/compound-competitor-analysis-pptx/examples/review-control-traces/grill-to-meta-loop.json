@@ -1,0 +1,23 @@
+{
+  "example_status": "synthetic_not_evidence",
+  "slide_id": "S07",
+  "grill_finding": {
+    "control_id": "GRILL-S07-01",
+    "question": "What would make the OEM threat rating wrong?",
+    "recommended_answer": "A verified nomination or homologation filing would invalidate the current medium rating.",
+    "required_visible_change": "Add an explicit falsifier beside the OEM rating."
+  },
+  "meta_loop_disposition": {
+    "control_id": "META-S07-01",
+    "independent_classification": "accept",
+    "reason": "The original page asserted a rating without exposing the evidence threshold that would change it.",
+    "rewrite_instruction": "Create a right-side decision rail containing rating, falsifier, owner, and 30-day trigger.",
+    "conflict_status": "resolved"
+  },
+  "contract_trace": {
+    "content_path": "falsifier",
+    "design_region": "R4",
+    "rendered_object_id": "S07-R4-FALSIFIER",
+    "acceptance_test": "Rendered slide contains the falsifier in 12pt or larger text and it is not relegated to notes."
+  }
+}
