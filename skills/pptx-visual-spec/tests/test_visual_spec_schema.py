@@ -1,7 +1,12 @@
 import json
 from pathlib import Path
 
-from jsonschema import Draft202012Validator
+import pytest
+
+jsonschema = pytest.importorskip(
+    "jsonschema", reason="jsonschema is an opt-in skill dependency (see pptx-design-quality/requirements.txt)"
+)
+Draft202012Validator = jsonschema.Draft202012Validator
 
 
 ROOT = Path(__file__).resolve().parents[1]

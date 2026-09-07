@@ -6,6 +6,13 @@ import sys
 from pathlib import Path
 
 
+import pytest
+
+pytest.importorskip(
+    "jsonschema",
+    reason="jsonschema is an opt-in skill dependency (see this skill's requirements.txt); the validator scripts under test import it",
+)
+
 SKILL_DIR = Path(__file__).resolve().parents[1]
 VALIDATOR = SKILL_DIR / "scripts/validate_template_profile.py"
 INITIALIZER = SKILL_DIR / "scripts/init_deck_context.py"

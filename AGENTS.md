@@ -55,6 +55,22 @@ Skill recovery, research, and porting contract:
   2 succeeded when only search results were returned or cached content was used.
 - See `docs/skill-recovery-porting-contract.md` for the operational procedure
   and verification commands.
+- In Codex Cloud, resolve a host-oriented skill path such as
+  `~/.claude/skills/<name>` or `~/.codex/skills/<name>` to the repository copy
+  at `skills/<name>/`. Never assume a user-home skill installation exists in a
+  cloud task container.
+- Treat Claude-specific interaction names as workflow intent: replace
+  `AskUserQuestion` with a normal concise user question, and use the active
+  host's plan or collaboration mechanism for Claude-only plan/subagent tool
+  names. Do not fail a skill solely because its prose names another host's
+  equivalent interaction tool.
+- Windows, WSL, macOS, browser-profile, and desktop-application paths are
+  host-specific alternatives. In Codex Cloud, prefer repository-relative
+  resources and Linux tools installed by the configured environment. Report a
+  capability as host-only when no cloud-safe alternative is bundled.
+- The complete cross-host import manifest and portability findings live under
+  `runs/skill-port/`. Generated caches, Python bytecode, nested Git metadata,
+  `node_modules`, and secret `.env` files are not portable skill source.
 
 GBrain knowledge rule:
 - If `gbrain` is available as an MCP server in Claude Code, Codex, or another

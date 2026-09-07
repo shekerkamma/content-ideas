@@ -18,6 +18,26 @@
 | `DECK_COLOR_COUNT` | warning | Resolved text and explicit fill color count exceeds the configured maximum |
 | `LAYOUT_REPETITION` | warning | The same normalized shape layout repeats too many times |
 
+## Motion rules (`lint_motion.py`)
+
+These fire only when `deck-design.json` declares a `motion` block. Without one the
+motion linter reports nothing, so decks that predate the contract are unaffected.
+
+| Rule ID | Severity | Meaning |
+|---|---|---|
+| `MOTION_EXIT_BREAKS_REST_STATE` | error | A slide carries exit animations, so its resting frame is missing content that PDF export, contact sheets, and Office render QA all inspect |
+| `MOTION_TRANSITION_OFF_CONTRACT` | warning | A slide transition is outside `motion.allowed_transitions` |
+| `MOTION_TRANSITION_TOO_LONG` | warning | A transition exceeds `motion.max_transition_ms` |
+| `MOTION_TRANSITION_MISSING` | warning | `motion.require_transition` is set but the slide declares none |
+| `MOTION_EFFECT_CLASS_OFF_CONTRACT` | warning | A slide uses an animation class outside `motion.allowed_effect_classes` |
+| `MOTION_BUILD_TOO_LONG` | warning | A slide exceeds `motion.max_build_steps_per_slide` |
+
+`MOTION_EXIT_BREAKS_REST_STATE` is the rule that keeps animation compatible with the
+existing delivery gate: every other QA surface reads a resting frame, so a deck whose
+meaning depends on mid-animation state is unreviewable. Permit exits deliberately by
+adding `"exit"` to `motion.allowed_effect_classes` — not by waiving the rule, which is
+an error and therefore not waivable.
+
 The linter suppresses native-title and layout-repetition checks when
 `deck.output_mode` is `image-per-slide`; the authored HTML route owns those checks.
 

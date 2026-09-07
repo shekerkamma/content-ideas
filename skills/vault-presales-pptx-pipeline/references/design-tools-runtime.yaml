@@ -1,0 +1,145 @@
+version: 2
+last_verified: 2026-07-18
+write_gate:
+  allowed_status:
+    - ready
+  blocked_status:
+    - limited
+    - blocked-auth
+    - available-not-tested
+    - browser-only
+  rule: Re-verify authentication, permissions, and export path before changing a blocked tool to ready.
+tools:
+  codex-presentations:
+    status: ready
+    access: local-artifact-tool
+    role: Final editable PPTX authoring, rendering, inspection, and QA.
+    delivery_rule: Final client-ready PowerPoint must be built here.
+  google-slides:
+    status: ready
+    access: google-drive-connector
+    authentication: verified
+    verification: Read back Client-Ready-PPTX-Design-System-Test with 7 slides.
+    role: Native Google Slides import, collaboration, reading, editing, and verification.
+  canva:
+    status: ready
+    access: canva-connector
+    authentication: verified
+    brand_kit_policy: One accessible brand kit; select automatically when Canva is requested.
+    brand_kit_id: kAHKo5AE_4Q
+    role: Branded presentation concepts and Canva-native presentation delivery.
+    pptx_rule: Treat Canva output as an intermediate source unless Canva is the requested final surface.
+  html-svg-screenshot:
+    status: ready
+    last_verified: 2026-07-17
+    access: ai-graphics-skill
+    runner: node ~/.claude/skills/ai-graphics/scripts/html_to_png.mjs <in.html> <out.png> <WxH>
+    authentication: not-required
+    role: >-
+      THE DEFAULT raster route. Any visual carrying text — diagrams, cards, flat
+      infographics, quote cards, covers with a headline. Write HTML/SVG, screenshot it.
+    why_default: >-
+      Free, deterministic, unlimited re-renders, pixel-exact colour, perfect glyphs, and
+      the .html ships beside the .png as a reusable editable template. Image models are
+      quota-bound and cannot render text reliably.
+    verified_2026_07_17: Rendered 1536x864 and 1080x1350 in ~19s each. Zero cost.
+
+  codex-built-in-image-generation:
+    status: ready
+    last_verified: 2026-07-18
+    access: codex-built-in-image_gen
+    runner: built-in image_gen tool
+    authentication: signed-in ChatGPT/Codex subscription
+    role: Illustrative raster images, covers, visual metaphors, and authorized raster edits.
+    evidence_rule: Never present generated imagery as client proof.
+    text_rule: >-
+      Never send text to an image model. Any glyph routes to html-svg-screenshot.
+      Generated assets must be text-free by construction.
+    model_disclosure_rule: >-
+      Record the orchestration model separately. Record the underlying image engine only when
+      the tool reports it; otherwise resolved_engine remains null.
+    availability_check: A successful real render. OmniRoute status does not govern this route.
+
+  omniroute-image-generation:
+    status: limited
+    last_verified: 2026-07-17
+    access: explicit-provider-adapter
+    runner: >-
+      python3 ~/.claude/skills/ai-graphics/scripts/omniroute_image.py
+      --provider <provider> --model <model> --prompt-file <spec> --size WxH --out <png>
+    authentication: OmniRoute server (Windows-side) + per-provider quota
+    role: Optional provider-controlled image route only when explicitly requested.
+    routes:
+      codex/gpt-5.5:
+        status: rate-limited
+        resets_after: 2026-07-23
+        note: Adapter status only; not the built-in Codex subscription route.
+      nvidia/flux.1-dev:
+        status: broken
+        note: Upstream 404 on both bare and provider-prefixed model names. Clamps 1024x1024.
+      nano-banana/gemini-2.5-flash-image:
+        status: blocked-billing
+        note: >-
+          HTTP 429 "prepayment credits are depleted". PAID prepaid billing, not the free
+          tier, and a different credential from the billing-free AI Studio key.
+      zenmux/gpt-image-2:
+        status: unreachable
+        note: >-
+          In catalog, but the driver errors "Unknown image provider" for zenmux.
+          Catalog entries are also mistagged as type chat rather than image.
+    preflight_caveat: >-
+      ai-graphics preflight.py probes with bogus models and reports PASS on reachability
+      alone. It does NOT see 429 quota or upstream 404. A green preflight does not mean a
+      render will succeed. Confirm with a real render before promising an image asset.
+    wsl_trap: >-
+      curl from WSL to 127.0.0.1:20128 returns 000 because WSL localhost is not Windows
+      localhost. The server is reachable at the WSL gateway, and omniroute_image.py already
+      proxies via powershell.exe so its localhost default is correct. Do not "fix" this.
+  web-image-search:
+    status: ready
+    access: built-in-web-image-query
+    role: Public image discovery with source, licensing, and provenance checks.
+  google-drive:
+    status: ready
+    access: google-drive-connector
+    authentication: verified
+    role: Approved asset, template, and source-deck retrieval.
+  figma:
+    status: limited
+    access: figma-connector
+    authentication: verified
+    seat: View
+    plan: Vokal
+    allowed_role: Read, inspect, retrieve approved references, and use existing accessible assets.
+    blocked_role: Production writes, component creation, and design-system changes until an edit-capable seat is verified.
+  magicpath:
+    status: ready
+    access: cli
+    cli_version: 2.6.0
+    runner: C:/Users/sheke/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback/pnpm.cmd dlx magicpath-ai
+    authentication: verified
+    verification: CLI whoami, account identity, and project access confirmed.
+    role: Agent-native UI concepts, product flows, and shared-canvas components.
+  genspark-slides:
+    status: available-not-tested
+    access: connector
+    role: Fast slide concepts and previews before editable PPTX reconstruction.
+    next_action: Verify on an explicitly requested preview job.
+  framer:
+    status: browser-only
+    role: Published web and CMS companions.
+  paper:
+    status: browser-only
+    role: Agent-native product design canvas.
+  google-stitch:
+    status: browser-only
+    role: Rapid UI concepts and design-system specification.
+  claude-design:
+    status: browser-only
+    role: Accessible design generation.
+  open-design:
+    status: browser-only
+    role: Budget-conscious design exploration.
+  ux-pilot:
+    status: browser-only
+    role: Rapid wireframes and user journeys.

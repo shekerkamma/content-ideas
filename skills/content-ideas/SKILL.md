@@ -1,19 +1,17 @@
 ---
 name: content-ideas
-version: "2.3.0"
-description: >
-  Build a For You feed from tracked competitors and turn it into content ideas.
-  Use for competitor research, trend discovery, and post or video brief
-  generation. First run walks through setup.
+description: Build a For You feed from tracked competitors and turn it into content ideas. Use for competitor research, trend discovery, and post or video brief generation. First run walks through setup.
 allowed-tools: Bash, Read, Write
-argument-hint: "[topic filter]"
-user-invocable: true
 metadata:
   requires:
     env:
-      - SCRAPECREATORS_API_KEY
+    - SCRAPECREATORS_API_KEY
     bins:
-      - python3
+    - python3
+  legacy-frontmatter:
+    version: 2.3.0
+    argument-hint: '[topic filter]'
+    user-invocable: true
 ---
 
 # content-ideas

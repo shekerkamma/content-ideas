@@ -1,0 +1,37 @@
+{
+  "channel_url": "https://youtube.com/@SandyAndyLeAI",
+  "brand_voice": "conversational, energetic, practical",
+  "brand_colors": ["#3D5A3A", "#F5F0E8", "#8B6F47"],
+  "brand_font": "Inter",
+  "competitors": [
+    "https://youtube.com/@mattwolfe",
+    "https://youtube.com/@TheAIAdvantage",
+    "https://youtube.com/@IncomeStreamSurfers",
+    "https://youtube.com/@DanMartell",
+    "https://youtube.com/@Fireship",
+    "https://youtube.com/@TwoMinutePapers",
+    "https://youtube.com/@AIExplained-official",
+    "https://youtube.com/@LiamOttley",
+    "https://youtube.com/@AIJason",
+    "https://youtube.com/@NickSaraev"
+  ],
+  "platforms": ["youtube", "x"],
+  "niche": "AI tools, AI automation, AI agency, AI business",
+  "ica": "solopreneurs, small business owners, and developers learning to use AI to grow their business",
+  "profile_photos": [],
+  "outlier_window_days": 5,
+  "outlier_threshold": 200,
+  "viral_threshold": 500,
+  "google_sheet_id": "pending",
+  "email_recipient": "pending",
+  "last_analyzed": null,
+  "shorts_enabled": false,
+  "apis": {
+    "youtube_data_api": "pending",
+    "google_sheets_credentials": "pending",
+    "gmail_credentials": "pending",
+    "nanobanana_api": "pending",
+    "descript_api": "pending",
+    "openrouter_api": "pending"
+  }
+}

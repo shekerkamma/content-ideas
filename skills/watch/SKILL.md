@@ -1,14 +1,16 @@
 ---
 name: watch
-version: "0.2.0"
 description: Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Claude so it can answer questions about what's in the video. When the user asks to recreate slides or test whether design templates improve the video's visuals, continue through the optional Impeccable visual-asset branch defined in this skill; do not route that request through video-to-deck.
-argument-hint: "<video-url-or-path> [question]"
-allowed-tools: Bash, Read, AskUserQuestion
-homepage: https://github.com/bradautomates/claude-video
-repository: https://github.com/bradautomates/claude-video
-author: bradautomates
 license: MIT
-user-invocable: true
+allowed-tools: Bash, Read, AskUserQuestion
+metadata:
+  legacy-frontmatter:
+    version: 0.2.0
+    argument-hint: <video-url-or-path> [question]
+    homepage: https://github.com/bradautomates/claude-video
+    repository: https://github.com/bradautomates/claude-video
+    author: bradautomates
+    user-invocable: true
 ---
 
 # /watch

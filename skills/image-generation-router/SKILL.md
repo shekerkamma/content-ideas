@@ -1,23 +1,25 @@
 ---
 name: image-generation-router
 description: Use when an existing skill needs to generate raster imagery and must choose between built-in OpenAI imagegen and an explicitly requested or fallback Gemini/Nano Banana model through local CLIProxyAPI. Also triggers on "use Gemini for this image", "use Nano Banana", "choose an image model", and "generate through CLIProxyAPI".
-argument-hint: "<image request or prompt-file> [provider]"
-permissions:
-  network:
-    - http://127.0.0.1:8317
-    - https://api.kimi.com
-  file_read:
-    - ~/cliproxyapi/config.yaml
-    - ~/.config/kimi/.env
-  file_write:
-    - /tmp/
-    - output/imagegen/
-    - runs/
-  shell:
-    allowed_scripts:
-      - scripts/generate_gemini.py
-      - scripts/kimi_adapter.py
-      - scripts/validate_contract.py
+metadata:
+  legacy-frontmatter:
+    argument-hint: <image request or prompt-file> [provider]
+    permissions:
+      network:
+      - http://127.0.0.1:8317
+      - https://api.kimi.com
+      file_read:
+      - ~/cliproxyapi/config.yaml
+      - ~/.config/kimi/.env
+      file_write:
+      - /tmp/
+      - output/imagegen/
+      - runs/
+      shell:
+        allowed_scripts:
+        - scripts/generate_gemini.py
+        - scripts/kimi_adapter.py
+        - scripts/validate_contract.py
 ---
 
 # Image Generation Router

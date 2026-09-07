@@ -1,0 +1,26 @@
+{
+  "contract_version": "1.0",
+  "deck": "",
+  "invariant_version": "v1",
+  "invariant_packet": "authoring/invariant-packet.json",
+  "max_batch_size": 4,
+  "authoritative_slide_order": [],
+  "batches": [
+    {
+      "batch_id": "batch-001",
+      "stage": "content",
+      "slide_ids": [],
+      "previous_slide_ids": [],
+      "next_slide_ids": [],
+      "control_ids": [],
+      "input_path": "",
+      "raw_output_path": "",
+      "validated_output_path": "",
+      "validation_path": "",
+      "status": "pending"
+    }
+  ],
+  "consolidated_content": "slide-content-contracts.json",
+  "consolidated_design": "slide-design-contracts.json",
+  "consolidation_validation": "authoring/validation/consolidation.json"
+}

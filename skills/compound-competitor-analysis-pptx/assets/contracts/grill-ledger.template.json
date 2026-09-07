@@ -1,0 +1,19 @@
+{
+  "contract_version": "1.0",
+  "deck": "",
+  "controls": [
+    {
+      "control_id": "G-001",
+      "question": "",
+      "answer": "",
+      "recommended_answer": "",
+      "answer_source": "user-confirmed",
+      "applies_to": {"scope": "deck", "slide_ids": []},
+      "layer": "story",
+      "required_visible_change": "",
+      "acceptance_test": "",
+      "evidence_ids": [],
+      "status": "open"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "success": false,
+  "message": "",
+  "warnings": [
+    {
+      "message": "Found 5 validation error(s):",
+      "code": "warning"
+    },
+    {
+      "message": "[Semantic] The relationship 'rIdMedia38' referenced by attribute 'http://schemas.openxmlformats.org/officeDocument/2006/relationships:embed' does not exist.",
+      "code": "warning"
+    },
+    {
+      "message": "Path: /p:sld[1]/p:cSld[1]/p:spTree[1]/p:pic[1]/p:nvPicPr[1]/p:nvPr[1]/p:extLst[1]/p:ext[1]/p14:media[1]",
+      "code": "warning"
+    },
+    {
+      "message": "Part: /ppt/slides/slide201.xml",
+      "code": "warning"
+    },
+    {
+      "message": "[Semantic] The relationship 'rIdMedia38' referenced by attribute 'http://schemas.openxmlformats.org/officeDocument/2006/relationships:embed' does not exist.",
+      "code": "warning"
+    },
+    {
+      "message": "Path: /p:sld[1]/p:cSld[1]/p:spTree[1]/p:pic[1]/p:nvPicPr[1]/p:nvPr[1]/p:extLst[1]/p:ext[1]/p14:media[1]",
+      "code": "warning"
+    },
+    {
+      "message": "Part: /ppt/slides/slide202.xml",
+      "code": "warning"
+    },
+    {
+      "message": "[Semantic] The relationship 'rIdMedia38' referenced by attribute 'http://schemas.openxmlformats.org/officeDocument/2006/relationships:embed' does not exist.",
+      "code": "warning"
+    },
+    {
+      "message": "Path: /p:sld[1]/p:cSld[1]/p:spTree[1]/p:pic[1]/p:nvPicPr[1]/p:nvPr[1]/p:extLst[1]/p:ext[1]/p14:media[1]",
+      "code": "warning"
+    },
+    {
+      "message": "Part: /ppt/slides/slide203.xml",
+      "code": "warning"
+    },
+    {
+      "message": "[Semantic] The relationship 'rIdMedia38' referenced by attribute 'http://schemas.openxmlformats.org/officeDocument/2006/relationships:embed' does not exist.",
+      "code": "warning"
+    },
+    {
+      "message": "Path: /p:sld[1]/p:cSld[1]/p:spTree[1]/p:pic[1]/p:nvPicPr[1]/p:nvPr[1]/p:extLst[1]/p:ext[1]/p14:media[1]",
+      "code": "warning"
+    },
+    {
+      "message": "Part: /ppt/slides/slide204.xml",
+      "code": "warning"
+    },
+    {
+      "message": "[Semantic] The relationship 'rIdMedia38' referenced by attribute 'http://schemas.openxmlformats.org/officeDocument/2006/relationships:embed' does not exist.",
+      "code": "warning"
+    },
+    {
+      "message": "Path: /p:sld[1]/p:cSld[1]/p:spTree[1]/p:pic[1]/p:nvPicPr[1]/p:nvPr[1]/p:extLst[1]/p:ext[1]/p14:media[1]",
+      "code": "warning"
+    },
+    {
+      "message": "Part: /ppt/slides/slide205.xml",
+      "code": "warning"
+    }
+  ]
+}

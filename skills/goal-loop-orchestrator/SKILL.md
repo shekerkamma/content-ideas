@@ -1,16 +1,10 @@
 ---
 name: goal-loop-orchestrator
-description: >
-  Use when the user wants to refine a goal, choose or chain multiple skills,
-  run a compound workflow, or plan looping skill passes across several skills.
-  The PLANNER of goal chains — a bare "/goal" or a pasted 5-part
-  TASK/WHY/OUTCOME/CONSTRAINTS/VERIFICATION contract routes to the `goal`
-  skill (the loop engine); use this skill when the goal needs multiple skills
-  chained, skill discovery, or a routing decision first. Works across Claude
-  Code and Codex with explicit handoffs, verification checks, and stop
-  conditions.
-category: Business Automation
+description: Use when the user wants to refine a goal, choose or chain multiple skills, run a compound workflow, or plan looping skill passes across several skills. The PLANNER of goal chains — a bare "/goal" or a pasted 5-part TASK/WHY/OUTCOME/CONSTRAINTS/VERIFICATION contract routes to the `goal` skill (the loop engine); use this skill when the goal needs multiple skills chained, skill discovery, or a routing decision first. Works across Claude Code and Codex with explicit handoffs, verification checks, and stop conditions.
 license: MIT
+metadata:
+  legacy-frontmatter:
+    category: Business Automation
 ---
 
 # Goal Loop Orchestrator

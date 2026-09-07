@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "data": {
+    "slides": 20,
+    "totalShapes": 937,
+    "textBoxes": 937,
+    "pictures": 0,
+    "charts": 0,
+    "oleObjects": 0,
+    "words": 3079,
+    "slidesWithoutTitle": 20,
+    "picturesWithoutAlt": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "contract_version": "1.0",
+  "records": [
+    {
+      "claim_id": "C-001",
+      "evidence_ids": ["E-001"],
+      "review_control_ids": ["G-001"],
+      "slide_id": 1,
+      "content_fields": ["assertion_title", "evidence_blocks[0]"],
+      "design_regions": ["primary-exhibit", "decision-rail"],
+      "builder_shapes": [],
+      "render_evidence": "qa/officecli/contact-native.png",
+      "status": "implemented"
+    }
+  ]
+}

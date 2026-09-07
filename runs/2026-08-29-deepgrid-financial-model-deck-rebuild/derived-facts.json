@@ -1,0 +1,1056 @@
+[
+  {
+    "id": "derived/portfolio-fy2032-total",
+    "text": "Total FY2032 revenue across all 15 SKUs is Rs1,128.45 Cr. Every SKU share percentage in this dossier is computed against this figure.",
+    "formula": "sum(revenue[FY2032] for all SKUs)",
+    "inputs": [
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit)",
+      "Revenue Build!AD1 Indoor L4 kit",
+      "Revenue Build!Smart Truck (AD2 kit)",
+      "..."
+    ],
+    "cites": [
+      "Revenue Build!Total (check)"
+    ],
+    "tags": [
+      "portfolio",
+      "total",
+      "fy2032"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/soc2-die-cost-inr",
+    "text": "One SoC2 die costs $3.8762 at volume, which is Rs364 at the model's USD/INR rate of 94. The die cost is identical in every product that carries one, regardless of that product's price.",
+    "formula": "die_cost_usd * usd_inr",
+    "inputs": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)",
+      "Assumptions!USD / INR"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)"
+    ],
+    "tags": [
+      "soc2",
+      "die",
+      "cost",
+      "unit-economics"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/4d-radar-pod-aftermarket/revenue-integrity",
+    "text": "'4D radar pod (aftermarket)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs25,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!4D radar pod (aftermarket) units",
+      "Revenue Build!4D radar pod (aftermarket) revenue"
+    ],
+    "cites": [
+      "Revenue Build!4D radar pod (aftermarket)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "4d-radar-pod-aftermarket"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/4d-radar-pod-aftermarket/fy2032-share",
+    "text": "'4D radar pod (aftermarket)' contributes Rs7.50 Cr in FY2032, 0.66% of the Rs1,128.45 Cr total. Its segment (Sensors) carries a 50% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!4D radar pod (aftermarket)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Sensors gross margin"
+    ],
+    "cites": [
+      "Revenue Build!4D radar pod (aftermarket)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "4d-radar-pod-aftermarket"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/4d-radar-pod-aftermarket/growth-shape",
+    "text": "'4D radar pod (aftermarket)' unit growth runs 2.917x / 2.286x / 2x / 1.875x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!4D radar pod (aftermarket) units"
+    ],
+    "cites": [
+      "Revenue Build!4D radar pod (aftermarket)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "4d-radar-pod-aftermarket"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-1ch-plussdk-m2/revenue-integrity",
+    "text": "'A100 compute box 1ch +SDK (M.2)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs85,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!A100 compute box 1ch +SDK (M.2) units",
+      "Revenue Build!A100 compute box 1ch +SDK (M.2) revenue"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 1ch +SDK (M.2)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "a100-compute-box-1ch-plussdk-m2"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-1ch-plussdk-m2/fy2032-share",
+    "text": "'A100 compute box 1ch +SDK (M.2)' contributes Rs25.50 Cr in FY2032, 2.26% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!A100 compute box 1ch +SDK (M.2)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 1ch +SDK (M.2)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "a100-compute-box-1ch-plussdk-m2"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-1ch-plussdk-m2/growth-shape",
+    "text": "'A100 compute box 1ch +SDK (M.2)' unit growth runs 1.995x / 2x / 2x / 2x across FY2029-FY2032. That is a constant 2x every year (the first step differs only by integer rounding of unit counts), which is a modelling assumption rather than a derived forecast.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!A100 compute box 1ch +SDK (M.2) units"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 1ch +SDK (M.2)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "a100-compute-box-1ch-plussdk-m2"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-1ch-plussdk-m2/silicon-intensity",
+    "text": "Silicon is 0.43% of the price of 'A100 compute box 1ch +SDK (M.2)' (Rs364 die in a Rs85,000 product). 99.57% of the price is SDK, packaging, board and channel.",
+    "formula": "(die_cost_usd * usd_inr) / asp * 100",
+    "inputs": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)",
+      "Assumptions!USD / INR",
+      "Revenue Build!A100 compute box 1ch +SDK (M.2) ASP"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)"
+    ],
+    "tags": [
+      "silicon",
+      "unit-economics",
+      "a100-compute-box-1ch-plussdk-m2"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-1ch-plussdk-m2/breakeven-contribution",
+    "text": "'A100 compute box 1ch +SDK (M.2)' consumes 5,813 SoC2 dies across FY2028-FY2032 (one die per unit), 3.3% of the 174,908-chip NRE breakeven. It would need 30.1x its planned volume to repay the tapeout on its own.",
+    "formula": "sum(units) / breakeven_chips * 100",
+    "inputs": [
+      "Revenue Build!A100 compute box 1ch +SDK (M.2) units",
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "tags": [
+      "breakeven",
+      "nre",
+      "dies",
+      "a100-compute-box-1ch-plussdk-m2"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-2ch-plussdk/revenue-integrity",
+    "text": "'A100 compute box 2ch +SDK' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs160,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!A100 compute box 2ch +SDK units",
+      "Revenue Build!A100 compute box 2ch +SDK revenue"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 2ch +SDK"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "a100-compute-box-2ch-plussdk"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-2ch-plussdk/fy2032-share",
+    "text": "'A100 compute box 2ch +SDK' contributes Rs28.80 Cr in FY2032, 2.55% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!A100 compute box 2ch +SDK",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 2ch +SDK"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "a100-compute-box-2ch-plussdk"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-2ch-plussdk/growth-shape",
+    "text": "'A100 compute box 2ch +SDK' unit growth runs 1.991x / 2x / 2x / 2x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!A100 compute box 2ch +SDK units"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 2ch +SDK"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "a100-compute-box-2ch-plussdk"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-2ch-plussdk/silicon-intensity",
+    "text": "Silicon is 0.23% of the price of 'A100 compute box 2ch +SDK' (Rs364 die in a Rs160,000 product). 99.77% of the price is SDK, packaging, board and channel.",
+    "formula": "(die_cost_usd * usd_inr) / asp * 100",
+    "inputs": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)",
+      "Assumptions!USD / INR",
+      "Revenue Build!A100 compute box 2ch +SDK ASP"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)"
+    ],
+    "tags": [
+      "silicon",
+      "unit-economics",
+      "a100-compute-box-2ch-plussdk"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-2ch-plussdk/breakeven-contribution",
+    "text": "'A100 compute box 2ch +SDK' consumes 3,488 SoC2 dies across FY2028-FY2032 (one die per unit), 2.0% of the 174,908-chip NRE breakeven. It would need 50.1x its planned volume to repay the tapeout on its own.",
+    "formula": "sum(units) / breakeven_chips * 100",
+    "inputs": [
+      "Revenue Build!A100 compute box 2ch +SDK units",
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "tags": [
+      "breakeven",
+      "nre",
+      "dies",
+      "a100-compute-box-2ch-plussdk"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-4ch-plussdk-pcie/revenue-integrity",
+    "text": "'A100 compute box 4ch +SDK (PCIe)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs300,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe) units",
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe) revenue"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "a100-compute-box-4ch-plussdk-pcie"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-4ch-plussdk-pcie/fy2032-share",
+    "text": "'A100 compute box 4ch +SDK (PCIe)' contributes Rs36.00 Cr in FY2032, 3.19% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "a100-compute-box-4ch-plussdk-pcie"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-4ch-plussdk-pcie/growth-shape",
+    "text": "'A100 compute box 4ch +SDK (PCIe)' unit growth runs 2x / 2x / 2x / 2x across FY2029-FY2032. That is a constant 2x every year, which is a modelling assumption rather than a derived forecast.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe) units"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "a100-compute-box-4ch-plussdk-pcie"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-4ch-plussdk-pcie/silicon-intensity",
+    "text": "Silicon is 0.12% of the price of 'A100 compute box 4ch +SDK (PCIe)' (Rs364 die in a Rs300,000 product). 99.88% of the price is SDK, packaging, board and channel.",
+    "formula": "(die_cost_usd * usd_inr) / asp * 100",
+    "inputs": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)",
+      "Assumptions!USD / INR",
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe) ASP"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Per-die cost at volume ($)"
+    ],
+    "tags": [
+      "silicon",
+      "unit-economics",
+      "a100-compute-box-4ch-plussdk-pcie"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-box-4ch-plussdk-pcie/breakeven-contribution",
+    "text": "'A100 compute box 4ch +SDK (PCIe)' consumes 2,325 SoC2 dies across FY2028-FY2032 (one die per unit), 1.3% of the 174,908-chip NRE breakeven. It would need 75.2x its planned volume to repay the tapeout on its own.",
+    "formula": "sum(units) / breakeven_chips * 100",
+    "inputs": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe) units",
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "tags": [
+      "breakeven",
+      "nre",
+      "dies",
+      "a100-compute-box-4ch-plussdk-pcie"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/ad0-smart-mirror-mandate-retrofit/revenue-integrity",
+    "text": "'AD0 Smart Mirror (mandate retrofit)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs50,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit) units",
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit) revenue"
+    ],
+    "cites": [
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "ad0-smart-mirror-mandate-retrofit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/ad0-smart-mirror-mandate-retrofit/fy2032-share",
+    "text": "'AD0 Smart Mirror (mandate retrofit)' contributes Rs270.00 Cr in FY2032, 23.93% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "ad0-smart-mirror-mandate-retrofit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/ad0-smart-mirror-mandate-retrofit/growth-shape",
+    "text": "'AD0 Smart Mirror (mandate retrofit)' unit growth runs 3.636x / 2.25x / 1.889x / 1.588x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit) units"
+    ],
+    "cites": [
+      "Revenue Build!AD0 Smart Mirror (mandate retrofit)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "ad0-smart-mirror-mandate-retrofit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/ad1-indoor-l4-kit/revenue-integrity",
+    "text": "'AD1 Indoor L4 kit' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs100,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!AD1 Indoor L4 kit units",
+      "Revenue Build!AD1 Indoor L4 kit revenue"
+    ],
+    "cites": [
+      "Revenue Build!AD1 Indoor L4 kit"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "ad1-indoor-l4-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/ad1-indoor-l4-kit/fy2032-share",
+    "text": "'AD1 Indoor L4 kit' contributes Rs42.00 Cr in FY2032, 3.72% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!AD1 Indoor L4 kit",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!AD1 Indoor L4 kit"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "ad1-indoor-l4-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/ad1-indoor-l4-kit/growth-shape",
+    "text": "'AD1 Indoor L4 kit' unit growth runs 20x / 2.5x / 2.2x / 1.909x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!AD1 Indoor L4 kit units"
+    ],
+    "cites": [
+      "Revenue Build!AD1 Indoor L4 kit"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "ad1-indoor-l4-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/autonomous-taas/revenue-integrity",
+    "text": "'Autonomous TaaS' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs6,600,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!Autonomous TaaS units",
+      "Revenue Build!Autonomous TaaS revenue"
+    ],
+    "cites": [
+      "Revenue Build!Autonomous TaaS"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "autonomous-taas"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/autonomous-taas/fy2032-share",
+    "text": "'Autonomous TaaS' contributes Rs66.00 Cr in FY2032, 5.85% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!Autonomous TaaS",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!Autonomous TaaS"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "autonomous-taas"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/autonomous-taas/growth-shape",
+    "text": "'Autonomous TaaS' unit growth runs 2x / 2.5x / 2x / 2x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!Autonomous TaaS units"
+    ],
+    "cites": [
+      "Revenue Build!Autonomous TaaS"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "autonomous-taas"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/chipset-oem-b2b-asic-die/revenue-integrity",
+    "text": "'Chipset OEM B2B (ASIC die)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs18,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!Chipset OEM B2B (ASIC die) units",
+      "Revenue Build!Chipset OEM B2B (ASIC die) revenue"
+    ],
+    "cites": [
+      "Revenue Build!Chipset OEM B2B (ASIC die)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "chipset-oem-b2b-asic-die"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/chipset-oem-b2b-asic-die/fy2032-share",
+    "text": "'Chipset OEM B2B (ASIC die)' contributes Rs54.00 Cr in FY2032, 4.79% of the Rs1,128.45 Cr total. Its segment (Semiconductors) carries a 94% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!Chipset OEM B2B (ASIC die)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Semiconductors gross margin"
+    ],
+    "cites": [
+      "Revenue Build!Chipset OEM B2B (ASIC die)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "chipset-oem-b2b-asic-die"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/chipset-oem-b2b-asic-die/growth-shape",
+    "text": "'Chipset OEM B2B (ASIC die)' unit growth runs 58.333x / 3.429x / 2.5x / 2x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!Chipset OEM B2B (ASIC die) units"
+    ],
+    "cites": [
+      "Revenue Build!Chipset OEM B2B (ASIC die)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "chipset-oem-b2b-asic-die"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/d100-drone-soc-kit/revenue-integrity",
+    "text": "'D100 drone SoC kit' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs500,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!D100 drone SoC kit units",
+      "Revenue Build!D100 drone SoC kit revenue"
+    ],
+    "cites": [
+      "Revenue Build!D100 drone SoC kit"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "d100-drone-soc-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/d100-drone-soc-kit/fy2032-share",
+    "text": "'D100 drone SoC kit' contributes Rs20.00 Cr in FY2032, 1.77% of the Rs1,128.45 Cr total. Its segment (Robotics) carries a 68% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!D100 drone SoC kit",
+      "Revenue Build!Total (check)",
+      "Assumptions!Robotics gross margin"
+    ],
+    "cites": [
+      "Revenue Build!D100 drone SoC kit"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "d100-drone-soc-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/d100-drone-soc-kit/growth-shape",
+    "text": "'D100 drone SoC kit' unit growth runs 10x / 2.5x / 1.8x / 1.778x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!D100 drone SoC kit units"
+    ],
+    "cites": [
+      "Revenue Build!D100 drone SoC kit"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "d100-drone-soc-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/defence-d-humr/revenue-integrity",
+    "text": "'Defence D-HUMR' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs2,000,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!Defence D-HUMR units",
+      "Revenue Build!Defence D-HUMR revenue"
+    ],
+    "cites": [
+      "Revenue Build!Defence D-HUMR"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "defence-d-humr"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/defence-d-humr/fy2032-share",
+    "text": "'Defence D-HUMR' contributes Rs30.00 Cr in FY2032, 2.66% of the Rs1,128.45 Cr total. Its segment (Robotics) carries a 68% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!Defence D-HUMR",
+      "Revenue Build!Total (check)",
+      "Assumptions!Robotics gross margin"
+    ],
+    "cites": [
+      "Revenue Build!Defence D-HUMR"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "defence-d-humr"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/defence-d-humr/growth-shape",
+    "text": "'Defence D-HUMR' unit growth runs 1.533x / 1.957x / 1.956x / 1.705x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!Defence D-HUMR units"
+    ],
+    "cites": [
+      "Revenue Build!Defence D-HUMR"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "defence-d-humr"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/h100-driver-monitor-wearable/revenue-integrity",
+    "text": "'H100 driver-monitor wearable' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs5,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!H100 driver-monitor wearable units",
+      "Revenue Build!H100 driver-monitor wearable revenue"
+    ],
+    "cites": [
+      "Revenue Build!H100 driver-monitor wearable"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "h100-driver-monitor-wearable"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/h100-driver-monitor-wearable/fy2032-share",
+    "text": "'H100 driver-monitor wearable' contributes Rs10.00 Cr in FY2032, 0.89% of the Rs1,128.45 Cr total. Its segment (Sensors) carries a 50% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!H100 driver-monitor wearable",
+      "Revenue Build!Total (check)",
+      "Assumptions!Sensors gross margin"
+    ],
+    "cites": [
+      "Revenue Build!H100 driver-monitor wearable"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "h100-driver-monitor-wearable"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/h100-driver-monitor-wearable/growth-shape",
+    "text": "'H100 driver-monitor wearable' unit growth runs 2.75x / 2.273x / 2.2x / 1.818x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!H100 driver-monitor wearable units"
+    ],
+    "cites": [
+      "Revenue Build!H100 driver-monitor wearable"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "h100-driver-monitor-wearable"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/seaport-agv-port-autonomy/revenue-integrity",
+    "text": "'Seaport AGV (port autonomy)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs4,530,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!Seaport AGV (port autonomy) units",
+      "Revenue Build!Seaport AGV (port autonomy) revenue"
+    ],
+    "cites": [
+      "Revenue Build!Seaport AGV (port autonomy)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "seaport-agv-port-autonomy"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/seaport-agv-port-autonomy/fy2032-share",
+    "text": "'Seaport AGV (port autonomy)' contributes Rs22.65 Cr in FY2032, 2.01% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!Seaport AGV (port autonomy)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!Seaport AGV (port autonomy)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "seaport-agv-port-autonomy"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/seaport-agv-port-autonomy/growth-shape",
+    "text": "'Seaport AGV (port autonomy)' unit growth runs 2.5x / 2x / 1.5x / 3.333x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!Seaport AGV (port autonomy) units"
+    ],
+    "cites": [
+      "Revenue Build!Seaport AGV (port autonomy)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "seaport-agv-port-autonomy"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/smart-truck-ad2-kit/revenue-integrity",
+    "text": "'Smart Truck (AD2 kit)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs250,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!Smart Truck (AD2 kit) units",
+      "Revenue Build!Smart Truck (AD2 kit) revenue"
+    ],
+    "cites": [
+      "Revenue Build!Smart Truck (AD2 kit)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "smart-truck-ad2-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/smart-truck-ad2-kit/fy2032-share",
+    "text": "'Smart Truck (AD2 kit)' contributes Rs450.00 Cr in FY2032, 39.88% of the Rs1,128.45 Cr total. Its segment (Systems) carries a 89% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!Smart Truck (AD2 kit)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Systems gross margin"
+    ],
+    "cites": [
+      "Revenue Build!Smart Truck (AD2 kit)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "smart-truck-ad2-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/smart-truck-ad2-kit/growth-shape",
+    "text": "'Smart Truck (AD2 kit)' unit growth runs 17.5x / 2.857x / 2.25x / 2x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!Smart Truck (AD2 kit) units"
+    ],
+    "cites": [
+      "Revenue Build!Smart Truck (AD2 kit)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "smart-truck-ad2-kit"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/t100-ai-licence-saas/revenue-integrity",
+    "text": "'T100 AI licence (SaaS)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs10,000,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!T100 AI licence (SaaS) units",
+      "Revenue Build!T100 AI licence (SaaS) revenue"
+    ],
+    "cites": [
+      "Revenue Build!T100 AI licence (SaaS)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "t100-ai-licence-saas"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/t100-ai-licence-saas/fy2032-share",
+    "text": "'T100 AI licence (SaaS)' contributes Rs50.00 Cr in FY2032, 4.43% of the Rs1,128.45 Cr total. Its segment (Semiconductors) carries a 94% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!T100 AI licence (SaaS)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Semiconductors gross margin"
+    ],
+    "cites": [
+      "Revenue Build!T100 AI licence (SaaS)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "t100-ai-licence-saas"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/t100-ai-licence-saas/growth-shape",
+    "text": "'T100 AI licence (SaaS)' unit growth runs 3x / 3x / 2.778x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!T100 AI licence (SaaS) units"
+    ],
+    "cites": [
+      "Revenue Build!T100 AI licence (SaaS)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "t100-ai-licence-saas"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/thermal-camera-aftermarket/revenue-integrity",
+    "text": "'Thermal camera (aftermarket)' revenue reproduces from units x ASP in 6 of 6 fiscal years (ASP Rs50,000). The revenue build is internally consistent for this SKU.",
+    "formula": "units[y] * asp / 1e7 == revenue[y]  (tolerance 0.002 Cr)",
+    "inputs": [
+      "Revenue Build!Thermal camera (aftermarket) units",
+      "Revenue Build!Thermal camera (aftermarket) revenue"
+    ],
+    "cites": [
+      "Revenue Build!Thermal camera (aftermarket)"
+    ],
+    "tags": [
+      "verification",
+      "arithmetic",
+      "thermal-camera-aftermarket"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/thermal-camera-aftermarket/fy2032-share",
+    "text": "'Thermal camera (aftermarket)' contributes Rs16.00 Cr in FY2032, 1.42% of the Rs1,128.45 Cr total. Its segment (Sensors) carries a 50% gross margin in FY2032.",
+    "formula": "revenue[FY2032] / portfolio_total_FY2032 * 100",
+    "inputs": [
+      "Revenue Build!Thermal camera (aftermarket)",
+      "Revenue Build!Total (check)",
+      "Assumptions!Sensors gross margin"
+    ],
+    "cites": [
+      "Revenue Build!Thermal camera (aftermarket)"
+    ],
+    "tags": [
+      "share",
+      "fy2032",
+      "thermal-camera-aftermarket"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/thermal-camera-aftermarket/growth-shape",
+    "text": "'Thermal camera (aftermarket)' unit growth runs 2.667x / 2.25x / 2x / 1.778x across FY2029-FY2032. The multiple varies year to year.",
+    "formula": "units[y+1] / units[y] for each consecutive pair",
+    "inputs": [
+      "Revenue Build!Thermal camera (aftermarket) units"
+    ],
+    "cites": [
+      "Revenue Build!Thermal camera (aftermarket)"
+    ],
+    "tags": [
+      "growth",
+      "assumption",
+      "thermal-camera-aftermarket"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-line/breakeven",
+    "text": "The 3 A100 compute box SKUs together consume 11,626 SoC2 dies across FY2028-FY2032 and produce Rs90.30 Cr in FY2032. That die volume is 6.6% of the 174,908-chip NRE breakeven, so the compute line cannot fund the tapeout: the kits carry that volume. The line's role is adoption, not silicon margin.",
+    "formula": "sum(units across A100 compute SKUs) / breakeven_chips * 100",
+    "inputs": [
+      "Revenue Build!A100 compute box 1ch/2ch/4ch",
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "cites": [
+      "Tapeout Unit Economics!Breakeven volume (chips to recover NRE)"
+    ],
+    "tags": [
+      "a100",
+      "compute-line",
+      "breakeven",
+      "platform-thesis"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  },
+  {
+    "id": "derived/a100-compute-line/mix-ratio",
+    "text": "The 1ch:2ch:4ch unit mix is fixed at 2.5:1.5:1.0 in every revenue year FY2028-FY2032. A constant mix across five years is an input to the model, not a result of it, and real channel mix typically drifts as a line matures.",
+    "formula": "units_1ch[y] : units_2ch[y] : units_4ch[y], each year",
+    "inputs": [
+      "Revenue Build!A100 compute box 1ch/2ch/4ch units"
+    ],
+    "cites": [
+      "Revenue Build!A100 compute box 4ch +SDK (PCIe)"
+    ],
+    "tags": [
+      "a100",
+      "mix",
+      "assumption"
+    ],
+    "derived": true,
+    "generator": "derive_facts.py"
+  }
+]

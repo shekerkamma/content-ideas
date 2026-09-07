@@ -1,0 +1,21 @@
+Segment,FY2027,FY2028,FY2029,FY2030,FY2031,FY2032,Each business its own margin; blends below
+Systems,0.47,0.73,0.8,0.83,0.86,0.89,
+Sensors,0.3,0.38,0.42,0.45,0.48,0.5,
+Semiconductors,0.55,0.78,0.86,0.9,0.92,0.94,
+Robotics,0.42,0.55,0.6,0.64,0.66,0.68,
+C.  OPEX DRIVERS  (% of revenue),,,,,,,
+Fiscal year,FY2027,FY2028,FY2029,FY2030,FY2031,FY2032,Source: projections Base case
+R&D % of revenue (total),0.38,0.37,0.36,0.35,0.34,0.33,Total R&D; split into run-rate + SoC4 5nm in P&L
+  of which: run-rate R&D %,0.3,0.26,0.22,0.19,0.18,0.18,Sustaining SoC2 + software; remainder funds SoC4 5nm
+Sales & Marketing % of revenue,0.15,0.145,0.14,0.135,0.13,0.125,
+G&A % of revenue,0.1,0.095,0.09,0.085,0.08,0.075,
+D&A % of revenue,0.02,0.02,0.02,0.02,0.02,0.02,
+D.  CURRENT STATE (June 2026) — FOR INVESTOR TRANSPARENCY,0.63,0.61,0.59,0.57,0.55,0.53,
+Cash in bank (actual),0.025,,,,,,Rs2.5L — verified from ICICI bank statement
+Immediate dues,0.23,,,,,,Rs23L — rent Rs9L + Jiyu vendor Rs8L + salaries Rs4L + EMI Rs2L
+Bridge funding (incoming),0.32,,,,,,Rs32L — Rs6L confirmed + Rs6L confirmed + Rs20L personal borrowing
+Net working capital after dues,0.09,,,,,,Rs9L usable — ~3 weeks ops at current burn
+"Monthly burn (actual, from bank statement)",1.2,,,,,,Rs12L/month — target cut to Rs8L with team reduction
+Robot revenue pipeline,0.5,,,,,,"Rs50L potential in 60 days from 5 robot sales @ Rs10L, Rs3L build cost"
+SoC2 tapeout status,RTL phase,,,,,,"3 blocking issues: B1 OPMODE (30min fix), B2 ITA AllReduce (2wk), RTL-1 pipeline reg (1day)"
+SoC4 3D MALU status,Timing closing,,,,,,169x efficiency proven on Verilator. Timing closure in progress. Patent filing needed immediately.

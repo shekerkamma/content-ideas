@@ -1,0 +1,13 @@
+{
+  "contract_version": "1.0",
+  "file": "runs/2026-08-22-l01-l16-layout-library/L01-L16-Layout-Library-reviewed.pptx",
+  "fast": false,
+  "status": "clean",
+  "counts": {
+    "error": 0,
+    "warning": 0,
+    "ignored": 0
+  },
+  "findings": [],
+  "ignored_findings": []
+}

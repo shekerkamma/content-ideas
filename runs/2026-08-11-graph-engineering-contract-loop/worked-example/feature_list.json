@@ -1,0 +1,69 @@
+{
+  "project": "Skill integrity audit",
+  "created": "2026-08-11",
+  "items": [
+    {
+      "id": 1,
+      "name": "Every skill directory contains a SKILL.md with a closed YAML frontmatter block",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule frontmatter",
+      "notes": "315/315 clean at audit time"
+    },
+    {
+      "id": 2,
+      "name": "No invocation name is declared by more than one skill directory",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule dupes",
+      "notes": "FIXED, then found insufficient. Renaming resolved the name: collision but MOVED it: all 3 pairs still had byte-identical description: and triggers:, which is what routing actually selects on. Pairs now carry distinct deprecation-pointer routing metadata. Criterion 8 added to measure that surface."
+    },
+    {
+      "id": 3,
+      "name": "Every skill's name field equals its directory name",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule name",
+      "notes": "FIXED, not waived. All 14 name: fields set to match their directories after the auditor rejected the waiver 0.0. Rename simulated first: 0 new collisions. NOTE: this did NOT free the pp-* namespace \u2014 skills/pp-hackernews/ and skills/pp-youtube/ still legitimately declare pp-hackernews and pp-youtube."
+    },
+    {
+      "id": 4,
+      "name": "Every skill's routing is reachable: 40+ char description, or a '## When to invoke' section, or triggers:",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule desc",
+      "notes": "Criterion REWRITTEN. The original 40-char rule was wrong: gstack's catalog trim (T4) deliberately shortens Claude-host descriptions and moves routing to the body plus proactive-suggestions.json. All 39 description edits were REVERTED. Now passes honestly across 315 skills."
+    },
+    {
+      "id": 5,
+      "name": "Every mirrored skill is byte-identical to its plugin copy",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule mirror",
+      "notes": "fixed earlier this run; was 4 drifted"
+    },
+    {
+      "id": 6,
+      "name": "No generated Python bytecode is committed under skills/ or plugins/",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule bytecode",
+      "notes": "criterion rewritten after auditor rejected 46 false positives"
+    },
+    {
+      "id": 7,
+      "name": "RETIRED \u2014 'shadows nothing in the repo tree' was unsatisfiable by construction",
+      "status": "passing",
+      "verified_by": "n/a \u2014 retired, see contract third amendment",
+      "notes": "The repo deliberately keeps one skill tree per harness, so every ported skill shadows itself by design. Replaced by criterion 9, which measures body drift rather than name presence."
+    },
+    {
+      "id": 8,
+      "name": "No two skills share an identical description: or triggers:",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule routing",
+      "notes": "Rule rebuilt twice after audit. Now: similarity-based at 0.95 (exact equality fell to a trailing period), YAML-indentation triggers parser (the old one returned [] for every gstack skill), and it also hashes '## When to invoke'. Both evasions mutation-tested and failing correctly."
+    },
+    {
+      "id": 9,
+      "name": "No skill's body differs across repo trees unless registered in cross-tree-variants.json with evidence",
+      "status": "passing",
+      "verified_by": "python3 check_skills.py --rule crosstree",
+      "notes": "38 multi-tree names: 33 differ only in frontmatter (intentional per-harness porting), 5 in body. 3 registered as deliberate (impeccable, investor-competitive-dossier routers, openhands-niche-agency accuracy edit); 2 were genuinely stale and synced forward (ikigai -> .agents, skill-builder -> .claude). Mutation-tested both ways."
+    }
+  ]
+}

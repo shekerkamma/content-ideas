@@ -1,0 +1,452 @@
+[
+ {
+  "name": "AD0 Smart Mirror (mandate retrofit)",
+  "segment": "Systems",
+  "domain": "Outdoor",
+  "surface": "Road autonomy",
+  "asp": 50000,
+  "units": [
+   10,
+   2200,
+   8000,
+   18000,
+   34000,
+   54000
+  ],
+  "rev": [
+   0.05,
+   11,
+   40,
+   90,
+   170,
+   270
+  ],
+  "fy32": 270,
+  "share": 23.93,
+  "gm": "89%",
+  "launch": "FY2027",
+  "pool": "Existing 360 surround-view market $3.1B (already selling)",
+  "capture": "0.93%",
+  "source": "Towards Automotive: $3.09B 2025, 10.7% CAGR"
+ },
+ {
+  "name": "AD1 Indoor L4 kit",
+  "segment": "Systems",
+  "domain": "Indoor",
+  "surface": "Road autonomy",
+  "asp": 100000,
+  "units": [
+   0,
+   20,
+   400,
+   1000,
+   2200,
+   4200
+  ],
+  "rev": [
+   0,
+   0.2,
+   4,
+   10,
+   22,
+   42
+  ],
+  "fy32": 42,
+  "share": 3.72,
+  "gm": "89%",
+  "launch": "FY2028",
+  "pool": "Warehouse/industrial autonomy; part of $4.8B edge-AI",
+  "capture": "—",
+  "source": "Dataintelo/GMI automotive edge-AI 2025"
+ },
+ {
+  "name": "Smart Truck (AD2 kit)",
+  "segment": "Systems",
+  "domain": "Outdoor",
+  "surface": "Road autonomy",
+  "asp": 250000,
+  "units": [
+   3,
+   80,
+   1400,
+   4000,
+   9000,
+   18000
+  ],
+  "rev": [
+   0.07,
+   2,
+   35,
+   100,
+   225,
+   450
+  ],
+  "fy32": 450,
+  "share": 39.88,
+  "gm": "89%",
+  "launch": "FY2027",
+  "pool": "MANDATORY: 0.5M new N2/N3 trucks/yr + 0.5M retrofit",
+  "capture": "1.80%",
+  "source": "MoRTH GSR 184(E) ADAS mandate on N2/N3"
+ },
+ {
+  "name": "Autonomous TaaS",
+  "segment": "Systems",
+  "domain": "Outdoor",
+  "surface": "Fleet & mobility",
+  "asp": 6600000,
+  "units": [
+   0,
+   5,
+   10,
+   25,
+   50,
+   100
+  ],
+  "rev": [
+   0,
+   3.3,
+   6.6,
+   16.5,
+   33,
+   66
+  ],
+  "fy32": 66,
+  "share": 5.85,
+  "gm": "89%",
+  "launch": "FY2028",
+  "pool": "India trucking 0.6-0.8M units/yr; fleet ops",
+  "capture": "0.01%",
+  "source": "Mobility Foresights; TheGlobalEconomy 952k CV"
+ },
+ {
+  "name": "Seaport AGV (port autonomy)",
+  "segment": "Systems",
+  "domain": "Indoor",
+  "surface": "Fleet & mobility",
+  "asp": 4530000,
+  "units": [
+   0,
+   2,
+   5,
+   10,
+   15,
+   50
+  ],
+  "rev": [
+   0,
+   0.91,
+   2.27,
+   4.53,
+   6.79,
+   22.65
+  ],
+  "fy32": 22.65,
+  "share": 2.01,
+  "gm": "89%",
+  "launch": "FY2028",
+  "pool": "Automated container terminal market $10.95B (2024)",
+  "capture": "0.02%",
+  "source": "SNS Insider: $10.95B 2024 -> $16.35B 2032, 5.2% CAGR"
+ },
+ {
+  "name": "Thermal camera (aftermarket)",
+  "segment": "Sensors",
+  "domain": "Outdoor",
+  "surface": "Sensors & robotics",
+  "asp": 50000,
+  "units": [
+   40,
+   150,
+   400,
+   900,
+   1800,
+   3200
+  ],
+  "rev": [
+   0.2,
+   0.75,
+   2,
+   4.5,
+   9,
+   16
+  ],
+  "fy32": 16,
+  "share": 1.42,
+  "gm": "50%",
+  "launch": "FY2027",
+  "pool": "Automotive thermal camera $1.68B global (2025)",
+  "capture": "0.10%",
+  "source": "Verified Market Research: $1.68B 2025, 12% CAGR"
+ },
+ {
+  "name": "4D radar pod (aftermarket)",
+  "segment": "Sensors",
+  "domain": "Outdoor",
+  "surface": "Sensors & robotics",
+  "asp": 25000,
+  "units": [
+   30,
+   120,
+   350,
+   800,
+   1600,
+   3000
+  ],
+  "rev": [
+   0.07,
+   0.3,
+   0.88,
+   2,
+   4,
+   7.5
+  ],
+  "fy32": 7.5,
+  "share": 0.66,
+  "gm": "50%",
+  "launch": "FY2027",
+  "pool": "4D imaging radar $2.75B global (2025)",
+  "capture": "0.03%",
+  "source": "Business Research Co./Mordor: ~$2.75B 2025, 13% CAGR"
+ },
+ {
+  "name": "H100 driver-monitor wearable",
+  "segment": "Sensors",
+  "domain": "Outdoor",
+  "surface": "Sensors & robotics",
+  "asp": 5000,
+  "units": [
+   200,
+   800,
+   2200,
+   5000,
+   11000,
+   20000
+  ],
+  "rev": [
+   0.1,
+   0.4,
+   1.1,
+   2.5,
+   5.5,
+   10
+  ],
+  "fy32": 10,
+  "share": 0.89,
+  "gm": "50%",
+  "launch": "FY2027",
+  "pool": "DDAWS mandate (AIS-184) + global DMS demand",
+  "capture": "—",
+  "source": "MoRTH AIS-184; EU Reg 2021/267 (commercial DMS)"
+ },
+ {
+  "name": "Chipset OEM B2B (ASIC die)",
+  "segment": "Semiconductors",
+  "domain": "Outdoor",
+  "surface": "Silicon & compute",
+  "asp": 18000,
+  "units": [
+   0,
+   30,
+   1750,
+   6000,
+   15000,
+   30000
+  ],
+  "rev": [
+   0,
+   0.05,
+   3.15,
+   10.8,
+   27,
+   54
+  ],
+  "fy32": 54,
+  "share": 4.79,
+  "gm": "94%",
+  "launch": "FY2028",
+  "pool": "India ADAS chip pool; $2.29B ADAS (2024)",
+  "capture": "0.25%",
+  "source": "EMR 2024: $2.29B, 20.6% CAGR"
+ },
+ {
+  "name": "A100 compute box 1ch +SDK (M.2)",
+  "segment": "Systems",
+  "domain": "Compute",
+  "surface": "Silicon & compute",
+  "asp": 85000,
+  "units": [
+   0,
+   188,
+   375,
+   750,
+   1500,
+   3000
+  ],
+  "rev": [
+   0,
+   1.6,
+   3.19,
+   6.38,
+   12.75,
+   25.5
+  ],
+  "fy32": 25.5,
+  "share": 2.26,
+  "gm": "89%",
+  "launch": "FY2028",
+  "pool": "Automotive edge-AI accelerator modules $4.8B (2025)",
+  "capture": "0.20%",
+  "source": "Dataintelo: $4.8B 2025 -> $22.6B 2034, 21% CAGR"
+ },
+ {
+  "name": "A100 compute box 2ch +SDK",
+  "segment": "Systems",
+  "domain": "Compute",
+  "surface": "Silicon & compute",
+  "asp": 160000,
+  "units": [
+   0,
+   113,
+   225,
+   450,
+   900,
+   1800
+  ],
+  "rev": [
+   0,
+   1.81,
+   3.6,
+   7.2,
+   14.4,
+   28.8
+  ],
+  "fy32": 28.8,
+  "share": 2.55,
+  "gm": "89%",
+  "launch": "FY2028",
+  "pool": "Automotive edge-AI accelerator modules $4.8B (2025)",
+  "capture": "0.20%",
+  "source": "Dataintelo: $4.8B 2025 -> $22.6B 2034, 21% CAGR"
+ },
+ {
+  "name": "A100 compute box 4ch +SDK (PCIe)",
+  "segment": "Systems",
+  "domain": "Compute",
+  "surface": "Silicon & compute",
+  "asp": 300000,
+  "units": [
+   0,
+   75,
+   150,
+   300,
+   600,
+   1200
+  ],
+  "rev": [
+   0,
+   2.25,
+   4.5,
+   9,
+   18,
+   36
+  ],
+  "fy32": 36,
+  "share": 3.19,
+  "gm": "89%",
+  "launch": "FY2028",
+  "pool": "Automotive edge-AI accelerator modules $4.8B (2025)",
+  "capture": "0.20%",
+  "source": "Dataintelo: $4.8B 2025 -> $22.6B 2034, 21% CAGR"
+ },
+ {
+  "name": "T100 AI licence (SaaS)",
+  "segment": "Semiconductors",
+  "domain": "Outdoor",
+  "surface": "Silicon & compute",
+  "asp": 10000000,
+  "units": [
+   0,
+   0,
+   2,
+   6,
+   18,
+   50
+  ],
+  "rev": [
+   0,
+   0,
+   2,
+   6,
+   18,
+   50
+  ],
+  "fy32": 50,
+  "share": 4.43,
+  "gm": "94%",
+  "launch": "FY2029",
+  "pool": null,
+  "capture": "—",
+  "source": null
+ },
+ {
+  "name": "Defence D-HUMR",
+  "segment": "Robotics",
+  "domain": "Outdoor",
+  "surface": "Sensors & robotics",
+  "asp": 2000000,
+  "units": [
+   6,
+   15,
+   23,
+   45,
+   88,
+   150
+  ],
+  "rev": [
+   1.2,
+   3,
+   4.6,
+   9,
+   17.6,
+   30
+  ],
+  "fy32": 30,
+  "share": 2.66,
+  "gm": "68%",
+  "launch": "FY2027",
+  "pool": "Indian Army UGV/robotics procurement",
+  "capture": "—",
+  "source": "MoD/Army programs (existing Rs1 Cr revenue)"
+ },
+ {
+  "name": "D100 drone SoC kit",
+  "segment": "Robotics",
+  "domain": "Outdoor",
+  "surface": "Sensors & robotics",
+  "asp": 500000,
+  "units": [
+   0,
+   5,
+   50,
+   125,
+   225,
+   400
+  ],
+  "rev": [
+   0,
+   0.25,
+   2.5,
+   6.25,
+   11.25,
+   20
+  ],
+  "fy32": 20,
+  "share": 1.77,
+  "gm": "68%",
+  "launch": "FY2028",
+  "pool": "India defence + commercial drone SoC",
+  "capture": "—",
+  "source": "Edge-AI drones segment (Mordor 18% CAGR)"
+ }
+]

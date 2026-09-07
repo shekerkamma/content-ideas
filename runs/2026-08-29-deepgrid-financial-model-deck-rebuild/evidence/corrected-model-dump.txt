@@ -1,0 +1,1181 @@
+==========================================================================================
+SHEET: Assumptions
+==========================================================================================
+    B2: Deal terms & chip per Investor Pitch v8 (CORRECTED June 2026); revenue revised to FPGA-only in FY2027, ASIC revenue from FY2028 Q3 earliest. Blue = input, black = formula, green = link.
+    B3: CORRECTION NOTE: FY2027 revenue reflects only FPGA-based products and robot sales. Chipset/ASIC revenue starts FY2028. Opening capital corrected to actual bank balance (Rs2.5L); all prior funding fully deployed.
+    B4: Investment highlights: even a 70% miss (Downside ~Rs339 Cr) still self-funds; SoC4 5nm = robotaxi + datacenter optionality, funded from profit.
+    B5: A.  MACRO & DEAL
+    B6: USD / INR
+    C6: 94
+    J6: Valuation report: Rs9.40 Cr = $1M
+    B7: Corporate tax rate
+    C7: 0.25
+    J7: India effective
+    B8: WACC
+    C8: 0.24
+    J8: Damodaran Jan 2025 (Rf 6.82% + ERP + startup premium)
+    B9: Terminal growth (g)
+    C9: 0.05
+    J9: Long-run
+   B10: Pre-money valuation (Rs Cr)
+   C10: 204.03
+   J10: Investor Pitch v7 Slide 12 / data room
+   B11: Equity raise (Rs Cr)
+   C11: 45
+   J11: Investor Pitch v7: Rs45.00 Cr = $4.79M
+   B12: Price per share (Rs)
+   C12: 20223
+   J12: Investor Pitch v7 Slide 12
+   B13: Existing shares (pre-raise)
+   C13: 100890
+   J13: Cap table
+   B15: Post-money (Rs Cr)
+   C15: 249.03   |F= =C10+C11
+   B16: Investor ownership %
+   C16: 0.1807   |F= =C11/C15
+   B17: New shares (investor)
+   C17: 22252   |F= =ROUND(C11*10000000/C12,0)
+   B19: SCENARIO  (Base / Bull / Bear / Downside)
+   C19: Base
+   J19: Downside = mandate slips, 3 pilots not the market
+   B20: Revenue multiplier
+   C20: 1   |F= =IF(C19="Bull",1.2,IF(C19="Bear",0.75,IF(C19="Downside",0.3,1)))
+   B21: Opex % delta
+   C21: 0   |F= =IF(C19="Bull",-0.03,IF(C19="Bear",0.05,IF(C19="Downside",0.08,0)))
+   B23: B.  GROSS MARGIN BY SEGMENT  (%)
+   B24: Segment
+   C24: FY2027
+   D24: FY2028
+   E24: FY2029
+   F24: FY2030
+   G24: FY2031
+   H24: FY2032
+   J24: Each business its own margin; blends below
+   B25: Systems
+   C25: 0.47
+   D25: 0.73
+   E25: 0.8
+   F25: 0.83
+   G25: 0.86
+   H25: 0.89
+   B26: Sensors
+   C26: 0.3
+   D26: 0.38
+   E26: 0.42
+   F26: 0.45
+   G26: 0.48
+   H26: 0.5
+   B27: Semiconductors
+   C27: 0.55
+   D27: 0.78
+   E27: 0.86
+   F27: 0.9
+   G27: 0.92
+   H27: 0.94
+   B28: Robotics
+   C28: 0.42
+   D28: 0.55
+   E28: 0.6
+   F28: 0.64
+   G28: 0.66
+   H28: 0.68
+   B30: C.  OPEX DRIVERS  (% of revenue)
+   B31: Fiscal year
+   C31: FY2027
+   D31: FY2028
+   E31: FY2029
+   F31: FY2030
+   G31: FY2031
+   H31: FY2032
+   J31: Source: projections Base case
+   B32: R&D % of revenue (total)
+   C32: 0.38
+   D32: 0.37
+   E32: 0.36
+   F32: 0.35
+   G32: 0.34
+   H32: 0.33
+   J32: Total R&D; split into run-rate + SoC4 5nm in P&L
+   B33:   of which: run-rate R&D %
+   C33: 0.3
+   D33: 0.26
+   E33: 0.22
+   F33: 0.19
+   G33: 0.18
+   H33: 0.18
+   J33: Sustaining SoC2 + software; remainder funds SoC4 5nm
+   B34: Sales & Marketing % of revenue
+   C34: 0.15
+   D34: 0.145
+   E34: 0.14
+   F34: 0.135
+   G34: 0.13
+   H34: 0.125
+   B35: G&A % of revenue
+   C35: 0.1
+   D35: 0.095
+   E35: 0.09
+   F35: 0.085
+   G35: 0.08
+   H35: 0.075
+   B36: D&A % of revenue
+   C36: 0.02
+   D36: 0.02
+   E36: 0.02
+   F36: 0.02
+   G36: 0.02
+   H36: 0.02
+   B38: D.  CURRENT STATE (June 2026) — FOR INVESTOR TRANSPARENCY
+   C38: 0.63   |F= =C32+C34+C35+$C$21
+   D38: 0.61   |F= =D32+D34+D35+$C$21
+   E38: 0.59   |F= =E32+E34+E35+$C$21
+   F38: 0.57   |F= =F32+F34+F35+$C$21
+   G38: 0.55   |F= =G32+G34+G35+$C$21
+   H38: 0.53   |F= =H32+H34+H35+$C$21
+   B39: Cash in bank (actual)
+   C39: 0.025
+   J39: Rs2.5L — verified from ICICI bank statement
+   B40: Immediate dues
+   C40: 0.23
+   J40: Rs23L — rent Rs9L + Jiyu vendor Rs8L + salaries Rs4L + EMI Rs2L
+   B41: Bridge funding (incoming)
+   C41: 0.32
+   J41: Rs32L — Rs6L confirmed + Rs6L confirmed + Rs20L personal borrowing
+   B42: Net working capital after dues
+   C42: 0.09   |F= =C41-C40
+   J42: Rs9L usable — ~3 weeks ops at current burn
+   B43: Monthly burn (actual, from bank statement)
+   C43: 1.2
+   J43: Rs12L/month — target cut to Rs8L with team reduction
+   B44: Robot revenue pipeline
+   C44: 0.5
+   J44: Rs50L potential in 60 days from 5 robot sales @ Rs10L, Rs3L build cost
+   B45: SoC2 tapeout status
+   C45: RTL phase
+   J45: 3 blocking issues: B1 OPMODE (30min fix), B2 ITA AllReduce (2wk), RTL-1 pipeline reg (1day)
+   B46: SoC4 3D MALU status
+   C46: Timing closing
+   J46: 169x efficiency proven on Verilator. Timing closure in progress. Patent filing needed immediately.
+==========================================================================================
+SHEET: Revenue Build
+==========================================================================================
+    B2: Revenue Build — Units x ASP
+    B3: Conservative early, then exponential. Revenue = units sold x unit price. Streams sum natively to the total — no scaling, no target plug. Units & ASP from the projections build.
+    B5: A.  PLATFORM SURFACES  (Rs Cr) — one SoC2/A100 chip + stack, four markets
+    B6: Surface
+    E6: FY2027
+    F6: FY2028
+    G6: FY2029
+    H6: FY2030
+    I6: FY2031
+    J6: FY2032
+    B7: Road Autonomy
+    E7: 0.125   |F= =E61+E62+E63
+    F7: 13.2   |F= =F61+F62+F63
+    G7: 79   |F= =G61+G62+G63
+    H7: 200   |F= =H61+H62+H63
+    I7: 417   |F= =I61+I62+I63
+    J7: 762   |F= =J61+J62+J63
+    B8: Silicon & Compute
+    E8: 0   |F= =E69+E70+E71+E72+E73
+    F8: 5.71   |F= =F69+F70+F71+F72+F73
+    G8: 16.4375   |F= =G69+G70+G71+G72+G73
+    H8: 39.375   |F= =H69+H70+H71+H72+H73
+    I8: 90.15   |F= =I69+I70+I71+I72+I73
+    J8: 194.3   |F= =J69+J70+J71+J72+J73
+    B9: Fleet & Mobility
+    E9: 0   |F= =E64+E65
+    F9: 4.206   |F= =F64+F65
+    G9: 8.865   |F= =G64+G65
+    H9: 21.03   |F= =H64+H65
+    I9: 39.795   |F= =I64+I65
+    J9: 88.65   |F= =J64+J65
+   B10: Sensors & Robotics
+   E10: 1.575   |F= =E66+E67+E68+E74+E75
+   F10: 4.7   |F= =F66+F67+F68+F74+F75
+   G10: 11.075   |F= =G66+G67+G68+G74+G75
+   H10: 24.25   |F= =H66+H67+H68+H74+H75
+   I10: 47.35   |F= =I66+I67+I68+I74+I75
+   J10: 83.5   |F= =J66+J67+J68+J74+J75
+   B11: Total (check)
+   E11: 1.7   |F= =SUM(E7:E10)
+   F11: 27.816   |F= =SUM(F7:F10)
+   G11: 115.3775   |F= =SUM(G7:G10)
+   H11: 284.655   |F= =SUM(H7:H10)
+   I11: 594.295   |F= =SUM(I7:I10)
+   J11: 1128.45   |F= =SUM(J7:J10)
+   B12: All four surfaces run on the same chip + software stack (different firmware) — a platform, not separate businesses.
+   B14: B.  REVENUE BY SEGMENT  (Rs Cr)
+   B15: Segment
+   E15: FY2027
+   F15: FY2028
+   G15: FY2029
+   H15: FY2030
+   I15: FY2031
+   J15: FY2032
+   B16: Systems
+   E16: 0.125   |F= =SUMIF($C$61:$C$75,$B16,E$61:E$75)
+   F16: 23.062   |F= =SUMIF($C$61:$C$75,$B16,F$61:F$75)
+   G16: 99.1525   |F= =SUMIF($C$61:$C$75,$B16,G$61:G$75)
+   H16: 243.605   |F= =SUMIF($C$61:$C$75,$B16,H$61:H$75)
+   I16: 501.945   |F= =SUMIF($C$61:$C$75,$B16,I$61:I$75)
+   J16: 940.95   |F= =SUMIF($C$61:$C$75,$B16,J$61:J$75)
+   B17: Sensors
+   E17: 0.375   |F= =SUMIF($C$61:$C$75,$B17,E$61:E$75)
+   F17: 1.45   |F= =SUMIF($C$61:$C$75,$B17,F$61:F$75)
+   G17: 3.975   |F= =SUMIF($C$61:$C$75,$B17,G$61:G$75)
+   H17: 9   |F= =SUMIF($C$61:$C$75,$B17,H$61:H$75)
+   I17: 18.5   |F= =SUMIF($C$61:$C$75,$B17,I$61:I$75)
+   J17: 33.5   |F= =SUMIF($C$61:$C$75,$B17,J$61:J$75)
+   B18: Semiconductors
+   E18: 0   |F= =SUMIF($C$61:$C$75,$B18,E$61:E$75)
+   F18: 0.054   |F= =SUMIF($C$61:$C$75,$B18,F$61:F$75)
+   G18: 5.15   |F= =SUMIF($C$61:$C$75,$B18,G$61:G$75)
+   H18: 16.8   |F= =SUMIF($C$61:$C$75,$B18,H$61:H$75)
+   I18: 45   |F= =SUMIF($C$61:$C$75,$B18,I$61:I$75)
+   J18: 104   |F= =SUMIF($C$61:$C$75,$B18,J$61:J$75)
+   B19: Robotics
+   E19: 1.2   |F= =SUMIF($C$61:$C$75,$B19,E$61:E$75)
+   F19: 3.25   |F= =SUMIF($C$61:$C$75,$B19,F$61:F$75)
+   G19: 7.1   |F= =SUMIF($C$61:$C$75,$B19,G$61:G$75)
+   H19: 15.25   |F= =SUMIF($C$61:$C$75,$B19,H$61:H$75)
+   I19: 28.85   |F= =SUMIF($C$61:$C$75,$B19,I$61:I$75)
+   J19: 50   |F= =SUMIF($C$61:$C$75,$B19,J$61:J$75)
+   B20: Total (check)
+   E20: 1.7   |F= =SUM(E16:E19)
+   F20: 27.816   |F= =SUM(F16:F19)
+   G20: 115.3775   |F= =SUM(G16:G19)
+   H20: 284.655   |F= =SUM(H16:H19)
+   I20: 594.295   |F= =SUM(I16:I19)
+   J20: 1128.45   |F= =SUM(J16:J19)
+   B21: Systems share of revenue
+   E21: 0.0735   |F= =E16/E20
+   F21: 0.8291   |F= =F16/F20
+   G21: 0.8594   |F= =G16/G20
+   H21: 0.8558   |F= =H16/H20
+   I21: 0.8446   |F= =I16/I20
+   J21: 0.8338   |F= =J16/J20
+   B23: C.  INDOOR vs OUTDOOR AUTONOMY  (Rs Cr)
+   B24: Domain
+   E24: FY2027
+   F24: FY2028
+   G24: FY2029
+   H24: FY2030
+   I24: FY2031
+   J24: FY2032
+   B25: Outdoor autonomy
+   E25: 1.7   |F= =SUMIF($D$61:$D$75,"Outdoor",E$61:E$75)
+   F25: 21.054   |F= =SUMIF($D$61:$D$75,"Outdoor",F$61:F$75)
+   G25: 97.825   |F= =SUMIF($D$61:$D$75,"Outdoor",G$61:G$75)
+   H25: 247.55   |F= =SUMIF($D$61:$D$75,"Outdoor",H$61:H$75)
+   I25: 520.35   |F= =SUMIF($D$61:$D$75,"Outdoor",I$61:I$75)
+   J25: 973.5   |F= =SUMIF($D$61:$D$75,"Outdoor",J$61:J$75)
+   B26: Indoor autonomy
+   E26: 0   |F= =SUMIF($D$61:$D$75,"Indoor",E$61:E$75)
+   F26: 1.106   |F= =SUMIF($D$61:$D$75,"Indoor",F$61:F$75)
+   G26: 6.265   |F= =SUMIF($D$61:$D$75,"Indoor",G$61:G$75)
+   H26: 14.53   |F= =SUMIF($D$61:$D$75,"Indoor",H$61:H$75)
+   I26: 28.795   |F= =SUMIF($D$61:$D$75,"Indoor",I$61:I$75)
+   J26: 64.65   |F= =SUMIF($D$61:$D$75,"Indoor",J$61:J$75)
+   B27: General compute (A100 box)
+   E27: 0   |F= =SUMIF($D$61:$D$75,"Compute",E$61:E$75)
+   F27: 5.656   |F= =SUMIF($D$61:$D$75,"Compute",F$61:F$75)
+   G27: 11.2875   |F= =SUMIF($D$61:$D$75,"Compute",G$61:G$75)
+   H27: 22.575   |F= =SUMIF($D$61:$D$75,"Compute",H$61:H$75)
+   I27: 45.15   |F= =SUMIF($D$61:$D$75,"Compute",I$61:I$75)
+   J27: 90.3   |F= =SUMIF($D$61:$D$75,"Compute",J$61:J$75)
+   B28: Total (check)
+   E28: 1.7   |F= =SUM(E25:E27)
+   F28: 27.816   |F= =SUM(F25:F27)
+   G28: 115.3775   |F= =SUM(G25:G27)
+   H28: 284.655   |F= =SUM(H25:H27)
+   I28: 594.295   |F= =SUM(I25:I27)
+   J28: 1128.45   |F= =SUM(J25:J27)
+   B29: Indoor share of revenue
+   E29: 0   |F= =E26/E28
+   F29: 0.0398   |F= =F26/F28
+   G29: 0.0543   |F= =G26/G28
+   H29: 0.051   |F= =H26/H28
+   I29: 0.0485   |F= =I26/I28
+   J29: 0.0573   |F= =J26/J28
+   B30: Indoor = AD1 L4 + AGV (geofenced). Outdoor = road ADAS, trucks, rental, sensors, chip, defence. Compute = A100 box.
+   B32: D.  CUSTOMER BASE  (key accounts / customers)
+   B33: Metric
+   E33: FY2027
+   F33: FY2028
+   G33: FY2029
+   H33: FY2030
+   I33: FY2031
+   J33: FY2032
+   B34: Distinct customers / key accounts
+   E34: 5
+   F34: 15
+   G34: 40
+   H34: 120
+   I34: 300
+   J34: 650
+   B35: Avg revenue per customer (Rs Cr)
+   E35: 0.34   |F= =E76/E34
+   F35: 1.8544   |F= =F76/F34
+   G35: 2.8844   |F= =G76/G34
+   H35: 2.3721   |F= =H76/H34
+   I35: 1.981   |F= =I76/I34
+   J35: 1.7361   |F= =J76/J34
+   B36: Customers grow 5 -> 650 as the AD0 mandate retrofit and fleets scale; de-risks single-account dependence.
+   B41: E.  UNITS x ASP -> REVENUE  (bottom-up detail, Rs Cr)
+   B42: Business line
+   C42: Segment
+   D42: ASP (Rs)
+   E42: FY2027
+   F42: FY2028
+   G42: FY2029
+   H42: FY2030
+   I42: FY2031
+   J42: FY2032
+   B43: Units sold
+   B44: AD0 Smart Mirror (mandate retrofit)
+   C44: Systems
+   D44: 50000
+   E44: 10
+   F44: 2200
+   G44: 8000
+   H44: 18000
+   I44: 34000
+   J44: 54000
+   B45: AD1 Indoor L4 kit
+   C45: Systems
+   D45: 100000
+   E45: 0
+   F45: 20
+   G45: 400
+   H45: 1000
+   I45: 2200
+   J45: 4200
+   B46: Smart Truck (AD2 kit)
+   C46: Systems
+   D46: 250000
+   E46: 3
+   F46: 80
+   G46: 1400
+   H46: 4000
+   I46: 9000
+   J46: 18000
+   B47: Autonomous TaaS
+   C47: Systems
+   D47: 6600000
+   E47: 0
+   F47: 5
+   G47: 10
+   H47: 25
+   I47: 50
+   J47: 100
+   B48: Seaport AGV (port autonomy)
+   C48: Systems
+   D48: 4530000
+   E48: 0
+   F48: 2
+   G48: 5
+   H48: 10
+   I48: 15
+   J48: 50
+   B49: Thermal camera (aftermarket)
+   C49: Sensors
+   D49: 50000
+   E49: 40
+   F49: 150
+   G49: 400
+   H49: 900
+   I49: 1800
+   J49: 3200
+   B50: 4D radar pod (aftermarket)
+   C50: Sensors
+   D50: 25000
+   E50: 30
+   F50: 120
+   G50: 350
+   H50: 800
+   I50: 1600
+   J50: 3000
+   B51: H100 driver-monitor wearable
+   C51: Sensors
+   D51: 5000
+   E51: 200
+   F51: 800
+   G51: 2200
+   H51: 5000
+   I51: 11000
+   J51: 20000
+   B52: Chipset OEM B2B (ASIC die)
+   C52: Semiconductors
+   D52: 18000
+   E52: 0
+   F52: 30
+   G52: 1750
+   H52: 6000
+   I52: 15000
+   J52: 30000
+   B53: A100 compute box 1ch +SDK (M.2)
+   C53: Systems
+   D53: 85000
+   E53: 0
+   F53: 188
+   G53: 375
+   H53: 750
+   I53: 1500
+   J53: 3000
+   B54: A100 compute box 2ch +SDK
+   C54: Systems
+   D54: 160000
+   E54: 0
+   F54: 113
+   G54: 225
+   H54: 450
+   I54: 900
+   J54: 1800
+   B55: A100 compute box 4ch +SDK (PCIe)
+   C55: Systems
+   D55: 300000
+   E55: 0
+   F55: 75
+   G55: 150
+   H55: 300
+   I55: 600
+   J55: 1200
+   B56: T100 AI licence (SaaS)
+   C56: Semiconductors
+   D56: 10000000
+   E56: 0
+   F56: 0
+   G56: 2
+   H56: 6
+   I56: 18
+   J56: 50
+   B57: Defence D-HUMR
+   C57: Robotics
+   D57: 2000000
+   E57: 6
+   F57: 15
+   G57: 23
+   H57: 45
+   I57: 88
+   J57: 150
+   B58: D100 drone SoC kit
+   C58: Robotics
+   D58: 500000
+   E58: 0
+   F58: 5
+   G58: 50
+   H58: 125
+   I58: 225
+   J58: 400
+   B60: Revenue (Rs Cr = units x ASP / 1e7, x scenario)
+   D60: Domain
+   B61: AD0 Smart Mirror (mandate retrofit)
+   C61: Systems
+   D61: Outdoor
+   E61: 0.05   |F= =E44*$D44/10000000*Assumptions!$C$20
+   F61: 11   |F= =F44*$D44/10000000*Assumptions!$C$20
+   G61: 40   |F= =G44*$D44/10000000*Assumptions!$C$20
+   H61: 90   |F= =H44*$D44/10000000*Assumptions!$C$20
+   I61: 170   |F= =I44*$D44/10000000*Assumptions!$C$20
+   J61: 270   |F= =J44*$D44/10000000*Assumptions!$C$20
+   B62: AD1 Indoor L4 kit
+   C62: Systems
+   D62: Indoor
+   E62: 0   |F= =E45*$D45/10000000*Assumptions!$C$20
+   F62: 0.2   |F= =F45*$D45/10000000*Assumptions!$C$20
+   G62: 4   |F= =G45*$D45/10000000*Assumptions!$C$20
+   H62: 10   |F= =H45*$D45/10000000*Assumptions!$C$20
+   I62: 22   |F= =I45*$D45/10000000*Assumptions!$C$20
+   J62: 42   |F= =J45*$D45/10000000*Assumptions!$C$20
+   B63: Smart Truck (AD2 kit)
+   C63: Systems
+   D63: Outdoor
+   E63: 0.075   |F= =E46*$D46/10000000*Assumptions!$C$20
+   F63: 2   |F= =F46*$D46/10000000*Assumptions!$C$20
+   G63: 35   |F= =G46*$D46/10000000*Assumptions!$C$20
+   H63: 100   |F= =H46*$D46/10000000*Assumptions!$C$20
+   I63: 225   |F= =I46*$D46/10000000*Assumptions!$C$20
+   J63: 450   |F= =J46*$D46/10000000*Assumptions!$C$20
+   B64: Autonomous TaaS
+   C64: Systems
+   D64: Outdoor
+   E64: 0   |F= =E47*$D47/10000000*Assumptions!$C$20
+   F64: 3.3   |F= =F47*$D47/10000000*Assumptions!$C$20
+   G64: 6.6   |F= =G47*$D47/10000000*Assumptions!$C$20
+   H64: 16.5   |F= =H47*$D47/10000000*Assumptions!$C$20
+   I64: 33   |F= =I47*$D47/10000000*Assumptions!$C$20
+   J64: 66   |F= =J47*$D47/10000000*Assumptions!$C$20
+   B65: Seaport AGV (port autonomy)
+   C65: Systems
+   D65: Indoor
+   E65: 0   |F= =E48*$D48/10000000*Assumptions!$C$20
+   F65: 0.906   |F= =F48*$D48/10000000*Assumptions!$C$20
+   G65: 2.265   |F= =G48*$D48/10000000*Assumptions!$C$20
+   H65: 4.53   |F= =H48*$D48/10000000*Assumptions!$C$20
+   I65: 6.795   |F= =I48*$D48/10000000*Assumptions!$C$20
+   J65: 22.65   |F= =J48*$D48/10000000*Assumptions!$C$20
+   B66: Thermal camera (aftermarket)
+   C66: Sensors
+   D66: Outdoor
+   E66: 0.2   |F= =E49*$D49/10000000*Assumptions!$C$20
+   F66: 0.75   |F= =F49*$D49/10000000*Assumptions!$C$20
+   G66: 2   |F= =G49*$D49/10000000*Assumptions!$C$20
+   H66: 4.5   |F= =H49*$D49/10000000*Assumptions!$C$20
+   I66: 9   |F= =I49*$D49/10000000*Assumptions!$C$20
+   J66: 16   |F= =J49*$D49/10000000*Assumptions!$C$20
+   B67: 4D radar pod (aftermarket)
+   C67: Sensors
+   D67: Outdoor
+   E67: 0.075   |F= =E50*$D50/10000000*Assumptions!$C$20
+   F67: 0.3   |F= =F50*$D50/10000000*Assumptions!$C$20
+   G67: 0.875   |F= =G50*$D50/10000000*Assumptions!$C$20
+   H67: 2   |F= =H50*$D50/10000000*Assumptions!$C$20
+   I67: 4   |F= =I50*$D50/10000000*Assumptions!$C$20
+   J67: 7.5   |F= =J50*$D50/10000000*Assumptions!$C$20
+   B68: H100 driver-monitor wearable
+   C68: Sensors
+   D68: Outdoor
+   E68: 0.1   |F= =E51*$D51/10000000*Assumptions!$C$20
+   F68: 0.4   |F= =F51*$D51/10000000*Assumptions!$C$20
+   G68: 1.1   |F= =G51*$D51/10000000*Assumptions!$C$20
+   H68: 2.5   |F= =H51*$D51/10000000*Assumptions!$C$20
+   I68: 5.5   |F= =I51*$D51/10000000*Assumptions!$C$20
+   J68: 10   |F= =J51*$D51/10000000*Assumptions!$C$20
+   B69: Chipset OEM B2B (ASIC die)
+   C69: Semiconductors
+   D69: Outdoor
+   E69: 0   |F= =E52*$D52/10000000*Assumptions!$C$20
+   F69: 0.054   |F= =F52*$D52/10000000*Assumptions!$C$20
+   G69: 3.15   |F= =G52*$D52/10000000*Assumptions!$C$20
+   H69: 10.8   |F= =H52*$D52/10000000*Assumptions!$C$20
+   I69: 27   |F= =I52*$D52/10000000*Assumptions!$C$20
+   J69: 54   |F= =J52*$D52/10000000*Assumptions!$C$20
+   B70: A100 compute box 1ch +SDK (M.2)
+   C70: Systems
+   D70: Compute
+   E70: 0   |F= =E53*$D53/10000000*Assumptions!$C$20
+   F70: 1.598   |F= =F53*$D53/10000000*Assumptions!$C$20
+   G70: 3.1875   |F= =G53*$D53/10000000*Assumptions!$C$20
+   H70: 6.375   |F= =H53*$D53/10000000*Assumptions!$C$20
+   I70: 12.75   |F= =I53*$D53/10000000*Assumptions!$C$20
+   J70: 25.5   |F= =J53*$D53/10000000*Assumptions!$C$20
+   B71: A100 compute box 2ch +SDK
+   C71: Systems
+   D71: Compute
+   E71: 0   |F= =E54*$D54/10000000*Assumptions!$C$20
+   F71: 1.808   |F= =F54*$D54/10000000*Assumptions!$C$20
+   G71: 3.6   |F= =G54*$D54/10000000*Assumptions!$C$20
+   H71: 7.2   |F= =H54*$D54/10000000*Assumptions!$C$20
+   I71: 14.4   |F= =I54*$D54/10000000*Assumptions!$C$20
+   J71: 28.8   |F= =J54*$D54/10000000*Assumptions!$C$20
+   B72: A100 compute box 4ch +SDK (PCIe)
+   C72: Systems
+   D72: Compute
+   E72: 0   |F= =E55*$D55/10000000*Assumptions!$C$20
+   F72: 2.25   |F= =F55*$D55/10000000*Assumptions!$C$20
+   G72: 4.5   |F= =G55*$D55/10000000*Assumptions!$C$20
+   H72: 9   |F= =H55*$D55/10000000*Assumptions!$C$20
+   I72: 18   |F= =I55*$D55/10000000*Assumptions!$C$20
+   J72: 36   |F= =J55*$D55/10000000*Assumptions!$C$20
+   B73: T100 AI licence (SaaS)
+   C73: Semiconductors
+   D73: Outdoor
+   E73: 0   |F= =E56*$D56/10000000*Assumptions!$C$20
+   F73: 0   |F= =F56*$D56/10000000*Assumptions!$C$20
+   G73: 2   |F= =G56*$D56/10000000*Assumptions!$C$20
+   H73: 6   |F= =H56*$D56/10000000*Assumptions!$C$20
+   I73: 18   |F= =I56*$D56/10000000*Assumptions!$C$20
+   J73: 50   |F= =J56*$D56/10000000*Assumptions!$C$20
+   B74: Defence D-HUMR
+   C74: Robotics
+   D74: Outdoor
+   E74: 1.2   |F= =E57*$D57/10000000*Assumptions!$C$20
+   F74: 3   |F= =F57*$D57/10000000*Assumptions!$C$20
+   G74: 4.6   |F= =G57*$D57/10000000*Assumptions!$C$20
+   H74: 9   |F= =H57*$D57/10000000*Assumptions!$C$20
+   I74: 17.6   |F= =I57*$D57/10000000*Assumptions!$C$20
+   J74: 30   |F= =J57*$D57/10000000*Assumptions!$C$20
+   B75: D100 drone SoC kit
+   C75: Robotics
+   D75: Outdoor
+   E75: 0   |F= =E58*$D58/10000000*Assumptions!$C$20
+   F75: 0.25   |F= =F58*$D58/10000000*Assumptions!$C$20
+   G75: 2.5   |F= =G58*$D58/10000000*Assumptions!$C$20
+   H75: 6.25   |F= =H58*$D58/10000000*Assumptions!$C$20
+   I75: 11.25   |F= =I58*$D58/10000000*Assumptions!$C$20
+   J75: 20   |F= =J58*$D58/10000000*Assumptions!$C$20
+   B76: TOTAL REVENUE (Rs Cr)
+   E76: 1.7   |F= =SUM(E61:E75)
+   F76: 27.816   |F= =SUM(F61:F75)
+   G76: 115.3775   |F= =SUM(G61:G75)
+   H76: 284.655   |F= =SUM(H61:H75)
+   I76: 594.295   |F= =SUM(I61:I75)
+   J76: 1128.45   |F= =SUM(J61:J75)
+   B77: Growth % (YoY)
+   F77: 15.3624   |F= =F76/E76-1
+   G77: 3.1479   |F= =G76/F76-1
+   H77: 1.4672   |F= =H76/G76-1
+   I77: 1.0878   |F= =I76/H76-1
+   J77: 0.8988   |F= =J76/I76-1
+   B78: Bottom-up: every line is units x ASP; nothing is plugged. Scenario multiplier from Assumptions.
+==========================================================================================
+SHEET: P&L
+==========================================================================================
+    B2: P&L Summary  (Rs Cr)
+    B3: Revenue links from Revenue Build (green). COGS, opex, EBITDA, net income are all derived. EBITDA = gross profit - operating expense.
+    B5: Line item
+    C5: FY2027
+    D5: FY2028
+    E5: FY2029
+    F5: FY2030
+    G5: FY2031
+    H5: FY2032
+    B6: Revenue
+    C6: 1.7   |F= ='Revenue Build'!E76
+    D6: 27.816   |F= ='Revenue Build'!F76
+    E6: 115.3775   |F= ='Revenue Build'!G76
+    F6: 284.655   |F= ='Revenue Build'!H76
+    G6: 594.295   |F= ='Revenue Build'!I76
+    H6: 1128.45   |F= ='Revenue Build'!J76
+    B7: Gross profit
+    C7: 0.6753   |F= ='Revenue Build'!E16*Assumptions!C25+'Revenue Build'!E17*Assumptions!C26+'Revenue Build'!E18*Assumptions!C27+'Revenue Build'!E19*Assumptions!C28
+    D7: 19.2159   |F= ='Revenue Build'!F16*Assumptions!D25+'Revenue Build'!F17*Assumptions!D26+'Revenue Build'!F18*Assumptions!D27+'Revenue Build'!F19*Assumptions!D28
+    E7: 89.6805   |F= ='Revenue Build'!G16*Assumptions!E25+'Revenue Build'!G17*Assumptions!E26+'Revenue Build'!G18*Assumptions!E27+'Revenue Build'!G19*Assumptions!E28
+    F7: 231.1222   |F= ='Revenue Build'!H16*Assumptions!F25+'Revenue Build'!H17*Assumptions!F26+'Revenue Build'!H18*Assumptions!F27+'Revenue Build'!H19*Assumptions!F28
+    G7: 500.9937   |F= ='Revenue Build'!I16*Assumptions!G25+'Revenue Build'!I17*Assumptions!G26+'Revenue Build'!I18*Assumptions!G27+'Revenue Build'!I19*Assumptions!G28
+    H7: 985.9555   |F= ='Revenue Build'!J16*Assumptions!H25+'Revenue Build'!J17*Assumptions!H26+'Revenue Build'!J18*Assumptions!H27+'Revenue Build'!J19*Assumptions!H28
+    J7: Sum of segment revenue x segment GM
+    B8:   COGS
+    C8: 1.0248   |F= =C6-C7
+    D8: 8.6001   |F= =D6-D7
+    E8: 25.697   |F= =E6-E7
+    F8: 53.5329   |F= =F6-F7
+    G8: 93.3013   |F= =G6-G7
+    H8: 142.4945   |F= =H6-H7
+    B9:   R&D (total)
+    C9: 0.646   |F= =C6*Assumptions!C32
+    D9: 10.2919   |F= =D6*Assumptions!D32
+    E9: 41.5359   |F= =E6*Assumptions!E32
+    F9: 99.6292   |F= =F6*Assumptions!F32
+    G9: 202.0603   |F= =G6*Assumptions!G32
+    H9: 372.3885   |F= =H6*Assumptions!H32
+   B10:      run-rate R&D
+   C10: 0.51   |F= =C6*Assumptions!C33
+   D10: 7.2322   |F= =D6*Assumptions!D33
+   E10: 25.3831   |F= =E6*Assumptions!E33
+   F10: 54.0844   |F= =F6*Assumptions!F33
+   G10: 106.9731   |F= =G6*Assumptions!G33
+   H10: 203.121   |F= =H6*Assumptions!H33
+   J10: Sustaining SoC2 + software
+   B11:      SoC4 5nm tape-out program
+   C11: 0.136   |F= =C9-C10
+   D11: 3.0598   |F= =D9-D10
+   E11: 16.1529   |F= =E9-E10
+   F11: 45.5448   |F= =F9-F10
+   G11: 95.0872   |F= =G9-G10
+   H11: 169.2675   |F= =H9-H10
+   J11: Next-gen 5nm chip for L4/robotaxi horizon
+   B12:   Sales & Marketing
+   C12: 0.255   |F= =C6*Assumptions!C34
+   D12: 4.0333   |F= =D6*Assumptions!D34
+   E12: 16.1529   |F= =E6*Assumptions!E34
+   F12: 38.4284   |F= =F6*Assumptions!F34
+   G12: 77.2583   |F= =G6*Assumptions!G34
+   H12: 141.0563   |F= =H6*Assumptions!H34
+   B13:   G&A
+   C13: 0.17   |F= =C6*Assumptions!C35
+   D13: 2.6425   |F= =D6*Assumptions!D35
+   E13: 10.384   |F= =E6*Assumptions!E35
+   F13: 24.1957   |F= =F6*Assumptions!F35
+   G13: 47.5436   |F= =G6*Assumptions!G35
+   H13: 84.6338   |F= =H6*Assumptions!H35
+   B14: Total operating expense
+   C14: 1.071   |F= =(C9+C12+C13)+C6*Assumptions!$C$21
+   D14: 16.9678   |F= =(D9+D12+D13)+D6*Assumptions!$C$21
+   E14: 68.0727   |F= =(E9+E12+E13)+E6*Assumptions!$C$21
+   F14: 162.2534   |F= =(F9+F12+F13)+F6*Assumptions!$C$21
+   G14: 326.8623   |F= =(G9+G12+G13)+G6*Assumptions!$C$21
+   H14: 598.0785   |F= =(H9+H12+H13)+H6*Assumptions!$C$21
+   J14: incl. scenario opex delta
+   B15: EBITDA
+   C15: -0.3957   |F= =C7-C14
+   D15: 2.2481   |F= =D7-D14
+   E15: 21.6078   |F= =E7-E14
+   F15: 68.8688   |F= =F7-F14
+   G15: 174.1315   |F= =G7-G14
+   H15: 387.877   |F= =H7-H14
+   J15: Gross profit - operating expense
+   B16: D&A
+   C16: 0.034   |F= =C6*Assumptions!C36
+   D16: 0.5563   |F= =D6*Assumptions!D36
+   E16: 2.3075   |F= =E6*Assumptions!E36
+   F16: 5.6931   |F= =F6*Assumptions!F36
+   G16: 11.8859   |F= =G6*Assumptions!G36
+   H16: 22.569   |F= =H6*Assumptions!H36
+   B17: EBIT
+   C17: -0.4298   |F= =C15-C16
+   D17: 1.6918   |F= =D15-D16
+   E17: 19.3002   |F= =E15-E16
+   F17: 63.1757   |F= =F15-F16
+   G17: 162.2456   |F= =G15-G16
+   H17: 365.308   |F= =H15-H16
+   B18:   Loss carryforward (opening)
+   C18: 0   |F= =0
+   D18: 0.4298   |F= =C21
+   E18: 0   |F= =D21
+   F18: 0   |F= =E21
+   G18: 0   |F= =F21
+   H18: 0   |F= =G21
+   B19:   Taxable income (after losses)
+   C19: 0   |F= =MAX(C17-C18,0)
+   D19: 1.262   |F= =MAX(D17-D18,0)
+   E19: 19.3002   |F= =MAX(E17-E18,0)
+   F19: 63.1757   |F= =MAX(F17-F18,0)
+   G19: 162.2456   |F= =MAX(G17-G18,0)
+   H19: 365.308   |F= =MAX(H17-H18,0)
+   B20: Tax (25%, post-carryforward)
+   C20: 0   |F= =C19*Assumptions!$C$7
+   D20: 0.3155   |F= =D19*Assumptions!$C$7
+   E20: 4.8251   |F= =E19*Assumptions!$C$7
+   F20: 15.7939   |F= =F19*Assumptions!$C$7
+   G20: 40.5614   |F= =G19*Assumptions!$C$7
+   H20: 91.327   |F= =H19*Assumptions!$C$7
+   B21:   Loss carryforward (closing)
+   C21: 0.4298   |F= =MAX(C18-MAX(C17,0),0)+MAX(-C17,0)
+   D21: 0   |F= =MAX(D18-MAX(D17,0),0)+MAX(-D17,0)
+   E21: 0   |F= =MAX(E18-MAX(E17,0),0)+MAX(-E17,0)
+   F21: 0   |F= =MAX(F18-MAX(F17,0),0)+MAX(-F17,0)
+   G21: 0   |F= =MAX(G18-MAX(G17,0),0)+MAX(-G17,0)
+   H21: 0   |F= =MAX(H18-MAX(H17,0),0)+MAX(-H17,0)
+   B22: Net income
+   C22: -0.4298   |F= =C17-C20
+   D22: 1.3763   |F= =D17-D20
+   E22: 14.4752   |F= =E17-E20
+   F22: 47.3818   |F= =F17-F20
+   G22: 121.6842   |F= =G17-G20
+   H22: 273.981   |F= =H17-H20
+   B24:   Gross margin %
+   C24: 0.3972   |F= =C7/C6
+   D24: 0.6908   |F= =D7/D6
+   E24: 0.7773   |F= =E7/E6
+   F24: 0.8119   |F= =F7/F6
+   G24: 0.843   |F= =G7/G6
+   H24: 0.8737   |F= =H7/H6
+   B25:   EBITDA margin %
+   C25: -0.2328   |F= =C15/C6
+   D25: 0.0808   |F= =D15/D6
+   E25: 0.1873   |F= =E15/E6
+   F25: 0.2419   |F= =F15/F6
+   G25: 0.293   |F= =G15/G6
+   H25: 0.3437   |F= =H15/H6
+   B26:   Net margin %
+   C26: -0.2528   |F= =C22/C6
+   D26: 0.0495   |F= =D22/D6
+   E26: 0.1255   |F= =E22/E6
+   F26: 0.1665   |F= =F22/F6
+   G26: 0.2048   |F= =G22/G6
+   H26: 0.2428   |F= =H22/H6
+   B28: Bottom-up build: units x ASP sum natively (no target plug). Deal terms & chip per Investor Pitch v7.
+   B29: R&D stays high by design: ~Rs300 Cr cumulative funds the SoC4 5nm tape-out (L4/robotaxi) from operating profit — the next silicon generation, self-funded.
+==========================================================================================
+SHEET: Use of Funds
+==========================================================================================
+    B2: Use of Funds — Rs45 Cr Equity + Rs10 Cr CGTMSE Loan
+    B3: Two sources: Rs45 Cr equity round funds the tapeout; a Rs10 Cr CGTMSE-backed loan funds working capital (debt, non-dilutive).
+    B5: SOURCES OF CAPITAL
+    B6: Source
+    C6: $M
+    D6: Rs Cr
+    B7: Pre-Series A equity round
+    C7: 4.7872   |F= =D7*10/Assumptions!C6
+    D7: 45   |F= =Assumptions!C11
+    G7: Equity; funds the SoC2 tapeout (18.07% to investor)
+    B8: CGTMSE-backed term loan
+    C8: 1.0638   |F= =D8*10/Assumptions!C6
+    D8: 10
+    G8: Rs10 Cr (~$1.06M) collateral-free MSME debt; funds working capital, non-dilutive
+    B9: Total capital available
+    C9: 5.8511   |F= =SUM(C7:C8)
+    D9: 55   |F= =SUM(D7:D8)
+   B11: USE OF CAPITAL
+   B12: Allocation
+   C12: $M
+   D12: Rs Cr
+   E12: % of total
+   B13: SoC2 tapeout NRE + IP (phased: MPW blocks -> full die -> dedicated mask)
+   C13: 3.17
+   D13: 29.798   |F= =C13*Assumptions!C6/10
+   E13: 0.5418   |F= =C13/$C$9
+   G13: Equity-funded. See Tapeout Unit Economics tab
+   B14: Engineering (chip + firmware + defence)
+   C14: 0.96
+   D14: 9.024   |F= =C14*Assumptions!C6/10
+   E14: 0.1641   |F= =C14/$C$9
+   G14: Equity-funded; ~18-mo runway to RTL->GDS
+   B15: AIS-162/188 certification + FPGA pilot
+   C15: 0.48
+   D15: 4.512   |F= =C15*Assumptions!C6/10
+   E15: 0.082   |F= =C15/$C$9
+   G15: Equity-funded; ARAI / ICAT + 100 pilot units
+   B16: Working capital / BD / inventory
+   C16: 1.24
+   D16: 11.656   |F= =C16*Assumptions!C6/10
+   E16: 0.2119   |F= =C16/$C$9
+   G16: Rs10 Cr CGTMSE loan + equity remainder
+   B17: Total
+   C17: 5.85   |F= =SUM(C13:C16)
+   D17: 54.99   |F= =SUM(D13:D16)
+   E17: 0.9998   |F= =SUM(E13:E16)
+   B18: Silicon (NRE + IP) as % of equity round
+   C18: 0.6622   |F= =C13/C7
+   G18: Equity round is ~all silicon; loan covers working capital
+   B20: Grants & prior funding (context, not part of this raise)
+   B21: ARAI certification grant
+   C21: 0.36
+   G21: Rs36 lakh - received
+   B22: HDFC Parivartan grant
+   C22: 0.12
+   G22: ~Rs2 Cr — fully deployed in operations (bank statement verified)
+   B23: Angel funding to date
+   C23: 2
+   G23: Rs1 Cr - MCEME/Army food robot — received and fully deployed in operations
+   B24: Defence revenue received
+   C24: 1
+   G24: Rs1 Cr - MCEME/Army, on FPGA
+   B25: CURRENT CASH POSITION (June 2026)
+   C25: 0.025
+   G25: Rs2.5L actual bank balance — bridge funding being arranged
+==========================================================================================
+SHEET: Tapeout Unit Economics
+==========================================================================================
+    B2: SoC2 Tapeout — Unit Economics
+    B3: What the raise funds. One-time NRE turns into a chip that costs ~$3 at volume vs $3,000-8,000 incumbents. Blue = input, black = formula.
+    B5: A.  PHASED TAPEOUT PROGRAM  (what the raise funds)
+    B6: Phase / item
+    C6: $
+    D6: Rs Cr
+    B7: A100 block MPW (5mm2 x $13,800/mm2, 100 samples)
+    C7: 69000
+    D7: 0.6486   |F= =C7*Assumptions!C6/10000000
+    J7: muSemi shared block, TSMC 28nm; compute block
+    B8: R100 block MPW (5mm2 x $13,800/mm2, 100 samples)
+    C8: 69000
+    D8: 0.6486   |F= =C8*Assumptions!C6/10000000
+    J8: muSemi shared block; radar DSP block
+    B9: Full 57mm2 MPW prototype (1p8m 8-metal)
+    C9: 232000
+    D9: 2.1808   |F= =C9*Assumptions!C6/10000000
+    J9: muSemi full block $220k + 5 proto wafers @ $2,400
+   B10: SmartSoC backend -> GDSII (PD / DFT / integration / signoff)
+   C10: 1000000
+   D10: 9.4   |F= =C10*Assumptions!C6/10000000
+   J10: After MPW blocks proven
+   B11: Dedicated mask set (TSMC 28nm 1p8m, negotiable)
+   C11: 1000000
+   D11: 9.4   |F= =C11*Assumptions!C6/10000000
+   J11: Full production mask, separate foundry cost
+   B12: IP — PrimeSoC MIPI + PCIe4 + LPDDR5X
+   C12: 300000
+   D12: 2.82   |F= =C12*Assumptions!C6/10000000
+   J12: Controller IP bundle (one-time licence)
+   B13: IP — Terminus Circuits PHY
+   C13: 500000
+   D13: 4.7   |F= =C13*Assumptions!C6/10000000
+   J13: PHY IP; $400-600k negotiable, midpoint
+   B14: Total program NRE (one-time)
+   C14: 3170000   |F= =SUM(C7:C13)
+   D14: 29.798   |F= =SUM(D7:D13)
+   J14: ~$3.2M total; validate A100/R100 blocks on MPW, then full die, then dedicated mask
+   B17: B.  PER-DIE COST AT VOLUME  (derived from die size + yield)
+   B18: SoC2 die area (mm2)
+   C18: 57
+   J18: v7 single-die SoC2, TSMC 28nm HPC+
+   B19: Wafer diameter (mm)
+   C19: 300
+   J19: Standard 300mm wafer
+   B20: Gross die per wafer (edge-corrected)
+   C20: 1069   |F= =ROUND(PI()*((C19/2-3)^2)/C18-PI()*(C19-6)/SQRT(C18),0)
+   J20: GDPW formula: pi*r^2/A - pi*2r/sqrt(A)
+   B21: Yield (mature 28nm)
+   C21: 0.945
+   J21: Murphy model at ~0.1/cm2 defect density
+   B22: Good die per wafer
+   C22: 1010   |F= =ROUND(C20*C21,0)
+   J22: Gross die x yield
+   B23: 28nm wafer cost ($/wafer)
+   C23: 2400
+   J23: Volume-committed price (~500k dies); TSMC 28nm
+   B24: Wafer cost per die ($)
+   C24: 2.3762   |F= =C23/C22
+   J24: Wafer cost / good die
+   B25: Assembly, test & packaging ($)
+   C25: 1.5
+   J25: OSAT / QuikPak at volume
+   B26: Per-die cost at volume ($)
+   C26: 3.8762   |F= =C24+C25
+   J26: Wafer/die + ATP
+   B28: Incumbent ADAS SoC cost ($)
+   C28: 3000
+   J28: Mobileye/Nvidia class: $3,000-8,000
+   B29: Cost advantage vs incumbent (x)
+   C29: 773.9464   |F= =C28/C26
+   B31: C.  NRE BREAKEVEN
+   B32: Chip contribution inside a kit ($/chip)
+   C32: 22
+   J32: ASIC replaces Rs65k FPGA module; priced inside kit BOM
+   B33: Gross margin per chip ($)
+   C33: 18.1238   |F= =C32-C26
+   B34: Breakeven volume (chips to recover NRE)
+   C34: 174908   |F= =ROUND(C14/C33,0)
+   J34: Total NRE / gross margin per chip
+   B36: Phased path de-risks the spend: prove A100 & R100 blocks on shared MPW, then a full-die
+   B37: prototype, and commit to the dedicated mask only once silicon works. Post-breakeven, every chip is near-pure margin.
+   B38: Production is demand-driven (~217k dies through FY32); the dedicated mask is built for a ~500k-die
+   B39: lifetime target, and that volume commitment is what earns the ~$2,400/wafer price used above.
+   B41: D.  SoC4 5nm SLIP SENSITIVITY
+   B42: Silicon & Compute revenue FY32 (on-time)
+   C42: 194.3   |F= ='Revenue Build'!J8
+   B43: Haircut if SoC4 tapes out 12 months late
+   C43: 0.3
+   B44: Silicon & Compute revenue FY32 (slip case)
+   C44: 136.01   |F= =C42*(1-C43)
+   J44: ~Rs58 Cr lost; chip+box ramp pushed one year right
+   B45: If SoC4 5nm slips 12 months, FY32 Silicon & Compute revenue falls ~30% (~Rs58 Cr). Core road-ADAS business on SoC2 is unaffected.
+   B47: E.  BEYOND FY32 — THE NEXT GROWTH WAVE
+   B48: SoC4 5nm is the option on the next two markets, both arriving post-FY32:
+   B49:    1. Robotaxi / L4 on Indian roads — SoC4 is the compute to win it; we are chip-ready when the market arrives.
+   B50:    2. Datacenter-class chipset — a bigger bet: the same transformer-native architecture scaled to datacenter inference.
+   B51: The Rs300 Cr cumulative R&D (FY28-32) is not a cost centre — it funds these two options from operating profit, so the
+   B52: FY33+ growth wave needs no new external capital for silicon. This is why R&D runs high by design.
+==========================================================================================
+SHEET: Cash Flow & Runway
+==========================================================================================
+    B2: Cash Flow & Runway  (Rs Cr)
+    B3: Does the Rs45 Cr round carry the company to self-funding? Operating cash from the P&L, less capex, tracked against the opening war chest.
+    B5: A.  OPENING CAPITAL
+    B6: Equity raise (this round)
+    C6: 45   |F= =Assumptions!C11
+    B7: Grants + angel + defence (in hand)
+    C7: 0.025
+    J7: CORRECTED: Actual bank balance Rs2.5L as of June 2026. All prior grants, angel funding (Rs2 Cr), and defence revenue (Rs1 Cr MCEME) fully deployed in operations.
+    B8: Total opening cash
+    C8: 45.025   |F= =C6+C7
+   B10: B.  ANNUAL CASH FLOW
+   B11: Fiscal year
+   C11: FY2027
+   D11: FY2028
+   E11: FY2029
+   F11: FY2030
+   G11: FY2031
+   H11: FY2032
+   B12: Operating cash flow (NI + D&A)
+   C12: -0.3957   |F= ='P&L'!C22+'P&L'!C16
+   D12: 1.9326   |F= ='P&L'!D22+'P&L'!D16
+   E12: 16.7827   |F= ='P&L'!E22+'P&L'!E16
+   F12: 53.0749   |F= ='P&L'!F22+'P&L'!F16
+   G12: 133.5701   |F= ='P&L'!G22+'P&L'!G16
+   H12: 296.55   |F= ='P&L'!H22+'P&L'!H16
+   B13: Less: tapeout capex (one-time)
+   C13: -18
+   D13: -10
+   E13: -2
+   F13: 0
+   G13: 0
+   H13: 0
+   J13: SoC2 NRE+IP ~Rs30 Cr, mostly FY27-28
+   B14: Less: other capex (equipment, lab)
+   C14: -1
+   D14: -1.5
+   E14: -2
+   F14: -3
+   G14: -4
+   H14: -5
+   B15: Memo: TaaS fleet debt outstanding (cumulative)
+   C15: 0.6
+   D15: 3
+   E15: 6
+   F15: 15
+   G15: 30
+   H15: 60
+   B16: Interest rate on fleet debt
+   C16: 0.15
+   J16: Indian asset-backed lending, pre-profit startup
+   B17: Less: TaaS debt interest
+   C17: -0.09   |F= =-C15*$C$16
+   D17: -0.45   |F= =-D15*$C$16
+   E17: -0.9   |F= =-E15*$C$16
+   F17: -2.25   |F= =-F15*$C$16
+   G17: -4.5   |F= =-G15*$C$16
+   H17: -9   |F= =-H15*$C$16
+   B18: NWC as % of revenue
+   C18: 0.15
+   J18: Inventory + receivables - payables; Indian OEMs pay 60-90d
+   B19: Net working capital (balance)
+   C19: 0.255   |F= ='P&L'!C6*$C$18
+   D19: 4.1724   |F= ='P&L'!D6*$C$18
+   E19: 17.3066   |F= ='P&L'!E6*$C$18
+   F19: 42.6983   |F= ='P&L'!F6*$C$18
+   G19: 89.1442   |F= ='P&L'!G6*$C$18
+   H19: 169.2675   |F= ='P&L'!H6*$C$18
+   B20: Less: change in working capital
+   C20: -0.255   |F= =-C19
+   D20: -3.9174   |F= =-(D19-C19)
+   E20: -13.1342   |F= =-(E19-D19)
+   F20: -25.3916   |F= =-(F19-E19)
+   G20: -46.446   |F= =-(G19-F19)
+   H20: -80.1232   |F= =-(H19-G19)
+   B21: Net cash flow for the year
+   C21: -19.7407   |F= =C12+C13+C14+C17+C20
+   D21: -13.9348   |F= =D12+D13+D14+D17+D20
+   E21: -1.2515   |F= =E12+E13+E14+E17+E20
+   F21: 22.4333   |F= =F12+F13+F14+F17+F20
+   G21: 78.6241   |F= =G12+G13+G14+G17+G20
+   H21: 202.4267   |F= =H12+H13+H14+H17+H20
+   B23: C.  CASH BALANCE
+   B24: Fiscal year
+   C24: FY2027
+   D24: FY2028
+   E24: FY2029
+   F24: FY2030
+   G24: FY2031
+   H24: FY2032
+   B25: Opening cash
+   C25: 45.025   |F= =C8
+   D25: 25.2843   |F= =C26
+   E25: 11.3495   |F= =D26
+   F25: 10.098   |F= =E26
+   G25: 32.5312   |F= =F26
+   H25: 111.1553   |F= =G26
+   B26: Closing cash
+   C26: 25.2843   |F= =C25+C21
+   D26: 11.3495   |F= =D25+D21
+   E26: 10.098   |F= =E25+E21
+   F26: 32.5312   |F= =F25+F21
+   G26: 111.1553   |F= =G25+G21
+   H26: 313.582   |F= =H25+H21
+   B28: Minimum cash balance (the trough)
+   C28: 10.098   |F= =MIN(C26:H26)
+   B29: Runway verdict
+   C29: Funded to self-sustaining   |F= =IF(C28>0,"Funded to self-sustaining","Bridge / next round needed")
+   B31: Note: TaaS fleet capex (~Rs60 Cr) is debt/lease financed against the trucks, so it is NOT
+   B32: a drain on this equity cash. Tapeout NRE is the main equity-funded capex, front-loaded in FY27-28.
+==========================================================================================
+SHEET: Demand & TAM
+==========================================================================================
+    B2: Demand & TAM — Sourced
+    B3: Top-down market funnel + every product tied to a sized, sourced demand pool (global or India). Blue = our assumption; black = sourced/derived; sources in right column.
+    B5: A.  MARKET FUNNEL  (TAM -> SAM -> SOM)
+    B6: Layer
+    C6: Value
+    D6: Unit
+    J6: Source
+    B7: India commercial-vehicle market (2025)
+    C7: 53.2
+    D7: $B
+    J7: IMARC 2025: $53.2B; Mordor $51.1B (corroborating)
+    B8: India ADAS market (2024)
+    C8: 2.29
+    D8: $B
+    J8: EMR 2024: $2.29B, 20.6% CAGR to ~$14.9B by 2034
+    B9: TAM — mandated ADAS (AIS-184/186/187/188) annual
+    C9: 200
+    D9: $M
+    J9: Telematicswire/Roadzen on GSR 184(E)
+   B10: SAM — N2/N3 trucks we target (new + retrofit)
+   C10: 1
+   D10: M units
+   J10: ~500k new/yr + ~500k retrofit (Roadzen/MoRTH)
+   B11: Annual new N2/N3 + bus production (mandated from FY26)
+   C11: 0.5
+   D11: M units/yr
+   J11: GSR 184(E) new-model scope, Apr 1 2026
+   B12: Retrofit pool (existing N2/N3 fleet)
+   C12: 0.5
+   D12: M units
+   J12: GSR 184(E) existing-model scope, Oct 1 2026
+   B14: SOM — our reachable share
+   B15: AD2 (mandatory) units at FY32 (from our build)
+   C15: 18000   |F= ='Revenue Build'!J46
+   J15: AD2 satisfies the AIS-184 ADAS mandate on N2/N3 trucks
+   B16: AD2 share of 1.0M mandated trucks (new+retrofit)
+   C16: 0.018   |F= =C15/(C10*1000000)
+   J16: Single-digit share of the mandated pool; mandate = demand floor
+   B17: AD0 (360 surround-view) units at FY32
+   C17: 54000   |F= ='Revenue Build'!J44
+   J17: NOT mandated — voluntary safety/convenience buy, already selling
+   B18: AD0 addressable: 360 surround-view market (2025)
+   C18: 3.09
+   J18: Towards Automotive: $3.09B 2025, 10.7% CAGR; Maruti/Tata already fitting
+   B20: B.  PER-PRODUCT DEMAND  (every line tied to a sourced market pool)
+   B21: Product
+   C21: FY32 units
+   D21: Demand pool & market size (sourced)
+   E21: Capture %
+   J21: Source
+   B22: AD2 Smart Truck kit
+   C22: 18000   |F= ='Revenue Build'!J46
+   D22: MANDATORY: 0.5M new N2/N3 trucks/yr + 0.5M retrofit
+   E22: 0.018   |F= =C22/1000000
+   J22: MoRTH GSR 184(E) ADAS mandate on N2/N3
+   B23: AD0 Smart Mirror (360 view)
+   C23: 54000   |F= ='Revenue Build'!J44
+   D23: Existing 360 surround-view market $3.1B (already selling)
+   E23: 0.0093   |F= ='Revenue Build'!J61*10000000/Assumptions!$C$6/1000000000/3.09
+   J23: Towards Automotive: $3.09B 2025, 10.7% CAGR
+   B24: AD1 Indoor L4 kit
+   C24: 4200   |F= ='Revenue Build'!J45
+   D24: Warehouse/industrial autonomy; part of $4.8B edge-AI
+   E24: —
+   J24: Dataintelo/GMI automotive edge-AI 2025
+   B25: Autonomous TaaS (fleet)
+   C25: 100   |F= ='Revenue Build'!J47
+   D25: India trucking 0.6-0.8M units/yr; fleet ops
+   E25: 0.0001   |F= =C25/700000
+   J25: Mobility Foresights; TheGlobalEconomy 952k CV
+   B26: Seaport AGV (port autonomy)
+   C26: 50   |F= ='Revenue Build'!J48
+   D26: Automated container terminal market $10.95B (2024)
+   E26: 0.0002   |F= ='Revenue Build'!J65*10000000/Assumptions!$C$6/1000000000/10.95
+   J26: SNS Insider: $10.95B 2024 -> $16.35B 2032, 5.2% CAGR
+   B27: A100 compute box (3 SKUs)
+   C27: 6000   |F= ='Revenue Build'!J53+'Revenue Build'!J54+'Revenue Build'!J55
+   D27: Automotive edge-AI accelerator modules $4.8B (2025)
+   E27: 0.002   |F= =('Revenue Build'!J70+'Revenue Build'!J71+'Revenue Build'!J72)*10000000/Assumptions!$C$6/1000000000/4.8
+   J27: Dataintelo: $4.8B 2025 -> $22.6B 2034, 21% CAGR
+   B28: Chipset OEM B2B (ASIC die)
+   C28: 30000   |F= ='Revenue Build'!J52
+   D28: India ADAS chip pool; $2.29B ADAS (2024)
+   E28: 0.0025   |F= ='Revenue Build'!J69*10000000/Assumptions!$C$6/1000000000/2.29
+   J28: EMR 2024: $2.29B, 20.6% CAGR
+   B29: Thermal camera (aftermarket)
+   C29: 3200   |F= ='Revenue Build'!J49
+   D29: Automotive thermal camera $1.68B global (2025)
+   E29: 0.001   |F= ='Revenue Build'!J66*10000000/Assumptions!$C$6/1000000000/1.68
+   J29: Verified Market Research: $1.68B 2025, 12% CAGR
+   B30: 4D radar pod (aftermarket)
+   C30: 3000   |F= ='Revenue Build'!J50
+   D30: 4D imaging radar $2.75B global (2025)
+   E30: 0.0003   |F= ='Revenue Build'!J67*10000000/Assumptions!$C$6/1000000000/2.75
+   J30: Business Research Co./Mordor: ~$2.75B 2025, 13% CAGR
+   B31: H100 driver-monitor wearable
+   C31: 20000   |F= ='Revenue Build'!J51
+   D31: DDAWS mandate (AIS-184) + global DMS demand
+   E31: —
+   J31: MoRTH AIS-184; EU Reg 2021/267 (commercial DMS)
+   B32: Defence D-HUMR
+   C32: 150   |F= ='Revenue Build'!J57
+   D32: Indian Army UGV/robotics procurement
+   E32: —
+   J32: MoD/Army programs (existing Rs1 Cr revenue)
+   B33: D100 drone SoC kit
+   C33: 400   |F= ='Revenue Build'!J58
+   D33: India defence + commercial drone SoC
+   E33: —
+   J33: Edge-AI drones segment (Mordor 18% CAGR)
+   B35: Every line maps to a real, sized market: our FY32 volumes are a single-digit share of each pool. Demand headroom is large, not stretched.
+   B37: Reading the capture %:
+   B38: 1. Market sizes above are GLOBAL. Our near-term serviceable market is the India slice, where our share is materially higher — the small % = runway, not a ceiling.
+   B39: 2. Seaport AGV pool ($10.95B) is TOTAL port automation (cranes + software + vehicles); the autonomous-vehicle layer we sell is a subset. Real proof point: live order at Vizag Container Terminal.
+   B40: 3. Mandate timing: DDAWS / blind-spot / LDWS suite is live Apr & Oct 2026 (what AD2 demand rests on). The AEBS braking piece (AIS-162/IS-11852) was deferred to Oct 1 2027 (Gadkari, Lok Sabha, Feb 2026) — does not affect the 2026 ADAS suite.
+   B42: Sources: MoRTH GSR 184(E) 20 Mar 2025; Roadzen/Telematicswire; IMARC & Mordor (CV); EMR (ADAS); Dataintelo/GMI (edge-AI); Verified MR (thermal); Business Research Co. (4D radar); SNS Insider (container terminals). Share/conversion rows are our assumptions.

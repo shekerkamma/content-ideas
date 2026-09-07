@@ -1,27 +1,23 @@
 ---
 name: ai-graphics
-description: >-
-  Use when someone wants a raster graphic, infographic, flyer, diagram, social card,
-  visual insight, reference recreation, or design-token brief. Design-first: render
-  structured or text-bearing graphics as deterministic HTML/SVG and route only eligible
-  organic imagery to a host-native image tool or an explicitly selected provider adapter.
-  For PPTX/deck work this skill is an execution dependency of pptx-visual-spec, not the
-  deck builder.
-argument-hint: "<what the graphic is about> [platform] [style]"
-permissions:
-  network:
-    - http://localhost:20128
-    - http://127.0.0.1:8317
-  file_read:
-    - ~/cliproxyapi/config.yaml
-  file_write:
-    - /mnt/c/Users/sheke/Pictures/
-    - /mnt/c/Users/sheke/AppData/Local/Temp/
-  shell:
-    allowed_scripts:
-      - scripts/omniroute_image.py
-      - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini.py
-      - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini_img2img.py
+description: 'Use when someone wants a raster graphic, infographic, flyer, diagram, social card, visual insight, reference recreation, or design-token brief. Design-first: render structured or text-bearing graphics as deterministic HTML/SVG and route only eligible organic imagery to a host-native image tool or an explicitly selected provider adapter. For PPTX/deck work this skill is an execution dependency of pptx-visual-spec, not the deck builder.'
+metadata:
+  legacy-frontmatter:
+    argument-hint: <what the graphic is about> [platform] [style]
+    permissions:
+      network:
+      - http://localhost:20128
+      - http://127.0.0.1:8317
+      file_read:
+      - ~/cliproxyapi/config.yaml
+      file_write:
+      - /mnt/c/Users/sheke/Pictures/
+      - /mnt/c/Users/sheke/AppData/Local/Temp/
+      shell:
+        allowed_scripts:
+        - scripts/omniroute_image.py
+        - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini.py
+        - ~/content-ideas/skills/image-generation-router/scripts/generate_gemini_img2img.py
 ---
 
 # ai-graphics — Design-First Raster Execution
@@ -344,7 +340,8 @@ default path.
 | Content | Renderer | Why |
 |---|---|---|
 | Structured/flat design: diagrams, cards, quote cards, data callouts, brand-token work, reference-matched layouts | **CODE: HTML/SVG → `scripts/html_to_png.mjs`** | deterministic, pixel-exact, any size, editable template |
-| Organic style WITH text (whiteboard marker, sketch, painterly + typography) | `codex` / `codex/gpt-5.5` | gpt-image follows specs; spelling survives |
+| Organic style WITH text (whiteboard marker, sketch, painterly + typography) | **CODEX CLI DIRECT: `scripts/codex_image.py --model gpt-5.6-sol`** | built-in `image_gen`; spelling survives; needs no gateway |
+| Same, via OmniRoute when it is up | `codex` / `codex/gpt-5.5` | gateway path; verify against its live catalog before use |
 | Pure illustration, texture, scene, ≤4 short labels | `nvidia` / `nvidia/black-forest-labs/flux.1-dev` | look exploration |
 | Edit an existing image (fix a word, restyle a region) | `nvidia` / `flux.1-kontext-dev`, or `nano-banana edit_image` MCP | targeted repair beats regeneration |
 | Explicit Gemini/Nano Banana generation | `image-generation-router` → CLIProxyAPI live image model | user-selected Gemini route; runtime catalog is authoritative |
@@ -362,11 +359,39 @@ Save the `.html` next to the `.png` — it IS the editable design artifact. The 
 resolves Playwright from `$PLAYWRIGHT_ROOT` (default `~/content-ideas`) and falls back
 across cached/system chromium builds.
 
-Do NOT hardcode newer model names (verified: `gpt-5.6` does not exist upstream —
-"not supported when using Codex with a ChatGPT account"). When checking for newer
-models, list the live catalog (recipe in [reference.md](reference.md)).
+Do NOT hardcode newer model names — list the live catalog (recipe in
+[reference.md](reference.md)). Measured 2026-08-23 on ChatGPT-subscription auth,
+each with a bogus-model control that correctly returned HTTP 400:
+
+| Model id | Result |
+|---|---|
+| `gpt-5.6-sol` | works, incl. built-in `image_gen` |
+| `gpt-5.5` | works |
+| `gpt-5.6` (bare) | **400** "not supported when using Codex with a ChatGPT account" |
+
+The shipping id carries the `-sol` suffix. An earlier note here generalised the bare
+`gpt-5.6` failure into "gpt-5.6 does not exist upstream" and that was wrong — the
+suffixed id works. Test the exact id, never the family name.
 
 ### 4. Generate
+
+**Default (no gateway required)** — Codex CLI built-in `image_gen`:
+
+```bash
+python3 ~/.claude/skills/ai-graphics/scripts/codex_image.py \
+  --model gpt-5.6-sol \
+  --prompt-file /path/to/spec.txt --size 1024x1536 \
+  --out <durable-path>/<name>.png
+```
+
+Verified 2026-08-23: rendered a two-string typography spec with both strings spelled
+correctly. It shells out to `codex exec`, which **reads stdin when not a TTY** — the
+adapter passes `stdin=DEVNULL` because inheriting it hangs the call for the full timeout
+with no output and no error. Codex may save under `~/.codex/generated_images/<session>/`
+instead of `--out`; the adapter copies the newest image it produced and validates magic
+bytes before reporting success.
+
+**Via OmniRoute** (only when the gateway is up):
 
 ```bash
 python3 ~/.claude/skills/ai-graphics/scripts/omniroute_image.py \

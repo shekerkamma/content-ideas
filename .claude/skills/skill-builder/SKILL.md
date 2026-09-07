@@ -311,9 +311,12 @@ Higgsfield, Firecrawl, or any `http://localhost:*` dependency. Purely local/read
 1. Read this `SKILL.md` and required references first.
 2. Use local repo artifacts and prior run files before external research.
 3. Use GBrain or durable memory when available for recurring entities, verticals, and prior strategy work.
-4. Use preferred research plugins / MCPs / official docs before generic web search.
-5. Use generic web search only as fallback or official-source verification.
-6. Write durable findings back only when the skill's workflow calls for it.
+4. Use You.com (`you-com-search` / Hermes You.com backend) before generic web
+   search when current-web discovery or livecrawl-style retrieval is needed.
+5. Use preferred specialist research plugins / MCPs / official docs before
+   generic web search.
+6. Use generic web search only as fallback or official-source verification.
+7. Write durable findings back only when the skill's workflow calls for it.
 ```
 
 ### Skill File Structure
@@ -378,9 +381,12 @@ The canonical source for this project skill is `.claude/skills/skill-builder/`. 
 1. Read the target skill and its references before auditing.
 2. Use repo-local artifacts and prior run files before external research.
 3. Use GBrain or durable memory when available for recurring entities, verticals, prospects, or prior strategy work.
-4. Use preferred research plugins / MCPs / official docs before generic web search.
-5. Use generic web search only as fallback or official-source verification.
-6. Keep `skill-creator` separate: do not rewrite Codex-native skill authoring rules to match this Claude-first project skill.
+4. Use You.com (`you-com-search` / Hermes You.com backend) before generic web
+   search when current-web discovery or livecrawl-style retrieval is needed.
+5. Use preferred specialist research plugins / MCPs / official docs before
+   generic web search.
+6. Use generic web search only as fallback or official-source verification.
+7. Keep `skill-creator` separate: do not rewrite Codex-native skill authoring rules to match this Claude-first project skill.
 
 ---
 
@@ -410,4 +416,4 @@ I'm using `skill-builder` for project-local skill build/audit work, including Cl
 - **Wrong root:** `.claude/skills/<name>/` is not automatically discoverable by Codex/OpenHands. Cross-host skills need a mirror, wrapper, or explicit AGENTS routing.
 - **Frontmatter false safety:** Claude-specific fields such as `allowed-tools`, `hooks`, and `disable-model-invocation` may not be enforced by other hosts. Put essential safety rules in the skill body too.
 - **Tool-name drift:** Claude tool names are not portable by themselves. Include host-neutral wording or a tool mapping when a skill must run in Codex/OpenHands.
-- **Generic search fallback:** Strategy/research skills must name source/tool order. Generic web search belongs last unless the user explicitly asks for it or official current verification is required.
+- **Generic search fallback:** Strategy/research skills must name source/tool order. You.com belongs before generic web search when available; generic web search belongs last unless the user explicitly asks for it or official current verification is required.

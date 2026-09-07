@@ -1,0 +1,39 @@
+{
+  "target_brand": "Your Brand",
+  "domain": "yourbrand.com",
+  "competitors": [
+    "Competitor One",
+    "Competitor Two",
+    "Competitor Three"
+  ],
+  "market": "US",
+  "language": "en",
+  "objective": "Find where AI answers recommend competitors instead of us.",
+  "topics": [
+    "your product category",
+    "the buyer problem you solve",
+    "best tools for your category"
+  ],
+  "engines": [
+    "ChatGPT",
+    "Claude",
+    "Perplexity",
+    "Google AI Mode"
+  ],
+  "manual_captures": [
+    {
+      "query": "best tools for your product category",
+      "engine": "ChatGPT",
+      "answer": "Paste the full AI answer here.",
+      "citation_urls": []
+    },
+    {
+      "query": "alternatives to Competitor One",
+      "engine": "Perplexity",
+      "answer": "Paste the full AI answer here.",
+      "citation_urls": [
+        "https://example-cited-source.com"
+      ]
+    }
+  ]
+}

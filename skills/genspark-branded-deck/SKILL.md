@@ -83,7 +83,7 @@ prompt and multimodal IDs, authoring structured visual assets deterministically,
 routing fully native output through `branded-pptx-deck`.
 Do not wait past the shared 600-second/two-no-progress ceiling. (Reading an existing
 deck is never blocked — see the recovery lane under Execution.) Trigger examples:
-`../pptx-visual-spec/portable-skills/genspark-slides/references/prompt-routing.md`.
+`../../portable-skills/genspark-slides/references/prompt-routing.md`.
 
 ## Why this skill exists (and when NOT to use it)
 

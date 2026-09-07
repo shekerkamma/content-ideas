@@ -1,0 +1,128 @@
+==========================================================================================
+SHEET: Cap Table
+==========================================================================================
+B2=DeepGrid Semi Private Limited
+B3=Cap Table
+B5=Name of the Shareholder  C5=Type of Shareholders  D5=No of Shares  E5=% of Shareholding  F5=x  G5=Comments
+B6=Muralidhar Naidu Govardhan  C6=Founder's Shares  D6=1000  E6=0.01  G6=Founder-led, with early angels who are domain operators (including DFT/semiconductor engineers backing the company personally) — conviction capital from people who understand silicon.
+B7=Aravind Prasad Govardhan  C7=Founder's Shares  D7=98300  E7=0.956
+B8=Venkata  C8=Angels  D8=697  E8=0.007
+B9=Navin  C9=Angels  D9=121  E9=0.001
+B10=Hameed  C10=Angels  D10=893  E10=0.009
+B11=Raghu Teja  C11=Angels  D11=893  E11=0.009
+B12=Tejovardhan  C12=Angels  D12=893  E12=0.009
+B13=Total Shares  D13=102797  E13=1.0
+==========================================================================================
+SHEET: Historical Context
+==========================================================================================
+B2=DeepGrid Semi Private Limited
+B3=Grants & Prior Funding
+B5=Particulars  C5=x  D5=Amount (In Cr.)  E5=x  F5=Comments
+B6=ARAI certification grant  D6=0.36  F6=Rs. 36 lakh - received
+B7=HDFC Parivartan grant  D7=0.12  F7=Rs. 12 Lakh - received - used for FPGA
+B8=Angel funding to date  D8=2  F8=~Rs. 2 Cr — fully deployed in operations (bank statement verified)
+==========================================================================================
+SHEET: CGTMSE Debt 
+==========================================================================================
+B2=DeepGrid Semi Private Limited
+B3=CGTMSE Debt Amortisation Schedule
+B5=Particulars  C5=x  D5=Amount (In Cr.)
+B6=Overdraft Limit  D6=10
+B7=Interest Rate  D7=0.15
+B8=Assumed Utilization Rate  D8=0.25
+B9=Finance Cost  D9=0.375
+==========================================================================================
+SHEET: Payroll
+==========================================================================================
+B2=DeepGrid Semi Private Limited
+B3=Payroll Projections
+D4=Headcount  K4=Monthly Gross  R4=Yearly Gross  Y4=Total Payroll Cost
+B5=Department  C5=x  D5=FY2027  E5=FY2028  F5=FY2029  G5=FY2030  H5=FY2031  I5=FY2032  J5=x  K5=FY2027  L5=FY2028  M5=FY2029  N5=FY2030  O5=FY2031  P5=FY2032  Q5=x  R5=FY2027  S5=FY2028  T5=FY2029  U5=FY2030  V5=FY2031  W5=FY2032  X5=x  Y5=FY2027  Z5=FY2028  AA5=FY2029  AB5=FY2030  AC5=FY2031  AD5=FY2032
+B6=Management  D6=3  E6=4  F6=4  G6=6  H6=6  I6=8  K6=222750.0  L6=272250.0  M6=299475.0  N6=329422.5  O6=362364.75  P6=398601.225  R6=2673000.0  S6=3267000.0  T6=3593700.0  U6=3953070.0  V6=4348377.0  W6=4783214.7  Y6=0.802  Z6=1.307  AA6=1.437  AB6=2.372  AC6=2.609  AD6=3.827
+B7=AI  D7=4  E7=10  F7=20  G7=25  H7=44  I7=68  K7=66659.67  L7=81472.93  M7=89620.223  N7=98582.245  O7=108440.47  P7=119284.517  R7=799916.04  S7=977675.16  T7=1075442.676  U7=1182986.944  V7=1301285.638  W7=1431414.202  Y7=0.32  Z7=0.978  AA7=2.151  AB7=2.957  AC7=5.726  AD7=9.734
+B8=Design  D8=2  E8=4  F8=4  G8=6  H8=10  I8=18  K8=37620  L8=45980.0  M8=50578.0  N8=55635.8  O8=61199.38  P8=67319.318  R8=451440  S8=551760.0  T8=606936.0  U8=667629.6  V8=734392.56  W8=807831.816  Y8=0.09  Z8=0.221  AA8=0.243  AB8=0.401  AC8=0.734  AD8=1.454
+B9=Firmware  D9=3  E9=6  F9=10  G9=12  H9=19  I9=38  K9=34650  L9=42350  M9=46585.0  N9=51243.5  O9=56367.85  P9=62004.635  R9=415800  S9=508200  T9=559020.0  U9=614922.0  V9=676414.2  W9=744055.62  Y9=0.125  Z9=0.305  AA9=0.559  AB9=0.738  AC9=1.285  AD9=2.827
+B10=Hardware  D10=6  E10=15  F10=30  G10=35  H10=57  I10=98  K10=57600.18  L10=70400.22  M10=77440.242  N10=85184.266  O10=93702.693  P10=103072.962  R10=691202.16  S10=844802.64  T10=929282.904  U10=1022211.194  V10=1124432.314  W10=1236875.545  Y10=0.415  Z10=1.267  AA10=2.788  AB10=3.578  AC10=6.409  AD10=12.121
+B11=HR  D11=2  E11=4  F11=5  G11=6  H11=9  I11=23  K11=12375.0  L11=15125.0  M11=16637.5  N11=18301.25  O11=20131.375  P11=22144.513  R11=148500.0  S11=181500.0  T11=199650.0  U11=219615.0  V11=241576.5  W11=265734.15  Y11=0.03  Z11=0.073  AA11=0.1  AB11=0.132  AC11=0.217  AD11=0.611
+B12=Software  D12=5  E12=12  F12=20  G12=30  H12=50  I12=105  K12=36029.07  L12=44035.53  M12=48439.083  N12=53282.991  O12=58611.29  P12=64472.419  R12=432348.84  S12=528426.36  T12=581268.996  U12=639395.896  V12=703335.485  W12=773669.034  Y12=0.216  Z12=0.634  AA12=1.163  AB12=1.918  AC12=3.517  AD12=8.124
+B13=Testing  D13=2  E13=4  F13=6  G13=10  H13=15  I13=30  K13=9900  L13=12100.0  M13=13310.0  N13=14641.0  O13=16105.1  P13=17715.61  R13=118800  S13=145200.0  T13=159720.0  U13=175692.0  V13=193261.2  W13=212587.32  Y13=0.024  Z13=0.058  AA13=0.096  AB13=0.176  AC13=0.29  AD13=0.638
+B14=Sales & BD  D14=3  E14=7  F14=12  G14=20  H14=35  I14=60  K14=59400  L14=72600  M14=79860  N14=87846  O14=96630.6  P14=106293.66  R14=132000  S14=145200.0  T14=159720.0  U14=175692.0  V14=193261.2  W14=212587.32  Y14=0.04  Z14=0.102  AA14=0.192  AB14=0.351  AC14=0.676  AD14=1.276
+B15=G&A / Finance  D15=2  E15=5  F15=7  G15=11  H15=19  I15=33  K15=54450.0  L15=66550.0  M15=73205.0  N15=80525.5  O15=88578.05  P15=97435.855  R15=132000  S15=145200.0  T15=159720.0  U15=175692.0  V15=193261.2  W15=212587.32  Y15=0.026  Z15=0.073  AA15=0.112  AB15=0.193  AC15=0.367  AD15=0.702
+B16=Operations  D16=2  E16=5  F16=10  G16=18  H16=32  I16=60  K16=44550.0  L16=54450.0  M16=59895.0  N16=65884.5  O16=72472.95  P16=79720.245  R16=132000  S16=145200.0  T16=159720.0  U16=175692.0  V16=193261.2  W16=212587.32  Y16=0.026  Z16=0.073  AA16=0.16  AB16=0.316  AC16=0.618  AD16=1.276
+B18=Total  D18=34  E18=76  F18=128  G18=179  H18=296  I18=541  K18=635983.92  L18=777313.68  M18=855045.048  N18=940549.553  O18=1034604.508  P18=1138064.959  R18=6127007.04  S18=7440164.16  T18=8184180.576  U18=9002598.634  V18=9902858.497  W18=10893144.347  Y18=2.114  Z18=5.089  AA18=8.999  AB18=13.132  AC18=22.45  AD18=42.588
+==========================================================================================
+SHEET: Expense Schedules
+==========================================================================================
+B2=DeepGrid Semi Private Limited
+B3=Expense Schedules
+B5=R&D Expenses
+B6=Line Item  C6=x  D6=FY2027  E6=FY2028  F6=FY2029  G6=FY2030  H6=FY2031  I6=FY2032
+B7=EDA tools & design licences  D7=0.6  E7=2.75  F7=8.187  G7=16.531  H7=28.749  I7=45.097
+B8=Cloud / HPC compute for AI training  D8=0.4  E8=2.022  F8=8.187  G8=17.34  H8=30.764  I8=48.483
+B9=Lab, prototyping & test equipment  D9=0.33  E9=1.862  F9=7.072  G9=15.318  H9=27.54  I9=43.827
+B10=Total Run Rate  D10=1.33  E10=6.634  F10=23.446  G10=49.19  H10=87.054  I10=137.407
+B11=SoC4 5nm tape-out program  D11=0.4  E11=6.283  F11=19.343  G11=55.338  H11=121.254  I11=240.462
+B13=Total R&D Expenses  D13=1.73  E13=12.917  F13=42.789  G13=104.528  H13=208.307  I13=377.869
+B15=G&A Expenses
+B16=Line Item  C16=x  D16=FY2027  E16=FY2028  F16=FY2029  G16=FY2030  H16=FY2031  I16=FY2032
+B17=Facilities & rent (T-Hub + expansion)  D17=0.2  E17=1.239  F17=4.113  G17=8.995  H17=19.384  I17=33.563
+B18=Legal, IP & compliance  D18=0.12  E18=0.826  F18=2.742  G18=5.622  H18=11.183  I18=17.665
+B19=Audit & professional fees  D19=0.08  E19=0.496  F19=1.6  G19=3.373  H19=6.71  I19=10.599
+B20=Insurance (D&O, liability, product)  D20=0.06  E20=0.413  F20=1.371  G20=3.092  H20=6.337  I20=10.599
+B21=IT, software & subscriptions (non-R&D)  D21=0.08  E21=0.496  F21=1.6  G21=3.373  H21=7.082  I21=11.482
+B22=Travel & other admin  D22=0.06  E22=0.441  F22=1.6  G22=3.654  H22=7.828  I22=13.249
+B24=Total  D24=0.599  E24=3.911  F24=13.025  G24=28.108  H24=58.524  I24=97.156
+B26=Sales and Marketing Expenses
+B27=Line Item  C27=x  D27=FY2027  E27=FY2028  F27=FY2029  G27=FY2030  H27=FY2031  I27=FY2032
+B28=Digital marketing & demand generation  D28=0.1  E28=1.171  F28=4.014  G28=9.416  H28=18.885  I28=34.444
+B29=Field pilots, demos & evaluation units  D29=0.2  E29=1.756  F29=6.021  G29=14.124  H29=28.327  I29=51.665
+B30=Channel & partner commissions  D30=0.1  E30=1.463  F30=5.018  G30=11.77  H30=23.606  I30=43.055
+B31=Trade shows, events & branding  D31=0.08  E31=0.702  F31=2.408  G31=5.65  H31=11.331  I31=20.666
+B32=Customer success & field support  D32=0.08  E32=0.761  F32=2.609  G32=6.121  H32=12.275  I32=22.388
+B34=Total  D34=0.56  E34=5.853  F34=20.07  G34=47.082  H34=94.424  I34=172.218
+==========================================================================================
+SHEET: Cover Page
+==========================================================================================
+B2=DEEPGRID SEMI PRIVATE LIMITED
+B3=India's First Full-Stack ADAS Company — Built on Its Own Transformer Silicon
+B4=Business Plan & Financial Model  ·  Pre-Series A  ·  June 2026
+B8=THE OPPORTUNITY  F8=FY2032 PROJECTIONS
+B9=Instrument  C9=Equity / Compulsorily Convertible  F9=REVENUE  G9=EBITDA
+B10=Raise target  C10=USD $4.0 – 5.0M   (≈ ₹45 Cr)  F10=1387.95  G10=536.628
+B11=Stage  C11=Pre-Series A  F11=₹ Cr  ·  FY2032E  G11=₹ Cr  ·  ~39% margin
+B12=Key use  C12=SoC2 28nm tapeout → ASIC scale
+B13=Allocation  C13=~80% silicon & tapeout · balance GTM  F13=NET INCOME  G13=GROSS MARGIN
+F14=381.371  G14=0.884
+F15=₹ Cr  ·  FY2032E  G15=FY2032E
+B17=SIX-YEAR FINANCIAL SUMMARY  (₹ Crore)
+C18=FY2027  D18=FY2028  E18=FY2029  F18=FY2030  G18=FY2031  H18=FY2032
+B19=Revenue  C19=5.995  D19=41.166  E19=144.727  F19=351.355  G19=731.545  H19=1387.95
+B20=EBITDA  C20=-1.8  D20=2.594  E20=29.733  F20=96.495  G20=240.914  H20=536.628
+B21=Net income  C21=-2.295  D21=-0.675  E21=19.847  F21=66.819  G21=169.431  H21=381.371
+B23=WORKBOOK CONTENTS
+B24=Finanacial Overview  F24=Working
+B25=P&L  C25=Projected income statement, FY27–FY32  F25=Market  G25=TAM, mandate & competitive pricing
+B26=Sales Summary  C26=Revenue by line, category & model  F26=Assumptions  G26=Margins, opex ratios, FX
+B27=Use of Funds  C27=Sources & uses of the round  F27=Revenue Master  G27=Bottom-up build — 26 product lines
+B28=Historical Context  C28=Prior-year background  F28=Tapeout Expenses  G28=SoC2 28nm NRE & mask phasing
+B29=CGTMSE Debt  C29=Non-dilutive working-capital facility  F29=Payroll  G29=Headcount & fully-loaded people cost
+B30=Cap Table  C30=Shareholding pre-round  F30=Expense Schedules  G30=Non-payroll R&D / S&M / G&A detail
+B33=STRICTLY CONFIDENTIAL — This financial model is furnished through Emani Capital Advisory Pvt Ltd solely for the evaluation of the proposed Pre-Series A investment. It may not be reproduced or distributed without prior written consent. Figures are management projections, not audited, and subject to the assumptions set out herein.
+Contact: Haradatta Emani · haradatta@emanicapital.com · +91 98496 53907
+==========================================================================================
+SHEET: Use of Funds
+==========================================================================================
+B2=DeepGrid Semi Private Limited
+B3=Use of Funds
+B5=Sources of Capital  D5=Revenue
+B6=Sources    C6=x  D6=$ M  E6=Rs. Cr  H6=Comments
+B7=Pre-Series A equity round  D7=4.787  E7=45.0  H7=Equity; funds the SoC2 tapeout (18.07% to investor)
+B8=CGTMSE-backed term loan  D8=1.064  E8=10  H8=Rs10 Cr (~$1.06M) collateral-free MSME debt; funds working capital, non-dilutive
+B10=Total  D10=5.851  E10=55.0  H10=55 Cr blended: 45 Cr equity funds the value-creating silicon and tapeout; 10 Cr non-dilutive CGTMSE debt funds working capital. Dilution is tied only to the milestone that creates enterprise value.
+B12=Use of Capital  D12=Revenue
+B13=Allocation  C13=x  D13=$ M  E13=Rs. Cr  F13=% OF Total  H13=Comment
+B14=SoC2 tapeout NRE + IP (phased: MPW blocks -> full die -> dedicated mask)  D14=3.17  E14=29.798  F14=0.542  H14=Equity-funded; see Tapeout tab
+B15=Engineering (chip + firmware + defence)  D15=0.96  E15=9.024  F15=0.164  H15=Core platform R&D
+B16=AIS-162/188 certification + FPGA pilot  D16=0.48  E16=4.512  F16=0.082  H16=Mandate compliance + pilots
+B17=Working capital / BD / inventory  D17=1.24  E17=11.656  F17=0.212  H17=L4+ stack, field units
+B19=Total  D19=5.85  E19=54.99  F19=1  H19=Equity round is ~all silicon; loan covers working capital

@@ -1,13 +1,12 @@
 ---
 name: pipeline-runner
-version: "1.2.0"
-description: >
-  Run a selected use case from signal to strategy and deal prep. Reads the
-  latest feed, lets the user choose a use case, and chains the downstream
-  research, scoring, brief, deck, and pre-sales stages.
+description: Run a selected use case from signal to strategy and deal prep. Reads the latest feed, lets the user choose a use case, and chains the downstream research, scoring, brief, deck, and pre-sales stages.
 allowed-tools: Bash, Read, Write
-argument-hint: "[use case number, name, or 'list']"
-user-invocable: true
+metadata:
+  legacy-frontmatter:
+    version: 1.2.0
+    argument-hint: '[use case number, name, or ''list'']'
+    user-invocable: true
 ---
 
 # pipeline-runner

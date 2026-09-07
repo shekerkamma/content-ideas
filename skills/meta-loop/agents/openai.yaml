@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meta LOOP"
+  short_description: "Claude Opus orchestrates verified Codex worker waves"
+  default_prompt: "Use $meta-loop to split this task into independent Codex worker briefs, have Claude Opus aggregate and verify the results, and return an evidence ledger."

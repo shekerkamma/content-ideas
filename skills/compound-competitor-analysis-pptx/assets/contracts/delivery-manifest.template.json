@@ -1,0 +1,14 @@
+{
+  "contract_version": "1.0",
+  "status": "draft",
+  "target": "",
+  "run_dir": "",
+  "evidence": {"ledger": "", "rows": 0, "allowed_numbers": ""},
+  "story": {"story_pack": "", "grill_ledger": "", "rewrite_blueprint": ""},
+  "authoring": {"batch_manifest": "", "content_contracts": "", "design_contracts": ""},
+  "deck": {"builder": "", "pptx": "", "slides": 0, "editability": "native"},
+  "qa": {"design_lint": "", "officecli_summary": "", "html_contact": "", "native_contact": "", "material_change": ""},
+  "derivatives": {"html": "", "battlecards": [], "public_url": ""},
+  "delivery": {"destination": "", "sha256_source": "", "sha256_destination": "", "opened": false},
+  "write_back": {"gbrain": "not-run", "monitoring_queue": ""}
+}

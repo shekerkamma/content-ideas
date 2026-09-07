@@ -1,7 +1,9 @@
 ---
 name: financial-model-review
-version: 0.1.0
 description: Use when someone shares a spreadsheet financial or business model — startup plan, investor model, segment build-up, budget, P&L, unit-economics workbook — and wants it analysed, sanity-checked, pressure-tested for red flags, prepared for diligence or an investment committee, reconciled against a pitch deck or information memorandum, or turned into a decision memo or deck. Produces an evidence-graded analysis report behind a blocking arithmetic-integrity gate. Triggers on "analyse this model", "review this financial model", "business analysis of this spreadsheet", "check these numbers", "is this plan credible", "diligence this". Chains `ai-analyst` for the analysis itself and `strategy-consulting` for the business case.
+metadata:
+  legacy-frontmatter:
+    version: 0.1.0
 ---
 
 # Financial Model Review
