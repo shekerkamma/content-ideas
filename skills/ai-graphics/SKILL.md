@@ -277,9 +277,10 @@ color and where it's used, arrow/connector style, annotation style. Then choose 
   **no `/images/edits` endpoint** (verified) — through *that gateway* the reference
   file itself can't be sent. That is a property of OmniRoute, **not of the model**: `gpt-image-2`
   does support `/v1/images/edits`, which `scripts/openai_image.py --ref` uses directly.
-  Image-to-image routes, in order of spec fidelity: `openai_image.py --ref` (metered, no
-  prompt revision), `codex_image_edit.py --ref` (subscription, via a mainline host that
-  rewrites the prompt), `nano-banana edit_image`, `higgsfield`.
+  Image-to-image routes: `codex_image_edit.py --ref` (default — subscription, hosted by
+  `gpt-6-astra`, verified to honor an attached reference), `openai_image.py --ref`
+  (metered, no plan cap, use when the subscription quota is spent), `nano-banana
+  edit_image`, `higgsfield`.
 - **Hybrid — Track A shell + Track B slots.** A and B are not either/or. For a rich graphic,
   let **code own all structure and every glyph** and use the image model only for **text-free
   illustrative regions** (a hero texture, a scenic backdrop), composited into the HTML before

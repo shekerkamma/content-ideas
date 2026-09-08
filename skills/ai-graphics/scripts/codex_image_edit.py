@@ -149,8 +149,13 @@ def main() -> int:
     g.add_argument("--prompt-file")
     ap.add_argument("--out", required=True)
     ap.add_argument("--mode", choices=sorted(MODES), default="edit")
-    ap.add_argument("--model", default="gpt-5.6-sol",
-                    help="mainline model hosting the image tool (not the image model)")
+    ap.add_argument("--model", default="gpt-6-astra",
+                    help="mainline model hosting the image tool (not the image model). "
+                         "gpt-6-astra is codex-cli 0.153.4's own default and is verified "
+                         "routable on this ChatGPT auth; only the full slug exists.")
+    ap.add_argument("--profile", default=None,
+                    help="codex profile from ~/.codex/<name>.config.toml, e.g. 'astra' "
+                         "(pins gpt-6-astra at reasoning_effort=high). Overrides --model.")
     ap.add_argument("--size", default=None, help="e.g. 1024x1536; passed as a directive")
     ap.add_argument("--timeout", type=int, default=900)
     a = ap.parse_args()
@@ -176,8 +181,8 @@ def main() -> int:
         f"path: {out}\n\n--- SPECIFICATION ---\n{spec}"
     )
 
-    cmd = ["codex", "exec", "-m", a.model, "--skip-git-repo-check",
-           "--enable", _image_flag()]
+    cmd = ["codex", "exec", "--skip-git-repo-check", "--enable", _image_flag()]
+    cmd += ["--profile", a.profile] if a.profile else ["-m", a.model]
     for r in refs:
         cmd += ["-i", str(r)]
     cmd.append("-")  # prompt arrives on stdin; keeps it clear of variadic -i
@@ -209,7 +214,7 @@ def main() -> int:
 
     prov = _provenance(out) or "unknown (no C2PA manifest)"
     print(f"OK {out} ({kind}, {out.stat().st_size} bytes)")
-    print(f"   rendered by: {prov}   |   refs: {len(refs)}   mode: {a.mode}   host: {a.model}")
+    print(f"   rendered by: {prov}   |   refs: {len(refs)}   mode: {a.mode}   host: {a.profile or a.model}")
     return 0
 
 

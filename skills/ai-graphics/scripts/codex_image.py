@@ -40,7 +40,7 @@ def _newest_generated(after: float) -> Path | None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="gpt-5.6-sol")
+    ap.add_argument("--model", default="gpt-6-astra")
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--prompt")
     g.add_argument("--prompt-file")
