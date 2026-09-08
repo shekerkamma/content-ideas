@@ -19,13 +19,17 @@ Two mechanics are load-bearing and non-obvious:
     than honoring a save path, so retrieval takes the freshest file postdating
     this run instead of trusting the model to write --out.
 
-Verification (2026-09-08): PARTIAL — argument plumbing and provenance decoding are
-executed and passing; reference conditioning is NOT YET EXECUTED. The subscription
-quota was exhausted before any render completed ("You've hit your usage limit ...
-try again at 9:20 AM"), so the claim that Images 2.0 honors an attached reference
-is a hypothesis here, not a result. Re-run the paired test in
-scripts/../tests/ (edit-with-ref vs no-ref control) after a quota reset and replace
-this note with the outcome. Treat --mode style/variation as unproven until then.
+Verification (2026-09-08): PASS — reference conditioning is EXECUTED and confirmed
+by a paired test against a no-reference control, both rendered by gpt-image 2.0 via
+host gpt-5.6-sol. Reference: a 1280x1222 editorial page with a labelled node diagram.
+The prompt named the box labels but deliberately did NOT enumerate the model captions
+or connector labels, so those are the discriminator. With --ref the output reproduced
+"GPT-5.6", "Gemini 3.5 Flash", "Fable 5", "Labor Layer: Parallel cheap execution
+subtasks", "premium taste and judgment loop", the page heading, both body paragraphs
+and the full four-column table, at 1283x1226 (the reference aspect). The control
+invented GPT-4o / Claude 3.5 Sonnet / Gemini 1.5 Pro / Llama 3.1 70B, produced a
+linear topology, dropped all page chrome, and defaulted to a stock 1536x1024. Only
+--mode edit is covered by this run; style/variation remain unexercised.
 
 Provenance is read back from the C2PA manifest and printed, so the run reports the
 model that actually rendered rather than the one we assumed.
