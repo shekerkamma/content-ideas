@@ -1,0 +1,8 @@
+Recolour the diagram panel to a deep navy (#0f1c33) background with light cream
+text and hairline rules, keeping the warm tan accent on the Advisor box.
+
+Everything else must carry over EXACTLY as in the reference: the same boxes in
+the same positions, the same labels word for word (Orchestrator, Advisor,
+Worker A, Worker B, Worker C, Worker D, and their model captions), the same
+arrows and the same connector labels. Do not invent, drop, rename, or rearrange
+any element. Diagram panel only.
