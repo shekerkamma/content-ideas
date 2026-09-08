@@ -48,7 +48,8 @@ Apply these rules in order:
 
 1. **Respect an explicit provider request.** `OpenAI`, `imagegen`, or `image_gen` selects
    the built-in tool. `Gemini`, `Nano Banana`, or `CLIProxyAPI` selects the local Gemini
-   adapter. Never translate "Nano Banana Pro" into a different Flash model.
+   adapter. `gpt-image-2`, `Images 2.0 API`, or `openai-images-api` selects the direct
+   metered API route. Never translate "Nano Banana Pro" into a different Flash model.
 2. **Otherwise use built-in OpenAI imagegen first.** Follow the installed `imagegen`
    skill and invoke the host-native built-in image tool. A successful tool call is its
    availability check; no API key is required.
@@ -60,6 +61,26 @@ Apply these rules in order:
    `GET /v1/models` is authoritative for CLIProxyAPI.
 5. **Do not silently substitute models.** If the requested model is absent, stop and name
    the available image models. A user may then choose one.
+6. **Never reach for the metered route on your own.** `openai-images-api` spends the user's
+   API credit per image and is the one route with a bill attached, so it requires an
+   explicit request — it is not a fallback and not a quota workaround. Say what it will
+   cost before the first call (`--dry-run` prints the estimate and sends nothing).
+
+### Built-in vs direct API: the same model, a different path
+
+Both routes render with **`gpt-image` 2.0**; they differ in what sits in front of it.
+
+| | `built-in-image_gen` | `openai-images-api` |
+|---|---|---|
+| Path | Codex CLI → **mainline model** → image tool | direct HTTP → image model |
+| Prompt | **rewritten by the mainline host** before rendering | sent verbatim |
+| Auth | signed-in ChatGPT subscription | `OPENAI_API_KEY` |
+| Cost | plan quota (stops at the reset window) | metered per image |
+| Reference editing | via the host's attached images | native `/v1/images/edits` |
+
+The prompt-revision row is the one that matters for this repo: the shared intake writes a
+structured design spec, and the built-in route hands that spec to another model that
+revises it. When the spec must survive word for word, take the direct route and say why.
 
 ### Operator commands
 
@@ -92,7 +113,24 @@ For decks, documents, and evidence-bearing work, the `pptx-visual-spec` contract
 precedence: image models are text-free, non-evidentiary, and limited to organic/editorial
 regions. Structured meaning remains native or deterministically authored.
 
-## OpenAI Route
+## OpenAI Direct API Route (metered — explicit request only)
+
+```bash
+# estimate first; sends nothing
+python3 skills/ai-graphics/scripts/openai_image.py \
+  --prompt-file <spec.txt> --out <out.png> --dry-run
+
+# generate, or edit against one or more references
+python3 skills/ai-graphics/scripts/openai_image.py \
+  [--ref <reference.png>]... --prompt-file <spec.txt> --out <out.png> \
+  [--size 1024x1536] [--quality low|medium|high] [--n 3]
+```
+
+`--n` is the multi-image consistency set; `--ref` switches to `/v1/images/edits`. Record
+`execution_path=openai-images-api`, the model, and the reported `usage`. A `429`
+`insufficient_quota` here is an empty credit balance, not a broken route.
+
+## OpenAI Built-in Route
 
 1. Read and follow the installed system `imagegen` skill completely.
 2. Invoke the built-in `image_gen` tool.

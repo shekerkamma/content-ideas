@@ -212,7 +212,7 @@ Notes:
 
 | Provider | Image driver | Models | Notes |
 |---|---|---|---|
-| codex | ✅ | `codex/gpt-5.5` (`type:image` in catalog) | ChatGPT subscription; honors size (3 options); strong typography. `gpt-5.6` REJECTED upstream: "not supported when using Codex with a ChatGPT account" |
+| codex | ✅ | **host** `gpt-5.6-sol` → **renders with `gpt-image` 2.0** | ChatGPT subscription. The id in this column is the MAINLINE model hosting the image tool, **not** the image model — every pixel comes from Images 2.0 (verified 2026-09-08 from the C2PA `softwareAgent` record on a real render). The host rewrites your prompt before rendering, so use `openai_image.py` when the design spec must survive verbatim. Bare `gpt-5.6` REJECTED upstream ("not supported when using Codex with a ChatGPT account"); the shipping id carries the `-sol` suffix. |
 | nvidia | ✅ | `flux.1-dev` ✅, `flux.1-schnell` ❌ (upstream error on test), `flux.1-kontext-dev` (edit, untested), `flux.2-klein-4b` (untested) | clamps to 1024×1024 |
 | comfyui | ✅ driver | `flux-dev`, `sdxl` | "fetch failed" until local ComfyUI app runs |
 | zenmux | ❌ | catalog lists `openai/gpt-image-2`, `gpt-image-1.5` | "Unknown image provider: zenmux" — unreachable |
