@@ -32,29 +32,28 @@ After the pass: **46 declared paths, 0 missing, 0 dead triggers.**
 
 ## How to re-run that audit
 
-Two checks. Paths are relative to `~`, not to the repo — resolving them from the
-wrong root produces false positives, which is how the first pass mis-reported
-four working skills as broken.
-
 ```bash
-# every declared SKILL.md path resolves
-for p in $(grep -oE '`~?/?[A-Za-z0-9._/-]*SKILL\.md`' ~/.claude/CLAUDE.md | tr -d '`' | sort -u); do
-  f="${p/#\~/$HOME}"; case "$f" in /*) ;; *) f="$HOME/$f";; esac
-  [ -e "$f" ] || echo "MISSING: $p"
-done
-
-# every /trigger resolves to a skill somewhere
-for t in $(grep -oE 'When the user types `/[a-z0-9-]+`' ~/.claude/CLAUDE.md \
-           | grep -oE '/[a-z0-9-]+' | tr -d '/' | sort -u); do
-  find -L ~/.claude/skills/$t ~/content-ideas/skills/$t \
-       ~/content-ideas/.claude/skills/$t \
-       ~/content-ideas.local/skill-framework/.agents/skills/$t ~/.claude/commands \
-       -maxdepth 2 \( -name SKILL.md -o -name "$t.md" \) 2>/dev/null | head -1 \
-    | grep -q . || echo "DEAD TRIGGER: /$t"
-done
+python3 scripts/check_routes.py ~/.claude/CLAUDE.md    # 0 clean, 1 blocked, 2 findings
+python3 scripts/check_routes.py CLAUDE.md AGENTS.md ~/.claude/CLAUDE.md
 ```
 
-**A directory is not a skill.** `find -type f` does not follow symlinks, so a
-working symlinked skill counts as zero files. That mistake produced a "61 empty
-directories" finding that was entirely an artifact; 325 of those resolved fine.
-Test with `-e` or `find -L`.
+`scripts/check_routes.py` replaces the shell one-liners this file used to carry.
+It checks two things per instruction file: that every `` `path/SKILL.md` ``
+backtick-quoted path resolves, and that every ``When the user types `/x` ``
+trigger reaches a skill in one of the known roots. `tests/test_route_integrity.py`
+holds it honest against `tests/fixtures/routes/broken-CLAUDE.md`, a fixture with
+four deliberate defects and one working route.
+
+Where `check_skills.py` validates the skills themselves, this validates the
+instructions that point at them — the failure mode nothing else catches.
+
+## Two traps the script encodes
+
+Both produced wrong answers on the first manual pass:
+
+- **Declared paths resolve from `~`, not from the repo root.** Resolving them
+  from the repo reported four working skills as broken.
+- **`find -type f` does not follow symlinks**, so a symlinked skill counts as
+  zero files. That produced a "61 empty directories" finding that was entirely
+  an artifact: 325 of them resolved fine. The script uses `Path.exists()`, which
+  follows, and a test asserts it never shells out to `find`.

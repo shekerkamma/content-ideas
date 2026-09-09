@@ -1,12 +1,9 @@
 ---
 name: architecture-to-everything
-description: >-
-  Use when the user says "document this architecture fully", "architecture to everything",
-  "turn this system into all formats", "full architecture package", or wants a complete
-  multi-format output (diagram + doc + deck + interactive HTML + NotebookLM) from a
-  single system description. Orchestrates drawio, architecture-presentation,
-  workflow-visualizer, and notebooklm as sub-tasks.
-user_invocable: true
+description: Use when the user says "document this architecture fully", "architecture to everything", "turn this system into all formats", "full architecture package", or wants a complete multi-format output (diagram + doc + deck + interactive HTML + NotebookLM) from a single system description. Orchestrates drawio, architecture-presentation, workflow-visualizer, and notebooklm as sub-tasks.
+metadata:
+  legacy-frontmatter:
+    user_invocable: true
 ---
 
 # Architecture-to-Everything Skill System
@@ -122,7 +119,7 @@ At invocation, confirm with the user:
 
 ## Gotchas
 
-- **NotebookLM is not fully automatable:** The Chrome MCP cannot navigate to `notebooklm.google.com`. Always fall back to manual steps for Stage 4 — never silently skip without telling the user.
+- **Gemini Notebook is not fully automatable:** The app was renamed from NotebookLM on 2026-07-16 and moved to `notebook.google.com` (`notebooklm.google.com` now 301-redirects). Browser automation against it is unreliable — Chrome MCP has been blocked at the domain level, that block is untested against the new domain, and the required MCP may not be loaded at all. Always fall back to manual steps for Stage 4 — never silently skip without telling the user.
 - **Stage order matters:** Stages 2 and 3 both depend on the system description extracted in Stage 1. Do not run them in parallel before Stage 1 is complete.
 - **drawio CLI must be on PATH:** If it's unavailable (sandbox, missing install), Stage 1 produces XML-only output. Subsequent stages can still run using the system description directly — document the gap to the user.
 - **Config file is first-run only:** If `~/.claude/skills/architecture-to-everything/config.json` exists, skip the onboarding questions and use saved preferences.
