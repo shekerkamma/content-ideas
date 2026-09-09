@@ -138,6 +138,20 @@ def read_table(table_name, data_dir=None):
     csv_path = Path(data_dir) / f"{table_name}.csv"
 
     if not csv_path.exists():
+        # An unconverted workbook is the common case here, and reading it with a
+        # bare pd.read_excel() would succeed *silently* on a title row, making
+        # the banner the column names. Fail loudly and route to /excel-ingest
+        # rather than guessing a header row this function knows nothing about.
+        for suffix in (".xlsx", ".xlsm", ".xls"):
+            workbook = Path(data_dir) / f"{table_name}{suffix}"
+            if workbook.exists():
+                raise FileNotFoundError(
+                    f"Table '{table_name}' is an Excel workbook ({workbook.name}), "
+                    f"not a CSV.\n"
+                    "  Excel is not read directly: a title row above the table would "
+                    "silently become the column names.\n"
+                    f"  Convert it first: /excel-ingest {workbook}"
+                )
         available = list_tables(data_dir)
         available_str = ", ".join(available) if available else "(none found)"
         raise FileNotFoundError(

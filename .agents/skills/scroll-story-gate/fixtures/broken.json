@@ -1,6 +1,0 @@
-[
- {"id":"01-open","kind":"scene","visual":"Hero shot","copy":"Trusted by 400 customers over 12 years","vh":0.6,"clip":"a","clip_seconds":6},
- {"id":"01-open","kind":"scene","visual":"","vh":0.2,"clip":"a","clip_seconds":6},
- {"id":"03-jump","kind":"scene","visual":"Completely different location","copy":"Our award-winning team","vh":9.5,"clip":"b","clip_seconds":6},
- {"id":"04-orphan","kind":"scene","visual":"Another place","vh":2.0,"clip":"c","clip_seconds":6,"continues_from":{"clip":"c","frame":"last"}}
-]

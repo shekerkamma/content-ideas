@@ -216,6 +216,48 @@ Layout variety is also a correctness issue: one build shipped **L12 ×10 of 20 s
 (the same "table + two cards"). Vary the layout per the design system's L01–L16, or the
 deck flatlines regardless of how good the words are.
 
+## 5c. Images — the placement API (images live INSIDE native slides)
+
+The reference decks shipped `0 pictures`, so this went undocumented and cost ~5 probes to
+rediscover (verified 2026-07-18 on the WSL Linux port). Placing an image is a `C.image({...})`
+compose node: the picture sits in a frame while titles/body/callouts stay live text — fully
+compliant, because only *flattened slides* are banned, not images.
+
+```js
+C.image({
+  dataUrl: `data:image/png;base64,${buf.toString('base64')}`,  // TOP-LEVEL prop, not source:{}
+  contentType: 'image/png',
+  fit: 'contain',                       // 'contain' letterboxes · 'cover' crops to fill
+  width: C.fixed(w), height: C.fixed(h),
+  position: { left: x, top: y },
+});
+```
+
+Frame helper (bordered rect behind, 1px inset so the image doesn't hide the border):
+
+```js
+function image(dataUrl, x, y, w, h, { fit = 'contain', bg = '#FFFFFF', border = '#E2E8F0' } = {}) {
+  return [ border === 'none' ? rect(x, y, w, h, bg) : rect(x, y, w, h, bg, border, 1),
+    C.image({ dataUrl, contentType: 'image/png', fit,
+      width: C.fixed(w - 2), height: C.fixed(h - 2), position: { left: x + 1, top: y + 1 } }) ];
+}
+```
+
+**The three facts that cost the probes:**
+
+- `dataUrl` / `path` / `blob` / `uri` are **top-level props** on `C.image({...})`, NOT wrapped
+  in a `source` key. Internally `Cqr(props)` reads them straight off props; wrapping them in
+  `source:{...}` (or passing a raw Buffer) yields `{prompt: undefined}` →
+  `Unsupported image payload: image/png (0 bytes)`.
+- **Only `dataUrl` works in this port.** It both embeds media in `ppt/media/` **and** rasterizes
+  in the QA PNG. `{path}` / `{blob}` / Buffer embed **nothing** (silently) and render a gray
+  placeholder box.
+- Verify embedding every build: `unzip -l deck.pptx | grep -c media/` → expect one per image.
+
+Source figures the user says to "capture as-is" (a blog image, screenshot, or supplied
+diagram) route `extract` in `visual-spec.json` with `exact_fidelity: true`. Generated
+ambient/cover imagery must be **text-free** — see `references/visual-tool-routing.md`.
+
 ## 6. Export + QA
 
 ```js
@@ -268,6 +310,9 @@ Run all of these. Evidence goes in the run folder.
 
 - **`skia.node: invalid ELF header`** → you imported the Windows package from WSL. Use the
   Linux port (§1). This is *the* blocker; everything else is downstream of it.
+- **`Unsupported image payload: image/png (0 bytes)`** → you wrapped the image source in
+  `source:{...}` or passed a raw Buffer. Pass a **top-level `dataUrl`** string (§5c). `{path}`
+  renders a gray placeholder and embeds no media at all — always `grep -c media/` to confirm.
 - **Do not reach for `pptxkit` / python-pptx for final client decks.** It works and it
   validates, but the mandated method is this one, and the design system's editability rule
   is what's actually at stake. `pptxkit` remains correct for `branded-pptx-deck` decks.

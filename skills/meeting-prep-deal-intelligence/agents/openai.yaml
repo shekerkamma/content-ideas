@@ -1,0 +1,4 @@
+interface:
+  display_name: "Meeting and Deal Intelligence"
+  short_description: "Prepare meetings and assess active deals"
+  default_prompt: "Use $meeting-prep-deal-intelligence to prepare an evidence-backed deal brief."

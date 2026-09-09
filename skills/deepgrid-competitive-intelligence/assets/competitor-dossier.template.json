@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "competitor": {"name": "", "as_of": "YYYY-MM-DD", "legal_entity": null},
+  "profile": {"products": [], "hardware": [], "certifications": [], "geographies": [], "gtm_motion": []},
+  "segments": {
+    "A": {"threat": "NOT_ASSESSABLE", "justification": "", "gem": null, "class_i": null, "foreign_silicon": null, "shipping_equivalent": null, "evidence_ids": []},
+    "B": {"threat": "NOT_ASSESSABLE", "justification": "", "certifications": {}, "oem_gates": [null, null, null, null, null, null, null], "india_relationships": [], "bom_comparison": "", "evidence_ids": []},
+    "C": {"threat": "NOT_ASSESSABLE", "justification": "", "shipping_retrofit": null, "capability": "UNAVAILABLE", "india_support": null, "evidence_ids": []}
+  },
+  "qualification_inversion": {"mandate_pressure": null, "budget_reality": null, "procurement_path_fit": null, "integration_readiness": null, "champion_strength": null, "proof_bar_match": null},
+  "hard_disqualifier_inversion": {"1": null, "2": null, "3": null, "4": null},
+  "messaging_collisions": [],
+  "white_space": [],
+  "counter_moves": [],
+  "evidence": [],
+  "gaps": []
+}

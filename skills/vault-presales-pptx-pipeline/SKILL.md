@@ -1,12 +1,9 @@
 ---
 name: vault-presales-pptx-pipeline
-description: Use when the deliverable is a CLIENT-READY PowerPoint deck — pre-sales decks, use-case realization decks, implementation or solution-architecture slides, solution-on-a-page, executive one-pagers, Genspark-sourced deck upgrades, rebuilding a supplied reference deck properly, fixing structural issues as part of a material client-ready redesign, or POC Factory assets. Triggers on "/vault-presales-pptx-pipeline", "client-ready deck", "custom pptx", "client-ready pptx", "pre-sales deck", "use-case realization deck", "solution-on-a-page", "rebuild this deck", "upgrade this deck", "update this deck", "modify this deck", "contextualize this deck", "customize this deck", "adapt this deck", "refresh this deck", "improve this deck", "enhance this deck", "rebrand this deck", "make this deck client-ready", "fix this deck and make it client-ready", or "deck from this reference". Treat broad update, modification, contextualization, adaptation, improvement, or branding requests as FULL NATIVE
-  REBUILDS, not in-place edits. St
-metadata:
-  legacy-frontmatter:
-    trigger: /vault-presales-pptx-pipeline
-    argument-hint: '[what deck — e.g. ''rebuild the DeepGrid IM client-ready'', ''use-case realization deck from UC-08'', ''solution-on-a-page for <account>'']'
-    category: Business Automation
+description: Use when the deliverable is a CLIENT-READY PowerPoint deck — pre-sales decks, use-case realization decks, implementation or solution-architecture slides, solution-on-a-page, executive one-pagers, Genspark-sourced deck upgrades, rebuilding a supplied reference deck properly, fixing structural issues as part of a material client-ready redesign, or POC Factory assets. Triggers on "/vault-presales-pptx-pipeline", "client-ready deck", "custom pptx", "client-ready pptx", "pre-sales deck", "use-case realization deck", "solution-on-a-page", "rebuild this deck", "upgrade this deck", "update this deck", "modify this deck", "contextualize this deck", "customize this deck", "adapt this deck", "refresh this deck", "improve this deck", "enhance this deck", "rebrand this deck", "make this deck client-ready", "fix this deck and make it client-ready", or "deck from this reference". Treat broad update, modification, contextualization, adaptation, improvement, or branding requests as FULL NATIVE REBUILDS, not in-place edits. Structurally preflight existing PPTX files with pptx-toolkit, then rebuild every slide via artifact-tool presentation JSX on the Client-Ready PPTX Design System — zero flattened images. Use pptx-toolkit alone only when the user explicitly requests a named surgical operation while preserving the current layout. Use branded-pptx-deck instead for branded-template decks outside that design system. Use genspark-branded-deck instead for a fast pixel-perfect visual deck (it flattens layouts and is NOT client-ready). Use genspark-slides instead when Genspark's own AI should draft the content first.
+trigger: /vault-presales-pptx-pipeline
+argument-hint: "[what deck — e.g. 'rebuild the DeepGrid IM client-ready', 'use-case realization deck from UC-08', 'solution-on-a-page for <account>']"
+category: Business Automation
 ---
 
 # Vault Pre-Sales PPTX Pipeline
@@ -288,7 +285,16 @@ guarantee the `Client-Ready PPTX Design System` editability contract: native obj
   12-column grid + named bands + templates. Native placement is DERIVED (`cx/span/cols/rows`),
   never hand-typed. Also carries the graphic/slide background-match rule.
 - `assets/*.md`: packet templates.
-- Design system: `Knowledge/Presentation Design/Client-Ready PPTX Design System.md` — canvas,
+- **`references/client-ready-pptx-design-system.md`: THE VISUAL CONTRACT — READ IT BEFORE
+  SIZING ANYTHING.** Bundled with the skill so it travels to every host. It is the same
+  document as the vault's `Knowledge/Presentation Design/Client-Ready PPTX Design System.md`;
+  re-copy it here whenever the vault copy changes.
+  **The spec is written in POINTS and artifact-tool works in PIXELS (1px = 0.75pt).**
+  Body 12-14pt = 16-19px · slide title 24-30pt = 32-40px · card heading 12-16pt = 16-21px ·
+  kicker 8-10pt = 11-13px · footer 7-8pt = 9-11px · KPI number 28-40pt = 37-53px.
+  Reading those numbers as pixels shrinks the whole deck by a third and is the single
+  fastest way to ship a deck that looks wrong at a glance.
+- Design system (vault original): `Knowledge/Presentation Design/Client-Ready PPTX Design System.md` — canvas,
   type, colour, L01–L16 layouts, density budget, quality gate.
 
 ---
@@ -305,7 +311,12 @@ Required for this skill to work:
   Without it every build fails with `skia.node: invalid ELF header`.
 - **`assets/deck-kit.mjs`** — the helper library (content-fitting cards, proportion bars,
   shape-charts, rails, chains). Start here; do not rewrite it.
-- **`Client-Ready PPTX Design System`** — `Knowledge/Presentation Design/`. The visual contract.
+- **`Client-Ready PPTX Design System`** — bundled at
+  `references/client-ready-pptx-design-system.md` (vault original:
+  `Knowledge/Presentation Design/`). The visual contract: canvas, grid, type scale in
+  POINTS, colour roles, L01-L16 layouts, density budget, quality gate. A host that has
+  the skill but not the vault previously could not reach it at all — which is exactly
+  how a deck gets built on generic tokens.
 - **`scripts/generate_deck_packet.py`** — packet generator. Defaults `--vault .`; pass
   `--vault /mnt/c/Users/sheke/Documents/hyundai-ai-vault` when running from another project.
 - `ai-graphics` — the raster route, when a slide needs a picture. Its scripts live in **that

@@ -44,6 +44,20 @@ Read `design-tools-runtime.yaml` before promising or invoking a design tool. Its
   hosts, use built-in `image_gen` through the signed-in ChatGPT/Codex subscription for eligible
   text-free organic imagery. OmniRoute route health applies only when that adapter is explicitly
   selected. Only a real render proves the selected execution path.
+  - **From Claude Code / WSL, drive it through the `codex` CLI bridge** (verified 2026-07-18,
+    `codex-cli 0.144.4`; this is the OpenAI route when OmniRoute's `:20128` images route is
+    down, which it was):
+    ```bash
+    codex exec --dangerously-bypass-approvals-and-sandbox \
+    "Use your built-in image generation tool to create ONE 16:9 image and save it to the EXACT
+    path /abs/out.png. CRITICAL: absolutely NO text/letters/numbers. Concept: <text-free scene>.
+    Save one PNG to /abs/out.png and confirm it exists."
+    ```
+    Codex writes to `~/.codex/generated_images/<id>/*.png` then copies to your path. No API key
+    (uses the subscription). **Timeouts:** ~60–120 s per image; generate **one image per
+    `codex exec`** (batching 4 in a session overran) and give the shell ≥ 300 s — the default
+    2-min cap kills it mid-render. On-palette prompt that worked: *"premium tech-keynote 3D
+    render, deep navy #0A1628, glowing cyan #00B4D8 + teal #0A9396, no text."*
 - **Figma is limited:** authentication works, but the verified Vokal organization seat is `View`. Use it for accessible references and inspection only until an edit-capable seat is verified.
 - **MagicPath is ready:** CLI 2.6.0 is authenticated and can access the user's projects through the bundled `pnpm dlx` fallback.
 - **Genspark Slides is available but not write-tested:** use it only after an explicit preview request and successful connector response.

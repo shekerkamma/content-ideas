@@ -36,9 +36,11 @@ def env_value(name: str) -> str | None:
     value = os.environ.get(name)
     if value:
         return value
+    # Resolve from $HOME only. A second hardcoded candidate pointed at
+    # /home/shekerk, the pre-migration home, which no longer exists — it had been
+    # dead since the move and any absolute home here goes stale the same way.
     claude_settings_candidates = [
         Path.home() / ".claude" / "settings.local.json",
-        Path("/home/shekerk/.claude/settings.local.json"),
     ]
     for claude_settings in claude_settings_candidates:
         if not claude_settings.exists():

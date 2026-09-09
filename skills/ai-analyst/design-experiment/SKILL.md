@@ -149,3 +149,36 @@ Provide:
 3. **Never ignore guardrails** — stopping early to protect negatives is valid
 4. **Never assume SUTVA** — if users interact, randomization at user level fails
 5. **Never forget intent-to-treat** — segment analysis comes after ITT validation
+
+## Experiment Statistics Library
+
+The coded estimators live at `skills/ai-analyst/design-experiment/scripts/experiment_stats/`.
+Add that directory to `sys.path`, then import:
+
+```python
+import sys
+sys.path.insert(0, "skills/ai-analyst/design-experiment/scripts")
+from experiment_stats import power_proportion, proportion_test, srm_check
+```
+
+Requires pandas, numpy and scipy. Every function returns a dict carrying an
+`interpretation` string written for direct quotation in a brief.
+
+| Need | Function |
+|---|---|
+| Sample size before launch | `power_proportion`, `power_mean`, `power_at_n`, `detectable_effect`, `duration_estimate`, `power_sensitivity_table` |
+| Randomization integrity | `srm_check`, `srm_diagnose` — run this **before** reading any result |
+| Fixed-horizon readout | `proportion_test`, `welch_test`, `ratio_metric_test`, `relative_lift` |
+| Peeking without inflating error | `always_valid_pvalue`, `confidence_sequence` |
+| Bayesian readout | `bayesian_proportion`, `bayesian_mean`, `prob_best`, `expected_loss` |
+| Many metrics at once | `adjust_pvalues` (multiple-comparison correction) |
+| Tighter tests on the same traffic | `cuped_adjust`, `cuped_adjusted_power`, `winsorize` |
+| Effect size | `cohens_d` |
+
+**The SRM gate is not optional.** A 52/48 split on 10,000 users returns
+`verdict: BLOCK` at p = 6.3e-5; a compromised randomization makes every downstream
+number meaningless. Route to `/srm-check` on any dataset carrying a variant column.
+
+When randomization is impossible, stop and route to `/causal` instead — it selects a
+quasi-experimental method and carries the assumption checks that make the estimate
+defensible.

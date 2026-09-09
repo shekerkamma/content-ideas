@@ -1,4 +1,9 @@
-"""Static and behavioural guards for scroll-story-gate."""
+"""Static and behavioural guards for the scroll-story storyboard gate.
+
+Lives in docs/ rather than skills/: it checks a scroll-scrub plan, a workflow
+this repo has not yet run, so it is kept findable without loading into every
+session. Promote it back to a skill if a scroll-scrub build becomes real.
+"""
 import ast
 import json
 import pathlib
@@ -6,9 +11,9 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills" / "scroll-story-gate"
-GATE = SKILL / "scripts" / "check_story.py"
-FIX = SKILL / "fixtures"
+DOC = ROOT / "docs" / "scroll-story-gate"
+GATE = DOC / "check_story.py"
+FIX = DOC / "fixtures"
 
 
 def run(fixture):
@@ -63,8 +68,7 @@ def test_thresholds_are_named_policy():
 
 def test_gate_names_no_vendor():
     """Provider independence is the whole point of this gate."""
-    blob = (GATE.read_text() + (SKILL / "SKILL.md").read_text()
-            + (SKILL / "references" / "plan-format.md").read_text()).lower()
+    blob = (GATE.read_text() + (DOC / "plan-format.md").read_text()).lower()
     for vendor in ("higgsfield", "kie.ai", "runway", "veo", "sora", "api_key"):
         assert vendor not in blob, f"gate must stay provider-agnostic, found {vendor!r}"
 

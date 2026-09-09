@@ -41,3 +41,13 @@
 | Validation | `agents/validation.md` | Need to verify findings before presenting |
 | Deck Creator | `agents/deck-creator.md` | Need to create a presentation from analysis. Supports `{{THEME}}` (analytics-dark) and `{{CONTEXT}}` (workshop/talk closing sequence). |
 | Comms Drafter | `agents/comms-drafter.md` | Need stakeholder communications (Slack summary, email brief, exec summary). Non-critical — pipeline continues if this fails. |
+| Causal Method Selector | `agents/causal-method-selector.md` | Randomization is impossible — walks the decision tree to pick Pre-Post, DiD, PSM, or regression adjustment, with a confidence level |
+| Causal Analyzer | `agents/causal-analyzer.md` | Method confirmed — runs the chosen estimator from `causal/scripts/causal_stats/` |
+| Causal Assumption Checker | `agents/causal-assumption-checker.md` | After Causal Analyzer — tests parallel trends, common support, and balance before the estimate is trusted |
+| Causal Sensitivity | `agents/causal-sensitivity.md` | After Causal Analyzer — Rosenbaum bounds and E-values: how strong must an unmeasured confounder be to erase this effect? |
+| Causal Report Generator | `agents/causal-report-generator.md` | Assumptions and sensitivity are in — writes the causal report with mandatory caveats |
+| Confound Scanner | `agents/confound-scanner.md` | Adversarial. After Hypothesis, before analysis — argues against the hypothesis to surface concurrent changes, selection bias, and measurement artifacts |
+| Experiment Analyzer | `agents/experiment-analyzer.md` | Experiment data in hand — runs SRM gate, primary metric, guardrails, and segments via `design-experiment/scripts/experiment_stats/` |
+| Experiment Interpreter | `agents/experiment-interpreter.md` | After Experiment Analyzer — turns statistics into a ship / no-ship decision |
+| Experiment Monitor | `agents/experiment-monitor.md` | Experiment is running — sequential testing and always-valid p-values, so peeking does not inflate false positives |
+| Experiment Readout | `agents/experiment-readout.md` | Decision made — audience-shaped readout. Non-critical: pipeline continues if this fails |

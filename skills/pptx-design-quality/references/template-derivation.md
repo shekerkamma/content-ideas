@@ -97,6 +97,58 @@ CSS variable, or a media query can move a number this table will not follow.
 Every derived or defaulted field is printed to stdout as `derived: ...` or
 `defaulted: ...` so the draft's provenance is auditable without diffing JSON.
 
+## Prompting the canvas you will derive from
+
+Everything above measures a canvas. This section is about drawing one worth
+measuring, because the derivation is only as good as its reference artboard.
+
+Brief a canvas the way you would brief a designer, in four parts and in this
+order — **Goal, Layout, Content, Audience**:
+
+| Part | What it fixes | What it costs to omit |
+|---|---|---|
+| **Goal** | What the artboard is for and the decision it serves | Generic composition; nothing to reject a layout against |
+| **Layout** | Row/column structure, section order, what is full-width | `geometry.grid_columns` derives from whatever CSS grid happened to appear |
+| **Content** | The actual labels, filters, states, and indicators | Lorem-length text; `typography.body_pt` reads a median of placeholder sizes |
+| **Audience** | Who reads it, on what screen, in what setting | Density tuned for nobody, so `safe_margin_inches` measures an accident |
+
+The two failure modes are the same one at different amplitudes:
+
+```
+Weak:   Make a dashboard for our sales team.
+
+Strong: Goal: A weekly pipeline dashboard for regional sales managers to spot
+        stalled deals before the Friday review.
+        Layout: Three-column top row (total pipeline value, deals at risk,
+        forecast accuracy), full-width filterable deals table, right-hand
+        sidebar with the top three coaching opportunities.
+        Content: Region filter (EMEA, AMER, APAC), deal stage chips, red flag
+        for deals stuck > 14 days, manager avatar per row.
+        Audience: Regional sales managers on a 13-inch laptop during a live
+        call. Prioritise scannability over density.
+```
+
+Four moves that pay off specifically at derivation time:
+
+- **Name the reference artboard `Main.dc.html`.** Typography is read from one
+  artboard in the order `Main.dc.html` → `launch.file` → first entry. Leave it
+  to chance and an L01 cover hero at 64px sets `title_pt` for the whole deck.
+- **Name every other artboard for its archetype.** `Comparison.dc.html` →
+  `comparison`; unrecognized stems are silently ignored, so a file called
+  `Untitled-3.dc.html` contributes nothing to `archetypes[]`.
+- **Declare flat CSS on the elements that matter.** The parser reads declared
+  CSS, never computed style — a cascade, a CSS variable, or a media query moves
+  a number it will not follow.
+- **Do not over-constrain the first prompt.** Start directional, then sharpen.
+  Sizes and spacing are what you tune once there is something on the canvas to
+  react to; the structure is what you must state up front.
+
+The GLCA framing is adapted from a third-party Claude Design guide (EfficusAI,
+Notion, undated) whose product claims did not survive checking against the
+installed `/design` skill — the pattern itself is sound and is all that was
+taken. The four derivation-specific moves are this repo's, measured against
+`derive_template_profile.py`.
+
 ## Non-goals
 
 - No logo detection or extraction from slide images.

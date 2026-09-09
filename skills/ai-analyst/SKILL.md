@@ -23,10 +23,40 @@ contract before visualization. The `export-results` subskill must emit and valid
 `<run>/visual-spec.json`, then hand it to the selected direct deck builder. Connector output
 is an upstream reference surface, not an exception to the visual-routing rules.
 
+## Excel Input
+
+Excel is **not** read directly by the analysis path. `pd.read_excel` on a normal business
+export succeeds while making the report banner the column names, and nothing raises — a
+profiler then reports five all-object columns and the analysis proceeds on garbage.
+
+Run `/excel-ingest` first: it names every sheet with its detected header row, reports merged
+cells rather than repairing them, refuses to choose between two data-shaped sheets, and writes
+`<workbook>__<sheet>.csv` into the data directory. Everything downstream is unchanged.
+`read_table` raises and points here when handed a workbook.
+
+## Causal Inference and Experimentation
+
+When the question is *did this cause that*, route by whether randomization is possible:
+
+- **Randomization possible** → `/design-experiment`. Power and sample size before launch,
+  then `experiment_stats/` for the readout. Peeking is safe only through
+  `always_valid_pvalue` / `confidence_sequence`.
+- **Randomization impossible** → `/causal`. Selects Pre-Post, DiD, propensity matching, or
+  regression adjustment, then checks the assumption each one rests on and reports how strong
+  an unmeasured confounder would need to be to erase the effect.
+- **Any experiment dataset** → `/srm-check` first. A sample ratio mismatch invalidates every
+  number downstream, so it runs as a gate, not a diagnostic.
+- **Before trusting a repeated answer** → `/reliability`. Stability, not correctness: a wrong
+  query is perfectly stable, which is exactly why this check needs no answer key.
+
+These carry runnable estimators rather than prose. They require `scipy`, `statsmodels`, and
+`scikit-learn`, which are not installed by default — the skills state this and stop rather
+than approximating. Provenance and verification: `references/provenance.md`.
+
 ## What You Get
 
-- **39 skills** — question framing, metric definition, data exploration, forecasting, experiment design, and more
-- **18 agents** — specialized analytical agents for hypothesis testing, cohort analysis, root cause investigation, storytelling, chart-making, and deck creation
+- **43 skills** — question framing, metric definition, data exploration, forecasting, experiment design, causal inference, and more
+- **28 agents** — specialized analytical agents for hypothesis testing, cohort analysis, root cause investigation, causal inference, experiment readout, storytelling, chart-making, and deck creation
 - **Publication-quality charts** — styled visualizations with consistent theming
 - **Slide decks** — Marp-powered presentations ready for stakeholder readouts
 - **Data validation** — built-in confidence scoring, source tieout, and logical validation

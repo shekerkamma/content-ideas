@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lead Sourcing and Qualification"
+  short_description: "Source and score evidence-backed leads"
+  default_prompt: "Use $lead-sourcing-qualification to build a tiered lead list with traceable scoring."

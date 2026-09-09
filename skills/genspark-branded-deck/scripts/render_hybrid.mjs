@@ -87,11 +87,47 @@ const CAPTURE = () => {
       }
     }
   };
+  // PRE-PASS — mixed content: an element owning inline text AND a block child,
+  // e.g. <div><strong>Label:</strong> value<div>caption</div></div>. The capture
+  // loop skips it for having a block kid, and its <strong>/text node are never
+  // boxes of their own, so "Label: value" vanishes from the PPTX while the PNG
+  // stays perfect. Wrap each stray inline run in its own block first. This must
+  // run before querySelectorAll below, which returns a STATIC list.
+  for (const el of [...slide.querySelectorAll("*")]) {
+    if (!el.children.length) continue;
+    const hasBlockKid = [...el.children].some(c => {
+      const d = getComputedStyle(c).display;
+      return d !== "inline" && d !== "none" && c.textContent.trim();
+    });
+    if (!hasBlockKid) continue;
+    let run = [];
+    const flush = () => {
+      if (!run.length) return;
+      const w = document.createElement("div");
+      w.setAttribute("data-hybrid-stray", "1");
+      el.insertBefore(w, run[0]);
+      for (const n of run) w.appendChild(n);
+      run = [];
+    };
+    for (const n of [...el.childNodes]) {
+      const isStray = n.nodeType === 3 ? !!n.textContent.trim()
+        : n.nodeType === 1 && getComputedStyle(n).display === "inline";
+      if (isStray) run.push(n); else flush();
+    }
+    flush();
+  }
+
   const all = slide.querySelectorAll("*");
   for (const el of all) {
     if (el.classList && el.classList.contains("num")) continue;
-    if (["STRONG", "B", "EM", "I", "A", "SMALL", "MARK"].includes(el.tagName)) continue;
     const cs = getComputedStyle(el);
+    // Inline tags are runs of their parent block — but ONLY while they are
+    // actually inline. A flex/grid parent blockifies its children, so the same
+    // <strong> becomes its own box; the parent is then skipped for having a
+    // block kid and the child skipped by tag name, and the text is lost.
+    // Gate the tag-name skip on the COMPUTED display, never on the tag alone.
+    if (["STRONG", "B", "EM", "I", "A", "SMALL", "MARK"].includes(el.tagName)
+        && cs.display === "inline") continue;
     if (cs.display === "inline") continue;   // pure-inline nodes are runs of their block, not boxes
     // A text box is any element that HOLDS text but contains no block-level
     // child that itself holds text ("text leaf block").

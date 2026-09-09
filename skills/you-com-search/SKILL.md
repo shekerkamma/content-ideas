@@ -11,10 +11,11 @@ research, freshness filters, or domain targeting.
 
 ## Requirements
 
-Set `YOU_API_KEY` in the environment. In Hermes/Codex-on-WSL contexts, the helper
-first reads the active Windows Hermes Desktop credentials at
-`/mnt/c/Users/sheke/AppData/Local/hermes/.env`, then falls back to
-`~/.hermes/.env` if `YOU_API_KEY` is not already exported.
+Set `YOU_API_KEY` or `YDC_API_KEY`. In Hermes/Codex-on-WSL contexts, the helper
+prefers the active Windows Hermes Desktop credential at
+`/mnt/c/Users/sheke/AppData/Local/hermes/.env`, then the WSL Hermes file, and
+only then an inherited shell value. This ordering prevents a stale exported key
+from masking the active cross-host credential.
 
 Do not hardcode API keys in scripts, prompts, markdown files, or repo artifacts.
 
@@ -36,8 +37,8 @@ Search with livecrawl:
 python3 skills/you-com-search/scripts/search.py "your query" --livecrawl
 ```
 
-Run the Hermes-equivalent Level 2 route (You.com discovery followed by fresh
-Exa extraction):
+Run Level 2 (You.com discovery plus current full-page Markdown extraction in
+the same POST request):
 
 ```bash
 python3 skills/you-com-search/scripts/level2_search.py "your query"
@@ -59,7 +60,8 @@ python3 skills/you-com-search/scripts/search.py "finance query" --mode finance
 
 - Prefer `search` for targeted discovery and source collection.
 - Prefer `--livecrawl` when the agent needs page content, not just result
-  snippets.
+  snippets. The compatibility flag maps to You.com's current POST
+  `extraction_mode: full_page` contract.
 - Prefer `research` for multi-step synthesis where You.com should plan and
   execute the research loop.
 - Prefer `finance` for fundamentals, filings, market data, commodities, macro,

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence-led GTM Analysis"
+  short_description: "Build validated GTM and competitor matrices"
+  default_prompt: "Use $data-analysis-dashboards with the AI Analyst workflow to validate source data, build comparison matrices and charts, and export presentation-ready analytical artifacts."

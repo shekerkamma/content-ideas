@@ -219,13 +219,16 @@ File: `<working-dir>/<name>-architecture.pptx`
 
 ---
 
-## Step 4 — NotebookLM Notebook
+## Step 4 — Gemini Notebook
 
-Invoke the `notebooklm` skill.
+Invoke the `notebooklm` skill. (The product was renamed from NotebookLM to
+Gemini Notebook on 2026-07-16; the skill keeps its original directory name.)
 
-**⚠️ Chrome MCP Domain Restriction:** The MCP cannot auto-navigate to notebooklm.google.com. Give the user these manual steps:
+**⚠️ Automation is unreliable:** the app moved to `notebook.google.com` in July
+2026, Chrome MCP has been blocked at the domain level, and the required browser
+MCP may not be loaded at all. Give the user these manual steps:
 
-1. Open Chrome → **https://notebooklm.google.com**
+1. Open the browser → **https://notebook.google.com**
 2. Click **"New notebook"** → name it `"<System Name> Architecture"`
 3. **"Add source"** → **"Upload file"** → select `<name>-architecture.md`
 4. Wait for spinner (~30 sec)
@@ -302,7 +305,7 @@ At invocation:
 
 ## Gotchas
 
-- **NotebookLM is not automatable via Chrome MCP:** The `mcp__Claude_in_Chrome__navigate` tool cannot reach `notebooklm.google.com`. Always fall back to the manual 5-step instructions in Step 4 — never silently skip.
+- **Gemini Notebook is not reliably automatable:** the app moved to `notebook.google.com` in July 2026, `mcp__Claude_in_Chrome__navigate` has been blocked at the old domain (untested against the new one), and the browser MCP may not be loaded in the session at all. Always fall back to the manual 5-step instructions in Step 4 — never silently skip.
 - **The `.md` doc must be written before the pptx:** The pptx narrative draws directly from the markdown structure. Writing them in reverse order produces a weaker deck.
 - **Enterprise Consulting theme = white backgrounds only:** No dark slides, no Midnight Executive. If a user asks for dark, decline and explain the constraint.
 - **Component-flow diagrams only in draw.io:** Swimlane diagrams look wrong for architecture. Use labeled component boxes with numbered arrows — see `drawio` skill reference.

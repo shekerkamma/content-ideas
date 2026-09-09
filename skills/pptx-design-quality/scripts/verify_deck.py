@@ -75,7 +75,15 @@ def run(path):
             for fx,fy,fw,fh,fc,fo in fills:
                 if fo <= o1: continue
                 ix=min(x+w,fx+fw)-max(x,fx); iy=min(y+h,fy+fh)-max(y,fy)
-                if ix>2 and iy>2 and (ix*iy)/(w*h) > 0.25:
+                # Threshold calibrated against OfficeCLI, which is authoritative for
+                # this class because it measures rendered glyph extents while this
+                # measures box bounds -- a box may carry slack at its bottom.
+                #   0.2083  a card clipping a 24px single-line label   OfficeCLI FLAGGED
+                #   0.1795  a card overlapping a 39px KPI note box     OfficeCLI CLEAN
+                #   0.1126  a card overlapping a 151px card body       OfficeCLI CLEAN
+                # 0.20 separates them. Treat this as a fast pre-pass, not a substitute
+                # for the OfficeCLI render gate; re-calibrate if that tool disagrees.
+                if ix > 2 and iy > 2 and (ix * iy) / (w * h) > 0.20:
                     findings.append(f"s{i} OCCL  {t[:34]!r} under shape at ({fx:.0f},{fy:.0f}) {fw:.0f}x{fh:.0f}")
                     break
 

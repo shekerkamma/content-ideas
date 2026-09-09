@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""No-network regression check for You.com livecrawl parameter naming."""
+"""No-network regression check for You.com full-page extraction mapping."""
 
 from __future__ import annotations
 
@@ -22,21 +22,19 @@ def main() -> int:
     search = _load_search_module()
     args = argparse.Namespace(
         query="test query",
-        level="2",
-        mode="search",
-        limit=10,
-        livecrawl=False,
+        count=10,
+        livecrawl=True,
+        crawl_timeout=30,
         freshness=None,
-        from_date=None,
-        to_date=None,
         site=[],
         exclude_site=[],
     )
-    params = dict(search._build_params(args))
-    assert params.get("live_crawl") == "true", params
-    assert "livecrawl" not in params, params
-    assert "liveCrawl" not in params, params
-    print("OK: Level 2 sends live_crawl=true")
+    payload = search.build_payload(args)
+    extraction = payload.get("extraction", {})
+    assert extraction.get("extraction_mode") == "full_page", payload
+    assert extraction.get("full_page", {}).get("extraction_formats") == ["markdown"], payload
+    assert payload.get("crawl_timeout") == 30, payload
+    print("OK: --livecrawl maps to POST full_page Markdown extraction")
     return 0
 
 

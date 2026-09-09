@@ -20,6 +20,8 @@
 //   proportion(x,y,w,h,segs) ................... to-scale share bar  <- use for any "X is N% of Y"
 //   rail(x,y,w,nodes,{dark}) ................... milestone timeline
 //   chain(x,y,w,nodes,{nodeW,nodeH}) ........... L04 process chain w/ arrows
+//   imageDataUrl(absPath) -> dataURL ........... async: read a PNG/JPG into a data URL
+//   image(dataUrl,x,y,w,h,{fit,bg,border}) ..... place an image INSIDE a native slide (framed)
 //
 // HARD RULES
 //   1. addSlide() calls setViewportSize(1280,720) -> exactly 13.333 x 7.5in. Never change.
@@ -30,10 +32,14 @@
 //   6. Fonts: DM Serif Display/Questrial are absent on Linux. SERIF/SANS below are the
 //      design system's documented fallbacks, set deliberately. Local renders show sans
 //      titles; Windows PowerPoint resolves Georgia. That is a render artifact, not a defect.
+//   7. Images go INSIDE native slides, never as a flattened slide. C.image needs a TOP-LEVEL
+//      `dataUrl` (base64 data URL) — {path}/{blob}/Buffer embed NOTHING in this port and
+//      render a gray box. Verify: `unzip -l deck.pptx | grep -c media/`. See the build
+//      reference §5c. Source figures route `extract`; generated art must be text-free.
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 
-const AT = 'file:///C:/Users/sheke/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@oai/artifact-tool/dist';
+const AT = 'file:///home/sheke/.local/artifact-tool-linux/dist';
 const { Presentation, PresentationFile, layers: composeLayers } = await import(`${AT}/artifact_tool.mjs`);
 const { textStyle, stroke } = await import(`${AT}/presentation-jsx/index.mjs`);
 const { jsx, jsxs } = await import(`${AT}/presentation-jsx/jsx-runtime.mjs`);
@@ -78,6 +84,22 @@ const sh = (geometry, x, y, w, h, fill, lineColor = 'none', lineWidth = 0) => js
 const rect = (x, y, w, h, f, lc = 'none', lw = 0) => sh('rect', x, y, w, h, f, lc, lw);
 const roundRect = (x, y, w, h, f, lc = 'none', lw = 0) => sh('roundRect', x, y, w, h, f, lc, lw);
 const ellipse = (x, y, w, h, f, lc = 'none', lw = 0) => sh('ellipse', x, y, w, h, f, lc, lw);
+
+// ── IMAGES (inside native slides — HARD RULE 7) ───────────────────────────
+// Read a local PNG/JPG into a base64 data URL. dataUrl is the ONLY source form that both
+// embeds media in the .pptx AND rasterizes in the QA PNG on this port (build reference §5c).
+async function imageDataUrl(absPath) {
+  const ext = absPath.toLowerCase().endsWith('.jpg') || absPath.toLowerCase().endsWith('.jpeg') ? 'jpeg' : 'png';
+  return `data:image/${ext};base64,${(await readFile(absPath)).toString('base64')}`;
+}
+// Place an image in a framed box. fit:'contain' letterboxes (no crop); 'cover' fills (crops).
+// Returns an array of layers — spread it into addSlide([...]).
+function image(dataUrl, x, y, w, h, { fit = 'contain', bg = K.white, border = K.line, contentType = 'image/png' } = {}) {
+  return [
+    border === 'none' ? rect(x, y, w, h, bg) : rect(x, y, w, h, bg, border, 1),
+    C.image({ dataUrl, contentType, fit, width: C.fixed(w - 2), height: C.fixed(h - 2), position: { left: x + 1, top: y + 1 } }),
+  ];
+}
 
 const FOOT = process.env.DECK_FOOTER || 'CLIENT  ·  INITIATIVE  ·  DATE';
 function footer(page, dark = false) {
@@ -264,3 +286,17 @@ function chain(x, y, w, nodes, opts = {}) {
 const SRC = (t, x = 48, y = 660) => tx(t, x, y, 1000, 14, { size: 8, color: K.gray, italic: true });
 
 
+
+// The header says "import everything below" but the module exported nothing, so
+// `import { card } from './deck-kit.mjs'` failed and every builder had to paste the
+// file inline or bolt an export block on by hand. Exporting is additive: copy-paste
+// use is unaffected.
+export {
+  P, C, K, SERIF, SANS, jsx, jsxs, Text, Shape, Layers,
+  style, tx, sh, rect, roundRect, ellipse,
+  header, headerDark, footer, addSlide,
+  textH, card, kpi, table, barsV, barsH, proportion, rail, chain, SRC,
+  imageDataUrl, image,
+  Presentation, PresentationFile, textStyle, stroke,
+  OUT, PREVIEW_DIR, MONTAGE, RUN,
+};

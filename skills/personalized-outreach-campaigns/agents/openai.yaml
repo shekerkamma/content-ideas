@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personalized Outreach Campaigns"
+  short_description: "Draft evidence-based outreach campaigns"
+  default_prompt: "Use $personalized-outreach-campaigns to draft a verified signal-based outreach sequence."
