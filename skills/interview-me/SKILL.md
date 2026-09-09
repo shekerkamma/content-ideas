@@ -37,6 +37,17 @@ This skill needs a live, responsive user. **Do not invoke in non-interactive con
 
 ## The Process
 
+### Step 0: Read before you ask
+
+Look at what is already available: the folder, the files named in the ask,
+recent related work, prior runs. **Never ask a question you could answer
+yourself by reading.**
+
+The question budget is small — five to seven is where a user's care runs out —
+so every question spent on a discoverable fact is a question not spent on a real
+unknown. Reading first also raises the Step 1 confidence number honestly, rather
+than inflating it.
+
 ### Step 1: Hypothesize, with a confidence number
 
 Before asking anything, write down your current best read of what the user wants in **one sentence**, plus an honest confidence number (0–100%):
@@ -90,6 +101,15 @@ When you hear these, the question to ask is:
 > *"If you didn't have to justify this to anyone, what would you actually want?"*
 
 That single question often does more work than the previous five.
+
+### Step 3b: Name the blind spot
+
+Before writing the restate, ask yourself one question and share the answer:
+**what has this interview not covered that could still change the outcome?**
+
+Say it plainly — "we haven't touched who maintains this after launch" — and let
+the user decide whether it matters. The unknowns you can name are cheap; the
+ones nobody says out loud are what the restate silently assumes away.
 
 ### Step 4: Restate intent in the user's own words
 
@@ -184,6 +204,15 @@ Two questions in, the agent has discovered the actual ask isn't "a dashboard." I
 - **`planning-and-task-breakdown`**: two hops downstream of this skill (after the spec).
 - **`doubt-driven-development`**: opposite end of the timeline. Interview-me is pre-decision intent extraction; doubt-driven is post-decision artifact review. Both catch divergence, but at different moments.
 - **`source-driven-development`**: orthogonal. Interview-me clarifies what the user wants; SDD verifies framework facts. They don't compete.
+
+## When the user rambles
+
+Let them. A user who answers question two by talking for four paragraphs is
+handing over the interview for free.
+
+Reconstruct the ramble into answers against the four things Step 3 needs to
+cover, then ask only about what it did not reach. Re-asking something already
+volunteered spends a question and signals you were not listening.
 
 ## Common Rationalizations
 
