@@ -542,6 +542,39 @@ because the guard and the box were asking different questions. Measure at the
 estimator does not model. Same class as the `defRPr` trap above: two gates
 agreeing means nothing when both inherit the same wrong number.
 
+### A narration that passes every audio gate can still recite the slides
+
+Five DG32 films passed pace (135–160 spoken-word wpm), voice (Kokoro `bm_george`,
+Holt profile) and decoded-duration gates, and four of them read their own slides
+back: up to 39% of a slide's narration trigrams were on the slide, 23% on average
+for the worst film. Nothing measured it until
+`skills/narrated-deck-film/scripts/check_narration.py` ran against the voiced
+text. Three rules came out of the rebuild:
+
+- **Gate the narration before voicing, and fix it at the source.** A story pack's
+  `## 9. Narration` section is both the film voiceover and the deck's speaker
+  notes, so fixing only the voiced text leaves the notes saying something else.
+  `rewrite_narration.py` gates the merged narration in memory, refuses to write
+  while any slide is flagged, and asserts every replacement matched exactly one
+  line. After rewriting: 1.7–6.0% mean echo, no slide over 18%.
+- **Rewritten narration is denser, so re-tune pace per slide.** The same Kokoro
+  speed ran 156–160 wpm on the new text. `tune_slide_speeds.py` turns the first
+  report into `SLIDE_SPEEDS` (speed × 150 ÷ wpm, capped at the base speed), and
+  the second pass is the one that is gated: 148.7–153.6 wpm. A slide still under
+  the band at the base speed is short on words, and the fix is the writing.
+- **New speaker notes do not need new frames**, but prove the slides did not
+  change before reusing the PowerPoint export (next section).
+
+### A rebuilt deck never matches byte for byte; normalise before calling it unchanged
+
+Rebuilding an artifact-tool deck with only new speaker notes changed every slide
+part: a byte diff reported all 16 `slideN.xml` files, their rels and the master.
+The churn is identity, not content. `a16:creationId` GUIDs, `R` + 16-hex
+relationship ids and `p14:creationId` values are regenerated on every build.
+With those three normalised, the only parts left different were the notes, which
+is what licensed reusing the 1920×1080 frames and the earlier visual QA. A raw
+diff says everything changed; no diff says nothing. Compare normalised XML.
+
 ### Authoring motion: four silent failures, each costing a full debug cycle
 
 - **`officecli` only persists writes to Windows-side paths.** Given a WSL path it prints
@@ -679,6 +712,37 @@ has (installed Playwright expects build 1228; the cache holds 1208 and 1234):
 `auto` picks the newest cached build and prints which one served the run,
 `<path>` pins one and checks it exists first — `executablePath` is accepted
 without verification, so a path that is set is not a path that resolves.
+
+### Scroll-driven pages: five failures a green browser run hides
+
+From a UI pass on the DG32 React site (reveal on entry, one pinned stage, sticky
+tabs). Each was found by measurement or a rendered crop, not by reading code:
+
+- **An IntersectionObserver reveal can skip a block for good.** Behind a
+  software-rendered WebGL hero, a fast scroll carried three cards through the
+  viewport between observer updates and they stayed at opacity 0, on one view
+  only. A slow phone flinging the page is the same condition. Sweep instead: on a
+  rAF-throttled scroll, reveal every pending block whose top has crossed ~88% of
+  the viewport, including any already scrolled past.
+- **Prove reveals finished, not that they started.** The gate that caught it
+  counts reveal targets still missing their revealed class, or under 0.99
+  computed opacity, after a scroll-through of every view at desktop and phone
+  width. A screenshot cannot tell a block that faded in from one never hidden.
+- **`html { scroll-behavior: smooth }` makes scripted scroll measurements lie.**
+  `scrollTo(0, y)` animates, so a capture 650 ms later measured a pinned stage
+  76 px from where it sticks and reported a pin that never held. Gates must use
+  `scrollTo({top: y, behavior: 'instant'})`.
+- **An absolutely positioned child keeps its `grid-column`.** When the containing
+  block is a grid container, that placement selects a grid area as the containing
+  block, so `left: 0` landed one column in. Reset `grid-column: 1 / -1` on the
+  positioned state.
+- **A new component class can restyle an old one.** A package diagram's
+  `.dr-pkg-body` matched the existing package cards' body class and turned every
+  card on the Overview into a navy square; typecheck, build and the overflow gate
+  all passed. Grep the stylesheet for a class name before introducing it.
+
+The site's own gate for all of this is `scripts/verify-site.mjs` in
+`shekerkamma/deepgrid-dr-silicon`.
 
 ## Local PDF service (Stirling PDF)
 
