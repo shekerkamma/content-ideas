@@ -26,7 +26,7 @@
       ".github"
     ],
     "reason": "One copy per detected harness, installed by `npx impeccable skills install`. The bodies differ only in each harness's own script path and sigil.",
-    "evidence": "CLAUDE.md: 'one copy per detected harness, installed via npx impeccable skills install'. Verified: .claude vs .agents differs on 8 lines, all of the form 'node .claude/skills/impeccable/scripts/context.mjs' vs 'node .agents/skills/impeccable/scripts/context.mjs'; .claude vs .github differs on 4, all path-only."
+    "evidence": "CLAUDE.md: 'one copy per detected harness, installed via npx impeccable skills install'. Re-verified 2026-09-27 at skill 4.3.1 (signed upstream bundle skill-v4.3.1, ed25519 key release-2026-09): .claude vs .agents differs on 8 body lines, every difference the harness path ('.claude' vs '.agents') or the command sigil ('/' vs '$'); .claude vs .github on 4, sigil only; skills/ body is byte-identical to .claude."
   },
   "investor-competitive-dossier": {
     "trees": [

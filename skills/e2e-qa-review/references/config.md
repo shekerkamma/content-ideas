@@ -67,8 +67,13 @@
 - `dist`: the build output; the scroll-craft lane looks here for `data-sc-act` to decide applicability.
 - `impeccableTargets` (optional): override the detector's targets. Avoid `dist/`: bundles drag in vendored
   libraries (paths under `vendor/`, `node_modules/`, `downloads/` and `*.min.*` are dropped regardless).
-- `scrollChrome` (optional): an installed Chrome with h264, passed to scroll-craft as `SCROLLCRAFT_CHROME`.
+- `scrollChrome` (optional): the browser scroll-craft uses, passed as `SCROLLCRAFT_CHROME`; it must decode h264
+  (verify by playing a clip, see [lanes.md](lanes.md)).
 - `skillDirs` (optional): pin a peer skill's directory; see [lanes.md](lanes.md) for the search order.
 
 Dependencies: `playwright` and `axe-core` resolve from the site, then `$E2E_QA_NODE_MODULES` (a
 `node_modules` directory), then this skill's repo. The run prints which one served.
+- `allowedFonts` (sweep, optional): the families DESIGN.md declares, e.g.
+  `["Inter Variable", "Newsreader Variable", "JetBrains Mono Variable"]`. Any visible text whose computed
+  first family is outside the list is a finding, named by family and element class. This is the runtime
+  proof for a detector's font warning: it separates a dead CSS rule from one that actually paints.

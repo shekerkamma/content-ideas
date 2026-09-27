@@ -45,6 +45,8 @@ def main() -> None:
             groups['Targets under 24px'].append(f"{at}: {r['small']} e.g. {r['smallSample'][:3]}")
         if r['unrevealed']:
             groups['Reveals that never finished'].append(f"{at}: {r['unrevealed']}")
+        if r.get('offFont'):
+            groups['Text outside the declared fonts'].append(f"{at}: {', '.join(r['offFont'][:4])}")
         for v in r['axe']:
             note = f"  ({SUSPECT[v['id']]})" if v['id'] in SUSPECT else ''
             groups[f"axe {v['id']} ({v['impact']})"].append(f"{at}: {v['n']} node(s) {v['sample'][:1]}{note}")

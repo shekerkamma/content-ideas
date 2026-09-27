@@ -54,7 +54,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
   await p.waitForTimeout(600);
   await p.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
   await p.waitForTimeout(250);
-  const m = await p.evaluate((reveal) => {
+  const m = await p.evaluate(([reveal, fonts]) => {
     const vis = (e) => { const r = e.getBoundingClientRect(); const c = getComputedStyle(e); return r.width > 0 && r.height > 0 && c.visibility !== 'hidden' && !e.closest('[hidden],[aria-hidden="true"]'); };
     const text = document.body.innerText;
     const around = (re) => { const o = []; let x; const g = new RegExp(re.source, 'g'); while ((x = g.exec(text)) && o.length < 3) o.push(text.slice(Math.max(0, x.index - 35), x.index + 35).replace(/\s+/g, ' ')); return o; };
@@ -74,6 +74,19 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
       noBox: noBox.map((i) => (i.getAttribute('src') || '').slice(-60)).slice(0, 4), noBoxN: noBox.length,
       small: small.length, smallSample: [...new Set(small.map((e) => `${String(e.className).split(' ')[0] || e.tagName}:${Math.round(e.getBoundingClientRect().width)}x${Math.round(e.getBoundingClientRect().height)}`))].slice(0, 5),
       unrevealed: reveal ? [...document.querySelectorAll(reveal)].filter((e) => e.getClientRects().length && parseFloat(getComputedStyle(e).opacity) < 0.99).length : 0,
+      // text whose rendered first family is outside the declared type system (runtime proof, not a CSS grep)
+      offFont: (() => {
+        if (!fonts.length) return [];
+        const seen = new Map();
+        for (const e of leaves) {
+          if (!e.textContent.trim()) continue;
+          const fam = getComputedStyle(e).fontFamily.split(',')[0].trim().replace(/^["']|["']$/g, '');
+          if (fonts.some((f) => fam.toLowerCase() === f.toLowerCase())) continue;
+          const key = fam + ' @ ' + (String(e.className).split(' ')[0] || e.tagName.toLowerCase());
+          seen.set(key, (seen.get(key) || 0) + 1);
+        }
+        return [...seen].map(([k, n]) => `${k} x${n}`).slice(0, 8);
+      })(),
       design: {
         emDash: (text.match(/—/g) || []).length, emDashAt: around(/—/),
         counters: leaves.filter((e) => /^(0\d|\d{2}\s*\/\s*\d{2})$/.test(e.textContent.trim())).length,
@@ -83,7 +96,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
         eyebrowsPerH2: +(kickers / Math.max(1, heads.filter((x) => x.tagName === 'H2').length)).toFixed(2),
       },
     };
-  }, cfg.reveal || '');
+  }, [cfg.reveal || '', cfg.allowedFonts || []]);
   await p.addScriptTag({ content: AXE });
   const axe = await p.evaluate(async () => (await window.axe.run(document, { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'] })).violations
     .map((v) => ({ id: v.id, impact: v.impact, n: v.nodes.length, sample: v.nodes.slice(0, 2).map((x) => x.target.join(' ') + ' | ' + ((x.failureSummary || '').split('\n')[1] || '').trim()) })));
@@ -95,7 +108,7 @@ await b.close();
 
 const titles = rows.filter((r) => r.width === widths[0][2] && r.statusOk && !/no-such|missing|404/.test(r.route)).map((r) => r.title);
 const dupTitles = [...new Set(titles.filter((t, i) => titles.indexOf(t) !== i))];
-const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.axe.length;
+const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.offFont.length || r.axe.length;
 const soft = (r) => r.design.emDash || r.design.counters || r.design.italicHeads.length || r.design.pills;
 const hardN = rows.filter(hard).length, softN = rows.filter(soft).length;
 writeFileSync(out, JSON.stringify({ base: BASE, loads: rows.length, dupTitles, rows }, null, 1));

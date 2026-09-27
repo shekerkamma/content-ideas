@@ -36,12 +36,13 @@ python3 "$SKILL_DIR/scripts/lanes.py" qa/lanes.json   # 0 clean, 2 findings, 1 a
 | `impeccable` | `npx impeccable@<pin> detect --json <src>` | Node >= 24 (found on PATH or under nvm) | never |
 | `scrollcraft` | `scroll-craft/scripts/shoot.mjs` at desktop, 390 px and reduced motion | `playwright-core` in the site, installed Chrome (bundled Chromium has no h264) | the build contains no `data-sc-act` |
 
-**On this WSL host `SCROLLCRAFT_CHROME` points at Playwright's bundled chromium-1228** (set in `~/.bashrc` and
-`.claude/settings.local.json`). That browser has no h264 decoder, so every scrub clip stays on its poster: a
-FROZEN CLIP or LEGS STUCK ON POSTER finding there is the browser, and a clean clip result is not evidence.
-Set `scrollChrome` to a real Chrome for clip verdicts; cues, dead scroll and contrast are still valid. Headless
-screenshots here also time out intermittently (a different pass each run), so each pass gets one retry and
-`passes` in the results records it.
+**Test the browser's h264, don't assume it.** scroll-craft refuses bundled Chromium because "Chromium ships
+without an h264 decoder", and a browser without it leaves every scrub clip on its poster: FROZEN CLIP and
+STUCK ON POSTER then describe the browser, not the page. That premise is build-dependent. Measured here on
+2026-09-27 with a real libx264 clip: Playwright's chromium-1228 played it (`videoWidth` 320, `currentTime`
+advancing), identical to Google Chrome 154. Before trusting a clip verdict, play one h264 file in the
+browser the lane will use; `scrollChrome` pins a different one. Headless screenshots here also time out
+intermittently (a different pass each run), so each pass gets one retry and `passes` records it.
 
 Peer skills are found by config `skillDirs`, then `E2E_QA_<NAME>_DIR`, then a sibling of this skill, then
 `~/.claude/skills`, `~/.agents/skills`, `.agents/skills`, `.claude/skills`, `~/.codex/skills`, then the
