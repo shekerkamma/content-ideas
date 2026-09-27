@@ -11,7 +11,7 @@
 # or npx unavailable)
 set -uo pipefail
 
-IMPECCABLE_VERSION="3.5.0"
+IMPECCABLE_VERSION="4.1.0"
 REQUIRED_NODE_MAJOR=24
 
 if ! command -v node >/dev/null 2>&1; then

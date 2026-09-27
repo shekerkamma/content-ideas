@@ -294,7 +294,7 @@ on-screen text, then narration.**
   `pptx-design-quality/scripts/lint_pptx.py`, which already covers the PPTX-native
   equivalent checks (overflow, overlap, contrast, font/color-count caps, DPI, layout
   repetition) with its own `qa.ignore_rules`/`qa.waivers` waiver mechanism.
-  `scripts/design-qa-detect.sh` is the pinned wrapper (`impeccable@3.5.0`, requires
+  `scripts/design-qa-detect.sh` is the pinned wrapper (`impeccable@4.1.0`, requires
   Node >= 24) that `marp` and `genspark-branded-deck` run against authored HTML before
   PPTX export; bump the pin there and in this file together when upgrading.
 

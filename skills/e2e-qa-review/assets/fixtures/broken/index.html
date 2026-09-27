@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Broken fixture</title>
+<style>
+  body { margin: 0; font: 16px sans-serif; }
+  .mega-nav { display: flex; gap: 12px; padding: 8px; }
+  /* no menu aim and a 120px gap: the panel closes before a pointer can reach it */
+  #m1 { position: absolute; top: 160px; left: 8px; background: #eee; padding: 8px; }
+  .wide { width: 2000px; height: 10px; background: #ccc; }           /* sideways scroll */
+  .tiny { width: 10px; height: 10px; padding: 0; }                   /* target under 24px, no name */
+</style></head>
+<body>
+<!-- Each defect below is deliberate; tests/test_e2e_qa_review.py expects the gates to fire on it. -->
+<nav class="mega-nav" aria-label="Main">
+  <button class="mega-trigger" aria-controls="m1" aria-expanded="false">Menu</button>
+  <a href="a">Top link</a>
+</nav>
+<div id="m1" hidden><a href="a">Page A</a> <a href="gone">Gone</a></div>
+<main>
+  <h1>Broken fixture</h1>
+  <h3>Skips h2</h3>                                                   <!-- heading skip -->
+  <p>A sentence with an em dash — the design default.</p>
+  <img src="missing.png" alt="">                                     <!-- broken, no reserved box -->
+  <button class="tiny"></button>                                     <!-- axe button-name -->
+  <div class="wide"></div>
+</main>
+<script>
+  const b = document.querySelector('.mega-trigger'), m = document.getElementById('m1');
+  b.addEventListener('mouseenter', () => { m.hidden = false; });
+  b.addEventListener('mouseleave', () => { m.hidden = true; });     // closes instantly
+  b.addEventListener('click', () => { m.hidden = !m.hidden; });    // Escape never closes it
+  undefinedFunction();                                                // page error
+</script>
+</body></html>
