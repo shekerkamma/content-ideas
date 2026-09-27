@@ -104,6 +104,11 @@ def test_serve_pages_resolves_like_github_pages(tmp_path):
         assert _get(base + 'bare') == (404, 'NOTFOUND')
         assert _get(base + 'bare/') == (404, 'NOTFOUND')
         assert _get(base + 'no-such-page') == (404, 'NOTFOUND')
+        root = f'http://127.0.0.1:{port}/'
+        assert _get(root)[0] == 404 and _get(root + 'about')[0] == 404       # outside the base path
+        (tmp_path / 'secret.html').write_text('SECRET')
+        assert _get(base + '../secret')[1] != 'SECRET'                        # no escape from dist
+        assert _get(base + '%2e%2e/secret')[1] != 'SECRET'
     finally:
         proc.terminate()
         proc.wait(5)
@@ -260,3 +265,50 @@ def test_impeccable_lane_gates_warnings_and_routes_advisory(tmp_path):
     assert imp['status'] == 'ran' and r.returncode == 2
     assert 'skipped-heading' in {f['rule'] for f in imp['findings']}
     assert all(f['severity'] != 'advisory' for f in imp['findings']) and 'improve-ui' in imp['advisory']['route']
+
+
+# --- cross-host contract: the compound skill must work from a fresh clone on any host -----------------------
+
+PORTED = ['e2e-qa-review', 'web-design-guidelines', 'improve-ui', 'impeccable']
+
+
+@pytest.mark.parametrize('name', PORTED)
+def test_lane_skill_is_flat_and_mirrored_for_every_host(name):
+    """Claude and Codex read skills/, DeepSeek Harness and OpenHands read .agents/skills/ (single level only)."""
+    import filecmp
+    for tree in ('skills', '.agents/skills'):
+        skill = ROOT / tree / name / 'SKILL.md'
+        assert skill.is_file(), f'{tree}/{name} missing: that host cannot see this lane'
+        head = skill.read_text().split('\n---\n', 1)[0]
+        assert re.search(rf'^name: {name}$', head, re.M) and re.search(r'^description: \S', head, re.M)
+    if name != 'impeccable':  # impeccable's harness copies differ by design (cross-tree-variants.json)
+        cmp = filecmp.dircmp(ROOT / 'skills' / name, ROOT / '.agents/skills' / name, ignore=['__pycache__'])
+        stack = [cmp]
+        while stack:
+            c = stack.pop()
+            assert not (c.left_only or c.right_only or c.diff_files), (name, c.left_only, c.right_only, c.diff_files)
+            stack += c.subdirs.values()
+
+
+@pytest.mark.parametrize('name', ['web-design-guidelines', 'improve-ui'])
+def test_vendored_lane_skills_carry_their_license(name):
+    d = ROOT / 'skills' / name
+    assert (d / 'PROVENANCE.md').is_file() and any(p.name.startswith('LICENSE') for p in d.iterdir())
+
+
+def test_lanes_resolve_peer_skills_from_the_repo_alone(tmp_path):
+    """A fresh machine has no ~/.claude/skills: the lane skills must resolve from this repo's own tree."""
+    code = ('import sys; sys.path.insert(0, sys.argv[1]); import lanes; '
+            'print(lanes.find_skill("web-design-guidelines", {})); print(lanes.find_skill("improve-ui", {}))')
+    env = {**__import__('os').environ, 'HOME': str(tmp_path), 'USERPROFILE': str(tmp_path)}
+    r = subprocess.run([sys.executable, '-c', code, str(SCRIPTS)], cwd=tmp_path, env=env, capture_output=True, text=True)
+    got = r.stdout.split()
+    assert len(got) == 2 and all(str(ROOT) in g for g in got), r.stdout + r.stderr
+
+
+def test_scripts_avoid_posix_only_calls():
+    """Windows hosts: no symlinks, no hard-coded python3 or bare npx inside the scripts themselves."""
+    for p in SCRIPTS.glob('*.py'):
+        src = p.read_text()
+        assert 'os.symlink' not in src, p.name
+        assert "'npx'" not in src or 'npx.cmd' in src, p.name

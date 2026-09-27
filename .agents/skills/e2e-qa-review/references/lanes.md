@@ -44,7 +44,8 @@ advancing), identical to Google Chrome 154. Before trusting a clip verdict, play
 browser the lane will use; `scrollChrome` pins a different one. Headless screenshots here also time out
 intermittently (a different pass each run), so each pass gets one retry and `passes` records it.
 
-Peer skills are found by config `skillDirs`, then `E2E_QA_<NAME>_DIR`, then a sibling of this skill, then
+Peer skills are found by config `skillDirs`, then `E2E_QA_<NAME>_DIR`, then a sibling of this skill (how a
+fresh clone finds `web-design-guidelines` and `improve-ui`), then
 `~/.claude/skills`, `~/.agents/skills`, `.agents/skills`, `.claude/skills`, `~/.codex/skills`, then the
 Claude plugin cache (`scroll-craft` ships in the `nateherk-design` plugin). A lane whose skill is missing is
 **BLOCKED with the reason**, never dropped: a lane that skips must not read as a lane that passed.

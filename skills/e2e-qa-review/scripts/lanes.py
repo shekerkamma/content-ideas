@@ -22,6 +22,7 @@ import subprocess
 import sys
 
 HOME = os.path.expanduser('~')
+WIN = os.name == 'nt'
 SKILL_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 
@@ -38,8 +39,11 @@ def find_skill(name: str, cfg: dict) -> str | None:
 
 def node_at_least(major: int) -> str | None:
     """A node binary new enough for the lane: PATH first, then the newest nvm install that qualifies."""
-    bins = [shutil.which('node')] + sorted(glob.glob(f'{HOME}/.nvm/versions/node/v*/bin/node'),
-                                           key=lambda p: [int(x) for x in re.findall(r'\d+', p.split('/v')[-1])[:3]],
+    nvm = glob.glob(f'{HOME}/.nvm/versions/node/v*/bin/node')  # nvm (Linux, macOS)
+    if WIN and os.environ.get('NVM_HOME'):                      # nvm-windows
+        nvm += glob.glob(os.path.join(os.environ['NVM_HOME'], 'v*', 'node.exe'))
+    bins = [shutil.which('node')] + sorted(nvm,
+                                           key=lambda p: [int(x) for x in re.findall(r'\d+', re.split(r'[/\\]v(?=\d)', p)[-1])[:3]],
                                            reverse=True)
     for b in filter(None, bins):
         try:
@@ -86,7 +90,7 @@ def lane_impeccable(cfg: dict) -> dict:
     targets = cfg.get('impeccableTargets') or [cfg.get('src', '.')]
     if not all(os.path.exists(t) for t in targets):
         return {'status': 'blocked', 'reason': f'impeccable target(s) {targets} not found'}
-    npx = os.path.join(os.path.dirname(node), 'npx')
+    npx = os.path.join(os.path.dirname(node), 'npx.cmd' if WIN else 'npx')
     env = {**os.environ, 'PATH': os.path.dirname(node) + os.pathsep + os.environ.get('PATH', '')}
     r = subprocess.run([npx, '--yes', f'impeccable@{pin}', 'detect', '--json', *targets],
                        capture_output=True, text=True, env=env, timeout=900)

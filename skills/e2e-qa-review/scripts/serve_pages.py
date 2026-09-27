@@ -12,9 +12,10 @@ What Pages does and `python3 -m http.server` does not:
 Stdlib only.
 """
 import os
+import posixpath
 import sys
-import tempfile
 from functools import partial
+from urllib.parse import unquote
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 
@@ -24,10 +25,19 @@ def main() -> None:
     dist, slug, port = os.path.abspath(sys.argv[1]), sys.argv[2].strip('/'), int(sys.argv[3])
     if not os.path.isfile(os.path.join(dist, 'index.html')):
         sys.exit(f'BLOCKED: {dist}/index.html not found; build first')
-    root = tempfile.mkdtemp(prefix='qa-srv-')
-    os.symlink(dist, os.path.join(root, slug))
+    prefix = '/' + slug
 
     class Handler(SimpleHTTPRequestHandler):
+        def translate_path(self, path):
+            # Serve dist under /<slug>/ by stripping the prefix here: no symlink, so no admin rights on Windows.
+            p = unquote(path.split('?')[0].split('#')[0])
+            if p != prefix and not p.startswith(prefix + '/'):
+                return os.path.join(dist, '.qa-outside-base', 'missing')  # outside the base path is a 404
+            rest = posixpath.normpath(p[len(prefix):] or '/')
+            parts = [x for x in rest.split('/') if x and x not in ('.', '..')]
+            full = os.path.join(dist, *parts)
+            return full + os.sep if p.endswith('/') and parts else full
+
         def send_head(self):
             clean = self.path.split('?')[0].split('#')[0]
             path = self.translate_path(clean)
@@ -59,7 +69,7 @@ def main() -> None:
 
     ThreadingHTTPServer.daemon_threads = True
     print(f'serving {dist} at http://127.0.0.1:{port}/{slug}/', flush=True)
-    ThreadingHTTPServer(('127.0.0.1', port), partial(Handler, directory=root)).serve_forever()
+    ThreadingHTTPServer(('127.0.0.1', port), partial(Handler, directory=dist)).serve_forever()
 
 
 if __name__ == '__main__':

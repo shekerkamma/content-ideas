@@ -226,9 +226,23 @@ For a native deck use pptx-design-quality instead."
 
 ## Host Compatibility
 
-- Claude Code: canonical `skills/e2e-qa-review/`, discovered through the `~/.claude/skills/e2e-qa-review`
-  symlink and the project `.claude/settings.json` skills list.
-- Codex: exposed by `.codex-plugin/plugin.json` (`"skills": "./skills/"`).
-- OpenHands / DeepSeek Harness: byte-identical mirror at `.agents/skills/e2e-qa-review/`.
-- Tools: Claude `Task` subagents map to Codex multi-agent tools where available, otherwise sequential passes
-  over the same page groups. `AskUserQuestion` maps to one plain question, only when blocked.
+One canonical copy, reached by every host through its own discovery path. The four lane skills follow the
+same layout, so the compound skill works from a fresh clone.
+
+| Host | Discovers it at | Lane skills |
+|---|---|---|
+| Claude Code | `~/.claude/skills/<name>` (symlink) + project `.claude/settings.json` | same |
+| Codex | `.codex-plugin` (`"skills": "./skills/"`) and `~/.codex/skills/<name>` via `scripts/sync-codex-skills.sh` | same |
+| DeepSeek Harness / OpenHands | `.agents/skills/<name>` in the repo (byte-identical mirror), `~/.agents/skills` and `~/.dsh/skills` from any other project | same |
+
+- **Canonical sources:** `skills/e2e-qa-review/`, `skills/web-design-guidelines/`, `skills/improve-ui/` (vendored
+  flat from ibelick/ui-skills, MIT, see its `PROVENANCE.md`), `skills/impeccable/` plus its per-harness
+  copies. `scroll-craft` is a Claude plugin (`nateherk-design`), not vendored: on hosts without it the
+  scroll lane is BLOCKED with that reason, and every other lane still runs.
+- **Operating systems:** scripts are Node ESM and stdlib Python with no symlinks or shell-only calls; on
+  Windows run `python` where this file says `python3`, and `lanes.py` finds `npx.cmd` and nvm-windows
+  installs. The impeccable lane needs Node >= 24 on every OS.
+- **Tools:** Claude `Task` subagents map to Codex multi-agent tools where available, otherwise sequential
+  passes over the same page groups. `AskUserQuestion` maps to one plain question, only when blocked.
+- **Contract:** `tests/test_e2e_qa_review.py` asserts every lane skill is flat and mirrored in both trees,
+  vendored ones carry their licence, and lane skills resolve from the repo with an empty home directory.
