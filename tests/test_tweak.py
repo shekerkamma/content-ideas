@@ -150,3 +150,65 @@ def test_browser_slider_then_bake(demo):
     finally:
         p.terminate()
         p.wait(5)
+
+
+def test_config_typo_fails_loudly(demo, tmp_path):
+    bad = tmp_path / 'tweak.json'
+    bad.write_text(json.dumps({'controls': [{'token': '--spcae', 'label': 'Spacing'}]}))
+    r = subprocess.run([sys.executable, str(SKILL / 'scripts' / 'tweak.py'), str(demo), '--bake-into',
+                        str(demo / 'styles.css'), '--config', str(bad)], capture_output=True, text=True, timeout=30)
+    assert r.returncode == 1 and "'--spcae' is not declared" in r.stderr
+
+
+def test_config_resolves_token_swatches(demo):
+    cfg = tweak.load_config(str(demo / 'tweak.json'), tweak.read_tokens([str(demo / 'styles.css')]))
+    sw = next(c for c in cfg['controls'] if c['token'] == '--brand')['swatches']
+    assert sw == [{'label': 'Brass', 'value': '#c6a379'}, {'label': 'Ink', 'value': '#1b1d1f'},
+                  {'label': 'Blue', 'value': '#3355ff'}]
+
+
+def test_browser_curated_panel(demo):
+    """Curated mode: four labelled controls first, a swatch sets the colour, a named section hides, Bake writes."""
+    if not shutil.which('node') or subprocess.run(['node', '-e', "require('playwright')"], cwd=ROOT).returncode:
+        pytest.skip('node + playwright not available')
+    port = _port()
+    p = subprocess.Popen([sys.executable, str(SKILL / 'scripts' / 'tweak.py'), str(demo), '--bake-into',
+                          str(demo / 'styles.css'), '--config', str(demo / 'tweak.json'), '--port', str(port)],
+                         stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    for _ in range(50):
+        try:
+            urllib.request.urlopen(f'http://127.0.0.1:{port}/__tweak/config')
+            break
+        except OSError:
+            time.sleep(0.1)
+    js = f"""
+    const {{chromium}} = require('playwright');
+    (async () => {{
+      const b = await chromium.launch(); const pg = await b.newPage();
+      await pg.goto('http://127.0.0.1:{port}/', {{waitUntil: 'networkidle'}});
+      await pg.waitForFunction(() => document.getElementById('tweak-panel-host')?.shadowRoot?.querySelector('.row'));
+      const res = await pg.evaluate(async () => {{
+        const sh = document.getElementById('tweak-panel-host').shadowRoot;
+        const top = [...sh.querySelectorAll('.b > .row')].map((r) => r.querySelector('label').firstChild.textContent);
+        const raw = sh.querySelectorAll('details .row').length;
+        [...sh.querySelectorAll('.sw button')].find((x) => x.textContent === 'Blue').click();
+        const bg = getComputedStyle(document.querySelector('.card')).backgroundColor;
+        const faq = [...sh.querySelectorAll('.sec')].find((l) => l.textContent.trim() === 'FAQ').querySelector('input');
+        faq.checked = false; faq.dispatchEvent(new Event('change'));
+        sh.querySelector('.bake').click();
+        await new Promise((r) => setTimeout(r, 800));
+        return {{ top, raw, bg, pressed: sh.querySelector('.sw button[aria-pressed=true]').textContent,
+                 out: sh.querySelector('.out').textContent }};
+      }});
+      console.log(JSON.stringify(res)); await b.close();
+    }})();"""
+    try:
+        r = subprocess.run(['node', '-e', js], cwd=ROOT, capture_output=True, text=True, timeout=120)
+        res = json.loads(r.stdout.strip().splitlines()[-1])
+        assert res['top'] == ['Font size', 'Spacing', 'Radius', 'Colour'] and res['raw'] == 8, res
+        assert res['bg'] == 'rgb(51, 85, 255)' and res['pressed'] == 'Blue', res
+        css = (demo / 'styles.css').read_text()
+        assert '--brand: #3355ff;' in css and '#faq { display: none !important; }' in css
+    finally:
+        p.terminate()
+        p.wait(5)

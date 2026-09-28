@@ -278,7 +278,7 @@ def test_impeccable_lane_gates_warnings_and_routes_advisory(tmp_path):
 
 # --- cross-host contract: the compound skill must work from a fresh clone on any host -----------------------
 
-PORTED = ['e2e-qa-review', 'web-design-guidelines', 'improve-ui', 'impeccable', 'hig', 'tweak']
+PORTED = ['e2e-qa-review', 'web-design-guidelines', 'improve-ui', 'impeccable', 'hig', 'tweak', 'design-os', 'tip-card-film']
 
 
 @pytest.mark.parametrize('name', PORTED)

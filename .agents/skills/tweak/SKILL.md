@@ -4,7 +4,7 @@ description: Use when someone wants to adjust a page's look by hand and keep the
 license: MIT
 metadata:
   category: Design tooling
-  version: '1.0'
+  version: '1.1'
   cost-tier: 'Haiku: the agent starts one script and reads its bake report; no model judgment is involved in the tuning itself.'
 ---
 
@@ -22,7 +22,7 @@ tokens gets a BLOCKED message, which is the honest answer, since there is nothin
 
 ```bash
 S=<this skill's directory>/scripts
-python3 $S/tweak.py <site-root> --bake-into <source.css> [<more.css> ...] [--port 8791] [--page index.html]
+python3 $S/tweak.py <site-root> --bake-into <source.css> [<more.css> ...] [--config tweak.json] [--port 8791]
 ```
 
 - `<site-root>`: the folder to serve: a static site, or a build's output (`dist/pages`).
@@ -31,8 +31,34 @@ python3 $S/tweak.py <site-root> --bake-into <source.css> [<more.css> ...] [--por
 - Open the printed URL. The panel sits top-right: colours, sizes, other tokens, then a toggle for every
   section that has an `id`. **Bake** writes and prints what changed; **Reset** reloads.
 
-Try it on the bundled demo first:
-`python3 $S/tweak.py <skill>/assets/demo --bake-into <skill>/assets/demo/styles.css`
+### Curate it with `tweak.json` (recommended)
+
+A real site declares dozens of tokens (42 on dr-silicon-v3); a panel of 42 raw names is a spreadsheet,
+not a design tool. Name the few that matter:
+
+```json
+{
+  "title": "tweak · my site",
+  "controls": [
+    { "token": "--text-body", "label": "Font size", "min": 0.75, "max": 1.5, "step": 0.0625 },
+    { "token": "--space", "label": "Spacing", "min": 8, "max": 64 },
+    { "token": "--brand", "label": "Colour", "swatches": [
+        { "label": "Brass", "value": "--brand" }, { "label": "Blue", "value": "#3355ff" } ] }
+  ],
+  "sections": { "#hero": "Hero", "#faq": "FAQ", ".footer-cta": "Footer CTA" }
+}
+```
+
+- The panel shows these controls first, in this order and with these labels; every other token stays
+  reachable under a collapsed **All tokens**, kept in sync with the curated rows.
+- A swatch `value` is a colour or a **token name**: `--ink` offers the palette's own ink, resolved when
+  the server starts, so presets come from the system instead of new hex codes.
+- `sections` maps any plain selector to a label, so content without an `id` can be toggled too.
+- The config is checked against the tokens actually declared: a misspelt token or swatch stops the server
+  with `BLOCKED` and the name, rather than silently showing nothing.
+
+Try it on the bundled demo first (it ships a `tweak.json`):
+`python3 $S/tweak.py <skill>/assets/demo --bake-into <skill>/assets/demo/styles.css --config <skill>/assets/demo/tweak.json`
 (work on a copy if you want to keep the demo pristine).
 
 For a built site, rebuild after baking (checking the build's exit code) to see the baked values in the
@@ -63,7 +89,7 @@ bundle; the panel previews them live without a rebuild.
 
 ## Gotchas
 
-- The panel only finds sections with an `id`; give a section an id to make it toggleable.
+- Without a config the panel only finds sections with an `id`; name others in `tweak.json` `sections`.
 - `--bake-into` must name the file where the token is **declared**. If the panel shows a token but Bake
   reports "not declared in a top-level :root", the declaration lives in another file or inside an
   at-rule.

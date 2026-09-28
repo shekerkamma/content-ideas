@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Serve a page with a token slider panel, then bake the chosen values back into its source CSS.
 
-usage: python3 tweak.py <site-root> --bake-into <file.css> [<file.css> ...] [--port 8791] [--page index.html]
+usage: python3 tweak.py <site-root> --bake-into <file.css> [<file.css> ...] [--config tweak.json] [--port 8791]
+                        [--page index.html]
 
   <site-root>    directory served as-is (a static site or a build's output folder)
   --bake-into    the SOURCE stylesheet(s) that declare the tokens (`:root { --x: ... }`); for a built site
                  these are the source files, not the hashed bundle. Only these files are ever written.
+  --config       optional tweak.json: the few controls to show, with labels, ranges, colour swatches and
+                 section names (see SKILL.md). Without it every :root token is listed by raw name.
 Open the printed URL, adjust, press Bake. Every bake first writes <file>.bak-tweak-<timestamp>.
 
 Stdlib only. Binds 127.0.0.1, and a bake needs the per-run token injected into the served page, so no
@@ -124,12 +127,41 @@ def bake(files: list[str], values: dict[str, str], hidden: list[str]) -> dict:
     return report
 
 
+def load_config(path: str, tokens: dict) -> dict:
+    """Validate tweak.json against the tokens actually declared; a typo must fail loudly, not vanish."""
+    cfg = json.load(open(path, encoding='utf-8'))
+    problems = []
+    for i, c in enumerate(cfg.get('controls', [])):
+        if c.get('token') not in tokens:
+            problems.append(f"controls[{i}]: {c.get('token')!r} is not declared in a top-level :root")
+        for sw in c.get('swatches', []):
+            val = sw.get('value') if isinstance(sw, dict) else sw
+            if isinstance(val, str) and val.startswith('--') and val not in tokens:
+                problems.append(f"controls[{i}] swatch {val!r} is not a declared token")
+    for sel in cfg.get('sections', {}):
+        if not re.fullmatch(r'[#.\w\-\s>:()\[\]="\']+', sel):
+            problems.append(f'sections: {sel!r} is not a plain selector')
+    if problems:
+        sys.exit('BLOCKED: ' + path + ':\n  ' + '\n  '.join(problems))
+    # resolve token-reference swatches to their values once, server-side
+    for c in cfg.get('controls', []):
+        out = []
+        for sw in c.get('swatches', []):
+            label, val = (sw.get('label'), sw.get('value')) if isinstance(sw, dict) else (None, sw)
+            out.append({'label': label or (val if not val.startswith('--') else val[2:]),
+                        'value': tokens[val]['value'] if val.startswith('--') else val})
+        if out:
+            c['swatches'] = out
+    return cfg
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('root')
     ap.add_argument('--bake-into', nargs='+', required=True)
     ap.add_argument('--port', type=int, default=8791)
     ap.add_argument('--page', default='')
+    ap.add_argument('--config')
     a = ap.parse_args()
     root = os.path.realpath(a.root)
     files = [os.path.realpath(f) for f in a.bake_into]
@@ -138,6 +170,7 @@ def main() -> None:
         sys.exit(f'BLOCKED: {root if not os.path.isdir(root) else missing} not found')
     if not read_tokens(files):
         sys.exit('BLOCKED: no `--token: value` declarations in a top-level :root of ' + ', '.join(files))
+    config = load_config(a.config, read_tokens(files)) if a.config else None
     token = secrets.token_urlsafe(16)
     panel = open(os.path.join(HERE, 'panel.js'), encoding='utf-8').read()
 
@@ -165,6 +198,9 @@ def main() -> None:
                 return
             if path == '/__tweak/tokens':
                 self._json(200, read_tokens(files))
+                return
+            if path == '/__tweak/config':
+                self._json(200, config or {})
                 return
             fs = self.translate_path(path)
             if os.path.isdir(fs):

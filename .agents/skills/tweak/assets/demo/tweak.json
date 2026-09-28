@@ -1,0 +1,14 @@
+{
+  "title": "tweak · demo",
+  "group": "Feel",
+  "controls": [
+    { "token": "--text-body", "label": "Font size", "min": 0.75, "max": 1.5, "step": 0.0625 },
+    { "token": "--space", "label": "Spacing", "min": 8, "max": 64 },
+    { "token": "--radius", "label": "Radius", "min": 0, "max": 32 },
+    { "token": "--brand", "label": "Colour", "swatches": [
+        { "label": "Brass", "value": "--brand" },
+        { "label": "Ink", "value": "--ink" },
+        { "label": "Blue", "value": "#3355ff" } ] }
+  ],
+  "sections": { "#hero": "Hero", "#features": "Features", "#faq": "FAQ" }
+}
