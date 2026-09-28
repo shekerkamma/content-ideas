@@ -173,9 +173,18 @@ def test_sweep_fires_on_every_planted_defect_and_not_on_the_clean_page(broken_si
     bad = rows['/']
     assert bad['errs'] and bad['failed'] and bad['skips'] and bad['overflowX'] > 0 and bad['broken'] and bad['small']
     assert 'button-name' in {v['id'] for v in bad['axe']} and bad['design']['emDash']
+    assert bad['lordiconNoCredit'] and bad['design']['rasterIcons']
     for clean in ('a', 'no-such-page'):   # the 404 route's own 404 is the right answer, not an error
         x = rows[clean]
         assert x['statusOk'] and not (x['errs'] or x['failed'] or x['skips'] or x['axe']), (clean, x)
+    # controls: a credited Lordicon and an SVG icon on page a must not be flagged
+    assert not rows['a']['lordiconNoCredit'] and not rows['a']['design']['rasterIcons']
+    # minTarget: the 32px control passes the WCAG 24px floor and fails the HIG 44px floor
+    cfg.write_text(json.dumps({**json.loads(cfg.read_text()), 'routes': [''], 'minTarget': 44,
+                               'out': str(tmp_path / 'r44.json')}))
+    subprocess.run(['node', str(SCRIPTS / 'sweep.mjs'), str(cfg)], cwd=ROOT, capture_output=True, timeout=300)
+    at44 = json.loads((tmp_path / 'r44.json').read_text())['rows'][0]
+    assert at44['small'] > bad['small'], (bad['small'], at44['small'])
 
 
 def test_nav_gate_fires_on_every_planted_defect(broken_site, tmp_path):
@@ -269,7 +278,7 @@ def test_impeccable_lane_gates_warnings_and_routes_advisory(tmp_path):
 
 # --- cross-host contract: the compound skill must work from a fresh clone on any host -----------------------
 
-PORTED = ['e2e-qa-review', 'web-design-guidelines', 'improve-ui', 'impeccable']
+PORTED = ['e2e-qa-review', 'web-design-guidelines', 'improve-ui', 'impeccable', 'hig', 'tweak']
 
 
 @pytest.mark.parametrize('name', PORTED)

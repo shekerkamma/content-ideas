@@ -76,7 +76,8 @@ python3 "$SKILL_DIR/scripts/summarize.py" qa/sweep-results.json > qa/SWEEP.md
 ```
 
 Per route and width it records: HTTP status, page errors, failed requests, one h1, heading skips, sideways
-scroll, broken images, images with no reserved box, targets under 24 px, em dashes, numbered counters,
+scroll, broken images, images with no reserved box, targets under the size floor (`minTarget`, 24 px WCAG
+by default, 44 for HIG), text outside `allowedFonts`, raster icons, Lordicon icons with no credit, em dashes, numbered counters,
 italic heading accents, monospace labels, pill buttons, eyebrow density, reveals that never finished, and
 axe-core WCAG 2.2 A/AA violations. It scrolls each page end to end first so lazy content exists, and saves a
 first-viewport screenshot for step 6.

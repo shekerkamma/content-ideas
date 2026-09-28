@@ -54,7 +54,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
   await p.waitForTimeout(600);
   await p.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
   await p.waitForTimeout(250);
-  const m = await p.evaluate(([reveal, fonts]) => {
+  const m = await p.evaluate(([reveal, fonts, minTarget]) => {
     const vis = (e) => { const r = e.getBoundingClientRect(); const c = getComputedStyle(e); return r.width > 0 && r.height > 0 && c.visibility !== 'hidden' && !e.closest('[hidden],[aria-hidden="true"]'); };
     const text = document.body.innerText;
     const around = (re) => { const o = []; let x; const g = new RegExp(re.source, 'g'); while ((x = g.exec(text)) && o.length < 3) o.push(text.slice(Math.max(0, x.index - 35), x.index + 35).replace(/\s+/g, ' ')); return o; };
@@ -62,7 +62,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
     const skips = []; let prev = 0;
     for (const x of heads) { const l = +x.tagName[1]; if (prev && l > prev + 1) skips.push(`h${prev}->h${l} "${x.textContent.trim().slice(0, 40)}"`); prev = l; }
     const inter = [...document.querySelectorAll('a[href],button,input,select,textarea,[role=button],[role=tab]')].filter(vis);
-    const small = inter.filter((e) => { const r = e.getBoundingClientRect(); return (r.width < 24 || r.height < 24) && !(e.tagName === 'A' && getComputedStyle(e).display === 'inline') && !['checkbox', 'radio'].includes(e.type); });
+    const small = inter.filter((e) => { const r = e.getBoundingClientRect(); return (r.width < minTarget || r.height < minTarget) && !(e.tagName === 'A' && getComputedStyle(e).display === 'inline') && !['checkbox', 'radio'].includes(e.type); });
     const pills = inter.filter((e) => { const r = e.getBoundingClientRect(); return r.height > 20 && parseFloat(getComputedStyle(e).borderTopLeftRadius) >= r.height / 2 - 1 && r.width > r.height * 1.4; });
     const leaves = [...document.querySelectorAll('body *')].filter((e) => e.children.length === 0 && vis(e));
     const noBox = [...document.images].filter((i) => vis(i) && !(i.getAttribute('width') && i.getAttribute('height')) && getComputedStyle(i).aspectRatio === 'auto');
@@ -87,16 +87,23 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
         }
         return [...seen].map(([k, n]) => `${k} x${n}`).slice(0, 8);
       })(),
+      // Lordicon's free licence requires a visible credit; an animated icon with no link back is a breach
+      lordiconNoCredit: (document.querySelector('lord-icon, [src*="cdn.lordicon.com"], script[src*="lordicon"]')
+        && ![...document.querySelectorAll('a[href]')].some((a) => /lordicon\.com/i.test(a.href))) || false,
       design: {
         emDash: (text.match(/—/g) || []).length, emDashAt: around(/—/),
         counters: leaves.filter((e) => /^(0\d|\d{2}\s*\/\s*\d{2})$/.test(e.textContent.trim())).length,
         italicHeads: heads.filter((x) => x.querySelector('em,i') || getComputedStyle(x).fontStyle === 'italic').map((x) => x.textContent.trim().slice(0, 50)),
         monoLabels: leaves.filter((e) => /mono|courier/i.test(getComputedStyle(e).fontFamily) && e.textContent.trim().length > 1 && e.textContent.trim().length < 40).length,
         pills: pills.length,
+        // icons must be SVG: a small raster image blurs at 2x and cannot take a token colour
+        rasterIcons: [...document.images].filter((i) => { const r = i.getBoundingClientRect(); const src = i.currentSrc || i.src || '';
+          return vis(i) && r.width > 0 && r.width <= 48 && r.height <= 48 && !/\.svg(\?|#|$)|^data:image\/svg/i.test(src); })
+          .map((i) => (i.getAttribute('src') || '').slice(-50)).slice(0, 5),
         eyebrowsPerH2: +(kickers / Math.max(1, heads.filter((x) => x.tagName === 'H2').length)).toFixed(2),
       },
     };
-  }, [cfg.reveal || '', cfg.allowedFonts || []]);
+  }, [cfg.reveal || '', cfg.allowedFonts || [], cfg.minTarget || 24]);
   await p.addScriptTag({ content: AXE });
   const axe = await p.evaluate(async () => (await window.axe.run(document, { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'] })).violations
     .map((v) => ({ id: v.id, impact: v.impact, n: v.nodes.length, sample: v.nodes.slice(0, 2).map((x) => x.target.join(' ') + ' | ' + ((x.failureSummary || '').split('\n')[1] || '').trim()) })));
@@ -108,8 +115,8 @@ await b.close();
 
 const titles = rows.filter((r) => r.width === widths[0][2] && r.statusOk && !/no-such|missing|404/.test(r.route)).map((r) => r.title);
 const dupTitles = [...new Set(titles.filter((t, i) => titles.indexOf(t) !== i))];
-const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.offFont.length || r.axe.length;
-const soft = (r) => r.design.emDash || r.design.counters || r.design.italicHeads.length || r.design.pills;
+const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.offFont.length || r.lordiconNoCredit || r.axe.length;
+const soft = (r) => r.design.emDash || r.design.counters || r.design.italicHeads.length || r.design.pills || r.design.rasterIcons.length;
 const hardN = rows.filter(hard).length, softN = rows.filter(soft).length;
 writeFileSync(out, JSON.stringify({ base: BASE, loads: rows.length, dupTitles, rows }, null, 1));
 console.log(`sweep: ${rows.length} loads, ${hardN} with findings, ${softN} with design-default items, ${dupTitles.length} duplicate titles -> ${out}`);

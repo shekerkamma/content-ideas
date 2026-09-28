@@ -73,6 +73,8 @@
 
 Dependencies: `playwright` and `axe-core` resolve from the site, then `$E2E_QA_NODE_MODULES` (a
 `node_modules` directory), then this skill's repo. The run prints which one served.
+- `minTarget` (sweep, optional, default 24): the smallest control size, in CSS px, before a target is a
+  finding. 24 is WCAG 2.5.8; use 44 for a mobile page held to Apple's HIG (see the `hig` skill).
 - `allowedFonts` (sweep, optional): the families DESIGN.md declares, e.g.
   `["Inter Variable", "Newsreader Variable", "JetBrains Mono Variable"]`. Any visible text whose computed
   first family is outside the list is a finding, named by family and element class. This is the runtime

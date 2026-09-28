@@ -481,6 +481,7 @@ when relevant; do not load every file by default.
 - Color: [references/color.md](references/color.md)
 - Motion: [references/motion.md](references/motion.md)
 - Icons: [references/icons.md](references/icons.md)
+- Component, effect and icon sources, with licence conditions: [references/component-sources.md](references/component-sources.md)
 - Forms, focus, images, touch, performance, accessibility: [references/craft-details.md](references/craft-details.md)
 - Copywriting and persuasion: [references/copywriting.md](references/copywriting.md)
 - Anti-AI-slop checks: [references/anti-ai-slop.md](references/anti-ai-slop.md)

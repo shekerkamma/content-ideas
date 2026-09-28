@@ -1,0 +1,17 @@
+/* demo tokens: the light theme is the top-level :root; the dark block is an override tweak must not touch */
+:root {
+  --brand: #c6a379;
+  --ink: #1b1d1f;
+  --bg: #f7f5f0;
+  --font-text: Inter, system-ui, sans-serif; /* a stack with commas stays one value */
+  --space: 24px;
+  --radius: 6px;
+  --text-body: 1.0625rem;
+  --duration: 200ms;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #111313; --ink: #efe9dc; }
+}
+body { margin: 0; background: var(--bg); color: var(--ink); font: var(--text-body)/1.6 var(--font-text); }
+section { padding: var(--space); border-bottom: 1px solid #0001; }
+.card { border-radius: var(--radius); background: var(--brand); padding: var(--space); transition: transform var(--duration); }

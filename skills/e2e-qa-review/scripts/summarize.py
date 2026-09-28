@@ -42,7 +42,7 @@ def main() -> None:
         if r['noBoxN']:
             groups['Images with no reserved box (CLS)'].append(f"{at}: {r['noBoxN']} e.g. {r['noBox'][:2]}")
         if r['small']:
-            groups['Targets under 24px'].append(f"{at}: {r['small']} e.g. {r['smallSample'][:3]}")
+            groups['Targets under the size floor'].append(f"{at}: {r['small']} e.g. {r['smallSample'][:3]}")
         if r['unrevealed']:
             groups['Reveals that never finished'].append(f"{at}: {r['unrevealed']}")
         if r.get('offFont'):
@@ -57,6 +57,10 @@ def main() -> None:
             groups['Design: numbered counters'].append(f"{at}: {dz['counters']}")
         if dz['italicHeads']:
             groups['Design: italic heading accents'].append(f"{at}: {dz['italicHeads'][:2]}")
+        if dz.get('rasterIcons'):
+            groups['Design: raster images used as icons (use SVG)'].append(f"{at}: {dz['rasterIcons'][:3]}")
+        if r.get('lordiconNoCredit'):
+            groups['Licence: Lordicon icon with no credit link'].append(at)
         if dz['pills']:
             groups['Design: pill buttons'].append(f"{at}: {dz['pills']}")
         if dz['eyebrowsPerH2'] > 0.34:

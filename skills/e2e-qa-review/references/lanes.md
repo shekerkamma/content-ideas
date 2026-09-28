@@ -19,6 +19,9 @@ other report is folded into it, not counted twice.
 | Anti-patterns in CSS/markup (overused fonts, gradient text, side tabs, flat type scale, layout transitions) | impeccable detector, **warning and above** | it is the only lane that knows the pattern catalogue |
 | Drift from DESIGN.md (undocumented colours, sizes, radii) | improve-ui reviewer, fed impeccable's **advisory** list as candidates | a colour outside the doc is a candidate, not a defect, until a contract and a runtime path prove it |
 | `transition: all`, `outline: none`, `...`, icon buttons with no label | guidelines script (source) | cheap and exact at file:line |
+| Raster images used as icons; Lordicon with no credit link | sweep (rendered) | only the rendered page shows what an `<img>` is used as and whether a credit link exists anywhere on it |
+| Licence conditions of borrowed parts: Iconify CC-BY / CC-BY-SA / GPL sets, React Bits and Canvas UI (no resale), 21st.dev (no scraping; link back if republished) | guidelines reviewer, reading `refero-design/references/component-sources.md` | the set or component's origin is in the source, not the DOM |
+| Canvas UI live-HTML effects (Chrome-behind-a-flag only) | visual round, in a browser without the flag | the effect silently degrades to plain HTML everywhere else |
 | Focus visibility, forms, motion, typography rules the script cannot regex | guidelines reviewer (the rest of its rulebook) | needs reading, not matching |
 | Scroll timeline: dead scroll, frozen clips, cues that never peak, contrast over moving media | scroll-craft harness, **only on scroll-craft engine pages** (`data-sc-act`) | a static screenshot is one frame; failures live between frames |
 | Generic scroll reveals (IntersectionObserver fade-ins) | sweep `reveal` check | the scroll-craft harness reads its own engine's state and has nothing to read elsewhere |

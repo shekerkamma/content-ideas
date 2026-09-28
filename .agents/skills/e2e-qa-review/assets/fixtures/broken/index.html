@@ -22,6 +22,12 @@
   <img src="missing.png" alt="">                                     <!-- broken, no reserved box -->
   <button class="tiny"></button>                                     <!-- axe button-name -->
   <div class="wide"></div>
+  <!-- raster icon: a 1x1 PNG shown at 24px, flagged as a design item (icons should be SVG) -->
+  <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" width="24" height="24" alt="">
+  <!-- Lordicon with no credit link anywhere on the page: a licence finding -->
+  <lord-icon src="https://cdn.lordicon.com/abc.json" style="display:inline-block;width:32px;height:32px"></lord-icon>
+  <!-- 32px control: passes the WCAG 24px floor, fails the HIG 44px floor (minTarget) -->
+  <button style="width:32px;height:32px" aria-label="Thirty-two">+</button>
 </main>
 <script>
   const b = document.querySelector('.mega-trigger'), m = document.getElementById('m1');
