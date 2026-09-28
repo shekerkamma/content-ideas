@@ -43,6 +43,8 @@
     .sec{display:flex;gap:8px;align-items:center;padding:3px 0;font-size:12px}
     .out{white-space:pre-wrap;font:11px ui-monospace,monospace;color:#9fd18b;margin-top:8px}
     .min .b{display:none}
+    .row.unused{opacity:.45}
+    .row.unused label::after{content:'not used on this page';font:italic 10px system-ui;color:#c9a36a;margin-left:auto;padding-left:8px}
   </style>
   <div class="p"><div class="h"><b>${config.title || 'tweak'}</b><button class="reset">Reset</button><button class="bake">Bake</button>
   <button class="fold" aria-label="Collapse panel">–</button></div><div class="b"></div></div>`;
@@ -55,6 +57,24 @@
   const rgbToHex = (v) => { const m = v.match(/rgba?\((\d+)[ ,]+(\d+)[ ,]+(\d+)/); return m ? '#' + m.slice(1, 4).map((x) => (+x).toString(16).padStart(2, '0')).join('') : null; };
   const toHex = (v) => HEX.test(v) ? (v.length === 4 ? '#' + [...v.slice(1)].map((x) => x + x).join('') : v) : (rgbToHex(v) || '#000000');
   const kind = (v) => (HEX.test(v) || rgbToHex(v) ? 'colour' : LEN.test(v) ? 'size' : 'other');
+  const PROPS = ['fontSize', 'letterSpacing', 'lineHeight', 'color', 'backgroundColor', 'borderTopColor',
+    'borderTopLeftRadius', 'maxWidth', 'fontFamily', 'paddingTop', 'marginTop', 'gap'];
+  function measureUsage(names) {
+    const els = [...document.querySelectorAll('body *')].filter((e) => e.getBoundingClientRect().height > 0).slice(0, 2500);
+    const snap = () => els.map((e) => { const c = getComputedStyle(e); return PROPS.map((k) => c[k]).join('|'); });
+    const base = snap(), used = {};
+    for (const n of names) {
+      const v = getComputedStyle(root).getPropertyValue(n).trim();
+      const probe = /^#|rgb|hsl/.test(v) ? '#ff00ff' : /[\d.](px|rem|em|ch|%|vw|vh)$|^-?[\d.]+$/.test(v) || /clamp|calc|min\(|max\(/.test(v) ? '37px' : 'serif';
+      const had = root.style.getPropertyValue(n);
+      root.style.setProperty(n, probe);
+      const after = snap();
+      if (had) root.style.setProperty(n, had); else root.style.removeProperty(n);
+      used[n] = after.reduce((a, x, i) => a + (x !== base[i] ? 1 : 0), 0);
+    }
+    return used;
+  }
+  const usage = measureUsage(Object.keys(tokens));
   const setters = {};  // token -> [fn(value)] so a curated control and its raw row stay in sync
   const set = (name, val) => { root.style.setProperty(name, val); changed[name] = val; (setters[name] || []).forEach((f) => f(val)); };
 
@@ -62,7 +82,8 @@
   function row(name, opts = {}) {
     const v = tokens[name].value.trim();
     const el = document.createElement('div');
-    el.className = 'row' + (opts.label ? ' named' : '');
+    el.className = 'row' + (opts.label ? ' named' : '') + (usage[name] ? '' : ' unused');
+    el.title = usage[name] ? `${usage[name]} element(s) on this page use it` : 'changing this does nothing on this page';
     el.dataset.token = name;
     el.innerHTML = `<label>${opts.label || name}<i>${v}</i></label>`;
     const badge = el.querySelector('i');
@@ -110,7 +131,8 @@
 
   function rawTokens(into) {
     const groups = { colour: [], size: [], other: [] };
-    for (const n of Object.keys(tokens).sort()) groups[kind(tokens[n].value.trim())].push(n);
+    const names = Object.keys(tokens).sort((a, b) => (usage[b] > 0) - (usage[a] > 0) || a.localeCompare(b));  // used first
+    for (const n of names) groups[kind(tokens[n].value.trim())].push(n);
     for (const [title, list] of Object.entries(groups)) {
       if (!list.length) continue;
       into.insertAdjacentHTML('beforeend', `<h4>${title} (${list.length})</h4>`);
@@ -122,7 +144,7 @@
     body.insertAdjacentHTML('beforeend', `<h4>${config.group || 'Feel'}</h4>`);
     for (const c of config.controls) body.append(row(c.token, c));
     const all = document.createElement('details');
-    all.innerHTML = `<summary>All tokens (${Object.keys(tokens).length})</summary>`;
+    all.innerHTML = `<summary>All tokens (${Object.keys(tokens).length}, ${Object.values(usage).filter(Boolean).length} used here)</summary>`;
     rawTokens(all);
     body.append(all);
   } else {
