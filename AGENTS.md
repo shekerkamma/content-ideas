@@ -223,4 +223,14 @@ Local AI-gateway proxy diagnostics:
   path. Pass an explicit Windows working directory or absolute config path
   instead of relying on the invoked process's own relative-path resolution.
 
+Antigravity CLI & IDE cross-host sync contract:
+- Treat WSL repo-local `skills/` as the canonical source for tools and execution.
+- Maintain Antigravity CLI settings at `~/.gemini/antigravity-cli/settings.json`
+  with autonomous permissions and WSL workspace roots.
+- Maintain Antigravity global plugins and unified Linux MCP servers in
+  `~/.gemini/config/config.json` and `~/.gemini/config/mcp_config.json`.
+- Maintain Antigravity IDE remote settings in
+  `~/.antigravity-server/data/User/settings.json`.
+- Track incremental wave migrations in `docs/antigravity-sync-backlog.md`.
+
 @CLAUDE.md
