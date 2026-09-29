@@ -655,6 +655,28 @@ thing that proves the flag is live — a passing read-only round on its own is
 equally consistent with the flag doing nothing. Audit any codex bridge on this
 axis alongside the stdin axis above.
 
+## graphify runs on the Pro subscription (`scripts/graphify-pro`)
+
+graphify's semantic extraction (docs, papers, images; code is AST-only and needs no
+model) defaults to `gemini-3-flash-preview` on `GEMINI_API_KEY`, which has been a
+**billed** Tier 1 key since 2026-09-29. `scripts/graphify-pro` routes graphify's
+gemini and openai backends through CLIProxyAPI (the Pro subscription) to
+`claude-sonnet-4-6`, instead of the default `gemini-3-flash-preview`. On the same
+two docs (2,799 words) Sonnet found 28 nodes / 25 edges, all grounded in the text;
+`gemini-3.1-pro-preview` found 6 / 2, and 5 / 3 with 2 ungrounded in deep mode.
+Use `eval "$(graphify-pro --env)"` before any graphify step that calls a model.
+
+- **One script, both OSes.** Under WSL it reaches the proxy on the Windows gateway
+  IP (re-resolved every run); under Git Bash (Windows Claude Code) on `127.0.0.1`.
+  `scripts/install-graphify-pro.sh` symlinks it in WSL, copies it to Windows, and
+  adds the one-line rule to Claude Code, Codex (WSL + Windows) and Antigravity.
+- **It fails closed.** A dead proxy exits 1 before any command runs, and it swaps
+  `GEMINI_API_KEY` for the proxy key, which Google rejects (HTTP 400), so nothing
+  can silently bill. `tests/test_graphify_pro.py` pins both.
+- **Pass `root=` as the corpus dir.** A file outside the root is skipped but still
+  sent as an EMPTY chunk, and Gemini invented a graph from it ("Alembic
+  Migration", "pgraster"). Check that node labels come from the source.
+
 ## Design tokens and WCAG render gates
 
 `skills/design-tokens/` is the token contract and the only place in this repo that
@@ -1097,6 +1119,8 @@ It provides persistent knowledge-graph memory across sessions.
   And v0.42's `src/core/ai/recipes/google.ts` pins model allowlists; embedding-2
   and the 3.x chat models are a local patch there (upstream relaxed the lists), so
   `gbrain self-upgrade` supersedes it rather than conflicting.
+  The patch is kept at `docs/patches/gbrain-0.42-google-recipe-models.patch`; re-apply
+  with `git -C ~/gbrain apply` if the checkout is reset before upgrading.
 - Cost: **$0.00/month** on free tier
 
 ### Running it — systemd user service, not an ad hoc background process

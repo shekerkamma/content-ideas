@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# graphify-pro — run graphify's LLM extraction on the Pro subscription (CLIProxyAPI →
+# Antigravity), never on the billed AI Studio key.
+#
+# graphify's gemini backend honors GEMINI_BASE_URL (any OpenAI-compatible server), so
+# the /graphify skill's default path — extract_corpus_parallel(backend="gemini") —
+# routes through the proxy unchanged. Verified 2026-09-29, graphifyy 0.9.53.
+#
+# Source of truth: content-ideas/scripts/graphify-pro. Installed by
+# scripts/install-graphify-pro.sh (WSL symlink + Windows copy). Runs in WSL bash and Git Bash.
+#
+# Usage:
+#   graphify-pro <command...>        run a command with the proxy env (e.g. graphify update .)
+#   eval "$(graphify-pro --env)"     export the env into the current shell / Bash call
+#   graphify-pro --check             probe the proxy and the chosen model, then exit
+#
+# Model: GRAPHIFY_PRO_MODEL overrides (both backends). Measured 2026-09-29 on the same
+# two docs (2,799 words), every label checked against the source:
+#   claude-sonnet-4-6       28 nodes / 25 edges, 28/28 grounded, 68 s   <- DEFAULT
+#   gemini-3.1-pro-preview   6 nodes /  2 edges,  6/6 grounded,  21 s   (gemini backend runs
+#                            reasoning_effort=low; deep mode was worse: 5/3, 2 ungrounded)
+#   gemini-3.8-flash-high    fast/cheap on quota: GRAPHIFY_PRO_MODEL=gemini-3.8-flash-high
+# Sonnet works through BOTH the gemini and openai backends via the proxy, so the
+# /graphify skill's default backend="gemini" path needs no edit.
+# Fails closed: if the proxy is unreachable the script exits 1. It never falls back to
+# GEMINI_API_KEY, which since 2026-09-29 is a billed Tier 1 project.
+set -euo pipefail
+
+PORT="${CLIPROXY_PORT:-8317}"
+
+# Host: Git Bash on Windows reaches the proxy on localhost; WSL (NAT) reaches it on the
+# Windows default gateway, whose IP changes on reboot — resolved fresh every run.
+case "$(uname -s)" in
+  MINGW*|MSYS*|CYGWIN*) gw="${CLIPROXY_HOST:-127.0.0.1}" ;;
+  *)                    gw="${CLIPROXY_HOST:-$(ip route 2>/dev/null | awk '/default/{print $3; exit}')}" ;;
+esac
+
+# Key, first hit wins: env, dsh credentials (WSL), the proxy's own config (Windows or WSL mount).
+read_proxy_config_key() { awk '/^api-keys:/{f=1;next} f&&/^[[:space:]]*-/{sub(/^[[:space:]]*-[[:space:]]*/,"");gsub(/["'\'']/,"");print;exit} f&&/^[^[:space:]-]/{exit}' "$1" 2>/dev/null || true; }
+key="${CLIPROXY_API_KEY:-}"
+[ -n "$key" ] || key="$(awk -F': *' '/^CLIPROXY_API_KEY:/{gsub(/["'\'']/, "", $2); print $2}' "${CLIPROXY_CREDS:-$HOME/.dsh/.credentials.yaml}" 2>/dev/null || true)"
+[ -n "$key" ] || key="$(read_proxy_config_key "$HOME/.cli-proxy-api/config.yaml")"
+[ -n "$key" ] || key="$(read_proxy_config_key "/mnt/c/Users/${USER:-sheke}/.cli-proxy-api/config.yaml")"
+[ -n "$gw" ]  || { echo "graphify-pro: cannot resolve the proxy host" >&2; exit 1; }
+[ -n "$key" ] || { echo "graphify-pro: no CLIProxyAPI key (env, ~/.dsh/.credentials.yaml, ~/.cli-proxy-api/config.yaml)" >&2; exit 1; }
+base="http://$gw:$PORT/v1"
+
+model="${GRAPHIFY_PRO_MODEL:-claude-sonnet-4-6}"
+openai_model="${GRAPHIFY_PRO_OPENAI_MODEL:-$model}"
+
+# Fail closed: the proxy must answer and must list the model, or nothing runs.
+models="$(curl -s -m 8 "$base/models" -H "Authorization: Bearer $key" || true)"
+if ! printf '%s' "$models" | grep -q "\"$model\""; then
+  echo "graphify-pro: proxy at $base is down or does not list '$model' — refusing to fall back to the billed Gemini key." >&2
+  echo "graphify-pro: start CLIProxyAPI on Windows (it needs an explicit -config path) and retry." >&2
+  exit 1
+fi
+
+emit() {
+  printf 'export GEMINI_BASE_URL=%q\n' "$base"
+  printf 'export GEMINI_API_KEY=%q\n' "$key"
+  printf 'unset GOOGLE_API_KEY\n'
+  printf 'export GRAPHIFY_GEMINI_MODEL=%q\n' "$model"
+  printf 'export OPENAI_BASE_URL=%q\n' "$base"
+  printf 'export OPENAI_API_KEY=%q\n' "$key"
+  printf 'export GRAPHIFY_OPENAI_MODEL=%q\n' "$openai_model"
+}
+
+case "${1:-}" in
+  --env)   emit ;;
+  --check) echo "graphify-pro: proxy $base OK; gemini backend → $model; openai backend → $openai_model" ;;
+  "")      echo "usage: graphify-pro <command...> | --env | --check" >&2; exit 2 ;;
+  *)       eval "$(emit)"; exec "$@" ;;
+esac
