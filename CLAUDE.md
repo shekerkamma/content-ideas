@@ -1230,8 +1230,20 @@ gbrain list --type <T>       # list pages (free)
   `claude -p`, storing no credential. It never emits `tool_calls`, so that
   route bypasses dsh's own tools, permissions, sandbox, and trajectory — a
   passing smoke test is indistinguishable from a real tool-calling model.
-- Windows-side gateways (OmniRoute 20128, CLIProxyAPI 8317) are **not** on
-  `127.0.0.1` from WSL — use the default-gateway IP, which changes on reboot.
+- Windows-side gateways (OmniRoute 20128, CLIProxyAPI 8317) are **not** natively on
+  `127.0.0.1` from WSL; the default-gateway IP changes on reboot. **CLIProxyAPI is
+  now forwarded:** `cliproxy-forward.service` (`scripts/cliproxy_forward.py`,
+  installed by `scripts/install-cliproxy-forward.sh`) listens on WSL
+  `127.0.0.1:8317` and re-resolves the gateway per connection. The Windows-copied
+  Hermes config (`base_url: http://127.0.0.1:8317/v1`) had failed from WSL with a
+  bare "Connection error" on all 9 Gemini models. With the forwarder it works
+  unchanged on both OSes. OmniRoute is not forwarded.
+- **CLIProxyAPI's `gemini-api-key` is the paid AI Studio key by design.** It is
+  covered by the AI Pro credits and top-up; don't swap it for the no-billing key.
+  The proxy logs no config reload, so restart it after any edit with the same
+  `-config C:\Users\sheke\.cli-proxy-api\config.yaml`. It does not recognize
+  Antigravity-only ids such as `gemini-3-flash-agent` or `gemini-3.5-flash-low`
+  ("unknown provider"); use `gemini-3.5-flash`.
 - **`~/.dsh/settings.yaml` silently beats every `--patch` overlay.** When its
   `agent-default-model` block is present, `dsh --patch ~/.dsh/patches/<x>.yml`
   is ignored with no warning, which disables all the documented escape hatches
