@@ -1117,6 +1117,23 @@ It provides persistent knowledge-graph memory across sessions.
   you ran it from. Re-run it from `content-ideas` specifically after any
   token rotation, or other projects silently keep the stale token.
 
+### Host wiring (verified 2026-09-29, one bearer token per host)
+Every host reaches the same WSL service at `http://127.0.0.1:3131/mcp`; Windows
+reaches it on `127.0.0.1` through WSL localhost forwarding, so server-side changes
+(key, models, embeddings) port to every host with no per-host edit.
+
+| Host | Where the token lives | GBrain token name |
+|---|---|---|
+| Claude Code WSL | `~/.claude.json` → `projects[<dir>].mcpServers.gbrain` (per directory) | `claude-code` |
+| Claude Code Windows | `C:\Users\sheke\.claude.json` → user-level `mcpServers.gbrain` | `claude-code-windows` |
+| Codex WSL, and Codex Desktop (runs in WSL mode since 2026-09-28) | env `GBRAIN_REMOTE_TOKEN` via `bearer_token_env_var` | `codex` |
+| Hermes WSL + Windows (one shared config) | `MCP_GBRAIN_API_KEY` in each host's `.env` | `hermes` |
+
+Check a host with a real MCP `initialize` + `tools/call search`, never `/health`
+alone — `/health` answers without auth, and Hermes Windows was 401 on a stale
+token while `/health` was green. `antigravity-hermes` is an older token, last
+used 2026-08-12; revoke it with `gbrain auth revoke` if nothing still uses it.
+
 ### When to use GBrain vs local files
 - **GBrain pages**: prospects, people, companies, recurring research topics,
   verticals, use-case themes, meeting notes, deal context — anything that
