@@ -1079,12 +1079,24 @@ It provides persistent knowledge-graph memory across sessions.
 - Brain: `~/.gbrain/brain.pglite` (local embedded Postgres, zero DB cost)
 - Engine: PGLite
 - Search mode: `conservative` (cheapest tier)
-- Embeddings: `google:gemini-embedding-001`, 768 dims (requires
-  `GOOGLE_GENERATIVE_AI_API_KEY` — get one at
-  `https://aistudio.google.com/apikey`; this is a different credential from
-  the Gemini CLI's OAuth-personal login and cannot be substituted for it)
-- Chat/synthesis: `google:gemini-2.0-flash-exp` (chat), `google:gemini-2.0-flash`
-  (query expansion)
+- Embeddings: `google:gemini-embedding-2`, 768 dims (migrated from `-001` on
+  2026-09-29 with `gbrain migrate embeddings`; multimodal — images embed in the
+  same space as text). Requires `GOOGLE_GENERATIVE_AI_API_KEY`, a different
+  credential from the Gemini CLI's OAuth-personal login.
+- **The service uses its own FREE-tier key**, set in
+  `~/.config/systemd/user/gbrain.service` (AI Studio project "Gemini Project",
+  `gen-lang-client-0308592450`, no billing). The shell's key is a billed Tier 1
+  project, so running the `gbrain` CLI from a shell bills embeddings to it — prefer
+  the MCP tools. Google keys are now 53-char `AQ.…`, not 39-char `AIza…`.
+- Chat/synthesis: `google:gemini-3.8-flash` (chat and `models.default`, so
+  `think` stops falling through to `opus`), `google:gemini-3.5-flash-lite` (query
+  expansion). The whole 2.0 family was retired by Google (404).
+- **Two silent traps:** `gbrain config set` writes the DB plane, but
+  `~/.gbrain/config.json` shadows it at runtime — edit the file for
+  `chat_model`/`expansion_model`/`embedding_*`, then confirm with `gbrain config get`.
+  And v0.42's `src/core/ai/recipes/google.ts` pins model allowlists; embedding-2
+  and the 3.x chat models are a local patch there (upstream relaxed the lists), so
+  `gbrain self-upgrade` supersedes it rather than conflicting.
 - Cost: **$0.00/month** on free tier
 
 ### Running it — systemd user service, not an ad hoc background process
