@@ -1128,11 +1128,14 @@ reaches it on `127.0.0.1` through WSL localhost forwarding, so server-side chang
 | Claude Code Windows | `C:\Users\sheke\.claude.json` → user-level `mcpServers.gbrain` | `claude-code-windows` |
 | Codex WSL, and Codex Desktop (runs in WSL mode since 2026-09-28) | env `GBRAIN_REMOTE_TOKEN` via `bearer_token_env_var` | `codex` |
 | Hermes WSL + Windows (one shared config) | `MCP_GBRAIN_API_KEY` in each host's `.env` | `hermes` |
+| Antigravity IDE (Windows; `~/.gemini/antigravity/mcp_config.json` reads `${MCP_GBRAIN_API_KEY}`) | Windows **user** env var `MCP_GBRAIN_API_KEY` | `antigravity` |
 
 Check a host with a real MCP `initialize` + `tools/call search`, never `/health`
 alone — `/health` answers without auth, and Hermes Windows was 401 on a stale
-token while `/health` was green. `antigravity-hermes` is an older token, last
-used 2026-08-12; revoke it with `gbrain auth revoke` if nothing still uses it.
+token while `/health` was green. Before revoking a token, check its "last used"
+time after exercising every host: `antigravity-hermes` looked idle since Aug 12, but
+it was Antigravity's live token (held in the Windows env var), not an orphan.
+It was replaced by `antigravity` and revoked 2026-09-29, and now returns 401.
 
 ### When to use GBrain vs local files
 - **GBrain pages**: prospects, people, companies, recurring research topics,
