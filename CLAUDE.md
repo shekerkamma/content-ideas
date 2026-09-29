@@ -655,24 +655,37 @@ thing that proves the flag is live — a passing read-only round on its own is
 equally consistent with the flag doing nothing. Audit any codex bridge on this
 axis alongside the stdin axis above.
 
-## graphify runs on the Pro subscription (`scripts/graphify-pro`)
+## graphify runs on Claude Sonnet 5.5, never the billed key (`scripts/graphify-pro`)
 
 graphify's semantic extraction (docs, papers, images; code is AST-only and needs no
 model) defaults to `gemini-3-flash-preview` on `GEMINI_API_KEY`, which has been a
-**billed** Tier 1 key since 2026-09-29. `scripts/graphify-pro` routes graphify's
-gemini and openai backends through CLIProxyAPI (the Pro subscription) to
-`claude-sonnet-4-6`, instead of the default `gemini-3-flash-preview`. On the same
-two docs (2,799 words) Sonnet found 28 nodes / 25 edges, all grounded in the text;
-`gemini-3.1-pro-preview` found 6 / 2, and 5 / 3 with 2 ungrounded in deep mode.
-Use `eval "$(graphify-pro --env)"` before any graphify step that calls a model.
+**billed** Tier 1 key since 2026-09-29. `eval "$(graphify-pro --env)"`, then
+`extract_corpus_parallel(files, backend=os.environ["GRAPHIFY_PRO_BACKEND"], root=...)`.
+Measured on the same two docs (2,799 words), every label checked against the source:
+
+| Model | Route | Nodes / edges | Grounded | Time |
+|---|---|---|---|---|
+| **`claude-sonnet-5-5`** (default) | graphify `claude-cli` backend, `claude -p` on the Claude plan | 28 / **37** | 28/28 | 53 s |
+| `claude-sonnet-4-6` | CLIProxyAPI (Pro subscription) | 28 / 25 | 28/28 | 68 s |
+| `gemini-3.1-pro-preview` | CLIProxyAPI | 6 / 2 | 6/6 | 21 s |
+
+CLIProxyAPI serves no Claude 5.x ("unknown provider for model claude-sonnet-5-5"), so
+the latest Sonnet runs through `claude-cli`, and graphify never auto-selects that
+backend; hence the exported `GRAPHIFY_PRO_BACKEND`. The wrapper also sets
+`CLAUDE_MEMORY_WORKER=1`, because the handoff hook must not fire for `claude -p`.
+`GRAPHIFY_PRO_MODEL=gemini-3.8-flash-high` switches to the proxy route.
+A `claude -p` call fails if that host's Claude Code login has expired. Windows
+answered "OAuth session expired" on 2026-09-29 until it was signed in again.
 
 - **One script, both OSes.** Under WSL it reaches the proxy on the Windows gateway
   IP (re-resolved every run); under Git Bash (Windows Claude Code) on `127.0.0.1`.
   `scripts/install-graphify-pro.sh` symlinks it in WSL, copies it to Windows, and
   adds the one-line rule to Claude Code, Codex (WSL + Windows) and Antigravity.
-- **It fails closed.** A dead proxy exits 1 before any command runs, and it swaps
-  `GEMINI_API_KEY` for the proxy key, which Google rejects (HTTP 400), so nothing
-  can silently bill. `tests/test_graphify_pro.py` pins both.
+- **It fails closed in both modes.** claude-cli mode unsets `GEMINI_API_KEY` and
+  exits 1 without `claude` on PATH. Proxy mode exits 1 on a dead proxy before any
+  command runs, and swaps the key for the proxy's, which Google rejects (HTTP 400).
+  `tests/test_graphify_pro.py` pins all of this. `install-graphify-pro.sh`
+  rewrites an outdated rule line in place, and a re-run is a no-op.
 - **Pass `root=` as the corpus dir.** A file outside the root is skipped but still
   sent as an EMPTY chunk, and Gemini invented a graph from it ("Alembic
   Migration", "pgraster"). Check that node labels come from the source.

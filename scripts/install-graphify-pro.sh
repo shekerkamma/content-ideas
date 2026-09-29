@@ -11,7 +11,7 @@ REPO="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$REPO/scripts/graphify-pro"
 WIN_HOME="${WIN_HOME:-/mnt/c/Users/${USER:-sheke}}"
 MARK="graphify-pro"
-RULE='- **graphify: run model-backed extraction on the Pro subscription.** Start every graphify Bash block that can call an LLM with `eval "$(graphify-pro --env)"`. It routes graphify through CLIProxyAPI to `claude-sonnet-4-6` (measured ~5x richer than gemini-3.1-pro, every node grounded), fails closed if the proxy is down, and never uses the billed GEMINI_API_KEY. Pass `root=` = the corpus dir. Source: content-ideas/scripts/graphify-pro.'
+RULE='- **graphify: run model-backed extraction on Claude Sonnet 5.5 (Claude plan), never the billed Gemini key.** Start every graphify Bash block that can call an LLM with `eval "$(graphify-pro --env)"`, then call `extract_corpus_parallel(files, backend=os.environ["GRAPHIFY_PRO_BACKEND"], root=<corpus dir>)`. The default is `claude-sonnet-5-5` via the claude-cli backend (28 nodes/37 edges vs 25 for sonnet-4-6, all grounded). It unsets GEMINI_API_KEY and fails closed. `GRAPHIFY_PRO_MODEL=gemini-3.8-flash-high` uses the CLIProxyAPI route instead. Source: content-ideas/scripts/graphify-pro.'
 
 mkdir -p "$HOME/.local/bin"
 ln -sfn "$SRC" "$HOME/.local/bin/graphify-pro"
@@ -27,7 +27,18 @@ fi
 add_rule() {
   local f="$1"
   [ -d "$(dirname "$f")" ] || { echo "skip:    $f (host not installed)"; return; }
-  if [ -f "$f" ] && grep -q "$MARK" "$f"; then echo "present: $f"; return; fi
+  if [ -f "$f" ] && grep -q "$MARK" "$f"; then
+    if grep -qF -- "$RULE" "$f"; then echo "current: $f"; return; fi
+    # Replace the outdated rule line in place; everything else in the file is untouched.
+    RULE="$RULE" MARK="$MARK" python3 - "$f" <<'PY'
+import os, sys
+p = sys.argv[1]; rule, mark = os.environ["RULE"], os.environ["MARK"]
+lines = open(p, encoding="utf-8").read().split("\n")
+out = [rule if (mark in l and l.lstrip().startswith("- **")) else l for l in lines]
+open(p, "w", encoding="utf-8").write("\n".join(out))
+PY
+    echo "updated: $f"; return
+  fi
   { [ -s "$f" ] && printf '\n'; printf '# graphify\n%s\n' "$RULE"; } >> "$f"
   echo "added:   $f"
 }
