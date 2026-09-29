@@ -655,6 +655,30 @@ thing that proves the flag is live — a passing read-only round on its own is
 equally consistent with the flag doing nothing. Audit any codex bridge on this
 axis alongside the stdin axis above.
 
+## Model routing across hosts: one apply, one verify (`scripts/hosts/host_setup.py`)
+
+Every host-level routing decision from 2026-09-29 is codified here. Run `apply` after
+any change and `verify` to prove it on both OSes:
+
+```bash
+python3 scripts/hosts/host_setup.py apply          # idempotent; a second run is a no-op
+python3 scripts/hosts/host_setup.py verify --live  # 30 checks, WSL + Windows; exit 1 on any failure
+```
+
+| Surface | Policy | Verified by |
+|---|---|---|
+| graphify | Claude Sonnet 5.5 via `graphify-pro` (claude-cli), rule line on 5 hosts | `--check` on WSL + Git Bash |
+| CLIProxyAPI | paid, credit-backed `gemini-api-key` by design; WSL reaches it at `127.0.0.1:8317` | forwarder + HTTP 200 + key match |
+| Hermes Gemini | only via `cliproxyapi` (Antigravity, Pro plan); `.env` blanks `GOOGLE_API_KEY`/`GEMINI_API_KEY` because `~/.bashrc` exports a paid one and Hermes loads `.env` with override=True | live: proxy answers, built-in `gemini` refused |
+| GBrain | no-billing key, embedding-2, 3.8-flash chat, one token per host (7 hosts) | a real MCP search per host |
+
+`apply` never writes secrets. The per-host GBrain tokens, the no-billing key in
+`gbrain.service` and the embedding migration need secrets or a login; `verify`
+checks each one. The negative control is to run `verify` with
+`GOOGLE_GENERATIVE_AI_API_KEY` unset: exactly one check must fail, with exit 1.
+Deleting only the key lines from Hermes's `.env` did **not** stop the paid route;
+the shell's key leaked in until the blank override lines existed.
+
 ## graphify runs on Claude Sonnet 5.5, never the billed key (`scripts/graphify-pro`)
 
 graphify's semantic extraction (docs, papers, images; code is AST-only and needs no
