@@ -77,10 +77,20 @@ python3 "$SKILL_DIR/scripts/summarize.py" qa/sweep-results.json > qa/SWEEP.md
 
 Per route and width it records: HTTP status, page errors, failed requests, one h1, heading skips, sideways
 scroll, broken images, images with no reserved box, targets under the size floor (`minTarget`, 24 px WCAG
-by default, 44 for HIG), text outside `allowedFonts`, raster icons, Lordicon icons with no credit, em dashes, numbered counters,
-italic heading accents, monospace labels, pill buttons, eyebrow density, reveals that never finished, and
-axe-core WCAG 2.2 A/AA violations. It scrolls each page end to end first so lazy content exists, and saves a
-first-viewport screenshot for step 6.
+by default, 44 for HIG), text outside `allowedFonts`, raster icons, Lordicon icons with no credit, em dashes,
+straight quotes, numbered counters, italic heading accents, monospace labels, pill buttons, eyebrow density,
+reveals that never finished, and axe-core WCAG 2.2 A/AA violations. It scrolls each page end to end first so
+lazy content exists, and saves a first-viewport screenshot for step 6.
+
+After the pages it requests every distinct same-site link found on any of them, once, and reports each
+4xx/5xx as a dead link on the page that carries it. The nav gate only walks menus; a call to action pointing
+at a route that was never built (a v6 videos page linked `/demonstrations` for a whole release) passes every
+other gate.
+
+**A green sweep is not a design review.** It proves structure, not that a page looks right: text-only video
+posters with clipped titles passed every check here. Look at the step 6 screenshots at both widths before
+calling a surface done, and read a full-page capture with care, because a pinned (sticky) stage renders there
+as one frame over a long blank band that is not a defect; confirm by capturing the viewport inside that band.
 
 ## 4. Drive the navigation like a person
 

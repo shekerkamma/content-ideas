@@ -128,6 +128,12 @@ def test_summarize_groups_findings_and_flags_suspects(tmp_path):
                          check=True).stdout
     assert '## axe target-size (serious) (1)' in out and 'test WCAG 2.4.11 directly' in out
     assert '## Design: em dashes (1)' in out
+    row['deadLinks'] = ['404 /demonstrations']
+    row['design'].update(straightQuotes=2, straightQuotesAt=["don't"])
+    f.write_text(json.dumps({'base': 'b', 'loads': 1, 'dupTitles': [], 'rows': [row]}))
+    out = subprocess.run([sys.executable, str(SCRIPTS / 'summarize.py'), str(f)], capture_output=True, text=True,
+                         check=True).stdout
+    assert '## Dead links in page content (1)' in out and '## Design: straight quotes (1)' in out
 
 
 FIXTURE = SKILL / 'assets' / 'fixtures' / 'broken'
@@ -174,6 +180,10 @@ def test_sweep_fires_on_every_planted_defect_and_not_on_the_clean_page(broken_si
     assert bad['errs'] and bad['failed'] and bad['skips'] and bad['overflowX'] > 0 and bad['broken'] and bad['small']
     assert 'button-name' in {v['id'] for v in bad['axe']} and bad['design']['emDash']
     assert bad['lordiconNoCredit'] and bad['design']['rasterIcons']
+    # in-page link crawl: the never-built route fires, and page a's own links (./ and a#top) do not
+    assert any(h.endswith('/demonstrations') for h in bad['deadLinks']), bad['deadLinks']
+    assert bad['design']['straightQuotes'] >= 2
+    assert rows['a']['deadLinks'] == [] and rows['a']['linksN'] >= 2 and not rows['a']['design']['straightQuotes']
     for clean in ('a', 'no-such-page'):   # the 404 route's own 404 is the right answer, not an error
         x = rows[clean]
         assert x['statusOk'] and not (x['errs'] or x['failed'] or x['skips'] or x['axe']), (clean, x)

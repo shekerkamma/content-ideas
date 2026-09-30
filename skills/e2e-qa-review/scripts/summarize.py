@@ -47,12 +47,16 @@ def main() -> None:
             groups['Reveals that never finished'].append(f"{at}: {r['unrevealed']}")
         if r.get('offFont'):
             groups['Text outside the declared fonts'].append(f"{at}: {', '.join(r['offFont'][:4])}")
+        for h in r.get('deadLinks', []):
+            groups['Dead links in page content'].append(f'{at}: {h}')
         for v in r['axe']:
             note = f"  ({SUSPECT[v['id']]})" if v['id'] in SUSPECT else ''
             groups[f"axe {v['id']} ({v['impact']})"].append(f"{at}: {v['n']} node(s) {v['sample'][:1]}{note}")
         dz = r['design']
         if dz['emDash']:
             groups['Design: em dashes'].append(f"{at}: {dz['emDash']} e.g. {dz['emDashAt'][:2]}")
+        if dz.get('straightQuotes'):
+            groups['Design: straight quotes'].append(f"{at}: {dz['straightQuotes']} e.g. {dz['straightQuotesAt'][:2]}")
         if dz['counters']:
             groups['Design: numbered counters'].append(f"{at}: {dz['counters']}")
         if dz['italicHeads']:

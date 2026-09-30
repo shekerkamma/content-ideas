@@ -4,6 +4,8 @@
 // exit 0 clean · 2 findings · 1 BLOCKED (no playwright / axe-core / base unreachable): never a silent skip.
 // Design-default items (em dashes, counters, pills...) are reported; they fail the run only with
 // "strictDesign": true, because a look the user pinned may legitimately carry them.
+// Every same-site link on every page is also requested once: the nav gate covers menus, and a dead link
+// inside page content (a CTA to a route that was never built) is otherwise invisible to every other gate.
 import { createRequire } from 'module';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { resolve } from 'path';
@@ -54,7 +56,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
   await p.waitForTimeout(600);
   await p.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
   await p.waitForTimeout(250);
-  const m = await p.evaluate(([reveal, fonts, minTarget]) => {
+  const m = await p.evaluate(([reveal, fonts, minTarget, base]) => {
     const vis = (e) => { const r = e.getBoundingClientRect(); const c = getComputedStyle(e); return r.width > 0 && r.height > 0 && c.visibility !== 'hidden' && !e.closest('[hidden],[aria-hidden="true"]'); };
     const text = document.body.innerText;
     const around = (re) => { const o = []; let x; const g = new RegExp(re.source, 'g'); while ((x = g.exec(text)) && o.length < 3) o.push(text.slice(Math.max(0, x.index - 35), x.index + 35).replace(/\s+/g, ' ')); return o; };
@@ -68,6 +70,9 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
     const noBox = [...document.images].filter((i) => vis(i) && !(i.getAttribute('width') && i.getAttribute('height')) && getComputedStyle(i).aspectRatio === 'auto');
     const kickers = [...document.querySelectorAll('.kicker, .eyebrow, [class*="kicker"]')].filter(vis).length;
     return {
+      // same-site hrefs, hash and query dropped; checked once each after the sweep
+      links: [...new Set([...document.querySelectorAll('a[href]')].map((a) => { try { const u = new URL(a.href); u.hash = ''; u.search = ''; return u.href; } catch { return ''; } })
+        .filter((h) => h.startsWith(base)))],
       title: document.title, h1: heads.filter((x) => x.tagName === 'H1').length, skips,
       overflowX: document.documentElement.scrollWidth - innerWidth,
       broken: [...document.images].filter((i) => i.complete && i.naturalWidth === 0 && i.getAttribute('src')).map((i) => i.getAttribute('src').slice(-60)),
@@ -92,6 +97,8 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
         && ![...document.querySelectorAll('a[href]')].some((a) => /lordicon\.com/i.test(a.href))) || false,
       design: {
         emDash: (text.match(/—/g) || []).length, emDashAt: around(/—/),
+        // typewriter quotes in running text: an apostrophe between letters, or a straight double quote
+        straightQuotes: (text.match(/[A-Za-z]'[A-Za-z]|"/g) || []).length, straightQuotesAt: around(/[A-Za-z]'[A-Za-z]|"/),
         counters: leaves.filter((e) => /^(0\d|\d{2}\s*\/\s*\d{2})$/.test(e.textContent.trim())).length,
         italicHeads: heads.filter((x) => x.querySelector('em,i') || getComputedStyle(x).fontStyle === 'italic').map((x) => x.textContent.trim().slice(0, 50)),
         monoLabels: leaves.filter((e) => /mono|courier/i.test(getComputedStyle(e).fontFamily) && e.textContent.trim().length > 1 && e.textContent.trim().length < 40).length,
@@ -103,7 +110,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
         eyebrowsPerH2: +(kickers / Math.max(1, heads.filter((x) => x.tagName === 'H2').length)).toFixed(2),
       },
     };
-  }, [cfg.reveal || '', cfg.allowedFonts || [], cfg.minTarget || 24]);
+  }, [cfg.reveal || '', cfg.allowedFonts || [], cfg.minTarget || 24, BASE]);
   await p.addScriptTag({ content: AXE });
   const axe = await p.evaluate(async () => (await window.axe.run(document, { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'] })).violations
     .map((v) => ({ id: v.id, impact: v.impact, n: v.nodes.length, sample: v.nodes.slice(0, 2).map((x) => x.target.join(' ') + ' | ' + ((x.failureSummary || '').split('\n')[1] || '').trim()) })));
@@ -113,10 +120,21 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
 }
 await b.close();
 
+// One request per distinct link across the whole run; a link is dead when it ends in 4xx/5xx or never answers.
+const linkStatus = new Map();
+for (const href of new Set(rows.flatMap((r) => r.links))) {
+  // read the body to the end: an unread body on a server that closes the socket crashes undici's parser
+  try { const res = await fetch(href, { redirect: 'follow' }); await res.arrayBuffer(); linkStatus.set(href, res.status); } catch { linkStatus.set(href, 0); }
+}
+for (const r of rows) {
+  r.deadLinks = r.links.filter((h) => { const s = linkStatus.get(h); return !s || s >= 400; }).map((h) => `${linkStatus.get(h) || 'no answer'} ${h.replace(BASE, '/')}`);
+  r.linksN = r.links.length; delete r.links;
+}
+
 const titles = rows.filter((r) => r.width === widths[0][2] && r.statusOk && !/no-such|missing|404/.test(r.route)).map((r) => r.title);
 const dupTitles = [...new Set(titles.filter((t, i) => titles.indexOf(t) !== i))];
-const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.offFont.length || r.lordiconNoCredit || r.axe.length;
-const soft = (r) => r.design.emDash || r.design.counters || r.design.italicHeads.length || r.design.pills || r.design.rasterIcons.length;
+const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.offFont.length || r.lordiconNoCredit || r.deadLinks.length || r.axe.length;
+const soft = (r) => r.design.emDash || r.design.straightQuotes || r.design.counters || r.design.italicHeads.length || r.design.pills || r.design.rasterIcons.length;
 const hardN = rows.filter(hard).length, softN = rows.filter(soft).length;
 writeFileSync(out, JSON.stringify({ base: BASE, loads: rows.length, dupTitles, rows }, null, 1));
 console.log(`sweep: ${rows.length} loads, ${hardN} with findings, ${softN} with design-default items, ${dupTitles.length} duplicate titles -> ${out}`);
