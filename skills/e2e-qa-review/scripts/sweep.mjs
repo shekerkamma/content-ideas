@@ -81,6 +81,9 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
       broken: [...document.images].filter((i) => i.complete && i.naturalWidth === 0 && i.getAttribute('src')).map((i) => i.getAttribute('src').slice(-60)),
       noBox: noBox.map((i) => (i.getAttribute('src') || '').slice(-60)).slice(0, 4), noBoxN: noBox.length,
       small: small.length, smallSample: [...new Set(small.map((e) => `${String(e.className).split(' ')[0] || e.tagName}:${Math.round(e.getBoundingClientRect().width)}x${Math.round(e.getBoundingClientRect().height)}`))].slice(0, 5),
+      // A disclosure whose only content is its summary opens onto nothing: v6's evaluation guide shipped
+      // empty on eleven routes because its body component returned null for routes without a brief.
+      emptyDisclosures: [...document.querySelectorAll('details')].filter((d) => vis(d) && ![...d.children].some((c) => c.tagName !== 'SUMMARY' && (c.textContent.trim() || c.querySelector('img,svg,canvas,video,iframe')))).map((d) => (d.querySelector('summary')?.textContent || '').trim().slice(0, 40)),
       unrevealed: reveal ? [...document.querySelectorAll(reveal)].filter((e) => e.getClientRects().length && parseFloat(getComputedStyle(e).opacity) < 0.99).length : 0,
       // text whose rendered first family is outside the declared type system (runtime proof, not a CSS grep)
       offFont: (() => {
@@ -136,7 +139,7 @@ for (const r of rows) {
 
 const titles = rows.filter((r) => r.width === widths[0][2] && r.statusOk && !/no-such|missing|404/.test(r.route)).map((r) => r.title);
 const dupTitles = [...new Set(titles.filter((t, i) => titles.indexOf(t) !== i))];
-const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.offFont.length || r.lordiconNoCredit || r.deadLinks.length || r.axe.length;
+const hard = (r) => !r.statusOk || r.errs.length || r.failed.length || r.h1 !== 1 || r.skips.length || r.overflowX > 0 || r.broken.length || r.noBoxN || r.small || r.unrevealed || r.offFont.length || r.lordiconNoCredit || r.deadLinks.length || r.emptyDisclosures.length || r.axe.length;
 const soft = (r) => r.design.emDash || r.design.straightQuotes || r.design.counters || r.design.italicHeads.length || r.design.pills || r.design.rasterIcons.length;
 const hardN = rows.filter(hard).length, softN = rows.filter(soft).length;
 writeFileSync(out, JSON.stringify({ base: BASE, loads: rows.length, dupTitles, rows }, null, 1));

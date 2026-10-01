@@ -47,6 +47,8 @@ def main() -> None:
             groups['Reveals that never finished'].append(f"{at}: {r['unrevealed']}")
         if r.get('offFont'):
             groups['Text outside the declared fonts'].append(f"{at}: {', '.join(r['offFont'][:4])}")
+        for h in r.get('emptyDisclosures', []):
+            groups['Disclosures that open onto nothing'].append(f'{at}: "{h}"')
         for h in r.get('deadLinks', []):
             groups['Dead links in page content'].append(f'{at}: {h}')
         for v in r['axe']:

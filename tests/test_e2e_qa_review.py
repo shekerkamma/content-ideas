@@ -183,6 +183,7 @@ def test_sweep_fires_on_every_planted_defect_and_not_on_the_clean_page(broken_si
     # in-page link crawl: the never-built route fires, and page a's own links (./ and a#top) do not
     assert any(h.endswith('/demonstrations') for h in bad['deadLinks']), bad['deadLinks']
     assert bad['design']['straightQuotes'] >= 2
+    assert bad['emptyDisclosures'] == ['Empty guide'] and rows['a']['emptyDisclosures'] == []
     assert rows['a']['deadLinks'] == [] and rows['a']['linksN'] >= 2 and not rows['a']['design']['straightQuotes']
     for clean in ('a', 'no-such-page'):   # the 404 route's own 404 is the right answer, not an error
         x = rows[clean]
