@@ -131,7 +131,7 @@ Keep that block in sync if directory names change.
 ## Commands
 ```bash
 # run the test suite (stdlib + pytest, no network)
-python3 -m pytest -q
+uv run pytest -q
 
 # exercise the scraper / feed generator directly against a checkout
 python3 skills/content-ideas/scripts/scrape.py --help
