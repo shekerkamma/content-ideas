@@ -189,6 +189,13 @@ def test_sweep_fires_on_every_planted_defect_and_not_on_the_clean_page(broken_si
         assert x['statusOk'] and not (x['errs'] or x['failed'] or x['skips'] or x['axe']), (clean, x)
     # controls: a credited Lordicon and an SVG icon on page a must not be flagged
     assert not rows['a']['lordiconNoCredit'] and not rows['a']['design']['rasterIcons']
+    # phone row (isMobile): the 2000px bar must still read as sideways scroll, though innerWidth grows to fit it
+    cfg.write_text(json.dumps({**json.loads(cfg.read_text()), 'routes': ['', 'a'], 'widths': [[390, 844, 'phone']],
+                               'out': str(tmp_path / 'rphone.json')}))
+    subprocess.run(['node', str(SCRIPTS / 'sweep.mjs'), str(cfg)], cwd=ROOT, capture_output=True, timeout=300)
+    ph = {x['route']: x for x in json.loads((tmp_path / 'rphone.json').read_text())['rows']}
+    assert ph['/']['overflowX'] > 0 and ph['a']['overflowX'] <= 0, (ph['/']['overflowX'], ph['a']['overflowX'])
+    cfg.write_text(json.dumps({**json.loads(cfg.read_text()), 'widths': [[1280, 800, 'desktop']]}))
     # minTarget: the 32px control passes the WCAG 24px floor and fails the HIG 44px floor
     cfg.write_text(json.dumps({**json.loads(cfg.read_text()), 'routes': [''], 'minTarget': 44,
                                'out': str(tmp_path / 'r44.json')}))

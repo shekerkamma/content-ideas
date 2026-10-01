@@ -56,7 +56,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
   await p.waitForTimeout(600);
   await p.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
   await p.waitForTimeout(250);
-  const m = await p.evaluate(([reveal, fonts, minTarget, base]) => {
+  const m = await p.evaluate(([reveal, fonts, minTarget, base, vw]) => {
     const vis = (e) => { const r = e.getBoundingClientRect(); const c = getComputedStyle(e); return r.width > 0 && r.height > 0 && c.visibility !== 'hidden' && !e.closest('[hidden],[aria-hidden="true"]'); };
     const text = document.body.innerText;
     const around = (re) => { const o = []; let x; const g = new RegExp(re.source, 'g'); while ((x = g.exec(text)) && o.length < 3) o.push(text.slice(Math.max(0, x.index - 35), x.index + 35).replace(/\s+/g, ' ')); return o; };
@@ -74,7 +74,10 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
       links: [...new Set([...document.querySelectorAll('a[href]')].map((a) => { try { const u = new URL(a.href); u.hash = ''; u.search = ''; return u.href; } catch { return ''; } })
         .filter((h) => h.startsWith(base)))],
       title: document.title, h1: heads.filter((x) => x.tagName === 'H1').length, skips,
-      overflowX: document.documentElement.scrollWidth - innerWidth,
+      // Against the configured width, not innerWidth: with isMobile (phone rows) the layout viewport grows to
+      // fit wide content, so scrollWidth - innerWidth reads 0 on a page that scrolls sideways. A product bar
+      // 31 px too wide passed this sweep at 390 and failed CI's clientWidth check (2026-10-01).
+      overflowX: Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - vw,
       broken: [...document.images].filter((i) => i.complete && i.naturalWidth === 0 && i.getAttribute('src')).map((i) => i.getAttribute('src').slice(-60)),
       noBox: noBox.map((i) => (i.getAttribute('src') || '').slice(-60)).slice(0, 4), noBoxN: noBox.length,
       small: small.length, smallSample: [...new Set(small.map((e) => `${String(e.className).split(' ')[0] || e.tagName}:${Math.round(e.getBoundingClientRect().width)}x${Math.round(e.getBoundingClientRect().height)}`))].slice(0, 5),
@@ -110,7 +113,7 @@ for (const [w, h, tag] of widths) for (const route of cfg.routes) {
         eyebrowsPerH2: +(kickers / Math.max(1, heads.filter((x) => x.tagName === 'H2').length)).toFixed(2),
       },
     };
-  }, [cfg.reveal || '', cfg.allowedFonts || [], cfg.minTarget || 24, BASE]);
+  }, [cfg.reveal || '', cfg.allowedFonts || [], cfg.minTarget || 24, BASE, w]);
   await p.addScriptTag({ content: AXE });
   const axe = await p.evaluate(async () => (await window.axe.run(document, { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'] })).violations
     .map((v) => ({ id: v.id, impact: v.impact, n: v.nodes.length, sample: v.nodes.slice(0, 2).map((x) => x.target.join(' ') + ' | ' + ((x.failureSummary || '').split('\n')[1] || '').trim()) })));
