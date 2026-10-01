@@ -64,6 +64,12 @@ clean on an empty bundle before shipping.
   planning, `docs/design.md`, launch, and roadmap execution.
 - `skills/karpathy-guidelines/SKILL.md` — coding guardrails: think before
   coding, keep solutions minimal, edit surgically, and verify success criteria.
+- `skills/investor-competitive-dossier/SKILL.md` — compound pipeline: GBrain
+  recall, Exa/You.com acquisition, evidence ledger, STORM lenses, competitor
+  architecture, branded native PPTX, Office QA, and GBrain write-back. Use
+  for investor decks, venture diligence, startup cohort analysis, and
+  competitive landscape memos. References live under
+  `skills/investor-competitive-dossier/references/`.
 
 ## Presentation system
 
@@ -146,6 +152,9 @@ bash scripts/sync-codex-skills.sh
 # Windows Hermes Desktop profile mounted into WSL; differing host copies are
 # backed up before replacement
 bash scripts/sync-presentation-pipeline-hosts.sh
+
+# verify presentation pipeline host copies are consistent and intact
+python3 scripts/verify-presentation-pipeline-hosts.py
 
 # validate the portable recovery skills and their integrity manifest
 bash scripts/verify-recovery-skills.sh
