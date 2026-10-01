@@ -107,6 +107,11 @@ clean on an empty bundle before shipping.
 - Trigger: `/claude-code-director` or "director mode", "plan this properly",
   "stop vibe coding", "apply the director framework"
 
+## Agent Skills (cross-host, `.agents/skills/`)
+Installed via `npx skills add`; available in any host that reads `.agents/skills/`.
+- `.agents/skills/improve/SKILL.md` — `shadcn/improve`: read-only codebase auditor that writes prioritized implementation plans under `plans/`; never modifies source code itself
+- `.agents/skills/ponytail/SKILL.md` — `DietrichGebert/ponytail`: forces minimal solutions (YAGNI, stdlib-first, native platform before dependencies). Intensity levels: `lite`, `full` (default), `ultra`. Sub-skills: `ponytail-audit`, `ponytail-debt`, `ponytail-gain`, `ponytail-help`, `ponytail-review`
+
 Claude Code project settings are in `.claude/settings.json` and point at these
 repo-local skill files. Codex discovers the packaged copies after installing
 the repo marketplace plugin, whose `.codex-plugin/plugin.json` exposes
