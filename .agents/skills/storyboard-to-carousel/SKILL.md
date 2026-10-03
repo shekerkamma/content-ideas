@@ -26,14 +26,18 @@ design system (`deepgrid-dr-silicon-v6/design-system/`) and the wordmark. Run fo
 
 ## Workflow
 
-1. **Zones.** `python3 ../part-explainer-film/scripts/locate_zones.py <drawio> <svg> --out zones.json`
-   (or copy `zones.json` from the part's explainer run).
+1. **Zones and blocks.** `python3 ../part-explainer-film/scripts/locate_zones.py <drawio> <svg> --out zones.json`,
+   then `scripts/zone_blocks.py <drawio> --zones zones.json` (adds each zone's blocks, so a beat redraws
+   them natively instead of pasting the diagram).
 2. **Scaffold.** `scripts/scaffold_carousel.py <storyboard> --zones zones.json --kicker "SKU-3 · HI-REL PMIC" --url <page> --out carousel.json`.
-3. **Author** every `body` (and the CTA `title`). One sentence for a reader in a feed, at most 25
-   words, what the block means for their board. Titles stay the storyboard's assertions.
+3. **Author** every `body` (and the CTA `title`), each beat's `stat` (`{"value", "label"}`: the one figure a
+   reader keeps, from the page), and exactly three `items` on the close (open questions) and on the CTA
+   (what to bring). One sentence per body, at most 25 words; items at most 14. Titles stay the storyboard's
+   assertions.
 4. **Gate.** `scripts/gate_carousel.py carousel.json --page-text page-text.txt` (0 clean, 2 findings).
-5. **Render.** `node scripts/render_carousel.mjs <run> --svg <svg> --ds <design-system> --wordmark <png>`
-   → `out/<part>-NN.png` and `out/<part>-carousel.pdf`. Blocks on a missing font or any overflowing text.
+5. **Render.** `node scripts/render_carousel.mjs <run> --ds <design-system> --wordmark <png>`
+   → `out/<part>-NN.png`, `out/<part>-carousel.pdf` and the editable `out/<part>-carousel.html`. Blocks on a
+   missing font or any overflowing text.
 6. **Look** at a contact sheet of every slide at feed size (about 430 px wide). Fix, re-render, stop
    after one confirmation round.
 
@@ -43,8 +47,13 @@ Editable policy. Tune here, never inside the step instructions.
 
 - **One idea per slide, 25 words at most.** A carousel is read at thumb speed; the title carries the
   claim, the body says why a board designer cares.
-- **The real diagram, cropped, never redrawn.** The crop stays inside the diagram (no blank paper past
-  its edge); the beat's zones keep full strength, the rest dims under ink, a copper frame marks them.
+- **Redraw, never paste.** A pasted draw.io crop put 5-px labels on a phone and read as a screenshot; the
+  first version was rejected as unprofessional for it. A beat redraws its zone's real blocks as tiles
+  (names the beat mentions first, each name once), and the SIGNAL-CHAIN RAIL draws the part's zones along
+  every slide's base with the active zone in copper: the diagram and the progress bar in one element.
+- **A focal point on every slide.** Each beat leads with one hero figure in copper; the cover with a hook
+  and a numbered zone map; the close with three numbered open questions; the CTA with three things to bring.
+  Four archetypes, never one template repeated.
 - **Every number is on the product page or storyboard.** No market figures, no "certified" or
   "compliant"; standards are "designed toward". Every slide footer says pre-silicon.
 - **Copper is the one accent; teal only for a safe state.** Ink ground, Newsreader titles, Inter body,
@@ -55,8 +64,12 @@ Editable policy. Tune here, never inside the step instructions.
 
 - Negative control: a body with a dash, "certified", "unparalleled" and an invented 47 V, plus a
   120-character title, gave 5 findings and exit 2; rendering it blocked on the title overflowing by 64 px.
-- The first render left ~250 px empty under every body and shrank a two-zone beat to unreadable; the
-  diagram card is now 660 px tall. Crops ran past the diagram's edge; they are now clamped inside it.
+- v1 (pasted, cropped diagram) was rejected. v2 visual rounds caught: a stat label orphaned beside its
+  figure (moved under it), a fault beat showing the wrong four blocks (named blocks now rank first),
+  close and CTA slides a fifth empty (lists spread to the rail), duplicate tiles where four rails share
+  names (de-duplicated), a rail label clipped mid-word at eight zones (dense size), and the package frame
+  listed as a zone (containers are skipped). zone_blocks.py first required a line break before a block's
+  sub-line and silently dropped half the DG32-LITE blocks; it accepts a dot too.
 
 ## Gotchas
 
