@@ -1,0 +1,30 @@
+"""SKU-7 imaging radar: mechanism scenes over the gated narration. Every figure is on the product page."""
+from lib import chain, stat, counter, wave, gridmap, compose, items
+
+SCENES = {
+ "open": {"scene": "Two dies light in turn: SiGe for the 77 GHz gain, CMOS for quiet converters and processing",
+          "build": lambda p, at: chain(p, at, [("SiGe die", "77 GHz front end"), ("CMOS die", "sampling · FFT · detection")],
+                                       light=[(0, "gain"), (1, "converters")])},
+ "b1": {"scene": "A frequency ramp draws itself, straight across the sweep",
+        "build": lambda p, at: wave(p, at, "chirp", [("draw", "ramp")], label="CHIRP · 4 GHz SWEEP · LINEAR RAMP")},
+ "b2": {"scene": "The oscillator at half the carrier, the doubler to 77 GHz, one chirp for transmit and receive",
+        "build": lambda p, at: compose(stat(p, at, "77 GHz", "CARRIER · FROM A 38.5 GHz VCO", "doubler", size=140),
+                                       chain(p, at, [("VCO", "38.5 GHz"), ("Doubler", "77 GHz"), ("TX + RX", "one chirp")],
+                                             light=[(0, "oscillator"), (1, "doubler"), (2, "transmit")], y=600, h=150, ns="c"))},
+ "b3": {"scene": "The chirp, then its echo returning offset: the offset is distance",
+        "build": lambda p, at: wave(p, at, "chirp", [("draw", "receivers"), ("echo", "echo")], label="FOUR RECEIVE CHANNELS · OFFSET GIVES RANGE")},
+ "b4": {"scene": "Four channels cross the die boundary once and fill a range-speed map",
+        "build": lambda p, at: compose(stat(p, at, "4", "CHANNELS · ONE CROSSING", "once", size=160),
+                                       gridmap(p, at, 8, 16, [], "map", label="RANGE × DOPPLER · 512 KB"))},
+ "b5": {"scene": "Detection lights targets out of the clutter on the map",
+        "build": lambda p, at: compose(stat(p, at, "CFAR", "CONSTANT FALSE-ALARM RATE", "detection", size=120),
+                                       gridmap(p, at, 8, 16, [(2, 4, "clutter"), (5, 11, "beamforming"), (3, 13, "target")], "@0.02",
+                                               label="DETECTIONS · ANGLE ESTIMATION"))},
+ "b6": {"scene": "The target count rises to 64; the raw samples stay on chip",
+        "build": lambda p, at: compose(counter(p, at, 64, "targets", "TRACKED · TO THE VEHICLE ECU", "64", size=160),
+                                       chain(p, at, [("Raw samples", "stay on chip"), ("Target list", "up to 64")],
+                                             light=[(1, "list"), (0, "never", "ink2")], packet=False, y=620, h=150, ns="c"))},
+ "close": {"scene": "Three open questions appear in turn, then the ask", "kicker": "WHAT IS STILL UNPROVEN",
+           "build": lambda p, at: items(p, at, [("The die boundary, SiGe to CMOS", "front"), ("Chirp error under 50 kHz rms", "fpga"),
+                                                ("Risk across IHP wafer runs", "bring")])},
+}

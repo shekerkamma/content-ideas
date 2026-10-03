@@ -1,0 +1,30 @@
+"""SKU-2 smart meter: mechanism scenes over the gated narration. Every figure is on the product page."""
+from lib import chain, stat, wave, timeline, stream, items, compose
+
+SCENES = {
+ "open": {"scene": "A timeline: the mains drops away, and the clock and record carry on",
+          "build": lambda p, at: timeline(p, at, "MAINS · OUTAGE · ALWAYS-ON DOMAIN", windows=[(0.42, 0.95, "MAINS GONE", "gone", "err")],
+                                          marks=[(0.55, "CLOCK + RECORD KEPT", "measurement", "safe")], sweep="meter")},
+ "b1": {"scene": "Voltage and current enter six dedicated 24-bit converters that set billing accuracy",
+        "build": lambda p, at: chain(p, at, [("V / I sense", "6 channels"), ("DG-AFE6", "24-bit sigma-delta"), ("Billing accuracy", "calibrated once")],
+                                     light=[(0, "voltage"), (1, "24"), (2, "billing")])},
+ "b2": {"scene": "A raw bit stream passes the decimator and leaves as clean samples",
+        "build": lambda p, at: chain(p, at, [("Raw stream", "sigma-delta bits"), ("DECIM", "sinc³ · OSR 256"), ("Clean samples", "to METRO")],
+                                     light=[(0, "raw"), (1, "decimator"), (2, "clean")])},
+ "b3": {"scene": "Power is computed beside the converters; harmonics to the 15th appear",
+        "build": lambda p, at: compose(stat(p, at, "15th", "HARMONIC · P, Q AND S IN HARDWARE", "15", size=140),
+                                       wave(p, at, "sine3", [("build", "real")], y=540, h=300, label="METRO · ACTIVE · REACTIVE · APPARENT"))},
+ "b4": {"scene": "Results cross the bus to the security engine and are stored and signed",
+        "build": lambda p, at: chain(p, at, [("Results", "over AHB-Lite"), ("DG-SE", "AES-256 · SHA-256"), ("Stored + signed", "secure boot · key wipe")],
+                                     light=[(0, "results"), (1, "signed"), (2, "secure")])},
+ "b5": {"scene": "Readings leave on the metering protocol beside display, relay and LED",
+        "build": lambda p, at: stream(p, at, ["UART · DLMS/COSEM", "LCD · 4 × 40", "RELAY · LED"],
+                                      [(0, "READING", "readings"), (1, "DISPLAY", "display"), (2, "RELAY", "relay")])},
+ "b6": {"scene": "On a backup cell the always-on domain keeps the clock and tamper log alive",
+        "build": lambda p, at: compose(stat(p, at, "< 2 µW", "ALWAYS-ON DOMAIN · BACKUP CELL 2.2 TO 3.6 V", "always", size=140),
+                                       chain(p, at, [("Backup cell", "2.2 to 3.6 V"), ("RTC", "32.768 kHz"), ("Tamper log", "kept")],
+                                             light=[(0, "backup"), (1, "clock"), (2, "tamper")], y=600, h=150, ns="c"))},
+ "close": {"scene": "Three open questions appear in turn, then the ask", "kicker": "WHAT IS STILL UNPROVEN",
+           "build": lambda p, at: items(p, at, [("Accuracy over a fifteen-year life", "accuracy"), ("Leakage through a thirty-day outage", "leakage"),
+                                                ("Magnet and DC tamper resistance", "proven")])},
+}

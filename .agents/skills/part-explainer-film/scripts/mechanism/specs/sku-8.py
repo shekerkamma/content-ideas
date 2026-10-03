@@ -1,0 +1,32 @@
+"""SKU-8 display driver: mechanism scenes over the gated narration. Every figure is on the product page."""
+from lib import chain, stat, counter, wave, timeline, compose, items
+
+SCENES = {
+ "open": {"scene": "Frames run along a timeline; the picture freezes, and hardware flags it",
+          "build": lambda p, at: timeline(p, at, "FRAMES · FREEZE DETECTION IN HARDWARE", sweep="cockpit",
+                                          windows=[(0.55, 0.95, "PICTURE FROZEN", "stops", "err")],
+                                          marks=[(0.75, "FLAGGED", "checks", "copper")])},
+ "b1": {"scene": "Video enters, lands in the line buffer, and the panel keeps its own pace",
+        "build": lambda p, at: chain(p, at, [("LVDS · MIPI · RGB", "video in"), ("Line buffer", "decouples the pace"), ("Panel", "its own timing")],
+                                     light=[(0, "video"), (1, "buffer"), (2, "pace")])},
+ "b2": {"scene": "The temperature sensor feeds gamma, and contrast holds",
+        "build": lambda p, at: chain(p, at, [("Temperature sensor", "on chip"), ("Gamma", "14-bit · per pixel"), ("Contrast", "holds at +85 °C")],
+                                     light=[(0, "heats"), (1, "corrected"), (2, "contrast")])},
+ "b3": {"scene": "Pixels reach a converter per column, where digital hands over to high voltage",
+        "build": lambda p, at: chain(p, at, [("Pixel pipeline", "dithered"), ("DAC per column", "10-bit"), ("High-voltage drive", "thick oxide")],
+                                     light=[(0, "column"), (1, "digital"), (2, "high", "hw")])},
+ "b4": {"scene": "The output count rises to 3,840 while a column swings 0 to 12 V",
+        "build": lambda p, at: compose(counter(p, at, 3840, "outputs", "0 TO 12 V SWING · CHARGE SHARING", "3840", size=150),
+                                       wave(p, at, "square", [("draw", "swing")], y=620, h=200, label="COLUMN DRIVE · 12 V"))},
+ "b5": {"scene": "The timing controller paces the frame, scans the rows at 24 V, and dims eight zones",
+        "build": lambda p, at: compose(stat(p, at, "24 V", "ROW SCAN · GATE LEVEL", "24", size=140),
+                                       chain(p, at, [("Timing controller", "paces every frame"), ("Row scan", "up to 24 V"), ("Backlight", "8 local zones")],
+                                             light=[(0, "timing"), (1, "rows"), (2, "backlight")], y=600, h=150, ns="c"))},
+ "b6": {"scene": "Frame compared with frame; the same frame twice, and the operator is warned within two frames",
+        "build": lambda p, at: timeline(p, at, "FRAME CRC · ALERT WITHIN TWO FRAMES",
+                                        windows=[(0.55, 0.8, "TWO FRAMES", "two", "err")],
+                                        marks=[(0.2, "FRAME n", "compares"), (0.4, "FRAME n+1", "before"), (0.85, "OPERATOR WARNED", "warned", "copper")])},
+ "close": {"scene": "Three open questions appear in turn, then the ask", "kicker": "WHAT IS STILL UNPROVEN",
+           "build": lambda p, at: items(p, at, [("Which voltages force the high-voltage process", "driven"),
+                                                ("The energy precharge recovers", "target"), ("Contrast held at +85 °C", "bring")])},
+}

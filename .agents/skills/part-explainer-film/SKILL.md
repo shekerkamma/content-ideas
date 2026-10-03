@@ -1,10 +1,10 @@
 ---
 name: part-explainer-film
-description: Use when a product part with a draw.io architecture diagram and a story-architect storyboard must become a short narrated explainer film (45-90 s) in the Founder Voice, with a camera that walks the real diagram beat by beat. Triggers on "explainer film for SKU-3", "make the part explainers", "animate the architecture diagram with narration", "one-minute film per product page". Not for an existing slide deck (use narrated-deck-film), not for adding motion over an already narrated film (use film-motion-overlay), not for a social carousel (use storyboard-to-carousel).
+description: Use when a product part with a draw.io architecture diagram and a story-architect storyboard must become a short narrated explainer film (45-90 s) in the Founder Voice, with a camera that walks the real diagram beat by beat. Triggers on "explainer film for SKU-3", "make the part explainers", "animate the architecture diagram with narration", "one-minute film per product page"; mechanism mode for "animate how the part works", "a video like the safety film for every product". Not for an existing slide deck (use narrated-deck-film), not for adding motion over an already narrated film (use film-motion-overlay), not for a social carousel (use storyboard-to-carousel).
 license: MIT
 metadata:
   category: Media Production
-  version: '1.0'
+  version: '1.1'
   cost-tier: Sonnet executes it; the narration step needs judgment, every other step is a script. ElevenLabs is paid per character; Kokoro is free.
   compatibility: Python 3 stdlib, ffmpeg/ffprobe, Node 20+ with playwright and a Chromium build. Groq Whisper for the transcript gate. Claude Code, Codex CLI, or any host reading agent Markdown.
   legacy-frontmatter:
@@ -69,7 +69,32 @@ Run folder: `content-ideas/runs/<date>-part-explainers/<slug>/`. Scripts are in 
 two tuning passes; ElevenLabs gets one budget preflight across all parts before any spend and never
 re-voices a failing part automatically. The nine Kokoro placeholders move to the Founder Voice after the
 ElevenLabs reset with the command in its docstring, then `scripts/explainers/sync.py --skip-films` in the
-site repo. Tests: `tests/test_part_explainer_film.py`.
+site repo. Tests: `tests/test_part_explainer_film.py`, `tests/test_part_explainer_mechanism.py`.
+
+## Mechanism mode: animate what the part does
+
+The camera film walks the diagram. A mechanism film animates the mechanism itself on the narration's
+words, as `/technology/safety`'s fault-path film does: a surge clamped at "clamps", a vote outvoting a
+struck copy at "triple". It reuses the part's gated narration and voice, so it spends no TTS credit, and
+it renders through HyperFrames (`faceless-explainer` workflow scripts, CLI pinned to 0.8.31, Node 20+).
+
+1. **Spec.** Write `scripts/mechanism/specs/<part>.py`: one entry per scene id in `scenes.json`, each a
+   one-line `scene` description and a `build(p, at)` over the `lib.py` primitives (`chain`, `stat`,
+   `counter`, `wave` (sine3, square, slew, ripple, surge, chirp, diff), `timeline`, `rails`, `stream`,
+   `gridmap`, `items`, `compose`). Cues are words the scene's narration says (`"3.3"`, `"rail#2"`);
+   `"@0.4"` forces a fraction. A cue the narration never says blocks the build.
+2. **Build.** `scripts/mechanism/make.py <part>` writes `~/hyperframes-videos/videos/<part>-mechanism/`
+   (the `dg32-fault-path-explained` project is the template). Word times come from Groq Whisper, cached
+   per clip, aligned to the script's spelling and forced into order.
+3. **Look.** `npx hyperframes@0.8.31 check`, then `snapshot --at <times> --describe false --no-end`.
+   Frames start at the cumulative *voice* durations (scenes overlap by their 0.5 s tails); sample from
+   `index.html`'s `data-start`, or a contact sheet shows one scene's caption under the next one's title.
+4. **Render, gate, package.** `render --skill=faceless-explainer --quality high --output renders/video.mp4`,
+   then `scripts/mechanism/deliver.py <part>` (exit 2 on a stale render, a wrong size or length, silence,
+   or captions out of script order) → `out/<part>-mechanism.{mp4,vtt,-poster.jpg}`; the poster is scene 1 with
+   the caption band painted ink (a raw frame carried a half-sentence, "still come").
+5. **Site.** The DeepGrid site's `scripts/explainers/sync.py` prefers a gated mechanism film over the
+   camera film for each part; SKU-4 plays the DG32 fault-path film.
 
 ## Judgment rules
 
@@ -90,6 +115,11 @@ Editable policy. Tune here, never inside the step instructions.
   warning that the writing is too thin or too long, not a target to pad to.
 - **Captions ship as a track, not burned in.** The lower frame is the diagram; text over it would
   hide what is being explained.
+- **Mechanism films illustrate; they do not simulate.** Every figure on screen is on the product page; a
+  waveform's shape is schematic, and the films section says so. One focal element per scene, moving on the
+  word that names it; copper the one accent, the error colour tinted, teal only for a safe state.
+- **Mechanism before camera when the part has a mechanism to show.** A film that only walks the diagram
+  tells; one that clamps the surge on "clamps" shows. Keep the camera film for parts whose story is layout.
 - **Motion: one camera move per scene, then stillness.** The move carries the eye from the last
   beat's zones to this one; the hold does not drift. Labels never sit on the diagram.
 
@@ -118,6 +148,20 @@ Editable policy. Tune here, never inside the step instructions.
 - **The delivery gate flagged a static opening** (move delta 0.06 against a still hold). The film now
   enters with a settle from a wider view. Motion is proven against the hold of the same scene.
 
+### Mechanism mode (nine films, 2026-10-03)
+
+- **Spoken numbers are cues, not fractions.** "3.3" was read as 3.3 x the scene and put a rail 47 s into
+  a 14 s scene. Words resolve first; `@` forces a fraction.
+- **The transcriber overlaps neighbours** ("0.9" starting before "or" ended); the caption builder sorts by
+  start, so a burned-in line read "1.2 0.9. or". All nine films had two to five swaps and were re-rendered;
+  times are now forced into order, and `deliver.py` checks caption order against the script.
+- **Caption contrast was 1.27:1**: `captions.mjs` takes a light palette's tokens. The build sets three
+  tokens and asserts each matched once. **"8 µs" rendered "8 MS"** under uppercase; `E()` shields µ.
+- **A CSS transform under a GSAP tween** fails lint (`gsap_css_transform_conflict`); GSAP owns transforms.
+- **`snapshot` runs Gemini vision on the billed key by default**: always pass `--describe false`.
+- Negative controls: the old resolver and aligner fail two tests in
+  `tests/test_part_explainer_mechanism.py`; a stale render gives `deliver.py` exit 2.
+
 ## Gotchas
 
 - **Never author narration from the beat body.** The gate's echo check exists because it is the
@@ -137,6 +181,7 @@ Media Production (Business Automation with sub-skill dependencies)
 ### Dependencies
 - `narrated-deck-film`: its `synth_narration.py` voices ElevenLabs runs (budget preflight, resume).
 - `use-case-film`: its `tts_beats.py` voices the Kokoro placeholder.
+- `faceless-explainer` + `hyperframes`: mechanism mode's captions, assembly, transitions and renderer.
 
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |

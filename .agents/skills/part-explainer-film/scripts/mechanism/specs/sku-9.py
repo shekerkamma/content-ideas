@@ -1,0 +1,31 @@
+"""SKU-9 zone controller: mechanism scenes over the gated narration. Every figure is on the product page."""
+from lib import chain, stat, stream, compose, items
+
+SCENES = {
+ "open": {"scene": "A relay box gives way to one chip, where brake and comfort traffic share silicon",
+          "build": lambda p, at: chain(p, at, [("Relay box", "and its loom"), ("One chip", "the zone"), ("Shared silicon", "brake + comfort")],
+                                       light=[(0, "relay", "ink2"), (1, "chip"), (2, "brake")])},
+ "b1": {"scene": "Messages cross four networks into one gateway; a flood on CAN is rate-limited",
+        "build": lambda p, at: stream(p, at, ["ETHERNET", "CAN", "LIN", "FLEXRAY"],
+                                      [(0, "FRAME", "ethernet"), (2, "FRAME", "lin"), (3, "FRAME", "flexray"), (1, "FLOOD · RATE-LIMITED", "flood", "err")])},
+ "b2": {"scene": "A reserved time slot on the shared link carries the brake frame",
+        "build": lambda p, at: stream(p, at, ["TSN LINK", "PRECISION TIME"],
+                                      [(1, "PTP", "time"), (0, "BULK DATA", "shared"), (0, "BRAKE-BY-WIRE", "latency", "safe")],
+                                      slot=(0, "reserves", "RESERVED SLOT"))},
+ "b3": {"scene": "A message becomes a request and reaches the block that acts on it",
+        "build": lambda p, at: chain(p, at, [("Message", "any network"), ("Service router", "to a request"), ("Acting block", "over the crossbar")],
+                                     light=[(0, "message"), (1, "request"), (2, "act")])},
+ "b4": {"scene": "Sixteen smart fuses replace the relay box beside the loads",
+        "build": lambda p, at: compose(stat(p, at, "16", "SMART FUSES · I²t · 12 V AND 48 V", "sixteen", size=140),
+                                       chain(p, at, [("Relay box", "replaced"), ("Smart fuse", "beside its logic"), ("Load", "12 / 48 V")],
+                                             light=[(0, "relay", "ink2"), (1, "switching"), (2, "loads", "hw")], y=600, h=150, ns="c"))},
+ "b5": {"scene": "Two cores in lockstep; a mismatch drives the zone to its safe state",
+        "build": lambda p, at: chain(p, at, [("Core A", "lockstep"), ("Core B", "lockstep"), ("Compare", "every cycle"), ("Safe state", "the zone")],
+                                     light=[(0, "two"), (1, "lockstep"), (2, "mismatch", "err"), (3, "safe", "safe")])},
+ "b6": {"scene": "An image is checked before it runs; a failed update rolls back",
+        "build": lambda p, at: chain(p, at, [("Image", "update"), ("Security module", "signature check"), ("Run", "working bank"), ("Roll back", "failed update")],
+                                     light=[(0, "image"), (1, "checked"), (2, "runs"), (3, "rolls", "err")])},
+ "close": {"scene": "Three open questions appear in turn, then the ask", "kicker": "WHAT IS STILL UNPROVEN",
+           "build": lambda p, at: items(p, at, [("Brake-by-wire under 10 µs", "design"), ("Fuse cut-off without avalanche damage", "certificate"),
+                                                ("Where the node line falls", "bring")])},
+}
