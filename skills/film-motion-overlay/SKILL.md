@@ -87,6 +87,9 @@ Editable policy. Tune here, never inside the step instructions.
 - **Tesseract paragraphs run across a row of cards** (17/35 agreement). Splitting lines at wide gaps
   and stacking only overlapping runs raised it to 32/35.
 
+Tests: `tests/test_film_motion_overlay.py` (spoken-number targets, header labels skipped, no false cuts on
+a dark title slide).
+
 ## Gotchas
 
 - **OCR is installed, off PATH:** `content-ideas/.tools/tesseract/bin/tesseract` (5.3.4). `TESSERACT`

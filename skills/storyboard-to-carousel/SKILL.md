@@ -71,6 +71,9 @@ Editable policy. Tune here, never inside the step instructions.
   listed as a zone (containers are skipped). zone_blocks.py first required a line break before a block's
   sub-line and silently dropped half the DG32-LITE blocks; it accepts a dot too.
 
+Tests: `tests/test_storyboard_to_carousel.py` (both block formats, a block that fills its zone, copy-gate
+defects in the hero figure and the lists).
+
 ## Gotchas
 
 - **LinkedIn takes the PDF**, not the PNGs, for a document carousel; the PNGs are for review and other channels.

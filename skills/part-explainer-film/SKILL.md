@@ -63,6 +63,14 @@ Run folder: `content-ideas/runs/<date>-part-explainers/<slug>/`. Scripts are in 
     `public/media/explainers/`, place the player at the top of "Inside the part" with the VTT as a
     `<track>`, no autoplay with sound, then run `e2e-qa-review`.
 
+## Batch: many parts, and the Founder Voice re-voice
+
+`scripts/run_parts.py` runs steps 5-9 for many parts, each isolated with its own log: Kokoro gets up to
+two tuning passes; ElevenLabs gets one budget preflight across all parts before any spend and never
+re-voices a failing part automatically. The nine Kokoro placeholders move to the Founder Voice after the
+ElevenLabs reset with the command in its docstring, then `scripts/explainers/sync.py --skip-films` in the
+site repo. Tests: `tests/test_part_explainer_film.py`.
+
 ## Judgment rules
 
 Editable policy. Tune here, never inside the step instructions.
