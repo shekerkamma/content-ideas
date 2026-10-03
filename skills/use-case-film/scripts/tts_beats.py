@@ -5,7 +5,7 @@ Loads the ONNX model once and generates every beat, which is why this exists
 instead of shelling out to a CLI per beat.
 
 Usage: tts_beats.py <beats.json> <out-dir> [--voice bm_george] [--lang en-gb]
-  beats.json: [{"id": "uc01-00", "vo": "..."}, ...]
+  beats.json: [{"id": "uc01-00", "vo": "...", "speed": 1.0 (optional)}, ...]
 """
 import argparse, json, pathlib, sys, time
 
@@ -22,6 +22,7 @@ def main():
     ap.add_argument("--lang", default="en-gb")
     ap.add_argument("--model", default=str(MODEL))
     ap.add_argument("--voices", default=str(VOICES))
+    ap.add_argument("--speed", type=float, default=1.0, help="default speed; a beat's own \"speed\" key wins")
     a = ap.parse_args()
 
     model = pathlib.Path(a.model)
@@ -42,7 +43,7 @@ def main():
 
     t0, total = time.time(), 0.0
     for b in beats:
-        samples, sr = k.create(b["vo"], voice=a.voice, speed=1.0, lang=a.lang)
+        samples, sr = k.create(b["vo"], voice=a.voice, speed=float(b.get("speed", a.speed)), lang=a.lang)
         sf.write(str(out / f"{b['id']}.wav"), samples, sr)
         d = len(samples) / sr; total += d
         print(f"{b['id']} {d:6.2f}s", flush=True)

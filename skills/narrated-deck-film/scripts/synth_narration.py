@@ -20,6 +20,11 @@ CREDIT_RATE = {
     "eleven_turbo_v2": 0.275, "eleven_flash_v2": 0.275,
 }
 RETRYABLE = {429, 500, 502, 503, 504}
+# Models that reject request stitching with HTTP 400 (measured 2026-10-03:
+# "Providing previous_text or next_text is not yet supported with the
+# 'eleven_v3' model", and the same for previous_request_ids). Config
+# "stitch": true/false overrides this per run.
+NO_STITCH = {"eleven_v3", "eleven_v3_conversational"}
 
 
 def _key():
@@ -106,11 +111,12 @@ def synth(cfg, slide, text, key, prev_ids, prev_text, next_text):
     }
     # Request stitching: the model hears what came before and what follows, so
     # 13 separate calls land as one continuous read instead of 13 cold starts.
-    if prev_ids:
+    stitch = cfg.get("stitch", payload["model_id"] not in NO_STITCH)
+    if stitch and prev_ids:
         payload["previous_request_ids"] = prev_ids[-3:]
-    if prev_text:
+    if stitch and prev_text:
         payload["previous_text"] = prev_text[-400:]
-    if next_text:
+    if stitch and next_text:
         payload["next_text"] = next_text[:400]
 
     url = (f"/text-to-speech/{cfg['voice_id']}"
