@@ -128,10 +128,22 @@ await b.close();
 
 // One request per distinct link across the whole run; a link is dead when it ends in 4xx/5xx or never answers.
 const linkStatus = new Map();
-for (const href of new Set(rows.flatMap((r) => r.links))) {
-  // read the body to the end: an unread body on a server that closes the socket crashes undici's parser
-  try { const res = await fetch(href, { redirect: 'follow' }); await res.arrayBuffer(); linkStatus.set(href, res.status); } catch { linkStatus.set(href, 0); }
-}
+// node:http(s), not fetch: undici's parser asserted (`assert(!this.paused)`) on a socket the server closed,
+// and the throw lands outside any try, killing the run after every page had loaded (v10 QA, 2026-10-04).
+// Reading the body did not prevent it. Follows up to five redirects; no answer in 15 s counts as dead.
+const { default: http } = await import('node:http'); const { default: https } = await import('node:https');
+const probe = (href, hops = 5) => new Promise((resolve) => {
+  let u; try { u = new URL(href); } catch { return resolve(0); }
+  const req = (u.protocol === 'https:' ? https : http).get(u, { agent: false, headers: { 'user-agent': 'e2e-qa-review' } }, (res) => {
+    res.resume();
+    const loc = res.headers.location;
+    if (res.statusCode >= 300 && res.statusCode < 400 && loc && hops > 0) return resolve(probe(new URL(loc, u).href, hops - 1));
+    resolve(res.statusCode || 0);
+  });
+  req.setTimeout(15000, () => { req.destroy(); resolve(0); });
+  req.on('error', () => resolve(0));
+});
+for (const href of new Set(rows.flatMap((r) => r.links))) linkStatus.set(href, await probe(href));
 for (const r of rows) {
   r.deadLinks = r.links.filter((h) => { const s = linkStatus.get(h); return !s || s >= 400; }).map((h) => `${linkStatus.get(h) || 'no answer'} ${h.replace(BASE, '/')}`);
   r.linksN = r.links.length; delete r.links;
