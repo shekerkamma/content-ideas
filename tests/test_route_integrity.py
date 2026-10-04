@@ -5,6 +5,7 @@ them. Every assertion below pins a behaviour whose absence produced a wrong
 answer during the audit that motivated the script.
 """
 import ast
+import os
 import pathlib
 import subprocess
 import sys
@@ -14,9 +15,10 @@ GATE = ROOT / "scripts" / "check_routes.py"
 BROKEN = ROOT / "tests" / "fixtures" / "routes" / "broken-CLAUDE.md"
 
 
-def run(*args):
+def run(*args, home=None):
+    env = {**os.environ, "HOME": str(home)} if home else None
     r = subprocess.run([sys.executable, str(GATE), *map(str, args)],
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, env=env)
     return r.returncode, r.stdout, r.stderr
 
 
@@ -33,9 +35,15 @@ def test_broken_fixture_is_caught():
     assert "/another-missing-skill-abc" in err
 
 
-def test_working_route_in_broken_fixture_still_passes():
-    """The fixture is not uniformly broken — /eli5 resolves and must not fire."""
-    _, _, err = run(BROKEN)
+def test_working_route_in_broken_fixture_still_passes(tmp_path):
+    """The fixture is not uniformly broken — /eli5 resolves and must not fire.
+
+    HOME is a temp dir holding eli5, so the result does not depend on what this machine has installed
+    (CI has an empty home and reported six findings)."""
+    skill = tmp_path / ".claude" / "skills" / "eli5" / "SKILL.md"
+    skill.parent.mkdir(parents=True)
+    skill.write_text("---\nname: eli5\ndescription: explain simply\n---\n")
+    _, _, err = run(BROKEN, home=tmp_path)
     assert err.count(" - ") == 4, f"expected exactly 4 findings, got:\n{err}"
     assert "/eli5" not in err
 

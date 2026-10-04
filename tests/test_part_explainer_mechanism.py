@@ -11,22 +11,39 @@ Every rule here was written after a bug while nine mechanism films were built (2
 - A composed second chain used an id-derived class with no CSS, and the error colour read as copper.
 """
 
+import contextlib
 import importlib.util
 import sys
 import unittest
 from pathlib import Path
 
 MECH = Path(__file__).resolve().parents[1] / "skills" / "part-explainer-film" / "scripts" / "mechanism"
-sys.path.insert(0, str(MECH))
+
+
+@contextlib.contextmanager
+def _mech_lib():
+    """Make "lib" mean mechanism/lib.py only while mechanism code loads. The content-ideas skill ships
+    its own "lib" package; leaving this one in sys.modules or on sys.path broke five other test files."""
+    path, prior = list(sys.path), sys.modules.get("lib")
+    sys.path.insert(0, str(MECH)); sys.modules["lib"] = lib
+    try:
+        yield
+    finally:
+        sys.path[:] = path
+        if prior is None:
+            sys.modules.pop("lib", None)
+        else:
+            sys.modules["lib"] = prior
 
 
 def _load(name):
-    spec = importlib.util.spec_from_file_location(name, MECH / f"{name}.py")
+    spec = importlib.util.spec_from_file_location(f"mechanism_{name}", MECH / f"{name}.py")
     mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
 
 
-lib = _load("lib"); sys.modules["lib"] = lib   # specs import "lib"; another skill ships a "lib" package
-make = _load("make"); deliver = _load("deliver")
+lib = _load("lib")
+with _mech_lib():
+    make = _load("make"); deliver = _load("deliver")
 WS = [{"text": "rails", "start": 1.0}, {"text": "3.3,", "start": 2.0}, {"text": "1.8", "start": 3.0},
       {"text": "rail", "start": 4.0}, {"text": "8", "start": 5.0}, {"text": "µs.", "start": 5.4}]
 
@@ -108,7 +125,10 @@ class Specs(unittest.TestCase):
 
 def _load_spec(p):
     spec = importlib.util.spec_from_file_location(p.stem.replace("-", "_"), p)
-    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
+    mod = importlib.util.module_from_spec(spec)
+    with _mech_lib():
+        spec.loader.exec_module(mod)
+    return mod
 
 
 if __name__ == "__main__":

@@ -17,5 +17,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run tests (stdlib only — no install needed)
-        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      # The runtime stays stdlib-only; pytest is the dev-group test runner (pyproject + uv.lock).
+      - name: Run tests
+        run: uv run --frozen pytest -q

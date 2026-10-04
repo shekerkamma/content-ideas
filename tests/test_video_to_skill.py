@@ -317,7 +317,11 @@ class CoverageMathTests(unittest.TestCase):
         installed = Path.home() / ".claude/skills/watch/scripts/frames.py"
         if not installed.is_file():
             self.skipTest("watch skill not installed on this host")
-        watch_frames = _load(installed, "watch_frames")
+        sys.path.insert(0, str(installed.parent))  # frames.py imports its sibling runtime.py (watch 0.3+)
+        try:
+            watch_frames = _load(installed, "watch_frames")
+        finally:
+            sys.path.remove(str(installed.parent))
         self.assertLess(self.hyper.SCREENCAST_THRESHOLD, watch_frames.SCENE_THRESHOLD)
 
 

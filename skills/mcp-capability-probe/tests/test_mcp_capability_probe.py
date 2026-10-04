@@ -211,4 +211,5 @@ def test_servers_contacts_nothing(server):
     r = run("servers")
     assert r.returncode == 0
     assert seen == []
-    assert "No server was contacted" in r.stdout or "configured MCP server" in r.stdout
+    # A host with no configured servers (CI) takes the "none found" branch; it must not contact anything either.
+    assert any(m in r.stdout for m in ("No server was contacted", "configured MCP server", "No MCP servers found"))
