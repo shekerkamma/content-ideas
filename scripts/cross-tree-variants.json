@@ -45,5 +45,13 @@
     "reason": "Same .agents structural convention as ikigai, plus divergent prose. The only substantive claim difference verified is that the '14k+ MCP servers' figure appears in skills/ and not in .agents. The .agents copy is the one .claude/settings.json loads.",
     "evidence": ".claude/settings.json loads .agents/skills/openhands-niche-agency/SKILL.md. Verified by grep: '14k+ MCP' appears at skills/openhands-niche-agency/SKILL.md:22 and nowhere in the .agents copy.",
     "correction": "An earlier version of this entry claimed the .agents copy also removed '$2k-$5k/month' and '$50k/mo' and replaced them with 'verified MCP integrations'. That was wrong on all three counts: $2k-$5k/mo survives at .agents/skills/openhands-niche-agency/SKILL.md:9, $50k/mo at :438, and the phrase 'verified MCP integrations' exists in neither file. Corrected after audit."
+  },
+  "gemini-video": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
   }
 }
