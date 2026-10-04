@@ -92,6 +92,18 @@ posters with clipped titles passed every check here. Look at the step 6 screensh
 calling a surface done, and read a full-page capture with care, because a pinned (sticky) stage renders there
 as one frame over a long blank band that is not a defect; confirm by capturing the viewport inside that band.
 
+### 3b. One heading axis per page
+
+```bash
+node "$SKILL_DIR/scripts/align_gate.mjs" qa/sweep.json   # exit 0 clean, 2 findings, 1 blocked
+```
+
+Every visible h1/h2 in the page body, every route, both widths. A page fails when its headings sit on two
+axes: some centred, others left. A wholly centred page passes; this is consistency, not taste. Left-aligned
+headings far right of the content edge are listed as info (in practice: headings inside cards or the text
+column of an image-and-text row). The sweep cannot see this and no reviewer lane owns it, so it was graded
+away once and the user found it on every page (DeepGrid v10: 258 of 594 headings, 0 after the fix).
+
 ## 4. Drive the navigation like a person
 
 ```bash
@@ -161,6 +173,11 @@ wait for CI and check the live URL serves the new commit (a `build-info.json` or
 sweep and the nav gate run once more against it. A CDN may serve the old page for its cache lifetime
 (`max-age=600` on GitHub Pages): say so rather than calling the deploy failed.
 
+**Before pushing, run the project's own CI checks locally**, every step its workflow runs, not only this
+skill's gates. On v10 a release passed every gate here and failed the deploy on the project's own
+interaction check, which still exercised a list the fix had removed; the check was stale, but only CI ran
+it, and the live site sat on the old build until it was found.
+
 ## 9. Report
 
 Use [references/report-template.md](references/report-template.md). The order is fixed: **Blocked on me**
@@ -185,6 +202,10 @@ Policy lives here, not in the steps. Edit these to tune the skill.
 - **Pinned look wins.** Where the user pinned an existing look, design-default bans are reported, not
   enforced.
 - **Bounded visual passes.** One round, one confirmation round, stop.
+- **A visible inconsistency is a finding, whatever rule explains it.** If a reviewer reports two
+  treatments of the same thing on one page (headings centred here, left there) and the only defence is a
+  rule the visitor cannot see ("split sections left, full sections centred"), grade it supported. v10:
+  graded contradicted, then reported by the user on every page.
 - **Stop only when blocked or before anything destructive or outward.** Otherwise keep going and put status
   in the same message as the next action.
 

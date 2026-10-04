@@ -1,5 +1,6 @@
 """Contract tests for skills/e2e-qa-review: the skill's gates must fail closed, and the Pages server must
 resolve paths the way GitHub Pages does (the local mismatch cost 79 false nav failures on dr-silicon-v3)."""
+import json
 import re
 import shutil
 import socket
@@ -31,19 +32,19 @@ def test_frontmatter_name_and_policy_sections():
 def test_every_script_named_in_skill_exists():
     text = (SKILL / 'SKILL.md').read_text()
     names = set(re.findall(r'\$SKILL_DIR/scripts/([\w.]+\.(?:py|mjs))', text))
-    assert len(names) == 6, names  # an empty population passes every check
+    assert len(names) == 7, names  # an empty population passes every check
     for name in names:
         assert (SCRIPTS / name).is_file(), name
 
 
-@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs'])
+@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs', 'align_gate.mjs'])
 def test_node_scripts_parse(name):
     if not shutil.which('node'):
         pytest.skip('node not installed')
     subprocess.run(['node', '--check', str(SCRIPTS / name)], check=True)
 
 
-@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs'])
+@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs', 'align_gate.mjs'])
 def test_gates_never_exit_clean_before_measuring(name):
     """A gate that skips must not look like a gate that passed: no exit(0) before the browser opens,
     and a missing dependency is exit 1 (BLOCKED), never 0."""
@@ -339,3 +340,15 @@ def test_scripts_avoid_posix_only_calls():
         src = p.read_text()
         assert 'os.symlink' not in src, p.name
         assert "'npx'" not in src or 'npx.cmd' in src, p.name
+
+
+def test_align_gate_fails_mixed_axes_and_passes_a_single_axis(broken_site, tmp_path):
+    """align_gate.mjs: a page with a centred h2 beside left-aligned headings fails; a.html (all left) passes."""
+    base = broken_site
+    for routes, want in ((['mixed'], 2), (['a'], 0)):
+        cfg = tmp_path / f'align-{want}.json'
+        cfg.write_text(json.dumps({'base': base, 'routes': routes, 'widths': [[1280, 800, 'desktop']]}))
+        r = subprocess.run(['node', str(SCRIPTS / 'align_gate.mjs'), str(cfg)], capture_output=True, text=True, cwd=ROOT, timeout=180)
+        assert r.returncode == want, (routes, r.returncode, r.stdout, r.stderr)
+    assert 'Centred section' in subprocess.run(['node', str(SCRIPTS / 'align_gate.mjs'), str(tmp_path / 'align-2.json')],
+                                               capture_output=True, text=True, cwd=ROOT, timeout=180).stdout
