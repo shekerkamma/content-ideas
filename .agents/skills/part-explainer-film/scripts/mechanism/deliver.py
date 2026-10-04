@@ -43,6 +43,17 @@ def lib_ink():
     return "0x" + lib.C["ink"].lstrip("#")
 
 
+def make_loop(proj, mp4, dest):
+    """A silent hero loop for the product page: scene 1 as it builds, cropped above the caption band (lib.py
+    keeps content above y = 880), no audio. The page's full film carries the narration and captions."""
+    groups = json.load(open(pathlib.Path(proj) / "caption_groups.json"))
+    end = min(g["start"] for g in groups["groups"] if g["frame"] == 2) - 0.2
+    sh("ffmpeg", "-y", "-loglevel", "error", "-i", str(mp4), "-t", f"{end:.2f}", "-an", "-vf", "crop=1920:880:0:0,scale=1280:-2,fps=30",
+       "-c:v", "libx264", "-crf", "30", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(dest))
+    band = sh("ffprobe", "-v", "error", "-show_entries", "stream=width,height:format=duration", "-of", "csv=p=0", str(dest)).stdout.split()
+    print(f"loop {pathlib.Path(dest).name}: {' '.join(band)}")
+
+
 def main(part):
     proj = ROOT / f"{part}-mechanism"; mp4 = proj / "renders/video.mp4"; findings = []
     if not mp4.exists():
@@ -85,8 +96,12 @@ def main(part):
     ymax = re.search(r"YMAX=(\d+)", band)
     if not ymax or int(ymax.group(1)) > 80:
         print(f"FINDING: poster caption band is not clean (YMAX {ymax and ymax.group(1)})"); sys.exit(2)
+    make_loop(proj, mp4, out / f"{name}-loop.mp4")
     print(f"{part}: {dur:.1f} s, {len(cues(words))} cues -> {out}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    if sys.argv[1] == "--loop":                       # deliver.py --loop <project-dir> <film.mp4> <dest.mp4>
+        make_loop(sys.argv[2], sys.argv[3], sys.argv[4])
+    else:
+        main(sys.argv[1])

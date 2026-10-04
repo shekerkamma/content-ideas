@@ -92,7 +92,9 @@ it renders through HyperFrames (`faceless-explainer` workflow scripts, CLI pinne
 4. **Render, gate, package.** `render --skill=faceless-explainer --quality high --output renders/video.mp4`,
    then `scripts/mechanism/deliver.py <part>` (exit 2 on a stale render, a wrong size or length, silence,
    or captions out of script order) → `out/<part>-mechanism.{mp4,vtt,-poster.jpg}`; the poster is scene 1 with
-   the caption band painted ink (a raw frame carried a half-sentence, "still come").
+   the caption band painted ink (a raw frame carried a half-sentence, "still come"). It also writes
+   `-loop.mp4`, scene 1 cropped above the captions, silent: the product page hero. `deliver.py --loop
+   <project> <film> <dest>` does the same for a film made elsewhere (SKU-4 uses the fault-path film).
 5. **Site.** The DeepGrid site's `scripts/explainers/sync.py` prefers a gated mechanism film over the
    camera film for each part; SKU-4 plays the DG32 fault-path film.
 
