@@ -113,3 +113,38 @@ def _load_spec(p):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AnimatedDiagram(unittest.TestCase):
+    """scripts/animate_diagram.py: written after a motion-off diff showed the diagram's own dashed paths
+    turned solid, and after the fallback PNGs were found to be 1.1 MB of every 1.2 MB diagram."""
+
+    def setUp(self):
+        import json, tempfile
+        self.ad = importlib.util.module_from_spec(s := importlib.util.spec_from_file_location("animate_diagram", MECH.parent / "animate_diagram.py"))
+        s.loader.exec_module(self.ad)
+        self.tmp = Path(tempfile.mkdtemp())
+        svg = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><switch><foreignObject/>'
+               '<image href="data:image/png;base64,AAAA" width="1" height="1"/></switch>'
+               '<path d="M0 0 L10 0" fill="none" stroke="#000"/><path d="M0 5 L10 5" fill="none" stroke="#000" stroke-dasharray="3 3"/></svg>')
+        (self.tmp / "d.svg").write_text(svg)
+        json.dump({"svg": str(self.tmp / "d.svg"), "zones": {"Host  ·  control": {"x": 10, "y": 10, "w": 100, "h": 50}}}, open(self.tmp / "z.json", "w"))
+        json.dump({"beats": [{"zones": ["Host · control"]}, {"zones": []}]}, open(self.tmp / "s.json", "w"))
+
+    def test_fallback_pngs_dropped_and_zone_names_matched_across_spacing(self):
+        out = self.tmp / "o.svg"; self.ad.build(self.tmp / "z.json", self.tmp / "s.json", out)
+        t = out.read_text()
+        self.assertNotIn("data:image/png", t)
+        self.assertIn('class="dga-beat"', t)
+
+    def test_motion_off_keeps_the_diagrams_own_dashes(self):
+        out = self.tmp / "o.svg"; self.ad.build(self.tmp / "z.json", self.tmp / "s.json", out)
+        t = out.read_text()
+        self.assertIn('path:not([stroke-dasharray]) { stroke-dasharray: none !important; }', t)
+        self.assertNotIn('path { animation: none !important; stroke-dasharray: none', t)
+
+    def test_a_beat_zone_missing_from_the_diagram_blocks(self):
+        import json
+        json.dump({"beats": [{"zones": ["Nowhere"]}]}, open(self.tmp / "s.json", "w"))
+        with self.assertRaises(SystemExit):
+            self.ad.build(self.tmp / "z.json", self.tmp / "s.json", self.tmp / "o.svg")

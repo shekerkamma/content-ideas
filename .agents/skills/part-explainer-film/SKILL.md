@@ -69,7 +69,7 @@ Run folder: `content-ideas/runs/<date>-part-explainers/<slug>/`. Scripts are in 
 two tuning passes; ElevenLabs gets one budget preflight across all parts before any spend and never
 re-voices a failing part automatically. The nine Kokoro placeholders move to the Founder Voice after the
 ElevenLabs reset with the command in its docstring, then `scripts/explainers/sync.py --skip-films` in the
-site repo. Tests: `tests/test_part_explainer_film.py`, `tests/test_part_explainer_mechanism.py`.
+site repo. Tests: `tests/test_part_explainer_film.py`, `tests/test_part_explainer_mechanism.py` (mechanism films and the animated diagram).
 
 ## Mechanism mode: animate what the part does
 
@@ -97,6 +97,18 @@ it renders through HyperFrames (`faceless-explainer` workflow scripts, CLI pinne
    <project> <film> <dest>` does the same for a film made elsewhere (SKU-4 uses the fault-path film).
 5. **Site.** The DeepGrid site's `scripts/explainers/sync.py` prefers a gated mechanism film over the
    camera film for each part; SKU-4 plays the DG32 fault-path film.
+
+## Animated architecture diagram (for the product page)
+
+`scripts/animate_diagram.py <zones.json> <storyboard.json> <out.svg>` turns the part's real draw.io SVG into
+an animated one for the web, from the same inputs the film uses: signal flow on every connector and the
+storyboard's reading path lit zone by zone, with the beat number. The animation is CSS inside the SVG, so
+it runs as a plain `<img>`; reduced motion stops it. draw.io's base64 PNG label fallbacks are dropped
+(1.1 MB of a 1.2 MB file; ten diagrams went from 13 MB to 700 KB).
+
+**Gate:** render source and animated copy with motion off and diff the pixels; they must match (max
+difference 0). The first version reset the diagram's own dashed (off-chip) paths to solid, three of ten
+diagrams, and only that diff caught it. The DeepGrid site calls it from `scripts/sku-diagrams/animate.py`.
 
 ## Judgment rules
 
