@@ -32,19 +32,19 @@ def test_frontmatter_name_and_policy_sections():
 def test_every_script_named_in_skill_exists():
     text = (SKILL / 'SKILL.md').read_text()
     names = set(re.findall(r'\$SKILL_DIR/scripts/([\w.]+\.(?:py|mjs))', text))
-    assert len(names) == 7, names  # an empty population passes every check
+    assert len(names) == 8, names  # an empty population passes every check
     for name in names:
         assert (SCRIPTS / name).is_file(), name
 
 
-@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs', 'align_gate.mjs'])
+@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs', 'align_gate.mjs', 'clip_gate.mjs'])
 def test_node_scripts_parse(name):
     if not shutil.which('node'):
         pytest.skip('node not installed')
     subprocess.run(['node', '--check', str(SCRIPTS / name)], check=True)
 
 
-@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs', 'align_gate.mjs'])
+@pytest.mark.parametrize('name', ['sweep.mjs', 'nav_gate.mjs', 'align_gate.mjs', 'clip_gate.mjs'])
 def test_gates_never_exit_clean_before_measuring(name):
     """A gate that skips must not look like a gate that passed: no exit(0) before the browser opens,
     and a missing dependency is exit 1 (BLOCKED), never 0."""
@@ -352,3 +352,26 @@ def test_align_gate_fails_mixed_axes_and_passes_a_single_axis(broken_site, tmp_p
         assert r.returncode == want, (routes, r.returncode, r.stdout, r.stderr)
     assert 'Centred section' in subprocess.run(['node', str(SCRIPTS / 'align_gate.mjs'), str(tmp_path / 'align-2.json')],
                                                capture_output=True, text=True, cwd=ROOT, timeout=180).stdout
+
+
+def test_clip_gate_fires_on_every_planted_defect_and_spares_the_controls(broken_site, tmp_path):
+    """clip_gate.mjs: clip.html plants a clipped action, a negative-margin overlap, a cropped text poster and an
+    uppercased unit; its controls (visually hidden label, ellipsis, scrolling rail, cropped photo, lower-case units)
+    must not fire. a.html is clean."""
+    base = broken_site
+    cfg = tmp_path / 'clip.json'
+    cfg.write_text(json.dumps({'base': base, 'routes': ['clip'], 'widths': [[1280, 800, 'desktop']], 'out': str(tmp_path / 'clip-out.json')}))
+    r = subprocess.run(['node', str(SCRIPTS / 'clip_gate.mjs'), str(cfg)], capture_output=True, text=True, cwd=ROOT, timeout=180)
+    assert r.returncode == 2, (r.returncode, r.stdout, r.stderr)
+    f = json.loads((tmp_path / 'clip-out.json').read_text())['failures'][0]
+    assert any('View details' in x for x in f['clipped']), f['clipped']
+    assert any('SECOND GROUP LABEL' in x for x in f['overlap']), f['overlap']
+    assert [x for x in f['crop'] if 'title-poster' in x] and not [x for x in f['crop'] if 'scene-photo' in x], f['crop']
+    assert any('130 nm' in x for x in f['units']) and not any('114 MHz' in x for x in f['units']), f['units']
+    every = ' '.join(f['clipped'] + f['overlap'])
+    for control in ('Signal', 'deliberately truncated', 'Sources'):
+        assert control not in every, (control, every)
+    clean = tmp_path / 'clip-clean.json'
+    clean.write_text(json.dumps({'base': base, 'routes': ['a'], 'widths': [[1280, 800, 'desktop']]}))
+    r = subprocess.run(['node', str(SCRIPTS / 'clip_gate.mjs'), str(clean)], capture_output=True, text=True, cwd=ROOT, timeout=180)
+    assert r.returncode == 0, (r.stdout, r.stderr)

@@ -104,6 +104,21 @@ headings far right of the content edge are listed as info (in practice: headings
 column of an image-and-text row). The sweep cannot see this and no reviewer lane owns it, so it was graded
 away once and the user found it on every page (DeepGrid v10: 258 of 594 headings, 0 after the fix).
 
+### 3c. Text fits: nothing cut off, covered or mangled
+
+```bash
+node "$SKILL_DIR/scripts/clip_gate.mjs" qa/sweep.json   # exit 0 clean, 2 findings, 1 blocked
+```
+
+Every route at 1440, 1100 and 390 by default, and every disclosure state named in the config's `expand`
+selectors (tabs, tiles, accordions: each is clicked in turn and re-measured). Four checks: text clipped by an
+`overflow: hidden` ancestor, text overlapping other text, text-bearing images (posters, diagrams, slides: the
+`textImages` pattern) cropped by `object-fit: cover`, and units forced into capitals by `text-transform:
+uppercase` ("130 NM"). Visually hidden text, deliberate ellipsis and scroll-container content are excluded.
+A restyle is where this bites: on DeepGrid v11 bolder headings and a larger body face made an open tile outgrow
+its fixed height and cut off its button, a negative margin laid one block over another on phones, and film
+stills lost their titles to `cover`, with every other gate green. Add the 1100 width: that is where it broke.
+
 ## 4. Drive the navigation like a person
 
 ```bash
@@ -115,7 +130,7 @@ clicked and landed on; Enter opens, Tab reaches a link, Escape closes and return
 opened and every link tapped; the URLs people type (`/About`, `/about/`, `/about.html`, a bare section path)
 must reach a real page. External links are checked by address and target, never followed.
 
-**Before trusting a clean run of either gate on a new site, or after editing a gate,** point it at
+**Before trusting a clean run of any gate on a new site, or after editing a gate,** point it at
 `assets/fixtures/broken/` (serve it with `serve_pages.py … fx <port>`). Every defect there is planted and
 commented; the sweep must exit 2 on `/` and stay clean on `/a` and the 404 route, and the nav gate must
 report the hover gap, Tab, Escape, click-toggle, missing phone sheet and `/A`. `tests/test_e2e_qa_review.py`

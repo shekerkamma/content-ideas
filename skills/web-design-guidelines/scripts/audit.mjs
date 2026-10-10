@@ -42,8 +42,9 @@ for (const file of files) {
       violationCount++;
     }
 
-    // Rule: Triple dots in JSX
-    if (/>[^<]*\.\.\.[^<]*</.test(line)) {
+    // Rule: Triple dots in JSX text. Spread syntax (`...name`, `...[`, `...{`, `...(`) is code, not
+    // typography; it was flagged on `{[{id:'all'},...groups].map(...)}` (DeepGrid v11, 2026-10-10).
+    if (/>[^<{]*?\.\.\.(?![\w$\[{(.])[^<]*</.test(line)) {
       console.log(`${file}:${lineNum}: [Typography] Use proper ellipsis character '…' instead of triple dots '...'.`);
       violationCount++;
     }
@@ -54,12 +55,25 @@ for (const file of files) {
       violationCount++;
     }
 
-    // Rule: Image missing width/height
-    if (/<img\b/i.test(line) && (!/width=/i.test(line) || !/height=/i.test(line))) {
+  });
+
+  // Rule: Image missing width/height. Read the whole tag, which in JSX often spans lines; a line-based
+  // check flagged images whose width and height sat on the next lines (DeepGrid v11, 2026-10-10).
+  for (const m of content.matchAll(/<img\b/gi)) {
+    let depth = 0, end = m.index + 4;
+    for (; end < content.length; end++) {
+      const ch = content[end];
+      if (ch === '{') depth++;
+      else if (ch === '}') depth--;
+      else if (ch === '>' && depth === 0) break;
+    }
+    const tag = content.slice(m.index, end + 1);
+    if (!/\bwidth=/i.test(tag) || !/\bheight=/i.test(tag)) {
+      const lineNum = content.slice(0, m.index).split('\n').length;
       console.log(`${file}:${lineNum}: [Images] '<img>' missing explicit width/height (causes CLS).`);
       violationCount++;
     }
-  });
+  }
 }
 
 console.log(`\nAudit complete: ${violationCount} potential guideline violation(s) found across ${files.length} file(s).`);
