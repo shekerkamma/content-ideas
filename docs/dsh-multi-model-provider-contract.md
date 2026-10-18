@@ -204,6 +204,34 @@ identical to a real tool-calling route, so this cannot be detected by output
 alone. Each call also re-sends Claude Code's own system prompt (~30k cache
 tokens cold), so subscription rate limits arrive sooner than with a bare model.
 
+## The OpenCode CLI bridge (Zen free models)
+
+OpenCode Zen's free models (`deepseek-v4.1-flash-free`, `glm-5.3-flash-free`,
+…) answer every direct `https://opencode.ai/zen/v1/chat/completions` call with
+`FreeTierError: OpenCode's free tier can only be used from within OpenCode`,
+with or without a key. The old `oc/*-free` OmniRoute route sent OpenCode's
+client headers to get past that; it is not the route to copy.
+`scripts/opencode_cli_bridge.py` instead spawns the real client per request,
+`opencode run -m opencode/<model> --format json`, and returns the `text`
+events. It runs as the systemd user unit `opencode-cli-bridge` on port 8320,
+and dsh knows it as provider `opencode-cli`:
+
+```bash
+dsh --profile headless --patch ~/.dsh/patches/opencode-deepseek-v4.1-flash-free.yml "task"
+```
+
+The same limitation as the Claude Code bridge applies (OpenCode does its own
+tool use; no `tool_calls` reach dsh), and each call costs ~76k input tokens
+cold, billed at 0. Two failure modes cost time on 2026-10-18:
+
+- **OpenCode snapshots the whole worktree before every run.** In a 29 GB
+  repo a "reply pong" request never finished. The bridge sets
+  `OPENCODE_CONFIG_CONTENT={"snapshot":false}` for its own subprocesses only;
+  with it, a request takes ~22 s.
+- **`database disk image is malformed`** means
+  `~/.local/share/opencode/opencode.db` is corrupt (the July copy was 90 %
+  zero bytes), not the model. Move it aside and OpenCode recreates it.
+
 ## Host gotchas
 
 Each of these cost real debugging time and is silent when wrong.
@@ -213,6 +241,13 @@ Each of these cost real debugging time and is silent when wrong.
   (`ip route show default | awk '{print $3}'`), which **changes on reboot**.
   Hermes' own config points `cliproxyapi` at `127.0.0.1:8317`, which therefore
   cannot work from the WSL side.
+- **CLIProxyAPI does not start with Windows.** After a reboot every
+  `cliproxyapi` model fails with `TRANSPORT: Connection error`, and
+  `journalctl --user -u cliproxy-forward` logs `upstream 8317 unreachable`.
+  Windows still shows a listener on 127.0.0.1:8317, but it is `wslrelay.exe`
+  mirroring the WSL forwarder, not CLIProxyAPI. Since 2026-10-18 the Windows
+  scheduled task `CLIProxyAPI` starts it at logon. If it is down anyway, run
+  `Start-ScheduledTask CLIProxyAPI` in PowerShell.
 - **CLIProxyAPI binds `host:` literally.** Shipped as `127.0.0.1`, it is
   unreachable from WSL even when running; `0.0.0.0` is required. It also needs
   an explicit `-config <path>` — it will not resolve the path from a
