@@ -91,7 +91,10 @@ def run_opencode(prompt, model_id):
     # A missing cwd raises the same FileNotFoundError as a missing binary.
     if not os.path.isdir(WORKDIR):
         return None, f"OPENCODE_BRIDGE_CWD does not exist: {WORKDIR}"
-    cmd = ["opencode", "run", "-m", MODEL_MAP[model_id], "--format", "json"]
+    # OpenCode 2 sends `run` to a shared background server that never sees
+    # this process's env, so the snapshot-off override below was ignored and
+    # the run hung snapshotting the repo. --standalone gives it a private one.
+    cmd = ["opencode", "run", "--standalone", "-m", MODEL_MAP[model_id], "--format", "json"]
     if AUTO:
         cmd.append("--auto")
     # The prompt goes in argv; stdin is DEVNULL so the CLI never blocks on it.
