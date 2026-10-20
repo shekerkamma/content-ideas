@@ -1653,3 +1653,16 @@ documented fallback. Report the step as blocked or skip the optional export.
 - Trigger: `/skill-builder` or "help me build a skill" or "audit this skill"
 - Supports: new skill discovery interview · existing skill audit · frontmatter optimization
 - Technical reference: `.claude/skills/skill-builder/reference.md`
+
+## Verifying your work
+
+- Before reporting anything as done, fixed, passing or verified, run the real
+  check and paste its output: the test suite, build, gate or rendered result.
+  Read the exit code before piping into `tail` or `head`.
+- A check counts only if it could have failed. Where you can, run it against
+  the old input or code first. Watch for empty selectors, checks built from the
+  artifact they test, gitignored files and silently ignored flags.
+- Never edit a test or a Proof list to make it pass.
+- For non-trivial claims, especially when this session wrote the check, ask the
+  `verifier` subagent (`.claude/agents/verifier.md`) and include its VERDICT line.
+  It runs the checks in a fresh context and never fixes anything.
