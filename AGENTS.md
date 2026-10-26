@@ -233,4 +233,17 @@ Antigravity CLI & IDE cross-host sync contract:
   `~/.antigravity-server/data/User/settings.json`.
 - Track incremental wave migrations in `docs/antigravity-sync-backlog.md`.
 
+## Gemini media lane (`gemini-api`, pilot)
+
+- `gemini-api` v0.4.4 is pinned in `~/.local/bin` (WSL). It bills the paid
+  `GEMINI_API_KEY`; Google AI Pro does not cover it. Do not upgrade unasked.
+- Use it to call Gemini models, generate or edit media (image, tts, music,
+  video), analyze files, transcribe, or launch managed agents.
+- Inspect `--help` or `--usage` to choose a command, and `--schema` when building
+  a `--body` JSON payload. Preview calls with `--dry-run`.
+- For JSON or `--jq` on streaming/background commands (`generate`, `agent run`,
+  `agent status`), pass `--stream=false --output-format json`.
+- Capture the returned file paths and interaction IDs for multi-step tasks.
+  Video and Deep Research cost real money: say the estimate before running.
+
 @CLAUDE.md
