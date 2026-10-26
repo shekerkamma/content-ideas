@@ -107,8 +107,21 @@ clean on an empty bundle before shipping.
 - Trigger: `/claude-code-director` or "director mode", "plan this properly",
   "stop vibe coding", "apply the director framework"
 
-Claude Code project settings are in `.claude/settings.json` and point at these
-repo-local skill files. Codex discovers the packaged copies after installing
+`.claude/settings.json` carries a `skills` array listing the repo-local skill
+files as repo-relative paths. `skills` is not a documented Claude Code settings
+key (see the settings reference at https://code.claude.com/docs/en/settings),
+so Claude Code does not load skills from it; treat it as a manifest only. Claude
+Code actually discovers skills from `.claude/skills/<name>/SKILL.md`, nested
+`<subdir>/.claude/skills/`, `--add-dir` directories, `~/.claude/skills/`, and
+installed plugins (this repo's `.claude-plugin/` packages `skills/`). Keep every
+entry repo-relative and never commit a `/home/<user>/...` path there.
+
+Skills that live outside this repo (e.g. a sibling
+`content-ideas.local/skill-framework/.agents/skills/` checkout) are
+machine-specific: list them only in the gitignored
+`.claude/settings.local.json`, and to make Claude Code load them, symlink each
+skill folder into `~/.claude/skills/<name>` (or a `.claude/skills/` directory
+passed with `--add-dir`). Codex discovers the packaged copies after installing
 the repo marketplace plugin, whose `.codex-plugin/plugin.json` exposes
 `"skills": "./skills/"`. `AGENTS.md` remains the repo-level fallback before
 plugin installation.
