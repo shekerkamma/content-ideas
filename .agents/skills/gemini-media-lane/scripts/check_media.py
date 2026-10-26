@@ -4,13 +4,15 @@
   check_media.py wav FILE                       one RIFF header, size field = file - 8, readable
   check_media.py av FILE [--duration S] [--min-duration S]
                                                 duration, audio present, loudness, no long silence
-  check_media.py ocr IMAGE "LINE" ["LINE" ...]  every expected line read exactly by Tesseract
-                                                (native, or the WSL build via wsl.exe on Windows)
+  check_media.py ocr IMAGE "LINE" ["LINE" ...] [--region x0,y0,x1,y1]
+                                                every expected line read exactly by Tesseract
+                                                (native, or the WSL build via wsl.exe on Windows);
+                                                --region crops to the text area first (busy art)
 
 Exit 0 = pass, 1 = check failed, 2 = usage or a missing tool.
 """
 from __future__ import annotations
-import argparse, os, re, shutil, struct, subprocess, sys, wave
+import argparse, os, re, shutil, struct, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
@@ -91,14 +93,22 @@ def check_av(path: str, duration: float | None, min_duration: float | None) -> i
     return 0
 
 
-def check_ocr(path: str, expected: list[str]) -> int:
+def check_ocr(path: str, expected: list[str], region: str | None = None) -> int:
     found = find_tesseract()
     if not found:
         print("tesseract not found (TESSERACT_BIN, repo .tools, PATH, Program Files, or WSL via wsl.exe)")
         return 2
     argv, label = found
-    text = subprocess.run(argv + [str(Path(path).resolve()), "-", "--psm", "11"],
-                          capture_output=True, text=True).stdout
+    target, psm = str(Path(path).resolve()), "11"
+    if region:
+        # Crop to the text area (fractions x0,y0,x1,y1) and read it as one block: on a busy
+        # image, whole-page sparse mode (psm 11) scatters graphic noise between wrapped lines.
+        x0, y0, x1, y1 = (float(v) for v in region.split(","))
+        target = os.path.join(tempfile.mkdtemp(prefix="ocr-"), "region.png")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-vf",
+                        f"crop=iw*{x1 - x0}:ih*{y1 - y0}:iw*{x0}:ih*{y0},format=gray", target], check=True)
+        psm = "6"
+    text = subprocess.run(argv + [target, "-", "--psm", psm], capture_output=True, text=True).stdout
     if not text.strip():
         print(f"tesseract ({label}) returned no text for {path}")
         return 1
@@ -118,6 +128,7 @@ def main() -> int:
     a = sub.add_parser("av"); a.add_argument("file")
     a.add_argument("--duration", type=float); a.add_argument("--min-duration", type=float)
     o = sub.add_parser("ocr"); o.add_argument("file"); o.add_argument("expected", nargs="+")
+    o.add_argument("--region", help="text area as fractions x0,y0,x1,y1, e.g. 0,0.25,0.55,0.75")
     args = ap.parse_args()
     if not Path(args.file).exists():
         print(f"no such file: {args.file}")
@@ -126,7 +137,7 @@ def main() -> int:
         return check_wav(args.file)
     if args.cmd == "av":
         return check_av(args.file, args.duration, args.min_duration)
-    return check_ocr(args.file, args.expected)
+    return check_ocr(args.file, args.expected, args.region)
 
 
 if __name__ == "__main__":

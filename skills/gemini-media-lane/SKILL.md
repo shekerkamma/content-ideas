@@ -31,10 +31,10 @@ makes the media. One command per asset, no hand-written API code.
 
 | Recipe | Video | What comes out | Typical cost (Oct 2026) |
 |---|---|---|---|
-| `teaser` | 0:48 | 10 s MP4: animated still + narration | ~$0.40 (Omni 360p ~$0.34) |
+| `teaser` | 0:48 | 10 s MP4: animated still + narration | about USD 0.40 (Omni 360p about USD 0.34) |
 | `music` | 4:45 | ~3 min stereo MP3 | cents per track |
-| `banner` | 5:03 | 2K image with exact text | ~$0.15 |
-| `research-page` | 6:17 | Deep Research report + landing page (image, loop, voice, music) | ~$2–4 ($1–3 research) |
+| `banner` | 5:03 | 2K image with exact text | about USD 0.15 |
+| `research-page` | 6:17 | Deep Research report + landing page (image, loop, voice, music) | about USD 2–4 (USD 1–3 research) |
 
 Prices come from Google's docs plus a third-party rate list. Re-check them when a recipe is used
 after 2026-11-30, when several Gemini rates double. AI Studio's usage page is the real bill.
@@ -65,7 +65,8 @@ Input: `$ARGUMENTS`, a recipe name plus a source (film path, topic, brief). Ask 
 - **music.** `music "<mood> background music for <use>" --out <dir>/name`. Check the duration
   and loudness, and that there are no silent gaps.
 - **banner.** `image "<brief> ... text reading exactly: X" --aspect-ratio 16:9 --image-size 2K`.
-  OCR the text (`check_media.py ocr`). It must match exactly.
+  OCR the text (`check_media.py ocr`, adding `--region x0,y0,x1,y1` when artwork sits beside the
+  text). It must match exactly; check punctuation by eye, since OCR matching ignores it.
 - **research-page.** Start `agent run --agent deep-research-preview-04-2026 --background
   --stream=false --jq '.id'`. Poll `agent status` once a minute in a background job. Meanwhile build
   the page assets with `image`, `video`, `tts` and `music`, and write the HTML around them. When it
@@ -97,7 +98,7 @@ Editable policy. Change these lines, not the workflow.
 - Omni output is a social teaser, not a product shot, when it redraws product markings.
 - Facts in narration and pages come from the user's source; the model's line may paraphrase only
   wording the source already shows (on screen or in the script).
-- Deep Research: standard agent by default; Max ($3–7) only on request. Poll once a minute; stop
+- Deep Research: standard agent by default; Max (USD 3–7) only on request. Poll once a minute; stop
   after 30 minutes and report.
 - Deep Research findings are leads, not facts: carry the report's own vendor-marketing flags, and say
   nothing was checked against primary sources unless it was.
@@ -123,6 +124,11 @@ Editable policy. Change these lines, not the workflow.
 - **Gemini's thumbnail pick can land mid-transition.** Always look at the frame.
 - **The Pro plan does not pay for this:** Google AI Pro covers the AI Studio website only; the
   CLI bills the API key, and Pro's monthly Cloud credits apply first.
+- **Dollar sign before a digit in this file:** Claude Code replaces a dollar sign followed by a number
+  with the invocation's arguments (positional placeholders), so a price written that way turns into an argument.
+  Write prices as "USD 0.15".
+- **O vs 0 in squared fonts:** Tesseract reads a squared "O" as a zero. Ask for "a rounded sans-serif
+  where O is a perfect circle" and OCR with `--region`. The model also tends to add a full stop.
 - **Shell cwd:** finish back at the repo root, or the proof-of-done hook runs pytest in a test-less
   folder (exit 5).
 
