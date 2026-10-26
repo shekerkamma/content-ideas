@@ -21,6 +21,7 @@ permissions:
     allowed_scripts:
       - scripts/check_media.py
       - scripts/dr_extract.py
+      - scripts/make_card.py
 ---
 
 # Gemini Media Lane
@@ -33,7 +34,7 @@ makes the media. One command per asset, no hand-written API code.
 |---|---|---|---|
 | `teaser` | 0:48 | 10 s MP4: animated still + narration | about USD 0.40 (Omni 360p about USD 0.34) |
 | `music` | 4:45 | ~3 min stereo MP3 | cents per track |
-| `banner` | 5:03 | 2K image with exact text | about USD 0.15 |
+| `banner` | 5:03 | card with exact text: Gemini art + real HTML text | about USD 0.15 (one art image) |
 | `research-page` | 6:17 | Deep Research report + landing page (image, loop, voice, music) | about USD 2–4 (USD 1–3 research) |
 
 Prices come from Google's docs plus a third-party rate list. Re-check them when a recipe is used
@@ -64,9 +65,13 @@ Input: `$ARGUMENTS`, a recipe name plus a source (film path, topic, brief). Ask 
   over the clip's ambience at 1 s, 10 s total. Transcribe it back to confirm the words.
 - **music.** `music "<mood> background music for <use>" --out <dir>/name`. Check the duration
   and loudness, and that there are no silent gaps.
-- **banner.** `image "<brief> ... text reading exactly: X" --aspect-ratio 16:9 --image-size 2K`.
-  OCR the text (`check_media.py ocr`, adding `--region x0,y0,x1,y1` when artwork sits beside the
-  text). It must match exactly; check punctuation by eye, since OCR matching ignores it.
+- **banner.** Gemini makes the art; code sets the words. Generate **text-free** art with `image
+  "<brief>. No text, no letters, no numbers, no logos anywhere."` (`--aspect-ratio 1:1` for the
+  square layout, `16:9` for landscape; `--image-size 2K`), look at it, then run `scripts/make_card.py
+  --layout square|landscape --art art.jpg --title "..." --tagline "..." --out <run>`. It checks the
+  art is text-free, fills `templates/card-<layout>.html` (Poppins), renders with ai-graphics
+  `html_to_png.mjs` (1080×1080 or 1200×627) and OCRs the text region. The model-drawn-text route
+  (text in the image prompt) is only on request; it misspelled and re-lettered text in testing.
 - **research-page.** Start `agent run --agent deep-research-preview-04-2026 --background
   --stream=false --jq '.id'`. Poll `agent status` once a minute in a background job. Meanwhile build
   the page assets with `image`, `video`, `tts` and `music`, and write the HTML around them. When it
@@ -80,7 +85,8 @@ Input: `$ARGUMENTS`, a recipe name plus a source (film path, topic, brief). Ask 
 | WAV | `check_media.py wav f.wav` | one RIFF header, size field = file − 8, readable |
 | MP3/MP4 | `check_media.py av f` | expected duration, audio present, mean > −30 dB, no >2 s silence |
 | Spoken line | `transcribe --format text --out f.txt` | words match the script |
-| Image text | `check_media.py ocr f.jpg "EXPECTED"` | every expected line found by Tesseract |
+| Card text | `make_card.py` (runs `check_media.py ocr --region`) | every expected line read exactly |
+| Art slot | `check_media.py textfree art.jpg` + look at it | no confident 2+ letter words; no cut-off letter at an edge |
 | Omni clip | look at a 1 fps contact sheet | product text not re-lettered where it matters |
 | Research | `dr_extract.py` | report starts at its `#` title; charts saved; sources listed |
 
@@ -93,7 +99,10 @@ Editable policy. Change these lines, not the workflow.
 - Generate images, never edit screenshots or diagrams that carry text; for an addition, generate the
   element alone and composite it with code.
 - Default video resolution: 360p for teasers; 720p+ only on request, with its price stated first.
-- Banner and image size: `--image-size 2K`; 1K garbles small text.
+- Banner text is HTML, never model-drawn, unless the user asks for model-drawn text.
+- Banner art is generated text-free; do not crop art out of an image that has text (a cut-off letter
+  slips past OCR).
+- Image size: `--image-size 2K`; 1K garbles small text.
 - Image text counts only if OCR reads it exactly; eyeballing is not a check.
 - Omni output is a social teaser, not a product shot, when it redraws product markings.
 - Facts in narration and pages come from the user's source; the model's line may paraphrase only
@@ -127,6 +136,14 @@ Editable policy. Change these lines, not the workflow.
 - **Dollar sign before a digit in this file:** Claude Code replaces a dollar sign followed by a number
   with the invocation's arguments (positional placeholders), so a price written that way turns into an argument.
   Write prices as "USD 0.15".
+- **"Any letter" is not an art-slot check:** OCR reports 31–50 letter-like fragments on clean chip art,
+  so `textfree` counts only confident words of 2+ letters. A lone letter cut off at a crop edge passes
+  it (tested), which is why the art is generated text-free and you still look at it.
+- **Old Node corrupts renders on the Windows drive:** the system Node v18 wrote a 512 KiB non-PNG
+  when the output sat on `/mnt/c` (fine on the WSL disk). `make_card.py` prefers nvm's newest Node,
+  and fails if the render isn't a real PNG instead of OCR-ing garbage.
+- **Hyphenated titles wrap at the hyphen:** the templates set `white-space:nowrap` on the title; keep
+  titles short enough for the layout (9 characters fit both at the template sizes).
 - **O vs 0 in squared fonts:** Tesseract reads a squared "O" as a zero. Ask for "a rounded sans-serif
   where O is a perfect circle" and OCR with `--region`. The model also tends to add a full stop.
 - **Shell cwd:** finish back at the repo root, or the proof-of-done hook runs pytest in a test-less
@@ -141,6 +158,9 @@ Library / API Reference
 
 ### Dependencies
 - `gemini-api` CLI v0.4.4 on PATH (`~/.local/bin` on WSL, `C:\Users\sheke\.local\bin` on Windows).
+- `ai-graphics` (`~/.claude/skills/ai-graphics/scripts/html_to_png.mjs` + Playwright) for banner renders;
+  on Windows `make_card.py` runs it through `wsl.exe` (override with `AI_GRAPHICS_HTML_TO_PNG`).
+  Poppins installed (the templates fall back to system-ui without it).
 - ffmpeg/ffprobe; Tesseract for OCR. `check_media.py` finds it on its own: `TESSERACT_BIN`, then the
   repo-local `.tools/tesseract/bin/tesseract`, then PATH, then Program Files. On Windows with none of
   those, it runs the WSL repo build through `wsl.exe` (override the path with `WSL_TESSERACT`).
@@ -149,7 +169,7 @@ Library / API Reference
 | Skill | Pattern | Condition | Handoff Artifact |
 |---|---|---|---|
 | `watch` / `watch-video` | Sequential upstream | study a reference video before copying it | `report.md` + frames |
-| `ai-graphics` | Alternative / Peer | text-heavy graphics, diagrams or edits to existing images (HTML/SVG first) | — |
+| `ai-graphics` | Dependency (banner) + Peer | banner renders through its `html_to_png.mjs`; use the full skill for diagrams, dense infographics or edits to existing images | `card-<layout>.html` → `.png` |
 | `pptx-design-quality` (`narrate_clips.py`) | Domain cluster | deck clip narration; already defaults to `gemini-api tts` | `<out-dir>/*.mp4` |
 | `deep-research` | Alternative / Peer | Claude-run research with its own sourcing rules | brief file |
 | `part-explainer-film` / `animate` | Sequential upstream | the film a teaser is cut from | film MP4 |
