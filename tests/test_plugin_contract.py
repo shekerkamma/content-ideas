@@ -45,6 +45,7 @@ class SkillFilesTests(unittest.TestCase):
             "assets/for-you-template.html",
             "scripts/scrape.py",
             "scripts/generate_feed.py",
+            "scripts/export_dashboard.py",
             "scripts/gbrain_tool.py",
             "scripts/pipeline_runner.py",
             "scripts/lib/__init__.py",

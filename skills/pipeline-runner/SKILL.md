@@ -1,6 +1,6 @@
 ---
 name: pipeline-runner
-version: "1.2.0"
+version: "1.3.0"
 description: >
   Run a selected use case from signal to strategy and deal prep. Reads the
   latest feed, lets the user choose a use case, and chains the downstream
@@ -45,6 +45,38 @@ Report missing capabilities once, before the first external call. Continue
 through safe fallbacks and optional skips. If a required stage has no documented
 fallback, stop there with completed artifacts intact instead of reporting the
 whole pipeline as successful.
+
+---
+
+## Execution mode: coordinator with nested sessions (optional)
+
+A full run (research, scoring, brief, deck, deal prep) fills one chat's context
+fast, and later stages get worse as it fills. When the host can start separate
+sessions that report back (Claude desktop app Projects or nested sessions, or a
+host tool that creates a session and sends it a message), run this skill as a
+**coordinator**:
+
+1. The coordinator chat runs Stage 0, the dependency preflight, and every gate
+   decision. It never does a stage's research or build work itself.
+2. Give each heavy stage its own session with fresh context: Stage 0.5 + 1
+   (signal and research), Stage 3 (brief), Stage 4 (deck), and each Stage 6
+   prospect. Stage 2 is short and can stay in the coordinator.
+3. Each brief must stand alone: the use case JSON, the run folder path, the
+   artifact paths from earlier stages, the stage's output contract, and the
+   rules that apply (GBrain status, branded-template and PPTX QA gates,
+   OpenHands source-of-truth). A nested session cannot see this chat.
+4. Ask each session to return only artifact paths, the stage verdict, and open
+   issues, not its working notes. Artifacts still go to the run folder on disk.
+5. Check each result against the stage's contract before starting the next
+   stage. If it falls short, send it back with the specific gap. Never pass a
+   failed or unreviewed artifact downstream.
+6. Stages 3 and 4 depend on Stage 1, and Stage 4 depends on Stage 3, so run
+   them in order. Separate Stage 6 prospects can run in parallel.
+
+If the host has no way to start separate sessions (Codex CLI, OpenHands, or a
+plan without the feature), run every stage inline in this chat as described
+below. The stage order, gates, fallbacks, and status block are the same in
+both modes. Say which mode ran in the final status.
 
 ---
 
