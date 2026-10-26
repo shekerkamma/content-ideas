@@ -7,6 +7,12 @@ look deliberate. Author narration instead and mux it in; a page's own audio is a
 bonus, never the plan.
 
 Voice routes, best first:
+  * `gemini-api tts` (default, `--engine gemini-api`) -- Google's Gemini API CLI,
+    pinned v0.4.4 in ~/.local/bin, same paid key (GEMINI_API_KEY, filled from
+    GOOGLE_GENERATIVE_AI_API_KEY when unset). It writes a finished 24 kHz WAV and
+    handles stock/designed voices, dialogue turns and inline tags like [sigh].
+    It has no style control: `--style` or a per-turn `(style)` needs
+    `--engine gemini`, the direct request below.
   * Gemini TTS on an AI Studio key -- `gemini-3.1-flash-tts-preview` (or
     `gemini-2.5-flash-preview-tts`), voice `Charon` for an informative, low-pitch
     register. Those return 24 kHz mono PCM in `inlineData`, wrapped here as WAV.
@@ -39,7 +45,7 @@ Every turn is sent as its own part carrying `speech_metadata.speaker`; a single
 "Host: ... Guest: ..." text part is rejected by 3.8 with HTTP 400.
 
 Usage:
-  narrate_clips.py <narration.md> <clip-dir> <out-dir> [--engine gemini|sapi]
+  narrate_clips.py <narration.md> <clip-dir> <out-dir> [--engine gemini-api|gemini|sapi]
                    [--model M] [--voice V] [--style S] [--speakers A=v1,B=v2]
 """
 from __future__ import annotations
@@ -128,10 +134,41 @@ def gemini(body: dict, out: str, model: str) -> None:
         f.write(to_wav(base64.b64decode(data)))
 
 
+def cli_args(text: str, voice: str, style: str, speakers: dict[str, str], model: str, out: str) -> tuple[list[str], str]:
+    """argv and stdin for `gemini-api tts`. Fails loudly where the CLI would drop style."""
+    if speakers:
+        parts = turns(text, speakers)
+        styled = [p["speech_metadata"]["speaker"] for p in parts if "style" in p["speech_metadata"]]
+        if styled or style:
+            who = f"styled turns by {sorted(set(styled))}" if styled else "--style"
+            raise SystemExit(f"gemini-api tts has no style control ({who}); use --engine gemini")
+        script = "\n".join(f"{p['speech_metadata']['speaker']}: {p['text']}" for p in parts)
+        voices = ["--multi-speaker", ",".join(f"{s}={v}" for s, v in speakers.items())]
+    else:
+        if style:
+            raise SystemExit("gemini-api tts has no style control; use --engine gemini for --style")
+        script, voices = " ".join(text.split()), ["--voice", voice]
+    bin_ = os.environ.get("GEMINI_API_BIN", "gemini-api")
+    return [bin_, "tts", "--stdin", "-m", model, *voices, "--out", out, "--no-interactive"], script
+
+
+def gemini_cli(argv: list[str], script: str, out: str) -> None:
+    env = dict(os.environ)
+    if not env.get("GEMINI_API_KEY") and env.get("GOOGLE_GENERATIVE_AI_API_KEY"):
+        env["GEMINI_API_KEY"] = env["GOOGLE_GENERATIVE_AI_API_KEY"]
+    r = subprocess.run(argv, input=script, capture_output=True, text=True, env=env, timeout=300)
+    if r.returncode:
+        raise SystemExit(f"gemini-api tts exit {r.returncode}: {r.stderr.strip()[:500]}")
+    with open(out, "rb") as f:
+        head = f.read(12)
+    if not (head.startswith(b"RIFF") and head[8:12] == b"WAVE"):
+        raise SystemExit(f"gemini-api tts wrote no WAV at {out}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("narration"); ap.add_argument("clip_dir"); ap.add_argument("out_dir")
-    ap.add_argument("--engine", default="gemini", choices=["gemini", "sapi"])
+    ap.add_argument("--engine", default="gemini-api", choices=["gemini-api", "gemini", "sapi"])
     ap.add_argument("--model", default="gemini-3.1-flash-tts-preview")
     ap.add_argument("--voice", default="Charon", help="stock voice name, or a designed voice_<id>")
     ap.add_argument("--style", default="", help="delivery direction (3.8 speech_metadata.style)")
@@ -148,7 +185,9 @@ def main() -> int:
     for name, text in blocks(a.narration).items():
         clip = os.path.join(a.clip_dir, f"{name}.mp4")
         wav = os.path.join(a.out_dir, f"{name}.wav")
-        if a.engine == "gemini":
+        if a.engine == "gemini-api":
+            gemini_cli(*cli_args(text, a.voice, a.style, speakers, a.model, wav), wav)
+        elif a.engine == "gemini":
             gemini(request_body(text, a.voice, a.style, speakers), wav, a.model)
         else:
             raise SystemExit("sapi path is host-specific; see references for the PowerShell form")
