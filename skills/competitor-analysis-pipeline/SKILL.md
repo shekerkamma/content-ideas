@@ -1,6 +1,7 @@
 ---
 name: competitor-analysis-pipeline
-description: Use when the user asks for competitor analysis, competitive landscape, competitor benchmarking, battlecards, market map, positioning analysis, consulting-firm positioning comparisons, or client-ready competitor-analysis deliverables. Use especially when outputs must include sourced research, a structured storyline, a branded PPTX deck, an interactive HTML page, GitHub Pages publishing, or review gates such as grill-me, story-architect, STORM, GStack strategy/design review, and PPTX/HTML QA.
+description: >-
+  Use when the user asks for competitor analysis, a competitive landscape, benchmarking, battlecards, a market map, or positioning comparisons delivered as a sourced, branded PPTX and HTML package with review gates. Default entry point for competitor work; add `aianalyst-competitor-analysis` for metric-heavy evidence, or use `evidence-led-competitor-pipeline` to orchestrate both end to end.
 ---
 
 # Competitor Analysis Pipeline

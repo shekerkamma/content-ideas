@@ -1,7 +1,8 @@
 # Skill context audit (October 2026)
 
-**Status:** item 3 is done. Nothing has been deleted or merged. The other open
-items need an explicit OK before anyone acts on them.
+**Status:** closed. Long descriptions are shortened and overlapping groups are
+disambiguated. After review, nothing is deleted or merged; each decision and
+its reason is below.
 
 ## Why this matters
 
@@ -22,15 +23,15 @@ that to confirm or reject the items below.
 | Skill | Copies | Decision |
 |---|---|---|
 | `impeccable` | `skills/`, `.claude/skills/`, `.agents/skills/`, `.github/skills/` | **Keep all.** The copies are not identical: `skills/impeccable/` has extra `reference/degraded/` files and other differences. It is also the canonical source that `scripts/sync-presentation-pipeline-hosts.sh` installs to other hosts, as part of the governed presentation bundle in `config/presentation-pipeline-hosts.json`. Removing it would break that sync. |
-| `investor-competitive-dossier` | `skills/` (canonical) and a `.claude/skills/` wrapper | Open. If the plugin is always installed, drop the wrapper; if the repo is used without the plugin, keep the wrapper and accept the duplicate. |
+| `investor-competitive-dossier` | `skills/` (canonical) and a `.claude/skills/` wrapper | **Keep the wrapper.** It is 160 characters and makes the skill available before anyone installs the plugin. |
 
-### 2. Merge overlapping skills (medium effort)
+### 2. Overlapping skills (reviewed: no merges)
 
-| Group | Skills | Overlap | Proposal |
-|---|---|---|---|
-| Channel to knowledge base | `channel-to-kb`, `channel-to-kb-ytdlp`, `channel-to-kb-supadata` | Same output, same trigger phrases; only the transcript fetcher differs. About 2,060 description chars. | One `channel-to-kb` skill with a fetcher choice (yt-dlp default, pytubefix, Supadata). Also removes the three-way byte-identical `assets/okf-template/` rule. |
-| Competitor analysis | `aianalyst-competitor-analysis`, `competitor-analysis-pipeline`, `evidence-led-competitor-pipeline`, `investor-competitive-dossier` | The first two list nearly the same trigger phrases, so the model has to guess between them. | One public entry point (for example `competitor-analysis-pipeline`) that routes to the others; set the rest to `user-invocable: false` with short descriptions. |
-| Graphics | `ai-graphics`, `explainer-graphic`, `image-generation-router` | `explainer-graphic` is a narrow case of `ai-graphics`. `image-generation-router` is an internal dependency, not something users ask for by name. | Fold `explainer-graphic` into `ai-graphics` as a mode. Mark `image-generation-router` internal and shorten its description. |
+| Group | Decision | Why |
+|---|---|---|
+| `channel-to-kb`, `-ytdlp`, `-supadata` | **Keep three skills.** | After item 3 their descriptions total about 1,000 characters, so a merge saves little. They are a deliberate peer set ported from upstream with a byte-identical-asset rule, and a merge would mean re-porting all three. |
+| `competitor-analysis-pipeline`, `aianalyst-competitor-analysis`, `evidence-led-competitor-pipeline` | **Keep; descriptions rewritten.** | They are layers, not copies: base delivery pipeline, evidence-dataset layer, and an orchestrator that chains both. The old descriptions repeated the same trigger list. Each now says which layer it is and points to the others (about 1,450 → 995 characters). `investor-competitive-dossier` stays separate (investor diligence, not competitor analysis). |
+| `ai-graphics`, `explainer-graphic`, `image-generation-router` | **Keep.** | `explainer-graphic` and `ai-graphics` are both in the governed presentation bundle (`config/presentation-pipeline-hosts.json`), and `explainer-graphic` is in the `skill-builder` audit list. Folding it would break the host sync and the audits. `image-generation-router` is a dependency that other skills call by name. |
 
 ### 3. Shorten long descriptions (done)
 
