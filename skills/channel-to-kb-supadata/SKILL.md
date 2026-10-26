@@ -1,16 +1,7 @@
 ---
 name: channel-to-kb-supadata
-description: >
-  Use when the user wants to turn an entire YouTube channel into an OKF
-  (Open Knowledge Format) knowledge base / Karpathy-style LLM wiki via a
-  managed transcript API — phrases like "build a knowledge base from this
-  channel using Supadata", "/channel-to-kb-supadata @handle". Uses
-  Supadata's managed API: cleanest API, no IP-blocking worries, AI fallback
-  for uncaptioned videos, but requires a paid SUPADATA_API_KEY (free tier
-  100 credits, then $17+/month). Prefer the free peer skills
-  channel-to-kb-ytdlp or channel-to-kb (no API key, same OKF output) unless
-  IP blocking or uncaptioned videos are a known problem. Ported from
-  coleam00/cole-medin-knowledge-base.
+description: >-
+  Use when the user wants a YouTube channel turned into an OKF knowledge base via the paid Supadata API (needs SUPADATA_API_KEY; no IP blocking, AI fallback for uncaptioned videos). Triggers on "build a knowledge base using Supadata", "/channel-to-kb-supadata @handle". Prefer the free peer channel-to-kb-ytdlp unless blocking is a known problem.
 license: MIT
 argument-hint: "<@ChannelHandle or channel-URL> [--api-key <key>]"
 metadata:

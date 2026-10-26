@@ -1,6 +1,7 @@
 ---
 name: build-client-acquisition-function
-description: Use when someone wants to systematise client acquisition — prospecting, outbound, lead qualification, proposal generation, follow-up, sales agents, an always-on acquisition workflow — or to turn acquisition prompts and playbooks into a compound skill. Triggers on "build a client acquisition function", "automate my outbound", "systematise prospecting", "sales agent team", "acquisition operating system". Diagnoses the current maturity level against a ten-level ladder, builds only the next reliable layer, creates explicit artifacts and handoffs, and preserves human approval for sending, pricing, contracts, and exceptions.
+description: >-
+  Use when someone wants to systematise client acquisition: prospecting, outbound, qualification, proposals, follow-up, or sales agents. Triggers on "build a client acquisition function", "automate my outbound", "systematise prospecting", "sales agent team". Keeps human approval for sending, pricing, and contracts.
 ---
 
 # Build Client Acquisition Function

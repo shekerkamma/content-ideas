@@ -1,16 +1,7 @@
 ---
 name: channel-to-kb
-description: >
-  Use when the user wants to turn an entire YouTube channel into an OKF (Open
-  Knowledge Format) knowledge base / Karpathy-style LLM wiki with zero API
-  keys — phrases like "build a knowledge base from this channel", "turn this
-  channel into a wiki", "/channel-to-kb @handle". Uses pytubefix (channel
-  enumeration) + youtube_transcript_api (in-memory transcripts): free, no
-  API key, fastest to set up, but transcript fetching can be blocked on
-  cloud IPs — run from a local machine for best results. Peer of
-  channel-to-kb-ytdlp (yt-dlp, also free, more reliable against YouTube
-  changes) and channel-to-kb-supadata (paid managed API, no IP-blocking
-  risk). Ported from coleam00/cole-medin-knowledge-base.
+description: >-
+  Use when the user wants a YouTube channel turned into an OKF knowledge base or LLM wiki with no API key, via pytubefix + youtube_transcript_api. Triggers on "build a knowledge base from this channel", "/channel-to-kb @handle". Can be IP-blocked on cloud hosts; prefer channel-to-kb-ytdlp by default, or channel-to-kb-supadata (paid).
 license: MIT
 argument-hint: "<@ChannelHandle or channel-URL>"
 metadata:

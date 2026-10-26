@@ -1,7 +1,7 @@
 # Skill context audit (October 2026)
 
-**Status:** proposal. Nothing has been deleted or merged. Each item below needs
-an explicit OK before anyone acts on it.
+**Status:** item 3 is done. Nothing has been deleted or merged. The other open
+items need an explicit OK before anyone acts on them.
 
 ## Why this matters
 
@@ -17,12 +17,12 @@ that to confirm or reject the items below.
 
 ## Recommendations
 
-### 1. Remove duplicate copies that load twice (low risk)
+### 1. Duplicate copies (reviewed: keep `impeccable`)
 
-| Skill | Copies | Proposal |
+| Skill | Copies | Decision |
 |---|---|---|
-| `impeccable` | `skills/`, `.claude/skills/`, `.agents/skills/`, `.github/skills/` (byte-identical) | Drop `skills/impeccable/`. `CLAUDE.md` names only the three per-harness copies; the `skills/` one makes Claude Code load it twice when the plugin is installed. Check `skills/watch/references/impeccable-slide-pipeline.md` first. |
-| `investor-competitive-dossier` | `skills/` (canonical) and a `.claude/skills/` wrapper | Keep one. If the plugin is always installed, drop the wrapper; if the repo is used without the plugin, keep the wrapper and accept the duplicate. |
+| `impeccable` | `skills/`, `.claude/skills/`, `.agents/skills/`, `.github/skills/` | **Keep all.** The copies are not identical: `skills/impeccable/` has extra `reference/degraded/` files and other differences. It is also the canonical source that `scripts/sync-presentation-pipeline-hosts.sh` installs to other hosts, as part of the governed presentation bundle in `config/presentation-pipeline-hosts.json`. Removing it would break that sync. |
+| `investor-competitive-dossier` | `skills/` (canonical) and a `.claude/skills/` wrapper | Open. If the plugin is always installed, drop the wrapper; if the repo is used without the plugin, keep the wrapper and accept the duplicate. |
 
 ### 2. Merge overlapping skills (medium effort)
 
@@ -32,10 +32,13 @@ that to confirm or reject the items below.
 | Competitor analysis | `aianalyst-competitor-analysis`, `competitor-analysis-pipeline`, `evidence-led-competitor-pipeline`, `investor-competitive-dossier` | The first two list nearly the same trigger phrases, so the model has to guess between them. | One public entry point (for example `competitor-analysis-pipeline`) that routes to the others; set the rest to `user-invocable: false` with short descriptions. |
 | Graphics | `ai-graphics`, `explainer-graphic`, `image-generation-router` | `explainer-graphic` is a narrow case of `ai-graphics`. `image-generation-router` is an internal dependency, not something users ask for by name. | Fold `explainer-graphic` into `ai-graphics` as a mode. Mark `image-generation-router` internal and shorten its description. |
 
-### 3. Shorten long descriptions (low risk)
+### 3. Shorten long descriptions (done)
 
-A description only needs to say when to use the skill. These are over 600
-characters; trimming each to about 300 saves roughly 2,500 characters.
+A description only needs to say when to use the skill. These were over 600
+characters. All but `impeccable` are now about 300 to 345 characters, saving
+about 2,000 characters. Each kept its "Use when" opener, its trigger
+phrases, and its peer-skill pointers. `impeccable` is left alone because it is
+upstream content that `npx impeccable skills install` would overwrite.
 
 | Skill | Chars |
 |---|---|

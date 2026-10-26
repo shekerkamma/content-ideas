@@ -1,15 +1,7 @@
 ---
 name: channel-to-kb-ytdlp
-description: >
-  Use when the user wants to turn an entire YouTube channel into an OKF (Open
-  Knowledge Format) knowledge base / Karpathy-style LLM wiki — phrases like
-  "build a knowledge base from this channel", "turn this channel into a
-  wiki", "/channel-to-kb-ytdlp @handle". Uses yt-dlp for both channel
-  enumeration and subtitle download: free, no API key, most reliable against
-  YouTube changes, captures publish dates automatically. Recommended default
-  over the peer skills channel-to-kb (pytubefix, no key, can be IP-blocked on
-  cloud hosts) and channel-to-kb-supadata (paid managed API, no IP-blocking
-  risk). Ported from coleam00/cole-medin-knowledge-base.
+description: >-
+  Use when the user wants a YouTube channel turned into an OKF knowledge base or LLM wiki. Triggers on "build a knowledge base from this channel", "turn this channel into a wiki", "/channel-to-kb-ytdlp @handle". Uses yt-dlp: free, no API key, most reliable. Recommended default over peers channel-to-kb and channel-to-kb-supadata.
 license: MIT
 argument-hint: "<@ChannelHandle or channel-URL>"
 metadata:
