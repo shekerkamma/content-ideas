@@ -17,5 +17,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run tests (stdlib only — no install needed)
-        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      # Skill runtime stays stdlib-only; pytest is a test-only dependency.
+      - name: Install test runner
+        run: python3 -m pip install "pytest>=8,<9"
+
+      - name: Run tests
+        run: python3 -m pytest

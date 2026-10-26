@@ -1,6 +1,6 @@
 ---
 name: content-ideas
-version: "2.3.0"
+version: "2.4.0"
 description: >
   Build a For You feed from tracked competitors and turn it into content ideas.
   Use for competitor research, trend discovery, and post or video brief
@@ -547,6 +547,32 @@ python3 "$SKILL_DIR/scripts/generate_feed.py" "$CONTENT_HOME/research/{today}" -
 
 Then present a short text summary (post count, how many are outliers, a couple
 of standout posts) and the page location.
+
+### 6b. Optional: publish a shareable dashboard
+
+Skip this step unless the user wants to share the feed or track it over time,
+and the host can publish hosted dashboards (for example, the Claude desktop
+app's Artifact tool lists a Dashboard type). Codex, OpenHands, and hosts
+without that feature keep the local page from Step 6 as the only view.
+
+First export the feed as flat tables:
+
+```bash
+python3 "$SKILL_DIR/scripts/export_dashboard.py" "$CONTENT_HOME/research/{today}"
+# → $CONTENT_HOME/research/{today}/dashboard/{posts.csv, ideas.csv, use-cases.csv, summary.json}
+```
+
+Then start a dashboard from the host's Dashboard type and load those files as
+its data. Good default charts: posts by platform, outliers by creator, top
+posts by `sortValue`, ideas by funnel stage, and the `patterns` list as text.
+
+- The dashboard is a read-only view. Reactions still go through the local page
+  from Step 6, which writes `feedback.json` for taste memory.
+- Keep it private unless the user names who should see it. The tables contain
+  only scraped public posts and generated ideas, never credentials or
+  `brand.md` contents.
+- The local files stay the system of record. Re-run the export and update the
+  same dashboard on later runs instead of creating a new one each day.
 
 ---
 

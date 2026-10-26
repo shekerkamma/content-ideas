@@ -1,6 +1,7 @@
 ---
 name: evidence-led-competitor-pipeline
-description: Orchestrate current-web ingestion, an AI Analyst evidence ledger, metric-first competitive scoring, decision-story review, and client-ready branded PPTX plus self-contained HTML delivery. Use when a competitor landscape, market map, battlecard, startup cohort, or company comparison must be repeatable, traceable, resumable, and pass evidence, PowerPoint, HTML, and manifest QA gates; especially when Printing Press/Firecrawl or You.com supplies research and `aianalyst-competitor-analysis` plus `competitor-analysis-pipeline` produce the deliverables.
+description: >-
+  Use when a competitor landscape, market map, battlecard, or startup cohort must be repeatable, traceable, and resumable end to end: current-web ingestion, then `aianalyst-competitor-analysis` for the evidence ledger, then `competitor-analysis-pipeline` for branded PPTX and HTML delivery, with QA gates at each step.
 ---
 
 # Evidence-Led Competitor Pipeline
