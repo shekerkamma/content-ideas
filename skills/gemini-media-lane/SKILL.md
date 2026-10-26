@@ -135,7 +135,9 @@ Library / API Reference
 
 ### Dependencies
 - `gemini-api` CLI v0.4.4 on PATH (`~/.local/bin` on WSL, `C:\Users\sheke\.local\bin` on Windows).
-- ffmpeg/ffprobe; Tesseract at `.tools/tesseract/bin/tesseract` (repo-local, off PATH) for OCR.
+- ffmpeg/ffprobe; Tesseract for OCR. `check_media.py` finds it on its own: `TESSERACT_BIN`, then the
+  repo-local `.tools/tesseract/bin/tesseract`, then PATH, then Program Files. On Windows with none of
+  those, it runs the WSL repo build through `wsl.exe` (override the path with `WSL_TESSERACT`).
 
 ### Relationships
 | Skill | Pattern | Condition | Handoff Artifact |

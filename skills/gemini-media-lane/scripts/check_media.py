@@ -5,6 +5,7 @@
   check_media.py av FILE [--duration S] [--min-duration S]
                                                 duration, audio present, loudness, no long silence
   check_media.py ocr IMAGE "LINE" ["LINE" ...]  every expected line read exactly by Tesseract
+                                                (native, or the WSL build via wsl.exe on Windows)
 
 Exit 0 = pass, 1 = check failed, 2 = usage or a missing tool.
 """
@@ -13,7 +14,34 @@ import argparse, os, re, shutil, struct, subprocess, sys, wave
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
-TESSERACT = os.environ.get("TESSERACT_BIN") or str(REPO / ".tools/tesseract/bin/tesseract")
+# Inside WSL, relative to $HOME: the repo-local build the Windows copies of this skill borrow.
+WSL_TESSERACT = os.environ.get("WSL_TESSERACT", "$HOME/content-ideas/.tools/tesseract/bin/tesseract")
+
+
+def find_tesseract() -> tuple[list[str], str] | None:
+    """argv prefix that reads an image path and prints its text, plus a label. None if none found.
+
+    Order: TESSERACT_BIN, the repo-local build, PATH, standard Windows installs, then (on
+    Windows) the WSL repo build through wsl.exe, so a Windows copy needs no install.
+    """
+    candidates = [os.environ.get("TESSERACT_BIN"), str(REPO / ".tools/tesseract/bin/tesseract"),
+                  shutil.which("tesseract")]
+    if os.name == "nt":
+        for base in (os.environ.get("ProgramFiles"), os.environ.get("ProgramFiles(x86)"),
+                     os.path.join(os.environ.get("LOCALAPPDATA", ""), "Programs")):
+            if base:
+                candidates.append(os.path.join(base, "Tesseract-OCR", "tesseract.exe"))
+    for c in candidates:
+        if c and Path(c).is_file():
+            return [c], c
+    wsl = shutil.which("wsl.exe") or shutil.which("wsl")
+    if os.name == "nt" and wsl:
+        probe = subprocess.run([wsl, "-e", "sh", "-c", f'test -x "{WSL_TESSERACT}"'], capture_output=True)
+        if probe.returncode == 0:
+            # wslpath turns the Windows image path into a WSL one inside the same call.
+            return [wsl, "-e", "sh", "-c", f'exec "{WSL_TESSERACT}" "$(wslpath -a "$1")" "$2" "$3" "$4"', "_"], \
+                f"wsl.exe → {WSL_TESSERACT}"
+    return None
 
 
 def fail(msg: str) -> int:
@@ -64,10 +92,16 @@ def check_av(path: str, duration: float | None, min_duration: float | None) -> i
 
 
 def check_ocr(path: str, expected: list[str]) -> int:
-    if not (shutil.which(TESSERACT) or Path(TESSERACT).exists()):
-        print(f"tesseract not found at {TESSERACT}; set TESSERACT_BIN")
+    found = find_tesseract()
+    if not found:
+        print("tesseract not found (TESSERACT_BIN, repo .tools, PATH, Program Files, or WSL via wsl.exe)")
         return 2
-    text = subprocess.run([TESSERACT, path, "-", "--psm", "11"], capture_output=True, text=True).stdout
+    argv, label = found
+    text = subprocess.run(argv + [str(Path(path).resolve()), "-", "--psm", "11"],
+                          capture_output=True, text=True).stdout
+    if not text.strip():
+        print(f"tesseract ({label}) returned no text for {path}")
+        return 1
     norm = lambda s: " ".join(s.split()).lower()
     seen = norm(text)
     missing = [e for e in expected if norm(e) not in seen]

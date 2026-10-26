@@ -14,3 +14,4 @@
 | Windows: `--api-key $env:X` stores the next flag as the key | `WSLENV` passing is dead in this harness, so `$env:X` was empty | Pass the key through a mode-600 temp file read over `\\wsl.localhost`, then delete it. |
 | Windows: `localhost:<port>` times out | Windows → WSL localhost forwarding is broken here | Open previews at `http://$(hostname -I \| awk '{print $1}'):<port>/`. |
 | proof-of-done: exit 5, "no tests ran" | the shell was left in a run folder | `cd` back to the repo root and rerun. |
+| `tesseract not found` | no native Tesseract and no WSL build | Set `TESSERACT_BIN`, or on Windows make sure WSL has `$HOME/content-ideas/.tools/tesseract/bin/tesseract` (override with `WSL_TESSERACT`). winget's `UB-Mannheim.TesseractOCR` has no per-user installer, so it needs an admin prompt. |
