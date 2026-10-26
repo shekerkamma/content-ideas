@@ -62,12 +62,14 @@ check that the trigger phrases still match.
   `karpathy-guidelines`: canonical shared sources mirrored under
   `plugins/content-ideas/skills/`.
 
-## Also found
+## Also found (fixed)
 
-`.claude/settings.json` lists skill paths under `/home/sheke/...`, including
-`/home/sheke/content-ideas.local/...`. Those only resolve on one machine. This
-conflicts with the rule that host-specific paths must be configurable. It is
-out of scope here, but worth fixing separately.
+`.claude/settings.json` had a `skills` list of `/home/sheke/...` paths. Claude
+Code has no such setting, so the list never loaded anything on any machine. It
+is replaced by the documented `extraKnownMarketplaces` + `enabledPlugins` pair,
+which enables this repo's own `content-ideas` plugin (every skill under
+`skills/`). `tests/test_plugin_contract.py` now checks the file stays free of
+machine paths.
 
 ## Already done in the same change
 

@@ -220,6 +220,18 @@ class CrossHostPackagingTests(unittest.TestCase):
     def test_pipeline_runner_command_present(self):
         self.assertTrue((REPO / "commands" / "pipeline-runner.md").is_file())
 
+    def test_project_settings_enable_repo_plugin_portably(self):
+        # Claude Code has no "skills" path-list setting; skills reach other
+        # machines through this repo's own marketplace plugin instead.
+        raw = (REPO / ".claude" / "settings.json").read_text(encoding="utf-8")
+        settings = json.loads(raw)
+        self.assertNotIn("skills", settings)
+        self.assertNotIn("/home/", raw)
+        marketplace = _json(".claude-plugin/marketplace.json")
+        key = f"{marketplace['plugins'][0]['name']}@{marketplace['name']}"
+        self.assertIs(True, settings["enabledPlugins"][key])
+        self.assertIn(marketplace["name"], settings["extraKnownMarketplaces"])
+
     def test_session_hook_present(self):
         hooks = _json("hooks/hooks.json")
         self.assertIn("SessionStart", hooks["hooks"])

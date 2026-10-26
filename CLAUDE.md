@@ -70,11 +70,17 @@ byte-identical across all three. Details and the upstream re-port procedure:
   `/goal` build loop for long-running app builds:
   `docs/agent-reference/claude-code-director-and-plaid.md`.
 
-Claude Code project settings are in `.claude/settings.json` and point at these
-repo-local skill files. Codex discovers the packaged copies after installing
-the repo marketplace plugin, whose `.codex-plugin/plugin.json` exposes
-`"skills": "./skills/"`. `AGENTS.md` remains the repo-level fallback before
-plugin installation.
+Claude Code loads `.claude/skills/` automatically. `.claude/settings.json`
+registers this repo as the `content-ideas` marketplace and enables the
+`content-ideas` plugin, which serves every skill under `skills/`. After
+trusting the folder, each person installs it once with
+`/plugin install content-ideas@content-ideas`. Keep machine-specific paths out
+of that file; personal or out-of-repo skills (for example `.agents/skills/` or a
+`content-ideas.local` checkout) belong in `~/.claude/skills/` or
+`.claude/settings.local.json`. Codex discovers the packaged copies after
+installing the repo marketplace plugin, whose `.codex-plugin/plugin.json`
+exposes `"skills": "./skills/"`. `AGENTS.md` remains the repo-level fallback
+before plugin installation.
 
 The skill resolves its own directory from the Codex cache, the Claude plugin
 cache, or a repo checkout — see the resolution block at the top of `SKILL.md`.
