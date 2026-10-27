@@ -94,9 +94,10 @@ Keep that block in sync if directory names change.
 # run the test suite (stdlib + pytest, no network)
 python3 -m pytest -q
 
-# exercise the scraper / feed generator directly against a checkout
+# exercise the scraper, feed generator, or dashboard exporter directly against a checkout
 python3 skills/content-ideas/scripts/scrape.py --help
 python3 skills/content-ideas/scripts/generate_feed.py --help
+python3 skills/content-ideas/scripts/export_dashboard.py --help
 
 # mirror every ~/.claude/skills entry into ~/.codex/skills so Codex sees the
 # same skill set as Claude Code (idempotent, safe to re-run after installing
