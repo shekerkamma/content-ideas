@@ -69,6 +69,10 @@ byte-identical across all three. Details and the upstream re-port procedure:
 - `.claude/skills/claude-code-director/` (Director Framework) and the PLAID
   `/goal` build loop for long-running app builds:
   `docs/agent-reference/claude-code-director-and-plaid.md`.
+- `.claude/skills/excel-ingest/` is a wrapper for `skills/ai-analyst/excel-ingest/`, which
+  turns an Excel workbook into analysis-ready CSVs (needs `pandas` and `openpyxl`, so it
+  is outside the stdlib-only runtime rule). Run `--list` first. It assumes one table per
+  sheet, so read stacked-table report sheets by label.
 
 Claude Code loads `.claude/skills/` automatically. `.claude/settings.json`
 registers this repo as the `content-ideas` marketplace and enables the
