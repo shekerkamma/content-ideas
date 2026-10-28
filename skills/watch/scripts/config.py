@@ -56,8 +56,15 @@ def get_config() -> dict[str, object]:
     if detail not in DETAILS:
         detail = DEFAULT_DETAIL
 
+    cookies_file = (
+        os.environ.get("WATCH_COOKIES_FILE")
+        or file_values.get("WATCH_COOKIES_FILE")
+        or None
+    )
+
     return {
         "detail": detail,
+        "cookies_file": cookies_file,
         "config_file": str(CONFIG_FILE),
     }
 

@@ -265,6 +265,7 @@ Both keys live in `~/.config/watch/.env`. The script prefers Groq when both are 
 - **No transcript available** → captions missing AND (no Whisper key OR Whisper API failed). Script prints a hint pointing to setup. Proceed frames-only and tell the user.
 - **Long video warning printed** → acknowledge it in your answer. Offer to re-run focused on a specific section via `--start`/`--end` rather than a sparse full-video scan.
 - **Download fails** → yt-dlp's error goes to stderr. If it's a login-required or region-locked video, tell the user plainly; do not keep retrying.
+- **Sign-in / bot check** ("Sign in to confirm you're not a bot") → the script stops after the first yt-dlp call and prints the options. This is common in cloud sessions, because YouTube blocks anonymous requests from datacenter IPs. Do not try to get around it (no switching player clients, proxies or retry loops). Offer the user three choices: (1) export cookies from their own signed-in browser to a Netscape `cookies.txt` file and set `WATCH_COOKIES_FILE=/path/to/cookies.txt` in `~/.config/watch/.env`, which yt-dlp then passes as `--cookies`; (2) run `/watch` on their own computer; (3) download the video themselves and pass the local file. Treat the cookies file as a credential: keep it out of the repo, and tell the user it signs requests in as their account.
 - **Whisper request fails** → the error is printed to stderr (likely: invalid key or rate limit). Audio over the API's 25 MB upload cap is split into chunks and transcribed automatically, so length alone won't fail it; if some chunks fail the transcript is partial and the dropped chunks are noted on stderr. The report will say "none available" only if every chunk fails. You can retry with `--whisper openai` if Groq failed (or vice versa).
 
 ## Token efficiency
@@ -288,7 +289,7 @@ If you already watched a video this session and the user asks a follow-up, do **
 
 **What this skill does NOT do:**
 - Does not upload the video itself to any API — only the extracted audio goes out, and only when native captions are missing AND Whisper is not disabled with `--no-whisper`
-- Does not access any platform account (no login, no session cookies, no posting) — yt-dlp only ever requests public data
+- Does not access any platform account by default (no login, no session cookies, no posting) — yt-dlp only requests public data. The one exception is opt-in: if the user sets `WATCH_COOKIES_FILE`, yt-dlp sends those cookies to the video host, so requests are signed in as that user. It never posts or changes anything on the account
 - Does not share API keys between providers (Groq key only goes to `api.groq.com`, OpenAI key only goes to `api.openai.com`)
 - Does not log, cache, or write API keys to stdout, stderr, or output files
 - Does not persist anything outside the working directory and `~/.config/watch/.env` — clean up the working directory when you're done (Step 5)
