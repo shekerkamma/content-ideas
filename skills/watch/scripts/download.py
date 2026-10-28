@@ -7,57 +7,14 @@ transcribe.py can parse them without needing Whisper.
 from __future__ import annotations
 
 import json
-import os
 import shutil
 import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
-from config import get_config
-
 
 VIDEO_EXTS = {".mp4", ".mkv", ".webm", ".mov", ".m4v", ".avi", ".flv", ".wmv"}
-
-# Phrases yt-dlp prints when the host refuses anonymous access from this IP
-# (YouTube's "Sign in to confirm you're not a bot" on cloud/datacenter hosts).
-BOT_CHECK_MARKERS = ("confirm you", "not a bot", "--cookies-from-browser")
-
-
-def _cookies_args() -> list[str]:
-    """Pass the user's own exported cookies to yt-dlp when configured."""
-    cookies = get_config().get("cookies_file")
-    if not cookies:
-        return []
-    path = Path(os.path.expanduser(str(cookies)))
-    if not path.is_file():
-        print(f"[watch] warning: WATCH_COOKIES_FILE not found: {path}", file=sys.stderr)
-        return []
-    return ["--cookies", str(path)]
-
-
-def _run_ytdlp(cmd: list[str]) -> int:
-    """Run yt-dlp, mirror its stderr, and fail fast on a sign-in/bot check."""
-    result = subprocess.run(cmd, stdout=sys.stderr, stderr=subprocess.PIPE, text=True)
-    err = result.stderr or ""
-    sys.stderr.write(err)
-    if "ERROR:" in err and any(m in err for m in BOT_CHECK_MARKERS):
-        hint = (
-            "The video host asked for a sign-in (bot check). This usually means the "
-            "machine running /watch is on a cloud/datacenter IP. Options:\n"
-            "  1. Export cookies from your own signed-in browser (Netscape cookies.txt) "
-            "and set WATCH_COOKIES_FILE=/path/to/cookies.txt in ~/.config/watch/.env\n"
-            "  2. Run /watch on your own computer (home network), not a cloud session\n"
-            "  3. Download the video yourself and pass the local file path to /watch"
-        )
-        if "--cookies" in cmd:
-            hint = (
-                "The video host still asked for a sign-in with WATCH_COOKIES_FILE set. "
-                "The cookies are probably expired or from a signed-out browser: "
-                "re-export them, or run /watch on your own computer, or pass a local file."
-            )
-        raise SystemExit(hint)
-    return result.returncode
 
 
 def is_url(source: str) -> bool:
@@ -123,12 +80,11 @@ def fetch_captions(url: str, out_dir: Path) -> dict:
         "--convert-subs", "vtt",
         "--no-playlist",
         "--ignore-errors",
-        *_cookies_args(),
         "-o", output_template,
         "--",
         url,
     ]
-    _run_ytdlp(cmd)
+    subprocess.run(cmd, stdout=sys.stderr, stderr=sys.stderr)
     subtitle = _pick_subtitle(out_dir)
     info = _read_info(out_dir / "video.info.json", url)
     return {
@@ -181,7 +137,6 @@ def download_url(
         "--convert-subs", "vtt",
         "--no-playlist",
         "--ignore-errors",
-        *_cookies_args(),
         "-o", output_template,
         "--",
         url,
@@ -189,11 +144,11 @@ def download_url(
 
     # yt-dlp may exit non-zero if a subtitle variant fails (e.g. 429) even when
     # the video itself downloaded fine. Treat "video file present" as success.
-    returncode = _run_ytdlp(cmd)
+    result = subprocess.run(cmd, stdout=sys.stderr, stderr=sys.stderr)
     video = _pick_video(out_dir)
     if video is None:
         raise SystemExit(
-            f"yt-dlp did not produce a video file in {out_dir} (exit {returncode})"
+            f"yt-dlp did not produce a video file in {out_dir} (exit {result.returncode})"
         )
 
     subtitle = _pick_subtitle(out_dir)

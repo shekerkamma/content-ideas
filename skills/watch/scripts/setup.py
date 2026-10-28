@@ -56,11 +56,6 @@ OPENAI_API_KEY=
 # Allowed values: transcript | efficient | balanced | token-burner
 # Keep the value on its own line with no trailing comment.
 # WATCH_DETAIL=balanced
-
-# Optional: cookies exported from your own signed-in browser (Netscape
-# cookies.txt). Only needed when the host asks for a sign-in / bot check,
-# which YouTube does for cloud and datacenter IPs.
-# WATCH_COOKIES_FILE=~/.config/watch/cookies.txt
 """
 
 
