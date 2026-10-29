@@ -3,7 +3,7 @@
 
 Standard library only, so it runs under WSL and Windows Python alike. The key is read from the
 `gemini-api-key` list in the CLIProxyAPI config and injected only into the child process; it is
-never printed. Defaults: engine gemini and model gemini-pro-latest, each unless the caller (flag,
+never printed. Defaults: engine gemini and model gemini-4-argon, each unless the caller (flag,
 environment, or ~/.config/watch/.env) already chose one.
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 SCRIPTS = Path(__file__).resolve().parent
-DEFAULT_MODEL = 'gemini-pro-latest'
+DEFAULT_MODEL = 'gemini-4-argon'
 CANDIDATES = [Path.home() / '.cli-proxy-api' / 'config.yaml',
               Path('/mnt/c/Users/sheke/.cli-proxy-api/config.yaml')]
 
