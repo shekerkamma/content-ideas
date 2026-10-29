@@ -1,5 +1,5 @@
 {
-  "_comment": "Skills that legitimately differ across repo trees. Anything NOT listed here whose body differs across trees fails --rule crosstree. Each entry needs a reason AND evidence, both non-empty, and must list every tree it covers \u2014 the rule validates all three, so an entry cannot silently waive more than it claims. Every quoted line below was verified against the file at the time of writing.",
+  "_comment": "Skills that legitimately differ across repo trees. Anything NOT listed here whose body differs across trees fails --rule crosstree. Each entry needs a reason AND evidence, both non-empty, and must list every tree it covers — the rule validates all three, so an entry cannot silently waive more than it claims. Every quoted line below was verified against the file at the time of writing.",
   "ai-analyst/run-analysis": {
     "trees": [
       "skills",
@@ -53,5 +53,23 @@
     ],
     "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
     "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "skill-doctor": {
+    "trees": [
+      "skills",
+      ".claude",
+      ".agents"
+    ],
+    "reason": "The .claude and .agents copies are deliberate routers, not stale forks. They carry no workflow logic and point at skills/ as the implementation.",
+    "evidence": ".claude/skills/skill-doctor/SKILL.md: 'Treat `skills/skill-doctor/` as the source of truth; do not add repair logic to this wrapper.' Both wrapper copies are ~258 bytes against 4416 bytes canonical."
+  },
+  "skill-hygiene": {
+    "trees": [
+      "skills",
+      ".claude",
+      ".agents"
+    ],
+    "reason": "The .claude and .agents copies are deliberate routers, not stale forks. They carry no workflow logic and point at skills/ as the implementation.",
+    "evidence": ".claude/skills/skill-hygiene/SKILL.md: 'Treat `skills/skill-hygiene/` as the source of truth; do not add sweep logic to this wrapper.' Both wrapper copies are ~265 bytes against 2930 bytes canonical."
   }
 }

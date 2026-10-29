@@ -8,7 +8,19 @@ count, and citation discipline for `active` packs.
 import re
 from pathlib import Path
 
-import pytest
+try:
+    import pytest
+except ImportError:  # pragma: no cover — pytest is a dev dep, not a runtime dep
+    import types as _types
+    import unittest as _ut
+
+    def _skip(reason: str = "") -> None:
+        raise _ut.SkipTest(reason)
+
+    pytest = _types.SimpleNamespace(  # type: ignore[assignment]
+        fixture=lambda *a, **kw: (lambda f: f),
+        skip=_skip,
+    )
 
 REPO = Path(__file__).resolve().parent.parent
 DOMAINS = REPO / "consulting-os" / "domains"
