@@ -1,0 +1,124 @@
+{
+  "contract_version": "1.0",
+  "pipeline": "evidence-controlled-competitor-to-reviewed-pptx",
+  "stages": [
+    {
+      "id": "recall",
+      "owner": "GBrain Recall or durable memory",
+      "requires": [],
+      "produces": ["outputs/recall-notes.md"],
+      "gate": "prior sourced findings inventoried or unavailability recorded"
+    },
+    {
+      "id": "acquisition",
+      "owner": "specialist discovery plus fresh-page extraction",
+      "requires": ["outputs/recall-notes.md"],
+      "produces": ["outputs/search-log.md", "research/raw-captures/"],
+      "gate": "important claims have current sources and extraction status"
+    },
+    {
+      "id": "evidence_product",
+      "owner": "aianalyst-competitor-analysis",
+      "requires": ["outputs/search-log.md", "research/raw-captures/"],
+      "produces": [
+        "outputs/evidence-ledger.csv",
+        "outputs/metric-definitions.md",
+        "outputs/data-quality-report.md",
+        "outputs/scoring-model.md",
+        "outputs/allowed-numbers.yaml",
+        "outputs/competitor-brief.md"
+      ],
+      "gate": "claims, metrics, scores, confidence and visible numbers validate"
+    },
+    {
+      "id": "decision_story",
+      "owner": "story-architect",
+      "requires": [
+        "outputs/evidence-ledger.csv",
+        "outputs/competitor-brief.md"
+      ],
+      "produces": [
+        "outputs/story-architect-pack.md"
+      ],
+      "gate": "BLUF, slide spine, evidence map and content cuts exist"
+    },
+    {
+      "id": "grill_controls",
+      "owner": "grill-me",
+      "requires": ["outputs/story-architect-pack.md"],
+      "produces": ["outputs/story-structure-review.md", "grill-ledger.json"],
+      "gate": "load-bearing answers are translated into atomic visible-change controls"
+    },
+    {
+      "id": "meta_loop_integration",
+      "owner": "meta-loop",
+      "requires": ["grill-ledger.json"],
+      "produces": [
+        "meta-loop/verified-findings-ledger.json",
+        "meta-loop/final-rewrite-blueprint.json"
+      ],
+      "gate": "workers are verified PASS/FIX/ESCALATE and aggregator returns SHIP or accepted CONDITIONAL"
+    },
+    {
+      "id": "slide_contracts",
+      "owner": "compound-competitor-analysis-pptx",
+      "requires": [
+        "meta-loop/final-rewrite-blueprint.json",
+        "deck-brief.md",
+        "template-profile.json"
+      ],
+      "produces": [
+        "authoring/batch-manifest.json",
+        "authoring/validation/consolidation.json",
+        "slide-content-contracts.json",
+        "slide-design-contracts.json",
+        "slide-plan.json",
+        "visual-spec.json",
+        "claim-slide-traceability.json"
+      ],
+      "gate": "bounded batches pass locally and consolidated contracts cover every slide exactly once"
+    },
+    {
+      "id": "native_build",
+      "owner": "branded-pptx-deck",
+      "requires": [
+        "slide-content-contracts.json",
+        "slide-design-contracts.json",
+        "slide-plan.json",
+        "visual-spec.json"
+      ],
+      "produces": ["builder source", "client-package/*-draft.pptx"],
+      "gate": "native editable deck, branded template and structural validation pass"
+    },
+    {
+      "id": "reviewed_qa",
+      "owner": "pptx-design-quality plus OfficeCLI",
+      "requires": ["client-package/*-draft.pptx"],
+      "produces": [
+        "qa/pptx-design-lint.json",
+        "qa/officecli/validate.json",
+        "qa/officecli/issues.json",
+        "qa/officecli/contact-html.png",
+        "qa/officecli/contact-native.png",
+        "qa/officecli/qa-summary.md",
+        "qa/material-change.json",
+        "client-package/*-reviewed.pptx"
+      ],
+      "gate": "zero unresolved issues and every slide inspected in a native PowerPoint render"
+    },
+    {
+      "id": "derivatives_and_close",
+      "owner": "competitor-analysis-pipeline",
+      "requires": ["client-package/*-reviewed.pptx"],
+      "produces": [
+        "client-package/site/index.html",
+        "client-package/delivery-manifest.json",
+        "outputs/sync-check.md",
+        "outputs/run-learnings.md",
+        "outputs/monitoring-queue.csv",
+        "GBrain Write-back"
+      ],
+      "gate": "derivatives preserve evidence IDs and client package is synchronized"
+    }
+  ]
+}
