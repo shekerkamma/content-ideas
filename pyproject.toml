@@ -13,7 +13,7 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "skills/*/tests"]
 pythonpath = ["tests"]
 python_files = ["test_*.py"]
 addopts = [

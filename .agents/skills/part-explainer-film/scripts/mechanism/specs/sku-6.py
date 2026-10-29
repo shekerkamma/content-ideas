@@ -1,0 +1,31 @@
+"""SKU-6 supervisor: mechanism scenes over the gated narration. Every figure is on the product page."""
+from lib import chain, stat, wave, timeline, items, compose
+
+SCENES = {
+ "open": {"scene": "A rail with converter ripple: a short glitch to ignore, then a brownout dip to catch",
+          "build": lambda p, at: wave(p, at, "ripple", [("draw", "0.05"), ("glitch", "ripple"), ("dip", "brownout")],
+                                      label="RAIL · RIPPLE TO IGNORE · BROWNOUT TO CATCH")},
+ "b1": {"scene": "Rail, matched divider and comparator light in turn",
+        "build": lambda p, at: chain(p, at, [("Rail", "5.0 · 3.3 · 1.8 · 1.2/0.9 V"), ("Divider", "poly ladder · 0.1% match"),
+                                              ("Comparator", "chopper-stabilised")],
+                                     light=[(0, "rail"), (1, "divider"), (2, "threshold")])},
+ "b2": {"scene": "A timeline: a ripple glitch dies inside the 8 µs window; a brownout outlasts it and counts",
+        "build": lambda p, at: timeline(p, at, "DEGLITCH COUNTER · 8 µs", sweep="fault",
+                                        windows=[(0.28, 0.50, "8 µs WINDOW", "8", "copper")],
+                                        marks=[(0.33, "RIPPLE · DROPPED", "ripple", "ink2"), (0.72, "BROWNOUT · COUNTS", "brownout", "err")])},
+ "b3": {"scene": "Fault matrix latches, FAULT_N warns first, RESET_N follows, as a signal travels",
+        "build": lambda p, at: chain(p, at, [("Fault matrix", "latched · recorded"), ("FAULT_N", "warns first"), ("RESET_N", "200 ms hold")],
+                                     light=[(0, "latched"), (1, "warning"), (2, "reset")])},
+ "b4": {"scene": "A 1.20 V trimmed reference, then all four thresholds light together",
+        "build": lambda p, at: compose(stat(p, at, "1.20 V", "BANDGAP · TRIMMED ONCE AT TEST · ±0.5%", "reference", size=160),
+                                       chain(p, at, [("VIN 1", "5.0 V"), ("VIN 2", "3.3 V"), ("VIN 3", "1.8 V"), ("VIN 4", "1.2/0.9 V")],
+                                             light=[(0, "every"), (1, "every"), (2, "every"), (3, "every")], packet=False, y=600, h=140, ns="c"))},
+ "b5": {"scene": "A watchdog window: a kick too early, a kick that never comes, then the processor restarts",
+        "build": lambda p, at: timeline(p, at, "WATCHDOG · WINDOW 100 ms TO 1.6 s",
+                                        windows=[(0.35, 0.65, "KICK WINDOW", "watchdog", "copper")],
+                                        marks=[(0.2, "TOO EARLY", "early", "err"), (0.86, "NEVER", "never", "err"), (0.95, "RESTART", "restarts", "copper")])},
+ "close": {"scene": "Three open questions appear in turn, then the ask",
+           "kicker": "WHAT IS STILL UNPROVEN",
+           "build": lambda p, at: items(p, at, [("The right deglitch window", "thresholds"), ("The chopper’s own ripple", "measured"),
+                                                ("Ladder ageing over twenty years", "silicon")])},
+}

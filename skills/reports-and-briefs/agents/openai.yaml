@@ -1,0 +1,4 @@
+interface:
+  display_name: "GTM Reports and Briefs"
+  short_description: "Build auditable GTM reports and briefs"
+  default_prompt: "Use $reports-and-briefs to produce an evidence-backed weekly GTM briefing."

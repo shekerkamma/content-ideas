@@ -1,0 +1,65 @@
+Surface,Unnamed: 2,Unnamed: 3,FY2027,FY2028,FY2029,FY2030,FY2031,FY2032
+Road Autonomy,,,0.125,13.2,79,200,417,762
+Silicon & Compute,,,0,5.71,16.4375,39.375,90.15,194.3
+Fleet & Mobility,,,0,4.206,8.865,21.03,39.795,88.65
+Sensors & Robotics,,,1.575,4.7,11.075,24.25,47.35,83.5
+Total (check),,,1.7,27.816,115.3775,284.655,594.295,1128.45
+"All four surfaces run on the same chip + software stack (different firmware) — a platform, not separate businesses.",,,,,,,,
+B.  REVENUE BY SEGMENT  (Rs Cr),,,,,,,,
+Segment,,,FY2027,FY2028,FY2029,FY2030,FY2031,FY2032
+Systems,,,0.125,23.062,99.1525,243.605,501.945,940.95
+Sensors,,,0.375,1.45,3.975,9,18.5,33.5
+Semiconductors,,,0,0.054,5.15,16.8,45,104
+Robotics,,,1.2,3.25,7.1,15.25,28.85,50
+Total (check),,,1.7,27.816,115.3775,284.655,594.295,1128.45
+Systems share of revenue,,,0.0735294117647059,0.829091170549324,0.859374661437455,0.855790342695544,0.844605793419093,0.833842881829058
+C.  INDOOR vs OUTDOOR AUTONOMY  (Rs Cr),,,,,,,,
+Domain,,,FY2027,FY2028,FY2029,FY2030,FY2031,FY2032
+Outdoor autonomy,,,1.7,21.054,97.825,247.55,520.35,973.5
+Indoor autonomy,,,0,1.106,6.265,14.53,28.795,64.65
+General compute (A100 box),,,0,5.656,11.2875,22.575,45.15,90.3
+Total (check),,,1.7,27.816,115.3775,284.655,594.295,1128.45
+Indoor share of revenue,,,0,0.0397612884670693,0.054300015167602,0.0510442465440621,0.0484523679317511,0.057290974345341
+"Indoor = AD1 L4 + AGV (geofenced). Outdoor = road ADAS, trucks, rental, sensors, chip, defence. Compute = A100 box.",,,,,,,,
+D.  CUSTOMER BASE  (key accounts / customers),,,,,,,,
+Metric,,,FY2027,FY2028,FY2029,FY2030,FY2031,FY2032
+Distinct customers / key accounts,,,5,15,40,120,300,650
+Avg revenue per customer (Rs Cr),,,0.34,1.8544,2.8844375,2.372125,1.98098333333333,1.73607692307692
+Customers grow 5 -> 650 as the AD0 mandate retrofit and fleets scale; de-risks single-account dependence.,,,,,,,,
+"E.  UNITS x ASP -> REVENUE  (bottom-up detail, Rs Cr)",,,,,,,,
+Business line,Segment,ASP (Rs),FY2027,FY2028,FY2029,FY2030,FY2031,FY2032
+Units sold,,,,,,,,
+AD0 Smart Mirror (mandate retrofit),Systems,50000,10,2200,8000,18000,34000,54000
+AD1 Indoor L4 kit,Systems,100000,0,20,400,1000,2200,4200
+Smart Truck (AD2 kit),Systems,250000,3,80,1400,4000,9000,18000
+Autonomous TaaS,Systems,6600000,0,5,10,25,50,100
+Seaport AGV (port autonomy),Systems,4530000,0,2,5,10,15,50
+Thermal camera (aftermarket),Sensors,50000,40,150,400,900,1800,3200
+4D radar pod (aftermarket),Sensors,25000,30,120,350,800,1600,3000
+H100 driver-monitor wearable,Sensors,5000,200,800,2200,5000,11000,20000
+Chipset OEM B2B (ASIC die),Semiconductors,18000,0,30,1750,6000,15000,30000
+A100 compute box 1ch +SDK (M.2),Systems,85000,0,188,375,750,1500,3000
+A100 compute box 2ch +SDK,Systems,160000,0,113,225,450,900,1800
+A100 compute box 4ch +SDK (PCIe),Systems,300000,0,75,150,300,600,1200
+T100 AI licence (SaaS),Semiconductors,10000000,0,0,2,6,18,50
+Defence D-HUMR,Robotics,2000000,6,15,23,45,88,150
+D100 drone SoC kit,Robotics,500000,0,5,50,125,225,400
+"Revenue (Rs Cr = units x ASP / 1e7, x scenario)",,Domain,,,,,,
+AD0 Smart Mirror (mandate retrofit),Systems,Outdoor,0.05,11,40,90,170,270
+AD1 Indoor L4 kit,Systems,Indoor,0,0.2,4,10,22,42
+Smart Truck (AD2 kit),Systems,Outdoor,0.075,2,35,100,225,450
+Autonomous TaaS,Systems,Outdoor,0,3.3,6.6,16.5,33,66
+Seaport AGV (port autonomy),Systems,Indoor,0,0.906,2.265,4.53,6.795,22.65
+Thermal camera (aftermarket),Sensors,Outdoor,0.2,0.75,2,4.5,9,16
+4D radar pod (aftermarket),Sensors,Outdoor,0.075,0.3,0.875,2,4,7.5
+H100 driver-monitor wearable,Sensors,Outdoor,0.1,0.4,1.1,2.5,5.5,10
+Chipset OEM B2B (ASIC die),Semiconductors,Outdoor,0,0.054,3.15,10.8,27,54
+A100 compute box 1ch +SDK (M.2),Systems,Compute,0,1.598,3.1875,6.375,12.75,25.5
+A100 compute box 2ch +SDK,Systems,Compute,0,1.808,3.6,7.2,14.4,28.8
+A100 compute box 4ch +SDK (PCIe),Systems,Compute,0,2.25,4.5,9,18,36
+T100 AI licence (SaaS),Semiconductors,Outdoor,0,0,2,6,18,50
+Defence D-HUMR,Robotics,Outdoor,1.2,3,4.6,9,17.6,30
+D100 drone SoC kit,Robotics,Outdoor,0,0.25,2.5,6.25,11.25,20
+TOTAL REVENUE (Rs Cr),,,1.7,27.816,115.3775,284.655,594.295,1128.45
+Growth % (YoY),,,,15.3623529411765,3.1478825136612,1.4671621416654,1.08777291809383,0.898804465795607
+Bottom-up: every line is units x ASP; nothing is plugged. Scenario multiplier from Assumptions.,,,,,,,,

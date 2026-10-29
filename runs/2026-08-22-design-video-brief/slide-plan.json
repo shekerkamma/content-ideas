@@ -1,0 +1,353 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Mastering /design in Claude Code — video brief",
+    "evidence_contract": null,
+    "visual_contract": "visual-spec.json"
+  },
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The previous path required sharing the design, pushing it into a Claude project, then copying the prompt and generated files into Claude Code by hand.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c2",
+      "text": "/design opens a multi-artboard canvas from one command typed in the project folder.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c3",
+      "text": "The skill designs only; it does not write the application code.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c4",
+      "text": "One prompt returned five design variations laid out on a single canvas.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c5",
+      "text": "Iterating on one direction means naming its artboard number, which leaves the other directions intact for comparison.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c6",
+      "text": "Elements are edited directly: hover to highlight, a properties panel, a live colour picker, text, and corner radius.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c7",
+      "text": "Hand-editing a colour is faster than prompting for it, because a prompt costs a full model turn.",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c8",
+      "text": "The locally hosted site rendered without the two colour changes made on the canvas.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c9",
+      "text": "The cause was an un-pressed Save button in the top right of the canvas.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c10",
+      "text": "Canvas edits stay local until Save republishes the page, which is when the agent can read them.",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c11",
+      "text": "The canvas is a published artifact page carrying both the editor and the artboards, not a panel embedded in Claude Code.",
+      "kind": "interpretation",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c12",
+      "text": "It is an early preview; the editor baked into a canvas does not update after publish.",
+      "kind": "fact",
+      "confidence": "high",
+      "evidence_ids": []
+    },
+    {
+      "id": "c13",
+      "text": "Adopt one habit: prompt for structure, click for style, and Save before telling the agent anything changed.",
+      "kind": "recommendation",
+      "confidence": "high",
+      "evidence_ids": []
+    }
+  ],
+  "slides": [
+    {
+      "slide_id": 1,
+      "archetype": "cover",
+      "action_title": "The canvas is native now. Your edits still aren't.",
+      "audience_job": "Understand in one line what changed and what still bites",
+      "claim_ids": [],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Source: Brendan Jowett, 'Master NEW /design Claude Skill In 10 Minutes!' (12:26).",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 2,
+      "archetype": "executive-summary",
+      "action_title": "One command, one habit — and the habit is the hard part",
+      "audience_job": "Take the whole argument if they see nothing else",
+      "claim_ids": [
+        "c2",
+        "c4",
+        "c7",
+        "c10"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "00:07 for the round-trip claim; 12:02 for the Save consequence.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "thesis",
+          "metrics"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 3,
+      "archetype": "three-card-argument",
+      "action_title": "Design used to cost a round-trip you made by hand",
+      "audience_job": "Recognise the cost that /design removes",
+      "claim_ids": [
+        "c1"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "02:09 share and send; 02:34 copy prompt and files; 02:19 'a bit of a headache'.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "cards"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 4,
+      "archetype": "operating-model",
+      "action_title": "Now it is one command inside the project folder",
+      "audience_job": "Know exactly how to start, and what the skill will not do",
+      "claim_ids": [
+        "c2",
+        "c3"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "03:04 open the folder; 03:16 type /design; 03:48 'purely for design'.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "chain",
+          "constraint"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 5,
+      "archetype": "three-card-argument",
+      "action_title": "Five directions arrive at once, so you compare instead of overwrite",
+      "audience_job": "See why a canvas beats a sequence of prompts",
+      "claim_ids": [
+        "c4",
+        "c5"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "04:01 the ask; 04:31 the canvas opened itself; 06:22 comparison is the point.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "cards"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 6,
+      "archetype": "comparison",
+      "action_title": "Clicking beats prompting — that is the actual unlock",
+      "audience_job": "Change how they divide work between hand and prompt",
+      "claim_ids": [
+        "c6",
+        "c7"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "07:13 click in; 07:39 properties; 08:04 colour; 09:09 radius; 08:20 the wait.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "quote",
+          "comparison"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 7,
+      "archetype": "big-number",
+      "action_title": "Then the site shipped without his edits",
+      "audience_job": "Feel the failure before being told the cause",
+      "claim_ids": [
+        "c8"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "11:38 the missing changes. He spends ~15 seconds not knowing why. Let this land.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "failure"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 8,
+      "archetype": "operating-model",
+      "action_title": "Because the canvas is a document, not a shared workspace",
+      "audience_job": "Hold the mental model that prevents the failure",
+      "claim_ids": [
+        "c9",
+        "c10",
+        "c11"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "11:53 the un-pressed Save; 12:02 'the agent won't see the new changes'.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "model"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 9,
+      "archetype": "comparison",
+      "action_title": "Two framings in the video will mislead you",
+      "audience_job": "Discount the parts of the walkthrough that do not survive checking",
+      "claim_ids": [
+        "c11",
+        "c12"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "Checked against Claude Code 2.1.238 as installed, not against the narration.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "cards"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    },
+    {
+      "slide_id": 10,
+      "archetype": "recommendation-ask",
+      "action_title": "Prompt for structure, click for style, Save before you speak",
+      "audience_job": "Leave with one habit and four adoption rules",
+      "claim_ids": [
+        "c13"
+      ],
+      "evidence_ids": [],
+      "visual_ids": [],
+      "speaker_notes": {
+        "talk_time_seconds": 60,
+        "narrative": "The habit is the deliverable. Everything else is discoverable by using it.",
+        "demo_fallback": null
+      },
+      "accessibility": {
+        "reading_order": [
+          "title",
+          "ask",
+          "adoption"
+        ],
+        "visual_alt_text": null
+      },
+      "status": "planned"
+    }
+  ]
+}

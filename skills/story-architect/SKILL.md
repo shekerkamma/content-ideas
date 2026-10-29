@@ -1,12 +1,9 @@
 ---
 name: story-architect
-description: >
-  Use before building decks, briefs, or narrative deliverables when raw research,
-  transcripts, notes, or analysis need to become an executive storyboard. Produces
-  BLUF, tension, argument arc, slide spine, evidence map, speaker implication,
-  and rebuild decisions so downstream deck builders do not dump notes or frames
-  onto slides.
-user_invocable: true
+description: Use before building decks, briefs, or narrative deliverables when raw research, transcripts, notes, or analysis need to become an executive storyboard. Produces BLUF, tension, argument arc, slide spine, evidence map, speaker implication, and rebuild decisions so downstream deck builders do not dump notes or frames onto slides.
+metadata:
+  legacy-frontmatter:
+    user_invocable: true
 ---
 
 # Story Architect

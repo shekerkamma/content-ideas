@@ -1,0 +1,30 @@
+"""D100 drone flight controller: mechanism scenes over the gated narration. Every figure is on the product page."""
+from lib import chain, counter, compose, items
+
+SCENES = {
+ "open": {"scene": "The flight computer freezes, a software failsafe freezes with it, the hardware rescue does not",
+          "build": lambda p, at: chain(p, at, [("Flight computer", "freezes"), ("Software failsafe", "freezes too"), ("Hardware rescue", "D100")],
+                                       light=[(0, "freezes", "err"), (1, "software", "err"), (2, "hardware", "safe")])},
+ "b1": {"scene": "Sensors and the radio link reach two flight cores, one flying and one navigating",
+        "build": lambda p, at: chain(p, at, [("IMU + RC link", "sensors"), ("Core 1", "flies"), ("Core 2", "navigates")],
+                                     light=[(0, "inertial"), (1, "flying"), (2, "navigating")])},
+ "b2": {"scene": "Cameras feed a geometry pose engine that works with no satellite signal",
+        "build": lambda p, at: chain(p, at, [("Cameras", "features"), ("Pose engine", "geometry, not a network"), ("No GPS", "still works")],
+                                     light=[(0, "cameras"), (1, "geometry"), (2, "satellite", "safe")])},
+ "b3": {"scene": "Camera and inertial data fuse into a pose; the rate counts to 30 Hz",
+        "build": lambda p, at: compose(counter(p, at, 30, "Hz", "SIX-DOF POSE · TO THE FLIGHT LOOP", "30", size=150),
+                                       chain(p, at, [("Camera features", "vision"), ("Inertial data", "IMU"), ("Pose", "6-DoF")],
+                                             light=[(0, "camera"), (1, "inertial"), (2, "pose")], y=600, h=150, ns="c"))},
+ "b4": {"scene": "Normal flight: commands leave the cores on eight channels to the speed controllers",
+        "build": lambda p, at: chain(p, at, [("Flight cores", "running"), ("ESC OUT", "8 channels"), ("Speed controllers", "motors")],
+                                     light=[(0, "normal"), (1, "eight"), (2, "speed")])},
+ "b5": {"scene": "The failsafe island, on its own power and clock, sees a lost link and picks return or land",
+        "build": lambda p, at: chain(p, at, [("Lost link · GPS · sensor", "seen in hardware"), ("Failsafe island", "own power + clock"), ("Return or land", "chosen")],
+                                     light=[(1, "island"), (0, "notices", "err"), (2, "picks", "safe")], packet=False)},
+ "b6": {"scene": "The island drives the speed controllers directly; the flight computer is bypassed",
+        "build": lambda p, at: chain(p, at, [("Failsafe island", "isolated"), ("ESCs", "driven directly"), ("Flight computer", "bypassed")],
+                                     light=[(0, "drives"), (1, "directly", "safe"), (2, "without", "ink2")])},
+ "close": {"scene": "Three open questions appear in turn, then the ask", "kicker": "WHAT IS STILL UNPROVEN",
+           "build": lambda p, at: items(p, at, [("What the failsafe must see first", "silicon"), ("Drift under jamming", "fpga"),
+                                                ("Heat at +55 °C", "bring")])},
+}

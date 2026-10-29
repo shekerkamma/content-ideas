@@ -1,0 +1,4 @@
+interface:
+  display_name: "DeepGrid Competitive Intelligence"
+  short_description: "Assess competitors against DeepGrid strategy"
+  default_prompt: "Use $deepgrid-competitive-intelligence to produce a sourced threat assessment and counter-moves for DeepGrid."

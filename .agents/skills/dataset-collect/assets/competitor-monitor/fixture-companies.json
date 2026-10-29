@@ -1,0 +1,7 @@
+[
+  {"company":"apify","name":"Apify","employee_count":243,"website":"https://apify.com/","country":"CZ","followers":51200},
+  {"company":"bright-data","name":"Bright Data","employee_count":373,"website":"https://brightdata.com","country":"IL","followers":46500},
+  {"company":"firecrawl","name":"Firecrawl","employee_count":48,"website":"https://www.firecrawl.dev/","country":"US","followers":12800},
+  {"company":"clay-hq","name":"Clay","employee_count":1367,"website":"https://www.clay.com/","country":"US","followers":98000},
+  {"company":"scrapegraphai","name":"ScrapeGraphAI","employee_count":4,"website":"https://scrapegraphai.com","country":"IT","followers":3100}
+]

@@ -1,0 +1,11 @@
+import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
+const ID='1bLfYm2pFV8JfhdMOMHOhvR2xgT1bwqRe';
+const b=await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx=b.contexts()[0];
+const page=ctx.pages().find(p=>p.url().includes(ID));
+await page.bringToFront(); await page.waitForTimeout(2000);
+await page.screenshot({path:'/home/sheke/content-ideas/runs/2026-08-29-deepgrid-financial-model-deck-rebuild/video/vids/slides-state.png'});
+console.log('URL:',page.url().split('?')[0]);
+const t=await page.evaluate(()=>document.body.innerText.split('\n').filter(l=>/turn into video|transform|generat|error|try again|limit|too (large|many)/i.test(l)&&l.length<80).slice(0,6));
+console.log(t.join(' | ')||'(no status text)');
+await b.close();

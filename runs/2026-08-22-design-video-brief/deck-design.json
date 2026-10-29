@@ -1,0 +1,41 @@
+{
+  "contract_version": "1.0",
+  "deck": {
+    "name": "Mastering /design in Claude Code \u2014 video brief",
+    "design_mode": "corporate",
+    "output_mode": "native",
+    "reference_design": "../2026-08-22-l01-l16-layout-library/canvas/",
+    "anti_references": [
+      "generic AI dashboard",
+      "cards nested inside cards",
+      "decorative gradients without semantic purpose"
+    ]
+  },
+  "typography": {
+    "heading_fonts": [
+      "Georgia"
+    ],
+    "body_fonts": [
+      "Aptos"
+    ],
+    "min_body_font_pt": 7.5,
+    "min_caption_font_pt": 7.5,
+    "max_font_families": 2
+  },
+  "color": {
+    "max_distinct_colors": 10,
+    "min_contrast_ratio": 4.5
+  },
+  "layout": {
+    "aspect_ratio": "16:9",
+    "grid_columns": 12,
+    "max_words_per_slide": 80,
+    "max_shapes_per_slide": 36,
+    "max_consecutive_same_archetype": 2,
+    "min_image_dpi": 120
+  },
+  "qa": {
+    "ignore_rules": [],
+    "waivers": {}
+  }
+}

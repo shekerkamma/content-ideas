@@ -1,0 +1,5 @@
+[
+ {"id":"01","kind":"scene","visual":"Open","copy":"Heading one","vh":1.2,"clip":"a","clip_seconds":6},
+ {"id":"02","kind":"transition","visual":"Move","copy":null,"copy_waived":"motion leads","vh":1.6,"clip":"b","clip_seconds":8,"continues_from":{"clip":"a","frame":"last"}},
+ {"id":"03","kind":"scene","visual":"Arrive","copy":"Heading two","vh":2.0,"clip":"c","clip_seconds":10,"continues_from":{"clip":"b","frame":"last"}}
+]

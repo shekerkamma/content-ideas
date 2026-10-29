@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Text fit</title>
+<style>
+body{font:16px/1.5 system-ui;margin:0;padding:2rem}
+.card{width:220px;height:90px;overflow:hidden;border:1px solid #888}
+.group+.group{margin-top:-28px}
+.poster{width:300px;height:300px;object-fit:cover}
+.photo{width:300px;height:300px;object-fit:cover}
+.kicker{text-transform:uppercase}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ell{width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rail{display:flex;gap:1rem;width:200px;overflow-x:auto;white-space:nowrap}
+</style></head>
+<body><main>
+<h1>Text fit fixture</h1>
+<!-- PLANTED clipped: a fixed-height card cuts off its own action. -->
+<div class="card"><p>A long product claim that wraps to several lines in a narrow card.</p><a href="#">View details</a></div>
+<!-- PLANTED overlap: a negative margin pulls the second group over the first group's last line. -->
+<div class="group"><p>First group description that ends on this line.</p></div>
+<div class="group"><p>SECOND GROUP LABEL</p></div>
+<!-- PLANTED crop: a poster with a baked-in title, cropped square by object-fit: cover. -->
+<img class="poster" src="title-poster.png" alt="" width="1600" height="900">
+<!-- PLANTED units: "130 nm" forced into capitals. -->
+<p class="kicker">SKU-1 · 130 nm BCD</p>
+<!-- CONTROLS that must not fire: visually hidden label, deliberate ellipsis, a scrolling rail, a cropped photo,
+     and units already in lower case. -->
+<dl><dt class="sr">Signal</dt><dd>Accelerometer</dd></dl>
+<div class="ell">A deliberately truncated product name</div>
+<div class="rail"><a href="#">Overview</a><a href="#">Architecture</a><a href="#">Readiness</a><a href="#">Sources</a></div>
+<img class="photo" src="scene-photo.png" alt="" width="1600" height="900">
+<p>Clock 114 MHz on 130 nm.</p>
+</main></body></html>

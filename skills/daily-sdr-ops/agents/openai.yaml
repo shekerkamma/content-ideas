@@ -1,0 +1,4 @@
+interface:
+  display_name: "Daily SDR Operations"
+  short_description: "Rank fresh signals into daily SDR actions"
+  default_prompt: "Use $daily-sdr-ops to create an evidence-backed morning hit list."

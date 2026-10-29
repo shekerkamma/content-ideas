@@ -1,30 +1,32 @@
 ---
 name: strategy-consulting
 description: Use when someone asks to assess a business situation, map a market, build a competitive analysis, frame strategic options, construct a business case, design an operating model, run war gaming, write a decision memo, or apply any Accenture-style consulting framework. Also triggers on "strategy work", "consulting framework", "situation assessment", "competitive intel", "strategic options", "transformation roadmap", or when a user describes a strategic business problem that needs structured diagnosis and recommendation.
-version: 1.0.0
-triggers:
-  - /strategy-consulting
-  - /situation-assessment
-  - /growth-barriers
-  - /assumption-audit
-  - /market-mapping
-  - /competitive-intel
-  - /customer-segmentation
-  - /profit-pool-analysis
-  - /strategic-options
-  - /business-case-builder
-  - /portfolio-review
-  - /pricing-strategy
-  - /operating-model-design
-  - /transformation-roadmap
-  - /initiative-prioritizer
-  - /kpi-architect
-  - /risk-and-mitigation
-  - /value-realization
-  - /war-gaming
-  - /decision-memo
-  - /narrative-builder
-  - /stakeholder-alignment
+metadata:
+  legacy-frontmatter:
+    version: 1.0.0
+    triggers:
+    - /strategy-consulting
+    - /situation-assessment
+    - /growth-barriers
+    - /assumption-audit
+    - /market-mapping
+    - /competitive-intel
+    - /customer-segmentation
+    - /profit-pool-analysis
+    - /strategic-options
+    - /business-case-builder
+    - /portfolio-review
+    - /pricing-strategy
+    - /operating-model-design
+    - /transformation-roadmap
+    - /initiative-prioritizer
+    - /kpi-architect
+    - /risk-and-mitigation
+    - /value-realization
+    - /war-gaming
+    - /decision-memo
+    - /narrative-builder
+    - /stakeholder-alignment
 ---
 
 # strategy-consulting — 21 Accenture-Style Consulting Frameworks

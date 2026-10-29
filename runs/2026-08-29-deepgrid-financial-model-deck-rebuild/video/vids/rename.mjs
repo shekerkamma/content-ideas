@@ -1,0 +1,16 @@
+import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
+const ID='19OkYdwlxjrSaV7UED1IQ5ABP48HgmUiNtofc_ZR9Fbs';
+const NEW='DeepGrid Semi — Financial Model Walkthrough (Investor Video)';
+const b=await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx=b.contexts()[0];
+const page=ctx.pages().find(p=>p.url().includes(ID));
+await page.bringToFront(); await page.waitForTimeout(1500);
+const title = page.locator('input[aria-label*="Rename"], [aria-label="Rename"]').first();
+await title.click({ timeout:20000 });
+await page.waitForTimeout(1200);
+await page.keyboard.press('Control+a');
+await page.keyboard.type(NEW, { delay:25 });
+await page.keyboard.press('Enter');
+await page.waitForTimeout(6000);
+console.log('TITLE now:', await page.title());
+await b.close();

@@ -1,0 +1,74 @@
+{
+ "generated": "2026-08-14",
+ "sources": [
+  {
+   "key": "zf-india-nomination",
+   "url": "https://www.zf.com/master/media/corporate/m_zf_com/company/bonds_relations_/wabco_india_ir/13_newspaper_publications/63.ZF_CV_India_-_FY_2025-26_ADAS_Business_Nomination_-_Press_Note.pdf",
+   "tests_claim": "ZF: \"programme specifics still need corroboration\"",
+   "markdown_chars": 6188,
+   "title": "ZF Presseinformation",
+   "published": null,
+   "status": "captured"
+  },
+  {
+   "key": "aptiv-gen6-india",
+   "url": "https://www.aptiv.com/en/newsroom/article/top-global-commercial-vehicle-oem-chooses-aptiv-s-gen-6-adas-platform",
+   "tests_claim": "Aptiv: India CV specifics require verification",
+   "markdown_chars": 5703,
+   "title": "\n\tTop Global Commercial Vehicle OEM Chooses Aptiv’s Gen 6 ADAS Platform\n",
+   "published": null,
+   "screenshot_bytes": 170917,
+   "status": "captured"
+  },
+  {
+   "key": "stradvision-india-cv",
+   "url": "http://www.prnewswire.com/news-releases/stradvision-enables-scalable-adas-deployment-in-indias-commercial-vehicle-market-with-efficient-ai-perception-302744153.html",
+   "tests_claim": "STRADVISION: \"India CV specifics not established\"",
+   "markdown_chars": 7776,
+   "title": "STRADVISION Enables Scalable ADAS Deployment in India's Commercial Vehicle Market with Efficient AI Perception",
+   "published": null,
+   "screenshot_bytes": 200609,
+   "status": "captured"
+  },
+  {
+   "key": "drivebuddyai-expansion",
+   "url": "https://www.globenewswire.com/news-release/2026/06/23/3315851/0/en/roadzen-s-drivebuddyai-lands-5-3-million-agreement-to-equip-3-600-electric-buses-and-trucks-in-india-with-ai-safety.html",
+   "tests_claim": "drivebuddyAI: dossier stops at the initial $2.5m / 3,000 trucks",
+   "markdown_chars": 26962,
+   "title": "Roadzen's drivebuddyAI Lands $5.3 Million Agreement to",
+   "published": null,
+   "screenshot_bytes": 255897,
+   "status": "captured"
+  },
+  {
+   "key": "drivebuddyai-ir",
+   "url": "https://www.investing.com/news/company-news/roadzens-drivebuddyai-wins-3000truck-adas-deployment-contract-93CH-4644619",
+   "tests_claim": "drivebuddyAI: contract needs primary confirmation",
+   "markdown_chars": 24322,
+   "title": "Roadzen’s drivebuddyAI wins 3,000-truck ADAS deployment contract By Investing.com",
+   "published": null,
+   "screenshot_bytes": 568249,
+   "status": "captured"
+  },
+  {
+   "key": "sterling-minieye-filing",
+   "url": "https://www.businessupturn.com/business/corporates/sterling-tools-partners-minieye-to-accelerate-adas-and-driver-monitoring-solutions-for-india/",
+   "tests_claim": "Sterling×MINIEYE: exchange-filed partnership, no named OEM nomination",
+   "markdown_chars": 7143,
+   "title": "Sterling Tools partners MINIEYE to accelerate ADAS and Driver Monitoring Solutions for India · Business Upturn",
+   "published": "2026-01-19T00:55:44.000Z",
+   "screenshot_bytes": 309296,
+   "status": "captured"
+  },
+  {
+   "key": "india-adas-dates",
+   "url": "https://auto.economictimes.indiatimes.com/news/commercial-vehicle/india-introduces-new-vehicle-width-regulations-and-safety-systems-for-heavy-vehicles/125640746",
+   "tests_claim": "Regulatory: April-2026 mandate claim rebased to notified 2027–28",
+   "markdown_chars": 6008,
+   "title": "MoRTH Vehicle Width Rules: India Introduces New Vehicle Width Regulations and Safety Systems for Heavy Vehicles, ETAuto",
+   "published": null,
+   "screenshot_bytes": 288955,
+   "status": "captured"
+  }
+ ]
+}

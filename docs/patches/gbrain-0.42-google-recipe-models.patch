@@ -1,0 +1,27 @@
+diff --git a/src/core/ai/recipes/google.ts b/src/core/ai/recipes/google.ts
+index 58e47cab3..23cea9633 100644
+--- a/src/core/ai/recipes/google.ts
++++ b/src/core/ai/recipes/google.ts
+@@ -11,19 +11,19 @@ export const google: Recipe = {
+   },
+   touchpoints: {
+     embedding: {
+-      models: ['gemini-embedding-001'],
++      models: ['gemini-embedding-001', 'gemini-embedding-2'], // local backport of upstream (GA 2026-04-22)
+       default_dims: 768,
+       dims_options: [768, 1536, 3072],
+       cost_per_1m_tokens_usd: 0.15,
+       price_last_verified: '2026-04-20',
+     },
+     expansion: {
+-      models: ['gemini-2.0-flash', 'gemini-2.0-flash-lite'],
++      models: ['gemini-3.5-flash-lite', 'gemini-3.8-flash'], // local: 2.0 family retired (404), verified live 2026-09-29
+       cost_per_1m_tokens_usd: 0.10,
+       price_last_verified: '2026-04-20',
+     },
+     chat: {
+-      models: ['gemini-2.0-flash-exp', 'gemini-2.0-flash', 'gemini-1.5-pro'],
++      models: ['gemini-3.8-flash', 'gemini-3.5-flash-lite'], // local: 2.0/1.5 retired (404), verified live 2026-09-29
+       supports_tools: true,
+       supports_subagent_loop: true,
+       supports_prompt_cache: false,

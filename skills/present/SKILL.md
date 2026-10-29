@@ -13,6 +13,7 @@ not create another presentation workflow.
 | Request | Primary route |
 |---|---|
 | Client-ready native, editable PPTX | `branded-pptx-deck` |
+| Competitor strategy deck requiring evidence-controlled Accenture grammar, per-slide prompts, and reviewed Office QA | `compound-competitor-analysis-pptx` orchestration → `branded-pptx-deck` |
 | Inspect or make controlled edits to an existing PPTX | `pptx-toolkit` |
 | Rebuild from PPTX, PDF, OneDrive, video, or slide images | `presentation-source-bundle` → selected builder |
 | Browser-native HTML presentation | `presentation` |
@@ -23,6 +24,10 @@ not create another presentation workflow.
 Domain skills such as `research-to-deck`, `architecture-presentation`,
 `analytics-to-comms`, and `gcc-roadmap` remain content/orchestration stages. Require them to
 hand off through the shared contracts instead of inventing a renderer.
+
+`compound-competitor-analysis-pptx` is the governed competitor-strategy orchestration stage. It does not
+replace the native builder, visual specification, design-quality overlay, toolkit, or OfficeCLI;
+it binds them through evidence, slide-content, and slide-design contracts.
 
 ## Governed workflow
 

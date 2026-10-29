@@ -1,0 +1,217 @@
+{
+  "contract_version": "1.0",
+  "file": "runs/2026-08-22-design-video-brief/Claude-design-video-brief-draft.pptx",
+  "fast": false,
+  "status": "findings",
+  "counts": {
+    "error": 0,
+    "warning": 29,
+    "ignored": 0
+  },
+  "findings": [
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "shape-2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.36:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "shape-16"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.57:1 is below 4.5:1.",
+      "slide": 2,
+      "shape": "shape-20"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "165 words exceed the configured maximum 80.",
+      "slide": 2,
+      "shape": null
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "48 shapes exceed the configured maximum 36.",
+      "slide": 3,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 3,
+      "shape": "shape-2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "168 words exceed the configured maximum 80.",
+      "slide": 3,
+      "shape": null
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "39 shapes exceed the configured maximum 36.",
+      "slide": 4,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 4,
+      "shape": "shape-2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "168 words exceed the configured maximum 80.",
+      "slide": 4,
+      "shape": null
+    },
+    {
+      "rule_id": "SLIDE_SHAPE_COUNT",
+      "severity": "warning",
+      "message": "37 shapes exceed the configured maximum 36.",
+      "slide": 5,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 5,
+      "shape": "shape-2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "148 words exceed the configured maximum 80.",
+      "slide": 5,
+      "shape": null
+    },
+    {
+      "rule_id": "SLIDE_MISSING_TITLE",
+      "severity": "warning",
+      "message": "No title-like text was found in the upper slide region.",
+      "slide": 5,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.61:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "shape-4"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.61:1 is below 4.5:1.",
+      "slide": 6,
+      "shape": "shape-7"
+    },
+    {
+      "rule_id": "SLIDE_MISSING_TITLE",
+      "severity": "warning",
+      "message": "No title-like text was found in the upper slide region.",
+      "slide": 6,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 7,
+      "shape": "shape-2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "138 words exceed the configured maximum 80.",
+      "slide": 7,
+      "shape": null
+    },
+    {
+      "rule_id": "SLIDE_MISSING_TITLE",
+      "severity": "warning",
+      "message": "No title-like text was found in the upper slide region.",
+      "slide": 7,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "shape-2"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "shape-13"
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.73:1 is below 4.5:1.",
+      "slide": 8,
+      "shape": "shape-16"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "150 words exceed the configured maximum 80.",
+      "slide": 8,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 2.46:1 is below 4.5:1.",
+      "slide": 9,
+      "shape": "shape-2"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "138 words exceed the configured maximum 80.",
+      "slide": 9,
+      "shape": null
+    },
+    {
+      "rule_id": "TEXT_LOW_CONTRAST",
+      "severity": "warning",
+      "message": "Contrast 3.61:1 is below 4.5:1.",
+      "slide": 10,
+      "shape": "shape-20"
+    },
+    {
+      "rule_id": "SLIDE_WORD_COUNT",
+      "severity": "warning",
+      "message": "85 words exceed the configured maximum 80.",
+      "slide": 10,
+      "shape": null
+    },
+    {
+      "rule_id": "DECK_COLOR_COUNT",
+      "severity": "warning",
+      "message": "15 explicit colors exceed the configured maximum 10.",
+      "slide": null,
+      "shape": null
+    }
+  ],
+  "ignored_findings": []
+}

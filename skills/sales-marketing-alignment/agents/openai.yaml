@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sales and Marketing Alignment"
+  short_description: "Coordinate account plays across GTM teams"
+  default_prompt: "Use $sales-marketing-alignment to draft a shared account handoff and action plan."

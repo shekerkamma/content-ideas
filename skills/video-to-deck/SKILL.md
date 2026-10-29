@@ -1,13 +1,6 @@
 ---
 name: video-to-deck
-description: >
-  Use when someone says "turn this video into a deck", "video to slides", "video to presentation",
-  pastes a video URL and wants a full deliverable, or asks for a presentation package from any
-  video content. Runs a 4-stage pipeline: watch (transcript) → content-research (enrich) →
-  visual route selection (excalidraw for conceptual/non-architecture visuals, explainer-graphic
-  for infographic analogies, architecture-presentation for technical or solution architecture)
-  → branded PPTX deck/package output.
-  For a Markdown-first slide deck without video input, use `marp` instead.
+description: 'Use when someone says "turn this video into a deck", "video to slides", "video to presentation", pastes a video URL and wants a full deliverable, or asks for a presentation package from any video content. Runs a 4-stage pipeline: watch (transcript) → content-research (enrich) → visual route selection (excalidraw for conceptual/non-architecture visuals, explainer-graphic for infographic analogies, architecture-presentation for technical or solution architecture) → branded PPTX deck/package output. For a Markdown-first slide deck without video input, use `marp` instead.'
 ---
 
 # Video-to-Deck Skill System
