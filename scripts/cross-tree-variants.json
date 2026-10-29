@@ -20,13 +20,13 @@
   },
   "impeccable": {
     "trees": [
-      "skills",
-      ".claude",
       ".agents",
-      ".github"
+      ".claude",
+      ".github",
+      "skills"
     ],
-    "reason": "One copy per detected harness, installed by `npx impeccable skills install`. The bodies differ only in each harness's own script path and sigil.",
-    "evidence": "CLAUDE.md: 'one copy per detected harness, installed via npx impeccable skills install'. Re-verified 2026-09-27 at skill 4.3.1 (signed upstream bundle skill-v4.3.1, ed25519 key release-2026-09): .claude vs .agents differs on 8 body lines, every difference the harness path ('.claude' vs '.agents') or the command sigil ('/' vs '$'); .claude vs .github on 4, sigil only; skills/ body is byte-identical to .claude."
+    "reason": "One copy per detected harness, installed by `npx impeccable skills install`. The bodies differ only in each harness's own script path and sigil. Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "CLAUDE.md: 'one copy per detected harness, installed via npx impeccable skills install'. Re-verified 2026-09-27 at skill 4.3.1 (signed upstream bundle skill-v4.3.1, ed25519 key release-2026-09): .claude vs .agents differs on 8 body lines, every difference the harness path ('.claude' vs '.agents') or the command sigil ('/' vs '$'); .claude vs .github on 4, sigil only; skills/ body is byte-identical to .claude. scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
   },
   "investor-competitive-dossier": {
     "trees": [
@@ -46,6 +46,244 @@
     "evidence": ".claude/settings.json loads .agents/skills/openhands-niche-agency/SKILL.md. Verified by grep: '14k+ MCP' appears at skills/openhands-niche-agency/SKILL.md:22 and nowhere in the .agents copy.",
     "correction": "An earlier version of this entry claimed the .agents copy also removed '$2k-$5k/month' and '$50k/mo' and replaced them with 'verified MCP integrations'. That was wrong on all three counts: $2k-$5k/mo survives at .agents/skills/openhands-niche-agency/SKILL.md:9, $50k/mo at :438, and the phrase 'verified MCP integrations' exists in neither file. Corrected after audit."
   },
+  "watch": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "session-handoff": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "grill-me": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "vault-presales-pptx-pipeline": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "office-hours": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "present": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "genspark-branded-deck": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "watch-video": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "video-to-deck": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "story-architect": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "graphify": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "content-ideas": {
+    "trees": [
+      ".agents",
+      "plugins",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "content-research": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "plaid": {
+    "trees": [
+      ".agents",
+      "plugins",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "karpathy-guidelines": {
+    "trees": [
+      ".agents",
+      "plugins",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "grilling": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "branded-pptx-deck": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "pptx-toolkit": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "pptx-design-quality": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "pptx-visual-spec": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "presentation-source-bundle": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "presentation-content-writer": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "genspark-slides": {
+    "trees": [
+      ".agents",
+      "portable",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "exa-api": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "you-com-search": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "firecrawl": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "e2e-qa-review": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "mcp-capability-probe": {
+    "trees": [
+      ".agents",
+      ".claude",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "skill-builder": {
+    "trees": [
+      ".agents",
+      ".claude",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
   "gemini-video": {
     "trees": [
       ".agents",
@@ -53,5 +291,87 @@
     ],
     "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
     "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "scrape-creators": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "blender": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "recorded-workflow": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "browser-testing-with-devtools": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "video-to-skill": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "desktop-app": {
+    "trees": [
+      ".agents",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "architecture-presentation": {
+    "trees": [
+      ".agents",
+      "portable",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "architecture-to-everything": {
+    "trees": [
+      ".agents",
+      "portable",
+      "skills"
+    ],
+    "reason": "Codex repo discovery uses a thin adapter that loads the canonical bundle; it does not replace that workflow.",
+    "evidence": "scripts/codex-priority-skills.json; scripts/codex_skill_setup.py; docs/codex-wsl-skill-compatibility.md."
+  },
+  "ai-feature-integrator": {
+    "trees": [
+      ".agents",
+      ".claude"
+    ],
+    "reason": "The maintained copy is .claude/skills/ai-feature-integrator (tracked, last changed in d4e214d8); there is no skills/ copy. The .agents copy is a thin Codex discovery adapter that loads it. It replaced an untracked 2026-10-01 copy made by a blind Claude->Codex word swap, which carried an invalid model id (`Codex-sonnet-4-6`) and pointed at a skill that does not exist (`/Codex-director`).",
+    "evidence": ".agents/skills/ai-feature-integrator/SKILL.md links ../../../.claude/skills/ai-feature-integrator/SKILL.md; `git log -- .claude/skills/ai-feature-integrator` shows d4e214d8; adapter text follows scripts/codex_skill_setup.py and docs/codex-wsl-skill-compatibility.md."
+  },
+  "claude-code-director": {
+    "trees": [
+      ".agents",
+      ".claude"
+    ],
+    "reason": "The maintained copy is .claude/skills/claude-code-director (tracked, last changed in d4e214d8); there is no skills/ copy. The .agents copy is a thin Codex discovery adapter that loads it. It replaced an untracked 2026-10-01 copy made by a blind Claude->Codex word swap, which carried an invalid model id (`Codex-sonnet-4-6`) and pointed at a skill that does not exist (`/Codex-director`).",
+    "evidence": ".agents/skills/claude-code-director/SKILL.md links ../../../.claude/skills/claude-code-director/SKILL.md; `git log -- .claude/skills/claude-code-director` shows d4e214d8; adapter text follows scripts/codex_skill_setup.py and docs/codex-wsl-skill-compatibility.md."
   }
 }

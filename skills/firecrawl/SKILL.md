@@ -20,7 +20,7 @@ Before using Firecrawl, verify the CLI:
 ```bash
 command -v firecrawl-pp-cli
 firecrawl-pp-cli --version
-firecrawl-pp-cli doctor
+python3 skills/firecrawl/scripts/firecrawl.py doctor --agent
 ```
 
 If `doctor` reports network unreachable inside Codex, the CLI is installed but
@@ -36,15 +36,21 @@ after important URLs are known, or a deep-research route when explicitly needed.
 
 The CLI can use its local OAuth/config file or `FIRECRAWL_BEARER_AUTH`.
 
+The portable wrapper `scripts/firecrawl.py` loads an existing host credential at runtime from Windows Hermes or WSL Hermes when none is exported, mapping `FIRECRAWL_API_KEY` to `FIRECRAWL_BEARER_AUTH`. It never copies credentials into the repo. From another project, invoke it by its resolved canonical absolute path.
+
 Do not print tokens. Check auth with:
 
 ```bash
-firecrawl-pp-cli doctor
+python3 skills/firecrawl/scripts/firecrawl.py doctor --agent
 ```
 
 ## Direct Commands
 
-Always use agent mode for machine-readable output:
+Always use agent mode for machine-readable output. For page content add `--compact=false`; the installed CLI otherwise reduces output to metadata. For fresh extraction use `--no-cache --data-source live --max-age 0`.
+
+The installed scrape command requires `--url`; a positional URL is rejected.
+
+
 
 ```bash
 firecrawl-pp-cli <command> [subcommand] [args] --agent
@@ -52,7 +58,7 @@ firecrawl-pp-cli <command> [subcommand] [args] --agent
 
 Common commands:
 
-- `firecrawl-pp-cli scrape <url> --agent`
+- `python3 skills/firecrawl/scripts/firecrawl.py scrape --url <url> --agent --compact=false --no-cache --data-source live --max-age 0`
 - `firecrawl-pp-cli firecrawl-search "<query>" --agent`
 - `firecrawl-pp-cli deep-research start "<query>" --agent`
 - `firecrawl-pp-cli deep-research get-status <id> --agent`

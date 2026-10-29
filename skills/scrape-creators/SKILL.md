@@ -502,3 +502,7 @@ Parse `$ARGUMENTS`:
    scrape-creators-pp-cli <command> [subcommand] [args] --agent
    ```
 4. If ambiguous, drill into subcommand help: `scrape-creators-pp-cli <command> --help`.
+
+## Configured Windows/WSL host route
+
+Use `python3 skills/scrape-creators/scripts/run.py --doctor` first, then invoke CLI commands through that wrapper. It resolves the existing CLI in ~/.local/bin or ~/go/bin and maps the already-configured SCRAPECREATORS_API_KEY to the CLI credential variable at runtime. Existing ignored Claude host settings are read without copying their secrets. For a minimal connection check, run `python3 skills/scrape-creators/scripts/run.py account list --json`. Canonical source stays here; Desktop discovery is a thin adapter.

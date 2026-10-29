@@ -1,237 +1,61 @@
-OpenHands implementation source of truth for strategy/pipeline builds:
-- https://github.com/OpenHands/OpenHands
-- https://docs.openhands.dev/
+# content-ideas — agent entrypoint
 
-Filesystem search and integrity rule:
-- Do not limit searches to the current working directory when investigating
-  missing, restored, corrupted, duplicated, or unavailable files and skills.
-- Discover and search every relevant repository and installation root before
-  drawing a conclusion. At minimum, check:
-  - the full current repository, including hidden and ignored paths
-  - repo-local `skills/`, `.claude/`, `.agents/`, and `plugins/` trees
-  - user-level skill installations such as `~/.claude/skills/` and
-    `~/.codex/skills/`
-  - external or adjacent repositories referenced by repo instructions,
-    symlinks, plugin manifests, or skill catalogs
-- Resolve `~` and report the exact roots actually searched. Do not infer that
-  restoring `/home/sheke/content-ideas` also restored an external installation
-  such as `/home/sheke/.claude/skills/gstack`.
-- For corruption claims, validate rather than relying on filenames or a prior
-  report: inspect text/source files for invalid NUL bytes or parse failures,
-  run Git integrity/status checks where applicable, and run the narrowest
-  available validator or test. Exclude expected binary formats and Git object
-  data from text-corruption counts.
-- State the verified scope and evidence behind any file count. If permissions
-  prevent checking a relevant external root, report the conclusion as partial
-  instead of claiming the whole installation is healthy or corrupted.
+@CLAUDE.md
 
-Skill recovery, research, and porting contract:
-- Keep portable skill sources in repo-local `skills/<skill>/`. Treat
-  `~/.claude/skills/` and `~/.codex/skills/` as host installations, not the
-  canonical or only recovery source.
-- For `docx`, `pdf`, `improve`, and `storm-research`, the canonical portable
-  copies are `skills/docx/`, `skills/pdf/`, `skills/improve/`, and
-  `skills/storm-research/`. Preserve the complete skill directory, including
-  licenses, references, templates, schemas, and scripts; exclude generated
-  `__pycache__/` directories and `*.pyc` files.
-- Separate detection from sourcing. Detect local corruption with byte-level,
-  parse, Git, and skill-specific validation. Use web research, Exa, You.com,
-  or Livecrawl Level 2 to locate authoritative recovery sources only; a web
-  search cannot inspect or prove the integrity of a local filesystem.
-- Prefer recovery sources in this order: a verified byte-identical local
-  archive or known-good repo copy, the skill's authoritative upstream Git
-  repository, then a freshly reconstructed file backed by documented evidence.
-  Never replace a customized skill wholesale with a merely related upstream
-  skill without validating that its interface and workflow match.
-- Before replacement, stage and validate the candidate; retain a timestamped,
-  recoverable backup of the installed directory; replace only the named skill;
-  then compare installed files to the staged candidate and rerun validators.
-- Research credentials are host-level secrets. Never copy API keys into this
-  repository, a project `.env`, skill source, generated report, test fixture,
-  commit, or chat output. On this WSL host, terminal research wrappers may read
-  the Windows Hermes Desktop configuration through `/mnt/c` at runtime.
-- Livecrawl Level 2 means search discovery followed by fresh-page extraction.
-  Verify both stages and report their actual backend/status. Do not claim Level
-  2 succeeded when only search results were returned or cached content was used.
-- See `docs/skill-recovery-porting-contract.md` for the operational procedure
-  and verification commands.
-- In Codex Cloud, resolve a host-oriented skill path such as
-  `~/.claude/skills/<name>` or `~/.codex/skills/<name>` to the repository copy
-  at `skills/<name>/`. Never assume a user-home skill installation exists in a
-  cloud task container.
-- Treat Claude-specific interaction names as workflow intent: replace
-  `AskUserQuestion` with a normal concise user question, and use the active
-  host's plan or collaboration mechanism for Claude-only plan/subagent tool
-  names. Do not fail a skill solely because its prose names another host's
-  equivalent interaction tool.
-- Windows, WSL, macOS, browser-profile, and desktop-application paths are
-  host-specific alternatives. In Codex Cloud, prefer repository-relative
-  resources and Linux tools installed by the configured environment. Report a
-  capability as host-only when no cloud-safe alternative is bundled.
-- The complete cross-host import manifest and portability findings live under
-  `runs/skill-port/`. Generated caches, Python bytecode, nested Git metadata,
-  `node_modules`, and secret `.env` files are not portable skill source.
+Read `WORKSPACE_MAP.md` before broad discovery, then only the relevant workflow
+sections and canonical skill bundles. Detailed rules remain binding for their
+applicable tasks. Reference copies preserve the former entrypoints; their legacy
+import lines are historical, not instructions to recursively load both files.
+Resolve paths and commands in those copies from the repository root.
 
-GBrain knowledge rule:
-- If `gbrain` is available as an MCP server in Claude Code, Codex, or another
-  host, use it by default for cross-session memory and retrieval before
-  repeating strategy or pipeline research from scratch.
-- Treat `gbrain` as an explicit skill-chaining stage, not just a background
-  preference:
-  - `GBrain Recall` happens before `content-research`, strategy synthesis, or
-    pipeline research begins
-  - `GBrain Write-back` happens after the run when the findings are likely to
-    matter again
-- Use GBrain as the durable knowledge layer for recurring prospects,
-  companies, people, verticals, themes, prior research, and named accounts.
-- Treat GBrain retrieval as embedding-backed semantic retrieval by default, not
-  just keyword lookup.
-- Prefer semantic recall first; use synthesis only when the task needs merged
-  interpretation rather than simple recall.
-- Read from GBrain first when the task references a company, person, vertical,
-  or use case that may have appeared in prior runs.
-- Write durable findings back to GBrain after strategy/pipeline work when they
-  are likely to matter again across sessions.
-- When reporting pipeline status, call out `GBrain Recall` as completed if it
-  was used to seed the run.
-- GBrain is not the system of record for deliverables.
-- Pipeline artifacts, briefs, decks, feed data, and client-facing outputs must
-  still be written to local repo/run files.
+## Efficient execution
 
-Research-plugin rule:
-- In Codex Desktop or any host that exposes high-quality research plugins
-  such as `exa`, prefer those plugins for source discovery and current web
-  research during Stage 1 and strategy work.
-- In terminal-first hosts such as Codex CLI, prefer the closest equivalent:
-  an MCP-connected research server or a local CLI/API wrapper for tools such as
-  Exa when available.
-- Concrete terminal patterns to prefer when available:
-  - Exa MCP over HTTP/remote MCP
-  - a local Exa API wrapper that calls `https://api.exa.ai/search`
-- Use them to improve discovery of official product pages, docs, GitHub repos,
-  competitive signals, and current operator proof points.
-- Codex Desktop plugin access is an advantage for discovery, not an exception
-  to the repo workflow. The same delivery and verification rules still apply.
-- This does not replace:
-  - local file generation
-  - branded PPTX build and QA
-  - repo-specific workflow rules
-  - verifying that final sources are primary and current
+- Complete the authorized scope and essential validation. Preserve explicit
+  provider, model, effort, quality, output and permission requirements.
+- Start with supplied paths; use `rg` before reading large files. Reuse findings
+  and unchanged content. Do not run unrelated audits or rebuild indexes.
+- Load only applicable skills and references. Keep specialist tooling and QA;
+  remove redundant context only when its absence has been evaluated.
+- For sustained or resumed work, use `docs/task-brief-template.md` in the run
+  directory. Reuse an existing approved plan; read only the current task and
+  its dependencies, not the entire backlog.
+- Ask about consequential blind spots during planning/review, then execute
+  against explicit acceptance criteria. Stop verification when required gates
+  pass unless a change, failure or unresolved risk warrants more checks.
+- Delegate only when authorized and useful. Preserve existing user edits.
+  Report results, evidence, limits and next steps concisely.
 
-Playwright rule:
-- Use the root `playwright.config.ts` and npm scripts for browser validation:
-  - `npm run test:e2e` for all e2e specs
-  - `npm run test:e2e:kyc` for the KYC workflow smoke test
-  - `npm run test:e2e:headed` when a visible Chromium run is needed
-- The Playwright config uses `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` when set,
-  then falls back to cached Chromium under `~/.cache/ms-playwright` when
-  present. If no browser is installed, run `npm run test:e2e:install`.
-- If `npm run build` was run while `npm run dev` was still active, restart the
-  dev server before Playwright testing. A stale dev server can serve HTML that
-  points to missing `.next` chunks such as `main-app.js`, preventing hydration.
-- Keep generated `playwright-report/` and `test-results/` out of commits.
+## Research and durable knowledge
 
-Client-facing PPTX rule:
-- Always use the branded PowerPoint template resolved from
-  `BRANDED_PPTX_TEMPLATE`, or fall back to
-  `~/.claude/templates/branded-template.pptx` when that env var is unset
-- Or use the `branded-pptx-deck` / `pptxkit` workflow that wraps that template
-- Never ship a client-facing `.pptx` built from an ad hoc blank presentation
-- Every slide must have structured content, not placeholder filler
-- Use the branded detailed use-case realization layout when presenting a use case
-- PPTX QA is mandatory before delivery
-- Check text overlap/overflow/collisions before calling a deck final
-- If branded preview tooling is unavailable, mark the deck unreviewed rather than silently delivering it
-- Use explicit deck status: `draft`, `reviewed`, or `blocked`
-- Use matching filename suffixes for deliverables
-- Keep the branded builder script with the run artifacts so QA fixes are reproducible
-- Copy reviewed decks only to a delivery destination resolved from
-  `CLIENT_DELIVERY_DIR` when one is configured for the host
+- When `gbrain` is available, use **GBrain Recall** before strategy/pipeline
+  research. Read from GBrain first using embedding-backed semantic retrieval;
+  use synthesis only when merged interpretation is needed.
+- Write durable findings back to GBrain through **GBrain Write-back** after
+  reusable research. GBrain is not the system of record for deliverables;
+  write briefs, decks, reports and feed data to local repo/run files.
+- Prefer exposed `exa` research plugins, or a MCP-connected research server
+  / terminal wrapper for `https://api.exa.ai/search`. Plugin access is
+  not an exception to the workflow and does not replace local generation or artifact QA.
+  Verify primary, current sources. Level 2 requires fresh discovery and extraction.
+- OpenHands implementation source of truth:
+  https://github.com/OpenHands/OpenHands and https://docs.openhands.dev/.
+- Follow the research, recovery and provider sections linked from the map.
 
-Presentation consolidation rule:
-- Route presentation requests through repo-local `skills/present/`; do not add a new
-  top-level presentation skill when an existing engine or support stage covers the job.
-- Use `branded-pptx-deck` for native client-ready PPTX, `pptx-toolkit` for controlled
-  existing-PPTX edits, `presentation` for HTML, `genspark-slides` plus
-  `genspark-branded-deck` for hosted Genspark work, and `marp` for Markdown slides.
-- For material builds, require `deck-brief.md`, `deck-design.json`,
-  `template-profile.json`, `slide-plan.json`, and `visual-spec.json`; source-derived work
-  also requires `presentation-evidence.json`.
-- Keep template profiles and reusable slide archetypes in `pptx-design-quality`. Keep
-  acquisition and normalization adapters in `presentation-source-bundle`.
-- For Claude Code, Windows Hermes, and Antigravity IDE hosting, treat repo-local `skills/` as canonical and run
-  `bash scripts/sync-presentation-pipeline-hosts.sh`; follow
-  `docs/presentation-pipeline-cross-host-contract.md`. Verify Hermes from WSL with the explicit
-  `HERMES_HOME=/mnt/c/Users/sheke/AppData/Local/hermes` path rather than auditing the WSL user's
-  default Hermes profile by mistake.
+## Output and host boundaries
 
-Cross-host product-build skills:
-- Use repo-local skills from `skills/` for both Codex and Claude Code.
-- Use `skills/plaid/SKILL.md` when the user says `PLAID`, `plaid build`,
-  `plaid design`, `execute the roadmap`, `build the app`, asks to generate a
-  PRD/product roadmap/design spec, or asks to continue a PLAID product build.
-- Use `skills/karpathy-guidelines/SKILL.md` for coding, review, or refactoring
-  work so assumptions are explicit, changes stay surgical, and success criteria
-  are verifiable.
-- For Codex `/goal` work, treat the existing PLAID artifacts as the build
-  contract:
-  - `vision.json`
-  - `docs/product-idea.md`
-  - `docs/validation-report.md`
-  - `docs/product-vision.md`
-  - `docs/prd.md`
-  - `docs/product-roadmap.md`
-  - `docs/design.md` when present
-- Start `/goal` only after the relevant PLAID docs and roadmap scope are clear.
-  Goals must name the phase/task scope, acceptance criteria, verification
-  commands, constraints, and stop conditions.
-- When `docs/product-roadmap.md` has unchecked tasks, route ambiguous build
-  requests to PLAID Build and complete roadmap tasks in order. Mark tasks done
-  only after implementation and verification.
-
-Channel-to-KB skills:
-- Use repo-local `skills/channel-to-kb-ytdlp/SKILL.md` (recommended default,
-  free, no API key, most reliable against YouTube changes),
-  `skills/channel-to-kb/SKILL.md` (free, no API key, can be IP-blocked on
-  cloud hosts), or `skills/channel-to-kb-supadata/SKILL.md` (paid managed
-  API via `SUPADATA_API_KEY`, no IP-blocking risk) when the user wants to
-  turn a YouTube channel into an OKF (Open Knowledge Format) knowledge base
-  or Karpathy-style LLM wiki — same on Codex and Claude Code.
-- Each skill scaffolds its bundle under
-  `$CONTENT_HOME/knowledge-bases/<channel-slug>/`, never the cwd, and ships
-  its own copy of the shared OKF toolkit (`assets/okf-template/`,
-  `references/pipeline-guide.md`). `uv run <skill-dir>/scripts/fetch_transcripts.py`
-  installs each script's PEP 723 dependencies in an isolated environment —
-  requires `uv` on PATH on whichever host runs it.
-- Ported from `coleam00/cole-medin-knowledge-base`; see the "Channel-to-KB
-  skills" section in `CLAUDE.md` for the re-sync procedure if upstream
-  changes its shared OKF toolkit files.
-
-Local AI-gateway proxy diagnostics:
-- Windows-side AI-gateway/router tools (free-claude-code, OmniRoute,
-  cli-proxy-api, Hermes Agent) are common places to find already-configured
-  provider keys and model routing before assuming one is broken or asking
-  for new credentials. See the API-key section in `CLAUDE.md` for exact
-  paths and known gotchas per tool.
-- Never trust a provider/model catalog listing as proof a model ID is
-  routable. Confirm with a real completion call and cross-check the tool's
-  own request log for the provider/status that actually served it — an
-  "auto" router can silently pick a different provider than the one you
-  intended to test.
-- PowerShell or native `.exe` processes launched from a WSL Bash shell
-  inherit the WSL cwd, which Windows renders as a `\\wsl.localhost\...` UNC
-  path. Pass an explicit Windows working directory or absolute config path
-  instead of relying on the invoked process's own relative-path resolution.
-
-Antigravity CLI & IDE cross-host sync contract:
-- Treat WSL repo-local `skills/` as the canonical source for tools and execution.
-- Maintain Antigravity CLI settings at `~/.gemini/antigravity-cli/settings.json`
-  with autonomous permissions and WSL workspace roots.
-- Maintain Antigravity global plugins and unified Linux MCP servers in
-  `~/.gemini/config/config.json` and `~/.gemini/config/mcp_config.json`.
-- Maintain Antigravity IDE remote settings in
-  `~/.antigravity-server/data/User/settings.json`.
-- Track incremental wave migrations in `docs/antigravity-sync-backlog.md`.
+- Use canonical repo `skills/<name>/` bundles. Preserve secrets in host storage;
+  never copy keys into project files, reports, fixtures, commits or chat output.
+- Client-facing PPTX requires `BRANDED_PPTX_TEMPLATE` or its documented fallback,
+  mandatory QA and explicit `draft`, `reviewed` or `blocked` status. Copy reviewed
+  decks only to configured `CLIENT_DELIVERY_DIR`. Follow the presentation route.
+- Open generated reports/previews in the in-app browser by default. Serve only
+  a dedicated preview directory; keep the canonical source. Reuse tabs and treat
+  queued opening as pending. Specialized native editors retain their requirements.
+- Skill/installation investigations must include relevant external roots and
+  symlink targets, not just this repo; report exact scope and verification limits.
+- Before a Desktop priority workflow, read `docs/codex-wsl-skill-compatibility.md`
+  once per session. Follow `docs/codex-capability-routing.md` for tool selection.
+  Discovery, authentication and successful execution are separate checks.
 
 ## Gemini media lane (`gemini-api`, pilot)
 
@@ -245,5 +69,3 @@ Antigravity CLI & IDE cross-host sync contract:
   `agent status`), pass `--stream=false --output-format json`.
 - Capture the returned file paths and interaction IDs for multi-step tasks.
   Video and Deep Research cost real money: say the estimate before running.
-
-@CLAUDE.md
