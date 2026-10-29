@@ -1,0 +1,6 @@
+Add a fifth worker box, "Worker E", to the row of workers, matching the existing
+worker boxes exactly in size, styling and model caption.
+
+Change NOTHING else: same heading, same body paragraphs, same diagram title,
+same Orchestrator and Advisor boxes, same arrows, same connector labels, same
+table underneath, same colours.

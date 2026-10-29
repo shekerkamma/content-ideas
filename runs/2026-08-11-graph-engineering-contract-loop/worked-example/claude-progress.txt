@@ -1,0 +1,164 @@
+# Skill integrity audit
+# Progress log. Newest entries at the bottom.
+#
+# One line per run. Record what was tried, what failed, and what the next run
+# should know. The "note for next run" lines are the ones that make the loop
+# get smarter without anyone retraining anything.
+#
+# Format: <timestamp> | <item id> | <what happened>
+
+2026-08-11 01:39 | -- | Loop initialized. No items attempted yet.
+2026-08-11 01:42 | -- | Rung 1 complete. check_skills.py: 34 findings across dupes(3), name(17), desc(14).
+2026-08-11 01:42 | 6  | Criterion 6 rewritten. Filesystem walk reported 46 __pycache__ failures; all gitignored,
+                        git ls-files returns 0. Was measuring the working directory, not what ships.
+                        Total went 77 -> 34. Note for next run: any criterion counting files should
+                        ask git what is tracked, not the filesystem.
+2026-08-11 01:42 | 7  | Not started. Needs the auditor subagent; no script can decide description quality.
+
+2026-08-11 02:06 | 2  | FIXED. All 3 collisions came from commit 7f3d602, which imported skills under both
+                        their directory name and their declared name. Resolved by making name: match
+                        the directory in gstack-command, connect-chrome, hackernews. Nothing deleted.
+2026-08-11 02:06 | 3  | WAIVED for 14 pp-* skills. In Claude Code the name: field is the invocation name;
+                        the directory is not. archive-is/pp-archive-is etc. resolve correctly and
+                        renaming them would change 14 live invocation names for no functional gain.
+2026-08-11 02:06 | 4  | FIXED, and the criterion was wrong twice over. The length check found 14 thin
+                        descriptions; the real number was 36, truncated to their first line. Source is
+                        ~/gstack/*/SKILL.md, which carries full 'description: |' blocks with Use-when
+                        triggers. Truncation happened at gstack's install into ~/.claude/skills/, NOT
+                        at the port into this repo — ~/.claude/skills/canary/SKILL.md is already
+                        truncated. Restored 36 from upstream, wrote 3 that have no upstream template.
+                        Note for next run: HOST INSTALLS ARE STILL TRUNCATED. Out of scope per the
+                        contract, but ~/.claude/skills/ is where these skills actually get invoked
+                        from, so routing is still degraded there. That is the next job.
+2026-08-11 02:06 | 4  | Second criterion defect: rule_desc returned early on folded blocks, so converting
+                        36 skills to 'description: >-' would have made it pass without measuring
+                        anything. Fixed to resolve folded blocks. A criterion that stops measuring
+                        looks identical to one that got satisfied.
+2026-08-11 02:06 | 7  | Not graded. Builder did the work; builder does not get to pass it.
+
+2026-08-11 02:21 | 4  | REVERTED. The criterion-4 work above was wrong and has been undone. The restore
+                        source ~/gstack is a STALE May checkout (v0.16.2.0); current gstack is
+                        v1.60.1.0 at ~/.claude/skills/gstack/. Running the current generator with
+                        --dry-run reports FRESH for every file, and freshness there is a content
+                        comparison — so today's generator PRODUCES the short descriptions. The cause
+                        is gstack's catalog trim (T4): for the Claude host it trims the description
+                        to its first sentence and moves routing prose to a '## When to invoke' body
+                        section plus proactive-suggestions.json, deliberately, to avoid the
+                        always-loaded cost. Short descriptions are that optimization working.
+                        All 39 edits reverted; only the 3 name-collision fixes kept. Criterion 4
+                        rewritten to check that routing is REACHABLE, which is what matters.
+                        Note for next run: verify which of two same-named checkouts is current
+                        BEFORE treating either as the source of truth. Version and commit date, not
+                        the presence of a git remote.
+2026-08-11 02:21 | 7  | FAILED 0.0 by independent auditor. traces/auditor-criterion-7.md. The waiver on
+                        criterion 3 is rejected: 13 of 14 skills have no recorded reason, and the
+                        waiver contradicts this repo's own skill-builder standard requiring name to
+                        match the directory. Also still live in the host tree: hackernews and
+                        pp-hackernews both declare pp-hackernews there.
+
+2026-08-11 02:27 | 3  | FIXED, not waived. Auditor rejected the waiver 0.0, decisively on the ground that
+                        .claude/skills/skill-builder/SKILL.md:114 already requires name to match the
+                        directory — the waiver overrode this repo's own standard without citing it.
+                        Renamed all 14 pp-* declarations to their directory names. Simulated the
+                        rename first: 0 new collisions, and the pp-* names are freed entirely.
+                        Removed the waiver clause from the contract's Grading section: a waiver that
+                        exists to excuse the one criterion nobody wanted to do is a partial pass.
+2026-08-11 02:27 | -- | DECISION: hackernews vs pp-hackernews duplication NOT resolved, deliberately.
+                        Both forms are legitimate — 14 of the pp-family are full checkouts
+                        (archive-is 75 files, cal-com 437), and pp-youtube is a standalone 1-file
+                        skill, so neither shape is anomalous. pp-hackernews is the newer generated
+                        mirror; hackernews carries the vendored source. The collision is fixed and
+                        the remaining duplication is the user's call. Two wrong source-of-truth
+                        calls already this run; a third guess on 972K of vendored source is not
+                        worth the risk. Escalated rather than decided.
+
+2026-08-11 02:47 | -- | CORRECTION to the 02:27 entries above. Two claims there are retracted:
+                        (a) "the pp-* names are freed entirely" is FALSE. skills/pp-hackernews/ and
+                            skills/pp-youtube/ still legitimately declare those names.
+                        (b) "hackernews vs pp-hackernews NOT resolved, deliberately" is superseded.
+                            The pair now carries distinct deprecation-pointer routing metadata.
+                            Neither directory was deleted; deletion remains out of scope.
+2026-08-11 02:47 | 2  | Round-2 audit failed the rename fix 0.0. Renaming resolved the name: collision but
+                        MOVED it: all 3 pairs remained byte-identical in description: and triggers:,
+                        and then again in their '## When to invoke' sections. Both surfaces are now
+                        distinct. Criterion 8 added to measure them.
+2026-08-11 02:47 | -- | DAMAGE CAUSED AND REVERTED. The sweep that fixed 11 dangling "/pp-X" invocation
+                        lines used a broad sed and also rewrote 50 upstream package coordinates in
+                        12 README/CURSOR files — including 13 GitHub URLs that became 404s. The
+                        auditor caught it by actually curling them (pp-archive-is=200,
+                        archive-is=404). All 15 files were reverted with git checkout and the fix
+                        re-applied surgically: it now matches only the literal 'invoke `/pp-X'
+                        instruction, exactly 1 line per file, 11 files. URLs re-verified at 200.
+                        Note for next run: a sed pattern broad enough to fix docs is broad enough to
+                        rewrite third-party coordinates. Bound the match to the sentence, and diff
+                        the line count per file before trusting the result.
+2026-08-11 02:47 | 8  | Rule rebuilt after the round-3 audit defeated it twice. Exact-string equality fell
+                        to one trailing period, so comparison is now similarity-based at 0.95. The
+                        triggers parser required list items indented DEEPER than their key; gstack
+                        puts them at the SAME indent, so it returned [] for every gstack skill and
+                        the triggers half checked nothing. Both evasions are now mutation-tested and
+                        both fail as they should.
+2026-08-11 02:47 | 7  | STILL FAILING. Auditor found 16 cross-tree name shadows (impeccable in 4 trees,
+                        skill-builder in 2, the ponytail family, others) where the same name maps to
+                        differing content. check_skills.py only iterates skills/, so this class is
+                        invisible to every rule. Not fixed: CLAUDE.md documents the multi-harness
+                        copies as intentional, so reconciling them is a scope decision for the user,
+                        not a defect to silently "fix". Escalated.
+
+2026-08-11 06:50 | 9  | Criterion 7 RETIRED, criterion 9 added. 7 read "shadows nothing in the repo tree"
+                        and was unsatisfiable by construction: the auditor found it directly
+                        CONTRADICTS criterion 5, which REQUIRES byte-identical plugin mirrors.
+                        Satisfying 7 would break 5, and deletion is out of scope, so no legal action
+                        could ever pass it. Replaced with body-drift detection, which is strictly
+                        harder: it fails when drift is introduced, mutation-tested both directions.
+2026-08-11 06:50 | -- | DAMAGE CAUSED AND REVERTED (second occurrence). Synced skills/ikigai body over
+                        .agents/skills/ikigai, destroying destination-only content: a Relationships
+                        row for openhands-niche-agency, a Constraints block, and "### Category:
+                        Data & Analysis" (silently changed to Runbook). Reverted via git checkout.
+                        Root cause: diagnosed "stale" by looking only at what skills/ had EXTRA,
+                        never at what the destination had extra. Re-diagnosis: Category +
+                        Relationships is a .agents TREE CONVENTION, present on exactly the four
+                        skills settings.json loads from that tree. The divergence is bidirectional;
+                        neither copy is a superset. Registered as an intentional variant instead.
+                        Note for next run: before any sync, diff BOTH directions. A one-directional
+                        read is how both content-destroying edits this session happened.
+2026-08-11 06:50 | 9  | Rule hardened after audit found three structural defects:
+                        (a) root.iterdir() saw only top-level dirs — 315 of skills/'s 364 SKILL.md
+                            and 15 of portable-skills/'s 57. 42 nested cross-tree pairs were
+                            compared ZERO times, and one hid real drift:
+                            ai-analyst/run-analysis, where the portable copy is missing the
+                            validate_agent_registry.py preflight gate. Now rglob.
+                        (b) "if name in registered: continue" read only the KEY, so an entry of {}
+                            waived anything. The criterion says "with evidence"; nothing enforced
+                            the evidence. Now requires non-empty reason AND evidence.
+                        (c) the "trees" field was never read, so one entry waived a skill across all
+                            six trees. Now only the listed trees are waived.
+                        All three mutation-tested.
+2026-08-11 06:50 | -- | REGISTRY CORRECTION. The openhands-niche-agency entry claimed the .agents copy
+                        removed three claims and replaced them with "verified MCP integrations".
+                        Wrong on all three counts, verified by grep: $2k-$5k/mo survives at
+                        .agents/.../SKILL.md:9, $50k/mo at :438, and "verified MCP integrations"
+                        exists in NEITHER file — it was fabricated. Only the "14k+ MCP servers"
+                        figure was actually dropped. Entry corrected and the error recorded in it.
+                        Note for next run: an entry justifying an exception is itself a claim and
+                        needs the same evidence bar as the work. This one had none.
+
+2026-08-11 11:38 | 8  | Coverage widened after audit noted the rule scanned 315 of the repo's 443 SKILL.md
+                        files and never inspected .claude/skills/ or .agents/skills/ — the trees
+                        Claude Code actually routes from. Now 450 files across all six trees,
+                        recursive, skipping same-name pairs since those belong to crosstree.
+                        Mutation-tested: two different .claude/ skills sharing a description now
+                        fail, which was previously invisible.
+2026-08-11 11:38 | 5  | Rule now asks git what is tracked, matching --rule bytecode. The two rules
+                        disagreed about what "ships": bytecode asked git, mirror walked the
+                        filesystem, so criterion 5 was green on skills/graph-engineering/ — a skill
+                        with no git history at all. It now fails honestly until the work is
+                        committed. Same lesson as criterion 6, third occurrence: measure what ships,
+                        not what is on the developer's disk.
+2026-08-11 11:38 | -- | Removed stray __pycache__ from .claude/skills/skill-builder/scripts/ — bytecode
+                        sitting inside the skill that had just been hand-synced.
+2026-08-11 11:38 | -- | Session lessons folded back into skills/graph-engineering/SKILL.md as a new
+                        "Verification discipline" section plus three Gotchas. The durable artifact is
+                        the skill, not this run: next time the rule about diffing both directions
+                        before a sync is on the page before the builder starts, not learned by
+                        destroying content twice.

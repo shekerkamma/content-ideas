@@ -1,0 +1,193 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+#
+# Ported from the working Hermes CLI config (~/.hermes/config.yaml), which
+# declares these same endpoints as `type: openai_compatible` custom_providers.
+# `openai_compatible` in Hermes == `api: openai-completions` in dsh.
+
+- id: llm-pi-ai
+  config:
+    providers:
+      # PRIMARY — zenmux aggregator. One key, every model family.
+      # Key is Hermes' ZENMUX_API_KEY; note this is a DIFFERENT and working
+      # credential from the stale zenmux connection inside OmniRoute, which
+      # returns 403 on every model.
+      # Every model below verified 2026-08-17 with a real completion
+      # ("What is 6*7?" -> "42"). Context lengths read from zenmux /v1/models,
+      # not guessed.
+      # BILLING: zenmux is a PREPAID AGGREGATOR, not a subscription. Every
+      # model below except the `-free` one spends zenmux account credit per
+      # token. Your Claude Pro / ChatGPT Plus subscriptions are NOT used here.
+      # For Claude on the subscription, use the claude-code-cli route instead.
+      # Prices USD per million tokens, read from zenmux /v1/models `pricings`
+      # on 2026-08-17 — re-check before assuming they still hold.
+      zenmux:
+        displayName: ZenMux
+        apiKeyEnv: ZENMUX_API_KEY
+        api: openai-completions
+        baseURL: https://zenmux.ai/api/v1
+        models:
+          # prompt 0 / completion 0 — the only genuinely free model here.
+          - id: deepseek/deepseek-v4-flash-free
+            name: DeepSeek V4 Flash (FREE)
+            contextWindow: 1000000
+          # completion $1.98/M, tiering to $3.96/M
+          - id: deepseek/deepseek-v4-pro
+            name: DeepSeek V4 Pro (PAID)
+            contextWindow: 1000000
+          # completion $25/M — the most expensive route in this file by ~10x.
+          - id: anthropic/claude-opus-5
+            name: Claude Opus 5 (PAID $25/M out)
+            contextWindow: 1000000
+          # completion $10/M
+          - id: anthropic/claude-sonnet-5
+            name: Claude Sonnet 5 (PAID $10/M out)
+            contextWindow: 1000000
+          # completion $1.20/M, tiering to $1.80/M
+          - id: openai/gpt-5.6-luna
+            name: GPT-5.6 Luna (PAID)
+            contextWindow: 1050000
+          # Reasons before emitting content — a small maxTokens returns an
+          # empty string rather than an error. Keep this budget generous.
+          - id: google/gemini-3.7-flash
+            name: Gemini 3.7 Flash
+            contextWindow: 1048576
+
+      # Claude Code CLI via local bridge — the dsh equivalent of Hermes'
+      #   providers.claude-code-cli = {auth_type: external_process,
+      #                                base_url: "cli://claude-code"}
+      # No credential is stored anywhere: the bridge spawns `claude -p` and the
+      # CLI authenticates itself against the user's own subscription.
+      # Start:  python3 ~/.dsh/bridges/claude_code_bridge.py --port 8318
+      #         (set CLAUDE_BRIDGE_CWD to the directory claude should work in)
+      #
+      # LIMITATION: `claude -p` is a whole agent, not a raw model — it never
+      # emits OpenAI tool_calls. Driving dsh through this route bypasses dsh's
+      # own bash/fs/todo tools, permission prompts, sandbox and trajectory:
+      # Claude Code does the work itself and returns prose. Good for text and
+      # self-contained tasks; not a substitute for a tool-calling model.
+      claude-code-cli:
+        displayName: Claude Code CLI (subscription, external process)
+        apiKeyEnv: CLAUDE_BRIDGE_TOKEN
+        api: openai-completions
+        baseURL: http://127.0.0.1:8318/v1
+        models:
+          - id: claude-code-default
+            name: Claude Code (session default)
+          - id: claude-code-opus
+            name: Claude Code - Opus
+          - id: claude-code-sonnet
+            name: Claude Code - Sonnet
+
+      # CLIProxyAPI — turns CLI OAuth logins into an OpenAI-compatible
+      # endpoint. Same endpoint Hermes uses as its `cliproxyapi` provider.
+      # Binary: C:\Users\sheke\AppData\Local\hermes\bin\cli-proxy-api.exe
+      # Start:  cli-proxy-api.exe -config C:\Users\sheke\.cli-proxy-api\config.yaml
+      # config host was 127.0.0.1 (Windows loopback, unreachable from WSL);
+      # changed to 0.0.0.0 so this route works. Backup kept alongside it.
+      # Gemini models come from the AI Studio `gemini-api-key`;
+      # claude-* come from the antigravity auth entry.
+      # Add more by logging in:  -claude-login  /  -codex-login
+      cliproxyapi:
+        displayName: CLIProxyAPI (local CLI logins)
+        apiKeyEnv: CLIPROXY_API_KEY
+        api: openai-completions
+        baseURL: http://172.20.112.1:8317/v1
+        models:
+          - id: gemini-3.1-flash-lite
+            name: Gemini 3.1 Flash Lite (AI Studio)
+          - id: gemini-3.6-flash-high
+            name: Gemini 3.6 Flash High (AI Studio)
+          - id: gemini-3.1-pro-low
+            name: Gemini 3.1 Pro Low (AI Studio)
+          - id: gemini-2.5-pro
+            name: Gemini 2.5 Pro (AI Studio)
+          - id: claude-sonnet-4-6
+            name: Claude Sonnet 4.6 (via Antigravity)
+          - id: claude-opus-4-6-thinking
+            name: Claude Opus 4.6 Thinking (via Antigravity)
+          - id: gpt-oss-120b-medium
+            name: GPT-OSS 120B Medium
+
+      # OmniRoute local gateway (Windows-side; from WSL this is the default
+      # gateway IP, not 127.0.0.1 — recover with:
+      #   ip route show default | awk '{print $3}')
+      omniroute:
+        displayName: OmniRoute (local gateway)
+        apiKeyEnv: OMNIROUTE_API_KEY
+        api: openai-completions
+        baseURL: http://172.20.112.1:20128/v1
+        models:
+          - id: oc/deepseek-v4-flash-free
+            name: DeepSeek V4 Flash (free, via OmniRoute)
+            contextWindow: 1000000
+          - id: cx/gpt-5.5-medium
+            name: GPT-5.5 Medium (ChatGPT subscription)
+            contextWindow: 400000
+
+      # NVIDIA NIM — direct against build.nvidia.com, not via OpenRouter.
+      # Free tier: the nvapi- key draws on NVIDIA's own free credit pool.
+      # Set NVIDIA_NIM_API_KEY (an `nvapi-` key, 70 chars) in the environment;
+      # get one from https://build.nvidia.com. On this machine the same key also
+      # backs OmniRoute's working `nvidia` connection.
+      #
+      # Every model below returned real content to a live chat/completions
+      # call on 2026-08-21 — the catalog lists 103, and many 404 or hang.
+      # Verified-broken and deliberately absent: llama-3.1-nemotron-ultra-253b-v1,
+      # nemotron-nano-3-30b-a3b, kimi-k2.6, mistral-large-2-instruct,
+      # llama-3.1-nemotron-70b-instruct, cosmos-reason2-8b, phi-3.5-moe-instruct,
+      # palmyra-creative-122b, mistral-nemo-12b-instruct (all 404);
+      # nemotron-nano-12b-v2-vl (500 EngineCore); and deepseek-v4-flash-0731,
+      # llama-3.3-70b-instruct, gemma-4-31b-it, llama-3.1-nemotron-nano-8b-v1
+      # (hang past 180s, reproduced twice).
+      #
+      # contextWindow is set only where this repo already recorded it for the
+      # same underlying model via its OpenRouter `:free` twin; omitted rather
+      # than guessed for the rest.
+      nvidia:
+        displayName: NVIDIA NIM (build.nvidia.com free tier)
+        apiKeyEnv: NVIDIA_NIM_API_KEY
+        api: openai-completions
+        baseURL: https://integrate.api.nvidia.com/v1
+        models:
+          # --- Nemotron family (NVIDIA's own) ---
+          - id: nvidia/nemotron-3-ultra-550b-a55b
+            name: Nemotron 3 Ultra 550B
+            contextWindow: 1000000
+          - { id: nvidia/nemotron-3-super-120b-a12b, name: Nemotron 3 Super 120B, contextWindow: 262144 }
+          - { id: nvidia/nemotron-3.5-lightning-30b-a3b, name: Nemotron 3.5 Lightning 30B, contextWindow: 1000000 }
+          - { id: nvidia/nemotron-3-nano-30b-a3b, name: Nemotron 3 Nano 30B, contextWindow: 256000 }
+          - { id: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning, name: Nemotron 3 Nano Omni Reasoning, contextWindow: 256000 }
+          - { id: nvidia/nvidia-nemotron-nano-9b-v2, name: Nemotron Nano 9B v2, contextWindow: 128000 }
+          - { id: nvidia/llama-3.3-nemotron-super-49b-v1.5, name: Llama 3.3 Nemotron Super 49B v1.5 }
+          - { id: nvidia/llama-3.3-nemotron-super-49b-v1, name: Llama 3.3 Nemotron Super 49B v1 }
+          - { id: nvidia/nemotron-mini-4b-instruct, name: Nemotron Mini 4B Instruct }
+          - { id: nvidia/ising-calibration-1.5-31b, name: Ising Calibration 1.5 31B }
+          # --- Third-party models hosted on NIM ---
+          - { id: openai/gpt-oss-120b, name: GPT-OSS 120B }
+          - { id: openai/gpt-oss-20b, name: GPT-OSS 20B, contextWindow: 131072 }
+          - { id: moonshotai/kimi-k3, name: Kimi K3 }
+          - { id: z-ai/glm-5.2, name: GLM 5.2, contextWindow: 256000 }
+          - { id: minimaxai/minimax-m3, name: MiniMax M3 }
+          - { id: stepfun-ai/step-3.7-flash, name: Step 3.7 Flash }
+          - { id: poolside/laguna-xs-2.1, name: Laguna XS 2.1 }
+          - { id: thinkingmachines/inkling, name: Inkling }
+          - { id: meta/muse-glimmer-30b, name: Muse Glimmer 30B }
+          - { id: meta/llama-3.1-8b-instruct, name: Llama 3.1 8B Instruct }
+
+      # Free fallback, no account balance required.
+      openrouter:
+        displayName: OpenRouter
+        apiKeyEnv: OPENROUTER_API_KEY
+        api: openai-completions
+        baseURL: https://openrouter.ai/api/v1
+        models:
+          - id: nvidia/nemotron-3-ultra-550b-a55b:free
+            name: Nemotron 3 Ultra 550B (free)
+            contextWindow: 1000000
+
+- id: agent-default-model
+  config:
+    provider: zenmux
+    model: deepseek/deepseek-v4-flash-free

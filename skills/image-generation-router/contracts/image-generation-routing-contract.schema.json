@@ -3,51 +3,199 @@
   "$id": "https://local.invalid/image-generation-routing-contract.schema.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["contract_version", "policy", "providers", "fallback", "secrets", "provenance", "consumer_contract"],
+  "required": [
+    "contract_version",
+    "policy",
+    "providers",
+    "fallback",
+    "secrets",
+    "provenance",
+    "consumer_contract"
+  ],
   "properties": {
-    "contract_version": {"const": "1.0"},
+    "contract_version": {
+      "const": "1.0"
+    },
     "policy": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["default_execution_path", "explicit_provider_request_wins", "silent_provider_fallback_allowed", "silent_model_substitution_allowed", "max_model_generations_per_deliverable"],
+      "required": [
+        "default_execution_path",
+        "explicit_provider_request_wins",
+        "silent_provider_fallback_allowed",
+        "silent_model_substitution_allowed",
+        "max_model_generations_per_deliverable",
+        "metered_route_requires_explicit_request"
+      ],
       "properties": {
-        "default_execution_path": {"const": "built-in-image_gen"},
-        "explicit_provider_request_wins": {"const": true},
-        "silent_provider_fallback_allowed": {"const": false},
-        "silent_model_substitution_allowed": {"const": false},
-        "max_model_generations_per_deliverable": {"type": "integer", "minimum": 1, "maximum": 2}
+        "default_execution_path": {
+          "const": "built-in-image_gen"
+        },
+        "explicit_provider_request_wins": {
+          "const": true
+        },
+        "silent_provider_fallback_allowed": {
+          "const": false
+        },
+        "silent_model_substitution_allowed": {
+          "const": false
+        },
+        "max_model_generations_per_deliverable": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "metered_route_requires_explicit_request": {
+          "const": true
+        }
       }
     },
     "providers": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["built-in-image_gen", "cliproxyapi-gemini"],
+      "required": [
+        "built-in-image_gen",
+        "cliproxyapi-gemini",
+        "openai-images-api"
+      ],
       "properties": {
         "built-in-image_gen": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["provider", "availability_source", "authentication"],
+          "required": [
+            "provider",
+            "availability_source",
+            "authentication"
+          ],
           "properties": {
-            "provider": {"const": "openai"},
-            "availability_source": {"const": "successful-host-tool-call"},
-            "authentication": {"type": "string", "minLength": 1}
+            "provider": {
+              "const": "openai"
+            },
+            "availability_source": {
+              "const": "successful-host-tool-call"
+            },
+            "authentication": {
+              "type": "string",
+              "minLength": 1
+            }
           }
         },
         "cliproxyapi-gemini": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["provider", "base_url_default", "discovery_endpoint", "generation_endpoint", "availability_source", "image_model_match", "preferred_models", "authentication", "discovery_command", "readiness_command"],
+          "required": [
+            "provider",
+            "base_url_default",
+            "discovery_endpoint",
+            "generation_endpoint",
+            "availability_source",
+            "image_model_match",
+            "preferred_models",
+            "authentication",
+            "discovery_command",
+            "readiness_command"
+          ],
           "properties": {
-            "provider": {"const": "gemini"},
-            "base_url_default": {"const": "http://127.0.0.1:8317"},
-            "discovery_endpoint": {"const": "/v1/models"},
-            "generation_endpoint": {"const": "/v1/chat/completions"},
-            "availability_source": {"const": "authenticated-live-catalog"},
-            "image_model_match": {"type": "string", "minLength": 1},
-            "preferred_models": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
-            "authentication": {"type": "string", "minLength": 1},
-            "discovery_command": {"type": "string", "minLength": 1},
-            "readiness_command": {"type": "string", "minLength": 1}
+            "provider": {
+              "const": "gemini"
+            },
+            "base_url_default": {
+              "const": "http://127.0.0.1:8317"
+            },
+            "discovery_endpoint": {
+              "const": "/v1/models"
+            },
+            "generation_endpoint": {
+              "const": "/v1/chat/completions"
+            },
+            "availability_source": {
+              "const": "authenticated-live-catalog"
+            },
+            "image_model_match": {
+              "type": "string",
+              "minLength": 1
+            },
+            "preferred_models": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "authentication": {
+              "type": "string",
+              "minLength": 1
+            },
+            "discovery_command": {
+              "type": "string",
+              "minLength": 1
+            },
+            "readiness_command": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "openai-images-api": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "provider",
+            "base_url_default",
+            "generation_endpoint",
+            "edit_endpoint",
+            "availability_source",
+            "authentication",
+            "preferred_models",
+            "metered",
+            "readiness_command",
+            "selection_notes"
+          ],
+          "properties": {
+            "provider": {
+              "const": "openai"
+            },
+            "base_url_default": {
+              "type": "string",
+              "minLength": 1
+            },
+            "generation_endpoint": {
+              "type": "string",
+              "minLength": 1
+            },
+            "edit_endpoint": {
+              "type": "string",
+              "minLength": 1
+            },
+            "availability_source": {
+              "const": "successful-authenticated-call"
+            },
+            "authentication": {
+              "type": "string",
+              "minLength": 1
+            },
+            "preferred_models": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            },
+            "metered": {
+              "const": true
+            },
+            "readiness_command": {
+              "type": "string",
+              "minLength": 1
+            },
+            "selection_notes": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string"
+              }
+            }
           }
         }
       }
@@ -55,37 +203,94 @@
     "fallback": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["from", "to", "required_conditions"],
+      "required": [
+        "from",
+        "to",
+        "required_conditions"
+      ],
       "properties": {
-        "from": {"const": "built-in-image_gen"},
-        "to": {"const": "cliproxyapi-gemini"},
-        "required_conditions": {"type": "array", "contains": {"const": "failure-disclosed-to-user"}, "minItems": 3, "uniqueItems": true}
+        "from": {
+          "const": "built-in-image_gen"
+        },
+        "to": {
+          "const": "cliproxyapi-gemini"
+        },
+        "required_conditions": {
+          "type": "array",
+          "contains": {
+            "const": "failure-disclosed-to-user"
+          },
+          "minItems": 3,
+          "uniqueItems": true
+        }
       }
     },
     "secrets": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["must_never_log"],
-      "properties": {"must_never_log": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}}
+      "required": [
+        "must_never_log"
+      ],
+      "properties": {
+        "must_never_log": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
     },
     "provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["required", "required_fields"],
+      "required": [
+        "required",
+        "required_fields"
+      ],
       "properties": {
-        "required": {"const": true},
-        "required_fields": {"type": "array", "items": {"type": "string"}, "minItems": 10, "uniqueItems": true}
+        "required": {
+          "const": true
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 10,
+          "uniqueItems": true
+        }
       }
     },
     "consumer_contract": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["deck_image_model_is_text_free", "generated_assets_are_evidence", "project_assets_must_be_persisted_outside_tmp", "required_repo_consumers"],
+      "required": [
+        "deck_image_model_is_text_free",
+        "generated_assets_are_evidence",
+        "project_assets_must_be_persisted_outside_tmp",
+        "required_repo_consumers"
+      ],
       "properties": {
-        "deck_image_model_is_text_free": {"const": true},
-        "generated_assets_are_evidence": {"const": false},
-        "project_assets_must_be_persisted_outside_tmp": {"const": true},
-        "required_repo_consumers": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true}
+        "deck_image_model_is_text_free": {
+          "const": true
+        },
+        "generated_assets_are_evidence": {
+          "const": false
+        },
+        "project_assets_must_be_persisted_outside_tmp": {
+          "const": true
+        },
+        "required_repo_consumers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
       }
     }
   }

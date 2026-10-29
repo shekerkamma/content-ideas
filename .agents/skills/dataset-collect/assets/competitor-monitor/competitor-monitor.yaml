@@ -1,0 +1,15 @@
+name: competitor-monitor
+description: 'Dataset: competitor-monitor'
+
+sources:
+  - id: competitor_profiles
+    adapter: file
+    fixture: fixture-companies.json
+    from_file: competitors.txt
+    input_key: company
+    parallel: 3
+    on_error: skip
+
+storage:
+  format: jsonl
+  path: ./data/competitor-monitor/

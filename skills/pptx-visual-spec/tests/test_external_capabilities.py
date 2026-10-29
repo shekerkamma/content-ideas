@@ -19,7 +19,7 @@ def test_external_capabilities_have_portable_fallbacks() -> None:
 
 
 def test_ai_analyst_is_a_complete_mirror() -> None:
-    mirror = Path(__file__).resolve().parents[1] / "portable-skills" / "ai-analyst"
+    mirror = ROOT / "portable-skills" / "ai-analyst"
     assert (mirror / "LICENSE").is_file()
     assert (mirror / "export-results" / "SKILL.md").is_file()
     assert len(list(mirror.glob("*/SKILL.md"))) >= 30

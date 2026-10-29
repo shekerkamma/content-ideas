@@ -1,0 +1,17 @@
+{
+  "contract_version": "2.0",
+  "status": "synthetic_content_v14_native_design",
+  "design_authority": "deepgrid-v14-native-archetypes-draft.pptx",
+  "source_reference": "C:/Users/sheke/OneDrive/Desktop/DeepGrid-India-ADAS-Competitive-Strategy-v14-DesignContract-reviewed.pptx",
+  "archetypes": [
+    {"id": "cover", "question": "What should leadership believe and do?", "dominant_exhibit": "decision-logic panel", "max_words": 115},
+    {"id": "ladder", "question": "What is proven and what remains unverified?", "dominant_exhibit": "evidence ladder plus bounded verdict", "max_words": 145},
+    {"id": "table", "question": "Which decisions follow from each evidence class?", "dominant_exhibit": "analytical decision table", "max_words": 165},
+    {"id": "funnel", "question": "How must claims narrow as accountability rises?", "dominant_exhibit": "qualification funnel", "max_words": 125},
+    {"id": "matrix", "question": "Who wins on buyer-priced control points?", "dominant_exhibit": "four-field comparison matrix", "max_words": 145},
+    {"id": "heatmap", "question": "Where does threat change by buying arena?", "dominant_exhibit": "threat-by-arena heatmap", "max_words": 155},
+    {"id": "mechanism", "question": "What converts evidence into buyer value?", "dominant_exhibit": "four-step causal mechanism", "max_words": 135},
+    {"id": "timeline", "question": "Which sequence creates reversible learning?", "dominant_exhibit": "event timeline with early signals", "max_words": 140},
+    {"id": "waterfall", "question": "What evidence unlocks further commitment?", "dominant_exhibit": "directional evidence bridge", "max_words": 125}
+  ]
+}

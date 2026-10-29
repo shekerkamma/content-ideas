@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design OS</title>
+<style>
+  :root {
+    --bg: #f6f4ef; --surface: #fffdf8; --ink: #1d1f21; --ink-2: #5b6167; --line: #e2ddd2; --accent: #b4622a;
+    --accent-ink: #fff; --shadow: 0 1px 2px #0000000f, 0 4px 16px #0000000a;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121314; --surface: #1b1d1f; --ink: #ecebe6; --ink-2: #9aa1a7; --line: #2d3034; --accent: #e08a4f;
+      --accent-ink: #151515; --shadow: 0 1px 2px #0006; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .bar { max-width: 1400px; margin: 0 auto; padding: 14px 16px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+  h1 { margin: 0; font-size: 17px; letter-spacing: -.01em; }
+  h1 span { color: var(--ink-2); font-weight: 400; font-size: 13px; margin-left: 8px; }
+  form { flex: 1 1 320px; display: flex; gap: 8px; }
+  input[type=search] { flex: 1; min-width: 0; min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px;
+    background: var(--surface); color: var(--ink); font: inherit; }
+  input[type=search]:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button { min-height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
+    color: var(--ink); font: 600 14px system-ui, sans-serif; cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .kinds { display: flex; gap: 6px; }
+  .kinds button[aria-pressed=true] { border-color: var(--accent); color: var(--accent); }
+  .note { max-width: 1400px; margin: 0 auto; padding: 10px 16px 0; color: var(--ink-2); font-size: 13px; min-height: 30px; }
+  /* row-first grid, not CSS columns: columns fill top-to-bottom and scramble a ranked list */
+  main { max-width: 1400px; margin: 0 auto; padding: 8px 16px 48px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .tile { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden; box-shadow: var(--shadow); }
+  .tile > a.thumb { display: block; aspect-ratio: 16 / 10; background: var(--line); }
+  .tile img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .ph { height: 100%; display: grid; place-items: center; padding: 16px; text-align: center; color: var(--ink-2); background: var(--line); font-size: 13px; }
+  .meta { padding: 10px 12px 12px; }
+  .name { font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+  .sub { font-size: 12px; color: var(--ink-2); display: flex; gap: 8px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .acts { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  .acts a, .acts button { min-height: 36px; padding: 0 10px; font: 600 12px system-ui, sans-serif; border-radius: 6px;
+    border: 1px solid var(--line); background: transparent; color: var(--ink); display: inline-flex; align-items: center; text-decoration: none; }
+  .empty { grid-column: 1 / -1; text-align: center; color: var(--ink-2); padding: 64px 0; }
+  @media (max-width: 600px) { main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .bar { padding: 12px 16px; }
+    .acts a.open { display: none; } .acts button { flex: 1 1 auto; justify-content: center; } .meta { padding: 8px 10px 10px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <h1>Design OS<span id="count"></span></h1>
+    <form id="f" role="search">
+      <label for="q" class="sr" style="position:absolute;left:-9999px">Search by what is in the image</label>
+      <input id="q" type="search" placeholder="Search by what's in it: a burger, dark dashboard, orange logo…" autocomplete="off">
+      <button class="primary" type="submit">Search</button>
+    </form>
+    <div class="kinds" role="group" aria-label="Filter by type">
+      <button type="button" data-kind="" aria-pressed="true">All</button>
+      <button type="button" data-kind="image" aria-pressed="false">Images</button>
+      <button type="button" data-kind="video" aria-pressed="false">Videos</button>
+      <button type="button" data-kind="design" aria-pressed="false">Designs</button>
+    </div>
+  </div>
+</header>
+<p class="note" id="note" aria-live="polite"></p>
+<main id="grid"></main>
+<script>
+  const S = { q: '', kind: '', like: null, likeName: '' };
+  const $ = (s) => document.querySelector(s);
+  const size = (n) => n > 1e6 ? (n / 1e6).toFixed(1) + ' MB' : Math.round(n / 1e3) + ' KB';
+  async function load() {
+    const p = new URLSearchParams({ kind: S.kind });
+    if (S.like) p.set('like', S.like); else if (S.q) p.set('q', S.q);
+    $('#note').textContent = S.q || S.like ? 'Searching…' : '';
+    const r = await (await fetch('/api/items?' + p)).json();
+    $('#count').textContent = `${r.searchable}/${r.total} searchable`;
+    $('#note').textContent = S.like ? `More like ${S.likeName}` : S.q ? `Best matches for “${S.q}”` : 'Newest first';
+    const g = $('#grid'); g.textContent = '';
+    if (!r.items.length) { g.innerHTML = '<p class="empty">Nothing here yet.</p>'; return; }
+    for (const it of r.items) {
+      const t = document.createElement('article'); t.className = 'tile';
+      const media = `<a class="thumb" href="/file/${it.id}" target="_blank" rel="noopener" aria-label="Open ${escapeHtml(it.name)}">` +
+        (it.thumb ? `<img loading="lazy" src="/thumb/${it.id}" alt="">` : `<div class="ph">${it.title ? escapeHtml(it.title) : 'no preview'}</div>`) + '</a>';
+      t.innerHTML = `${media}<div class="meta"><div class="name"></div>
+        <div class="sub"><span>${it.kind}</span><span>${size(it.size)}</span>${it.score != null ? `<span>${(+it.score).toFixed(2)}</span>` : ''}</div>
+        <div class="acts"><a class="open" href="/file/${it.id}" target="_blank" rel="noopener">Open</a>
+        <button type="button" data-copy>Copy path</button><button type="button" data-like>More like this</button></div></div>`;
+      t.querySelector('.name').textContent = it.title || it.name;
+      t.querySelector('[data-copy]').onclick = (e) => copy(it.path, e.target);
+      t.querySelector('[data-like]').onclick = () => { S.like = it.id; S.likeName = it.name; S.q = ''; $('#q').value = ''; load(); scrollTo(0, 0); };
+      g.append(t);
+    }
+  }
+  function escapeHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  async function copy(text, btn) {
+    try { await navigator.clipboard.writeText(text); }
+    catch { const a = document.createElement('textarea'); a.value = text; document.body.append(a); a.select(); document.execCommand('copy'); a.remove(); }
+    const was = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => (btn.textContent = was), 1200);
+  }
+  $('#f').onsubmit = (e) => { e.preventDefault(); S.q = $('#q').value.trim(); S.like = null; load(); };
+  document.querySelectorAll('.kinds button').forEach((b) => b.onclick = () => {
+    document.querySelectorAll('.kinds button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    S.kind = b.dataset.kind; load();
+  });
+  load();
+</script>
+</body>
+</html>

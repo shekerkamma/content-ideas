@@ -1,0 +1,18 @@
+{
+  "policy": "All 30 slides are 100% native objects. Zero raster images, therefore zero cropping or aspect defects by construction.",
+  "rationale": "The brief reported images overlapping and mis-cropped in the prior version. Native geometry removes that failure mode entirely rather than re-cropping assets.",
+  "regions": [
+    { "slide": 1,  "verdict": "AUTHOR", "form": "native geometric motif", "note": "Concentric ellipses and vertical rules on midnight. No bitmap." },
+    { "slide": "6,12,18,27", "verdict": "AUTHOR", "form": "native chapter divider", "note": "Midnight field, cyan rule, part number and title." },
+    { "slide": "2,4,15,20,21,22,25", "verdict": "NATIVE", "form": "KPI tiles", "note": "Numeral size scales to tile width so values never wrap." },
+    { "slide": "7,11,15,23,26", "verdict": "NATIVE", "form": "column trajectory, direct-labelled", "note": "No legend; values sit above each column per the design system." },
+    { "slide": "8,9,19", "verdict": "NATIVE", "form": "100% proportion strip with keyed legend" },
+    { "slide": "13,16", "verdict": "NATIVE", "form": "endpoint ramp rows", "note": "Start and end values labelled directly; clearer than four crossing lines." },
+    { "slide": "5,20", "verdict": "NATIVE", "form": "process chain, flowChartProcess nodes" },
+    { "slide": 4,  "verdict": "NATIVE", "form": "regulatory timeline rail" },
+    { "slide": 22, "verdict": "NATIVE", "form": "horizontal comparison bars" },
+    { "slide": "3,9,10,14,17,19,20,21,23,24,25,28,29", "verdict": "NATIVE", "form": "tables with derived row heights" },
+    { "slide": 30, "verdict": "AUTHOR", "form": "native close panel" }
+  ],
+  "image_generation": "Not invoked. No slide met the GENERATE verdict: the cover and dividers are served by deterministic native geometry, which is stronger here because the brief's defect was image handling."
+}

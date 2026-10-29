@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # design-qa-detect.sh — pinned Impeccable HTML design-QA gate.
 #
-# Referenced by skills/pptx-visual-spec/portable-skills/marp/SKILL.md and
+# Referenced by portable-skills/marp/SKILL.md and
 # skills/genspark-branded-deck/SKILL.md as the preferred gate for HTML-derived
 # decks before PPTX export. Impeccable does not understand native .pptx; use
 # skills/pptx-design-quality/scripts/lint_pptx.py for the PowerPoint artifact.
@@ -11,7 +11,7 @@
 # or npx unavailable)
 set -uo pipefail
 
-IMPECCABLE_VERSION="3.5.0"
+IMPECCABLE_VERSION="4.1.0"
 REQUIRED_NODE_MAJOR=24
 
 if ! command -v node >/dev/null 2>&1; then

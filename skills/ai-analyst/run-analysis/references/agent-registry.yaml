@@ -403,3 +403,167 @@ agents:
     outputs:
       - working/comms_draft.md
     knowledge_context: []
+
+  # ── Causal inference & experimentation (ported from AI Analyst Plus) ──
+
+  - name: causal-method-selector
+    file: agents/causal-method-selector.md
+    pipeline_step: null
+    critical: true
+    inputs:
+      - CAUSAL_QUESTION
+      - DATA_DESCRIPTION
+    outputs:
+      - working/causal_method_selection.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: causal-analyzer
+    file: agents/causal-analyzer.md
+    pipeline_step: null
+    critical: true
+    depends_on:
+      - causal-method-selector
+    inputs:
+      - METHOD
+      - DATA
+      - OUTCOME_COL
+      - TREATMENT_COL
+      - COVARIATES
+    outputs:
+      - working/causal_analysis_results.json
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: causal-assumption-checker
+    file: agents/causal-assumption-checker.md
+    pipeline_step: null
+    critical: true
+    depends_on:
+      - causal-method-selector
+      - causal-analyzer
+    inputs:
+      - METHOD
+      - DATA
+      - ANALYSIS_RESULTS
+    outputs:
+      - working/assumption_report.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: causal-sensitivity
+    file: agents/causal-sensitivity.md
+    pipeline_step: null
+    critical: true
+    depends_on:
+      - causal-method-selector
+      - causal-analyzer
+    inputs:
+      - METHOD
+      - ANALYSIS_RESULTS
+      - MATCHED_DATA
+    outputs:
+      - working/sensitivity_report.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: causal-report-generator
+    file: agents/causal-report-generator.md
+    pipeline_step: null
+    critical: true
+    depends_on:
+      - causal-analyzer
+      - causal-assumption-checker
+      - causal-sensitivity
+    inputs:
+      - CAUSAL_QUESTION
+      - ANALYSIS_RESULTS
+      - ASSUMPTION_REPORT
+      - SENSITIVITY_REPORT
+      - INTERPRETATION
+    outputs:
+      - working/causal_report.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: confound-scanner
+    file: agents/confound-scanner.md
+    pipeline_step: null
+    critical: true
+    depends_on:
+      - hypothesis
+    inputs:
+      - HYPOTHESIS
+      - ANALYSIS_BRIEF
+      - DATA_CONTEXT
+      - TIME_PERIOD
+    outputs:
+      - working/confound_scan.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: experiment-analyzer
+    file: agents/experiment-analyzer.md
+    pipeline_step: null
+    critical: true
+    inputs:
+      - EXPERIMENT_DATA
+      - PRIMARY_METRIC
+      - GUARDRAIL_METRICS
+      - TREATMENT_COLUMN
+      - SEGMENT_COLUMNS
+    outputs:
+      - working/experiment_analysis.json
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: experiment-interpreter
+    file: agents/experiment-interpreter.md
+    pipeline_step: null
+    critical: true
+    depends_on:
+      - experiment-analyzer
+    inputs:
+      - ANALYSIS_RESULTS
+      - EXPERIMENT_CONFIG
+    outputs:
+      - working/experiment_interpretation.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: experiment-monitor
+    file: agents/experiment-monitor.md
+    pipeline_step: null
+    critical: true
+    inputs:
+      - EXPERIMENT_CONFIG
+      - CURRENT_DATA
+    outputs:
+      - working/experiment_monitor.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md
+
+  - name: experiment-readout
+    file: agents/experiment-readout.md
+    pipeline_step: null
+    critical: false
+    depends_on:
+      - experiment-interpreter
+    inputs:
+      - ANALYSIS_RESULTS
+      - AUDIENCE
+      - CONTEXT
+    outputs:
+      - working/experiment_readout.md
+    knowledge_context:
+      - .knowledge/datasets/{active}/schema.md
+      - .knowledge/datasets/{active}/quirks.md

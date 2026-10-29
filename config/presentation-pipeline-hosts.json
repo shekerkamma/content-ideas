@@ -1,5 +1,5 @@
 {
-  "contract_version": "1.0",
+  "contract_version": "1.1",
   "canonical_root": "/home/sheke/content-ideas/skills",
   "hosts": {
     "claude-code": "/home/sheke/.claude/skills",
@@ -10,8 +10,15 @@
     "present",
     "watch",
     "presentation-source-bundle",
+    "evidence-led-competitor-pipeline",
+    "competitor-analysis-pipeline",
+    "aianalyst-competitor-analysis",
+    "compound-competitor-analysis-pptx",
     "ai-analyst",
     "story-architect",
+    "grill-me",
+    "meta-loop",
+    "llm-council",
     "presentation-content-writer",
     "impeccable",
     "explainer-graphic",
@@ -19,6 +26,7 @@
     "branded-pptx-deck",
     "pptx-toolkit",
     "pptx-design-quality",
+    "pptx-visual-spec",
     "officecli"
   ],
   "windows_runtime": {

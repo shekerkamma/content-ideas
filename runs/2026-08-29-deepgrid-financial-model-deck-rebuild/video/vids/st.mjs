@@ -1,0 +1,14 @@
+import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
+import { kill } from './lib.mjs';
+const VID='174Q-q4Zu7vTYoBppSvvsEBxr2gT46pV21pF0MWzwimA';
+const b=await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx=b.contexts()[0];
+const page=ctx.pages().find(p=>p.url().includes(VID));
+await page.bringToFront(); await page.waitForTimeout(2000); await kill(page);
+await page.screenshot({path:'st.png'});
+console.log('TITLE:',await page.title());
+const b2=await page.evaluate(()=>document.body.innerText);
+console.log('dur  :',(b2.match(/\d\d:\d\d\.\d\s*\/\s*\d\d:\d\d\.\d/)||['-'])[0]);
+console.log('scene:',(b2.match(/Scene \d+ \/ \d+/)||['-'])[0]);
+console.log('msgs :',b2.split('\n').filter(l=>/error|fail|unable|too |limit|not supported|try again/i.test(l)&&l.length<90).slice(0,4).join(' | ')||'none');
+await b.close();

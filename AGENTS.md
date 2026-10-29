@@ -55,6 +55,22 @@ Skill recovery, research, and porting contract:
   2 succeeded when only search results were returned or cached content was used.
 - See `docs/skill-recovery-porting-contract.md` for the operational procedure
   and verification commands.
+- In Codex Cloud, resolve a host-oriented skill path such as
+  `~/.claude/skills/<name>` or `~/.codex/skills/<name>` to the repository copy
+  at `skills/<name>/`. Never assume a user-home skill installation exists in a
+  cloud task container.
+- Treat Claude-specific interaction names as workflow intent: replace
+  `AskUserQuestion` with a normal concise user question, and use the active
+  host's plan or collaboration mechanism for Claude-only plan/subagent tool
+  names. Do not fail a skill solely because its prose names another host's
+  equivalent interaction tool.
+- Windows, WSL, macOS, browser-profile, and desktop-application paths are
+  host-specific alternatives. In Codex Cloud, prefer repository-relative
+  resources and Linux tools installed by the configured environment. Report a
+  capability as host-only when no cloud-safe alternative is bundled.
+- The complete cross-host import manifest and portability findings live under
+  `runs/skill-port/`. Generated caches, Python bytecode, nested Git metadata,
+  `node_modules`, and secret `.env` files are not portable skill source.
 
 GBrain knowledge rule:
 - If `gbrain` is available as an MCP server in Claude Code, Codex, or another
@@ -206,5 +222,28 @@ Local AI-gateway proxy diagnostics:
   inherit the WSL cwd, which Windows renders as a `\\wsl.localhost\...` UNC
   path. Pass an explicit Windows working directory or absolute config path
   instead of relying on the invoked process's own relative-path resolution.
+
+Antigravity CLI & IDE cross-host sync contract:
+- Treat WSL repo-local `skills/` as the canonical source for tools and execution.
+- Maintain Antigravity CLI settings at `~/.gemini/antigravity-cli/settings.json`
+  with autonomous permissions and WSL workspace roots.
+- Maintain Antigravity global plugins and unified Linux MCP servers in
+  `~/.gemini/config/config.json` and `~/.gemini/config/mcp_config.json`.
+- Maintain Antigravity IDE remote settings in
+  `~/.antigravity-server/data/User/settings.json`.
+- Track incremental wave migrations in `docs/antigravity-sync-backlog.md`.
+
+## Gemini media lane (`gemini-api`, pilot)
+
+- `gemini-api` v0.4.4 is pinned in `~/.local/bin` (WSL). It bills the paid
+  `GEMINI_API_KEY`; Google AI Pro does not cover it. Do not upgrade unasked.
+- Use it to call Gemini models, generate or edit media (image, tts, music,
+  video), analyze files, transcribe, or launch managed agents.
+- Inspect `--help` or `--usage` to choose a command, and `--schema` when building
+  a `--body` JSON payload. Preview calls with `--dry-run`.
+- For JSON or `--jq` on streaming/background commands (`generate`, `agent run`,
+  `agent status`), pass `--stream=false --output-format json`.
+- Capture the returned file paths and interaction IDs for multi-step tasks.
+  Video and Deep Research cost real money: say the estimate before running.
 
 @CLAUDE.md

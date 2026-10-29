@@ -1,0 +1,4 @@
+# Clip narration — the far-horizon part
+
+**mesh** · 40.4 s · SoC4-A optionality, beyond the plan
+One more part, and it is deliberately not in the plan you have just seen. SoC4-A is the far horizon: one thousand and twenty-four tiles on TSMC's four-nanometre process, arranged as a thirty-two by thirty-two mesh, reaching four petaflops at FP4. Watch the diagonal wavefront cross the array — that is a store propagating from one edge to the other, and moving data that way efficiently is the whole problem a mesh this size has to solve. Each tile is a five-port router with a safety wrapper, and the blocks inside it are not sketches: the FlooNoC network-on-chip, the Spatz vector unit, the ITA attention accelerator and the iDMA mover are published, silicon-proven designs from the open PULP platform. None of this is what the raise funds. SoC2 is the business. This is the option that the business buys you.

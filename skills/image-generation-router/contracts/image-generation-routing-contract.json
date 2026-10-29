@@ -5,7 +5,8 @@
     "explicit_provider_request_wins": true,
     "silent_provider_fallback_allowed": false,
     "silent_model_substitution_allowed": false,
-    "max_model_generations_per_deliverable": 2
+    "max_model_generations_per_deliverable": 2,
+    "metered_route_requires_explicit_request": true
   },
   "providers": {
     "built-in-image_gen": {
@@ -20,10 +21,33 @@
       "generation_endpoint": "/v1/chat/completions",
       "availability_source": "authenticated-live-catalog",
       "image_model_match": "image",
-      "preferred_models": ["gemini-3.1-flash-image"],
+      "preferred_models": [
+        "gemini-3.1-flash-image"
+      ],
       "authentication": "local-client-key-plus-provider-oauth",
       "discovery_command": "python3 skills/image-generation-router/scripts/generate_gemini.py --list-models",
       "readiness_command": "python3 skills/image-generation-router/scripts/generate_gemini.py --probe"
+    },
+    "openai-images-api": {
+      "provider": "openai",
+      "base_url_default": "https://api.openai.com/v1/images",
+      "generation_endpoint": "/generations",
+      "edit_endpoint": "/edits",
+      "availability_source": "successful-authenticated-call",
+      "authentication": "OPENAI_API_KEY",
+      "preferred_models": [
+        "gpt-image-2",
+        "chatgpt-image-latest"
+      ],
+      "metered": true,
+      "readiness_command": "python3 skills/ai-graphics/scripts/openai_image.py --prompt x --out /tmp/probe.png --dry-run",
+      "selection_notes": [
+        "No mainline model in the path, so the design spec is NOT rewritten before rendering.",
+        "Prefer for spec-faithful work and for reference editing; built-in-image_gen routes",
+        "through a mainline host that revises the prompt.",
+        "Costs money per image and does not share the ChatGPT plan quota.",
+        "Renders the same model as built-in-image_gen: gpt-image 2.0."
+      ]
     }
   },
   "fallback": {
@@ -36,7 +60,11 @@
     ]
   },
   "secrets": {
-    "must_never_log": ["CLIPROXYAPI_KEY", "config-api-key", "provider-oauth-token"]
+    "must_never_log": [
+      "CLIPROXYAPI_KEY",
+      "config-api-key",
+      "provider-oauth-token"
+    ]
   },
   "provenance": {
     "required": true,

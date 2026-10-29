@@ -57,24 +57,43 @@ python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/init_deck_context.py" \
   --run <run-dir> --title "<deck title>"
 ```
 
-### Deriving a draft from a reference deck (optional)
+### Deriving a draft from a reference deck or a design canvas (optional)
 
-When rebuilding from a reference presentation, draft `template-profile.json` from it
-instead of hand-authoring from a blank template:
+When rebuilding from a reference presentation — or from a `/design` canvas drawn for
+this deck — draft `template-profile.json` from it instead of hand-authoring from a
+blank template:
 
 ```bash
 python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/derive_template_profile.py" \
   --run <run-dir> \
   --evidence <run-dir>/presentation-evidence.json \
-  --pptx <reference.pptx>
+  --pptx <reference.pptx> \
+  --canvas <canvas-dir>
 ```
 
-Either `--evidence` (from `presentation-source-bundle`) or `--pptx` works alone; supply
-both for the most complete draft. The script writes `<run-dir>/draft-template-profile.json`
-only — it never overwrites `template-profile.json`. Review the derivation notes it prints,
-tailor the draft, then `cp` it over `template-profile.json` before validating. See
+Any one of `--evidence` (from `presentation-source-bundle`), `--pptx`, or `--canvas`
+works alone; supply more for a more complete draft. The script writes
+`<run-dir>/draft-template-profile.json` only — it never overwrites
+`template-profile.json`. Review the derivation notes it prints, tailor the draft, then
+`cp` it over `template-profile.json` before validating. See
 [`references/template-derivation.md`](references/template-derivation.md) for exactly what
 each field's heuristic does and does not cover.
+
+**`--canvas` takes the `/design` working tree** — the directory holding `canvas.json`
+and the `*.dc.html` artboards. It is the only input that derives `geometry.grid_columns`,
+`geometry.gutter_inches`, and `composition.corner_radius`, because a canvas declares its
+grid and radii where a rendered deck only implies them. It is stdlib-only (no
+`python-pptx`, no Pillow), and when combined with `--pptx` it wins every field it
+derives — a canvas is the design you intend, a reference deck is the design you have.
+
+Two things to hold onto:
+
+- **The px scale is derived, not assumed.** The reference artboard's frame width in
+  `canvas.json` fixes `pt = px * (slide_width_inches / frame_width_px) * 72`. At a
+  1280x720 artboard that is 0.75pt/px; at 1920x1080 it is 0.5. Reading a canvas at a
+  fixed 0.75 would inflate every size by a third on any other frame.
+- **A canvas sets geometry, type, and brand — never evidence.** Claims and numbers stay
+  with `presentation-evidence.json` and `check_claim_evidence.py`.
 
 Tailor both files, then validate:
 
@@ -123,6 +142,54 @@ python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_pptx.py" \
 Exit `0` means no unresolved findings, `2` means design findings were detected, and
 `1` means the lint run itself failed. `--fast` skips higher-cost image-resolution and
 contrast checks for inner-loop builds.
+
+When `deck-design.json` declares a `motion` block, also run the motion linter. Static
+contact sheets and Office render QA both inspect resting frames, so neither can see a
+transition or a build at all:
+
+```bash
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/lint_motion.py" \
+  <run-dir>/<deck>-draft.pptx \
+  --config <run-dir>/deck-design.json \
+  --json --out <run-dir>/qa/pptx-motion-lint.json
+```
+
+Same exit codes as `lint_pptx.py`. It reads transition and timing XML straight out of
+the package rather than calling `officecli`, so the check stays independent of the tool
+that authored the motion. Decks with no `motion` block exit `0` and report nothing.
+
+Author motion with `officecli` (`transition` and `animation` elements — see the
+`officecli` skill). **`officecli` only persists writes to Windows-side paths.** Given a
+WSL path it prints `Updated ...` and leaves the file byte-identical, so run it against
+`C:\...` and verify with `lint_motion.py` before trusting any motion edit.
+
+A motion contract is a claim about what the deck does when it plays, and no
+resting-frame check can confirm it. On Windows with PowerPoint available, render the
+motion and review it:
+
+```bash
+python3 "$PPTX_DESIGN_QUALITY_DIR/scripts/motion_contact_sheet.py" \
+  <run-dir>/<deck>-draft.pptx --out-dir <run-dir>/qa/motion --json
+```
+
+It drives PowerPoint's own `CreateVideo`, samples the result, and tiles it into
+`motion-contact-sheet.png`. Exit `0` means a sheet was produced, `3` means blocked,
+`1` means bad input. Run `--preflight-only` first to check the environment, and
+`--from-video <mp4>` to rebuild the sheet without re-exporting.
+
+Two failure modes it reports rather than dying obscurely:
+
+- **PowerPoint is a single-instance COM server.** Automation attaches to whatever
+  instance is already running, so one degraded window — long-running, or titled
+  "(Unlicensed Product)" — makes every call fail with `0x80048240` while a freshly
+  launched instance works. Preflight names the running instances; close PowerPoint
+  and retry before concluding automation is unavailable.
+- **PowerPoint cannot open a WSL path.** Decks under WSL are staged to a
+  Windows-side temp directory, and paths are resolved to absolute first — a
+  relative path is resolved against PowerPoint's own cwd and fails as `E_FAIL`.
+
+Where PowerPoint is unavailable, say the deck's motion is unreviewed and label it
+`blocked`; a passing `lint_motion.py` verifies the contract, not the playback.
 
 For an evidence-derived deck (`slide-plan.json`'s `deck.evidence_contract` is non-null),
 also run the mechanical claim-vs-evidence check before Office render QA:
@@ -205,7 +272,8 @@ for the PowerPoint artifact.
 
 - `python-pptx` — required by `lint_pptx.py`.
 - `jsonschema` — required by `validate_deck_context.py`.
-- `Pillow` — required by `derive_template_profile.py` for brand color sampling.
+- `Pillow` — required by `derive_template_profile.py` for brand color sampling from
+  `--evidence` slide images. Not needed for `--pptx` or `--canvas`.
 - Version floors are declared in [`requirements.txt`](requirements.txt) for fresh hosts.
 - The selected builder and Office render tooling remain responsible for their own
   dependencies; this overlay does not install packages at runtime.

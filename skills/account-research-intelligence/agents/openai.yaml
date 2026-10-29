@@ -1,0 +1,4 @@
+interface:
+  display_name: "Account Research Intelligence"
+  short_description: "Research accounts with traceable GTM evidence"
+  default_prompt: "Use $account-research-intelligence to build an evidence-backed account brief."

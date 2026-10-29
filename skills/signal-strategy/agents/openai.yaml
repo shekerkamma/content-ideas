@@ -1,0 +1,4 @@
+interface:
+  display_name: "GTM Signal Strategy"
+  short_description: "Design and audit buying-signal portfolios"
+  default_prompt: "Use $signal-strategy to design a provider-agnostic buying-signal portfolio."

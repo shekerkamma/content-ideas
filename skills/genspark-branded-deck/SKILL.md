@@ -83,7 +83,7 @@ prompt and multimodal IDs, authoring structured visual assets deterministically,
 routing fully native output through `branded-pptx-deck`.
 Do not wait past the shared 600-second/two-no-progress ceiling. (Reading an existing
 deck is never blocked — see the recovery lane under Execution.) Trigger examples:
-`../pptx-visual-spec/portable-skills/genspark-slides/references/prompt-routing.md`.
+`../../portable-skills/genspark-slides/references/prompt-routing.md`.
 
 ## Why this skill exists (and when NOT to use it)
 
@@ -209,7 +209,7 @@ table and font handling: [`references/verbatim-recovery.md`](references/verbatim
    title boxes are the usual culprit: a two-line title prints over its subtitle.
    Run the pinned HTML design gate before export. Prefer
    `"${CONTENT_IDEAS_DIR:-$HOME/content-ideas}/scripts/design-qa-detect.sh" <deck.html>`;
-   when no checkout wrapper exists, run `npx -y impeccable@3.5.0 detect <deck.html>`.
+   when no checkout wrapper exists, run `npx -y impeccable@4.1.0 detect <deck.html>`.
    Fix or explicitly waive every
    Impeccable finding; never invoke an unpinned `@latest` fallback.
 

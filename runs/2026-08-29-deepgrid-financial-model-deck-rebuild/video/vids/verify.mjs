@@ -1,0 +1,12 @@
+import { chromium } from '/home/sheke/content-ideas/node_modules/playwright/index.mjs';
+const ID = '19OkYdwlxjrSaV7UED1IQ5ABP48HgmUiNtofc_ZR9Fbs';
+const b = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx = b.contexts()[0];
+const page = ctx.pages().find(p => p.url().includes(ID));
+await page.bringToFront(); await page.waitForTimeout(1500);
+const t = await page.evaluate(() => document.body.innerText);
+console.log('runtime:', (t.match(/\d\d:\d\d\.\d\s*\/\s*\d\d:\d\d\.\d/) || ['?'])[0]);
+console.log('voice  :', (t.match(/Holt|Nyla/) || ['?'])[0], (t.match(/(Informative, low|Soft, higher) pitch/) || ['?'])[0]);
+console.log('music  :', /Corporate Green Technology/.test(t) ? 'present' : 'MISSING');
+console.log('stray edit text present:', /A walkthrough of our financial plan/.test(t));
+await b.close();

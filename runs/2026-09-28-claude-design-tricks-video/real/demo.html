@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Four skills on DG32 v3</title>
+<style>
+:root{--bg:#101212;--surface:#191d1b;--ink:#eeeae2;--ink2:#a0a59b;--line:#3d453b;--copper:#d4a36e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:40px 16px 80px}
+h1{font:600 30px/1.2 Georgia,serif;margin:0 0 6px}p.lead{color:var(--ink2);margin:0 0 36px}
+section{border-top:1px solid var(--line);padding:32px 0}
+h2{font:600 22px/1.25 Georgia,serif;margin:0 0 4px}h2 span{color:var(--copper);font:600 13px ui-monospace,monospace;margin-right:10px}
+.what{color:var(--ink2);margin:0 0 14px;max-width:70ch}
+code{display:block;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font:13px ui-monospace,monospace;color:#cfd3cc;overflow-x:auto;white-space:pre;margin:0 0 16px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;align-items:start}
+figure{margin:0}img,video{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+figcaption{color:var(--ink2);font-size:13px;margin-top:6px}
+table{border-collapse:collapse;font-size:14px;width:100%}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}th{color:var(--ink2);font-weight:500}
+td.n{color:var(--copper);font-variant-numeric:tabular-nums}
+.phone img{max-width:340px}
+</style></head><body><main>
+<h1>Four skills, run on DG32 v3</h1>
+<p class="lead">Every result below came from running the skill on the dr-silicon-v3 site on 28 Sep 2026. Nothing on the live site was changed.</p>
+
+<section><h2><span>01</span>hig: Apple's tap-target and text rules</h2>
+<p class="what">Checks a page at phone width against Apple's Human Interface Guidelines: every control at least 44×44 pt, body text 17 pt, contrast 4.5:1. Here it measured tap targets on five v3 pages.</p>
+<code>sweep.mjs  (phone 390 px, "minTarget": 44)   routes: / · products · technology/safety · about · contact</code>
+<div class="row"><figure class="phone"><img src="0-hig-v3-phone.png" alt="v3 home page at phone width with small controls outlined in red"><figcaption>Home at 390 px. Red: controls under 44 px (logo link 130×26, "Explore products" 154×43).</figcaption></figure>
+<table><tr><th>Page</th><th>Controls under 44 px</th><th>Examples</th></tr>
+<tr><td>/</td><td class="n">26</td><td>logo 130×26, loop buttons 32×32</td></tr>
+<tr><td>products</td><td class="n">33</td><td>links 38×24, button 99×38</td></tr>
+<tr><td>technology/safety</td><td class="n">11</td><td>links 38×24, 76×24</td></tr>
+<tr><td>about</td><td class="n">7</td><td>text link 161×43</td></tr>
+<tr><td>contact</td><td class="n">19</td><td>text link 279×43</td></tr></table></div>
+</section>
+
+<section><h2><span>02</span>tweak: sliders over the site's tokens, then Bake</h2>
+<p class="what">Opens the page with a panel of the design tokens you choose. Changes show live; Bake writes them into the source CSS with a backup. The panel also measures which tokens this page actually uses (28 of v3's 42).</p>
+<code>tweak.py  site/  --bake-into globals.css visual-refinement.css v3.css  --config tweak.json</code>
+<div class="row"><figure><img src="2-tweak-v3-before.png" alt="v3 products page before tweaks"><figcaption>Before.</figcaption></figure>
+<figure><img src="2-tweak-v3-after.png" alt="v3 products page after tweaks"><figcaption>After: body 1.125 rem, line height 1.9, corner radius 14 px, copper hairlines. Previewed on a copy; v3's CSS untouched.</figcaption></figure></div>
+</section>
+
+<section><h2><span>03</span>design-os: search your own images by what is in them</h2>
+<p class="what">Indexes a folder once, then finds images from a plain-words description, with no tags or filenames needed. Indexed: v3's 84 images and film posters.</p>
+<code>design_os.py index public/images public/media   →   design_os.py search "a silicon wafer"</code>
+<div class="row"><figure><img src="3-design-os-v3-gallery.png" alt="Gallery search results for a silicon wafer"><figcaption>"a silicon wafer": both wafer renders first (score 0.61), then die, package and chip shots.</figcaption></figure>
+<table><tr><th>Query</th><th>Top hit</th><th>Score</th></tr>
+<tr><td>a silicon wafer</td><td>company-wafer</td><td class="n">0.61</td></tr>
+<tr><td>a 3D chip package on a dark background</td><td>package-stack</td><td class="n">0.48</td></tr>
+<tr><td>a motor on a factory floor</td><td>products-hero (weak)</td><td class="n">0.35</td></tr></table></div>
+</section>
+
+<section><h2><span>04</span>tip-card-film: cards on a narrated video</h2>
+<p class="what">Takes a video and a list of moments. At each one the video shrinks into a rounded corner window while a titled card builds beside it, in the brand's colours and fonts. Made from 45 s of v3's fault-path film, four cards timed to the narration.</p>
+<code>build_tip_film.py spec.json out   →   hyperframes check   →   hyperframes render --output film.mp4</code>
+<figure><video src="1-dg32-tip-card-film.mp4" controls preload="metadata"></video><figcaption>45 s, 1280×720, narration audio kept. Cards at 0:00, 0:10, 0:26 and 0:37.</figcaption></figure>
+</section>
+</main></body></html>

@@ -3,7 +3,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from PIL import Image
+import pytest
+
+Image = pytest.importorskip("PIL.Image")
 
 
 MODULE_PATH = Path(__file__).parents[1] / "scripts" / "extract_screen_states.py"

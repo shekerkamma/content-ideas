@@ -1,0 +1,15 @@
+{
+  "site": "https://example.invalid/fixture/",
+  "published": "published",
+  "rebuilt": "rebuilt",
+  "build_env": ["VITE_RERANK_ENDPOINT"],
+  "artifacts": [
+    {"role": "app-bundle", "published": "assets/index-*.js", "expect": "identical"},
+    {"role": "stylesheet", "published": "assets/index-*.css", "expect": "identical"},
+    {"role": "retrieval-index",
+     "published": "assets/knowledge-index-*.js",
+     "expect": "explained",
+     "max_differing_bytes": 32,
+     "reason": "the index generator embeds its own build timestamp; unit count and score match"}
+  ]
+}

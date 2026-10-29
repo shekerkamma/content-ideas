@@ -1,0 +1,10 @@
+{
+  "interface": {
+    "display_name": "E2E Qa Review",
+    "short_description": "Validate websites end to end with browser, accessibility, route ",
+    "default_prompt": "Use $e2e-qa-review for this task and follow its canonical workflow."
+  },
+  "policy": {
+    "allow_implicit_invocation": true
+  }
+}

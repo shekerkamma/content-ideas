@@ -1,0 +1,19 @@
+Product,FY32 units,Demand pool & market size (sourced),Capture %,Source
+AD2 Smart Truck kit,18000.0,MANDATORY: 0.5M new N2/N3 trucks/yr + 0.5M retrofit,0.018,MoRTH GSR 184(E) ADAS mandate on N2/N3
+AD0 Smart Mirror (360 view),54000.0,Existing 360 surround-view market $3.1B (already selling),0.00929560008262756,"Towards Automotive: $3.09B 2025, 10.7% CAGR"
+AD1 Indoor L4 kit,4200.0,Warehouse/industrial autonomy; part of $4.8B edge-AI,—,Dataintelo/GMI automotive edge-AI 2025
+Autonomous TaaS (fleet),100.0,India trucking 0.6-0.8M units/yr; fleet ops,0.000142857142857143,Mobility Foresights; TheGlobalEconomy 952k CV
+Seaport AGV (port autonomy),50.0,Automated container terminal market $10.95B (2024),0.000220052462838823,"SNS Insider: $10.95B 2024 -> $16.35B 2032, 5.2% CAGR"
+A100 compute box (3 SKUs),6000.0,Automotive edge-AI accelerator modules $4.8B (2025),0.00200132978723404,"Dataintelo: $4.8B 2025 -> $22.6B 2034, 21% CAGR"
+Chipset OEM B2B (ASIC die),30000.0,India ADAS chip pool; $2.29B ADAS (2024),0.00250859425810648,"EMR 2024: $2.29B, 20.6% CAGR"
+Thermal camera (aftermarket),3200.0,Automotive thermal camera $1.68B global (2025),0.00101317122593718,"Verified Market Research: $1.68B 2025, 12% CAGR"
+4D radar pod (aftermarket),3000.0,4D imaging radar $2.75B global (2025),0.000290135396518375,"Business Research Co./Mordor: ~$2.75B 2025, 13% CAGR"
+H100 driver-monitor wearable,20000.0,DDAWS mandate (AIS-184) + global DMS demand,—,MoRTH AIS-184; EU Reg 2021/267 (commercial DMS)
+Defence D-HUMR,150.0,Indian Army UGV/robotics procurement,—,MoD/Army programs (existing Rs1 Cr revenue)
+D100 drone SoC kit,400.0,India defence + commercial drone SoC,—,Edge-AI drones segment (Mordor 18% CAGR)
+"Every line maps to a real, sized market: our FY32 volumes are a single-digit share of each pool. Demand headroom is large, not stretched.",,,,
+Reading the capture %:,,,,
+"1. Market sizes above are GLOBAL. Our near-term serviceable market is the India slice, where our share is materially higher — the small % = runway, not a ceiling.",,,,
+2. Seaport AGV pool ($10.95B) is TOTAL port automation (cranes + software + vehicles); the autonomous-vehicle layer we sell is a subset. Real proof point: live order at Vizag Container Terminal.,,,,
+"3. Mandate timing: DDAWS / blind-spot / LDWS suite is live Apr & Oct 2026 (what AD2 demand rests on). The AEBS braking piece (AIS-162/IS-11852) was deferred to Oct 1 2027 (Gadkari, Lok Sabha, Feb 2026) — does not affect the 2026 ADAS suite.",,,,
+Sources: MoRTH GSR 184(E) 20 Mar 2025; Roadzen/Telematicswire; IMARC & Mordor (CV); EMR (ADAS); Dataintelo/GMI (edge-AI); Verified MR (thermal); Business Research Co. (4D radar); SNS Insider (container terminals). Share/conversion rows are our assumptions.,,,,
