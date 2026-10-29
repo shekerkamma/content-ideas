@@ -103,6 +103,20 @@ than guessed — NVIDIA's `/v1/models` does not expose context length.
 
 ### `~/.dsh/settings.yaml` silently overrides every `--patch` overlay
 
+> **Superseded in dsh 0.2.x (verified on 0.2.1-rc.2, 2026-10-18).** dsh no longer
+> reads `settings.yaml` at runtime. The first profile to boot with the Settings
+> plugin imports it once into *that profile's* `cordis.patch.yml` and renames it
+> `settings.yaml.imported`. On this machine that profile was headless, so web
+> needed its `agent-default-model` set by hand. Layer order is now bundles →
+> profile patch → `$DSH_HOME/cordis.patch.yml` → `--patch`, and an overlay
+> pointed at a bogus model fails with `UNKNOWN_MODEL`, so the
+> `~/.dsh/patches/*.yml` escape hatches work again. 0.2.x headless also ships
+> with the saved-credential store disabled (keys from env or `.env` only); the
+> headless profile patch re-enables `credentials`, `authorization` and
+> `deepseek-account`. The web UI now needs the per-process token URL printed at
+> startup (`journalctl --user -u dsh-web | grep token=`). The 0.1 text below is
+> kept for history.
+
 `~/.dsh/patches/*.yml` each claim, in their own header comment, that
 `dsh --profile headless --patch ~/.dsh/patches/<x>.yml "task"` repoints the
 model. **It does not**, whenever `~/.dsh/settings.yaml` carries an

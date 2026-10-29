@@ -43,13 +43,36 @@ Default model `lyria-3.5`: about 3:00, 44.1 kHz stereo, 192 kb/s MP3, about 35 s
 
 ## banner (video 5:03)
 
+Default: Gemini makes text-free art, and code sets the words (proven on the DG32-2DOM cards, 2026-10-26).
+
 ```bash
-gemini-api image "A clean, modern YouTube channel banner for <brand>. Large title text reading exactly: <TITLE>. \
-Smaller tagline below reading exactly: <TAGLINE>. <palette, motif>, plenty of empty space at the edges." \
-  --aspect-ratio 16:9 --image-size 2K --out $R/banner --no-interactive
-python3 $S/scripts/check_media.py ocr $R/banner.jpg "<TITLE>" "<TAGLINE>"
+# 1. Text-free art. Square layout: art fills the lower part. Landscape: art fills the right side.
+gemini-api image "<subject, palette, motif> on a dark navy background, cinematic lighting. \
+No text, no letters, no numbers, no logos anywhere." \
+  --aspect-ratio 1:1 --image-size 2K --out $R/art --no-interactive      # 16:9 for landscape
+python3 $S/scripts/check_media.py textfree $R/art.jpg                     # then look at it yourself
+# 2. Card: fill the template, render, OCR the text region
+python3 $S/scripts/make_card.py --layout square --art $R/art.jpg \
+  --title "<TITLE>" --tagline "<TAGLINE>" --out $R                        # or --layout landscape
 ```
-The output is a 2752×1536 JPEG. Supported ratios are 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9, 1:8, 8:1, 1:4 and 4:1.
+
+| Layout | Canvas | Art placement | OCR region |
+|---|---|---|---|
+| `square` | 1080×1080 (LinkedIn/IG feed) | lower 640 px, top edge faded | `0,0,1,0.42` |
+| `landscape` | 1200×627 (LinkedIn link/post) | right 640 px, left edge faded | `0,0.25,0.52,0.75` |
+
+`make_card.py` writes `card-<layout>.html` (the editable source), `art.jpg` and `card-<layout>.png`.
+To change the words, edit the HTML and re-render with
+`node ~/.claude/skills/ai-graphics/scripts/html_to_png.mjs card-square.html card-square.png 1080x1080`.
+It is free and deterministic. If the art's subject sits off-centre, adjust `background-position`
+in the HTML.
+
+Only on request: model-drawn text, i.e. the text inside the image prompt ("Large title text reading
+exactly: X ... in a rounded sans-serif where O is a perfect circle ... no punctuation"), then
+`check_media.py ocr $R/banner.jpg "X" "Y" --region ...`. In testing it read "D0M" for "DOM" and added
+full stops, and the square version was OCR-inconclusive at 3 of 4 scales.
+
+Gemini outputs a 2752×1536 (16:9) or 2048×2048 (1:1) JPEG. Supported ratios are 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9, 1:8, 8:1, 1:4 and 4:1.
 
 ## research-page (video 6:17)
 

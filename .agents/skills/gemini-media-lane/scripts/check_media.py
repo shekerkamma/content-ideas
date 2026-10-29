@@ -8,11 +8,12 @@
                                                 every expected line read exactly by Tesseract
                                                 (native, or the WSL build via wsl.exe on Windows);
                                                 --region crops to the text area first (busy art)
+  check_media.py textfree IMAGE [--min-conf 85]  art slot has no confident 2+ letter words
 
 Exit 0 = pass, 1 = check failed, 2 = usage or a missing tool.
 """
 from __future__ import annotations
-import argparse, os, re, shutil, struct, subprocess, sys, tempfile, wave
+import argparse, csv, io, os, re, shutil, struct, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
@@ -121,6 +122,43 @@ def check_ocr(path: str, expected: list[str], region: str | None = None) -> int:
     return 0
 
 
+def words_in(rows: list[dict], min_conf: float) -> list[tuple[str, int]]:
+    """Confident OCR tokens with 2+ letters. Pure so it can be tested without Tesseract.
+
+    Why not "any letter": on text-free chip art Tesseract reports 31-50 letter-like fragments
+    from circuit traces, so an any-letter rule fails every real art slot. Real text comes back
+    as whole words at 90+ confidence ("DEEPGRID" 91, "attention" 95); trace noise never reached
+    80 on the 2026-10-26 set. A lone letter cut off at a crop edge is NOT caught by any OCR
+    rule tried (the "M" crop scored like clean art), so generate art text-free and look at it.
+    """
+    out = []
+    for r in rows:
+        t = (r.get("text") or "").strip()
+        try:
+            conf = float(r.get("conf", -1))
+        except ValueError:
+            continue
+        if conf >= min_conf and sum(c.isalpha() for c in t) >= 2:
+            out.append((t, int(conf)))
+    return out
+
+
+def check_textfree(path: str, min_conf: float) -> int:
+    found = find_tesseract()
+    if not found:
+        print("tesseract not found (TESSERACT_BIN, repo .tools, PATH, Program Files, or WSL via wsl.exe)")
+        return 2
+    argv, _ = found
+    tsv = subprocess.run(argv + [str(Path(path).resolve()), "-", "--psm", "11", "tsv"],
+                         capture_output=True, text=True).stdout
+    rows = list(csv.DictReader(io.StringIO(tsv), delimiter="\t", quoting=csv.QUOTE_NONE))
+    hits = words_in(rows, min_conf)
+    if hits:
+        return fail(f"{path}: art slot has text: {hits[:8]}")
+    print(f"PASS {path}: no confident words (conf >= {min_conf:g}); still look at it for a lone cut-off letter")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -129,6 +167,8 @@ def main() -> int:
     a.add_argument("--duration", type=float); a.add_argument("--min-duration", type=float)
     o = sub.add_parser("ocr"); o.add_argument("file"); o.add_argument("expected", nargs="+")
     o.add_argument("--region", help="text area as fractions x0,y0,x1,y1, e.g. 0,0.25,0.55,0.75")
+    tf = sub.add_parser("textfree"); tf.add_argument("file")
+    tf.add_argument("--min-conf", type=float, default=85, help="OCR confidence that counts as a word")
     args = ap.parse_args()
     if not Path(args.file).exists():
         print(f"no such file: {args.file}")
@@ -137,6 +177,8 @@ def main() -> int:
         return check_wav(args.file)
     if args.cmd == "av":
         return check_av(args.file, args.duration, args.min_duration)
+    if args.cmd == "textfree":
+        return check_textfree(args.file, args.min_conf)
     return check_ocr(args.file, args.expected, args.region)
 
 

@@ -15,3 +15,7 @@
 | Windows: `localhost:<port>` times out | Windows → WSL localhost forwarding is broken here | Open previews at `http://$(hostname -I \| awk '{print $1}'):<port>/`. |
 | proof-of-done: exit 5, "no tests ran" | the shell was left in a run folder | `cd` back to the repo root and rerun. |
 | `tesseract not found` | no native Tesseract and no WSL build | Set `TESSERACT_BIN`, or on Windows make sure WSL has `$HOME/content-ideas/.tools/tesseract/bin/tesseract` (override with `WSL_TESSERACT`). winget's `UB-Mannheim.TesseractOCR` has no per-user installer, so it needs an admin prompt. |
+| `make_card.py`: "renderer not found" | ai-graphics isn't installed on this host | Install or link `~/.claude/skills/ai-graphics`, or set `AI_GRAPHICS_HTML_TO_PNG`. On Windows it uses WSL's copy through `wsl.exe` (override with `WSL_HTML_TO_PNG`). |
+| `make_card.py`: "art slot has text" | the art has words in it (often a crop of an image with drawn text) | Regenerate the art with "No text, no letters, no numbers, no logos anywhere"; don't crop around text. |
+| A card title splits across lines | it's longer than the layout fits | Shorten it, or lower `h1` `font-size` in the HTML and re-render (free). |
+| `make_card.py`: "render wrote a non-PNG file (524288 bytes)" | an old Node (system v18) rendering onto `/mnt/c` | Use Node 20+: set `NODE_BIN` (WSL) or `WSL_NODE` (Windows bridge). By default the bridge picks nvm's newest Node. |

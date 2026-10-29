@@ -53,3 +53,6 @@ runs/**/qa/*.png
 runs/**/research/raw/
 runs/**/*-draft.pptx
 runs/**/*.pptx.inspect.ndjson
+
+# Stitch CLI per-repo config (workspace id; local only)
+.stitch.json

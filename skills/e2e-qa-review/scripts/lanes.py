@@ -139,6 +139,10 @@ def lane_scrollcraft(cfg: dict) -> dict:
     dist = cfg.get('dist', '')
     uses = False
     for f in glob.glob(os.path.join(dist, '**', '*.html'), recursive=True) + glob.glob(os.path.join(dist, '**', '*.js'), recursive=True):
+        # the vendored engine carries its own [data-sc-act] selector; only a page or app chunk that sets the
+        # attribute means a page mounts it (DeepGrid v11 ships the engine unmounted, and the lane waited on home)
+        if os.sep + 'scrollcraft' + os.sep in os.path.normpath(f) or os.path.basename(f).startswith('scrollcraft'):
+            continue
         with open(f, errors='ignore') as fh:
             if 'data-sc-act' in fh.read():
                 uses = True
