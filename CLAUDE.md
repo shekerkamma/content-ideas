@@ -31,6 +31,18 @@ HTML renderer.
   `skills/storm-research/` as canonical shared recovery sources for those
   skills. They must remain portable across Claude Code and Codex and must not
   contain generated Python bytecode or host credentials.
+- Treat `skills/skill-doctor/` as the canonical source for skill-tree corruption
+  detection and repair. Its host wrappers at `.claude/skills/skill-doctor/` and
+  `.agents/skills/skill-doctor/` must stay byte-identical to each other and must
+  contain no repair logic of their own. The executable lives at
+  `scripts/audit_skill_corruption.py` (stdlib only) and generalizes the
+  four-skill NUL check in `scripts/verify-recovery-skills.sh` to every skill tree.
+- Treat `skills/skill-hygiene/` as the canonical library-maintenance router: it sequences
+  `skill-doctor` (intact) → `skills-analyst` (earned) → `writing-for-agents` (lean) →
+  `skill-builder` (rewrite). The gate order is load-bearing — `skills-analyst` reads a
+  zero-filled `SKILL.md` as DELETE/ARCHIVE, so repair must precede classification. It is
+  user-invoked (`disable-model-invocation: true`) and therefore costs no context load.
+  Its host wrappers must stay byte-identical and carry no sweep logic.
 - Keep matching copies under `plugins/content-ideas/skills/` byte-identical.
 - Keep Claude-only UI fields as enhancements; repeat critical safety and
   fallback behavior in skill bodies for Codex and OpenHands.
@@ -114,6 +126,12 @@ bash scripts/sync-presentation-pipeline-hosts.sh
 
 # validate the portable recovery skills and their integrity manifest
 bash scripts/verify-recovery-skills.sh
+
+# audit every skill tree for zero-fill (all-NUL) corruption and restore from
+# ranked donors (sibling host copies, then git history). Report-only without
+# --apply; exits non-zero when a live skill file is corrupt with no donor.
+python3 scripts/audit_skill_corruption.py ~ --git-repo .
+python3 scripts/audit_skill_corruption.py ~ --git-repo . --apply
 ```
 
 ## Rules
