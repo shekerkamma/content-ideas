@@ -10,5 +10,19 @@
   },
   "enabledPlugins": {
     "content-ideas@content-ideas": true
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/scripts/link-cloud-skills.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }
