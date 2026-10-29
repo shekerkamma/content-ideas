@@ -110,21 +110,65 @@ def _post(payload: dict, key: str, timeout: float):
     return parts, tokens, data.get('status')
 
 
+def _stream(video: dict, prompt: str, *, model: str, key: str, clip, timeout: float):
+    """streamGenerateContent over SSE. Bytes keep flowing while Gemini works, so egress proxies
+    that cut a silent connection (cloud sessions drop one after about 30 s) leave it open."""
+    file_data = {'fileUri': video['uri'], **({'mimeType': video['mime_type']} if video.get('mime_type') else {})}
+    video_part = {'fileData': file_data}
+    if clip and (clip[0] is not None or clip[1] is not None):
+        video_part['videoMetadata'] = {k: f'{int(f(v))}s' for k, v, f in (('startOffset', clip[0], math.floor),
+                                                                          ('endOffset', clip[1], math.ceil))
+                                       if v is not None}
+    body = json.dumps({'contents': [{'role': 'user', 'parts': [video_part, {'text': prompt}]}]}).encode('utf-8')
+    request = Request(f'{API}/v1beta/models/{model}:streamGenerateContent?alt=sse', data=body, method='POST',
+                      headers={'x-goog-api-key': key, 'Content-Type': 'application/json'})
+    parts, tokens = [], None
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            for raw in response:
+                line = raw.decode('utf-8', errors='replace').strip()
+                if not line.startswith('data:'):
+                    continue
+                chunk = json.loads(line[5:])
+                for candidate in chunk.get('candidates', []):
+                    parts += [p['text'] for p in (candidate.get('content') or {}).get('parts', [])
+                              if p.get('text') and not p.get('thought')]
+                tokens = (chunk.get('usageMetadata') or {}).get('totalTokenCount', tokens)
+    except HTTPError as exc:
+        message = _error_message(exc.read())
+        category = ('auth' if exc.code in (401, 403) or 'api key' in message.lower() else 'quota' if exc.code == 429
+                    else 'service' if exc.code >= 500 else 'rejected')
+        raise _fail(category, f'HTTP {exc.code}: {message}', key) from None
+    except (URLError, TimeoutError, OSError) as exc:
+        raise _fail('network', f'{type(exc).__name__}: {getattr(exc, "reason", exc)}', key) from None
+    except (ValueError, AttributeError, TypeError):
+        raise _fail('response', 'unreadable stream chunk', key) from None
+    return [''.join(parts)] if parts else [], tokens
+
+
 def ask(video: dict, question: str | None, *, model: str, key: str, clip=None, timeout: float = 600.0) -> dict:
     processing, label = _processing(clip)
     video_part = {'type': 'video', **video, 'processing': processing}
-    payload = {'model': model, 'input': [video_part, {'type': 'text', 'text': build_prompt(question)}]}
+    prompt = build_prompt(question)
+    payload = {'model': model, 'input': [video_part, {'type': 'text', 'text': prompt}]}
     try:
-        parts, tokens, status = _post(payload, key, timeout)
+        try:
+            parts, tokens, status = _post(payload, key, timeout)
+        except SystemExit as exc:
+            # Pro models reject agentic mode (HTTP 400); they watch the whole video in standard mode instead.
+            if processing != 'agentic' or 'agentic video processing is not enabled' not in str(exc).lower():
+                raise
+            del video_part['processing']
+            label = 'standard'
+            parts, tokens, status = _post(payload, key, timeout)
+        if not parts:  # Agentic runs occasionally complete without a model_output step; one retry clears it.
+            parts, tokens, status = _post(payload, key, timeout)
     except SystemExit as exc:
-        # Pro models reject agentic mode (HTTP 400); they watch the whole video in standard mode instead.
-        if processing != 'agentic' or 'agentic video processing is not enabled' not in str(exc).lower():
+        # A proxy that drops silent connections surfaces as a 5xx or a reset; a streamed request survives it.
+        if not str(exc).startswith(('Gemini service', 'Gemini network')):
             raise
-        del video_part['processing']
-        label = 'standard'
-        parts, tokens, status = _post(payload, key, timeout)
-    if not parts:  # Agentic runs occasionally complete without a model_output step; one retry clears it.
-        parts, tokens, status = _post(payload, key, timeout)
+        parts, tokens = _stream(video, prompt, model=model, key=key, clip=clip, timeout=timeout)
+        label, status = 'standard (streamed)', 'streamed'
     if not parts:
         raise _fail('response', f'no answer text (status {status})', key)
     return {'text': '\n'.join(parts).strip(), 'model': model, 'processing': label,
