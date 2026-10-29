@@ -101,6 +101,7 @@ def main():
         sh("ffmpeg", "-v", "error", "-y", "-i", run / v["audio"], "-ac", "1", "-ar", "48000", wav)
         dur = float(sh("ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", wav).stdout)
         words = align(s["narration"], groq_words(wav, proj / "work" / f"{i:02d}.words.json"))
+        for w in words: w["end"] = min(w["end"], dur); w["start"] = min(w["start"], w["end"])   # Whisper can time the last word past the audio
         voices.append({"frame": i, "path": f"assets/voice/{i:02d}.wav", "duration_s": round(dur, 3),
                        "words": [dict(id=f"w{i}-{k}", **w) for k, w in enumerate(words)]})
         text = re.sub(r"\s+", " ", re.sub(r"\[[^\]]+\]", " ", s["narration"])).strip()

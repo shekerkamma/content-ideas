@@ -104,6 +104,22 @@ nothing on the audited routes (unresolved).
 > composition, motion that lurches or stalls, copy landing on the busiest part of a frame, and acts that say
 > nothing. Its refuse list joins the contract's leave-out list. Do not rebuild or restyle the page; this is
 > review, not a build.
+>
+> Also grade six points from Nate Herk's ScrollCraft walkthrough (youtube.com/watch?v=QUI6Ug4cHnE, 2026), each
+> as a row with its evidence:
+> 1. **Hook in the first viewport.** A visitor decides within seconds; the hero must show the offer and one
+>    proof, not only a headline.
+> 2. **Motion density matches the audience.** Consumer hype can be loud; professional, editorial or engineering
+>    pages get subtle, dignified motion.
+> 3. **Scroll distance matches reading speed.** A scroll-driven figure that changes faster than its text can be
+>    read is too short. In the video a globe counter was stretched from 2.3 to 4.4 viewport heights.
+> 4. **One surge.** Name the energy curve ("quiet, then one surge"); two equal peaks means no peak.
+> 5. **Prune.** A section that is heavy, repeated or off-journey is cut, not restyled.
+> 6. **Every claim has a receipt** where the product makes claims: the source sits next to the figure.
+> For restraint benchmarks on deep-tech pages, compare against `ai-graphics/assets/references/deeptech-silicon/`
+> and `awwwards-deeptech/` (each has a `brief.md`; the Awwwards set is ten award winners in robotics, energy,
+> defence and sensors). There the accent covers 0.15–4.9% of the surface, display type is light, and an authority
+> strip of real figures sits under the hero.
 
 Skip a judgment lane only with a one-line reason in the report (e.g. "scroll-craft taste: no scroll-driven
 sections"). A skipped reviewer is a *Could not confirm* item, not a pass.

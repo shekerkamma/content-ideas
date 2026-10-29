@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- gemini-media-lane template (1200x627). make_card.py fills {{TITLE}}, {{TAGLINE}} and copies the art to art.jpg.
+     Every glyph is real text (Poppins); art.jpg must be text-free (check_media.py textfree). -->
+<style>
+  :root{--bg:#10172a;--ink:#f4f6fa;--mute:#b4bccb;--cu:#d98a4e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:627px;background:var(--bg);overflow:hidden}
+  body{position:relative;font-family:"Poppins",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .art{position:absolute;top:0;right:0;bottom:0;width:640px;
+       background:url(art.jpg) 40% 52%/cover no-repeat}
+  /* fade the art's left edge into the text side so there is no seam */
+  .art::before{content:"";position:absolute;inset:0 auto 0 0;width:200px;
+       background:linear-gradient(90deg,var(--bg),rgba(16,23,42,0))}
+  .copy{position:absolute;left:72px;top:50%;transform:translateY(-50%);width:560px}
+  .rule{width:56px;height:5px;border-radius:3px;background:var(--cu);margin-bottom:28px}
+  h1{font-weight:600;font-size:84px;line-height:1;letter-spacing:-.01em;color:var(--ink);white-space:nowrap}
+  p{margin-top:22px;font-weight:400;font-size:36px;line-height:1.25;color:var(--mute);max-width:400px}
+</style></head>
+<body>
+  <div class="art" aria-hidden="true"></div>
+  <div class="copy">
+    <div class="rule"></div>
+    <h1>{{TITLE}}</h1>
+    <p>{{TAGLINE}}</p>
+  </div>
+</body></html>
