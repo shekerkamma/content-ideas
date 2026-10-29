@@ -1,5 +1,0 @@
-apify
-bright-data
-firecrawl
-clay-hq
-scrapegraphai
