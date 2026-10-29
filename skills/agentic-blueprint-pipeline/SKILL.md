@@ -10,11 +10,10 @@ This is the Codex/OpenHands discovery wrapper for the canonical project skill.
 
 Before doing blueprint work, read and follow:
 
-- `/home/sheke/content-ideas/.claude/skills/agentic-blueprint-pipeline/SKILL.md`
-- `/home/sheke/content-ideas/.claude/skills/agentic-blueprint-pipeline/references/master-blueprint-template.md`
-- `/home/sheke/content-ideas/.claude/skills/agentic-blueprint-pipeline/references/implementation-depth-checklist.md`
-- `/home/sheke/content-ideas/.claude/skills/agentic-blueprint-pipeline/references/quality-rubric.md`
-- `/home/sheke/content-ideas/.claude/skills/agentic-blueprint-pipeline/references/research-agent-brief.md`
+- `references/master-blueprint-template.md`
+- `references/implementation-depth-checklist.md`
+- `references/quality-rubric.md`
+- `references/research-agent-brief.md`
 
 Canonical source:
 `.claude/skills/agentic-blueprint-pipeline/`
