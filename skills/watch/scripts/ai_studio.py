@@ -41,7 +41,10 @@ def credential() -> str:
                 raise SystemExit(f'{path} lists {len(keys)} Gemini keys; set WATCH_CLIPROXY_CONFIG to a config with one.')
             if keys:
                 return keys[0]
-    raise SystemExit('No AI Studio key found in the CLIProxyAPI config; no request was made.')
+    # Cloud sessions have no CLIProxyAPI config; their key arrives as an environment secret.
+    if os.environ.get('GEMINI_API_KEY'):
+        return os.environ['GEMINI_API_KEY']
+    raise SystemExit('No AI Studio key found in the CLIProxyAPI config or GEMINI_API_KEY; no request was made.')
 
 
 def configured(name: str) -> bool:
