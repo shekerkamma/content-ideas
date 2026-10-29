@@ -36,7 +36,7 @@ PORT="${CLIPROXY_PORT:-8317}"
 # Windows default gateway, whose IP changes on reboot — resolved fresh every run.
 case "$(uname -s)" in
   MINGW*|MSYS*|CYGWIN*) gw="${CLIPROXY_HOST:-127.0.0.1}" ;;
-  *)                    gw="${CLIPROXY_HOST:-$(ip route 2>/dev/null | awk '/default/{print $3; exit}')}" ;;
+  *)                    gw="${CLIPROXY_HOST:-$({ ip route 2>/dev/null || true; } | awk '/default/ && !g {g=$3} END {print g}')}" ;;
 esac
 
 # Key, first hit wins: env, dsh credentials (WSL), the proxy's own config (Windows or WSL mount).
