@@ -1,0 +1,9 @@
+{
+  "page": "plan",
+  "must_be_zero": [
+    "DECIDE THIS WEEK", "Founder inputs", "contradictions sat in the repo", "Stages not complete",
+    "Questions that failed", "holdout diligence", "Argument against", "Lock physical layout",
+    "approved-decisions", "SKU-6 qualification path", "military screening of the 130 nm"
+  ],
+  "must_hit": ["data-inputs-status", "pd-lede", "decisionReport:null"]
+}
