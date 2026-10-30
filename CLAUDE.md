@@ -83,6 +83,17 @@ Three peer skills (`skills/channel-to-kb/`, `-ytdlp/` (recommended default),
 byte-identical across all three. Details and the upstream re-port procedure:
 `docs/agent-reference/channel-to-kb.md`.
 
+## Roast Room skills
+
+`skills/roast-room/` (advisor council on a founder decision) and `skills/newroaster/` (build a new
+advisor) are ported from `github.com/nateherkai/roast-room` (MIT, licence kept in each folder).
+Seats ship as plain files in `skills/roast-room/seats/` and run as `general-purpose` sub-agents, so
+no agent is registered and the council runs the same on Claude Code and Codex. Bundled seats,
+brains, and examples are read-only; sessions, custom seats, brains, portraits, and roster changes
+live under `$ROAST_HOME` (default `$CONTENT_HOME/roast-room`). The room (`app/`) and the newroaster
+scripts need Node 20+, an optional add-on outside the stdlib-only runtime rule.
+`tests/test_roast_room.py` guards the paths and the quote checker.
+
 ## Shared Product-Build Skills
 - `skills/plaid/SKILL.md` — Product Led AI Development: idea, validation,
   planning, `docs/design.md`, launch, and roadmap execution.
