@@ -1,0 +1,163 @@
+<title>Claude Time Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column, a timesheet-style ledger up top, then three review lists with stable item codes for comments. */
+:root{
+  --bg:#f6f7f6; --surface:#ffffff; --fg:#1b2222; --muted:#5c6966; --line:#dde3e1; --accent:#1f6f6b;
+  --c1:#1f6f6b; --c2:#c4733a; --c3:#5470b8; --c4:#8a5aa8; --c5:#3f9a5c; --c6:#b8a03a; --c7:#8c9693; --c8:#c0c7c5;
+  --display:"Schibsted Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Sans 3",ui-sans-serif,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121817; --surface:#1a2221; --fg:#e4ebe9; --muted:#97a6a2; --line:#2b3735; --accent:#5cc0b8;
+  --c1:#5cc0b8; --c2:#e39a62; --c3:#8aa2e6; --c4:#b98fd6; --c5:#6cc489; --c6:#d8c164; --c7:#8c9693; --c8:#55605d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121817; --surface:#1a2221; --fg:#e4ebe9; --muted:#97a6a2; --line:#2b3735; --accent:#5cc0b8;
+  --c1:#5cc0b8; --c2:#e39a62; --c3:#8aa2e6; --c4:#b98fd6; --c5:#6cc489; --c6:#d8c164; --c7:#8c9693; --c8:#55605d; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--body)}
+.wrap{max-width:860px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:2.1rem}
+h2{font-size:1.35rem}
+p{margin:0;max-width:65ch}
+.eyebrow{font:600 .8rem/1.3 var(--mono);color:var(--muted)}
+header{display:grid;gap:12px}
+.lede{color:var(--muted)}
+.ledger{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center}
+@media (max-width:640px){.ledger{grid-template-columns:1fr;justify-items:center}}
+.donut{width:220px;max-width:100%}
+.donut text{fill:var(--fg);font-family:var(--display)}
+.donut .sub{fill:var(--muted);font:12px var(--mono)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+th{font:600 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.n,th.n{text-align:right;font-family:var(--mono);font-size:.9rem;white-space:nowrap}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:-1px}
+.tablebox{min-width:0;overflow-x:auto;width:100%}
+.note{font-size:.9rem;color:var(--muted)}
+section{display:grid;gap:14px}
+.howto{color:var(--muted);font-size:.95rem;font-style:italic}
+ol.items{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.code{font:600 .85rem var(--mono);color:var(--accent);padding-top:2px}
+.item h3{margin:0;font:600 1.02rem/1.35 var(--body)}
+.item p{grid-column:2;font-size:.95rem;color:var(--muted)}
+.item .ev{grid-column:2;font:.8rem var(--mono);color:var(--muted)}
+.prompts{display:grid;gap:10px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+summary{cursor:pointer;font-weight:600}
+summary:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+blockquote{margin:10px 0 8px;font-size:.93rem;color:var(--fg);white-space:pre-wrap}
+button{font:600 .8rem var(--mono);background:transparent;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:4px 10px;cursor:pointer}
+footer{font-size:.85rem;color:var(--muted);display:grid;gap:6px}
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">24 Sep – 30 Oct 2026 · WSL host · 103 sessions</span>
+  <h1>Where your Claude time went</h1>
+  <p class="lede">167.6 hours of Claude working time across 31 active days. Website work took 42% of it. Below that: what to turn into skills, which micro-tools to build, and which text lists should become pictures. Comment on any item to approve or skip it.</p>
+</header>
+
+<div class="ledger">
+  <svg class="donut" viewBox="0 0 220 220" role="img" aria-label="Donut chart of hours by task type"></svg>
+  <div class="tablebox"><table id="hours"><thead><tr><th>Task type</th><th class="n">Hours</th><th class="n">Share</th><th class="n">Prompts</th></tr></thead><tbody></tbody></table></div>
+</div>
+<p class="note">How this was measured: every Claude Code transcript under <code>~/.claude/projects</code> on WSL. Time is the gap between consecutive transcript events, with any gap over 5 minutes cut to 5, so long idle stretches don't count. Each of your prompts was sorted by keywords, and follow-ups like "yes, go ahead" inherit the previous prompt's type. This is Claude's working time, not your hands-on time. Windows-side sessions are not included.</p>
+
+<section>
+  <span class="eyebrow">Artifact 1 · ranked by time saved</span>
+  <h2>Skills to create or improve</h2>
+  <p class="howto">Highlight an item and comment "do this" or "skip". Then tell Claude "create the skills I approved".</p>
+  <ol class="items">
+    <li class="item"><span class="code">S1</span><h3>New skill: <code>/pages-watch</code> for v11 and v12 deploys</h3>
+      <p>You asked 34 times to wait for both sites' GitHub Pages runs, confirm build, deploy and verify-live are green, then run <code>live-scan.mjs</code>. One command would watch both run IDs, report each job, and run the scan.</p>
+      <span class="ev">Website build, QA & deploy: 71.3 h · 34 "when the runs finish…" prompts</span></li>
+    <li class="item"><span class="code">S2</span><h3>New skill: <code>/dual-host</code> to apply a change on WSL and Windows together</h3>
+      <p>Mods, skills and settings get installed on WSL, then ported to Windows in a second request. The skill would back up both <code>settings.json</code> files, apply the change on each, and confirm with <code>claude plugin list</code> on both. <code>scripts/sync-codex-skills.sh</code> covers Codex only.</p>
+      <span class="ev">Agent hosts, mods & tool setup: 26.6 h · 9 explicit "both WSL and Windows" prompts</span></li>
+    <li class="item"><span class="code">S3</span><h3>Improve <code>/watch</code>: end with an adoption review page</h3>
+      <p>Most video requests say "watch, analyze, adopt". Today that ends in a chat summary you have to answer line by line. The skill would end the way this page does: a review list you comment on, then Claude executes the approved items.</p>
+      <span class="ev">Learning from videos & articles: 17.6 h · 109 prompts</span></li>
+    <li class="item"><span class="code">S4</span><h3>Fix: the failing test run that Proof of Done keeps flagging</h3>
+      <p>The proof-of-done plugin interrupted 19 times saying this repo's tests fail. Each one cost a round trip. Fixing or scoping the test command once stops all of them. This is a repair, not a new skill.</p>
+      <span class="ev">19 proof-of-done interruptions, 23 Oct – 26 Oct</span></li>
+  </ol>
+</section>
+
+<section>
+  <span class="eyebrow">Artifact 3 · internal micro-tools · not built yet</span>
+  <h2>Five micro-tools worth building</h2>
+  <p class="howto">Each is one small page that does one job. Comment on the ones you want; Claude builds one at a time.</p>
+  <ol class="items">
+    <li class="item"><span class="code">T1</span><h3>Two-site deploy board</h3><p>v11 and v12 side by side: last Pages run per job, verify-live result, live-scan findings, with a refresh button. Pairs with S1.</p></li>
+    <li class="item"><span class="code">T2</span><h3>Host parity table</h3><p>Every mod, skill and MCP server on WSL next to Windows, with differences highlighted. Answers "is it on both?" without asking.</p></li>
+    <li class="item"><span class="code">T3</span><h3>Video adoption tracker</h3><p>Each video you watched, what it recommended, what was adopted, and what is still open. Stops the same video being re-analyzed.</p></li>
+    <li class="item"><span class="code">T4</span><h3>Free model route checker</h3><p>Which DeepSeek, OpenCode and OmniRoute models actually route for free, with the date each was last tested. Your notes show 28 of 29 listed DeepSeek models did not route.</p></li>
+    <li class="item"><span class="code">T5</span><h3>Disk space map</h3><p>Largest folders on WSL and C:, with which ones are safe to clean. Lowest value: housekeeping took only 1.3 h.</p></li>
+  </ol>
+</section>
+
+<section>
+  <span class="eyebrow">Artifact 4 · text that someone has to picture</span>
+  <h2>Three lists that should be visuals</h2>
+  <p class="howto">The video's rule: if someone has to imagine it from a text list, show it instead. Pick one to build as a proof of concept.</p>
+  <ol class="items">
+    <li class="item"><span class="code">V1</span><h3>Deploy summaries become a status board</h3><p>End-of-turn reports for v11 and v12 list run IDs and job results in prose. A grid of green and red jobs reads in one glance. Overlaps with T1.</p></li>
+    <li class="item"><span class="code">V2</span><h3>Model routing notes become a route map</h3><p>Which host calls which proxy, which key, and which model is spread across a dozen memory notes. One diagram would replace them.</p></li>
+    <li class="item"><span class="code">V3</span><h3>Film re-voice list becomes a storyboard grid</h3><p>The Founder Voice re-voice of the explainer films is tracked as a text list. A grid of film posters with a status chip on each shows what is left.</p></li>
+  </ol>
+</section>
+
+<section>
+  <span class="eyebrow">From the video · reuse these</span>
+  <h2>The prompts</h2>
+  <div class="prompts" id="prompts"></div>
+</section>
+
+<footer>
+  <p>Workflow from the video: Ask, Review, Handoff, Execute. Most people only use AI to execute. This page is the review and handoff step.</p>
+  <p>Source video: youtube.com/watch?v=QBClwotyT3Y. Prompts were read off screen by Gemini.</p>
+</footer>
+</div>
+
+<script>
+const rows=[
+ ["Website build, QA & deploy",4279,465,"--c1"],
+ ["Agent hosts, mods & tool setup",1598,286,"--c2"],
+ ["Video & film production",1336,126,"--c3"],
+ ["Skill building & tuning",1256,108,"--c4"],
+ ["Learning from videos & articles",1054,109,"--c5"],
+ ["Decks, docs & PDFs",382,23,"--c6"],
+ ["Machine & disk housekeeping",78,14,"--c7"],
+ ["Test probes & automation",72,null,"--c8"]];
+const total=rows.reduce((s,r)=>s+r[1],0);
+const svg=document.querySelector('.donut'),ns='http://www.w3.org/2000/svg';
+let a=-Math.PI/2;const R=90,r=58,cx=110,cy=110;
+const pt=(rad,ang)=>[cx+rad*Math.cos(ang),cy+rad*Math.sin(ang)];
+rows.forEach(([name,min,,c])=>{
+  const sweep=min/total*2*Math.PI,b=a+sweep,big=sweep>Math.PI?1:0;
+  const [x1,y1]=pt(R,a),[x2,y2]=pt(R,b),[x3,y3]=pt(r,b),[x4,y4]=pt(r,a);
+  const p=document.createElementNS(ns,'path');
+  p.setAttribute('d',`M${x1} ${y1}A${R} ${R} 0 ${big} 1 ${x2} ${y2}L${x3} ${y3}A${r} ${r} 0 ${big} 0 ${x4} ${y4}Z`);
+  p.setAttribute('fill',`var(${c})`);p.setAttribute('stroke','var(--surface)');p.setAttribute('stroke-width','1.5');
+  const t=document.createElementNS(ns,'title');t.textContent=`${name}: ${(min/60).toFixed(1)} h`;p.append(t);svg.append(p);a=b;});
+svg.insertAdjacentHTML('beforeend',`<text x="110" y="110" text-anchor="middle" font-size="30" font-weight="700">${(total/60).toFixed(1)}</text><text class="sub" x="110" y="132" text-anchor="middle">hours</text>`);
+document.querySelector('#hours tbody').innerHTML=rows.map(([n,m,p,c])=>`<tr><td><span class="sw" style="background:var(${c})"></span>${n}</td><td class="n">${(m/60).toFixed(1)}</td><td class="n">${(m/total*100).toFixed(1)}%</td><td class="n">${p??'–'}</td></tr>`).join('');
+
+const prompts=[
+ ["Artifact 1 · Time map","Look at my past Claude sessions and build an artifact that visualizes where I'm spending my time. Include a pie chart of my time by type of task. Then suggest the Skills I should create or improve, ranked by time saved."],
+ ["Artifact 2 · Document","Create an artifact document for [what you're working on]."],
+ ["Artifact 2 · Package notes for review","Take all of my notes on [PLAN OR REVIEW] and package them up into an artifact a team member can review. One item per line: what I found and what I want. Keep each item short enough to approve or reject in one comment."],
+ ["Artifact 3 · Internal micro-tools","Review my setup and identify the parts of my work that could use a micro-tool: a tiny artifact that does one specific job. Suggest the top 5 I could build for internal use, ranked by time saved. Don't build anything yet."],
+ ["Artifact 3 · Lead magnets","Analyze what I'm working on and suggest 5 micro-tool lead magnets I could offer my customers. Each one should be an artifact that's genuinely valuable, does one specific job, and takes one prompt to build. Tell me which one you'd build first and why."],
+ ["Artifact 4 · Visual audit","Audit my work day and find where a visual component would help: anywhere I hand off or explain something as a text list that someone else has to picture. Show me the top 3. Then build an artifact for the best one as a proof of concept."],
+ ["Artifact 4 · Save the format as a skill","I want to create a skill called /[name], where the artifact output is this format."]];
+document.getElementById('prompts').innerHTML=prompts.map(([t,q],i)=>`<details><summary>${t}</summary><blockquote id="p${i}">${q}</blockquote><button type="button" data-i="${i}">Copy prompt</button></details>`).join('');
+document.getElementById('prompts').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;const el=document.getElementById('p'+b.dataset.i);
+  navigator.clipboard.writeText(el.textContent).then(()=>{b.textContent='Copied'},()=>{const s=getSelection(),rg=document.createRange();rg.selectNodeContents(el);s.removeAllRanges();s.addRange(rg);b.textContent='Selected, press Ctrl+C'});
+  setTimeout(()=>b.textContent='Copy prompt',2000);});
+</script>

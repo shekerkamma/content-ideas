@@ -168,6 +168,34 @@ For follow-ups, reuse evidence already viewed before rerunning. Remove only the 
 Bundled scripts: `watch.py`, `download.py`, `frames.py`, `transcribe.py`, `whisper.py`, `local_whisperx.py`, `gemini.py`, `config.py`, `runtime.py`, and `setup.py` under `scripts/`. The base runtime uses only Python's standard library; optional WhisperX dependencies remain in its separate process/environment.
 
 
+## Adopt branch: end with a review page
+
+Use this when the request asks to act on the video — "adopt", "apply", "build this", "set this
+up", "implement the recommendations". A chat summary forces the user to answer line by line;
+a review list lets them approve or skip each item with one comment. Pattern: Ask → Review →
+Handoff → Execute (from the video this branch was learned from, QBClwotyT3Y, 4:17).
+
+1. After the ordinary watch result, list every recommendation with its timestamp. Copy prompts
+   shown on screen verbatim.
+2. Check each one against this user's setup before listing it: skills, settings, repo files,
+   session history. Mark it **have** (already exists — name the file), **adapt**, **new** or
+   **does not fit** (say why). Never pass on an item you did not check yourself.
+3. Write the review list. One item per line with a stable code (A1, A2…): what the video says,
+   what you would do here, and the evidence. Each item must be short enough to approve or reject
+   in one comment. End with the verbatim prompts in a copyable block.
+4. Publish it as a private Artifact page where the host has one; otherwise write
+   `$CONTENT_HOME/research/<date>-watch-<slug>/adoption-review.md`. Give the link.
+5. Stop. Ask the user to comment "do this" or "skip" on items, or to reply with the codes.
+   When they say "act on my comments", read the comments (Claude Code: `ArtifactComments`)
+   and execute only the approved items.
+
+Judgment rules for this branch:
+- Skip the review step only when the user says so ("skip the review", "just do it", or names
+  the codes to build). Then execute directly.
+- An item marked **have** is not work. Show it so the user knows it was checked.
+- Do not build anything before the review unless step 5 was skipped. A suggestion list is the
+  deliverable of steps 1–4.
+
 ## Optional Impeccable slide-recreation branch
 
 Use this branch when the user asks to recreate slides from the watched video, reuse its visual
