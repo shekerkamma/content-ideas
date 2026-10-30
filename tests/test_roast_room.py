@@ -27,7 +27,7 @@ ROSTER = json.loads((ROAST / 'roster.json').read_text())
 
 def test_every_seat_has_a_seat_file_and_full_brain():
     keys = [s['key'] for s in ROSTER['seats']]
-    assert len(keys) == len(set(keys)) == 12
+    assert len(keys) == len(set(keys)) == 13
     for s in ROSTER['seats']:
         assert (ROAST / 'seats' / f"council-{s['key']}.md").is_file(), s['key']
         for f in BRAIN_FILES:
@@ -112,7 +112,7 @@ def test_room_reads_roast_home_before_the_bundle(tmp_path):
                 time.sleep(0.1)
         else:
             pytest.fail('room did not start')
-        assert len(seats['seats']) == 12 and seats['board']['default'] == ['buffett']
+        assert len(seats['seats']) == 13 and seats['board']['default'] == ['buffett']
         assert urllib.request.urlopen(base + '/portraits/buffett-base.webp').read() == b'custom'
         sessions = json.load(urllib.request.urlopen(base + '/api/sessions'))['sessions']
         assert len(sessions) == 3   # the bundled examples
@@ -133,3 +133,14 @@ def test_add_seat_writes_roast_home_not_the_bundle(tmp_path):
     assert res.returncode == 0, res.stderr
     assert 'naval' in json.loads((tmp_path / 'roster.json').read_text())['default']
     assert (ROAST / 'roster.json').read_bytes() == before
+
+
+@pytest.mark.skipif(shutil.which('node') is None, reason='node not installed')
+def test_portrait_falls_back_to_gemini_without_a_kie_key(tmp_path):
+    script = str(NEWROASTER / 'scripts' / 'portrait.mjs')
+    base = {'HOME': str(tmp_path), 'PATH': '/usr/bin:/bin:/usr/local/bin'}
+    res = subprocess.run(['node', script, 'probe'], capture_output=True, text=True, cwd=tmp_path,
+                         env=dict(base, GEMINI_API_KEY='x'))
+    assert res.returncode == 0 and 'engine: gemini (gemini-nano-banana-2.1)' in res.stdout
+    res = subprocess.run(['node', script, 'probe'], capture_output=True, text=True, cwd=tmp_path, env=base)
+    assert res.returncode == 3 and 'GEMINI_API_KEY' in res.stderr
