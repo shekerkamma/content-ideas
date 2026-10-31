@@ -94,6 +94,23 @@ live under `$ROAST_HOME` (default `$CONTENT_HOME/roast-room`). The room (`app/`)
 scripts need Node 20+, an optional add-on outside the stdlib-only runtime rule.
 `tests/test_roast_room.py` guards the paths and the quote checker.
 
+13 bundled seats: Bezos, Blakely, Buffett, GaryVee, Graham, Hormozi (Alex & Leila), Martell, Musk,
+Naval, Sanchez, Welsh, Wickman. `roster.json` is the authoritative list.
+
+`newroaster/scripts/portrait.mjs` uses kie.ai (`KIE_AI_API_KEY`) by default; falls back to Google
+Gemini Nano Banana 2.1 (`GEMINI_API_KEY` or `GOOGLE_API_KEY`) when no kie.ai key is set.
+`PORTRAIT_ENGINE=kie|gemini` forces a backend; `PORTRAIT_GEMINI_MODEL` overrides the Gemini model.
+
+## CI & workflow skills
+
+- `skills/pages-watch/` — waits for GitHub Pages workflow runs to finish, reports every job, then
+  runs the live leak scan against the deployed sites. Read-only (never cancels, reruns, or pushes).
+  Designed for the two DeepGrid Pages repos (v11 / v12) but configurable via `--repos`.
+- `skills/dual-host/` — applies a Claude Code change (plugin, mod, skill, settings) to both the
+  WSL install (`~/.claude`) and the Windows install (`/mnt/c/Users/<user>/.claude`), backing up
+  both `settings.json` files first and verifying plugin/skill parity afterward. Not for Codex skill
+  mirroring (`scripts/sync-codex-skills.sh` handles that).
+
 ## Shared Product-Build Skills
 - `skills/plaid/SKILL.md` — Product Led AI Development: idea, validation,
   planning, `docs/design.md`, launch, and roadmap execution.
