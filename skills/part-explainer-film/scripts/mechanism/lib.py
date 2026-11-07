@@ -142,7 +142,8 @@ def wave(p, at, kind, events=(), label="", x=X0, y=Y0 + 40, w=X1 - X0, h=420):
            f'<line x1="0" y1="{h - 2}" x2="{w}" y2="{h - 2}" stroke="{C["line"]}" stroke-width="2"/>']
     mid = h / 2
     def path(d, pid, col, width=4, dash=False):
-        svg.append(f'<path id="{p}-{pid}" d="{d}" fill="none" stroke="{col}" stroke-width="{width}"{" stroke-dasharray=\"10 8\"" if dash else ""}/>')
+        dash_attr = ' stroke-dasharray="10 8"' if dash else ''
+        svg.append(f'<path id="{p}-{pid}" d="{d}" fill="none" stroke="{col}" stroke-width="{width}"{dash_attr}/>')
     def draw(pid, t, dur=2.2):
         tl.append(f'(function(){{const e=document.getElementById("{p}-{pid}");const L=e.getTotalLength();'
                   f'tl.fromTo(e,{{strokeDasharray:L,strokeDashoffset:L}},{{strokeDashoffset:0,duration:{dur},ease:"none"}},{t:.2f});}})();')
