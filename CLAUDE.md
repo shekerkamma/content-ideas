@@ -121,6 +121,10 @@ scripts need Node 20+, an optional add-on outside the stdlib-only runtime rule.
   turns an Excel workbook into analysis-ready CSVs (needs `pandas` and `openpyxl`, so it
   is outside the stdlib-only runtime rule). Run `--list` first. It assumes one table per
   sheet, so read stacked-table report sheets by label.
+- `detox` (Ben AI's setup-audit skill) is third-party with no licence, so this public repo
+  carries only our patches in `scripts/detox/`. Build it per machine into the gitignored
+  `vendor/detox/` with `apply_patches.py --zip <download>`; dual-host links it. Never commit
+  the original or the built skill.
 
 Claude Code loads `.claude/skills/` automatically. `.claude/settings.json`
 registers this repo as the `content-ideas` marketplace and enables the
