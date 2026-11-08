@@ -36,6 +36,9 @@ Input: `$ARGUMENTS`. "parity" or a question like "is it on both?" → step 1 and
    - Switch a mod on or off: `echo "/<mod> on" | dual_host.py claude -- -p` (stdin, no model call).
    - Skill: symlink on WSL (`~/.claude/skills/<name>` → repo); on Windows copy the folder,
      because Windows Claude cannot follow a WSL symlink.
+   - Third-party skill the public repo must not carry (for example `detox`): build it into the
+     gitignored `vendor/<name>/` first (`python3 scripts/detox/apply_patches.py --zip <download>`),
+     then symlink `~/.claude/skills/<name>` → `vendor/<name>` on WSL and copy it on Windows.
    - Settings key or hook: edit each `settings.json` separately with an exact edit, then
      `python3 -c 'import json;json.load(open(p))'` on each to prove it still parses.
 4. **Prove it.** Run `parity` again. Show the before and after lines for the changed item.

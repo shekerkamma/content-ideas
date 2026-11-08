@@ -1,0 +1,15 @@
+{
+  "_comment": "Hashes only. The original is Ben AI's free detox skill (no licence), not stored in this repo.",
+  "source": "https://c.benai.co/tosw1-free (from the video https://www.youtube.com/watch?v=k6JWDYvHr3U)",
+  "original_zip_sha256": "c7fd996c2aae1ef8ad4d468beab0935e757c0c6062975242c3b9a3e63f855a8a",
+  "patched_files_sha256": {
+    "PATCHES.md": "33828ca864dccadd62fff014de8ec49adbbc8df10ae0bedd22108426380c8e07",
+    "SKILL.md": "9a2f0dbc445f183fc455a12cf3923531229966abc823983dc7c3227decfea5f8",
+    "assets/logo.svg": "933fe7ed399e900c03a1235fccaf894337369667c90a81e1e7718e9cd4094463",
+    "assets/page.html": "b5b515c27f30b7fb83521d5d6380a64934614dc0aa4cb82e7dc94dccd4c25b42",
+    "references/checks.md": "99303927cd6d4a5d72bddf7d668fe90f3711222b032b7fb5408fd10fa587eff4",
+    "references/findings-schema.md": "ab2f61c61b689457675dbfe6b9e459b4df31c24e2db55a5df6efc45220b2e0cc",
+    "scripts/build_page.py": "4b29d5b6b62cd3fa58bf9f70397a415d01f6fac9cf84560742af5fad3cd122e0",
+    "scripts/gather_local.py": "24e914b8d2b999c3e055cbe2a84267ad6770659f8f0f6a40649766df9cfd94c4"
+  }
+}

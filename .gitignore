@@ -56,3 +56,6 @@ runs/**/*.pptx.inspect.ndjson
 
 # Stitch CLI per-repo config (workspace id; local only)
 .stitch.json
+
+# Third-party skills built locally from the user's own download (see scripts/detox/)
+vendor/
