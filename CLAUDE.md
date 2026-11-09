@@ -172,6 +172,10 @@ bash scripts/verify-recovery-skills.sh
 # --apply; exits non-zero when a live skill file is corrupt with no donor.
 python3 scripts/audit_skill_corruption.py ~ --git-repo .
 python3 scripts/audit_skill_corruption.py ~ --git-repo . --apply
+
+# build the patched /detox skill from your own copy of Ben AI's download
+# (vendor/ is gitignored; dual-host then symlinks it on WSL and copies on Windows)
+python3 scripts/detox/apply_patches.py --zip ~/Downloads/detox.zip
 ```
 
 ## Rules
