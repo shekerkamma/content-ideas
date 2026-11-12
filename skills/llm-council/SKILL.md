@@ -127,7 +127,7 @@ Answer these three questions. Be specific. Reference responses by letter.
 2. Which response has the biggest blind spot? What is it missing?
 3. What did ALL five responses miss that the council should consider?
 
-Keep your review under 200 words. Be direct.
+Keep your review short and direct: the verdict and the reasons that carry it.
 ```
 
 Run all 5 reviewers in parallel.
