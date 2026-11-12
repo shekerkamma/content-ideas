@@ -169,7 +169,7 @@ Answer these four questions. Reference responses by letter.
 3. Where does the evidence CONTRADICT what an advisor claimed?
 4. What did ALL five responses miss that the evidence suggests we should investigate?
 
-Keep under 200 words. Be direct.
+Keep it short and direct: the verdict and the reasons that carry it.
 ```
 
 ---

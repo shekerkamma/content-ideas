@@ -35,7 +35,7 @@ different lenses, then the main agent synthesizes and verifies their outputs.
 
 - Resolve this skill's directory from the visible path of this `SKILL.md`; the
   report template is `report-template.html` in the same folder.
-- Always use subagents when the host exposes them:
+- Run the five lenses as subagents when the host exposes them, so each lens stays independent:
   - Claude Code: use `Task` / `general-purpose` agents.
   - Codex: use `multi_agent_v1.spawn_agent` when available.
   - Antigravity/OpenHands: use the host's available task/subagent mechanism.

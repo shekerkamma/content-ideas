@@ -534,7 +534,7 @@ Analyze collected dataset records using LLM. Requires `anysite llm setup` first.
 Non-interactive setup (for agents):
 ```bash
 anysite llm setup --provider openai --api-key <key> --no-test
-anysite llm setup --provider anthropic --api-key-env ANTHROPIC_API_KEY --model claude-sonnet-4-5-20250514 --no-test
+anysite llm setup --provider anthropic --api-key-env ANTHROPIC_API_KEY --model claude-sonnet-5-5 --no-test
 ```
 
 ```bash
