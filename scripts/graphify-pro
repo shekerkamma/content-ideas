@@ -45,9 +45,6 @@ key="${CLIPROXY_API_KEY:-}"
 [ -n "$key" ] || key="$(awk -F': *' '/^CLIPROXY_API_KEY:/{gsub(/["'\'']/, "", $2); print $2}' "${CLIPROXY_CREDS:-$HOME/.dsh/.credentials.yaml}" 2>/dev/null || true)"
 [ -n "$key" ] || key="$(read_proxy_config_key "$HOME/.cli-proxy-api/config.yaml")"
 [ -n "$key" ] || key="$(read_proxy_config_key "/mnt/c/Users/${USER:-sheke}/.cli-proxy-api/config.yaml")"
-[ -n "$gw" ]  || { echo "graphify-pro: cannot resolve the proxy host" >&2; exit 1; }
-base="http://$gw:$PORT/v1"
-
 model="${GRAPHIFY_PRO_MODEL:-claude-sonnet-5-5}"
 case "$model" in
   claude-sonnet-5*|claude-opus-5*|claude-haiku-4-5*|sonnet|opus|haiku) mode=cli ;;
@@ -64,6 +61,8 @@ if [ "$mode" = cli ]; then
   }
   summary="claude-cli backend → $model ($(claude --version 2>/dev/null | head -1)); billed Gemini key unset"
 else
+  [ -n "$gw" ]  || { echo "graphify-pro: cannot resolve the proxy host" >&2; exit 1; }
+  base="http://$gw:$PORT/v1"
   [ -n "$key" ] || { echo "graphify-pro: no CLIProxyAPI key (env, ~/.dsh/.credentials.yaml, ~/.cli-proxy-api/config.yaml)" >&2; exit 1; }
   # Fail closed: the proxy must answer and must list the model, or nothing runs.
   models="$(curl -s -m 8 "$base/models" -H "Authorization: Bearer $key" || true)"
