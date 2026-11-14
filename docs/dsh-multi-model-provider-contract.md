@@ -8,6 +8,7 @@ Companion files:
 - `docs/dsh-cordis-patch.example.yml` — the provider config, secrets-free
   (`apiKeyEnv` references only). Live copy: `~/.dsh/profiles/{headless,web}/cordis.patch.yml`.
 - `scripts/claude_code_bridge.py` — OpenAI-compatible shim over the Claude Code CLI.
+- `scripts/codex_cli_bridge.py` — OpenAI-compatible shim over the Codex CLI.
 
 ## The one rule that governed this work
 
@@ -28,6 +29,7 @@ Trusting any of those listings would have produced a config that never worked.
 | Route | Endpoint | Auth | Cost |
 |---|---|---|---|
 | `claude-code-cli` | `127.0.0.1:8318/v1` (local bridge) | **Claude subscription** — no credential stored | none |
+| `codex-cli` | `127.0.0.1:8319/v1` (local bridge) | **ChatGPT subscription** — no credential stored | none |
 | `cliproxyapi` | `<win-host>:8317/v1` | AI Studio key + Antigravity OAuth | free tier |
 | `zenmux` | `zenmux.ai/api/v1` | API key | **prepaid, per token** |
 | `omniroute` | `<win-host>:20128/v1` | gateway key; ChatGPT sub for `cx/*` | mixed |
@@ -180,27 +182,36 @@ python3 scripts/claude_code_bridge.py --port 8318
 dsh --profile headless --patch ~/.dsh/patches/claude-code-cli.yml "your task"
 ```
 
-**The bridge's two env vars ARE the nested agent's sandbox, and both fail as
-somebody else's bug.** Neither is a dsh setting, and neither is visible in the
-dsh web UI — but a nested agent hitting either one reports it as a dsh session
-permission or working-directory scope, because that is what it looks like from
-inside.
+**Lean mode (default for all models except `claude-code-agent`).**
+Before 2026-11-13 each request booted a full Claude Code session — loading every
+MCP server, hook, plugin, and mod — making a "Reply PONG" call take 62–184 s.
+All models except `claude-code-agent` now run lean: `--strict-mcp-config`,
+`--setting-sources ""`, `--disable-slash-commands`, `--tools ""`,
+`--no-session-persistence`, in a separate empty working directory
+(`CLAUDE_BRIDGE_LEAN_CWD`, default `~/.dsh/bridges/work`). PONG is 3–5 s; a
+real dsh turn is ~8 s.
 
-- `CLAUDE_BRIDGE_CWD` is the sandbox root. `claude -p` reads and writes only
-  beneath its own cwd, so every path outside it is "blocked by policy" to the
-  caller. Left at a `$CONTENT_HOME`-style scratch or `/tmp` scratchpad, the
-  agent can see nothing of the repo. Worse, `/tmp` session scratchpads get
-  swept, and a missing cwd raises the same `FileNotFoundError` as a missing
-  binary — which is why the bridge now checks `os.path.isdir` first and says
-  so, instead of blaming your PATH.
-- `CLAUDE_BRIDGE_PERMISSION_MODE` decides whether the nested agent can act.
-  `claude -p` has no TTY, so under the CLI default anything needing approval is
-  **auto-rejected with no prompt for a human to answer** — tools read as "not
-  granted" and confirmation dialogs (`EnterWorktree` and friends) re-show
-  forever. `acceptEdits` lets file edits through; `bypassPermissions` gates
-  nothing and should only be set on a bridge whose every local caller you
-  trust, since the default bearer token is the well-known string
+The `claude-code-agent` model still uses the full session (all tools, MCP
+servers, hooks) in `CLAUDE_BRIDGE_CWD`, which is the right choice when you
+actually need the nested agent's full tool access.
+
+**The bridge's env vars:**
+
+- `CLAUDE_BRIDGE_CWD` — sandbox root for `claude-code-agent` (full session).
+- `CLAUDE_BRIDGE_LEAN_CWD` — working directory for lean (default) models.
+  `claude -p` can only see paths under its own cwd, so both variables scope
+  what the nested Claude can read and write. A missing path raises the same
+  `FileNotFoundError` as a missing binary; the bridge checks `os.path.isdir`
+  first to give a useful message.
+- `CLAUDE_BRIDGE_PERMISSION_MODE` — `acceptEdits` (default). `claude -p` has
+  no TTY, so the CLI default auto-rejects tools; `acceptEdits` allows file
+  edits. `bypassPermissions` gates nothing — only use it when every caller is
+  trusted, since the default bearer token is the well-known string
   `local-claude-bridge`.
+- `CLAUDE_BRIDGE_TIMEOUT` — per-request timeout in seconds (default: **180**,
+  was 600 before 2026-11-13).
+- `CLAUDE_BRIDGE_RETRIES` — extra tries on transient `No messages returned`
+  failures (default: 1).
 
 **Diagnosing a 502 `upstream_error` from this bridge:** Claude Code writes the
 reason to **stdout as JSON** (`is_error`, `subtype`, `terminal_reason`,
@@ -245,6 +256,39 @@ cold, billed at 0. Two failure modes cost time on 2026-10-18:
 - **`database disk image is malformed`** means
   `~/.local/share/opencode/opencode.db` is corrupt (the July copy was 90 %
   zero bytes), not the model. Move it aside and OpenCode recreates it.
+
+## The Codex CLI bridge
+
+`scripts/codex_cli_bridge.py` is an OpenAI-compatible shim over the signed-in
+Codex CLI. It runs `codex exec --ephemeral --skip-git-repo-check -s read-only`
+in a read-only sandbox, reading the prompt from stdin to stay under Linux
+`ARG_MAX`. The bridge serves `/v1/chat/completions` (JSON and SSE) plus
+`/v1/models` on port 8319, and dsh knows it as provider `codex-cli`:
+
+```bash
+CODEX_BRIDGE_CWD=~/.dsh/bridges/work \
+python3 scripts/codex_cli_bridge.py --port 8319
+dsh --profile headless --patch ~/.dsh/patches/codex-cli-default.yml "task"
+```
+
+**Models:** `codex-cli-default`, `codex-cli-gpt-6.1-sol`, `codex-cli-gpt-6.1-terra`,
+`codex-cli-gpt-6-sol`, `codex-cli-gpt-6-astra`, `codex-cli-gpt-6-luna`,
+`codex-cli-gpt-5.6-sol`, `codex-cli-gpt-5.6-terra`, `codex-cli-gpt-5.6-luna`.
+(`gpt-5.5`, `gpt-5.4`, and `gpt-5.4-mini` were excluded because Codex returns
+`model_not_found` when used with a ChatGPT account subscription.)
+
+**Env vars:**
+
+- `CODEX_BRIDGE_CWD` — working directory passed to `codex exec -C`. Defaults
+  to `~`. Use an empty folder (`~/.dsh/bridges/work`) since `codex exec` runs
+  in a read-only sandbox and doesn't need repo access.
+- `CODEX_BRIDGE_TIMEOUT` — per-request timeout in seconds (default: 900).
+- `CODEX_BRIDGE_TOKEN` — bearer token the bridge accepts (default:
+  `local-codex-bridge`).
+
+**Same limitation as the Claude Code bridge:** Codex does its own tool use
+internally and returns prose; no `tool_calls` reach dsh. Measured: a dsh
+headless turn answers in ~15 s.
 
 ## Host gotchas
 
