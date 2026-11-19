@@ -5,7 +5,10 @@ from pathlib import Path
 
 import pytest
 
-Image = pytest.importorskip("PIL.Image")
+try:
+    import PIL.Image as Image
+except Exception:
+    pytest.skip("PIL not available", allow_module_level=True)
 
 
 MODULE_PATH = Path(__file__).parents[1] / "scripts" / "extract_screen_states.py"
