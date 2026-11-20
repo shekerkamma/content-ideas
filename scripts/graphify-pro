@@ -45,14 +45,16 @@ key="${CLIPROXY_API_KEY:-}"
 [ -n "$key" ] || key="$(awk -F': *' '/^CLIPROXY_API_KEY:/{gsub(/["'\'']/, "", $2); print $2}' "${CLIPROXY_CREDS:-$HOME/.dsh/.credentials.yaml}" 2>/dev/null || true)"
 [ -n "$key" ] || key="$(read_proxy_config_key "$HOME/.cli-proxy-api/config.yaml")"
 [ -n "$key" ] || key="$(read_proxy_config_key "/mnt/c/Users/${USER:-sheke}/.cli-proxy-api/config.yaml")"
-[ -n "$gw" ]  || { echo "graphify-pro: cannot resolve the proxy host" >&2; exit 1; }
-base="http://$gw:$PORT/v1"
 
 model="${GRAPHIFY_PRO_MODEL:-claude-sonnet-5-5}"
 case "$model" in
   claude-sonnet-5*|claude-opus-5*|claude-haiku-4-5*|sonnet|opus|haiku) mode=cli ;;
   *) mode=proxy ;;
 esac
+
+# CLI mode routes through `claude -p` and never touches the proxy; skip the gw check.
+[ -n "$gw" ] || [ "$mode" = cli ] || { echo "graphify-pro: cannot resolve the proxy host" >&2; exit 1; }
+base="http://$gw:$PORT/v1"
 
 if [ "$mode" = cli ]; then
   command -v claude >/dev/null 2>&1 || { echo "graphify-pro: 'claude' CLI not on PATH — cannot run $model via claude-cli" >&2; exit 1; }
