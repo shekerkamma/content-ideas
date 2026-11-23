@@ -19,8 +19,8 @@ import sys
 
 try:
     from PIL import Image
-except ImportError:
-    sys.exit("BLOCKED: Pillow is required (pip install pillow). Not measuring.")
+except ImportError as _pil_err:
+    raise ImportError("Pillow is required (pip install pillow)") from _pil_err
 
 SAMPLE = 240
 

@@ -16,14 +16,17 @@ sys.path.insert(0, str(SKILL / "scripts"))
 
 
 def _solid(path, rgb, size=(120, 120)):
-    Image = pytest.importorskip("PIL.Image", reason="Pillow not installed")
+    from PIL import Image
     Image.new("RGB", size, rgb).save(path)
     return str(path)
 
 
 @pytest.fixture
 def metric():
-    pytest.importorskip("PIL", reason="Pillow not installed")
+    try:
+        from PIL import Image  # noqa: F401
+    except (ImportError, ModuleNotFoundError):
+        pytest.skip("Pillow not installed")
     import palette_distance
     return palette_distance
 
