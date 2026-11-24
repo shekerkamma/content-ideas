@@ -1,0 +1,402 @@
+[
+  {
+    "n": 1,
+    "hint": "Series title, e.g. The Code Mode test",
+    "value": "The Code Mode test"
+  },
+  {
+    "n": 2,
+    "hint": "The gain.",
+    "value": "Half the tokens."
+  },
+  {
+    "n": 3,
+    "hint": "The cost.",
+    "value": "Almost twice the time."
+  },
+  {
+    "n": 4,
+    "hint": "One sentence: what you ran and what changed.",
+    "value": "I ran the same Claude Code job twice, once with the new experimental Code Mode switched on. Here is what changed."
+  },
+  {
+    "n": 5,
+    "hint": "−48%",
+    "value": "−48%"
+  },
+  {
+    "n": 6,
+    "hint": "metric A",
+    "value": "conversation tokens"
+  },
+  {
+    "n": 7,
+    "hint": "1.8×",
+    "value": "1.8×"
+  },
+  {
+    "n": 8,
+    "hint": "metric B",
+    "value": "time to answer"
+  },
+  {
+    "n": 9,
+    "hint": "5/5",
+    "value": "5/5"
+  },
+  {
+    "n": 10,
+    "hint": "correct, both runs",
+    "value": "correct, both runs"
+  },
+  {
+    "n": 11,
+    "hint": "Tool version · model · one run each",
+    "value": "Claude Code 2.1.331 · Opus 5.5 · one run each"
+  },
+  {
+    "n": 12,
+    "hint": "Series title",
+    "value": "The Code Mode test"
+  },
+  {
+    "n": 13,
+    "hint": "One task, run twice. Only one switch changed.",
+    "value": "One task, run twice. Only one switch changed."
+  },
+  {
+    "n": 14,
+    "hint": "What was run",
+    "value": "List the broken links in 24 Markdown notes"
+  },
+  {
+    "n": 15,
+    "hint": "How the right answer was known",
+    "value": "5 broken links, planted by hand"
+  },
+  {
+    "n": 16,
+    "hint": "What stayed the same",
+    "value": "Model, prompt, effort level"
+  },
+  {
+    "n": 17,
+    "hint": "The one switch",
+    "value": "Code Mode off, then on"
+  },
+  {
+    "n": 18,
+    "hint": "Metrics and where they came from",
+    "value": "Tokens (/context), time, correctness"
+  },
+  {
+    "n": 19,
+    "hint": "One line explaining the thing tested",
+    "value": "In Code Mode, Claude writes a script that makes its tool calls"
+  },
+  {
+    "n": 20,
+    "hint": "Series title",
+    "value": "The Code Mode test"
+  },
+  {
+    "n": 21,
+    "hint": "Finding A, number in",
+    "value": "Code Mode cut conversation tokens by"
+  },
+  {
+    "n": 22,
+    "hint": "48%",
+    "value": "48%"
+  },
+  {
+    "n": 23,
+    "hint": "Why it moved, one sentence.",
+    "value": "File contents stayed inside the script instead of passing through the conversation."
+  },
+  {
+    "n": 24,
+    "hint": "Metric A, unit",
+    "value": "Conversation tokens, thousands"
+  },
+  {
+    "n": 25,
+    "hint": "40",
+    "value": "40"
+  },
+  {
+    "n": 26,
+    "hint": "Baseline",
+    "value": "Normal"
+  },
+  {
+    "n": 27,
+    "hint": "34.4",
+    "value": "34.4"
+  },
+  {
+    "n": 28,
+    "hint": "34.4k",
+    "value": "34.4k"
+  },
+  {
+    "n": 29,
+    "hint": "Change",
+    "value": "Code Mode"
+  },
+  {
+    "n": 30,
+    "hint": "18",
+    "value": "18"
+  },
+  {
+    "n": 31,
+    "hint": "18k",
+    "value": "18k"
+  },
+  {
+    "n": 32,
+    "hint": "10k",
+    "value": "10k"
+  },
+  {
+    "n": 33,
+    "hint": "20k",
+    "value": "20k"
+  },
+  {
+    "n": 34,
+    "hint": "30k",
+    "value": "30k"
+  },
+  {
+    "n": 35,
+    "hint": "40k",
+    "value": "40k"
+  },
+  {
+    "n": 36,
+    "hint": "where metric A was read",
+    "value": "/context “Messages” row at the end of each run"
+  },
+  {
+    "n": 37,
+    "hint": "One run per arm",
+    "value": "One run per arm"
+  },
+  {
+    "n": 38,
+    "hint": "Series title",
+    "value": "The Code Mode test"
+  },
+  {
+    "n": 39,
+    "hint": "Finding B, number in",
+    "value": "But the same job took"
+  },
+  {
+    "n": 40,
+    "hint": "1.8 times",
+    "value": "1.8 times"
+  },
+  {
+    "n": 41,
+    "hint": "as long",
+    "value": "as long"
+  },
+  {
+    "n": 42,
+    "hint": "Metric B, unit",
+    "value": "Time to answer, seconds"
+  },
+  {
+    "n": 43,
+    "hint": "80",
+    "value": "80"
+  },
+  {
+    "n": 44,
+    "hint": "Baseline",
+    "value": "Normal"
+  },
+  {
+    "n": 45,
+    "hint": "38",
+    "value": "38"
+  },
+  {
+    "n": 46,
+    "hint": "38 s",
+    "value": "38 s"
+  },
+  {
+    "n": 47,
+    "hint": "Change",
+    "value": "Code Mode"
+  },
+  {
+    "n": 48,
+    "hint": "67",
+    "value": "67"
+  },
+  {
+    "n": 49,
+    "hint": "67 s",
+    "value": "67 s"
+  },
+  {
+    "n": 50,
+    "hint": "20",
+    "value": "20"
+  },
+  {
+    "n": 51,
+    "hint": "40",
+    "value": "40"
+  },
+  {
+    "n": 52,
+    "hint": "60",
+    "value": "60"
+  },
+  {
+    "n": 53,
+    "hint": "80",
+    "value": "80"
+  },
+  {
+    "n": 54,
+    "hint": "where metric B was read",
+    "value": "shell timestamps, prompt sent to answer finished"
+  },
+  {
+    "n": 55,
+    "hint": "Correctness result, and what it means, in one or two sentences.",
+    "value": "Both runs found all 5 broken links. The answer didn’t change, only the bill and the wait."
+  },
+  {
+    "n": 56,
+    "hint": "One run per arm",
+    "value": "One run per arm"
+  },
+  {
+    "n": 57,
+    "hint": "Series title",
+    "value": "The Code Mode test"
+  },
+  {
+    "n": 58,
+    "hint": "What you give up when it’s on",
+    "value": "What you give up when it’s on"
+  },
+  {
+    "n": 59,
+    "hint": "Feature",
+    "value": "Feature"
+  },
+  {
+    "n": 60,
+    "hint": "In the changed setup",
+    "value": "In a Code Mode session"
+  },
+  {
+    "n": 61,
+    "hint": "Limit 1",
+    "value": "Remote Control"
+  },
+  {
+    "n": 62,
+    "hint": "Not available",
+    "value": "Not available"
+  },
+  {
+    "n": 63,
+    "hint": "Limit 2",
+    "value": "Claude in Chrome"
+  },
+  {
+    "n": 64,
+    "hint": "Not available",
+    "value": "Not available"
+  },
+  {
+    "n": 65,
+    "hint": "Limit 3",
+    "value": "Computer use"
+  },
+  {
+    "n": 66,
+    "hint": "Not available",
+    "value": "Not available"
+  },
+  {
+    "n": 67,
+    "hint": "Caveat 1",
+    "value": "Resuming a session"
+  },
+  {
+    "n": 68,
+    "hint": "What happens",
+    "value": "Only with Code Mode on"
+  },
+  {
+    "n": 69,
+    "hint": "where the limits are documented",
+    "value": "Claude Code docs, as summarised in the Code Mode video and guide"
+  },
+  {
+    "n": 70,
+    "hint": "Series title",
+    "value": "The Code Mode test"
+  },
+  {
+    "n": 71,
+    "hint": "The verdict,",
+    "value": "Opt in per job,"
+  },
+  {
+    "n": 72,
+    "hint": "the turn",
+    "value": "not by default"
+  },
+  {
+    "n": 73,
+    "hint": "Use it for",
+    "value": "Use Code Mode for"
+  },
+  {
+    "n": 74,
+    "hint": "When it pays off",
+    "value": "Long searches across many files, where your usage limit matters more than the wait"
+  },
+  {
+    "n": 75,
+    "hint": "Keep it off for",
+    "value": "Keep it off for"
+  },
+  {
+    "n": 76,
+    "hint": "When it doesn't",
+    "value": "Quick back-and-forth work, and anything needing Remote Control or computer use"
+  },
+  {
+    "n": 77,
+    "hint": "# where it lives",
+    "value": "# ~/.bashrc: start Code Mode only when asked"
+  },
+  {
+    "n": 78,
+    "hint": "setup line, <span class=\"k\">highlighted</span> part",
+    "html": "claude-cm() {<br>&nbsp;&nbsp;<span class=\"k\">CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1</span> claude \"$@\"<br>}"
+  },
+  {
+    "n": 79,
+    "hint": "One run on one task.",
+    "value": "One run on one task."
+  },
+  {
+    "n": 80,
+    "hint": "Run your own test before you switch.",
+    "value": "Run your own test before you switch."
+  }
+]
