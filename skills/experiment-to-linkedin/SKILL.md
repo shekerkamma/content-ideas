@@ -41,10 +41,16 @@ it into existence.
    `## Draft` (paste-ready), `## Source Notes`, `## Repurpose`.
 4. **Check the post:**
    `python3 scripts/check_post.py <run>/linkedin-post-draft.md` and fix every FAIL.
-5. **Fill the carousel.** Copy `assets/template.html` to `<run>/carousel/carousel.html` and
-   replace every `[[placeholder]]`, including the chart numbers (`--max`, `--v`, tick labels). Slide plan and design rules:
+5. **Fill the carousel.** Don't hand-edit 80 placeholders.
+   `python3 scripts/fill_template.py skeleton assets/template.html <run>/carousel/values.json`
+   writes one `{"n", "hint", "value"}` entry per placeholder, in page order. Fill every `value`
+   from `claims.md`, including the chart numbers (`--max`, `--v`, tick labels). Use `"html"`
+   instead of `"value"` only for markup such as the highlighted code line. Then
+   `python3 scripts/fill_template.py fill assets/template.html <run>/carousel/values.json <run>/carousel/carousel.html`.
+   It refuses a wrong count, a mismatched hint or an empty value. Worked example:
+   `examples/code-mode.values.json`. Slide plan and design rules:
    [references/carousel-design.md](references/carousel-design.md). Keep the slide order identical
-   to the post.
+   to the post. Need extra table rows (slide 5)? Add them to the filled `carousel.html` afterwards.
 6. **Render at 2x:**
    `node scripts/render.mjs <run>/carousel/carousel.html <run>/carousel`
    → `slide-01.png` … (2160x2700).
@@ -64,7 +70,8 @@ it into existence.
   claims.md                   # number → source → caveat
   linkedin-post-draft.md      # Hook Options / Draft / Source Notes / Repurpose
   carousel/
-    carousel.html             # editable source
+    values.json               # placeholder values (fill_template.py)
+    carousel.html             # filled template, editable source
     slide-01.png … slide-06.png   # 2160x2700
     carousel.pdf              # image-only, 1080x1350 pages
 ```
@@ -103,6 +110,10 @@ Editable policy. Tune here, not in the steps.
   still holds after copy edits.
 - **Bar rows:** `.lab`, `.bar` use `flex-shrink:0` and `.val` uses `nowrap`. Without them a long bar
   squeezes its label and the value wraps ("67 / s"), which happened in the first editorial render.
+- **Values are text by default.** `fill_template.py` HTML-escapes `value`, so `&` and `<` show
+  literally. A `"html"` entry goes in as-is: use it only for markup, never for copy.
+- **A values file is tied to one template.** If the template changes, the hint check fails. Run
+  `skeleton` again and copy the values across. Don't edit hints to force a match.
 - **Playwright lookup:** scripts resolve `playwright` from `$PLAYWRIGHT_ROOT`, then the cwd, then
   the repo root. Set `PLAYWRIGHT_ROOT=~/content-ideas` if it says "Cannot find module".
 

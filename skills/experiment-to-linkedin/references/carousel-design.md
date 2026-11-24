@@ -1,7 +1,7 @@
 # Carousel design: editorial report
 
-`assets/template.html` is the design. Copy it, replace every `[[placeholder]]`, and set the chart
-numbers. Don't restyle per post. The user picked this direction from three mockups after
+`assets/template.html` is the design. Fill it with `scripts/fill_template.py` (skeleton → values
+→ fill; see SKILL.md step 5), chart numbers included. Don't restyle per post. The user picked this direction from three mockups after
 rejecting two others (see `examples/code-mode.md`), so changing it is the user's call.
 
 ## Tokens
