@@ -7,7 +7,9 @@ argument-hint: "<results: file, folder, or pasted numbers> [--out <run-dir>]"
 # Experiment → LinkedIn post + carousel
 
 Turns one measured comparison into two finished pieces that say the same thing in the same order:
-a LinkedIn post (paste-ready text) and a 6-slide carousel PDF to attach as a document.
+a LinkedIn post (paste-ready text) and a 6-slide carousel PDF to attach as a document. The carousel
+uses an editorial-report design: white page, serif headlines that state each finding, real bar
+charts with a source line, ruled tables.
 
 **Cost tier:** Sonnet-class can run it end to end. Rendering is free and local (Playwright +
 chromium). No image model, no paid API. Writing the post is the only judgment-heavy step.
@@ -39,15 +41,15 @@ it into existence.
    `## Draft` (paste-ready), `## Source Notes`, `## Repurpose`.
 4. **Check the post:**
    `python3 scripts/check_post.py <run>/linkedin-post-draft.md` and fix every FAIL.
-5. **Fill the carousel.** Copy `assets/template.html` to `<run>/carousel/carousel.html` and edit
-   only the regions marked `EDIT`. Slide plan and design rules:
+5. **Fill the carousel.** Copy `assets/template.html` to `<run>/carousel/carousel.html` and
+   replace every `[[placeholder]]`, including the chart numbers (`--max`, `--v`, tick labels). Slide plan and design rules:
    [references/carousel-design.md](references/carousel-design.md). Keep the slide order identical
    to the post.
 6. **Render at 2x:**
    `node scripts/render.mjs <run>/carousel/carousel.html <run>/carousel`
    → `slide-01.png` … (2160x2700).
-7. **Look at every slide** at full size (Read each PNG). Fix collisions, faint text, stray
-   decoration squares, one-word last lines; re-render. No cap on these passes, they're free.
+7. **Look at every slide** at full size (Read each PNG). Fix wrapped bar values, misaligned bars, bar
+   lengths that don't match the numbers, one-word last lines; re-render. No cap on these passes, they're free.
 8. **Build the PDF from the reviewed PNGs:**
    `node scripts/build_pdf.mjs <run>/carousel` → `carousel.pdf`.
 9. **Look at the PDF pages** (`pdftoppm -r 30 -png` → contact sheet → Read). The PDF must match
@@ -73,21 +75,22 @@ Editable policy. Tune here, not in the steps.
 
 - **Six slides** by default: hook, setup, metric A, metric B, the catch, your setup/verdict.
   Drop to five if there is only one metric; never pad to six.
-- **One idea per slide**, greige context lines then one ink or orange punchline.
-- **Unit-grid charts** when values are ≤ ~90 units after scaling (1 square = 1k tokens, 1 s, 1 €).
-  Above that, rescale the unit; never draw more than ~90 squares per arm.
+- **One idea per slide.** Each headline states the finding; one `<em>` span carries the accent.
+- **Bar charts** for every metric: grey baseline, red change, axis from 0 to a round `--max` just
+  above the largest value, and a source line naming where the number was read.
 - **Post length** 100–200 words; hook must land in the first 210 characters.
 - **Single runs are reported as single runs**, in the post and on a slide footer. Never imply a
   benchmark.
 - **Third-party numbers** appear only with who measured them, and only to say they aren't yours.
 - **No code in the post body.** Code goes on a carousel slide.
-- **Grey text contrast ≥ 3:1** on the canvas (large text); labels ≥ 4:1.
+- **Text contrast:** body `#3A3A3A` and labels `#6B6B6B` on white (both above 4.5:1).
 
 ## Gotchas
 
-- **The stock look:** near-black + terracotta + monospace cards is the generic default; the user
-  called it horrible. The template's bone canvas + orange pixel grid is the fix, grounded in the
-  `ai-graphics` reference `deeptech-silicon/groq`. If you restyle, ground it in a real capture first.
+- **Don't restyle on your own.** Two designs were rejected: near-black + terracotta + monospace
+  cards ("looks horrible"), then a bone canvas with orange pixel-square charts ("does not look
+  professional at all"). The user picked the editorial report from three mockups. If a restyle is
+  ever needed, show 2–3 mockups and let the user choose; don't guess a fourth time.
 - **Never `page.pdf()` the HTML.** Text becomes Type 3 glyphs that look bad in Windows viewers.
   The PDF is built from the reviewed PNGs only.
 - **Pillow's PDF writer fails here** (no JPEG encoder). Use `build_pdf.mjs`.
@@ -96,8 +99,10 @@ Editable policy. Tune here, not in the steps.
 - **1,300 characters is not the "see more" line.** LinkedIn cuts at ~210 characters / 2–3 lines.
 - **`brand_context/voice-profile.md` is a stock template** (web-scraping persona). Use its
   LinkedIn format rules, not its catchphrases. Ask for the user's real voice if voice matters.
-- **`text-wrap: balance`** is on headings to stop one-word last lines. Check it still holds after
-  copy edits.
+- **`text-wrap: balance`** is on headlines and the callout to stop one-word last lines. Check it
+  still holds after copy edits.
+- **Bar rows:** `.lab`, `.bar` use `flex-shrink:0` and `.val` uses `nowrap`. Without them a long bar
+  squeezes its label and the value wraps ("67 / s"), which happened in the first editorial render.
 - **Playwright lookup:** scripts resolve `playwright` from `$PLAYWRIGHT_ROOT`, then the cwd, then
   the repo root. Set `PLAYWRIGHT_ROOT=~/content-ideas` if it says "Cannot find module".
 
@@ -116,7 +121,7 @@ Business Automation
 | `watch` | Sequential upstream | when the experiment was prompted by a video claim | `<run>/report.md` |
 | `watch-video` | Sequential upstream | same, via the wrapper that writes `report.md` into the run dir | `<run>/report.md` |
 | `anti-slop` | Behavioral overlay | always, step 3 | — |
-| `ai-graphics` | Alternative / Peer | a one-off graphic, or a restyle needing a new reference | design spec + HTML |
+| `ai-graphics` | Alternative / Peer | a one-off graphic, or design mockups if a restyle is asked for | design spec + HTML |
 | `vault-content-ideas-pipeline` | Alternative / Peer | post with no measured experiment; vault note shape | `Content/LinkedIn/*.md` |
 | `storyboard-to-carousel` | Alternative / Peer | DeepGrid part storyboards in the DeepGrid design system | — |
 | `review-draft` | Amplifier | optional voice check if a real brand voice exists | draft md |
