@@ -1,8 +1,8 @@
 # Worked example: Claude Code Code Mode A/B (2026-11-24)
 
 The run that produced this skill. The post below passed `check_post.py`; the carousel is
-`code-mode-carousel.html` in this folder (the filled template). The user rejected two earlier
-versions, so both failures are recorded here.
+`code-mode-carousel.html` in this folder (the filled editorial template). The user rejected
+earlier versions of both, so every failure is recorded here.
 
 ## Result table
 
@@ -41,5 +41,8 @@ One run on one task proves very little. Test it on your own work before you chan
 
 - **Carousel v1:** near-black + terracotta + monospace cards. "The pdf file looks horrible."
   Also printed via `page.pdf()`, so the text became Type 3 glyphs.
+- **Carousel v2:** bone canvas, light grey type, orange pixel-square unit charts. "Looks like the pdf
+  generated does not look professional at all." Replaced by the editorial report the user picked
+  from three mockups (`code-mode-carousel.html` here).
 - **Post v1–v3:** outline of "2. Setup → …", arrows, a pasted bash function, an 👉 emoji and a
   "Tried Code Mode yet?" closer. "Does not look good at all."

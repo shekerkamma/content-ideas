@@ -1,52 +1,58 @@
-# Carousel design
+# Carousel design: editorial report
 
-`assets/template.html` is the design. Copy it, fill the `EDIT` regions, set the `data-n` counts.
-Don't restyle per post; consistency across posts is the point.
+`assets/template.html` is the design. Copy it, replace every `[[placeholder]]`, and set the chart
+numbers. Don't restyle per post. The user picked this direction from three mockups after
+rejecting two others (see `examples/code-mode.md`), so changing it is the user's call.
 
 ## Tokens
 
 | Token | Hex | Use |
 |---|---|---|
-| canvas | `#F2F1EB` | background (bone, not white) |
-| ink | `#1A1A17` | punchline line, baseline numbers |
-| greige | `#8F8A7E` | context lines (3.04:1 on canvas; large text only) |
-| muted | `#77736A` | mono labels (4.18:1) |
-| rule | `#D9D6CC` | header/footer hairlines |
-| signal | `#F04E23` | the change arm, one punchline per slide, pixel squares |
-| steel | `#3B3A36` | the baseline arm's squares |
+| paper | `#FFFFFF` | background |
+| ink | `#111111` | headlines, masthead rules, values |
+| body | `#3A3A3A` | standfirst and table text |
+| muted | `#6B6B6B` | labels, axis ticks, source lines, footers |
+| hair | `#D9D9D9` | table rules, footer rule, chart gridlines |
+| accent | `#A4161A` | the change arm, the "Changed" row, one `<em>` per headline |
+| base | `#9AA3AD` | the baseline arm's bar |
+| wash | `#F4F4F2` | code block background |
 
-Type: Inter 300/400/500 for display and body; IBM Plex Mono uppercase for labels. Both are
-installed locally; the stack falls back to Helvetica/DejaVu.
+Type: **DM Serif Display** (headlines, masthead title, key figures, callout) and **Inter**
+(everything else, tabular numerals). IBM Plex Mono for code. All three are installed locally;
+the stacks fall back to Georgia, Helvetica and DejaVu Sans Mono.
 
 ## Slide plan (6)
 
 | # | Archetype | Focal point |
 |---|---|---|
-| 1 | Hook statement | three lines: context (greige), gain (ink), cost (orange) |
-| 2 | Setup statement | held-constant lines in greige, the one change in ink |
-| 3 | Metric A | 270px hero number + two unit grids |
-| 4 | Metric B | hero number + grids; correctness in the caption |
-| 5 | The catch | what you lose (greige list), the sharpest limit (ink) |
-| 6 | Verdict | the rule you now follow + optional code block |
+| 1 | Verdict | headline "gain. <em>cost.</em>", standfirst, three key figures in a ruled strip |
+| 2 | Method | headline + ruled method table (task, answer key, held constant, changed, measured) |
+| 3 | Metric A | finding as headline, horizontal bar chart with axis, source line |
+| 4 | Metric B | same chart; a red-ruled callout carries the correctness result |
+| 5 | The catch | headline + feature table, limits in the accent |
+| 6 | Rule | headline, "use it for / keep it off for" columns, optional code block |
 
-Only one metric? Delete slide 4 and renumber the `0N / 06` labels to `/ 05`.
+Only one metric? Delete slide 4 and renumber the masthead pages `n / 5`.
 
-## Unit grids (the signature element)
+## Headlines
 
-`<div class="grid b" data-n="18">` draws 18 squares, 22 per row. Pick a unit so each arm is
-roughly 10–90 squares, and say the unit in the slide footer ("1 square = 1k tokens"). Round
-to the nearest unit; the exact value sits beside the label.
+Every headline is the finding, not a topic ("Code Mode cut conversation tokens by 48%", not
+"Token usage"). Put `<em>` on exactly one span (the number or the turn), which colours it red.
 
-## Decoration squares
+## Bar charts
 
-The `.px` squares are absolutely positioned. After copy edits, check that none sits on text or
-on the code block. Move them; don't delete them all (they carry the reference's look).
+- Set `--max` on `.plot` to a round number just above the largest value (34.4 → 40, 67 → 80).
+- Set `--v` on each `.bar` to the raw value in the same unit. Length is `v / max × 640px`.
+- Tick labels go at 0 / 25 / 50 / 75 / 100 % of `--max` (40 → 10k, 20k, 30k, 40k).
+- Baseline bar is `.bar` (grey), the change is `.bar b` (red), with its value in `.val acc`.
+- The source line under every chart is required. It names where the number was read.
 
 ## Review checklist (each slide, full size)
 
 - no `[[placeholder]]` left (render.mjs refuses anyway)
-- no one-word last line (headings use `text-wrap: balance`)
-- no decoration square touching text or the code box
-- hero numbers match `claims.md` exactly
+- no one-word last line (headlines and the callout use `text-wrap: balance`)
+- bar values stay on one line, and both bars start at the same x
+- bar lengths match the numbers (34.4 of 40 = 86 % of the axis)
+- every number matches `claims.md`
 - slide order matches the post
-- the code block's lines are broken by hand, not wrapped by the browser
+- code-block lines are broken by hand, not wrapped by the browser
