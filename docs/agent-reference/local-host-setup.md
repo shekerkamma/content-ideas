@@ -21,6 +21,16 @@
     in `~/.codex/config.toml` for the gbrain MCP server); it has no
     settings.local.json equivalent, so this layer is what Codex — and any
     interactively-launched Claude Code session — actually relies on.
+  - **Hermes** reads its own `~/.hermes/.env` (Windows Desktop:
+    `C:\Users\<user>\AppData\Local\hermes\.env`). `add_key.py NAME --hermes`
+    writes there too; `--from-env-file PATH` copies an existing value without
+    showing it (it refuses `$VAR` references); `--skip-claude` leaves
+    settings.local.json alone. Hermes expands `${env:NAME}` config refs before
+    it loads its `.env`, so a key it only finds there triggers a harmless
+    "is not set" warning: keep it in `keys.env` as well (also sourced from
+    `~/.profile`), and the gateway's systemd drop-in
+    `hermes-gateway.service.d/env.conf` loads `~/.hermes/.env` with
+    `EnvironmentFile=` (systemd ignores `export` lines, so not `keys.env`).
   - Write to both layers together; neither replaces the other. Never put a
     real key in `~/.config/content/.env`'s tracked convention notes, a
     commit, or any file under version control.

@@ -154,3 +154,67 @@ def test_migrate_twice_is_a_no_op(tmp_path):
     p, rc, keys = migrate(tmp_path)
     assert p.returncode == 0 and "nothing to move" in p.stdout
     assert rc.read_text() == rc_after
+
+
+def run_opts(tmp, *args, value=None):
+    proj = tmp / "proj"
+    (proj / ".claude").mkdir(parents=True, exist_ok=True)
+    cmd = [sys.executable, str(SCRIPT), *args, "--project-dir", str(proj),
+           "--bashrc", str(tmp / "bashrc"), "--keys-file", str(tmp / "cfg" / "keys.env"),
+           "--hermes-env", str(tmp / "hermes" / ".env")]
+    p = subprocess.run(cmd, input=None if value is None else value + "\n",
+                       capture_output=True, text=True, start_new_session=True)
+    return p, proj / ".claude" / "settings.local.json", tmp / "cfg" / "keys.env", tmp / "hermes" / ".env"
+
+
+def test_hermes_flag_writes_hermes_env_and_keeps_its_other_lines(tmp_path):
+    (tmp_path / "hermes").mkdir()
+    (tmp_path / "hermes" / ".env").write_text("SLACK_HOME_CHANNEL=D1\nAI_KEY=old\n# note\nAI_KEY=older\n")
+    p, settings, keys, henv = run_opts(tmp_path, "AI_KEY", "--stdin", "--hermes", value=VALUE)
+    assert p.returncode == 0, p.stderr
+    assert VALUE not in p.stdout + p.stderr
+    assert henv.read_text() == f"SLACK_HOME_CHANNEL=D1\nAI_KEY={VALUE}\n# note\n"
+    assert stat.S_IMODE(henv.stat().st_mode) == 0o600
+    assert f"export AI_KEY={VALUE}" in keys.read_text()
+
+
+def test_from_env_file_copies_value_and_skip_claude_leaves_settings_alone(tmp_path):
+    src = tmp_path / "src.env"
+    src.write_text(f"OTHER=x\nAI_STUDIO_API_KEY=\"{VALUE}\"\n")
+    p, settings, keys, henv = run_opts(tmp_path, "AI_STUDIO_API_KEY", "--from-env-file", str(src),
+                                       "--skip-claude")
+    assert p.returncode == 0, p.stderr
+    assert VALUE not in p.stdout + p.stderr
+    assert not settings.exists() and not henv.exists()
+    out = subprocess.run(["bash", "-c", f'source "{keys}"; printf %s "$AI_STUDIO_API_KEY"'],
+                         capture_output=True, text=True).stdout
+    assert out == VALUE
+
+
+def test_from_env_file_missing_name_or_both_sources_is_refused(tmp_path):
+    src = tmp_path / "src.env"
+    src.write_text("OTHER=x\n")
+    p, settings, keys, _ = run_opts(tmp_path, "AI_STUDIO_API_KEY", "--from-env-file", str(src))
+    assert p.returncode == 1 and "not set in" in p.stderr and not keys.exists()
+    p, *_ = run_opts(tmp_path, "K", "--from-env-file", str(src), "--stdin", value="v")
+    assert p.returncode == 2
+
+
+def test_tricky_value_round_trips_through_every_format(tmp_path):
+    tricky = "a b'c\"d\\e$HOME#x"
+    p, _, keys, henv = run_opts(tmp_path, "T_KEY", "--stdin", "--hermes", value=tricky)
+    assert p.returncode == 0, p.stderr
+    sys.path.insert(0, str(SCRIPT.parent))
+    import importlib
+    ak = importlib.import_module("add_key")
+    assert ak.read_env_file_value(keys, "T_KEY") == tricky     # shell-quoted keys.env
+    assert ak.read_env_file_value(henv, "T_KEY") == tricky     # dotenv-quoted Hermes .env
+
+
+def test_from_env_file_refuses_a_variable_reference(tmp_path):
+    src = tmp_path / "keys.env"
+    src.write_text('export GEMINI_API_KEY="$GOOGLE_GENERATIVE_AI_API_KEY"\nexport LIT_KEY=\'a$b\'\n')
+    p, settings, keys, _ = run_opts(tmp_path, "GEMINI_API_KEY", "--from-env-file", str(src))
+    assert p.returncode == 1 and "refers to another variable" in p.stderr and not keys.exists()
+    p, settings, keys, _ = run_opts(tmp_path, "LIT_KEY", "--from-env-file", str(src), "--skip-claude")
+    assert p.returncode == 0, p.stderr                       # single-quoted $ is a literal, allowed

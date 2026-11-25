@@ -25,6 +25,14 @@ Add --dry-run to list the names without changing anything.
 
 --stdin reads the value from standard input instead of the keyboard, for a
 password manager pipe (`pass show x | add_key.py NAME --stdin`) and for tests.
+--from-env-file PATH copies the value of NAME from an existing .env or
+keys file (KEY=value or export KEY=value), e.g. to put a key Hermes already
+has into keys.env; the value is never shown.
+
+--hermes also writes NAME=value into Hermes's own env file, ~/.hermes/.env
+(override with --hermes-env), which Hermes loads at start. --skip-claude
+leaves .claude/settings.local.json untouched, for keys Claude Code should not
+get.
 
 Stdlib only.
 """
@@ -200,6 +208,60 @@ def migrate(bashrc: Path, keys_file: Path, dry_run: bool) -> int:
     return 0
 
 
+def _dotenv_value(raw: str) -> str:
+    raw = raw.strip()
+    if len(raw) >= 2 and raw[0] == raw[-1] and raw[0] in "'\"":
+        inner = raw[1:-1]
+        return re.sub(r"\\(.)", r"\1", inner) if raw[0] == '"' else inner
+    return raw.split(" #", 1)[0].strip()
+
+
+def read_env_file_value(path: Path, name: str) -> str | None:
+    """Last assignment of NAME in a KEY=value / export KEY=value file, or None."""
+    pat = re.compile(rf"^\s*(?:export\s+)?{re.escape(name)}\s*=(.*)$")
+    found = None
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
+        m = pat.match(line)
+        if m:
+            if line.lstrip().startswith("export"):   # shell syntax, as add_key writes keys.env
+                raw = m.group(1).strip()
+                if "$" in raw and not raw.startswith("'"):
+                    raise ValueError(f"{name} in {path} refers to another variable "
+                                     "(contains $); copy that variable instead")
+                parts = shlex.split(raw, comments=True)
+                found = parts[0] if parts else ""
+            else:
+                found = _dotenv_value(m.group(1))
+    return found
+
+
+def _dotenv_quote(value: str) -> str:
+    if re.fullmatch(r"[A-Za-z0-9_\-.:/+=@,]+", value):
+        return value
+    if "'" not in value:
+        return f"'{value}'"
+    return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def set_dotenv(path: Path, name: str, value: str) -> str:
+    lines = _lines(path)
+    pat = re.compile(rf"^\s*(?:export\s+)?{re.escape(name)}\s*=")
+    new = f"{name}={_dotenv_quote(value)}\n"
+    hits = [i for i, l in enumerate(lines) if pat.match(l)]
+    if hits:
+        lines[hits[0]] = new
+        for i in reversed(hits[1:]):
+            del lines[i]
+        action = "replaced"
+    else:
+        if lines and not lines[-1].endswith("\n"):
+            lines[-1] += "\n"
+        lines.append(new)
+        action = "added"
+    atomic_write(path, "".join(lines), 0o600)
+    return action
+
+
 def project_dir(arg: str | None) -> Path:
     if arg:
         return Path(arg).expanduser().resolve()
@@ -222,6 +284,12 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--migrate", action="store_true",
                     help="move secret export lines from --bashrc into --keys-file")
     ap.add_argument("--dry-run", action="store_true", help="with --migrate: list names only")
+    ap.add_argument("--from-env-file", metavar="PATH",
+                    help="copy the value of NAME from this .env / keys file instead of asking")
+    ap.add_argument("--hermes", action="store_true", help="also write NAME into Hermes's env file")
+    ap.add_argument("--hermes-env", default="~/.hermes/.env", help="Hermes env file for --hermes")
+    ap.add_argument("--skip-claude", action="store_true",
+                    help="do not write .claude/settings.local.json")
     args = ap.parse_args(argv)
     keys_file = Path(args.keys_file).expanduser()
     bashrc = Path(args.bashrc).expanduser()
@@ -235,7 +303,19 @@ def main(argv: list[str] | None = None) -> int:
     if not NAME_RE.match(name):
         fail(f"{name!r} is not a valid variable name (use A-Z, 0-9 and _, starting with a letter).", 2)
 
-    if args.stdin:
+    if args.stdin and args.from_env_file:
+        fail("use --stdin or --from-env-file, not both.", 2)
+    if args.from_env_file:
+        src = Path(args.from_env_file).expanduser()
+        if not src.is_file():
+            fail(f"{src} does not exist; nothing was changed.")
+        try:
+            value = read_env_file_value(src, name)
+        except ValueError as exc:
+            fail(f"{exc}; nothing was changed.")
+        if value is None:
+            fail(f"{name} is not set in {src}; nothing was changed.")
+    elif args.stdin:
         value = sys.stdin.readline().rstrip("\r\n")
     else:
         value = read_hidden(f"Value for {name} (typing is hidden): ")
@@ -247,12 +327,15 @@ def main(argv: list[str] | None = None) -> int:
     if "\n" in value or "\x00" in value:
         fail("the value contains a newline or NUL; nothing was changed.")
 
-    settings = project_dir(args.project_dir) / ".claude" / "settings.local.json"
-    a1 = set_settings(settings, name, value)
+    if not args.skip_claude:
+        settings = project_dir(args.project_dir) / ".claude" / "settings.local.json"
+        print(f"{name}: {set_settings(settings, name, value)} in {settings}")
     a2 = set_keys_file(keys_file, name, value)
     notes = fix_bashrc(bashrc, name)
-    print(f"{name}: {a1} in {settings}")
     print(f"{name}: {a2} in {keys_file}")
+    if args.hermes:
+        hermes_env = Path(args.hermes_env).expanduser()
+        print(f"{name}: {set_dotenv(hermes_env, name, value)} in {hermes_env}")
     for n in notes:
         print(f"{bashrc}: {n}")
     print("Restart Claude Code (and open a new shell) so the new value loads.")
