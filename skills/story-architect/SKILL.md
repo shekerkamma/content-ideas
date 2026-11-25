@@ -4,6 +4,17 @@ description: Use before building decks, briefs, or narrative deliverables when r
 metadata:
   legacy-frontmatter:
     user_invocable: true
+hooks:
+  Stop:
+    - hooks:
+        - type: prompt
+          prompt: >-
+            Check the storyboard, brief or evidence map Claude wrote in this turn.
+            Every factual claim and every number must name its source (a file path,
+            URL or transcript timestamp), and no number may differ from that source.
+            If the turn wrote no storyboard, or everything is sourced, respond
+            {"ok": true}. Otherwise respond {"ok": false, "reason": "list each
+            claim or number that has no source or does not match it"}.
 ---
 
 # Story Architect
@@ -59,3 +70,14 @@ Before handing off to PPTX rendering, answer:
 - Are the examples specific enough to prove the claim?
 - Is there a clear decision or next action?
 - Are there any unsupported claims, internal terms, or visible timestamps?
+
+## Host Compatibility
+
+- Claude Code: yes. The `hooks:` Stop prompt in the frontmatter checks that every
+  claim and number in the storyboard names its source before the turn ends.
+- Codex: yes. Codex ignores the `hooks:` field, so run the Quality Gate above by
+  hand: every claim and number in the evidence map names its source.
+- OpenHands: yes, same as Codex.
+- Source / Tool Order: this skill works from the material it is given (local
+  files, transcripts, analysis). It does no lookup of its own; when a claim needs
+  a source it lacks, follow the global research order.

@@ -5,15 +5,6 @@ content ideas. Runs the same on Claude Code and Codex (and any host that reads
 `AGENTS.md`). Dependency-free Python (stdlib only) plus a single self-contained
 HTML renderer.
 
-## Structure
-- `skills/content-ideas/SKILL.md` — canonical skill definition (the entry point)
-- `skills/content-ideas/scripts/scrape.py` — competitor/own-channel scraper
-- `skills/content-ideas/scripts/generate_feed.py` — builds the For You HTML feed
-- `skills/content-ideas/scripts/export_dashboard.py` — exports the feed as CSV/JSON tables for a hosted dashboard
-- `skills/content-ideas/scripts/lib/` — platform fetchers, scoring, relevance, rendering
-- `skills/content-ideas/assets/for-you-template.html` — renderer template
-- `skills/content-ideas/references/content-strategy.md` — idea-generation guidance
-
 ## Cross-host packaging
 - `plugin.json` (root) — Agent Plugins 1.0.0 manifest, the vendor-neutral install
 - `.claude-plugin/plugin.json` + `marketplace.json` — Claude Code install
@@ -147,38 +138,42 @@ Keep that block in sync if directory names change.
 
 ## Commands
 ```bash
-# run the test suite (stdlib + pytest, no network)
-python3 -m pytest -q
+# tests: system python3 has no pytest; use the repo venv. The full suite takes
+# about 13 minutes, so CI (validate.yml, check "test") runs it. The project
+# Stop hook (.claude/hooks/check-tests.sh) runs only the tests for changed files.
+.venv/bin/python -m pytest -q
 
-# exercise the scraper / feed generator directly against a checkout
-python3 skills/content-ideas/scripts/scrape.py --help
-python3 skills/content-ideas/scripts/generate_feed.py --help
-
-# mirror every ~/.claude/skills entry into ~/.codex/skills so Codex sees the
-# same skill set as Claude Code (idempotent, safe to re-run after installing
-# new skills on either host)
+# mirror every ~/.claude/skills entry into ~/.codex/skills (idempotent)
 bash scripts/sync-codex-skills.sh
 
-# synchronize the governed presentation pipeline to Claude Code and the
-# Windows Hermes Desktop profile mounted into WSL; differing host copies are
-# backed up before replacement
+# sync the presentation pipeline to Claude Code and the Windows Hermes profile;
+# differing host copies are backed up before replacement
 bash scripts/sync-presentation-pipeline-hosts.sh
 
 # validate the portable recovery skills and their integrity manifest
 bash scripts/verify-recovery-skills.sh
 
-# audit every skill tree for zero-fill (all-NUL) corruption and restore from
-# ranked donors (sibling host copies, then git history). Report-only without
-# --apply; exits non-zero when a live skill file is corrupt with no donor.
-python3 scripts/audit_skill_corruption.py ~ --git-repo .
-python3 scripts/audit_skill_corruption.py ~ --git-repo . --apply
+# audit every skill tree for zero-fill corruption; report-only without --apply,
+# non-zero exit when a live skill file is corrupt with no donor
+python3 scripts/audit_skill_corruption.py ~ --git-repo . [--apply]
 ```
+
+## Review by risk
+- `main` requires the CI `test` check; admins can still push directly.
+- Docs and copy changes: no human review once checks are green; they may use
+  auto-merge (`gh pr merge --auto`).
+- Ordinary product changes: one reviewer. Risky changes (secrets, permissions,
+  hooks, deploy workflows, anything published): two reviewers, never auto-merge.
 
 ## Rules
 - Runtime stays dependency-free: stdlib only (`urllib`, `json`, ...). No pip installs at runtime.
 - `skills/content-ideas/scripts/lib/__init__.py` is a bare package marker — no eager imports.
 - Persistent state lives under `$CONTENT_HOME` (default `~/Documents/Content`), never the cwd.
 - Credentials live in `~/.config/content/.env` (`SCRAPECREATORS_API_KEY`, `SETUP_COMPLETE`).
+- `.claude/settings.local.json` and `.env*` files are read-denied in
+  `.claude/settings.json`, so an agent cannot open them; the user adds keys there
+  (suggest a `! ` command). Their other half, the `~/.bashrc` export, is still
+  the agent's to write.
 - API keys follow a two-layer pattern: `.claude/settings.local.json` `env`
   block (Claude Code, gitignored) plus a `~/.bashrc` `export` (cross-host
   baseline for Codex). Write both together. Never put a real key in a commit or
