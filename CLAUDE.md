@@ -171,9 +171,10 @@ python3 scripts/audit_skill_corruption.py ~ --git-repo . [--apply]
 - Persistent state lives under `$CONTENT_HOME` (default `~/Documents/Content`), never the cwd.
 - Credentials live in `~/.config/content/.env` (`SCRAPECREATORS_API_KEY`, `SETUP_COMPLETE`).
 - `.claude/settings.local.json` and `.env*` files are read-denied in
-  `.claude/settings.json`, so an agent cannot open them; the user adds keys there
-  (suggest a `! ` command). Their other half, the `~/.bashrc` export, is still
-  the agent's to write.
+  `.claude/settings.json`, so an agent cannot open them. To add or change a key,
+  ask the user to run `python3 scripts/add_key.py NAME` in their own terminal:
+  it reads the value with echo off and writes both layers below. Never ask for
+  a key in chat or inside a `! ` command; both land in the transcript.
 - API keys follow a two-layer pattern: `.claude/settings.local.json` `env`
   block (Claude Code, gitignored) plus a `~/.bashrc` `export` (cross-host
   baseline for Codex). Write both together. Never put a real key in a commit or
