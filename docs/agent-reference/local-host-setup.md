@@ -12,7 +12,11 @@
     which don't source `~/.bashrc`. Gitignored (`.gitignore` has the
     `.claude/settings.local.json` pattern) — never the committed
     `.claude/settings.json`.
-  - **`~/.bashrc` `export`** — the cross-host baseline. Codex reads secrets
+  - **`export` in `~/.config/keys.env`, sourced by `~/.bashrc`** — the
+    cross-host baseline. Since 2026-11-25 the key lines live in that file
+    (chmod 600, read-denied in Claude Code user settings) rather than in
+    `~/.bashrc` itself; `scripts/add_key.py NAME` writes this layer and the
+    settings.local.json one together. Codex reads secrets
     from its own process environment directly (e.g. `bearer_token_env_var`
     in `~/.codex/config.toml` for the gbrain MCP server); it has no
     settings.local.json equivalent, so this layer is what Codex — and any

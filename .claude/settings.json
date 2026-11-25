@@ -4,7 +4,6 @@
     "deny": [
       "Read(./.env*)",
       "Read(./**/.env*)",
-      "Read(./.claude/settings.local.json)",
       "Read(./secrets/**)",
       "Bash(git reset --hard *)",
       "Bash(git push --force *)",

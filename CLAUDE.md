@@ -170,14 +170,16 @@ python3 scripts/audit_skill_corruption.py ~ --git-repo . [--apply]
 - `skills/content-ideas/scripts/lib/__init__.py` is a bare package marker — no eager imports.
 - Persistent state lives under `$CONTENT_HOME` (default `~/Documents/Content`), never the cwd.
 - Credentials live in `~/.config/content/.env` (`SCRAPECREATORS_API_KEY`, `SETUP_COMPLETE`).
-- `.claude/settings.local.json` and `.env*` files are read-denied in
-  `.claude/settings.json`, so an agent cannot open them. To add or change a key,
-  ask the user to run `python3 scripts/add_key.py NAME` in their own terminal:
-  it reads the value with echo off and writes both layers below. Never ask for
-  a key in chat or inside a `! ` command; both land in the transcript.
+- To add or change a key, ask the user to run `python3 scripts/add_key.py NAME`
+  in their own terminal: it reads the value with echo off and writes both layers
+  below. Never ask for a key in chat or inside a `! ` command; both land in the
+  transcript. `.env*` files and `~/.config/keys.env*` are read-denied;
+  `.claude/settings.local.json` is readable again (user's choice, 2026-11-25),
+  so avoid opening it unless the task needs it.
 - API keys follow a two-layer pattern: `.claude/settings.local.json` `env`
-  block (Claude Code, gitignored) plus a `~/.bashrc` `export` (cross-host
-  baseline for Codex). Write both together. Never put a real key in a commit or
+  block (Claude Code, gitignored) plus an `export` in `~/.config/keys.env`,
+  which `~/.bashrc` sources (cross-host baseline for Codex). `add_key.py`
+  writes both; `--migrate` moves stray key exports out of `~/.bashrc`. Never put a real key in a commit or
   any tracked file. Configured keys, where to look for existing ones (including
   Windows-side configs and local AI-gateway proxies), and WSL/PowerShell
   pitfalls: `docs/agent-reference/local-host-setup.md`.
