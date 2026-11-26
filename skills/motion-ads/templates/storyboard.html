@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storyboard</title>
+<!--
+  A numbered storyboard to approve before anything is built.
+  Fill in board.js next to this file (see board.example.js), then open this page in a browser,
+  or turn it into one image with:
+    node scripts/render_page.mjs storyboard.html --stills out --at 0
+  Nothing here animates. Each card says what is on screen, what moves, how this shot BECOMES
+  the next one, and what you hear.
+-->
+<style>
+  :root {
+    --paper: #f4f1ea; --card: #fbfaf6; --ink: #1f1d1a; --soft: #6b665d; --rule: #dcd6c9; --clay: #b5573a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--paper); color: var(--ink); }
+  body { font: 15px/1.45 "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif; padding: 44px 48px 56px; width: 1920px; }
+  header { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; border-bottom: 2px solid var(--ink); padding-bottom: 18px; }
+  h1 { font-size: 34px; line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.01em; }
+  header p { margin: 0; max-width: 1180px; color: var(--soft); font-size: 17px; }
+  .facts { text-align: right; font-size: 15px; color: var(--soft); white-space: nowrap; }
+  .facts b { display: block; color: var(--ink); font-size: 22px; }
+  .rules { margin: 16px 0 26px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 26px; font-size: 14px; color: var(--soft); }
+  .rules li::before { content: "\2014\00a0"; color: var(--clay); }
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px 22px; }
+  .shot { background: var(--card); border: 1px solid var(--rule); }
+  .frame { position: relative; aspect-ratio: 16 / 9; background: #e7e2d6; overflow: hidden; }
+  .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .frame .empty { position: absolute; inset: 0; display: grid; place-items: center; color: var(--soft); font-size: 14px; padding: 18px; text-align: center; }
+  .num { position: absolute; left: 0; top: 0; background: var(--ink); color: var(--paper); font-weight: 700; font-size: 19px; width: 40px; height: 40px; display: grid; place-items: center; }
+  /* the centre mark: the subject of every shot should sit on it */
+  .frame::before, .frame::after { content: ""; position: absolute; left: 50%; top: 50%; background: var(--clay); opacity: .85; }
+  .frame::before { width: 22px; height: 2px; margin: -1px 0 0 -11px; }
+  .frame::after { width: 2px; height: 22px; margin: -11px 0 0 -1px; }
+  .body { padding: 14px 16px 16px; }
+  .time { font-size: 13px; color: var(--soft); font-variant-numeric: tabular-nums; }
+  h2 { font-size: 19px; margin: 2px 0 8px; line-height: 1.2; }
+  dl { margin: 0; display: grid; grid-template-columns: 78px 1fr; gap: 6px 10px; font-size: 14px; }
+  dt { color: var(--soft); font-size: 13px; padding-top: 1px; }
+  dd { margin: 0; }
+  dd.becomes { font-weight: 650; }
+  footer { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--soft); font-size: 14px; display: flex; justify-content: space-between; gap: 24px; }
+</style>
+</head>
+<body>
+<header>
+  <div><h1 id="title"></h1><p id="summary"></p></div>
+  <div class="facts"><b id="length"></b><span id="count"></span></div>
+</header>
+<ul class="rules" id="rules"></ul>
+<main class="shots" id="shots"></main>
+<footer><span id="note"></span><span>Approve this, or ask for changes, before anything is built.</span></footer>
+<script src="board.js"></script>
+<script>
+  const board = window.BOARD || { title: 'Storyboard', summary: 'Fill in board.js next to this file.', shots: [] };
+  const text = (id, value) => { document.getElementById(id).textContent = value || ''; };
+  const make = (tag, cls, value) => { const el = document.createElement(tag); if (cls) el.className = cls; if (value) el.textContent = value; return el; };
+  text('title', board.title);
+  text('summary', board.summary);
+  text('length', board.length);
+  text('count', `${board.shots.length} shots`);
+  text('note', board.note);
+  for (const rule of board.rules || []) document.getElementById('rules').append(make('li', '', rule));
+  board.shots.forEach((shot, i) => {
+    const card = make('section', 'shot');
+    const frame = make('div', 'frame');
+    if (shot.image) { const img = new Image(); img.src = shot.image; img.alt = shot.title; frame.append(img); }
+    else frame.append(make('div', 'empty', shot.sketch || 'frame to come'));
+    frame.append(make('div', 'num', String(i + 1)));
+    const body = make('div', 'body');
+    body.append(make('div', 'time', shot.time), make('h2', '', shot.title));
+    const list = make('dl');
+    for (const [label, key] of [['On screen', 'on_screen'], ['Moves', 'moves'], ['Becomes', 'becomes'], ['Sound', 'sound'], ['Text', 'text']]) {
+      if (!shot[key]) continue;
+      list.append(make('dt', '', label), make('dd', key === 'becomes' ? 'becomes' : '', shot[key]));
+    }
+    body.append(list);
+    card.append(frame, body);
+    document.getElementById('shots').append(card);
+  });
+  // lets render_page.mjs turn the board into one image, sized to its content
+  window.ad = { duration: 1, width: 1920, height: Math.ceil(document.documentElement.scrollHeight), seek() {},
+    ready: Promise.all([...document.images].map((im) => im.decode().catch(() => {}))).then(() => { window.ad.height = Math.ceil(document.documentElement.scrollHeight); }) };
+</script>
+</body>
+</html>

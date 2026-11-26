@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ad page starter</title>
+<!--
+  A starter for a code-only ad (Level 1) or for graphics laid over footage (Level 2).
+  It shows the four habits that matter, in the smallest page that has them all:
+
+    1. Time-driven. Nothing runs on a clock. seek(t) draws the frame for time t, so
+       scripts/render_page.mjs can render it exactly, at any size, with no dropped frames.
+    2. One block of beats (B) at the top. Every time in the piece lives there, and the same
+       names go to the sound through window.ad.events.
+    3. The subject stays on the centre of the frame while it changes shape. It transforms;
+       nothing cross-dissolves.
+    4. Something is always moving, even on a hold (the slow drift in the background).
+
+  Text comes in the way the rest of the piece should: each word slides up inside a mask,
+  one after the other. No bounce, no letter-by-letter fade.
+
+  Replace the shapes with the product itself, built from its own logo, photos and screens. For 3D, load three.js from a
+  local copy, render into a canvas the same size as the stage, and keep seek(t) as the only
+  thing that changes the scene.
+
+  Preview: open the file in a browser (it loops).  Add ?t=3.2 to hold one frame.
+  Render:  node scripts/render_page.mjs ad-page.html --video draft.mp4
+-->
+<style>
+  html, body { margin: 0; background: #f4f1ea; }
+  #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #f4f1ea; font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif; }
+  canvas { position: absolute; inset: 0; }
+  #line { position: absolute; left: 0; right: 0; top: 800px; text-align: center; font-size: 84px; font-weight: 600; color: #1f1d1a; letter-spacing: -0.01em; }
+  /* the mask: each word sits in a box that hides it until it has slid up into place */
+  .word { display: inline-block; overflow: hidden; vertical-align: bottom; padding: 0 0.14em; line-height: 1.25; }
+  .word span { display: inline-block; will-change: transform; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="1920" height="1080"></canvas>
+  <div id="line"></div>
+</div>
+<script>
+  // ---- every beat of the piece, in seconds. Change timing here and nowhere else. ----
+  const B = {
+    start: 0,
+    'shape.turn': 1.6,     // the circle starts to become a square
+    'shape.land': 2.8,     // ... and has become it
+    'text.in': 3.3,        // the line slides up, word by word
+    'text.out': 5.2,
+    end: 6,
+  };
+  const LINE = ['Built', 'from', 'one', 'prompt.'];
+  const WORD_GAP = 0.09, WORD_TIME = 0.55;
+
+  const clamp = (x) => Math.min(1, Math.max(0, x));
+  const span = (t, a, b) => clamp((t - a) / (b - a));
+  const easeOut = (x) => 1 - Math.pow(1 - x, 4);                       // fast, then a long settle
+  const easeInOut = (x) => x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2;
+
+  const ctx = document.getElementById('c').getContext('2d');
+  const line = document.getElementById('line');
+  const words = LINE.map((w) => {
+    const box = document.createElement('span'); box.className = 'word';
+    const inner = document.createElement('span'); inner.textContent = w;
+    box.append(inner); line.append(box);
+    return inner;
+  });
+
+  function seek(t) {
+    const W = 1920, H = 1080, cx = W / 2, cy = 420;
+
+    // background: two soft shapes that never stop drifting, well out of the way of the subject
+    ctx.fillStyle = '#f4f1ea';
+    ctx.fillRect(0, 0, W, H);
+    for (const [phase, radius, tint] of [[0, 520, 'rgba(181, 87, 58, 0.10)'], [2.4, 420, 'rgba(31, 29, 26, 0.06)']]) {
+      const x = cx + Math.cos(t * 0.22 + phase) * 620, y = cy + Math.sin(t * 0.17 + phase) * 240;
+      const glow = ctx.createRadialGradient(x, y, 0, x, y, radius);
+      glow.addColorStop(0, tint); glow.addColorStop(1, 'rgba(244, 241, 234, 0)');
+      ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
+    }
+
+    // the subject: a circle that BECOMES a rounded square, on the centre of the frame.
+    // One shape with a changing corner radius. Never two shapes fading across each other.
+    const turn = easeInOut(span(t, B['shape.turn'], B['shape.land']));
+    const arrive = easeOut(span(t, B.start, 1.2));
+    const size = 120 + 90 * arrive + 20 * turn;
+    const corner = size * (1 - 0.82 * turn);
+    const tilt = (1 - turn) * 0.5 + t * 0.03;                           // still turning a little on the hold
+    ctx.save();
+    ctx.translate(cx, cy); ctx.rotate(tilt);
+    ctx.beginPath(); ctx.roundRect(-size, -size, size * 2, size * 2, corner);
+    ctx.fillStyle = '#1f1d1a'; ctx.fill();
+    ctx.restore();
+
+    // text: each word slides up inside its mask, one after the other, and leaves the same way
+    words.forEach((el, i) => {
+      const up = easeOut(span(t, B['text.in'] + i * WORD_GAP, B['text.in'] + i * WORD_GAP + WORD_TIME));
+      const away = easeInOut(span(t, B['text.out'] + i * WORD_GAP * 0.5, B['text.out'] + i * WORD_GAP * 0.5 + 0.4));
+      el.style.transform = `translateY(${(1 - up) * 110 - away * 110}%)`;
+    });
+  }
+
+  window.ad = { duration: B.end, width: 1920, height: 1080, events: B, seek, ready: document.fonts.ready };
+
+  // preview in a browser: loop, or hold one frame with ?t=
+  const held = new URLSearchParams(location.search).get('t');
+  if (held !== null) seek(Number(held));
+  else if (!navigator.webdriver) { const t0 = performance.now(); (function loop() { seek(((performance.now() - t0) / 1000) % B.end); requestAnimationFrame(loop); })(); }
+  else seek(0);
+</script>
+</body>
+</html>
