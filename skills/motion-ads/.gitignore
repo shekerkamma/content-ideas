@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+node_modules/
+
+# Example frames show a third-party product; the licence excludes them, so they stay local only
+examples/*.jpg
+examples/frames/
