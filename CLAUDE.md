@@ -85,6 +85,18 @@ live under `$ROAST_HOME` (default `$CONTENT_HOME/roast-room`). The room (`app/`)
 scripts need Node 20+, an optional add-on outside the stdlib-only runtime rule.
 `tests/test_roast_room.py` guards the paths and the quote checker.
 
+## Motion ads skill
+
+`skills/motion-ads/` is ported from Samin Yasar (MIT, licence kept in
+`skills/motion-ads/LICENSE`). It makes product ads and motion graphics across
+three levels: code-only (HTML/canvas/three.js), footage+code, and photoreal
+product shots. Scripts need numpy and other non-stdlib dependencies plus Node
+20+ for `render_page.mjs` — both outside the stdlib-only runtime rule; use the
+dedicated venv at `~/.venvs/motion-ads`. `render_page.mjs` renders must run
+outside the sandbox (Playwright Chromium). The gitignored prompt library lives
+at `vendor/motion-ads-prompts/`; example frames showing a third-party product
+are also gitignored (not covered by the MIT licence).
+
 ## Shared Product-Build Skills
 - `skills/plaid/SKILL.md` — Product Led AI Development: idea, validation,
   planning, `docs/design.md`, launch, and roadmap execution.
